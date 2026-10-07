@@ -43,10 +43,25 @@ export function blindChoose(model: BlindModel, state: BlindState, difficulty: "e
     } else {
       const score = Array<number>(state.cells.length).fill(0);
       if (difficulty === "medium") {
-        const shapes = blindCellPlacements(model);
-        for (const ship of afloat) for (const placement of legal(state, ship, shapes[ship]!)) {
-          const weight = hits(state, placement) ** 2;
-          for (const cell of placement) if (state.cells[cell] === 0) score[cell] = score[cell]! + weight;
+        const namedHits = Array<number>(model.fleet.length).fill(0);
+        let anonymous = false, anyHits = false;
+        for (let cell = 0; cell < state.cells.length; cell++) if (state.cells[cell] === 2) {
+          anyHits = true;
+          const label = state.hitShip?.[cell];
+          if (label == null) anonymous = true;
+          else namedHits[label] = namedHits[label]! + 1;
+        }
+        // With no hits every score is zero. With only named hits, ships that
+        // own none must avoid all foreign hits and also contribute exactly zero.
+        if (anyHits) {
+          const shapes = blindCellPlacements(model);
+          for (const ship of afloat) {
+            if (!anonymous && namedHits[ship] === 0) continue;
+            for (const placement of legal(state, ship, shapes[ship]!)) {
+              const weight = (anonymous ? hits(state, placement) : namedHits[ship]!) ** 2;
+              for (const cell of placement) if (state.cells[cell] === 0) score[cell] = score[cell]! + weight;
+            }
+          }
         }
         const max = Math.max(...unknown.map(cell => score[cell]!));
         if (max > 0) { pool = unknown.filter(cell => max - score[cell]! <= 1e-12); method = "target"; }
