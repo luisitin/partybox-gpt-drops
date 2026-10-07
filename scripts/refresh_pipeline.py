@@ -132,7 +132,7 @@ for job_id, title in jobs:
         work += " " + pr_notes(pull)
     worker = current_work.get(job_id)
     if worker:
-        work = f"**Active work:** {worker['summary']} **Next step:** {worker['next']} " + work
+        work = f"**Project status:** {worker['summary']} **Next step:** {worker['next']} " + work
     matching_runs = [run for run in workflow_runs if run.get("head_sha") == head_sha and f"/{job_id}.yml" in run.get("path", "")]
     if not matching_runs and head_sha and workflow:
         try:
@@ -206,7 +206,7 @@ lines = [
     "",
 ]
 if activity.get("workers"):
-    lines.extend(["## Current work and queue", "", f"_Work notes recorded: {activity['updatedAt']}; checks below are freshly queried._", "", activity.get("summary", ""), "", "| Working on | Current detail | Next step | Queued after this |", "|---|---|---|---|"])
+    lines.extend(["## Project detail and next steps", "", f"_Work notes recorded: {activity['updatedAt']}; checks below are freshly queried._", "", activity.get("summary", ""), "", "| Project | Current detail | Next step | Queued after this |", "|---|---|---|---|"])
     for worker in activity["workers"]:
         values = [worker["current"], worker["summary"], worker["next"], ", ".join(worker["queue"]) or "Delivery review"]
         lines.append("| " + " | ".join(value.replace("|", "\\|") for value in values) + " |")
