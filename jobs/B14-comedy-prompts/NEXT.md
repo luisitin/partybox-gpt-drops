@@ -5,8 +5,8 @@ specific first-pass grade and reason. Run `npm run build` and draft schema/lengt
 checks after each batch. Push each measured milestone. Seal `review-input.json`
 and request the independent second grading through the root coordinator.
 
-Current pool: 450 fill and 450 most-likely candidates; next batch is 010.
-Independent grading exists for batches 001-002 only. Batches 003-009 have sealed,
+Current pool: 500 fill and 500 most-likely candidates; next batch is 011.
+Independent grading exists for batches 001-004 only. Batches 005-010 have sealed,
 grade-free handoffs under `review-inputs/`. Preserve existing seals and failed
 grades. After B14 satisfies its complete editorial gates, begin the separately
 assigned B13 worktree at `/workspace/job-B13`.

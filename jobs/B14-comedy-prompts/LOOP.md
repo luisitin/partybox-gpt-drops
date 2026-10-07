@@ -34,3 +34,7 @@
    before sealing. All 900 rows pass structural checks. Preserved the complete
    second independent review: 118 of 200 reviewed candidates meet 4+ in both
    passes. Current agreement rates are reported explicitly as partial results.
+10. Authored 100 drink and breakfast-brand candidates; shortened one overlength
+    draft before sealing. All 1,000 rows pass structural checks. Integrated
+    independent batches 003-004 without changing rejected or accepted grades:
+    284 of 400 reviewed candidates meet 4+ in both passes.
