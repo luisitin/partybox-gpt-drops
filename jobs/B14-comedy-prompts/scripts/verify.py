@@ -24,6 +24,26 @@ result = {"mode": "draft" if args.draft else "release", "schemaCases": len(rows)
           "requiredCandidateCounts": {"fill": 1500, "most-likely": 1500},
           "maximumCharacters": max([len(row["text"]) for row in rows], default=0),
           "reviewInputSha256": hashlib.sha256((ROOT / "review-input.json").read_bytes()).hexdigest()}
+first_by_id = {row["id"]: row for row in rows}
+reviewed = {}
+for path in sorted((ROOT / "grading").glob("pass2-*.json")):
+    batch = json.loads(path.read_text())
+    input_path = ROOT / "review-inputs" / (batch["batch"] + ".json")
+    assert hashlib.sha256(input_path.read_bytes()).hexdigest() == batch["reviewInputSha256"], "batch review hash mismatch"
+    input_ids = {row["id"] for row in json.loads(input_path.read_text())}
+    batch_ids = {row["id"] for row in batch["rows"]}
+    assert len(batch_ids) == len(batch["rows"]) and batch_ids == input_ids, "incomplete or duplicate batch review"
+    assert batch["reviewer"] and batch["reviewer"] != "original-author", "invalid independent grader identity"
+    for row in batch["rows"]:
+        assert row["id"] not in reviewed, "second-pass candidate reviewed twice without resolution"
+        assert isinstance(row["grade"], int) and 1 <= row["grade"] <= 5 and len(row["reason"]) >= 10, "invalid second-pass row"
+        reviewed[row["id"]] = row
+if reviewed:
+    result["independentReviewedCases"] = len(reviewed)
+    result["independentGrade4Plus"] = sum(row["grade"] >= 4 for row in reviewed.values())
+    result["bothPassesGrade4Plus"] = sum(row["grade"] >= 4 and first_by_id[key]["firstPass"]["grade"] >= 4 for key, row in reviewed.items())
+    result["reviewedExactGradeAgreement"] = sum(row["grade"] == first_by_id[key]["firstPass"]["grade"] for key, row in reviewed.items()) / len(reviewed)
+    result["reviewedThresholdAgreement"] = sum((row["grade"] >= 4) == (first_by_id[key]["firstPass"]["grade"] >= 4) for key, row in reviewed.items()) / len(reviewed)
 if args.draft:
     result["UNVERIFIED"] = ["full candidate counts", "independent second grading", "final 600+600 selections", "final near-duplicate resolution", "editorial named-reference and adult-content checks"]
 else:

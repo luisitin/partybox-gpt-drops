@@ -20,6 +20,8 @@ for path in sorted((ROOT / "batches").glob("*.tsv")):
         kind, grade, references, prompt, reason = fields
         if kind not in ["fill", "most-likely"]:
             raise ValueError(f"{path.name}:{line_number}: unknown kind")
+        if len(prompt) > 90 or not 1 <= int(grade) <= 5 or len(reason) < 10:
+            raise ValueError(f"{path.name}:{line_number}: invalid length, grade, or reason before sealing")
         counts[kind] += 1
         prefix = "Q" if kind == "fill" else "M"
         row = {"id": f"{prefix}{counts[kind]:04}", "kind": kind,
