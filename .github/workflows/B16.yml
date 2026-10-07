@@ -15,9 +15,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '22.16.0'
       - name: Install pinned development compiler
-        run: npm install --ignore-scripts --no-audit --no-fund
+        run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Full suite including unchanged product acceptance thresholds
         run: npm test
       - name: Preserve verification evidence even when acceptance fails
@@ -26,6 +26,7 @@ jobs:
         with:
           name: B16-verification
           path: |
-            jobs/B16-player-colors/out/
+            jobs/B16-player-colors/reports-run/
             jobs/B16-player-colors/reports/
             jobs/B16-player-colors/swatches/
+            jobs/B16-player-colors/tables/

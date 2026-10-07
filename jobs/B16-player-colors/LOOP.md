@@ -1,4 +1,7 @@
 # Improvement loop
 
-Original B16 prompt and root README read. Existing remote branch has a workflow
-but no job assets. An isolated worktree was created; implementation starts here.
+1. Read the full original B16 prompt and root README; isolated the existing workflow-only branch. Independently wrote/sealed production math, passed all 34 Sharma values, then exchanged the already sealed root reference. Neither author viewed the other's implementation before sealing.
+2. Executed three seeded searches (975,000 moves), seeded local refinement, and all simultaneous two-color ±1 code-value neighborhoods. Preserved genuine three-deficit local result instead of claiming impossibility. Root's independent continuous SLSQP search found a feasible solution; adopted and independently rechecked exact 16-bit values.
+3. Added exact CSS serialization, labeled approximate hex, 16-bit PNGs and full unrounded pair/contrast tables. Independent full-scene pixel checks include labels and both backgrounds. Every delivered simulated PNG's decoded fill vectors must themselves pass the original distances; normal decoded fills must exactly equal canonical values.
+4. The full suite caught cross-runtime JSON byte drift (~1e-14 in one minimum) between author Node24 and pinned Node22.16.0. Regenerated all assets on pinned22 and retained unchanged byte comparison and strict distance thresholds. Cross-runtime bitwise output remains explicitly unverified.
+5. First isolated mutation run compiled/caught all 25 alterations under all three seeds. Completed suite also includes the original product gates, independent numerical comparisons, exact asset reproduction, and full PNG decoding. The first full pinned run passed. Its summary is preserved as reports/first-full-run.json. The weakest remaining pure helper was seeded RNG replay, so 10,000 independently calculated transitions/replays per seed were added before the final complete rerun.

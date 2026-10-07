@@ -1,5 +1,3 @@
-# Next
+# Next step
 
-Implement and independently verify color math; search the exact constrained
-8-bit sRGB domain, generate a real12-color palette and all pairwise/simulation
-artifacts, retain unchanged acceptance thresholds, publish evidence and CI.
+Finish the full pinned-runtime B16 suite, copy its fresh summary to committed evidence, write checksums and VERIFY, push the actual palette, and inspect full hosted CI at the exact final commit. Then continue the explicitly assigned B12 Ticket to Ride USA job, reading its original PROMPTS.md block and README first.
