@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-07T16:12:04.509236Z",
-  "summary": "Seven deliveries have passed their complete GitHub checks: board odds, Monopoly, Clue, icons, colors, sounds and motion. They await maintainer review; no PR has been merged. The CPU code and modes draft also passed structural checks, with research gaps retained. Hourly background reports are active and the open dashboard refreshes every 30 minutes.",
+  "updatedAt": "2026-10-07T16:22:00Z",
+  "summary": "Eight open deliveries now have exact-head green full-suite checks: board odds, Battleship, Monopoly, Clue, icons, colors, sounds and motion. No PR has merged, and green CI does not erase documented independence, research or benchmark limitations. The CPU code and modes draft also passed structural checks with research gaps retained.",
   "workers": [
     {
       "current": "B07",
@@ -10,8 +10,8 @@
     },
     {
       "current": "B10",
-      "summary": "Battleship completed all 600,000 Easy/Medium hosted games within the speed limit; the full run timed out during Hard. A new all-seed matrix preserves the entire 900,000-game suite and is running.",
-      "next": "Finish every matrix cell and strict aggregate check; retain actual timing failures and timeout evidence.",
+      "summary": "The replacement Battleship seed matrix completed successfully at exact head 740d13f: all three seeded jobs and the strict aggregate passed. The earlier Hard-stage timeout remains preserved as historical evidence.",
+      "next": "Review PR 6 without treating green CI as proof of blind independent authorship; continue the assigned B11 work.",
       "queue": [
         "B11"
       ]
@@ -38,8 +38,8 @@
     },
     {
       "current": "B14",
-      "summary": "1,800 of the required 3,000 comedy candidates are authored. Eight hundred have separate second grades; 586 satisfy both thresholds so far, split evenly between the genres. These are provisional before final duplicate and named-reference curation.",
-      "next": "Finish the whole candidate pool and separate review, resolve duplicate flags and the combined named-reference cap, then select 600 per genre.",
+      "summary": "1,900 of the required 3,000 comedy candidates are authored. 1,100 have separate second grades and 766 satisfy both grade thresholds. These remain provisional before full-pool duplicate and named-reference curation.",
+      "next": "Finish the full candidate pool and second review, resolve duplicate flags and the combined named-reference cap, then select 600 per genre.",
       "queue": [
         "B13"
       ]
