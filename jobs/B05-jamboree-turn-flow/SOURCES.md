@@ -1,6 +1,6 @@
 # B05 — Sources and claim quotations
 
-Research date: 2026-10-07. Each quotation is at most 25 words; no retained source exceeds 200 quoted words. Reopening fingerprints and short quotation captures are in `reports/source-captures/`.
+Research date: 2026-10-07. Every quotation is at most 25 words; no retained source exceeds 200 quoted words. Fresh two-pass capture receipts include observed UTC retrieval times and returned-markdown hashes.
 
 ## Source lineages
 
@@ -136,6 +136,24 @@ https://www.nintendo.com/us/whatsnew/the-party-is-getting-even-bigger-with-jambo
 
 Lineage: `nintendo`; kind: `primary`. Official enhanced-edition release; strengthens Frenzy starting conditions without treating Nintendo overview as independent of Nintendo release.
 
+### GFAQCLASSIC — GameFAQs: Does this game really have no option for classic bonus stars? — comperko, post 2
+
+https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80869247
+
+Lineage: `gamefaqs-comperko`; kind: `secondary`. Independently authored player report. Coin/Happening are informal names for Rich/Eventful, not exact on-screen strings. Relative forum dates are not promoted to absolute publication dates.
+
+### GFAQPRO — GameFAQs: Do you prefer party or pro rules? — Ice_Dragon14, post 10
+
+https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80870887
+
+Lineage: `gamefaqs-ice-dragon14`; kind: `secondary`. Detailed independent player enumeration, not an official menu transcript. Random item spaces alone do not establish a roulette interface. Choice-count alone does not explicitly establish all-four-player voting. No VS wager or Star-cycle reset statement is present.
+
+### NINUK — Nintendo UK: Super Mario Party Jamboree — basic board rules
+
+https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Super-Mario-Party-Jamboree-2591147.html
+
+Lineage: `nintendo`; kind: `primary`. Official default 20-coin exchange description. Board, Homestretch and Buddy price modifiers remain separately scoped.
+
 ## SET01
 
 Party turn limits: 10, 15, 20, 25, or 30.
@@ -254,12 +272,14 @@ Status: **single_source**; confidence: **medium**.
 
 The usual Star price is 20 coins; board and Buddy modifiers require separate handling.
 
-Status: **single_source**; confidence: **medium**. 
+Status: **corroborated**; confidence: **high**. Nintendo UK explicitly confirms the ordinary 20-coin exchange independently of Mario Wiki. This default does not assert uniform prices at every board, time, or Buddy interaction.
 
 - [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Yellow Toad Star exchange; Star Exchange opening paragraphs
   - `QUOTE-TURN04-20`: “20 coins”
 - [EXCHANGE](https://www.mariowiki.com/Star_Exchange) — Yellow Toad Star exchange; Star Exchange opening paragraphs
   - `EXCHANGE-E2`: “20 coins”
+- [NINUK](https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Super-Mario-Party-Jamboree-2591147.html) — The rules are simple!, default Star exchange
+  - `NINUK-TURN04-1`: “Collect 20 coins and exchange them for a Star!”
 
 ## TURN05
 
@@ -419,10 +439,12 @@ Status: **single_source**; confidence: **medium**.
 
 Vote offers three minigame choices; all four players vote.
 
-Status: **single_source**; confidence: **medium**. 
+Status: **single_source**; confidence: **medium**. The independent player report confirms three choices and a random player-choice selection, but omits explicit four-voter cardinality. The complete row remains single_source; weights, tie effects and repeat suppression are not inferred.
 
 - [IGN](https://me.ign.com/en/super-mario-party-jamboree/225526/review/super-mario-party-jamboree-review) — Pro Rules paragraph
   - `IGN-E3`: “vote between three choices”
+- [GFAQPRO](https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80870887) — Ice_Dragon14, post 10; partial support only, all-four voter qualifier omitted
+  - `GFAQPRO-ROUND02-5`: “Pick from 3, 1 player's choice is picked at random”
 
 ## ROUND03
 
@@ -569,7 +591,7 @@ Status: **corroborated**; confidence: **high**.
 
 Classic below 30 turns uses Rich and Eventful; Classic at 30 additionally uses Minigame.
 
-Status: **single_source**; confidence: **medium**. BONUS explicitly states the 30-turn exception; MNN omits it and MPL does not identify the particular pair below 30. Full combined policy lacks a second explicit statement. See C02.
+Status: **corroborated**; confidence: **medium**. Complete two/trio policy corroborated by the original comperko post 2 and the Jamboree-scoped Bonus Star article. Mario Party Legacy confirms the full three-category pool and two categories below 30. Coin/Happening in the player report denote Rich/Eventful; these are not promoted to exact displayed labels. The source is a player report, not a primary-frame capture.
 
 - [BONUS](https://www.mariowiki.com/Bonus_Star) — Classic distribution passages
   - `BONUS-COUNT02-10`: “it restricts the Minigame Bonus to 30-turn games.”
@@ -578,6 +600,10 @@ Status: **single_source**; confidence: **medium**. BONUS explicitly states the 3
   - `MPL-E3`: “fewer than 30 turns”
 - [MNN](https://mynintendonews.com/2024/10/01/preview-super-mario-party-jamboree/) — Classic distribution passages
   - `MNN-E3`: “classic mode”
+- [GFAQCLASSIC](https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80869247) — comperko, original post 2, complete Classic policy
+  - `GFAQCLASSIC-COUNT02-1`: “There are classic bonus stars but only 2 when playing less than 30 turns.”
+  - `GFAQCLASSIC-COUNT02-2`: “So if you turn on classic bonus stars there is coin and happening bonus stars.”
+  - `GFAQCLASSIC-COUNT02-3`: “If its 30 turns then theres also minigame bonus star.”
 
 ## COUNT03
 
@@ -652,39 +678,48 @@ Status: **corroborated**; confidence: **high**.
 
 Pro keeps Homestretch ±6 Blue/Red values and same-space duels.
 
-Status: **single_source**; confidence: **medium**. 
+Status: **corroborated**; confidence: **medium**. Ice_Dragon14 explicitly reports x2 Blue/Red and continuing duels in Pro. The 3-coin baseline and numeric 6 values are separately supplied by the game/host sources. Zero-coin duel wager, tie and event-priority edge cases remain unverified.
 
 - [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Pro Rules / Homestretch
   - `GAME-PRO03-17`: “the duel that occurs when two players land on the same space remain unchanged.”
 - [HOME](https://www.mariowiki.com/Homestretch) — Pro Rules / Homestretch
   - `HOME-PRO03-13`: “normal duels will occur when two or more players land on the same space.”
+- [GFAQPRO](https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80870887) — Ice_Dragon14, post 10, retained Homestretch rules; 3-coin base is separately established
+  - `GFAQPRO-PRO03-1`: “No last 5 turns event. x2 Blue/Red and Duels still happen”
 
 ## PRO04
 
 Pro Lucky spaces offer 10 coins or Double Dice; Unlucky transfers 7 coins to last place.
 
-Status: **single_source**; confidence: **medium**. 
+Status: **corroborated**; confidence: **medium**. Both complete choices/transfers are explicit in Ice_Dragon14 post 10 and the Jamboree article. Final-turn alternatives and empty-inventory behavior remain open.
 
 - [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Pro Rules changes
   - `GAME-E6`: “7 coins”
+- [GFAQPRO](https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80870887) — Ice_Dragon14, post 10, Lucky-space choice
+  - `GFAQPRO-PRO04-2`: “Lucky spaces let you choose between recieving 10 coins or a double dice”
+  - `GFAQPRO-PRO04-3`: “Unlucky spaces always gives 7 coins to last place”
 
 ## PRO05
 
 Pro uses item roulette without item minigames.
 
-Status: **single_source**; confidence: **medium**. 
+Status: **single_source**; confidence: **medium**. The independent player report confirms absence of Item minigames, but not the precise roulette presentation. The complete row remains single_source.
 
 - [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Pro Rules changes
   - `GAME-E8`: “roulette”
+- [GFAQPRO](https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80870887) — Ice_Dragon14, post 10; partial support only, roulette presentation omitted
+  - `GFAQPRO-PRO05-4`: “Item spaces always random, no item mini games”
 
 ## PRO06
 
 Pro marks future Star sites; a used site becomes eligible again after the other sites have been used.
 
-Status: **single_source**; confidence: **medium**. 
+Status: **single_source**; confidence: **medium**. The independent player report confirms marked spawn sites but omits the used-site reset cycle. The complete row remains single_source.
 
 - [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Pro Rules Star Stop Signs
   - `GAME-PRO06-18`: “a Star will no longer appear at a particular space until all Star Spaces have been used”
+- [GFAQPRO](https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80870887) — Ice_Dragon14, post 10; partial support only, used-site reset omitted
+  - `GFAQPRO-PRO06-6`: “Signs show potential star spawn spots”
 
 ## PRO07
 

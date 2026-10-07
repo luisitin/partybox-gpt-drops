@@ -9,3 +9,12 @@
 7. Ran the closed JSON Schemas, cross-reference checks, lineage checks, negative rejection fixtures, citation capture checks, strict acceptance and final file manifests. Actual results appear in VERIFY.md.
 
 Strict research acceptance remains NOT MET; six bonus criteria, tie procedures, several timeline facts and exceptions lack complete independent corroboration. These have not been guessed.
+
+## Continuation — 2026-10-07
+
+- Re-read the full original B05 prompt, README and outstanding evidence requirements. Recovered original independently authored GameFAQs posts and Nintendo UK’s ordinary Star-price statement.
+- Corroborated four complete scoped claims. Added partial independent evidence to three other rows without promoting omitted qualifiers. Classic policy records now agree with their confirmed claim.
+- Reopened every one of 25 retained URLs in two fresh passes and recovered all 192 registered quotations in each pass, 384 total. Reviewed all 141 rows twice, preserving 62 unresolved claim/gap records and all nine null tie rules.
+- Bound every row review to its canonical data hash; the validator rejects stale reviews. Added actual UTC source-retrieval timestamps and a malformed-fingerprint rejection case.
+- Investigated a real Misfortune-caption lead. The direct video request failed with HTTP tunnel 403; no guessed timestamp or observed tie rule was added.
+- Regenerated docs and manifests, ran structural and strict commands, and pushed an evidence milestone. Hosted exact-head results are linked in PR9 once observed.

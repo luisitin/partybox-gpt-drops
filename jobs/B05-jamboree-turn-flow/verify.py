@@ -37,6 +37,13 @@ def require(condition: bool, message: str) -> None:
     if not condition:
         raise AssertionError(message)
 
+def row_fingerprint(row: dict[str, Any]) -> str:
+    encoded = json.dumps(row, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')
+    return hashlib.sha256(encoded).hexdigest()
+
+def require_current_review(audit: dict[str, Any], canonical: dict[str, Any]) -> None:
+    require(audit['canonicalSha256'] == row_fingerprint(canonical), 'Row review refers to a different data version: ' + audit['rowId'])
+
 def unique(rows: list[dict[str, Any]], field: str = 'id') -> dict[str, dict[str, Any]]:
     result = {r[field]: r for r in rows}
     require(len(result) == len(rows), f'Duplicate {field}')
@@ -152,6 +159,7 @@ def run(mode: str, checksums: bool) -> int:
         for row in audits.values():
             kind, rid = row['rowId'].split(':', 1)
             canonical = {'claim': claims, 'bonus': bonuses, 'effect': effects, 'string': strings, 'policy': policies}[kind][rid]
+            require_current_review(row, canonical)
             if kind == 'claim':
                 source_ids = [e['sourceId'] for e in canonical['evidence']]
             elif kind == 'string':
@@ -174,6 +182,7 @@ def run(mode: str, checksums: bool) -> int:
     x = copy.deepcopy(data['strings']); x[0]['source']['url'] = 'not-a-url'; negatives.append(('strings', x))
     x = copy.deepcopy(data['bonusStars']); x['bonuses'][0]['tieRule']['value'] = 'all tied win'; negatives.append(('bonusStars', x))
     x = copy.deepcopy(data['claims']); x['claims'][0]['status'] = 'verified'; negatives.append(('claims', x))
+    x = copy.deepcopy(data['recheck']); x['rows'][0]['canonicalSha256'] = 'not-a-sha256'; negatives.append(('recheck', x))
     for name, invalid in negatives:
         require(not validators[name].is_valid(invalid), 'Deliberate schema defect escaped detection')
     caught = 0
@@ -183,7 +192,17 @@ def run(mode: str, checksums: bool) -> int:
         except (AssertionError, ValueError):
             caught += 1
     require(caught == 2, 'Deliberate duplicate escaped detection')
-    passed('NEGATIVE_REJECTION_CASES', len(negatives) + caught)
+    changed_id = next(iter(claims))
+    changed_claim = copy.deepcopy(claims[changed_id])
+    changed_claim['text'] += ' Deliberately changed after review.'
+    stale_caught = 0
+    try:
+        require_current_review(audits['claim:' + changed_id], changed_claim)
+    except AssertionError as error:
+        require('different data version' in str(error), 'Unexpected stale-review rejection')
+        stale_caught = 1
+    require(stale_caught == 1, 'Post-review data change escaped detection')
+    passed('NEGATIVE_REJECTION_CASES', len(negatives) + caught + stale_caught)
     files = [p for p in ROOT.rglob('*') if p.is_file() and '__pycache__' not in p.parts]
     workflow = ROOT.parent.parent / '.github/workflows/B05.yml'
     require(workflow.is_file(), 'Missing B05 delivery workflow')

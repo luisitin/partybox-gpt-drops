@@ -1,6 +1,6 @@
 # B05 — Party timeline and award rules
 
-**Research draft, not a verified implementation specification.** This document covers the requested phases, but preserves unresolved behavior instead of filling gaps from other Mario Party games. Read the status on each claim. Seven additional core facts were independently corroborated in the 2026-10-07 audit. `corroborated` means the retained core statement agrees across independent source lineages; it does not certify every related edge case. The strict acceptance gate fails.
+**Research draft, not a verified implementation specification.** This document covers the requested phases, but preserves unresolved behavior instead of filling gaps from other Mario Party games. Read the status on each claim. The continuation confirms four more scoped rules: the Classic pair/trio policy, ordinary Star price, retained Pro Homestretch rules, and Pro Lucky/Unlucky outcomes. `corroborated` means the retained core statement agrees across independent source lineages; it does not certify every related edge case. The strict acceptance gate fails.
 
 The ordered headings below are an editorial framework, not proof of a complete engine event queue. In particular, item/Buddy ordering, branch prompts, landing-effect priority and board phase hooks remain open. Source URLs, locators, excerpt references and conflicts are in [SOURCES.md](SOURCES.md), [claims.json](claims.json), and [CONFLICTS.md](CONFLICTS.md).
 
@@ -40,7 +40,7 @@ An exact pre-roll state machine has not been established. Do not ship a guessed 
 
 ### 3.2 Dice and movement
 
-Ordinary movement uses a Dice Block numbered 1–10. [TURN01](SOURCES.md#turn01) — corroborated; high confidence.
+Ordinary movement uses a Dice Block numbered 1–10. [TURN01](SOURCES.md#turn01) — corroborated; high confidence. Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open.
 
 Players take turns rolling and traversing the board to collect coins and obtain Stars. [TURN02](SOURCES.md#turn02) — corroborated; high confidence.
 
@@ -48,7 +48,7 @@ Players take turns rolling and traversing the board to collect coins and obtain 
 
 A Star purchase can be offered while passing its bearer; exact landing is not required. [TURN03](SOURCES.md#turn03) — single_source; medium confidence.
 
-The usual Star price is 20 coins; board and Buddy modifiers require separate handling. [TURN04](SOURCES.md#turn04) — single_source; medium confidence.
+The usual Star price is 20 coins; board and Buddy modifiers require separate handling. [TURN04](SOURCES.md#turn04) — corroborated; high confidence. Nintendo UK explicitly confirms the ordinary 20-coin exchange independently of Mario Wiki. This default does not assert uniform prices at every board, time, or Buddy interaction.
 
 A recruited Buddy can allow two Star purchases instead of one. [TURN05](SOURCES.md#turn05) — corroborated; high confidence.
 
@@ -72,19 +72,19 @@ Buddy effects include repeated landing-space interactions, including repeated ha
 
 ### 3.6 Landing and interruptions
 
-Blue adds 3 coins and Red removes 3 before Homestretch. [LAND01](SOURCES.md#land01) — corroborated; high confidence.
+Blue adds 3 coins and Red removes 3 before Homestretch. [LAND01](SOURCES.md#land01) — corroborated; high confidence. Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open.
 
-Event spaces invoke the board-specific event; Lucky and Unlucky spaces resolve their respective reward or penalty. [LAND02](SOURCES.md#land02) — corroborated; high confidence.
+Event spaces invoke the board-specific event; Lucky and Unlucky spaces resolve their respective reward or penalty. [LAND02](SOURCES.md#land02) — corroborated; high confidence. Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open.
 
 An Item Space can use a roulette or item minigame; no item is awarded on the final turn. [LAND03](SOURCES.md#land03) — single_source; medium confidence.
 
-Chance Time can transfer or exchange Stars or coins between selected players. [LAND04](SOURCES.md#land04) — corroborated; high confidence.
+Chance Time can transfer or exchange Stars or coins between selected players. [LAND04](SOURCES.md#land04) — corroborated; high confidence. Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open.
 
-VS spaces interrupt play for a pooled-coin minigame. [LAND05](SOURCES.md#land05) — corroborated; high confidence.
+VS spaces interrupt play for a pooled-coin minigame. [LAND05](SOURCES.md#land05) — corroborated; high confidence. Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open.
 
 Hidden Blocks can appear after landing on Blue or Red spaces in Party Rules. [LAND06](SOURCES.md#land06) — corroborated; high confidence. MPL explicitly confirms both colors. Its speculation about probabilities is excluded. Pro removal is separate in PRO02.
 
-A Bowser Space invokes Impostor Bowser; Party outcomes include coin or Star losses, redistribution, and position shuffling. [LAND07](SOURCES.md#land07) — corroborated; high confidence.
+A Bowser Space invokes Impostor Bowser; Party outcomes include coin or Star losses, redistribution, and position shuffling. [LAND07](SOURCES.md#land07) — corroborated; high confidence. Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open.
 
 Showdown, Item, Duel and VS interruptions are distinct from the ordinary round-ending minigame. [ROUND04](SOURCES.md#round04) — single_source; medium confidence. Exact interruption/resumption event priority remains unverified.
 
@@ -94,7 +94,7 @@ Showdown, Item, Duel and VS interruptions are distinct from the ordinary round-e
 
 After all four players have moved, a minigame concludes the round. [ROUND01](SOURCES.md#round01) — single_source; medium confidence.
 
-Vote offers three minigame choices; all four players vote. [ROUND02](SOURCES.md#round02) — single_source; medium confidence.
+Vote offers three minigame choices; all four players vote. [ROUND02](SOURCES.md#round02) — single_source; medium confidence. The independent player report confirms three choices and a random player-choice selection, but omits explicit four-voter cardinality. The complete row remains single_source; weights, tie effects and repeat suppression are not inferred.
 
 Bonus Minigames double the coins won. [ROUND03](SOURCES.md#round03) — single_source; medium confidence.
 
@@ -122,7 +122,7 @@ After the special event, the host gives two tips and board play resumes. [HOME05
 
 ### Reported special-event pool
 
-Each row below is triggered when that extra **Party Rules** Homestretch event is selected. All eight remain single-lineage reports, not independently verified exhaustive coverage. Five offered menu choices must not be confused with eight reported possible effects. No uniform probabilities are asserted.
+Each row below is triggered when that extra **Party Rules** Homestretch event is selected. Seven effects remain single-lineage; the +12/−12 effect has independent corroboration. This is not independently verified exhaustive coverage. Five offered menu choices must not be confused with eight reported possible effects. No uniform probabilities are asserted.
 
 | Effect | Reported result and exception | Claim | Confidence |
 |---|---|---|---|
@@ -182,7 +182,7 @@ The number of selected categories is not automatically the number of individual 
 
 With random bonuses enabled, 10/15/20/25 turns award two categories; 30 turns award three. [COUNT01](SOURCES.md#count01) — corroborated; high confidence.
 
-Classic below 30 turns uses Rich and Eventful; Classic at 30 additionally uses Minigame. [COUNT02](SOURCES.md#count02) — single_source; medium confidence. BONUS explicitly states the 30-turn exception; MNN omits it and MPL does not identify the particular pair below 30. Full combined policy lacks a second explicit statement. See C02.
+Classic below 30 turns uses Rich and Eventful; Classic at 30 additionally uses Minigame. [COUNT02](SOURCES.md#count02) — corroborated; medium confidence. Complete two/trio policy corroborated by the original comperko post 2 and the Jamboree-scoped Bonus Star article. Mario Party Legacy confirms the full three-category pool and two categories below 30. Coin/Happening in the player report denote Rich/Eventful; these are not promoted to exact displayed labels. The source is a player report, not a primary-frame capture.
 
 Off disables Bonus Stars. [COUNT03](SOURCES.md#count03) — corroborated; high confidence.
 
@@ -210,13 +210,13 @@ Players choose a starting item; shop stock is limited to two copies per item wit
 
 Pro removes Chance Time, Hidden Blocks and the extra Homestretch event. [PRO02](SOURCES.md#pro02) — corroborated; high confidence.
 
-Pro keeps Homestretch ±6 Blue/Red values and same-space duels. [PRO03](SOURCES.md#pro03) — single_source; medium confidence.
+Pro keeps Homestretch ±6 Blue/Red values and same-space duels. [PRO03](SOURCES.md#pro03) — corroborated; medium confidence. Ice_Dragon14 explicitly reports x2 Blue/Red and continuing duels in Pro. The 3-coin baseline and numeric 6 values are separately supplied by the game/host sources. Zero-coin duel wager, tie and event-priority edge cases remain unverified.
 
-Pro Lucky spaces offer 10 coins or Double Dice; Unlucky transfers 7 coins to last place. [PRO04](SOURCES.md#pro04) — single_source; medium confidence.
+Pro Lucky spaces offer 10 coins or Double Dice; Unlucky transfers 7 coins to last place. [PRO04](SOURCES.md#pro04) — corroborated; medium confidence. Both complete choices/transfers are explicit in Ice_Dragon14 post 10 and the Jamboree article. Final-turn alternatives and empty-inventory behavior remain open.
 
-Pro uses item roulette without item minigames. [PRO05](SOURCES.md#pro05) — single_source; medium confidence.
+Pro uses item roulette without item minigames. [PRO05](SOURCES.md#pro05) — single_source; medium confidence. The independent player report confirms absence of Item minigames, but not the precise roulette presentation. The complete row remains single_source.
 
-Pro marks future Star sites; a used site becomes eligible again after the other sites have been used. [PRO06](SOURCES.md#pro06) — single_source; medium confidence.
+Pro marks future Star sites; a used site becomes eligible again after the other sites have been used. [PRO06](SOURCES.md#pro06) — single_source; medium confidence. The independent player report confirms marked spawn sites but omits the used-site reset cycle. The complete row remains single_source.
 
 Pro permits Star wagers in duels. [PRO07](SOURCES.md#pro07) — corroborated; high confidence. The additional requirement that both participants have a Star is stated only by GAME and is not promoted to a dual-confirmed rule.
 

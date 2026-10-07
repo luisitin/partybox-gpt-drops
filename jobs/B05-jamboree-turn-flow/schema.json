@@ -821,12 +821,17 @@
             "conflict",
             "unverified"
           ]
+        },
+        "canonicalSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
         }
       },
       "required": [
         "rowId",
         "passA",
-        "passB"
+        "passB",
+        "canonicalSha256"
       ],
       "additionalProperties": false
     },
@@ -1018,6 +1023,10 @@
         "interpretation": {
           "type": "string",
           "minLength": 1
+        },
+        "accessedAtUtc": {
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
@@ -1030,7 +1039,8 @@
         "retrievedTextSha256",
         "retrievedCharacters",
         "quotations",
-        "interpretation"
+        "interpretation",
+        "accessedAtUtc"
       ],
       "additionalProperties": false
     },

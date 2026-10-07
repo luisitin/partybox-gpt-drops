@@ -10,9 +10,9 @@ The Jamboree Homestretch paragraph refers to five special events while its compl
 
 ## C02 — Classic category selection and the 30-turn exception
 
-Rows: COUNT02. Sources: BONUS, MNN, MPL, QUOTE (URLs in [SOURCES.md](SOURCES.md)).
+Rows: COUNT02. Sources: BONUS, MNN, MPL, QUOTE, GFAQCLASSIC (URLs in [SOURCES.md](SOURCES.md)).
 
-BONUS explicitly restricts the additional Minigame category to 30-turn Classic games. MNN abbreviates Classic to Rich/Eventful; MPL lists a three-category pool and two awards below 30 without identifying that pair. The latter two do not independently certify the entire combined policy. Retain the detailed report as single_source.
+BONUS restricts the additional Minigame category to 30-turn Classic games. MNN abbreviates Classic to Rich/Eventful; MPL lists a three-category pool and two awards below 30. The continuation recovered comperko’s original GameFAQs post 2, which explicitly names the lower-turn Coin/Happening pair and the 30-turn Minigame addition. This independently confirms the full normalized policy. Preserve the earlier omission history and informal-versus-exact-label distinction. Exact game-frame labels and random-mode selection algorithms remain separate gaps.
 
 ## C03 — Bonus ties and no-recipient cases
 
@@ -63,3 +63,7 @@ The B05 workflow checks all retained schemas, references, audits, quotation capt
 ## C11 — Tracker retrieval and exact names
 
 The fresh tracker text omitted edition icons and displayed aliased headings rather than exact Jamboree Bonus labels. Exact names now cite the Jamboree transcript's parenthetical award labels; the tracker remains one dependent Mario Wiki lineage. Its generic rolled-total/coin-spending descriptions do not establish Jamboree's counter behavior.
+
+## C12 — Partial Pro reports and untimed footage
+
+The new GameFAQs Pro enumeration confirms choices/transfers and the continued doubled-space/duel rules. It omits four-voter cardinality, roulette presentation and used-Star-site reset, so ROUND02, PRO05 and PRO06 remain single_source. An untimed stream-caption lead mentions the Misfortune criterion, but playable footage/timestamps were not accessible. The direct-video 403 is retained. The lead is not counted toward criterion or tie confirmation; see [RESEARCH-LEADS.md](RESEARCH-LEADS.md).
