@@ -27,7 +27,7 @@ into `results/draft.json`; the npm alias runs the same validator.
 
 | Current measured check | Cases | Passed | Failed | Seed | Exact command |
 | --- | ---: | ---: | ---: | --- | --- |
-| JSON Schema / character limit / ID / genre checks | 600 | 600 | 0 | not applicable | `npm run check:draft` |
+| JSON Schema / character limit / ID / genre checks | 700 | 700 | 0 | not applicable | `npm run check:draft` |
 | Complete independent batch record and input-hash match | 100 | 100 | 0 | not applicable | `npm run check:draft` |
 
 The independent-record check validates completeness and input identity; it does
@@ -37,6 +37,10 @@ Sixth measured draft milestone: 300 candidates per genre, 600/600 structural
 checks, maximum 90 characters. First-pass failures are retained alongside the
 stronger rows; unsupported context and generic celebrity substitutions score
 below 4 instead of entering the eligible pool automatically.
+
+Seventh measured draft milestone: 350 candidates per genre and 700/700
+structural checks, maximum 90 characters. New music references are fictional
+performance briefs; no invented real lyrics or alleged real incidents are used.
 
 At milestone 005, `npm run checksums` size-checked 36 files (largest 185,166
 bytes), and `sha256sum -c SHA256SUMS.txt` passed all 35 listed file hashes.
