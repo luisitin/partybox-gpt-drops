@@ -12,6 +12,7 @@ This is a research milestone, not the completed minigame specification. `catalog
 - `ASSUMPTIONS.md` and `NEXT.md`: scope decisions and exact resumption steps.
 - `NAME-RESEARCH.md`, `name-evidence.json`, `check-name-evidence.py` and its fresh check report: narrow English-name evidence and repeatable two-pass quotation checks.
 - `check-validator-rejections.py` and before/after reports: a valid baseline plus five actual false-acceptance regressions, all now rejected.
+- `gameplay-leads.json`, its schema and `GAMEPLAY-RESEARCH.md`: scoped single-wiki-family quotations from all 132 game articles, each retrieved twice. These are explicitly unverified research leads; no finished per-game values are claimed. Collection, verification and guard helpers retain provenance and prevent raw-capture overwrites.
 
 Validate the committed index without network requests, from the repository root:
 

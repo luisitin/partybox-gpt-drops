@@ -66,7 +66,7 @@ The Pull-Back Attack discrepancy remains unresolved. Do not promote either claim
 
 - Base count: wiki 112 and Legacy 112; equal counts do not resolve their two name differences.
 - Additions: wiki 20, Legacy 20 and Nintendo 20; the two independent twenty-name sets agree.
-- Combined: wiki explicitly states 132; Legacy’s disjoint base112 and TV20 lists total132. The prompt-required second complete wiki list page remains missing.
+- Combined: wiki explicitly states 132; Legacy’s disjoint base 112 and TV 20 lists total132. The prompt-required second complete wiki list page remains missing.
 - Wiki and Legacy both describe exclusions from TV Free Play using their own Koopathlon/Kaboom/Rhythm labels. These are documented source contexts; complete per-game availability and category interpretations still need review.
 - Nintendo’s mouse/HD-rumble/microphone count statement is marketing context, not independently sourced controls for every row.
 - Detailed gameplay fields, final JSON/CSV/schema and a complete per-game second pass remain unverified.

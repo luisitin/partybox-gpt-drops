@@ -226,3 +226,142 @@ These supplementary sources concern disputed English names only. They do not cre
 | destructoid-details | 2026-10-07T15:46:44.133643+00:00 | 2026-10-07T15:48:18Z | `db7f69dec603e1fa88a566ea94f64cd34b08eac21e5ca4d813f3611505e5d9da` | `db7f69dec603e1fa88a566ea94f64cd34b08eac21e5ca4d813f3611505e5d9da` |
 
 Destructoid guide author: Chris Penwell, published 2024-09-10. It links to its own hands-on coverage; this is independent editorial English-name evidence. Super Mario Wiki’s list and individual pages remain one source family. Nintendo’s Japanese title/category quotation is not English-name corroboration.
+
+## UNVERIFIED individual-game research leads
+
+Each linked wiki article was reopened in two fresh requests. This table gives one representative short gameplay quotation per article; the full quotation dictionaries, field references, source locators and pass hashes are in `gameplay-leads.json`. Every mechanics lead remains one source family and requires independent corroboration. This table does not claim complete per-fact two-source citation coverage.
+
+| Game | Single-family source URL | Representative short quote | Locator |
+| --- | --- | --- | --- |
+| Lumber Tumble | https://www.mariowiki.com/Lumber_Tumble | “Players attempt to stay on a maze-like bridge.” | #Overview |
+| Big-Top Quiz | https://www.mariowiki.com/Big-Top_Quiz | “Three Toads come onto a stage, rolling around on circus balls.” | #Overview |
+| Camera-Ready | https://www.mariowiki.com/Camera-Ready | “Each player is holding a camera in the middle of a plaza.” | #Overview |
+| Scare-ousel | https://www.mariowiki.com/Scare-ousel | “The minigame takes place on a large metal carousel at night.” | #Overview |
+| Snag the Flags | https://www.mariowiki.com/Snag_the_Flags | “A large metal sphere with flags around it appears up in space.” | #Overview |
+| Sandwiched | https://www.mariowiki.com/Sandwiched | “The minigame opens with the players inside a giant picnic basket, where they are surprised by a massive sandwich that falls from above.” | #Overview |
+| Hot Cross Blocks | https://www.mariowiki.com/Hot_Cross_Blocks | “The players need to select one of the four block patterns that appear on the right of the screen to traverse over lava.” | #Overview |
+| Light-Wave Battle | https://www.mariowiki.com/Light-Wave_Battle | “Each of the four players is placed on a circular device at the minigame's start.” | #Overview |
+| Thwomp the Difference | https://www.mariowiki.com/Thwomp_the_Difference | “In each of the five rounds, the players must watch the Thwomps carefully as they rise to reveal a picture of a fruit behind them.” | #Overview |
+| Cold Front | https://www.mariowiki.com/Cold_Front | “The opening shows players dodging the wind blown by the top middle Ty-foo.” | #Overview |
+| Hot-Hot Hop | https://www.mariowiki.com/Hot-Hot_Hop | “The players are placed on a metallic platform suspended over lava, with a Fire Bar in the center.” | #Overview |
+| Domination | https://www.mariowiki.com/Domination | “In-game description:” | #Super_Mario_Party_Jamboree_2 |
+| Three Throw | https://www.mariowiki.com/Three_Throw | “"Sink jump shots for points!” | #Super_Mario_Party_Jamboree_2 |
+| Granite Getaway | https://www.mariowiki.com/Granite_Getaway | “In-game description:” | #Super_Mario_Party_Jamboree_2 |
+| Tilt-a-Golf | https://www.mariowiki.com/Tilt-a-Golf | “Obstacles include sand traps and miniature mushrooms.” | #Overview |
+| Night Lights | https://www.mariowiki.com/Night_Lights | “The first player to light up the star at the top turns on the rest of the castle's lights and wins the minigame.” | #Overview |
+| Hammer It Home | https://www.mariowiki.com/Hammer_It_Home | “Each character stands in front of a board with nails in it.” | #Overview |
+| Twist and Sort | https://www.mariowiki.com/Twist_and_Sort | “Players must sort falling Cheep Cheeps and Bloopers into separate water tanks.” | #Overview |
+| Shuttle Scuttle | https://www.mariowiki.com/Shuttle_Scuttle | “Players race toward the top of a vertically based area full of stationary and moving Amps.” | #Overview |
+| Tiny Triathlon | https://www.mariowiki.com/Tiny_Triathlon | “This minigame features three sections.” | #Overview |
+| Pickax Dash | https://www.mariowiki.com/Pickax_Dash | “The players must shake their Joy-Con while holding or to clear tunnels through the blockage.” | #Overview |
+| Gate Key-pers | https://www.mariowiki.com/Gate_Key-pers | “The players stand in front of three locked gates, looking scared.” | #Overview |
+| Sled to the Edge | https://www.mariowiki.com/Sled_to_the_Edge | “The screen then pans to the players, who are also seen sledding.” | #Overview |
+| Rinks to Riches | https://www.mariowiki.com/Rinks_to_Riches | “Each player rides an ice skate across ice in a rink.” | #Overview |
+| Treetop Treasure | https://www.mariowiki.com/Treetop_Treasure | “Each player is placed on one of two seesaws, one on each end.” | #Overview |
+| Treasure Divers | https://www.mariowiki.com/Treasure_Divers | “"Salvage treasure chests from the ocean floor.” | #Super_Mario_Party_Jamboree_2 |
+| Platform Peril | https://www.mariowiki.com/Platform_Peril | “"Cross the platforms and collect coins.” | #Super_Mario_Party_Jamboree_2 |
+| Stamp Out! | https://www.mariowiki.com/Stamp_Out! | “In-game description:” | #Super_Mario_Party_Jamboree_2 |
+| Trample-line | https://www.mariowiki.com/Trample-line | “Players are in a pit with Ant Troopers walking on the walls and the floor, which cause them the bounce high in the air.” | #Overview |
+| Sunset Standoff | https://www.mariowiki.com/Sunset_Standoff | “During each round, a Bomber Bill vehicle is launched from a cannon towards the team, who is on a runway.” | #Overview |
+| Cookie Cutters | https://www.mariowiki.com/Cookie_Cutters | “The players need to cut cookies out of the cookie dough with different shapes.” | #Overview |
+| Unfriendly Flying Object | https://www.mariowiki.com/Unfriendly_Flying_Object | “The solo player's spaceship turns horizontally and can drop an unlimited number of spike platforms onto the ground, which come in varying lengths.” | #Overview |
+| Lost and Pound | https://www.mariowiki.com/Lost_and_Pound | “The solo player chooses which of four holes on a machine to hide in, then the team of three must choose where to strike.” | #Overview |
+| Arch Rivals | https://www.mariowiki.com/Arch_Rivals | “The solo player is on a moving platform that cannot be controlled.” | #Overview |
+| On-Again, Off-Again | https://www.mariowiki.com/On-Again,_Off-Again | “If the solo player manages to eliminate the team of three, they win.” | #Overview |
+| Broozer Bash | https://www.mariowiki.com/Broozer_Bash | “In the introduction, the solo player is raised into the arena in a large robotic Broozer as smoke is released.” | #Overview |
+| Cage Catch | https://www.mariowiki.com/Cage_Catch | “This minigame features a pool of water holding the solo player and three Cheep Cheeps.” | #Overview |
+| Income Stream | https://www.mariowiki.com/Income_Stream | “The solo player rides Plessie, which can bump other players away with great force.” | #Overview |
+| Blame It on the Crane | https://www.mariowiki.com/Blame_It_on_the_Crane | “"The solo player tries to catch the team side with the claw while the team side tries to avoid it.” | #Super_Mario_Party_Jamboree_2 |
+| Snow Brawl | https://www.mariowiki.com/Snow_Brawl | “In-game description:” | #Super_Mario_Party_Jamboree_2 |
+| Squeaky Shakedown | https://www.mariowiki.com/Squeaky_Shakedown | “The game starts with the solo player at the center of the arena, wielding a squeaky hammer.” | #Overview |
+| Rocky Rope Race | https://www.mariowiki.com/Rocky_Rope_Race | “The first team to reach the end wins.” | #Overview |
+| Pickin' Produce | https://www.mariowiki.com/Pickin%27_Produce | “Each team has three conveyor belts, which lead to a basket for a specific fruit, which are, from left to right, bananas, apples, and watermelons.” | #Overview |
+| Prime Cut | https://www.mariowiki.com/Prime_Cut | “Each steak has varying irregular shapes.” | #Overview |
+| Dorrie Pedal-Paddle | https://www.mariowiki.com/Dorrie_Pedal-Paddle | “Each of the two teams is sitting in a Dorrie-shaped paddle boat near a beach.” | #Overview |
+| Robo Arm Wrestle | https://www.mariowiki.com/Robo_Arm_Wrestle | “The team with more button presses causes the arms to rotate closer to the team's button.” | #Overview |
+| Shadow Play | https://www.mariowiki.com/Shadow_Play | “This minigame takes place in a simplistic city at night with Toads and Shy Guys in bleachers.” | #Overview |
+| Match Makers | https://www.mariowiki.com/Match_Makers | “The left team approaches a set of five cards before a Whomp drops from above behind a passageway, shocking the duo in the process.” | #Overview |
+| Defuse or Lose | https://www.mariowiki.com/Defuse_or_Lose | “In-game description:” | #Super_Mario_Party_Jamboree_2 |
+| Jump the Gun | https://www.mariowiki.com/Jump_the_Gun | “In-game description:” | #Super_Mario_Party_Jamboree_2 |
+| Two-Axis Taxi | https://www.mariowiki.com/Two-Axis_Taxi | “Players must work together with their teammate to drive a vehicle around the entire track.” | #Overview |
+| Tricky Turntable | https://www.mariowiki.com/Tricky_Turntable | “The maximum number of coins a team can get is 29.” | #Overview |
+| Coin Corral | https://www.mariowiki.com/Coin_Corral | “In a Western-themed place, treasure chests and Bob-ombs drop onto a circular conveyor belt.” | #Overview |
+| Fast Fishing | https://www.mariowiki.com/Fast_Fishing | “The objective of the minigame is to fish up the Cheep Cheep faster than the opponent.” | #Overview |
+| Slappy-Go-Round | https://www.mariowiki.com/Slappy-Go-Round | “The opens shows an arena with a large mechanical hand that swings to the left and then to the right before stopping.” | #Overview |
+| Stone-Eye Bowling | https://www.mariowiki.com/Stone-Eye_Bowling | “The minigame acts as a modified, shortened form of ten-pin bowling.” | #Overview |
+| Fuzzy Heights | https://www.mariowiki.com/Fuzzy_Heights | “Both players are placed on platforms on a track.” | #Overview |
+| All the Marbles | https://www.mariowiki.com/All_the_Marbles | “In the introduction, the camera scrolls through a cardboard track before meeting the two player characters at the end.” | #Overview |
+| Roll with It | https://www.mariowiki.com/Roll_with_It | “The player has 15 seconds to tilt a ball into one of four holes in a square board, earning one of five items.” | #Overview |
+| Prize Line | https://www.mariowiki.com/Prize_Line | “The gameplay is based on that of the decision-making game ghost leg, similarly to Pipe Maze from Mario Party.” | #Overview |
+| A Stone's Throw | https://www.mariowiki.com/A_Stone%27s_Throw | “The player has 10 seconds to press the button to launch a curling stone across a table with five spaces containing an item each.” | #Overview |
+| Flip 'n Find | https://www.mariowiki.com/Flip_%27n_Find | “The player is shown 10 cards displaying five items in pairs.” | #Overview |
+| Prize Drop | https://www.mariowiki.com/Prize_Drop | “Creepy Dice Block” | #Items |
+| Mario's Three-peat | https://www.mariowiki.com/Mario%27s_Three-peat | “The first stage is based on Leaf Leap, returning from Mario Party 5.” | #Overview |
+| Luigi Rescue Operation | https://www.mariowiki.com/Luigi_Rescue_Operation | “In the introduction, Luigi and the four players enter a haunted mansion.” | #Overview |
+| Peach's Day Off | https://www.mariowiki.com/Peach%27s_Day_Off | “In the introduction, the camera pans down to the city, where Peach is chatting with some Toads.” | #Overview |
+| Daisy's Field Day | https://www.mariowiki.com/Daisy%27s_Field_Day | “In the introduction, the four players walk up to an archway, where Daisy greets them and invites them to a big pier-themed obstacle course.” | #Overview |
+| Wario's Buzzer Beater | https://www.mariowiki.com/Wario%27s_Buzzer_Beater | “The camera zooms into Wario, then pans to each individual player, before zooming out to show all players and Wario.” | #Overview |
+| Waluigi's Pinball Arcade | https://www.mariowiki.com/Waluigi%27s_Pinball_Arcade_(minigame) | “In the introduction, Waluigi and all the players in an arcade with most of the lights turned off.” | #Overview |
+| Yoshi's Mountain Race | https://www.mariowiki.com/Yoshi%27s_Mountain_Race | “This minigame has four players racing against each other on blue, pink, yellow, and red Yoshis (respectively in player order) through a long mountain course.” | #Overview |
+| Rosalina's Radical Race | https://www.mariowiki.com/Rosalina%27s_Radical_Race | “This minigame has four players racing against each other on snowboards.” | #Overview |
+| DK's Konga Line | https://www.mariowiki.com/DK%27s_Konga_Line | “When the notes coincide exactly with the judgment circle, players must press either (or ), (or ), or both at the right time.” | #Overview |
+| Jr.'s Jauntlet | https://www.mariowiki.com/Jr.%27s_Jauntlet | “He laughs and pushes a couple buttons on a remote he is holding, causing the screen floor to turn on and surprise the players.” | #Overview |
+| Dragoneel Slayers | https://www.mariowiki.com/Dragoneel_Slayers | “The main goal of the minigame is to defeat Dragoneel while also scoring the most points to win.” | #Overview |
+| Mega Stingby Stompers | https://www.mariowiki.com/Mega_Stingby_Stompers | “In the intro, each of the players is standing in a forest.” | #Overview |
+| Mega Rocky Wrench Wreckers | https://www.mariowiki.com/Mega_Rocky_Wrench_Wreckers | “The players are on a ship with cannons and manholes in front of them.” | #Overview |
+| Boss Sumo Bro Blitzers | https://www.mariowiki.com/Boss_Sumo_Bro_Blitzers | “The minigame opens with Boss Sumo Bro descending on his cloud.” | #Overview |
+| Bowser Crashers | https://www.mariowiki.com/Bowser_Crashers | “In the intro, the players stand on their jets.” | #Overview |
+| Noggin Knock | https://www.mariowiki.com/Noggin_Knock | “Players can freely move around to spaces corresponding to each hole.” | #Overview |
+| Brick Breaker | https://www.mariowiki.com/Brick_Breaker | “In this minigame, the player's character carries a paddle in a similar manner to Mario in the Bonus Stage of Pinball.” | #Overview |
+| Gold 'n Brown | https://www.mariowiki.com/Gold_%27n_Brown | “In this minigame, the player has to pull baked goods out of a wood-fired oven using a peel.” | #Overview |
+| Spike's Gambit | https://www.mariowiki.com/Spike%27s_Gambit | “The player is placed at the bottom of a sand hill decorated with Spike-themed ruins.” | #Overview |
+| Down the Hatch | https://www.mariowiki.com/Down_the_Hatch | “The minigame is viewed from the inside of an arcade machine in which a conveyor belt sporadically carries prizes.” | #Overview |
+| Lane Change | https://www.mariowiki.com/Lane_Change | “The player controls a hovering vehicle on a five-lane track that continues indefinitely throughout the minigame.” | #Overview |
+| Coin Conveyor | https://www.mariowiki.com/Coin_Conveyor | “Pieces made up of coin blocks and Bob-ombs move along a conveyor belt.” | #Overview |
+| Which Door Has More? | https://www.mariowiki.com/Which_Door_Has_More%3F | “The area of play takes place in a building with many rooms and doors.” | #Overview |
+| Sky-High Cannons | https://www.mariowiki.com/Sky-High_Cannons | “The minigame takes place in the sky, with several cannons resting on cloud platforms and coins floating in mid-air.” | #Overview |
+| Burning Bridges | https://www.mariowiki.com/Burning_Bridges | “The camera focuses on the player character before zooming out to show the entire area.” | #Overview |
+| Castle Hassle | https://www.mariowiki.com/Castle_Hassle | “Impostor Bowser crashes through part of the floor from offscreen.” | #Overview |
+| Sleight of Shell | https://www.mariowiki.com/Sleight_of_Shell | “There are three chests, one of which Impostor Bowser fills with Bob-ombs.” | #Gameplay |
+| Fire Away | https://www.mariowiki.com/Fire_Away | “The camera pans over all of the player characters standing on individual platforms.” | #Overview |
+| The Floor Is Falling | https://www.mariowiki.com/The_Floor_Is_Falling | “All of the players are looking around.” | #Overview |
+| Juiceworks | https://www.mariowiki.com/Juiceworks | “All of the players must work together to make apple juice.” | #Overview |
+| Ball Volley | https://www.mariowiki.com/Ball_Volley | “In the introduction, the eight players are seen stretching between volleyball nets with Goombas, Koopa Troopas, and Shy Guys in the audience.” | #Overview |
+| Ballistic Bingo | https://www.mariowiki.com/Ballistic_Bingo | “In the introduction, the eight characters each fire a cannonball at a ship's grid, earning a horizontal bingo.” | #Overview |
+| Bath Bob-ombs | https://www.mariowiki.com/Bath_Bob-ombs | “In the introduction, all eight characters pass under a gate, which then closes behind them.” | #Overview |
+| Chomp Wash | https://www.mariowiki.com/Chomp_Wash | “The player controlling the hose must angle it to wash the paint off the Chain Chomp.” | #Overview |
+| Match! That! Item! | https://www.mariowiki.com/Match!_That!_Item! | “Players earn one point for each spinner stopped on the correct image, receiving an additional two points if all eight are matched.” | #Overview |
+| Trading Cards | https://www.mariowiki.com/Trading_Cards | “The objective of the minigame is to arrange all the picture pieces in numbered order before the time runs out.” | #Overview |
+| Ski-daddle | https://www.mariowiki.com/Ski-daddle | “All players must work together to match the rhythm and reach the goal before the time runs out.” | #Overview |
+| Look This Way | https://www.mariowiki.com/Look_This_Way | “All of the players must work together to face the correct direction—up, down, left, or right—as indicated by the arrow a spinner stops on.” | #Overview |
+| Puzzle Pandemonium | https://www.mariowiki.com/Puzzle_Pandemonium | “In the introduction, a filled-in puzzle is dropped in the screen as the players react in shock.” | #Overview |
+| Soup Troupe | https://www.mariowiki.com/Soup_Troupe | “The players, each with a huge knife, are on a giant wooden spoon over a pot of steaming soup.” | #Overview |
+| Parfait the Course | https://www.mariowiki.com/Parfait_the_Course | “The players, each with a huge spoon, are on a glacier in front of a giant parfait bowl.” | #Overview |
+| Whisk Cream | https://www.mariowiki.com/Whisk_Cream | “The players must work together for more points.” | #Overview |
+| Spread 'n Butter | https://www.mariowiki.com/Spread_%27n_Butter | “The players, each with a huge butterknife, must shake the Joy-Con with the right timing to gather butter, then spread it on bread.” | #Overview |
+| Short-Stack Chef | https://www.mariowiki.com/Short-Stack_Chef | “Players shake the Joy-Con, one after the other, as each of them flip pancakes on a frying pan over a stove.” | #Overview |
+| Burger Builders | https://www.mariowiki.com/Burger_Builders | “The players must shake the Joy-Con with the right timing to throw ingredients to assemble burgers.” | #Overview |
+| Footlong Frenzy | https://www.mariowiki.com/Footlong_Frenzy | “The players must shake the Joy-Con with the right timing to assemble footlong sandwiches.” | #Overview |
+| Copycat Curry | https://www.mariowiki.com/Copycat_Curry | “The players are on a giant table in front of a curry with a character on the stage, the default being Waluigi.” | #Overview |
+| En Barb! | https://www.mariowiki.com/En_Barb! | “The players, each with an épée, must shake the Joy-Con with the right timing to stab and gather barbecue ingredients.” | #Overview |
+| On the Beet | https://www.mariowiki.com/On_the_Beet | “The players, each with a shovel, must shake the Joy-Con with the right timing to harvest subterranean vegetables.” | #Overview |
+| Shell Hockey | https://www.mariowiki.com/Shell_Hockey | “When 20 seconds are left, four Koopa Troopas will spawn onto the board, which can eventually be knocked as additional shells to score points in.” | #Overview |
+| Bowser Filter | https://www.mariowiki.com/Bowser_Filter | “Suddenly, many emails depicted by letter symbols, including normal emails and emails with Bowser's face on them, show up on the screen, surprising the Toad.” | #Overview |
+| Stuffie Stacker | https://www.mariowiki.com/Stuffie_Stacker | “In the 2-vs.-2 version of the minigame, players from both teams must work together in order to create the tallest plushie tower.” | #Overview |
+| Pull-Back Attack | https://www.mariowiki.com/Pull-Back_Attack | “The players aim to reach their opposing team's goal on the opposite side, which scores them a point if they are successful.” | #Overview |
+| Domino Effect | https://www.mariowiki.com/Domino_Effect_(Super_Mario_Party_Jamboree) | “The teams get 22 dominoes in total to accomplish this task.” | #Overview |
+| Bob-omb Makeover | https://www.mariowiki.com/Bob-omb_Makeover | “After the minigame ends, the Bob-ombs detonate and the player that has the most paint on the Bob-omb earns a point.” | #Overview |
+| Toad-ally Electric Escape | https://www.mariowiki.com/Toad-ally_Electric_Escape | “In the 2-vs.-2 version of the minigame, the players must guide two Toads to the goal around a maze with electric walls powered by Amps.” | #Overview |
+| Ice and Easy | https://www.mariowiki.com/Ice_and_Easy | “On the final round, there is a single golden balloon that earns 3 points if popped.” | #Overview |
+| Bob-omb Toss | https://www.mariowiki.com/Bob-omb_Toss | “In the 2-vs.-2 version of the minigame, the teams must move the Bob-ombs on their hot-air balloon to the other team's hot-air balloon.” | #Overview |
+| Net Gains | https://www.mariowiki.com/Net_Gains | “Each Cheep Cheep caught in a net awards one point for that round; Gold Cheep Cheeps award three points instead.” | #Overview |
+| Get a Grip | https://www.mariowiki.com/Get_a_Grip | “In the 2-vs.-2 version of the minigame, the players on each team must work together to climb up the wall first.” | #Overview |
+| What's the Scoop? | https://www.mariowiki.com/What%27s_the_Scoop%3F | “After scooping an ice cream, it can be placed on the cone.” | #Overview |
+| Knock-Knock Match | https://www.mariowiki.com/Knock-Knock_Match | “In the 2-vs.-2 version of the minigame, players from both teams knock on two doors in attempts to find two matching characters.” | #Overview |
+| Goomba Scoopas | https://www.mariowiki.com/Goomba_Scoopas | “The team with the most amount of points after 30 seconds wins.” | #Overview |
+| Talking Flower Says | https://www.mariowiki.com/Talking_Flower_Says | “The players on both teams are assigned either a Mario Cap or a Luigi Cap.” | #Overview |
+| Hitting It Rich | https://www.mariowiki.com/Hitting_It_Rich | “The players on both teams must make a hitting motion on the camera to hit the ?” | #Overview |
+| Goombalancing Act | https://www.mariowiki.com/Goombalancing_Act | “If the player tilts too far on one side, the Goombas may fall off.” | #Overview |
+| Bowser Chicken | https://www.mariowiki.com/Bowser_Chicken | “The closer the car is towards Bowser, the more points that will be earned.” | #Overview |
+| Speak Up, Junior! | https://www.mariowiki.com/Speak_Up,_Junior! | “To do this, the players can emit sound on the microphone to move Bowser Jr. upwards, who is riding on his Junior Clown Car.” | #Overview |
+| Bowser Beats | https://www.mariowiki.com/Bowser_Beats | “The players must clap to the beats marked by their playable character's icon to earn points.” | #Overview |

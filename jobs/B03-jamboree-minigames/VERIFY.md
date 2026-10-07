@@ -126,7 +126,7 @@ curl --fail --silent --show-error --location --connect-timeout 10 --max-time 45 
 
 ## Per-row list-label second pass
 
-All132 wiki rows,112 Legacy base rows and20 Legacy TV rows were reparsed from later requests. The audit below is for list names/raw headings, never detailed mechanics.
+All 132 wiki rows,112 Legacy base rows and20 Legacy TV rows were reparsed from later requests. The audit below is for list names/raw headings, never detailed mechanics.
 
 | Row | Wiki name | Edition | Wiki name/category pass two | Legacy name/category pass two |
 | ---: | --- | --- | --- | --- |
@@ -268,7 +268,7 @@ Legacy-only base rows reopened: **Sandwhiched** (Free-for-All) and **Squeaky Sho
 ## UNVERIFIED
 
 - Prompt-required second complete wiki list page and its combined count. Legacy is an independent publisher, not a second wiki.
-- Final per-game format, time limit, controls, win/score/tie rules, coin/star rewards, two-sentence summaries, phoneFit scores and rationales for all132 rows. Preliminary category headings do not complete these fields.
+- Final per-game format, time limit, controls, win/score/tie rules, coin/star rewards, two-sentence summaries, phoneFit scores and rationales for all 132 rows. Preliminary category headings do not complete these fields.
 - Independent sources for every final gameplay fact, all final confidence assessments and the full per-game fact second pass.
 - Identity linkage for Sandwiched/Sandwhiched and Squeaky Shakedown/Squeaky Showdown; independent English Squeaky Shakedown corroboration. Sandwiched spelling itself now has wiki/Destructoid support.
 - Category interpretations and conflicting Pull-Back Attack four-player availability.
@@ -278,3 +278,76 @@ Legacy-only base rows reopened: **Sandwhiched** (Free-for-All) and **Squeaky Sho
 ## Integrity
 
 SHA256SUMS.txt covers every delivered file except itself. From this job folder run `sha256sum -c SHA256SUMS.txt`. Integrity checking does not establish research completeness.
+
+## Preliminary gameplay evidence checks
+
+All 132 actual game URLs returned article content in both fresh HTTPS passes. The following executed checks bind compact quotations to the retained raw captures. Every mechanics lead remains **UNVERIFIED, one source family**. Schema/evidence integrity does not complete final fields, independence, summaries or phoneFit.
+
+Exact capture-bound command from the repository root (original raw captures must still exist):
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research
+```
+
+| Test | Cases | Passed | Seed | Exact command |
+| --- | ---: | --- | --- | --- |
+| json_schema | 1 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
+| unique_index_rows | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
+| index_bound_rows | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
+| short_quotes | 987 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
+| field_reference_lists | 1056 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
+| source_pass_records | 264 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
+| https_url_tls_hash_byte_records | 264 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
+| raw_capture_hashes | 264 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
+| quotes_located_in_capture_sections | 1974 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
+| fresh_pass_extraction_comparisons | 264 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
+| ordered_pass_timestamps | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
+| returning_game_scoped_quotes | 84 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
+| coverage_totals | 8 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
+
+Actual validator output, scope and case counters (field coverage is in the full committed report):
+
+```json
+{
+  "passed": true,
+  "scope": "Preliminary evidence integrity only; final B03 research remains UNVERIFIED.",
+  "caseCounts": {
+    "json_schema": 1,
+    "unique_index_rows": 132,
+    "index_bound_rows": 132,
+    "short_quotes": 987,
+    "field_reference_lists": 1056,
+    "source_pass_records": 264,
+    "https_url_tls_hash_byte_records": 264,
+    "raw_capture_hashes": 264,
+    "quotes_located_in_capture_sections": 1974,
+    "fresh_pass_extraction_comparisons": 264,
+    "ordered_pass_timestamps": 132,
+    "returning_game_scoped_quotes": 84,
+    "coverage_totals": 8
+  }
+}
+```
+
+Exact guard-suite command:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/test-gameplay-evidence.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --snapshots /workspace/b03-gameplay-research
+```
+
+The unchanged compact baseline and a new external output directory validate; **18** deliberately invalid cases reject. The raw-capture preflight validates **264** records. Actual `networkRequests` is **0**. This report is `gameplay-guard-validation-results.json`. Without `--snapshots`, sixteen invalid cases execute and raw-capture cases do not execute. They must not be counted as run.
+
+| Candidate field | Rows with a lead | TV rows with a lead |
+| --- | ---: | ---: |
+| controls | 132 | 20 |
+| winRules | 82 | 19 |
+| scoreRules | 57 | 11 |
+| timeLimit | 30 | 5 |
+| tieRules | 22 | 4 |
+| coinReward | 10 | 1 |
+| starReward | 0 | 0 |
+| gameplay | 132 | 20 |
+
+Quoted timer mentions can describe a round or component; coin mentions can describe an internal game/mode payout. They do not establish a whole-game timer or a universal Party-mode award. No star-reward lead exists; absent evidence is not a zero reward. `GAMEPLAY-RESEARCH.md` documents ten returning-game scope exclusions and all remaining limitations.
+
+The full original retrieval commands and raw webpages are outside the checkout. To make a new independent retrieval run, use `collect-gameplay.py` with a new external output directory as shown in the research notes. To validate committed metadata/schema alone, omit `--snapshots`; that does not execute raw-byte/location comparisons.
