@@ -8,7 +8,7 @@ receipts and raw stdout are retained under `reports/historical/` because
 integration checks were improved after the earlier complete run.
 
 | Test | Cases per seed | Seeds | Exact command run by npm test | Observed result | Evidence |
-|---|---:|---|---|------|
+|---|---:|---|---|---|---|
 | Strict production and independent TypeScript | all configured strict flags | deterministic build | `node node_modules/typescript/bin/tsc -p tsconfig.json`; explicit strict compiler commands in `run.mjs` | PASS | full stdout and source hashes |
 | Original primary seal | 19 files, original source replayed from snapshot | 1, 2, 3 invocation | `checkSeal` in `node run.mjs` | PASS | unchanged original manifest |
 | Independent original seal | 13 files | 1, 2, 3 invocation | `checkSeal` in `node run.mjs` | PASS | unchanged original manifest |
