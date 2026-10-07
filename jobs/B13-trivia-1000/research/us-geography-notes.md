@@ -1,0 +1,7 @@
+# US geography authoring notes
+
+100 real initial rows: 50 state capitals with postal-code context; 50 formation years with exact-date context. The thirteen original states explicitly ask about ratification, while the other37 ask about admission, following the CRS scope note. No guessed effective date or modern population estimate is used. North/South Dakota’s simultaneous admissions are not given a historically certain signing order. Minnesota’s Saint Paul/St. Paul variants are normalized in the answer, with original source quotes retained.
+
+Actual HTTP200 body captures: Wikimedia state reference, State Symbols USA independent capitals/postal table, and Congress.gov CRS historical reference. All200 row citation quotes are contiguous normalized source substrings of25words or less. Sources receipts and hashes are delivered; full bodies stay in ignored.work. A guessed State Symbols statehood URL actually404ed and is excluded. Infoplease states overview was retrieved but does not supply the row-level facts and is excluded.
+
+UNVERIFIED: no fresh adversarial reviewer has checked these rows yet; second full reopening is pending. Structural schema and editorial balance pass, but repeated capital/year templates are a known diversity weakness and may produce near-duplicate flags. Before final acceptance, replace weak repetitive items with independently supported physical geography/park facts and rerun every changed row’s review. This100-row initial milestone is not a completed research gate.
