@@ -11,6 +11,11 @@ of the required count or editorial work.
 Second measured draft milestone: 100 fill candidates and 100 most-likely
 candidates, 200/200 JSON Schema and structural checks, maximum 86 characters.
 
+Third measured draft milestone: 150 fill candidates and 150 most-likely
+candidates, 300/300 JSON Schema and structural checks, maximum 87 characters.
+Batch 003 applies the independent reviewer's feedback to concrete banking,
+insurance, and adult drinking premises rather than generic product replacements.
+
 Independent batch 001 grading was performed by the root coordinator without
 opening first-pass scores or reasons. All 100 candidates have specific second
 grades and reasons in `grading/pass2-001.json`; 65 received grade 4 or 5. Failed
