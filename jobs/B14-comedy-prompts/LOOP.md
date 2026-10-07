@@ -72,3 +72,5 @@
     Independent review remains partial; complete counts are recorded verbatim.
 26. Authored 100 fresh actress and entertainer scenarios with individual reasons; integrated the complete independent batch 025 review without changing scores. All 2,600 rows pass structural checks.
     Independent review remains partial; complete counts are recorded verbatim.
+27. Authored 100 fresh music, funeral-performance and estate scenarios with individual first-pass reasons; source wording remains separate from the independent review queue. All 2,700 rows pass structural checks.
+    Independent review remains partial; complete counts are recorded verbatim.
