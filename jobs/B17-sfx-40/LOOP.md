@@ -25,3 +25,11 @@ three seeds, and all listed deliverable hashes are checked under every seed.
 The full rerun passed again: 120 audio, 30 EBU and 75 mutation checks. Remaining
 improvements are presentation and subjective sound selection; original measured
 acceptance thresholds remain satisfied. Final hosted commit verification pending.
+
+Final provenance improvement: every hashed deliverable is checked for integrity,
+complete coverage and the 30 MB filecap. A previous success summary is removed at
+suite startup, and a successful summary fingerprints all 15 code/config files.
+Evidence recording rejects changed source hashes. Full pinned-node rerun passed
+120 audio/30 EBU/75 mutation checks again. Calibration documentation clarified that
+case 19's sample peak is below fullscale despite its reconstructed +3 dBTP peak;
+no synthesis or meter behavior changed. Final exact-head hosted inspection follows.

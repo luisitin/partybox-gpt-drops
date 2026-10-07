@@ -100,7 +100,10 @@ the EBU table. Per-channel maximum true peak retains the table's expectation.
 
 Cases 15–19 are one second long, with 10 ms linear fade-in/out; the public
 definition leaves their duration unspecified. Case 19 remains floating point
-because amplitude 1.41 cannot be faithfully stored in normalized PCM16.
+to avoid quantizing the constructed calibration fixture. Its continuous tone
+amplitude is 1.41, but the 45° sampled sine has peak 1.41/√2 ≈0.997, so these
+particular PCM samples fit normalized PCM16 even though its true peak exceeds
+0 dBTP. No clipping-based justification is claimed.
 
 ## Unverified scope
 

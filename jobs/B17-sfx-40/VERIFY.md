@@ -7,13 +7,16 @@ CI installs the development compiler then runs exactly `npm test`.
 Machine-readable evidence: reports/seed1.json, seed2.json, seed3.json,
 mutations.json and summary.json. Each reports both implementations and exact
 external FFmpeg summaries. A failed suite exits nonzero and does not create a
-passing summary.
+passing summary. The suite removes a previous summary at startup, and the
+successful summary fingerprints all 15 code/configuration files; recording
+rejects a changed source fingerprint. SHA256 coverage includes every deliverable
+and checks the 30 MB per-file cap.
 
 ## Per-seed suites
 
 | Test name | Cases per seed | Seeds | Passed | Exact command |
 | --- | ---: | --- | --- | --- |
-| sha256Files | 105 | 1, 2, 3 | all | `npm test` |
+| sha256Files | 111 | 1, 2, 3 | all | `npm test` |
 | independentRaw | 40 | 1, 2, 3 | all | `npm test` |
 | independentMaster | 40 | 1, 2, 3 | all | `npm test` |
 | independentFullPcm | 40 | 1, 2, 3 | all | `npm test` |
@@ -41,12 +44,12 @@ passing summary.
 Each seed compares 1649280 raw samples and
 1649280 independently mastered samples.
 The quantized fade check compares 19200 samples
-per seed (240 at each end ×40 sounds). The entire independently reconstructed
+per seed (240 at each end × 40 sounds). The entire independently reconstructed
 PCM pipeline also matches every WAV byte, in addition to these edge checks.
 
 ## Measured audio
 
-120 cases =40 sounds ×3 seeds, each decoded from the final PCM16 WAV:
+120 cases = 40 sounds × 3 seeds, each decoded from the final PCM16 WAV:
 
 | Quantity | Observed range / maximum | Required |
 | --- | --- | --- |
@@ -67,10 +70,10 @@ plus 40 manifest hashes are checked under every seed.
 ## EBU Tech 3341 calibration scope
 
 Ten rebuilt **mono adaptations** of official Table 1 cases 1–5 and 15–19 are run
-under each seed:30/30 passes. Each official stereo integrated target is reduced
+under each seed: 30/30 passes. Each official stereo integrated target is reduced
 by 10 log10(2)=3.01029995664 LU for one channel; true-peak targets are unchanged.
 Both meters agree to 2e−8 on every numeric field; expected integrated tolerances
-are ±0.1 LU and true-peak tolerances are  +0.2/−0.4 dB.
+are ±0.1 LU and true-peak tolerances are +0.2/−0.4 dB.
 
 | Rebuilt case | Seed 1 production result | Expected acceptance | Seeds 1/2/3 |
 | --- | --- | --- | --- |
@@ -88,7 +91,9 @@ are ±0.1 LU and true-peak tolerances are  +0.2/−0.4 dB.
 The meter resets filters on every call. The 120 deliverable comparisons use
 complete 400 ms blocks; incomplete trailing blocks are excluded. General inputs
 shorter than 400 ms are explicitly zero-padded by project convention and are not
-present in delivered audio. Case 19 stays floating point to avoid PCM clipping.
+present in delivered audio. Case 19 stays floating point to avoid quantizing the synthetic calibration input.
+Its continuous amplitude is 1.41; the 45° sampled sine has peak 1.41/√2≈0.997,
+so those particular samples can fit PCM16 despite a true peak above 0 dBTP.
 Sources/recipes are in ORACLE.md and SOURCES.md.
 
 ## 25 isolated source mutations
@@ -141,7 +146,7 @@ ORACLE_AMENDMENTS.md. Source was never viewed by the reference author.
 
 The first complete hosted run passed:
 https://github.com/luisitin/partybox-gpt-drops/actions/runs/37634170473
-(code revision 28dd7ba; full logs were inspected, all3 seeds and 25 mutations present).
+(code revision 28dd7ba; full logs were inspected, all 3 seeds and 25 mutations present).
 The PR description links the final successful hosted run after publication.
 The workflow has read-only contents permission, no secrets, a 30 minute timeout,
 and only actions/* pinned to major versions.
@@ -153,6 +158,6 @@ and only actions/* pinned to major versions.
   are outside this mono integrated/4× meter's verified scope. Passing the ten
   rebuilt adaptations does not establish certification of the complete standard.
 - Subjective audition for taste and perceived game feel has not been performed.
-  The quantitative5 ms taper checks do not assert universal psychoacoustic
+  The quantitative 5 ms taper checks do not assert universal psychoacoustic
   inaudibility for every listener or playback system.
 - Cross-engine byte identity beyond the pinned Node/V8 environment is not claimed.

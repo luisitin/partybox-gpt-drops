@@ -56,3 +56,13 @@ The second amended seal is:
 2c7397344bb67fbb74134229eb86254d97628fa9d961d8d113d214f89822a658  reference.ts
 51e4c7460b42b2d445ad7111a07a58d1e63987f84b7773d66bf69845e890baba  ORACLE.md
 ```
+
+## Documentation clarification after verification
+
+The case 19 floating-point explanation was corrected without changing source: at
+fs/4 and 45° phase its discrete sample peak is 1.41/√2≈0.997, so PCM16 sample
+clipping would not occur. Floating point is retained to avoid quantizing the
+constructed calibration signal; its true peak is about +3 dBTP. Current ORACLE.md
+SHA256: `5dc58797daa7ee4ab56265eb532f9ce9a4f15fcf78337b7388066c264acc131d`.
+Current reference.ts remains unchanged at
+`2c7397344bb67fbb74134229eb86254d97628fa9d961d8d113d214f89822a658`.

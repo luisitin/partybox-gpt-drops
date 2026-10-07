@@ -90,10 +90,11 @@ Tests independently reconstruct the entire mastering operation and compare both
 PCM edges within one quantization step. This proves the prescribed taper; an
 extra global-peak envelope diagnostic is documented separately in ORACLE.md.
 
-The standards calibration is a reproducible **mono adaptation** of EBU Tech3341
+The standards calibration is a reproducible **mono adaptation** of EBU Tech 3341
 cases 1–5 and 15–19. It checks the published tolerances with the stereo loudness
-target reduced by 3.0103 LU; case19 remains floating point because it exceeds
-PCM16 full scale. It is not full EBU Mode certification. ORACLE.md,
+target reduced by 3.0103 LU; case 19 remains floating point to avoid quantizing
+the constructed calibration signal. Its sampled values fit PCM16 even though
+its interpolated true peak exceeds 0 dBTP. It is not full EBU Mode certification. ORACLE.md,
 ORACLE_AMENDMENTS.md and SOURCES.md state isolation, sources and scope.
 
 Spectrograms use a 1024-sample Hann FFT, 256 time columns, logarithmic frequency
