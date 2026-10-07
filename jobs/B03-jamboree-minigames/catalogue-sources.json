@@ -4277,6 +4277,12 @@
           "text": "scoop ice cream and place it on a cone",
           "locator": "Game description: What's the Scoop?",
           "scope": "Fact context must be read at the locator; short clip is not an exhaustive rule."
+        },
+        {
+          "id": "SR_MOUSEQ006",
+          "text": "pulling back and then sliding forward",
+          "locator": "Ice and Easy / Pull Back, Release, And That's It",
+          "scope": "Original hands-on description of the sliding action; not copied Nintendo instructions."
         }
       ],
       "passes": [
@@ -4292,7 +4298,8 @@
             "SR_MOUSEQ002",
             "SR_MOUSEQ003",
             "SR_MOUSEQ004",
-            "SR_MOUSEQ005"
+            "SR_MOUSEQ005",
+            "SR_MOUSEQ006"
           ]
         },
         {
@@ -4307,11 +4314,12 @@
             "SR_MOUSEQ002",
             "SR_MOUSEQ003",
             "SR_MOUSEQ004",
-            "SR_MOUSEQ005"
+            "SR_MOUSEQ005",
+            "SR_MOUSEQ006"
           ]
         }
       ],
-      "uniqueQuotedWords": 35
+      "uniqueQuotedWords": 41
     },
     {
       "id": "BB_TV",
@@ -4472,6 +4480,110 @@
         }
       ],
       "uniqueQuotedWords": 4
+    },
+    {
+      "id": "TG_TV",
+      "url": "https://www.thegamer.com/super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv-review/",
+      "publisherLineage": "valnet",
+      "kind": "publisher_article",
+      "title": "Super Mario Party Jamboree For Nintendo Switch 2 Is The Perfect Game To Unite The Whole Family",
+      "quotes": [
+        {
+          "id": "TG_TVQ001",
+          "text": "use the mouse controls to net fish in Net Gains",
+          "locator": "The Party Just Got Even Bigger And Better / Get a Grip paragraph",
+          "scope": "Original hands-on action report; only mouse net fishing is used, not complete scores/timers/controls."
+        },
+        {
+          "id": "TG_TVQ002",
+          "text": "corral goombas in Goomba Scoopas",
+          "locator": "The Party Just Got Even Bigger And Better / Get a Grip paragraph",
+          "scope": "Original hands-on action report; only corralling Goombas is used, not complete scores/timers/controls."
+        }
+      ],
+      "passes": [
+        {
+          "pass": "A",
+          "retrieval": "Fresh curl HTTPS request with inherited proxy, CA trust and TLS verification; retained bytes checked on replay",
+          "observedAtUTC": "2026-10-07T18:42:26.795785+00:00",
+          "requestOrder": 1,
+          "bodySha256": "2ba1cf3d1788fdbe1f9e9de62e9fea094643c360d7547a2a1878bc9b093bdbec",
+          "bodyBytes": 353373,
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "textSha256": "697093ae37d914474dbdc3c55514005cd97546d8ea2d7c2e37cb7923fc050c25",
+          "textCharacters": 425,
+          "recoveredQuoteIds": [
+            "TG_TVQ001",
+            "TG_TVQ002"
+          ]
+        },
+        {
+          "pass": "B",
+          "retrieval": "Fresh curl HTTPS request with inherited proxy, CA trust and TLS verification; retained bytes checked on replay",
+          "observedAtUTC": "2026-10-07T18:42:27.824079+00:00",
+          "requestOrder": 2,
+          "bodySha256": "9f1897853dc7ede7f0e12f190d73e6c1c295ecd30f46c92366c993b25ac462c4",
+          "bodyBytes": 352675,
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "textSha256": "697093ae37d914474dbdc3c55514005cd97546d8ea2d7c2e37cb7923fc050c25",
+          "textCharacters": 425,
+          "recoveredQuoteIds": [
+            "TG_TVQ001",
+            "TG_TVQ002"
+          ]
+        }
+      ],
+      "uniqueQuotedWords": 15
+    },
+    {
+      "id": "GNC_TV",
+      "url": "https://www.gamenchickgaming.com/post/super-mario-party-jamboree-jamboree-tv-review-nintendo-switch-2",
+      "publisherLineage": "gamenchick",
+      "kind": "publisher_article",
+      "title": "Super Mario Party Jamboree + Jamboree TV REVIEW — GameNChick",
+      "quotes": [
+        {
+          "id": "GNC_TVQ001",
+          "text": "a Knock Knock Match mini game that has you and your partner match characters behind a door",
+          "locator": "Tag Team / Mouse Mode minigames paragraph",
+          "scope": "Original released-game hands-on description; only partner matching of characters behind doors is used, not timings, payouts or complete bindings."
+        }
+      ],
+      "passes": [
+        {
+          "pass": "A",
+          "retrieval": "Fresh curl HTTPS request with inherited proxy, CA trust and TLS verification",
+          "observedAtUTC": "2026-10-07T18:46:00.952947+00:00",
+          "requestOrder": 1,
+          "bodySha256": "e969e0f643d7763043eaf9b6a42d2c08567a2114768da94e73f51e645fc377fa",
+          "bodyBytes": 1487350,
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "textSha256": "91301ab9e07a86984f8b9acd2d5e4d2e1cdc81c8211ee3bacdc5553e019a4215",
+          "textCharacters": 2000,
+          "recoveredQuoteIds": [
+            "GNC_TVQ001"
+          ]
+        },
+        {
+          "pass": "B",
+          "retrieval": "Fresh curl HTTPS request with inherited proxy, CA trust and TLS verification",
+          "observedAtUTC": "2026-10-07T18:46:01.592433+00:00",
+          "requestOrder": 2,
+          "bodySha256": "e969e0f643d7763043eaf9b6a42d2c08567a2114768da94e73f51e645fc377fa",
+          "bodyBytes": 1487350,
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "textSha256": "91301ab9e07a86984f8b9acd2d5e4d2e1cdc81c8211ee3bacdc5553e019a4215",
+          "textCharacters": 2000,
+          "recoveredQuoteIds": [
+            "GNC_TVQ001"
+          ]
+        }
+      ],
+      "uniqueQuotedWords": 17
     },
     {
       "id": "W001",
@@ -7648,6 +7760,12 @@
           "text": "During the course of the minigame, coins drop into the rink, adding one coin to the player's coin count if",
           "locator": "Overview/gameplay rule context for scoreRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W024_reward_1",
+          "text": "all collected coins being rewarded to their respective player upon the minigame's end",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -7670,7 +7788,8 @@
             "W024_q8",
             "W024Q009",
             "W024Q010",
-            "W024Q011"
+            "W024Q011",
+            "W024_reward_1"
           ],
           "fullArticleScopeSha256": "4fe04c0e98e71cc4a90f885438f193d963dba0e4cf5bb106dda53bf657b05d4d"
         },
@@ -7693,12 +7812,13 @@
             "W024_q8",
             "W024Q009",
             "W024Q010",
-            "W024Q011"
+            "W024Q011",
+            "W024_reward_1"
           ],
           "fullArticleScopeSha256": "4fe04c0e98e71cc4a90f885438f193d963dba0e4cf5bb106dda53bf657b05d4d"
         }
       ],
-      "uniqueQuotedWords": 128
+      "uniqueQuotedWords": 141
     },
     {
       "id": "W025",
@@ -7799,6 +7919,12 @@
           "text": "During the course of the minigame, coins and Red Coins spawn in the air, adding one or three coins, respectively,",
           "locator": "Overview/gameplay rule context for scoreRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W025_reward_1",
+          "text": "all collected coins being rewarded to their respective players upon the minigame's end",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -7822,7 +7948,8 @@
             "W025_q9",
             "W025Q010",
             "W025Q011",
-            "W025Q012"
+            "W025Q012",
+            "W025_reward_1"
           ],
           "fullArticleScopeSha256": "39dae26970c422389fe8c998d891eda6ce91162898e6308f09e1466997c54736"
         },
@@ -7846,12 +7973,13 @@
             "W025_q9",
             "W025Q010",
             "W025Q011",
-            "W025Q012"
+            "W025Q012",
+            "W025_reward_1"
           ],
           "fullArticleScopeSha256": "39dae26970c422389fe8c998d891eda6ce91162898e6308f09e1466997c54736"
         }
       ],
-      "uniqueQuotedWords": 128
+      "uniqueQuotedWords": 141
     },
     {
       "id": "W026",
@@ -9398,6 +9526,12 @@
           "text": "Like other coin-collecting minigames, Income Stream does not have a victor in the Mario Party mode — instead, the objective",
           "locator": "Overview/gameplay rule context for winRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W038_reward_1",
+          "text": "all collected coins being rewarded to their respective players upon the minigame's end",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -9416,7 +9550,8 @@
             "W038_q4",
             "W038_q5",
             "W038_q6",
-            "W038Q007"
+            "W038Q007",
+            "W038_reward_1"
           ],
           "fullArticleScopeSha256": "700e7e68d0107c60c91bb68ef57876c6f61b741f86f625af58b70fc7fd36e899"
         },
@@ -9435,12 +9570,13 @@
             "W038_q4",
             "W038_q5",
             "W038_q6",
-            "W038Q007"
+            "W038Q007",
+            "W038_reward_1"
           ],
           "fullArticleScopeSha256": "700e7e68d0107c60c91bb68ef57876c6f61b741f86f625af58b70fc7fd36e899"
         }
       ],
-      "uniqueQuotedWords": 104
+      "uniqueQuotedWords": 117
     },
     {
       "id": "W039",
@@ -9755,6 +9891,18 @@
           "text": "Each team player then gets seven coins, which the solo player can steal by hitting them.",
           "locator": "Overview/gameplay rule context for scoreRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W041_reward_1",
+          "text": "The rivals all receive the number of coins they have remaining.",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
+        },
+        {
+          "id": "W041_reward_2",
+          "text": "The team side keeps their total number of coins remaining.",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -9776,7 +9924,9 @@
             "W041_q7",
             "W041_q8",
             "W041Q009",
-            "W041Q010"
+            "W041Q010",
+            "W041_reward_1",
+            "W041_reward_2"
           ],
           "fullArticleScopeSha256": "ec6e7a4daab0730fc10d85e172a7a7d2d40529e124d7fdba60f2d20fce623f6e"
         },
@@ -9798,12 +9948,14 @@
             "W041_q7",
             "W041_q8",
             "W041Q009",
-            "W041Q010"
+            "W041Q010",
+            "W041_reward_1",
+            "W041_reward_2"
           ],
           "fullArticleScopeSha256": "ec6e7a4daab0730fc10d85e172a7a7d2d40529e124d7fdba60f2d20fce623f6e"
         }
       ],
-      "uniqueQuotedWords": 85
+      "uniqueQuotedWords": 106
     },
     {
       "id": "W042",
@@ -12124,6 +12276,18 @@
           "text": "15 seconds",
           "locator": "Infobox / Time limit",
           "scope": "Reported label; mode, per-round scope and Endless cap must not be inferred beyond this text."
+        },
+        {
+          "id": "W059_reward_1",
+          "text": "Rolling the ball into one of the holes earns the player the item displayed inside.",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
+        },
+        {
+          "id": "W059_reward_2",
+          "text": "the player automatically receives the item on the raised section.",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -12146,7 +12310,9 @@
             "W059_q8",
             "W059_q9",
             "W059_q10",
-            "W059Q011"
+            "W059Q011",
+            "W059_reward_1",
+            "W059_reward_2"
           ],
           "fullArticleScopeSha256": "d59de52b32ec92e0c27d2bbf6684958046d6f7e6fe9cf6d89009c128d31141d6"
         },
@@ -12169,12 +12335,14 @@
             "W059_q8",
             "W059_q9",
             "W059_q10",
-            "W059Q011"
+            "W059Q011",
+            "W059_reward_1",
+            "W059_reward_2"
           ],
           "fullArticleScopeSha256": "d59de52b32ec92e0c27d2bbf6684958046d6f7e6fe9cf6d89009c128d31141d6"
         }
       ],
-      "uniqueQuotedWords": 85
+      "uniqueQuotedWords": 95
     },
     {
       "id": "W060",
@@ -12296,6 +12464,12 @@
           "text": "30 seconds",
           "locator": "Infobox / Time limit",
           "scope": "Reported label; mode, per-round scope and Endless cap must not be inferred beyond this text."
+        },
+        {
+          "id": "W060_reward_1",
+          "text": "Depending on how the wheel is lined up, the player earns one of five randomly chosen items.",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -12320,7 +12494,8 @@
             "W060_q10",
             "W060_q11",
             "W060_q12",
-            "W060Q013"
+            "W060Q013",
+            "W060_reward_1"
           ],
           "fullArticleScopeSha256": "66eeacc7caf7aa3ba4eafc6e1612ef148d351f36bda651935a7a9deba995cbd4"
         },
@@ -12345,7 +12520,8 @@
             "W060_q10",
             "W060_q11",
             "W060_q12",
-            "W060Q013"
+            "W060Q013",
+            "W060_reward_1"
           ],
           "fullArticleScopeSha256": "66eeacc7caf7aa3ba4eafc6e1612ef148d351f36bda651935a7a9deba995cbd4"
         }
@@ -12459,6 +12635,12 @@
           "text": "10 seconds",
           "locator": "Infobox / Time limit",
           "scope": "Reported label; mode, per-round scope and Endless cap must not be inferred beyond this text."
+        },
+        {
+          "id": "W061_reward_1",
+          "text": "the stone lands on one of the spaces, which awards the displayed item to the player.",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -12482,7 +12664,8 @@
             "W061_q9",
             "W061_q10",
             "W061_q11",
-            "W061Q012"
+            "W061Q012",
+            "W061_reward_1"
           ],
           "fullArticleScopeSha256": "660df94b0b660baf5c594947eee504f902b1c1f3dbce906791e5d373a378528e"
         },
@@ -12506,12 +12689,13 @@
             "W061_q9",
             "W061_q10",
             "W061_q11",
-            "W061Q012"
+            "W061Q012",
+            "W061_reward_1"
           ],
           "fullArticleScopeSha256": "660df94b0b660baf5c594947eee504f902b1c1f3dbce906791e5d373a378528e"
         }
       ],
-      "uniqueQuotedWords": 65
+      "uniqueQuotedWords": 81
     },
     {
       "id": "W062",
@@ -12635,6 +12819,18 @@
           "text": "30 seconds to choose cards",
           "locator": "Infobox / Time limit",
           "scope": "Reported label; mode, per-round scope and Endless cap must not be inferred beyond this text."
+        },
+        {
+          "id": "W062_reward_1",
+          "text": "If a pair is found, the paired item is awarded.",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
+        },
+        {
+          "id": "W062_reward_2",
+          "text": "the player automatically receives a randomly chosen item.",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -12661,7 +12857,9 @@
             "W062_q12",
             "W062_q13",
             "W062_q14",
-            "W062Q015"
+            "W062Q015",
+            "W062_reward_1",
+            "W062_reward_2"
           ],
           "fullArticleScopeSha256": "dff970c8efeadaf24b5b990e9cd2a397deb661727dfd57d18b3d95d839e0bd50"
         },
@@ -12688,12 +12886,14 @@
             "W062_q12",
             "W062_q13",
             "W062_q14",
-            "W062Q015"
+            "W062Q015",
+            "W062_reward_1",
+            "W062_reward_2"
           ],
           "fullArticleScopeSha256": "dff970c8efeadaf24b5b990e9cd2a397deb661727dfd57d18b3d95d839e0bd50"
         }
       ],
-      "uniqueQuotedWords": 92
+      "uniqueQuotedWords": 100
     },
     {
       "id": "W063",
@@ -12762,6 +12962,12 @@
           "text": "15 seconds",
           "locator": "Infobox / Time limit",
           "scope": "Reported label; mode, per-round scope and Endless cap must not be inferred beyond this text."
+        },
+        {
+          "id": "W063_reward_1",
+          "text": "earning the player the item displayed.",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -12781,7 +12987,8 @@
             "W063_q5",
             "W063_q6",
             "W063_q7",
-            "W063Q008"
+            "W063Q008",
+            "W063_reward_1"
           ],
           "fullArticleScopeSha256": "57b38aefee1a63355a0a2f456869d9502b8fdf7df18f99d23d63de9579eab203"
         },
@@ -12801,12 +13008,13 @@
             "W063_q5",
             "W063_q6",
             "W063_q7",
-            "W063Q008"
+            "W063Q008",
+            "W063_reward_1"
           ],
           "fullArticleScopeSha256": "57b38aefee1a63355a0a2f456869d9502b8fdf7df18f99d23d63de9579eab203"
         }
       ],
-      "uniqueQuotedWords": 25
+      "uniqueQuotedWords": 31
     },
     {
       "id": "W064",
@@ -12915,6 +13123,12 @@
           "text": "Each player's score is kept at the end of each stage, awarding five points for first place, four for second,",
           "locator": "Overview/gameplay rule context for scoreRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W064_reward_1",
+          "text": "receives Mario as a Jamboree Buddy",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -12936,7 +13150,8 @@
             "W064_q7",
             "W064_q8",
             "W064Q009",
-            "W064Q010"
+            "W064Q010",
+            "W064_reward_1"
           ],
           "fullArticleScopeSha256": "84edb1183d2c811819118261f5694345cfbe57b3d12a53a058c25042c7d505f2"
         },
@@ -12958,12 +13173,13 @@
             "W064_q7",
             "W064_q8",
             "W064Q009",
-            "W064Q010"
+            "W064Q010",
+            "W064_reward_1"
           ],
           "fullArticleScopeSha256": "84edb1183d2c811819118261f5694345cfbe57b3d12a53a058c25042c7d505f2"
         }
       ],
-      "uniqueQuotedWords": 106
+      "uniqueQuotedWords": 112
     },
     {
       "id": "W065",
@@ -13050,6 +13266,12 @@
           "text": "Back at the main room, the winning player(s) is/are seen doing their winning animation(s), while the losing player(s) do(es) their",
           "locator": "Overview/gameplay rule context for tieRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W065_reward_1",
+          "text": "receives Luigi as a Jamboree Buddy",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -13070,7 +13292,8 @@
             "W065_q6",
             "W065_q7",
             "W065Q008",
-            "W065Q009"
+            "W065Q009",
+            "W065_reward_1"
           ],
           "fullArticleScopeSha256": "726c925b6db6e626a6da40d07df854b696f2420d8c37da22c0c1d8e24a80a9d6"
         },
@@ -13091,12 +13314,13 @@
             "W065_q6",
             "W065_q7",
             "W065Q008",
-            "W065Q009"
+            "W065Q009",
+            "W065_reward_1"
           ],
           "fullArticleScopeSha256": "726c925b6db6e626a6da40d07df854b696f2420d8c37da22c0c1d8e24a80a9d6"
         }
       ],
-      "uniqueQuotedWords": 105
+      "uniqueQuotedWords": 111
     },
     {
       "id": "W066",
@@ -13198,6 +13422,12 @@
           "text": "Each present is worth three points.",
           "locator": "Overview/gameplay rule context for scoreRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W066_reward_1",
+          "text": "receives Peach as a Jamboree Buddy",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -13219,7 +13449,8 @@
             "W066_q7",
             "W066Q008",
             "W066Q009",
-            "W066Q010"
+            "W066Q010",
+            "W066_reward_1"
           ],
           "fullArticleScopeSha256": "480cbb323a73045945e5dea406e4ad233f16745423d5322b861c9162511e1e22"
         },
@@ -13241,12 +13472,13 @@
             "W066_q7",
             "W066Q008",
             "W066Q009",
-            "W066Q010"
+            "W066Q010",
+            "W066_reward_1"
           ],
           "fullArticleScopeSha256": "480cbb323a73045945e5dea406e4ad233f16745423d5322b861c9162511e1e22"
         }
       ],
-      "uniqueQuotedWords": 100
+      "uniqueQuotedWords": 106
     },
     {
       "id": "W067",
@@ -13347,6 +13579,12 @@
           "text": "Daisy also periodically throws red medals, which are worth three points.",
           "locator": "Overview/gameplay rule context for scoreRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W067_reward_1",
+          "text": "receives Daisy as a Jamboree Buddy",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -13370,7 +13608,8 @@
             "W067_q9",
             "W067Q010",
             "W067Q011",
-            "W067Q012"
+            "W067Q012",
+            "W067_reward_1"
           ],
           "fullArticleScopeSha256": "af6d0239d84260d48c38a14a783ab542b38351dd0bae272bfffd3c8cd340995e"
         },
@@ -13394,12 +13633,13 @@
             "W067_q9",
             "W067Q010",
             "W067Q011",
-            "W067Q012"
+            "W067Q012",
+            "W067_reward_1"
           ],
           "fullArticleScopeSha256": "af6d0239d84260d48c38a14a783ab542b38351dd0bae272bfffd3c8cd340995e"
         }
       ],
-      "uniqueQuotedWords": 94
+      "uniqueQuotedWords": 100
     },
     {
       "id": "W068",
@@ -13488,6 +13728,12 @@
           "text": "In the ending of Free Play, the winning player(s) is/are seen doing their winning animation(s), while the losing player(s) do(es)",
           "locator": "Overview/gameplay rule context for tieRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W068_reward_1",
+          "text": "receives Wario as a Jamboree Buddy",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -13508,7 +13754,8 @@
             "W068_q6",
             "W068Q007",
             "W068Q008",
-            "W068Q009"
+            "W068Q009",
+            "W068_reward_1"
           ],
           "fullArticleScopeSha256": "bdad160658c6f775df0d908621d07ecf3fc0534642292c0161e011cf9e7768eb"
         },
@@ -13529,12 +13776,13 @@
             "W068_q6",
             "W068Q007",
             "W068Q008",
-            "W068Q009"
+            "W068Q009",
+            "W068_reward_1"
           ],
           "fullArticleScopeSha256": "bdad160658c6f775df0d908621d07ecf3fc0534642292c0161e011cf9e7768eb"
         }
       ],
-      "uniqueQuotedWords": 134
+      "uniqueQuotedWords": 140
     },
     {
       "id": "W069",
@@ -13625,6 +13873,12 @@
           "text": "The pinball board has two sets of flippers (one pair near the bottom and one closer to the top), three",
           "locator": "Overview/gameplay rule context for tieRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W069_reward_1",
+          "text": "receives Waluigi as a Jamboree Buddy",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -13646,7 +13900,8 @@
             "W069Q007",
             "W069Q008",
             "W069Q009",
-            "W069Q010"
+            "W069Q010",
+            "W069_reward_1"
           ],
           "fullArticleScopeSha256": "79dfc9581ef3c7070389371c86c3e16e17f49683e399bc0d5cd077f653b54741"
         },
@@ -13668,12 +13923,13 @@
             "W069Q007",
             "W069Q008",
             "W069Q009",
-            "W069Q010"
+            "W069Q010",
+            "W069_reward_1"
           ],
           "fullArticleScopeSha256": "79dfc9581ef3c7070389371c86c3e16e17f49683e399bc0d5cd077f653b54741"
         }
       ],
-      "uniqueQuotedWords": 112
+      "uniqueQuotedWords": 118
     },
     {
       "id": "W070",
@@ -13760,6 +14016,12 @@
           "text": "In any mode except Mario Party Mode, if five minutes pass, all players will lose and perform their losing animations.",
           "locator": "Overview/gameplay rule context for tieRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W070_reward_1",
+          "text": "receives Yoshi as a Jamboree Buddy",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -13780,7 +14042,8 @@
             "W070_q6",
             "W070_q7",
             "W070Q008",
-            "W070Q009"
+            "W070Q009",
+            "W070_reward_1"
           ],
           "fullArticleScopeSha256": "6fd54686c806fff5d2a89a8e6ffb3f21107a11769d232d07b354f1a72facb273"
         },
@@ -13801,12 +14064,13 @@
             "W070_q6",
             "W070_q7",
             "W070Q008",
-            "W070Q009"
+            "W070Q009",
+            "W070_reward_1"
           ],
           "fullArticleScopeSha256": "6fd54686c806fff5d2a89a8e6ffb3f21107a11769d232d07b354f1a72facb273"
         }
       ],
-      "uniqueQuotedWords": 105
+      "uniqueQuotedWords": 111
     },
     {
       "id": "W071",
@@ -13891,6 +14155,12 @@
           "text": "The player who crosses the finish line first wins the minigame and receives Rosalina as a Jamboree Buddy.",
           "locator": "Overview/gameplay rule context for winRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W071_reward_1",
+          "text": "receives Rosalina as a Jamboree Buddy",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -13910,7 +14180,8 @@
             "W071_q5",
             "W071_q6",
             "W071_q7",
-            "W071Q008"
+            "W071Q008",
+            "W071_reward_1"
           ],
           "fullArticleScopeSha256": "a2445f3165d58919c1c9836955261c99e896d8d31e8762ee4f6c37ef6104ad62"
         },
@@ -13930,12 +14201,13 @@
             "W071_q5",
             "W071_q6",
             "W071_q7",
-            "W071Q008"
+            "W071Q008",
+            "W071_reward_1"
           ],
           "fullArticleScopeSha256": "a2445f3165d58919c1c9836955261c99e896d8d31e8762ee4f6c37ef6104ad62"
         }
       ],
-      "uniqueQuotedWords": 87
+      "uniqueQuotedWords": 93
     },
     {
       "id": "W072",
@@ -14047,6 +14319,12 @@
           "text": "When the notes coincide exactly with the judgment circle, players must press either (or ), (or ), or both at",
           "locator": "Overview/gameplay rule context for scoreRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W072_reward_1",
+          "text": "receives Donkey Kong as a Jamboree Buddy",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -14067,7 +14345,8 @@
             "W072_q6",
             "W072_q7",
             "W072Q008",
-            "W072Q009"
+            "W072Q009",
+            "W072_reward_1"
           ],
           "fullArticleScopeSha256": "9bdfc5c671eb72bc7d3b13fafc9492037284a07bec9f0dba46157f15be4bc403"
         },
@@ -14088,12 +14367,13 @@
             "W072_q6",
             "W072_q7",
             "W072Q008",
-            "W072Q009"
+            "W072Q009",
+            "W072_reward_1"
           ],
           "fullArticleScopeSha256": "9bdfc5c671eb72bc7d3b13fafc9492037284a07bec9f0dba46157f15be4bc403"
         }
       ],
-      "uniqueQuotedWords": 122
+      "uniqueQuotedWords": 129
     },
     {
       "id": "W073",
@@ -14193,6 +14473,12 @@
           "text": "The player with the most points at the end wins the minigame and, if applicable, receives Bowser Jr.",
           "locator": "Overview/gameplay rule context for scoreRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W073_reward_1",
+          "text": "receives Bowser Jr. as a Jamboree Buddy",
+          "locator": "#Overview / exact reward statement",
+          "scope": "Scoped Party-mode coin, item or Jamboree Buddy report only; still one publisher lineage."
         }
       ],
       "passes": [
@@ -14215,7 +14501,8 @@
             "W073_q8",
             "W073Q009",
             "W073Q010",
-            "W073Q011"
+            "W073Q011",
+            "W073_reward_1"
           ],
           "fullArticleScopeSha256": "af706bae819b74c50d1a25f5dd2762eb980817e01ca5a3a5e814587d0980252c"
         },
@@ -14238,12 +14525,13 @@
             "W073_q8",
             "W073Q009",
             "W073Q010",
-            "W073Q011"
+            "W073Q011",
+            "W073_reward_1"
           ],
           "fullArticleScopeSha256": "af706bae819b74c50d1a25f5dd2762eb980817e01ca5a3a5e814587d0980252c"
         }
       ],
-      "uniqueQuotedWords": 117
+      "uniqueQuotedWords": 124
     },
     {
       "id": "W074",
@@ -20817,6 +21105,18 @@
           "text": "On the final round, there is a single golden balloon that earns 3 points if popped.",
           "locator": "Overview/gameplay rule context for scoreRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W120_gameplay_1",
+          "text": "the players must slide their Joy-Con 2 as a mouse",
+          "locator": "#Overview / Battle and Co-op gameplay",
+          "scope": "Narrow sliding and shared balloon objective; round counts/scoring remain separately single-source."
+        },
+        {
+          "id": "W120_gameplay_2",
+          "text": "the players must work together to pop as many balloons as possible",
+          "locator": "#Overview / Battle and Co-op gameplay",
+          "scope": "Narrow sliding and shared balloon objective; round counts/scoring remain separately single-source."
         }
       ],
       "passes": [
@@ -20845,7 +21145,9 @@
             "W120_q14",
             "W120Q015",
             "W120Q016",
-            "W120Q017"
+            "W120Q017",
+            "W120_gameplay_1",
+            "W120_gameplay_2"
           ],
           "fullArticleScopeSha256": "0368a797f2fe7469fe63917d3c9a2a18082b91df7d8e94b1bcdb719e6253514b"
         },
@@ -20874,12 +21176,14 @@
             "W120_q14",
             "W120Q015",
             "W120Q016",
-            "W120Q017"
+            "W120Q017",
+            "W120_gameplay_1",
+            "W120_gameplay_2"
           ],
           "fullArticleScopeSha256": "0368a797f2fe7469fe63917d3c9a2a18082b91df7d8e94b1bcdb719e6253514b"
         }
       ],
-      "uniqueQuotedWords": 81
+      "uniqueQuotedWords": 103
     },
     {
       "id": "W121",
@@ -21157,6 +21461,12 @@
           "text": "Each Cheep Cheep caught in a net awards one point for that round; Gold Cheep Cheeps award three points instead.",
           "locator": "Overview/gameplay rule context for scoreRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W122_gameplay_review",
+          "text": "players from both teams try to catch the most Cheep Cheeps by dragging their net with the Joy-Con 2",
+          "locator": "#Overview / net or Goomba collection gameplay",
+          "scope": "Only the narrow shared collection action is corroborated; original detailed game parameters remain single-source."
         }
       ],
       "passes": [
@@ -21183,7 +21493,8 @@
             "W122_q12",
             "W122_q13",
             "W122Q014",
-            "W122Q015"
+            "W122Q015",
+            "W122_gameplay_review"
           ],
           "fullArticleScopeSha256": "868082db75f1aacb973b7075bbc84556217512cb1bff5aad0ea403bf24501862"
         },
@@ -21210,12 +21521,13 @@
             "W122_q12",
             "W122_q13",
             "W122Q014",
-            "W122Q015"
+            "W122Q015",
+            "W122_gameplay_review"
           ],
           "fullArticleScopeSha256": "868082db75f1aacb973b7075bbc84556217512cb1bff5aad0ea403bf24501862"
         }
       ],
-      "uniqueQuotedWords": 90
+      "uniqueQuotedWords": 109
     },
     {
       "id": "W123",
@@ -21867,6 +22179,12 @@
           "text": "The team with the most amount of points after 30 seconds wins.",
           "locator": "Overview/gameplay rule context for scoreRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W126_gameplay_review",
+          "text": "using the Joy-Con 2 as a mouse to shove Goombas",
+          "locator": "#Overview / net or Goomba collection gameplay",
+          "scope": "Only the narrow shared collection action is corroborated; original detailed game parameters remain single-source."
         }
       ],
       "passes": [
@@ -21895,7 +22213,8 @@
             "W126_q14",
             "W126Q015",
             "W126Q016",
-            "W126Q017"
+            "W126Q017",
+            "W126_gameplay_review"
           ],
           "fullArticleScopeSha256": "e788e4a1f13eaf354bef07dc64f5ffa3755fdd5c6a454a849e93aba70e73aa1c"
         },
@@ -21924,12 +22243,13 @@
             "W126_q14",
             "W126Q015",
             "W126Q016",
-            "W126Q017"
+            "W126Q017",
+            "W126_gameplay_review"
           ],
           "fullArticleScopeSha256": "e788e4a1f13eaf354bef07dc64f5ffa3755fdd5c6a454a849e93aba70e73aa1c"
         }
       ],
-      "uniqueQuotedWords": 77
+      "uniqueQuotedWords": 87
     },
     {
       "id": "W127",

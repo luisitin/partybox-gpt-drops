@@ -368,7 +368,7 @@ Each linked wiki article was reopened in two fresh requests. This table gives on
 
 ## Complete draft catalogue citation registry
 
-Every current fact references clip IDs below through `minigames.json.fieldEvidence`. The quote and URL are retained exactly; locators identify the complete source context. Short locator clips do not independently establish every detail. Original historical evidence tables above remain preserved. Publisher lineages, A/B recoveries and full-scope hashes are in `catalogue-sources.json` and `catalogue-second-pass.json`.
+Every current fact references clip IDs below through `minigames.json.fieldEvidence`. URLs and quotations are exact; locators identify the complete source context. Short locator clips do not independently establish complete mechanics. Original historical tables above remain preserved. TheGamer and ScreenRant share Valnet ownership and are counted as one family; the new reviews are used only for their narrowly quoted gameplay actions. Current publisher lineages, A/B recoveries and complete source-scope fingerprints remain in the catalogue evidence files.
 
 ### W_LIST — List of Super Mario Party Jamboree minigames - Super Mario Wiki, the Mario encyclopedia
 
@@ -934,7 +934,7 @@ Publisher lineage: `familygamesquad`; unique retained quotation words: 145.
 
 URL: https://screenrant.com/every-mouse-minigame-mario-party-jamboree-ranked/
 
-Publisher lineage: `valnet`; unique retained quotation words: 35.
+Publisher lineage: `valnet`; unique retained quotation words: 41.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -943,6 +943,7 @@ Publisher lineage: `valnet`; unique retained quotation words: 35.
 | SR_MOUSEQ003 | the team with the fewest Bob-ombs wins | Game description: Bob-omb Toss |
 | SR_MOUSEQ004 | climb to the top of the mountain | Game description: Get a Grip |
 | SR_MOUSEQ005 | scoop ice cream and place it on a cone | Game description: What's the Scoop? |
+| SR_MOUSEQ006 | pulling back and then sliding forward | Ice and Easy / Pull Back, Release, And That's It |
 
 ### BB_TV — Super Mario Party Jamboree - Nintendo Switch 2 Edition + Jamboree TV review | Best Buy Blog
 
@@ -978,6 +979,27 @@ Publisher lineage: `nintendo`; unique retained quotation words: 4.
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
 | N_US_MODESQ001 | motion-controlled, rhythm-based cooking minigames | Rhythm Kitchen |
+
+### TG_TV — Super Mario Party Jamboree For Nintendo Switch 2 Is The Perfect Game To Unite The Whole Family
+
+URL: https://www.thegamer.com/super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv-review/
+
+Publisher lineage: `valnet`; unique retained quotation words: 15.
+
+| Clip ID | Exact quote (≤25 words) | Locator |
+| --- | --- | --- |
+| TG_TVQ001 | use the mouse controls to net fish in Net Gains | The Party Just Got Even Bigger And Better / Get a Grip paragraph |
+| TG_TVQ002 | corral goombas in Goomba Scoopas | The Party Just Got Even Bigger And Better / Get a Grip paragraph |
+
+### GNC_TV — Super Mario Party Jamboree + Jamboree TV REVIEW — GameNChick
+
+URL: https://www.gamenchickgaming.com/post/super-mario-party-jamboree-jamboree-tv-review-nintendo-switch-2
+
+Publisher lineage: `gamenchick`; unique retained quotation words: 17.
+
+| Clip ID | Exact quote (≤25 words) | Locator |
+| --- | --- | --- |
+| GNC_TVQ001 | a Knock Knock Match mini game that has you and your partner match characters behind a door | Tag Team / Mouse Mode minigames paragraph |
 
 ### W001 — Lumber Tumble
 
@@ -1399,7 +1421,7 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 102.
 
 URL: https://www.mariowiki.com/Rinks_to_Riches
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 128.
+Publisher lineage: `mariowiki`; unique retained quotation words: 141.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -1414,12 +1436,13 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 128.
 | W024Q009 | 30 seconds | Infobox / Time limit |
 | W024Q010 | Like other coin-collecting minigames, Rinks to Riches does not have a victor in the Mario Party mode—instead, the objective is | Overview/gameplay rule context for winRules |
 | W024Q011 | During the course of the minigame, coins drop into the rink, adding one coin to the player's coin count if | Overview/gameplay rule context for scoreRules |
+| W024_reward_1 | all collected coins being rewarded to their respective player upon the minigame's end | #Overview / exact reward statement |
 
 ### W025 — Treetop Treasure
 
 URL: https://www.mariowiki.com/Treetop_Treasure
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 128.
+Publisher lineage: `mariowiki`; unique retained quotation words: 141.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -1435,6 +1458,7 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 128.
 | W025Q010 | 30 seconds | Infobox / Time limit |
 | W025Q011 | Like other coin-collecting minigames, Treetop Treasure does not have a victor in the Mario Party mode—instead, the objective is simply | Overview/gameplay rule context for winRules |
 | W025Q012 | During the course of the minigame, coins and Red Coins spawn in the air, adding one or three coins, respectively, | Overview/gameplay rule context for scoreRules |
+| W025_reward_1 | all collected coins being rewarded to their respective players upon the minigame's end | #Overview / exact reward statement |
 
 ### W026 — Treasure Divers
 
@@ -1645,7 +1669,7 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 90.
 
 URL: https://www.mariowiki.com/Income_Stream
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 104.
+Publisher lineage: `mariowiki`; unique retained quotation words: 117.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -1656,6 +1680,7 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 104.
 | W038_q5 | There are a total of 33 possible coins which can be collected. | #Overview |
 | W038_q6 | In other game modes in Minigame Bay, however, the side with more coins is considered to be victorious. | #Overview |
 | W038Q007 | Like other coin-collecting minigames, Income Stream does not have a victor in the Mario Party mode — instead, the objective | Overview/gameplay rule context for winRules |
+| W038_reward_1 | all collected coins being rewarded to their respective players upon the minigame's end | #Overview / exact reward statement |
 
 ### W039 — Blame It on the Crane
 
@@ -1692,7 +1717,7 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 32.
 
 URL: https://www.mariowiki.com/Squeaky_Shakedown
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 85.
+Publisher lineage: `mariowiki`; unique retained quotation words: 106.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -1706,6 +1731,8 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 85.
 | W041_q8 | – Move | #Team_Side |
 | W041Q009 | 30 seconds | Infobox / Time limit |
 | W041Q010 | Each team player then gets seven coins, which the solo player can steal by hitting them. | Overview/gameplay rule context for scoreRules |
+| W041_reward_1 | The rivals all receive the number of coins they have remaining. | #Overview / exact reward statement |
+| W041_reward_2 | The team side keeps their total number of coins remaining. | #Overview / exact reward statement |
 
 ### W042 — Rocky Rope Race
 
@@ -2017,7 +2044,7 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 78.
 
 URL: https://www.mariowiki.com/Roll_with_It
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 85.
+Publisher lineage: `mariowiki`; unique retained quotation words: 95.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -2032,6 +2059,8 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 85.
 | W059_q9 | Creepy Dice Block | #Items |
 | W059_q10 | Tilt the platform to roll the ball to the item you want. | #In-game_text |
 | W059Q011 | 15 seconds | Infobox / Time limit |
+| W059_reward_1 | Rolling the ball into one of the holes earns the player the item displayed inside. | #Overview / exact reward statement |
+| W059_reward_2 | the player automatically receives the item on the raised section. | #Overview / exact reward statement |
 
 ### W060 — Prize Line
 
@@ -2054,12 +2083,13 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 83.
 | W060_q11 | Mushroom | #Items |
 | W060_q12 | Stop the wheels to connect the lines with the item you want. | #In-game_text |
 | W060Q013 | 30 seconds | Infobox / Time limit |
+| W060_reward_1 | Depending on how the wheel is lined up, the player earns one of five randomly chosen items. | #Overview / exact reward statement |
 
 ### W061 — A Stone's Throw
 
 URL: https://www.mariowiki.com/A_Stone%27s_Throw
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 65.
+Publisher lineage: `mariowiki`; unique retained quotation words: 81.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -2075,12 +2105,13 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 65.
 | W061_q10 | Boo Bell | #Items |
 | W061_q11 | Push the stone at whichever item you want. | #In-game_text |
 | W061Q012 | 10 seconds | Infobox / Time limit |
+| W061_reward_1 | the stone lands on one of the spaces, which awards the displayed item to the player. | #Overview / exact reward statement |
 
 ### W062 — Flip 'n Find
 
 URL: https://www.mariowiki.com/Flip_%27n_Find
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 92.
+Publisher lineage: `mariowiki`; unique retained quotation words: 100.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -2099,12 +2130,14 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 92.
 | W062_q13 | Flip the cards picturing the item you want. | #In-game_text |
 | W062_q14 | You'll get the item of the first pair you make. | #In-game_text |
 | W062Q015 | 30 seconds to choose cards | Infobox / Time limit |
+| W062_reward_1 | If a pair is found, the paired item is awarded. | #Overview / exact reward statement |
+| W062_reward_2 | the player automatically receives a randomly chosen item. | #Overview / exact reward statement |
 
 ### W063 — Prize Drop
 
 URL: https://www.mariowiki.com/Prize_Drop
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 25.
+Publisher lineage: `mariowiki`; unique retained quotation words: 31.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -2116,12 +2149,13 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 25.
 | W063_q6 | Double Dice | #Items |
 | W063_q7 | Drop the medal and try to get the item you want. | #In-game_text |
 | W063Q008 | 15 seconds | Infobox / Time limit |
+| W063_reward_1 | earning the player the item displayed. | #Overview / exact reward statement |
 
 ### W064 — Mario's Three-peat
 
 URL: https://www.mariowiki.com/Mario%27s_Three-peat
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 106.
+Publisher lineage: `mariowiki`; unique retained quotation words: 112.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -2135,12 +2169,13 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 106.
 | W064_q8 | (or ) / (or ) – Raise flag | #Controls |
 | W064Q009 | The player who climbs the highest when the 30-second time limit runs out wins. | Overview/gameplay rule context for winRules |
 | W064Q010 | Each player's score is kept at the end of each stage, awarding five points for first place, four for second, | Overview/gameplay rule context for scoreRules |
+| W064_reward_1 | receives Mario as a Jamboree Buddy | #Overview / exact reward statement |
 
 ### W065 — Luigi Rescue Operation
 
 URL: https://www.mariowiki.com/Luigi_Rescue_Operation
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 105.
+Publisher lineage: `mariowiki`; unique retained quotation words: 111.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -2153,12 +2188,13 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 105.
 | W065_q7 | – Reset (fourth and eighth rooms only) | #Controls |
 | W065Q008 | The first player to clear all nine rooms wins the minigame and receives Luigi as a Jamboree Buddy. | Overview/gameplay rule context for winRules |
 | W065Q009 | Back at the main room, the winning player(s) is/are seen doing their winning animation(s), while the losing player(s) do(es) their | Overview/gameplay rule context for tieRules |
+| W065_reward_1 | receives Luigi as a Jamboree Buddy | #Overview / exact reward statement |
 
 ### W066 — Peach's Day Off
 
 URL: https://www.mariowiki.com/Peach%27s_Day_Off
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 100.
+Publisher lineage: `mariowiki`; unique retained quotation words: 106.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -2172,12 +2208,13 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 100.
 | W066Q008 | 10 seconds per round for the second stage 45 seconds for the last stage | Infobox / Time limit |
 | W066Q009 | Each present is worth three points. | Overview/gameplay rule context for winRules |
 | W066Q010 | Each present is worth three points. | Overview/gameplay rule context for scoreRules |
+| W066_reward_1 | receives Peach as a Jamboree Buddy | #Overview / exact reward statement |
 
 ### W067 — Daisy's Field Day
 
 URL: https://www.mariowiki.com/Daisy%27s_Field_Day
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 94.
+Publisher lineage: `mariowiki`; unique retained quotation words: 100.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -2193,12 +2230,13 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 94.
 | W067Q010 | 30 seconds per round | Infobox / Time limit |
 | W067Q011 | Daisy also periodically throws red medals, which are worth three points. | Overview/gameplay rule context for winRules |
 | W067Q012 | Daisy also periodically throws red medals, which are worth three points. | Overview/gameplay rule context for scoreRules |
+| W067_reward_1 | receives Daisy as a Jamboree Buddy | #Overview / exact reward statement |
 
 ### W068 — Wario's Buzzer Beater
 
 URL: https://www.mariowiki.com/Wario%27s_Buzzer_Beater
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 134.
+Publisher lineage: `mariowiki`; unique retained quotation words: 140.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -2211,12 +2249,13 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 134.
 | W068Q007 | 10 seconds to choose an answer per round | Infobox / Time limit |
 | W068Q008 | How many points players get depends on how fast they are: five points for first place, three for second, two | Overview/gameplay rule context for winRules |
 | W068Q009 | In the ending of Free Play, the winning player(s) is/are seen doing their winning animation(s), while the losing player(s) do(es) | Overview/gameplay rule context for tieRules |
+| W068_reward_1 | receives Wario as a Jamboree Buddy | #Overview / exact reward statement |
 
 ### W069 — Waluigi's Pinball Arcade
 
 URL: https://www.mariowiki.com/Waluigi%27s_Pinball_Arcade_(minigame)
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 112.
+Publisher lineage: `mariowiki`; unique retained quotation words: 118.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -2230,12 +2269,13 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 112.
 | W069Q008 | Players must attempt to get the highest score out of all the opponents within the 180-second time limit. | Overview/gameplay rule context for winRules |
 | W069Q009 | Players must attempt to get the highest score out of all the opponents within the 180-second time limit. | Overview/gameplay rule context for scoreRules |
 | W069Q010 | The pinball board has two sets of flippers (one pair near the bottom and one closer to the top), three | Overview/gameplay rule context for tieRules |
+| W069_reward_1 | receives Waluigi as a Jamboree Buddy | #Overview / exact reward statement |
 
 ### W070 — Yoshi's Mountain Race
 
 URL: https://www.mariowiki.com/Yoshi%27s_Mountain_Race
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 105.
+Publisher lineage: `mariowiki`; unique retained quotation words: 111.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -2248,12 +2288,13 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 105.
 | W070_q7 | Hold to Flutter Jump | #Controls |
 | W070Q008 | The player who crosses the finish line at the top of the mountain first wins the minigame and receives | Overview/gameplay rule context for winRules |
 | W070Q009 | In any mode except Mario Party Mode, if five minutes pass, all players will lose and perform their losing animations. | Overview/gameplay rule context for tieRules |
+| W070_reward_1 | receives Yoshi as a Jamboree Buddy | #Overview / exact reward statement |
 
 ### W071 — Rosalina's Radical Race
 
 URL: https://www.mariowiki.com/Rosalina%27s_Radical_Race
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 87.
+Publisher lineage: `mariowiki`; unique retained quotation words: 93.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -2265,12 +2306,13 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 87.
 | W071_q6 | ^ The Controls section for this minigame does not show this method. | #Controls |
 | W071_q7 | The course starts on the slopes of a snowy mountain; about halfway, Rosalina forms a rainbow path. | #Overview |
 | W071Q008 | The player who crosses the finish line first wins the minigame and receives Rosalina as a Jamboree Buddy. | Overview/gameplay rule context for winRules |
+| W071_reward_1 | receives Rosalina as a Jamboree Buddy | #Overview / exact reward statement |
 
 ### W072 — DK's Konga Line
 
 URL: https://www.mariowiki.com/DK%27s_Konga_Line
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 122.
+Publisher lineage: `mariowiki`; unique retained quotation words: 129.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -2283,12 +2325,13 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 122.
 | W072_q7 | Match Donkey Kong's rhythm to play the bongos! | #In-game_text |
 | W072Q008 | Players receive two points for timing the beat perfectly, one point if they are too early or too late, and | Overview/gameplay rule context for winRules |
 | W072Q009 | When the notes coincide exactly with the judgment circle, players must press either (or ), (or ), or both at | Overview/gameplay rule context for scoreRules |
+| W072_reward_1 | receives Donkey Kong as a Jamboree Buddy | #Overview / exact reward statement |
 
 ### W073 — Jr.'s Jauntlet
 
 URL: https://www.mariowiki.com/Jr.%27s_Jauntlet
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 117.
+Publisher lineage: `mariowiki`; unique retained quotation words: 124.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -2303,6 +2346,7 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 117.
 | W073Q009 | 5 seconds for the first nine rounds 20 seconds for the last round | Infobox / Time limit |
 | W073Q010 | The player with the most points at the end wins the minigame and, if applicable, receives Bowser Jr. | Overview/gameplay rule context for winRules |
 | W073Q011 | The player with the most points at the end wins the minigame and, if applicable, receives Bowser Jr. | Overview/gameplay rule context for scoreRules |
+| W073_reward_1 | receives Bowser Jr. as a Jamboree Buddy | #Overview / exact reward statement |
 
 ### W074 — Dragoneel Slayers
 
@@ -3195,7 +3239,7 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 87.
 
 URL: https://www.mariowiki.com/Ice_and_Easy
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 81.
+Publisher lineage: `mariowiki`; unique retained quotation words: 103.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -3216,6 +3260,8 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 81.
 | W120Q015 | 15 seconds | Infobox / Time limit |
 | W120Q016 | On the final round, there is a single golden balloon that earns 3 points if popped. | Overview/gameplay rule context for winRules |
 | W120Q017 | On the final round, there is a single golden balloon that earns 3 points if popped. | Overview/gameplay rule context for scoreRules |
+| W120_gameplay_1 | the players must slide their Joy-Con 2 as a mouse | #Overview / Battle and Co-op gameplay |
+| W120_gameplay_2 | the players must work together to pop as many balloons as possible | #Overview / Battle and Co-op gameplay |
 
 ### W121 — Bob-omb Toss
 
@@ -3240,7 +3286,7 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 113.
 
 URL: https://www.mariowiki.com/Net_Gains
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 90.
+Publisher lineage: `mariowiki`; unique retained quotation words: 109.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -3259,6 +3305,7 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 90.
 | W122_q13 | C: 0-49 points | #Team_of_4 |
 | W122Q014 | Each Cheep Cheep caught in a net awards one point for that round; Gold Cheep Cheeps award three points instead. | Overview/gameplay rule context for winRules |
 | W122Q015 | Each Cheep Cheep caught in a net awards one point for that round; Gold Cheep Cheeps award three points instead. | Overview/gameplay rule context for scoreRules |
+| W122_gameplay_review | players from both teams try to catch the most Cheep Cheeps by dragging their net with the Joy-Con 2 | #Overview / net or Goomba collection gameplay |
 
 ### W123 — Get a Grip
 
@@ -3331,7 +3378,7 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 101.
 
 URL: https://www.mariowiki.com/Goomba_Scoopas
 
-Publisher lineage: `mariowiki`; unique retained quotation words: 77.
+Publisher lineage: `mariowiki`; unique retained quotation words: 87.
 
 | Clip ID | Exact quote (≤25 words) | Locator |
 | --- | --- | --- |
@@ -3352,6 +3399,7 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 77.
 | W126Q015 | 30 seconds | Infobox / Time limit |
 | W126Q016 | The team with the most amount of points after 30 seconds wins. | Overview/gameplay rule context for winRules |
 | W126Q017 | The team with the most amount of points after 30 seconds wins. | Overview/gameplay rule context for scoreRules |
+| W126_gameplay_review | using the Joy-Con 2 as a mouse to shove Goombas | #Overview / net or Goomba collection gameplay |
 
 ### W127 — Talking Flower Says
 

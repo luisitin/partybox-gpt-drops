@@ -15,23 +15,27 @@ PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes
 | Test name | Case count | Passed | Seed | Exact command |
 | --- | ---: | --- | --- | --- |
 | Six closed Draft 2020-12 data schemas | 6 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
-| All delivery JSON rejects duplicate keys | 42 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| All delivery JSON rejects duplicate keys | 44 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Canonical 132-row union and 112/20 edition scope | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Every row has every required field and exact canonical name | 2376 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Case/punctuation-insensitive name uniqueness | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Counts versus independently reopened lists and raw disagreements | 10 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Exact JSON/CSV field round trip | 2376 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Field citations and true publisher lineage boundaries | 1320 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
-| Short clips, quote budgets and complete A/B recovery | 2231 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Short clips, quote budgets and complete A/B recovery | 2267 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Literal controller labels and 25 base motion entries | 370 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Original two-sentence summaries and phone assessments | 396 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
-| Full row audit bindings and complete reopened source contexts | 550 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Independent publisher families for all 132 narrow core-gameplay summaries | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| ScreenRant/TheGamer shared-Valnet lineage rejection | 1 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Full row audit bindings and complete reopened source contexts | 553 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Unknown awards, returning editions, timer scopes and conflict retention | 157 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Fourteen material conflicts preserved | 14 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Exact reward/gameplay quote witnesses bound to both article captures | 48 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Four isolated malformed reward-capture fixtures | 4 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Closed schema and exact per-row remaining research-gap ledger | 133 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Three closed source-reopening report schemas | 3 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
-| All 145 source URLs reopened twice with ordered HTTPS/TLS records | 290 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
-| Every recovered reopen quotation bound to the original registry | 3616 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| All 147 source URLs reopened twice with ordered HTTPS/TLS records | 294 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Every recovered reopen quotation bound to the original registry | 3676 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Sixteen isolated malformed reopening-proof fixtures | 16 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Fifteen isolated hostile catalogue/evidence fixtures | 15 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Preserved historical index / Draft 2020-12 JSON Schema | 1 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
@@ -77,32 +81,36 @@ PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes
 | Preserved guard / check-validator-rejections.py | 6 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Preserved guard / test-gameplay-evidence.py --evidence gameplay-leads.json | 16 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 | Preserved guard / test-gameplay-evidence.py --evidence current-article-leads.json | 16 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
-| Every delivered file below 30 MB | 68 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
-| Complete SHA-256 delivery manifest | 67 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Every delivered file below 30 MB | 70 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Complete SHA-256 delivery manifest | 69 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 
 All preserved index/article suites run against both original evidence and fresh retained captures. Original helper files remain unchanged. Fifteen catalogue fixtures reject missing controls, invalid ratings/names/citations, invented star awards, false completion, wrong summary/timer scopes, lost availability/motion conflicts, false lineage, overlong clips and altered row fingerprints. Sixteen reopen fixtures reject incomplete/duplicated/invented sources, changed URLs/passes, failed TLS/HTTP, false byte/hash data, reordered timestamps, changed/missing clips, full-HTML publication and false summaries.
 
-Actual validator output before final manifest pass (64 suites / 23967 cases):
+Actual validator output before final manifest pass (68 suites / 24,259 cases):
 
 ```text
 PASS Six closed Draft 2020-12 data schemas: 6 cases; seed=n/a
-PASS All delivery JSON rejects duplicate keys: 42 cases; seed=n/a
+PASS All delivery JSON rejects duplicate keys: 44 cases; seed=n/a
 PASS Canonical 132-row union and 112/20 edition scope: 132 cases; seed=n/a
 PASS Every row has every required field and exact canonical name: 2376 cases; seed=n/a
 PASS Case/punctuation-insensitive name uniqueness: 132 cases; seed=n/a
 PASS Counts versus independently reopened lists and raw disagreements: 10 cases; seed=n/a
 PASS Exact JSON/CSV field round trip: 2376 cases; seed=n/a
 PASS Field citations and true publisher lineage boundaries: 1320 cases; seed=n/a
-PASS Short clips, quote budgets and complete A/B recovery: 2231 cases; seed=n/a
+PASS Short clips, quote budgets and complete A/B recovery: 2267 cases; seed=n/a
 PASS Literal controller labels and 25 base motion entries: 370 cases; seed=n/a
 PASS Original two-sentence summaries and phone assessments: 396 cases; seed=n/a
-PASS Full row audit bindings and complete reopened source contexts: 550 cases; seed=n/a
+PASS Independent publisher families for all 132 narrow core-gameplay summaries: 132 cases; seed=n/a
+PASS ScreenRant/TheGamer shared-Valnet lineage rejection: 1 cases; seed=n/a
+PASS Full row audit bindings and complete reopened source contexts: 553 cases; seed=n/a
 PASS Unknown awards, returning editions, timer scopes and conflict retention: 157 cases; seed=n/a
 PASS Fourteen material conflicts preserved: 14 cases; seed=n/a
+PASS Exact reward/gameplay quote witnesses bound to both article captures: 48 cases; seed=n/a
+PASS Four isolated malformed reward-capture fixtures: 4 cases; seed=n/a
 PASS Closed schema and exact per-row remaining research-gap ledger: 133 cases; seed=n/a
 PASS Three closed source-reopening report schemas: 3 cases; seed=n/a
-PASS All 145 source URLs reopened twice with ordered HTTPS/TLS records: 290 cases; seed=n/a
-PASS Every recovered reopen quotation bound to the original registry: 3616 cases; seed=n/a
+PASS All 147 source URLs reopened twice with ordered HTTPS/TLS records: 294 cases; seed=n/a
+PASS Every recovered reopen quotation bound to the original registry: 3676 cases; seed=n/a
 PASS Sixteen isolated malformed reopening-proof fixtures: 16 cases; seed=n/a
 PASS Fifteen isolated hostile catalogue/evidence fixtures: 15 cases; seed=n/a
 PASS Preserved historical index / Draft 2020-12 JSON Schema: 1 cases; seed=n/a
@@ -148,14 +156,14 @@ PASS Preserved fresh article / coverage_totals: 8 cases; seed=n/a
 PASS Preserved guard / check-validator-rejections.py: 6 cases; seed=n/a
 PASS Preserved guard / test-gameplay-evidence.py --evidence gameplay-leads.json: 16 cases; seed=n/a
 PASS Preserved guard / test-gameplay-evidence.py --evidence current-article-leads.json: 16 cases; seed=n/a
-PASS Every delivered file below 30 MB: 68 cases; seed=n/a
+PASS Every delivered file below 30 MB: 70 cases; seed=n/a
 ```
 
 The final complete report is `reports/final-validation.json`; all delivery files are bound by `SHA256SUMS.txt`.
 
 ## Actual complete source reopens
 
-Retained `reports/source-reopens-passA.json` and `passB.json` record every request start/end timestamp, exact URL, successful HTTP 200, TLS result 0, response byte count/hash, original short quote and every recovered quote ID. Both passes cover the same **145 unique URLs**, including three preserved historical supplements. **290 requests, 3,616 quote recoveries, zero missing quotations.** Every second request began after its first request completed. The offline suite validates every record against the original source registry and independently rejects malformed proofs. The network collector uses inherited proxy/CA settings and does not disable TLS verification.
+Retained `reports/source-reopens-passA.json` and `passB.json` record every request start/end timestamp, exact URL, successful HTTP 200, TLS result 0, response byte count/hash, original short quote and every recovered quote ID. Both passes cover the same **147 unique URLs**, including three preserved historical supplements. **294 requests, 3,676 quote recoveries, zero missing quotations.** Every second request began after its first request completed. The offline suite validates every record against the original source registry and independently rejects malformed proofs. The network collector uses inherited proxy/CA settings and does not disable TLS verification.
 
 Initial compact source records retain Exa text hashes and request order where the tool did not expose a request timestamp; no timestamp is invented. Later complete curl reopens supply real observed timestamps and response hashes for every retained URL. Matching cached bytes do not imply publisher independence. Full article captures remain external; the source-reopen collector stores compact records and discards temporary complete bodies.
 
@@ -190,8 +198,8 @@ Each row below binds every published field to its exact canonical JSON SHA-256. 
 | MG021 | Pickax Dash | 9/9 | 3 | 18 | `3810d199a302111c9c8b44643d455f31858230220d7ca4c9e98f3c1048f6cdc9` |
 | MG022 | Gate Key-pers | 10/10 | 3 | 18 | `c7689601cb4713c0e53f96ff2812ddc58f9d72d5e0b19d4b806c4cde4dbf95c7` |
 | MG023 | Sled to the Edge | 10/10 | 3 | 18 | `c6881cce6086c192cc0b028242d2521caa4d9c2051f8567e0ad9ddf1b2b89c6e` |
-| MG024 | Rinks to Riches | 11/11 | 3 | 18 | `1bf03503f2face6acd400df65cc9171514cbe01855a077c4010cbae24267a91b` |
-| MG025 | Treetop Treasure | 12/12 | 3 | 18 | `ec84537b76e7b54f31477a47099d41c6594a7c8bcf690453025a6a5af3b6afcb` |
+| MG024 | Rinks to Riches | 12/12 | 3 | 18 | `9967ffa9fa9a4c2e3f80b7a869a860acc5dab0b30532412643c11dd681fdd48a` |
+| MG025 | Treetop Treasure | 13/13 | 3 | 18 | `0ed303138469d2635c07a8a5933f0cbd9f74bf59799d1343a133c1168f290d01` |
 | MG026 | Treasure Divers | 5/5 | 3 | 18 | `c3c3fdb7eac0fd8a1952fabe51b3896f21e643e69ecce0ae77d47321cdb2cc66` |
 | MG027 | Platform Peril | 5/5 | 3 | 18 | `971694fe90cbe16cf47bc8ab8ace309fe806ec1ff8296e580b92bbdbab86d49b` |
 | MG028 | Stamp Out! | 5/5 | 3 | 18 | `d812d9c15e4be61a3b126b617ed573f8feac34afae8347544e402fd64eda568a` |
@@ -204,10 +212,10 @@ Each row below binds every published field to its exact canonical JSON SHA-256. 
 | MG035 | On-Again, Off-Again | 10/10 | 3 | 18 | `3be777d49463edf96080ff9f5507d6fe513e8f9c50175b0d742e905d76b6b5e4` |
 | MG036 | Broozer Bash | 10/10 | 3 | 18 | `1f8f968199a2ec3048ca84f8362ebd861bd86170b74d711db5be707f670ac040` |
 | MG037 | Cage Catch | 10/10 | 3 | 18 | `c3ae3ce067c0832ccf949aa8284ee6d3cef1d4141487cefd95d3d94ad1cce038` |
-| MG038 | Income Stream | 7/7 | 3 | 18 | `9a272a9ca08849c4bde6963a3c54d12a1fcd826892fb6537504eb0412e2aa7d4` |
+| MG038 | Income Stream | 8/8 | 3 | 18 | `c423bf737c15391146471bde5ae5a839799a8f79c76127b14eaedc5c6241ef96` |
 | MG039 | Blame It on the Crane | 7/7 | 3 | 18 | `389105c916efb6cbd20d38daaebf976da14b96cff09214a4f5e9fcbb8d94748c` |
 | MG040 | Snow Brawl | 6/6 | 3 | 18 | `167766b5885246263bd5a0eb8b76e11a74d3d1fe4185d1b1179fdae6f51896f7` |
-| MG041 | Squeaky Shakedown | 10/10 | 3 | 18 | `d4a3dd757c54b86330330d4f350865ae18422aef7379781a62c410713ecc7717` |
+| MG041 | Squeaky Shakedown | 12/12 | 3 | 18 | `09e8e1cf0b54952baefbf191bcb3969d9ed2f5d4d023be9de3180faecdf69ac1` |
 | MG042 | Rocky Rope Race | 7/7 | 3 | 18 | `a731e5f101373ac74c1661a20b44e3e20eba8fd4360b5444db425da0b04fe9ec` |
 | MG043 | Pickin' Produce | 9/9 | 3 | 18 | `7ace2636df74ce869193161a1b67c6f5651f2caed278a80b8c57f8758f597093` |
 | MG044 | Prime Cut | 12/12 | 3 | 18 | `86f7e299f493252c5179fa96b801a454e6706b4e5e4f40a9d0dac9f060efd910` |
@@ -225,21 +233,21 @@ Each row below binds every published field to its exact canonical JSON SHA-256. 
 | MG056 | Stone-Eye Bowling | 11/11 | 3 | 18 | `acca599b6ebe958fc24ff6c1876b8e9d5cb77736890661ccb5413d3bcd20f1b4` |
 | MG057 | Fuzzy Heights | 11/11 | 3 | 18 | `db7e8722a1599b833f09c144cde1f8e909bc0a53f0b6ff51a5777ac3e76833b9` |
 | MG058 | All the Marbles | 10/10 | 3 | 18 | `ac502bd17672789502c806e0250da864acf093ed2adcda54d13474c11f5ac399` |
-| MG059 | Roll with It | 11/11 | 3 | 18 | `3e9877b21c6c06c248b33553612573af6b0ddf1907f4eab20f86376277b6766a` |
-| MG060 | Prize Line | 13/13 | 3 | 18 | `e5c365babae95b18530036d71bc6bbb58ceccd6023a2807c690f833a12561d95` |
-| MG061 | A Stone's Throw | 12/12 | 3 | 18 | `5081b282c97f8db68089f9b5e6c05aebd4ee214d98c3638b9d3f3e31e4c1e250` |
-| MG062 | Flip 'n Find | 15/15 | 3 | 18 | `31acacf472b476b64168e5cdc9ab376f830f4649851054e64165fb4b6d0ace80` |
-| MG063 | Prize Drop | 8/8 | 3 | 18 | `e46a56339807777cf64fe84c23725c3bf54bb4cf96053dac8d743997c446ca2f` |
-| MG064 | Mario's Three-peat | 10/10 | 3 | 18 | `10dfedb1e7cddb39d0d121107bab75607514207348f0c71a3aa686285d277eec` |
-| MG065 | Luigi Rescue Operation | 9/9 | 3 | 18 | `ca691554e07b766afcf2b3b0bec4fcdff9e1a5ca0978f6466be73891725e581e` |
-| MG066 | Peach's Day Off | 10/10 | 3 | 18 | `a3ebb7cbf1197a425c0d88f700601f903f59ae360ede567ba4f0788e4adb416b` |
-| MG067 | Daisy's Field Day | 12/12 | 3 | 18 | `d0b3f5144d893064abb1e92708881002019b69c09f7cfa1b2d40ab38238d2ffb` |
-| MG068 | Wario's Buzzer Beater | 9/9 | 3 | 18 | `4c1a09eb34db06df67a1dceea2597210147b9798ae97c5ffcc9bbadbdfdd2d3c` |
-| MG069 | Waluigi's Pinball Arcade | 10/10 | 3 | 18 | `ccf116878caee1fb95c3f3cd6a3c8ac9bf3a02e0f21bccafa4c6c34352724e67` |
-| MG070 | Yoshi's Mountain Race | 9/9 | 3 | 18 | `4760ffebc236e3677821a5266c5eb0f63951701cc26c97a6c84ae322ea05776d` |
-| MG071 | Rosalina's Radical Race | 8/8 | 3 | 18 | `edeba6707e88949c0d1e54a190d46370d102ccb313a311daba6fe817546f7f56` |
-| MG072 | DK's Konga Line | 9/9 | 3 | 18 | `5d7bab3a0fa200365a768fc1d0e24d027b8e45cf4c67cd0928bf9effcfbaa865` |
-| MG073 | Jr.'s Jauntlet | 11/11 | 3 | 18 | `b79fa1203439471333771c597dc5f9391ae08e10e0b70b154ad3644d96ac4475` |
+| MG059 | Roll with It | 13/13 | 3 | 18 | `723b0536b8d07b1a3e67890c8fdb226f2170da236ce5f87008c77884fa6586d0` |
+| MG060 | Prize Line | 14/14 | 3 | 18 | `61223677c79b9ef07d2058a45a8d88725456d2bb278fee3e1fb3a9dba384a52b` |
+| MG061 | A Stone's Throw | 13/13 | 3 | 18 | `4d404224f0e2ba1519331f78ebbe9604a7c9ada67172f187c63c125f17714552` |
+| MG062 | Flip 'n Find | 17/17 | 3 | 18 | `054619a05072fe3650e5ea9454c9b2bf822f32bbda896e392c47772f6116a3f5` |
+| MG063 | Prize Drop | 9/9 | 3 | 18 | `80e358d28f668e1f501fe4a11cc344813f7f4c8331188caf23649a9208f824c6` |
+| MG064 | Mario's Three-peat | 11/11 | 3 | 18 | `7c695e85bdcf1d154cfb43d5aee3538dd6211f6e621ac4d397e48b2893ec591c` |
+| MG065 | Luigi Rescue Operation | 10/10 | 3 | 18 | `8debc0c7d8101cec6093a5062ed54a65ff365f75675e87a3881979701bd151e4` |
+| MG066 | Peach's Day Off | 11/11 | 3 | 18 | `634ad3a4e086adc91a93b626038f43481741f7c3eed526ed7f58a25e8aca7339` |
+| MG067 | Daisy's Field Day | 13/13 | 3 | 18 | `883a5a4f0a08a91f744142d1b3cdc0fbe30f242d6c7c0f90ad94e975acc9f909` |
+| MG068 | Wario's Buzzer Beater | 10/10 | 3 | 18 | `38a15354f97aee4b01774d172d09d260be9fbb70216fd6e8d2b75c69c45b53d4` |
+| MG069 | Waluigi's Pinball Arcade | 11/11 | 3 | 18 | `03dee9586bc64821157a0b3b09f1c77151c2cddcac933573e84bfe650a70b82e` |
+| MG070 | Yoshi's Mountain Race | 10/10 | 3 | 18 | `67d51f73d6baa69896c11912d020bc70716666b4d54e7015a5910f281cc571a7` |
+| MG071 | Rosalina's Radical Race | 9/9 | 3 | 18 | `e92cd491c29ccfaf8ca86fef3421aa306d21f0906a0179c16a8752aa83a56b62` |
+| MG072 | DK's Konga Line | 10/10 | 3 | 18 | `2713faf5fe9aa9115fc49b86def999d03dcb04e076d19150ce911b9cd3e2e4ec` |
+| MG073 | Jr.'s Jauntlet | 12/12 | 3 | 18 | `d23e84539bd0b945139563d1df376d2585455f044a18a060a5e455685b57d23e` |
 | MG074 | Dragoneel Slayers | 10/10 | 3 | 18 | `18da2f139d5bdf114cbe3b3b791dd7d0b33f0be98abcae3845c9b17a32b87d87` |
 | MG075 | Mega Stingby Stompers | 8/8 | 3 | 18 | `d261cab1ecd01e1efbcbfed8dff19ce048c81b3fdef2d105a07b3a4d7372dde5` |
 | MG076 | Mega Rocky Wrench Wreckers | 8/8 | 3 | 18 | `7f87a2d6a7298b380c772ff832053967ca1c4b7c6ec8d89f09eb7bf5cf24c12c` |
@@ -286,13 +294,13 @@ Each row below binds every published field to its exact canonical JSON SHA-256. 
 | MG117 | Domino Effect | 10/10 | 4 | 18 | `a14230be8c54a9dcfd646c3e474cd2c8adf584b3edb7bdc32725a757cdab8459` |
 | MG118 | Bob-omb Makeover | 13/13 | 4 | 18 | `c68e1617f941987d82fa9012fcdfc5538dd8dea40762d8caa6abc1777cff8413` |
 | MG119 | Toad-ally Electric Escape | 9/9 | 4 | 18 | `70b6b3d8d41da9296470bafd7364592b4ddfaca517f544965e25cce286597b33` |
-| MG120 | Ice and Easy | 17/17 | 4 | 18 | `39b5f263c387da68969b0cb15a77cdda7af468e3204f0d0897e7a121bd70136e` |
+| MG120 | Ice and Easy | 19/19 | 4 | 18 | `ad3a4655d7cf646978fca809d47e26c6be1f8ce6f70645cb7434c225ba9d56b1` |
 | MG121 | Bob-omb Toss | 10/10 | 4 | 18 | `335d75450734d362d4c070de4d97b565aad1534fd7fcef7d8d81c9f0345766de` |
-| MG122 | Net Gains | 15/15 | 3 | 18 | `a6325fee684dfc8beb0625eacb189afea3a8bb23df9a3c5254145b35290d6be4` |
+| MG122 | Net Gains | 16/16 | 4 | 18 | `8d7b33b5aacc5c11fb5eafa91a6ffd5796ffaee4caa8cdd9955f89cc1d664685` |
 | MG123 | Get a Grip | 15/15 | 4 | 18 | `007e2bb068b4da002728e252c14e6b8d687bb2e8f7db4e6570078771c5334b2c` |
 | MG124 | What's the Scoop? | 15/15 | 4 | 18 | `8bab88056c861d8d993e97a00493f894612e2d9bc4868d96e9a8062667e570e2` |
-| MG125 | Knock-Knock Match | 10/10 | 3 | 18 | `e570f78e3406be80e5a9d99d557a85a9209f60ef6f3b18e81e52cd75bfa4184f` |
-| MG126 | Goomba Scoopas | 17/17 | 3 | 18 | `eb584dec19c7d13910a350c0ae7aa8a328cf6acd5eb5f066f3caeb3a0b7db02b` |
+| MG125 | Knock-Knock Match | 10/10 | 4 | 18 | `d1cac45736c0170ddbe885c1a275c094114a51e0c272d1a251356f3f5695c95d` |
+| MG126 | Goomba Scoopas | 18/18 | 4 | 18 | `ba89cd8e21af0c874d23bc876386739c250091192d80be8341916e797a919b49` |
 | MG127 | Talking Flower Says | 8/8 | 3 | 18 | `b4f976b30b6b048e7c980f16e288bb3b4abbf15580ed9ef7d3566094c87e78b6` |
 | MG128 | Hitting It Rich | 9/9 | 4 | 18 | `f04ffb0021ef835416c244197079b15104d8bd376d9d2a29f64465f74cd3fa16` |
 | MG129 | Goombalancing Act | 8/8 | 3 | 18 | `657e612f7c496465a5fb9b1949dbdf6c97f61b13807a3f0678f7979faf396c19` |
@@ -300,16 +308,29 @@ Each row below binds every published field to its exact canonical JSON SHA-256. 
 | MG131 | Speak Up, Junior! | 7/7 | 3 | 18 | `e2969d586395785297c39f7dbfe7886c9eb3806cf685016bd6f4e8cab3c75097` |
 | MG132 | Bowser Beats | 7/7 | 3 | 18 | `e33dafdbfffb1bfa70ad0e050cd9901f10c4983ffaa11c9931ef2c51d5f19bf0` |
 
+## Weakest-evidence improvement
+
+Nineteen reward reports previously cited introductory article clips. Each now cites the exact scoped coin payout, item outcome or Jamboree Buddy statement, matched against both preserved complete article captures: **48 exact quote/capture comparisons** including Ice and Easy, bound to the response hashes in the original source registry. Four isolated malformed capture-witness fixtures reject missing, changed, hash-mismatched and duplicate proofs. The initial 1,796-clip documentation count was stale after additional list-comparison clips; the current registry count is exactly **1,835**, validated against the audit total.
+
+Ice and Easy’s summary was narrowed to the sliding action and shared balloon objective explicitly described by both Wiki and ScreenRant. Only that narrow gameplay field becomes corroborated; its timings, scoring, tie and reward fields retain their prior qualifiers. Whole-row confidence remains low. A new complete reopen of all 147 URLs recovered every updated short clip twice, with **3,676 recoveries**, no missing clips and successful verified HTTPS throughout.
+
+
+## Every core-gameplay summary independently described
+
+Actual two-pass HTTPS captures of TheGamer's original hands-on review corroborate Net Gains' mouse-controlled net fishing and Goomba Scoopas' Goomba-corralling action. Actual two-pass captures of GameNChick's released-game review corroborate Knock-Knock Match's partner matching of characters behind doors. Complete corresponding contexts match across both captures; updated source reopens recover every quote again. These three summaries were narrowed to the common actions, retaining all separate rule uncertainties.
+
+All **132 narrow core-gameplay fields** now have at least two publisher families. TheGamer and ScreenRant both belong to Valnet: a targeted fixture with these two brands alone is rejected for lacking independence. The complete source registry now contains **144 URLs / 1,835 clips**, with **421 independent publisher contexts** rechecked and **147 current/historical URLs** reopened twice. This does not satisfy the original requirement for complete independently corroborated timers, bindings, scores, ties and payouts: **463 narrow fields accepted, 857 gaps, zero complete rows**.
+
 ## UNVERIFIED
 
-**Strict research gate: NOT_MET; 459 narrowly corroborated fields out of 1,320; zero of 132 whole rows complete.** The exact remaining fields, limitations and retained citations are listed for every row in `reports/research-gaps.json`.
+**Strict research gate: NOT_MET; 463 narrowly corroborated fields out of 1,320; zero of 132 whole rows complete.** The exact remaining fields, limitations and retained citations are listed for every row in `reports/research-gaps.json`.
 
 | Fact field | Corroborated | Single source | Conflict | Unknown |
 | --- | ---: | ---: | ---: | ---: |
 | name | 132 | 0 | 0 | 0 |
 | category | 118 | 14 | 0 | 0 |
 | format | 81 | 50 | 1 | 0 |
-| gameplay | 128 | 4 | 0 | 0 |
+| gameplay | 132 | 0 | 0 | 0 |
 | controls | 0 | 121 | 11 | 0 |
 | timeLimit | 0 | 100 | 3 | 29 |
 | winRules | 0 | 132 | 0 | 0 |
@@ -317,7 +338,7 @@ Each row below binds every published field to its exact canonical JSON SHA-256. 
 | tieRules | 0 | 31 | 0 | 101 |
 | reward | 0 | 19 | 0 | 113 |
 
-No Nintendo gameplay or phone adaptation was executed. Unknown coin and star awards are null. Available timers include scoped modes/stages; component durations and record caps are not universal time limits. Win, score and tie mechanics require independent corroboration. Four TV gameplay summaries lack an accepted second independent account. Source categories, player availability, camera actions, rhythm controls, stage counts, score tokens and release/preview differences retain explicit conflicts.
+No Nintendo gameplay or phone adaptation was executed. Unknown coin and star awards are null. Available timers include scoped modes/stages; component durations and record caps are not universal time limits. Win, score and tie mechanics require independent corroboration. All 132 narrow core-gameplay summaries now have independent accounts; detailed rule fields remain qualified. Source categories, player availability, camera actions, rhythm controls, stage counts, score tokens and release/preview differences retain explicit conflicts.
 
 The count is supported by the Wiki, Nintendo Life’s 112-row base table and 20-name TV page, and Family Game Squad’s 112 base-game headings. The original request specifically says two wiki list pages; a second complete wiki list page has not been located. Independent publishers agree on total counts but raw spellings differ, as listed in CONFLICTS.md.
 

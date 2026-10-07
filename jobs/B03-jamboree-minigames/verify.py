@@ -19,7 +19,7 @@ import jsonschema
 ROOT=Path(__file__).resolve().parent
 FACTS=['name','category','format','gameplay','controls','timeLimit','winRules','scoreRules','tieRules','reward']
 OWN=['minigames','catalogue-sources','catalogue-conflicts','catalogue-second-pass','historical-supplement-reopens','catalogue-list-comparison']
-LINEAGES={'www.mariowiki.com':'mariowiki','www.nintendolife.com':'hookshot','mariopartylegacy.com':'mariopartylegacy','familygamesquad.com':'familygamesquad','screenrant.com':'valnet','blog.bestbuy.ca':'bestbuy','gamingtrend.com':'gamingtrend','www.nintendo.com':'nintendo'}
+LINEAGES={'www.mariowiki.com':'mariowiki','www.nintendolife.com':'hookshot','mariopartylegacy.com':'mariopartylegacy','familygamesquad.com':'familygamesquad','screenrant.com':'valnet','blog.bestbuy.ca':'bestbuy','gamingtrend.com':'gamingtrend','www.nintendo.com':'nintendo','www.thegamer.com':'valnet','www.gamenchickgaming.com':'gamenchick'}
 def require(ok,message):
     if not ok:raise AssertionError(message)
 def pairs(items):
@@ -37,7 +37,7 @@ def validate_catalogue(d,sources,audit,index):
     rows=d['minigames'];expected=index['entries'];require(d['complete'] is False,'False completion claim')
     require(len(rows)==132 and len({key(r['name']) for r in rows})==132,'Roster length or normalized duplicate')
     require(sum(r['edition']=='base' for r in rows)==112,'Base scope differs')
-    sourceby={s['id']:s for s in sources['sources']};require(len(sourceby)==142,'Missing or duplicate sources')
+    sourceby={s['id']:s for s in sources['sources']};require(len(sourceby)==len(sources['sources']) and len(sourceby)>=142,'Missing or duplicate sources')
     quotes={}
     for s in sources['sources']:
         parsed=urlsplit(s['url']);require(parsed.scheme=='https' and parsed.netloc in LINEAGES and s['publisherLineage']==LINEAGES[parsed.netloc],'False URL/publisher lineage')
@@ -50,9 +50,10 @@ def validate_catalogue(d,sources,audit,index):
             require(q['id'] not in quotes and 0<len(q['text'].split())<=25,'Duplicate or overlong quote');quotes[q['id']]=(s,q)
         for p in s['passes']:
             require(len(p['recoveredQuoteIds'])==len(set(p['recoveredQuoteIds'])) and set(p['recoveredQuoteIds'])==qq,'Pass did not recover every retained quote')
-            if s['kind']=='game_article':require(p['httpStatus']==200 and p['tlsVerified'] is True and re.fullmatch('[0-9a-f]{64}',p['bodySha256']) and p['bodyBytes']>0,'Invalid actual HTTP/TLS capture')
-        if s['kind']=='game_article':require(datetime.fromisoformat(s['passes'][1]['observedAtUTC'])>datetime.fromisoformat(s['passes'][0]['observedAtUTC']),'Article pass order differs')
+            if s['kind']=='game_article' or 'httpStatus' in p:require(p['httpStatus']==200 and p['tlsVerified'] is True and re.fullmatch('[0-9a-f]{64}',p['bodySha256']) and p['bodyBytes']>0,'Invalid actual HTTP/TLS capture')
+        if all('observedAtUTC' in p for p in s['passes']):require(datetime.fromisoformat(s['passes'][1]['observedAtUTC'])>datetime.fromisoformat(s['passes'][0]['observedAtUTC']),'Article pass order differs')
     require(len(audit['rows'])==132 and audit['factsFullyVerified']==0,'Audit scope or factual completion differs')
+    require(audit['quoteRecoveriesPerPass']==len(quotes),'Article audit quotation total differs from source registry')
     for i,(r,e,a) in enumerate(zip(rows,expected,audit['rows']),1):
         require(r['id']==f'MG{i:03d}' and r['name']==e['name'] and r['edition']==e['edition'],'Published row differs from canonical index')
         require(r['confidence']=='low' and r['complete'] is False,'Unresolved whole row promoted')
@@ -94,7 +95,7 @@ def validate_reopens(sources, passes, summary):
             qq = [{'id':f'H{i}Q{j+1}', 'text':q['quote'], 'locator':q['locator']} for x in old_sources.values() if x['url']==source['url'] for j,q in enumerate(x['pass2']['quotes'])]
         require(qq, 'Supplemental source has no retained original quotations')
         expected[f'HIST{i}']={'url':source['url'], 'quotes':qq}
-    require(len(expected)==145 and len({s['url'] for s in expected.values()})==145, 'Delivery URLs missing or duplicated')
+    require(len(expected)>=145 and len({s['url'] for s in expected.values()})==len(expected), 'Delivery URLs missing or duplicated')
     by_pass=[]
     for number, records in enumerate(passes, 1):
         require(len(records)==len(expected), 'Delivery source reopen count differs')
@@ -118,7 +119,7 @@ def validate_reopens(sources, passes, summary):
         by_pass.append(seen)
     for sid in expected:
         require(datetime.fromisoformat(by_pass[1][sid]['requestBeganUTC'])>datetime.fromisoformat(by_pass[0][sid]['requestCompletedUTC']), 'Second reopen precedes first completion')
-    require(summary['passed'] is True and summary['uniqueUrls']==145 and summary['passes']==2 and summary['requests']==290 and summary['quoteRecoveries']==sum(len(r['recoveredQuoteIds']) for records in passes for r in records) and summary['missingQuotes']==0 and summary['failedSources']==[], 'Reopen summary differs from complete request records')
+    require(summary['passed'] is True and summary['uniqueUrls']==len(expected) and summary['passes']==2 and summary['requests']==len(expected)*2 and summary['quoteRecoveries']==sum(len(r['recoveredQuoteIds']) for records in passes for r in records) and summary['missingQuotes']==0 and summary['failedSources']==[], 'Reopen summary differs from complete request records')
     return sum(len(r['recoveredQuoteIds']) for records in passes for r in records)
 
 def run(args):
@@ -152,13 +153,44 @@ def run(args):
                 require(observed==v,'CSV round-trip changed '+row['id']+' '+k)
     checked('Exact JSON/CSV field round trip',132*len(rows[0]),csv_check)
     checked('Field citations and true publisher lineage boundaries',1320,lambda:validate_catalogue(data,sources,audit,index))
-    checked('Short clips, quote budgets and complete A/B recovery',len(quotes)+142+284,lambda:validate_catalogue(data,sources,audit,index))
+    checked('Short clips, quote budgets and complete A/B recovery',len(quotes)+len(sources['sources'])*3,lambda:validate_catalogue(data,sources,audit,index))
     checked('Literal controller labels and 25 base motion entries',sum(len(r['controls']['bindings']) for r in rows)+132,lambda:validate_catalogue(data,sources,audit,index))
     checked('Original two-sentence summaries and phone assessments',396,lambda:validate_catalogue(data,sources,audit,index))
+    checked('Independent publisher families for all 132 narrow core-gameplay summaries',132,lambda:require(all(r['fieldEvidence']['gameplay']['status']=='corroborated' for r in rows),'Core gameplay summary remains single-source'))
+    def same_publisher_rejects():
+        altered=copy.deepcopy(data)
+        altered['minigames'][121]['fieldEvidence']['gameplay']['quoteIds']=['SR_MOUSEQ002','TG_TVQ001']
+        try:validate_catalogue(altered,sources,audit,index)
+        except AssertionError as error:require(str(error)=='Two references from one publisher are not independent','Wrong failure hid publisher-lineage weakness')
+        else:raise AssertionError('ScreenRant and TheGamer falsely counted as independent publishers')
+    checked('ScreenRant/TheGamer shared-Valnet lineage rejection',1,same_publisher_rejects)
     contexts=sum(len(a['independentScopeChecks']) for a in audit['rows'])
     checked('Full row audit bindings and complete reopened source contexts',132+contexts,lambda:validate_catalogue(data,sources,audit,index))
     checked('Unknown awards, returning editions, timer scopes and conflict retention',132+25,lambda:validate_catalogue(data,sources,audit,index))
     checked('Fourteen material conflicts preserved',14,lambda:require(len(documents['catalogue-conflicts']['conflicts'])==14,'Conflict omitted'))
+    def reward_witness_check(proof):
+        schema=load('reports/reward-quote-capture-audit.schema.json')
+        jsonschema.Draft202012Validator.check_schema(schema);jsonschema.Draft202012Validator(schema).validate(proof)
+        expected={r['id']:set(r['fieldEvidence']['reward']['quoteIds']) for r in rows if r['fieldEvidence']['reward']['status']=='single_source'}
+        require(len(expected)==19, 'Reported reward row scope differs')
+        expected['MG120']={q for q in rows[119]['fieldEvidence']['gameplay']['quoteIds'] if q.startswith('W120_gameplay_')}
+        wanted={(row,q,p) for row,ids in expected.items() for q in ids for p in [1,2]};observed=set()
+        for check in proof['checks']:
+            key=(check['id'],check['quoteId'],check['pass']);require(key in wanted and key not in observed,'Duplicate, invented or unrelated reward/gameplay witness')
+            observed.add(key);source,quote=quotes[check['quoteId']]
+            require(check['sourceUrl']==source['url'] and check['quote']==quote['text'] and check['bodySha256']==source['passes'][check['pass']-1]['bodySha256'], 'Capture witness differs from original quote/response registry')
+        require(observed==wanted,'Missing exact reward or gameplay witness')
+        require(all('_reward_' in q for row,ids in expected.items() if row!='MG120' for q in ids),'Reward claim supported only by introductory text')
+    reward_proof=load('reports/reward-quote-capture-audit.json')
+    checked('Exact reward/gameplay quote witnesses bound to both article captures',48,lambda:reward_witness_check(reward_proof))
+    def bad_reward_witnesses():
+        mutations=[lambda d:d['checks'].pop(),lambda d:d['checks'][0].__setitem__('quote','Unsupported reward'),lambda d:d['checks'][0].__setitem__('bodySha256','0'*64),lambda d:d['checks'].__setitem__(1,copy.deepcopy(d['checks'][0]))]
+        for mutate in mutations:
+            proof=copy.deepcopy(reward_proof);mutate(proof)
+            try:reward_witness_check(proof)
+            except (AssertionError,jsonschema.ValidationError):pass
+            else:raise AssertionError('Malformed reward capture witness accepted')
+    checked('Four isolated malformed reward-capture fixtures',4,bad_reward_witnesses)
     def gaps_check():
         gaps=load('reports/research-gaps.json');schema=load('reports/research-gaps.schema.json')
         jsonschema.Draft202012Validator.check_schema(schema);jsonschema.Draft202012Validator(schema).validate(gaps)
@@ -174,7 +206,7 @@ def run(args):
             schema=load(path+'.schema.json');jsonschema.Draft202012Validator.check_schema(schema);jsonschema.Draft202012Validator(schema).validate(document)
     checked('Three closed source-reopening report schemas',3,reopen_schemas)
     recovered=validate_reopens(sources,reopen_docs[:2],reopen_docs[2])
-    checked('All 145 source URLs reopened twice with ordered HTTPS/TLS records',290,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
+    checked('All '+str(len(reopen_docs[0]))+' source URLs reopened twice with ordered HTTPS/TLS records',len(reopen_docs[0])*2,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
     checked('Every recovered reopen quotation bound to the original registry',recovered,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
     def negative_reopens():
         mutations=[
