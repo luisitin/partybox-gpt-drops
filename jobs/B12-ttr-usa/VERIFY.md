@@ -498,4 +498,3 @@ The exact-head GitHub Actions run is linked in the PR description after every st
 - Expansion variant scoring policies (1910 Globetrotter/Big Cities) and the newer 33-ticket base edition; catalogs and differences are explicit, while scoreGame implements classic USA scoring.
 - Worst-case search performance on arbitrary large dense cyclic graphs. Exactness has no cap; exponential time is possible.
 - Future changes to live source URLs. The two actually opened authoring passes and immutable local factual snapshots are the verified evidence.
-
