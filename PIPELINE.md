@@ -1,53 +1,56 @@
 # ChatGPT project pipeline
 
-_Last refreshed: 2026-10-07 03:46 UTC_
+_Last refreshed: 2026-10-07 03:53 UTC_
 
-This tracker follows the 20 jobs listed in [PROMPTS.md](PROMPTS.md). It checks the job branches and pull requests in this repository.
+This tracker covers the 20 jobs in [PROMPTS.md](PROMPTS.md). It reads branch commits, changed files, and pull-request notes from GitHub.
 
 Live dashboard: https://partybox-project-tracker.artificiallysloppy.chatgpt.site
 
+The notes below describe what the GitHub record suggests is being worked on. They are evidence from commits and pull requests, not a claim that a job has passed verification.
+
 ## Stage meanings
 
-- **Pre-pipeline:** no job branch has been created yet.
+- **Pre-pipeline:** no job branch or pull request exists.
 - **Pipeline:** a job branch exists, but its pull request is not open.
-- **Review:** a pull request is open and waiting for review.
+- **Review:** a pull request is open.
 - **Completed:** a pull request has been merged.
 
-**Current count:** 1 pre-pipeline, 19 pipeline, 0 in review, 0 completed.
+**Current count:** 1 pre-pipeline, 18 pipeline, 1 in review, 0 completed.
 
 ## Pre-pipeline (1)
 
-| Job | Project | GitHub status |
+| Job | What seems to be worked on | Latest evidence |
 |---|---|---|
-| B06 | Jamboree CPU behaviour + cpuPolicy.ts (R+C) | No job branch found |
+| [B06 Jamboree CPU behaviour + cpuPolicy.ts (R+C)](https://github.com/luisitin/partybox-gpt-drops/blob/main/PROMPTS.md) | No branch or pull request exists yet. | No commit details available |
 
-## Pipeline (19)
+## Pipeline (18)
 
-| Job | Project | GitHub status |
+| Job | What seems to be worked on | Latest evidence |
 |---|---|---|
-| B01 | Jamboree dice blocks + exact odds (R+C) | Branch [job/B01-jamboree-dice](https://github.com/luisitin/partybox-gpt-drops/tree/job/B01-jamboree-dice) exists at the same commit as main; no open PR |
-| B02 | Board movement odds engine (C) | Branch [job/B02-board-odds](https://github.com/luisitin/partybox-gpt-drops/tree/job/B02-board-odds) exists at the same commit as main; no open PR |
-| B03 | Every Jamboree minigame, catalogued (R) | Branch [job/B03-jamboree-minigames](https://github.com/luisitin/partybox-gpt-drops/tree/job/B03-jamboree-minigames) exists at the same commit as main; no open PR |
-| B04 | All Jamboree boards, space by space (R) | Branch [job/B04-jamboree-boards](https://github.com/luisitin/partybox-gpt-drops/tree/job/B04-jamboree-boards) exists at the same commit as main; no open PR |
-| B05 | Turn flow, exact strings, bonus stars (R) | Branch [job/B05-jamboree-turn-flow](https://github.com/luisitin/partybox-gpt-drops/tree/job/B05-jamboree-turn-flow) exists at the same commit as main; no open PR |
-| B07 | Yahtzee exact optimal solver (C) | Branch [job/B07-yahtzee-optimal](https://github.com/luisitin/partybox-gpt-drops/tree/job/B07-yahtzee-optimal) exists at the same commit as main; no open PR |
-| B08 | Monopoly exact landing odds + ROI (C) | Branch [job/B08-monopoly-markov](https://github.com/luisitin/partybox-gpt-drops/tree/job/B08-monopoly-markov) exists at the same commit as main; no open PR |
-| B09 | Clue exact deduction engine (C) | Branch [job/B09-clue-solver](https://github.com/luisitin/partybox-gpt-drops/tree/job/B09-clue-solver) exists at the same commit as main; no open PR |
-| B10 | Battleship probability-density AI (C) | Branch [job/B10-battleship-ai](https://github.com/luisitin/partybox-gpt-drops/tree/job/B10-battleship-ai) exists at the same commit as main; no open PR |
-| B11 | Rummikub validator + best play (C) | Branch [job/B11-rummikub-solver](https://github.com/luisitin/partybox-gpt-drops/tree/job/B11-rummikub-solver) exists at the same commit as main; no open PR |
-| B12 | Ticket to Ride USA data + longest path (R+C) | Branch [job/B12-ttr-usa](https://github.com/luisitin/partybox-gpt-drops/tree/job/B12-ttr-usa) exists at the same commit as main; no open PR |
-| B13 | 1,000 verified trivia questions (R) | Branch [job/B13-trivia-1000](https://github.com/luisitin/partybox-gpt-drops/tree/job/B13-trivia-1000) exists at the same commit as main; no open PR |
-| B14 | 600 comedy prompts + 600 "most likely to" (R) | Branch [job/B14-comedy-prompts](https://github.com/luisitin/partybox-gpt-drops/tree/job/B14-comedy-prompts) exists at the same commit as main; no open PR |
-| B15 | 120 original SVG game icons (C) | Branch [job/B15-icons-120](https://github.com/luisitin/partybox-gpt-drops/tree/job/B15-icons-120) exists at the same commit as main; no open PR |
-| B16 | 12 accessible player colors (C) | Branch [job/B16-player-colors](https://github.com/luisitin/partybox-gpt-drops/tree/job/B16-player-colors) exists at the same commit as main; no open PR |
-| B17 | 40 original synthesized sound effects (C) | Branch [job/B17-sfx-40](https://github.com/luisitin/partybox-gpt-drops/tree/job/B17-sfx-40) exists at the same commit as main; no open PR |
-| B18 | Tiny spring + easing library (C) | Branch [job/B18-motion-ts](https://github.com/luisitin/partybox-gpt-drops/tree/job/B18-motion-ts) exists at the same commit as main; no open PR |
-| B19 | Player-name filter (C) | Branch [job/B19-name-filter](https://github.com/luisitin/partybox-gpt-drops/tree/job/B19-name-filter) exists at the same commit as main; no open PR |
-| B20 | Every other Jamboree mode, buildable specs (R) | Branch [job/B20-jamboree-modes](https://github.com/luisitin/partybox-gpt-drops/tree/job/B20-jamboree-modes) exists at the same commit as main; no open PR |
+| [B11 Rummikub validator + best play (C)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B11-rummikub-solver) | Branch exists; no change details were returned. | No commit details available |
+| [B13 1,000 verified trivia questions (R)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B13-trivia-1000) | Branch exists; no change details were returned. | No commit details available |
+| [B09 Clue exact deduction engine (C)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B09-clue-solver) | Branch exists; no change details were returned. | No commit details available |
+| [B18 Tiny spring + easing library (C)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B18-motion-ts) | Branch exists; no change details were returned. | No commit details available |
+| [B05 Turn flow, exact strings, bonus stars (R)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B05-jamboree-turn-flow) | Branch exists; no change details were returned. | No commit details available |
+| [B20 Every other Jamboree mode, buildable specs (R)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B20-jamboree-modes) | Branch exists; no change details were returned. | No commit details available |
+| [B04 All Jamboree boards, space by space (R)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B04-jamboree-boards) | Branch exists; no change details were returned. | No commit details available |
+| [B07 Yahtzee exact optimal solver (C)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B07-yahtzee-optimal) | Branch exists; no change details were returned. | No commit details available |
+| [B12 Ticket to Ride USA data + longest path (R+C)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B12-ttr-usa) | Branch exists; no change details were returned. | No commit details available |
+| [B02 Board movement odds engine (C)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B02-board-odds) | Added the job-specific GitHub verification workflow; no job deliverables are committed yet. | 2026-10-07T03:48:23Z — B02: add isolated read-only verification workflow; files: .github/workflows/B02.yml |
+| [B15 120 original SVG game icons (C)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B15-icons-120) | Branch exists; no change details were returned. | No commit details available |
+| [B01 Jamboree dice blocks + exact odds (R+C)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B01-jamboree-dice) | Added the job-specific GitHub verification workflow; no job deliverables are committed yet. | 2026-10-07T03:49:52Z — B01: add read-only full-suite PR verification workflow; files: .github/workflows/B01.yml |
+| [B17 40 original synthesized sound effects (C)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B17-sfx-40) | Added the job-specific GitHub verification workflow; no job deliverables are committed yet. | 2026-10-07T03:48:32Z — B17: add read-only full-suite workflow on job branch; files: .github/workflows/B17.yml |
+| [B16 12 accessible player colors (C)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B16-player-colors) | Added the job-specific GitHub verification workflow; no job deliverables are committed yet. | 2026-10-07T03:50:37Z — B16: add full verification workflow with strict acceptance gate; files: .github/workflows/B16.yml |
+| [B14 600 comedy prompts + 600 "most likely to" (R)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B14-comedy-prompts) | Branch exists; no change details were returned. | No commit details available |
+| [B10 Battleship probability-density AI (C)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B10-battleship-ai) | Added the job-specific GitHub verification workflow; no job deliverables are committed yet. | 2026-10-07T03:44:33Z — B10: add isolated full-suite verification workflow; files: .github/workflows/B10.yml |
+| [B08 Monopoly exact landing odds + ROI (C)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B08-monopoly-markov) | Added the job-specific GitHub verification workflow; no job deliverables are committed yet. | 2026-10-07T03:45:53Z — B08: add isolated full-suite PR workflow; files: .github/workflows/B08.yml |
+| [B03 Every Jamboree minigame, catalogued (R)](https://github.com/luisitin/partybox-gpt-drops/tree/job/B03-jamboree-minigames) | Branch exists; no change details were returned. | No commit details available |
 
-## Review (0)
+## Review (1)
 
-_None._
+| Job | What seems to be worked on | Latest evidence |
+|---|---|---|
+| [B19 Player-name filter (C)](https://github.com/luisitin/partybox-gpt-drops/pull/2) | Project files committed: jobs/B19-name-filter/.gitignore, jobs/B19-name-filter/README.md, jobs/B19-name-filter/VERIFY.md, jobs/B19-name-filter/data/kept-rejections.json, jobs/B19-name-filter/data/policy.json, +6 more; job-specific GitHub verification workflow also added PR says: Implements the bounded TypeScript name filter plus a structurally different bitset-NFA reference, 5,000 unique generated obfuscations per seed, 25 executed mutants per seed, public-corpus acquisition and checks, and a literal per-observation latency gate. All suites run at seeds 1, 2, 3 using npm test. Verification note: Local core runs block all 15,000 generated obfuscations and kill 25/25 mutants in all three seeds. The local strict 0.05 ms latency gate has observed outliers, so no complete pass is claimed. Full corpus results and the Actions link will be recorded after inspecting the execution. Clean-room independent authorship is UNVERIFIED: the reference is a separate algorithm but was written in the same session and shares policy data. Corpus collisions, unverified coverage | 2026-10-07T03:50:44Z — B19: add full seeded differential, mutation, corpus and latency verification; files: .github/workflows/B19.yml, jobs/B19-name-filter/.gitignore, jobs/B19-name-filter/README.md, jobs/B19-name-filter/VERIFY.md, jobs/B19-name-filter/data/kept-rejections.json, jobs/B19-name-filter/data/policy.json, +6 more; [PR #2](https://github.com/luisitin/partybox-gpt-drops/pull/2) |
 
 ## Completed (0)
 
