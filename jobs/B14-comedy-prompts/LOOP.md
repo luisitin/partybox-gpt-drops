@@ -44,3 +44,5 @@
 12. Authored and first-graded 100 candy candidates, distinguishing concrete
     physical and adult procedural jokes from weak literal-name substitutions.
     All 1,200 rows pass structural checks; sealed grades and rejected rows remain.
+13. Corrected and regraded Q0621 after recording the failed missing-blank check; preserved the invalidated batch and added pre-seal genre guards. All 1,300 rows pass structural checks.
+    Independent review remains partial; complete counts are recorded verbatim.

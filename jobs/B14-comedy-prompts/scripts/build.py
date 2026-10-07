@@ -22,6 +22,8 @@ for path in sorted((ROOT / "batches").glob("*.tsv")):
             raise ValueError(f"{path.name}:{line_number}: unknown kind")
         if len(prompt) > 90 or not 1 <= int(grade) <= 5 or len(reason) < 10:
             raise ValueError(f"{path.name}:{line_number}: invalid length, grade, or reason before sealing")
+        if (kind == "fill" and "___" not in prompt) or (kind == "most-likely" and not prompt.startswith("Who's most likely to ")):
+            raise ValueError(f"{path.name}:{line_number}: invalid genre structure before sealing")
         counts[kind] += 1
         prefix = "Q" if kind == "fill" else "M"
         row = {"id": f"{prefix}{counts[kind]:04}", "kind": kind,
