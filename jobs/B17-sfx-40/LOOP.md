@@ -33,3 +33,9 @@ Evidence recording rejects changed source hashes. Full pinned-node rerun passed
 120 audio/30 EBU/75 mutation checks again. Calibration documentation clarified that
 case 19's sample peak is below fullscale despite its reconstructed +3 dBTP peak;
 no synthesis or meter behavior changed. Final exact-head hosted inspection follows.
+
+Final purity review found exported FFT changed caller arrays. Converted it to
+copy its real/imaginary inputs and return new arrays, preserving all numeric and
+PNG output. Added assertions of unchanged caller arrays alongside independent
+direct-DFT comparisons for all six sizes under each seed. Full rerun required
+before recording or handing off this code change.

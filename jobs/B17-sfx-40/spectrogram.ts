@@ -1,6 +1,6 @@
 /** Pure radix-2 FFT and minimal PNG encoder (stored zlib/deflate blocks). */
-export function fft(real:Float64Array, imaginary=new Float64Array(real.length)):void {
-  const n=real.length;
+export function fft(input:Float64Array, inputImaginary=new Float64Array(input.length)):{real:Float64Array;imaginary:Float64Array} {
+  const real=input.slice(),imaginary=inputImaginary.slice(),n=real.length;
   if(n<2||(n&(n-1))!==0||imaginary.length!==n) throw new RangeError('FFT requires equal power-of-two arrays');
   for(let i=1,j=0;i<n;i++) { let bit=n>>1; for(;j&bit;bit>>=1) j^=bit; j^=bit; if(i<j){[real[i],real[j]]=[real[j]!,real[i]!];[imaginary[i],imaginary[j]]=[imaginary[j]!,imaginary[i]!];} }
   for(let size=2;size<=n;size*=2) {
@@ -12,6 +12,7 @@ export function fft(real:Float64Array, imaginary=new Float64Array(real.length)):
       real[a]=ar+tr;imaginary[a]=ai+ti;real[b]=ar-tr;imaginary[b]=ai-ti;
     }
   }
+  return {real,imaginary};
 }
 export function crc32(bytes:Uint8Array):number {
   let crc=0xffffffff;
@@ -39,11 +40,11 @@ export function spectrogram(samples:Float64Array,width=256,height=128):Uint8Arra
   for(let x=0;x<width;x++) {
     const start=Math.round(x*(samples.length-n)/Math.max(1,width-1)),real=new Float64Array(n),imag=new Float64Array(n);
     for(let j=0;j<n;j++)real[j]=(samples[start+j]??0)*(.5-.5*Math.cos(2*Math.PI*j/(n-1)));
-    fft(real,imag);
+    const transformed=fft(real,imag);
     for(let y=0;y<height;y++) {
       // Log frequency axis, 47 Hz (one bin) to 24 kHz; 70 dB magnitude window.
       const bin=Math.min(n/2,Math.max(1,Math.round(Math.pow(n/2,(height-1-y)/Math.max(1,height-1)))));
-      const db=20*Math.log10(Math.hypot(real[bin]!,imag[bin]!)/(n/2)+1e-12);
+      const db=20*Math.log10(Math.hypot(transformed.real[bin]!,transformed.imaginary[bin]!)/(n/2)+1e-12);
       const v=Math.min(1,Math.max(0,(db+70)/70)),at=(y*width+x)*3;
       pixels[at]=Math.round(18+237*Math.min(1,v*1.5));
       pixels[at+1]=Math.round(15+225*Math.max(0,(v-.25)/.75));
