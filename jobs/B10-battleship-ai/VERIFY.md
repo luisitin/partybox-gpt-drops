@@ -26,7 +26,11 @@ cause is assigned without a trace and no outlier is waived.
 
 ## Additional optimization checks
 
-- Independent Medium zero-contribution derivation:30,000 named/anonymous public states, every cell/method matched the sealed implementation. Strict standalone compilation into `/tmp/B10-reference-opt` preceded the comparison.
-- Independent audit candidate/conditional word representation:1,800 states(1,500 six-by-six,300 ten-by-ten),132,181 accepted worlds; exact deep equality of full occupancy/target arrays against sealed grid reduction. Strict standalone compilation into `/tmp/B10-reference-opt3` preceded the comparison.
-- Allocation-change complete correctness: `npm run build && node test/run.mjs --no-bench`, seeds1/2/3;30,000 exact states,600 sample audits,90,000 policies,75/75 mutation kills; passed. Raw report/log: `evidence/allocation-correctness.json` and `.log`.
-- Allocation-change exploratory Hard pilot: `node test/benchmark.mjs 1 1000 hard`,44,751 policy and density comparisons passed, mean44.751, max35.187ms,0 calls>50ms. Raw report: `evidence/allocation-pilot-1000.json`. This is additional evidence only; full required benchmark remains pending.
+- Independent Medium zero-contribution derivation: 30,000 named/anonymous public states, every cell/method matched the sealed implementation. Strict standalone compilation into `/tmp/B10-reference-opt` preceded the comparison.
+- Independent audit candidate/conditional word representation: 1,800 states(1,500 six-by-six, 300 ten-by-ten), 132,181 accepted worlds; exact deep equality of full occupancy/target arrays against sealed grid reduction. Strict standalone compilation into `/tmp/B10-reference-opt3` preceded the comparison.
+- Allocation-change complete correctness: `npm run build && node test/run.mjs --no-bench`, seeds 1/2/3; 30,000 exact states, 600 sample audits, 90,000 policies, 75/75 mutation kills; passed. Raw report/log: `evidence/allocation-correctness.json` and `.log`.
+- Allocation-change exploratory Hard pilot: `node test/benchmark.mjs 1 1000 hard`,44,751 policy and density comparisons passed, mean 44.751, max 35.187 ms, 0 calls >50 ms. Raw report: `evidence/allocation-pilot-1000.json`. This is additional evidence only; full required benchmark remains pending.
+
+## Hosted timeout and complete CI aggregation
+
+Run37642504864 at1b8c93f was cancelled after exceeding the30-minute job maximum. This is a failed run, preserved in `evidence/ci-timeout-37642504864.json` and `.log`; it is not full verification. The workflow now runs each complete seed suite on its own runner, retaining100,000 games per difficulty per seed, and a final aggregation step requires allnine benchmark cells and every correctness/mutation suite. `npm test` defaults to allthree seeds; `npm test -- --seed=N` runs the entire suite for that seed. Aggregation rejects even one measured call>50ms and any missing comparison. The27 synthetic ledger validation tests passed for each seed via `runLedgerTests`; synthetic ledgers do not count as gameplay evidence.

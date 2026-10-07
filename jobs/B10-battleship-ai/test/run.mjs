@@ -7,13 +7,14 @@ import {performance} from 'node:perf_hooks';
 import * as AI from '../dist/battleshipAI.js';
 import {runUnit,runDifferential,runSampleAudit} from './suites.mjs';
 import {runMutations} from './mutations.mjs';
+import {runLedgerTests} from './ci-ledger-tests.mjs';
 const quick=process.argv.includes('--quick'),noBench=process.argv.includes('--no-bench');
 const single=process.argv.find(x=>x.startsWith('--seed='));
 const seeds=single?[Number(single.split('=')[1])]:[1,2,3];
 assert.ok(seeds.every(x=>[1,2,3].includes(x)),'Only verification seeds 1, 2 and 3 are supported');
 const command=`${process.execPath} test/run.mjs ${process.argv.slice(2).join(' ')}`.trim();
 const report={command,complete:!quick&&!noBench&&!single,node:process.version,platform:platform(),arch:arch(),cpu:cpus()[0]?.model,
-  logicalCPUs:availableParallelism(),seeds,staticChecks:[],units:[],differential:[],sampleAudits:[],mutations:[],benchmarks:[],failures:[]};
+  logicalCPUs:availableParallelism(),seeds,staticChecks:[],units:[],differential:[],sampleAudits:[],mutations:[],ledgerChecks:[],benchmarks:[],failures:[]};
 const start=performance.now();mkdirSync('reports',{recursive:true});
 const hash=path=>createHash('sha256').update(readFileSync(path)).digest('hex');
 function save(){report.elapsedSeconds=(performance.now()-start)/1000;writeFileSync('reports/latest.json',JSON.stringify(report,null,2)+'\n');}
@@ -48,6 +49,7 @@ try {
   for(const seed of seeds) {
     if(seed!==seeds[0])execFileSync(process.execPath,['node_modules/typescript/bin/tsc','-p','tsconfig.json'],{stdio:'inherit'});
     checks(seed);
+    report.ledgerChecks.push(runLedgerTests(seed));
     report.units.push(...runUnit(AI,seed));
     report.differential.push(runDifferential(AI,seed,quick?1000:10000));
     report.sampleAudits.push(runSampleAudit(AI,seed,quick?50:200));

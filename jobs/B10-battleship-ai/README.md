@@ -166,3 +166,5 @@ original raw-reports.zip. The three >50 ms historical calls remain recorded. A n
 1,000-game exploratory run matched all 44,751 shots and densities but recorded one
 72.618 ms call; it remains a failed timing run in LOOP.md. Final 900,000-game
 verification and exact-head hosted evidence are pending.
+
+CI uses three full seed jobs and a required aggregation job after an observed30-minute timeout with the additional independent checks. The aggregate requires the complete900,000-game corpus and every per-seed gate; no seed job uses quick or reduced mode. Default `npm test` still runs allseeds locally.

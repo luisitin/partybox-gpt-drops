@@ -6,6 +6,11 @@ permissions:
   contents: read
 jobs:
   verify:
+    name: verify seed ${{ matrix.seed }}
+    strategy:
+      fail-fast: false
+      matrix:
+        seed: [1, 2, 3]
     runs-on: ubuntu-latest
     timeout-minutes: 30
     defaults:
@@ -17,9 +22,33 @@ jobs:
         with:
           node-version: '22'
       - run: npm ci --ignore-scripts --no-audit --no-fund
-      - run: npm test
+      - run: npm test -- --seed=${{ matrix.seed }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: B10-verification
+          name: B10-seed-${{ matrix.seed }}
           path: jobs/B10-battleship-ai/reports/
+  aggregate:
+    name: complete all three seeds
+    needs: verify
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: jobs/B10-battleship-ai
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: B10-seed-*
+          path: jobs/B10-battleship-ai/reports/ci-seeds
+      - run: node test/ci-aggregate.mjs reports/ci-seeds
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: B10-full-verification
+          path: jobs/B10-battleship-ai/reports/ci-aggregate.json
