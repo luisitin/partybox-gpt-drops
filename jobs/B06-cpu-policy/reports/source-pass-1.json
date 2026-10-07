@@ -220,15 +220,17 @@
         {
           "source": "B",
           "quote": "branch",
-          "recovered": false
+          "recovered": true,
+          "provider": "native web browser"
         },
         {
           "source": "A",
           "quote": "branch",
-          "recovered": false
+          "recovered": true,
+          "provider": "native web browser"
         }
       ],
-      "allRegisteredQuotesRecovered": false,
+      "allRegisteredQuotesRecovered": true,
       "assessment": "qualitative source scope retained; no numeric behavior inferred"
     },
     {
@@ -239,7 +241,8 @@
         {
           "source": "A",
           "quote": "custom",
-          "recovered": false
+          "recovered": true,
+          "provider": "native web browser"
         },
         {
           "source": "G",
@@ -247,7 +250,7 @@
           "recovered": true
         }
       ],
-      "allRegisteredQuotesRecovered": false,
+      "allRegisteredQuotesRecovered": true,
       "assessment": "qualitative source scope retained; no numeric behavior inferred"
     },
     {
@@ -258,7 +261,8 @@
         {
           "source": "B",
           "quote": "hard",
-          "recovered": false
+          "recovered": true,
+          "provider": "native web browser"
         },
         {
           "source": "G",
@@ -266,7 +270,7 @@
           "recovered": true
         }
       ],
-      "allRegisteredQuotesRecovered": false,
+      "allRegisteredQuotesRecovered": true,
       "assessment": "qualitative source scope retained; no numeric behavior inferred"
     },
     {
@@ -277,20 +281,23 @@
         {
           "source": "A",
           "quote": "luigi",
-          "recovered": false
+          "recovered": true,
+          "provider": "native web browser"
         },
         {
           "source": "M",
           "quote": "master",
-          "recovered": false
+          "recovered": true,
+          "provider": "native web browser"
         },
         {
           "source": "M",
           "quote": "minigame",
-          "recovered": false
+          "recovered": true,
+          "provider": "native web browser"
         }
       ],
-      "allRegisteredQuotesRecovered": false,
+      "allRegisteredQuotesRecovered": true,
       "assessment": "qualitative source scope retained; no numeric behavior inferred"
     },
     {
@@ -320,7 +327,8 @@
         {
           "source": "B",
           "quote": "shop",
-          "recovered": false
+          "recovered": true,
+          "provider": "native web browser"
         },
         {
           "source": "P",
@@ -328,7 +336,7 @@
           "recovered": true
         }
       ],
-      "allRegisteredQuotesRecovered": false,
+      "allRegisteredQuotesRecovered": true,
       "assessment": "qualitative source scope retained; no numeric behavior inferred"
     },
     {
@@ -353,10 +361,11 @@
         {
           "source": "B",
           "quote": "buddy",
-          "recovered": false
+          "recovered": true,
+          "provider": "native web browser"
         }
       ],
-      "allRegisteredQuotesRecovered": false,
+      "allRegisteredQuotesRecovered": true,
       "assessment": "qualitative source scope retained; no numeric behavior inferred"
     },
     {
@@ -550,6 +559,89 @@
       "evidence": [],
       "allRegisteredQuotesRecovered": false,
       "assessment": "coverage gap retained"
+    }
+  ],
+  "browserSupplement": [
+    {
+      "source": "B",
+      "url": "https://www.reddit.com/r/MARIOPARTY/comments/1g862fp/ai_in_jamboree_plus_a_surprise/",
+      "provider": "native web browser source reopen",
+      "openedAt": "2026-10-07T15:21:24.777195+00:00",
+      "quotes": {
+        "branch": {
+          "registeredQuote": "avoid landing on unlucky spaces in branching paths",
+          "recovered": true
+        },
+        "shop": {
+          "registeredQuote": "skip out on buying items if they're about to buy a star",
+          "recovered": true
+        },
+        "hard": {
+          "registeredQuote": "especially when set to Hard difficulty or above",
+          "recovered": true
+        },
+        "buddy": {
+          "registeredQuote": "use Jamboree buddies at the Boo",
+          "recovered": true
+        }
+      },
+      "status": "passed",
+      "registeredExcerptSha256": "f0ab8df756c49c679f702335553184e6823fcb70152141e45aa24fabc0a3ae92",
+      "captureScope": "Hash of source URL plus only registered excerpts recovered from the actual reopened native-browser source section. Full page text is not archived."
+    },
+    {
+      "source": "A",
+      "url": "https://www.reddit.com/r/MARIOPARTY/comments/1h44ohe/list_things_you_noticed_about_the_cpus/",
+      "provider": "native web browser source reopen",
+      "openedAt": "2026-10-07T15:21:24.777565+00:00",
+      "quotes": {
+        "branch": {
+          "registeredQuote": "always avoid landing on the Bowser Space",
+          "recovered": true
+        },
+        "items": {
+          "registeredQuote": "The CPUs are very bad at at strategically using items.",
+          "recovered": true
+        },
+        "custom": {
+          "registeredQuote": "If CPUs get Custom Dice Blocks, they will often not even use them.",
+          "recovered": true
+        },
+        "luigi": {
+          "registeredQuote": "The CPU is ridiculously good at Luigi Rescue Operation on Master difficulty.",
+          "recovered": true
+        },
+        "flying": {
+          "registeredQuote": "the CPU is pretty bad at the minigame even on Master",
+          "recovered": true
+        },
+        "counter": {
+          "registeredQuote": "the thing about the bowser spaces on Bowser’s keep has not been what I observed.",
+          "recovered": true
+        }
+      },
+      "status": "passed",
+      "registeredExcerptSha256": "4c3d95e138eabccf736b5abebb71bc477aae608a8b38f7e0f404b135c64408b1",
+      "captureScope": "Hash of source URL plus only registered excerpts recovered from the actual reopened native-browser source section. Full page text is not archived."
+    },
+    {
+      "source": "M",
+      "url": "https://www.reddit.com/r/MARIOPARTY/comments/1hktj9s/playing_with_cpu/",
+      "provider": "native web browser source reopen",
+      "openedAt": "2026-10-07T15:21:24.777629+00:00",
+      "quotes": {
+        "master": {
+          "registeredQuote": "I always play them on master and even then they make stupid decisions",
+          "recovered": true
+        },
+        "minigame": {
+          "registeredQuote": "they’re hard when it comes to some games in jamboree tbh.",
+          "recovered": true
+        }
+      },
+      "status": "passed",
+      "registeredExcerptSha256": "44b5842c44101e3a489e41be92fff3e7adebd41294e921b8c511365414e208af",
+      "captureScope": "Hash of source URL plus only registered excerpts recovered from the actual reopened native-browser source section. Full page text is not archived."
     }
   ]
 }

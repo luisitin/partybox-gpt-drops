@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import{spawnSync}from'node:child_process';import{pathToFileURL}from'node:url';import{createHash}from'node:crypto';
-import{manual}from'./scenarios.mjs';import{researchCheck}from'./research-check.mjs';import{randomSuite,toySuite}from'./core.mjs';import{mutations}from'./mutations.mjs';
+import{manual}from'./scenarios.mjs';import{artifactCheck}from'./artifact-check.mjs';import{researchCheck}from'./research-check.mjs';import{randomSuite,toySuite}from'./core.mjs';import{mutations}from'./mutations.mjs';
 const root=path.resolve(path.dirname(new URL(import.meta.url).pathname),'..');process.chdir(root);fs.mkdirSync('.work',{recursive:true});
 const compile=(args)=>{const p=spawnSync(process.execPath,['node_modules/typescript/bin/tsc',...args],{encoding:'utf8',timeout:60000});assert.equal(p.status,0,`strict compile: ${p.stdout}${p.stderr}`);};
 const source=fs.readFileSync('cpuPolicy.ts','utf8');assert.ok(!/Math\.random|Date\.now|performance\.now/.test(source));assert.equal(Object.keys(JSON.parse(fs.readFileSync('package.json')).dependencies??{}).length,0);
@@ -16,7 +16,8 @@ for(const seed of [1,2,3]){
   try{manual(mutant);randomSuite(mutant,ref,seed,1000);toySuite(mutant,ref,seed,100);}catch(error){witness=String(error.message).slice(0,1000);}
   assert.ok(witness,`SURVIVED: ${name}`);kills.push({number:i+1,name,compiled:true,killed:true,witness,sourceSha256:createHash('sha256').update(source.replace(needle,replacement)).digest('hex')});console.log(`seed ${seed}: mutant ${i+1}/25 killed (${name})`);
  }
+ const artifacts=artifactCheck();
  const research=researchCheck();
- const report={seed,research,command:'npm test',manual:scenarios,random,toy,mutations:kills,status:'passed'};fs.writeFileSync(`.work/seed-${seed}.json`,JSON.stringify(report,null,2)+'\n');
+ const report={seed,research,artifacts,command:'npm test',manual:scenarios,random,toy,mutations:kills,status:'passed'};fs.writeFileSync(`.work/seed-${seed}.json`,JSON.stringify(report,null,2)+'\n');
 }
 console.log('All code suites passed for seeds 1, 2, 3. Research acceptance is tracked separately and may remain UNVERIFIED.');
