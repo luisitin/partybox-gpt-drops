@@ -33,7 +33,7 @@ export const mutations:readonly Mutation[]=[
   {id:'M25',name:'Exclude alpha exactly 128',from:'if (rgba[i + 3] >= 128)',to:'if (rgba[i + 3] > 128)'}
 ];
 export const limitCases:readonly (readonly [number,number,boolean])[]=[
- [4,5,false],[3,5,true],[0,1,true],[1,1,false],[0,0,false],[-1,5,false],[6,5,false],[4.1,6,false],[799,1000,true],[800,1000,false],[801,1000,false]
+ [4,5,false],[3,5,true],[0,1,true],[1,1,false],[0,0,false],[-1,5,false],[6,5,false],[4.1,6,false],[799,1000,true],[800,1000,false],[801,1000,false],[7205759403792643,9007199254740804,true],[7205759403792792,9007199254740991,true],[7205759403792793,9007199254740991,false]
 ];
 export interface MutationResult extends Mutation { readonly seed:number;readonly killed:boolean;readonly killingCases:number;readonly firstFailure:string;readonly executedCases:number;readonly moduleSha256:string; }
 export async function runMutations(root:string,seed:number,svgCases:readonly SvgCase[],maskCases:readonly MaskCase[],expectedMasks:readonly (readonly number[])[]):Promise<MutationResult[]> {

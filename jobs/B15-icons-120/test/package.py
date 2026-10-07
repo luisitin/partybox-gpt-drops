@@ -5,10 +5,11 @@ root=Path(__file__).resolve().parents[1];repo=root.parents[1]
 workflow=repo/'.github/workflows/B15.yml'
 
 def source_files():
-    names=['README.md','package.json','tsconfig.json','requirements-dev.txt','manifest.json','icons.zip','.gitignore']
+    names=['README.md','ASSUMPTIONS.md','LOOP.md','NEXT.md','package-lock.json','package.json','tsconfig.json','requirements-dev.txt','manifest.json','icons.zip','.gitignore']
     paths=[root/name for name in names if (root/name).exists()]
     paths+=sorted((root/'icons').glob('*.svg'))
     paths+=sorted((root/'src').glob('*.ts'))+sorted((root/'test').glob('*.ts'))+sorted((root/'test').glob('*.py'))
+    paths+=sorted(p for p in (root/'test/blind').rglob('*') if p.is_file() and '__pycache__' not in p.parts)
     if workflow.exists(): paths.append(workflow)
     return sorted(paths,key=lambda p:str(p))
 
@@ -34,7 +35,7 @@ max_bytes=max(result['assets'],key=lambda x:x['bytes']);max_colors=max(x['colors
 unique={}
 for value in result['maxima']:unique[(value['renderer'],value['size'])]=value
 lines=['# B15 verification evidence','',
-'Automated suites below passed. Blind authorship by two isolated developers is **not verified**; see UNVERIFIED.',
+'Automated suites below passed with an independently authored reference sealed before production source inspection. See `test/blind/AUTHORING.md` and the explicit integration boundary below.',
 '', '## Scope and definitions','',
 '- Exactly 120 original SVG files, viewBox `0 0 64 64`, no text or external artwork.',
 f'- Largest file: **{max_bytes["id"]}.svg, {max_bytes["bytes"]} UTF-8 bytes**. Maximum distinct paints: **{max_colors}**. Limits apply to the SVG, not antialiased PNG colors.',
@@ -42,7 +43,7 @@ f'- Largest file: **{max_bytes["id"]}.svg, {max_bytes["bytes"]} UTF-8 bytes**. M
 '- IoU = intersection / union. The gate uses the exact integer comparison `5 * intersection < 4 * union`; equality at 0.8 fails.',
 '- Every one of 7,140 unordered pairs is tested at 24, 48 and 256 px, in each of seeds 1, 2 and 3. librsvg masks are checked by both arithmetic implementations. CairoSVG provides a second independent rasterization.',
 '- A: TypeScript XML-profile scanner, Sharp/librsvg rasterizer, RGBA alpha extraction and 32-bit popcount.',
-'- B: Python ElementTree, standard-library PNG decoding with CRC/filter validation, packed arbitrary-precision integers and bit_count. It does not import the TypeScript checker or its constants.',
+'- B: sealed `test/blind/oracle.py`, independently authored Python ElementTree/profile parser, strict standard-library PNG decoding and mask arithmetic. It imports no production helpers. The historical `test/oracle.py` is supplemental.',
 '- Two rasterizers are not required to have identical antialiasing. Their per-icon binary-mask IoU must be at least 0.90. Identical PNG input must yield **byte-identical masks** in both mask-decoding paths and identical integer intersection/union results for every pair.',
 '', '## Maximum silhouette pair by renderer and size','',
 '| Renderer | Size | Maximum pair | Exact IoU | Decimal |','|---|---:|---|---|---:|']
@@ -58,10 +59,10 @@ for first in mutations[:25]:
     samples=[m for m in mutations if m['id']==first['id']]
     lines.append('| '+first['id']+' | '+first['name']+' | '+' | '.join(m['firstFailure'] for m in samples)+' |')
 lines+=['','## Evidence files','',
-'`reports/results.json`: suite counts, environment versions, byte/color table, maximum pairs, cross-renderer minimum and seed summaries. `reports/oracle-seed-1.json` through `-3.json`: every pair for every size and both renderers, exact intersections/unions, independent PNG mask hashes and all oracle results. `reports/cases-seed-*.json`: every SVG truth label and both checker decisions.','',
+'`reports/results.json`: suite counts, environment versions, byte/color table, maximum pairs, cross-renderer minimum and seed summaries. `reports/oracle-seed-1.json` through `-3.json`: every pair for every size and both renderers, exact intersections/unions, independent PNG mask hashes and all oracle results. `reports/cases-seed-*.json`: every SVG truth label, both historical checker decisions, raw sealed decisions and explicit-profile decisions. `reports/blind-seed-*.json` records all sealed SVG, mask, PNG and exact pair results.','',
 '`SHA256SUMS.txt` seals authored inputs. `BUNDLE_SHA256SUMS.txt` covers all files in the delivered bundle except itself; generated outputs are intentionally not part of the immutable source seal. Both manifests are verified with the system sha256sum implementation. ZIP member timestamps are fixed to 1980-01-01 for reproducibility.','',
-'## UNVERIFIED','',
-'**Blind independent authorship:** both checker implementations were authored in the same assistant session. They are structurally different and differentially tested, but the requirement that two isolated authors wrote them without seeing each other has not been demonstrated. No such claim is made.','',
+'## Verification boundaries','',
+'**Independent reference provenance:** the second author read the original brief, root README, public measurement summary and supplied API contract, but no checker, artwork or fixture source before sealing. The unchanged source hash is `a53cf7584c586ab925fab7dff6f0b1b403b848342cee079b7543570674036b66`. Its 69 mathematical/profile self-checks are recorded. The post-seal adapter applies the existing canonical attribute serialization rule, absent from the supplied contract; raw sealed decisions are saved and exactly the `spaces-around-equals` fixture differs before that extra rule. No raw disagreement is hidden.','',
 '**Independent 24 px recognition study:** no blinded human-panel recognition experiment was performed. Native 24 px raster proofs are supplied for review. Readability is a visual design judgment, not something XML validity or IoU proves.','',
 '**Renderer universality:** the full run tests the recorded librsvg and CairoSVG versions. Pixel identity across every browser, operating system, GPU and future renderer is not claimed.','',
 '## GitHub delivery','']

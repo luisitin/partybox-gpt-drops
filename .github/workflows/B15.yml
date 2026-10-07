@@ -26,7 +26,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends libcairo2 fonts-dejavu-core
-          npm install --ignore-scripts --no-audit --no-fund --package-lock=false
+          npm ci --ignore-scripts --no-audit --no-fund
           python3 -m pip install -r requirements-dev.txt
       - name: All suites and all three seeds
         run: npm test

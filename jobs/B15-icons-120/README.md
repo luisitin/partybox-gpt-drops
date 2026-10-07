@@ -6,7 +6,7 @@ A coordinated, chunky, friendly icon family drawn specifically for this job. Rou
 
 `icons/` contains all 120 individually minified SVG files, committed directly for review. `npm test` also builds the deterministic `icons.zip` bundle. The full downloadable/CI bundle includes 360 primary transparent PNGs in `png/24`, `png/48`, `png/256`, a second 360-image rasterizer proof in `png-cairo/`, five PNG contact sheets in `preview/`, and a nearest-neighbor 4x view of the actual 24 px pixels.
 
-`src/art.ts` is the complete original geometry. `src/icons.ts` is the dependency-free, pure lookup API. `src/check.ts` is a pure SVG-profile and exact silhouette auditor. `test/oracle.py` supplies a separately structured XML/PNG/IoU checker. `test/` also contains the generator, adversarial fixtures, executable source mutation tests and deterministic packager. `manifest.json` describes every icon. `VERIFY.md` records exact test counts, seeds, commands and limitations. Complete pair ledgers and mutation evidence are in `reports/` after testing.
+`src/art.ts` is the complete original geometry. `src/icons.ts` is the dependency-free, pure lookup API. `src/check.ts` is a pure SVG-profile and exact silhouette auditor. `test/blind/oracle.py` is a separately authored, sealed XML/PNG/mask reference. `test/blind-adapter.py` connects its public API to every required case; the older `test/oracle.py` remains supplemental. `test/` also contains the generator, adversarial fixtures, executable source mutation tests and deterministic packager. `manifest.json` describes every icon. `VERIFY.md` records exact test counts, seeds, commands and limitations. Complete pair ledgers and mutation evidence are in `reports/` after testing.
 
 Only this job folder and `.github/workflows/B15.yml` belong to this change. No changes to main or other job folders are required.
 
@@ -20,7 +20,7 @@ On Ubuntu, first install development tools:
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends libcairo2 fonts-dejavu-core
 cd jobs/B15-icons-120
-npm install --ignore-scripts --no-audit --no-fund --package-lock=false
+npm ci --ignore-scripts --no-audit --no-fund
 python3 -m pip install -r requirements-dev.txt
 npm test
 ```
@@ -50,7 +50,7 @@ Every source file uses `viewBox="0 0 64 64"`, at most 1,500 UTF-8 bytes, and no 
 
 For each native raster size, foreground is alpha >= 128. Internal transparent holes are retained. Every pair uses the same fixed canvas, without alignment, normalization, pairwise transforms, or silhouette dilation. The test checks **5 × intersection < 4 × union** in integers. An IoU of exactly 0.8 fails. There are exactly 120 × 119 / 2 = **7,140 unique unordered pairs per size**. Their exact counts are reported, not just a sampled maximum.
 
-Checker A uses a TypeScript scanner and 32-bit word population counts. Checker B uses Python's XML parser, a standard-library PNG decoder and arbitrary-precision integer bit operations. Identical input PNGs must produce identical mask bytes and exact pair counts in both. CairoSVG independently rerenders all artwork, and all of its pairs must also pass. Cross-renderer antialiasing need not be pixel-identical; per-icon binary-mask overlap must remain at least 0.90.
+Checker A uses a TypeScript scanner and 32-bit word population counts. The sealed independent reference uses Python's XML parser, a standard-library PNG decoder and integer bit operations. It decodes both renderers' PNGs and compares every pair; the historical checker remains an additional differential path. Identical input PNGs must produce identical mask bytes and exact pair counts in both. CairoSVG independently rerenders all artwork, and all of its pairs must also pass. Cross-renderer antialiasing need not be pixel-identical; per-icon binary-mask overlap must remain at least 0.90.
 
 The SVG auditor intentionally accepts a narrow, inert subset used by these assets: svg/g/path/rect/circle/ellipse, absolute M/L/H/V/C/Q/Z paths, finite numeric geometry, hex/none paints and three-argument rotate transforms. It rejects text, scripts, styles, handlers, declarations, external references and unsupported attributes. It is **not** a general-purpose SVG sanitizer or a replacement for a hardened untrusted-content security boundary.
 
@@ -62,7 +62,7 @@ For an intentional artwork edit, modify `src/art.ts`, run `npm run generate`, re
 
 ## Important verification boundary
 
-The two checkers are structurally different, but they were authored in the same assistant session. A blind, isolated second author was not available; **that part of the requested independence criterion remains UNVERIFIED**. Likewise, no independent human-panel recognition study is represented as having occurred. Native 24 px proofs are supplied for visual review. See VERIFY.md for these limitations rather than treating a green automated run as proof of every subjective or authorship requirement.
+The reference was authored in `/workspace/blind-b15` without opening the production checker, artwork or fixtures, self-checked and SHA-256 sealed before source inspection. Its unchanged source and authoring record are in `test/blind/`. One serialization rule absent from the supplied public contract (`name="value"` without spaces around `=`) is applied explicitly by the post-seal adapter; raw decisions are retained, including that one documented difference. No independent human-panel recognition study is represented as having occurred. Native 24 px proofs are supplied for visual review. See VERIFY.md for these limitations rather than treating a green automated run as proof of every subjective or authorship requirement.
 
 ## Full icon inventory
 

@@ -23,6 +23,12 @@ interface Oracle {
   pngFixtures:{ok:boolean;width?:number;height?:number;rgba?:number[]}[];
   cairoSVG:string;
 }
+interface BlindOracle extends Omit<Oracle,'cairoSVG'> {
+  rawAudits:Audit[];
+  secondaryPngs:Oracle['pngs'];
+  maskWords:[number[],number[]][];
+  limits:boolean[];
+}
 interface TestRow { name:string;cases:number;passed:number;seed:number;command:string; }
 interface PairMax {a:string;b:string;intersection:number;union:number;iou:number;size:number;renderer:string;}
 const reportDir=path.join(root,'reports');fs.mkdirSync(reportDir,{recursive:true});
@@ -64,6 +70,7 @@ assert.deepEqual(fs.readdirSync(path.join(root,'icons')).sort(),iconNames.map(x=
 let firstHashes:Record<string,string>|undefined;
 for(const seed of [1,2,3]){
   // Strict compilation is repeated as well, not just the randomized runtime suites.
+  command('python3',['-c',"import os,runpy,subprocess;os.chdir('test/blind');subprocess.run(['sha256sum','-c','SEALED-SHA256SUMS.txt'],check=True);runpy.run_path('selfcheck.py',run_name='__main__')"]);record('Sealed reference mathematical/profile self-checks',69,seed);
   command(process.execPath,['node_modules/typescript/bin/tsc','-p','tsconfig.json']);record('TypeScript strict compilation',1,seed,'node node_modules/typescript/bin/tsc -p tsconfig.json');
   record('Runtime dependency / ambient RNG / clock AST audit',productionChecks(),seed);
   command('sha256sum',['-c','SHA256SUMS.txt']);record('Authored-input SHA-256 seal',fs.readFileSync(path.join(root,'SHA256SUMS.txt'),'utf8').trim().split('\n').length,seed,'sha256sum -c SHA256SUMS.txt');
@@ -76,25 +83,39 @@ for(const seed of [1,2,3]){
   const rasters=await renderAll();record('Native-size librsvg rasterization',360,seed);
   const fixtures=pngFixtures(path.join(reportDir,'.png-fixtures'));
   const oracle=JSON.parse(command('python3',['test/oracle.py'],JSON.stringify({cases:all,maskCases:masks,pngFixtures:fixtures,pngRoot:path.join(root,'png'),secondaryRoot:path.join(root,'png-cairo'),svgRoot:path.join(root,'icons'),ids:iconNames}))) as Oracle;
+  const blind=JSON.parse(command('python3',['test/blind-adapter.py'],JSON.stringify({cases:all,maskCases:masks,limits:limitCases,pngFixtures:fixtures,pngRoot:path.join(root,'png'),secondaryRoot:path.join(root,'png-cairo'),ids:iconNames}))) as BlindOracle;
+  assert.equal(blind.audits.length,all.length);
+  assert.deepEqual(blind.pairs,oracle.pairs);
+  assert.deepEqual(blind.secondaryPairs,oracle.secondaryPairs);
+  assert.deepEqual(blind.crossRenderer,oracle.crossRenderer);
+  assert.deepEqual(blind.maskCases,oracle.maskCases);
+  assert.deepEqual(blind.pngFixtures,oracle.pngFixtures);
+  const rawDifferences=all.filter((test,index)=>blind.rawAudits[index]!.valid!==test.valid).map(test=>test.name);
+  assert.deepEqual(rawDifferences,['spaces-around-equals']);
   assert.equal(oracle.audits.length,all.length);assert.equal(oracle.pngs.length,360);assert.equal(oracle.maskCases.length,masks.length);
   const caseLog:unknown[]=[];
   for(const [index,test] of all.entries()){
-    const a=auditSvg(test.svg),b=oracle.audits[index]!;
+    const a=auditSvg(test.svg),b=oracle.audits[index]!,c=blind.audits[index]!;
     assert.equal(a.valid,test.valid,'A: '+test.name+' '+a.issues);assert.equal(b.valid,test.valid,'B: '+test.name);
     assert.equal(a.bytes,b.bytes,'UTF-8 bytes '+test.name);
-    if(test.valid){assert.deepEqual(a.colors,b.colors);assert.equal(a.shapes,b.shapes);}
-    caseLog.push({name:test.name,expected:test.valid,a:a.valid,b:b.valid,passed:true,bytes:a.bytes});
+    assert.equal(c.valid,test.valid,'sealed reference plus documented serialization profile: '+test.name);
+    assert.equal(a.bytes,c.bytes,'sealed UTF-8 bytes '+test.name);
+    if(test.valid){assert.deepEqual(a.colors,b.colors);assert.equal(a.shapes,b.shapes);assert.deepEqual(a.colors,c.colors);assert.equal(a.shapes,c.shapes);}
+    caseLog.push({name:test.name,expected:test.valid,a:a.valid,b:b.valid,blind:c.valid,rawBlind:blind.rawAudits[index]!.valid,passed:true,bytes:a.bytes});
   }
   record('Dual XML / SVG profile auditors, all assets and adversarial cases',all.length,seed);
+  record('Sealed blind SVG auditor plus explicit canonical serialization rule',all.length,seed);
   for(const [index,test] of masks.entries()){
     const a=Uint8Array.from(test.a),b=Uint8Array.from(test.b),aBefore=Buffer.from(a),bBefore=Buffer.from(b);
     const ma=alphaMask(a)!,mb=alphaMask(b)!,snapshotA=Array.from(ma),snapshotB=Array.from(mb),value=compareMasks(ma,mb)!;
     assert.deepEqual([value.intersection,value.union],oracle.maskCases[index]);
+    assert.deepEqual(snapshotA,blind.maskWords[index]![0]);assert.deepEqual(snapshotB,blind.maskWords[index]![1]);
     if(test.expected)assert.deepEqual([value.intersection,value.union],test.expected);
     assert.deepEqual(Buffer.from(a),aBefore);assert.deepEqual(Buffer.from(b),bBefore);assert.deepEqual(Array.from(ma),snapshotA);assert.deepEqual(Array.from(mb),snapshotB);
   }
   record('Seeded mask arithmetic differential and input immutability',masks.length,seed);
-  for(const [i,u,answer] of limitCases)assert.equal(belowLimit(i,u),answer);
+  record('Sealed blind exact alpha words and overlap arithmetic',masks.length,seed);
+  for(const [index,[i,u,answer]] of limitCases.entries()){assert.equal(belowLimit(i,u),answer);assert.equal(blind.limits[index],answer);}
   assert.equal(alphaMask(new Uint8Array(3)),undefined);assert.equal(compareMasks([1],[1,0]),undefined);
   assert.equal(utf8Bytes('🎲'),4);assert.equal(utf8Bytes('café'),5);
   for(const name of ['__proto__','constructor','toString','hasOwnProperty','not-an-icon'])assert.equal(getIcon(name),undefined);
@@ -106,9 +127,14 @@ for(const seed of [1,2,3]){
   record('All five PNG row filters, CRC corruption and truncation',fixtures.length,seed);
   const mapped=new Map<string,Uint32Array>(),hashes:Record<string,string>={};
   for(const [index,r] of rasters.entries()){
-    const mask=alphaMask(r.rgba)!,b=oracle.pngs[index]!;mapped.set(r.size+'/'+r.id,mask);
+    const mask=alphaMask(r.rgba)!,b=oracle.pngs[index]!,c=blind.pngs[index]!;mapped.set(r.size+'/'+r.id,mask);
     assert.equal(b.name,r.id);assert.equal(b.size,r.size);assert.equal(b.bytes,r.rgba.length);
     assert.equal(sha(bitBytes(mask)),b.maskSha256,'independent mask bytes '+r.id);
+    assert.equal(sha(bitBytes(mask)),c.maskSha256,'sealed mask bytes '+r.id);
+    assert.equal(sha(r.rgba),(c as typeof c & {rgbaSha256:string}).rgbaSha256,'sealed RGBA bytes '+r.id);
+    const secondary=await sharp(path.join(root,'png-cairo',String(r.size),r.id+'.png')).ensureAlpha().raw().toBuffer(),d=blind.secondaryPngs[index]!;
+    assert.equal(sha(secondary),(d as typeof d & {rgbaSha256:string}).rgbaSha256,'sealed Cairo RGBA bytes '+r.id);
+    assert.equal(sha(bitBytes(alphaMask(secondary)!)),d.maskSha256,'sealed Cairo mask bytes '+r.id);
     const own=compareMasks(mask,mask)!;assert.equal(own.union,b.pixels);assert.ok(b.pixels>0);
     if(r.size===256){for(let i=0;i<256;i++)for(const pos of [i,255*256+i,i*256,i*256+255])assert.equal(r.rgba[pos*4+3],0,'clipping '+r.id);}
     hashes['librsvg/'+r.size+'/'+r.id]=sha(r.png);
@@ -116,6 +142,7 @@ for(const seed of [1,2,3]){
   }
   record('Independent PNG decoder / exact mask bytes / dimensions / clipping',360,seed);
   record('Independent CairoSVG native-size rasterization',360,seed);
+  record('Sealed blind PNG decoder / exact RGBA and mask bytes, both renderers',720,seed);
   for(const renderer of ['librsvg','cairo'])for(const size of [24,48,256]){
     const pairs=renderer==='librsvg'?oracle.pairs[String(size)]!:oracle.secondaryPairs[String(size)]!;
     assert.equal(pairs.length,7140);let max:PairMax={a:'',b:'',intersection:0,union:1,iou:0,size,renderer};
@@ -128,6 +155,7 @@ for(const seed of [1,2,3]){
     }
     maxima.push(max);record(renderer+' silhouette pairs at '+size+' px',pairs.length,seed);
   }
+  record('Sealed blind exact silhouette pair counts, both renderers and all sizes',42840,seed);
   const minimum=Math.min(...oracle.crossRenderer.map(row=>row[2]/row[3]));
   assert.ok(minimum>=0.90,'renderer drift '+minimum);record('Cross-renderer alpha-mask agreement >= 0.90',360,seed);
   await contacts(rasters);
@@ -154,7 +182,7 @@ for(const seed of [1,2,3]){
   const mutations=await runMutations(root,seed,all,masks,oracle.maskCases);
   for(const mutation of mutations)assert.ok(mutation.killed,mutation.id+' survived');
   allMutations.push(...mutations);record('Sequential executable source mutants killed',mutations.length,seed);
-  save('oracle-seed-'+seed+'.json',oracle);save('cases-seed-'+seed+'.json',caseLog);
+  save('oracle-seed-'+seed+'.json',oracle);save('blind-seed-'+seed+'.json',blind);save('cases-seed-'+seed+'.json',caseLog);
   vectors.push({seed,svgCases:all.length,maskCases:masks.length,mutantCasesEach:mutations[0]!.executedCases,minimumCrossRendererIoU:minimum,cairoSVG:oracle.cairoSVG});
 }
 const assets=iconNames.map(id=>{const value=auditSvg(getIcon(id)!);return {id,bytes:value.bytes,colors:value.colors.length,sha256:sha(getIcon(id)!)};});

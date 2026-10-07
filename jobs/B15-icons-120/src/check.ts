@@ -137,5 +137,7 @@ export function compareMasks(a: ArrayLike<number>, b: ArrayLike<number>): Overla
 }
 /** Exact comparison against 4/5. Equality is a failure, not a pass. */
 export function belowLimit(intersection: number, union: number): boolean {
-  return Number.isSafeInteger(intersection) && Number.isSafeInteger(union) && intersection >= 0 && union > 0 && intersection <= union && intersection * 5 < union * 4;
+  return Number.isSafeInteger(intersection) && Number.isSafeInteger(union) && intersection >= 0 && union > 0 && intersection <= union && (union <= Number.MAX_SAFE_INTEGER / 5
+    ? intersection * 5 < union * 4
+    : BigInt(intersection) * 5n < BigInt(union) * 4n);
 }

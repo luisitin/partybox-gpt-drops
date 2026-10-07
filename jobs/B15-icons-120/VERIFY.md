@@ -1,6 +1,6 @@
 # B15 verification evidence
 
-Automated suites below passed. Blind authorship by two isolated developers is **not verified**; see UNVERIFIED.
+Automated suites below passed with an independently authored reference sealed before production source inspection. See `test/blind/AUTHORING.md` and the explicit integration boundary below.
 
 ## Scope and definitions
 
@@ -10,7 +10,7 @@ Automated suites below passed. Blind authorship by two isolated developers is **
 - IoU = intersection / union. The gate uses the exact integer comparison `5 * intersection < 4 * union`; equality at 0.8 fails.
 - Every one of 7,140 unordered pairs is tested at 24, 48 and 256 px, in each of seeds 1, 2 and 3. librsvg masks are checked by both arithmetic implementations. CairoSVG provides a second independent rasterization.
 - A: TypeScript XML-profile scanner, Sharp/librsvg rasterizer, RGBA alpha extraction and 32-bit popcount.
-- B: Python ElementTree, standard-library PNG decoding with CRC/filter validation, packed arbitrary-precision integers and bit_count. It does not import the TypeScript checker or its constants.
+- B: sealed `test/blind/oracle.py`, independently authored Python ElementTree/profile parser, strict standard-library PNG decoding and mask arithmetic. It imports no production helpers. The historical `test/oracle.py` is supplemental.
 - Two rasterizers are not required to have identical antialiasing. Their per-icon binary-mask IoU must be at least 0.90. Identical PNG input must yield **byte-identical masks** in both mask-decoding paths and identical integer intersection/union results for every pair.
 
 ## Maximum silhouette pair by renderer and size
@@ -30,65 +30,80 @@ Commands are run from `jobs/B15-icons-120/`. `npm test` reruns all three seeds, 
 
 | Test | Cases | Passed | Seed | Exact command |
 |---|---:|---:|---:|---|
+| Sealed reference mathematical/profile self-checks | 69 | 69 | 1 | `npm test` |
 | TypeScript strict compilation | 1 | 1 | 1 | `node node_modules/typescript/bin/tsc -p tsconfig.json` |
 | Runtime dependency / ambient RNG / clock AST audit | 8 | 8 | 1 | `npm test` |
-| Authored-input SHA-256 seal | 139 | 139 | 1 | `sha256sum -c SHA256SUMS.txt` |
+| Authored-input SHA-256 seal | 149 | 149 | 1 | `sha256sum -c SHA256SUMS.txt` |
 | Sealed SVG bundle / generator byte equality / palette | 120 | 120 | 1 | `npm test` |
 | Native-size librsvg rasterization | 360 | 360 | 1 | `npm test` |
 | Dual XML / SVG profile auditors, all assets and adversarial cases | 1196 | 1196 | 1 | `npm test` |
+| Sealed blind SVG auditor plus explicit canonical serialization rule | 1196 | 1196 | 1 | `npm test` |
 | Seeded mask arithmetic differential and input immutability | 517 | 517 | 1 | `npm test` |
-| Boundary, malformed input and prototype-safe lookup | 20 | 20 | 1 | `npm test` |
+| Sealed blind exact alpha words and overlap arithmetic | 517 | 517 | 1 | `npm test` |
+| Boundary, malformed input and prototype-safe lookup | 23 | 23 | 1 | `npm test` |
 | All five PNG row filters, CRC corruption and truncation | 7 | 7 | 1 | `npm test` |
 | Independent PNG decoder / exact mask bytes / dimensions / clipping | 360 | 360 | 1 | `npm test` |
 | Independent CairoSVG native-size rasterization | 360 | 360 | 1 | `npm test` |
+| Sealed blind PNG decoder / exact RGBA and mask bytes, both renderers | 720 | 720 | 1 | `npm test` |
 | librsvg silhouette pairs at 24 px | 7140 | 7140 | 1 | `npm test` |
 | librsvg silhouette pairs at 48 px | 7140 | 7140 | 1 | `npm test` |
 | librsvg silhouette pairs at 256 px | 7140 | 7140 | 1 | `npm test` |
 | cairo silhouette pairs at 24 px | 7140 | 7140 | 1 | `npm test` |
 | cairo silhouette pairs at 48 px | 7140 | 7140 | 1 | `npm test` |
 | cairo silhouette pairs at 256 px | 7140 | 7140 | 1 | `npm test` |
+| Sealed blind exact silhouette pair counts, both renderers and all sizes | 42840 | 42840 | 1 | `npm test` |
 | Cross-renderer alpha-mask agreement >= 0.90 | 360 | 360 | 1 | `npm test` |
 | Five backgrounds / all 600 raster thumbnails | 600 | 600 | 1 | `npm test` |
 | Deterministic raster and contact-sheet hashes | 725 | 725 | 1 | `npm test` |
 | Sequential executable source mutants killed | 25 | 25 | 1 | `npm test` |
+| Sealed reference mathematical/profile self-checks | 69 | 69 | 2 | `npm test` |
 | TypeScript strict compilation | 1 | 1 | 2 | `node node_modules/typescript/bin/tsc -p tsconfig.json` |
 | Runtime dependency / ambient RNG / clock AST audit | 8 | 8 | 2 | `npm test` |
-| Authored-input SHA-256 seal | 139 | 139 | 2 | `sha256sum -c SHA256SUMS.txt` |
+| Authored-input SHA-256 seal | 149 | 149 | 2 | `sha256sum -c SHA256SUMS.txt` |
 | Sealed SVG bundle / generator byte equality / palette | 120 | 120 | 2 | `npm test` |
 | Native-size librsvg rasterization | 360 | 360 | 2 | `npm test` |
 | Dual XML / SVG profile auditors, all assets and adversarial cases | 1196 | 1196 | 2 | `npm test` |
+| Sealed blind SVG auditor plus explicit canonical serialization rule | 1196 | 1196 | 2 | `npm test` |
 | Seeded mask arithmetic differential and input immutability | 517 | 517 | 2 | `npm test` |
-| Boundary, malformed input and prototype-safe lookup | 20 | 20 | 2 | `npm test` |
+| Sealed blind exact alpha words and overlap arithmetic | 517 | 517 | 2 | `npm test` |
+| Boundary, malformed input and prototype-safe lookup | 23 | 23 | 2 | `npm test` |
 | All five PNG row filters, CRC corruption and truncation | 7 | 7 | 2 | `npm test` |
 | Independent PNG decoder / exact mask bytes / dimensions / clipping | 360 | 360 | 2 | `npm test` |
 | Independent CairoSVG native-size rasterization | 360 | 360 | 2 | `npm test` |
+| Sealed blind PNG decoder / exact RGBA and mask bytes, both renderers | 720 | 720 | 2 | `npm test` |
 | librsvg silhouette pairs at 24 px | 7140 | 7140 | 2 | `npm test` |
 | librsvg silhouette pairs at 48 px | 7140 | 7140 | 2 | `npm test` |
 | librsvg silhouette pairs at 256 px | 7140 | 7140 | 2 | `npm test` |
 | cairo silhouette pairs at 24 px | 7140 | 7140 | 2 | `npm test` |
 | cairo silhouette pairs at 48 px | 7140 | 7140 | 2 | `npm test` |
 | cairo silhouette pairs at 256 px | 7140 | 7140 | 2 | `npm test` |
+| Sealed blind exact silhouette pair counts, both renderers and all sizes | 42840 | 42840 | 2 | `npm test` |
 | Cross-renderer alpha-mask agreement >= 0.90 | 360 | 360 | 2 | `npm test` |
 | Five backgrounds / all 600 raster thumbnails | 600 | 600 | 2 | `npm test` |
 | Deterministic raster and contact-sheet hashes | 725 | 725 | 2 | `npm test` |
 | Sequential executable source mutants killed | 25 | 25 | 2 | `npm test` |
+| Sealed reference mathematical/profile self-checks | 69 | 69 | 3 | `npm test` |
 | TypeScript strict compilation | 1 | 1 | 3 | `node node_modules/typescript/bin/tsc -p tsconfig.json` |
 | Runtime dependency / ambient RNG / clock AST audit | 8 | 8 | 3 | `npm test` |
-| Authored-input SHA-256 seal | 139 | 139 | 3 | `sha256sum -c SHA256SUMS.txt` |
+| Authored-input SHA-256 seal | 149 | 149 | 3 | `sha256sum -c SHA256SUMS.txt` |
 | Sealed SVG bundle / generator byte equality / palette | 120 | 120 | 3 | `npm test` |
 | Native-size librsvg rasterization | 360 | 360 | 3 | `npm test` |
 | Dual XML / SVG profile auditors, all assets and adversarial cases | 1196 | 1196 | 3 | `npm test` |
+| Sealed blind SVG auditor plus explicit canonical serialization rule | 1196 | 1196 | 3 | `npm test` |
 | Seeded mask arithmetic differential and input immutability | 517 | 517 | 3 | `npm test` |
-| Boundary, malformed input and prototype-safe lookup | 20 | 20 | 3 | `npm test` |
+| Sealed blind exact alpha words and overlap arithmetic | 517 | 517 | 3 | `npm test` |
+| Boundary, malformed input and prototype-safe lookup | 23 | 23 | 3 | `npm test` |
 | All five PNG row filters, CRC corruption and truncation | 7 | 7 | 3 | `npm test` |
 | Independent PNG decoder / exact mask bytes / dimensions / clipping | 360 | 360 | 3 | `npm test` |
 | Independent CairoSVG native-size rasterization | 360 | 360 | 3 | `npm test` |
+| Sealed blind PNG decoder / exact RGBA and mask bytes, both renderers | 720 | 720 | 3 | `npm test` |
 | librsvg silhouette pairs at 24 px | 7140 | 7140 | 3 | `npm test` |
 | librsvg silhouette pairs at 48 px | 7140 | 7140 | 3 | `npm test` |
 | librsvg silhouette pairs at 256 px | 7140 | 7140 | 3 | `npm test` |
 | cairo silhouette pairs at 24 px | 7140 | 7140 | 3 | `npm test` |
 | cairo silhouette pairs at 48 px | 7140 | 7140 | 3 | `npm test` |
 | cairo silhouette pairs at 256 px | 7140 | 7140 | 3 | `npm test` |
+| Sealed blind exact silhouette pair counts, both renderers and all sizes | 42840 | 42840 | 3 | `npm test` |
 | Cross-renderer alpha-mask agreement >= 0.90 | 360 | 360 | 3 | `npm test` |
 | Five backgrounds / all 600 raster thumbnails | 600 | 600 | 3 | `npm test` |
 | Deterministic raster and contact-sheet hashes | 725 | 725 | 3 | `npm test` |
@@ -130,13 +145,13 @@ Each mutant is a real one-location rewrite of compiled checker source, dynamical
 
 ## Evidence files
 
-`reports/results.json`: suite counts, environment versions, byte/color table, maximum pairs, cross-renderer minimum and seed summaries. `reports/oracle-seed-1.json` through `-3.json`: every pair for every size and both renderers, exact intersections/unions, independent PNG mask hashes and all oracle results. `reports/cases-seed-*.json`: every SVG truth label and both checker decisions.
+`reports/results.json`: suite counts, environment versions, byte/color table, maximum pairs, cross-renderer minimum and seed summaries. `reports/oracle-seed-1.json` through `-3.json`: every pair for every size and both renderers, exact intersections/unions, independent PNG mask hashes and all oracle results. `reports/cases-seed-*.json`: every SVG truth label, both historical checker decisions, raw sealed decisions and explicit-profile decisions. `reports/blind-seed-*.json` records all sealed SVG, mask, PNG and exact pair results.
 
 `SHA256SUMS.txt` seals authored inputs. `BUNDLE_SHA256SUMS.txt` covers all files in the delivered bundle except itself; generated outputs are intentionally not part of the immutable source seal. Both manifests are verified with the system sha256sum implementation. ZIP member timestamps are fixed to 1980-01-01 for reproducibility.
 
-## UNVERIFIED
+## Verification boundaries
 
-**Blind independent authorship:** both checker implementations were authored in the same assistant session. They are structurally different and differentially tested, but the requirement that two isolated authors wrote them without seeing each other has not been demonstrated. No such claim is made.
+**Independent reference provenance:** the second author read the original brief, root README, public measurement summary and supplied API contract, but no checker, artwork or fixture source before sealing. The unchanged source hash is `a53cf7584c586ab925fab7dff6f0b1b403b848342cee079b7543570674036b66`. Its 69 mathematical/profile self-checks are recorded. The post-seal adapter applies the existing canonical attribute serialization rule, absent from the supplied contract; raw sealed decisions are saved and exactly the `spaces-around-equals` fixture differs before that extra rule. No raw disagreement is hidden.
 
 **Independent 24 px recognition study:** no blinded human-panel recognition experiment was performed. Native 24 px raster proofs are supplied for review. Readability is a visual design judgment, not something XML validity or IoU proves.
 
@@ -154,6 +169,6 @@ Runtime dependencies: zero. The UI lookup and checker are pure functions. The bu
 
 | Test | Cases | Passed | Seed | Exact command |
 |---|---:|---:|---:|---|
-| SHA-256 complete bundle | 875 | 875 | 1 | `sha256sum -c BUNDLE_SHA256SUMS.txt` |
-| SHA-256 complete bundle | 875 | 875 | 2 | `sha256sum -c BUNDLE_SHA256SUMS.txt` |
-| SHA-256 complete bundle | 875 | 875 | 3 | `sha256sum -c BUNDLE_SHA256SUMS.txt` |
+| SHA-256 complete bundle | 888 | 888 | 1 | `sha256sum -c BUNDLE_SHA256SUMS.txt` |
+| SHA-256 complete bundle | 888 | 888 | 2 | `sha256sum -c BUNDLE_SHA256SUMS.txt` |
+| SHA-256 complete bundle | 888 | 888 | 3 | `sha256sum -c BUNDLE_SHA256SUMS.txt` |
