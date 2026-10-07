@@ -20,3 +20,7 @@
    review record and measured partial agreement instead of treating a second
    pass as automatic approval. Added a 30,000,000-byte delivered-file guard to
    manifest generation; integrity is checked after packaging.
+6. Authored and graded a further 100 ceremony and screen-personality candidates,
+   retaining a grade-2 unsupported premise and multiple grade-3 weak frames.
+   The pool is 300 per genre; all 600 rows satisfy structural limits. Editorial
+   eligibility still depends on both actual grades rather than schema success.

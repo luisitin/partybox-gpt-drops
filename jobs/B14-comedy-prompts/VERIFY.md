@@ -27,11 +27,20 @@ into `results/draft.json`; the npm alias runs the same validator.
 
 | Current measured check | Cases | Passed | Failed | Seed | Exact command |
 | --- | ---: | ---: | ---: | --- | --- |
-| JSON Schema / character limit / ID / genre checks | 500 | 500 | 0 | not applicable | `npm run check:draft` |
+| JSON Schema / character limit / ID / genre checks | 600 | 600 | 0 | not applicable | `npm run check:draft` |
 | Complete independent batch record and input-hash match | 100 | 100 | 0 | not applicable | `npm run check:draft` |
 
 The independent-record check validates completeness and input identity; it does
 not count low editorial grades as passing the humor rubric.
+
+Sixth measured draft milestone: 300 candidates per genre, 600/600 structural
+checks, maximum 90 characters. First-pass failures are retained alongside the
+stronger rows; unsupported context and generic celebrity substitutions score
+below 4 instead of entering the eligible pool automatically.
+
+At milestone 005, `npm run checksums` size-checked 36 files (largest 185,166
+bytes), and `sha256sum -c SHA256SUMS.txt` passed all 35 listed file hashes.
+These packaging checks do not establish content or editorial completion.
 
 The strict release gate scans every selected pair using punctuation-insensitive,
 lowercase `difflib.SequenceMatcher` character similarity with `autojunk=False`.
