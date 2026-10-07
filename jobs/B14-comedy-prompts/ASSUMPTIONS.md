@@ -1,5 +1,12 @@
 # Assumptions
 
+Mascot aliases share their owning brand's canonical final-reference bucket.
+For example, Mr. Peanut and Planters are both `planters`; appearances under
+either wording count toward the same cap of three across the combined final
+1,200. This merging is stricter than assigning the mascot and brand separate
+allowances. A canonical tag still needs an explicit name or recognizable named
+alias in the prompt; generic coffee or social media does not establish a brand.
+
 - Adult friends in the US are the audience; no prompt involves minors.
 - The 90-character limit counts Unicode code points; authored text uses ASCII.
 - "At most 3 prompts per named brand/person" applies across the combined final

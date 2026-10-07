@@ -58,3 +58,5 @@
     Independent review remains partial; complete counts are recorded verbatim.
 19. Authored 100 original adult scientist and author scenes, retained niche literary-reference failures, and incorporated fresh service, drink, and corrected restaurant reviews unchanged. All 1,900 rows pass structural checks.
     Independent review remains partial; complete counts are recorded verbatim.
+20. Authored 100 pantry-product candidates with separate physical and adult procedural premises; integrated all newly available independent reviews unchanged and documented strict mascot-brand alias aggregation. All 2,000 rows pass structural checks.
+    Independent review remains partial; complete counts are recorded verbatim.
