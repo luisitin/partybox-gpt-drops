@@ -1,6 +1,6 @@
 # B01 research sources
 
-Sources were reopened in two fresh passes on 2026-10-07. Exact returned page content is retained in `reports/source-captures/`; hashes are in SHA256SUMS.txt. Individual quotes contain at most 25 words. A reused wiki or mirrored record never supplies an independent second source.
+Sources were reopened in two fresh passes on 2026-10-07. Exact registered quotations and retrieved-text hashes are retained in `reports/source-captures/`; hashes are in SHA256SUMS.txt. Individual quotes contain at most 25 words. A reused wiki or mirrored record never supplies an independent second source.
 
 ## S01 — Destructoid
 

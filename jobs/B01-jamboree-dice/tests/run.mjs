@@ -46,6 +46,13 @@ function researchRecheck(){
  for(const source of audit)if(source.kind!=='rejected'){
   assert(source.firstRetrieved&&source.secondRetrieved,source.id+' both source passes');
   assert(source.firstQuoteMatches.every(Boolean)&&source.secondQuoteMatches.every(Boolean),source.id+' quote recovery');
+  for(const capturePath of[source.firstPass,source.secondPass]){
+   const page=read(capturePath).pages.find(page=>page.url===source.url);
+   assert(page&&page.retrieved,source.id+' archived page record');
+   assert(page.quotes.every(quote=>quote.foundInRetrievedText),source.id+' archived quotation recovery');
+   assert.equal(page.retrievedTextSha256.length,64);
+   assert.deepEqual(page.quotes.map(quote=>quote.text),data.sources.find(row=>row.id===source.id).quotes);
+  }
  }
  const expected=data.facts.length+data.characters.length+data.dice.reduce((n,die)=>n+die.faces.length,0)+
   data.items.length+data.models.length+data.compatibility.length;

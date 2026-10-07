@@ -385,6 +385,6 @@ Each mutant is compiled separately from pristine source. Only an AssertionError 
 
 ## Integrity and repeated verification
 
-The initial integration run passed 42/42 suites. After the fresh evidence and source-row audit were added, the complete run passed 48/48. The final repeated run additionally requires assertion-only mutant kills and also passed 48/48. No Monte Carlo failure was discarded.
+The initial integration run passed 42/42 suites. After the fresh evidence and source-row audit were added, the complete run passed 48/48. The repeated run additionally requires assertion-only mutant kills and passed 48/48. The final citation packaging run verifies the exact archived short quotations and retrieved-content hashes and also passed 48/48. No Monte Carlo failure was discarded.
 
 The delivered manifest covers all tracked job artifacts and the B01 workflow, excluding itself, installed tools and transient outputs. Final reports and documentation are packaged after the numerical run, followed by regeneration and three explicit manifest checks. These packaging checks supplement the numerical run; GitHub CI repeats the complete numerical command on the final published manifest. Every individual delivered file is below 30,000,000 bytes.

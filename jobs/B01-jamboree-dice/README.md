@@ -18,7 +18,7 @@ Jamboree does not give each playable character a distinct die. The 22 characters
 - `rng.ts`, `tests/run.mjs`, `tests/mutations.mjs`: injected seeded RNG, exact comparisons, three complete seeded runs and 25 one-at-a-time source mutations.
 - `schema.json`: closed JSON Schema, Draft 2020-12, for both data documents; validated by the real `jsonschema` implementation.
 - `SOURCES.md`, `CONFLICTS.md`, `VERIFY.md`: evidence, dissent, source-reopening results, per-row audit and actual test output.
-- `reports/`: actual source captures for two fresh passes, complete row and quote audits, executed suite results, and compact Monte Carlo/mutation summaries. Full per-bin reports are regenerated in `.test-output/` and uploaded by CI.
+- `reports/`: source quotation captures and retrieved-content hashes for two fresh passes, complete row and quote audits, executed suite results, and compact Monte Carlo/mutation summaries. Full per-bin reports are regenerated in `.test-output/` and uploaded by CI.
 - `SHA256SUMS.txt`: hashes of delivered job files and the root workflow; the checksum file itself is necessarily excluded.
 
 The only repository path outside this job is `.github/workflows/B01.yml`, as expressly permitted by the repository README. No root build files or other jobs are changed.
