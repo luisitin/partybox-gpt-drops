@@ -74,3 +74,5 @@
     Independent review remains partial; complete counts are recorded verbatim.
 27. Authored 100 fresh music, funeral-performance and estate scenarios with individual first-pass reasons; source wording remains separate from the independent review queue. All 2,700 rows pass structural checks.
     Independent review remains partial; complete counts are recorded verbatim.
+28. Authored 100 concrete adult television scenarios with specific first-pass reasons; integrated all 100 independent batch 026 grades unchanged. All 2,800 rows pass structural checks.
+    Independent review remains partial; complete counts are recorded verbatim.
