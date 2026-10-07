@@ -1,26 +1,34 @@
 # Conflicts and coverage gaps
 
-The two publishers each state 112 base minigames, but their normalized base name sets agree on 110 entries. The following disagreements are retained; no row is silently renamed.
+The publishers each list 112 base games; 110 names match after the declared case/punctuation normalization. Their twenty TV names all match. No source spelling or category is silently repaired.
 
 | Wiki-only base name | Legacy-only base name | Category placement | Status |
 | --- | --- | --- | --- |
-| Sandwiched | Sandwhiched | Both publishers place their respective spelling in Free-for-All | Unresolved spelling/identity disagreement |
-| Squeaky Shakedown | Squeaky Showdown | Wiki 1 vs. 3 / Legacy 1-vs-3 | Unresolved name/identity disagreement |
+| Sandwiched | Sandwhiched | Both respective entries in Free-for-All | Sandwiched English spelling independently corroborated by Destructoid; Legacy identity linkage unresolved |
+| Squeaky Shakedown | Squeaky Showdown | Wiki 1 vs. 3 / Legacy 1-vs-3 | English-name corroboration and identity linkage unresolved |
 
-The apparent pairings above are investigation leads based on their category placement, not accepted aliases. The strict set difference remains two wiki-only and two Legacy-only base names.
+The apparent pairings are investigation leads, not accepted aliases. The strict difference remains two wiki-only and two Legacy-only base names. See `NAME-RESEARCH.md` and the supplementary citations in `SOURCES.md`.
 
 ## Category wording and hierarchy
 
-| Wiki category | Legacy category | Observed membership |
-| --- | --- | --- |
-| Kaboom-Squad Minigames | Teamwork Minigames | Same ten normalized names; preserve both labels |
-| Koopathlon / Coin Minigames (9), Survivathon Minigames (5) | Koopathlon Minigames (14) | Legacy uses one broader category; no per-entry reclassification |
-| 1 vs. 3 Minigames | 1-vs-3 Minigames | Formatting differs; one name disagreement remains |
-| 2 vs. 2 Minigames | 2 vs 2 Minigames | Formatting differs; twelve normalized names agree |
+All differing raw category groups and their actual members are retained in `catalogue-index.json`. These headings do not replace the final research into format or controls.
+
+| Wiki category path | Legacy category path | Matching members |
+| --- | --- | ---: |
+| 1 vs. 3 Minigames | 1-vs-3 Minigames | 11 |
+| 2 vs. 2 Minigames | 2 vs 2 Minigames | 12 |
+| Koopathlon Minigames / Coin Minigames | Koopathlon Minigames | 9 |
+| Koopathlon Minigames / Survivathon Minigames | Koopathlon Minigames | 5 |
+| Kaboom-Squad Minigames | Teamwork Minigames | 10 |
+| Jamboree TV minigames / Mouse minigames | Free Play (List of Minigames) / List of Jamboree TV Minigames | 14 |
+| Jamboree TV minigames / Bowser Live minigames | Bowser Live / Camera | 3 |
+| Jamboree TV minigames / Bowser Live minigames | Bowser Live / Microphone | 3 |
+
+Legacy’s fourteen non-Bowser entries appear under Free Play/List of Jamboree TV Minigames; the examined heading does not call them Mouse minigames. Its six Bowser Live entries have Camera or Microphone subheadings. Preserve those labels rather than inventing identical source categories.
 
 ## Names differing only in case/punctuation
 
-These names match under the declared normalization. Their original spelling remains in the index and quotations.
+Normalization matches the following original spellings; it never corrects a spelling or creates an alias.
 
 | Wiki spelling | Legacy spelling |
 | --- | --- |
@@ -41,39 +49,24 @@ These names match under the declared normalization. Their original spelling rema
 | Spike's Gambit | Spike’s Gambit |
 | Spread 'n Butter | Spread ‘n Butter |
 | Short-Stack Chef | Short Stack Chef |
+| What's the Scoop? | What’s the Scoop? |
 
-## TV entries absent from the independent base list
+## TV name coverage
 
-Wiki lists the following twenty additions. Mario Party Legacy’s examined list covers the base game only; absence there is a scope gap, not evidence that these games do not exist. Nintendo independently confirms the additions count of twenty but does not supply a complete named list on the examined page.
+The complete twenty-name list on https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/ independently matches the wiki TV set. There are no wiki-only or Legacy-only TV names after normalization. This closes the prior independent TV-name enumeration gap, but not every category, control or gameplay detail.
 
-| Wiki TV category | Name present only on wiki’s examined list |
-| --- | --- |
-| Mouse minigames | Shell Hockey |
-| Mouse minigames | Bowser Filter |
-| Mouse minigames | Stuffie Stacker |
-| Mouse minigames | Pull-Back Attack |
-| Mouse minigames | Domino Effect |
-| Mouse minigames | Bob-omb Makeover |
-| Mouse minigames | Toad-ally Electric Escape |
-| Mouse minigames | Ice and Easy |
-| Mouse minigames | Bob-omb Toss |
-| Mouse minigames | Net Gains |
-| Mouse minigames | Get a Grip |
-| Mouse minigames | What's the Scoop? |
-| Mouse minigames | Knock-Knock Match |
-| Mouse minigames | Goomba Scoopas |
-| Bowser Live minigames | Talking Flower Says |
-| Bowser Live minigames | Hitting It Rich |
-| Bowser Live minigames | Goombalancing Act |
-| Bowser Live minigames | Bowser Chicken |
-| Bowser Live minigames | Speak Up, Junior! |
-| Bowser Live minigames | Bowser Beats |
+## Four-player availability disagreement
 
-## Counts and availability exclusions
+- Wiki’s list marks both **Shell Hockey** and **Pull-Back Attack** with the asterisk for games excluded from four-player Co-op: “Mouse minigames marked with an asterisk (*) cannot be played in Co-op rules with four players.”
+- Legacy states: “Shell Hockey is notably the only minigame not to have a Team of 4 variation.” Its broader paragraph describes Battle, Team of 2 and Team of 4 variants.
 
-- Base: wiki 112 and Legacy 112. Equal totals do not resolve the two name disagreements.
-- Additions: wiki 20 and Nintendo 20. Complete independent TV name/category enumeration is still missing.
-- Combined: wiki explicitly states 132; arithmetic 112 + 20 agrees. The required total count comparison against two complete wiki lists is UNVERIFIED.
-- Wiki states that Koopathlon, Kaboom-Squad and Rhythm minigames cannot be played in Jamboree TV’s version of Free Play. These base games remain in the union catalogue; availability is a separate pending research field.
-- Wiki marks certain Mouse entries with `*`, stating that they cannot be played under four-player Co-op rules. The marker is retained in archived gallery labels and excluded from the actual names. This availability statement still needs independent corroboration.
-- Nintendo’s page describes the new count using mouse, HD rumble and microphone marketing. It is not per-entry control evidence. No mode availability or control statement is promoted to the final dataset.
+The Pull-Back Attack discrepancy remains unresolved. Do not promote either claim as a final per-game availability rule. The original marker remains in source gallery labels and is not part of the game name.
+
+## Counts and remaining scope gaps
+
+- Base count: wiki 112 and Legacy 112; equal counts do not resolve their two name differences.
+- Additions: wiki 20, Legacy 20 and Nintendo 20; the two independent twenty-name sets agree.
+- Combined: wiki explicitly states 132; Legacy’s disjoint base112 and TV20 lists total132. The prompt-required second complete wiki list page remains missing.
+- Wiki and Legacy both describe exclusions from TV Free Play using their own Koopathlon/Kaboom/Rhythm labels. These are documented source contexts; complete per-game availability and category interpretations still need review.
+- Nintendo’s mouse/HD-rumble/microphone count statement is marketing context, not independently sourced controls for every row.
+- Detailed gameplay fields, final JSON/CSV/schema and a complete per-game second pass remain unverified.

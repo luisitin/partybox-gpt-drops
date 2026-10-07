@@ -1,65 +1,78 @@
-# Sources — preliminary list evidence only
+# Sources — preliminary list and name evidence
 
-All quotations below are at most 25 words each. Citations support the listed names/category headings and count statements only; no per-game timer, control, rule or reward is claimed. `source-excerpts.json` archives both extracted passes and original page-byte hashes.
+All quotations are at most 25 words each. The index records names, raw category headings and count claims. Context quotations are retained with disagreements; they are not a completed per-game specification. `source-excerpts.json` records four URLs reopened in two fresh passes. The two Legacy pages are one publisher family, independent of the wiki; Nintendo separately corroborates the additions count.
 
-## Super Mario Wiki — base and TV catalogue
+## Super Mario Wiki — combined catalogue
 
 URL: https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames
 
 | Pass | Retrieved UTC | Source-byte SHA-256 | Bytes | HTTP |
 | --- | --- | --- | ---: | --- |
-| pass1 | 2026-10-07T15:34:53Z | `a38f52d833467bbfc4ac69ef853c1ea3646ce68178190d740fe46415bbaa134e` | 200673 | 200 |
-| pass2 | 2026-10-07T15:34:55Z | `a38f52d833467bbfc4ac69ef853c1ea3646ce68178190d740fe46415bbaa134e` | 200673 | 200 |
+| pass1 | 2026-10-07T15:59:30.205547Z | `a38f52d833467bbfc4ac69ef853c1ea3646ce68178190d740fe46415bbaa134e` | 200673 | 200 |
+| pass2 | 2026-10-07T15:59:31.335346Z | `a38f52d833467bbfc4ac69ef853c1ea3646ce68178190d740fe46415bbaa134e` | 200673 | 200 |
 
-Count/context quotations from both fresh passes:
+Short quotations checked in both passes:
 
 - baseCount, introductory paragraph 1: “Super Mario Party Jamboree features 112 minigames, the most of any game in the Mario Party series.” (17 words).
 - tvAndCombinedCount, introductory paragraph 2: “includes 20 new minigames (bringing the total to 132)” (9 words).
-- singleSourceContext, introductory paragraph 3: “the Koopathlon, Kaboom-Squad, and Rhythm minigames cannot be played in its version of Free Play.” (15 words).
-- singleSourceContext, #Jamboree_TV_minigames: “Mouse minigames marked with an asterisk (*) cannot be played in Co-op rules with four players.” (16 words).
+- sourceContext, introductory paragraph 3: “the Koopathlon, Kaboom-Squad, and Rhythm minigames cannot be played in its version of Free Play.” (15 words).
+- sourceContext, #Jamboree_TV_minigames: “Mouse minigames marked with an asterisk (*) cannot be played in Co-op rules with four players.” (16 words).
 
-The Free Play and four-player Co-op exclusions are single-source context, pending independent corroboration. They are not final per-game rules.
-
-## Mario Party Legacy — base-game list
+## Mario Party Legacy — base list
 
 URL: https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables
 
 | Pass | Retrieved UTC | Source-byte SHA-256 | Bytes | HTTP |
 | --- | --- | --- | ---: | --- |
-| pass1 | 2026-10-07T15:34:53Z | `322a6ec826546e16332b6bdc2201b7d2895450cf591d1aea4d9106e12bb9b6c4` | 138782 | 200 |
-| pass2 | 2026-10-07T15:34:55Z | `efd9ee865453ba2505270202af0320c5f57d02198292a5a7d7e5db845a0f5291` | 138782 | 200 |
+| pass1 | 2026-10-07T15:59:30.206110Z | `d4327873395fcaa86d4ca3e18c4f47c2dcdcc39b9f404b8562ef0677e79993d7` | 138782 | 200 |
+| pass2 | 2026-10-07T15:59:31.335253Z | `c3ea68af3c2a852a37ba2c490982cb8ab61f35ca48bfde6eba5232c5f8768130` | 138782 | 200 |
 
-Count/context quotations from both fresh passes:
+Short quotations checked in both passes:
 
 - baseCount, introductory paragraph: “Each of the 112 Super Mario Party Jamboree minigames are listed below.” (12 words).
 
-## Nintendo — official Switch 2 edition product page
+## Mario Party Legacy — TV list
+
+URL: https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/
+
+| Pass | Retrieved UTC | Source-byte SHA-256 | Bytes | HTTP |
+| --- | --- | --- | ---: | --- |
+| pass1 | 2026-10-07T15:59:30.206587Z | `32278c21f1c8a5bb80fa8929bd8de50ea10b6eb83acdb6966d533741a0f44381` | 88132 | 200 |
+| pass2 | 2026-10-07T15:59:31.336053Z | `27c34793a46264a2c3179b88a3763517a64e4442a2c685d7331087a91181ed89` | 88132 | 200 |
+
+Short quotations checked in both passes:
+
+- tvCount, #free-play: “There are 20 new minigames in total in Jamboree TV.” (10 words).
+- sourceContext, #free-play: “Six of them are Bowser Live minigames” (7 words).
+- sourceContext, #free-play: “Each of the new 14 non-Bowser minigames can be played through three variations: Battle, Team of 2, and Team of 4.” (21 words).
+- sourceContext, #free-play: “Any minigame from the Bowser Kaboom Squad, Koopathlon, or Rhythm Kitchen modes are not included.” (15 words).
+- sourceContext, #free-play: “Shell Hockey is notably the only minigame not to have a Team of 4 variation.” (15 words).
+
+## Nintendo — official additions count
 
 URL: https://www.nintendo.com/us/store/products/super-mario-party-jamboree-nintendo-switch-2-edition-plus-jamboree-tv-switch-2/
 
 | Pass | Retrieved UTC | Source-byte SHA-256 | Bytes | HTTP |
 | --- | --- | --- | ---: | --- |
-| pass1 | 2026-10-07T15:34:53Z | `faba7d2c2ca3e03a086ec8cc7c358b46dba741b8b88eff00802bb50bd6c1ba62` | 708001 | 200 |
-| pass2 | 2026-10-07T15:34:55Z | `faba7d2c2ca3e03a086ec8cc7c358b46dba741b8b88eff00802bb50bd6c1ba62` | 708001 | 200 |
+| pass1 | 2026-10-07T15:59:30.207225Z | `260211938de49aa52e8267fec821034cc23108e9137abcce792e3ec63bf51881` | 708005 | 200 |
+| pass2 | 2026-10-07T15:59:31.336538Z | `260211938de49aa52e8267fec821034cc23108e9137abcce792e3ec63bf51881` | 708005 | 200 |
 
-Count/context quotations from both fresh passes:
+Short quotations checked in both passes:
 
 - tvCount, Even MORE minigames! section: “Enjoy 20 new minigames using Joy-Con 2 mouse controls, HD rumble 2, and the system's built-in microphone.” (17 words).
 
-This verifies the additions count. It does not provide a complete named TV list or independently verify each game’s controls.
-
 ## Per-entry name/category quotations
 
-Quoted category labels preserve each publisher’s own wording. A missing Legacy quotation means that source does not corroborate the name under the specified normalization. No spelling correction has been made.
+Both publishers enumerate all twenty TV names. Original headings remain separate; matching names do not erase category or availability disagreements. The combined count is 132 on the wiki and 112 + 20 across Legacy’s two lists. Legacy is not the prompt-required second wiki list page.
 
-| Wiki entry | Wiki quotations and locator | Legacy quotations and locator |
+| Wiki entry | Wiki quotations and locator | Independent Legacy quotations and locator |
 | --- | --- | --- |
 | Lumber Tumble | “Lumber Tumble”; “Free-for-All Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Free-for-All_Minigames) | “Lumber Tumble”; “Free-for-All Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#free-for-all-minigames) |
 | Big-Top Quiz | “Big-Top Quiz”; “Free-for-All Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Free-for-All_Minigames) | “Big-Top Quiz”; “Free-for-All Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#free-for-all-minigames) |
 | Camera-Ready | “Camera-Ready”; “Free-for-All Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Free-for-All_Minigames) | “Camera-Ready”; “Free-for-All Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#free-for-all-minigames) |
 | Scare-ousel | “Scare-ousel”; “Free-for-All Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Free-for-All_Minigames) | “Scare-ousel”; “Free-for-All Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#free-for-all-minigames) |
 | Snag the Flags | “Snag the Flags”; “Free-for-All Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Free-for-All_Minigames) | “Snag the Flags”; “Free-for-All Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#free-for-all-minigames) |
-| Sandwiched | “Sandwiched”; “Free-for-All Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Free-for-All_Minigames) | No normalized name match; UNVERIFIED independently |
+| Sandwiched | “Sandwiched”; “Free-for-All Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Free-for-All_Minigames) | No normalized name match; identity UNVERIFIED |
 | Hot Cross Blocks | “Hot Cross Blocks”; “Free-for-All Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Free-for-All_Minigames) | “Hot Cross Blocks”; “Free-for-All Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#free-for-all-minigames) |
 | Light-Wave Battle | “Light-Wave Battle”; “Free-for-All Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Free-for-All_Minigames) | “Light-Wave Battle”; “Free-for-All Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#free-for-all-minigames) |
 | Thwomp the Difference | “Thwomp the Difference”; “Free-for-All Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Free-for-All_Minigames) | “Thwomp the Difference”; “Free-for-All Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#free-for-all-minigames) |
@@ -94,7 +107,7 @@ Quoted category labels preserve each publisher’s own wording. A missing Legacy
 | Income Stream | “Income Stream”; “1 vs. 3 Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#1_vs._3_Minigames) | “Income Stream”; “1-vs-3 Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#1-vs-3-minigames) |
 | Blame It on the Crane | “Blame It on the Crane”; “1 vs. 3 Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#1_vs._3_Minigames) | “Blame It on the Crane”; “1-vs-3 Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#1-vs-3-minigames) |
 | Snow Brawl | “Snow Brawl”; “1 vs. 3 Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#1_vs._3_Minigames) | “Snow Brawl”; “1-vs-3 Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#1-vs-3-minigames) |
-| Squeaky Shakedown | “Squeaky Shakedown”; “1 vs. 3 Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#1_vs._3_Minigames) | No normalized name match; UNVERIFIED independently |
+| Squeaky Shakedown | “Squeaky Shakedown”; “1 vs. 3 Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#1_vs._3_Minigames) | No normalized name match; identity UNVERIFIED |
 | Rocky Rope Race | “Rocky Rope Race”; “2 vs. 2 Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#2_vs._2_Minigames) | “Rocky Rope Race”; “2 vs 2 Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#2-vs-2-minigames) |
 | Pickin' Produce | “Pickin' Produce”; “2 vs. 2 Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#2_vs._2_Minigames) | “Pickin’ Produce”; “2 vs 2 Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#2-vs-2-minigames) |
 | Prime Cut | “Prime Cut”; “2 vs. 2 Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#2_vs._2_Minigames) | “Prime Cut”; “2 vs 2 Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#2-vs-2-minigames) |
@@ -166,34 +179,50 @@ Quoted category labels preserve each publisher’s own wording. A missing Legacy
 | Copycat Curry | “Copycat Curry”; “Rhythm Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Rhythm_Minigames) | “Copycat Curry”; “Rhythm Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#rhythm-minigames) |
 | En Barb! | “En Barb!”; “Rhythm Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Rhythm_Minigames) | “En Barb!”; “Rhythm Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#rhythm-minigames) |
 | On the Beet | “On the Beet”; “Rhythm Minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Rhythm_Minigames) | “On the Beet”; “Rhythm Minigames” — [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#rhythm-minigames) |
-| Shell Hockey | “Shell Hockey”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | No normalized name match; UNVERIFIED independently |
-| Bowser Filter | “Bowser Filter”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | No normalized name match; UNVERIFIED independently |
-| Stuffie Stacker | “Stuffie Stacker”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | No normalized name match; UNVERIFIED independently |
-| Pull-Back Attack | “Pull-Back Attack”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | No normalized name match; UNVERIFIED independently |
-| Domino Effect | “Domino Effect”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | No normalized name match; UNVERIFIED independently |
-| Bob-omb Makeover | “Bob-omb Makeover”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | No normalized name match; UNVERIFIED independently |
-| Toad-ally Electric Escape | “Toad-ally Electric Escape”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | No normalized name match; UNVERIFIED independently |
-| Ice and Easy | “Ice and Easy”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | No normalized name match; UNVERIFIED independently |
-| Bob-omb Toss | “Bob-omb Toss”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | No normalized name match; UNVERIFIED independently |
-| Net Gains | “Net Gains”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | No normalized name match; UNVERIFIED independently |
-| Get a Grip | “Get a Grip”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | No normalized name match; UNVERIFIED independently |
-| What's the Scoop? | “What's the Scoop?”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | No normalized name match; UNVERIFIED independently |
-| Knock-Knock Match | “Knock-Knock Match”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | No normalized name match; UNVERIFIED independently |
-| Goomba Scoopas | “Goomba Scoopas”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | No normalized name match; UNVERIFIED independently |
-| Talking Flower Says | “Talking Flower Says”; “Jamboree TV minigames”; “Bowser Live minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Bowser_Live_minigames) | No normalized name match; UNVERIFIED independently |
-| Hitting It Rich | “Hitting It Rich”; “Jamboree TV minigames”; “Bowser Live minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Bowser_Live_minigames) | No normalized name match; UNVERIFIED independently |
-| Goombalancing Act | “Goombalancing Act”; “Jamboree TV minigames”; “Bowser Live minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Bowser_Live_minigames) | No normalized name match; UNVERIFIED independently |
-| Bowser Chicken | “Bowser Chicken”; “Jamboree TV minigames”; “Bowser Live minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Bowser_Live_minigames) | No normalized name match; UNVERIFIED independently |
-| Speak Up, Junior! | “Speak Up, Junior!”; “Jamboree TV minigames”; “Bowser Live minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Bowser_Live_minigames) | No normalized name match; UNVERIFIED independently |
-| Bowser Beats | “Bowser Beats”; “Jamboree TV minigames”; “Bowser Live minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Bowser_Live_minigames) | No normalized name match; UNVERIFIED independently |
+| Shell Hockey | “Shell Hockey”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | “Shell Hockey”; “Free Play (List of Minigames)”; “List of Jamboree TV Minigames” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#free-play) |
+| Bowser Filter | “Bowser Filter”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | “Bowser Filter”; “Free Play (List of Minigames)”; “List of Jamboree TV Minigames” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#free-play) |
+| Stuffie Stacker | “Stuffie Stacker”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | “Stuffie Stacker”; “Free Play (List of Minigames)”; “List of Jamboree TV Minigames” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#free-play) |
+| Pull-Back Attack | “Pull-Back Attack”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | “Pull-Back Attack”; “Free Play (List of Minigames)”; “List of Jamboree TV Minigames” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#free-play) |
+| Domino Effect | “Domino Effect”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | “Domino Effect”; “Free Play (List of Minigames)”; “List of Jamboree TV Minigames” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#free-play) |
+| Bob-omb Makeover | “Bob-omb Makeover”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | “Bob-omb Makeover”; “Free Play (List of Minigames)”; “List of Jamboree TV Minigames” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#free-play) |
+| Toad-ally Electric Escape | “Toad-ally Electric Escape”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | “Toad-ally Electric Escape”; “Free Play (List of Minigames)”; “List of Jamboree TV Minigames” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#free-play) |
+| Ice and Easy | “Ice and Easy”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | “Ice and Easy”; “Free Play (List of Minigames)”; “List of Jamboree TV Minigames” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#free-play) |
+| Bob-omb Toss | “Bob-omb Toss”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | “Bob-omb Toss”; “Free Play (List of Minigames)”; “List of Jamboree TV Minigames” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#free-play) |
+| Net Gains | “Net Gains”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | “Net Gains”; “Free Play (List of Minigames)”; “List of Jamboree TV Minigames” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#free-play) |
+| Get a Grip | “Get a Grip”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | “Get a Grip”; “Free Play (List of Minigames)”; “List of Jamboree TV Minigames” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#free-play) |
+| What's the Scoop? | “What's the Scoop?”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | “What’s the Scoop?”; “Free Play (List of Minigames)”; “List of Jamboree TV Minigames” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#free-play) |
+| Knock-Knock Match | “Knock-Knock Match”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | “Knock-Knock Match”; “Free Play (List of Minigames)”; “List of Jamboree TV Minigames” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#free-play) |
+| Goomba Scoopas | “Goomba Scoopas”; “Jamboree TV minigames”; “Mouse minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Mouse_minigames) | “Goomba Scoopas”; “Free Play (List of Minigames)”; “List of Jamboree TV Minigames” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#free-play) |
+| Talking Flower Says | “Talking Flower Says”; “Jamboree TV minigames”; “Bowser Live minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Bowser_Live_minigames) | “Talking Flower Says”; “Bowser Live”; “Camera” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#bowser-live) |
+| Hitting It Rich | “Hitting It Rich”; “Jamboree TV minigames”; “Bowser Live minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Bowser_Live_minigames) | “Hitting It Rich”; “Bowser Live”; “Camera” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#bowser-live) |
+| Goombalancing Act | “Goombalancing Act”; “Jamboree TV minigames”; “Bowser Live minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Bowser_Live_minigames) | “Goombalancing Act”; “Bowser Live”; “Camera” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#bowser-live) |
+| Bowser Chicken | “Bowser Chicken”; “Jamboree TV minigames”; “Bowser Live minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Bowser_Live_minigames) | “Bowser Chicken”; “Bowser Live”; “Microphone” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#bowser-live) |
+| Speak Up, Junior! | “Speak Up, Junior!”; “Jamboree TV minigames”; “Bowser Live minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Bowser_Live_minigames) | “Speak Up, Junior!”; “Bowser Live”; “Microphone” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#bowser-live) |
+| Bowser Beats | “Bowser Beats”; “Jamboree TV minigames”; “Bowser Live minigames” — [wiki](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames#Bowser_Live_minigames) | “Bowser Beats”; “Bowser Live”; “Microphone” — [legacyTv](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/#bowser-live) |
 
-## Independent-list-only quotations
+## Focused English-name evidence
 
-| Legacy name | Category quote | Locator |
-| --- | --- | --- |
-| “Sandwhiched” | “Free-for-All Minigames” | [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#free-for-all-minigames) |
-| “Squeaky Showdown” | “1-vs-3 Minigames” | [legacy](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables#1-vs-3-minigames) |
+These supplementary sources concern disputed English names only. They do not create a second independent source for every game rule. `name-evidence.json` records original and fresh retrievals; `NAME-RESEARCH.md` explains scope and remaining gaps.
 
-## Earlier probe exclusions
+| Source family | Field | Short quote | URL and locator |
+| --- | --- | --- | --- |
+| Super Mario Wiki | englishName | “Sandwiched” | https://www.mariowiki.com/Sandwiched — h1#firstHeading |
+| Super Mario Wiki | nameCategory | “Sandwiched is a 4-Player minigame in Super Mario Party Jamboree” | https://www.mariowiki.com/Sandwiched — lead paragraph |
+| Super Mario Wiki | mechanic | “The players must avoid being crushed by the falling sandwiches” | https://www.mariowiki.com/Sandwiched — #Overview |
+| Super Mario Wiki | englishName | “Squeaky Shakedown” | https://www.mariowiki.com/Squeaky_Shakedown — h1#firstHeading |
+| Super Mario Wiki | nameCategory | “Squeaky Shakedown is a 1-vs.-3 coin -collecting minigame in Super Mario Party Jamboree” | https://www.mariowiki.com/Squeaky_Shakedown — lead paragraph; adjacent link text creates a space before hyphen |
+| Super Mario Wiki | mechanic | “The solo player hits the team side with the squeaky hammer to steal coins.” | https://www.mariowiki.com/Squeaky_Shakedown — #In-game_text |
+| Mario Party Legacy | conflictingEnglishName | “Sandwhiched” | https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables — #free-for-all-minigames; row with japanese-minigame-6.jpg |
+| Mario Party Legacy | conflictingEnglishName | “Squeaky Showdown” | https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables — #1-vs-3-minigames; row with japanese-minigame-46.jpg |
+| Nintendo primary | japaneseNameAndCategoryOnly | “かわしてサンドイッチ 4人対戦” | https://www.nintendo.com/jp/switch/a7hla/minigame/index.html — div.player.p2 img[data-src="../assets/img/minigame/name_type_2.png"] @alt |
+| Destructoid editorial guide (GAMURS) | englishName | “Sandwiched” | https://www.destructoid.com/everything-we-know-about-super-mario-party-jamboree-characters-mini-games-release-date/ — #h-all-mini-games-we-know-so-far; following list first li |
 
-Two initial `/minigames` candidate URLs redirected to a Mario Party (N64) list. Their successful HTTP responses were irrelevant to Jamboree and are excluded. See `source-access.json` for actual request records. No quoted factual evidence was taken from them.
+| Source | Pass one UTC | Pass two UTC | Pass-one hash | Pass-two hash |
+| --- | --- | --- | --- | --- |
+| wiki-sandwiched | 2026-10-07T15:42:55.244211+00:00 | 2026-10-07T15:48:18Z | `6dd9c5e59dd983227fb9d6a0443dd224cccd99ff7278495a5b956795db5c3d71` | `6dd9c5e59dd983227fb9d6a0443dd224cccd99ff7278495a5b956795db5c3d71` |
+| wiki-squeaky | 2026-10-07T15:42:55.244808+00:00 | 2026-10-07T15:48:18Z | `db42fcef6afd961474723a315b5fa91cc4e9e3ae6c57b48422f8c871b54dbafd` | `db42fcef6afd961474723a315b5fa91cc4e9e3ae6c57b48422f8c871b54dbafd` |
+| legacy | 2026-10-07T15:42:55.245449+00:00 | 2026-10-07T15:48:18Z | `ac7307fdbd17bcf85b4545a009d49a1889a8a0f34af086df2e5e0d8c140526d6` | `582b8d8f9db29a61d9423b6330199bdda2602dbff33f8c68fb4ebea233ad7c3a` |
+| nintendo-jp-minigames | 2026-10-07T15:43:37.238681+00:00 | 2026-10-07T15:48:18Z | `4ac1b4b6d59e2cd417440c7fa54b8f9ada4ac88015ad8f4614b0173a9c7a9904` | `4ac1b4b6d59e2cd417440c7fa54b8f9ada4ac88015ad8f4614b0173a9c7a9904` |
+| destructoid-details | 2026-10-07T15:46:44.133643+00:00 | 2026-10-07T15:48:18Z | `db7f69dec603e1fa88a566ea94f64cd34b08eac21e5ca4d813f3611505e5d9da` | `db7f69dec603e1fa88a566ea94f64cd34b08eac21e5ca4d813f3611505e5d9da` |
+
+Destructoid guide author: Chris Penwell, published 2024-09-10. It links to its own hands-on coverage; this is independent editorial English-name evidence. Super Mario Wiki’s list and individual pages remain one source family. Nintendo’s Japanese title/category quotation is not English-name corroboration.

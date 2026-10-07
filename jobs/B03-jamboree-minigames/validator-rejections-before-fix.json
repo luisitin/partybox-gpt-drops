@@ -1,0 +1,48 @@
+{
+  "scope": "four isolated validator-boundary mutations plus accepted baseline",
+  "caseCount": 5,
+  "sourceSHA256": {
+    "verify-index.py": "a46b10caad5a3d3bdabeec4496b411d30b2c84f2a1c460c7709a2d3682cb5619",
+    "catalogue-index.json": "3445161e5439a7dc9ea9aba6fe64ffe9da74c0cc6c9fb430fbfb24c7de97b37e",
+    "source-excerpts.json": "b647af704afbc3394661bcdc552a6c9798c51f748f901d55e5d87771d5a86fcc",
+    "catalogue-index.schema.json": "505d92cea64275e3da105a8d5c745fe0d5d9d57cec9fe561c37758e525c8a06f"
+  },
+  "cases": [
+    {
+      "name": "unmodified_baseline",
+      "expected": "accept",
+      "accepted": true,
+      "passed": true,
+      "verificationGroups": 9
+    },
+    {
+      "name": "wrong_article_for_verified_name",
+      "expected": "reject",
+      "accepted": true,
+      "passed": false,
+      "verificationGroups": 9
+    },
+    {
+      "name": "omitted_category_disagreements",
+      "expected": "reject",
+      "accepted": true,
+      "passed": false,
+      "verificationGroups": 9
+    },
+    {
+      "name": "duplicate_wiki_category_replaces_all_name_and_independent_citations",
+      "expected": "reject",
+      "accepted": true,
+      "passed": false,
+      "verificationGroups": 9
+    },
+    {
+      "name": "unrelated_http_publisher_replaces_all_expected_sources",
+      "expected": "reject",
+      "accepted": true,
+      "passed": false,
+      "verificationGroups": 9
+    }
+  ],
+  "passed": false
+}

@@ -33,9 +33,14 @@
           "minimum": 0
         },
         "legacyTv": {
-          "type": "null"
+          "type": "integer",
+          "minimum": 0
         },
         "nintendoTv": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "legacyCombined": {
           "type": "integer",
           "minimum": 0
         }
@@ -46,7 +51,8 @@
         "wikiCombined",
         "legacyBase",
         "legacyTv",
-        "nintendoTv"
+        "nintendoTv",
+        "legacyCombined"
       ],
       "additionalProperties": false
     },
@@ -119,7 +125,8 @@
                 "source": {
                   "enum": [
                     "wiki",
-                    "legacy"
+                    "legacy",
+                    "legacyTv"
                   ]
                 },
                 "field": {
@@ -165,6 +172,13 @@
               "legacy"
             ],
             "additionalProperties": false
+          },
+          "legacySource": {
+            "enum": [
+              "legacy",
+              "legacyTv",
+              null
+            ]
           }
         },
         "required": [
@@ -177,7 +191,8 @@
           "legacyCategoryPath",
           "confidence",
           "citations",
-          "indexPass2"
+          "indexPass2",
+          "legacySource"
         ],
         "additionalProperties": false
       },
@@ -260,6 +275,21 @@
             ],
             "additionalProperties": false
           }
+        },
+        "tvNormalizedIntersection": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "combinedNormalizedIntersection": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "legacyOnlyTv": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
         }
       },
       "required": [
@@ -268,7 +298,10 @@
         "legacyOnlyBase",
         "wikiOnlyTv",
         "punctuationCaseVariants",
-        "categoryDifferences"
+        "categoryDifferences",
+        "tvNormalizedIntersection",
+        "combinedNormalizedIntersection",
+        "legacyOnlyTv"
       ],
       "additionalProperties": false
     },
