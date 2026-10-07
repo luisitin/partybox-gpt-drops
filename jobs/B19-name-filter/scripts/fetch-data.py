@@ -7,6 +7,7 @@ import csv, hashlib, io, json, pathlib, sys, urllib.request, zipfile
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUT = ROOT / 'data' / 'cache'
 OUT.mkdir(parents=True, exist_ok=True)
+LOCK = json.loads((ROOT / 'data' / 'snapshot-manifest.json').read_text())
 SOURCES = {
  'male': 'https://www2.census.gov/topics/genealogy/1990surnames/dist.male.first',
  'female': 'https://www2.census.gov/topics/genealogy/1990surnames/dist.female.first',
@@ -26,12 +27,16 @@ def main():
         m=json.loads(manifest_path.read_text())
         for item in m['outputs']:
             b=(OUT/item['file']).read_bytes()
-            if digest(b)!=item['sha256']: raise RuntimeError('Cached corpus checksum mismatch: '+item['file'])
+            expected = next(x for x in LOCK['outputs'] if x['file']==item['file'])
+            if digest(b)!=item['sha256'] or item != expected: raise RuntimeError('Cached corpus checksum mismatch: '+item['file'])
+        if m != LOCK: raise RuntimeError('Cached manifest differs from committed snapshot lock')
         print('CORPORA_CACHE_VERIFIED',json.dumps(m,ensure_ascii=True)); return
     raw={}; sources=[]
     for key,url in SOURCES.items():
         b=fetch(url)
         if len(b)>29_000_000: raise RuntimeError('Source exceeds file size budget')
+        expected=next(x for x in LOCK['sources'] if x['id']==key)
+        if digest(b)!=expected['sha256']: raise RuntimeError('Upstream source changed; do not silently refresh the snapshot: '+key)
         raw[key]=b
         sources.append({'id':key,'url':url,'bytes':len(b),'sha256':digest(b)})
     given={}
@@ -43,6 +48,8 @@ def main():
             name, frequency, rank=fields[0].lower(), float(fields[1]), int(fields[3])
             item={'name':name,'source':category,'sourceRank':rank,'sourceFrequency':frequency}
             if name not in given or frequency>given[name]['sourceFrequency']: given[name]=item
+    # 5,000 unique given names by max sex-specific frequency, then the most
+    # frequent surnames not already selected until 20,000 unique names total.
     names=sorted(given.values(),key=lambda x:(-x['sourceFrequency'],x['name']))[:5000]
     if len(names)!=5000: raise RuntimeError('Fewer than 5000 distinct first names')
     seen={x['name'] for x in names}
@@ -73,6 +80,7 @@ def main():
         (OUT/(key+'.json')).write_bytes(b)
         outputs.append({'file':key+'.json','count':n,'bytes':len(b),'sha256':digest(b)})
     m={'sources':sources,'outputs':outputs,'selection':'5000 unique 1990 given names by max sex-specific frequency; append highest-ranked distinct surnames to 20000; all 10000 English entries unfiltered; 2000 unique GeoNames city names by descending population. No moderation-based exclusions.'}
+    if m != LOCK: raise RuntimeError('Selected corpus differs from committed snapshot lock')
     manifest_path.write_text(json.dumps(m,indent=2)+'\n')
     print('CORPORA_FETCHED',json.dumps(m,ensure_ascii=True))
 if __name__=='__main__':

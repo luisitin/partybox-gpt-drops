@@ -1,0 +1,25 @@
+# Conflicts and limitations
+
+1. Blocking every supported obfuscation and allowing every real name conflict on
+identical strings. Lana/anal and Bonner/boner are concrete witnesses. Eleven
+Census names remain blocked and are explicitly reported as false positives.
+2. An unfiltered frequency list contains actual sexual/profanity words. The
+48 kept lexical word rejections are deliberate policy decisions; passing their
+regression expectations does not mean all 10,000 words are allowed.
+3. A 16-code-point API cannot allow every longer place name unchanged. The 57
+place and one word length rejections are format failures, not lexical matches.
+4. The Census sources are historical and separated by category. Our disclosed
+5,000-given-plus-15,000-distinct-surname selection is not a certified combined
+national top-20,000 ranking. No data are invented to fill missing downloads.
+5. Algorithmic separation is not blinded independent authorship. Both algorithms
+were produced in the same session and share the explicit policy data.
+6. Low mean/p99 latency does not prove a maximum bound. Individual observed
+outliers over 0.05 ms fail npm test and are never discarded or turned into passes.
+7. Exceptions were reviewed after observing the corpus. Zero unexpected
+rejections on this regression set would not establish zero unseen false positives.
+8. A first implementation wrongly collapsed mandatory doubled letters (Bob/boob)
+and omitted a lowercase homoglyph partner. Both were fixed, with regressions.
+The final mutation harness counts only baseline-passing cases as mutant kills;
+preexisting failures cannot make a mutant appear caught.
+9. Snapshot hashes intentionally reject changed upstream corpora. The retained
+cache reproduces the selected data; a later fresh GeoNames download may not.

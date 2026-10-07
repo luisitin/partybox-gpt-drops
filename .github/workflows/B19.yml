@@ -23,6 +23,9 @@ jobs:
         with:
           name: B19-verification
           path: |
-            jobs/B19-name-filter/reports/latest/
-            jobs/B19-name-filter/data/cache/
+            jobs/B19-name-filter/
+            .github/workflows/B19.yml
+            !jobs/B19-name-filter/node_modules/**
+            !jobs/B19-name-filter/dist/**
+          include-hidden-files: true
           retention-days: 30

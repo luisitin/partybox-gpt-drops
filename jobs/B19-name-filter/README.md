@@ -1,10 +1,12 @@
 # B19 Player-name filter
 
-A small, pure TypeScript player-name filter, a separately structured bitset-NFA reference, seeded adversarial tests, and 25 executable mutation tests. The production file has zero runtime dependencies.
+Pure TypeScript name moderation, a separately structured bitset-NFA reference,
+seeded generation, public-corpus regression tests, 25 actual executable mutations,
+and a literal per-observation latency gate. There are no runtime dependencies.
 
 ## Rerun
 
-Requires Node 22+, Python 3, and network access on the first full corpus run.
+Node 22+, Python 3, and TypeScript 5.8.3 (development dependency):
 
 ```sh
 cd jobs/B19-name-filter
@@ -12,7 +14,17 @@ npm install --ignore-scripts --no-audit --no-fund
 npm test
 ```
 
-`npm test` compiles with strict TypeScript and runs all suites at seeds 1, 2, and 3. Results, every corpus rejection, obfuscation fixtures, and mutation witnesses go to `reports/latest/`. Failed downloads, failed assertions, and measured latency violations fail the command. `npm run test:core` is explicitly a partial offline run, not a substitute for full verification.
+The single command compiles strict TypeScript and runs every behavioral suite at
+seeds 1, 2, 3. It also repeats the strict no-emit type check at each seed. First
+corpus acquisition requires network access; subsequent runs use a SHA-256-checked
+snapshot. The delivery archive includes that cache for offline data replay.
+`npm run test:core` explicitly skips corpora and is NOT full verification.
+
+Results, complete generated fixtures, every corpus rejection, source checksums,
+and all mutation witnesses are written to `reports/latest/`. CI uploads these
+alongside the source files and cached public corpora, including on failure.
+Upstream data changes fail the snapshot lock rather than silently changing tests.
+GeoNames is a daily source: a future fresh download may need the retained cache.
 
 ## API
 
@@ -23,10 +35,39 @@ nameFilter('s.e.x');     // { ok: false, reason: 'blocked' }
 isAllowedName('Bob');   // true
 ```
 
-The limit is 16 Unicode code points before trimming/normalization, not 16 UTF-16 units or grapheme clusters. Render user text using textContent, never innerHTML. The filter is moderation, not an HTML sanitizer.
+Results are frozen and safe to reuse. The 16-character limit means Unicode code
+points BEFORE trimming or normalization, not UTF-16 units or grapheme clusters.
+Combining marks count separately. No input is silently truncated. Render original
+text with textContent, never innerHTML; moderation is not an HTML sanitizer.
 
-## Honest acceptance status
+## Acceptance status and policy
 
-This is a finite English-policy filter, not a proof that every slur or every Unicode lookalike is recognized. Real names and blocked strings can coincide; literal all-pass corpora and block-all policy cannot both hold on identical inputs. No false-positive exceptions are silently manufactured from corpus results. All remaining failures stay visible in the reports and VERIFY.md.
+See VERIFY.md for measured results and UNVERIFIED items. This delivery does not
+claim universal vocabulary coverage, blinded authorship, or zero real-name false
+positives. A finite English-policy lexicon, selected lookalikes, NFKD, letter-run
+matching, reversed matching, and exact benign-word exceptions are documented in
+POLICY.md and data/policy.json.
 
-Two different matching algorithms are implemented, but they were authored in the same session and share policy data. Blinded independent authorship is not claimed. The literal 0.05 ms per-observation benchmark is enforced; outliers are not hidden behind an average.
+Eleven Census names remain rejected; some have exactly the same spelling as a
+blocked term and others are supported whole-word obfuscations. Common-word data
+contains genuine blocked words, and 57 place names exceed the API length limit.
+Every kept rejection is listed with a reason in data/kept-rejections.json.
+Reviewed-corpus tests enforce that explicit policy baseline, NOT an all-pass
+corpus claim. Exact exceptions were refined using these corpora, so the measured
+false positives are regression results, not held-out generalization estimates.
+
+The 0.05 ms gate measures individual calls without discarding outliers. Failures
+stay failures; an average or p99 does not substitute for the requested maximum.
+Two algorithms agree on tested inputs, but both were authored in one session:
+clean-room independent authorship remains UNVERIFIED.
+
+## Contents
+
+nameFilter.ts is the only runtime file. tests/reference.ts is the NFA oracle;
+tests/run.mjs generates and executes suites and mutants. scripts/fetch-data.py
+retrieves aggregate corpora and verifies the committed snapshot manifest.
+scripts/integrity.mjs verifies delivery checksums and size. data/ records policy,
+review choices, and corpus hashes. SOURCES.md and CONFLICTS.md explain provenance
+and requirement conflicts. The authorized repository-level workflow is
+../../.github/workflows/B19.yml. SHA256SUMS.txt excludes itself, generated
+reports/latest, data/cache (separately snapshot-locked), dist, and node_modules.
