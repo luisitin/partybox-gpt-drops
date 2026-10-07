@@ -6,10 +6,11 @@ functions are pure. The gzip gate is **1,200 bytes**, including the gzip wrapper
 for both the actual TypeScript source and its emitted JavaScript (gzip level 9).
 TypeScript 5.8.3 is a development-only dependency.
 
-**Verification limitation:** the numerical algorithms are different, but they
-were authored by one assistant. This is not a blinded, independently authored
-implementation exercise. See `VERIFY.md` -> `UNVERIFIED` before treating this
-as satisfying every requested process requirement.
+The complete seeded suites now use sealed references written by an isolated
+author who read the original B18 instructions and public API contract before
+seeing production or previous verification code. The RK4 reference checks every
+spring frame; the 113-bit reference checks every random and named Bezier input.
+`tests/blind/AUTHORING.md` and `SEALED-SHA256SUMS.txt` record that provenance.
 
 ## Use
 
@@ -141,10 +142,16 @@ The PR description is the location for the observed hosted run link.
 
 ## Contents and measurement domains
 
-`motion.ts` is production. `tests/reference.ts` supplies RK4, a scaling/squaring
-matrix exponential, and a separate settling-bound bisection. `tests/oracle.cpp`
-supplies 113-bit de Casteljau + bisection. `tests/exact.mjs` supplies an additional
-exact-integer Q160 Bernstein audit. `tests/regressions.mjs` holds fixed cases and
+`motion.ts` is production. `tests/blind/spring-oracle.mjs` supplies the sealed
+independently authored RK4 step, analytic spring and conservative settling bound.
+`tests/blind/bezier-quad.cpp` supplies independently authored 113-bit De Casteljau
+evaluation and safeguarded inversion. Every required spring trajectory frame,
+million-point Bezier corpus and named curve is compared with those references.
+`tests/reference.ts` retains the historical matrix exponential and settling
+bisection as supplemental algorithms. `tests/oracle.cpp` retains the historical
+113-bit curve reference as an additional comparison. These historical sources
+are not claimed as blind independent authorship. `tests/exact.mjs` supplies an
+additional exact-integer Q160 Bernstein audit. `tests/regressions.mjs` holds fixed cases and
 25 source mutations. `tests/run.mjs` runs everything. `VERIFY.md` records counts,
 errors, commands and limitations. `SOURCES.md` identifies the external facts.
 `SHA256SUMS.txt` covers every delivered file except itself, including the workflow.
@@ -155,14 +162,19 @@ in [0.2,40] rad/s, damping ratio in [0,4), initial x and v in [-5,5), and 100 to
 10,000 integration steps. Exact-critical cases use mass 1 and integer frequencies
 1..40. Near-critical cases perturb the ratio by 1e-6 down to 1e-14. The maximum
 error is checked at **every 1e-4-second frame**, for both x and v, not just at the
-final sample. Each spring also gets a separate matrix-exponential comparison.
+final sample. Each spring also gets an independent analytic endpoint comparison
+and a supplemental matrix-exponential comparison. Each seed checks 640,000
+position/velocity tail samples for the production settling estimate and another
+640,000 for the blind author's separately derived conservative estimate. Valid
+conservative settling estimates need not have equal values.
 
 Each seed tests 1,000,000 Bezier inputs. Controls x are in [0,1]; random y are
 in [-4,4). Strata include flat endpoints, exact/nearly flat interiors, identical
 x controls, named curves, exact progress endpoints, tiny progress increments,
 and extrapolation with progress in [-2,3). The near-flat interior stratum targets
 the midpoint with x controls within 1e-12 of (1,0). All million outputs are
-compared to the 113-bit reference to absolute error <1e-7. Another 40,004 points
-check the named exports, and 5,000 independently audit the reference with exact
+compared to both the sealed independent and historical 113-bit references to
+absolute error <1e-7. Another 40,004 points check the named exports against both
+references, and 5,000 audit the historical reference with exact
 integer arithmetic. No universal 1e-7 absolute-error claim is made for arbitrary
 astronomical y values.

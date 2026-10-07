@@ -1,7 +1,21 @@
 # B18 assumptions
 
-- Resume the existing public API and documented numerical domains. The runtime remains pure, with zero runtime dependencies and the decimal 1,200-byte gzip limit.
-- The original instruction requires implementations written without looking at one another. A new isolated reference author has access only to the original prompt and public API contract. Existing production and test implementations are excluded from that author's input.
-- A settling-time estimate may differ between valid algorithms. Compare its all-future displacement and velocity bound, rather than require identical conservative estimates.
-- Preserve every original test count, seed, accuracy tolerance and mutation gate. Additional independent checks supplement those tests.
-- A completed delivery is a verified pull request for maintainer review. The repository prohibits pushing to main.
+- Preserve the existing public API, zero runtime dependencies, pure functions,
+  documented numerical domains and decimal 1,200-byte gzip gate.
+- The independent reference author read the original instructions, repository
+  README and public API contract before writing and sealing the sources.
+  Production and previous reference access was authorized only after sealing.
+  Provenance and source hashes are retained in `tests/blind/`.
+- A settling estimate is a conservative all-future bound for both displacement
+  and velocity. Different valid conservative estimates need not be numerically
+  equal. The blind estimate and production estimate both receive tail checks;
+  the historical envelope inversion remains a supplemental comparison.
+- All original test counts, seeds, tolerances and mutation gates are retained.
+  No original million-point or every-frame comparison is replaced by a sample.
+- Arbitrary finite inputs receive finite output guards. Precise numerical
+  accuracy is verified only over the domains stated in `README.md`; browser
+  rendering engines and exhaustive binary64 enumeration are not claimed.
+- Clean `npm ci --ignore-scripts --no-audit --no-fund` succeeded locally during
+  this resumed delivery. Hosted CI independently performs `npm ci --ignore-scripts`.
+- Delivery is PR #5 on `job/B18-motion-ts` for maintainer review. The repository
+  prohibits pushing to main or changing another job's folder.

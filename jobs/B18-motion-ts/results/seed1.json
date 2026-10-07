@@ -5,8 +5,8 @@
   "suites": [
     {
       "name": "SHA256 integrity and per-file 30 MB limit",
-      "cases": 17,
-      "passed": 17,
+      "cases": 26,
+      "passed": 26,
       "failed": 0,
       "seed": 1
     },
@@ -43,7 +43,7 @@
       "seed": 1
     },
     {
-      "name": "closed form vs RK4, every dt=1e-4 frame",
+      "name": "closed form vs blindly authored RK4, every dt=1e-4 frame",
       "cases": 10000,
       "passed": 10000,
       "failed": 0,
@@ -96,6 +96,14 @@
       "maxAbsoluteError": 3.311129148642067e-11
     },
     {
+      "name": "closed form vs blindly authored spring solution",
+      "cases": 10000,
+      "passed": 10000,
+      "failed": 0,
+      "seed": 1,
+      "maxAbsoluteError": 4.600764214046649e-13
+    },
+    {
       "name": "cubic Bezier vs 113-bit reference",
       "cases": 1000000,
       "passed": 1000000,
@@ -117,6 +125,25 @@
       "streamSha256": "87a766065fa268fcad1a96d5274da9a0186571a3afd743b92d420197ff64c639",
       "referenceSignificandBits": 113,
       "bisectionIterations": 116
+    },
+    {
+      "name": "cubic Bezier vs blindly authored high-precision oracle",
+      "cases": 1000000,
+      "passed": 1000000,
+      "failed": 0,
+      "seed": 1,
+      "maxAbsoluteError": 9.094947017729282e-13,
+      "maxPriorOracleDifference": 4.440892098500626e-16,
+      "inputSha256": "3a32957e2c2455bd0ea932a2c096929db23f96c52777cd9fd172de3bada683af",
+      "outputSha256": "0efb69dfdba01c12ebcea1146aca715fcf9f9ea303f28331aa9b8b9f3376b009"
+    },
+    {
+      "name": "all four CSS named easings vs blindly authored high-precision oracle",
+      "cases": 40004,
+      "passed": 40004,
+      "failed": 0,
+      "seed": 1,
+      "maxAbsoluteError": 4.440892098500626e-16
     },
     {
       "name": "all four CSS named easings vs 113-bit reference",
@@ -154,6 +181,14 @@
       "failed": 0,
       "seed": 1,
       "maxFractionOfTolerance": 0.05717126248279699
+    },
+    {
+      "name": "blindly authored settling-bound tail check",
+      "cases": 640000,
+      "passed": 640000,
+      "failed": 0,
+      "seed": 1,
+      "maxFractionOfTolerance": 0.05047469826749929
     },
     {
       "name": "semigroup / physical scale / time-unit invariance",
