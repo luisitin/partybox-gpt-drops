@@ -1,7 +1,7 @@
 /** Independently authored from the public rules, before reading production. */
 export type BlindCell = 0 | 1 | 2 | 3;
 export interface BlindModel { readonly size: number; readonly fleet: readonly number[] }
-export interface BlindHull { readonly cells: readonly number[]; readonly mask: bigint }
+export interface BlindHull { readonly cells: readonly number[]; readonly mask: bigint; readonly words: readonly number[] }
 const preparedGeometry: unique symbol = Symbol("independent geometry");
 const preparedCells: unique symbol = Symbol("independent cell geometry");
 type PreparedModel = BlindModel & { readonly [preparedGeometry]?: readonly (readonly BlindHull[])[]; readonly [preparedCells]?: readonly (readonly (readonly number[])[])[] };
@@ -24,8 +24,10 @@ export function blindHulls(model: BlindModel): readonly (readonly BlindHull[])[]
       for (let row = 0; row < model.size; row++) for (let column = 0; column < model.size; column++) {
         if (direction === 0 ? column + length > model.size : row + length > model.size) continue;
         const cells = Array.from({ length }, (_, offset) => row * model.size + column + offset * step);
-        let mask = 0n; for (const cell of cells) mask |= 1n << BigInt(cell);
-        result.push({ cells, mask });
+        let mask = 0n;
+        const words = [0,0,0,0];
+        for (const cell of cells) { mask |= 1n << BigInt(cell); words[cell >>> 5] = words[cell >>> 5]! | (1 << (cell & 31)); }
+        result.push({ cells, mask, words });
       }
     }
     return result;

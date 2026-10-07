@@ -1,4 +1,4 @@
-import { blindCellPlacements, type BlindModel, type BlindState, type BlindFailure } from "./blindOracle.js";
+import { blindCellPlacements, blindHulls, type BlindModel, type BlindState, type BlindFailure, type BlindHull } from "./blindOracle.js";
 
 export interface BlindEstimate { readonly occupancy: readonly number[]; readonly target: readonly number[]; readonly method: "exact" | "sampled" }
 export interface BlindAuditWorld { readonly world: readonly (readonly number[])[]; readonly weight: number }
@@ -84,16 +84,29 @@ export function blindChoose(model: BlindModel, state: BlindState, difficulty: "e
 export function blindAuditDensity(model: BlindModel, state: BlindState, samples: readonly BlindAuditWorld[]): BlindEstimate | BlindFailure {
   try {
     if (samples.length === 0 || samples.some(sample => !Number.isFinite(sample.weight) || sample.weight <= 0)) return invalid("Positive finite audited sample weights required");
-    const afloat = remaining(model, state), shapes = blindCellPlacements(model);
-    const candidates = shapes.map((placements, ship) => afloat.includes(ship) ? legal(state, ship, placements) : []);
+    const afloat = remaining(model, state), shapes = blindHulls(model);
+    const namedCounts = Array<number>(model.fleet.length).fill(0);
+    for (let cell = 0; cell < state.cells.length; cell++) if (state.cells[cell] === 2 && state.hitShip?.[cell] != null) namedCounts[state.hitShip[cell]!] = namedCounts[state.hitShip[cell]!]! + 1;
+    const candidates = shapes.map((placements, ship) => afloat.includes(ship) ? placements.filter(hull => {
+      let unknown = false, covered = 0;
+      for (const cell of hull.cells) {
+        const value = state.cells[cell]!, label = state.hitShip?.[cell];
+        if (value === 1 || value === 3 || (value === 2 && label != null && label !== ship)) return false;
+        if (value === 0) unknown = true;
+        if (value === 2 && label === ship) covered++;
+      }
+      return unknown && covered === namedCounts[ship];
+    }) : []);
     const occupancy = Array<number>(state.cells.length).fill(0), target = Array<number>(state.cells.length).fill(0);
     const maximum = Math.max(...samples.map(sample => sample.weight));
     let totalWeight = 0;
-    const owners = new Int16Array(state.cells.length), hitCells: number[] = [], conditional: (readonly number[])[] = [];
-    for (let cell = 0; cell < state.cells.length; cell++) if (state.cells[cell] === 2) hitCells.push(cell);
+    const owners = new Int16Array(state.cells.length), hitCells: number[] = [], conditional: BlindHull[] = [];
+    const occupied = new Int32Array(4), worldMasks = new Int32Array(model.fleet.length * 4), hitMasks = new Int32Array(4);
+    for (let cell = 0; cell < state.cells.length; cell++) if (state.cells[cell] === 2) { hitCells.push(cell); const word = cell >>> 5; hitMasks[word] = hitMasks[word]! | (1 << (cell & 31)); }
     for (const sample of samples) {
       if (sample.world.length !== model.fleet.length) return invalid("Audited worlds must retain every labeled hull");
       owners.fill(-1);
+      occupied.fill(0); worldMasks.fill(0);
       for (let ship = 0; ship < model.fleet.length; ship++) {
         const placement = sample.world[ship]!, fixed = state.sunk.find(s => s.ship === ship);
         if (placement.length !== model.fleet[ship]) return invalid("Audited hull length disagrees with its label");
@@ -104,6 +117,8 @@ export function blindAuditDensity(model: BlindModel, state: BlindState, samples:
         for (const cell of placement) {
           if (!Number.isInteger(cell) || cell < 0 || cell >= state.cells.length || owners[cell] !== -1) return invalid("Audited world contains invalid or overlapping cells");
           owners[cell] = ship;
+          const word = cell >>> 5, bit = 1 << (cell & 31);
+          occupied[word] = occupied[word]! | bit; worldMasks[ship * 4 + word] = worldMasks[ship * 4 + word]! | bit;
           const row = Math.floor(cell / model.size), column = cell % model.size;
           lowRow = Math.min(lowRow,row); highRow = Math.max(highRow,row); lowColumn = Math.min(lowColumn,column); highColumn = Math.max(highColumn,column);
           if (state.cells[cell] === 0) unknown = true;
@@ -115,21 +130,19 @@ export function blindAuditDensity(model: BlindModel, state: BlindState, samples:
       for (const cell of hitCells) if (owners[cell] === -1 || (state.hitShip?.[cell] != null && owners[cell] !== state.hitShip[cell])) return invalid("Audited world leaves a hit uncovered or assigns it to a foreign label");
       const weight = sample.weight / maximum; totalWeight += weight;
       for (const ship of afloat) {
-        let required = 0; for (const cell of hitCells) if (owners[cell] === ship) required++;
+        const base = ship * 4;
+        const h0 = hitMasks[0]! & worldMasks[base]!, h1 = hitMasks[1]! & worldMasks[base+1]!, h2 = hitMasks[2]! & worldMasks[base+2]!, h3 = hitMasks[3]! & worldMasks[base+3]!;
+        const o0 = occupied[0]! & ~worldMasks[base]!, o1 = occupied[1]! & ~worldMasks[base+1]!, o2 = occupied[2]! & ~worldMasks[base+2]!, o3 = occupied[3]! & ~worldMasks[base+3]!;
         conditional.length=0;
         for (const placement of candidates[ship]!) {
-          let covered = 0, valid = true;
-          for (const cell of placement) {
-            if (owners[cell] !== -1 && owners[cell] !== ship) { valid = false; break; }
-            if (state.cells[cell] === 2 && owners[cell] === ship) covered++;
-          }
-          if (valid && covered === required) conditional.push(placement);
+          const words = placement.words;
+          if (((words[0]! & o0) | (words[1]! & o1) | (words[2]! & o2) | (words[3]! & o3)) === 0 && (words[0]! & h0) === h0 && (words[1]! & h1) === h1 && (words[2]! & h2) === h2 && (words[3]! & h3) === h3) conditional.push(placement);
         }
         if (conditional.length === 0) return invalid("An audited world has no conditional hulls");
         const contribution = weight / conditional.length;
         for (const placement of conditional) {
-          const targets = required > 0;
-          for (const cell of placement) {
+          const targets = (h0 | h1 | h2 | h3) !== 0;
+          for (const cell of placement.cells) {
             occupancy[cell] = occupancy[cell]! + contribution;
             if (targets) target[cell] = target[cell]! + contribution;
           }
