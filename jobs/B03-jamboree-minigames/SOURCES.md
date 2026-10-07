@@ -368,7 +368,7 @@ Each linked wiki article was reopened in two fresh requests. This table gives on
 
 ## Complete draft catalogue citation registry
 
-Every current fact references clip IDs below through `minigames.json.fieldEvidence`. URLs and quotations are exact; locators identify the complete source context. Short locator clips do not independently establish complete mechanics. Original historical tables above remain preserved. TheGamer and ScreenRant share Valnet ownership and are counted as one family; the new reviews are used only for their narrowly quoted gameplay actions. Current publisher lineages, A/B recoveries and complete source-scope fingerprints remain in the catalogue evidence files.
+Every current fact references clip IDs below through `minigames.json.fieldEvidence`. URLs and quotations are exact; locators identify the complete source context. Short locator clips do not independently establish complete mechanics. Original historical tables above remain preserved. TheGamer and ScreenRant share Valnet ownership and are counted as one family; the reviews are used only for their narrowly quoted gameplay actions or scoped Party-board Buddy facts. Current publisher lineages, A/B recoveries and complete source-scope fingerprints remain in the catalogue evidence files.
 
 ### W_LIST — List of Super Mario Party Jamboree minigames - Super Mario Wiki, the Mario encyclopedia
 
@@ -3500,3 +3500,52 @@ Publisher lineage: `mariowiki`; unique retained quotation words: 66.
 | W132_q5 | Clap to the beat of the symbols as they float by. | #In-game_text |
 | W132Q006 | The players must clap to the beats marked by their playable character's icon to earn points. | Overview/gameplay rule context for winRules |
 | W132Q007 | The players must clap to the beats marked by their playable character's icon to earn points. | Overview/gameplay rule context for scoreRules |
+
+### TG_BUDDY — Gabrielle Castania: What Does Each Jamboree Buddy Do In Super Mario Party Jamboree?
+
+URL: https://www.thegamer.com/super-mario-party-jamboree-buddy-allies-abilities-minigames-perks/
+
+Published October 23, 2024. Publisher lineage: `valnet` (shared with ScreenRant); 70 unique retained quotation words. Complete native article scope was identical in both actual HTTP 200/TLS-verified captures. An earlier urllib HTTP 503 is preserved in the external attempt receipt; later success is not an origin-freshness claim.
+
+| Clip ID | Exact quote (≤25 words) | Locator |
+| --- | --- | --- |
+| TG_BUDDY_FMT1 | everyone will need to compete in a four-player minigame to earn the right to have said buddy. | Gabrielle Castania → Play Minigames To Earn Your Jamboree Buddy → first paragraph |
+| TG_BUDDY_FMT2 | The player who reaches the buddy’s space gets an advantage at the beginning of the buddy minigame | Same section → encounter advantage paragraph and character-specific starting-player-bonus table |
+| TG_BUDDY_reward_WIN | the buddy goes with whoever won their minigame | Same section → When the minigame ends paragraph |
+| TG_BUDDY_reward_MG064 | Mario Three-Peat | Every Buddy Ability In Super Mario Party Jamboree table → Mario row → Minigame column |
+| TG_BUDDY_reward_MG065 | Luigi Rescue Operation | Every Buddy Ability In Super Mario Party Jamboree table → Luigi row → Minigame column |
+| TG_BUDDY_reward_MG067 | Daisy's Field Day | Every Buddy Ability In Super Mario Party Jamboree table → Daisy row → Minigame column |
+| TG_BUDDY_reward_MG068 | Wario's Buzzer Beater | Every Buddy Ability In Super Mario Party Jamboree table → Wario row → Minigame column |
+| TG_BUDDY_reward_MG069 | Waluigi's Pinball Arcade | Every Buddy Ability In Super Mario Party Jamboree table → Waluigi row → Minigame column |
+| TG_BUDDY_reward_MG070 | Yoshi's Mountain Race | Every Buddy Ability In Super Mario Party Jamboree table → Yoshi row → Minigame column |
+| TG_BUDDY_reward_MG071 | Rosalina's Radical Race | Every Buddy Ability In Super Mario Party Jamboree table → Rosalina row → Minigame column |
+| TG_BUDDY_reward_MG072 | Dk's Konga Line | Every Buddy Ability In Super Mario Party Jamboree table → Donkey Kong row → Minigame column |
+| TG_BUDDY_reward_MG073 | Jr.'s Jauntlet | Every Buddy Ability In Super Mario Party Jamboree table → Bowser Jr. row → Minigame column |
+| TG_BUDDY_NAME_PEACH | Peach's Day Out | Every Buddy Ability In Super Mario Party Jamboree table → Peach row → Minigame column |
+
+TG_BUDDY_NAME_PEACH is retained as a conflict, not accepted reward evidence. Controls, scoring, ties, timers and unknown board coin/star awards were not promoted from this guide.
+
+### Additional literal Showdown format witnesses
+
+The following eighteen clips were each compared to both original full Wiki captures; original response hashes and byte lengths matched before the evidence lists were extended. Fresh full native URL reopens additionally check them. Waluigi’s format was withheld because its second account does not explicitly state four players.
+
+| Clip ID | Exact quote (≤25 words) | URL / locator |
+| --- | --- | --- |
+| W064_format_FOUR | four players competing against him and each other | https://www.mariowiki.com/Mario%27s_Three-peat / Lead/Overview → explicit four-player Showdown context |
+| W064_format_ADVANTAGE | is awarded three points at the beginning as an advantage. | https://www.mariowiki.com/Mario%27s_Three-peat / Overview → Mario Party mode board-encounter advantage paragraph |
+| W065_format_FOUR | four players solving puzzles in order to save him. | https://www.mariowiki.com/Luigi_Rescue_Operation / Lead/Overview → explicit four-player Showdown context |
+| W065_format_ADVANTAGE | has the first room's puzzle solved as an advantage. | https://www.mariowiki.com/Luigi_Rescue_Operation / Overview → Mario Party mode board-encounter advantage paragraph |
+| W066_format_FOUR | four players fulfilling several tasks for her during a day out in the city. | https://www.mariowiki.com/Peach%27s_Day_Off / Lead/Overview → explicit four-player Showdown context |
+| W066_format_ADVANTAGE | receives a golden present worth 10 points as an advantage. | https://www.mariowiki.com/Peach%27s_Day_Off / Overview → Mario Party mode board-encounter advantage paragraph |
+| W067_format_FOUR | four players competing against each other to collect the most medals. | https://www.mariowiki.com/Daisy%27s_Field_Day / Lead/Overview → explicit four-player Showdown context |
+| W067_format_ADVANTAGE | receives three red medals at the start as an advantage. | https://www.mariowiki.com/Daisy%27s_Field_Day / Overview → Mario Party mode board-encounter advantage paragraph |
+| W068_format_FOUR | four players answer a series of questions in a game show setting. | https://www.mariowiki.com/Wario%27s_Buzzer_Beater / Lead/Overview → explicit four-player Showdown context |
+| W068_format_ADVANTAGE | is awarded five points at the beginning as an advantage. | https://www.mariowiki.com/Wario%27s_Buzzer_Beater / Overview → Mario Party mode board-encounter advantage paragraph |
+| W070_format_FOUR | four players racing against each other on several colored Yoshis | https://www.mariowiki.com/Yoshi%27s_Mountain_Race / Lead/Overview → explicit four-player Showdown context |
+| W070_format_ADVANTAGE | has three fruits placed in front of them at the start as an advantage | https://www.mariowiki.com/Yoshi%27s_Mountain_Race / Overview → Mario Party mode board-encounter advantage paragraph |
+| W071_format_FOUR | four players racing against each other on snowboards. | https://www.mariowiki.com/Rosalina%27s_Radical_Race / Lead/Overview → explicit four-player Showdown context |
+| W071_format_ADVANTAGE | receives a boosting item at the start as an advantage. | https://www.mariowiki.com/Rosalina%27s_Radical_Race / Overview → Mario Party mode board-encounter advantage paragraph |
+| W072_format_FOUR | four players trying to match his bongo rhythm | https://www.mariowiki.com/DK%27s_Konga_Line / Lead/Overview → explicit four-player Showdown context |
+| W072_format_ADVANTAGE | is given a more lenient timing window | https://www.mariowiki.com/DK%27s_Konga_Line / Overview → Mario Party mode board-encounter advantage paragraph |
+| W073_format_FOUR | four players complete a series of rounds, most of which involve avoiding enemies, to earn points. | https://www.mariowiki.com/Jr.%27s_Jauntlet / Lead/Overview → explicit four-player Showdown context |
+| W073_format_ADVANTAGE | is awarded three points at the beginning as an advantage. | https://www.mariowiki.com/Jr.%27s_Jauntlet / Overview → Mario Party mode board-encounter advantage paragraph |

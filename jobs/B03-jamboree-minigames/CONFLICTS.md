@@ -91,3 +91,9 @@ The earlier preliminary text above is retained as historical provenance; current
 | C12 | endless_timer | Scare-ousel, Sandwiched, Cold Front | Infobox Endless duration versus overview no-time-limit wording | Recorded maximum is not promoted to an enforced gameplay cutoff. |
 | C13 | score_metric | Bob-omb Makeover | team with most paint versus Wiki counts predominantly painted Bob-ombs | Core paint action is corroborated; complete scoring formula remains single source. |
 | C14 | date | GamingTrend preview | Exa metadata August 2026 versus article byline April 3, 2025 | Treat as prerelease hands-on preview; do not claim its mechanics prove release-version parity. |
+
+| C15 | list_name | Peach's Day Off | Peach's Day Out (TG_BUDDY) | Credited guide prints Day Out; this mapping is excluded and Peach's reward remains single-source. Exact conflicting clip is TG_BUDDY_NAME_PEACH. |
+
+The same credited guide displays `Mario Three-Peat` and `Dk's Konga Line`. These punctuation/case variants remain exact in their clips. Their character-table associations support only the scoped Party-mode Buddy awards; they do not replace the independently supported catalogue names.
+
+Waluigi's Pinball Arcade format remains single-source: the credited guide gives a generic four-player encounter, but the independently opened Wiki article does not explicitly state that count. Its Party Buddy award alone is corroborated; the unchanged format value retains its prior qualifier.

@@ -18,3 +18,6 @@
 15. Broad mode rules do not establish every game’s alternate scoring, coin/star payout or tie behavior. Unknowns remain null and keep whole-row confidence low.
 16. The strict completeness gate deliberately remains NOT_MET even when every integrity check succeeds. A green draft workflow is not full acceptance.
 17. Two retrievals of the same article remain one publisher family. Nintendo Life republishes in-game instructions; this is not accepted as independent corroboration of every binding or mechanic.
+
+18. The credited Gabrielle Castania Buddy guide is independently authored relative to Super Mario Wiki, but TheGamer and ScreenRant both count as Valnet. Its complete article was captured twice over verified native HTTPS. A prior urllib request actually returned HTTP 503; successful curl responses do not erase that failed attempt.
+19. Nine newly corroborated reward fields cover only the named character as a Party-mode Jamboree Buddy. Their unknown coin/star payouts remain null and complete mode-specific rewards remain unverified. Peach's conflicting guide name is excluded. The nine new format corroborations cover the four-player Party encounter and character-specific starting advantage, without alternate-mode availability claims.

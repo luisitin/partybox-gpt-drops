@@ -167,11 +167,11 @@ def run(args):
     contexts=sum(len(a['independentScopeChecks']) for a in audit['rows'])
     checked('Full row audit bindings and complete reopened source contexts',132+contexts,lambda:validate_catalogue(data,sources,audit,index))
     checked('Unknown awards, returning editions, timer scopes and conflict retention',132+25,lambda:validate_catalogue(data,sources,audit,index))
-    checked('Fourteen material conflicts preserved',14,lambda:require(len(documents['catalogue-conflicts']['conflicts'])==14,'Conflict omitted'))
+    checked('Fifteen material conflicts preserved',15,lambda:require(len(documents['catalogue-conflicts']['conflicts'])==15,'Conflict omitted'))
     def reward_witness_check(proof):
         schema=load('reports/reward-quote-capture-audit.schema.json')
         jsonschema.Draft202012Validator.check_schema(schema);jsonschema.Draft202012Validator(schema).validate(proof)
-        expected={r['id']:set(r['fieldEvidence']['reward']['quoteIds']) for r in rows if r['fieldEvidence']['reward']['status']=='single_source'}
+        expected={r['id']:set(r['fieldEvidence']['reward']['quoteIds']) for r in rows if r['fieldEvidence']['reward']['status'] in ['single_source','corroborated']}
         require(len(expected)==19, 'Reported reward row scope differs')
         expected['MG120']={q for q in rows[119]['fieldEvidence']['gameplay']['quoteIds'] if q.startswith('W120_gameplay_')}
         wanted={(row,q,p) for row,ids in expected.items() for q in ids for p in [1,2]};observed=set()
@@ -182,7 +182,7 @@ def run(args):
         require(observed==wanted,'Missing exact reward or gameplay witness')
         require(all('_reward_' in q for row,ids in expected.items() if row!='MG120' for q in ids),'Reward claim supported only by introductory text')
     reward_proof=load('reports/reward-quote-capture-audit.json')
-    checked('Exact reward/gameplay quote witnesses bound to both article captures',48,lambda:reward_witness_check(reward_proof))
+    checked('Exact reward/gameplay quote witnesses bound to both article captures',len(reward_proof['checks']),lambda:reward_witness_check(reward_proof))
     def bad_reward_witnesses():
         mutations=[lambda d:d['checks'].pop(),lambda d:d['checks'][0].__setitem__('quote','Unsupported reward'),lambda d:d['checks'][0].__setitem__('bodySha256','0'*64),lambda d:d['checks'].__setitem__(1,copy.deepcopy(d['checks'][0]))]
         for mutate in mutations:
