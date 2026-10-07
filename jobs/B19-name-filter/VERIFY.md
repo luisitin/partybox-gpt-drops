@@ -11,7 +11,7 @@ source and full measured reports are committed in `results/`; new runs write
 succeeded. The source compiler and each seed's repeated strict no-emit check
 use the pinned TypeScript 5.8.3 package.
 
-Runtime SHA256: `679235b2f6b3eed9c002d5f3c4d83e4ecae43f87a450351bea8ea2baf2fa0405`.
+Runtime SHA256: `94b9bfcfd9c37d40e42bcc717fcf08bbef2c23b861ed3a0ca03ed0d5ee1e0bf2`.
 
 Sealed blind reference SHA256: `40449357a616619cc649d6b8efab2f6664a187de178511b8b0f17e28e92eea9a`.
 
@@ -35,6 +35,7 @@ against the sealed reference; none is replaced with a sample.
 | generator-byte-identical-replay-and-coverage | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
 | handwritten-format-and-Scunthorpe | 459 | 459 | 0 | 1 | `node tests/run.mjs` |
 | exhaustive-declared-single-glyph-substitution | 1,371 | 1,371 | 0 | 1 | `node tests/run.mjs` |
+| precompiled-Unicode-policy-context-differential | 1,296 | 1,296 | 0 | 1 | `node tests/run.mjs` |
 | generated-obfuscations | 5,000 | 5,000 | 0 | 1 | `node tests/run.mjs` |
 | names-count-and-uniqueness | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
 | names-reviewed-corpus-policy | 20,000 | 20,000 | 0 | 1 | `node tests/run.mjs` |
@@ -53,7 +54,7 @@ against the sealed reference; none is replaced with a sample.
 | 25-real-executed-mutations | 25 | 25 | 0 | 1 | `node tests/run.mjs` |
 | runtime-gzip-size | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
 | zero-runtime-dependencies-and-forbidden-APIs | 5 | 5 | 0 | 1 | `node tests/run.mjs` |
-| latency-every-observed-check-under-005ms | 10,000 | 9,978 | 22 | 1 | `node tests/run.mjs` |
+| latency-every-observed-check-under-005ms | 10,000 | 9,963 | 37 | 1 | `node tests/run.mjs` |
 | delivery-file-size-and-checksums | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
 | immutable-return-values | 3 | 3 | 0 | 2 | `node tests/run.mjs` |
 | policy-copy-consistency-and-no-duplicate-terms | 3 | 3 | 0 | 2 | `node tests/run.mjs` |
@@ -61,6 +62,7 @@ against the sealed reference; none is replaced with a sample.
 | generator-byte-identical-replay-and-coverage | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
 | handwritten-format-and-Scunthorpe | 459 | 459 | 0 | 2 | `node tests/run.mjs` |
 | exhaustive-declared-single-glyph-substitution | 1,371 | 1,371 | 0 | 2 | `node tests/run.mjs` |
+| precompiled-Unicode-policy-context-differential | 1,296 | 1,296 | 0 | 2 | `node tests/run.mjs` |
 | generated-obfuscations | 5,000 | 5,000 | 0 | 2 | `node tests/run.mjs` |
 | names-count-and-uniqueness | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
 | names-reviewed-corpus-policy | 20,000 | 20,000 | 0 | 2 | `node tests/run.mjs` |
@@ -79,7 +81,7 @@ against the sealed reference; none is replaced with a sample.
 | 25-real-executed-mutations | 25 | 25 | 0 | 2 | `node tests/run.mjs` |
 | runtime-gzip-size | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
 | zero-runtime-dependencies-and-forbidden-APIs | 5 | 5 | 0 | 2 | `node tests/run.mjs` |
-| latency-every-observed-check-under-005ms | 10,000 | 9,992 | 8 | 2 | `node tests/run.mjs` |
+| latency-every-observed-check-under-005ms | 10,000 | 9,985 | 15 | 2 | `node tests/run.mjs` |
 | delivery-file-size-and-checksums | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
 | immutable-return-values | 3 | 3 | 0 | 3 | `node tests/run.mjs` |
 | policy-copy-consistency-and-no-duplicate-terms | 3 | 3 | 0 | 3 | `node tests/run.mjs` |
@@ -87,6 +89,7 @@ against the sealed reference; none is replaced with a sample.
 | generator-byte-identical-replay-and-coverage | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
 | handwritten-format-and-Scunthorpe | 459 | 459 | 0 | 3 | `node tests/run.mjs` |
 | exhaustive-declared-single-glyph-substitution | 1,371 | 1,371 | 0 | 3 | `node tests/run.mjs` |
+| precompiled-Unicode-policy-context-differential | 1,296 | 1,296 | 0 | 3 | `node tests/run.mjs` |
 | generated-obfuscations | 5,000 | 5,000 | 0 | 3 | `node tests/run.mjs` |
 | names-count-and-uniqueness | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
 | names-reviewed-corpus-policy | 20,000 | 20,000 | 0 | 3 | `node tests/run.mjs` |
@@ -105,7 +108,7 @@ against the sealed reference; none is replaced with a sample.
 | 25-real-executed-mutations | 25 | 25 | 0 | 3 | `node tests/run.mjs` |
 | runtime-gzip-size | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
 | zero-runtime-dependencies-and-forbidden-APIs | 5 | 5 | 0 | 3 | `node tests/run.mjs` |
-| latency-every-observed-check-under-005ms | 10,000 | 9,987 | 13 | 3 | `node tests/run.mjs` |
+| latency-every-observed-check-under-005ms | 10,000 | 9,988 | 12 | 3 | `node tests/run.mjs` |
 
 ## Independent reference and complete behavioral results
 
@@ -138,23 +141,31 @@ asserted to have blind authorship.
 
 ## Size, dependencies and source optimization
 
-Source: **6,838 bytes / 3,186 gzip bytes**. Emitted runtime: **5,897 bytes / 2,572 gzip bytes**. Both gzip artifacts are gated at 6,000 bytes, level 9.
+Source: **9,161 bytes / 3,946 gzip bytes**. Emitted runtime: **7,864 bytes / 3,114 gzip bytes**. Both gzip artifacts are gated at 6,000 bytes, level 9.
 
 Runtime has zero dependencies, imports, ambient RNG or clocks. It adds no
 result cache or benchmark-specific path. Printable ASCII avoids unnecessary
 Unicode normalization/replacement. Plain ASCII words enter the matcher without
 building a new mapped string. Character-property regexes are compiled once at
 module initialization, and one scan handles forward and reversed patterns.
-All original policy decisions and guards retain the complete differential and
-mutation checks above.
+A private table compiled at module initialization contains NFKD expansions,
+mapping results and letter/number classification for declared glyphs, case
+variants and known ignorable formats. Those inputs avoid repeated normalization
+and mark/format replacement. Other Unicode keeps the original fallback.
+Whole-string lowercasing preserves contextual Greek final sigma; only
+Case_Ignorable marks/formats may be removed before that operation. No names or
+filter results are cached. All original policy decisions and guards retain the
+complete differential and mutation checks above. An additional 1,296 mixed
+character/context cases per seed agree with the sealed reference: 3,888 passed
+checks, including Greek sigma and fallback boundaries.
 
 ## Literal latency results in milliseconds
 
 | Seed | Calls | Mean | p50 | p99 | Maximum | Above 0.05 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 1 | 10000 | 0.003667145 | 0.000847000 | 0.005783000 | 3.485158000 | 22 |
-| 2 | 10000 | 0.001489924 | 0.000635000 | 0.003996000 | 3.132775000 | 8 |
-| 3 | 10000 | 0.002425181 | 0.000642000 | 0.004188000 | 3.852742000 | 13 |
+| 1 | 10000 | 0.016340163 | 0.000817000 | 0.008403000 | 41.188051000 | 37 |
+| 2 | 10000 | 0.001290300 | 0.000624000 | 0.004348000 | 0.714895000 | 15 |
+| 3 | 10000 | 0.003125306 | 0.000645000 | 0.004366000 | 19.354561000 | 12 |
 
 Each seed warms 100,000 calls and measures 10,000 seeded mixed inputs, using the
 original unchanged timer window around the call and result access. No outlier

@@ -83,6 +83,11 @@ for(const term of policy.terms)for(let i=0;i<term.length;i++)for(const v of vari
  const input=term.slice(0,i)+v+term.slice(i+1);
  mappingCases.push({input,expected:'blocked',kind:'single-glyph',term});
 }
+// Supplement every original suite with all declared characters/case variants
+// in mixed contexts, including Greek final sigma and normalization fallback.
+const knownCharacters=new Set([...policy.groups.flatMap(([,group])=>[...group]),...'\u00ad\u034f\u061c\u180e\u200b\u200c\u200d\u200e\u200f\u2060\u2061\u2062\u2063\u2064\ufeff']);
+for(const character of [...knownCharacters]){knownCharacters.add(character.toUpperCase());knownCharacters.add(character.toLowerCase());}
+const knownCases=[...knownCharacters].flatMap(c=>[c,'a'+c,c+'a','s'+c+'ex','se'+c+'x','Σ'+c+'A','A'+c+'Σ','AΣ'+c,'ſ'+c+'ex'].map(input=>({input,expected:label(blind.nameFilter(input)),kind:'precompiled-Unicode-policy'})));
 const mutations = [
  ['M01','Remove lowercasing', '.toLowerCase()', ''],
  ['M02','Lose compatibility normalization', "normalize('NFKD')", "normalize('NFD')"],
@@ -164,6 +169,7 @@ for(const seed of [1,2,3]) {
  writeFileSync(`${out}/obfuscations-seed${seed}.jsonl`,generated.rows.map(x=>JSON.stringify(x)).join('\n')+'\n');
  const baseline=evalCases(nameFilter,fixed);record('handwritten-format-and-Scunthorpe',fixed.length,baseline.passed,seed,{errors:baseline.errors});
  const mapResult=evalCases(nameFilter,mappingCases);record('exhaustive-declared-single-glyph-substitution',mappingCases.length,mapResult.passed,seed,{errors:mapResult.errors});
+ const knownResult=evalCases(nameFilter,knownCases);record('precompiled-Unicode-policy-context-differential',knownCases.length,knownResult.passed,seed,{errors:knownResult.errors});
  const obf=evalCases(nameFilter,generated.rows);
  record('generated-obfuscations',5000,obf.passed,seed,{misses:5000-obf.passed,errors:obf.errors,coverage:generated.coverage,attempts:generated.attempts});
  const corpusCases=[];

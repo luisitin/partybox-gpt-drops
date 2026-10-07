@@ -6,6 +6,11 @@ The final local literal 0.05 ms maximum remains unmet; all outlier inputs and
 times are delivered in results/benchmark-seed*.json. Eleven reviewed name
 collisions and the documented word/length conflicts remain explicit.
 
+The finite declared-Unicode policy-character compilation has also been tried
+with the complete suite, all original cases and 1,296 supplementary contexts
+per seed. The literal local gate still fails. Its latest failures remain in the
+committed reports.
+
 For substantive future optimization, inspect those witnesses and reduce actual
 per-check allocation or execution work. Retain every original input/count/seed,
 all 25 real mutations per seed and the unchanged per-observation maximum. Do

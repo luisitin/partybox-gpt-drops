@@ -12,7 +12,8 @@
 - Identical-string name/obfuscation conflicts and overlength corpus rows retain
   their explicit reviewed rejections; a passed policy regression is not an
   assertion that every corpus row was allowed.
-- Runtime optimization uses a stateless ASCII fast path and a combined regex
-  scan. It adds no result cache, ambient randomness, clocks or dependencies.
+- Runtime optimization uses a stateless ASCII fast path, a combined regex
+  scan and a private finite policy-character table compiled only at startup.
+  Whole-string lowercasing and original Unicode fallback remain. It adds no result cache, ambient randomness, clocks or dependencies.
 - Only this job folder and the required B19 workflow may change. Delivery uses
   `job/B19-name-filter` and PR #2; main is never pushed.

@@ -68,6 +68,10 @@ The sealed reference was authored from the original instructions, public API
 contract and policy JSON before its author read production or existing tests.
 All 43,830 inputs per seed are compared with it, in addition to the historical
 NFA comparison. Its authoring record and source hashes are in tests/blind/.
+A finite private table compiles declared glyphs/case variants/known ignorable
+formats once, preserving whole-string contextual lowercasing and the full
+normalization fallback for other Unicode. Another 1,296 context checks per seed
+agree with the sealed reference. No input or result cache is used.
 
 ## Contents
 

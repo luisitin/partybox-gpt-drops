@@ -35,6 +35,51 @@ const CONTENT = /[\p{L}\p{N}]/u;
 const MARKS = /\p{M}/gu;
 const FORMATS = /\p{Cf}/gu;
 const SEPARATOR = /^[\p{P}\p{S}\p{Z}]$/u;
+const lower = (value: string): string => value.toLowerCase();
+const normalize = (value: string): string => value.normalize('NFKD');
+const clean = (value: string): string => value.replace(MARKS, '').replace(FORMATS, '');
+interface KnownCharacter { readonly plain: string; readonly mapped: string; readonly meaningful: boolean; }
+// Compiled once from the declared glyph policy, case variants and common
+// ignorable formats. No names or results are cached. Other Unicode falls back.
+const KNOWN: ReadonlyMap<string, KnownCharacter> = (() => {
+  const candidates = new Set<string>([...'\u00ad\u034f\u061c\u180e\u200b\u200c\u200d\u200e\u200f\u2060\u2061\u2062\u2063\u2064\ufeff']);
+  for (const [, group] of GROUPS) for (const character of group) {
+    candidates.add(character); candidates.add(lower(character)); candidates.add(character.toUpperCase());
+  }
+  const table = new Map<string, KnownCharacter>();
+  for (const character of candidates) {
+    const decomposed = normalize(character);
+    // Removing Case_Ignorable characters preserves contextual lowercasing
+    // (notably Greek final sigma). Keep whole-string lowercasing below.
+    if ([...decomposed].some(value => /[\p{M}\p{Cf}]/u.test(value) && !/\p{Case_Ignorable}/u.test(value))) continue;
+    const plain = clean(decomposed), folded = lower(plain);
+    let mapped = '';
+    for (const value of folded) {
+      mapped += value >= 'a' && value <= 'z' ? value
+        : MAP.get(value) ?? (value <= '\x7f' || SEPARATOR.test(value) ? '' : '~');
+    }
+    table.set(character, Object.freeze({plain, mapped, meaningful: CONTENT.test(folded)}));
+  }
+  return table;
+})();
+function knownPlain(input: string): string | undefined {
+  let plain = '';
+  for (const character of input) {
+    if (character <= '\x7f') { plain += character; continue; }
+    const entry = KNOWN.get(character);
+    if (entry === undefined) return undefined;
+    plain += entry.plain;
+  }
+  return plain;
+}
+function hasContent(plain: string): boolean {
+  for (const character of plain) {
+    if ((character >= 'a' && character <= 'z') || (character >= '0' && character <= '9')) return true;
+    const entry = KNOWN.get(character);
+    if (entry === undefined ? CONTENT.test(character) : entry.meaningful) return true;
+  }
+  return false;
+}
 const OK: NameResult = Object.freeze({ ok: true });
 const FAILURE = {
   type: Object.freeze({ ok: false, reason: 'type' } as const),
@@ -55,10 +100,10 @@ export function nameFilter(input: unknown): NameResult {
   if (CONTROLS.test(input))
     return FAILURE.control;
   const ascii = ASCII.test(input);
-  let plain = (ascii ? input : input.normalize('NFKD')).toLowerCase();
-  if (!ascii) plain = plain.replace(MARKS, '').replace(FORMATS, '');
+  const known = ascii ? undefined : knownPlain(input);
+  let plain = ascii ? lower(input) : known === undefined ? clean(lower(normalize(input))) : lower(known);
   plain = plain.trim();
-  if (!(ascii ? ASCII_CONTENT.test(plain) : CONTENT.test(plain))) return FAILURE.empty;
+  if (!(ascii ? ASCII_CONTENT.test(plain) : hasContent(plain))) return FAILURE.empty;
   if (SAFE.has(plain)) return OK;
   let text = plain;
   if (!WORD.test(plain)) {
@@ -67,7 +112,7 @@ export function nameFilter(input: unknown): NameResult {
     if (c >= 'a' && c <= 'z') { text += c; continue; }
     const mapped = MAP.get(c);
     if (mapped !== undefined) text += mapped;
-    else if (c <= '\x7f' || SEPARATOR.test(c)) continue;
+    else if (c <= '\x7f' || KNOWN.get(c)?.mapped === '' || SEPARATOR.test(c)) continue;
     else text += '~'; // Unmapped letters are barriers, never silently deleted.
    }
   }
