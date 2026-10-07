@@ -1,3 +1,5 @@
-# B04 Next step
+# B04 — Exact next step
 
-Integrate every current board event, full normal and Tag Team space tables, shop inventories and cited regional map descriptions. Preserve conflicting qualifiers, reopen every retained source, audit all retained rows, add closed schema/reference validation, hash and observe exact-head CI. Then B03.
+Finish structural/schema/reference/rejection-fixture checks, record actual output, regenerate the complete manifest and perform three final hash checks. Push only theB04folder/ownworkflow and observe the exact latestgreenCIhead on draftPR18. Then continue assignedB03.
+
+Research continuation: locate genuinely independent full type-count tables; obtain current numbered maps/gate endpoints and complete event triggers/effects; resolve the9source conflicts and current SteamerEventSpace nulls. Every single-source qualifier remainsUNVERIFIED. Reopen changed sources, recheck all changed rows, rerun checks, regenerate hashes and retain the draft until original factual completeness is actually met.
