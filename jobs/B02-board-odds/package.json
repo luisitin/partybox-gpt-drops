@@ -1,0 +1,12 @@
+{
+  "name": "b02-board-odds",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Exact BigInt board-movement probabilities with reproducible verification",
+  "engines": { "node": ">=22" },
+  "exports": { ".": { "types": "./build/boardOdds.d.ts", "import": "./build/boardOdds.js" } },
+  "scripts": { "build": "tsc -p tsconfig.json", "test": "node run.mjs" },
+  "devDependencies": { "typescript": "5.8.3" },
+  "dependencies": {}
+}
