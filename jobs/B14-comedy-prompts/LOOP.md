@@ -68,3 +68,5 @@
     Independent review remains partial; complete counts are recorded verbatim.
 24. Authored 100 travel and public-service scenarios; shortened nine overlength drafts before sealing; corrected the documented character-count assumption to include accented names. All 2,400 rows pass structural checks.
     Independent review remains partial; complete counts are recorded verbatim.
+25. Authored 100 adult screen-personality scenarios with specific traits and retained weak cameo failures; shortened eight overlength rows before sealing and integrated independent023–024 unchanged. All 2,500 rows pass structural checks.
+    Independent review remains partial; complete counts are recorded verbatim.
