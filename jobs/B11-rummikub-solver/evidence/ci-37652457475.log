@@ -1,0 +1,493 @@
+verify	Set up job	﻿2026-10-07T16:29:40.5923148Z Current runner version: '2.337.0'
+verify	Set up job	2026-10-07T16:29:40.5946486Z ##[group]Runner Image Provisioner
+verify	Set up job	2026-10-07T16:29:40.5947229Z Hosted Compute Agent
+verify	Set up job	2026-10-07T16:29:40.5947799Z Version: 20261002.596
+verify	Set up job	2026-10-07T16:29:40.5948310Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+verify	Set up job	2026-10-07T16:29:40.5948922Z Build Date: 2026-10-02T22:28:27Z
+verify	Set up job	2026-10-07T16:29:40.5949537Z Worker ID: {e1b25807-1ba9-4243-a39e-fa026ed77a75}
+verify	Set up job	2026-10-07T16:29:40.5950146Z Region: westus3
+verify	Set up job	2026-10-07T16:29:40.5950637Z Cloud: Azure
+verify	Set up job	2026-10-07T16:29:40.5951084Z ##[endgroup]
+verify	Set up job	2026-10-07T16:29:40.5952157Z ##[group]Operating System
+verify	Set up job	2026-10-07T16:29:40.5952742Z Ubuntu
+verify	Set up job	2026-10-07T16:29:40.5953179Z 24.04.5
+verify	Set up job	2026-10-07T16:29:40.5953757Z LTS
+verify	Set up job	2026-10-07T16:29:40.5954196Z ##[endgroup]
+verify	Set up job	2026-10-07T16:29:40.5954681Z ##[group]Runner Image
+verify	Set up job	2026-10-07T16:29:40.5955277Z Image: ubuntu-24.04
+verify	Set up job	2026-10-07T16:29:40.5955742Z Version: 20261004.327.1
+verify	Set up job	2026-10-07T16:29:40.5956644Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+verify	Set up job	2026-10-07T16:29:40.5958067Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+verify	Set up job	2026-10-07T16:29:40.5958933Z ##[endgroup]
+verify	Set up job	2026-10-07T16:29:40.5959807Z ##[group]GITHUB_TOKEN Permissions
+verify	Set up job	2026-10-07T16:29:40.5961373Z Contents: read
+verify	Set up job	2026-10-07T16:29:40.5961901Z Metadata: read
+verify	Set up job	2026-10-07T16:29:40.5962427Z ##[endgroup]
+verify	Set up job	2026-10-07T16:29:40.5964439Z Secret source: Actions
+verify	Set up job	2026-10-07T16:29:40.5965304Z Cache mode: write
+verify	Set up job	2026-10-07T16:29:40.5965907Z Prepare workflow directory
+verify	Set up job	2026-10-07T16:29:40.6287852Z Prepare all required actions
+verify	Set up job	2026-10-07T16:29:40.6326938Z Getting action download info
+verify	Set up job	2026-10-07T16:29:40.9886640Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verify	Set up job	2026-10-07T16:29:41.0750204Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+verify	Set up job	2026-10-07T16:29:41.2012151Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+verify	Set up job	2026-10-07T16:29:41.2998308Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+verify	Set up job	2026-10-07T16:29:41.5217345Z Complete job name: verify
+verify	Run actions/checkout@v4	﻿2026-10-07T16:29:41.5871229Z ##[group]Run actions/checkout@v4
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5871953Z with:
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5872334Z   repository: luisitin/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5875733Z   token: ***
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5876086Z   ssh-strict: true
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5876433Z   ssh-user: git
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5876790Z   persist-credentials: true
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5877182Z   clean: true
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5877538Z   sparse-checkout-cone-mode: true
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5877959Z   fetch-depth: 1
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5878300Z   fetch-tags: false
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5878656Z   show-progress: true
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5879021Z   lfs: false
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5879350Z   submodules: false
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5879733Z   set-safe-directory: true
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5880130Z   allow-unsafe-pr-checkout: false
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.5880770Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.6800554Z Syncing repository: luisitin/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.6802450Z ##[group]Getting Git version info
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.6803142Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.6804827Z [command]/usr/bin/git version
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.6926209Z git version 2.55.0
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.6965403Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.6971519Z Temporarily overriding HOME='/home/runner/work/_temp/96a4dbbd-296a-4b8d-9997-d0f8e2e08149' before making global git config changes
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.6973291Z Adding repository directory to the temporary git global config as a safe directory
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.6975061Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7009255Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7013566Z ##[group]Initializing the repository
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7017386Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7129348Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7131535Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7134433Z hint: to use in all of your new repositories, which will suppress this warning,
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7135815Z hint: call:
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7136555Z hint:
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7137423Z hint: 	git config --global init.defaultBranch <name>
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7138340Z hint:
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7139384Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7140631Z hint: 'development'. The just-created branch can be renamed via this command:
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7141714Z hint:
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7142395Z hint: 	git branch -m <name>
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7143452Z hint:
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7144465Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7145531Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7147316Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7197181Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7198155Z ##[group]Disabling automatic garbage collection
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7201799Z [command]/usr/bin/git config --local gc.auto 0
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7234679Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7235630Z ##[group]Setting up auth
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7242061Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7275692Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7597684Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7631142Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7827157Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.7860131Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.8098968Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.8136793Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.8137525Z ##[group]Fetching the repository
+verify	Run actions/checkout@v4	2026-10-07T16:29:41.8144365Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +de74d235c7c422deda0afd4d2ff15fbaea8f4037:refs/remotes/pull/7/merge
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4313419Z From https://github.com/luisitin/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4315875Z  * [new ref]         de74d235c7c422deda0afd4d2ff15fbaea8f4037 -> pull/7/merge
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4320420Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4321695Z ##[group]Determining the checkout info
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4323113Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4333038Z [command]/usr/bin/git sparse-checkout disable
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4386517Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4419783Z ##[group]Checking out the ref
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4422110Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/7/merge
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4517612Z Note: switching to 'refs/remotes/pull/7/merge'.
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4518616Z 
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4519430Z You are in 'detached HEAD' state. You can look around, make experimental
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4521268Z changes and commit them, and you can discard any commits you make in this
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4523172Z state without impacting any branches by switching back to a branch.
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4524516Z 
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4525041Z If you want to create a new branch to retain commits you create, you may
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4526514Z do so (now or later) by using -c with the switch command. Example:
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4527526Z 
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4527951Z   git switch -c <new-branch-name>
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4528592Z 
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4529030Z Or undo this operation with:
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4529644Z 
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4530121Z   git switch -
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4530698Z 
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4531456Z Turn off this advice by setting config variable advice.detachedHead to false
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4532473Z 
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4533832Z HEAD is now at de74d23 Merge 1738f8c9466a370d57d2b9fbf34f4052e3c3b3d6 into e5967fd4e2c26bdc6c5fbf023dbf795bf3812c7e
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4537785Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4566838Z [command]/usr/bin/git log -1 --format=%H
+verify	Run actions/checkout@v4	2026-10-07T16:29:42.4591511Z de74d235c7c422deda0afd4d2ff15fbaea8f4037
+verify	Run actions/setup-node@v4	﻿2026-10-07T16:29:42.4906907Z ##[group]Run actions/setup-node@v4
+verify	Run actions/setup-node@v4	2026-10-07T16:29:42.4907827Z with:
+verify	Run actions/setup-node@v4	2026-10-07T16:29:42.4908493Z   node-version: 22.16.0
+verify	Run actions/setup-node@v4	2026-10-07T16:29:42.4909261Z   always-auth: false
+verify	Run actions/setup-node@v4	2026-10-07T16:29:42.4910000Z   check-latest: false
+verify	Run actions/setup-node@v4	2026-10-07T16:29:42.4917584Z   token: ***
+verify	Run actions/setup-node@v4	2026-10-07T16:29:42.4918268Z ##[endgroup]
+verify	Run actions/setup-node@v4	2026-10-07T16:29:42.6040187Z Attempting to download 22.16.0...
+verify	Run actions/setup-node@v4	2026-10-07T16:29:42.6123506Z (node:2072) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Run actions/setup-node@v4	2026-10-07T16:29:42.6126388Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Run actions/setup-node@v4	2026-10-07T16:29:43.6511822Z Acquiring 22.16.0 - x64 from https://github.com/actions/node-versions/releases/download/22.16.0-15177438473/node-22.16.0-linux-x64.tar.gz
+verify	Run actions/setup-node@v4	2026-10-07T16:29:44.2148578Z Extracting ...
+verify	Run actions/setup-node@v4	2026-10-07T16:29:44.2245519Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/d352795f-87a9-4962-a910-731995c80032 -f /home/runner/work/_temp/c83ae089-5772-4702-a07a-05dd50f86a71
+verify	Run actions/setup-node@v4	2026-10-07T16:29:45.2270226Z Adding to the cache ...
+verify	Run actions/setup-node@v4	2026-10-07T16:29:47.2508349Z ##[group]Environment details
+verify	Run actions/setup-node@v4	2026-10-07T16:29:47.4349629Z node: v22.16.0
+verify	Run actions/setup-node@v4	2026-10-07T16:29:47.4350199Z npm: 10.9.2
+verify	Run actions/setup-node@v4	2026-10-07T16:29:47.4350463Z yarn: 1.22.22
+verify	Run actions/setup-node@v4	2026-10-07T16:29:47.4351092Z ##[endgroup]
+verify	Run actions/setup-python@v5	﻿2026-10-07T16:29:47.4768511Z ##[group]Run actions/setup-python@v5
+verify	Run actions/setup-python@v5	2026-10-07T16:29:47.4768790Z with:
+verify	Run actions/setup-python@v5	2026-10-07T16:29:47.4768964Z   python-version: 3.12.14
+verify	Run actions/setup-python@v5	2026-10-07T16:29:47.4769168Z   check-latest: false
+verify	Run actions/setup-python@v5	2026-10-07T16:29:47.4771152Z   token: ***
+verify	Run actions/setup-python@v5	2026-10-07T16:29:47.4771335Z   update-environment: true
+verify	Run actions/setup-python@v5	2026-10-07T16:29:47.4771573Z   allow-prereleases: false
+verify	Run actions/setup-python@v5	2026-10-07T16:29:47.4771762Z   freethreaded: false
+verify	Run actions/setup-python@v5	2026-10-07T16:29:47.4771947Z ##[endgroup]
+verify	Run actions/setup-python@v5	2026-10-07T16:29:47.5921139Z ##[group]Installed versions
+verify	Run actions/setup-python@v5	2026-10-07T16:29:47.6271046Z Version 3.12.14 was not found in the local cache
+verify	Run actions/setup-python@v5	2026-10-07T16:29:47.6371251Z (node:2107) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Run actions/setup-python@v5	2026-10-07T16:29:47.6372513Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Run actions/setup-python@v5	2026-10-07T16:29:48.7137446Z Version 3.12.14 is available for downloading
+verify	Run actions/setup-python@v5	2026-10-07T16:29:48.7138834Z Download from "https://github.com/actions/python-versions/releases/download/3.12.14-31661455385/python-3.12.14-linux-24.04-x64.tar.gz"
+verify	Run actions/setup-python@v5	2026-10-07T16:29:49.3677815Z Extract downloaded archive
+verify	Run actions/setup-python@v5	2026-10-07T16:29:49.3775516Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/17c4d618-76c1-4481-8aff-213d94dc5fca -f /home/runner/work/_temp/e6a10c51-6eda-4625-b053-ee5066d57afe
+verify	Run actions/setup-python@v5	2026-10-07T16:29:51.0351356Z Execute installation script
+verify	Run actions/setup-python@v5	2026-10-07T16:29:51.0434880Z Check if Python hostedtoolcache folder exist...
+verify	Run actions/setup-python@v5	2026-10-07T16:29:51.0435305Z Create Python 3.12.14 folder
+verify	Run actions/setup-python@v5	2026-10-07T16:29:51.0453094Z Copy Python binaries to hostedtoolcache folder
+verify	Run actions/setup-python@v5	2026-10-07T16:29:51.4292531Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+verify	Run actions/setup-python@v5	2026-10-07T16:29:51.4327368Z Upgrading pip...
+verify	Run actions/setup-python@v5	2026-10-07T16:29:56.5539036Z Collecting pip
+verify	Run actions/setup-python@v5	2026-10-07T16:29:56.5830077Z Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+verify	Run actions/setup-python@v5	2026-10-07T16:29:56.5898324Z Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+verify	Run actions/setup-python@v5	2026-10-07T16:29:56.6428086Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 40.4 MB/s eta 0:00:00
+verify	Run actions/setup-python@v5	2026-10-07T16:29:56.6428593Z 
+verify	Run actions/setup-python@v5	2026-10-07T16:29:56.6897637Z Installing collected packages: pip
+verify	Run actions/setup-python@v5	2026-10-07T16:29:56.6898191Z Attempting uninstall: pip
+verify	Run actions/setup-python@v5	2026-10-07T16:29:56.6914298Z Found existing installation: pip 25.0.1
+verify	Run actions/setup-python@v5	2026-10-07T16:29:56.7183805Z Uninstalling pip-25.0.1:
+verify	Run actions/setup-python@v5	2026-10-07T16:29:56.7229113Z Successfully uninstalled pip-25.0.1
+verify	Run actions/setup-python@v5	2026-10-07T16:29:57.5111761Z Successfully installed pip-26.2.1
+verify	Run actions/setup-python@v5	2026-10-07T16:29:57.5683475Z Create complete file
+verify	Run actions/setup-python@v5	2026-10-07T16:29:57.5716691Z Successfully set up CPython (3.12.14)
+verify	Run actions/setup-python@v5	2026-10-07T16:29:57.5717762Z ##[endgroup]
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	﻿2026-10-07T16:29:57.5862854Z ##[group]Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:57.5863454Z [36;1mpython3 -m pip install --disable-pip-version-check -r requirements-dev.txt[0m
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:57.6090469Z shell: /usr/bin/bash -e {0}
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:57.6090734Z env:
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:57.6090970Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:57.6091335Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:57.6091675Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:57.6091974Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:57.6092275Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:57.6092564Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:57.6092821Z ##[endgroup]
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:58.1293584Z Collecting numpy==2.3.5 (from -r requirements-dev.txt (line 1))
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:58.1685542Z   Downloading numpy-2.3.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:58.4841833Z Collecting scipy==1.17.0 (from -r requirements-dev.txt (line 2))
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:58.4874758Z   Downloading scipy-1.17.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:58.5155482Z Downloading numpy-2.3.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:58.9096019Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 42.0 MB/s  0:00:00
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:58.9129635Z Downloading scipy-1.17.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.0 MB)
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:59.1703527Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.0/35.0 MB 136.1 MB/s  0:00:00
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:29:59.2730847Z Installing collected packages: numpy, scipy
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:30:04.8749436Z 
+verify	Run python3 -m pip install --disable-pip-version-check -r requirements-dev.txt	2026-10-07T16:30:04.8758557Z Successfully installed numpy-2.3.5 scipy-1.17.0
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	﻿2026-10-07T16:30:04.9495728Z ##[group]Run npm ci --ignore-scripts --no-audit --no-fund
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T16:30:04.9496262Z [36;1mnpm ci --ignore-scripts --no-audit --no-fund[0m
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T16:30:04.9555607Z shell: /usr/bin/bash -e {0}
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T16:30:04.9555835Z env:
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T16:30:04.9556078Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T16:30:04.9556417Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T16:30:04.9556749Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T16:30:04.9557048Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T16:30:04.9557337Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T16:30:04.9557630Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T16:30:04.9557886Z ##[endgroup]
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T16:30:05.5798211Z 
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T16:30:05.5798757Z added 1 package in 538ms
+verify	Run npm test	﻿2026-10-07T16:30:05.6166026Z ##[group]Run npm test
+verify	Run npm test	2026-10-07T16:30:05.6166253Z [36;1mnpm test[0m
+verify	Run npm test	2026-10-07T16:30:05.6224574Z shell: /usr/bin/bash -e {0}
+verify	Run npm test	2026-10-07T16:30:05.6224969Z env:
+verify	Run npm test	2026-10-07T16:30:05.6225193Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Run npm test	2026-10-07T16:30:05.6225537Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+verify	Run npm test	2026-10-07T16:30:05.6225878Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Run npm test	2026-10-07T16:30:05.6226175Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Run npm test	2026-10-07T16:30:05.6226466Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Run npm test	2026-10-07T16:30:05.6226763Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+verify	Run npm test	2026-10-07T16:30:05.6227023Z ##[endgroup]
+verify	Run npm test	2026-10-07T16:30:05.7049370Z 
+verify	Run npm test	2026-10-07T16:30:05.7050055Z > b11-rummikub-solver@1.0.0 test
+verify	Run npm test	2026-10-07T16:30:05.7050381Z > node test/run.mjs
+verify	Run npm test	2026-10-07T16:30:05.7050498Z 
+verify	Run npm test	2026-10-07T16:30:05.7628858Z SHA256: 61/61 files passed (manifest itself excluded)
+verify	Run npm test	2026-10-07T16:30:06.6108979Z {"suite":"hand-written","seed":1,"cases":61,"passed":61,"jokerCases":40,"jokerPassed":40,"command":"SEED=1 node test/unit.mjs","orderSha256":"dc81746db6807038b0ed266b79077f95ab74545ab63a2940c5b3b9267ed1adcd"}
+verify	Run npm test	2026-10-07T16:30:08.8418751Z contracts seed=1: 1005 passed
+verify	Run npm test	2026-10-07T16:30:12.9623456Z small seed=1 5000/50000
+verify	Run npm test	2026-10-07T16:30:16.5356049Z small seed=1 10000/50000
+verify	Run npm test	2026-10-07T16:30:19.6568720Z small seed=1 15000/50000
+verify	Run npm test	2026-10-07T16:30:23.2112061Z small seed=1 20000/50000
+verify	Run npm test	2026-10-07T16:30:26.6538883Z small seed=1 25000/50000
+verify	Run npm test	2026-10-07T16:30:30.1455939Z small seed=1 30000/50000
+verify	Run npm test	2026-10-07T16:30:33.6604003Z small seed=1 35000/50000
+verify	Run npm test	2026-10-07T16:30:36.9383870Z small seed=1 40000/50000
+verify	Run npm test	2026-10-07T16:30:40.3328658Z small seed=1 45000/50000
+verify	Run npm test	2026-10-07T16:30:43.9110864Z small seed=1 50000/50000
+verify	Run npm test	2026-10-07T16:30:43.9186891Z {"suite":"physical-subset-brute-force","seed":1,"cases":50000,"passed":50000,"command":"SEED=1 node test/small.mjs","maxTiles":14,"tileCounts":[315,313,347,4000,4080,4032,4062,4157,4224,4067,4051,4137,4091,4125,3999],"jokerHistogram":[16941,13342,19717],"openings":17438,"plays":31100,"changedOldMelds":8298,"semanticDiffSha256":"446ecbf008875bc6a4e62716be1ffc1e8a9cece72025035c6b0d8518f5c4ab9c","elapsedMs":35037.162868}
+verify	Run npm test	2026-10-07T16:30:44.7717933Z MILP/literal seed=1 100/1000
+verify	Run npm test	2026-10-07T16:30:45.0415015Z MILP/literal seed=1 200/1000
+verify	Run npm test	2026-10-07T16:30:45.3063538Z MILP/literal seed=1 300/1000
+verify	Run npm test	2026-10-07T16:30:45.6059607Z MILP/literal seed=1 400/1000
+verify	Run npm test	2026-10-07T16:30:45.8825639Z MILP/literal seed=1 500/1000
+verify	Run npm test	2026-10-07T16:30:46.1482211Z MILP/literal seed=1 600/1000
+verify	Run npm test	2026-10-07T16:30:46.4282066Z MILP/literal seed=1 700/1000
+verify	Run npm test	2026-10-07T16:30:46.6661594Z MILP/literal seed=1 800/1000
+verify	Run npm test	2026-10-07T16:30:46.9406791Z MILP/literal seed=1 900/1000
+verify	Run npm test	2026-10-07T16:30:47.2361171Z MILP/literal seed=1 1000/1000
+verify	Run npm test	2026-10-07T16:30:47.2926933Z {"suite":"independent-MILP-versus-literal-subsets","seed":1,"cases":1000,"passed":1000,"command":"SEED=1 node test/milp-crosscheck.mjs","versions":{"python":"3.12.14","numpy":"2.3.5","scipy":"1.17.0"},"families":[100,100,100,100,100,100,100,100,100,100],"jokerHistogram":[339,276,385],"tileCounts":[5,9,10,70,87,80,82,89,70,77,75,71,102,98,75],"openings":348,"inventoryBoundClosed":32,"semanticDiffSHA256":"51cf7546113b59f21141f0403df1dbcda020c1a1275a88739db722d09c3a54e5","elapsedMs":3232.140434}
+verify	Run npm test	2026-10-07T16:30:50.5283441Z independent large seed=1 main 25/200
+verify	Run npm test	2026-10-07T16:30:53.9443559Z independent large seed=1 main 50/200
+verify	Run npm test	2026-10-07T16:30:56.7567283Z independent large seed=1 main 75/200
+verify	Run npm test	2026-10-07T16:30:59.1534679Z independent large seed=1 main 100/200
+verify	Run npm test	2026-10-07T16:31:01.8323457Z independent large seed=1 main 125/200
+verify	Run npm test	2026-10-07T16:31:04.1692342Z independent large seed=1 main 150/200
+verify	Run npm test	2026-10-07T16:31:07.9606450Z independent large seed=1 main 175/200
+verify	Run npm test	2026-10-07T16:31:10.6241037Z independent large seed=1 main 200/200
+verify	Run npm test	2026-10-07T16:31:11.4583347Z {"suite":"blind-independent-large-optima","seed":1,"cases":208,"passed":208,"command":"SEED=1 node test/large-independent.mjs","mainCases":200,"warmupCases":8,"independentSourceSHA256":"dd1439b64a5f46124ba452a2bd54091ab05006f45b1bf1e110bc31645212a3c8","independentModelSHA256":"ab4ee25d308423d25d3a03fd8ac44861b91a3e937768d949f41800e0c0edb920","generatorSourceSHA256":"b5e3357b1b4e0766ed0ba34aecee480965abd92be520160e1d9bdf20bca96683","elapsedMs":24112.924970999997}
+verify	Run npm test	2026-10-07T16:31:15.6000890Z full-state audit seed=1 50/200
+verify	Run npm test	2026-10-07T16:31:20.9084209Z full-state audit seed=1 100/200
+verify	Run npm test	2026-10-07T16:31:23.1377095Z full-state audit seed=1 150/200
+verify	Run npm test	2026-10-07T16:31:27.4605541Z full-state audit seed=1 200/200
+verify	Run npm test	2026-10-07T16:31:27.4631129Z full-state audit seed=1: 200 passed
+verify	Run npm test	2026-10-07T16:31:28.4933263Z M01 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:28.9365442Z M02 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:29.2537725Z M03 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:29.5476320Z M04 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:29.8128218Z M05 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:30.0757817Z M06 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:30.3358190Z M07 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:30.6227432Z M08 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:30.8816940Z M09 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:31.1689353Z M10 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:31.4299368Z M11 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:31.6707295Z M12 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:31.9011958Z M13 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:32.1168188Z M14 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:32.3355496Z M15 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:32.5569377Z M16 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:32.7693234Z M17 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:32.9937980Z M18 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:33.2046921Z M19 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:33.4222489Z M20 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:33.6483145Z M21 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:33.8690499Z M22 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:34.2437087Z M23 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:34.5500836Z M24 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:34.8352683Z M25 seed=1 KILLED by assertion
+verify	Run npm test	2026-10-07T16:31:34.8363565Z {"suite":"one-at-a-time-mutations","seed":1,"cases":25,"passed":25,"command":"SEED=1 node test/mutations.mjs","killSuite":"61 hand-written tests (includes 40 joker cases)"}
+verify	Run npm test	2026-10-07T16:31:35.8548832Z bench seed=1 50/200
+verify	Run npm test	2026-10-07T16:31:36.9718238Z bench seed=1 100/200
+verify	Run npm test	2026-10-07T16:31:37.4958452Z bench seed=1 150/200
+verify	Run npm test	2026-10-07T16:31:38.4230179Z bench seed=1 200/200
+verify	Run npm test	2026-10-07T16:31:38.4262733Z {"suite":"40-table-20-hand-latency","seed":1,"cases":200,"warmupCases":8,"warmupPassed":8,"blindOptimumComparisons":208,"passed":200,"command":"SEED=1 node test/bench.mjs","limitMs":500,"p50Ms":8.55968299999995,"p99Ms":103.2286939999999,"maxMs":174.65100800000005,"totalJokerHistogram":[10,22,168],"corpusSha256":"fb9baa8b9339e5db4323a20c87d70c24c76ce11e789a8f85bbc46ffff51a0ad0","environment":{"node":"v22.16.0","platform":"linux","arch":"x64","cpu":"AMD EPYC 9V74 80-Core Processor"}}
+verify	Run npm test	2026-10-07T16:31:38.4703197Z SHA256: 61/61 files passed (manifest itself excluded)
+verify	Run npm test	2026-10-07T16:31:39.2455241Z {"suite":"hand-written","seed":2,"cases":61,"passed":61,"jokerCases":40,"jokerPassed":40,"command":"SEED=2 node test/unit.mjs","orderSha256":"ed39969cfdef43f504272e815863bb1446ccab4f43f46b8cf0c07b3864cef2c1"}
+verify	Run npm test	2026-10-07T16:31:41.3029881Z contracts seed=2: 1005 passed
+verify	Run npm test	2026-10-07T16:31:45.3573197Z small seed=2 5000/50000
+verify	Run npm test	2026-10-07T16:31:48.8159496Z small seed=2 10000/50000
+verify	Run npm test	2026-10-07T16:31:52.3652183Z small seed=2 15000/50000
+verify	Run npm test	2026-10-07T16:31:55.8839656Z small seed=2 20000/50000
+verify	Run npm test	2026-10-07T16:31:59.4837594Z small seed=2 25000/50000
+verify	Run npm test	2026-10-07T16:32:02.8157370Z small seed=2 30000/50000
+verify	Run npm test	2026-10-07T16:32:06.3523607Z small seed=2 35000/50000
+verify	Run npm test	2026-10-07T16:32:09.6858172Z small seed=2 40000/50000
+verify	Run npm test	2026-10-07T16:32:13.5329400Z small seed=2 45000/50000
+verify	Run npm test	2026-10-07T16:32:17.3916492Z small seed=2 50000/50000
+verify	Run npm test	2026-10-07T16:32:17.3989838Z {"suite":"physical-subset-brute-force","seed":2,"cases":50000,"passed":50000,"command":"SEED=2 node test/small.mjs","maxTiles":14,"tileCounts":[354,337,322,4106,4014,4019,4126,4064,4134,4057,4156,4112,4111,4016,4072],"jokerHistogram":[16693,13497,19810],"openings":17453,"plays":31121,"changedOldMelds":8262,"semanticDiffSha256":"210b818d0868f2b26021cc67208e7e6c707ed9a23bc6a617193ddc708a43ed31","elapsedMs":36054.767857}
+verify	Run npm test	2026-10-07T16:32:18.1303470Z MILP/literal seed=2 100/1000
+verify	Run npm test	2026-10-07T16:32:18.4112139Z MILP/literal seed=2 200/1000
+verify	Run npm test	2026-10-07T16:32:18.7135949Z MILP/literal seed=2 300/1000
+verify	Run npm test	2026-10-07T16:32:19.0037657Z MILP/literal seed=2 400/1000
+verify	Run npm test	2026-10-07T16:32:19.2687355Z MILP/literal seed=2 500/1000
+verify	Run npm test	2026-10-07T16:32:19.5992897Z MILP/literal seed=2 600/1000
+verify	Run npm test	2026-10-07T16:32:19.8454139Z MILP/literal seed=2 700/1000
+verify	Run npm test	2026-10-07T16:32:20.1492159Z MILP/literal seed=2 800/1000
+verify	Run npm test	2026-10-07T16:32:20.3800462Z MILP/literal seed=2 900/1000
+verify	Run npm test	2026-10-07T16:32:20.6429424Z MILP/literal seed=2 1000/1000
+verify	Run npm test	2026-10-07T16:32:20.6946876Z {"suite":"independent-MILP-versus-literal-subsets","seed":2,"cases":1000,"passed":1000,"command":"SEED=2 node test/milp-crosscheck.mjs","versions":{"python":"3.12.14","numpy":"2.3.5","scipy":"1.17.0"},"families":[100,100,100,100,100,100,100,100,100,100],"jokerHistogram":[338,253,409],"tileCounts":[7,8,7,69,85,95,81,84,69,91,85,72,82,85,80],"openings":361,"inventoryBoundClosed":47,"semanticDiffSHA256":"7ce622ef017f8d36f13e7a96bf38fd81671876d590bd53327b3101e965ad3130","elapsedMs":3161.438218}
+verify	Run npm test	2026-10-07T16:32:24.4164693Z independent large seed=2 main 25/200
+verify	Run npm test	2026-10-07T16:32:27.1154034Z independent large seed=2 main 50/200
+verify	Run npm test	2026-10-07T16:32:29.6679883Z independent large seed=2 main 75/200
+verify	Run npm test	2026-10-07T16:32:32.5266680Z independent large seed=2 main 100/200
+verify	Run npm test	2026-10-07T16:32:34.9934954Z independent large seed=2 main 125/200
+verify	Run npm test	2026-10-07T16:32:37.7831207Z independent large seed=2 main 150/200
+verify	Run npm test	2026-10-07T16:32:40.1774797Z independent large seed=2 main 175/200
+verify	Run npm test	2026-10-07T16:32:43.3420922Z independent large seed=2 main 200/200
+verify	Run npm test	2026-10-07T16:32:44.1428430Z {"suite":"blind-independent-large-optima","seed":2,"cases":208,"passed":208,"command":"SEED=2 node test/large-independent.mjs","mainCases":200,"warmupCases":8,"independentSourceSHA256":"dd1439b64a5f46124ba452a2bd54091ab05006f45b1bf1e110bc31645212a3c8","independentModelSHA256":"ab4ee25d308423d25d3a03fd8ac44861b91a3e937768d949f41800e0c0edb920","generatorSourceSHA256":"b5e3357b1b4e0766ed0ba34aecee480965abd92be520160e1d9bdf20bca96683","elapsedMs":23397.774321999997}
+verify	Run npm test	2026-10-07T16:32:50.1564437Z full-state audit seed=2 50/200
+verify	Run npm test	2026-10-07T16:32:53.5541443Z full-state audit seed=2 100/200
+verify	Run npm test	2026-10-07T16:32:57.4618251Z full-state audit seed=2 150/200
+verify	Run npm test	2026-10-07T16:33:01.1790636Z full-state audit seed=2 200/200
+verify	Run npm test	2026-10-07T16:33:01.1816241Z full-state audit seed=2: 200 passed
+verify	Run npm test	2026-10-07T16:33:02.2255026Z M01 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:02.6610354Z M02 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:02.9897600Z M03 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:03.2912795Z M04 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:03.5634193Z M05 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:03.8319935Z M06 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:04.0941764Z M07 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:04.3428422Z M08 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:04.6131245Z M09 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:04.9017412Z M10 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:05.1620835Z M11 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:05.4173987Z M12 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:05.6398887Z M13 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:05.8663064Z M14 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:06.0957461Z M15 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:06.3292176Z M16 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:06.5477658Z M17 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:06.7887568Z M18 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:07.0197481Z M19 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:07.2416269Z M20 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:07.4657679Z M21 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:07.6840821Z M22 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:08.0412662Z M23 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:08.3515993Z M24 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:08.6467110Z M25 seed=2 KILLED by assertion
+verify	Run npm test	2026-10-07T16:33:08.6477633Z {"suite":"one-at-a-time-mutations","seed":2,"cases":25,"passed":25,"command":"SEED=2 node test/mutations.mjs","killSuite":"61 hand-written tests (includes 40 joker cases)"}
+verify	Run npm test	2026-10-07T16:33:09.8325747Z bench seed=2 50/200
+verify	Run npm test	2026-10-07T16:33:10.5262508Z bench seed=2 100/200
+verify	Run npm test	2026-10-07T16:33:11.2776732Z bench seed=2 150/200
+verify	Run npm test	2026-10-07T16:33:11.9963325Z bench seed=2 200/200
+verify	Run npm test	2026-10-07T16:33:11.9998183Z {"suite":"40-table-20-hand-latency","seed":2,"cases":200,"warmupCases":8,"warmupPassed":8,"blindOptimumComparisons":208,"passed":200,"command":"SEED=2 node test/bench.mjs","limitMs":500,"p50Ms":7.59656700000005,"p99Ms":83.94870500000002,"maxMs":128.63729400000005,"totalJokerHistogram":[11,26,163],"corpusSha256":"55a7cf536adfa14dbcd4906fcd333db9a41386308daf4b7df52616c12602dca0","environment":{"node":"v22.16.0","platform":"linux","arch":"x64","cpu":"AMD EPYC 9V74 80-Core Processor"}}
+verify	Run npm test	2026-10-07T16:33:12.0383188Z SHA256: 61/61 files passed (manifest itself excluded)
+verify	Run npm test	2026-10-07T16:33:12.8327136Z {"suite":"hand-written","seed":3,"cases":61,"passed":61,"jokerCases":40,"jokerPassed":40,"command":"SEED=3 node test/unit.mjs","orderSha256":"c9984ec6eaa406fd165dced2c4e8256e0de4809484a44e491b65ee5799d93537"}
+verify	Run npm test	2026-10-07T16:33:14.8833111Z contracts seed=3: 1005 passed
+verify	Run npm test	2026-10-07T16:33:18.6861557Z small seed=3 5000/50000
+verify	Run npm test	2026-10-07T16:33:22.6093171Z small seed=3 10000/50000
+verify	Run npm test	2026-10-07T16:33:26.2539942Z small seed=3 15000/50000
+verify	Run npm test	2026-10-07T16:33:29.5071284Z small seed=3 20000/50000
+verify	Run npm test	2026-10-07T16:33:32.8609805Z small seed=3 25000/50000
+verify	Run npm test	2026-10-07T16:33:36.3804534Z small seed=3 30000/50000
+verify	Run npm test	2026-10-07T16:33:39.8384404Z small seed=3 35000/50000
+verify	Run npm test	2026-10-07T16:33:43.4740248Z small seed=3 40000/50000
+verify	Run npm test	2026-10-07T16:33:46.9812633Z small seed=3 45000/50000
+verify	Run npm test	2026-10-07T16:33:50.4752545Z small seed=3 50000/50000
+verify	Run npm test	2026-10-07T16:33:50.4832140Z {"suite":"physical-subset-brute-force","seed":3,"cases":50000,"passed":50000,"command":"SEED=3 node test/small.mjs","maxTiles":14,"tileCounts":[339,338,333,4206,4082,4034,4120,4049,4090,4124,4062,4002,4041,4053,4127],"jokerHistogram":[16876,13242,19882],"openings":17484,"plays":31175,"changedOldMelds":8189,"semanticDiffSha256":"2a27c8782af00762d2026c56c665ced4870c3e0278e35da5cbc1ee37490afb64","elapsedMs":35557.371026}
+verify	Run npm test	2026-10-07T16:33:51.2678520Z MILP/literal seed=3 100/1000
+verify	Run npm test	2026-10-07T16:33:51.5546689Z MILP/literal seed=3 200/1000
+verify	Run npm test	2026-10-07T16:33:51.8411373Z MILP/literal seed=3 300/1000
+verify	Run npm test	2026-10-07T16:33:52.1392103Z MILP/literal seed=3 400/1000
+verify	Run npm test	2026-10-07T16:33:52.4186237Z MILP/literal seed=3 500/1000
+verify	Run npm test	2026-10-07T16:33:52.6795542Z MILP/literal seed=3 600/1000
+verify	Run npm test	2026-10-07T16:33:52.9186417Z MILP/literal seed=3 700/1000
+verify	Run npm test	2026-10-07T16:33:53.1776063Z MILP/literal seed=3 800/1000
+verify	Run npm test	2026-10-07T16:33:53.4170135Z MILP/literal seed=3 900/1000
+verify	Run npm test	2026-10-07T16:33:53.7047043Z MILP/literal seed=3 1000/1000
+verify	Run npm test	2026-10-07T16:33:53.7587870Z {"suite":"independent-MILP-versus-literal-subsets","seed":3,"cases":1000,"passed":1000,"command":"SEED=3 node test/milp-crosscheck.mjs","versions":{"python":"3.12.14","numpy":"2.3.5","scipy":"1.17.0"},"families":[100,100,100,100,100,100,100,100,100,100],"jokerHistogram":[352,268,380],"tileCounts":[2,9,6,77,80,88,71,95,98,75,79,70,85,85,80],"openings":352,"inventoryBoundClosed":28,"semanticDiffSHA256":"a4732c184e428c9da841c14294e06e06ef8550be400c76e3980be244b7547199","elapsedMs":3136.985485}
+verify	Run npm test	2026-10-07T16:33:56.6346250Z independent large seed=3 main 25/200
+verify	Run npm test	2026-10-07T16:33:59.2919349Z independent large seed=3 main 50/200
+verify	Run npm test	2026-10-07T16:34:02.0130943Z independent large seed=3 main 75/200
+verify	Run npm test	2026-10-07T16:34:04.7411137Z independent large seed=3 main 100/200
+verify	Run npm test	2026-10-07T16:34:08.0232168Z independent large seed=3 main 125/200
+verify	Run npm test	2026-10-07T16:34:10.3923050Z independent large seed=3 main 150/200
+verify	Run npm test	2026-10-07T16:34:13.8595425Z independent large seed=3 main 175/200
+verify	Run npm test	2026-10-07T16:34:17.4176556Z independent large seed=3 main 200/200
+verify	Run npm test	2026-10-07T16:34:18.2189511Z {"suite":"blind-independent-large-optima","seed":3,"cases":208,"passed":208,"command":"SEED=3 node test/large-independent.mjs","mainCases":200,"warmupCases":8,"independentSourceSHA256":"dd1439b64a5f46124ba452a2bd54091ab05006f45b1bf1e110bc31645212a3c8","independentModelSHA256":"ab4ee25d308423d25d3a03fd8ac44861b91a3e937768d949f41800e0c0edb920","generatorSourceSHA256":"b5e3357b1b4e0766ed0ba34aecee480965abd92be520160e1d9bdf20bca96683","elapsedMs":24408.136678}
+verify	Run npm test	2026-10-07T16:34:22.1429850Z full-state audit seed=3 50/200
+verify	Run npm test	2026-10-07T16:34:26.5260320Z full-state audit seed=3 100/200
+verify	Run npm test	2026-10-07T16:34:31.3354692Z full-state audit seed=3 150/200
+verify	Run npm test	2026-10-07T16:34:34.9695842Z full-state audit seed=3 200/200
+verify	Run npm test	2026-10-07T16:34:34.9721066Z full-state audit seed=3: 200 passed
+verify	Run npm test	2026-10-07T16:34:35.9776349Z M01 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:36.4081176Z M02 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:36.7171635Z M03 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:37.0075250Z M04 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:37.2675628Z M05 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:37.5156868Z M06 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:37.7715292Z M07 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:38.0136008Z M08 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:38.2806728Z M09 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:38.5607266Z M10 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:38.8089144Z M11 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:39.0463373Z M12 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:39.2648159Z M13 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:39.4738929Z M14 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:39.6967048Z M15 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:39.9241276Z M16 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:40.1408044Z M17 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:40.3627193Z M18 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:40.5903798Z M19 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:40.8213889Z M20 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:41.0499276Z M21 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:41.2552907Z M22 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:41.6166019Z M23 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:41.9031897Z M24 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:42.1801706Z M25 seed=3 KILLED by assertion
+verify	Run npm test	2026-10-07T16:34:42.1812014Z {"suite":"one-at-a-time-mutations","seed":3,"cases":25,"passed":25,"command":"SEED=3 node test/mutations.mjs","killSuite":"61 hand-written tests (includes 40 joker cases)"}
+verify	Run npm test	2026-10-07T16:34:43.0957369Z bench seed=3 50/200
+verify	Run npm test	2026-10-07T16:34:44.0731252Z bench seed=3 100/200
+verify	Run npm test	2026-10-07T16:34:45.0990322Z bench seed=3 150/200
+verify	Run npm test	2026-10-07T16:34:45.8849121Z bench seed=3 200/200
+verify	Run npm test	2026-10-07T16:34:45.8882627Z {"suite":"40-table-20-hand-latency","seed":3,"cases":200,"warmupCases":8,"warmupPassed":8,"blindOptimumComparisons":208,"passed":200,"command":"SEED=3 node test/bench.mjs","limitMs":500,"p50Ms":8.66022299999986,"p99Ms":76.64378199999965,"maxMs":263.52053399999977,"totalJokerHistogram":[7,29,164],"corpusSha256":"29a02955f8a1cb613876cbcaf2aa3d0f2a639436cee8ba3ee24615eb161be8fb","environment":{"node":"v22.16.0","platform":"linux","arch":"x64","cpu":"AMD EPYC 9V74 80-Core Processor"}}
+verify	Run npm test	2026-10-07T16:34:45.8991661Z {"suite":"full-npm-test","command":"npm test","seeds":[1,2,3],"status":"passed","runs":[{"suite":"strict-TypeScript","seed":1,"cases":3,"passed":3,"command":"SEED=1 node node_modules/typescript/bin/tsc -p tsconfig.json"},{"suite":"hand-written","seed":1,"cases":61,"passed":61,"command":"SEED=1 node test/unit.mjs"},{"suite":"contracts-and-metamorphic","seed":1,"cases":1005,"passed":1005,"command":"SEED=1 node test/contracts.mjs"},{"suite":"physical-subset-brute-force","seed":1,"cases":50000,"passed":50000,"command":"SEED=1 node test/small.mjs"},{"suite":"independent-MILP-versus-literal-subsets","seed":1,"cases":1000,"passed":1000,"command":"SEED=1 node test/milp-crosscheck.mjs"},{"suite":"blind-independent-large-optima","seed":1,"cases":208,"passed":208,"command":"SEED=1 node test/large-independent.mjs"},{"suite":"full-state-key-large-differential","seed":1,"cases":200,"passed":200,"command":"SEED=1 node test/audit.mjs"},{"suite":"one-at-a-time-mutations","seed":1,"cases":25,"passed":25,"command":"SEED=1 node test/mutations.mjs"},{"suite":"40-table-20-hand-latency","seed":1,"cases":200,"passed":200,"command":"SEED=1 node test/bench.mjs"},{"suite":"strict-TypeScript","seed":2,"cases":3,"passed":3,"command":"SEED=2 node node_modules/typescript/bin/tsc -p tsconfig.json"},{"suite":"hand-written","seed":2,"cases":61,"passed":61,"command":"SEED=2 node test/unit.mjs"},{"suite":"contracts-and-metamorphic","seed":2,"cases":1005,"passed":1005,"command":"SEED=2 node test/contracts.mjs"},{"suite":"physical-subset-brute-force","seed":2,"cases":50000,"passed":50000,"command":"SEED=2 node test/small.mjs"},{"suite":"independent-MILP-versus-literal-subsets","seed":2,"cases":1000,"passed":1000,"command":"SEED=2 node test/milp-crosscheck.mjs"},{"suite":"blind-independent-large-optima","seed":2,"cases":208,"passed":208,"command":"SEED=2 node test/large-independent.mjs"},{"suite":"full-state-key-large-differential","seed":2,"cases":200,"passed":200,"command":"SEED=2 node test/audit.mjs"},{"suite":"one-at-a-time-mutations","seed":2,"cases":25,"passed":25,"command":"SEED=2 node test/mutations.mjs"},{"suite":"40-table-20-hand-latency","seed":2,"cases":200,"passed":200,"command":"SEED=2 node test/bench.mjs"},{"suite":"strict-TypeScript","seed":3,"cases":3,"passed":3,"command":"SEED=3 node node_modules/typescript/bin/tsc -p tsconfig.json"},{"suite":"hand-written","seed":3,"cases":61,"passed":61,"command":"SEED=3 node test/unit.mjs"},{"suite":"contracts-and-metamorphic","seed":3,"cases":1005,"passed":1005,"command":"SEED=3 node test/contracts.mjs"},{"suite":"physical-subset-brute-force","seed":3,"cases":50000,"passed":50000,"command":"SEED=3 node test/small.mjs"},{"suite":"independent-MILP-versus-literal-subsets","seed":3,"cases":1000,"passed":1000,"command":"SEED=3 node test/milp-crosscheck.mjs"},{"suite":"blind-independent-large-optima","seed":3,"cases":208,"passed":208,"command":"SEED=3 node test/large-independent.mjs"},{"suite":"full-state-key-large-differential","seed":3,"cases":200,"passed":200,"command":"SEED=3 node test/audit.mjs"},{"suite":"one-at-a-time-mutations","seed":3,"cases":25,"passed":25,"command":"SEED=3 node test/mutations.mjs"},{"suite":"40-table-20-hand-latency","seed":3,"cases":200,"passed":200,"command":"SEED=3 node test/bench.mjs"}],"elapsedMs":280163.616421}
+verify	Upload fresh verification receipts	﻿2026-10-07T16:34:45.9138158Z ##[group]Run actions/upload-artifact@v4
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9138397Z with:
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9138565Z   name: B11-verification-receipts
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9138790Z   path: jobs/B11-rummikub-solver/.test-output/
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9139024Z   include-hidden-files: true
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9139213Z   if-no-files-found: warn
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9139394Z   compression-level: 6
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9139576Z   overwrite: false
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9139815Z env:
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9140109Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9140502Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9141085Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9141493Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9141953Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9142348Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+verify	Upload fresh verification receipts	2026-10-07T16:34:45.9142828Z ##[endgroup]
+verify	Upload fresh verification receipts	2026-10-07T16:34:46.0501795Z (node:3492) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Upload fresh verification receipts	2026-10-07T16:34:46.0502499Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Upload fresh verification receipts	2026-10-07T16:34:46.0580200Z With the provided path, there will be 28 files uploaded
+verify	Upload fresh verification receipts	2026-10-07T16:34:46.0584746Z Artifact name is valid!
+verify	Upload fresh verification receipts	2026-10-07T16:34:46.0585396Z Root directory input is valid!
+verify	Upload fresh verification receipts	2026-10-07T16:34:46.4515457Z Beginning upload of artifact content to blob storage
+verify	Upload fresh verification receipts	2026-10-07T16:34:46.5721511Z (node:3492) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+verify	Upload fresh verification receipts	2026-10-07T16:34:47.0233218Z Uploaded bytes 712517
+verify	Upload fresh verification receipts	2026-10-07T16:34:47.0850713Z Finished uploading artifact content to blob storage!
+verify	Upload fresh verification receipts	2026-10-07T16:34:47.0851816Z SHA256 digest of uploaded artifact zip is 0351a83cfe76838f6704bef0af90587141adcf288730fde796ed6a031aa0007d
+verify	Upload fresh verification receipts	2026-10-07T16:34:47.0852919Z Finalizing artifact upload
+verify	Upload fresh verification receipts	2026-10-07T16:34:47.3650580Z Artifact B11-verification-receipts.zip successfully finalized. Artifact ID 11497741298
+verify	Upload fresh verification receipts	2026-10-07T16:34:47.3651720Z Artifact B11-verification-receipts has been successfully uploaded! Final size is 712517 bytes. Artifact ID is 11497741298
+verify	Upload fresh verification receipts	2026-10-07T16:34:47.3656267Z Artifact download URL: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37652457475/artifacts/11497741298
+verify	Post Run actions/setup-python@v5	﻿2026-10-07T16:34:47.3814655Z Post job cleanup.
+verify	Post Run actions/setup-python@v5	2026-10-07T16:34:47.4761737Z (node:3505) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Post Run actions/setup-python@v5	2026-10-07T16:34:47.4762468Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Post Run actions/setup-node@v4	﻿2026-10-07T16:34:47.4890782Z Post job cleanup.
+verify	Post Run actions/setup-node@v4	2026-10-07T16:34:47.5885388Z (node:3513) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Post Run actions/setup-node@v4	2026-10-07T16:34:47.5886430Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Post Run actions/checkout@v4	﻿2026-10-07T16:34:47.6015480Z Post job cleanup.
+verify	Post Run actions/checkout@v4	2026-10-07T16:34:47.6725226Z [command]/usr/bin/git version
+verify	Post Run actions/checkout@v4	2026-10-07T16:34:47.6761522Z git version 2.55.0
+verify	Post Run actions/checkout@v4	2026-10-07T16:34:47.6804988Z Temporarily overriding HOME='/home/runner/work/_temp/aef2f8a3-2025-4e2d-8d27-1d0ee5bbad67' before making global git config changes
+verify	Post Run actions/checkout@v4	2026-10-07T16:34:47.6806067Z Adding repository directory to the temporary git global config as a safe directory
+verify	Post Run actions/checkout@v4	2026-10-07T16:34:47.6806976Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify	Post Run actions/checkout@v4	2026-10-07T16:34:47.6831278Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Post Run actions/checkout@v4	2026-10-07T16:34:47.6860298Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Post Run actions/checkout@v4	2026-10-07T16:34:47.7071903Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Post Run actions/checkout@v4	2026-10-07T16:34:47.7098758Z http.https://github.com/.extraheader
+verify	Post Run actions/checkout@v4	2026-10-07T16:34:47.7108632Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verify	Post Run actions/checkout@v4	2026-10-07T16:34:47.7139100Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Post Run actions/checkout@v4	2026-10-07T16:34:47.7351372Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Post Run actions/checkout@v4	2026-10-07T16:34:47.7381032Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Complete job	﻿2026-10-07T16:34:47.7726787Z Cleaning up orphan processes
+verify	Complete job	2026-10-07T16:34:47.7988254Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

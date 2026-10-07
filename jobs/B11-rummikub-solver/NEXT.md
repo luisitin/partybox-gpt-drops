@@ -1,3 +1,3 @@
 # Next step
 
-Run the complete final-source `npm test` for all three seeds with the pinned Python development toolchain: 150,000 literal small comparisons, 120 joker fixtures, 75 compiling source mutations, 3,000 accelerator crosschecks, 624 large independent calls and every literal 500 ms timing gate. Preserve both blind seals and disclose the floating-point solver-bound boundary. Publish actual evidence and observe hosted CI on the exact final delivery head. B10 final evidence publication is also in progress.
+Observe the complete final publication-head hosted run with the stronger cold-start timing checks and link its exact SHA/checks from PR 7. Review and merge the ready PR when desired. Preserve both immutable blind seals, every complete receipt and the disclosed floating-point optimum-bound limitation. Runtime production stays pure TypeScript with zero dependencies; Python/SciPy remain pinned development-only tools. B10's final exact-head run is also active.

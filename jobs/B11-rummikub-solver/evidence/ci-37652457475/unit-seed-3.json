@@ -1,0 +1,281 @@
+{
+  "suite": "hand-written",
+  "seed": 3,
+  "cases": 61,
+  "passed": 61,
+  "jokerCases": 40,
+  "jokerPassed": 40,
+  "command": "SEED=3 node test/unit.mjs",
+  "orderSha256": "c9984ec6eaa406fd165dced2c4e8256e0de4809484a44e491b65ee5799d93537",
+  "results": [
+    {
+      "name": "J40: Both table jokers may be rearranged in one legal turn",
+      "passed": true
+    },
+    {
+      "name": "J19: The whole table may not contain three physical jokers",
+      "passed": true
+    },
+    {
+      "name": "J17: A joker cannot represent fourteen",
+      "passed": true
+    },
+    {
+      "name": "J04: Two consecutive jokers in a run",
+      "passed": true
+    },
+    {
+      "name": "J08: First absent color in a three-tile group",
+      "passed": true
+    },
+    {
+      "name": "J20: One physical joker cannot occur in two melds",
+      "passed": true
+    },
+    {
+      "name": "S17 opening cannot borrow old table",
+      "passed": true
+    },
+    {
+      "name": "V03 malformed JSON-shaped inputs never throw",
+      "passed": true
+    },
+    {
+      "name": "J06: Two jokers in a three-tile group",
+      "passed": true
+    },
+    {
+      "name": "J11: Joker group number must agree",
+      "passed": true
+    },
+    {
+      "name": "S14 standalone 13-tile run",
+      "passed": true
+    },
+    {
+      "name": "S02 short natural run",
+      "passed": true
+    },
+    {
+      "name": "J32: One rack tile anywhere on turn suffices for joker retrieval",
+      "passed": true
+    },
+    {
+      "name": "J24: Two jokers alone are not a meld",
+      "passed": true
+    },
+    {
+      "name": "J25: Fractional joker bindings are invalid",
+      "passed": true
+    },
+    {
+      "name": "S09 prefer highest legal joker binding",
+      "passed": true
+    },
+    {
+      "name": "S11 two rack jokers in low run",
+      "passed": true
+    },
+    {
+      "name": "J07: Two jokers in a four-tile group",
+      "passed": true
+    },
+    {
+      "name": "J02: Trailing joker can represent 13",
+      "passed": true
+    },
+    {
+      "name": "J30: Opening cannot retrieve an old table joker",
+      "passed": true
+    },
+    {
+      "name": "J26: Exactly 30 opens; joker contributes 11, not 30",
+      "passed": true
+    },
+    {
+      "name": "J18: Unbound table joker is rejected",
+      "passed": true
+    },
+    {
+      "name": "J16: A joker cannot represent zero",
+      "passed": true
+    },
+    {
+      "name": "S05 only rack value counted when extending table",
+      "passed": true
+    },
+    {
+      "name": "J39: Table-only rearrangement is not a play",
+      "passed": true
+    },
+    {
+      "name": "S03 exactly 30 opening with joker",
+      "passed": true
+    },
+    {
+      "name": "J28: Exactly 29 fails even across two sets",
+      "passed": true
+    },
+    {
+      "name": "S07 a long run is not lost by short-run enumeration",
+      "passed": true
+    },
+    {
+      "name": "J21: Two distinct jokers may occur in separate melds",
+      "passed": true
+    },
+    {
+      "name": "J36: Dissolving a joker run into other groups is allowed",
+      "passed": true
+    },
+    {
+      "name": "S10 two rack jokers in high group",
+      "passed": true
+    },
+    {
+      "name": "S08 full rearrangement across colors",
+      "passed": true
+    },
+    {
+      "name": "S13 duplicate natural copies",
+      "passed": true
+    },
+    {
+      "name": "S15 no move with empty hand",
+      "passed": true
+    },
+    {
+      "name": "J37: A retrieved joker cannot return to the rack",
+      "passed": true
+    },
+    {
+      "name": "J12: Joker cannot duplicate a natural group color",
+      "passed": true
+    },
+    {
+      "name": "J33: The other absent group color also retrieves the joker",
+      "passed": true
+    },
+    {
+      "name": "J01: Leading joker can represent 1",
+      "passed": true
+    },
+    {
+      "name": "S06 old table tiles are mandatory, not optional",
+      "passed": true
+    },
+    {
+      "name": "J34: A shifted run can free a joker without an exact-number replacement",
+      "passed": true
+    },
+    {
+      "name": "J22: A represented face does not count as a third physical numbered copy",
+      "passed": true
+    },
+    {
+      "name": "S12 distinguish rack joker from table joker",
+      "passed": true
+    },
+    {
+      "name": "J13: Joker run color must agree",
+      "passed": true
+    },
+    {
+      "name": "J31: Opening preserves the explicit bindings of old jokers",
+      "passed": true
+    },
+    {
+      "name": "J15: No 13-to-1 wrap through a joker",
+      "passed": true
+    },
+    {
+      "name": "S01 three-color group",
+      "passed": true
+    },
+    {
+      "name": "J38: A foreign joker cannot replace an owned one",
+      "passed": true
+    },
+    {
+      "name": "J23: Three physical numbered copies remain illegal with a joker present",
+      "passed": true
+    },
+    {
+      "name": "J35: Splitting the old run can free its interior joker",
+      "passed": true
+    },
+    {
+      "name": "V01 identity conservation even when resulting faces make valid sets",
+      "passed": true
+    },
+    {
+      "name": "J10: Two joker bindings cannot duplicate a group color",
+      "passed": true
+    },
+    {
+      "name": "J29: Opening turn cannot also extend the table",
+      "passed": true
+    },
+    {
+      "name": "J14: An incorrectly bound joker does not bridge a gap",
+      "passed": true
+    },
+    {
+      "name": "J09: Other absent color in a three-tile group",
+      "passed": true
+    },
+    {
+      "name": "S16 empty position",
+      "passed": true
+    },
+    {
+      "name": "V02 duplicate ID across table and hand",
+      "passed": true
+    },
+    {
+      "name": "V04 106 physical tiles accepted by inventory validation",
+      "passed": true
+    },
+    {
+      "name": "J05: Two endpoint jokers with one natural tile",
+      "passed": true
+    },
+    {
+      "name": "J27: A 27-point joker opening fails",
+      "passed": true
+    },
+    {
+      "name": "J03: Interior gap filled by joker",
+      "passed": true
+    },
+    {
+      "name": "S04 under-30 is pass",
+      "passed": true
+    }
+  ],
+  "sourceHashes": {
+    "blindReference.ts": "dd1439b64a5f46124ba452a2bd54091ab05006f45b1bf1e110bc31645212a3c8",
+    "package-lock.json": "8132ba5b102ffd1e940e687860c35cb6d57285f03d6a583b196269b37360c46b",
+    "package.json": "2fae4bd56a9a8c8e85d3b3dae251958d717b36d1407b963c7bdaa4d2a001cce5",
+    "reference.ts": "ba5aff682de643b28dee70f0033fbc45cc773d0328964df4e1a4b56037cb7f03",
+    "requirements-dev.txt": "1668a3152e33680d94637b13421c15e68bd97cd8701f7f555c691f5bc5c0b9f3",
+    "rummikub.ts": "fa9b18e28b7f7917526f3c76e4f7cf7484de978dd23b96bce531d946c8ccf502",
+    "test/audit.mjs": "39166afc4e5b96c0a6adfab95172532b15270f279390231c61e5c33a7b989bdf",
+    "test/bench.mjs": "5d822ca540c667f9b5975d1d45e117b07a1e03c9e7ded0f7be79c7988be05e6f",
+    "test/blind-adapter.mjs": "ab2af0a017f3e65a82b5521a0b69e34224196dc5597f766b70643a5f55e6d3dc",
+    "test/checksums.mjs": "9a902917974d76cfdcf3e57b958167354487bd455b39f0e6bac7c237f8ca3f66",
+    "test/contracts.mjs": "9718163d7473658996a23b17b40bef73358176defe0668d55cb3c60d5ad77006",
+    "test/helpers.mjs": "b5e3357b1b4e0766ed0ba34aecee480965abd92be520160e1d9bdf20bca96683",
+    "test/independent-ledger.mjs": "ceacb539df2a8abc5d9e4c4c8eb604b5d395b7be4d143641de1c5933f14a36fc",
+    "test/joker-cases.mjs": "2ab956f9da8684f022fc520db5354c538cd00f3d1092e9d269427d949ec45f04",
+    "test/large-independent.mjs": "cbe4170165015b9d841c731b77f582b56f4c7381255eab282314c73a8ca7fd57",
+    "test/milp-crosscheck.mjs": "347117b94d526435162226b62112ae5539b3f04cb4491c8780e3d98aea92ae58",
+    "test/milp-reference.mjs": "5935b7460d9fee85038f123e96d85058b827d6cc2f8e2e98cbcf748db3af666e",
+    "test/milp-reference.py": "ab4ee25d308423d25d3a03fd8ac44861b91a3e937768d949f41800e0c0edb920",
+    "test/mutations.mjs": "104ba949db2701e31cf3b914ee48cd9fb0ffa9caeba80e6a634e2e7840561a68",
+    "test/run.mjs": "f772b0095d27660007d1bc7aae5e989b295914fd5248b7b88c27e9c15817e636",
+    "test/small.mjs": "331b9fa657d6d8fe0529cce8c3789d0b8c27710ce409f9c363e6695c6f4be2a5",
+    "test/unit.mjs": "bb9f144c50d8a6b90a0bc992cdd76e920ed13d275a5c9be5d8192212782210e9",
+    "tsconfig.json": "f51388110625cad2bca05aee0460a7a522d9e1280fc44e12978c849e9dbdd07e"
+  }
+}

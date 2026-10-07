@@ -1,0 +1,2464 @@
+{
+  "suite": "40-table-20-hand-latency",
+  "seed": 2,
+  "cases": 200,
+  "warmupCases": 8,
+  "warmupPassed": 8,
+  "blindOptimumComparisons": 208,
+  "passed": 200,
+  "command": "SEED=2 node test/bench.mjs",
+  "limitMs": 500,
+  "p50Ms": 7.59656700000005,
+  "p99Ms": 83.94870500000002,
+  "maxMs": 128.63729400000005,
+  "totalJokerHistogram": [
+    11,
+    26,
+    163
+  ],
+  "corpusSha256": "55a7cf536adfa14dbcd4906fcd333db9a41386308daf4b7df52616c12602dca0",
+  "environment": {
+    "node": "v22.16.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor"
+  },
+  "samples": [
+    {
+      "case": 0,
+      "ms": 6.709775000000008,
+      "value": 136,
+      "played": 17,
+      "states": 26103,
+      "memoHits": 34867,
+      "boundPrunes": 2245,
+      "candidates": 394
+    },
+    {
+      "case": 1,
+      "ms": 5.5523760000000095,
+      "value": 125,
+      "played": 20,
+      "states": 22603,
+      "memoHits": 22669,
+      "boundPrunes": 522,
+      "candidates": 1102
+    },
+    {
+      "case": 2,
+      "ms": 77.47600700000001,
+      "value": 129,
+      "played": 20,
+      "states": 196644,
+      "memoHits": 412615,
+      "boundPrunes": 78,
+      "candidates": 992
+    },
+    {
+      "case": 3,
+      "ms": 12.346644999999995,
+      "value": 122,
+      "played": 20,
+      "states": 27714,
+      "memoHits": 41252,
+      "boundPrunes": 114,
+      "candidates": 1011
+    },
+    {
+      "case": 4,
+      "ms": 1.7089699999999652,
+      "value": 130,
+      "played": 20,
+      "states": 3135,
+      "memoHits": 2250,
+      "boundPrunes": 126,
+      "candidates": 1184
+    },
+    {
+      "case": 5,
+      "ms": 8.116391000000021,
+      "value": 137,
+      "played": 18,
+      "states": 24645,
+      "memoHits": 39200,
+      "boundPrunes": 74,
+      "candidates": 824
+    },
+    {
+      "case": 6,
+      "ms": 4.717358999999988,
+      "value": 147,
+      "played": 20,
+      "states": 13173,
+      "memoHits": 19129,
+      "boundPrunes": 171,
+      "candidates": 946
+    },
+    {
+      "case": 7,
+      "ms": 34.330736,
+      "value": 115,
+      "played": 17,
+      "states": 102366,
+      "memoHits": 201009,
+      "boundPrunes": 8,
+      "candidates": 964
+    },
+    {
+      "case": 8,
+      "ms": 1.006528000000003,
+      "value": 131,
+      "played": 16,
+      "states": 1353,
+      "memoHits": 1081,
+      "boundPrunes": 2,
+      "candidates": 103
+    },
+    {
+      "case": 9,
+      "ms": 10.768827999999985,
+      "value": 117,
+      "played": 20,
+      "states": 35950,
+      "memoHits": 50030,
+      "boundPrunes": 80,
+      "candidates": 935
+    },
+    {
+      "case": 10,
+      "ms": 8.87375400000002,
+      "value": 120,
+      "played": 18,
+      "states": 31506,
+      "memoHits": 43800,
+      "boundPrunes": 97,
+      "candidates": 960
+    },
+    {
+      "case": 11,
+      "ms": 1.4416069999999763,
+      "value": 116,
+      "played": 20,
+      "states": 4181,
+      "memoHits": 2307,
+      "boundPrunes": 201,
+      "candidates": 870
+    },
+    {
+      "case": 12,
+      "ms": 19.359996000000024,
+      "value": 106,
+      "played": 18,
+      "states": 70526,
+      "memoHits": 107224,
+      "boundPrunes": 173,
+      "candidates": 1009
+    },
+    {
+      "case": 13,
+      "ms": 7.778335000000027,
+      "value": 146,
+      "played": 17,
+      "states": 30766,
+      "memoHits": 38109,
+      "boundPrunes": 659,
+      "candidates": 443
+    },
+    {
+      "case": 14,
+      "ms": 49.72769999999997,
+      "value": 108,
+      "played": 17,
+      "states": 144503,
+      "memoHits": 325824,
+      "boundPrunes": 90,
+      "candidates": 927
+    },
+    {
+      "case": 15,
+      "ms": 9.225300000000004,
+      "value": 136,
+      "played": 17,
+      "states": 31976,
+      "memoHits": 57848,
+      "boundPrunes": 0,
+      "candidates": 805
+    },
+    {
+      "case": 16,
+      "ms": 7.236589999999978,
+      "value": 155,
+      "played": 20,
+      "states": 28310,
+      "memoHits": 41346,
+      "boundPrunes": 870,
+      "candidates": 431
+    },
+    {
+      "case": 17,
+      "ms": 9.007871000000023,
+      "value": 150,
+      "played": 18,
+      "states": 34384,
+      "memoHits": 51528,
+      "boundPrunes": 945,
+      "candidates": 883
+    },
+    {
+      "case": 18,
+      "ms": 4.4331809999999905,
+      "value": 159,
+      "played": 20,
+      "states": 16589,
+      "memoHits": 18880,
+      "boundPrunes": 443,
+      "candidates": 1045
+    },
+    {
+      "case": 19,
+      "ms": 26.949725,
+      "value": 145,
+      "played": 19,
+      "states": 84608,
+      "memoHits": 166260,
+      "boundPrunes": 44,
+      "candidates": 1098
+    },
+    {
+      "case": 20,
+      "ms": 3.6443629999999985,
+      "value": 132,
+      "played": 16,
+      "states": 13133,
+      "memoHits": 19292,
+      "boundPrunes": 1250,
+      "candidates": 827
+    },
+    {
+      "case": 21,
+      "ms": 4.441584000000034,
+      "value": 144,
+      "played": 20,
+      "states": 15697,
+      "memoHits": 23452,
+      "boundPrunes": 19,
+      "candidates": 1047
+    },
+    {
+      "case": 22,
+      "ms": 128.63729400000005,
+      "value": 99,
+      "played": 19,
+      "states": 321871,
+      "memoHits": 748240,
+      "boundPrunes": 5,
+      "candidates": 1179
+    },
+    {
+      "case": 23,
+      "ms": 31.156143000000043,
+      "value": 123,
+      "played": 20,
+      "states": 92216,
+      "memoHits": 200689,
+      "boundPrunes": 17,
+      "candidates": 984
+    },
+    {
+      "case": 24,
+      "ms": 6.153867999999989,
+      "value": 148,
+      "played": 19,
+      "states": 22823,
+      "memoHits": 33573,
+      "boundPrunes": 63,
+      "candidates": 797
+    },
+    {
+      "case": 25,
+      "ms": 4.641327000000047,
+      "value": 132,
+      "played": 20,
+      "states": 12576,
+      "memoHits": 15276,
+      "boundPrunes": 42,
+      "candidates": 1078
+    },
+    {
+      "case": 26,
+      "ms": 83.94870500000002,
+      "value": 124,
+      "played": 18,
+      "states": 241030,
+      "memoHits": 501380,
+      "boundPrunes": 65,
+      "candidates": 925
+    },
+    {
+      "case": 27,
+      "ms": 9.87471400000004,
+      "value": 151,
+      "played": 17,
+      "states": 33718,
+      "memoHits": 59272,
+      "boundPrunes": 6,
+      "candidates": 957
+    },
+    {
+      "case": 28,
+      "ms": 0.6171260000000984,
+      "value": 133,
+      "played": 18,
+      "states": 2071,
+      "memoHits": 1762,
+      "boundPrunes": 9,
+      "candidates": 97
+    },
+    {
+      "case": 29,
+      "ms": 5.90253000000007,
+      "value": 156,
+      "played": 20,
+      "states": 25416,
+      "memoHits": 34518,
+      "boundPrunes": 748,
+      "candidates": 326
+    },
+    {
+      "case": 30,
+      "ms": 7.808679999999981,
+      "value": 140,
+      "played": 20,
+      "states": 28127,
+      "memoHits": 34349,
+      "boundPrunes": 16,
+      "candidates": 1063
+    },
+    {
+      "case": 31,
+      "ms": 6.748823000000016,
+      "value": 119,
+      "played": 20,
+      "states": 28158,
+      "memoHits": 27170,
+      "boundPrunes": 193,
+      "candidates": 1074
+    },
+    {
+      "case": 32,
+      "ms": 21.06338800000003,
+      "value": 107,
+      "played": 18,
+      "states": 75205,
+      "memoHits": 141558,
+      "boundPrunes": 0,
+      "candidates": 393
+    },
+    {
+      "case": 33,
+      "ms": 5.186127000000056,
+      "value": 159,
+      "played": 20,
+      "states": 21043,
+      "memoHits": 25538,
+      "boundPrunes": 23,
+      "candidates": 389
+    },
+    {
+      "case": 34,
+      "ms": 2.981930000000034,
+      "value": 95,
+      "played": 17,
+      "states": 11098,
+      "memoHits": 13371,
+      "boundPrunes": 1,
+      "candidates": 929
+    },
+    {
+      "case": 35,
+      "ms": 1.175467000000026,
+      "value": 122,
+      "played": 20,
+      "states": 2231,
+      "memoHits": 2897,
+      "boundPrunes": 10,
+      "candidates": 815
+    },
+    {
+      "case": 36,
+      "ms": 23.904321000000095,
+      "value": 145,
+      "played": 19,
+      "states": 87786,
+      "memoHits": 139565,
+      "boundPrunes": 103,
+      "candidates": 1040
+    },
+    {
+      "case": 37,
+      "ms": 31.100600999999983,
+      "value": 137,
+      "played": 18,
+      "states": 87122,
+      "memoHits": 246883,
+      "boundPrunes": 175,
+      "candidates": 974
+    },
+    {
+      "case": 38,
+      "ms": 2.5302760000000717,
+      "value": 140,
+      "played": 17,
+      "states": 8978,
+      "memoHits": 12443,
+      "boundPrunes": 8,
+      "candidates": 788
+    },
+    {
+      "case": 39,
+      "ms": 1.3809979999999769,
+      "value": 169,
+      "played": 20,
+      "states": 3450,
+      "memoHits": 3620,
+      "boundPrunes": 24,
+      "candidates": 768
+    },
+    {
+      "case": 40,
+      "ms": 0.38981300000000374,
+      "value": 149,
+      "played": 18,
+      "states": 816,
+      "memoHits": 483,
+      "boundPrunes": 12,
+      "candidates": 72
+    },
+    {
+      "case": 41,
+      "ms": 15.783172000000036,
+      "value": 115,
+      "played": 17,
+      "states": 62238,
+      "memoHits": 82075,
+      "boundPrunes": 398,
+      "candidates": 938
+    },
+    {
+      "case": 42,
+      "ms": 66.39860699999997,
+      "value": 157,
+      "played": 19,
+      "states": 187949,
+      "memoHits": 412755,
+      "boundPrunes": 7,
+      "candidates": 1117
+    },
+    {
+      "case": 43,
+      "ms": 9.903747000000067,
+      "value": 97,
+      "played": 18,
+      "states": 37112,
+      "memoHits": 49703,
+      "boundPrunes": 102,
+      "candidates": 977
+    },
+    {
+      "case": 44,
+      "ms": 5.503414000000021,
+      "value": 161,
+      "played": 18,
+      "states": 22892,
+      "memoHits": 25486,
+      "boundPrunes": 126,
+      "candidates": 957
+    },
+    {
+      "case": 45,
+      "ms": 34.13054199999999,
+      "value": 118,
+      "played": 16,
+      "states": 109307,
+      "memoHits": 254687,
+      "boundPrunes": 2,
+      "candidates": 719
+    },
+    {
+      "case": 46,
+      "ms": 2.0273670000000266,
+      "value": 142,
+      "played": 20,
+      "states": 1805,
+      "memoHits": 1183,
+      "boundPrunes": 25,
+      "candidates": 1076
+    },
+    {
+      "case": 47,
+      "ms": 1.6383559999999306,
+      "value": 142,
+      "played": 20,
+      "states": 3103,
+      "memoHits": 2841,
+      "boundPrunes": 50,
+      "candidates": 1152
+    },
+    {
+      "case": 48,
+      "ms": 113.80925400000012,
+      "value": 104,
+      "played": 13,
+      "states": 298019,
+      "memoHits": 796530,
+      "boundPrunes": 9,
+      "candidates": 1018
+    },
+    {
+      "case": 49,
+      "ms": 4.50977899999998,
+      "value": 105,
+      "played": 19,
+      "states": 3090,
+      "memoHits": 2201,
+      "boundPrunes": 161,
+      "candidates": 1109
+    },
+    {
+      "case": 50,
+      "ms": 5.955006999999796,
+      "value": 154,
+      "played": 19,
+      "states": 22573,
+      "memoHits": 34366,
+      "boundPrunes": 279,
+      "candidates": 888
+    },
+    {
+      "case": 51,
+      "ms": 3.3638109999999415,
+      "value": 139,
+      "played": 19,
+      "states": 11072,
+      "memoHits": 14738,
+      "boundPrunes": 57,
+      "candidates": 930
+    },
+    {
+      "case": 52,
+      "ms": 11.896274000000176,
+      "value": 129,
+      "played": 19,
+      "states": 43370,
+      "memoHits": 72618,
+      "boundPrunes": 227,
+      "candidates": 939
+    },
+    {
+      "case": 53,
+      "ms": 46.24894099999983,
+      "value": 127,
+      "played": 19,
+      "states": 140482,
+      "memoHits": 304067,
+      "boundPrunes": 152,
+      "candidates": 1095
+    },
+    {
+      "case": 54,
+      "ms": 32.137563999999884,
+      "value": 144,
+      "played": 16,
+      "states": 98385,
+      "memoHits": 202021,
+      "boundPrunes": 14,
+      "candidates": 960
+    },
+    {
+      "case": 55,
+      "ms": 16.96755200000007,
+      "value": 127,
+      "played": 20,
+      "states": 59049,
+      "memoHits": 104525,
+      "boundPrunes": 44,
+      "candidates": 958
+    },
+    {
+      "case": 56,
+      "ms": 7.737745000000132,
+      "value": 174,
+      "played": 19,
+      "states": 23951,
+      "memoHits": 41580,
+      "boundPrunes": 1094,
+      "candidates": 867
+    },
+    {
+      "case": 57,
+      "ms": 12.618534000000182,
+      "value": 136,
+      "played": 18,
+      "states": 42516,
+      "memoHits": 89514,
+      "boundPrunes": 626,
+      "candidates": 773
+    },
+    {
+      "case": 58,
+      "ms": 27.710070000000087,
+      "value": 136,
+      "played": 18,
+      "states": 88186,
+      "memoHits": 183132,
+      "boundPrunes": 89,
+      "candidates": 976
+    },
+    {
+      "case": 59,
+      "ms": 2.1849090000000615,
+      "value": 172,
+      "played": 20,
+      "states": 3355,
+      "memoHits": 3302,
+      "boundPrunes": 37,
+      "candidates": 1075
+    },
+    {
+      "case": 60,
+      "ms": 31.717106000000058,
+      "value": 110,
+      "played": 14,
+      "states": 105093,
+      "memoHits": 207130,
+      "boundPrunes": 12,
+      "candidates": 776
+    },
+    {
+      "case": 61,
+      "ms": 24.76695799999993,
+      "value": 137,
+      "played": 17,
+      "states": 85607,
+      "memoHits": 152794,
+      "boundPrunes": 80,
+      "candidates": 977
+    },
+    {
+      "case": 62,
+      "ms": 8.517610999999988,
+      "value": 145,
+      "played": 16,
+      "states": 30011,
+      "memoHits": 49471,
+      "boundPrunes": 65,
+      "candidates": 899
+    },
+    {
+      "case": 63,
+      "ms": 1.7278369999999086,
+      "value": 139,
+      "played": 18,
+      "states": 5757,
+      "memoHits": 5567,
+      "boundPrunes": 218,
+      "candidates": 872
+    },
+    {
+      "case": 64,
+      "ms": 3.3273870000000443,
+      "value": 60,
+      "played": 14,
+      "states": 14829,
+      "memoHits": 17947,
+      "boundPrunes": 1,
+      "candidates": 369
+    },
+    {
+      "case": 65,
+      "ms": 22.422153999999864,
+      "value": 106,
+      "played": 16,
+      "states": 76825,
+      "memoHits": 147526,
+      "boundPrunes": 1,
+      "candidates": 898
+    },
+    {
+      "case": 66,
+      "ms": 33.74144000000001,
+      "value": 122,
+      "played": 20,
+      "states": 107866,
+      "memoHits": 207940,
+      "boundPrunes": 49,
+      "candidates": 1036
+    },
+    {
+      "case": 67,
+      "ms": 2.652454999999918,
+      "value": 131,
+      "played": 20,
+      "states": 1421,
+      "memoHits": 621,
+      "boundPrunes": 19,
+      "candidates": 941
+    },
+    {
+      "case": 68,
+      "ms": 6.853016000000025,
+      "value": 143,
+      "played": 19,
+      "states": 26392,
+      "memoHits": 41431,
+      "boundPrunes": 7,
+      "candidates": 410
+    },
+    {
+      "case": 69,
+      "ms": 17.108109000000013,
+      "value": 151,
+      "played": 19,
+      "states": 54237,
+      "memoHits": 105425,
+      "boundPrunes": 25,
+      "candidates": 978
+    },
+    {
+      "case": 70,
+      "ms": 15.891080999999986,
+      "value": 120,
+      "played": 17,
+      "states": 54626,
+      "memoHits": 91875,
+      "boundPrunes": 105,
+      "candidates": 925
+    },
+    {
+      "case": 71,
+      "ms": 1.6814699999999903,
+      "value": 122,
+      "played": 19,
+      "states": 1192,
+      "memoHits": 723,
+      "boundPrunes": 23,
+      "candidates": 963
+    },
+    {
+      "case": 72,
+      "ms": 9.00385499999993,
+      "value": 132,
+      "played": 17,
+      "states": 30051,
+      "memoHits": 51501,
+      "boundPrunes": 930,
+      "candidates": 486
+    },
+    {
+      "case": 73,
+      "ms": 7.214025999999876,
+      "value": 131,
+      "played": 19,
+      "states": 23646,
+      "memoHits": 27299,
+      "boundPrunes": 46,
+      "candidates": 1152
+    },
+    {
+      "case": 74,
+      "ms": 5.920225999999957,
+      "value": 142,
+      "played": 18,
+      "states": 21272,
+      "memoHits": 24247,
+      "boundPrunes": 10,
+      "candidates": 906
+    },
+    {
+      "case": 75,
+      "ms": 57.81634100000019,
+      "value": 131,
+      "played": 19,
+      "states": 181836,
+      "memoHits": 360694,
+      "boundPrunes": 4,
+      "candidates": 898
+    },
+    {
+      "case": 76,
+      "ms": 13.690569000000096,
+      "value": 164,
+      "played": 18,
+      "states": 44525,
+      "memoHits": 85011,
+      "boundPrunes": 4967,
+      "candidates": 958
+    },
+    {
+      "case": 77,
+      "ms": 35.22309700000005,
+      "value": 148,
+      "played": 20,
+      "states": 89272,
+      "memoHits": 254175,
+      "boundPrunes": 302,
+      "candidates": 1016
+    },
+    {
+      "case": 78,
+      "ms": 1.9898229999998875,
+      "value": 130,
+      "played": 20,
+      "states": 2933,
+      "memoHits": 2433,
+      "boundPrunes": 32,
+      "candidates": 969
+    },
+    {
+      "case": 79,
+      "ms": 5.425574999999981,
+      "value": 140,
+      "played": 20,
+      "states": 14782,
+      "memoHits": 17782,
+      "boundPrunes": 31,
+      "candidates": 1085
+    },
+    {
+      "case": 80,
+      "ms": 9.246932000000015,
+      "value": 92,
+      "played": 15,
+      "states": 37235,
+      "memoHits": 57530,
+      "boundPrunes": 2,
+      "candidates": 377
+    },
+    {
+      "case": 81,
+      "ms": 5.764186999999993,
+      "value": 116,
+      "played": 20,
+      "states": 21406,
+      "memoHits": 32931,
+      "boundPrunes": 118,
+      "candidates": 988
+    },
+    {
+      "case": 82,
+      "ms": 17.9962230000001,
+      "value": 157,
+      "played": 18,
+      "states": 63832,
+      "memoHits": 97944,
+      "boundPrunes": 208,
+      "candidates": 1017
+    },
+    {
+      "case": 83,
+      "ms": 7.59656700000005,
+      "value": 120,
+      "played": 19,
+      "states": 29689,
+      "memoHits": 40501,
+      "boundPrunes": 199,
+      "candidates": 926
+    },
+    {
+      "case": 84,
+      "ms": 22.951892000000043,
+      "value": 139,
+      "played": 17,
+      "states": 78574,
+      "memoHits": 152884,
+      "boundPrunes": 10,
+      "candidates": 789
+    },
+    {
+      "case": 85,
+      "ms": 6.728261999999859,
+      "value": 150,
+      "played": 19,
+      "states": 26074,
+      "memoHits": 28265,
+      "boundPrunes": 100,
+      "candidates": 997
+    },
+    {
+      "case": 86,
+      "ms": 1.9477210000000014,
+      "value": 148,
+      "played": 19,
+      "states": 6208,
+      "memoHits": 4369,
+      "boundPrunes": 107,
+      "candidates": 1102
+    },
+    {
+      "case": 87,
+      "ms": 12.187690999999859,
+      "value": 106,
+      "played": 15,
+      "states": 40305,
+      "memoHits": 86561,
+      "boundPrunes": 2,
+      "candidates": 734
+    },
+    {
+      "case": 88,
+      "ms": 6.5629200000000765,
+      "value": 94,
+      "played": 15,
+      "states": 25459,
+      "memoHits": 37371,
+      "boundPrunes": 5,
+      "candidates": 440
+    },
+    {
+      "case": 89,
+      "ms": 19.150709000000006,
+      "value": 121,
+      "played": 19,
+      "states": 61953,
+      "memoHits": 133116,
+      "boundPrunes": 39,
+      "candidates": 972
+    },
+    {
+      "case": 90,
+      "ms": 1.1670039999999062,
+      "value": 143,
+      "played": 20,
+      "states": 1846,
+      "memoHits": 1363,
+      "boundPrunes": 11,
+      "candidates": 908
+    },
+    {
+      "case": 91,
+      "ms": 8.50514300000009,
+      "value": 129,
+      "played": 19,
+      "states": 31570,
+      "memoHits": 46850,
+      "boundPrunes": 85,
+      "candidates": 1099
+    },
+    {
+      "case": 92,
+      "ms": 4.638253000000077,
+      "value": 149,
+      "played": 20,
+      "states": 15338,
+      "memoHits": 27922,
+      "boundPrunes": 215,
+      "candidates": 900
+    },
+    {
+      "case": 93,
+      "ms": 13.383638000000019,
+      "value": 143,
+      "played": 18,
+      "states": 45834,
+      "memoHits": 89067,
+      "boundPrunes": 239,
+      "candidates": 895
+    },
+    {
+      "case": 94,
+      "ms": 2.680768000000171,
+      "value": 108,
+      "played": 20,
+      "states": 10029,
+      "memoHits": 10806,
+      "boundPrunes": 12,
+      "candidates": 920
+    },
+    {
+      "case": 95,
+      "ms": 4.724950000000035,
+      "value": 129,
+      "played": 20,
+      "states": 19296,
+      "memoHits": 17313,
+      "boundPrunes": 267,
+      "candidates": 1026
+    },
+    {
+      "case": 96,
+      "ms": 0.6650770000001103,
+      "value": 118,
+      "played": 18,
+      "states": 2949,
+      "memoHits": 1794,
+      "boundPrunes": 18,
+      "candidates": 104
+    },
+    {
+      "case": 97,
+      "ms": 9.975923000000193,
+      "value": 145,
+      "played": 18,
+      "states": 35064,
+      "memoHits": 63691,
+      "boundPrunes": 21,
+      "candidates": 941
+    },
+    {
+      "case": 98,
+      "ms": 16.120136999999886,
+      "value": 115,
+      "played": 19,
+      "states": 58299,
+      "memoHits": 82939,
+      "boundPrunes": 562,
+      "candidates": 1049
+    },
+    {
+      "case": 99,
+      "ms": 7.872683999999936,
+      "value": 155,
+      "played": 18,
+      "states": 29286,
+      "memoHits": 37534,
+      "boundPrunes": 321,
+      "candidates": 1000
+    },
+    {
+      "case": 100,
+      "ms": 0.9732390000001487,
+      "value": 57,
+      "played": 12,
+      "states": 4029,
+      "memoHits": 4281,
+      "boundPrunes": 0,
+      "candidates": 76
+    },
+    {
+      "case": 101,
+      "ms": 14.037979999999834,
+      "value": 95,
+      "played": 18,
+      "states": 48411,
+      "memoHits": 78997,
+      "boundPrunes": 115,
+      "candidates": 908
+    },
+    {
+      "case": 102,
+      "ms": 11.19120799999996,
+      "value": 140,
+      "played": 18,
+      "states": 36791,
+      "memoHits": 74413,
+      "boundPrunes": 13,
+      "candidates": 930
+    },
+    {
+      "case": 103,
+      "ms": 21.093882999999778,
+      "value": 140,
+      "played": 19,
+      "states": 70532,
+      "memoHits": 121731,
+      "boundPrunes": 275,
+      "candidates": 1187
+    },
+    {
+      "case": 104,
+      "ms": 3.791349000000082,
+      "value": 102,
+      "played": 20,
+      "states": 13438,
+      "memoHits": 15082,
+      "boundPrunes": 356,
+      "candidates": 382
+    },
+    {
+      "case": 105,
+      "ms": 82.25206300000013,
+      "value": 115,
+      "played": 17,
+      "states": 209663,
+      "memoHits": 474307,
+      "boundPrunes": 3,
+      "candidates": 1063
+    },
+    {
+      "case": 106,
+      "ms": 60.65864600000009,
+      "value": 103,
+      "played": 19,
+      "states": 160665,
+      "memoHits": 379680,
+      "boundPrunes": 3,
+      "candidates": 940
+    },
+    {
+      "case": 107,
+      "ms": 0.9984369999999672,
+      "value": 130,
+      "played": 20,
+      "states": 103,
+      "memoHits": 47,
+      "boundPrunes": 8,
+      "candidates": 1022
+    },
+    {
+      "case": 108,
+      "ms": 0.6162950000000365,
+      "value": 132,
+      "played": 19,
+      "states": 2546,
+      "memoHits": 1413,
+      "boundPrunes": 68,
+      "candidates": 115
+    },
+    {
+      "case": 109,
+      "ms": 2.000438000000031,
+      "value": 128,
+      "played": 20,
+      "states": 4790,
+      "memoHits": 4993,
+      "boundPrunes": 62,
+      "candidates": 1238
+    },
+    {
+      "case": 110,
+      "ms": 9.744302000000062,
+      "value": 151,
+      "played": 19,
+      "states": 34185,
+      "memoHits": 58540,
+      "boundPrunes": 209,
+      "candidates": 1089
+    },
+    {
+      "case": 111,
+      "ms": 4.53133600000001,
+      "value": 177,
+      "played": 18,
+      "states": 17009,
+      "memoHits": 25858,
+      "boundPrunes": 22,
+      "candidates": 891
+    },
+    {
+      "case": 112,
+      "ms": 1.3406089999998585,
+      "value": 140,
+      "played": 15,
+      "states": 5360,
+      "memoHits": 5124,
+      "boundPrunes": 19,
+      "candidates": 377
+    },
+    {
+      "case": 113,
+      "ms": 6.630839999999807,
+      "value": 143,
+      "played": 20,
+      "states": 23806,
+      "memoHits": 33648,
+      "boundPrunes": 87,
+      "candidates": 965
+    },
+    {
+      "case": 114,
+      "ms": 56.9829749999999,
+      "value": 148,
+      "played": 17,
+      "states": 178210,
+      "memoHits": 392461,
+      "boundPrunes": 5,
+      "candidates": 956
+    },
+    {
+      "case": 115,
+      "ms": 16.263077000000067,
+      "value": 120,
+      "played": 19,
+      "states": 59073,
+      "memoHits": 89440,
+      "boundPrunes": 184,
+      "candidates": 951
+    },
+    {
+      "case": 116,
+      "ms": 1.9117209999999432,
+      "value": 114,
+      "played": 19,
+      "states": 9042,
+      "memoHits": 11671,
+      "boundPrunes": 0,
+      "candidates": 114
+    },
+    {
+      "case": 117,
+      "ms": 73.61800700000003,
+      "value": 145,
+      "played": 20,
+      "states": 218124,
+      "memoHits": 450309,
+      "boundPrunes": 88,
+      "candidates": 1015
+    },
+    {
+      "case": 118,
+      "ms": 6.300762000000304,
+      "value": 150,
+      "played": 19,
+      "states": 24268,
+      "memoHits": 27142,
+      "boundPrunes": 599,
+      "candidates": 1157
+    },
+    {
+      "case": 119,
+      "ms": 8.038035000000036,
+      "value": 128,
+      "played": 18,
+      "states": 30457,
+      "memoHits": 50671,
+      "boundPrunes": 8,
+      "candidates": 780
+    },
+    {
+      "case": 120,
+      "ms": 0.6279230000000098,
+      "value": 97,
+      "played": 15,
+      "states": 2479,
+      "memoHits": 1748,
+      "boundPrunes": 2,
+      "candidates": 105
+    },
+    {
+      "case": 121,
+      "ms": 9.292398999999932,
+      "value": 107,
+      "played": 15,
+      "states": 33156,
+      "memoHits": 63660,
+      "boundPrunes": 6,
+      "candidates": 779
+    },
+    {
+      "case": 122,
+      "ms": 65.19454499999983,
+      "value": 134,
+      "played": 17,
+      "states": 203760,
+      "memoHits": 392410,
+      "boundPrunes": 3,
+      "candidates": 963
+    },
+    {
+      "case": 123,
+      "ms": 2.324307000000317,
+      "value": 153,
+      "played": 19,
+      "states": 8811,
+      "memoHits": 6984,
+      "boundPrunes": 58,
+      "candidates": 980
+    },
+    {
+      "case": 124,
+      "ms": 3.2596419999999853,
+      "value": 97,
+      "played": 15,
+      "states": 12097,
+      "memoHits": 19237,
+      "boundPrunes": 33,
+      "candidates": 751
+    },
+    {
+      "case": 125,
+      "ms": 15.451634000000013,
+      "value": 143,
+      "played": 19,
+      "states": 55320,
+      "memoHits": 93512,
+      "boundPrunes": 42,
+      "candidates": 946
+    },
+    {
+      "case": 126,
+      "ms": 24.367349999999988,
+      "value": 152,
+      "played": 18,
+      "states": 87144,
+      "memoHits": 134837,
+      "boundPrunes": 163,
+      "candidates": 1065
+    },
+    {
+      "case": 127,
+      "ms": 4.101208000000042,
+      "value": 113,
+      "played": 20,
+      "states": 15752,
+      "memoHits": 20949,
+      "boundPrunes": 92,
+      "candidates": 984
+    },
+    {
+      "case": 128,
+      "ms": 2.2748139999998784,
+      "value": 110,
+      "played": 19,
+      "states": 10965,
+      "memoHits": 12003,
+      "boundPrunes": 339,
+      "candidates": 310
+    },
+    {
+      "case": 129,
+      "ms": 3.250228000000334,
+      "value": 142,
+      "played": 20,
+      "states": 11337,
+      "memoHits": 11272,
+      "boundPrunes": 44,
+      "candidates": 1128
+    },
+    {
+      "case": 130,
+      "ms": 15.216107000000193,
+      "value": 118,
+      "played": 13,
+      "states": 46845,
+      "memoHits": 97667,
+      "boundPrunes": 86,
+      "candidates": 882
+    },
+    {
+      "case": 131,
+      "ms": 5.494085999999697,
+      "value": 122,
+      "played": 20,
+      "states": 22007,
+      "memoHits": 23070,
+      "boundPrunes": 134,
+      "candidates": 1190
+    },
+    {
+      "case": 132,
+      "ms": 19.53436499999998,
+      "value": 117,
+      "played": 17,
+      "states": 62604,
+      "memoHits": 143848,
+      "boundPrunes": 63,
+      "candidates": 781
+    },
+    {
+      "case": 133,
+      "ms": 9.66512799999964,
+      "value": 142,
+      "played": 18,
+      "states": 33266,
+      "memoHits": 54818,
+      "boundPrunes": 68,
+      "candidates": 977
+    },
+    {
+      "case": 134,
+      "ms": 1.9850780000001578,
+      "value": 123,
+      "played": 16,
+      "states": 6601,
+      "memoHits": 6690,
+      "boundPrunes": 195,
+      "candidates": 839
+    },
+    {
+      "case": 135,
+      "ms": 28.47267499999998,
+      "value": 105,
+      "played": 18,
+      "states": 91535,
+      "memoHits": 209744,
+      "boundPrunes": 8,
+      "candidates": 933
+    },
+    {
+      "case": 136,
+      "ms": 7.5626069999998435,
+      "value": 135,
+      "played": 19,
+      "states": 31211,
+      "memoHits": 47157,
+      "boundPrunes": 4,
+      "candidates": 333
+    },
+    {
+      "case": 137,
+      "ms": 38.33731500000022,
+      "value": 122,
+      "played": 17,
+      "states": 125531,
+      "memoHits": 244601,
+      "boundPrunes": 4,
+      "candidates": 856
+    },
+    {
+      "case": 138,
+      "ms": 4.069300999999996,
+      "value": 145,
+      "played": 18,
+      "states": 15869,
+      "memoHits": 17027,
+      "boundPrunes": 9,
+      "candidates": 996
+    },
+    {
+      "case": 139,
+      "ms": 4.48708600000009,
+      "value": 120,
+      "played": 20,
+      "states": 15938,
+      "memoHits": 22515,
+      "boundPrunes": 55,
+      "candidates": 1008
+    },
+    {
+      "case": 140,
+      "ms": 5.776150000000143,
+      "value": 138,
+      "played": 16,
+      "states": 24781,
+      "memoHits": 31658,
+      "boundPrunes": 2,
+      "candidates": 345
+    },
+    {
+      "case": 141,
+      "ms": 12.55072999999993,
+      "value": 121,
+      "played": 17,
+      "states": 51461,
+      "memoHits": 68232,
+      "boundPrunes": 34,
+      "candidates": 806
+    },
+    {
+      "case": 142,
+      "ms": 1.0259180000002743,
+      "value": 136,
+      "played": 20,
+      "states": 562,
+      "memoHits": 248,
+      "boundPrunes": 20,
+      "candidates": 931
+    },
+    {
+      "case": 143,
+      "ms": 3.191291999999976,
+      "value": 155,
+      "played": 20,
+      "states": 12353,
+      "memoHits": 12652,
+      "boundPrunes": 164,
+      "candidates": 1012
+    },
+    {
+      "case": 144,
+      "ms": 1.2610140000001593,
+      "value": 128,
+      "played": 20,
+      "states": 2021,
+      "memoHits": 1621,
+      "boundPrunes": 31,
+      "candidates": 423
+    },
+    {
+      "case": 145,
+      "ms": 11.657666000000063,
+      "value": 144,
+      "played": 20,
+      "states": 39113,
+      "memoHits": 79746,
+      "boundPrunes": 59,
+      "candidates": 898
+    },
+    {
+      "case": 146,
+      "ms": 1.546422999999777,
+      "value": 105,
+      "played": 20,
+      "states": 3434,
+      "memoHits": 2822,
+      "boundPrunes": 75,
+      "candidates": 1071
+    },
+    {
+      "case": 147,
+      "ms": 11.484821999999895,
+      "value": 129,
+      "played": 17,
+      "states": 43910,
+      "memoHits": 67983,
+      "boundPrunes": 94,
+      "candidates": 912
+    },
+    {
+      "case": 148,
+      "ms": 16.276676999999836,
+      "value": 123,
+      "played": 17,
+      "states": 58919,
+      "memoHits": 112192,
+      "boundPrunes": 1,
+      "candidates": 396
+    },
+    {
+      "case": 149,
+      "ms": 3.2660909999999603,
+      "value": 158,
+      "played": 17,
+      "states": 12643,
+      "memoHits": 13842,
+      "boundPrunes": 148,
+      "candidates": 1024
+    },
+    {
+      "case": 150,
+      "ms": 9.671927999999753,
+      "value": 124,
+      "played": 20,
+      "states": 32420,
+      "memoHits": 64545,
+      "boundPrunes": 42,
+      "candidates": 842
+    },
+    {
+      "case": 151,
+      "ms": 12.387628999999833,
+      "value": 112,
+      "played": 18,
+      "states": 44661,
+      "memoHits": 61241,
+      "boundPrunes": 286,
+      "candidates": 1082
+    },
+    {
+      "case": 152,
+      "ms": 1.0033549999998286,
+      "value": 98,
+      "played": 15,
+      "states": 5152,
+      "memoHits": 3947,
+      "boundPrunes": 0,
+      "candidates": 116
+    },
+    {
+      "case": 153,
+      "ms": 2.1306219999996756,
+      "value": 110,
+      "played": 20,
+      "states": 9380,
+      "memoHits": 10103,
+      "boundPrunes": 378,
+      "candidates": 416
+    },
+    {
+      "case": 154,
+      "ms": 42.297435999999834,
+      "value": 165,
+      "played": 20,
+      "states": 137216,
+      "memoHits": 245515,
+      "boundPrunes": 108,
+      "candidates": 1057
+    },
+    {
+      "case": 155,
+      "ms": 1.3575959999998304,
+      "value": 136,
+      "played": 20,
+      "states": 2398,
+      "memoHits": 1263,
+      "boundPrunes": 17,
+      "candidates": 1038
+    },
+    {
+      "case": 156,
+      "ms": 1.5102600000000166,
+      "value": 116,
+      "played": 19,
+      "states": 6137,
+      "memoHits": 6676,
+      "boundPrunes": 86,
+      "candidates": 368
+    },
+    {
+      "case": 157,
+      "ms": 1.3606700000000274,
+      "value": 142,
+      "played": 19,
+      "states": 5978,
+      "memoHits": 5440,
+      "boundPrunes": 23,
+      "candidates": 360
+    },
+    {
+      "case": 158,
+      "ms": 30.54550100000006,
+      "value": 158,
+      "played": 18,
+      "states": 93049,
+      "memoHits": 218096,
+      "boundPrunes": 153,
+      "candidates": 889
+    },
+    {
+      "case": 159,
+      "ms": 12.796159999999873,
+      "value": 137,
+      "played": 20,
+      "states": 32118,
+      "memoHits": 51616,
+      "boundPrunes": 61,
+      "candidates": 1007
+    },
+    {
+      "case": 160,
+      "ms": 1.6410219999997935,
+      "value": 119,
+      "played": 20,
+      "states": 6982,
+      "memoHits": 7309,
+      "boundPrunes": 100,
+      "candidates": 343
+    },
+    {
+      "case": 161,
+      "ms": 8.182688000000326,
+      "value": 157,
+      "played": 15,
+      "states": 32733,
+      "memoHits": 48742,
+      "boundPrunes": 3,
+      "candidates": 356
+    },
+    {
+      "case": 162,
+      "ms": 16.217909999999847,
+      "value": 148,
+      "played": 18,
+      "states": 52263,
+      "memoHits": 102573,
+      "boundPrunes": 19,
+      "candidates": 922
+    },
+    {
+      "case": 163,
+      "ms": 9.13066200000003,
+      "value": 144,
+      "played": 19,
+      "states": 34834,
+      "memoHits": 46191,
+      "boundPrunes": 38,
+      "candidates": 1079
+    },
+    {
+      "case": 164,
+      "ms": 29.588424999999916,
+      "value": 139,
+      "played": 20,
+      "states": 97267,
+      "memoHits": 169174,
+      "boundPrunes": 17,
+      "candidates": 1064
+    },
+    {
+      "case": 165,
+      "ms": 15.802188999999998,
+      "value": 161,
+      "played": 19,
+      "states": 54575,
+      "memoHits": 89725,
+      "boundPrunes": 51,
+      "candidates": 896
+    },
+    {
+      "case": 166,
+      "ms": 50.259501,
+      "value": 129,
+      "played": 17,
+      "states": 153172,
+      "memoHits": 328850,
+      "boundPrunes": 21,
+      "candidates": 1058
+    },
+    {
+      "case": 167,
+      "ms": 69.12421100000029,
+      "value": 127,
+      "played": 18,
+      "states": 199846,
+      "memoHits": 455670,
+      "boundPrunes": 3,
+      "candidates": 963
+    },
+    {
+      "case": 168,
+      "ms": 3.8967680000000655,
+      "value": 131,
+      "played": 17,
+      "states": 16786,
+      "memoHits": 20918,
+      "boundPrunes": 1619,
+      "candidates": 421
+    },
+    {
+      "case": 169,
+      "ms": 6.592521000000033,
+      "value": 183,
+      "played": 19,
+      "states": 23152,
+      "memoHits": 36692,
+      "boundPrunes": 30,
+      "candidates": 889
+    },
+    {
+      "case": 170,
+      "ms": 20.94256499999983,
+      "value": 140,
+      "played": 19,
+      "states": 72297,
+      "memoHits": 125313,
+      "boundPrunes": 12,
+      "candidates": 1031
+    },
+    {
+      "case": 171,
+      "ms": 2.6034669999999096,
+      "value": 178,
+      "played": 20,
+      "states": 8527,
+      "memoHits": 11330,
+      "boundPrunes": 267,
+      "candidates": 1103
+    },
+    {
+      "case": 172,
+      "ms": 9.93423299999995,
+      "value": 126,
+      "played": 15,
+      "states": 39083,
+      "memoHits": 66477,
+      "boundPrunes": 1,
+      "candidates": 336
+    },
+    {
+      "case": 173,
+      "ms": 4.098034000000098,
+      "value": 104,
+      "played": 17,
+      "states": 17931,
+      "memoHits": 20221,
+      "boundPrunes": 184,
+      "candidates": 783
+    },
+    {
+      "case": 174,
+      "ms": 2.3746909999999843,
+      "value": 97,
+      "played": 18,
+      "states": 8231,
+      "memoHits": 8430,
+      "boundPrunes": 219,
+      "candidates": 981
+    },
+    {
+      "case": 175,
+      "ms": 11.486315000000104,
+      "value": 120,
+      "played": 20,
+      "states": 43010,
+      "memoHits": 67122,
+      "boundPrunes": 37,
+      "candidates": 1045
+    },
+    {
+      "case": 176,
+      "ms": 12.222026000000369,
+      "value": 149,
+      "played": 18,
+      "states": 39114,
+      "memoHits": 80603,
+      "boundPrunes": 66,
+      "candidates": 778
+    },
+    {
+      "case": 177,
+      "ms": 3.696983999999702,
+      "value": 137,
+      "played": 20,
+      "states": 15031,
+      "memoHits": 20694,
+      "boundPrunes": 36,
+      "candidates": 384
+    },
+    {
+      "case": 178,
+      "ms": 1.291247999999996,
+      "value": 134,
+      "played": 20,
+      "states": 2665,
+      "memoHits": 2152,
+      "boundPrunes": 46,
+      "candidates": 848
+    },
+    {
+      "case": 179,
+      "ms": 2.627932999999757,
+      "value": 125,
+      "played": 20,
+      "states": 8944,
+      "memoHits": 9189,
+      "boundPrunes": 29,
+      "candidates": 1056
+    },
+    {
+      "case": 180,
+      "ms": 24.68359499999997,
+      "value": 124,
+      "played": 20,
+      "states": 83358,
+      "memoHits": 167222,
+      "boundPrunes": 116,
+      "candidates": 951
+    },
+    {
+      "case": 181,
+      "ms": 1.7146909999996751,
+      "value": 154,
+      "played": 20,
+      "states": 5365,
+      "memoHits": 5387,
+      "boundPrunes": 97,
+      "candidates": 865
+    },
+    {
+      "case": 182,
+      "ms": 5.788138000000345,
+      "value": 161,
+      "played": 19,
+      "states": 21479,
+      "memoHits": 30658,
+      "boundPrunes": 178,
+      "candidates": 1022
+    },
+    {
+      "case": 183,
+      "ms": 34.59005700000034,
+      "value": 129,
+      "played": 19,
+      "states": 107140,
+      "memoHits": 221369,
+      "boundPrunes": 74,
+      "candidates": 956
+    },
+    {
+      "case": 184,
+      "ms": 0.9730199999999058,
+      "value": 121,
+      "played": 20,
+      "states": 797,
+      "memoHits": 578,
+      "boundPrunes": 59,
+      "candidates": 874
+    },
+    {
+      "case": 185,
+      "ms": 1.639100000000326,
+      "value": 129,
+      "played": 20,
+      "states": 3376,
+      "memoHits": 4055,
+      "boundPrunes": 20,
+      "candidates": 1160
+    },
+    {
+      "case": 186,
+      "ms": 3.130341000000044,
+      "value": 126,
+      "played": 16,
+      "states": 11375,
+      "memoHits": 16597,
+      "boundPrunes": 58,
+      "candidates": 947
+    },
+    {
+      "case": 187,
+      "ms": 15.518090999999913,
+      "value": 160,
+      "played": 20,
+      "states": 57309,
+      "memoHits": 82690,
+      "boundPrunes": 203,
+      "candidates": 1166
+    },
+    {
+      "case": 188,
+      "ms": 0.9214950000000499,
+      "value": 109,
+      "played": 17,
+      "states": 4146,
+      "memoHits": 3644,
+      "boundPrunes": 15,
+      "candidates": 112
+    },
+    {
+      "case": 189,
+      "ms": 52.25286099999994,
+      "value": 160,
+      "played": 18,
+      "states": 165473,
+      "memoHits": 359476,
+      "boundPrunes": 51,
+      "candidates": 835
+    },
+    {
+      "case": 190,
+      "ms": 28.88704400000006,
+      "value": 98,
+      "played": 20,
+      "states": 94507,
+      "memoHits": 157799,
+      "boundPrunes": 1365,
+      "candidates": 1134
+    },
+    {
+      "case": 191,
+      "ms": 10.764374000000316,
+      "value": 144,
+      "played": 18,
+      "states": 40111,
+      "memoHits": 72935,
+      "boundPrunes": 8,
+      "candidates": 846
+    },
+    {
+      "case": 192,
+      "ms": 0.414560000000165,
+      "value": 118,
+      "played": 18,
+      "states": 1137,
+      "memoHits": 611,
+      "boundPrunes": 4,
+      "candidates": 92
+    },
+    {
+      "case": 193,
+      "ms": 1.6846660000001066,
+      "value": 145,
+      "played": 20,
+      "states": 3767,
+      "memoHits": 3359,
+      "boundPrunes": 42,
+      "candidates": 1035
+    },
+    {
+      "case": 194,
+      "ms": 55.945630000000165,
+      "value": 134,
+      "played": 20,
+      "states": 174381,
+      "memoHits": 376070,
+      "boundPrunes": 29,
+      "candidates": 909
+    },
+    {
+      "case": 195,
+      "ms": 1.6810209999998733,
+      "value": 124,
+      "played": 20,
+      "states": 4958,
+      "memoHits": 4921,
+      "boundPrunes": 36,
+      "candidates": 850
+    },
+    {
+      "case": 196,
+      "ms": 33.709142000000156,
+      "value": 163,
+      "played": 20,
+      "states": 117573,
+      "memoHits": 198356,
+      "boundPrunes": 227,
+      "candidates": 993
+    },
+    {
+      "case": 197,
+      "ms": 1.3498749999998836,
+      "value": 149,
+      "played": 20,
+      "states": 2816,
+      "memoHits": 2093,
+      "boundPrunes": 18,
+      "candidates": 963
+    },
+    {
+      "case": 198,
+      "ms": 3.781908999999814,
+      "value": 159,
+      "played": 19,
+      "states": 16224,
+      "memoHits": 18316,
+      "boundPrunes": 71,
+      "candidates": 958
+    },
+    {
+      "case": 199,
+      "ms": 7.584648999999899,
+      "value": 122,
+      "played": 20,
+      "states": 29918,
+      "memoHits": 29706,
+      "boundPrunes": 13,
+      "candidates": 1141
+    }
+  ],
+  "worstInput": {
+    "table": [
+      {
+        "kind": "group",
+        "tiles": [
+          {
+            "id": "red-7-0",
+            "kind": "number",
+            "color": "red",
+            "value": 7
+          },
+          {
+            "id": "blue-7-1",
+            "kind": "number",
+            "color": "blue",
+            "value": 7
+          },
+          {
+            "id": "black-7-1",
+            "kind": "number",
+            "color": "black",
+            "value": 7
+          },
+          {
+            "id": "orange-7-1",
+            "kind": "number",
+            "color": "orange",
+            "value": 7
+          }
+        ]
+      },
+      {
+        "kind": "run",
+        "tiles": [
+          {
+            "id": "red-5-1",
+            "kind": "number",
+            "color": "red",
+            "value": 5
+          },
+          {
+            "id": "red-6-0",
+            "kind": "number",
+            "color": "red",
+            "value": 6
+          },
+          {
+            "id": "red-7-1",
+            "kind": "number",
+            "color": "red",
+            "value": 7
+          },
+          {
+            "id": "red-8-1",
+            "kind": "number",
+            "color": "red",
+            "value": 8
+          },
+          {
+            "id": "red-9-0",
+            "kind": "number",
+            "color": "red",
+            "value": 9
+          }
+        ]
+      },
+      {
+        "kind": "run",
+        "tiles": [
+          {
+            "id": "blue-6-1",
+            "kind": "number",
+            "color": "blue",
+            "value": 6
+          },
+          {
+            "id": "joker-0",
+            "kind": "joker",
+            "as": {
+              "color": "blue",
+              "value": 7
+            }
+          },
+          {
+            "id": "blue-8-1",
+            "kind": "number",
+            "color": "blue",
+            "value": 8
+          },
+          {
+            "id": "blue-9-1",
+            "kind": "number",
+            "color": "blue",
+            "value": 9
+          },
+          {
+            "id": "blue-10-0",
+            "kind": "number",
+            "color": "blue",
+            "value": 10
+          },
+          {
+            "id": "blue-11-0",
+            "kind": "number",
+            "color": "blue",
+            "value": 11
+          }
+        ]
+      },
+      {
+        "kind": "run",
+        "tiles": [
+          {
+            "id": "red-1-1",
+            "kind": "number",
+            "color": "red",
+            "value": 1
+          },
+          {
+            "id": "red-2-1",
+            "kind": "number",
+            "color": "red",
+            "value": 2
+          },
+          {
+            "id": "red-3-1",
+            "kind": "number",
+            "color": "red",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "kind": "run",
+        "tiles": [
+          {
+            "id": "black-1-0",
+            "kind": "number",
+            "color": "black",
+            "value": 1
+          },
+          {
+            "id": "black-2-0",
+            "kind": "number",
+            "color": "black",
+            "value": 2
+          },
+          {
+            "id": "black-3-0",
+            "kind": "number",
+            "color": "black",
+            "value": 3
+          },
+          {
+            "id": "black-4-0",
+            "kind": "number",
+            "color": "black",
+            "value": 4
+          },
+          {
+            "id": "black-5-0",
+            "kind": "number",
+            "color": "black",
+            "value": 5
+          },
+          {
+            "id": "black-6-1",
+            "kind": "number",
+            "color": "black",
+            "value": 6
+          },
+          {
+            "id": "black-7-0",
+            "kind": "number",
+            "color": "black",
+            "value": 7
+          }
+        ]
+      },
+      {
+        "kind": "run",
+        "tiles": [
+          {
+            "id": "joker-1",
+            "kind": "joker",
+            "as": {
+              "color": "red",
+              "value": 8
+            }
+          },
+          {
+            "id": "red-9-1",
+            "kind": "number",
+            "color": "red",
+            "value": 9
+          },
+          {
+            "id": "red-10-0",
+            "kind": "number",
+            "color": "red",
+            "value": 10
+          },
+          {
+            "id": "red-11-0",
+            "kind": "number",
+            "color": "red",
+            "value": 11
+          },
+          {
+            "id": "red-12-0",
+            "kind": "number",
+            "color": "red",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "kind": "run",
+        "tiles": [
+          {
+            "id": "blue-2-1",
+            "kind": "number",
+            "color": "blue",
+            "value": 2
+          },
+          {
+            "id": "blue-3-0",
+            "kind": "number",
+            "color": "blue",
+            "value": 3
+          },
+          {
+            "id": "blue-4-1",
+            "kind": "number",
+            "color": "blue",
+            "value": 4
+          },
+          {
+            "id": "blue-5-0",
+            "kind": "number",
+            "color": "blue",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "kind": "run",
+        "tiles": [
+          {
+            "id": "orange-2-0",
+            "kind": "number",
+            "color": "orange",
+            "value": 2
+          },
+          {
+            "id": "orange-3-1",
+            "kind": "number",
+            "color": "orange",
+            "value": 3
+          },
+          {
+            "id": "orange-4-1",
+            "kind": "number",
+            "color": "orange",
+            "value": 4
+          },
+          {
+            "id": "orange-5-1",
+            "kind": "number",
+            "color": "orange",
+            "value": 5
+          },
+          {
+            "id": "orange-6-1",
+            "kind": "number",
+            "color": "orange",
+            "value": 6
+          },
+          {
+            "id": "orange-7-0",
+            "kind": "number",
+            "color": "orange",
+            "value": 7
+          }
+        ]
+      }
+    ],
+    "hand": [
+      {
+        "id": "blue-1-0",
+        "kind": "number",
+        "color": "blue",
+        "value": 1
+      },
+      {
+        "id": "orange-10-1",
+        "kind": "number",
+        "color": "orange",
+        "value": 10
+      },
+      {
+        "id": "black-1-1",
+        "kind": "number",
+        "color": "black",
+        "value": 1
+      },
+      {
+        "id": "black-3-1",
+        "kind": "number",
+        "color": "black",
+        "value": 3
+      },
+      {
+        "id": "black-8-0",
+        "kind": "number",
+        "color": "black",
+        "value": 8
+      },
+      {
+        "id": "blue-1-1",
+        "kind": "number",
+        "color": "blue",
+        "value": 1
+      },
+      {
+        "id": "black-13-0",
+        "kind": "number",
+        "color": "black",
+        "value": 13
+      },
+      {
+        "id": "orange-8-1",
+        "kind": "number",
+        "color": "orange",
+        "value": 8
+      },
+      {
+        "id": "black-8-1",
+        "kind": "number",
+        "color": "black",
+        "value": 8
+      },
+      {
+        "id": "black-2-1",
+        "kind": "number",
+        "color": "black",
+        "value": 2
+      },
+      {
+        "id": "red-4-0",
+        "kind": "number",
+        "color": "red",
+        "value": 4
+      },
+      {
+        "id": "black-5-1",
+        "kind": "number",
+        "color": "black",
+        "value": 5
+      },
+      {
+        "id": "orange-1-1",
+        "kind": "number",
+        "color": "orange",
+        "value": 1
+      },
+      {
+        "id": "blue-5-1",
+        "kind": "number",
+        "color": "blue",
+        "value": 5
+      },
+      {
+        "id": "orange-2-1",
+        "kind": "number",
+        "color": "orange",
+        "value": 2
+      },
+      {
+        "id": "orange-4-0",
+        "kind": "number",
+        "color": "orange",
+        "value": 4
+      },
+      {
+        "id": "blue-4-0",
+        "kind": "number",
+        "color": "blue",
+        "value": 4
+      },
+      {
+        "id": "blue-12-0",
+        "kind": "number",
+        "color": "blue",
+        "value": 12
+      },
+      {
+        "id": "red-2-0",
+        "kind": "number",
+        "color": "red",
+        "value": 2
+      },
+      {
+        "id": "orange-13-0",
+        "kind": "number",
+        "color": "orange",
+        "value": 13
+      }
+    ],
+    "initialMeldDone": true
+  },
+  "sourceHashes": {
+    "blindReference.ts": "dd1439b64a5f46124ba452a2bd54091ab05006f45b1bf1e110bc31645212a3c8",
+    "package-lock.json": "8132ba5b102ffd1e940e687860c35cb6d57285f03d6a583b196269b37360c46b",
+    "package.json": "2fae4bd56a9a8c8e85d3b3dae251958d717b36d1407b963c7bdaa4d2a001cce5",
+    "reference.ts": "ba5aff682de643b28dee70f0033fbc45cc773d0328964df4e1a4b56037cb7f03",
+    "requirements-dev.txt": "1668a3152e33680d94637b13421c15e68bd97cd8701f7f555c691f5bc5c0b9f3",
+    "rummikub.ts": "fa9b18e28b7f7917526f3c76e4f7cf7484de978dd23b96bce531d946c8ccf502",
+    "test/audit.mjs": "39166afc4e5b96c0a6adfab95172532b15270f279390231c61e5c33a7b989bdf",
+    "test/bench.mjs": "5d822ca540c667f9b5975d1d45e117b07a1e03c9e7ded0f7be79c7988be05e6f",
+    "test/blind-adapter.mjs": "ab2af0a017f3e65a82b5521a0b69e34224196dc5597f766b70643a5f55e6d3dc",
+    "test/checksums.mjs": "9a902917974d76cfdcf3e57b958167354487bd455b39f0e6bac7c237f8ca3f66",
+    "test/contracts.mjs": "9718163d7473658996a23b17b40bef73358176defe0668d55cb3c60d5ad77006",
+    "test/helpers.mjs": "b5e3357b1b4e0766ed0ba34aecee480965abd92be520160e1d9bdf20bca96683",
+    "test/independent-ledger.mjs": "ceacb539df2a8abc5d9e4c4c8eb604b5d395b7be4d143641de1c5933f14a36fc",
+    "test/joker-cases.mjs": "2ab956f9da8684f022fc520db5354c538cd00f3d1092e9d269427d949ec45f04",
+    "test/large-independent.mjs": "cbe4170165015b9d841c731b77f582b56f4c7381255eab282314c73a8ca7fd57",
+    "test/milp-crosscheck.mjs": "347117b94d526435162226b62112ae5539b3f04cb4491c8780e3d98aea92ae58",
+    "test/milp-reference.mjs": "5935b7460d9fee85038f123e96d85058b827d6cc2f8e2e98cbcf748db3af666e",
+    "test/milp-reference.py": "ab4ee25d308423d25d3a03fd8ac44861b91a3e937768d949f41800e0c0edb920",
+    "test/mutations.mjs": "104ba949db2701e31cf3b914ee48cd9fb0ffa9caeba80e6a634e2e7840561a68",
+    "test/run.mjs": "f772b0095d27660007d1bc7aae5e989b295914fd5248b7b88c27e9c15817e636",
+    "test/small.mjs": "331b9fa657d6d8fe0529cce8c3789d0b8c27710ce409f9c363e6695c6f4be2a5",
+    "test/unit.mjs": "bb9f144c50d8a6b90a0bc992cdd76e920ed13d275a5c9be5d8192212782210e9",
+    "tsconfig.json": "f51388110625cad2bca05aee0460a7a522d9e1280fc44e12978c849e9dbdd07e"
+  }
+}

@@ -21,6 +21,10 @@ for(const seed of [1,2,3]){
   run([`test/${suite}.mjs`],seed);
   const data=JSON.parse(readFileSync(resolve(root,`.test-output/${suite}-seed-${seed}.json`),'utf8'));
   assert.equal(data.seed,seed);assert.equal(data.passed,data.cases);
+  if(suite==='bench') {
+    assert.equal(data.allMeasuredCalls,208);assert.equal(data.allPassed,208);
+    assert.equal(data.warmupPassed,8);assert.ok(data.maxMs<=500);
+  }
   runs.push({suite:data.suite,seed,cases:data.cases,passed:data.passed,command:data.command});
  }
 }

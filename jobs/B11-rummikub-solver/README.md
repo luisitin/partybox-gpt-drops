@@ -1,6 +1,6 @@
 # B11 Rummikub validator + best play
 
-A pure, deterministic, exact TypeScript solver with zero runtime dependencies. Read [VERIFY.md](VERIFY.md) for current results and pending gates.
+A pure, deterministic, exact TypeScript solver with zero runtime dependencies. The complete hosted and local suites passed all three seeds, including 150,000 literal small comparisons, 624 independent large optima and 75 compiling mutation kills. Read [VERIFY.md](VERIFY.md) for complete evidence and boundaries.
 
 ## Run
 
@@ -12,7 +12,7 @@ python3 -m pip install --disable-pip-version-check -r requirements-dev.txt
 npm test
 ```
 
-The full command strictly compiles all three TypeScript sources and runs every suite for seeds 1, 2 and 3. Each seed includes 50,000 positions with at most 14 physical tiles, all 40 joker fixtures, 25 individually planted source bugs, contract/metamorphic checks, 1,000 fresh accelerator-versus-literal checks, 200 full 40-table/20-hand positions and eight distinct warm-up positions. The production timing bracket includes validation, search, reconstruction and its own output validation. Independent work is outside that bracket. Both p99 and the literal maximum must be at most 500 ms.
+The full command strictly compiles all three TypeScript sources and runs every suite for seeds 1, 2 and 3. Each seed includes 50,000 positions with at most 14 physical tiles, all 40 joker fixtures, 25 individually planted source bugs, contract/metamorphic checks, 1,000 fresh accelerator-versus-literal checks, 200 full 40-table/20-hand positions and eight distinct warm-up positions. The production timing bracket includes validation, search, reconstruction and its own output validation. Independent work is outside that bracket. Main p99 and the literal maximum over all 208 measured calls per seed must be at most 500 ms; the distinct cold-start warmups are also measured and never discarded.
 
 ## Independent reference
 
@@ -32,4 +32,4 @@ The search is exact and unbounded. Finite measured corpora cannot establish a un
 
 ## Delivery
 
-The authorized workflow is `../../.github/workflows/B11.yml`. The manifest includes the workflow and delivery files, excluding generated output and itself. Each file is below 30 MB. Historical evidence is preserved; current full independent verification and hosted CI are still pending.
+The authorized workflow is `../../.github/workflows/B11.yml`. The manifest includes the workflow and delivery files, excluding generated output and itself. Each file is below 30 MB. Historical evidence and complete independent hosted/local receipts are preserved. The final improvement-publication head receives another complete hosted run, linked from PR 7.
