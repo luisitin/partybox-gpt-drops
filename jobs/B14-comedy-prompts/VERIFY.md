@@ -33,8 +33,8 @@ into `results/draft.json`; the npm alias runs the same validator.
 
 | Current measured check | Cases | Passed | Failed | Seed | Exact command |
 | --- | ---: | ---: | ---: | --- | --- |
-| JSON Schema / character limit / ID / genre checks | 1800 | 1800 | 0 | not applicable | `npm run check:draft` |
-| Complete independent batch record and input-hash match | 800 | 800 | 0 | not applicable | `npm run check:draft` |
+| JSON Schema / character limit / ID / genre checks | 1900 | 1900 | 0 | not applicable | `npm run check:draft` |
+| Complete independent batch record and input-hash match | 1100 | 1100 | 0 | not applicable | `npm run check:draft` |
 
 The independent-record check validates completeness and input identity; it does
 not count low editorial grades as passing the humor rubric.
@@ -108,6 +108,12 @@ checks, maximum 90 characters. 800 independent rows validated;
 37.5%; threshold agreement is
 74.875% on reviewed rows only.
 
+Measured milestone 019: 950 candidates per genre, 1,900/1,900 structural
+checks, maximum 90 characters. 1100 independent rows validated;
+766 meet 4+ in both passes. Exact-score agreement is
+38.3636%; threshold agreement is
+74.3636% on reviewed rows only.
+
 At milestone 005, `npm run checksums` size-checked 36 files (largest 185,166
 bytes), and `sha256sum -c SHA256SUMS.txt` passed all 35 listed file hashes.
 These packaging checks do not establish content or editorial completion.
@@ -142,7 +148,7 @@ changed after sealing.
 ## UNVERIFIED
 
 - The 1,500+1,500 candidate pool is not yet complete.
-- Independent second grading is complete for batches 001, 002, 003, 004, 005, 006, 007, 008 only, not all 3,000 rows.
+- Independent second grading is complete for batches 001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 013 only, not all 3,000 rows.
 - Final 600+600 selection, agreement rates, near-duplicate resolution, and the
   named-reference cap have not yet been established.
 - Adult-only content and no-slur editorial review remains pending.
