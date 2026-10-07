@@ -1,56 +1,62 @@
 {
-  "updatedAt": "2026-10-07T16:22:00Z",
-  "summary": "Eight open deliveries now have exact-head green full-suite checks: board odds, Battleship, Monopoly, Clue, icons, colors, sounds and motion. No PR has merged, and green CI does not erase documented independence, research or benchmark limitations. The CPU code and modes draft also passed structural checks with research gaps retained.",
+  "updatedAt": "2026-10-07T16:55:32.583667Z",
+  "summary": "Nine deliveries have passed their complete final GitHub checks: board odds, Monopoly, Clue, icons, colors, sounds, motion, Rummikub and Ticket to Ride. They await maintainer review; no PR is merged. Battleship passed the full 900,000-game source run and its final evidence run is underway. Hourly background reports are enabled; the open dashboard refreshes every 30 minutes.",
   "workers": [
     {
       "current": "B07",
-      "summary": "The separate Yahtzee generator and checker are sealed. Both complete independent tables are computed: official rules 254.5877; published convention 254.5896. Primary implementation and full original suite are underway.",
-      "next": "Compare both computed tables and all decisions, then complete scoring, mid-game, million-game and mutation checks.",
+      "summary": "Both independently authored Yahtzee tables agree across all 1,072,896 valid entries. All three TypeScript suites passed 150,000 exact mid-game comparisons, 606,528 scoring cases and 75 mutations. Six million paired simulations are underway with a separate check that native decisions match both actual TypeScript implementations.",
+      "next": "Complete every paired simulation, actual TypeScript decision proof and exact-head GitHub checks; preserve the official versus published rules distinction.",
       "queue": []
     },
     {
       "current": "B10",
-      "summary": "The replacement Battleship seed matrix completed successfully at exact head 740d13f: all three seeded jobs and the strict aggregate passed. The earlier Hard-stage timeout remains preserved as historical evidence.",
-      "next": "Review PR 6 without treating green CI as proof of blind independent authorship; continue the assigned B11 work.",
-      "queue": [
-        "B11"
-      ]
-    },
-    {
-      "current": "B12",
-      "summary": "Ticket to Ride sources were reopened twice, with 264 fact rows audited. Both implementations and three independent helper seals are retained. All 75 mutations passed; 6,000 full games and exact graph checks are running.",
-      "next": "Finish all game, exhaustive graph and longest-trail benchmark counts, then publish exact-commit CI evidence.",
-      "queue": []
-    },
-    {
-      "current": "B11",
-      "summary": "Rummikub passed all 150,000 small exact comparisons and Joker fixtures. Its independent full-size search is being optimized before the large audits can finish.",
-      "next": "Prove exact large optima with a separately authored model, validate every output, and preserve the 500 ms production gate.",
-      "queue": []
-    },
-    {
-      "current": "B04",
-      "summary": "The modes draft is pushed and structurally green, with research gaps retained. A board draft PR is open; all seven board pages and independent guides are retrieved, with conflicting prices and counts recorded.",
-      "next": "Audit all seven boards against independent sources, then continue the minigame research.",
-      "queue": [
-        "B03"
-      ]
-    },
-    {
-      "current": "B14",
-      "summary": "1,900 of the required 3,000 comedy candidates are authored. 1,100 have separate second grades and 766 satisfy both grade thresholds. These remain provisional before full-pool duplicate and named-reference curation.",
-      "next": "Finish the full candidate pool and second review, resolve duplicate flags and the combined named-reference cap, then select 600 per genre.",
+      "summary": "Battleship passed all 900,000 hosted games, 47,091,168 blind shot comparisons, exact-state checks and all 75 mutations. No measured call exceeded 50 ms; maximum was 5.980390 ms. Final evidence-commit CI is running. Older local timing failures and the timeout remain recorded.",
+      "next": "Confirm the final evidence commit, update its PR and support the trivia project.",
       "queue": [
         "B13"
       ]
     },
     {
-      "current": "B07 independent checker",
-      "summary": "The CPU code is pushed and green with 26 research gaps retained. The independent Yahtzee generator, two full tables and TypeScript checker are sealed after 1,073,622 self-check assertions.",
-      "next": "Support full independent Yahtzee comparisons, continue comedy grading and keep GitHub and the live dashboard current.",
+      "current": "B11",
+      "summary": "Rummikub final commit 575139d passed GitHub CI37654587097: 150,000 exact small states, 3,000 fresh model comparisons, 624 independently certified large calls including 24 cold starts, 600 derived audits and 75 mutations. Maximum call was 334.467 ms against the 500 ms limit. GitHub PR metadata changes are temporarily returning upstream errors.",
+      "next": "Retry PR metadata and ready status, then help the trivia lead with assigned categories and independent review.",
       "queue": [
-        "B07 independent checker"
+        "B13"
       ]
+    },
+    {
+      "current": "B12",
+      "summary": "Ticket to Ride final commit9a5d8c6 passed CI37654164782. Full counts include60,000 brute-force graphs,6,000 complete USA games,186,053 independent helper comparisons,75 mutations and13,880,102 conservation checks. PR19 is open; metadata publishing is being retried after GitHub errors.",
+      "next": "Complete PR handoff and independently grade comedy batches023\u2013030 as sealed inputs arrive.",
+      "queue": [
+        "B14 independent review"
+      ]
+    },
+    {
+      "current": "B03",
+      "summary": "The board research draft passed structural CI with its479 single-source facts and9 conflicts retained. Minigame work now preserves the external branch commits and adds the requested JSON/CSV roster of132 games; source articles are retrieved and individual facts are being researched.",
+      "next": "Finish independently supported minigame facts and both source-review passes; retain every unsupported fact explicitly.",
+      "queue": []
+    },
+    {
+      "current": "B14",
+      "summary": "2,300 of3,000 required comedy candidates are authored.2,200 have independent second reviews;1,403 satisfy both grade thresholds provisionally (686 fill-in,717 most-likely). Child-mascot misses are rejected and retained. Final duplicate resolution, named-reference caps and600-per-genre selection remain.",
+      "next": "Finish the remaining700 candidates, fresh reviews and separately reviewed adult rewrites; curate and publish the full1,200-item set.",
+      "queue": [
+        "B13 assigned support"
+      ]
+    },
+    {
+      "current": "B13",
+      "summary": "A dedicated trivia lead has started the full1,000-question project, with10 categories of100, explicit ID ranges, balanced difficulty and answer positions, and two independent sources per answer and fun fact. Category authoring and source-verification contracts are being established for parallel contributors.",
+      "next": "Author and verify all1,000 rows, reopen every source, then conduct a fresh adversarial review of every question.",
+      "queue": []
+    },
+    {
+      "current": "B07 independent checker",
+      "summary": "The CPU code is green with26 original research gaps retained. The independent Yahtzee reference is sealed; a native adapter passed1,000 full strategy components,65,520 scorer cases and16 negative parser fixtures. A preserved amendment removes repeated dice-array allocations while retaining every proof check.",
+      "next": "Deliver the amended checker, support all full simulation proofs and keep GitHub and the live site current.",
+      "queue": []
     }
   ]
 }
