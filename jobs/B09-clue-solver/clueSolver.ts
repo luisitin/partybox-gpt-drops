@@ -113,37 +113,55 @@ function countDeals(input: GameLog): SolverResult {
   let stride = 1, initialCode = 0;
   for (let owner = 0; owner < n; owner++) { strides.push(stride); initialCode += remaining[owner]! * stride; stride *= bases[owner]!; }
   const initialEnvelope = envelopeFixed.reduce((mask, set, k) => mask | (set ? 1 << k : 0), 0);
-  const cover = variable.map(card => Array.from({ length: n + 1 }, (_, owner) => clauses.reduce((mask, clause, k) => clause.owner === owner && clause.cards.includes(card) ? mask | (1n << BigInt(k)) : mask, 0n)));
-  const expired: bigint[] = variable.map((_, position) => clauses.reduce((mask, clause, k) => clause.cards.every(c => variable.indexOf(c) < position) ? mask | (1n << BigInt(k)) : mask, 0n));
-  const initialClauses = (1n << BigInt(clauses.length)) - 1n;
-  type State = { code: number; envelope: number; clauses: bigint };
-  const key = (state: State): number | string => state.clauses === 0n ? state.code * 8 + state.envelope : `${state.code * 8 + state.envelope}:${state.clauses}`;
+  // Most game logs have at most 30 unresolved clauses. Compact masks keep that
+  // common path allocation-light; larger logs retain arbitrary-width BigInt masks.
+  type Mask = number | bigint;
+  const compact = clauses.length <= 30, maskBase = compact ? 2 ** clauses.length : 0;
+  const convert = (mask: bigint): Mask => compact ? Number(mask) : mask;
+  const empty = (mask: Mask): boolean => mask === 0 || mask === 0n;
+  const remove = (mask: Mask, satisfied: Mask): Mask => typeof mask === "number" ? mask & ~(satisfied as number) : mask & ~(satisfied as bigint);
+  const intersects = (mask: Mask, other: Mask): boolean => typeof mask === "number" ? (mask & (other as number)) !== 0 : (mask & (other as bigint)) !== 0n;
+  const cover = variable.map(card => Array.from({ length: n + 1 }, (_, owner) => convert(clauses.reduce((mask, clause, k) => clause.owner === owner && clause.cards.includes(card) ? mask | (1n << BigInt(k)) : mask, 0n))));
+  const expired = variable.map((_, position) => convert(clauses.reduce((mask, clause, k) => clause.cards.every(c => variable.indexOf(c) < position) ? mask | (1n << BigInt(k)) : mask, 0n)));
+  const initialClauses: Mask = compact ? 2 ** clauses.length - 1 : (1n << BigInt(clauses.length)) - 1n;
+  type State = { code: number; envelope: number; clauses: Mask };
+  const key = (state: State): number | string => typeof state.clauses === "number" ? (state.code * 8 + state.envelope) * maskBase + state.clauses : `${state.code * 8 + state.envelope}:${state.clauses}`;
   const transitions = (position: number, state: State): { owner: number; next: State }[] => {
     const card = variable[position]!, out: { owner: number; next: State }[] = [];
     for (let owner = 0; owner <= n; owner++) {
       if ((domains[card]! & (1 << owner)) === 0) continue;
       if (owner === n) {
         const bit = 1 << category[card]!;
-        if ((state.envelope & bit) === 0) out.push({ owner, next: { code: state.code, envelope: state.envelope | bit, clauses: state.clauses & ~cover[position]![owner]! } });
+        if ((state.envelope & bit) === 0) out.push({ owner, next: { code: state.code, envelope: state.envelope | bit, clauses: remove(state.clauses, cover[position]![owner]!) } });
       } else if (Math.floor(state.code / strides[owner]!) % bases[owner]! > 0) {
-        out.push({ owner, next: { code: state.code - strides[owner]!, envelope: state.envelope, clauses: state.clauses & ~cover[position]![owner]! } });
+        out.push({ owner, next: { code: state.code - strides[owner]!, envelope: state.envelope, clauses: remove(state.clauses, cover[position]![owner]!) } });
       }
     }
     return out;
   };
   const memo = Array.from({ length: variable.length }, () => new Map<number | string, number>());
-  const count = (position: number, state: State): number => {
-    if (position === variable.length) return state.code === 0 && state.envelope === 7 && state.clauses === 0n ? 1 : 0;
-    if ((state.clauses & expired[position]!) !== 0n) return 0;
-    const stateKey = key(state), saved = memo[position]!.get(stateKey);
+  const count = (position: number, code: number, envelope: number, unsatisfied: Mask): number => {
+    if (position === variable.length) return code === 0 && envelope === 7 && empty(unsatisfied) ? 1 : 0;
+    if (intersects(unsatisfied, expired[position]!)) return 0;
+    const stateKey = typeof unsatisfied === "number" ? (code * 8 + envelope) * maskBase + unsatisfied : `${code * 8 + envelope}:${unsatisfied}`;
+    const saved = memo[position]!.get(stateKey);
     if (saved !== undefined) return saved;
     let total = 0;
-    for (const { next } of transitions(position, state)) total += count(position + 1, next);
+    const card = variable[position]!;
+    for (let owner = 0; owner <= n; owner++) {
+      if ((domains[card]! & (1 << owner)) === 0) continue;
+      if (owner === n) {
+        const bit = 1 << category[card]!;
+        if ((envelope & bit) === 0) total += count(position + 1, code, envelope | bit, remove(unsatisfied, cover[position]![owner]!));
+      } else if (Math.floor(code / strides[owner]!) % bases[owner]! > 0) {
+        total += count(position + 1, code - strides[owner]!, envelope, remove(unsatisfied, cover[position]![owner]!));
+      }
+    }
     memo[position]!.set(stateKey, total);
     return total;
   };
   const initial: State = { code: initialCode, envelope: initialEnvelope, clauses: initialClauses };
-  const total = count(0, initial);
+  const total = count(0, initial.code, initial.envelope, initial.clauses);
   if (total === 0) return fail("CONTRADICTION", "No consistent deals");
   // With <=21 cards, <=6 hands, and the complete observer hand fixed, the
   // multinomial upper bound is below 2^53. Every addition here is an exact integer.
@@ -154,7 +172,7 @@ function countDeals(input: GameLog): SolverResult {
     const nextLayer = new Map<number | string, { state: State; ways: number }>();
     for (const { state, ways } of layer.values()) {
       for (const { owner, next } of transitions(position, state)) {
-        const suffix = count(position + 1, next);
+        const suffix = count(position + 1, next.code, next.envelope, next.clauses);
         if (suffix === 0) continue;
         const card = variable[position]!;
         marginal[card]![owner] = marginal[card]![owner]! + ways * suffix;

@@ -1,3 +1,5 @@
 # Improvement loop
 
-Initial milestone: shared public contract and explicit probability/observation assumptions established before independent authoring.
+1. Established the shared contract before either implementation. Production uses per-card suffix/prefix counting; a blind reference author used literal enumeration for reduced decks and independent grouped combinatorial allocations for classic decks.
+2. Initial exact comparisons passed 20,000 reduced logs and every update of 5,000 classic games for seed 1. The strict six-player maximum gate failed at 215.745 ms; the 200 ms requirement was retained. A production-only replay also found a 205.084 ms outlier at game 4015, turn 3; its input is saved in benchmark-worst.json.
+3. Improved state allocation: use compact exact number masks for up to 30 unresolved clauses, retain arbitrary-width BigInt masks beyond that, and count suffixes without allocating transition objects. Added malformed input, zero-size hands, prototype-like card identifiers, frozen-input purity, and repeatability fixtures. The blind reference author independently added an exact closed-form shortcut for unconstrained classic observations. Full three-seed rerun and mutation rerun are pending at this milestone.

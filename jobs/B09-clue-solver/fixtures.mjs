@@ -60,6 +60,8 @@ export function adversarialCases() {
   invalid.push(['duplicate deck name', { ...clone(), deck: { ...reduced, weapons: ['s0','w1','w2'] } }]);
   invalid.push(['empty category', { ...clone(), deck: { ...reduced, rooms: [] } }]);
   invalid.push(['empty card id', { ...clone(), deck: { ...reduced, suspects: ['', 's1','s2'] } }]);
+  invalid.push(['oversized deck', { ...clone(), deck: { ...reduced, rooms: Array.from({ length: 20 }, (_, i) => `large${i}`) } }]);
+  invalid.push(['null deck category', { ...clone(), deck: { ...reduced, rooms: null } }]);
   invalid.push(['unknown shown card', { ...clone(), shown: [{ player: 1, card: 'bad' }] }]);
   invalid.push(['invalid shown owner', { ...clone(), shown: [{ player: 5, card: 's1' }] }]);
   invalid.push(['invalid suggestion player', { ...clone(), suggestions: [{ player: -1, cards: ['s1','w1','r1'], refutedBy: null }] }]);
@@ -70,6 +72,8 @@ export function adversarialCases() {
   invalid.push(['short suggestion', { ...clone(), suggestions: [{ player: 0, cards: ['s1','w1'], refutedBy: 1 }] }]);
   invalid.push(['shown outside suggestion', { ...clone(), suggestions: [{ player: 0, cards: ['s1','w1','r1'], refutedBy: 1, shownCard: 'r2' }] }]);
   invalid.push(['shown with no refuter', { ...clone(), suggestions: [{ player: 0, cards: ['s1','w1','r1'], refutedBy: null, shownCard: 's1' }] }]);
+  invalid.push(['null suggestion', { ...clone(), suggestions: [null] }]);
+  invalid.push(['null shown observation', { ...clone(), shown: [null] }]);
   const contradiction = [
     ['own card shown elsewhere', { ...clone(), shown: [{ player: 1, card: 's0' }] }],
     ['same card in two hands', { ...clone(), shown: [{ player: 1, card: 's1' }, { player: 2, card: 's1' }] }],
