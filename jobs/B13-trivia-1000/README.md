@@ -5,7 +5,7 @@ quotes for every answer and fun fact, followed by a fresh adversarial review and
 second full reopening of sources. The original B13 prompt is the acceptance
 contract; [CONTRACT.md](CONTRACT.md) fixes row/source formats and ownership.
 
-Latest authoring milestone (2026-10-07T18:33:45.906638+00:00): 310 real authored rows across 5 category files; 832/832 quote fields matched against actual source captures; 0 schema/data errors; 0 current fresh adversarial acceptances and 0 current source-reopen reviews.
+Latest authoring milestone (2026-10-07T19:17:08.893321+00:00): 682 real authored rows across 9 category files; 2281/2281 quote fields matched against actual source captures; 0 schema/data errors; 60 current fresh adversarial acceptances and 60 current source-reopen reviews.
 Research acceptance remains unfinished. Draft structural success is not a claim
 of independently verified questions. Every similarity flag and incomplete review
 remains visible in [reports/checks.json](reports/checks.json) and [VERIFY.md](VERIFY.md).

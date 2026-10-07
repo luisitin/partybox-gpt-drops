@@ -1,13 +1,7 @@
-# Exact next step
+# Exact next work
 
-1. Continue actual primary and independent reference collection for world geography
-   and animals/nature; select distinct stable facts whose answer AND fun-fact context
-   each fit direct <=25-word quotations from both sources.
-2. Complete the remaining categories and replace weak repetitive initial rows.
-   Preserve all similarity flags and record actual editorial decisions.
-3. Run fresh cross-author adversarial review and actual second source reopening
-   against finalized row hashes; revise failures and review each changed version.
-4. Resolve every full-set similarity and length-bias report, then integrate
-   `trivia.json` and run the full schema/coverage/checksum gates.
-5. Continue until all ten categories contain 100 accepted rows and every original
-   research/structural gate is actually complete. Preserve and document failures.
+Author world-geography remaining85, sports-games remaining40, US-history-civics100 and food-everyday-life remaining93. Complete current-version cross-author review/source reopening, including changed animal versions and root science fixes. Retain every earlier rejection and source-conflict record.
+
+Current coverage: 682 actual authored rows, 60 fresh current-version acceptances and 60 current reopen approvals. All similarity flags require concrete version-bound editorial resolution. The option-length gate accepts only an actual editorial assessment bound to the current complete row-set and metric hashes.
+
+Lead alone commits shared integration; workers edit assigned files. Never merge/push main. Run `python3 scripts/check-data.py --draft` at real milestones; full `python3 scripts/check-data.py` must remain failing until every original gate is met.

@@ -22,3 +22,7 @@ review/reopen cycle is reserved after category versions are finalized.
 ## Resume authoring snapshot — 2026-10-07T18:33:45.906638+00:00
 
 Preserved previous rows/captures and recovered the previous lead’s source collection. Added actually supported animal rows; a stale unpublished cheetah newborn-spots quote failed exact matching and was replaced with the separately supported cub-mantle fact. 310 real authored rows across 5 category files; 832/832 quote fields matched against actual source captures; 0 schema/data errors; 0 current fresh adversarial acceptances and 0 current source-reopen reviews. No fresh-review completion is claimed.
+
+## Resume authoring snapshot — 2026-10-07T19:17:08.893321+00:00
+
+Preserved previous rows/captures and recovered the previous lead’s source collection. Added actually supported animal rows; a stale unpublished cheetah newborn-spots quote failed exact matching and was replaced with the separately supported cub-mantle fact. 682 real authored rows across 9 category files; 2281/2281 quote fields matched against actual source captures; 0 schema/data errors; 60 current fresh adversarial acceptances and 60 current source-reopen reviews. No fresh-review completion is claimed.

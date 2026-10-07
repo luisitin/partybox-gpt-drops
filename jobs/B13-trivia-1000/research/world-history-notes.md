@@ -15,3 +15,9 @@ Author owns B13-0501–0600. Evidence captures are actual HTTP bodies under igno
 ## Progress
 
 First 20 real rows use five independently authored Britannica/WHE pairs. Both quotes per claim match actual bodies; page quotation totals remain below 200 words. Delivery remains in authoring progress. No fresh review or second source reopening has yet been performed by this author.
+
+## 100-row author milestone (2026-10-07)
+
+Recovered 20 genuine earlier rows and continued to 100; all 400 answer/context quote fields match actual captured source bodies and are at most 25 words. There are 51 independently owned Britannica/WHE article URLs used. Difficulty is 34/33/33 and answer indices exactly 25 each. `evidence/world-history-author-seal.json` binds current files; no fresh adversarial review or second full reopening is claimed. Author-stage factual/quote refinements retain the superseded full rows in `world-history-author-stage-revisions.json`.
+
+Additional exclusions: Black Death sources disagree on ending year (1351 vs 1352), so the question asks its beginning century. The WHE Mehmed article gives an inconsistent siege-opening date; only the agreed conquest year is used. Mansa Musa's exact reign dates, total wealth, pilgrimage entourage and death year are uncertain or differ; no such numerical claim is used. Cyrus's mythical childhood and Croesus's conflicting reported fate are excluded. WHE's original Shah Jahan disambiguation page is excluded; independently authored Taj Mahal context supports the monument questions. A short-topic-only Napoleon quotation was strengthened to the actual civil-law/First Consul narratives before sealing. Britannica sometimes serves only the first chapter; separate genuine French Revolution chapters were retrieved, not treated as if unseen later chapters had been read.

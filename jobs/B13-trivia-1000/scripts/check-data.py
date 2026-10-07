@@ -100,9 +100,12 @@ for i in range(len(rows)):
         a,b=normalized[i],normalized[j]
         matcher=difflib.SequenceMatcher(None,a,b,autojunk=False)
         if matcher.real_quick_ratio()<=.8 or matcher.quick_ratio()<=.8:continue
-        ratio=matcher.ratio()
+        forward=matcher.ratio()
+        reverse=difflib.SequenceMatcher(None,b,a,autojunk=False).ratio()
+        ratio=max(forward,reverse)
         if ratio>.8:flags.append({'ids':[rows[i]['id'],rows[j]['id']],
-          'rowSha256':[canonical_sha(rows[i]),canonical_sha(rows[j])],'similarity':round(ratio,6)})
+          'rowSha256':[canonical_sha(rows[i]),canonical_sha(rows[j])],'similarity':round(ratio,6),
+          'forwardSimilarity':round(forward,6),'reverseSimilarity':round(reverse,6)})
 resolutions=read(ROOT/'evidence/similarity-resolutions.json',[])
 resolved=[]
 for flag in flags:
@@ -115,10 +118,20 @@ lengths={'unit':'Unicode code points','meanCorrect':average(correct_lengths),'me
  'meanOptionByPosition':{str(i):average([len(r['options'][i]) for r in rows]) for i in range(4)},
  'meanCorrectByPosition':{str(i):average([len(r['correctAnswer']) for r in rows if r['correctIndex']==i]) for i in range(4)},
  'uniquelyLongestCorrect':len(longest),'uniquelyLongestCorrectFraction':round(len(longest)/len(rows),5) if rows else None,
- 'uniquelyLongestCorrectIds':longest,'editorialAssessment':'PENDING: metrics alone do not certify absence of answer-length clues.'}
+ 'uniquelyLongestCorrectIds':longest}
+row_versions=[{'id':r['id'],'rowSha256':canonical_sha(r)} for r in sorted(rows,key=lambda r:r['id'])]
+length_assessment=read(ROOT/'evidence/option-length-assessment.json',{})
+length_assessment_current=(length_assessment.get('rowVersionsSha256')==canonical_sha(row_versions)
+ and length_assessment.get('metricsSha256')==canonical_sha(lengths)
+ and length_assessment.get('result')=='accept'
+ and bool(length_assessment.get('reviewer')) and bool(length_assessment.get('reviewedAt'))
+ and bool(length_assessment.get('rationale')))
+lengths['rowVersionsSha256']=canonical_sha(row_versions)
+lengths['metricsSha256']=canonical_sha({k:v for k,v in lengths.items() if k not in ['rowVersionsSha256','metricsSha256']})
+lengths['editorialAssessment']='ACCEPTED: current version-bound editorial review.' if length_assessment_current else 'PENDING: metrics alone do not certify absence of answer-length clues.'
 pending={'targetRowsMissing':max(0,1000-len(rows)),'adversarialNotCurrent':len(rows)-len(review_current),
  'reopenNotCurrent':len(rows)-len(reopen_current),'similarityFlagsUnresolved':len(flags)-len(resolved),
- 'optionLengthEditorialAssessment':'PENDING'}
+ 'optionLengthEditorialAssessment':None if length_assessment_current else 'PENDING'}
 if not args.draft:
     for k,v in pending.items():
         if v:errors.append(f'Unfinished gate {k}: {v}')
@@ -126,7 +139,7 @@ report={'mode':'draft' if args.draft else 'full','excludedInProgressCategories':
  'sourceRecords':len(sources),'quoteFields':quote_count,'quoteMatchesActualLocalCaptures':quote_matches,
  'quoteCapturesUnavailable':quote_unavailable,'schemaAndDataErrors':errors,
  'adversarialAcceptedCurrent':len(review_current),'reopenSupportedCurrent':len(reopen_current),
- 'similarityMethod':'Casefold, replace nonword sequences with spaces, SequenceMatcher character ratio >0.8; autojunk disabled.',
+ 'similarityMethod':'Casefold, replace nonword sequences with spaces, maximum of both SequenceMatcher character-ratio directions >0.8; autojunk disabled.',
  'similarityFlags':flags,'similarityFlagsResolved':len(resolved),'optionLengths':lengths,'pending':pending,
  'researchComplete':not errors and not any(pending.values())}
 out=ROOT/args.output;out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(report,indent=2)+'\n')

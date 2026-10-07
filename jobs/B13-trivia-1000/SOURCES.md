@@ -1,6 +1,6 @@
 # B13 source quotations
 
-Current authoring milestone: 310 rows. Fresh independent support review and second source reopening remain pending. Source ledger ownership, actual retrieval timestamps, method/status where returned and content hashes are in `evidence/*-sources.json`. Quotes are contiguous actual captured text, ≤25 words each; two separately edited source accounts are selected per row. Full captures are excluded from delivery.
+Current authoring milestone: 682 rows. Current fresh acceptance coverage is recorded per version in the report; remaining support review and second reopening remain pending. Source ledger ownership, actual retrieval timestamps, method/status where returned and content hashes are in `evidence/*-sources.json`. Quotes are contiguous actual captured text, ≤25 words each; two separately edited source accounts are selected per row. Full captures are excluded from delivery.
 
 ## B13-0001 — Which city is the state capital of Alabama?
 
@@ -902,305 +902,405 @@ Answer: 1821. Fun fact: Missouri was admitted to the Union on August 10, 1821.
 
   Answer/context quote: “Missouri August 10, 1821” (4 words).
 
-## B13-0076 — In which year did Montana become a US state?
+## B13-0076 — In which US state is Acadia National Park?
 
-Answer: 1889. Fun fact: Montana was admitted to the Union on November 8, 1889.
+Answer: Maine. Fun fact: The park includes land on Mount Desert Island.
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+- us-geography-s0004: [National Park Service](https://www.nps.gov/acad/index.htm)
 
-  Answer/context quote: “Montana MT Helena Billings Nov 8, 1889” (7 words).
+  Answer/context quote: “Acadia National Park • Maine” (5 words).
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+  Additional fun-fact quote: “located on the eastern side of Mount Desert Island in Newport Cove, is the largest sandy beach found in Acadia. Photo courtesy Emma Forthofer,” (24 words).
 
-  Answer/context quote: “Montana November 8, 1889” (4 words).
+- us-geography-s0005: [Encyclopaedia Britannica](https://www.britannica.com/place/Acadia-National-Park)
 
-## B13-0077 — In which year did Nebraska become a US state?
+  Answer/context quote: “Acadia National Park , national park on the Atlantic coast of Maine , U.S., astride Frenchman Bay. It has an area of 65” (23 words).
 
-Answer: 1867. Fun fact: Nebraska was admitted to the Union on March 1, 1867.
+  Additional fun-fact quote: “comprises a rugged forested area on Mount Desert Island , dominated by Cadillac Mountain (1,530 feet [466 metres]) and including Anemone Cave and Sieur” (24 words).
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+## B13-0077 — What kind of natural rock formation gives Arches National Park its name?
 
-  Answer/context quote: “Nebraska NE Lincoln Omaha Mar 1, 1867” (7 words).
+Answer: Stone arches. Fun fact: Arches National Park is in Utah.
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+- us-geography-s0006: [National Park Service](https://www.nps.gov/arch/index.htm)
 
-  Answer/context quote: “Nebraska March 1, 1867” (4 words).
+  Answer/context quote: “other. The park has over 2,000 natural stone arches, hundreds of soaring pinnacles, massive rock fins, and giant balanced rocks. This red-rock wonderland will” (24 words).
 
-## B13-0078 — In which year did Nevada become a US state?
+  Additional fun-fact quote: “Arches National Park • Utah” (5 words).
 
-Answer: 1864. Fun fact: Nevada was admitted to the Union on October 31, 1864.
+- us-geography-s0007: [Encyclopaedia Britannica](https://www.britannica.com/place/Arches-National-Park)
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+  Answer/context quote: “of unusual shapes, including pinnacles , windows, and arches. Notable features are Balanced Rock, Courthouse Towers (with spires that resemble skyscrapers), The Windows Section,” (24 words).
 
-  Answer/context quote: “Nevada NV Carson City Las Vegas Oct 31, 1864” (9 words).
+  Additional fun-fact quote: “Arches National Park , desert area of sandstone formations in eastern Utah , U.S., on the Colorado River just north of Moab and” (23 words).
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+## B13-0078 — In which US state is Badlands National Park?
 
-  Answer/context quote: “Nevada October 31, 1864” (4 words).
+Answer: South Dakota. Fun fact: Its mixed-grass prairie provides habitat for bison.
 
-## B13-0079 — In which year did New Hampshire ratify the US Constitution?
+- us-geography-s0008: [National Park Service](https://www.nps.gov/badl/index.htm)
 
-Answer: 1788. Fun fact: New Hampshire ratified the US Constitution on June 21, 1788.
+  Answer/context quote: “Badlands National Park • South Dakota” (6 words).
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+  Additional fun-fact quote: “244,000 acres protect an expanse of mixed-grass prairie where bison, bighorn sheep, prairie dogs, and black-footed ferrets live today. Plan your visit About the” (24 words).
 
-  Answer/context quote: “New Hampshire NH Concord Manchester Jun 21, 1788” (8 words).
+- us-geography-s0009: [Encyclopaedia Britannica](https://www.britannica.com/place/Badlands-National-Park)
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+  Answer/context quote: “, rugged, eroded area of buttes, saw-toothed divides, and gullies in southwestern South Dakota , U.S. It was established as a national monument in” (24 words).
 
-  Answer/context quote: “New Hampshire June 21, 1788” (5 words).
+  Additional fun-fact quote: “park’s grasslands encompass the largest protected mixed-grass prairie in the United States and are inhabited by bison, bighorn sheep , pronghorn antelope, mule deer” (24 words).
 
-## B13-0080 — In which year did New Jersey ratify the US Constitution?
+## B13-0079 — Which river forms Big Bend National Park’s southern boundary?
 
-Answer: 1787. Fun fact: New Jersey ratified the US Constitution on December 18, 1787.
+Answer: Rio Grande. Fun fact: Big Bend National Park is in Texas.
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+- us-geography-s0010: [National Park Service](https://www.nps.gov/bibe/index.htm)
 
-  Answer/context quote: “New Jersey NJ Trenton Newark Dec 18, 1787” (8 words).
+  Answer/context quote: “place of expansive views NPS The Rio Grande serves as the park's southern boundary NPS When ocotillo bloom, they transform the desert NPS /” (24 words).
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+  Additional fun-fact quote: “Big Bend National Park • Texas” (6 words).
 
-  Answer/context quote: “New Jersey December 18, 1787” (5 words).
+- us-geography-s0011: [Encyclopaedia Britannica](https://www.britannica.com/place/Big-Bend-National-Park)
 
-## B13-0081 — In which year did New Mexico become a US state?
+  Answer/context quote: “bend in the Rio Grande, which skirts its southern edge for 118 miles (190 km), it has magnificent mountain and desert scenery, deep canyons” (24 words).
 
-Answer: 1912. Fun fact: New Mexico was admitted to the Union on January 6, 1912.
+  Additional fun-fact quote: “Big Bend National Park , remote frontierlike region in southwestern Texas , U.S., 250 miles (400 km) southeast of El Paso ,” (22 words).
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+## B13-0080 — In which US state is Biscayne National Park?
 
-  Answer/context quote: “New Mexico NM Santa Fe Albuquerque Jan 6, 1912” (9 words).
+Answer: Florida. Fun fact: The park protects coral reefs.
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+- us-geography-s0012: [National Park Service](https://www.nps.gov/bisc/index.htm)
 
-  Answer/context quote: “New Mexico January 6, 1912” (5 words).
+  Answer/context quote: “Biscayne National Park • Florida” (5 words).
 
-## B13-0082 — In which year did New York ratify the US Constitution?
+  Additional fun-fact quote: “aquamarine waters, emerald islands, and fish-bejeweled coral reefs. Evidence of 10,000 years of human history is here too; from prehistoric tribes to shipwrecks, and” (24 words).
 
-Answer: 1788. Fun fact: New York ratified the US Constitution on July 26, 1788.
+- us-geography-s0013: [Encyclopaedia Britannica](https://www.britannica.com/place/Biscayne-National-Park)
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+  Answer/context quote: “other marine features in the Atlantic Ocean off the southeastern coast of Florida , U.S., about 20 miles (32 km) south of Miami .” (24 words).
 
-  Answer/context quote: “New York NY Albany New York City Jul 26, 1788” (10 words).
+  Additional fun-fact quote: “Biscayne National Park , area of coral reefs and other marine features in the Atlantic Ocean off the southeastern coast of Florida , U.S.,” (24 words).
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+## B13-0081 — In which US state is Bryce Canyon National Park?
 
-  Answer/context quote: “New York July 26, 1788” (5 words).
+Answer: Utah. Fun fact: The park is known for irregular columns of rock.
 
-## B13-0083 — In which year did North Carolina ratify the US Constitution?
+- us-geography-s0014: [National Park Service](https://www.nps.gov/brca/index.htm)
 
-Answer: 1789. Fun fact: North Carolina ratified the US Constitution on November 21, 1789.
+  Answer/context quote: “Bryce Canyon National Park • Utah” (6 words).
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+  Additional fun-fact quote: “Bryce Canyon National Park • Utah Hoodoos (irregular columns of rock) exist on every continent, but here is the largest concentration found anywhere on” (24 words).
 
-  Answer/context quote: “North Carolina NC Raleigh Charlotte Nov 21, 1789” (8 words).
+- us-geography-s0015: [Encyclopaedia Britannica](https://www.britannica.com/place/Bryce-Canyon-National-Park)
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+  Answer/context quote: “Bryce Canyon National Park , area of spectacular rock formations in southern Utah , U.S., roughly 40 miles (64 km) northeast of Zion National” (24 words).
 
-  Answer/context quote: “North Carolina November 21, 1789” (5 words).
+  Additional fun-fact quote: “pink, and orange limestone and sandstone columns, spires, and walls sculpted by erosion . The amphitheatre called Bryce Canyon was named for Ebenezer Bryce,” (24 words).
 
-## B13-0084 — In which year did North Dakota become a US state?
+## B13-0082 — What kind of volcanic basin does Crater Lake occupy?
 
-Answer: 1889. Fun fact: North Dakota was admitted to the Union on November 2, 1889.
+Answer: A caldera. Fun fact: Crater Lake National Park is in Oregon.
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+- us-geography-s0016: [National Park Service](https://www.nps.gov/crla/index.htm)
 
-  Answer/context quote: “North Dakota ND Bismarck Fargo Nov 2, 1889” (8 words).
+  Answer/context quote: “winter NPS Photo Clouds in the Crater Lake Caldera NPS Photo Contact Us Plan Your Visit Trying to decide when to visit, how to” (24 words).
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+  Additional fun-fact quote: “Crater Lake National Park • Oregon” (6 words).
 
-  Answer/context quote: “North Dakota November 2, 1889” (5 words).
+- us-geography-s0017: [Encyclopaedia Britannica](https://www.britannica.com/place/Crater-Lake-Oregon)
 
-## B13-0085 — In which year did Ohio become a US state?
+  Answer/context quote: “blue lake located within a huge volcanic caldera in the Cascade Range , southwestern Oregon , U.S., about 50 miles (80 km) northeast of” (24 words).
 
-Answer: 1803. Fun fact: Ohio was admitted to the Union on March 1, 1803.
+  Additional fun-fact quote: “located within a huge volcanic caldera in the Cascade Range , southwestern Oregon , U.S., about 50 miles (80 km) northeast of Medford .” (24 words).
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+## B13-0083 — In which US state is Denali National Park?
 
-  Answer/context quote: “Ohio OH Columbus Mar 1, 1803” (6 words).
+Answer: Alaska. Fun fact: Its landscape includes taiga forest and alpine tundra.
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+- us-geography-s0018: [National Park Service](https://www.nps.gov/dena/index.htm)
 
-  Answer/context quote: “Ohio March 1, 1803” (4 words).
+  Answer/context quote: “Denali National Park & Preserve • Alaska” (7 words).
 
-## B13-0086 — In which year did Oklahoma become a US state?
+  Additional fun-fact quote: “along it see the relatively low-elevation taiga forest give way to high alpine tundra and snowy mountains, culminating in North America's tallest peak, 20,310'” (24 words).
 
-Answer: 1907. Fun fact: Oklahoma was admitted to the Union on November 16, 1907.
+- us-geography-s0019: [Encyclopaedia Britannica](https://www.britannica.com/place/Denali-National-Park-and-Preserve)
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+  Answer/context quote: “unspoiled natural environment of alpine tundra and boreal forest (taiga) in south-central Alaska , U.S. It lies roughly equidistant from Fairbanks to the northeast” (24 words).
 
-  Answer/context quote: “Oklahoma OK Oklahoma City Nov 16, 1907” (7 words).
+  Additional fun-fact quote: “with an unspoiled natural environment of alpine tundra and boreal forest (taiga) in south-central Alaska , U.S. It lies roughly equidistant from Fairbanks to” (24 words).
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+## B13-0084 — In which US state is Everglades National Park?
 
-  Answer/context quote: “Oklahoma November 16, 1907” (4 words).
+Answer: Florida. Fun fact: The park contains wetland, forest and marine habitats.
 
-## B13-0087 — In which year did Oregon become a US state?
+- us-geography-s0020: [National Park Service](https://www.nps.gov/ever/index.htm)
 
-Answer: 1859. Fun fact: Oregon was admitted to the Union on February 14, 1859.
+  Answer/context quote: “Everglades National Park • Florida” (5 words).
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+  Additional fun-fact quote: “Park protects 1.5 million acres of wetland, forest, and marine habitats and the native plants and animals that call it home. With several international” (24 words).
 
-  Answer/context quote: “Oregon OR Salem Portland Feb 14, 1859” (7 words).
+- us-geography-s0021: [Encyclopaedia Britannica](https://www.britannica.com/place/Everglades-National-Park)
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+  Answer/context quote: “in the southwestern portion of the more extensive Everglades region in southern Florida . Incorporating forest, marine, and wetland habitats, the park is home” (24 words).
 
-  Answer/context quote: “Oregon February 14, 1859” (4 words).
+  Additional fun-fact quote: “region in southern Florida . Incorporating forest, marine, and wetland habitats, the park is home to dozens of endangered or threatened animals, including the” (24 words).
 
-## B13-0088 — In which year did Pennsylvania ratify the US Constitution?
+## B13-0085 — In which US state is Glacier National Park?
 
-Answer: 1787. Fun fact: Pennsylvania ratified the US Constitution on December 12, 1787.
+Answer: Montana. Fun fact: The Going-to-the-Sun Road runs through the park.
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+- us-geography-s0022: [National Park Service](https://www.nps.gov/glac/index.htm)
 
-  Answer/context quote: “Pennsylvania [ B ] PA Harrisburg Philadelphia Dec 12, 1787” (10 words).
+  Answer/context quote: “Glacier National Park • Montana” (5 words).
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+  Additional fun-fact quote: “historic chalets, lodges, and the famous Going-to-the-Sun Road. Plan your visit About the park Info Alerts Maps Calendar Fees Going-to-the-Sun Road in the St.” (24 words).
 
-  Answer/context quote: “Pennsylvania December 12, 1787” (4 words).
+- us-geography-s0023: [Encyclopaedia Britannica](https://www.britannica.com/place/Glacier-National-Park-Montana)
 
-## B13-0089 — In which year did Rhode Island ratify the US Constitution?
+  Answer/context quote: “Park , scenic wilderness area in the northern Rocky Mountains in northwestern Montana , U.S., adjoining the Canadian border and Canada’s Waterton Lakes National” (24 words).
 
-Answer: 1790. Fun fact: Rhode Island ratified the US Constitution on May 29, 1790.
+  Additional fun-fact quote: “km) of trails. The 50-mile (80-km) Going-to-the-Sun Road (dedicated 1933) crosses the park, allowing scenic views of mountains, meadows, and lakes; the high-country part” (24 words).
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+## B13-0086 — In which US state is Grand Canyon National Park?
 
-  Answer/context quote: “Rhode Island RI Providence May 29, 1790” (7 words).
+Answer: Arizona. Fun fact: The park includes a stretch of the Colorado River.
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+- us-geography-s0024: [National Park Service](https://www.nps.gov/grca/index.htm)
 
-  Answer/context quote: “Rhode Island May 29, 1790” (5 words).
+  Answer/context quote: “Grand Canyon National Park • Arizona” (6 words).
 
-## B13-0090 — In which year did South Carolina ratify the US Constitution?
+  Additional fun-fact quote: “278 miles (447 km) of the Colorado River and adjacent uplands. Located on the ancestral homelands of 11 present day Tribal Communities, Grand Canyon” (24 words).
 
-Answer: 1788. Fun fact: South Carolina ratified the US Constitution on May 23, 1788.
+- us-geography-s0025: [Encyclopaedia Britannica](https://www.britannica.com/place/Grand-Canyon-National-Park)
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+  Answer/context quote: “Grand Canyon National Park , vast scenic area of northwestern Arizona in the southwestern United States . The park was created in” (22 words).
 
-  Answer/context quote: “South Carolina SC Columbia Charleston May 23, 1788” (8 words).
+  Additional fun-fact quote: “by the cutting action of the Colorado River . It is at its widest and deepest in the 56-mile (90-km) stretch where the river” (24 words).
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+## B13-0087 — In which US state is Grand Teton National Park?
 
-  Answer/context quote: “South Carolina May 23, 1788” (5 words).
+Answer: Wyoming. Fun fact: The Teton Range is part of the park’s mountain landscape.
 
-## B13-0091 — In which year did South Dakota become a US state?
+- us-geography-s0026: [National Park Service](https://www.nps.gov/grte/index.htm)
 
-Answer: 1889. Fun fact: South Dakota was admitted to the Union on November 2, 1889.
+  Answer/context quote: “Grand Teton National Park • Wyoming” (6 words).
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+  Additional fun-fact quote: “lakes, and majestic alpine vistas, the Teton Range stands as a testament to generations of stewards. For over 11,000 years, communities have thrived in” (24 words).
 
-  Answer/context quote: “South Dakota SD Pierre Sioux Falls Nov 2, 1889” (9 words).
+- us-geography-s0027: [Encyclopaedia Britannica](https://www.britannica.com/place/Grand-Teton-National-Park)
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+  Answer/context quote: “Grand Teton National Park , spectacular glaciated mountain region in northwestern Wyoming , U.S. It lies just south of Yellowstone National Park (to” (23 words).
 
-  Answer/context quote: “South Dakota November 2, 1889” (5 words).
+  Additional fun-fact quote: “The park encompasses much of the Teton Range and most of Jackson Hole, a fertile valley just to the east of the Tetons, through” (24 words).
 
-## B13-0092 — In which year did Tennessee become a US state?
+## B13-0088 — In which US state is Great Basin National Park?
 
-Answer: 1796. Fun fact: Tennessee was admitted to the Union on June 1, 1796.
+Answer: Nevada. Fun fact: Ancient bristlecone pines grow in the park.
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+- us-geography-s0028: [National Park Service](https://www.nps.gov/grba/index.htm)
 
-  Answer/context quote: “Tennessee TN Nashville Jun 1, 1796” (6 words).
+  Answer/context quote: “Great Basin National Park • Nevada” (6 words).
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+  Additional fun-fact quote: “solitude of the wilderness, walk among ancient bristlecone pines, bask in the darkest of night skies, and explore mysterious subterranean passages. There's a lot” (24 words).
 
-  Answer/context quote: “Tennessee June 1, 1796” (4 words).
+- us-geography-s0029: [Encyclopaedia Britannica](https://www.britannica.com/place/Great-Basin-National-Park)
 
-## B13-0093 — In which year did Texas become a US state?
+  Answer/context quote: “Great Basin National Park , scenic region in eastern Nevada , U.S., just west of Baker and about 40 miles (65” (21 words).
 
-Answer: 1845. Fun fact: Texas was admitted to the Union on December 29, 1845.
+  Additional fun-fact quote: “Peak. The park has groves of ancient bristlecone pines and the 75-foot- (23-metre-) high limestone Lexington Arch.” (17 words).
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+## B13-0089 — In which US state is Great Sand Dunes National Park?
 
-  Answer/context quote: “Texas TX Austin Houston Dec 29, 1845” (7 words).
+Answer: Colorado. Fun fact: The park protects the tallest sand dunes in North America.
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+- us-geography-s0030: [National Park Service](https://www.nps.gov/grsa/index.htm)
 
-  Answer/context quote: “Texas December 29, 1845” (4 words).
+  Answer/context quote: “Great Sand Dunes National Park & Preserve • Colorado” (9 words).
 
-## B13-0094 — In which year did Utah become a US state?
+  Additional fun-fact quote: “Park & Preserve • Colorado The tallest dunes in North America are the centerpiece in a diverse landscape of grasslands, wetlands, forests, alpine lakes,” (24 words).
 
-Answer: 1896. Fun fact: Utah was admitted to the Union on January 4, 1896.
+- us-geography-s0031: [Encyclopaedia Britannica](https://www.britannica.com/place/Great-Sand-Dunes-National-Park-and-Preserve)
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+  Answer/context quote: “Preserve , area of large sand dunes and mountainous terrain in south-central Colorado , U.S. Covering some 150,000 acres (60,700 hectares), it is located” (24 words).
 
-  Answer/context quote: “Utah UT Salt Lake City Jan 4, 1896” (8 words).
+  Additional fun-fact quote: “national park. The park contains the highest sand dunes in North America , with ever-changing crests that rise to 700 feet (215 metres). The” (24 words).
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+## B13-0090 — In which US state is Haleakala National Park?
 
-  Answer/context quote: “Utah January 4, 1896” (4 words).
+Answer: Hawaii. Fun fact: Silversword plants grow in the park.
 
-## B13-0095 — In which year did Vermont become a US state?
+- us-geography-s0032: [National Park Service](https://www.nps.gov/hale/index.htm)
 
-Answer: 1791. Fun fact: Vermont was admitted to the Union on March 4, 1791.
+  Answer/context quote: “Haleakalā National Park • Hawai'i” (5 words).
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+  Additional fun-fact quote: “Info Alerts Maps Calendar Fees 'Ahinahina silversword blooms in Haleakala crater NPS Waimoku waterfall in the park's Kipahulu District NPS The Pools of ?Ohe?o” (24 words).
 
-  Answer/context quote: “Vermont VT Montpelier Burlington Mar 4, 1791” (7 words).
+- us-geography-s0033: [Encyclopaedia Britannica](https://www.britannica.com/place/Haleakala-National-Park)
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+  Answer/context quote: “Haleakala National Park , area centred on Haleakala Crater, south-central Maui island, Hawaii , U.S. Authorized as a part of Hawaii National Park (now” (24 words).
 
-  Answer/context quote: “Vermont March 4, 1791” (4 words).
+  Additional fun-fact quote: “nene (Hawaiian goose) inhabit the crater. Silverswords, yuccalike plants that take as long as 50 years to flower once and then die, are found” (24 words).
 
-## B13-0096 — In which year did Virginia ratify the US Constitution?
+## B13-0091 — Which pair of volcanoes is included in Hawaii Volcanoes National Park?
 
-Answer: 1788. Fun fact: Virginia ratified the US Constitution on June 25, 1788.
+Answer: Mauna Loa and Kīlauea. Fun fact: Hawaii Volcanoes National Park is in Hawaii.
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+- us-geography-s0034: [National Park Service](https://www.nps.gov/havo/index.htm)
 
-  Answer/context quote: “Virginia [ B ] VA Richmond Virginia Beach Jun 25, 1788” (11 words).
+  Answer/context quote: “the world's most active volcanoes - Kīlauea and Mauna Loa - and is a designated International Biosphere Reserve and UNESCO World Heritage Site. Plan” (24 words).
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+  Additional fun-fact quote: “Hawaiʻi Volcanoes National Park • Hawai'i” (6 words).
 
-  Answer/context quote: “Virginia June 25, 1788” (4 words).
+- us-geography-s0035: [Encyclopaedia Britannica](https://www.britannica.com/place/Hawaii-Volcanoes-National-Park)
 
-## B13-0097 — In which year did Washington become a US state?
+  Answer/context quote: “and includes two active volcanoes — Mauna Loa and Kilauea —25 miles (40 km) apart. The park was designated a UNESCO World Heritage site” (24 words).
 
-Answer: 1889. Fun fact: Washington was admitted to the Union on November 11, 1889.
+  Additional fun-fact quote: “along the southeastern shore of the island of Hawaii , Hawaii state, U.S., located southwest of Hilo . Established in 1961 and formerly a” (24 words).
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+## B13-0092 — Which two deserts meet in Joshua Tree National Park?
 
-  Answer/context quote: “Washington WA Olympia Seattle Nov 11, 1889” (7 words).
+Answer: Mojave and Colorado. Fun fact: Joshua Tree National Park is in California.
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+- us-geography-s0036: [National Park Service](https://www.nps.gov/jotr/index.htm)
 
-  Answer/context quote: “Washington November 11, 1889” (4 words).
+  Answer/context quote: “• California Two distinct desert ecosystems, the Mojave and the Colorado, come together in Joshua Tree National Park. A fascinating variety of plants and” (24 words).
 
-## B13-0098 — In which year did West Virginia become a US state?
+  Additional fun-fact quote: “Joshua Tree National Park • California” (6 words).
 
-Answer: 1863. Fun fact: West Virginia was admitted to the Union on June 20, 1863.
+- us-geography-s0037: [Encyclopaedia Britannica](https://www.britannica.com/place/Joshua-Tree-National-Park)
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+  Answer/context quote: “, on the border between the Mojave and Colorado deserts. The park has an area of 1,234 square miles (3,196 square km), about three-fourths” (24 words).
 
-  Answer/context quote: “West Virginia WV Charleston Jun 20, 1863” (7 words).
+  Additional fun-fact quote: “Joshua Tree National Park , desert and wilderness area in southern California , U.S. It is situated just east of Palm Springs and” (23 words).
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+## B13-0093 — In which US state is Mammoth Cave National Park?
 
-  Answer/context quote: “West Virginia June 20, 1863” (5 words).
+Answer: Kentucky. Fun fact: The park protects an extensive underground cave system.
 
-## B13-0099 — In which year did Wisconsin become a US state?
+- us-geography-s0038: [National Park Service](https://www.nps.gov/maca/index.htm)
 
-Answer: 1848. Fun fact: Wisconsin was admitted to the Union on May 29, 1848.
+  Answer/context quote: “Mammoth Cave National Park • Kentucky” (6 words).
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+  Additional fun-fact quote: “valleys, and the world's longest known cave system. Mammoth Cave National Park is home to thousands of years of human history and a rich” (24 words).
 
-  Answer/context quote: “Wisconsin WI Madison Milwaukee May 29, 1848” (7 words).
+- us-geography-s0039: [Encyclopaedia Britannica](https://www.britannica.com/place/Mammoth-Cave-National-Park)
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+  Answer/context quote: “, national park containing an extensive system of limestone caverns in west-central Kentucky , U.S. It was designated a World Heritage site in 1981.” (24 words).
 
-  Answer/context quote: “Wisconsin May 29, 1848” (4 words).
+  Additional fun-fact quote: “Park , national park containing an extensive system of limestone caverns in west-central Kentucky , U.S. It was designated a World Heritage site in” (24 words).
 
-## B13-0100 — In which year did Wyoming become a US state?
+## B13-0094 — What kind of historic homes is Mesa Verde National Park known for preserving?
 
-Answer: 1890. Fun fact: Wyoming was admitted to the Union on July 10, 1890.
+Answer: Cliff dwellings. Fun fact: Mesa Verde National Park is in Colorado.
 
-- us-geography-s0001: [Wikipedia contributors](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States)
+- us-geography-s0040: [National Park Service](https://www.nps.gov/meve/index.htm)
 
-  Answer/context quote: “Wyoming WY Cheyenne Jul 10, 1890” (6 words).
+  Answer/context quote: “Fees Cliff Palace, Mesa Verde's Largest Cliff Dwelling NPS Photo Visitors enjoying Step House, on Wetherill Mesa NPS Photo View of Balcony House from” (24 words).
 
-- us-geography-s0003: [Congressional Research Service / Library of Congress](https://www.congress.gov/crs-product/R47747)
+  Additional fun-fact quote: “Mesa Verde National Park • Colorado” (6 words).
 
-  Answer/context quote: “Wyoming July 10, 1890” (4 words).
+- us-geography-s0041: [Encyclopaedia Britannica](https://www.britannica.com/place/Mesa-Verde-National-Park)
+
+  Answer/context quote: “in 1906 to preserve notable prehistoric cliff dwellings ; it was designated a World Heritage site in 1978. Occupying a high tableland area of” (24 words).
+
+  Additional fun-fact quote: “Mesa Verde National Park , national park in southwestern Colorado , U.S., established in 1906 to preserve notable prehistoric cliff dwellings” (21 words).
+
+## B13-0095 — What kind of geological feature is Mount Rainier?
+
+Answer: A volcano. Fun fact: Mount Rainier National Park is in Washington.
+
+- us-geography-s0042: [National Park Service](https://www.nps.gov/mora/index.htm)
+
+  Answer/context quote: “an icon in the Washington landscape. An active volcano, Mount Rainier is the most glaciated peak in the contiguous U.S.A., spawning five major rivers.” (24 words).
+
+  Additional fun-fact quote: “Mount Rainier National Park • Washington” (6 words).
+
+- us-geography-s0043: [Encyclopaedia Britannica](https://www.britannica.com/place/Mount-Rainier-National-Park)
+
+  Answer/context quote: “1899 to preserve Mount Rainier , a dormant volcano 14,410 feet (4,392 meters) high, and the surrounding area. It covers 369 square miles (957” (24 words).
+
+  Additional fun-fact quote: “Rainier National Park , scenic area of the Cascade Range in west-central Washington , U.S., about 35 miles (56 km) southeast of Tacoma and” (24 words).
+
+## B13-0096 — In which US state is Olympic National Park?
+
+Answer: Washington. Fun fact: Temperate rain forests are among its ecosystems.
+
+- us-geography-s0044: [National Park Service](https://www.nps.gov/olym/index.htm)
+
+  Answer/context quote: “Olympic National Park • Washington” (5 words).
+
+  Additional fun-fact quote: “different ecosystems, including glacier-capped mountains, old-growth temperate rain forests, and over 70 miles of wild coastline. Come explore! Plan your visit About the park” (24 words).
+
+- us-geography-s0045: [Encyclopaedia Britannica](https://www.britannica.com/place/Olympic-National-Park)
+
+  Answer/context quote: “, ecologically diverse area occupying much of the Olympic Peninsula in northwestern Washington , U.S. Originally established as a national monument in 1909 and” (24 words).
+
+  Additional fun-fact quote: “precipitation and support an old-growth (virgin) temperate rainforest (notably the section centred on the Hoh River)—the largest of its kind in the Western Hemisphere—in” (24 words).
+
+## B13-0097 — What fossilized material gives Petrified Forest National Park its name?
+
+Answer: Wood. Fun fact: Petrified Forest National Park is in Arizona.
+
+- us-geography-s0046: [National Park Service](https://www.nps.gov/pefo/index.htm)
+
+  Answer/context quote: “largest and most vivid collections of petrified wood. Spanning more than 200 million years of geologic history, the park protects ancient fossils, ancestral Puebloan” (24 words).
+
+  Additional fun-fact quote: “Petrified Forest National Park • Arizona” (6 words).
+
+- us-geography-s0047: [Encyclopaedia Britannica](https://www.britannica.com/place/Petrified-Forest-National-Park)
+
+  Answer/context quote: “The park features extensive exhibits of petrified wood in several “forest” areas, which are the remains of ancient tropical groves. Of note is the” (24 words).
+
+  Additional fun-fact quote: “desert area containing plant and animal fossils and archaeological sites in eastern Arizona , U.S., 19 miles (30 km) east of Holbrook. It was” (24 words).
+
+## B13-0098 — In which US state is Rocky Mountain National Park?
+
+Answer: Colorado. Fun fact: The park’s ecosystems include alpine tundra.
+
+- us-geography-s0048: [National Park Service](https://www.nps.gov/romo/index.htm)
+
+  Answer/context quote: “Rocky Mountain National Park • Colorado” (6 words).
+
+  Additional fun-fact quote: “forests and mountain peaks in the alpine tundra, there is something for everyone to discover. Plan your visit About the park Info Alerts Maps” (24 words).
+
+- us-geography-s0049: [Encyclopaedia Britannica](https://www.britannica.com/place/Rocky-Mountain-National-Park)
+
+  Answer/context quote: “Rocky Mountain National Park , spectacular mountainous region of north-central Colorado , U.S. It lies just west of the town of Estes” (22 words).
+
+  Additional fun-fact quote: “supports three ecosystems: montane, subalpine, and alpine tundra . Tundra makes up one-third of the park’s area. A great variety of plant life, more” (24 words).
+
+## B13-0099 — In which US state is Yosemite National Park?
+
+Answer: California. Fun fact: Giant sequoias grow in the park.
+
+- us-geography-s0050: [National Park Service](https://www.nps.gov/yose/index.htm)
+
+  Answer/context quote: “Yosemite National Park • California” (5 words).
+
+  Additional fun-fact quote: “find deep valleys, grand meadows, ancient giant sequoias, a vast wilderness area, and much more. Plan your visit About the park Info Alerts Maps” (24 words).
+
+- us-geography-s0051: [Encyclopaedia Britannica](https://www.britannica.com/place/Yosemite-National-Park)
+
+  Answer/context quote: “Yosemite National Park , scenic mountain region in east-central California , U.S. It is situated about 140 miles (225 km) east” (21 words).
+
+  Additional fun-fact quote: “include groves of big trees (the giant sequoias), notably at the Mariposa Grove in the southern part of the park; higher up, closer to” (24 words).
+
+## B13-0100 — In which US state is Zion National Park?
+
+Answer: Utah. Fun fact: The park has towering cliffs.
+
+- us-geography-s0052: [National Park Service](https://www.nps.gov/zion/index.htm)
+
+  Answer/context quote: “Zion National Park • Utah” (5 words).
+
+  Additional fun-fact quote: “of years. Gaze up at massive sandstone cliffs of cream, pink, and red that soar into a brilliant blue sky. Experience the tall, stretching” (24 words).
+
+- us-geography-s0053: [Encyclopaedia Britannica](https://www.britannica.com/place/Zion-National-Park)
+
+  Answer/context quote: “of colourful deep canyons, high cliffs, mesas, and forested plateaus in southwestern Utah , U.S. The park lies on the northwestern edge of the” (24 words).
+
+  Additional fun-fact quote: “dramatic landscape of colourful deep canyons, high cliffs, mesas, and forested plateaus in southwestern Utah , U.S. The park lies on the northwestern edge” (24 words).
 
 ## B13-0101 — Which city is home to the Taj Mahal?
 
@@ -1213,6 +1313,202 @@ Answer: Agra. Fun fact: It is a mausoleum made of white marble.
 - world-geography-s0002: [Wikipedia contributors](https://en.wikipedia.org/wiki/Taj_Mahal)
 
   Answer/context quote: “an ivory-white marble mausoleum on the right bank of the river Yamuna in Agra” (14 words).
+
+## B13-0102 — The Taj Mahal stands on the bank of which river?
+
+Answer: Yamuna. Fun fact: The monument stands in Agra.
+
+- world-geography-s0001: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/252/)
+
+  Answer/context quote: “The Taj Mahal is located on the right bank of the Yamuna River” (13 words).
+
+  Additional fun-fact quote: “in the Agra District in Uttar Pradesh.” (7 words).
+
+- world-geography-s0002: [Wikipedia contributors](https://en.wikipedia.org/wiki/Taj_Mahal)
+
+  Answer/context quote: “on the right bank of the river Yamuna in Agra” (10 words).
+
+## B13-0103 — Which Mughal emperor commissioned the Taj Mahal?
+
+Answer: Shah Jahan. Fun fact: It was built in memory of his wife Mumtaz Mahal.
+
+- world-geography-s0001: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/252/)
+
+  Answer/context quote: “It was built by Mughal Emperor Shah Jahan in memory of his wife Mumtaz Mahal” (15 words).
+
+- world-geography-s0002: [Wikipedia contributors](https://en.wikipedia.org/wiki/Taj_Mahal)
+
+  Answer/context quote: “by the fifth Mughal emperor , Shah Jahan” (8 words).
+
+  Additional fun-fact quote: “to house the tomb of his late wife, Mumtaz Mahal” (10 words).
+
+## B13-0104 — What material gives the Taj Mahal’s main mausoleum its pale appearance?
+
+Answer: White marble. Fun fact: The main building is a mausoleum, housing tombs.
+
+- world-geography-s0001: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/252/)
+
+  Answer/context quote: “An immense mausoleum of white marble” (6 words).
+
+- world-geography-s0002: [Wikipedia contributors](https://en.wikipedia.org/wiki/Taj_Mahal)
+
+  Answer/context quote: “an ivory-white marble mausoleum” (4 words).
+
+## B13-0105 — The Great Wall defended ancient China mainly along which compass edge?
+
+Answer: Northern. Fun fact: It formed a system of defensive fortifications.
+
+- world-geography-s0003: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/438/)
+
+  Answer/context quote: “on the northern border of the country as the great military defence project” (13 words).
+
+- world-geography-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Great_Wall_of_China)
+
+  Answer/context quote: “They were built across the historical northern borders of ancient Chinese states and Imperial China as protection” (17 words).
+
+## B13-0106 — Which dynasty built many of the best-known surviving Great Wall sections?
+
+Answer: Ming. Fun fact: The wall system was expanded under successive dynasties.
+
+- world-geography-s0003: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/438/)
+
+  Answer/context quote: “Construction continued up to the Ming dynasty (1368–1644)” (8 words).
+
+  Additional fun-fact quote: “the great military defence project of successive Chinese Empires” (9 words).
+
+- world-geography-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Great_Wall_of_China)
+
+  Answer/context quote: “Successive dynasties expanded the wall system; the best-known sections were built by the Ming dynasty (1368–1644).” (16 words).
+
+## B13-0107 — Which first emperor joined earlier Chinese defensive walls into a unified system?
+
+Answer: Qin Shi Huang. Fun fact: The Great Wall incorporated earlier fortifications.
+
+- world-geography-s0003: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/438/)
+
+  Answer/context quote: “under Qin Shi Huang, sections of earlier fortifications were joined together to form a united defence system” (17 words).
+
+- world-geography-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Great_Wall_of_China)
+
+  Answer/context quote: “Shihuangdi (Qin Shi Huang), the first emperor of a united China (under the Qin dynasty), connected a number of existing defensive walls” (22 words).
+
+## B13-0108 — Which lookout structures were part of the Great Wall’s defensive system?
+
+Answer: Watchtowers. Fun fact: The wall also included shelters or stations for defenders.
+
+- world-geography-s0003: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/438/)
+
+  Answer/context quote: “Its main body consists of walls, horse tracks, watch towers, and shelters on the wall” (15 words).
+
+- world-geography-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Great_Wall_of_China)
+
+  Answer/context quote: “the Great Wall utilized watchtowers , troop barracks, garrison stations” (10 words).
+
+## B13-0109 — Machu Picchu is a mountain citadel associated with which civilization?
+
+Answer: Inca. Fun fact: The site includes walls and terraces.
+
+- world-geography-s0005: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/274/)
+
+  Answer/context quote: “urban creation of the Inca Empire” (6 words).
+
+  Additional fun-fact quote: “its giant walls, terraces and ramps” (6 words).
+
+- world-geography-s0006: [Wikipedia contributors](https://en.wikipedia.org/wiki/Machu_Picchu)
+
+  Answer/context quote: “Machu Picchu was constructed in the classical Inca style , featuring finely crafted dry-stone walls .” (16 words).
+
+  Additional fun-fact quote: “terraces” (1 words).
+
+## B13-0110 — Approximately how high above sea level is Machu Picchu’s citadel?
+
+Answer: 2,430 meters. Fun fact: The citadel occupies a mountain setting.
+
+- world-geography-s0005: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/274/)
+
+  Answer/context quote: “Machu Picchu stands 2,430 m above sea-level, in the middle of a tropical mountain forest” (15 words).
+
+- world-geography-s0006: [Wikipedia contributors](https://en.wikipedia.org/wiki/Machu_Picchu)
+
+  Answer/context quote: “on a mountain ridge at 2,430 meters (7,970 ft)” (9 words).
+
+## B13-0111 — Which stepped landscape feature is prominent among Machu Picchu’s ruins?
+
+Answer: Terraces. Fun fact: Stone walls are another conspicuous part of the site.
+
+- world-geography-s0005: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/274/)
+
+  Answer/context quote: “its giant walls, terraces and ramps” (6 words).
+
+- world-geography-s0006: [Wikipedia contributors](https://en.wikipedia.org/wiki/Machu_Picchu)
+
+  Answer/context quote: “terraces” (1 words).
+
+  Additional fun-fact quote: “Machu Picchu was constructed in the classical Inca style , featuring finely crafted dry-stone walls .” (16 words).
+
+## B13-0112 — The ancient city of Petra was the capital of which kingdom?
+
+Answer: Nabataean. Fun fact: Its caravan trade linked regional routes.
+
+- world-geography-s0007: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/326/)
+
+  Answer/context quote: “the rock-cut capital city of the Nabateans” (7 words).
+
+  Additional fun-fact quote: “a major caravan centre” (4 words).
+
+- world-geography-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/Petra)
+
+  Answer/context quote: “Petra would later become the capital city of the Nabataean Kingdom” (11 words).
+
+  Additional fun-fact quote: “Petra as the capital of the Nabataean Kingdom and the centre of their caravan trade.” (15 words).
+
+## B13-0113 — Much of Petra’s famous architecture was made by doing what to the rock?
+
+Answer: Carving into it. Fun fact: The city’s landscape includes sandstone.
+
+- world-geography-s0007: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/326/)
+
+  Answer/context quote: “Petra is half-built, half-carved into the rock” (7 words).
+
+  Additional fun-fact quote: “set in a dominating red sandstone landscape” (7 words).
+
+- world-geography-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/Petra)
+
+  Answer/context quote: “Famous for its rock-cut architecture” (5 words).
+
+  Additional fun-fact quote: “because of the colour of the sandstone from which it is carved.” (12 words).
+
+## B13-0114 — Which rock gives Petra’s landscape its characteristic reddish tone?
+
+Answer: Sandstone. Fun fact: Its famous structures include rock-cut architecture.
+
+- world-geography-s0007: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/326/)
+
+  Answer/context quote: “set in a dominating red sandstone landscape” (7 words).
+
+  Additional fun-fact quote: “Petra is half-built, half-carved into the rock” (7 words).
+
+- world-geography-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/Petra)
+
+  Answer/context quote: “Petra is also called the "Rose City" because of the colour of the sandstone from which it is carved.” (19 words).
+
+  Additional fun-fact quote: “Famous for its rock-cut architecture” (5 words).
+
+## B13-0115 — Which engineering achievement helped Petra support settlement in an arid landscape?
+
+Answer: Water management. Fun fact: Channels and reservoirs helped conserve water.
+
+- world-geography-s0007: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/326/)
+
+  Answer/context quote: “An ingenious water management system allowed extensive settlement of an essentially arid area” (13 words).
+
+  Additional fun-fact quote: “channels, tunnels and diversion dams that combined with a vast network of cisterns and reservoirs” (15 words).
+
+- world-geography-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/Petra)
+
+  Answer/context quote: “The Nabataeans were able to survive the desert due to efficient rainwater collecting” (13 words).
+
+  Additional fun-fact quote: “water conduit systems” (3 words).
 
 ## B13-0201 — Which chemical element has the symbol H?
 
@@ -2528,7 +2824,7 @@ Answer: India. Fun fact: Their surviving native range is associated with northwe
 
 ## B13-0305 — In lion prides, which adults do most of the hunting?
 
-Answer: Females. Fun fact: Males can join hunts, even though females usually do more of the hunting.
+Answer: Females. Fun fact: Lion hunting can be a group activity.
 
 - animals-nature-s0003: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/lion)
 
@@ -2538,9 +2834,11 @@ Answer: Females. Fun fact: Males can join hunts, even though females usually do 
 
   Answer/context quote: “Showy males have more difficulty hunting than females because of their conspicuousness, therefore females in a pride do the majority of hunting.” (22 words).
 
+  Additional fun-fact quote: “They usually hunt in groups” (5 words).
+
 ## B13-0306 — Which animal is the fastest land mammal over a short sprint?
 
-Answer: Cheetah. Fun fact: Its speed adaptations are suited to short bursts rather than long endurance runs.
+Answer: Cheetah. Fun fact: Its speed adaptations support very short sprints.
 
 - animals-nature-s0005: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/cheetah)
 
@@ -2664,7 +2962,7 @@ Answer: Mongoose. Fun fact: Their faces have conspicuous dark rings or patches a
 
   Additional fun-fact quote: “Meerkats also have black rings around their large eyes.” (9 words).
 
-## B13-0315 — What does a meerkat acting as the group’s sentinel do?
+## B13-0315 — What is a meerkat sentinel’s main role while its group forages?
 
 Answer: Watches for danger. Fun fact: Members can take turns performing this lookout duty.
 
@@ -2768,7 +3066,7 @@ Answer: Orange-red. Fun fact: Its long arms help it move through the tree canopy
 
   Answer/context quote: “Orangutans have long, sparse orange or reddish hair unequally distributed over their bodies.” (13 words).
 
-  Additional fun-fact quote: “with arms much longer than their legs.” (7 words).
+  Additional fun-fact quote: “are very well adapted to life in the trees, with arms much longer than their legs.” (16 words).
 
 - animals-nature-s0014: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Pongo_pygmaeus/)
 
@@ -2860,9 +3158,9 @@ Answer: Plants. Fun fact: Leaves are among its foods.
 
   Additional fun-fact quote: “Plant Foods leaves roots and tubers wood, bark, or stems” (10 words).
 
-## B13-0329 — Among adult Asian elephants, which sex is generally larger?
+## B13-0329 — Which listed animal typically has larger adult males than females?
 
-Answer: Males. Fun fact: The species shows a noticeable size difference between the sexes.
+Answer: Asian elephant. Fun fact: The species shows a noticeable size difference between the sexes.
 
 - animals-nature-s0015: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/asian-elephant)
 
@@ -2918,7 +3216,7 @@ Answer: Alternating red and buff rings. Fun fact: Its tail is long and furry.
 
   Additional fun-fact quote: “relatively long, furry tails” (4 words).
 
-## B13-0333 — What covers the soles of a red panda’s feet?
+## B13-0333 — What distinctive covering is found on the soles of a red panda’s feet?
 
 Answer: Dense fur. Fun fact: Its feet have fur even on their undersides.
 
@@ -2929,6 +3227,926 @@ Answer: Dense fur. Fun fact: Its feet have fur even on their undersides.
 - animals-nature-s0018: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Ailurus_fulgens/)
 
   Answer/context quote: “the soles of its feet are covered with dense, white hair.” (11 words).
+
+## B13-0334 — What supplies the pigments responsible for an American flamingo’s pink plumage?
+
+Answer: Its food. Fun fact: Dietary pigments become incorporated into growing feathers.
+
+- animals-nature-s0023: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/american-flamingo)
+
+  Answer/context quote: “A pigment in their food gives their feathers their flamboyant pink color.” (12 words).
+
+- animals-nature-s0024: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Phoenicopterus_ruber/)
+
+  Answer/context quote: “as the flamingo ages and incorporates carotenoid compounds from its diet into new growth.” (14 words).
+
+## B13-0335 — What color are an adult American flamingo’s flight feathers?
+
+Answer: Black. Fun fact: These dark feathers contrast with its pink body plumage.
+
+- animals-nature-s0023: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/american-flamingo)
+
+  Answer/context quote: “A flamingo's plumage is a distinctive pink color with black flight feathers along the edges of the wings.” (18 words).
+
+- animals-nature-s0024: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Phoenicopterus_ruber/)
+
+  Answer/context quote: “Adults have primarily pink plumage with black flight feathers only visible in flight.” (13 words).
+
+## B13-0336 — What general shape does an American flamingo’s nest have?
+
+Answer: A raised mound. Fun fact: Both partners help build the nest.
+
+- animals-nature-s0023: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/american-flamingo)
+
+  Answer/context quote: “both parents help build a volcano-shaped nest” (7 words).
+
+- animals-nature-s0024: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Phoenicopterus_ruber/)
+
+  Answer/context quote: “The nest is a small mound approximately twelve inches high, circular, and with a depressed center” (16 words).
+
+  Additional fun-fact quote: “When the mating is complete, both birds will build a nest from the mud.” (14 words).
+
+## B13-0337 — How many eggs does an American flamingo pair usually lay in one breeding cycle?
+
+Answer: One. Fun fact: Both parents take part in incubation.
+
+- animals-nature-s0023: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/american-flamingo)
+
+  Answer/context quote: “they lay a single egg that they then incubate” (9 words).
+
+  Additional fun-fact quote: “both parents help build a volcano-shaped nest, where they lay a single egg that they then incubate for about 28 days.” (21 words).
+
+- animals-nature-s0024: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Phoenicopterus_ruber/)
+
+  Answer/context quote: “A pair of flamingos will usually lay a single egg once per breeding cycle.” (14 words).
+
+  Additional fun-fact quote: “The egg is incubated by both parents” (7 words).
+
+## B13-0338 — Which species is the largest living bird?
+
+Answer: Ostrich. Fun fact: Its native range includes Africa.
+
+- animals-nature-s0025: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/ostrich)
+
+  Answer/context quote: “The world’s tallest and heaviest bird, the common ostrich is native to the grasslands and savannas of Africa.” (18 words).
+
+- animals-nature-s0026: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Struthio_camelus/)
+
+  Answer/context quote: “Ostriches are the largest living birds.” (6 words).
+
+  Additional fun-fact quote: “Ostriches are currently restricted to drier and sandy regions of central and southern Africa.” (14 words).
+
+## B13-0339 — What is the typical adult male ostrich’s plumage color combination?
+
+Answer: Black and white. Fun fact: Adult females are mainly brown or gray-brown.
+
+- animals-nature-s0025: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/ostrich)
+
+  Answer/context quote: “adult males have black feathers and white tails, while females are mostly covered in brown feathers.” (16 words).
+
+- animals-nature-s0026: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Struthio_camelus/)
+
+  Answer/context quote: “Males are black and white, females gray brown.” (8 words).
+
+## B13-0340 — How do breeding ostriches often use an egg nest?
+
+Answer: Several females share it. Fun fact: Both males and females help care for the eggs.
+
+- animals-nature-s0025: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/ostrich)
+
+  Answer/context quote: “Ostrich nests are communal; several ostriches lay their eggs in the same nest.” (13 words).
+
+  Additional fun-fact quote: “one male and one female take turns incubating the eggs.” (10 words).
+
+- animals-nature-s0026: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Struthio_camelus/)
+
+  Answer/context quote: “ostriches in some areas use communal nests to hold anywhere from 15 to 60 eggs.” (15 words).
+
+  Additional fun-fact quote: “Caring for their eggs is divided up between males and females.” (11 words).
+
+## B13-0341 — The common ostrich’s surviving native wild range is on which continent?
+
+Answer: Africa. Fun fact: Its habitats include relatively open, dry landscapes.
+
+- animals-nature-s0025: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/ostrich)
+
+  Answer/context quote: “Common ostriches are mostly found in the grasslands, savanna and shrublands of southern and eastern Africa.” (16 words).
+
+- animals-nature-s0026: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Struthio_camelus/)
+
+  Answer/context quote: “Ostriches are currently restricted to drier and sandy regions of central and southern Africa.” (14 words).
+
+## B13-0342 — Emus are native to which country?
+
+Answer: Australia. Fun fact: They occur across much of that continent.
+
+- animals-nature-s0027: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/emu)
+
+  Answer/context quote: “Emus live only in Australia, where they are widespread.” (9 words).
+
+- animals-nature-s0028: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Dromaius_novaehollandiae/)
+
+  Answer/context quote: “Emus ( Dromaius novaehollandiae ) are found exclusively in Australia and inhabits nearly the entire continent.” (16 words).
+
+## B13-0343 — Which emu parent incubates the eggs?
+
+Answer: The male. Fun fact: Females are generally somewhat larger than males.
+
+- animals-nature-s0027: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/emu)
+
+  Answer/context quote: “The males incubate the eggs.” (5 words).
+
+  Additional fun-fact quote: “females weigh about 11 pounds (5 kilograms) more than males.” (10 words).
+
+- animals-nature-s0028: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Dromaius_novaehollandiae/)
+
+  Answer/context quote: “After the males begin the incubation period” (7 words).
+
+  Additional fun-fact quote: “with females being slightly by not significantly larger.” (8 words).
+
+## B13-0344 — Which listed species has females that generally outweigh males?
+
+Answer: Emu. Fun fact: Male emus perform the egg-incubation duty.
+
+- animals-nature-s0027: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/emu)
+
+  Answer/context quote: “females weigh about 11 pounds (5 kilograms) more than males.” (10 words).
+
+  Additional fun-fact quote: “The males incubate the eggs.” (5 words).
+
+- animals-nature-s0028: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Dromaius_novaehollandiae/)
+
+  Answer/context quote: “with females being slightly by not significantly larger.” (8 words).
+
+  Additional fun-fact quote: “After the males begin the incubation period” (7 words).
+
+## B13-0345 — Emus belong to the ratites, a group best known for which trait?
+
+Answer: Being flightless. Fun fact: Their long legs resemble those of other running ratites.
+
+- animals-nature-s0027: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/emu)
+
+  Answer/context quote: “Emus are large, flightless birds resembling and related to ostriches.” (10 words).
+
+  Additional fun-fact quote: “Their necks and legs are long” (6 words).
+
+- animals-nature-s0028: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Dromaius_novaehollandiae/)
+
+  Answer/context quote: “Emus have long bare legs, similar to other flightless birds Ratites .” (12 words).
+
+## B13-0346 — What is the helmet-like structure on a southern cassowary’s head called?
+
+Answer: A casque. Fun fact: The structure is on top of the head.
+
+- animals-nature-s0029: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/southern-cassowary)
+
+  Answer/context quote: “One of the cassowary’s most unique and dinosaur-like features is the casque atop its head.” (15 words).
+
+- animals-nature-s0030: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Casuarius_casuarius/)
+
+  Answer/context quote: “On their heads there is a large bony casque which is made of trabecular bone and cartilage.” (17 words).
+
+## B13-0347 — What is the main food in a southern cassowary’s diet?
+
+Answer: Fruit. Fun fact: It eats fruit in its forest habitat.
+
+- animals-nature-s0029: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/southern-cassowary)
+
+  Answer/context quote: “cassowaries mostly eat fruits.” (4 words).
+
+- animals-nature-s0030: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Casuarius_casuarius/)
+
+  Answer/context quote: “Southern cassowaries are frugivorous, feeding mostly on fruits from canopy species in the forests where they live.” (17 words).
+
+## B13-0348 — How are southern cassowary eggs normally incubated?
+
+Answer: The male broods them. Fun fact: Female cassowaries are generally larger than males.
+
+- animals-nature-s0029: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/southern-cassowary)
+
+  Answer/context quote: “Males are the sole caregivers, incubating the eggs by themselves and raising the chicks” (14 words).
+
+  Additional fun-fact quote: “Females are slightly larger than males” (6 words).
+
+- animals-nature-s0030: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Casuarius_casuarius/)
+
+  Answer/context quote: “Incubation, which is exclusively done by the males” (8 words).
+
+  Additional fun-fact quote: “Females are 127 to 170 cm long and up to 59 kg, are larger than the males” (17 words).
+
+## B13-0349 — Female-biased adult body size is characteristic of which animal here?
+
+Answer: Southern cassowary. Fun fact: Males incubate the eggs.
+
+- animals-nature-s0029: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/southern-cassowary)
+
+  Answer/context quote: “Females are slightly larger than males” (6 words).
+
+  Additional fun-fact quote: “Males are the sole caregivers, incubating the eggs by themselves” (10 words).
+
+- animals-nature-s0030: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Casuarius_casuarius/)
+
+  Answer/context quote: “Females are 127 to 170 cm long and up to 59 kg, are larger than the males” (17 words).
+
+  Additional fun-fact quote: “Incubation, which is exclusively done by the males” (8 words).
+
+## B13-0350 — Which insects are a staple food for sloth bears?
+
+Answer: Termites. Fun fact: Their strong claws open termite nests.
+
+- animals-nature-s0019: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/sloth-bear)
+
+  Answer/context quote: “Termites, dug out of their cement-hard nest mounds, and some ants are year-round staples.” (14 words).
+
+  Additional fun-fact quote: “long, curved claws which they use to excavate termites and ants.” (11 words).
+
+- animals-nature-s0020: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Melursus_ursinus/)
+
+  Answer/context quote: “feast on their prize by vacuuming the termites into their mouths.” (11 words).
+
+  Additional fun-fact quote: “rip open the nest with their long claws” (8 words).
+
+## B13-0351 — What can a sloth bear close to keep out dust while raiding an insect nest?
+
+Answer: Its nostrils. Fun fact: Closing them helps prevent inhaling dust.
+
+- animals-nature-s0019: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/sloth-bear)
+
+  Answer/context quote: “Sloth bears' nostrils can close completely, protecting the animals from dust or insects” (13 words).
+
+- animals-nature-s0020: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Melursus_ursinus/)
+
+  Answer/context quote: “The ability to voluntarily open and close the nostrils prevents the inhalation of dust during this process.” (17 words).
+
+## B13-0352 — Where do young sloth bear cubs often ride on their mother?
+
+Answer: On her back. Fun fact: The cubs travel with their mother this way.
+
+- animals-nature-s0019: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/sloth-bear)
+
+  Answer/context quote: “they routinely carry their cubs on their backs.” (8 words).
+
+- animals-nature-s0020: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Melursus_ursinus/)
+
+  Answer/context quote: “Cubs often ride on the mother's back” (7 words).
+
+## B13-0353 — Which body parts does a sloth bear use to rip open termite nests?
+
+Answer: Its long claws. Fun fact: It then sucks termites into its mouth.
+
+- animals-nature-s0019: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/sloth-bear)
+
+  Answer/context quote: “long, curved claws which they use to excavate termites and ants.” (11 words).
+
+  Additional fun-fact quote: “which enables them to suck up termites and other insects with ease.” (12 words).
+
+- animals-nature-s0020: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Melursus_ursinus/)
+
+  Answer/context quote: “rip open the nest with their long claws” (8 words).
+
+  Additional fun-fact quote: “vacuuming the termites into their mouths.” (6 words).
+
+## B13-0354 — Which teeth are unusually long in a clouded leopard?
+
+Answer: Canines. Fun fact: This cat can climb headfirst down trees.
+
+- animals-nature-s0021: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/clouded-leopard)
+
+  Answer/context quote: “Another distinctive feature of the clouded leopard is its long canine teeth.” (12 words).
+
+  Additional fun-fact quote: “including climbing headfirst down trees.” (5 words).
+
+- animals-nature-s0022: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Neofelis_nebulosa/)
+
+  Answer/context quote: “Clouded leopards have the longest canine teeth relative to head and body size” (13 words).
+
+  Additional fun-fact quote: “climbing slowly head first down tree trunks” (7 words).
+
+## B13-0355 — Which cat is notably adapted for headfirst descents of tree trunks?
+
+Answer: Clouded leopard. Fun fact: It has short legs and a long tail.
+
+- animals-nature-s0021: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/clouded-leopard)
+
+  Answer/context quote: “including climbing headfirst down trees.” (5 words).
+
+  Additional fun-fact quote: “It has proportionately short legs and a long tail.” (9 words).
+
+- animals-nature-s0022: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Neofelis_nebulosa/)
+
+  Answer/context quote: “climbing slowly head first down tree trunks” (7 words).
+
+  Additional fun-fact quote: “Large feet, short legs, and a long tail make clouded leopards well-adapted for arboreal living.” (15 words).
+
+## B13-0356 — What is a conspicuous feature of a clouded leopard’s coat?
+
+Answer: Dark blotches. Fun fact: Its coat has a brownish or grayish background.
+
+- animals-nature-s0021: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/clouded-leopard)
+
+  Answer/context quote: “The coat is brown or yellowish-gray and covered with irregular dark stripes, spots and blotches.” (15 words).
+
+- animals-nature-s0022: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Neofelis_nebulosa/)
+
+  Answer/context quote: “The fur is marked with elliptical blotches of a darker color than the background” (14 words).
+
+  Additional fun-fact quote: “a background field that varies from yellowish brown to dark gray.” (11 words).
+
+## B13-0357 — A clouded leopard’s diet is primarily what type?
+
+Answer: Carnivorous. Fun fact: It hunts vertebrates such as birds and mammals.
+
+- animals-nature-s0021: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/clouded-leopard)
+
+  Answer/context quote: “Like all wild cats, clouded leopards are carnivores.” (8 words).
+
+  Additional fun-fact quote: “They may also hunt birds and rodents.” (7 words).
+
+- animals-nature-s0022: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Neofelis_nebulosa/)
+
+  Answer/context quote: “Like other felids, they are strict carnivores.” (7 words).
+
+  Additional fun-fact quote: “preying on birds, fish, monkeys, deer, and rodents.” (8 words).
+
+## B13-0358 — Which snout shape distinguishes the American alligator from many crocodiles?
+
+Answer: Rounded. Fun fact: Males are generally larger than females.
+
+- animals-nature-s0031: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/american-alligator)
+
+  Answer/context quote: “Alligators have a long, rounded snout” (6 words).
+
+  Additional fun-fact quote: “Male alligators are larger than female alligators.” (7 words).
+
+- animals-nature-s0032: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Alligator_mississippiensis/)
+
+  Answer/context quote: “the snout of the American alligator is round.” (8 words).
+
+  Additional fun-fact quote: “a male adult alligator is larger than a female alligator.” (10 words).
+
+## B13-0359 — What environmental factor helps determine an American alligator hatchling’s sex?
+
+Answer: Incubation temperature. Fun fact: Sex determination occurs during egg development.
+
+- animals-nature-s0031: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/american-alligator)
+
+  Answer/context quote: “The sex of the juveniles is determined by the temperature of the nest.” (13 words).
+
+- animals-nature-s0032: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Alligator_mississippiensis/)
+
+  Answer/context quote: “The sex of the American alligator is temperature-determinant.” (8 words).
+
+## B13-0360 — How is an American alligator’s egg nest normally prepared?
+
+Answer: The female piles vegetation. Fun fact: The nest is made with plant material.
+
+- animals-nature-s0031: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/american-alligator)
+
+  Answer/context quote: “After mating has taken place, the female builds a nest of vegetation.” (12 words).
+
+- animals-nature-s0032: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Alligator_mississippiensis/)
+
+  Answer/context quote: “The female builds the nest using her tail” (8 words).
+
+  Additional fun-fact quote: “The vegetation and other plant materials, which are used for shade, are formed to make a nest” (17 words).
+
+## B13-0361 — Male-biased adult body size is typical of which animal here?
+
+Answer: American alligator. Fun fact: This is a form of sexual dimorphism.
+
+- animals-nature-s0031: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/american-alligator)
+
+  Answer/context quote: “Male alligators are larger than female alligators.” (7 words).
+
+- animals-nature-s0032: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Alligator_mississippiensis/)
+
+  Answer/context quote: “as a characteristic of sexual dimorphism, a male adult alligator is larger than a female alligator.” (16 words).
+
+## B13-0362 — The Aldabra giant tortoise is native to an atoll in which island nation?
+
+Answer: Seychelles. Fun fact: Its native range includes Aldabra Atoll.
+
+- animals-nature-s0033: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/aldabra-tortoise)
+
+  Answer/context quote: “They are native to Aldabra Island, one of the Seychelles northeast of Madagascar in the Indian Ocean.” (17 words).
+
+  Additional fun-fact quote: “Aldabra Island is a coral atoll” (6 words).
+
+- animals-nature-s0059: [Wikipedia contributors](https://en.wikipedia.org/wiki/Aldabra_giant_tortoise)
+
+  Answer/context quote: “The species is endemic to the Seychelles” (7 words).
+
+  Additional fun-fact quote: “A. g. gigantea native to Aldabra atoll.” (7 words).
+
+## B13-0363 — What is the Aldabra giant tortoise’s diet mainly composed of?
+
+Answer: Vegetation. Fun fact: Grasses and woody plant parts are among its foods.
+
+- animals-nature-s0033: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/aldabra-tortoise)
+
+  Answer/context quote: “They are grazers and browsers, feeding mainly on grasses and woody plants.” (12 words).
+
+- animals-nature-s0059: [Wikipedia contributors](https://en.wikipedia.org/wiki/Aldabra_giant_tortoise)
+
+  Answer/context quote: “Primarily herbivores , Aldabra giant tortoises eat grasses , leaves , woody plant stems, and fruit.” (16 words).
+
+## B13-0364 — Which body feature helps an Aldabra tortoise reach vegetation while browsing?
+
+Answer: Its long neck. Fun fact: Its neck assists with food gathering.
+
+- animals-nature-s0033: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/aldabra-tortoise)
+
+  Answer/context quote: “They have long necks, which helps with food gathering.” (9 words).
+
+- animals-nature-s0059: [Wikipedia contributors](https://en.wikipedia.org/wiki/Aldabra_giant_tortoise)
+
+  Answer/context quote: “The neck of the Aldabra giant tortoise is very long” (10 words).
+
+  Additional fun-fact quote: “which helps the animal to exploit tree branches up to a meter from the ground as a food source.” (19 words).
+
+## B13-0365 — What shape is an Aldabra giant tortoise’s upper shell?
+
+Answer: Highly domed. Fun fact: This tortoise has a long neck.
+
+- animals-nature-s0033: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/aldabra-tortoise)
+
+  Answer/context quote: “They are dark gray to black in color with a highly domed, thick carapace.” (14 words).
+
+  Additional fun-fact quote: “They have long necks” (4 words).
+
+- animals-nature-s0059: [Wikipedia contributors](https://en.wikipedia.org/wiki/Aldabra_giant_tortoise)
+
+  Answer/context quote: “with a high, domed shape.” (5 words).
+
+  Additional fun-fact quote: “The neck of the Aldabra giant tortoise is very long” (10 words).
+
+## B13-0366 — Which fennec fox body feature helps dissipate heat?
+
+Answer: Its large ears. Fun fact: Those ears also help detect prey beneath sand.
+
+- animals-nature-s0035: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/fennec-fox)
+
+  Answer/context quote: “which they use to dispel heat and track down prey underneath the sand.” (13 words).
+
+- animals-nature-s0036: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Vulpes_zerda/)
+
+  Answer/context quote: “the large, 15 cm long pinnae are used both to dissipate heat and to locate prey moving under the sand.” (20 words).
+
+## B13-0367 — When does a fennec fox usually hunt?
+
+Answer: At night. Fun fact: It shelters from the hot sun during the day.
+
+- animals-nature-s0035: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/fennec-fox)
+
+  Answer/context quote: “Nocturnal animals, fennec foxes will hide out in burrows during daylight to avoid the hottest portion of the day.” (19 words).
+
+- animals-nature-s0036: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Vulpes_zerda/)
+
+  Answer/context quote: “Nocturnal hunters, fennecs need places to sleep during the day in which they will be sheltered from the hot desert sun.” (21 words).
+
+## B13-0368 — Fennec foxes are strongly associated with which desert?
+
+Answer: Sahara. Fun fact: Their native range extends across parts of North Africa.
+
+- animals-nature-s0035: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/fennec-fox)
+
+  Answer/context quote: “Fennec foxes live in North Africa, throughout the Sahara Desert” (10 words).
+
+- animals-nature-s0036: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Vulpes_zerda/)
+
+  Answer/context quote: “The largest populations of Vulpes zerda occur in the central Sahara” (11 words).
+
+  Additional fun-fact quote: “northern Morocco” (2 words).
+
+## B13-0369 — What protects a fennec fox’s paws from hot desert sand?
+
+Answer: Thick fur. Fun fact: The covering is present around the foot pads.
+
+- animals-nature-s0035: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/fennec-fox)
+
+  Answer/context quote: “Heavily furred paws provide traction when running in the sand while also offering protection from the extreme heat of the terrain.” (21 words).
+
+- animals-nature-s0036: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Vulpes_zerda/)
+
+  Answer/context quote: “The feet are heavily furred, protecting the pads from the hot desert sand.” (13 words).
+
+## B13-0370 — What structures do North American beavers build to slow flowing water?
+
+Answer: Dams. Fun fact: Slower water forms ponds around their habitat.
+
+- animals-nature-s0037: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/beaver)
+
+  Answer/context quote: “Dams reduce stream erosion by forming slow-moving ponds.” (8 words).
+
+- animals-nature-s0038: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Castor_canadensis/)
+
+  Answer/context quote: “Beavers build dams to slow down the flow of water in streams and rivers” (14 words).
+
+## B13-0371 — What is the characteristic shape of a North American beaver’s tail?
+
+Answer: Broad and flat. Fun fact: The tail is covered with scales.
+
+- animals-nature-s0037: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/beaver)
+
+  Answer/context quote: “a broad, flat, scaly tail.” (5 words).
+
+- animals-nature-s0038: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Castor_canadensis/)
+
+  Answer/context quote: “A beaver's tail is broad, flat, and covered with large black scales.” (12 words).
+
+## B13-0372 — What is a North American beaver’s constructed home commonly called?
+
+Answer: A lodge. Fun fact: Its living space is above the water level.
+
+- animals-nature-s0037: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/beaver)
+
+  Answer/context quote: “Beavers also build dome-like lodges” (5 words).
+
+  Additional fun-fact quote: “living quarters are located in the top of the lodge above the water line.” (14 words).
+
+- animals-nature-s0038: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Castor_canadensis/)
+
+  Answer/context quote: “Beavers live in lodges” (4 words).
+
+  Additional fun-fact quote: “The island lodge consists of a central chamber, with its floor slightly above the water level” (16 words).
+
+## B13-0373 — How does a beaver use its tail to warn others of danger?
+
+Answer: Slaps it on water. Fun fact: The slap creates a conspicuous warning signal.
+
+- animals-nature-s0037: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/beaver)
+
+  Answer/context quote: “to signal danger when slapped on the water.” (8 words).
+
+- animals-nature-s0038: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Castor_canadensis/)
+
+  Answer/context quote: “Beavers will also warn others of danger by slapping their tails against the water, creating a powerful noise.” (18 words).
+
+## B13-0374 — Which insects make up most of a giant anteater’s food?
+
+Answer: Ants and termites. Fun fact: Its sticky tongue collects this small prey.
+
+- animals-nature-s0039: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/giant-anteater)
+
+  Answer/context quote: “Anteaters feed almost exclusively on ants and termites” (8 words).
+
+  Additional fun-fact quote: “then ingest with their sticky tongue.” (6 words).
+
+- animals-nature-s0040: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Myrmecophaga_tridactyla/)
+
+  Answer/context quote: “Giant anteaters eat ants, termites, and soft-bodied grubs.” (8 words).
+
+  Additional fun-fact quote: “The salivary glands secrete sticky saliva during feeding that coats the tongue.” (12 words).
+
+## B13-0375 — How many teeth does a giant anteater have?
+
+Answer: None. Fun fact: It has a very long tongue instead of chewing teeth.
+
+- animals-nature-s0039: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/giant-anteater)
+
+  Answer/context quote: “Giant anteaters have a long, distinctive snout with a 2-foot-long tongue and no teeth.” (14 words).
+
+- animals-nature-s0040: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Myrmecophaga_tridactyla/)
+
+  Answer/context quote: “Giant anteaters have no teeth.” (5 words).
+
+  Additional fun-fact quote: “The tongue can be extended 610 mm outside of the mouth” (11 words).
+
+## B13-0376 — What helps prey stick to a giant anteater’s tongue?
+
+Answer: Sticky saliva. Fun fact: The saliva coats the tongue during feeding.
+
+- animals-nature-s0039: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/giant-anteater)
+
+  Answer/context quote: “When feeding, sticky saliva coats the tongue.” (7 words).
+
+- animals-nature-s0040: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Myrmecophaga_tridactyla/)
+
+  Answer/context quote: “The salivary glands secrete sticky saliva during feeding that coats the tongue.” (12 words).
+
+## B13-0377 — Why does a giant anteater walk on the knuckles of its front feet?
+
+Answer: To protect its claws. Fun fact: Its front claws are used to open insect nests.
+
+- animals-nature-s0039: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/giant-anteater)
+
+  Answer/context quote: “Giant anteaters protect their sharp front claws by tucking them into their palms and walking on their front knuckles.” (19 words).
+
+  Additional fun-fact quote: “whose nests they rip open with their powerful forelimbs and claws” (11 words).
+
+- animals-nature-s0040: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Myrmecophaga_tridactyla/)
+
+  Answer/context quote: “Their weight is born on the knuckles and wrist to protect the claws.” (13 words).
+
+  Additional fun-fact quote: “Using the long, sharp claws on their forelimbs, they open insect colonies and tree trunks.” (15 words).
+
+## B13-0378 — How can a southern three-banded armadillo defend itself when threatened?
+
+Answer: Roll into a complete ball. Fun fact: Its shell can close around the body.
+
+- animals-nature-s0056: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/la-plata-three-banded-armadillo)
+
+  Answer/context quote: “allowing the head, legs and tail to tuck inside when the animal rolls into a ball.” (16 words).
+
+- animals-nature-s0052: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Tolypeutes_matacus/)
+
+  Answer/context quote: “It can completely close its shell around its entire body.” (10 words).
+
+## B13-0379 — What conspicuous protective covering does a three-banded armadillo have?
+
+Answer: Body armor. Fun fact: The armored covering extends to the head and tail.
+
+- animals-nature-s0056: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/la-plata-three-banded-armadillo)
+
+  Answer/context quote: “The tail, top of head and the outer surfaces of the limbs are also usually armored.” (16 words).
+
+- animals-nature-s0052: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Tolypeutes_matacus/)
+
+  Answer/context quote: “They are dark brown and heavely armored with a thick, leathery shell” (12 words).
+
+  Additional fun-fact quote: “This armor covers the tail, head, feet, and back of the animal.” (12 words).
+
+## B13-0380 — Southern three-banded armadillos are native to which continent?
+
+Answer: South America. Fun fact: Their native range includes several South American countries.
+
+- animals-nature-s0056: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/la-plata-three-banded-armadillo)
+
+  Answer/context quote: “Native to South America” (4 words).
+
+  Additional fun-fact quote: “The range of La Plata three-banded armadillos includes parts of Bolivia, Brazil, Paraguay and Argentina.” (15 words).
+
+- animals-nature-s0052: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Tolypeutes_matacus/)
+
+  Answer/context quote: “South America: north central Argentina, east central Bolivia and sections of Brazil and Paraguay.” (14 words).
+
+## B13-0381 — What prey do southern three-banded armadillos mainly eat?
+
+Answer: Ants and termites. Fun fact: Strong limbs and claws help obtain their food.
+
+- animals-nature-s0056: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/la-plata-three-banded-armadillo)
+
+  Answer/context quote: “In the wild they feed primarily on ants and termites, which they obtain using their powerful forelegs and claws.” (19 words).
+
+- animals-nature-s0052: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Tolypeutes_matacus/)
+
+  Answer/context quote: “This species of armadillo eats mainly ants and termites.” (9 words).
+
+  Additional fun-fact quote: “They use their strong legs and large claws to dig through insect colonies” (13 words).
+
+## B13-0382 — Ring-tailed lemurs are native to which island?
+
+Answer: Madagascar. Fun fact: Their native range includes the island’s southwest.
+
+- animals-nature-s0043: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/ring-tailed-lemur)
+
+  Answer/context quote: “Ring-tailed lemurs live in southwestern Madagascar” (6 words).
+
+- animals-nature-s0044: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Lemur_catta/)
+
+  Answer/context quote: “Ring-tailed lemurs are found only in southern and southwestern Madagascar.” (10 words).
+
+## B13-0383 — Which colors alternate in a ring-tailed lemur’s tail bands?
+
+Answer: Black and white. Fun fact: The bands run along its long tail.
+
+- animals-nature-s0043: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/ring-tailed-lemur)
+
+  Answer/context quote: “alternating black and white bands that adorn their tails.” (9 words).
+
+- animals-nature-s0044: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Lemur_catta/)
+
+  Answer/context quote: “The tail has thick, well defined, black and white rings from stem to tip.” (14 words).
+
+## B13-0384 — What do ring-tailed lemurs waft at opponents during a “stink battle”?
+
+Answer: Scent from their tails. Fun fact: They rub gland secretions onto the tail before displaying it.
+
+- animals-nature-s0043: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/ring-tailed-lemur)
+
+  Answer/context quote: “Secretions from the wrist glands can also be rubbed on the tail and flicked at an opponent.” (17 words).
+
+- animals-nature-s0044: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Lemur_catta/)
+
+  Answer/context quote: “secretions from scent glands are rubbed onto the tail, then wafted at opposing animals.” (14 words).
+
+## B13-0385 — Which sex typically dominates a ring-tailed lemur troop’s hierarchy?
+
+Answer: Females. Fun fact: Females typically remain in their birth group.
+
+- animals-nature-s0043: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/ring-tailed-lemur)
+
+  Answer/context quote: “Females are dominant within groups, meaning females have preferential access to food” (12 words).
+
+  Additional fun-fact quote: “Females spend their whole lives in their birth group.” (9 words).
+
+- animals-nature-s0044: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Lemur_catta/)
+
+  Answer/context quote: “All females are dominant over all males.” (7 words).
+
+  Additional fun-fact quote: “Females stay with the same troop they were born into” (10 words).
+
+## B13-0386 — What is the characteristic coat color of a golden lion tamarin?
+
+Answer: Reddish-gold. Fun fact: A mane frames its face and head.
+
+- animals-nature-s0045: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/golden-lion-tamarin)
+
+  Answer/context quote: “Golden lion tamarins are small, social primates with reddish-gold coats and long, backswept manes.” (14 words).
+
+- animals-nature-s0046: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Leontopithecus_rosalia/)
+
+  Answer/context quote: “Their bodies are covered in long, soft silky hair with coloration ranging from pale golden to a rich reddish-gold.” (19 words).
+
+  Additional fun-fact quote: “a thick golden mane on the crown, cheeks, throat, ears and shoulders.” (12 words).
+
+## B13-0387 — Golden lion tamarins are native to coastal rainforest in which country?
+
+Answer: Brazil. Fun fact: Their habitat is associated with the Atlantic coast.
+
+- animals-nature-s0045: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/golden-lion-tamarin)
+
+  Answer/context quote: “Golden lion tamarins live in the heavily populated Atlantic coastal regions of southeastern Brazil.” (14 words).
+
+- animals-nature-s0046: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Leontopithecus_rosalia/)
+
+  Answer/context quote: “Lowland, coastal rain forest region in Southeast Brazil.” (8 words).
+
+## B13-0388 — How many infants does a female golden lion tamarin usually deliver at a time?
+
+Answer: Twins. Fun fact: A typical litter consists of two young.
+
+- animals-nature-s0045: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/golden-lion-tamarin)
+
+  Answer/context quote: “the female usually gives birth to twins.” (7 words).
+
+- animals-nature-s0046: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Leontopithecus_rosalia/)
+
+  Answer/context quote: “Females give birth to twins after a gestation of 130 to 135 days.” (13 words).
+
+## B13-0389 — Golden lion tamarins belong to which broad animal group?
+
+Answer: Primates. Fun fact: They are small monkeys with a mane around the face.
+
+- animals-nature-s0045: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/golden-lion-tamarin)
+
+  Answer/context quote: “Golden lion tamarins are small, social primates” (7 words).
+
+  Additional fun-fact quote: “Their signature mane covers the ears and frames the dark, almost bare face.” (13 words).
+
+- animals-nature-s0046: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Leontopithecus_rosalia/)
+
+  Answer/context quote: “Order Primates primates” (3 words).
+
+  Additional fun-fact quote: “a thick golden mane on the crown, cheeks, throat, ears and shoulders.” (12 words).
+
+## B13-0390 — Why is the Asian small-clawed otter aptly named?
+
+Answer: Its claws stay short of the toe pads. Fun fact: Its toes are webbed.
+
+- animals-nature-s0047: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/asian-small-clawed-otter)
+
+  Answer/context quote: “They have webbed feet, and true to their name, their claws do not extend beyond their digital pads.” (18 words).
+
+- animals-nature-s0058: [Wikipedia contributors](https://en.wikipedia.org/wiki/Asian_small-clawed_otter)
+
+  Answer/context quote: “It has short claws that do not extend beyond the pads of its webbed digits.” (15 words).
+
+## B13-0391 — What is notable about the webbing between an Asian small-clawed otter’s toes?
+
+Answer: It is incomplete. Fun fact: The webbing stops before the ends of the digits.
+
+- animals-nature-s0047: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/asian-small-clawed-otter)
+
+  Answer/context quote: “Incomplete webbing between the toes gives them a great deal of manual dexterity.” (13 words).
+
+- animals-nature-s0058: [Wikipedia contributors](https://en.wikipedia.org/wiki/Asian_small-clawed_otter)
+
+  Answer/context quote: “Its paws are narrow with short digits that are webbed to the last joint.” (14 words).
+
+## B13-0392 — Which foods are commonly eaten by Asian small-clawed otters?
+
+Answer: Crabs and mollusks. Fun fact: Shellfish are among their aquatic prey.
+
+- animals-nature-s0047: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/asian-small-clawed-otter)
+
+  Answer/context quote: “In the wild the otters eat primarily crustaceans and mollusks” (10 words).
+
+  Additional fun-fact quote: “shellfish (clams and mussels) and crabs.” (6 words).
+
+- animals-nature-s0058: [Wikipedia contributors](https://en.wikipedia.org/wiki/Asian_small-clawed_otter)
+
+  Answer/context quote: “It feeds on molluscs , crabs and other small aquatic animals .” (12 words).
+
+## B13-0393 — Which coastal habitat can support Asian small-clawed otters?
+
+Answer: Mangrove swamps. Fun fact: They also live in rivers.
+
+- animals-nature-s0047: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/asian-small-clawed-otter)
+
+  Answer/context quote: “These otters live in small streams, rivers, marshes, rice paddies, seacoasts and in mangroves.” (14 words).
+
+- animals-nature-s0058: [Wikipedia contributors](https://en.wikipedia.org/wiki/Asian_small-clawed_otter)
+
+  Answer/context quote: “The Asian small-clawed otter lives in riverine habitats, freshwater wetlands and mangrove swamps .” (14 words).
+
+## B13-0394 — Which reptile is the largest living lizard?
+
+Answer: Komodo dragon. Fun fact: Its native range includes Indonesian islands.
+
+- animals-nature-s0049: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/komodo-dragon)
+
+  Answer/context quote: “The Komodo dragon is the largest living lizard in the world.” (11 words).
+
+  Additional fun-fact quote: “Komodo dragons are limited to a few Indonesian islands” (9 words).
+
+- animals-nature-s0050: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Varanus_komodoensis/)
+
+  Answer/context quote: “Komodo dragons are the largest lizards” (6 words).
+
+  Additional fun-fact quote: “the lesser Sunda region of the Indonesian archipelago” (8 words).
+
+## B13-0395 — Wild Komodo dragons are native to islands in which country?
+
+Answer: Indonesia. Fun fact: Their native island group includes Komodo and Flores.
+
+- animals-nature-s0049: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/komodo-dragon)
+
+  Answer/context quote: “Komodo dragons are limited to a few Indonesian islands of the Lesser Sunda group, including Rintja, Padar and Flores” (19 words).
+
+  Additional fun-fact quote: “the island of Komodo” (4 words).
+
+- animals-nature-s0050: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Varanus_komodoensis/)
+
+  Answer/context quote: “the lesser Sunda region of the Indonesian archipelago, including the islands of Komodo, Flores, Rinca, and Padar.” (17 words).
+
+## B13-0396 — Which sense does a Komodo dragon rely on heavily when its tongue samples the air?
+
+Answer: Smell. Fun fact: The tongue is important for detecting scent from food.
+
+- animals-nature-s0049: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/komodo-dragon)
+
+  Answer/context quote: “They rely heavily on their sense of smell, using their forked tongues to sample the air.” (16 words).
+
+- animals-nature-s0050: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Varanus_komodoensis/)
+
+  Answer/context quote: “its sense of smell is its primary method for detecting food and the tip of its tongue is its primary scent detector.” (22 words).
+
+## B13-0397 — Which food type is eaten by adult Komodo dragons?
+
+Answer: Meat and carrion. Fun fact: They may scavenge carcasses as well as hunt prey.
+
+- animals-nature-s0049: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/komodo-dragon)
+
+  Answer/context quote: “Komodo dragons eat almost any kind of meat, scavenging for carcasses or stalking animals” (14 words).
+
+- animals-nature-s0050: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Varanus_komodoensis/)
+
+  Answer/context quote: “A normal adult Komodo dragon diet consists mainly of carrion” (10 words).
+
+  Additional fun-fact quote: “attack and eat a variety of large prey” (8 words).
+
+## B13-0398 — Which two colors make up a giant panda’s distinctive coat?
+
+Answer: Black and white. Fun fact: The giant panda is a bear.
+
+- animals-nature-s0001: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/giant-panda)
+
+  Answer/context quote: “The giant panda, a black-and-white bear” (6 words).
+
+- animals-nature-s0002: [San Diego Zoo Animals & Plants](https://animals.sandiegozoo.org/animals/giant-panda)
+
+  Answer/context quote: “Giant pandas are black and white” (6 words).
+
+  Additional fun-fact quote: “scientists have confirmed the panda's relationship with bears.” (8 words).
+
+## B13-0399 — Giant pandas are native to mountain forests in which country?
+
+Answer: China. Fun fact: Wild pandas inhabit Chinese mountain ranges.
+
+- animals-nature-s0001: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/giant-panda)
+
+  Answer/context quote: “Giant pandas live in a few mountain ranges in south central China” (12 words).
+
+- animals-nature-s0002: [San Diego Zoo Animals & Plants](https://animals.sandiegozoo.org/animals/giant-panda)
+
+  Answer/context quote: “Giant pandas live in the mountains of southwestern China” (9 words).
+
+## B13-0400 — Despite its unusual bamboo-heavy diet, the giant panda belongs to which animal family?
+
+Answer: Bears. Fun fact: Strong jaws help it crush bamboo.
+
+- animals-nature-s0001: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/giant-panda)
+
+  Answer/context quote: “The giant panda, a black-and-white bear” (6 words).
+
+  Additional fun-fact quote: “Giant pandas have large molar teeth and strong jaw muscles for crushing tough bamboo.” (14 words).
+
+- animals-nature-s0002: [San Diego Zoo Animals & Plants](https://animals.sandiegozoo.org/animals/giant-panda)
+
+  Answer/context quote: “scientists have confirmed the panda's relationship with bears.” (8 words).
+
+  Additional fun-fact quote: “Strong jawbones and cheek muscles help pandas crush and chew the thick stalks” (13 words).
 
 ## B13-0501 — Who was the first emperor of ancient Rome?
 
@@ -2942,13 +4160,13 @@ Answer: Augustus. Fun fact: Julius Caesar adopted Augustus as his son.
 
 - world-history-s0004: [World History Encyclopedia](https://www.worldhistory.org/augustus/)
 
-  Answer/context quote: “Augustus Caesar (27 BCE - 14 CE) was the name of the first” (13 words).
+  Answer/context quote: “Augustus Caesar (27 BCE - 14 CE) was the name of the first and, by most accounts, greatest Roman emperor .” (21 words).
 
   Additional fun-fact quote: “Octavian was adopted by his great-uncle Julius Caesar in 44 BCE” (11 words).
 
 ## B13-0502 — Which Roman leader adopted the future emperor Augustus?
 
-Answer: Julius Caesar. Fun fact: The future Augustus is commonly called Octavian for the period before 27 BCE.
+Answer: Julius Caesar. Fun fact: Augustus was also known as Octavian.
 
 - world-history-s0003: [Encyclopaedia Britannica](https://www.britannica.com/biography/Augustus-Roman-emperor)
 
@@ -2962,7 +4180,7 @@ Answer: Julius Caesar. Fun fact: The future Augustus is commonly called Octavian
 
   Additional fun-fact quote: “Octavian when referring to events between 44 and 27 BCE” (10 words).
 
-## B13-0503 — Before receiving the title Augustus, this Roman ruler was commonly known by what name?
+## B13-0503 — What other name is commonly used for the Roman emperor Augustus?
 
 Answer: Octavian. Fun fact: Augustus used princeps, meaning first citizen.
 
@@ -2992,7 +4210,7 @@ Answer: First citizen. Fun fact: Augustus was the first Roman emperor.
 
   Answer/context quote: “simply calling himself ' Princeps ', or, First Citizen.” (9 words).
 
-  Additional fun-fact quote: “Augustus Caesar (27 BCE - 14 CE) was the name of the first” (13 words).
+  Additional fun-fact quote: “Augustus Caesar (27 BCE - 14 CE) was the name of the first and, by most accounts, greatest Roman emperor .” (21 words).
 
 ## B13-0505 — Which philosopher tutored Alexander the Great?
 
@@ -3256,7 +4474,7 @@ Answer: Hammurabi. Fun fact: The Code of Hammurabi contains 282 case laws.
 
 - world-history-s0043: [Encyclopaedia Britannica](https://www.britannica.com/topic/Code-of-Hammurabi)
 
-  Answer/context quote: “Code of Hammurabi” (3 words).
+  Answer/context quote: “Code of Hammurabi , the most complete and perfect extant collection of Babylonian laws, developed during the reign of Hammurabi” (20 words).
 
   Additional fun-fact quote: “These 282 case laws” (4 words).
 
@@ -3446,11 +4664,11 @@ Answer: Chandragupta. Fun fact: Ashoka ruled the Mauryan dynasty.
 
 Answer: Shah Jahan. Fun fact: The Taj Mahal was built in memory of Mumtaz Mahal.
 
-- world-history-s0017: [Encyclopaedia Britannica](https://www.britannica.com/biography/Shah-Jahan)
+- world-history-s0055: [Encyclopaedia Britannica](https://www.britannica.com/topic/Taj-Mahal)
 
-  Answer/context quote: “Shah Jahan, Mughal emperor from 1628 to 1658, is perhaps best remembered for the grand monuments constructed during his reign” (20 words).
+  Answer/context quote: “the Taj Mahal was built by the Mughal emperor Shah Jahan” (11 words).
 
-  Additional fun-fact quote: “was erected in memory of the favorite of his three queens, Arjumand ( Mumtaz Maḥal” (15 words).
+  Additional fun-fact quote: “to immortalize his consort Mumtaz Mahal.” (6 words).
 
 - world-history-s0044: [World History Encyclopedia](https://www.worldhistory.org/Taj_Mahal/)
 
@@ -3572,49 +4790,49 @@ Answer: Nicaea. Fun fact: Constantine I established Constantinople as a new impe
 
 ## B13-0541 — On which island was Napoleon Bonaparte born?
 
-Answer: Corsica. Fun fact: Napoleon’s return to power ended with defeat at Waterloo in 1815.
+Answer: Corsica. Fun fact: Napoleon sponsored the civil-law collection known as the Napoleonic Code.
 
 - world-history-s0021: [Encyclopaedia Britannica](https://www.britannica.com/biography/Napoleon-I)
 
   Answer/context quote: “Born: August 15, 1769, Ajaccio , Corsica” (7 words).
 
-  Additional fun-fact quote: “Battle of Waterloo” (3 words).
+  Additional fun-fact quote: “developed a civil code (the Napoleonic Code )” (8 words).
 
 - world-history-s0022: [World History Encyclopedia](https://www.worldhistory.org/Napoleon_Bonaparte/)
 
   Answer/context quote: “Napoleon Bonaparte (1769-1821) was a Corsican-born French general” (8 words).
 
-  Additional fun-fact quote: “Battle of Waterloo (18 June 1815)” (6 words).
+  Additional fun-fact quote: “a set of civil laws, best known as the Napoleonic Code” (11 words).
 
-## B13-0542 — Which battle ended Napoleon’s return to power in 1815?
+## B13-0542 — Which influential French civil-law code carries Napoleon’s name?
 
-Answer: Waterloo. Fun fact: Napoleon was exiled to Elba in 1814.
+Answer: Napoleonic Code. Fun fact: Napoleon was First Consul before becoming emperor of France.
 
 - world-history-s0021: [Encyclopaedia Britannica](https://www.britannica.com/biography/Napoleon-I)
 
-  Answer/context quote: “Battle of Waterloo” (3 words).
+  Answer/context quote: “developed a civil code (the Napoleonic Code )” (8 words).
 
-  Additional fun-fact quote: “Elba” (1 words).
+  Additional fun-fact quote: “served as the First Consul of France (1799–1804), and was the first emperor of France (1804–14/15)” (16 words).
 
 - world-history-s0022: [World History Encyclopedia](https://www.worldhistory.org/Napoleon_Bonaparte/)
 
-  Answer/context quote: “Battle of Waterloo (18 June 1815)” (6 words).
+  Answer/context quote: “a set of civil laws, best known as the Napoleonic Code” (11 words).
 
-  Additional fun-fact quote: “exiled to the Mediterranean island of Elba in April 1814” (10 words).
+  Additional fun-fact quote: “he was confirmed First Consul for life by a plebiscite.” (10 words).
 
-## B13-0543 — To which Mediterranean island was Napoleon first exiled in 1814?
+## B13-0543 — What title did Napoleon hold before he became emperor of France?
 
-Answer: Elba. Fun fact: Napoleon died on St. Helena in 1821.
+Answer: First Consul. Fun fact: Napoleon died on St. Helena in 1821.
 
 - world-history-s0021: [Encyclopaedia Britannica](https://www.britannica.com/biography/Napoleon-I)
 
-  Answer/context quote: “Elba” (1 words).
+  Answer/context quote: “served as the First Consul of France (1799–1804), and was the first emperor of France (1804–14/15)” (16 words).
 
   Additional fun-fact quote: “Died: May 5, 1821, St. Helena Island” (7 words).
 
 - world-history-s0022: [World History Encyclopedia](https://www.worldhistory.org/Napoleon_Bonaparte/)
 
-  Answer/context quote: “exiled to the Mediterranean island of Elba in April 1814” (10 words).
+  Answer/context quote: “he was confirmed First Consul for life by a plebiscite.” (10 words).
 
   Additional fun-fact quote: “the island of St. Helena in the South Atlantic, where he died on 5 May 1821.” (16 words).
 
@@ -4145,3 +5363,4659 @@ Answer: Septicemic. Fun fact: Yersinia pestis caused the plague associated with 
   Answer/context quote: “Bubonic plague, Pneumonic plague and Septicemic plague.” (7 words).
 
   Additional fun-fact quote: “caused by a bacillus bacteria, Yersinia pestis” (7 words).
+
+## B13-0577 — Which Paris fortress was stormed by a crowd on 14 July 1789?
+
+Answer: The Bastille. Fun fact: The Bastille was stormed on 14 July 1789.
+
+- world-history-s0053: [Encyclopaedia Britannica](https://www.britannica.com/event/French-Revolution/Events-of-1789)
+
+  Answer/context quote: “On July 14, 1789, the Parisian crowd stormed the Bastille” (10 words).
+
+  Additional fun-fact quote: “The storming of the Bastille on July 14, 1789” (9 words).
+
+- world-history-s0040: [World History Encyclopedia](https://www.worldhistory.org/French_Revolution/)
+
+  Answer/context quote: “uprising climaxed on 14 July with the Storming of the Bastille” (11 words).
+
+  Additional fun-fact quote: “uprising climaxed on 14 July with the Storming of the Bastille” (11 words).
+
+## B13-0578 — On what day and month did the 1789 storming of the Bastille occur?
+
+Answer: 14 July. Fun fact: The Bastille was stormed on 14 July 1789.
+
+- world-history-s0053: [Encyclopaedia Britannica](https://www.britannica.com/event/French-Revolution/Events-of-1789)
+
+  Answer/context quote: “The storming of the Bastille on July 14, 1789” (9 words).
+
+  Additional fun-fact quote: “On July 14, 1789, the Parisian crowd stormed the Bastille” (10 words).
+
+- world-history-s0040: [World History Encyclopedia](https://www.worldhistory.org/French_Revolution/)
+
+  Answer/context quote: “uprising climaxed on 14 July with the Storming of the Bastille” (11 words).
+
+  Additional fun-fact quote: “uprising climaxed on 14 July with the Storming of the Bastille” (11 words).
+
+## B13-0579 — Which French king was tried and executed in January 1793?
+
+Answer: Louis XVI. Fun fact: Maximilien Robespierre fell from power at the end of the Reign of Terror.
+
+- world-history-s0054: [Encyclopaedia Britannica](https://www.britannica.com/event/French-Revolution/Counterrevolution-regicide-and-the-Reign-of-Terror)
+
+  Answer/context quote: “Louis XVI was judged by the Convention, condemned to death for treason, and executed on January 21, 1793” (18 words).
+
+  Additional fun-fact quote: “Robespierre, “the Incorruptible,” who had sponsored the restrictions, was overthrown in the National Convention on 9 Thermidor” (17 words).
+
+- world-history-s0040: [World History Encyclopedia](https://www.worldhistory.org/French_Revolution/)
+
+  Answer/context quote: “deposed Louis XVI; ultimately, he was tried and guillotined on 21 January 1793” (13 words).
+
+  Additional fun-fact quote: “the fall of Maximilien Robespierre and his allies on 28 July 1794 brought the Terror to an end” (18 words).
+
+## B13-0580 — Which revolutionary leader fell from power at the end of the Reign of Terror?
+
+Answer: Maximilien Robespierre. Fun fact: Louis XVI was tried and executed in January 1793.
+
+- world-history-s0054: [Encyclopaedia Britannica](https://www.britannica.com/event/French-Revolution/Counterrevolution-regicide-and-the-Reign-of-Terror)
+
+  Answer/context quote: “Robespierre, “the Incorruptible,” who had sponsored the restrictions, was overthrown in the National Convention on 9 Thermidor” (17 words).
+
+  Additional fun-fact quote: “Louis XVI was judged by the Convention, condemned to death for treason, and executed on January 21, 1793” (18 words).
+
+- world-history-s0040: [World History Encyclopedia](https://www.worldhistory.org/French_Revolution/)
+
+  Answer/context quote: “the fall of Maximilien Robespierre and his allies on 28 July 1794 brought the Terror to an end” (18 words).
+
+  Additional fun-fact quote: “deposed Louis XVI; ultimately, he was tried and guillotined on 21 January 1793” (13 words).
+
+## B13-0581 — Which city did Ottoman sultan Mehmed II conquer in 1453?
+
+Answer: Constantinople. Fun fact: Mehmed II was an Ottoman sultan.
+
+- world-history-s0041: [Encyclopaedia Britannica](https://www.britannica.com/biography/Mehmed-II-Ottoman-sultan)
+
+  Answer/context quote: “leading the siege of Constantinople in 1453” (7 words).
+
+  Additional fun-fact quote: “was an Ottoman sultan from 1444 to 1446 and from 1451 to 1481” (13 words).
+
+- world-history-s0042: [World History Encyclopedia](https://www.worldhistory.org/Mehmed_II/)
+
+  Answer/context quote: “29 May 1453 Ottoman Sultan Mehmed II sacks Constantinople” (9 words).
+
+  Additional fun-fact quote: “Mehmed II (1432-1481 CE), also known as Mehmed the Conqueror, was the seventh and among the greatest sultans of the Ottoman Empire” (22 words).
+
+## B13-0582 — Mehmed II was sultan of which empire?
+
+Answer: Ottoman. Fun fact: Constantinople fell to Mehmed II in 1453.
+
+- world-history-s0041: [Encyclopaedia Britannica](https://www.britannica.com/biography/Mehmed-II-Ottoman-sultan)
+
+  Answer/context quote: “was an Ottoman sultan from 1444 to 1446 and from 1451 to 1481” (13 words).
+
+  Additional fun-fact quote: “during the siege of Constantinople (April 6–May 29, 1453)” (9 words).
+
+- world-history-s0042: [World History Encyclopedia](https://www.worldhistory.org/Mehmed_II/)
+
+  Answer/context quote: “Mehmed II (1432-1481 CE), also known as Mehmed the Conqueror, was the seventh and among the greatest sultans of the Ottoman Empire” (22 words).
+
+  Additional fun-fact quote: “29 May 1453 CE marked the fall of Constantinople.” (9 words).
+
+## B13-0583 — In what year did Constantinople fall to Mehmed II?
+
+Answer: 1453. Fun fact: Mehmed II is known as the Conqueror.
+
+- world-history-s0041: [Encyclopaedia Britannica](https://www.britannica.com/biography/Mehmed-II-Ottoman-sultan)
+
+  Answer/context quote: “during the siege of Constantinople (April 6–May 29, 1453)” (9 words).
+
+  Additional fun-fact quote: “Mehmed the Conqueror” (3 words).
+
+- world-history-s0042: [World History Encyclopedia](https://www.worldhistory.org/Mehmed_II/)
+
+  Answer/context quote: “29 May 1453 CE marked the fall of Constantinople.” (9 words).
+
+  Additional fun-fact quote: “Mehmed II (1432-1481 CE), also known as Mehmed the Conqueror” (10 words).
+
+## B13-0584 — What famous epithet is attached to Mehmed II?
+
+Answer: The Conqueror. Fun fact: Mehmed II conquered Constantinople in 1453.
+
+- world-history-s0041: [Encyclopaedia Britannica](https://www.britannica.com/biography/Mehmed-II-Ottoman-sultan)
+
+  Answer/context quote: “Mehmed the Conqueror” (3 words).
+
+  Additional fun-fact quote: “leading the siege of Constantinople in 1453” (7 words).
+
+- world-history-s0042: [World History Encyclopedia](https://www.worldhistory.org/Mehmed_II/)
+
+  Answer/context quote: “Mehmed II (1432-1481 CE), also known as Mehmed the Conqueror” (10 words).
+
+  Additional fun-fact quote: “29 May 1453 Ottoman Sultan Mehmed II sacks Constantinople” (9 words).
+
+## B13-0585 — Cyrus the Great founded which ancient Persian empire?
+
+Answer: Achaemenid. Fun fact: Cyrus conquered Babylon in 539 BCE.
+
+- world-history-s0045: [Encyclopaedia Britannica](https://www.britannica.com/biography/Cyrus-the-Great)
+
+  Answer/context quote: “Founder: Achaemenid Empire” (3 words).
+
+  Additional fun-fact quote: “In October 539 bce , the greatest city of the ancient world fell to the Persians” (16 words).
+
+- world-history-s0046: [World History Encyclopedia](https://www.worldhistory.org/Cyrus_the_Great/)
+
+  Answer/context quote: “the first king of the Achaemenid Empire” (7 words).
+
+  Additional fun-fact quote: “c. 539 BCE Cyrus the Great conquers Babylon” (8 words).
+
+## B13-0586 — Which great Mesopotamian city did Cyrus capture in 539 BCE?
+
+Answer: Babylon. Fun fact: Croesus ruled Lydia.
+
+- world-history-s0045: [Encyclopaedia Britannica](https://www.britannica.com/biography/Cyrus-the-Great)
+
+  Answer/context quote: “In October 539 bce , the greatest city of the ancient world fell to the Persians” (16 words).
+
+  Additional fun-fact quote: “Croesus , king of Lydia in Asia Minor” (8 words).
+
+- world-history-s0046: [World History Encyclopedia](https://www.worldhistory.org/Cyrus_the_Great/)
+
+  Answer/context quote: “c. 539 BCE Cyrus the Great conquers Babylon” (8 words).
+
+  Additional fun-fact quote: “Croesus (560-547 BCE), king of Lydia” (6 words).
+
+## B13-0587 — The wealthy king Croesus, defeated by Cyrus, ruled which kingdom?
+
+Answer: Lydia. Fun fact: Cambyses II was a son of Cyrus the Great.
+
+- world-history-s0045: [Encyclopaedia Britannica](https://www.britannica.com/biography/Cyrus-the-Great)
+
+  Answer/context quote: “Croesus , king of Lydia in Asia Minor” (8 words).
+
+  Additional fun-fact quote: “son Cambyses II” (3 words).
+
+- world-history-s0046: [World History Encyclopedia](https://www.worldhistory.org/Cyrus_the_Great/)
+
+  Answer/context quote: “Croesus (560-547 BCE), king of Lydia” (6 words).
+
+  Additional fun-fact quote: “Upon his death, Cyrus was succeeded by his son Cambyses II” (11 words).
+
+## B13-0588 — Which of these rulers was a son of Cyrus the Great?
+
+Answer: Cambyses II. Fun fact: Cyrus the Great founded the Achaemenid Empire.
+
+- world-history-s0045: [Encyclopaedia Britannica](https://www.britannica.com/biography/Cyrus-the-Great)
+
+  Answer/context quote: “son Cambyses II” (3 words).
+
+  Additional fun-fact quote: “Founder: Achaemenid Empire” (3 words).
+
+- world-history-s0046: [World History Encyclopedia](https://www.worldhistory.org/Cyrus_the_Great/)
+
+  Answer/context quote: “Upon his death, Cyrus was succeeded by his son Cambyses II” (11 words).
+
+  Additional fun-fact quote: “the first king of the Achaemenid Empire” (7 words).
+
+## B13-0589 — Justinian I ruled which empire in the sixth century?
+
+Answer: Byzantine. Fun fact: Theodora was Justinian I’s wife.
+
+- world-history-s0047: [Encyclopaedia Britannica](https://www.britannica.com/biography/Justinian-I)
+
+  Answer/context quote: “was a Byzantine emperor (527–565)” (5 words).
+
+  Additional fun-fact quote: “his wife, the former actress Theodora” (6 words).
+
+- world-history-s0048: [World History Encyclopedia](https://www.worldhistory.org/Justinian_I/)
+
+  Answer/context quote: “Justinian I reigned as emperor of the Byzantine Empire from 527 to 565 CE.” (14 words).
+
+  Additional fun-fact quote: “In 525 CE he married Theodora” (6 words).
+
+## B13-0590 — Who was the influential wife of Emperor Justinian I?
+
+Answer: Theodora. Fun fact: Belisarius was a leading general in Justinian I’s military campaigns.
+
+- world-history-s0047: [Encyclopaedia Britannica](https://www.britannica.com/biography/Justinian-I)
+
+  Answer/context quote: “his wife, the former actress Theodora” (6 words).
+
+  Additional fun-fact quote: “the Byzantine generals, among whom Belisarius was the most distinguished” (10 words).
+
+- world-history-s0048: [World History Encyclopedia](https://www.worldhistory.org/Justinian_I/)
+
+  Answer/context quote: “In 525 CE he married Theodora” (6 words).
+
+  Additional fun-fact quote: “General Belisarius (Justinian's most successful military leader)” (7 words).
+
+## B13-0591 — Which Byzantine general led major reconquests for Justinian I?
+
+Answer: Belisarius. Fun fact: Justinian I sponsored the Code of Justinian.
+
+- world-history-s0047: [Encyclopaedia Britannica](https://www.britannica.com/biography/Justinian-I)
+
+  Answer/context quote: “the Byzantine generals, among whom Belisarius was the most distinguished” (10 words).
+
+  Additional fun-fact quote: “codification of laws known as the Codex Justinianus (Code of Justinian)” (11 words).
+
+- world-history-s0048: [World History Encyclopedia](https://www.worldhistory.org/Justinian_I/)
+
+  Answer/context quote: “General Belisarius (Justinian's most successful military leader)” (7 words).
+
+  Additional fun-fact quote: “the Codex Iustinianus” (3 words).
+
+## B13-0592 — Which legal collection is associated with Justinian I’s codification project?
+
+Answer: Code of Justinian. Fun fact: Justinian I was emperor of the Byzantine Empire.
+
+- world-history-s0047: [Encyclopaedia Britannica](https://www.britannica.com/biography/Justinian-I)
+
+  Answer/context quote: “codification of laws known as the Codex Justinianus (Code of Justinian)” (11 words).
+
+  Additional fun-fact quote: “was a Byzantine emperor (527–565)” (5 words).
+
+- world-history-s0048: [World History Encyclopedia](https://www.worldhistory.org/Justinian_I/)
+
+  Answer/context quote: “the Codex Iustinianus” (3 words).
+
+  Additional fun-fact quote: “Justinian I reigned as emperor of the Byzantine Empire from 527 to 565 CE.” (14 words).
+
+## B13-0593 — Mansa Musa was ruler of which West African empire?
+
+Answer: Mali. Fun fact: Mansa Musa made a famous pilgrimage to Mecca.
+
+- world-history-s0049: [Encyclopaedia Britannica](https://www.britannica.com/biography/Musa-I-of-Mali)
+
+  Answer/context quote: “Mūsā I , the emperor ( mansa ) of the Mali empire” (12 words).
+
+  Additional fun-fact quote: “pilgrimage to Mecca in 1324” (5 words).
+
+- world-history-s0050: [World History Encyclopedia](https://www.worldhistory.org/Mansa_Musa_I/)
+
+  Answer/context quote: “Mansa Musa I was the ruler of the Mali Empire in West Africa” (13 words).
+
+  Additional fun-fact quote: “set off for a pilgrimage to Mecca in 1324” (9 words).
+
+## B13-0594 — To which holy city did Mansa Musa make his famous pilgrimage?
+
+Answer: Mecca. Fun fact: Gold-producing regions helped make Mali wealthy under Mansa Musa.
+
+- world-history-s0049: [Encyclopaedia Britannica](https://www.britannica.com/biography/Musa-I-of-Mali)
+
+  Answer/context quote: “pilgrimage to Mecca in 1324” (5 words).
+
+  Additional fun-fact quote: “much of which came from its control of major gold-producing regions” (11 words).
+
+- world-history-s0050: [World History Encyclopedia](https://www.worldhistory.org/Mansa_Musa_I/)
+
+  Answer/context quote: “set off for a pilgrimage to Mecca in 1324” (9 words).
+
+  Additional fun-fact quote: “Controlling territories rich in gold and copper” (7 words).
+
+## B13-0595 — Which precious metal was a major source of Mali’s wealth under Mansa Musa?
+
+Answer: Gold. Fun fact: Mansa Musa undertook his celebrated pilgrimage in 1324.
+
+- world-history-s0049: [Encyclopaedia Britannica](https://www.britannica.com/biography/Musa-I-of-Mali)
+
+  Answer/context quote: “much of which came from its control of major gold-producing regions” (11 words).
+
+  Additional fun-fact quote: “In the 17th year of his reign (1324), he set out on his famous pilgrimage to Mecca” (17 words).
+
+- world-history-s0050: [World History Encyclopedia](https://www.worldhistory.org/Mansa_Musa_I/)
+
+  Answer/context quote: “Controlling territories rich in gold and copper” (7 words).
+
+  Additional fun-fact quote: “set off for a pilgrimage to Mecca in 1324” (9 words).
+
+## B13-0596 — In which year did Mansa Musa undertake his celebrated pilgrimage?
+
+Answer: 1324. Fun fact: Mansa Musa ruled the Mali Empire.
+
+- world-history-s0049: [Encyclopaedia Britannica](https://www.britannica.com/biography/Musa-I-of-Mali)
+
+  Answer/context quote: “In the 17th year of his reign (1324), he set out on his famous pilgrimage to Mecca” (17 words).
+
+  Additional fun-fact quote: “Mūsā I , the emperor ( mansa ) of the Mali empire” (12 words).
+
+- world-history-s0050: [World History Encyclopedia](https://www.worldhistory.org/Mansa_Musa_I/)
+
+  Answer/context quote: “set off for a pilgrimage to Mecca in 1324” (9 words).
+
+  Additional fun-fact quote: “Mansa Musa I was the ruler of the Mali Empire in West Africa” (13 words).
+
+## B13-0597 — Who painted the Mona Lisa?
+
+Answer: Leonardo da Vinci. Fun fact: Leonardo painted The Last Supper.
+
+- world-history-s0051: [Encyclopaedia Britannica](https://www.britannica.com/biography/Leonardo-da-Vinci)
+
+  Answer/context quote: “His Last Supper (1495–98) and Mona Lisa (c. 1503–19)” (9 words).
+
+  Additional fun-fact quote: “His Last Supper (1495–98)” (4 words).
+
+- world-history-s0052: [World History Encyclopedia](https://www.worldhistory.org/Leonardo_da_Vinci/)
+
+  Answer/context quote: “His most-loved works include the Mona Lisa portrait and The Last Supper mural.” (13 words).
+
+  Additional fun-fact quote: “The Last Supper mural” (4 words).
+
+## B13-0598 — Which of these Renaissance works was painted by Leonardo da Vinci?
+
+Answer: The Last Supper. Fun fact: Leonardo da Vinci was a Renaissance artist.
+
+- world-history-s0051: [Encyclopaedia Britannica](https://www.britannica.com/biography/Leonardo-da-Vinci)
+
+  Answer/context quote: “His Last Supper (1495–98)” (4 words).
+
+  Additional fun-fact quote: “epitomized the Renaissance humanist ideal.” (5 words).
+
+- world-history-s0052: [World History Encyclopedia](https://www.worldhistory.org/Leonardo_da_Vinci/)
+
+  Answer/context quote: “The Last Supper mural” (4 words).
+
+  Additional fun-fact quote: “The Italian Renaissance artist Leonardo da Vinci” (7 words).
+
+## B13-0599 — Leonardo da Vinci’s career belongs to which major European cultural period?
+
+Answer: Renaissance. Fun fact: Leonardo used mirror writing in many notebooks.
+
+- world-history-s0051: [Encyclopaedia Britannica](https://www.britannica.com/biography/Leonardo-da-Vinci)
+
+  Answer/context quote: “epitomized the Renaissance humanist ideal.” (5 words).
+
+  Additional fun-fact quote: “his use of mirror writing” (5 words).
+
+- world-history-s0052: [World History Encyclopedia](https://www.worldhistory.org/Leonardo_da_Vinci/)
+
+  Answer/context quote: “The Italian Renaissance artist Leonardo da Vinci” (7 words).
+
+  Additional fun-fact quote: “many are written as mirror script , that is in the reverse direction of normal handwriting.” (16 words).
+
+## B13-0600 — What unusual handwriting style appears in many of Leonardo’s notebooks?
+
+Answer: Mirror writing. Fun fact: Leonardo da Vinci painted the Mona Lisa.
+
+- world-history-s0051: [Encyclopaedia Britannica](https://www.britannica.com/biography/Leonardo-da-Vinci)
+
+  Answer/context quote: “his use of mirror writing” (5 words).
+
+  Additional fun-fact quote: “His Last Supper (1495–98) and Mona Lisa (c. 1503–19)” (9 words).
+
+- world-history-s0052: [World History Encyclopedia](https://www.worldhistory.org/Leonardo_da_Vinci/)
+
+  Answer/context quote: “many are written as mirror script , that is in the reverse direction of normal handwriting.” (16 words).
+
+  Additional fun-fact quote: “His most-loved works include the Mona Lisa portrait and The Last Supper mural.” (13 words).
+
+## B13-0601 — Who played nightclub owner Rick Blaine in Casablanca?
+
+Answer: Humphrey Bogart. Fun fact: Ingrid Bergman played Ilsa Lund.
+
+- movies-tv-s0001: [Wikipedia](https://en.wikipedia.org/wiki/Casablanca_(film))
+
+  Answer/context quote: “Humphrey Bogart as Rick Blaine” (5 words).
+
+  Additional fun-fact quote: “Ingrid Bergman as Ilsa Lund” (5 words).
+
+- movies-tv-s0002: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/27175)
+
+  Answer/context quote: “Humphrey Bogart Rick Blaine” (4 words).
+
+  Additional fun-fact quote: “Ingrid Bergman Ilsa Lund” (4 words).
+
+## B13-0602 — Casablanca lists which filmmaker as its director?
+
+Answer: Michael Curtiz. Fun fact: Ingrid Bergman played Ilsa Lund.
+
+- movies-tv-s0001: [Wikipedia](https://en.wikipedia.org/wiki/Casablanca_(film))
+
+  Answer/context quote: “Directed by Michael Curtiz” (4 words).
+
+  Additional fun-fact quote: “Ingrid Bergman as Ilsa Lund” (5 words).
+
+- movies-tv-s0002: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/27175)
+
+  Answer/context quote: “Director: Michael Curtiz” (3 words).
+
+  Additional fun-fact quote: “Ingrid Bergman Ilsa Lund” (4 words).
+
+## B13-0603 — Which song is especially associated with Casablanca?
+
+Answer: As Time Goes By. Fun fact: Michael Curtiz directed Casablanca.
+
+- movies-tv-s0001: [Wikipedia](https://en.wikipedia.org/wiki/Casablanca_(film))
+
+  Answer/context quote: “Ilsa asks him to play " As Time Goes By "” (11 words).
+
+  Additional fun-fact quote: “Directed by Michael Curtiz” (4 words).
+
+- movies-tv-s0002: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/27175)
+
+  Answer/context quote: “Composer Max Steiner hated the song "As Time Goes By"” (10 words).
+
+  Additional fun-fact quote: “Director: Michael Curtiz” (3 words).
+
+## B13-0604 — In which country is most of Casablanca's story set?
+
+Answer: Morocco. Fun fact: Michael Curtiz directed Casablanca.
+
+- movies-tv-s0001: [Wikipedia](https://en.wikipedia.org/wiki/Casablanca_(film))
+
+  Answer/context quote: “Casablanca , then in French Morocco” (6 words).
+
+  Additional fun-fact quote: “Directed by Michael Curtiz” (4 words).
+
+- movies-tv-s0002: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/27175)
+
+  Answer/context quote: “During World War II, Casablanca, Morocco is a waiting point” (10 words).
+
+  Additional fun-fact quote: “Director: Michael Curtiz” (3 words).
+
+## B13-0605 — Which filmmaker directed Citizen Kane?
+
+Answer: Orson Welles. Fun fact: Bernard Herrmann composed Citizen Kane's music.
+
+- movies-tv-s0003: [Wikipedia](https://en.wikipedia.org/wiki/Citizen_Kane)
+
+  Answer/context quote: “Directed by Orson Welles” (4 words).
+
+  Additional fun-fact quote: “Music by Bernard Herrmann” (4 words).
+
+- movies-tv-s0004: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/27624)
+
+  Answer/context quote: “Director: Orson Welles” (3 words).
+
+  Additional fun-fact quote: “Bernard Herrmann Mus comp and cond” (6 words).
+
+## B13-0606 — In Citizen Kane, what object bears the name “Rosebud”?
+
+Answer: A sled. Fun fact: Gregg Toland was Citizen Kane's cinematographer.
+
+- movies-tv-s0003: [Wikipedia](https://en.wikipedia.org/wiki/Citizen_Kane)
+
+  Answer/context quote: “the sled's trade name is "Rosebud"” (6 words).
+
+  Additional fun-fact quote: “Cinematography Gregg Toland” (3 words).
+
+- movies-tv-s0004: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/27624)
+
+  Answer/context quote: “As a workman throws the sled into a furnace, the word Rosebud, painted across the top” (16 words).
+
+  Additional fun-fact quote: “Cinematographer: Gregg Toland” (3 words).
+
+## B13-0607 — Who photographed Citizen Kane?
+
+Answer: Gregg Toland. Fun fact: Orson Welles directed Citizen Kane.
+
+- movies-tv-s0003: [Wikipedia](https://en.wikipedia.org/wiki/Citizen_Kane)
+
+  Answer/context quote: “Cinematography Gregg Toland” (3 words).
+
+  Additional fun-fact quote: “Directed by Orson Welles” (4 words).
+
+- movies-tv-s0004: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/27624)
+
+  Answer/context quote: “Cinematographer: Gregg Toland” (3 words).
+
+  Additional fun-fact quote: “Director: Orson Welles” (3 words).
+
+## B13-0608 — Which composer supplied the music for Citizen Kane?
+
+Answer: Bernard Herrmann. Fun fact: Orson Welles directed Citizen Kane.
+
+- movies-tv-s0003: [Wikipedia](https://en.wikipedia.org/wiki/Citizen_Kane)
+
+  Answer/context quote: “Music by Bernard Herrmann” (4 words).
+
+  Additional fun-fact quote: “Directed by Orson Welles” (4 words).
+
+- movies-tv-s0004: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/27624)
+
+  Answer/context quote: “Bernard Herrmann Mus comp and cond” (6 words).
+
+  Additional fun-fact quote: “Director: Orson Welles” (3 words).
+
+## B13-0609 — Who portrayed Vito Corleone in the original 1972 Godfather film?
+
+Answer: Marlon Brando. Fun fact: Mario Puzo wrote the novel The Godfather.
+
+- movies-tv-s0005: [Wikipedia](https://en.wikipedia.org/wiki/The_Godfather)
+
+  Answer/context quote: “Vito Corleone (Brando)” (3 words).
+
+  Additional fun-fact quote: “Based on The Godfather by Mario Puzo” (7 words).
+
+- movies-tv-s0006: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/54023)
+
+  Answer/context quote: “"Don Vito Corleone" ( Marlon Brando )” (7 words).
+
+  Additional fun-fact quote: “Mario Puzo 's best-selling novel The Godfather” (7 words).
+
+## B13-0610 — The Godfather was directed by which filmmaker?
+
+Answer: Francis Ford Coppola. Fun fact: Mario Puzo wrote the novel The Godfather.
+
+- movies-tv-s0005: [Wikipedia](https://en.wikipedia.org/wiki/The_Godfather)
+
+  Answer/context quote: “Directed by Francis Ford Coppola” (5 words).
+
+  Additional fun-fact quote: “Based on The Godfather by Mario Puzo” (7 words).
+
+- movies-tv-s0006: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/54023)
+
+  Answer/context quote: “Director: Francis Ford Coppola” (4 words).
+
+  Additional fun-fact quote: “Mario Puzo 's best-selling novel The Godfather” (7 words).
+
+## B13-0611 — Who wrote the novel on which The Godfather is based?
+
+Answer: Mario Puzo. Fun fact: Francis Ford Coppola directed The Godfather.
+
+- movies-tv-s0005: [Wikipedia](https://en.wikipedia.org/wiki/The_Godfather)
+
+  Answer/context quote: “Based on The Godfather by Mario Puzo” (7 words).
+
+  Additional fun-fact quote: “Directed by Francis Ford Coppola” (5 words).
+
+- movies-tv-s0006: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/54023)
+
+  Answer/context quote: “Mario Puzo 's best-selling novel The Godfather” (7 words).
+
+  Additional fun-fact quote: “Director: Francis Ford Coppola” (4 words).
+
+## B13-0612 — The main score and famous theme of The Godfather are associated with which composer?
+
+Answer: Nino Rota. Fun fact: Francis Ford Coppola directed The Godfather.
+
+- movies-tv-s0005: [Wikipedia](https://en.wikipedia.org/wiki/The_Godfather)
+
+  Answer/context quote: “Music by Nino Rota” (4 words).
+
+  Additional fun-fact quote: “Directed by Francis Ford Coppola” (5 words).
+
+- movies-tv-s0006: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/54023)
+
+  Answer/context quote: “Nino Rota 's "Godfather" theme” (5 words).
+
+  Additional fun-fact quote: “Director: Francis Ford Coppola” (4 words).
+
+## B13-0613 — Who played Scarlett O'Hara in Gone with the Wind?
+
+Answer: Vivien Leigh. Fun fact: Margaret Mitchell wrote Gone with the Wind.
+
+- movies-tv-s0007: [Wikipedia](https://en.wikipedia.org/wiki/Gone_with_the_Wind_(film))
+
+  Answer/context quote: “Scarlett O'Hara ( Vivien Leigh )” (6 words).
+
+  Additional fun-fact quote: “Gone with the Wind by Margaret Mitchell” (7 words).
+
+- movies-tv-s0008: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/1181)
+
+  Answer/context quote: “Vivien Leigh Scarlett [O'Hara Hamilton Kennedy Butler]” (7 words).
+
+  Additional fun-fact quote: “Based on the novel Gone With the Wind by Margaret Mitchell” (11 words).
+
+## B13-0614 — Rhett Butler was played by which actor in Gone with the Wind?
+
+Answer: Clark Gable. Fun fact: Margaret Mitchell wrote Gone with the Wind.
+
+- movies-tv-s0007: [Wikipedia](https://en.wikipedia.org/wiki/Gone_with_the_Wind_(film))
+
+  Answer/context quote: “Rhett Butler ( Clark Gable )” (6 words).
+
+  Additional fun-fact quote: “Gone with the Wind by Margaret Mitchell” (7 words).
+
+- movies-tv-s0008: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/1181)
+
+  Answer/context quote: “Clark Gable Rhett Butler” (4 words).
+
+  Additional fun-fact quote: “Based on the novel Gone With the Wind by Margaret Mitchell” (11 words).
+
+## B13-0615 — Which author wrote the novel Gone with the Wind?
+
+Answer: Margaret Mitchell. Fun fact: Clark Gable played Rhett Butler.
+
+- movies-tv-s0007: [Wikipedia](https://en.wikipedia.org/wiki/Gone_with_the_Wind_(film))
+
+  Answer/context quote: “Gone with the Wind by Margaret Mitchell” (7 words).
+
+  Additional fun-fact quote: “Rhett Butler ( Clark Gable )” (6 words).
+
+- movies-tv-s0008: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/1181)
+
+  Answer/context quote: “Based on the novel Gone With the Wind by Margaret Mitchell” (11 words).
+
+  Additional fun-fact quote: “Clark Gable Rhett Butler” (4 words).
+
+## B13-0616 — Who receives the director credit on the 1939 Gone with the Wind?
+
+Answer: Victor Fleming. Fun fact: Margaret Mitchell wrote Gone with the Wind.
+
+- movies-tv-s0007: [Wikipedia](https://en.wikipedia.org/wiki/Gone_with_the_Wind_(film))
+
+  Answer/context quote: “Directed by Victor Fleming” (4 words).
+
+  Additional fun-fact quote: “Gone with the Wind by Margaret Mitchell” (7 words).
+
+- movies-tv-s0008: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/1181)
+
+  Answer/context quote: “Director: Victor Fleming” (3 words).
+
+  Additional fun-fact quote: “Based on the novel Gone With the Wind by Margaret Mitchell” (11 words).
+
+## B13-0617 — Who starred as Dorothy in the 1939 Wizard of Oz?
+
+Answer: Judy Garland. Fun fact: L. Frank Baum wrote The Wonderful Wizard of Oz.
+
+- movies-tv-s0009: [Wikipedia](https://en.wikipedia.org/wiki/The_Wizard_of_Oz_(1939_film))
+
+  Answer/context quote: “Judy Garland as Dorothy Gale” (5 words).
+
+  Additional fun-fact quote: “The Wonderful Wizard of Oz by L. Frank Baum” (9 words).
+
+- movies-tv-s0010: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/7892)
+
+  Answer/context quote: “Judy Garland Dorothy [Gale]” (4 words).
+
+  Additional fun-fact quote: “Based on the novel The Wonderful Wizard of Oz by L. Frank Baum” (13 words).
+
+## B13-0618 — What is Dorothy's dog called in The Wizard of Oz?
+
+Answer: Toto. Fun fact: Judy Garland played Dorothy in The Wizard of Oz.
+
+- movies-tv-s0009: [Wikipedia](https://en.wikipedia.org/wiki/The_Wizard_of_Oz_(1939_film))
+
+  Answer/context quote: “Her dog Toto” (3 words).
+
+  Additional fun-fact quote: “Judy Garland as Dorothy Gale” (5 words).
+
+- movies-tv-s0010: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/7892)
+
+  Answer/context quote: “Dorothy's little dog Toto” (4 words).
+
+  Additional fun-fact quote: “Judy Garland Dorothy [Gale]” (4 words).
+
+## B13-0619 — Who wrote the book The Wonderful Wizard of Oz?
+
+Answer: L. Frank Baum. Fun fact: Judy Garland played Dorothy in The Wizard of Oz.
+
+- movies-tv-s0009: [Wikipedia](https://en.wikipedia.org/wiki/The_Wizard_of_Oz_(1939_film))
+
+  Answer/context quote: “The Wonderful Wizard of Oz by L. Frank Baum” (9 words).
+
+  Additional fun-fact quote: “Judy Garland as Dorothy Gale” (5 words).
+
+- movies-tv-s0010: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/7892)
+
+  Answer/context quote: “Based on the novel The Wonderful Wizard of Oz by L. Frank Baum” (13 words).
+
+  Additional fun-fact quote: “Judy Garland Dorothy [Gale]” (4 words).
+
+## B13-0620 — Who composed the songs, including “Over the Rainbow,” for The Wizard of Oz?
+
+Answer: Harold Arlen. Fun fact: L. Frank Baum wrote The Wonderful Wizard of Oz.
+
+- movies-tv-s0009: [Wikipedia](https://en.wikipedia.org/wiki/The_Wizard_of_Oz_(1939_film))
+
+  Answer/context quote: “Its songs were composed by Harold Arlen” (7 words).
+
+  Additional fun-fact quote: “The Wonderful Wizard of Oz by L. Frank Baum” (9 words).
+
+- movies-tv-s0010: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/7892)
+
+  Answer/context quote: “Harburg and composer Harold Arlen were hired in May 1938 to write the songs.” (14 words).
+
+  Additional fun-fact quote: “Based on the novel The Wonderful Wizard of Oz by L. Frank Baum” (13 words).
+
+## B13-0621 — Which director made the shark thriller Jaws?
+
+Answer: Steven Spielberg. Fun fact: Peter Benchley wrote the novel Jaws.
+
+- movies-tv-s0011: [Wikipedia](https://en.wikipedia.org/wiki/Jaws_(film))
+
+  Answer/context quote: “Directed by Steven Spielberg” (4 words).
+
+  Additional fun-fact quote: “Based on Jaws by Peter Benchley” (6 words).
+
+- movies-tv-s0012: [American Film Institute](https://catalog.afi.com/Film/55193-JAWS)
+
+  Answer/context quote: “Director: Steven Spielberg” (3 words).
+
+  Additional fun-fact quote: “Based on the novel Jaws by Peter Benchley” (8 words).
+
+## B13-0622 — Police chief Martin Brody in Jaws was played by whom?
+
+Answer: Roy Scheider. Fun fact: Steven Spielberg directed Jaws.
+
+- movies-tv-s0011: [Wikipedia](https://en.wikipedia.org/wiki/Jaws_(film))
+
+  Answer/context quote: “Roy Scheider as police chief Martin Brody” (7 words).
+
+  Additional fun-fact quote: “Directed by Steven Spielberg” (4 words).
+
+- movies-tv-s0012: [American Film Institute](https://catalog.afi.com/Film/55193-JAWS)
+
+  Answer/context quote: “Roy Scheider [Martin] Brody” (4 words).
+
+  Additional fun-fact quote: “Director: Steven Spielberg” (3 words).
+
+## B13-0623 — Who wrote the novel that became Jaws?
+
+Answer: Peter Benchley. Fun fact: Roy Scheider played police chief Martin Brody.
+
+- movies-tv-s0011: [Wikipedia](https://en.wikipedia.org/wiki/Jaws_(film))
+
+  Answer/context quote: “Based on Jaws by Peter Benchley” (6 words).
+
+  Additional fun-fact quote: “Roy Scheider as police chief Martin Brody” (7 words).
+
+- movies-tv-s0012: [American Film Institute](https://catalog.afi.com/Film/55193-JAWS)
+
+  Answer/context quote: “Based on the novel Jaws by Peter Benchley” (8 words).
+
+  Additional fun-fact quote: “Roy Scheider [Martin] Brody” (4 words).
+
+## B13-0624 — The famous threatening music in Jaws was written by which composer?
+
+Answer: John Williams. Fun fact: Steven Spielberg directed Jaws.
+
+- movies-tv-s0011: [Wikipedia](https://en.wikipedia.org/wiki/Jaws_(film))
+
+  Answer/context quote: “Music by John Williams” (4 words).
+
+  Additional fun-fact quote: “Directed by Steven Spielberg” (4 words).
+
+- movies-tv-s0012: [American Film Institute](https://catalog.afi.com/Film/55193-JAWS)
+
+  Answer/context quote: “the ominous score by John Williams” (6 words).
+
+  Additional fun-fact quote: “Director: Steven Spielberg” (3 words).
+
+## B13-0625 — Who directed E.T. the Extra-Terrestrial?
+
+Answer: Steven Spielberg. Fun fact: John Williams wrote the E.T. score.
+
+- movies-tv-s0013: [Wikipedia](https://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial)
+
+  Answer/context quote: “Directed by Steven Spielberg” (4 words).
+
+  Additional fun-fact quote: “Music by John Williams” (4 words).
+
+- movies-tv-s0014: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/67140)
+
+  Answer/context quote: “Director: Steven Spielberg” (3 words).
+
+  Additional fun-fact quote: “John Williams [composer] Mus” (4 words).
+
+## B13-0626 — Who played Elliott, the human friend of E.T.?
+
+Answer: Henry Thomas. Fun fact: Steven Spielberg directed E.T. the Extra-Terrestrial.
+
+- movies-tv-s0013: [Wikipedia](https://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial)
+
+  Answer/context quote: “Henry Thomas as Elliott Taylor” (5 words).
+
+  Additional fun-fact quote: “Directed by Steven Spielberg” (4 words).
+
+- movies-tv-s0014: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/67140)
+
+  Answer/context quote: “Henry Thomas Elliott” (3 words).
+
+  Additional fun-fact quote: “Director: Steven Spielberg” (3 words).
+
+## B13-0627 — Which composer wrote E.T.'s orchestral score?
+
+Answer: John Williams. Fun fact: Henry Thomas played Elliott in E.T.
+
+- movies-tv-s0013: [Wikipedia](https://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial)
+
+  Answer/context quote: “Music by John Williams” (4 words).
+
+  Additional fun-fact quote: “Henry Thomas as Elliott Taylor” (5 words).
+
+- movies-tv-s0014: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/67140)
+
+  Answer/context quote: “John Williams [composer] Mus” (4 words).
+
+  Additional fun-fact quote: “Henry Thomas Elliott” (3 words).
+
+## B13-0628 — Who was E.T.'s cinematographer?
+
+Answer: Allen Daviau. Fun fact: Steven Spielberg directed E.T. the Extra-Terrestrial.
+
+- movies-tv-s0013: [Wikipedia](https://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial)
+
+  Answer/context quote: “Cinematography Allen Daviau” (3 words).
+
+  Additional fun-fact quote: “Directed by Steven Spielberg” (4 words).
+
+- movies-tv-s0014: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/67140)
+
+  Answer/context quote: “Cinematographer: Allen Daviau” (3 words).
+
+  Additional fun-fact quote: “Director: Steven Spielberg” (3 words).
+
+## B13-0629 — Who directed the original 1977 Star Wars film?
+
+Answer: George Lucas. Fun fact: John Williams composed the original Star Wars music.
+
+- movies-tv-s0015: [Wikipedia](https://en.wikipedia.org/wiki/Star_Wars_(film))
+
+  Answer/context quote: “Directed by George Lucas” (4 words).
+
+  Additional fun-fact quote: “Music by John Williams” (4 words).
+
+- movies-tv-s0016: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55187)
+
+  Answer/context quote: “Director: George Lucas” (3 words).
+
+  Additional fun-fact quote: “John Williams ’ extensive ninety-minute score” (6 words).
+
+## B13-0630 — Luke Skywalker was played by which actor in the original Star Wars?
+
+Answer: Mark Hamill. Fun fact: George Lucas directed the original Star Wars.
+
+- movies-tv-s0015: [Wikipedia](https://en.wikipedia.org/wiki/Star_Wars_(film))
+
+  Answer/context quote: “Mark Hamill as Luke Skywalker” (5 words).
+
+  Additional fun-fact quote: “Directed by George Lucas” (4 words).
+
+- movies-tv-s0016: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55187)
+
+  Answer/context quote: “Mark Hamill Luke Skywalker” (4 words).
+
+  Additional fun-fact quote: “Director: George Lucas” (3 words).
+
+## B13-0631 — Which actor portrayed Grand Moff Tarkin in the 1977 Star Wars?
+
+Answer: Peter Cushing. Fun fact: George Lucas directed the original Star Wars.
+
+- movies-tv-s0015: [Wikipedia](https://en.wikipedia.org/wiki/Star_Wars_(film))
+
+  Answer/context quote: “Peter Cushing as Grand Moff Tarkin” (6 words).
+
+  Additional fun-fact quote: “Directed by George Lucas” (4 words).
+
+- movies-tv-s0016: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55187)
+
+  Answer/context quote: “Peter Cushing Grand Moff Tarkin” (5 words).
+
+  Additional fun-fact quote: “Director: George Lucas” (3 words).
+
+## B13-0632 — Who composed the original Star Wars' orchestral music?
+
+Answer: John Williams. Fun fact: Mark Hamill played Luke Skywalker.
+
+- movies-tv-s0015: [Wikipedia](https://en.wikipedia.org/wiki/Star_Wars_(film))
+
+  Answer/context quote: “Music by John Williams” (4 words).
+
+  Additional fun-fact quote: “Mark Hamill as Luke Skywalker” (5 words).
+
+- movies-tv-s0016: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55187)
+
+  Answer/context quote: “John Williams ’ extensive ninety-minute score” (6 words).
+
+  Additional fun-fact quote: “Mark Hamill Luke Skywalker” (4 words).
+
+## B13-0633 — Which filmmaker directed the original 1993 Jurassic Park?
+
+Answer: Steven Spielberg. Fun fact: Michael Crichton wrote the novel Jurassic Park.
+
+- movies-tv-s0017: [Wikipedia](https://en.wikipedia.org/wiki/Jurassic_Park_(film))
+
+  Answer/context quote: “Directed by Steven Spielberg” (4 words).
+
+  Additional fun-fact quote: “Based on Jurassic Park by Michael Crichton” (7 words).
+
+- movies-tv-s0018: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/67200)
+
+  Answer/context quote: “Director: Steven Spielberg” (3 words).
+
+  Additional fun-fact quote: “Based on the novel Jurassic Park by Michael Crichton” (9 words).
+
+## B13-0634 — Who wrote the novel Jurassic Park?
+
+Answer: Michael Crichton. Fun fact: Steven Spielberg directed the original Jurassic Park.
+
+- movies-tv-s0017: [Wikipedia](https://en.wikipedia.org/wiki/Jurassic_Park_(film))
+
+  Answer/context quote: “Based on Jurassic Park by Michael Crichton” (7 words).
+
+  Additional fun-fact quote: “Directed by Steven Spielberg” (4 words).
+
+- movies-tv-s0018: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/67200)
+
+  Answer/context quote: “Based on the novel Jurassic Park by Michael Crichton” (9 words).
+
+  Additional fun-fact quote: “Director: Steven Spielberg” (3 words).
+
+## B13-0635 — Who played paleontologist Alan Grant in Jurassic Park?
+
+Answer: Sam Neill. Fun fact: Steven Spielberg directed the original Jurassic Park.
+
+- movies-tv-s0017: [Wikipedia](https://en.wikipedia.org/wiki/Jurassic_Park_(film))
+
+  Answer/context quote: “Sam Neill as Alan Grant” (5 words).
+
+  Additional fun-fact quote: “Directed by Steven Spielberg” (4 words).
+
+- movies-tv-s0018: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/67200)
+
+  Answer/context quote: “Sam Neill [Alan] Grant” (4 words).
+
+  Additional fun-fact quote: “Director: Steven Spielberg” (3 words).
+
+## B13-0636 — What fictional island houses the park in the first Jurassic Park movie?
+
+Answer: Isla Nublar. Fun fact: Michael Crichton wrote the novel Jurassic Park.
+
+- movies-tv-s0017: [Wikipedia](https://en.wikipedia.org/wiki/Jurassic_Park_(film))
+
+  Answer/context quote: “the fictional island of Isla Nublar” (6 words).
+
+  Additional fun-fact quote: “Based on Jurassic Park by Michael Crichton” (7 words).
+
+- movies-tv-s0018: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/67200)
+
+  Answer/context quote: “a “biological preserve” on Isla Nublar” (6 words).
+
+  Additional fun-fact quote: “Based on the novel Jurassic Park by Michael Crichton” (9 words).
+
+## B13-0637 — Who played Marty McFly in Back to the Future?
+
+Answer: Michael J. Fox. Fun fact: Christopher Lloyd played Doc Brown.
+
+- movies-tv-s0019: [Wikipedia](https://en.wikipedia.org/wiki/Back_to_the_Future)
+
+  Answer/context quote: “Michael J. Fox as Marty McFly” (6 words).
+
+  Additional fun-fact quote: “Christopher Lloyd as Emmett "Doc" Brown” (6 words).
+
+- movies-tv-s0020: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55763)
+
+  Answer/context quote: “Michael J. Fox Marty McFly” (5 words).
+
+  Additional fun-fact quote: “Christopher Lloyd Dr. ["Doc"] Emmett Brown” (6 words).
+
+## B13-0638 — What make of car becomes the time machine in Back to the Future?
+
+Answer: DeLorean. Fun fact: Michael J. Fox played Marty McFly.
+
+- movies-tv-s0019: [Wikipedia](https://en.wikipedia.org/wiki/Back_to_the_Future)
+
+  Answer/context quote: “a time machine built from a modified DeLorean” (8 words).
+
+  Additional fun-fact quote: “Michael J. Fox as Marty McFly” (6 words).
+
+- movies-tv-s0020: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55763)
+
+  Answer/context quote: “later decided on the DeLorean, a gull-winged sports car” (9 words).
+
+  Additional fun-fact quote: “Michael J. Fox Marty McFly” (5 words).
+
+## B13-0639 — Who portrayed the eccentric Doc Brown?
+
+Answer: Christopher Lloyd. Fun fact: Back to the Future's time machine was built from a DeLorean.
+
+- movies-tv-s0019: [Wikipedia](https://en.wikipedia.org/wiki/Back_to_the_Future)
+
+  Answer/context quote: “Christopher Lloyd as Emmett "Doc" Brown” (6 words).
+
+  Additional fun-fact quote: “a time machine built from a modified DeLorean” (8 words).
+
+- movies-tv-s0020: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55763)
+
+  Answer/context quote: “Christopher Lloyd Dr. ["Doc"] Emmett Brown” (6 words).
+
+  Additional fun-fact quote: “later decided on the DeLorean, a gull-winged sports car” (9 words).
+
+## B13-0640 — Back to the Future's instrumental score was composed by whom?
+
+Answer: Alan Silvestri. Fun fact: Michael J. Fox played Marty McFly.
+
+- movies-tv-s0019: [Wikipedia](https://en.wikipedia.org/wiki/Back_to_the_Future)
+
+  Answer/context quote: “Music by Alan Silvestri” (4 words).
+
+  Additional fun-fact quote: “Michael J. Fox as Marty McFly” (6 words).
+
+- movies-tv-s0020: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55763)
+
+  Answer/context quote: “MUSIC Alan Silvestri Mus” (4 words).
+
+  Additional fun-fact quote: “Michael J. Fox Marty McFly” (5 words).
+
+## B13-0641 — Who played Neo in the original Matrix film?
+
+Answer: Keanu Reeves. Fun fact: The Wachowskis directed The Matrix.
+
+- movies-tv-s0021: [Wikipedia](https://en.wikipedia.org/wiki/The_Matrix)
+
+  Answer/context quote: “Keanu Reeves as Neo” (4 words).
+
+  Additional fun-fact quote: “Directed by The Wachowskis” (4 words).
+
+- movies-tv-s0022: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/61230)
+
+  Answer/context quote: “Keanu Reeves Neo [a.k.a. Thomas Anderson]” (6 words).
+
+  Additional fun-fact quote: “Directors: Lilly Wachowski , Lana Wachowski” (6 words).
+
+## B13-0642 — Which filmmaking siblings directed The Matrix?
+
+Answer: The Wachowskis. Fun fact: Keanu Reeves played Neo in The Matrix.
+
+- movies-tv-s0021: [Wikipedia](https://en.wikipedia.org/wiki/The_Matrix)
+
+  Answer/context quote: “Directed by The Wachowskis” (4 words).
+
+  Additional fun-fact quote: “Keanu Reeves as Neo” (4 words).
+
+- movies-tv-s0022: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/61230)
+
+  Answer/context quote: “Directors: Lilly Wachowski , Lana Wachowski” (6 words).
+
+  Additional fun-fact quote: “Keanu Reeves Neo [a.k.a. Thomas Anderson]” (6 words).
+
+## B13-0643 — The Matrix's cinematographer was which person?
+
+Answer: Bill Pope. Fun fact: The Wachowskis directed The Matrix.
+
+- movies-tv-s0021: [Wikipedia](https://en.wikipedia.org/wiki/The_Matrix)
+
+  Answer/context quote: “Cinematography Bill Pope” (3 words).
+
+  Additional fun-fact quote: “Directed by The Wachowskis” (4 words).
+
+- movies-tv-s0022: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/61230)
+
+  Answer/context quote: “Cinematographer: Bill Pope” (3 words).
+
+  Additional fun-fact quote: “Directors: Lilly Wachowski , Lana Wachowski” (6 words).
+
+## B13-0644 — Who composed The Matrix's original instrumental score?
+
+Answer: Don Davis. Fun fact: Keanu Reeves played Neo in The Matrix.
+
+- movies-tv-s0021: [Wikipedia](https://en.wikipedia.org/wiki/The_Matrix)
+
+  Answer/context quote: “Music by Don Davis” (4 words).
+
+  Additional fun-fact quote: “Keanu Reeves as Neo” (4 words).
+
+- movies-tv-s0022: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/61230)
+
+  Answer/context quote: “MUSIC Don Davis Mus comp” (5 words).
+
+  Additional fun-fact quote: “Keanu Reeves Neo [a.k.a. Thomas Anderson]” (6 words).
+
+## B13-0645 — Who portrayed Ripley in the 1979 Alien?
+
+Answer: Sigourney Weaver. Fun fact: Ridley Scott directed the original Alien.
+
+- movies-tv-s0023: [Wikipedia](https://en.wikipedia.org/wiki/Alien_(film))
+
+  Answer/context quote: “Sigourney Weaver as Ripley” (4 words).
+
+  Additional fun-fact quote: “Directed by Ridley Scott” (4 words).
+
+- movies-tv-s0024: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/53908)
+
+  Answer/context quote: “Sigourney Weaver Ripley” (3 words).
+
+  Additional fun-fact quote: “Director: Ridley Scott” (3 words).
+
+## B13-0646 — Which filmmaker directed the first Alien movie?
+
+Answer: Ridley Scott. Fun fact: Sigourney Weaver played Ripley in Alien.
+
+- movies-tv-s0023: [Wikipedia](https://en.wikipedia.org/wiki/Alien_(film))
+
+  Answer/context quote: “Directed by Ridley Scott” (4 words).
+
+  Additional fun-fact quote: “Sigourney Weaver as Ripley” (4 words).
+
+- movies-tv-s0024: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/53908)
+
+  Answer/context quote: “Director: Ridley Scott” (3 words).
+
+  Additional fun-fact quote: “Sigourney Weaver Ripley” (3 words).
+
+## B13-0647 — What is the name of the spacecraft in the original Alien?
+
+Answer: Nostromo. Fun fact: Ridley Scott directed the original Alien.
+
+- movies-tv-s0023: [Wikipedia](https://en.wikipedia.org/wiki/Alien_(film))
+
+  Answer/context quote: “The commercial space tug Nostromo” (5 words).
+
+  Additional fun-fact quote: “Directed by Ridley Scott” (4 words).
+
+- movies-tv-s0024: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/53908)
+
+  Answer/context quote: “commercial towing vehicle ‘The Nostromo’” (5 words).
+
+  Additional fun-fact quote: “Director: Ridley Scott” (3 words).
+
+## B13-0648 — Alien's original film score was composed by whom?
+
+Answer: Jerry Goldsmith. Fun fact: Sigourney Weaver played Ripley in Alien.
+
+- movies-tv-s0023: [Wikipedia](https://en.wikipedia.org/wiki/Alien_(film))
+
+  Answer/context quote: “Music by Jerry Goldsmith” (4 words).
+
+  Additional fun-fact quote: “Sigourney Weaver as Ripley” (4 words).
+
+- movies-tv-s0024: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/53908)
+
+  Answer/context quote: “MUSIC Jerry Goldsmith Mus” (4 words).
+
+  Additional fun-fact quote: “Sigourney Weaver Ripley” (3 words).
+
+## B13-0649 — Who directed the original 1960 Psycho?
+
+Answer: Alfred Hitchcock. Fun fact: Robert Bloch wrote the novel Psycho.
+
+- movies-tv-s0025: [Wikipedia](https://en.wikipedia.org/wiki/Psycho_(1960_film))
+
+  Answer/context quote: “Directed by Alfred Hitchcock” (4 words).
+
+  Additional fun-fact quote: “Psycho 1959 novel by Robert Bloch” (6 words).
+
+- movies-tv-s0026: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/53260)
+
+  Answer/context quote: “Director: Alfred Hitchcock” (3 words).
+
+  Additional fun-fact quote: “the Robert Bloch novel on which the film was based” (10 words).
+
+## B13-0650 — Norman Bates in Hitchcock's Psycho was played by whom?
+
+Answer: Anthony Perkins. Fun fact: Alfred Hitchcock directed the original Psycho.
+
+- movies-tv-s0025: [Wikipedia](https://en.wikipedia.org/wiki/Psycho_(1960_film))
+
+  Answer/context quote: “Anthony Perkins as Norman Bates” (5 words).
+
+  Additional fun-fact quote: “Directed by Alfred Hitchcock” (4 words).
+
+- movies-tv-s0026: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/53260)
+
+  Answer/context quote: “Anthony Perkins Norman Bates” (4 words).
+
+  Additional fun-fact quote: “Director: Alfred Hitchcock” (3 words).
+
+## B13-0651 — Who wrote the novel adapted into Psycho?
+
+Answer: Robert Bloch. Fun fact: Alfred Hitchcock directed the original Psycho.
+
+- movies-tv-s0025: [Wikipedia](https://en.wikipedia.org/wiki/Psycho_(1960_film))
+
+  Answer/context quote: “Psycho 1959 novel by Robert Bloch” (6 words).
+
+  Additional fun-fact quote: “Directed by Alfred Hitchcock” (4 words).
+
+- movies-tv-s0026: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/53260)
+
+  Answer/context quote: “the Robert Bloch novel on which the film was based” (10 words).
+
+  Additional fun-fact quote: “Director: Alfred Hitchcock” (3 words).
+
+## B13-0652 — Which composer wrote Psycho's famously unsettling music?
+
+Answer: Bernard Herrmann. Fun fact: Robert Bloch wrote the novel Psycho.
+
+- movies-tv-s0025: [Wikipedia](https://en.wikipedia.org/wiki/Psycho_(1960_film))
+
+  Answer/context quote: “Music by Bernard Herrmann” (4 words).
+
+  Additional fun-fact quote: “Psycho 1959 novel by Robert Bloch” (6 words).
+
+- movies-tv-s0026: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/53260)
+
+  Answer/context quote: “Bernard Herrmann ’s score” (4 words).
+
+  Additional fun-fact quote: “the Robert Bloch novel on which the film was based” (10 words).
+
+## B13-0653 — Who played the title cyborg in The Terminator?
+
+Answer: Arnold Schwarzenegger. Fun fact: Linda Hamilton played Sarah Connor.
+
+- movies-tv-s0027: [Wikipedia](https://en.wikipedia.org/wiki/The_Terminator)
+
+  Answer/context quote: “Arnold Schwarzenegger as the titular character” (6 words).
+
+  Additional fun-fact quote: “Linda Hamilton as Sarah Connor” (5 words).
+
+- movies-tv-s0028: [American Film Institute](https://catalog.afi.com/Catalog/MovieDetails/57224)
+
+  Answer/context quote: “Arnold Schwarzenegger Terminator” (3 words).
+
+  Additional fun-fact quote: “Linda Hamilton Sarah [J.] Connor” (5 words).
+
+## B13-0654 — Which director made The Terminator?
+
+Answer: James Cameron. Fun fact: Linda Hamilton played Sarah Connor.
+
+- movies-tv-s0027: [Wikipedia](https://en.wikipedia.org/wiki/The_Terminator)
+
+  Answer/context quote: “Directed by James Cameron” (4 words).
+
+  Additional fun-fact quote: “Linda Hamilton as Sarah Connor” (5 words).
+
+- movies-tv-s0028: [American Film Institute](https://catalog.afi.com/Catalog/MovieDetails/57224)
+
+  Answer/context quote: “Director: James Cameron” (3 words).
+
+  Additional fun-fact quote: “Linda Hamilton Sarah [J.] Connor” (5 words).
+
+## B13-0655 — Who played Sarah Connor in the first Terminator movie?
+
+Answer: Linda Hamilton. Fun fact: James Cameron directed The Terminator.
+
+- movies-tv-s0027: [Wikipedia](https://en.wikipedia.org/wiki/The_Terminator)
+
+  Answer/context quote: “Linda Hamilton as Sarah Connor” (5 words).
+
+  Additional fun-fact quote: “Directed by James Cameron” (4 words).
+
+- movies-tv-s0028: [American Film Institute](https://catalog.afi.com/Catalog/MovieDetails/57224)
+
+  Answer/context quote: “Linda Hamilton Sarah [J.] Connor” (5 words).
+
+  Additional fun-fact quote: “Director: James Cameron” (3 words).
+
+## B13-0656 — Who composed The Terminator's score?
+
+Answer: Brad Fiedel. Fun fact: James Cameron directed The Terminator.
+
+- movies-tv-s0027: [Wikipedia](https://en.wikipedia.org/wiki/The_Terminator)
+
+  Answer/context quote: “Music by Brad Fiedel” (4 words).
+
+  Additional fun-fact quote: “Directed by James Cameron” (4 words).
+
+- movies-tv-s0028: [American Film Institute](https://catalog.afi.com/Catalog/MovieDetails/57224)
+
+  Answer/context quote: “MUSIC Brad Fiedel Mus” (4 words).
+
+  Additional fun-fact quote: “Director: James Cameron” (3 words).
+
+## B13-0657 — Which of these actors stars in Pulp Fiction?
+
+Answer: John Travolta. Fun fact: Quentin Tarantino directed Pulp Fiction.
+
+- movies-tv-s0029: [Wikipedia](https://en.wikipedia.org/wiki/Pulp_Fiction)
+
+  Answer/context quote: “Starring John Travolta” (3 words).
+
+  Additional fun-fact quote: “Directed by Quentin Tarantino” (4 words).
+
+- movies-tv-s0030: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55207)
+
+  Answer/context quote: “Cast: John Travolta” (3 words).
+
+  Additional fun-fact quote: “Director: Quentin Tarantino” (3 words).
+
+## B13-0658 — Pulp Fiction was directed by whom?
+
+Answer: Quentin Tarantino. Fun fact: Sally Menke edited Pulp Fiction.
+
+- movies-tv-s0029: [Wikipedia](https://en.wikipedia.org/wiki/Pulp_Fiction)
+
+  Answer/context quote: “Directed by Quentin Tarantino” (4 words).
+
+  Additional fun-fact quote: “Edited by Sally Menke” (4 words).
+
+- movies-tv-s0030: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55207)
+
+  Answer/context quote: “Director: Quentin Tarantino” (3 words).
+
+  Additional fun-fact quote: “Editor: Sally Menke” (3 words).
+
+## B13-0659 — Who edited Pulp Fiction?
+
+Answer: Sally Menke. Fun fact: Quentin Tarantino directed Pulp Fiction.
+
+- movies-tv-s0029: [Wikipedia](https://en.wikipedia.org/wiki/Pulp_Fiction)
+
+  Answer/context quote: “Edited by Sally Menke” (4 words).
+
+  Additional fun-fact quote: “Directed by Quentin Tarantino” (4 words).
+
+- movies-tv-s0030: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55207)
+
+  Answer/context quote: “Editor: Sally Menke” (3 words).
+
+  Additional fun-fact quote: “Director: Quentin Tarantino” (3 words).
+
+## B13-0660 — Which cinematographer shot Pulp Fiction?
+
+Answer: Andrzej Sekuła. Fun fact: John Travolta is a star of Pulp Fiction.
+
+- movies-tv-s0029: [Wikipedia](https://en.wikipedia.org/wiki/Pulp_Fiction)
+
+  Answer/context quote: “Cinematography Andrzej Sekuła” (3 words).
+
+  Additional fun-fact quote: “Starring John Travolta” (3 words).
+
+- movies-tv-s0030: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55207)
+
+  Answer/context quote: “Cinematographer: Andrzej Sekula” (3 words).
+
+  Additional fun-fact quote: “Cast: John Travolta” (3 words).
+
+## B13-0661 — Which studio produced the original animated Snow White and the Seven Dwarfs?
+
+Answer: Walt Disney Productions. Fun fact: Lucille La Verne voiced the Wicked Queen in Snow White.
+
+- movies-tv-s0031: [Wikipedia](https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_(1937_film))
+
+  Answer/context quote: “Production company Walt Disney Productions” (5 words).
+
+  Additional fun-fact quote: “Lucille La Verne as the Queen” (6 words).
+
+- movies-tv-s0032: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/5865)
+
+  Answer/context quote: “Production Company: Walt Disney Productions, Ltd.” (6 words).
+
+  Additional fun-fact quote: “Lucille LaVerne Voice of the Wicked Queen” (7 words).
+
+## B13-0662 — How many dwarfs are named in the title of Disney's original Snow White film?
+
+Answer: Seven. Fun fact: Walt Disney Productions made Snow White and the Seven Dwarfs.
+
+- movies-tv-s0031: [Wikipedia](https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_(1937_film))
+
+  Answer/context quote: “Snow White and the Seven Dwarfs” (6 words).
+
+  Additional fun-fact quote: “Production company Walt Disney Productions” (5 words).
+
+- movies-tv-s0032: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/5865)
+
+  Answer/context quote: “Snow White and the Seven Dwarfs” (6 words).
+
+  Additional fun-fact quote: “Production Company: Walt Disney Productions, Ltd.” (6 words).
+
+## B13-0663 — Who supplied the Wicked Queen's voice in Disney's original Snow White?
+
+Answer: Lucille La Verne. Fun fact: Seven dwarfs feature alongside Snow White.
+
+- movies-tv-s0031: [Wikipedia](https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_(1937_film))
+
+  Answer/context quote: “Lucille La Verne as the Queen” (6 words).
+
+  Additional fun-fact quote: “Snow White and the Seven Dwarfs” (6 words).
+
+- movies-tv-s0032: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/5865)
+
+  Answer/context quote: “Lucille LaVerne Voice of the Wicked Queen” (7 words).
+
+  Additional fun-fact quote: “Snow White and the Seven Dwarfs” (6 words).
+
+## B13-0664 — Which of these composers received a music credit on the 1937 Snow White film?
+
+Answer: Frank Churchill. Fun fact: Lucille La Verne voiced the Wicked Queen in Snow White.
+
+- movies-tv-s0031: [Wikipedia](https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_(1937_film))
+
+  Answer/context quote: “Music by Frank Churchill Leigh Harline Paul Smith” (8 words).
+
+  Additional fun-fact quote: “Lucille La Verne as the Queen” (6 words).
+
+- movies-tv-s0032: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/5865)
+
+  Answer/context quote: “MUSIC Frank Churchill Mus” (4 words).
+
+  Additional fun-fact quote: “Lucille LaVerne Voice of the Wicked Queen” (7 words).
+
+## B13-0665 — What is the heroine's name in Disney's 1991 Beauty and the Beast?
+
+Answer: Belle. Fun fact: Angela Lansbury voiced Mrs. Potts in the 1991 animated film.
+
+- movies-tv-s0033: [Wikipedia](https://en.wikipedia.org/wiki/Beauty_and_the_Beast_(1991_film))
+
+  Answer/context quote: “young woman named Belle” (4 words).
+
+  Additional fun-fact quote: “Angela Lansbury as Mrs. Potts” (5 words).
+
+- movies-tv-s0034: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55212)
+
+  Answer/context quote: “Paige O'Hara Belle” (3 words).
+
+  Additional fun-fact quote: “Angela Lansbury Mrs. Potts” (4 words).
+
+## B13-0666 — Mrs. Potts in the animated Beauty and the Beast was voiced by whom?
+
+Answer: Angela Lansbury. Fun fact: Alan Menken composed Beauty and the Beast's original score.
+
+- movies-tv-s0033: [Wikipedia](https://en.wikipedia.org/wiki/Beauty_and_the_Beast_(1991_film))
+
+  Answer/context quote: “Angela Lansbury as Mrs. Potts” (5 words).
+
+  Additional fun-fact quote: “Music by Alan Menken” (4 words).
+
+- movies-tv-s0034: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55212)
+
+  Answer/context quote: “Angela Lansbury Mrs. Potts” (4 words).
+
+  Additional fun-fact quote: “Alan Menken Orig score by” (5 words).
+
+## B13-0667 — Who composed the score for the 1991 Beauty and the Beast?
+
+Answer: Alan Menken. Fun fact: Angela Lansbury voiced Mrs. Potts in the 1991 animated film.
+
+- movies-tv-s0033: [Wikipedia](https://en.wikipedia.org/wiki/Beauty_and_the_Beast_(1991_film))
+
+  Answer/context quote: “Music by Alan Menken” (4 words).
+
+  Additional fun-fact quote: “Angela Lansbury as Mrs. Potts” (5 words).
+
+- movies-tv-s0034: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55212)
+
+  Answer/context quote: “Alan Menken Orig score by” (5 words).
+
+  Additional fun-fact quote: “Angela Lansbury Mrs. Potts” (4 words).
+
+## B13-0668 — Which directing team made Disney's animated Beauty and the Beast?
+
+Answer: Gary Trousdale and Kirk Wise. Fun fact: Belle is the heroine of Disney's animated Beauty and the Beast.
+
+- movies-tv-s0033: [Wikipedia](https://en.wikipedia.org/wiki/Beauty_and_the_Beast_(1991_film))
+
+  Answer/context quote: “Directed by Gary Trousdale Kirk Wise” (6 words).
+
+  Additional fun-fact quote: “young woman named Belle” (4 words).
+
+- movies-tv-s0034: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55212)
+
+  Answer/context quote: “Directors: Gary Trousdale , Kirk Wise” (6 words).
+
+  Additional fun-fact quote: “Paige O'Hara Belle” (3 words).
+
+## B13-0669 — Who voiced the Genie in the original animated Aladdin?
+
+Answer: Robin Williams. Fun fact: Gilbert Gottfried voiced Iago in Disney's animated Aladdin.
+
+- movies-tv-s0035: [Wikipedia](https://en.wikipedia.org/wiki/Aladdin_(1992_Disney_film))
+
+  Answer/context quote: “Robin Williams as the Genie” (5 words).
+
+  Additional fun-fact quote: “Gilbert Gottfried as Iago” (4 words).
+
+- movies-tv-s0036: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/67020)
+
+  Answer/context quote: “Robin Williams Genie” (3 words).
+
+  Additional fun-fact quote: “Gilbert Gottfried Iago” (3 words).
+
+## B13-0670 — In what fictional city does Disney's Aladdin take place?
+
+Answer: Agrabah. Fun fact: Robin Williams voiced the Genie in the 1992 Aladdin.
+
+- movies-tv-s0035: [Wikipedia](https://en.wikipedia.org/wiki/Aladdin_(1992_Disney_film))
+
+  Answer/context quote: “fictional Middle Eastern city of Agrabah” (6 words).
+
+  Additional fun-fact quote: “Robin Williams as the Genie” (5 words).
+
+- movies-tv-s0036: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/67020)
+
+  Answer/context quote: “city of Agrabah” (3 words).
+
+  Additional fun-fact quote: “Robin Williams Genie” (3 words).
+
+## B13-0671 — Who was the voice of the parrot Iago in the 1992 Aladdin?
+
+Answer: Gilbert Gottfried. Fun fact: Aladdin's fictional city is Agrabah.
+
+- movies-tv-s0035: [Wikipedia](https://en.wikipedia.org/wiki/Aladdin_(1992_Disney_film))
+
+  Answer/context quote: “Gilbert Gottfried as Iago” (4 words).
+
+  Additional fun-fact quote: “fictional Middle Eastern city of Agrabah” (6 words).
+
+- movies-tv-s0036: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/67020)
+
+  Answer/context quote: “Gilbert Gottfried Iago” (3 words).
+
+  Additional fun-fact quote: “city of Agrabah” (3 words).
+
+## B13-0672 — Aladdin's original instrumental score was written by which composer?
+
+Answer: Alan Menken. Fun fact: Robin Williams voiced the Genie in the 1992 Aladdin.
+
+- movies-tv-s0035: [Wikipedia](https://en.wikipedia.org/wiki/Aladdin_(1992_Disney_film))
+
+  Answer/context quote: “Music by Alan Menken” (4 words).
+
+  Additional fun-fact quote: “Robin Williams as the Genie” (5 words).
+
+- movies-tv-s0036: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/67020)
+
+  Answer/context quote: “MUSIC Alan Menken Orig score by” (6 words).
+
+  Additional fun-fact quote: “Robin Williams Genie” (3 words).
+
+## B13-0673 — What is the young lion hero's name in The Lion King?
+
+Answer: Simba. Fun fact: Jeremy Irons voiced Scar in the 1994 Lion King.
+
+- movies-tv-s0037: [Wikipedia](https://en.wikipedia.org/wiki/The_Lion_King_(1994_film))
+
+  Answer/context quote: “young lion prince named Simba” (5 words).
+
+  Additional fun-fact quote: “Jeremy Irons as Scar” (4 words).
+
+- movies-tv-s0038: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/60348)
+
+  Answer/context quote: “Jonathan Taylor Thomas Young Simba” (5 words).
+
+  Additional fun-fact quote: “Jeremy Irons Scar” (3 words).
+
+## B13-0674 — Which actor voiced Scar in the original animated Lion King?
+
+Answer: Jeremy Irons. Fun fact: Hans Zimmer composed The Lion King's film score.
+
+- movies-tv-s0037: [Wikipedia](https://en.wikipedia.org/wiki/The_Lion_King_(1994_film))
+
+  Answer/context quote: “Jeremy Irons as Scar” (4 words).
+
+  Additional fun-fact quote: “Music by Hans Zimmer” (4 words).
+
+- movies-tv-s0038: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/60348)
+
+  Answer/context quote: “Jeremy Irons Scar” (3 words).
+
+  Additional fun-fact quote: “MUSIC Hans Zimmer Mus score” (5 words).
+
+## B13-0675 — Who wrote the instrumental score for Disney's 1994 Lion King?
+
+Answer: Hans Zimmer. Fun fact: Jeremy Irons voiced Scar in the 1994 Lion King.
+
+- movies-tv-s0037: [Wikipedia](https://en.wikipedia.org/wiki/The_Lion_King_(1994_film))
+
+  Answer/context quote: “Music by Hans Zimmer” (4 words).
+
+  Additional fun-fact quote: “Jeremy Irons as Scar” (4 words).
+
+- movies-tv-s0038: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/60348)
+
+  Answer/context quote: “MUSIC Hans Zimmer Mus score” (5 words).
+
+  Additional fun-fact quote: “Jeremy Irons Scar” (3 words).
+
+## B13-0676 — Who shared the directing credit on the 1994 Lion King?
+
+Answer: Roger Allers and Rob Minkoff. Fun fact: Simba is The Lion King's young lion protagonist.
+
+- movies-tv-s0037: [Wikipedia](https://en.wikipedia.org/wiki/The_Lion_King_(1994_film))
+
+  Answer/context quote: “Directed by Roger Allers Rob Minkoff” (6 words).
+
+  Additional fun-fact quote: “young lion prince named Simba” (5 words).
+
+- movies-tv-s0038: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/60348)
+
+  Answer/context quote: “Directors: Roger Allers , Rob Minkoff” (6 words).
+
+  Additional fun-fact quote: “Jonathan Taylor Thomas Young Simba” (5 words).
+
+## B13-0677 — Who voiced Woody in the original Toy Story?
+
+Answer: Tom Hanks. Fun fact: Tim Allen voiced Buzz Lightyear in the first Toy Story.
+
+- movies-tv-s0039: [Wikipedia](https://en.wikipedia.org/wiki/Toy_Story)
+
+  Answer/context quote: “Tom Hanks as Woody” (4 words).
+
+  Additional fun-fact quote: “Tim Allen as Buzz Lightyear” (5 words).
+
+- movies-tv-s0040: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55210)
+
+  Answer/context quote: “Tom Hanks Woody” (3 words).
+
+  Additional fun-fact quote: “Tim Allen Buzz Lightyear” (4 words).
+
+## B13-0678 — Buzz Lightyear's voice in the first Toy Story belongs to which actor?
+
+Answer: Tim Allen. Fun fact: Tom Hanks voiced Woody in Toy Story.
+
+- movies-tv-s0039: [Wikipedia](https://en.wikipedia.org/wiki/Toy_Story)
+
+  Answer/context quote: “Tim Allen as Buzz Lightyear” (5 words).
+
+  Additional fun-fact quote: “Tom Hanks as Woody” (4 words).
+
+- movies-tv-s0040: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55210)
+
+  Answer/context quote: “Tim Allen Buzz Lightyear” (4 words).
+
+  Additional fun-fact quote: “Tom Hanks Woody” (3 words).
+
+## B13-0679 — The original Toy Story was directed by whom?
+
+Answer: John Lasseter. Fun fact: Tim Allen voiced Buzz Lightyear in the first Toy Story.
+
+- movies-tv-s0039: [Wikipedia](https://en.wikipedia.org/wiki/Toy_Story)
+
+  Answer/context quote: “Directed by John Lasseter” (4 words).
+
+  Additional fun-fact quote: “Tim Allen as Buzz Lightyear” (5 words).
+
+- movies-tv-s0040: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55210)
+
+  Answer/context quote: “Director: John Lasseter” (3 words).
+
+  Additional fun-fact quote: “Tim Allen Buzz Lightyear” (4 words).
+
+## B13-0680 — Which composer wrote the music for Toy Story?
+
+Answer: Randy Newman. Fun fact: John Lasseter directed the original Toy Story.
+
+- movies-tv-s0039: [Wikipedia](https://en.wikipedia.org/wiki/Toy_Story)
+
+  Answer/context quote: “Music by Randy Newman” (4 words).
+
+  Additional fun-fact quote: “Directed by John Lasseter” (4 words).
+
+- movies-tv-s0040: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55210)
+
+  Answer/context quote: “MUSIC Randy Newman Mus” (4 words).
+
+  Additional fun-fact quote: “Director: John Lasseter” (3 words).
+
+## B13-0681 — Who played Rocky Balboa in the original Rocky?
+
+Answer: Sylvester Stallone. Fun fact: Sylvester Stallone wrote the original Rocky screenplay.
+
+- movies-tv-s0041: [Wikipedia](https://en.wikipedia.org/wiki/Rocky)
+
+  Answer/context quote: “Sylvester Stallone as Robert "Rocky" Balboa” (6 words).
+
+  Additional fun-fact quote: “Written by Sylvester Stallone” (4 words).
+
+- movies-tv-s0042: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/53862)
+
+  Answer/context quote: “Sylvester Stallone Rocky [Balboa]” (4 words).
+
+  Additional fun-fact quote: “Writer: Sylvester Stallone” (3 words).
+
+## B13-0682 — Which sport is central to the movie Rocky?
+
+Answer: Boxing. Fun fact: Bill Conti composed Rocky's music.
+
+- movies-tv-s0041: [Wikipedia](https://en.wikipedia.org/wiki/Rocky)
+
+  Answer/context quote: “heavyweight boxing world champion Apollo Creed” (6 words).
+
+  Additional fun-fact quote: “Music by Bill Conti” (4 words).
+
+- movies-tv-s0042: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/53862)
+
+  Answer/context quote: “the film’s climactic boxing sequence” (5 words).
+
+  Additional fun-fact quote: “MUSIC Bill Conti Mus” (4 words).
+
+## B13-0683 — Who directed the first Rocky movie?
+
+Answer: John G. Avildsen. Fun fact: Sylvester Stallone wrote the original Rocky screenplay.
+
+- movies-tv-s0041: [Wikipedia](https://en.wikipedia.org/wiki/Rocky)
+
+  Answer/context quote: “Directed by John G. Avildsen” (5 words).
+
+  Additional fun-fact quote: “Written by Sylvester Stallone” (4 words).
+
+- movies-tv-s0042: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/53862)
+
+  Answer/context quote: “Director: John G. Avildsen” (4 words).
+
+  Additional fun-fact quote: “Writer: Sylvester Stallone” (3 words).
+
+## B13-0684 — Who composed the music for the original Rocky?
+
+Answer: Bill Conti. Fun fact: John G. Avildsen directed the original Rocky.
+
+- movies-tv-s0041: [Wikipedia](https://en.wikipedia.org/wiki/Rocky)
+
+  Answer/context quote: “Music by Bill Conti” (4 words).
+
+  Additional fun-fact quote: “Directed by John G. Avildsen” (5 words).
+
+- movies-tv-s0042: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/53862)
+
+  Answer/context quote: “MUSIC Bill Conti Mus” (4 words).
+
+  Additional fun-fact quote: “Director: John G. Avildsen” (4 words).
+
+## B13-0685 — Who played young Rose in the 1997 Titanic?
+
+Answer: Kate Winslet. Fun fact: James Cameron directed and wrote the 1997 Titanic.
+
+- movies-tv-s0043: [Wikipedia](https://en.wikipedia.org/wiki/Titanic_(1997_film))
+
+  Answer/context quote: “Kate Winslet as Rose DeWitt Bukater” (6 words).
+
+  Additional fun-fact quote: “Directed by James Cameron Written by James Cameron” (8 words).
+
+- movies-tv-s0044: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55202)
+
+  Answer/context quote: “Kate Winslet Rose DeWitt Bukater” (5 words).
+
+  Additional fun-fact quote: “Director: James Cameron Writer: James Cameron” (6 words).
+
+## B13-0686 — Who portrayed Jack Dawson in Titanic?
+
+Answer: Leonardo DiCaprio. Fun fact: James Horner composed Titanic's film score.
+
+- movies-tv-s0043: [Wikipedia](https://en.wikipedia.org/wiki/Titanic_(1997_film))
+
+  Answer/context quote: “Leonardo DiCaprio as Jack Dawson” (5 words).
+
+  Additional fun-fact quote: “Music by James Horner” (4 words).
+
+- movies-tv-s0044: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55202)
+
+  Answer/context quote: “Leonardo DiCaprio Jack Dawson” (4 words).
+
+  Additional fun-fact quote: “MUSIC James Horner Mus comp” (5 words).
+
+## B13-0687 — Which director made the 1997 Titanic?
+
+Answer: James Cameron. Fun fact: Kate Winslet played young Rose in the 1997 Titanic.
+
+- movies-tv-s0043: [Wikipedia](https://en.wikipedia.org/wiki/Titanic_(1997_film))
+
+  Answer/context quote: “Directed by James Cameron Written by James Cameron” (8 words).
+
+  Additional fun-fact quote: “Kate Winslet as Rose DeWitt Bukater” (6 words).
+
+- movies-tv-s0044: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55202)
+
+  Answer/context quote: “Director: James Cameron Writer: James Cameron” (6 words).
+
+  Additional fun-fact quote: “Kate Winslet Rose DeWitt Bukater” (5 words).
+
+## B13-0688 — Who composed the score for James Cameron's Titanic?
+
+Answer: James Horner. Fun fact: Leonardo DiCaprio played Jack Dawson in Titanic.
+
+- movies-tv-s0043: [Wikipedia](https://en.wikipedia.org/wiki/Titanic_(1997_film))
+
+  Answer/context quote: “Music by James Horner” (4 words).
+
+  Additional fun-fact quote: “Leonardo DiCaprio as Jack Dawson” (5 words).
+
+- movies-tv-s0044: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55202)
+
+  Answer/context quote: “MUSIC James Horner Mus comp” (5 words).
+
+  Additional fun-fact quote: “Leonardo DiCaprio Jack Dawson” (4 words).
+
+## B13-0689 — Who played Mary Poppins in the original 1964 movie?
+
+Answer: Julie Andrews. Fun fact: P. L. Travers wrote the Mary Poppins books.
+
+- movies-tv-s0045: [Wikipedia](https://en.wikipedia.org/wiki/Mary_Poppins_(film))
+
+  Answer/context quote: “Julie Andrews as Mary Poppins” (5 words).
+
+  Additional fun-fact quote: “Based on Mary Poppins by P. L. Travers” (8 words).
+
+- movies-tv-s0046: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/23290)
+
+  Answer/context quote: “Julie Andrews Mary Poppins” (4 words).
+
+  Additional fun-fact quote: “P. L. Travers ’s series of “Mary Poppins” children’s novels” (10 words).
+
+## B13-0690 — Bert in Disney's original Mary Poppins was played by whom?
+
+Answer: Dick Van Dyke. Fun fact: Julie Andrews played Mary Poppins in the 1964 film.
+
+- movies-tv-s0045: [Wikipedia](https://en.wikipedia.org/wiki/Mary_Poppins_(film))
+
+  Answer/context quote: “Dick Van Dyke as Bert” (5 words).
+
+  Additional fun-fact quote: “Julie Andrews as Mary Poppins” (5 words).
+
+- movies-tv-s0046: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/23290)
+
+  Answer/context quote: “Dick Van Dyke Bert/Mr. Dawes, Senior” (6 words).
+
+  Additional fun-fact quote: “Julie Andrews Mary Poppins” (4 words).
+
+## B13-0691 — Which songwriting brothers wrote the songs for Mary Poppins?
+
+Answer: The Sherman brothers. Fun fact: P. L. Travers wrote the Mary Poppins books.
+
+- movies-tv-s0045: [Wikipedia](https://en.wikipedia.org/wiki/Mary_Poppins_(film))
+
+  Answer/context quote: “songs written and composed by the Sherman Brothers” (8 words).
+
+  Additional fun-fact quote: “Based on Mary Poppins by P. L. Travers” (8 words).
+
+- movies-tv-s0046: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/23290)
+
+  Answer/context quote: “music and lyrics by Richard M. Sherman and Robert B. Sherman.” (11 words).
+
+  Additional fun-fact quote: “P. L. Travers ’s series of “Mary Poppins” children’s novels” (10 words).
+
+## B13-0692 — Who directed Disney's 1964 Mary Poppins?
+
+Answer: Robert Stevenson. Fun fact: The Sherman brothers wrote Mary Poppins's songs.
+
+- movies-tv-s0045: [Wikipedia](https://en.wikipedia.org/wiki/Mary_Poppins_(film))
+
+  Answer/context quote: “Directed by Robert Stevenson” (4 words).
+
+  Additional fun-fact quote: “songs written and composed by the Sherman Brothers” (8 words).
+
+- movies-tv-s0046: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/23290)
+
+  Answer/context quote: “Director: Robert Stevenson” (3 words).
+
+  Additional fun-fact quote: “music and lyrics by Richard M. Sherman and Robert B. Sherman.” (11 words).
+
+## B13-0693 — Who played Maria in the 1965 Sound of Music?
+
+Answer: Julie Andrews. Fun fact: Richard Rodgers composed The Sound of Music's songs.
+
+- movies-tv-s0047: [Wikipedia](https://en.wikipedia.org/wiki/The_Sound_of_Music_(film))
+
+  Answer/context quote: “Julie Andrews as Maria” (4 words).
+
+  Additional fun-fact quote: “stage musical composed by Richard Rodgers” (6 words).
+
+- movies-tv-s0048: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/22305)
+
+  Answer/context quote: “Julie Andrews Maria” (3 words).
+
+  Additional fun-fact quote: “music by Richard Rodgers, lyrics by Oscar Hammerstein II” (9 words).
+
+## B13-0694 — The 1965 Sound of Music was directed by which filmmaker?
+
+Answer: Robert Wise. Fun fact: Julie Andrews played Maria in The Sound of Music.
+
+- movies-tv-s0047: [Wikipedia](https://en.wikipedia.org/wiki/The_Sound_of_Music_(film))
+
+  Answer/context quote: “Directed by Robert Wise” (4 words).
+
+  Additional fun-fact quote: “Julie Andrews as Maria” (4 words).
+
+- movies-tv-s0048: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/22305)
+
+  Answer/context quote: “Director: Robert Wise” (3 words).
+
+  Additional fun-fact quote: “Julie Andrews Maria” (3 words).
+
+## B13-0695 — Who composed the songs for The Sound of Music?
+
+Answer: Richard Rodgers. Fun fact: Oscar Hammerstein II wrote lyrics for The Sound of Music.
+
+- movies-tv-s0047: [Wikipedia](https://en.wikipedia.org/wiki/The_Sound_of_Music_(film))
+
+  Answer/context quote: “stage musical composed by Richard Rodgers” (6 words).
+
+  Additional fun-fact quote: “lyrics by Oscar Hammerstein II” (5 words).
+
+- movies-tv-s0048: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/22305)
+
+  Answer/context quote: “music by Richard Rodgers, lyrics by Oscar Hammerstein II” (9 words).
+
+  Additional fun-fact quote: “lyrics by Oscar Hammerstein II” (5 words).
+
+## B13-0696 — Who wrote The Sound of Music's original stage-musical lyrics?
+
+Answer: Oscar Hammerstein II. Fun fact: Robert Wise directed The Sound of Music.
+
+- movies-tv-s0047: [Wikipedia](https://en.wikipedia.org/wiki/The_Sound_of_Music_(film))
+
+  Answer/context quote: “lyrics by Oscar Hammerstein II” (5 words).
+
+  Additional fun-fact quote: “Directed by Robert Wise” (4 words).
+
+- movies-tv-s0048: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/22305)
+
+  Answer/context quote: “lyrics by Oscar Hammerstein II” (5 words).
+
+  Additional fun-fact quote: “Director: Robert Wise” (3 words).
+
+## B13-0697 — Who played Andy Dufresne in The Shawshank Redemption?
+
+Answer: Tim Robbins. Fun fact: Stephen King wrote the story adapted into The Shawshank Redemption.
+
+- movies-tv-s0049: [Wikipedia](https://en.wikipedia.org/wiki/The_Shawshank_Redemption)
+
+  Answer/context quote: “Tim Robbins as Andy Dufresne” (5 words).
+
+  Additional fun-fact quote: “Based on Rita Hayworth and Shawshank Redemption by Stephen King” (10 words).
+
+- movies-tv-s0050: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55199)
+
+  Answer/context quote: “Tim Robbins Andy Dufresne” (4 words).
+
+  Additional fun-fact quote: “"Rita Hayworth and the Shawshank Redemption" by Stephen King” (9 words).
+
+## B13-0698 — Which director made The Shawshank Redemption?
+
+Answer: Frank Darabont. Fun fact: Tim Robbins played Andy Dufresne in The Shawshank Redemption.
+
+- movies-tv-s0049: [Wikipedia](https://en.wikipedia.org/wiki/The_Shawshank_Redemption)
+
+  Answer/context quote: “Directed by Frank Darabont” (4 words).
+
+  Additional fun-fact quote: “Tim Robbins as Andy Dufresne” (5 words).
+
+- movies-tv-s0050: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55199)
+
+  Answer/context quote: “Director: Frank Darabont” (3 words).
+
+  Additional fun-fact quote: “Tim Robbins Andy Dufresne” (4 words).
+
+## B13-0699 — The Shawshank Redemption's score was composed by whom?
+
+Answer: Thomas Newman. Fun fact: Frank Darabont directed The Shawshank Redemption.
+
+- movies-tv-s0049: [Wikipedia](https://en.wikipedia.org/wiki/The_Shawshank_Redemption)
+
+  Answer/context quote: “Music by Thomas Newman” (4 words).
+
+  Additional fun-fact quote: “Directed by Frank Darabont” (4 words).
+
+- movies-tv-s0050: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55199)
+
+  Answer/context quote: “MUSIC Thomas Newman Mus” (4 words).
+
+  Additional fun-fact quote: “Director: Frank Darabont” (3 words).
+
+## B13-0700 — Which actress's name appears in the title of the novella adapted into The Shawshank Redemption?
+
+Answer: Rita Hayworth. Fun fact: Stephen King wrote the story adapted into The Shawshank Redemption.
+
+- movies-tv-s0049: [Wikipedia](https://en.wikipedia.org/wiki/The_Shawshank_Redemption)
+
+  Answer/context quote: “novella Rita Hayworth and Shawshank Redemption” (6 words).
+
+  Additional fun-fact quote: “Based on Rita Hayworth and Shawshank Redemption by Stephen King” (10 words).
+
+- movies-tv-s0050: [American Film Institute](https://catalog.afi.com/Catalog/moviedetails/55199)
+
+  Answer/context quote: “short novel "Rita Hayworth and the Shawshank Redemption"” (8 words).
+
+  Additional fun-fact quote: “"Rita Hayworth and the Shawshank Redemption" by Stephen King” (9 words).
+
+## B13-0701 — Which English city was the Beatles' hometown?
+
+Answer: Liverpool. Fun fact: Their final public performance took place on a London rooftop in 1969.
+
+- music-s0001: [Wikipedia](https://en.wikipedia.org/wiki/The_Beatles)
+
+  Answer/context quote: “The Beatles were an English rock band formed in Liverpool in 1960.” (12 words).
+
+  Additional fun-fact quote: “their final live performance was filmed on the rooftop of the Apple Corps building at 3 Savile Row , London, on 30 January 1969.” (24 words).
+
+- music-s0002: [Encyclopaedia Britannica](https://www.britannica.com/topic/the-Beatles)
+
+  Answer/context quote: “first performed together in Liverpool , England , in 1957.” (10 words).
+
+  Additional fun-fact quote: “their last public performance was on January 30, 1969, on the rooftop of the Apple record label’s headquarters in London” (20 words).
+
+## B13-0702 — In the Beatles' familiar four-member lineup, who was the drummer?
+
+Answer: Ringo Starr. Fun fact: Brian Epstein worked in a Liverpool record shop before managing the band.
+
+- music-s0001: [Wikipedia](https://en.wikipedia.org/wiki/The_Beatles)
+
+  Answer/context quote: “Ringo Starr – drums, percussion, vocals (1962–1970)” (7 words).
+
+  Additional fun-fact quote: “Brian Epstein , a local record-store owner and music columnist.” (10 words).
+
+- music-s0002: [Encyclopaedia Britannica](https://www.britannica.com/topic/the-Beatles)
+
+  Answer/context quote: “and drummer Ringo Starr (born 1940).” (6 words).
+
+  Additional fun-fact quote: “In autumn 1961 Brian Epstein , a local Liverpool record store manager, saw the band and fell in love.” (19 words).
+
+## B13-0703 — Which producer helped shape the Beatles' recordings at Parlophone?
+
+Answer: George Martin. Fun fact: Parlophone belonged to the EMI group of record labels.
+
+- music-s0001: [Wikipedia](https://en.wikipedia.org/wiki/The_Beatles)
+
+  Answer/context quote: “producer George Martin developed their recordings, greatly expanding their domestic success” (11 words).
+
+  Additional fun-fact quote: “producer George Martin signed the Beatles to EMI 's Parlophone label.” (11 words).
+
+- music-s0002: [Encyclopaedia Britannica](https://www.britannica.com/topic/the-Beatles)
+
+  Answer/context quote: “The man in charge of their career at Parlophone was George Martin , a classically trained musician” (17 words).
+
+  Additional fun-fact quote: “Parlophone, a subsidiary of the giant EMI group of music labels.” (11 words).
+
+## B13-0704 — Who managed the Beatles during the Beatlemania years?
+
+Answer: Brian Epstein. Fun fact: Their early hit “Love Me Do” was released in 1962.
+
+- music-s0001: [Wikipedia](https://en.wikipedia.org/wiki/The_Beatles)
+
+  Answer/context quote: “Manager Brian Epstein moulded them into a professional act” (9 words).
+
+  Additional fun-fact quote: “achieved their first hit, " Love Me Do ", in late 1962.” (12 words).
+
+- music-s0002: [Encyclopaedia Britannica](https://www.britannica.com/topic/the-Beatles)
+
+  Answer/context quote: “Epstein became their manager and proceeded to bombard the major British music companies with letters and tape recordings of the band” (21 words).
+
+  Additional fun-fact quote: “The Beatles ’ first hit was the song “Love Me Do” in 1962” (13 words).
+
+## B13-0705 — What was the name of Elvis Presley's famous mansion?
+
+Answer: Graceland. Fun fact: Presley entered U.S. Army service in 1958.
+
+- music-s0003: [Wikipedia](https://en.wikipedia.org/wiki/Elvis_Presley)
+
+  Answer/context quote: “Presley purchased his 18-room mansion, Graceland , on March 19, 1957.” (11 words).
+
+  Additional fun-fact quote: “Branch United States Army Service years 1958–1960” (7 words).
+
+- music-s0004: [Encyclopaedia Britannica](https://kids.britannica.com/kids/article/Elvis-Presley/399570)
+
+  Answer/context quote: “Graceland, his mansion in Memphis.” (5 words).
+
+  Additional fun-fact quote: “In 1958 Presley entered the U.S. Army.” (7 words).
+
+## B13-0706 — Elvis Presley made his film debut in which movie?
+
+Answer: Love Me Tender. Fun fact: His early recording career began with producer Sam Phillips at Sun Records.
+
+- music-s0003: [Wikipedia](https://en.wikipedia.org/wiki/Elvis_Presley)
+
+  Answer/context quote: “In November 1956, Presley made his film debut in Love Me Tender .” (13 words).
+
+  Additional fun-fact quote: “He began his music career in 1954 at Sun Records with the producer Sam Phillips” (15 words).
+
+- music-s0004: [Encyclopaedia Britannica](https://kids.britannica.com/kids/article/Elvis-Presley/399570)
+
+  Answer/context quote: “His first movie, Love Me Tender , was released in that year.” (12 words).
+
+  Additional fun-fact quote: “In 1953 Presley went to Sam Phillips’ music studio to make a recording for his mother. Phillips had recently started the Sun Records label.” (24 words).
+
+## B13-0707 — Which record label released Elvis Presley's earliest commercial recordings?
+
+Answer: Sun Records. Fun fact: He later recorded for the major label RCA Victor.
+
+- music-s0003: [Wikipedia](https://en.wikipedia.org/wiki/Elvis_Presley)
+
+  Answer/context quote: “He began his music career in 1954 at Sun Records with the producer Sam Phillips” (15 words).
+
+  Additional fun-fact quote: “RCA Victor acquired his contract in a deal arranged by Colonel Tom Parker” (13 words).
+
+- music-s0004: [Encyclopaedia Britannica](https://kids.britannica.com/kids/article/Elvis-Presley/399570)
+
+  Answer/context quote: “In 1954 Presley made his first recordings for Sun, including “That’s All Right Mama,” which became a local hit.” (19 words).
+
+  Additional fun-fact quote: “In 1955 Presley began recording with RCA Victor, a major record label.” (12 words).
+
+## B13-0708 — In which Mississippi town was Elvis Presley born?
+
+Answer: Tupelo. Fun fact: His family moved to Memphis while he was growing up.
+
+- music-s0003: [Wikipedia](https://en.wikipedia.org/wiki/Elvis_Presley)
+
+  Answer/context quote: “Presley was born in Tupelo, Mississippi ; his family moved to Memphis, Tennessee , when he was 13.” (18 words).
+
+  Additional fun-fact quote: “his family moved to Memphis, Tennessee , when he was 13.” (11 words).
+
+- music-s0004: [Encyclopaedia Britannica](https://kids.britannica.com/kids/article/Elvis-Presley/399570)
+
+  Answer/context quote: “Elvis Presley was born on January 8, 1935, in Tupelo, Mississippi.” (11 words).
+
+  Additional fun-fact quote: “In the late 1940s the Presleys moved to Memphis, Tennessee.” (10 words).
+
+## B13-0709 — Who was Queen's flamboyant lead singer on “Bohemian Rhapsody”?
+
+Answer: Freddie Mercury. Fun fact: Brian May played guitar in Queen.
+
+- music-s0005: [Wikipedia](https://en.wikipedia.org/wiki/Queen_(band))
+
+  Answer/context quote: “Freddie Mercury (lead vocals, piano)” (5 words).
+
+  Additional fun-fact quote: “Brian May (guitar, vocals)” (4 words).
+
+- music-s0006: [Encyclopaedia Britannica](https://www.britannica.com/topic/Queen-British-rock-group)
+
+  Answer/context quote: “lead singer Freddie Mercury” (4 words).
+
+  Additional fun-fact quote: “guitarist Brian May” (3 words).
+
+## B13-0710 — Which Queen member is known for his guitar playing?
+
+Answer: Brian May. Fun fact: Roger Taylor was Queen's drummer.
+
+- music-s0005: [Wikipedia](https://en.wikipedia.org/wiki/Queen_(band))
+
+  Answer/context quote: “Brian May (guitar, vocals)” (4 words).
+
+  Additional fun-fact quote: “Roger Taylor (drums, vocals)” (4 words).
+
+- music-s0006: [Encyclopaedia Britannica](https://www.britannica.com/topic/Queen-British-rock-group)
+
+  Answer/context quote: “guitarist Brian May” (3 words).
+
+  Additional fun-fact quote: “drummer Roger Taylor” (3 words).
+
+## B13-0711 — “Bohemian Rhapsody” originally appeared on which Queen studio album?
+
+Answer: A Night at the Opera. Fun fact: Queen released its self-titled debut album in 1973.
+
+- music-s0005: [Wikipedia](https://en.wikipedia.org/wiki/Queen_(band))
+
+  Answer/context quote: “A Night at the Opera in 1975 brought them international success. The latter featured " Bohemian Rhapsody "” (18 words).
+
+  Additional fun-fact quote: “the band released their self-titled debut album in 1973.” (9 words).
+
+- music-s0006: [Encyclopaedia Britannica](https://www.britannica.com/topic/Queen-British-rock-group)
+
+  Answer/context quote: “Queen's A Night at the Opera (1975) featured the song “Bohemian Rhapsody,”” (12 words).
+
+  Additional fun-fact quote: “The group debuted on record with Queen (1973)” (8 words).
+
+## B13-0712 — Who played bass in Queen's classic four-member lineup?
+
+Answer: John Deacon. Fun fact: Queen released its self-titled debut album in 1973.
+
+- music-s0005: [Wikipedia](https://en.wikipedia.org/wiki/Queen_(band))
+
+  Answer/context quote: “John Deacon (bass).” (3 words).
+
+  Additional fun-fact quote: “the band released their self-titled debut album in 1973.” (9 words).
+
+- music-s0006: [Encyclopaedia Britannica](https://www.britannica.com/topic/Queen-British-rock-group)
+
+  Answer/context quote: “bassist John Deacon” (3 words).
+
+  Additional fun-fact quote: “The group debuted on record with Queen (1973)” (8 words).
+
+## B13-0713 — Which singer fronts the Rolling Stones?
+
+Answer: Mick Jagger. Fun fact: Keith Richards played guitar in the Rolling Stones.
+
+- music-s0007: [Wikipedia](https://en.wikipedia.org/wiki/The_Rolling_Stones)
+
+  Answer/context quote: “vocalist Mick Jagger” (3 words).
+
+  Additional fun-fact quote: “guitarist Keith Richards” (3 words).
+
+- music-s0008: [Encyclopaedia Britannica](https://www.britannica.com/topic/the-Rolling-Stones)
+
+  Answer/context quote: “lead vocalist Mick Jagger” (4 words).
+
+  Additional fun-fact quote: “rhythm guitarist Keith Richards” (4 words).
+
+## B13-0714 — Who was the Rolling Stones' longtime drummer before his death in 2021?
+
+Answer: Charlie Watts. Fun fact: “(I Can't Get No) Satisfaction” was released in 1965.
+
+- music-s0007: [Wikipedia](https://en.wikipedia.org/wiki/The_Rolling_Stones)
+
+  Answer/context quote: “drummer Charlie Watts” (3 words).
+
+  Additional fun-fact quote: “" (I Can't Get No) Satisfaction ", " Get Off of My Cloud " (both 1965)” (16 words).
+
+- music-s0008: [Encyclopaedia Britannica](https://www.britannica.com/topic/the-Rolling-Stones)
+
+  Answer/context quote: “drummer Charlie Watts” (3 words).
+
+  Additional fun-fact quote: ““ (I Can’t Get No) Satisfaction ,” in 1965” (9 words).
+
+## B13-0715 — A song by which blues musician supplied the Rolling Stones' name?
+
+Answer: Muddy Waters. Fun fact: “(I Can't Get No) Satisfaction” was released in 1965.
+
+- music-s0007: [Wikipedia](https://en.wikipedia.org/wiki/The_Rolling_Stones)
+
+  Answer/context quote: “Jones saw a Muddy Waters LP lying on the floor; one of the tracks was " Rollin' Stone "” (19 words).
+
+  Additional fun-fact quote: “" (I Can't Get No) Satisfaction ", " Get Off of My Cloud " (both 1965)” (16 words).
+
+- music-s0008: [Encyclopaedia Britannica](https://www.britannica.com/topic/the-Rolling-Stones)
+
+  Answer/context quote: “the Rolling Stones took their name from a Muddy Waters song titled “Rollin’ Stone”” (14 words).
+
+  Additional fun-fact quote: ““ (I Can’t Get No) Satisfaction ,” in 1965” (9 words).
+
+## B13-0716 — Who played bass in the Rolling Stones' first stable lineup?
+
+Answer: Bill Wyman. Fun fact: Keith Richards played guitar in the Rolling Stones.
+
+- music-s0007: [Wikipedia](https://en.wikipedia.org/wiki/The_Rolling_Stones)
+
+  Answer/context quote: “bassist Bill Wyman” (3 words).
+
+  Additional fun-fact quote: “guitarist Keith Richards” (3 words).
+
+- music-s0008: [Encyclopaedia Britannica](https://www.britannica.com/topic/the-Rolling-Stones)
+
+  Answer/context quote: “bassist Bill Wyman” (3 words).
+
+  Additional fun-fact quote: “rhythm guitarist Keith Richards” (4 words).
+
+## B13-0717 — Who sang lead vocals for Led Zeppelin?
+
+Answer: Robert Plant. Fun fact: John Bonham was Led Zeppelin's drummer.
+
+- music-s0009: [Wikipedia](https://en.wikipedia.org/wiki/Led_Zeppelin)
+
+  Answer/context quote: “Robert Plant – vocals, harmonica” (5 words).
+
+  Additional fun-fact quote: “John Bonham – drums, percussion” (5 words).
+
+- music-s0010: [Encyclopaedia Britannica](https://www.britannica.com/topic/Led-Zeppelin)
+
+  Answer/context quote: “Robert Plant on vocals” (4 words).
+
+  Additional fun-fact quote: “John Bonham on drums” (4 words).
+
+## B13-0718 — Which guitarist co-founded Led Zeppelin?
+
+Answer: Jimmy Page. Fun fact: The group disbanded in 1980 after John Bonham died.
+
+- music-s0009: [Wikipedia](https://en.wikipedia.org/wiki/Led_Zeppelin)
+
+  Answer/context quote: “Jimmy Page – guitars” (4 words).
+
+  Additional fun-fact quote: “They disbanded after Bonham's death from alcoholism in 1980” (9 words).
+
+- music-s0010: [Encyclopaedia Britannica](https://www.britannica.com/topic/Led-Zeppelin)
+
+  Answer/context quote: “Jimmy Page on guitar” (4 words).
+
+  Additional fun-fact quote: “Led Zeppelin disbanded in 1980, following the death of drummer John Bonham” (12 words).
+
+## B13-0719 — Which drummer's death led Led Zeppelin to disband in 1980?
+
+Answer: John Bonham. Fun fact: Robert Plant sang lead vocals for Led Zeppelin.
+
+- music-s0009: [Wikipedia](https://en.wikipedia.org/wiki/Led_Zeppelin)
+
+  Answer/context quote: “They disbanded after Bonham's death from alcoholism in 1980” (9 words).
+
+  Additional fun-fact quote: “Robert Plant – vocals, harmonica” (5 words).
+
+- music-s0010: [Encyclopaedia Britannica](https://www.britannica.com/topic/Led-Zeppelin)
+
+  Answer/context quote: “Led Zeppelin disbanded in 1980, following the death of drummer John Bonham” (12 words).
+
+  Additional fun-fact quote: “Robert Plant on vocals” (4 words).
+
+## B13-0720 — What was the name of Led Zeppelin's own record label?
+
+Answer: Swan Song. Fun fact: John Bonham was Led Zeppelin's drummer.
+
+- music-s0009: [Wikipedia](https://en.wikipedia.org/wiki/Led_Zeppelin)
+
+  Answer/context quote: “launched their own record label, Swan Song” (7 words).
+
+  Additional fun-fact quote: “John Bonham – drums, percussion” (5 words).
+
+- music-s0010: [Encyclopaedia Britannica](https://www.britannica.com/topic/Led-Zeppelin)
+
+  Answer/context quote: “band's label Swan Song Records.” (5 words).
+
+  Additional fun-fact quote: “John Bonham on drums” (4 words).
+
+## B13-0721 — Which Nirvana album contains “Smells Like Teen Spirit”?
+
+Answer: Nevermind. Fun fact: Nirvana formed in Aberdeen, near Seattle.
+
+- music-s0011: [Wikipedia](https://en.wikipedia.org/wiki/Nirvana_(band))
+
+  Answer/context quote: “" Smells Like Teen Spirit ", the first single from its landmark second album, Nevermind (1991).” (16 words).
+
+  Additional fun-fact quote: “Nirvana was an American rock band formed in Aberdeen, Washington” (10 words).
+
+- music-s0012: [Encyclopaedia Britannica](https://kids.britannica.com/scholars/article/Nirvana/105679)
+
+  Answer/context quote: “Nevermind , featuring the anthemic hit “Smells Like Teen Spirit,”” (10 words).
+
+  Additional fun-fact quote: “Nirvana formed in 1987 in nearby Aberdeen” (7 words).
+
+## B13-0722 — What was the title of Nirvana's debut studio album?
+
+Answer: Bleach. Fun fact: Bleach was issued by Sub Pop.
+
+- music-s0011: [Wikipedia](https://en.wikipedia.org/wiki/Nirvana_(band))
+
+  Answer/context quote: “They released their first album, Bleach” (6 words).
+
+  Additional fun-fact quote: “They released their first album, Bleach , on the independent record label Sub Pop in 1989.” (16 words).
+
+- music-s0012: [Encyclopaedia Britannica](https://kids.britannica.com/scholars/article/Nirvana/105679)
+
+  Answer/context quote: “Nirvana’s debut, Bleach (1989)” (4 words).
+
+  Additional fun-fact quote: “album, Bleach (1989), for Sub Pop , an independent record company in Seattle.” (13 words).
+
+## B13-0723 — Which independent label released Nirvana's Bleach?
+
+Answer: Sub Pop. Fun fact: Nirvana's third studio album was In Utero, released in 1993.
+
+- music-s0011: [Wikipedia](https://en.wikipedia.org/wiki/Nirvana_(band))
+
+  Answer/context quote: “They released their first album, Bleach , on the independent record label Sub Pop in 1989.” (16 words).
+
+  Additional fun-fact quote: “third studio album, In Utero (1993).” (6 words).
+
+- music-s0012: [Encyclopaedia Britannica](https://kids.britannica.com/scholars/article/Nirvana/105679)
+
+  Answer/context quote: “album, Bleach (1989), for Sub Pop , an independent record company in Seattle.” (13 words).
+
+  Additional fun-fact quote: “the band’s third album, In Utero (1993)” (7 words).
+
+## B13-0724 — Nirvana followed Nevermind with which third studio album?
+
+Answer: In Utero. Fun fact: Nirvana formed in Aberdeen, near Seattle.
+
+- music-s0011: [Wikipedia](https://en.wikipedia.org/wiki/Nirvana_(band))
+
+  Answer/context quote: “third studio album, In Utero (1993).” (6 words).
+
+  Additional fun-fact quote: “Nirvana was an American rock band formed in Aberdeen, Washington” (10 words).
+
+- music-s0012: [Encyclopaedia Britannica](https://kids.britannica.com/scholars/article/Nirvana/105679)
+
+  Answer/context quote: “the band’s third album, In Utero (1993)” (7 words).
+
+  Additional fun-fact quote: “Nirvana formed in 1987 in nearby Aberdeen” (7 words).
+
+## B13-0725 — Which pop superstar was nicknamed the “King of Pop”?
+
+Answer: Michael Jackson. Fun fact: Michael Jackson was born in Gary, Indiana.
+
+- music-s0013: [Wikipedia](https://en.wikipedia.org/wiki/Michael_Jackson)
+
+  Answer/context quote: “Dubbed the " King of Pop "” (7 words).
+
+  Additional fun-fact quote: “August 29, 1958 Gary, Indiana , US” (7 words).
+
+- music-s0014: [Encyclopaedia Britannica](https://www.britannica.com/biography/Michael-Jackson)
+
+  Answer/context quote: “Widely regarded as the “King of Pop,”” (7 words).
+
+  Additional fun-fact quote: “Michael Jackson was born in Gary , Indiana” (8 words).
+
+## B13-0726 — In which year did Michael Jackson release Thriller?
+
+Answer: 1982. Fun fact: Off the Wall was released in 1979.
+
+- music-s0013: [Wikipedia](https://en.wikipedia.org/wiki/Michael_Jackson)
+
+  Answer/context quote: “Thriller (1982)” (2 words).
+
+  Additional fun-fact quote: “Off the Wall (1979)” (4 words).
+
+- music-s0014: [Encyclopaedia Britannica](https://www.britannica.com/biography/Michael-Jackson)
+
+  Answer/context quote: “Thriller (1982)” (2 words).
+
+  Additional fun-fact quote: “Off the Wall (1979)” (4 words).
+
+## B13-0727 — What backward-gliding dance became a Michael Jackson trademark?
+
+Answer: Moonwalk. Fun fact: Thriller was released in 1982.
+
+- music-s0013: [Wikipedia](https://en.wikipedia.org/wiki/Michael_Jackson)
+
+  Answer/context quote: “popularizing street dance moves such as the moonwalk” (8 words).
+
+  Additional fun-fact quote: “Thriller (1982)” (2 words).
+
+- music-s0014: [Encyclopaedia Britannica](https://www.britannica.com/biography/Michael-Jackson)
+
+  Answer/context quote: “Jackson’s trademark “moonwalk” dance” (4 words).
+
+  Additional fun-fact quote: “Thriller (1982)” (2 words).
+
+## B13-0728 — Who co-wrote “We Are the World” with Michael Jackson?
+
+Answer: Lionel Richie. Fun fact: Michael Jackson was born in Gary, Indiana.
+
+- music-s0013: [Wikipedia](https://en.wikipedia.org/wiki/Michael_Jackson)
+
+  Answer/context quote: “With Lionel Richie , Jackson co-wrote the charity single " We Are the World " (1985)” (16 words).
+
+  Additional fun-fact quote: “August 29, 1958 Gary, Indiana , US” (7 words).
+
+- music-s0014: [Encyclopaedia Britannica](https://www.britannica.com/biography/Michael-Jackson)
+
+  Answer/context quote: “In 1985 Jackson and Lionel Richie wrote “ We Are the World ,”” (13 words).
+
+  Additional fun-fact quote: “Michael Jackson was born in Gary , Indiana” (8 words).
+
+## B13-0729 — In which U.S. state was Madonna born?
+
+Answer: Michigan. Fun fact: Like a Virgin was released in 1984.
+
+- music-s0015: [Wikipedia](https://en.wikipedia.org/wiki/Madonna)
+
+  Answer/context quote: “Bay City, Michigan , US” (5 words).
+
+  Additional fun-fact quote: “Like a Virgin (1984)” (4 words).
+
+- music-s0016: [Encyclopaedia Britannica](https://www.britannica.com/biography/Madonna-American-singer-and-actress)
+
+  Answer/context quote: “Bay City , Michigan , U.S.” (6 words).
+
+  Additional fun-fact quote: “Like a Virgin (1984)” (4 words).
+
+## B13-0730 — Madonna starred as Eva Perón in which film musical?
+
+Answer: Evita. Fun fact: Madonna was born in Bay City, Michigan.
+
+- music-s0015: [Wikipedia](https://en.wikipedia.org/wiki/Madonna)
+
+  Answer/context quote: “portraying Eva Perón in Evita” (5 words).
+
+  Additional fun-fact quote: “Bay City, Michigan , US” (5 words).
+
+- music-s0016: [Encyclopaedia Britannica](https://www.britannica.com/biography/Madonna-American-singer-and-actress)
+
+  Answer/context quote: “Evita , an adaptation of the stage musical by Andrew Lloyd Webber and Tim Rice about the life of Eva Perón” (21 words).
+
+  Additional fun-fact quote: “Bay City , Michigan , U.S.” (6 words).
+
+## B13-0731 — What is Madonna's family surname?
+
+Answer: Ciccone. Fun fact: Like a Virgin was released in 1984.
+
+- music-s0015: [Wikipedia](https://en.wikipedia.org/wiki/Madonna)
+
+  Answer/context quote: “Madonna Louise Ciccone” (3 words).
+
+  Additional fun-fact quote: “Like a Virgin (1984)” (4 words).
+
+- music-s0016: [Encyclopaedia Britannica](https://www.britannica.com/biography/Madonna-American-singer-and-actress)
+
+  Answer/context quote: “Madonna Louise Veronica Ciccone” (4 words).
+
+  Additional fun-fact quote: “Like a Virgin (1984)” (4 words).
+
+## B13-0732 — Which Madonna album was released in 1998?
+
+Answer: Ray of Light. Fun fact: Madonna was born in Bay City, Michigan.
+
+- music-s0015: [Wikipedia](https://en.wikipedia.org/wiki/Madonna)
+
+  Answer/context quote: “Ray of Light (1998)” (4 words).
+
+  Additional fun-fact quote: “Bay City, Michigan , US” (5 words).
+
+- music-s0016: [Encyclopaedia Britannica](https://www.britannica.com/biography/Madonna-American-singer-and-actress)
+
+  Answer/context quote: “In 1998 Madonna released her first album of new material in four years, Ray of Light .” (17 words).
+
+  Additional fun-fact quote: “Bay City , Michigan , U.S.” (6 words).
+
+## B13-0733 — Which film shares its title with Prince's celebrated 1984 soundtrack album?
+
+Answer: Purple Rain. Fun fact: Prince was born in Minneapolis.
+
+- music-s0017: [Wikipedia](https://en.wikipedia.org/wiki/Prince_(musician))
+
+  Answer/context quote: “with Purple Rain , its soundtrack” (6 words).
+
+  Additional fun-fact quote: “Born and raised in Minneapolis, Minnesota” (6 words).
+
+- music-s0018: [Encyclopaedia Britannica](https://www.britannica.com/biography/Prince-singer-and-songwriter)
+
+  Answer/context quote: “Purple Rain (1984) accompanied a hit film of the same name.” (11 words).
+
+  Additional fun-fact quote: “born June 7, 1958, Minneapolis, Minnesota” (6 words).
+
+## B13-0734 — Which Minnesota city was Prince's birthplace?
+
+Answer: Minneapolis. Fun fact: Purple Rain was released in 1984.
+
+- music-s0017: [Wikipedia](https://en.wikipedia.org/wiki/Prince_(musician))
+
+  Answer/context quote: “Born and raised in Minneapolis, Minnesota” (6 words).
+
+  Additional fun-fact quote: “Purple Rain (1984)” (3 words).
+
+- music-s0018: [Encyclopaedia Britannica](https://www.britannica.com/biography/Prince-singer-and-songwriter)
+
+  Answer/context quote: “born June 7, 1958, Minneapolis, Minnesota” (6 words).
+
+  Additional fun-fact quote: “Purple Rain (1984)” (3 words).
+
+## B13-0735 — What was the name of Prince's home and recording complex?
+
+Answer: Paisley Park. Fun fact: Prince was born in Minneapolis.
+
+- music-s0017: [Wikipedia](https://en.wikipedia.org/wiki/Prince_(musician))
+
+  Answer/context quote: “Paisley Park home and recording studio” (6 words).
+
+  Additional fun-fact quote: “Born and raised in Minneapolis, Minnesota” (6 words).
+
+- music-s0018: [Encyclopaedia Britannica](https://www.britannica.com/biography/Prince-singer-and-songwriter)
+
+  Answer/context quote: “Paisley Park , the studio and label he established” (9 words).
+
+  Additional fun-fact quote: “born June 7, 1958, Minneapolis, Minnesota” (6 words).
+
+## B13-0736 — What did Prince adopt as his stage name in 1993?
+
+Answer: An unpronounceable symbol. Fun fact: Purple Rain was released in 1984.
+
+- music-s0017: [Wikipedia](https://en.wikipedia.org/wiki/Prince_(musician))
+
+  Answer/context quote: “Prince changed his stage name to the unpronounceable symbol” (9 words).
+
+  Additional fun-fact quote: “Purple Rain (1984)” (3 words).
+
+- music-s0018: [Encyclopaedia Britannica](https://www.britannica.com/biography/Prince-singer-and-songwriter)
+
+  Answer/context quote: “In 1993 he announced that he had changed his name to a combination of the male and female gender signs” (20 words).
+
+  Additional fun-fact quote: “Purple Rain (1984)” (3 words).
+
+## B13-0737 — Which glam-rock persona is associated with David Bowie?
+
+Answer: Ziggy Stardust. Fun fact: Bowie released Let's Dance in 1983.
+
+- music-s0019: [Wikipedia](https://en.wikipedia.org/wiki/David_Bowie)
+
+  Answer/context quote: “with the Ziggy Stardust character” (5 words).
+
+  Additional fun-fact quote: “Let's Dance in 1983.” (4 words).
+
+- music-s0020: [Encyclopaedia Britannica](https://www.britannica.com/biography/David-Bowie)
+
+  Answer/context quote: “Also known as: David Robert Jones, Ziggy Stardust” (8 words).
+
+  Additional fun-fact quote: “Let’s Dance (1983)” (3 words).
+
+## B13-0738 — What was David Bowie's original name?
+
+Answer: David Robert Jones. Fun fact: Bowie released Let's Dance in 1983.
+
+- music-s0019: [Wikipedia](https://en.wikipedia.org/wiki/David_Bowie)
+
+  Answer/context quote: “David Robert Jones (8 January 1947” (6 words).
+
+  Additional fun-fact quote: “Let's Dance in 1983.” (4 words).
+
+- music-s0020: [Encyclopaedia Britannica](https://www.britannica.com/biography/David-Bowie)
+
+  Answer/context quote: “The original name of British singer and songwriter David Bowie was David Robert Jones.” (14 words).
+
+  Additional fun-fact quote: “Let’s Dance (1983)” (3 words).
+
+## B13-0739 — Which space-themed song gave Bowie British chart success in 1969?
+
+Answer: Space Oddity. Fun fact: David Bowie developed the Ziggy Stardust persona.
+
+- music-s0019: [Wikipedia](https://en.wikipedia.org/wiki/David_Bowie)
+
+  Answer/context quote: “achieving his first success in 1969 with " Space Oddity "” (11 words).
+
+  Additional fun-fact quote: “with the Ziggy Stardust character” (5 words).
+
+- music-s0020: [Encyclopaedia Britannica](https://www.britannica.com/biography/David-Bowie)
+
+  Answer/context quote: ““ Space Oddity,” the science-fiction single that marks the real beginning of his career, reached the top 10 in Britain in 1969” (22 words).
+
+  Additional fun-fact quote: “Also known as: David Robert Jones, Ziggy Stardust” (8 words).
+
+## B13-0740 — Which Bowie album arrived just before his death in 2016?
+
+Answer: Blackstar. Fun fact: Bowie released Let's Dance in 1983.
+
+- music-s0019: [Wikipedia](https://en.wikipedia.org/wiki/David_Bowie)
+
+  Answer/context quote: “His final studio album, Blackstar , released two days before his death in 2016” (14 words).
+
+  Additional fun-fact quote: “Let's Dance in 1983.” (4 words).
+
+- music-s0020: [Encyclopaedia Britannica](https://www.britannica.com/biography/David-Bowie)
+
+  Answer/context quote: “Blackstar (2016) was released two days before his death” (9 words).
+
+  Additional fun-fact quote: “Let’s Dance (1983)” (3 words).
+
+## B13-0741 — Which instrument is central to Elton John's performances?
+
+Answer: Piano. Fun fact: Bernie Taupin is Elton John's longtime lyric-writing collaborator.
+
+- music-s0021: [Wikipedia](https://en.wikipedia.org/wiki/Elton_John)
+
+  Answer/context quote: “British singer, composer and pianist.” (5 words).
+
+  Additional fun-fact quote: “songwriting partnership with the lyricist Bernie Taupin” (7 words).
+
+- music-s0022: [Encyclopaedia Britannica](https://www.britannica.com/biography/Elton-John)
+
+  Answer/context quote: “British singer, composer, and pianist” (5 words).
+
+  Additional fun-fact quote: “his major songwriting collaborator, Bernie Taupin” (6 words).
+
+## B13-0742 — Who is Elton John's longtime lyric-writing partner?
+
+Answer: Bernie Taupin. Fun fact: Elton John wrote songs for The Lion King with Tim Rice.
+
+- music-s0021: [Wikipedia](https://en.wikipedia.org/wiki/Elton_John)
+
+  Answer/context quote: “songwriting partnership with the lyricist Bernie Taupin” (7 words).
+
+  Additional fun-fact quote: “Along with Tim Rice , John wrote the songs for the 1994 Disney animated film The Lion King” (18 words).
+
+- music-s0022: [Encyclopaedia Britannica](https://www.britannica.com/biography/Elton-John)
+
+  Answer/context quote: “his major songwriting collaborator, Bernie Taupin” (6 words).
+
+  Additional fun-fact quote: “With lyricist Tim Rice he wrote songs for the film The Lion King (1994)” (14 words).
+
+## B13-0743 — What was Elton John's birth name?
+
+Answer: Reginald Kenneth Dwight. Fun fact: Bernie Taupin is Elton John's longtime lyric-writing collaborator.
+
+- music-s0021: [Wikipedia](https://en.wikipedia.org/wiki/Elton_John)
+
+  Answer/context quote: “born Reginald Kenneth Dwight” (4 words).
+
+  Additional fun-fact quote: “songwriting partnership with the lyricist Bernie Taupin” (7 words).
+
+- music-s0022: [Encyclopaedia Britannica](https://www.britannica.com/biography/Elton-John)
+
+  Answer/context quote: “Also known as: Reginald Kenneth Dwight” (6 words).
+
+  Additional fun-fact quote: “his major songwriting collaborator, Bernie Taupin” (6 words).
+
+## B13-0744 — Which Elton John song from The Lion King won the original-song Oscar?
+
+Answer: Can You Feel the Love Tonight. Fun fact: Elton John wrote songs for The Lion King with Tim Rice.
+
+- music-s0021: [Wikipedia](https://en.wikipedia.org/wiki/Elton_John)
+
+  Answer/context quote: “John won the award for " Can You Feel the Love Tonight "” (13 words).
+
+  Additional fun-fact quote: “Along with Tim Rice , John wrote the songs for the 1994 Disney animated film The Lion King” (18 words).
+
+- music-s0022: [Encyclopaedia Britannica](https://www.britannica.com/biography/Elton-John)
+
+  Answer/context quote: ““ Can You Feel the Love Tonight ” won the Academy Award for best original song” (16 words).
+
+  Additional fun-fact quote: “With lyricist Tim Rice he wrote songs for the film The Lion King (1994)” (14 words).
+
+## B13-0745 — From which country did ABBA come?
+
+Answer: Sweden. Fun fact: ABBA's music inspired the stage musical Mamma Mia!
+
+- music-s0023: [Wikipedia](https://en.wikipedia.org/wiki/ABBA)
+
+  Answer/context quote: “were a Swedish pop music group” (6 words).
+
+  Additional fun-fact quote: “ABBA's music was adapted into Mamma Mia! , a stage musical” (11 words).
+
+- music-s0024: [Encyclopaedia Britannica](https://www.britannica.com/topic/ABBA)
+
+  Answer/context quote: “ABBA was a Swedish Europop group” (6 words).
+
+  Additional fun-fact quote: “The song “Mamma Mia” inspired a hit musical in 1999” (10 words).
+
+## B13-0746 — Which song earned ABBA its 1974 Eurovision victory?
+
+Answer: Waterloo. Fun fact: ABBA's music inspired the stage musical Mamma Mia!
+
+- music-s0023: [Wikipedia](https://en.wikipedia.org/wiki/ABBA)
+
+  Answer/context quote: “ABBA won the Eurovision Song Contest for Sweden with their song " Waterloo "” (14 words).
+
+  Additional fun-fact quote: “ABBA's music was adapted into Mamma Mia! , a stage musical” (11 words).
+
+- music-s0024: [Encyclopaedia Britannica](https://www.britannica.com/topic/ABBA)
+
+  Answer/context quote: “ABBA won the Eurovision Song Contest once, in 1974 with the song “Waterloo.”” (13 words).
+
+  Additional fun-fact quote: “The song “Mamma Mia” inspired a hit musical in 1999” (10 words).
+
+## B13-0747 — The name ABBA is built from what?
+
+Answer: The members' first-name initials. Fun fact: ABBA won Eurovision in 1974 with “Waterloo.”
+
+- music-s0023: [Wikipedia](https://en.wikipedia.org/wiki/ABBA)
+
+  Answer/context quote: “"ABBA" is an acronym formed from the first letters of each group member's first name” (15 words).
+
+  Additional fun-fact quote: “ABBA won the Eurovision Song Contest for Sweden with their song " Waterloo "” (14 words).
+
+- music-s0024: [Encyclopaedia Britannica](https://www.britannica.com/topic/ABBA)
+
+  Answer/context quote: “ABBA—an acronym derived from the members’ first names” (8 words).
+
+  Additional fun-fact quote: “ABBA won the Eurovision Song Contest once, in 1974 with the song “Waterloo.”” (13 words).
+
+## B13-0748 — Which ABBA singer also used the solo name Frida?
+
+Answer: Anni-Frid Lyngstad. Fun fact: ABBA came from Sweden.
+
+- music-s0023: [Wikipedia](https://en.wikipedia.org/wiki/ABBA)
+
+  Answer/context quote: “Anni-Frid "Frida" Lyngstad” (3 words).
+
+  Additional fun-fact quote: “were a Swedish pop music group” (6 words).
+
+- music-s0024: [Encyclopaedia Britannica](https://www.britannica.com/topic/ABBA)
+
+  Answer/context quote: “Lyngstad had previously released a pair of solo albums under the name Frida” (13 words).
+
+  Additional fun-fact quote: “ABBA was a Swedish Europop group” (6 words).
+
+## B13-0749 — Dolly Parton's childhood home state is which one?
+
+Answer: Tennessee. Fun fact: Parton starred in the comedy 9 to 5.
+
+- music-s0025: [Wikipedia](https://en.wikipedia.org/wiki/Dolly_Parton)
+
+  Answer/context quote: “Born and raised in East Tennessee” (6 words).
+
+  Additional fun-fact quote: “Parton starred in the comedy films 9 to 5 (1980)” (10 words).
+
+- music-s0026: [Encyclopaedia Britannica](https://www.britannica.com/biography/Dolly-Parton)
+
+  Answer/context quote: “eastern Tennessee , Parton’s home state” (6 words).
+
+  Additional fun-fact quote: “the comedy Nine to Five (1980; also called 9 to 5 ), in which she starred” (16 words).
+
+## B13-0750 — Which theme park bears Dolly Parton's name?
+
+Answer: Dollywood. Fun fact: Dolly Parton was raised in Tennessee.
+
+- music-s0025: [Wikipedia](https://en.wikipedia.org/wiki/Dolly_Parton)
+
+  Answer/context quote: “Dollywood theme park” (3 words).
+
+  Additional fun-fact quote: “Born and raised in East Tennessee” (6 words).
+
+- music-s0026: [Encyclopaedia Britannica](https://www.britannica.com/biography/Dolly-Parton)
+
+  Answer/context quote: “Dollywood is a theme park” (5 words).
+
+  Additional fun-fact quote: “eastern Tennessee , Parton’s home state” (6 words).
+
+## B13-0751 — Who partnered with Dolly Parton on “Islands in the Stream”?
+
+Answer: Kenny Rogers. Fun fact: Parton starred in the comedy 9 to 5.
+
+- music-s0025: [Wikipedia](https://en.wikipedia.org/wiki/Dolly_Parton)
+
+  Answer/context quote: “Kenny Rogers duet " Islands in the Stream "” (9 words).
+
+  Additional fun-fact quote: “Parton starred in the comedy films 9 to 5 (1980)” (10 words).
+
+- music-s0026: [Encyclopaedia Britannica](https://www.britannica.com/biography/Dolly-Parton)
+
+  Answer/context quote: ““Islands in the Stream,” a duet with fellow country legend Kenny Rogers” (12 words).
+
+  Additional fun-fact quote: “the comedy Nine to Five (1980; also called 9 to 5 ), in which she starred” (16 words).
+
+## B13-0752 — Who wrote “I Will Always Love You” before Whitney Houston made it a pop hit?
+
+Answer: Dolly Parton. Fun fact: Dolly Parton was raised in Tennessee.
+
+- music-s0025: [Wikipedia](https://en.wikipedia.org/wiki/Dolly_Parton)
+
+  Answer/context quote: “wrote more than 3,000 songs, including " I Will Always Love You "” (13 words).
+
+  Additional fun-fact quote: “Born and raised in East Tennessee” (6 words).
+
+- music-s0026: [Encyclopaedia Britannica](https://www.britannica.com/biography/Dolly-Parton)
+
+  Answer/context quote: “I’ve written something I think you need to hear.” I started singing “I Will Always Love You,”” (17 words).
+
+  Additional fun-fact quote: “eastern Tennessee , Parton’s home state” (6 words).
+
+## B13-0753 — Which country singer was called the “Man in Black”?
+
+Answer: Johnny Cash. Fun fact: Cash recorded the song “I Walk the Line.”
+
+- music-s0027: [Wikipedia](https://en.wikipedia.org/wiki/Johnny_Cash)
+
+  Answer/context quote: “nickname " Man in Black "” (6 words).
+
+  Additional fun-fact quote: “His other signature songs include " I Walk the Line "” (11 words).
+
+- music-s0028: [Encyclopaedia Britannica](https://www.britannica.com/biography/Johnny-Cash)
+
+  Answer/context quote: “Also known as: “Man in Black”” (6 words).
+
+  Additional fun-fact quote: ““I Walk the Line” brought him considerable attention” (8 words).
+
+## B13-0754 — Which prison appears in the title of Johnny Cash's famous 1968 live album?
+
+Answer: Folsom Prison. Fun fact: Sun Records signed Johnny Cash in 1955.
+
+- music-s0027: [Wikipedia](https://en.wikipedia.org/wiki/Johnny_Cash)
+
+  Answer/context quote: “These performances were recorded live, and released on highly successful albums: Johnny Cash at Folsom Prison (1968)” (17 words).
+
+  Additional fun-fact quote: “In 1955, when signing with Sun Records” (7 words).
+
+- music-s0028: [Encyclopaedia Britannica](https://www.britannica.com/biography/Johnny-Cash)
+
+  Answer/context quote: “Johnny Cash’s album Johnny Cash at Folsom Prison (1968) was recorded live” (12 words).
+
+  Additional fun-fact quote: “Sun Records , who signed Cash in 1955.” (8 words).
+
+## B13-0755 — Which label signed Johnny Cash in 1955?
+
+Answer: Sun Records. Fun fact: Cash recorded the song “I Walk the Line.”
+
+- music-s0027: [Wikipedia](https://en.wikipedia.org/wiki/Johnny_Cash)
+
+  Answer/context quote: “In 1955, when signing with Sun Records” (7 words).
+
+  Additional fun-fact quote: “His other signature songs include " I Walk the Line "” (11 words).
+
+- music-s0028: [Encyclopaedia Britannica](https://www.britannica.com/biography/Johnny-Cash)
+
+  Answer/context quote: “Sun Records , who signed Cash in 1955.” (8 words).
+
+  Additional fun-fact quote: ““I Walk the Line” brought him considerable attention” (8 words).
+
+## B13-0756 — Which country singer married Johnny Cash in 1968?
+
+Answer: June Carter. Fun fact: Sun Records signed Johnny Cash in 1955.
+
+- music-s0027: [Wikipedia](https://en.wikipedia.org/wiki/Johnny_Cash)
+
+  Answer/context quote: “Cash proposed onstage to June on February 22, 1968” (9 words).
+
+  Additional fun-fact quote: “In 1955, when signing with Sun Records” (7 words).
+
+- music-s0028: [Encyclopaedia Britannica](https://www.britannica.com/biography/Johnny-Cash)
+
+  Answer/context quote: “June Carter of the Carter Family , with whom he had worked since 1961, he eventually sought treatment; the couple married in 1968.” (23 words).
+
+  Additional fun-fact quote: “Sun Records , who signed Cash in 1955.” (8 words).
+
+## B13-0757 — Which jazz musician was nicknamed “Satchmo”?
+
+Answer: Louis Armstrong. Fun fact: Armstrong joined King Oliver's band in Chicago.
+
+- music-s0029: [Wikipedia](https://en.wikipedia.org/wiki/Louis_Armstrong)
+
+  Answer/context quote: “nicknamed " Satchmo "” (4 words).
+
+  Additional fun-fact quote: “to Chicago to play in Oliver's Creole Jazz Band” (9 words).
+
+- music-s0030: [Encyclopaedia Britannica](https://www.britannica.com/biography/Louis-Armstrong)
+
+  Answer/context quote: “Also known as: Louis Daniel Armstrong, Satchmo” (7 words).
+
+  Additional fun-fact quote: “in 1922 he moved to Chicago to join King Oliver ’s Creole Jazz Band” (14 words).
+
+## B13-0758 — What brass instrument is most associated with Louis Armstrong?
+
+Answer: Trumpet. Fun fact: Louis Armstrong was nicknamed Satchmo.
+
+- music-s0029: [Wikipedia](https://en.wikipedia.org/wiki/Louis_Armstrong)
+
+  Answer/context quote: “American jazz and blues trumpeter and vocalist” (7 words).
+
+  Additional fun-fact quote: “nicknamed " Satchmo "” (4 words).
+
+- music-s0030: [Encyclopaedia Britannica](https://www.britannica.com/biography/Louis-Armstrong)
+
+  Answer/context quote: “Louis Armstrong was the leading trumpeter” (6 words).
+
+  Additional fun-fact quote: “Also known as: Louis Daniel Armstrong, Satchmo” (7 words).
+
+## B13-0759 — Which city was Louis Armstrong's birthplace?
+
+Answer: New Orleans. Fun fact: Armstrong joined King Oliver's band in Chicago.
+
+- music-s0029: [Wikipedia](https://en.wikipedia.org/wiki/Louis_Armstrong)
+
+  Answer/context quote: “August 4, 1901 New Orleans , Louisiana, U.S.” (8 words).
+
+  Additional fun-fact quote: “to Chicago to play in Oliver's Creole Jazz Band” (9 words).
+
+- music-s0030: [Encyclopaedia Britannica](https://www.britannica.com/biography/Louis-Armstrong)
+
+  Answer/context quote: “born August 4, 1901, New Orleans, Louisiana” (7 words).
+
+  Additional fun-fact quote: “in 1922 he moved to Chicago to join King Oliver ’s Creole Jazz Band” (14 words).
+
+## B13-0760 — What number completes the name of Armstrong's recording group the “Hot ___”?
+
+Answer: Five. Fun fact: Armstrong joined King Oliver's band in Chicago.
+
+- music-s0029: [Wikipedia](https://en.wikipedia.org/wiki/Louis_Armstrong)
+
+  Answer/context quote: “Armstrong formed Louis Armstrong and his Hot Five” (8 words).
+
+  Additional fun-fact quote: “to Chicago to play in Oliver's Creole Jazz Band” (9 words).
+
+- music-s0030: [Encyclopaedia Britannica](https://www.britannica.com/biography/Louis-Armstrong)
+
+  Answer/context quote: “his Hot Five and Hot Seven ensembles” (7 words).
+
+  Additional fun-fact quote: “in 1922 he moved to Chicago to join King Oliver ’s Creole Jazz Band” (14 words).
+
+## B13-0761 — Which instrument did jazz bandleader Duke Ellington play?
+
+Answer: Piano. Fun fact: “Take the A Train” became Ellington's band theme.
+
+- music-s0031: [Wikipedia](https://en.wikipedia.org/wiki/Duke_Ellington)
+
+  Answer/context quote: “an American jazz pianist , composer, and leader” (8 words).
+
+  Additional fun-fact quote: “" Take the 'A' Train ", a hit in 1941, became the band's theme” (14 words).
+
+- music-s0032: [Encyclopaedia Britannica](https://www.britannica.com/biography/Duke-Ellington)
+
+  Answer/context quote: “an American pianist” (3 words).
+
+  Additional fun-fact quote: “the band’s theme song, “ Take the ‘A’ Train,”” (9 words).
+
+## B13-0762 — Duke Ellington grew up in which U.S. capital city?
+
+Answer: Washington, D.C.. Fun fact: Ellington's orchestra became famous at Harlem's Cotton Club.
+
+- music-s0031: [Wikipedia](https://en.wikipedia.org/wiki/Duke_Ellington)
+
+  Answer/context quote: “Born and raised in Washington, D.C.” (6 words).
+
+  Additional fun-fact quote: “gained a national profile through his orchestra's appearances at the Cotton Club in Harlem” (14 words).
+
+- music-s0032: [Encyclopaedia Britannica](https://www.britannica.com/biography/Duke-Ellington)
+
+  Answer/context quote: “Duke Ellington grew up in Washington, D.C.” (7 words).
+
+  Additional fun-fact quote: “Extended residencies at the Cotton Club in Harlem” (8 words).
+
+## B13-0763 — Which Harlem nightclub helped establish Ellington's national reputation?
+
+Answer: Cotton Club. Fun fact: Duke Ellington was born and raised in Washington, D.C.
+
+- music-s0031: [Wikipedia](https://en.wikipedia.org/wiki/Duke_Ellington)
+
+  Answer/context quote: “gained a national profile through his orchestra's appearances at the Cotton Club in Harlem” (14 words).
+
+  Additional fun-fact quote: “Born and raised in Washington, D.C.” (6 words).
+
+- music-s0032: [Encyclopaedia Britannica](https://www.britannica.com/biography/Duke-Ellington)
+
+  Answer/context quote: “Extended residencies at the Cotton Club in Harlem” (8 words).
+
+  Additional fun-fact quote: “Duke Ellington grew up in Washington, D.C.” (7 words).
+
+## B13-0764 — Who composed the Ellington band's theme “Take the A Train”?
+
+Answer: Billy Strayhorn. Fun fact: Ellington's orchestra became famous at Harlem's Cotton Club.
+
+- music-s0031: [Wikipedia](https://en.wikipedia.org/wiki/Duke_Ellington)
+
+  Answer/context quote: “Strayhorn's " Take the 'A' Train "” (7 words).
+
+  Additional fun-fact quote: “gained a national profile through his orchestra's appearances at the Cotton Club in Harlem” (14 words).
+
+- music-s0032: [Encyclopaedia Britannica](https://www.britannica.com/biography/Duke-Ellington)
+
+  Answer/context quote: “Billy Strayhorn , composer of what would become the band’s theme song, “ Take the ‘A’ Train,”” (17 words).
+
+  Additional fun-fact quote: “Extended residencies at the Cotton Club in Harlem” (8 words).
+
+## B13-0765 — Which singer earned the nickname “Queen of Soul”?
+
+Answer: Aretha Franklin. Fun fact: Franklin was the first woman inducted into the Rock and Roll Hall of Fame in 1987.
+
+- music-s0033: [Wikipedia](https://en.wikipedia.org/wiki/Aretha_Franklin)
+
+  Answer/context quote: “Regarded as the " Queen of Soul "” (8 words).
+
+  Additional fun-fact quote: “became the first woman inducted into the Rock and Roll Hall of Fame in 1987” (15 words).
+
+- music-s0034: [Encyclopaedia Britannica](https://www.britannica.com/biography/Aretha-Franklin)
+
+  Answer/context quote: “Nicknamed the “Queen of Soul,”” (5 words).
+
+  Additional fun-fact quote: “the first woman to be inducted into the Rock and Roll Hall of Fame (1987)” (15 words).
+
+## B13-0766 — Aretha Franklin was born in which Tennessee city?
+
+Answer: Memphis. Fun fact: Franklin's breakthrough soul records were made for Atlantic.
+
+- music-s0033: [Wikipedia](https://en.wikipedia.org/wiki/Aretha_Franklin)
+
+  Answer/context quote: “at 406 Lucy Avenue, Memphis, Tennessee” (6 words).
+
+  Additional fun-fact quote: “The Atlantic days would lead to a series of hits” (10 words).
+
+- music-s0034: [Encyclopaedia Britannica](https://www.britannica.com/biography/Aretha-Franklin)
+
+  Answer/context quote: “she was born in Memphis , Tennessee” (7 words).
+
+  Additional fun-fact quote: “she switched to Atlantic Records” (5 words).
+
+## B13-0767 — Whose song did Aretha Franklin transform with her 1967 version of “Respect”?
+
+Answer: Otis Redding. Fun fact: Franklin was the first woman inducted into the Rock and Roll Hall of Fame in 1987.
+
+- music-s0033: [Wikipedia](https://en.wikipedia.org/wiki/Aretha_Franklin)
+
+  Answer/context quote: “" Respect " was Otis Redding 's song” (8 words).
+
+  Additional fun-fact quote: “became the first woman inducted into the Rock and Roll Hall of Fame in 1987” (15 words).
+
+- music-s0034: [Encyclopaedia Britannica](https://www.britannica.com/biography/Aretha-Franklin)
+
+  Answer/context quote: ““ Respect ,” her 1967 cover of Otis Redding ’s spirited composition” (12 words).
+
+  Additional fun-fact quote: “the first woman to be inducted into the Rock and Roll Hall of Fame (1987)” (15 words).
+
+## B13-0768 — Who became the Rock and Roll Hall of Fame's first female inductee in 1987?
+
+Answer: Aretha Franklin. Fun fact: Franklin was born in Memphis.
+
+- music-s0033: [Wikipedia](https://en.wikipedia.org/wiki/Aretha_Franklin)
+
+  Answer/context quote: “became the first woman inducted into the Rock and Roll Hall of Fame in 1987” (15 words).
+
+  Additional fun-fact quote: “at 406 Lucy Avenue, Memphis, Tennessee” (6 words).
+
+- music-s0034: [Encyclopaedia Britannica](https://www.britannica.com/biography/Aretha-Franklin)
+
+  Answer/context quote: “the first woman to be inducted into the Rock and Roll Hall of Fame (1987)” (15 words).
+
+  Additional fun-fact quote: “she was born in Memphis , Tennessee” (7 words).
+
+## B13-0769 — Who composed the opera Don Giovanni?
+
+Answer: Wolfgang Amadeus Mozart. Fun fact: Mozart died in Vienna in 1791.
+
+- music-s0035: [Wikipedia](https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart)
+
+  Answer/context quote: “the operas Le nozze di Figaro , Don Giovanni” (9 words).
+
+  Additional fun-fact quote: “Died 5 December 1791 (1791-12-05) (aged 35) Vienna” (8 words).
+
+- music-s0036: [Encyclopaedia Britannica](https://www.britannica.com/biography/Wolfgang-Amadeus-Mozart)
+
+  Answer/context quote: “operas (1786) and Don Giovanni (1787)” (6 words).
+
+  Additional fun-fact quote: “died December 5, 1791, Vienna” (5 words).
+
+## B13-0770 — In which city was Mozart born?
+
+Answer: Salzburg. Fun fact: Mozart died in Vienna in 1791.
+
+- music-s0035: [Wikipedia](https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart)
+
+  Answer/context quote: “27 January 1756 Salzburg” (4 words).
+
+  Additional fun-fact quote: “Died 5 December 1791 (1791-12-05) (aged 35) Vienna” (8 words).
+
+- music-s0036: [Encyclopaedia Britannica](https://www.britannica.com/biography/Wolfgang-Amadeus-Mozart)
+
+  Answer/context quote: “born January 27, 1756, Salzburg” (5 words).
+
+  Additional fun-fact quote: “died December 5, 1791, Vienna” (5 words).
+
+## B13-0771 — What was the first name of Mozart's father and early teacher?
+
+Answer: Leopold. Fun fact: Mozart was born in Salzburg.
+
+- music-s0035: [Wikipedia](https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart)
+
+  Answer/context quote: “under the training of his father Leopold” (7 words).
+
+  Additional fun-fact quote: “27 January 1756 Salzburg” (4 words).
+
+- music-s0036: [Encyclopaedia Britannica](https://www.britannica.com/biography/Wolfgang-Amadeus-Mozart)
+
+  Answer/context quote: “His father, Leopold” (3 words).
+
+  Additional fun-fact quote: “born January 27, 1756, Salzburg” (5 words).
+
+## B13-0772 — Which Mozart work remained unfinished when he died?
+
+Answer: Requiem. Fun fact: Mozart died in Vienna in 1791.
+
+- music-s0035: [Wikipedia](https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart)
+
+  Answer/context quote: “The Requiem was largely unfinished at the time of his death” (11 words).
+
+  Additional fun-fact quote: “Died 5 December 1791 (1791-12-05) (aged 35) Vienna” (8 words).
+
+- music-s0036: [Encyclopaedia Britannica](https://www.britannica.com/biography/Wolfgang-Amadeus-Mozart)
+
+  Answer/context quote: “At his death, Mozart left incomplete his , K 626. The requiem was later completed” (15 words).
+
+  Additional fun-fact quote: “died December 5, 1791, Vienna” (5 words).
+
+## B13-0773 — Which sense did Beethoven progressively lose during his musical career?
+
+Answer: Hearing. Fun fact: Beethoven was a pianist as well as a composer.
+
+- music-s0037: [Wikipedia](https://en.wikipedia.org/wiki/Ludwig_van_Beethoven)
+
+  Answer/context quote: “Beethoven began experiencing symptoms of hearing loss” (7 words).
+
+  Additional fun-fact quote: “Beethoven gained a reputation as a virtuoso pianist” (8 words).
+
+- music-s0038: [Encyclopaedia Britannica](https://www.britannica.com/summary/Ludwig-van-Beethoven)
+
+  Answer/context quote: “He began to lose his hearing” (6 words).
+
+  Additional fun-fact quote: “well known as both a virtuoso and a composer” (9 words).
+
+## B13-0774 — Which city became Beethoven's principal adult career base?
+
+Answer: Vienna. Fun fact: Beethoven studied with Joseph Haydn in Vienna.
+
+- music-s0037: [Wikipedia](https://en.wikipedia.org/wiki/Ludwig_van_Beethoven)
+
+  Answer/context quote: “Vienna , which became his base” (6 words).
+
+  Additional fun-fact quote: “studied composition with Joseph Haydn” (5 words).
+
+- music-s0038: [Encyclopaedia Britannica](https://www.britannica.com/summary/Ludwig-van-Beethoven)
+
+  Answer/context quote: “he moved to Vienna to study with Joseph Haydn and remained there for the rest of his life.” (18 words).
+
+  Additional fun-fact quote: “he moved to Vienna to study with Joseph Haydn” (9 words).
+
+## B13-0775 — What was Beethoven's birthplace?
+
+Answer: Bonn. Fun fact: Beethoven was a pianist as well as a composer.
+
+- music-s0037: [Wikipedia](https://en.wikipedia.org/wiki/Ludwig_van_Beethoven)
+
+  Answer/context quote: “Born in Bonn , Beethoven” (5 words).
+
+  Additional fun-fact quote: “Beethoven gained a reputation as a virtuoso pianist” (8 words).
+
+- music-s0038: [Encyclopaedia Britannica](https://www.britannica.com/summary/Ludwig-van-Beethoven)
+
+  Answer/context quote: “baptized Dec. 17, 1770, Bonn” (5 words).
+
+  Additional fun-fact quote: “well known as both a virtuoso and a composer” (9 words).
+
+## B13-0776 — With which composer did Beethoven study after moving to Vienna?
+
+Answer: Joseph Haydn. Fun fact: Beethoven suffered progressive hearing loss.
+
+- music-s0037: [Wikipedia](https://en.wikipedia.org/wiki/Ludwig_van_Beethoven)
+
+  Answer/context quote: “studied composition with Joseph Haydn” (5 words).
+
+  Additional fun-fact quote: “Beethoven began experiencing symptoms of hearing loss” (7 words).
+
+- music-s0038: [Encyclopaedia Britannica](https://www.britannica.com/summary/Ludwig-van-Beethoven)
+
+  Answer/context quote: “he moved to Vienna to study with Joseph Haydn” (9 words).
+
+  Additional fun-fact quote: “He began to lose his hearing” (6 words).
+
+## B13-0777 — Johann Sebastian Bach is most associated with which musical era?
+
+Answer: Baroque. Fun fact: Bach wrote The Well-Tempered Clavier.
+
+- music-s0039: [Wikipedia](https://en.wikipedia.org/wiki/Johann_Sebastian_Bach)
+
+  Answer/context quote: “was a German composer and musician of the late Baroque period” (11 words).
+
+  Additional fun-fact quote: “keyboard works such as the Goldberg Variations and The Well-Tempered Clavier” (11 words).
+
+- music-s0040: [Encyclopaedia Britannica](https://www.britannica.com/biography/Johann-Sebastian-Bach)
+
+  Answer/context quote: “composer of the Baroque era” (5 words).
+
+  Additional fun-fact quote: “creator of the Brandenburg Concertos , The Well-Tempered Clavier” (9 words).
+
+## B13-0778 — Who composed the Brandenburg Concertos?
+
+Answer: Johann Sebastian Bach. Fun fact: Bach wrote The Well-Tempered Clavier.
+
+- music-s0039: [Wikipedia](https://en.wikipedia.org/wiki/Johann_Sebastian_Bach)
+
+  Answer/context quote: “including the orchestral Brandenburg Concertos” (5 words).
+
+  Additional fun-fact quote: “keyboard works such as the Goldberg Variations and The Well-Tempered Clavier” (11 words).
+
+- music-s0040: [Encyclopaedia Britannica](https://www.britannica.com/biography/Johann-Sebastian-Bach)
+
+  Answer/context quote: “celebrated as the creator of the Brandenburg Concertos” (8 words).
+
+  Additional fun-fact quote: “creator of the Brandenburg Concertos , The Well-Tempered Clavier” (9 words).
+
+## B13-0779 — Which German town was Bach's birthplace?
+
+Answer: Eisenach. Fun fact: Bach died in Leipzig in 1750.
+
+- music-s0039: [Wikipedia](https://en.wikipedia.org/wiki/Johann_Sebastian_Bach)
+
+  Answer/context quote: “31 March 1685 ( 1685-03-31 ) (N.S.) Eisenach” (8 words).
+
+  Additional fun-fact quote: “Died 28 July 1750 (1750-07-28) (aged 65) Leipzig” (8 words).
+
+- music-s0040: [Encyclopaedia Britannica](https://www.britannica.com/biography/Johann-Sebastian-Bach)
+
+  Answer/context quote: “Eisenach, Thuringia, Ernestine Saxon Duchies” (5 words).
+
+  Additional fun-fact quote: “died July 28, 1750, Leipzig” (5 words).
+
+## B13-0780 — In which city did Johann Sebastian Bach die in 1750?
+
+Answer: Leipzig. Fun fact: Bach composed the Brandenburg Concertos.
+
+- music-s0039: [Wikipedia](https://en.wikipedia.org/wiki/Johann_Sebastian_Bach)
+
+  Answer/context quote: “Died 28 July 1750 (1750-07-28) (aged 65) Leipzig” (8 words).
+
+  Additional fun-fact quote: “including the orchestral Brandenburg Concertos” (5 words).
+
+- music-s0040: [Encyclopaedia Britannica](https://www.britannica.com/biography/Johann-Sebastian-Bach)
+
+  Answer/context quote: “died July 28, 1750, Leipzig” (5 words).
+
+  Additional fun-fact quote: “celebrated as the creator of the Brandenburg Concertos” (8 words).
+
+## B13-0781 — Who composed the ballet Swan Lake?
+
+Answer: Pyotr Ilyich Tchaikovsky. Fun fact: Tchaikovsky also composed the ballet The Sleeping Beauty.
+
+- music-s0041: [Wikipedia](https://en.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky)
+
+  Answer/context quote: “the ballets Swan Lake , The Sleeping Beauty and The Nutcracker” (11 words).
+
+  Additional fun-fact quote: “the ballets Swan Lake , The Sleeping Beauty and The Nutcracker” (11 words).
+
+- music-s0042: [Encyclopaedia Britannica](https://www.britannica.com/biography/Pyotr-Ilyich-Tchaikovsky)
+
+  Answer/context quote: “include music for the ballets Swan Lake” (7 words).
+
+  Additional fun-fact quote: “the ballets Swan Lake (1877), The Sleeping Beauty (1889)” (9 words).
+
+## B13-0782 — Which of these ballet scores was composed by Tchaikovsky?
+
+Answer: The Nutcracker. Fun fact: Tchaikovsky also composed the ballet The Sleeping Beauty.
+
+- music-s0041: [Wikipedia](https://en.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky)
+
+  Answer/context quote: “the ballets Swan Lake , The Sleeping Beauty and The Nutcracker” (11 words).
+
+  Additional fun-fact quote: “the ballets Swan Lake , The Sleeping Beauty and The Nutcracker” (11 words).
+
+- music-s0042: [Encyclopaedia Britannica](https://www.britannica.com/biography/Pyotr-Ilyich-Tchaikovsky)
+
+  Answer/context quote: “The Sleeping Beauty (1889), and The Nutcracker (1892)” (8 words).
+
+  Additional fun-fact quote: “the ballets Swan Lake (1877), The Sleeping Beauty (1889)” (9 words).
+
+## B13-0783 — In which town was Tchaikovsky born?
+
+Answer: Votkinsk. Fun fact: Tchaikovsky graduated from the Saint Petersburg Conservatory in 1865.
+
+- music-s0041: [Wikipedia](https://en.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky)
+
+  Answer/context quote: “Tchaikovsky was born on 7 May 1840 in Votkinsk” (9 words).
+
+  Additional fun-fact quote: “Saint Petersburg Conservatory , from which he graduated in 1865” (10 words).
+
+- music-s0042: [Encyclopaedia Britannica](https://www.britannica.com/biography/Pyotr-Ilyich-Tchaikovsky)
+
+  Answer/context quote: “1840, Votkinsk , Russia” (4 words).
+
+  Additional fun-fact quote: “Tchaikovsky graduated from the St. Petersburg Conservatory in 1865.” (9 words).
+
+## B13-0784 — Which city's conservatory did Tchaikovsky graduate from in 1865?
+
+Answer: Saint Petersburg. Fun fact: Tchaikovsky was born in Votkinsk.
+
+- music-s0041: [Wikipedia](https://en.wikipedia.org/wiki/Pyotr_Ilyich_Tchaikovsky)
+
+  Answer/context quote: “Saint Petersburg Conservatory , from which he graduated in 1865” (10 words).
+
+  Additional fun-fact quote: “Tchaikovsky was born on 7 May 1840 in Votkinsk” (9 words).
+
+- music-s0042: [Encyclopaedia Britannica](https://www.britannica.com/biography/Pyotr-Ilyich-Tchaikovsky)
+
+  Answer/context quote: “Tchaikovsky graduated from the St. Petersburg Conservatory in 1865.” (9 words).
+
+  Additional fun-fact quote: “1840, Votkinsk , Russia” (4 words).
+
+## B13-0785 — Which Taylor Swift album was originally released in 2014?
+
+Answer: 1989. Fun fact: Swift released her self-titled debut album in 2006.
+
+- music-s0043: [Wikipedia](https://en.wikipedia.org/wiki/Taylor_Swift)
+
+  Answer/context quote: “recalibrated her artistic identity from country to pop with the synth-pop album 1989 (2014)” (14 words).
+
+  Additional fun-fact quote: “albums Taylor Swift (2006) and Fearless (2008)” (7 words).
+
+- music-s0044: [Encyclopaedia Britannica](https://www.britannica.com/biography/Taylor-Swift)
+
+  Answer/context quote: “In 2014 Swift released 1989 , an album titled after the year of her birth” (15 words).
+
+  Additional fun-fact quote: “Taylor Swift (2006)” (3 words).
+
+## B13-0786 — What 2020 album did Swift describe as Folklore's sister record?
+
+Answer: Evermore. Fun fact: Swift was born in West Reading, Pennsylvania.
+
+- music-s0043: [Wikipedia](https://en.wikipedia.org/wiki/Taylor_Swift)
+
+  Answer/context quote: “She explored indie folk on the 2020 albums Folklore and Evermore” (11 words).
+
+  Additional fun-fact quote: “Swift was born on December 13, 1989, in West Reading, Pennsylvania” (11 words).
+
+- music-s0044: [Encyclopaedia Britannica](https://www.britannica.com/biography/Taylor-Swift)
+
+  Answer/context quote: “The “sister record,” Evermore , appeared later in 2020.” (9 words).
+
+  Additional fun-fact quote: “Taylor Swift was born in West Reading, Pennsylvania” (8 words).
+
+## B13-0787 — Which pair of Swift albums received Taylor's Version re-recordings in 2021?
+
+Answer: Fearless and Red. Fun fact: Swift released her self-titled debut album in 2006.
+
+- music-s0043: [Wikipedia](https://en.wikipedia.org/wiki/Taylor_Swift)
+
+  Answer/context quote: “Swift released two re-recorded albums in 2021: Fearless (Taylor's Version) on April 9, and Red (Taylor's Version) on November 12.” (20 words).
+
+  Additional fun-fact quote: “albums Taylor Swift (2006) and Fearless (2008)” (7 words).
+
+- music-s0044: [Encyclopaedia Britannica](https://www.britannica.com/biography/Taylor-Swift)
+
+  Answer/context quote: “in 2021 Fearless (Taylor’s Version) and Red (Taylor’s Version) appeared.” (10 words).
+
+  Additional fun-fact quote: “Taylor Swift (2006)” (3 words).
+
+## B13-0788 — Which Pennsylvania town was Taylor Swift's birthplace?
+
+Answer: West Reading. Fun fact: Swift released her self-titled debut album in 2006.
+
+- music-s0043: [Wikipedia](https://en.wikipedia.org/wiki/Taylor_Swift)
+
+  Answer/context quote: “Swift was born on December 13, 1989, in West Reading, Pennsylvania” (11 words).
+
+  Additional fun-fact quote: “albums Taylor Swift (2006) and Fearless (2008)” (7 words).
+
+- music-s0044: [Encyclopaedia Britannica](https://www.britannica.com/biography/Taylor-Swift)
+
+  Answer/context quote: “Taylor Swift was born in West Reading, Pennsylvania” (8 words).
+
+  Additional fun-fact quote: “Taylor Swift (2006)” (3 words).
+
+## B13-0789 — Which group first brought Beyoncé widespread fame?
+
+Answer: Destiny's Child. Fun fact: Beyoncé was born in Houston, Texas.
+
+- music-s0045: [Wikipedia](https://en.wikipedia.org/wiki/Beyonc%C3%A9)
+
+  Answer/context quote: “lead singer of Destiny's Child” (5 words).
+
+  Additional fun-fact quote: “Beyoncé Giselle Knowles was born on September 4, 1981, in Houston , Texas.” (13 words).
+
+- music-s0046: [Encyclopaedia Britannica](https://www.britannica.com/biography/Beyonce)
+
+  Answer/context quote: “lead singer of the R&B group Destiny’s Child” (8 words).
+
+  Additional fun-fact quote: “born September 4, 1981, Houston , Texas , U.S.” (9 words).
+
+## B13-0790 — Which rapper married Beyoncé in 2008?
+
+Answer: Jay-Z. Fun fact: Beyoncé was born in Houston, Texas.
+
+- music-s0045: [Wikipedia](https://en.wikipedia.org/wiki/Beyonc%C3%A9)
+
+  Answer/context quote: “On April 4, 2008, Beyoncé and Jay-Z married” (8 words).
+
+  Additional fun-fact quote: “Beyoncé Giselle Knowles was born on September 4, 1981, in Houston , Texas.” (13 words).
+
+- music-s0046: [Encyclopaedia Britannica](https://www.britannica.com/biography/Beyonce)
+
+  Answer/context quote: “In 2008 she and Jay-Z married” (6 words).
+
+  Additional fun-fact quote: “born September 4, 1981, Houston , Texas , U.S.” (9 words).
+
+## B13-0791 — What was Beyoncé's debut solo studio album?
+
+Answer: Dangerously in Love. Fun fact: Beyoncé first became famous as lead singer of Destiny's Child.
+
+- music-s0045: [Wikipedia](https://en.wikipedia.org/wiki/Beyonc%C3%A9)
+
+  Answer/context quote: “Her debut solo album, Dangerously in Love (2003)” (8 words).
+
+  Additional fun-fact quote: “lead singer of Destiny's Child” (5 words).
+
+- music-s0046: [Encyclopaedia Britannica](https://www.britannica.com/biography/Beyonce)
+
+  Answer/context quote: “her first solo album, Dangerously in Love (2003)” (8 words).
+
+  Additional fun-fact quote: “lead singer of the R&B group Destiny’s Child” (8 words).
+
+## B13-0792 — Beyoncé's 2008 album title begins “I Am...” and ends with what name?
+
+Answer: Sasha Fierce. Fun fact: Dangerously in Love was Beyoncé's debut solo album.
+
+- music-s0045: [Wikipedia](https://en.wikipedia.org/wiki/Beyonc%C3%A9)
+
+  Answer/context quote: “I Am... Sasha Fierce (2008)” (5 words).
+
+  Additional fun-fact quote: “Her debut solo album, Dangerously in Love (2003)” (8 words).
+
+- music-s0046: [Encyclopaedia Britannica](https://www.britannica.com/biography/Beyonce)
+
+  Answer/context quote: “Later that year Beyoncé released the double album I Am…Sasha Fierce .” (12 words).
+
+  Additional fun-fact quote: “her first solo album, Dangerously in Love (2003)” (8 words).
+
+## B13-0793 — Which songwriter is associated with “Blowin' in the Wind”?
+
+Answer: Bob Dylan. Fun fact: Dylan was born in Duluth, Minnesota.
+
+- music-s0047: [Wikipedia](https://en.wikipedia.org/wiki/Bob_Dylan)
+
+  Answer/context quote: “" Blowin' in the Wind " (1963) and " The Times They Are a-Changin' " (1964)” (16 words).
+
+  Additional fun-fact quote: “May 24, 1941 (age 85) Duluth, Minnesota , U.S.” (9 words).
+
+- music-s0048: [Encyclopaedia Britannica](https://www.britannica.com/biography/Bob-Dylan)
+
+  Answer/context quote: “his first major composition , “ Blowin’ in the Wind ,”” (11 words).
+
+  Additional fun-fact quote: “born May 24, 1941, Duluth , Minnesota , U.S.” (9 words).
+
+## B13-0794 — Bob Dylan's 2016 Nobel Prize was in which field?
+
+Answer: Literature. Fun fact: Dylan was born in Duluth, Minnesota.
+
+- music-s0047: [Wikipedia](https://en.wikipedia.org/wiki/Bob_Dylan)
+
+  Answer/context quote: “2016 Nobel Prize in Literature” (5 words).
+
+  Additional fun-fact quote: “May 24, 1941 (age 85) Duluth, Minnesota , U.S.” (9 words).
+
+- music-s0048: [Encyclopaedia Britannica](https://www.britannica.com/biography/Bob-Dylan)
+
+  Answer/context quote: “He won the Nobel Prize for Literature in 2016.” (9 words).
+
+  Additional fun-fact quote: “born May 24, 1941, Duluth , Minnesota , U.S.” (9 words).
+
+## B13-0795 — What was Bob Dylan's birth name?
+
+Answer: Robert Allen Zimmerman. Fun fact: Bob Dylan won the 2016 Nobel Prize in Literature.
+
+- music-s0047: [Wikipedia](https://en.wikipedia.org/wiki/Bob_Dylan)
+
+  Answer/context quote: “born Robert Allen Zimmerman” (4 words).
+
+  Additional fun-fact quote: “2016 Nobel Prize in Literature” (5 words).
+
+- music-s0048: [Encyclopaedia Britannica](https://www.britannica.com/biography/Bob-Dylan)
+
+  Answer/context quote: “Also known as: Robert Allen Zimmerman” (6 words).
+
+  Additional fun-fact quote: “He won the Nobel Prize for Literature in 2016.” (9 words).
+
+## B13-0796 — Which Dylan studio album contains “Like a Rolling Stone”?
+
+Answer: Highway 61 Revisited. Fun fact: Bob Dylan won the 2016 Nobel Prize in Literature.
+
+- music-s0047: [Wikipedia](https://en.wikipedia.org/wiki/Bob_Dylan)
+
+  Answer/context quote: “Dylan's 1965 hit single, which appeared on the album Highway 61 Revisited” (12 words).
+
+  Additional fun-fact quote: “2016 Nobel Prize in Literature” (5 words).
+
+- music-s0048: [Encyclopaedia Britannica](https://www.britannica.com/biography/Bob-Dylan)
+
+  Answer/context quote: “the album containing the hit single, Highway 61 Revisited (1965)” (10 words).
+
+  Additional fun-fact quote: “He won the Nobel Prize for Literature in 2016.” (9 words).
+
+## B13-0797 — Which stage name is associated with Tupac Shakur?
+
+Answer: 2Pac. Fun fact: Tupac also used the name Makaveli.
+
+- music-s0049: [Wikipedia](https://en.wikipedia.org/wiki/Tupac_Shakur)
+
+  Answer/context quote: “also known by his stage names 2Pac and Makaveli” (9 words).
+
+  Additional fun-fact quote: “also known by his stage names 2Pac and Makaveli” (9 words).
+
+- music-s0050: [Encyclopaedia Britannica](https://www.britannica.com/biography/Tupac-Shakur)
+
+  Answer/context quote: “Also known as: 2Pac, Lesane Parish Crooks, Makaveli” (8 words).
+
+  Additional fun-fact quote: “Bynames: 2Pac and Makaveli” (4 words).
+
+## B13-0798 — What was Tupac Shakur's debut solo album?
+
+Answer: 2Pacalypse Now. Fun fact: Tupac also used the name Makaveli.
+
+- music-s0049: [Wikipedia](https://en.wikipedia.org/wiki/Tupac_Shakur)
+
+  Answer/context quote: “His debut album 2Pacalypse Now (1991)” (6 words).
+
+  Additional fun-fact quote: “also known by his stage names 2Pac and Makaveli” (9 words).
+
+- music-s0050: [Encyclopaedia Britannica](https://www.britannica.com/biography/Tupac-Shakur)
+
+  Answer/context quote: “before his solo debut, 2Pacalypse Now , later that year.” (10 words).
+
+  Additional fun-fact quote: “Bynames: 2Pac and Makaveli” (4 words).
+
+## B13-0799 — Although closely associated with West Coast rap, Tupac was born in which city?
+
+Answer: New York City. Fun fact: Tupac also used the name Makaveli.
+
+- music-s0049: [Wikipedia](https://en.wikipedia.org/wiki/Tupac_Shakur)
+
+  Answer/context quote: “June 16, 1971 Manhattan , New York City, U.S.” (9 words).
+
+  Additional fun-fact quote: “also known by his stage names 2Pac and Makaveli” (9 words).
+
+- music-s0050: [Encyclopaedia Britannica](https://www.britannica.com/biography/Tupac-Shakur)
+
+  Answer/context quote: “Born: June 16, 1971, Brooklyn, New York , U.S.” (9 words).
+
+  Additional fun-fact quote: “Bynames: 2Pac and Makaveli” (4 words).
+
+## B13-0800 — Which singer starred opposite Tupac in Poetic Justice?
+
+Answer: Janet Jackson. Fun fact: Tupac also used the name Makaveli.
+
+- music-s0049: [Wikipedia](https://en.wikipedia.org/wiki/Tupac_Shakur)
+
+  Answer/context quote: “Shakur starred with Janet Jackson in John Singleton 's 1993 romance film, Poetic Justice” (14 words).
+
+  Additional fun-fact quote: “also known by his stage names 2Pac and Makaveli” (9 words).
+
+- music-s0050: [Encyclopaedia Britannica](https://www.britannica.com/biography/Tupac-Shakur)
+
+  Answer/context quote: “Poetic Justice , opposite Janet Jackson” (6 words).
+
+  Additional fun-fact quote: “Bynames: 2Pac and Makaveli” (4 words).
+
+## B13-0801 — In a standard full-sided soccer match as of 2025, how many players does each team start with?
+
+Answer: 11. Fun fact: Only the goalkeeper may handle the ball inside its own penalty area in normal soccer play.
+
+- sports-games-s0001: [Encyclopaedia Britannica](https://www.britannica.com/sports/football-soccer)
+
+  Answer/context quote: “two teams of 11 players” (5 words).
+
+  Additional fun-fact quote: “handling the ball (except by a goalkeeper inside their own penalty area)” (12 words).
+
+- sports-games-s0002: [Wikipedia contributors](https://en.wikipedia.org/wiki/Association_football)
+
+  Answer/context quote: “two teams of 11 players” (5 words).
+
+  Additional fun-fact quote: “Only the goalkeepers may use their hands and arms, but only within their own penalty area” (16 words).
+
+## B13-0802 — As of 2025, which soccer position may handle the ball inside its own penalty area?
+
+Answer: Goalkeeper. Fun fact: A player receiving a red card is dismissed from the soccer match.
+
+- sports-games-s0001: [Encyclopaedia Britannica](https://www.britannica.com/sports/football-soccer)
+
+  Answer/context quote: “handling the ball (except by a goalkeeper inside their own penalty area)” (12 words).
+
+  Additional fun-fact quote: “they are ejected from the game and must leave the pitch” (11 words).
+
+- sports-games-s0002: [Wikipedia contributors](https://en.wikipedia.org/wiki/Association_football)
+
+  Answer/context quote: “Only the goalkeepers may use their hands and arms, but only within their own penalty area” (16 words).
+
+  Additional fun-fact quote: “dismissed from the game with a red card.” (8 words).
+
+## B13-0803 — As of 2025, what happens to a soccer player who receives a red card?
+
+Answer: Dismissed from the match. Fun fact: FIFA is the global governing body for association football.
+
+- sports-games-s0001: [Encyclopaedia Britannica](https://www.britannica.com/sports/football-soccer)
+
+  Answer/context quote: “they are ejected from the game and must leave the pitch” (11 words).
+
+  Additional fun-fact quote: “Football’s governing body, the Fédération Internationale de Football Association (FIFA)” (10 words).
+
+- sports-games-s0002: [Wikipedia contributors](https://en.wikipedia.org/wiki/Association_football)
+
+  Answer/context quote: “dismissed from the game with a red card.” (8 words).
+
+  Additional fun-fact quote: “association football is governed by FIFA” (6 words).
+
+## B13-0804 — Which international organization governs association football?
+
+Answer: FIFA. Fun fact: A standard full-sided soccer team starts with 11 players.
+
+- sports-games-s0001: [Encyclopaedia Britannica](https://www.britannica.com/sports/football-soccer)
+
+  Answer/context quote: “Football’s governing body, the Fédération Internationale de Football Association (FIFA)” (10 words).
+
+  Additional fun-fact quote: “two teams of 11 players” (5 words).
+
+- sports-games-s0002: [Wikipedia contributors](https://en.wikipedia.org/wiki/Association_football)
+
+  Answer/context quote: “association football is governed by FIFA” (6 words).
+
+  Additional fun-fact quote: “two teams of 11 players” (5 words).
+
+## B13-0805 — As of 2025, how many players from each team are normally on court in standard basketball?
+
+Answer: Five. Fun fact: James Naismith invented basketball.
+
+- sports-games-s0003: [Encyclopaedia Britannica](https://www.britannica.com/sports/basketball)
+
+  Answer/context quote: “two teams, typically of five players each” (7 words).
+
+  Additional fun-fact quote: “Basketball was invented by James Naismith” (6 words).
+
+- sports-games-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Basketball)
+
+  Answer/context quote: “two teams of five players each (excluding substitutes)” (8 words).
+
+  Additional fun-fact quote: “Invented in 1891 by Canadian-American gym teacher James Naismith” (9 words).
+
+## B13-0806 — Who invented basketball?
+
+Answer: James Naismith. Fun fact: Basketball was invented in1891.
+
+- sports-games-s0003: [Encyclopaedia Britannica](https://www.britannica.com/sports/basketball)
+
+  Answer/context quote: “Basketball was invented by James Naismith” (6 words).
+
+  Additional fun-fact quote: “basketball was invented by James Naismith in 1891” (8 words).
+
+- sports-games-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Basketball)
+
+  Answer/context quote: “Invented in 1891 by Canadian-American gym teacher James Naismith” (9 words).
+
+  Additional fun-fact quote: “Invented in 1891 by Canadian-American gym teacher James Naismith” (9 words).
+
+## B13-0807 — In which year was basketball invented?
+
+Answer: 1891. Fun fact: Naismith invented basketball in Springfield, Massachusetts.
+
+- sports-games-s0003: [Encyclopaedia Britannica](https://www.britannica.com/sports/basketball)
+
+  Answer/context quote: “basketball was invented by James Naismith in 1891” (8 words).
+
+  Additional fun-fact quote: “Training School, Springfield , Massachusetts , where Naismith was an instructor” (11 words).
+
+- sports-games-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Basketball)
+
+  Answer/context quote: “Invented in 1891 by Canadian-American gym teacher James Naismith” (9 words).
+
+  Additional fun-fact quote: “James Naismith in Springfield, Massachusetts” (5 words).
+
+## B13-0808 — In which Massachusetts city did Naismith invent basketball?
+
+Answer: Springfield. Fun fact: Standard basketball uses five on-court players per team.
+
+- sports-games-s0003: [Encyclopaedia Britannica](https://www.britannica.com/sports/basketball)
+
+  Answer/context quote: “Training School, Springfield , Massachusetts , where Naismith was an instructor” (11 words).
+
+  Additional fun-fact quote: “two teams, typically of five players each” (7 words).
+
+- sports-games-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Basketball)
+
+  Answer/context quote: “James Naismith in Springfield, Massachusetts” (5 words).
+
+  Additional fun-fact quote: “two teams of five players each (excluding substitutes)” (8 words).
+
+## B13-0809 — How many players are in a standard baseball fielding lineup as of 2025?
+
+Answer: Nine. Fun fact: A baseball diamond has four bases including home plate.
+
+- sports-games-s0005: [Encyclopaedia Britannica](https://www.britannica.com/sports/baseball)
+
+  Answer/context quote: “two teams of nine players each” (6 words).
+
+  Additional fun-fact quote: “four white bases laid out in a diamond” (8 words).
+
+- sports-games-s0006: [Wikipedia contributors](https://en.wikipedia.org/wiki/Baseball)
+
+  Answer/context quote: “two teams of nine players each” (6 words).
+
+  Additional fun-fact quote: “touching all four bases, in order” (6 words).
+
+## B13-0810 — How many bases, including home plate, form the baseball diamond?
+
+Answer: Four. Fun fact: Three outs end a baseball half-inning.
+
+- sports-games-s0005: [Encyclopaedia Britannica](https://www.britannica.com/sports/baseball)
+
+  Answer/context quote: “four white bases laid out in a diamond” (8 words).
+
+  Additional fun-fact quote: “exchanging places when three members of the batting team are “put out.”” (12 words).
+
+- sports-games-s0006: [Wikipedia contributors](https://en.wikipedia.org/wiki/Baseball)
+
+  Answer/context quote: “touching all four bases, in order” (6 words).
+
+  Additional fun-fact quote: “Once the fielding team records three outs, the offensive and defensive sides switch roles.” (14 words).
+
+## B13-0811 — As of 2025, how many outs end a team’s half-inning in baseball?
+
+Answer: Three. Fun fact: Jackie Robinson broke modern Major League Baseball’s color barrier in1947.
+
+- sports-games-s0005: [Encyclopaedia Britannica](https://www.britannica.com/sports/baseball)
+
+  Answer/context quote: “exchanging places when three members of the batting team are “put out.”” (12 words).
+
+  Additional fun-fact quote: “in 1947 Jackie Robinson crossed the long-standing color bar in major league baseball” (13 words).
+
+- sports-games-s0006: [Wikipedia contributors](https://en.wikipedia.org/wiki/Baseball)
+
+  Answer/context quote: “Once the fielding team records three outs, the offensive and defensive sides switch roles.” (14 words).
+
+  Additional fun-fact quote: “In 1947, Robinson broke the major leagues' color barrier when he debuted with the Dodgers.” (15 words).
+
+## B13-0812 — In which year did Jackie Robinson break Major League Baseball’s modern color barrier?
+
+Answer: 1947. Fun fact: A standard baseball fielding team has nine players.
+
+- sports-games-s0005: [Encyclopaedia Britannica](https://www.britannica.com/sports/baseball)
+
+  Answer/context quote: “in 1947 Jackie Robinson crossed the long-standing color bar in major league baseball” (13 words).
+
+  Additional fun-fact quote: “two teams of nine players each” (6 words).
+
+- sports-games-s0006: [Wikipedia contributors](https://en.wikipedia.org/wiki/Baseball)
+
+  Answer/context quote: “In 1947, Robinson broke the major leagues' color barrier when he debuted with the Dodgers.” (15 words).
+
+  Additional fun-fact quote: “two teams of nine players each” (6 words).
+
+## B13-0813 — In American football as of 2025, how many points is a touchdown worth before the try?
+
+Answer: Six. Fun fact: An American-football field goal scores three points.
+
+- sports-games-s0051: [Encyclopaedia Britannica](https://www.britannica.com/sports/American-football)
+
+  Answer/context quote: “A touchdown , worth six points” (6 words).
+
+  Additional fun-fact quote: “A field goal , worth three points” (7 words).
+
+- sports-games-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/American_football)
+
+  Answer/context quote: “The touchdown (TD), worth six points” (6 words).
+
+  Additional fun-fact quote: “A field goal (FG), worth three points” (7 words).
+
+## B13-0814 — As of 2025, how many points does a successful American-football field goal score?
+
+Answer: Three. Fun fact: An American-football offense normally has four downs to gain a first down.
+
+- sports-games-s0051: [Encyclopaedia Britannica](https://www.britannica.com/sports/American-football)
+
+  Answer/context quote: “A field goal , worth three points” (7 words).
+
+  Additional fun-fact quote: “10 yards in four downs to get a first down” (10 words).
+
+- sports-games-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/American_football)
+
+  Answer/context quote: “A field goal (FG), worth three points” (7 words).
+
+  Additional fun-fact quote: “at least ten yards in four downs or plays” (9 words).
+
+## B13-0815 — As of 2025, how many downs does an American-football offense normally get to gain a first down?
+
+Answer: Four. Fun fact: An American-football offense normally needs ten yards for a first down.
+
+- sports-games-s0051: [Encyclopaedia Britannica](https://www.britannica.com/sports/American-football)
+
+  Answer/context quote: “10 yards in four downs to get a first down” (10 words).
+
+  Additional fun-fact quote: “advance the ball at least 10 yards in four downs to earn a first down” (15 words).
+
+- sports-games-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/American_football)
+
+  Answer/context quote: “at least ten yards in four downs or plays” (9 words).
+
+  Additional fun-fact quote: “advance the ball at least ten yards in four downs or plays” (12 words).
+
+## B13-0816 — As of 2025, how many yards must an American-football offense normally gain for a new first down?
+
+Answer: Ten. Fun fact: An American-football touchdown is worth six points before the try.
+
+- sports-games-s0051: [Encyclopaedia Britannica](https://www.britannica.com/sports/American-football)
+
+  Answer/context quote: “advance the ball at least 10 yards in four downs to earn a first down” (15 words).
+
+  Additional fun-fact quote: “A touchdown , worth six points” (6 words).
+
+- sports-games-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/American_football)
+
+  Answer/context quote: “advance the ball at least ten yards in four downs or plays” (12 words).
+
+  Additional fun-fact quote: “The touchdown (TD), worth six points” (6 words).
+
+## B13-0817 — What is tennis called when one player competes against one other player?
+
+Answer: Singles. Fun fact: A doubles tennis match has four players, two per side.
+
+- sports-games-s0009: [Encyclopaedia Britannica](https://www.britannica.com/sports/tennis)
+
+  Answer/context quote: “two opposing players (singles)” (4 words).
+
+  Additional fun-fact quote: “pairs of players (doubles)” (4 words).
+
+- sports-games-s0010: [Wikipedia contributors](https://en.wikipedia.org/wiki/Tennis)
+
+  Answer/context quote: “against a single opponent ( singles )” (7 words).
+
+  Additional fun-fact quote: “two teams of two players each ( doubles )” (9 words).
+
+## B13-0818 — How many total players take part in a doubles tennis match?
+
+Answer: Four. Fun fact: The third won point in an ordinary tennis game is scored40.
+
+- sports-games-s0009: [Encyclopaedia Britannica](https://www.britannica.com/sports/tennis)
+
+  Answer/context quote: “pairs of players (doubles)” (4 words).
+
+  Additional fun-fact quote: “method of scoring—15, 30, 40, game” (6 words).
+
+- sports-games-s0010: [Wikipedia contributors](https://en.wikipedia.org/wiki/Tennis)
+
+  Answer/context quote: “two teams of two players each ( doubles )” (9 words).
+
+  Additional fun-fact quote: “zero to three points are described as "love", "15", "30", and "40", respectively.” (13 words).
+
+## B13-0819 — As of 2025, what score is called after a tennis player wins the third point of an ordinary game?
+
+Answer: 40. Fun fact: The first Wimbledon tennis championships were held in1877.
+
+- sports-games-s0009: [Encyclopaedia Britannica](https://www.britannica.com/sports/tennis)
+
+  Answer/context quote: “method of scoring—15, 30, 40, game” (6 words).
+
+  Additional fun-fact quote: “In 1877 the club decided to hold a tennis championship” (10 words).
+
+- sports-games-s0010: [Wikipedia contributors](https://en.wikipedia.org/wiki/Tennis)
+
+  Answer/context quote: “zero to three points are described as "love", "15", "30", and "40", respectively.” (13 words).
+
+  Additional fun-fact quote: “its first championships at Wimbledon, in 1877” (7 words).
+
+## B13-0820 — In what year were the first Wimbledon tennis championships held?
+
+Answer: 1877. Fun fact: Tennis with one player against one other player is singles.
+
+- sports-games-s0009: [Encyclopaedia Britannica](https://www.britannica.com/sports/tennis)
+
+  Answer/context quote: “In 1877 the club decided to hold a tennis championship” (10 words).
+
+  Additional fun-fact quote: “two opposing players (singles)” (4 words).
+
+- sports-games-s0010: [Wikipedia contributors](https://en.wikipedia.org/wiki/Tennis)
+
+  Answer/context quote: “its first championships at Wimbledon, in 1877” (7 words).
+
+  Additional fun-fact quote: “against a single opponent ( singles )” (7 words).
+
+## B13-0821 — As of 2025, how many players per team are on court in standard indoor volleyball?
+
+Answer: Six. Fun fact: William G. Morgan invented volleyball.
+
+- sports-games-s0011: [Encyclopaedia Britannica](https://www.britannica.com/sports/volleyball)
+
+  Answer/context quote: “each team consists of six players” (6 words).
+
+  Additional fun-fact quote: “volleyball was invented in 1895 by William G. Morgan” (9 words).
+
+- sports-games-s0012: [Wikipedia contributors](https://en.wikipedia.org/wiki/Volleyball)
+
+  Answer/context quote: “two teams of six players are separated by a net” (10 words).
+
+  Additional fun-fact quote: “Volleyball was invented in 1895 by the American educator William G. Morgan” (12 words).
+
+## B13-0822 — Who invented volleyball?
+
+Answer: William G. Morgan. Fun fact: Morgan originally called volleyball mintonette.
+
+- sports-games-s0011: [Encyclopaedia Britannica](https://www.britannica.com/sports/volleyball)
+
+  Answer/context quote: “volleyball was invented in 1895 by William G. Morgan” (9 words).
+
+  Additional fun-fact quote: “Morgan called the sport “mintonette”” (5 words).
+
+- sports-games-s0012: [Wikipedia contributors](https://en.wikipedia.org/wiki/Volleyball)
+
+  Answer/context quote: “Volleyball was invented in 1895 by the American educator William G. Morgan” (12 words).
+
+  Additional fun-fact quote: “the game, which he originally called "mintonette"” (7 words).
+
+## B13-0823 — What was volleyball originally called?
+
+Answer: Mintonette. Fun fact: Volleyball was invented in1895.
+
+- sports-games-s0011: [Encyclopaedia Britannica](https://www.britannica.com/sports/volleyball)
+
+  Answer/context quote: “Morgan called the sport “mintonette”” (5 words).
+
+  Additional fun-fact quote: “volleyball was invented in 1895 by William G. Morgan” (9 words).
+
+- sports-games-s0012: [Wikipedia contributors](https://en.wikipedia.org/wiki/Volleyball)
+
+  Answer/context quote: “the game, which he originally called "mintonette"” (7 words).
+
+  Additional fun-fact quote: “Volleyball was invented in 1895” (5 words).
+
+## B13-0824 — In which year was volleyball invented?
+
+Answer: 1895. Fun fact: Standard indoor volleyball uses six on-court players per team.
+
+- sports-games-s0011: [Encyclopaedia Britannica](https://www.britannica.com/sports/volleyball)
+
+  Answer/context quote: “volleyball was invented in 1895 by William G. Morgan” (9 words).
+
+  Additional fun-fact quote: “each team consists of six players” (6 words).
+
+- sports-games-s0012: [Wikipedia contributors](https://en.wikipedia.org/wiki/Volleyball)
+
+  Answer/context quote: “Volleyball was invented in 1895” (5 words).
+
+  Additional fun-fact quote: “two teams of six players are separated by a net” (10 words).
+
+## B13-0825 — What disk-shaped object do ice-hockey players try to shoot into the goal?
+
+Answer: Puck. Fun fact: Full-strength ice hockey normally has six players per side including the goaltender.
+
+- sports-games-s0013: [Encyclopaedia Britannica](https://www.britannica.com/sports/ice-hockey)
+
+  Answer/context quote: “a vulcanized rubber disk, the puck” (6 words).
+
+  Additional fun-fact quote: “each usually having six players” (5 words).
+
+- sports-games-s0014: [Wikipedia contributors](https://en.wikipedia.org/wiki/Ice_hockey)
+
+  Answer/context quote: “a vulcanized rubber hockey puck” (5 words).
+
+  Additional fun-fact quote: “During normal play, there are six players on ice skates on the ice per side” (15 words).
+
+## B13-0826 — As of 2025, how many players per side are normally on the ice, including the goalie, in full-strength ice hockey?
+
+Answer: Six. Fun fact: A standard ice-hockey puck is made from vulcanized rubber.
+
+- sports-games-s0013: [Encyclopaedia Britannica](https://www.britannica.com/sports/ice-hockey)
+
+  Answer/context quote: “each usually having six players” (5 words).
+
+  Additional fun-fact quote: “a vulcanized rubber disk, the puck” (6 words).
+
+- sports-games-s0014: [Wikipedia contributors](https://en.wikipedia.org/wiki/Ice_hockey)
+
+  Answer/context quote: “During normal play, there are six players on ice skates on the ice per side” (15 words).
+
+  Additional fun-fact quote: “a vulcanized rubber hockey puck” (5 words).
+
+## B13-0827 — What material is a standard ice-hockey puck made from?
+
+Answer: Vulcanized rubber. Fun fact: The first organized indoor ice-hockey game was held in Montreal in1875.
+
+- sports-games-s0013: [Encyclopaedia Britannica](https://www.britannica.com/sports/ice-hockey)
+
+  Answer/context quote: “a vulcanized rubber disk, the puck” (6 words).
+
+  Additional fun-fact quote: “took place in Montreal ’s Victoria Skating Rink in 1875” (10 words).
+
+- sports-games-s0014: [Wikipedia contributors](https://en.wikipedia.org/wiki/Ice_hockey)
+
+  Answer/context quote: “a vulcanized rubber hockey puck” (5 words).
+
+  Additional fun-fact quote: “Montreal , where the first indoor game was played on March 3, 1875” (13 words).
+
+## B13-0828 — Which Canadian city hosted the first organized indoor ice-hockey game in1875?
+
+Answer: Montreal. Fun fact: Ice hockey is played with a puck.
+
+- sports-games-s0013: [Encyclopaedia Britannica](https://www.britannica.com/sports/ice-hockey)
+
+  Answer/context quote: “took place in Montreal ’s Victoria Skating Rink in 1875” (10 words).
+
+  Additional fun-fact quote: “a vulcanized rubber disk, the puck” (6 words).
+
+- sports-games-s0014: [Wikipedia contributors](https://en.wikipedia.org/wiki/Ice_hockey)
+
+  Answer/context quote: “Montreal , where the first indoor game was played on March 3, 1875” (13 words).
+
+  Additional fun-fact quote: “a vulcanized rubber hockey puck” (5 words).
+
+## B13-0829 — Which feathered or synthetic object is struck back and forth in badminton?
+
+Answer: Shuttlecock. Fun fact: Under the standard badminton scoring used in2025, a game normally goes to21 points.
+
+- sports-games-s0015: [Encyclopaedia Britannica](https://www.britannica.com/sports/badminton)
+
+  Answer/context quote: “using a shuttlecock.” (3 words).
+
+  Additional fun-fact quote: “To win a game, a player must score 21 points.” (10 words).
+
+- sports-games-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Badminton)
+
+  Answer/context quote: “racquets to hit a shuttlecock across a net” (8 words).
+
+  Additional fun-fact quote: “Each game is played to 21 points” (7 words).
+
+## B13-0830 — As of2025, how many points normally win a badminton game before any required extension?
+
+Answer: 21. Fun fact: Badminton became an official Summer Olympic sport in1992.
+
+- sports-games-s0015: [Encyclopaedia Britannica](https://www.britannica.com/sports/badminton)
+
+  Answer/context quote: “To win a game, a player must score 21 points.” (10 words).
+
+  Additional fun-fact quote: “1992: Recognition as an official Olympic sport at the Barcelona Olympic Games” (12 words).
+
+- sports-games-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Badminton)
+
+  Answer/context quote: “Each game is played to 21 points” (7 words).
+
+  Additional fun-fact quote: “In 1992, badminton debuted as a Summer Olympic sport” (9 words).
+
+## B13-0831 — In which year did badminton become an official Summer Olympic sport?
+
+Answer: 1992. Fun fact: Badminton was earlier called Poona, after the city now called Pune.
+
+- sports-games-s0015: [Encyclopaedia Britannica](https://www.britannica.com/sports/badminton)
+
+  Answer/context quote: “1992: Recognition as an official Olympic sport at the Barcelona Olympic Games” (12 words).
+
+  Additional fun-fact quote: “badminton was first known as “poona,” after the city of Poona (Pune)” (12 words).
+
+- sports-games-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Badminton)
+
+  Answer/context quote: “In 1992, badminton debuted as a Summer Olympic sport” (9 words).
+
+  Additional fun-fact quote: “the game was also known as Poona or Poonah after the garrison town of Poona (Pune)” (16 words).
+
+## B13-0832 — What earlier name for badminton came from the Indian city now called Pune?
+
+Answer: Poona. Fun fact: Badminton players strike a shuttlecock.
+
+- sports-games-s0015: [Encyclopaedia Britannica](https://www.britannica.com/sports/badminton)
+
+  Answer/context quote: “badminton was first known as “poona,” after the city of Poona (Pune)” (12 words).
+
+  Additional fun-fact quote: “using a shuttlecock.” (3 words).
+
+- sports-games-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Badminton)
+
+  Answer/context quote: “the game was also known as Poona or Poonah after the garrison town of Poona (Pune)” (16 words).
+
+  Additional fun-fact quote: “racquets to hit a shuttlecock across a net” (8 words).
+
+## B13-0833 — As of2025, how many players are on each standard cricket team?
+
+Answer: Eleven. Fun fact: A standard cricket pitch is22 yards long.
+
+- sports-games-s0017: [Encyclopaedia Britannica](https://www.britannica.com/sports/cricket-sport)
+
+  Answer/context quote: “two competing sides (teams) of 11 players” (7 words).
+
+  Additional fun-fact quote: “the pitch, that is 22 yards” (6 words).
+
+- sports-games-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Cricket)
+
+  Answer/context quote: “two teams of eleven players” (5 words).
+
+  Additional fun-fact quote: “the wickets are placed 22 yards” (6 words).
+
+## B13-0834 — How long is a standard cricket pitch between the wickets?
+
+Answer: 22 yards. Fun fact: A standard cricket over consists of six legal balls (deliveries).
+
+- sports-games-s0017: [Encyclopaedia Britannica](https://www.britannica.com/sports/cricket-sport)
+
+  Answer/context quote: “the pitch, that is 22 yards” (6 words).
+
+  Additional fun-fact quote: “A bowler delivers six balls at one wicket (thus completing an “over”)” (12 words).
+
+- sports-games-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Cricket)
+
+  Answer/context quote: “the wickets are placed 22 yards” (6 words).
+
+  Additional fun-fact quote: “six legal balls (deliveries)” (4 words).
+
+## B13-0835 — As of2025, how many legal deliveries make up a standard cricket over?
+
+Answer: Six. Fun fact: A cricket wicket has three upright stumps.
+
+- sports-games-s0017: [Encyclopaedia Britannica](https://www.britannica.com/sports/cricket-sport)
+
+  Answer/context quote: “A bowler delivers six balls at one wicket (thus completing an “over”)” (12 words).
+
+  Additional fun-fact quote: “Two sets of three sticks, called wickets” (7 words).
+
+- sports-games-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Cricket)
+
+  Answer/context quote: “six legal balls (deliveries)” (4 words).
+
+  Additional fun-fact quote: “two bails (small sticks) balanced on three stumps” (8 words).
+
+## B13-0836 — How many upright stumps make up one cricket wicket?
+
+Answer: Three. Fun fact: A standard cricket team has eleven players.
+
+- sports-games-s0017: [Encyclopaedia Britannica](https://www.britannica.com/sports/cricket-sport)
+
+  Answer/context quote: “Two sets of three sticks, called wickets” (7 words).
+
+  Additional fun-fact quote: “two competing sides (teams) of 11 players” (7 words).
+
+- sports-games-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Cricket)
+
+  Answer/context quote: “two bails (small sticks) balanced on three stumps” (8 words).
+
+  Additional fun-fact quote: “two teams of eleven players” (5 words).
+
+## B13-0837 — Which sport is also called ping-pong?
+
+Answer: Table tennis. Fun fact: Table tennis originated in England.
+
+- sports-games-s0019: [Encyclopaedia Britannica](https://www.britannica.com/sports/table-tennis)
+
+  Answer/context quote: “originally called Ping-Pong, a trade name” (6 words).
+
+  Additional fun-fact quote: “The game was invented in England” (6 words).
+
+- sports-games-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/Table_tennis)
+
+  Answer/context quote: “Table tennis (also known as ping-pong )” (7 words).
+
+  Additional fun-fact quote: “The sport originated in Victorian England” (6 words).
+
+## B13-0838 — In which country did table tennis originate?
+
+Answer: England. Fun fact: Table tennis became an Olympic sport in1988.
+
+- sports-games-s0019: [Encyclopaedia Britannica](https://www.britannica.com/sports/table-tennis)
+
+  Answer/context quote: “The game was invented in England” (6 words).
+
+  Additional fun-fact quote: “Table tennis became an Olympic sport in 1988” (8 words).
+
+- sports-games-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/Table_tennis)
+
+  Answer/context quote: “The sport originated in Victorian England” (6 words).
+
+  Additional fun-fact quote: “Table tennis has been an Olympic sport since 1988” (9 words).
+
+## B13-0839 — In what year did table tennis first become an Olympic sport?
+
+Answer: 1988. Fun fact: The International Table Tennis Federation was founded in1926.
+
+- sports-games-s0019: [Encyclopaedia Britannica](https://www.britannica.com/sports/table-tennis)
+
+  Answer/context quote: “Table tennis became an Olympic sport in 1988” (8 words).
+
+  Additional fun-fact quote: “International Table Tennis Federation) was founded in 1926” (8 words).
+
+- sports-games-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/Table_tennis)
+
+  Answer/context quote: “Table tennis has been an Olympic sport since 1988” (9 words).
+
+  Additional fun-fact quote: “International Table Tennis Federation (ITTF), founded in 1926” (8 words).
+
+## B13-0840 — In which year was the International Table Tennis Federation founded?
+
+Answer: 1926. Fun fact: Table tennis is also called ping-pong.
+
+- sports-games-s0019: [Encyclopaedia Britannica](https://www.britannica.com/sports/table-tennis)
+
+  Answer/context quote: “International Table Tennis Federation) was founded in 1926” (8 words).
+
+  Additional fun-fact quote: “originally called Ping-Pong, a trade name” (6 words).
+
+- sports-games-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/Table_tennis)
+
+  Answer/context quote: “International Table Tennis Federation (ITTF), founded in 1926” (8 words).
+
+  Additional fun-fact quote: “Table tennis (also known as ping-pong )” (7 words).
+
+## B13-0841 — Rugby developed from a style of football played at Rugby School in which country?
+
+Answer: England. Fun fact: Standard rugby union teams have15 players.
+
+- sports-games-s0021: [Encyclopaedia Britannica](https://www.britannica.com/sports/rugby)
+
+  Answer/context quote: “origins in the style of football played at Rugby School in England” (12 words).
+
+  Additional fun-fact quote: “two teams of 15 players (in rugby union play)” (9 words).
+
+- sports-games-s0022: [Wikipedia contributors](https://en.wikipedia.org/wiki/Rugby_union)
+
+  Answer/context quote: “originated at Rugby School in England” (6 words).
+
+  Additional fun-fact quote: “two teams of 15 players each” (6 words).
+
+## B13-0842 — As of2025, how many players start on each full-sided rugby union team?
+
+Answer: 15. Fun fact: A rugby union try is worth five points.
+
+- sports-games-s0068: [Encyclopaedia Britannica](https://www.britannica.com/sports/rugby/Principles-of-play)
+
+  Answer/context quote: “In rugby union a team fields 15 players” (8 words).
+
+  Additional fun-fact quote: “In rugby union these are now worth five points” (9 words).
+
+- sports-games-s0022: [Wikipedia contributors](https://en.wikipedia.org/wiki/Rugby_union)
+
+  Answer/context quote: “Each team starts the match with 15 players on the field” (11 words).
+
+  Additional fun-fact quote: “is worth 5 points” (4 words).
+
+## B13-0843 — As of2025, how many points is a try worth in rugby union?
+
+Answer: Five. Fun fact: A successful rugby union conversion is worth two points.
+
+- sports-games-s0068: [Encyclopaedia Britannica](https://www.britannica.com/sports/rugby/Principles-of-play)
+
+  Answer/context quote: “In rugby union these are now worth five points” (9 words).
+
+  Additional fun-fact quote: “In both codes conversions count two points” (7 words).
+
+- sports-games-s0022: [Wikipedia contributors](https://en.wikipedia.org/wiki/Rugby_union)
+
+  Answer/context quote: “is worth 5 points” (4 words).
+
+  Additional fun-fact quote: “conversion kick scores 2 points” (5 words).
+
+## B13-0844 — As of2025, how many points is a successful conversion worth in rugby union?
+
+Answer: Two. Fun fact: A rugby union try is worth five points.
+
+- sports-games-s0068: [Encyclopaedia Britannica](https://www.britannica.com/sports/rugby/Principles-of-play)
+
+  Answer/context quote: “In both codes conversions count two points” (7 words).
+
+  Additional fun-fact quote: “In rugby union these are now worth five points” (9 words).
+
+- sports-games-s0022: [Wikipedia contributors](https://en.wikipedia.org/wiki/Rugby_union)
+
+  Answer/context quote: “conversion kick scores 2 points” (5 words).
+
+  Additional fun-fact quote: “is worth 5 points” (4 words).
+
+## B13-0845 — How many holes are played in a conventional full round of golf?
+
+Answer: 18. Fun fact: Some golf courses have nine holes.
+
+- sports-games-s0053: [Encyclopaedia Britannica](https://www.britannica.com/sports/golf/Play-of-the-game)
+
+  Answer/context quote: “The stipulated round consists of 18 holes” (7 words).
+
+  Additional fun-fact quote: “Some courses have only nine holes” (6 words).
+
+- sports-games-s0024: [Wikipedia contributors](https://en.wikipedia.org/wiki/Golf)
+
+  Answer/context quote: “Courses typically have either 9 or 18 holes” (8 words).
+
+  Additional fun-fact quote: “Courses typically have either 9 or 18 holes” (8 words).
+
+## B13-0846 — In golf, what is a score of one stroke under par on a hole called?
+
+Answer: Birdie. Fun fact: An eagle is two strokes under par on a golf hole.
+
+- sports-games-s0052: [Encyclopaedia Britannica](https://www.britannica.com/question/What-golf-terms-should-you-know)
+
+  Answer/context quote: “Birdie: A score of one stroke under par.” (8 words).
+
+  Additional fun-fact quote: “Eagle: A score of two strokes under par.” (8 words).
+
+- sports-games-s0024: [Wikipedia contributors](https://en.wikipedia.org/wiki/Golf)
+
+  Answer/context quote: “Birdie one stroke under par” (5 words).
+
+  Additional fun-fact quote: “Eagle two strokes under par” (5 words).
+
+## B13-0847 — A golf score two strokes under par on one hole is called what?
+
+Answer: Eagle. Fun fact: A double eagle is three strokes under par on a golf hole.
+
+- sports-games-s0052: [Encyclopaedia Britannica](https://www.britannica.com/question/What-golf-terms-should-you-know)
+
+  Answer/context quote: “Eagle: A score of two strokes under par.” (8 words).
+
+  Additional fun-fact quote: “Double eagle: A score of three strokes under par.” (9 words).
+
+- sports-games-s0024: [Wikipedia contributors](https://en.wikipedia.org/wiki/Golf)
+
+  Answer/context quote: “Eagle two strokes under par” (5 words).
+
+  Additional fun-fact quote: “Albatross (Double eagle) three strokes under par” (7 words).
+
+## B13-0848 — In golf, a double eagle means how many strokes under par on a hole?
+
+Answer: Three. Fun fact: A birdie is one stroke under par on a golf hole.
+
+- sports-games-s0052: [Encyclopaedia Britannica](https://www.britannica.com/question/What-golf-terms-should-you-know)
+
+  Answer/context quote: “Double eagle: A score of three strokes under par.” (9 words).
+
+  Additional fun-fact quote: “Birdie: A score of one stroke under par.” (8 words).
+
+- sports-games-s0024: [Wikipedia contributors](https://en.wikipedia.org/wiki/Golf)
+
+  Answer/context quote: “Albatross (Double eagle) three strokes under par” (7 words).
+
+  Additional fun-fact quote: “Birdie one stroke under par” (5 words).
+
+## B13-0849 — In which swimming stroke does a swimmer lie face-up?
+
+Answer: Backstroke. Fun fact: Backstroke uses a flutter kick.
+
+- sports-games-s0055: [Encyclopaedia Britannica](https://www.britannica.com/sports/swimming-sport/Strokes)
+
+  Answer/context quote: “In the backstroke the swimmer is supine” (7 words).
+
+  Additional fun-fact quote: “strong and steady flutter kick” (5 words).
+
+- sports-games-s0072: [Wikipedia contributors](https://en.wikipedia.org/wiki/Backstroke)
+
+  Answer/context quote: “styles swum on the back” (5 words).
+
+  Additional fun-fact quote: “flutter kick” (2 words).
+
+## B13-0850 — As of2025, how many different strokes are used in an individual swimming medley?
+
+Answer: Four. Fun fact: Individual medleys include butterfly.
+
+- sports-games-s0055: [Encyclopaedia Britannica](https://www.britannica.com/sports/swimming-sport/Strokes)
+
+  Answer/context quote: “individual medley (a combination of freestyle, backstroke, breaststroke, and butterfly)” (10 words).
+
+  Additional fun-fact quote: “individual medley (a combination of freestyle, backstroke, breaststroke, and butterfly)” (10 words).
+
+- sports-games-s0026: [Wikipedia contributors](https://en.wikipedia.org/wiki/Swimming_(sport))
+
+  Answer/context quote: “the individual medley, or IM, which consists of all four” (10 words).
+
+  Additional fun-fact quote: “equal distances of butterfly, then backstroke, breaststroke, and finally, freestyle” (10 words).
+
+## B13-0851 — Which competitive swimming stroke uses a simultaneous dolphin kick during its surface swimming?
+
+Answer: Butterfly. Fun fact: In butterfly, both arms recover above the water.
+
+- sports-games-s0055: [Encyclopaedia Britannica](https://www.britannica.com/sports/swimming-sport/Strokes)
+
+  Answer/context quote: “Later swimmers used two dolphin kicks to one arm pull.” (10 words).
+
+  Additional fun-fact quote: “In the butterfly the arms are brought forward above the water.” (11 words).
+
+- sports-games-s0073: [Wikipedia contributors](https://en.wikipedia.org/wiki/Butterfly_stroke)
+
+  Answer/context quote: “the legs moving up and down together in a dolphin kick” (11 words).
+
+  Additional fun-fact quote: “arms moving symmetrically down the front of the body and then over the water” (14 words).
+
+## B13-0852 — At which first modern Olympic Games was men’s swimming included?
+
+Answer: Athens1896. Fun fact: Women’s Olympic swimming was added in1912.
+
+- sports-games-s0025: [Encyclopaedia Britannica](https://www.britannica.com/sports/swimming-sport)
+
+  Answer/context quote: “modern Olympic Games from their inception in 1896” (8 words).
+
+  Additional fun-fact quote: “women’s events were added in 1912” (6 words).
+
+- sports-games-s0026: [Wikipedia contributors](https://en.wikipedia.org/wiki/Swimming_(sport))
+
+  Answer/context quote: “Olympic Games in 1896 in Athens” (6 words).
+
+  Additional fun-fact quote: “Women's swimming was introduced into the Olympics in 1912” (9 words).
+
+## B13-0853 — What is the official marathon distance in kilometres?
+
+Answer: 42.195. Fun fact: The standard distance traces to the1908 London Olympic race.
+
+- sports-games-s0063: [Encyclopaedia Britannica](https://www.britannica.com/sports/marathon-race)
+
+  Answer/context quote: “42.195 km” (2 words).
+
+  Additional fun-fact quote: “This was based on a decision of the British Olympic Committee to start the 1908 Olympic race” (17 words).
+
+- sports-games-s0064: [Wikipedia contributors](https://en.wikipedia.org/wiki/Marathon)
+
+  Answer/context quote: “a distance of 42.195 kilometres” (5 words).
+
+  Additional fun-fact quote: “directly from the length used at the 1908 Summer Olympics in London.” (12 words).
+
+## B13-0854 — How many events make up a decathlon?
+
+Answer: Ten. Fun fact: A modern decathlon takes place over two consecutive days.
+
+- sports-games-s0060: [Encyclopaedia Britannica](https://www.britannica.com/sports/decathlon)
+
+  Answer/context quote: “10 track-and-field events” (3 words).
+
+  Additional fun-fact quote: “athletic competition lasting two consecutive days” (6 words).
+
+- sports-games-s0065: [Wikipedia contributors](https://en.wikipedia.org/wiki/Decathlon)
+
+  Answer/context quote: “consisting of 10 track and field events” (7 words).
+
+  Additional fun-fact quote: “Events are held over two consecutive days” (7 words).
+
+## B13-0855 — How many events are contested in a heptathlon?
+
+Answer: Seven. Fun fact: The women’s heptathlon includes javelin throwing.
+
+- sports-games-s0061: [Encyclopaedia Britannica](https://www.britannica.com/sports/heptathlon)
+
+  Answer/context quote: “seven different track-and-field events” (4 words).
+
+  Additional fun-fact quote: “javelin throw” (2 words).
+
+- sports-games-s0066: [Wikipedia contributors](https://en.wikipedia.org/wiki/Heptathlon)
+
+  Answer/context quote: “combined events contest made up of seven events” (8 words).
+
+  Additional fun-fact quote: “Javelin throw” (2 words).
+
+## B13-0856 — Which running event requires athletes to clear a water jump?
+
+Answer: Steeplechase. Fun fact: The standard3000-metre steeplechase has seven water jumps.
+
+- sports-games-s0062: [Encyclopaedia Britannica](https://www.britannica.com/sports/steeplechase-athletics)
+
+  Answer/context quote: “water ditches” (2 words).
+
+  Additional fun-fact quote: “Runners of the standard course face a total of 7 water jumps” (12 words).
+
+- sports-games-s0067: [Wikipedia contributors](https://en.wikipedia.org/wiki/Steeplechase_(athletics))
+
+  Answer/context quote: “seven water jumps” (3 words).
+
+  Additional fun-fact quote: “28 barriers and seven water jumps” (6 words).
+
+## B13-0857 — What protective hand equipment was required by the original Queensberry boxing rules?
+
+Answer: Boxing gloves. Fun fact: Queensberry-rule boxing rounds lasted three minutes.
+
+- sports-games-s0059: [Encyclopaedia Britannica](https://www.britannica.com/sports/boxing/The-Queensberry-rules)
+
+  Answer/context quote: “contestants wore padded gloves” (4 words).
+
+  Additional fun-fact quote: “a round consisted of three minutes of fighting” (8 words).
+
+- sports-games-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Boxing)
+
+  Answer/context quote: “The introduction of boxing gloves of "fair-size"” (7 words).
+
+  Additional fun-fact quote: “three minutes” (2 words).
+
+## B13-0858 — How long was a fighting round under the original Queensberry boxing rules?
+
+Answer: Three minutes. Fun fact: The Marquess of Queensberry lent his name to influential boxing rules.
+
+- sports-games-s0059: [Encyclopaedia Britannica](https://www.britannica.com/sports/boxing/The-Queensberry-rules)
+
+  Answer/context quote: “a round consisted of three minutes of fighting” (8 words).
+
+  Additional fun-fact quote: “the 9th marquess of Queensberry, who lent his name to the new guidelines” (13 words).
+
+- sports-games-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Boxing)
+
+  Answer/context quote: “three minutes” (2 words).
+
+  Additional fun-fact quote: “Marquess of Queensberry Rules” (4 words).
+
+## B13-0859 — Which titled aristocrat lent his name to boxing’s influential gloved-fighting rules?
+
+Answer: Marquess of Queensberry. Fun fact: The Queensberry boxing rules were introduced in1867.
+
+- sports-games-s0059: [Encyclopaedia Britannica](https://www.britannica.com/sports/boxing/The-Queensberry-rules)
+
+  Answer/context quote: “the 9th marquess of Queensberry, who lent his name to the new guidelines” (13 words).
+
+  Additional fun-fact quote: “devised a new set of rules in 1867” (8 words).
+
+- sports-games-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Boxing)
+
+  Answer/context quote: “Marquess of Queensberry Rules” (4 words).
+
+  Additional fun-fact quote: “Marquess of Queensberry Rules in 1867” (6 words).
+
+## B13-0860 — In what year were the Marquess of Queensberry boxing rules introduced?
+
+Answer: 1867. Fun fact: The Queensberry rules required boxing gloves.
+
+- sports-games-s0059: [Encyclopaedia Britannica](https://www.britannica.com/sports/boxing/The-Queensberry-rules)
+
+  Answer/context quote: “devised a new set of rules in 1867” (8 words).
+
+  Additional fun-fact quote: “contestants wore padded gloves” (4 words).
+
+- sports-games-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Boxing)
+
+  Answer/context quote: “Marquess of Queensberry Rules in 1867” (6 words).
+
+  Additional fun-fact quote: “The introduction of boxing gloves of "fair-size"” (7 words).
+
+## B13-0901 — Allspice is made from which part of the Pimenta dioica tree?
+
+Answer: Dried berries. Fun fact: Its name reflects a flavor resembling cloves, cinnamon and nutmeg.
+
+- food-everyday-life-s0001: [Encyclopaedia Britannica](https://www.britannica.com/plant/allspice)
+
+  Answer/context quote: “and its berries, the source of a highly aromatic spice .” (11 words).
+
+  Additional fun-fact quote: “the flavor of the dried berry resembles a combination of cloves , cinnamon , and nutmeg .” (17 words).
+
+- food-everyday-life-s0002: [Wikipedia contributors](https://en.wikipedia.org/wiki/Allspice)
+
+  Answer/context quote: “is the dried unripe berry of Pimenta dioica” (8 words).
+
+  Additional fun-fact quote: “valued it as a spice that combined the flavours of cinnamon , nutmeg , and clove .” (17 words).
+
+## B13-0902 — Natural vanilla beans come from what kind of plant?
+
+Answer: Orchid. Fun fact: The flavoring is extracted from the plant's pods.
+
+- food-everyday-life-s0003: [Encyclopaedia Britannica](https://www.britannica.com/plant/vanilla)
+
+  Answer/context quote: “any member of a group of tropical climbing orchids (family Orchidaceae )” (12 words).
+
+  Additional fun-fact quote: “the flavoring agent extracted from their pods” (7 words).
+
+- food-everyday-life-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Vanilla)
+
+  Answer/context quote: “Vanilla is a spice derived from orchids of the genus Vanilla” (11 words).
+
+  Additional fun-fact quote: “primarily obtained from the seed pods of the flat-leaved Mexican and Central American vanilla” (14 words).
+
+## B13-0903 — Which part of a tree supplies cinnamon spice?
+
+Answer: Inner bark. Fun fact: Cinnamon flavors both sweet and savory foods.
+
+- food-everyday-life-s0005: [Encyclopaedia Britannica](https://www.britannica.com/plant/cinnamon)
+
+  Answer/context quote: “The spice , consisting of the dried inner bark” (9 words).
+
+  Additional fun-fact quote: “Cinnamon is used to flavor a variety of sweet and savory foods” (12 words).
+
+- food-everyday-life-s0006: [Wikipedia contributors](https://en.wikipedia.org/wiki/Cinnamon)
+
+  Answer/context quote: “Cinnamon is a spice obtained from the inner bark” (9 words).
+
+  Additional fun-fact quote: “in particular sweet and savoury dishes” (6 words).
+
+## B13-0904 — Whole cloves are dried examples of which plant part?
+
+Answer: Flower buds. Fun fact: Both sources trace cloves to Indonesia's Maluku Islands, also called the Moluccas.
+
+- food-everyday-life-s0007: [Encyclopaedia Britannica](https://www.britannica.com/plant/clove)
+
+  Answer/context quote: “its small, reddish-brown flower buds used as a spice” (9 words).
+
+  Additional fun-fact quote: “are thought to be indigenous to the Moluccas , or Spice Islands, of Indonesia” (14 words).
+
+- food-everyday-life-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/Clove)
+
+  Answer/context quote: “Cloves are the aromatic flower buds” (6 words).
+
+  Additional fun-fact quote: “They are native to the Maluku Islands , or Moluccas, in Indonesia” (12 words).
+
+## B13-0905 — The tree that produces nutmeg also supplies which other spice?
+
+Answer: Mace. Fun fact: Nutmeg comes from the seed; mace comes from its covering.
+
+- food-everyday-life-s0009: [Encyclopaedia Britannica](https://www.britannica.com/plant/nutmeg)
+
+  Answer/context quote: “The fleshy arils surrounding the nutmeg seed are the source of the spice mace” (14 words).
+
+  Additional fun-fact quote: “the spice made of its seed” (6 words).
+
+- food-everyday-life-s0010: [Wikipedia contributors](https://en.wikipedia.org/wiki/Nutmeg)
+
+  Answer/context quote: “nutmeg, from its seed, and mace , from the seed covering” (11 words).
+
+  Additional fun-fact quote: “nutmeg, from its seed, and mace , from the seed covering” (11 words).
+
+## B13-0906 — Which pollen-receiving flower parts are harvested to make saffron?
+
+Answer: Stigmas. Fun fact: The pigment crocin helps give saffron its golden-yellow coloring.
+
+- food-everyday-life-s0011: [Encyclopaedia Britannica](https://www.britannica.com/plant/saffron)
+
+  Answer/context quote: “golden-colored pungent stigmas (pollen-receiving structures)” (5 words).
+
+  Additional fun-fact quote: “The coloring matter is crocin” (5 words).
+
+- food-everyday-life-s0012: [Wikipedia contributors](https://en.wikipedia.org/wiki/Saffron)
+
+  Answer/context quote: “The vivid crimson stigma and styles (in industry jargon: 'threads') are collected and dried” (14 words).
+
+  Additional fun-fact quote: “a carotenoid pigment, crocin , which imparts a rich golden-yellow hue” (11 words).
+
+## B13-0907 — Which compound chiefly gives black pepper its pungency?
+
+Answer: Piperine. Fun fact: Whole black peppercorns are dried fruits of the pepper vine.
+
+- food-everyday-life-s0013: [Encyclopaedia Britannica](https://www.britannica.com/plant/black-pepper-plant)
+
+  Answer/context quote: “The characteristic flavor is principally derived from the chemical piperine” (10 words).
+
+  Additional fun-fact quote: “The fruits, which are sometimes called peppercorns” (7 words).
+
+- food-everyday-life-s0014: [Wikipedia contributors](https://en.wikipedia.org/wiki/Black_pepper)
+
+  Answer/context quote: “Its spiciness is due to the chemical compound piperine” (9 words).
+
+  Additional fun-fact quote: “cultivated for its fruit (the peppercorn ), which is usually dried and used as a spice” (16 words).
