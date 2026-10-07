@@ -1,353 +1,332 @@
-# VERIFY — preliminary research only
+# VERIFY — complete draft catalogue, incomplete research
 
-Final B03 completion: **UNVERIFIED**. Passing checks validate the index, source retrieval records and focused evidence. No final `minigames.json` or `minigames.csv` exists.
+**Original B03 acceptance: NOT_MET.** All 132 requested JSON/CSV rows exist and the full structural/evidence suite passes. Detailed independent mechanics and the second complete wiki roster remain unverified. CI integrity success is separate from research completion.
 
-## Executed index checks
+Executed under Python 3.12.14, jsonschema 4.26.0 and beautifulsoup4 4.15.0. Deterministic research checks use seed n/a. Reports include actual counts, never estimated gameplay execution.
 
-Python 3.12; jsonschema 4.26.0; Draft 2020-12. All research comparisons are deterministic, seed n/a. Exact command from the repository root:
+## Full offline verification
+
+Exact command from the repository root:
 
 ```bash
-PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-index.py --json-output jobs/B03-jamboree-minigames/verification-results.json
+PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes
 ```
 
-| Test name | Cases | Passed | Seed | Exact command |
+| Test name | Case count | Passed | Seed | Exact command |
 | --- | ---: | --- | --- | --- |
-| Draft 2020-12 JSON Schema | 1 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-index.py --json-output jobs/B03-jamboree-minigames/verification-results.json` |
-| Expected HTTPS publishers, effective scopes, and distinct verified snapshots | 8 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-index.py --json-output jobs/B03-jamboree-minigames/verification-results.json` |
-| Counts versus two publisher catalogues and official additions count | 14 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-index.py --json-output jobs/B03-jamboree-minigames/verification-results.json` |
-| Case/punctuation-insensitive duplicate and edition-overlap checks | 660 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-index.py --json-output jobs/B03-jamboree-minigames/verification-results.json` |
-| Fresh second-pass list rows and all short source quotations | 275 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-index.py --json-output jobs/B03-jamboree-minigames/verification-results.json` |
-| Every row and HTTPS game link bound to exact pass-two extraction | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-index.py --json-output jobs/B03-jamboree-minigames/verification-results.json` |
-| Complete exact per-row citation multisets, without duplicates or substitutes | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-index.py --json-output jobs/B03-jamboree-minigames/verification-results.json` |
-| Every archived/index quotation at most 25 words | 600 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-index.py --json-output jobs/B03-jamboree-minigames/verification-results.json` |
-| Exact base/TV/combined source sets and spelling disagreements | 8 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-index.py --json-output jobs/B03-jamboree-minigames/verification-results.json` |
-| Reconstructed exact category-difference groups and membership | 8 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-index.py --json-output jobs/B03-jamboree-minigames/verification-results.json` |
-| Independent base category and raw TV group count claims | 24 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-index.py --json-output jobs/B03-jamboree-minigames/verification-results.json` |
+| Six closed Draft 2020-12 data schemas | 6 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| All delivery JSON rejects duplicate keys | 42 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Canonical 132-row union and 112/20 edition scope | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Every row has every required field and exact canonical name | 2376 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Case/punctuation-insensitive name uniqueness | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Counts versus independently reopened lists and raw disagreements | 10 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Exact JSON/CSV field round trip | 2376 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Field citations and true publisher lineage boundaries | 1320 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Short clips, quote budgets and complete A/B recovery | 2231 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Literal controller labels and 25 base motion entries | 370 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Original two-sentence summaries and phone assessments | 396 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Full row audit bindings and complete reopened source contexts | 550 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Unknown awards, returning editions, timer scopes and conflict retention | 157 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Fourteen material conflicts preserved | 14 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Closed schema and exact per-row remaining research-gap ledger | 133 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Three closed source-reopening report schemas | 3 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| All 145 source URLs reopened twice with ordered HTTPS/TLS records | 290 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Every recovered reopen quotation bound to the original registry | 3616 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Sixteen isolated malformed reopening-proof fixtures | 16 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Fifteen isolated hostile catalogue/evidence fixtures | 15 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical index / Draft 2020-12 JSON Schema | 1 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical index / Expected HTTPS publishers, effective scopes, and distinct verified snapshots | 8 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical index / Counts versus two publisher catalogues and official additions count | 14 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical index / Case/punctuation-insensitive duplicate and edition-overlap checks | 660 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical index / Fresh second-pass list rows and all short source quotations | 275 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical index / Every row and HTTPS game link bound to exact pass-two extraction | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical index / Complete exact per-row citation multisets, without duplicates or substitutes | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical index / Every archived/index quotation at most 25 words | 600 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical index / Exact base/TV/combined source sets and spelling disagreements | 8 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical index / Reconstructed exact category-difference groups and membership | 8 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical index / Independent base category and raw TV group count claims | 24 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh index / Draft 2020-12 JSON Schema | 1 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh index / Expected HTTPS publishers, effective scopes, and distinct verified snapshots | 8 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh index / Counts versus two publisher catalogues and official additions count | 14 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh index / Case/punctuation-insensitive duplicate and edition-overlap checks | 660 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh index / Fresh second-pass list rows and all short source quotations | 275 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh index / Every row and HTTPS game link bound to exact pass-two extraction | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh index / Complete exact per-row citation multisets, without duplicates or substitutes | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh index / Every archived/index quotation at most 25 words | 600 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh index / Exact base/TV/combined source sets and spelling disagreements | 8 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh index / Reconstructed exact category-difference groups and membership | 8 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh index / Independent base category and raw TV group count claims | 24 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical article / json_schema | 1 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical article / unique_index_rows | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical article / index_bound_rows | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical article / short_quotes | 987 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical article / field_reference_lists | 1056 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical article / source_pass_records | 264 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical article / https_url_tls_hash_byte_records | 264 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical article / ordered_pass_timestamps | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved historical article / coverage_totals | 8 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh article / json_schema | 1 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh article / unique_index_rows | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh article / index_bound_rows | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh article / short_quotes | 987 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh article / field_reference_lists | 1056 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh article / source_pass_records | 264 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh article / https_url_tls_hash_byte_records | 264 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh article / ordered_pass_timestamps | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved fresh article / coverage_totals | 8 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved guard / check-validator-rejections.py | 6 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved guard / test-gameplay-evidence.py --evidence gameplay-leads.json | 16 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Preserved guard / test-gameplay-evidence.py --evidence current-article-leads.json | 16 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Every delivered file below 30 MB | 68 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
+| Complete SHA-256 delivery manifest | 67 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --hashes` |
 
-Actual validator output:
+All preserved index/article suites run against both original evidence and fresh retained captures. Original helper files remain unchanged. Fifteen catalogue fixtures reject missing controls, invalid ratings/names/citations, invented star awards, false completion, wrong summary/timer scopes, lost availability/motion conflicts, false lineage, overlong clips and altered row fingerprints. Sixteen reopen fixtures reject incomplete/duplicated/invented sources, changed URLs/passes, failed TLS/HTTP, false byte/hash data, reordered timestamps, changed/missing clips, full-HTML publication and false summaries.
+
+Actual validator output before final manifest pass (64 suites / 23967 cases):
 
 ```text
-jsonschema 4.26.0 / Draft 2020-12
-PASS Draft 2020-12 JSON Schema: 1 cases; seed=n/a
-PASS Expected HTTPS publishers, effective scopes, and distinct verified snapshots: 8 cases; seed=n/a; Stored page bytes checked when original outside-checkout snapshot files remain available.
-PASS Counts versus two publisher catalogues and official additions count: 14 cases; seed=n/a; Wiki combined list:132; Legacy base112 + TV20:132. Nintendo additions20. Second wiki list page remains missing.
-PASS Case/punctuation-insensitive duplicate and edition-overlap checks: 660 cases; seed=n/a
-PASS Fresh second-pass list rows and all short source quotations: 275 cases; seed=n/a; 132 wiki +112 Legacy base +20 Legacy TV list rows; list labels/context only, never full game mechanics.
-PASS Every row and HTTPS game link bound to exact pass-two extraction: 132 cases; seed=n/a
-PASS Complete exact per-row citation multisets, without duplicates or substitutes: 132 cases; seed=n/a
-PASS Every archived/index quotation at most 25 words: 600 cases; seed=n/a
-PASS Exact base/TV/combined source sets and spelling disagreements: 8 cases; seed=n/a; Base intersection110; TV20; combined130. Two wiki-only and two Legacy-only base names preserved; TV sets identical.
-PASS Reconstructed exact category-difference groups and membership: 8 cases; seed=n/a
-PASS Independent base category and raw TV group count claims: 24 cases; seed=n/a
-UNVERIFIED: final per-game facts, source category/availability conflicts, two wiki list-page counts, final JSON/CSV/schema, full per-game second pass.
-Job B03 complete=false. Passing checks validate the preliminary index only.
+PASS Six closed Draft 2020-12 data schemas: 6 cases; seed=n/a
+PASS All delivery JSON rejects duplicate keys: 42 cases; seed=n/a
+PASS Canonical 132-row union and 112/20 edition scope: 132 cases; seed=n/a
+PASS Every row has every required field and exact canonical name: 2376 cases; seed=n/a
+PASS Case/punctuation-insensitive name uniqueness: 132 cases; seed=n/a
+PASS Counts versus independently reopened lists and raw disagreements: 10 cases; seed=n/a
+PASS Exact JSON/CSV field round trip: 2376 cases; seed=n/a
+PASS Field citations and true publisher lineage boundaries: 1320 cases; seed=n/a
+PASS Short clips, quote budgets and complete A/B recovery: 2231 cases; seed=n/a
+PASS Literal controller labels and 25 base motion entries: 370 cases; seed=n/a
+PASS Original two-sentence summaries and phone assessments: 396 cases; seed=n/a
+PASS Full row audit bindings and complete reopened source contexts: 550 cases; seed=n/a
+PASS Unknown awards, returning editions, timer scopes and conflict retention: 157 cases; seed=n/a
+PASS Fourteen material conflicts preserved: 14 cases; seed=n/a
+PASS Closed schema and exact per-row remaining research-gap ledger: 133 cases; seed=n/a
+PASS Three closed source-reopening report schemas: 3 cases; seed=n/a
+PASS All 145 source URLs reopened twice with ordered HTTPS/TLS records: 290 cases; seed=n/a
+PASS Every recovered reopen quotation bound to the original registry: 3616 cases; seed=n/a
+PASS Sixteen isolated malformed reopening-proof fixtures: 16 cases; seed=n/a
+PASS Fifteen isolated hostile catalogue/evidence fixtures: 15 cases; seed=n/a
+PASS Preserved historical index / Draft 2020-12 JSON Schema: 1 cases; seed=n/a
+PASS Preserved historical index / Expected HTTPS publishers, effective scopes, and distinct verified snapshots: 8 cases; seed=n/a
+PASS Preserved historical index / Counts versus two publisher catalogues and official additions count: 14 cases; seed=n/a
+PASS Preserved historical index / Case/punctuation-insensitive duplicate and edition-overlap checks: 660 cases; seed=n/a
+PASS Preserved historical index / Fresh second-pass list rows and all short source quotations: 275 cases; seed=n/a
+PASS Preserved historical index / Every row and HTTPS game link bound to exact pass-two extraction: 132 cases; seed=n/a
+PASS Preserved historical index / Complete exact per-row citation multisets, without duplicates or substitutes: 132 cases; seed=n/a
+PASS Preserved historical index / Every archived/index quotation at most 25 words: 600 cases; seed=n/a
+PASS Preserved historical index / Exact base/TV/combined source sets and spelling disagreements: 8 cases; seed=n/a
+PASS Preserved historical index / Reconstructed exact category-difference groups and membership: 8 cases; seed=n/a
+PASS Preserved historical index / Independent base category and raw TV group count claims: 24 cases; seed=n/a
+PASS Preserved fresh index / Draft 2020-12 JSON Schema: 1 cases; seed=n/a
+PASS Preserved fresh index / Expected HTTPS publishers, effective scopes, and distinct verified snapshots: 8 cases; seed=n/a
+PASS Preserved fresh index / Counts versus two publisher catalogues and official additions count: 14 cases; seed=n/a
+PASS Preserved fresh index / Case/punctuation-insensitive duplicate and edition-overlap checks: 660 cases; seed=n/a
+PASS Preserved fresh index / Fresh second-pass list rows and all short source quotations: 275 cases; seed=n/a
+PASS Preserved fresh index / Every row and HTTPS game link bound to exact pass-two extraction: 132 cases; seed=n/a
+PASS Preserved fresh index / Complete exact per-row citation multisets, without duplicates or substitutes: 132 cases; seed=n/a
+PASS Preserved fresh index / Every archived/index quotation at most 25 words: 600 cases; seed=n/a
+PASS Preserved fresh index / Exact base/TV/combined source sets and spelling disagreements: 8 cases; seed=n/a
+PASS Preserved fresh index / Reconstructed exact category-difference groups and membership: 8 cases; seed=n/a
+PASS Preserved fresh index / Independent base category and raw TV group count claims: 24 cases; seed=n/a
+PASS Preserved historical article / json_schema: 1 cases; seed=n/a
+PASS Preserved historical article / unique_index_rows: 132 cases; seed=n/a
+PASS Preserved historical article / index_bound_rows: 132 cases; seed=n/a
+PASS Preserved historical article / short_quotes: 987 cases; seed=n/a
+PASS Preserved historical article / field_reference_lists: 1056 cases; seed=n/a
+PASS Preserved historical article / source_pass_records: 264 cases; seed=n/a
+PASS Preserved historical article / https_url_tls_hash_byte_records: 264 cases; seed=n/a
+PASS Preserved historical article / ordered_pass_timestamps: 132 cases; seed=n/a
+PASS Preserved historical article / coverage_totals: 8 cases; seed=n/a
+PASS Preserved fresh article / json_schema: 1 cases; seed=n/a
+PASS Preserved fresh article / unique_index_rows: 132 cases; seed=n/a
+PASS Preserved fresh article / index_bound_rows: 132 cases; seed=n/a
+PASS Preserved fresh article / short_quotes: 987 cases; seed=n/a
+PASS Preserved fresh article / field_reference_lists: 1056 cases; seed=n/a
+PASS Preserved fresh article / source_pass_records: 264 cases; seed=n/a
+PASS Preserved fresh article / https_url_tls_hash_byte_records: 264 cases; seed=n/a
+PASS Preserved fresh article / ordered_pass_timestamps: 132 cases; seed=n/a
+PASS Preserved fresh article / coverage_totals: 8 cases; seed=n/a
+PASS Preserved guard / check-validator-rejections.py: 6 cases; seed=n/a
+PASS Preserved guard / test-gameplay-evidence.py --evidence gameplay-leads.json: 16 cases; seed=n/a
+PASS Preserved guard / test-gameplay-evidence.py --evidence current-article-leads.json: 16 cases; seed=n/a
+PASS Every delivered file below 30 MB: 68 cases; seed=n/a
 ```
 
-## Validator regression checks
+The final complete report is `reports/final-validation.json`; all delivery files are bound by `SHA256SUMS.txt`.
 
-Independent review demonstrated four false-acceptance cases, then a fifth combined curl-option case. They are fixed. The committed before-fix reports record expected failures; they are not counted as passing tests. Six final cases pass: the unchanged baseline validates and all five isolated malformed inputs reject. No insecure network request was executed; the TLS case mutates only recorded command data.
+## Actual complete source reopens
 
-Exact command:
+Retained `reports/source-reopens-passA.json` and `passB.json` record every request start/end timestamp, exact URL, successful HTTP 200, TLS result 0, response byte count/hash, original short quote and every recovered quote ID. Both passes cover the same **145 unique URLs**, including three preserved historical supplements. **290 requests, 3,616 quote recoveries, zero missing quotations.** Every second request began after its first request completed. The offline suite validates every record against the original source registry and independently rejects malformed proofs. The network collector uses inherited proxy/CA settings and does not disable TLS verification.
 
-```bash
-PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/check-validator-rejections.py --output jobs/B03-jamboree-minigames/validator-rejections.json
-```
+Initial compact source records retain Exa text hashes and request order where the tool did not expose a request timestamp; no timestamp is invented. Later complete curl reopens supply real observed timestamps and response hashes for every retained URL. Matching cached bytes do not imply publisher independence. Full article captures remain external; the source-reopen collector stores compact records and discards temporary complete bodies.
 
-| Test | Cases | Passed | Seed | Evidence |
-| --- | ---: | --- | --- | --- |
-| Accepted baseline + five isolated rejection cases | 6 | yes | n/a | `validator-rejections.json`, source hashes included |
+The initial article-capture audit additionally checked 264 raw response hashes/byte lengths and 1,974 section-located quotes against preserved external captures. Its actual report is `reports/capture-bound-validation.json`; `capture-guard-validation.json` retains 18 rejected guard fixtures and 264 raw-capture preflights. Those recorded raw-capture checks are not represented as automatically rerunnable after a fresh clone without the external bodies.
 
-## Focused English-name checks
+## Second full pass: all 132 published rows
 
-Historical evidence validates ten separately retained original response hashes before twenty quote-presence/length checks. A fresh root execution also passes twenty quote checks from ten successful requests with distinct response paths. This supports exact quotation presence; independence and semantic scope are reviewed separately. Only Sandwiched gains independent English-name corroboration. Neither Legacy identity linkage is accepted.
+Each row below binds every published field to its exact canonical JSON SHA-256. Both complete article scopes were compared, every retained article clip recovered, and all independent guide contexts reopened. This rechecks the draft including explicit unknowns; it does not convert single-source mechanics into accepted facts.
 
-Exact root execution:
-
-```bash
-PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/check-name-evidence.py --evidence jobs/B03-jamboree-minigames/name-evidence.json --output jobs/B03-jamboree-minigames/name-evidence-current-recheck.json
-```
-
-| Test | Cases | Passed | Seed | Evidence |
-| --- | ---: | --- | --- | --- |
-| Quote presence/length across five sources and two requests each | 20 | yes | n/a | `name-evidence-current-recheck.json` |
-| Separate response paths, successful requests and byte hashes | 10 | yes | n/a | same report |
-
-## Actual fresh list retrievals
-
-Curl retained its default certificate verification and inherited proxy. Original page bytes are retained outside the checkout and represented here by short extracts and hashes. Snapshot hashes are checked when those retained files exist; after a fresh clone without them, recorded metadata/extract consistency alone cannot establish the original bytes. The collector can produce new distinct snapshots without overwriting the originals.
-
-wiki pass1: 2026-10-07T15:59:30.205547Z; HTTP200; 200673 bytes; SHA256 `a38f52d833467bbfc4ac69ef853c1ea3646ce68178190d740fe46415bbaa134e`.
-
-```bash
-curl --fail --silent --show-error --location --connect-timeout 10 --max-time 45 --output /workspace/b03-tv-research/confirmed-snapshots/pass1/wiki.html --write-out '%{http_code} %{url_effective}' https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames
-```
-
-wiki pass2: 2026-10-07T15:59:31.335346Z; HTTP200; 200673 bytes; SHA256 `a38f52d833467bbfc4ac69ef853c1ea3646ce68178190d740fe46415bbaa134e`.
-
-```bash
-curl --fail --silent --show-error --location --connect-timeout 10 --max-time 45 --output /workspace/b03-tv-research/confirmed-snapshots/pass2/wiki.html --write-out '%{http_code} %{url_effective}' https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames
-```
-
-legacy pass1: 2026-10-07T15:59:30.206110Z; HTTP200; 138782 bytes; SHA256 `d4327873395fcaa86d4ca3e18c4f47c2dcdcc39b9f404b8562ef0677e79993d7`.
-
-```bash
-curl --fail --silent --show-error --location --connect-timeout 10 --max-time 45 --output /workspace/b03-tv-research/confirmed-snapshots/pass1/legacy.html --write-out '%{http_code} %{url_effective}' https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables
-```
-
-legacy pass2: 2026-10-07T15:59:31.335253Z; HTTP200; 138782 bytes; SHA256 `c3ea68af3c2a852a37ba2c490982cb8ab61f35ca48bfde6eba5232c5f8768130`.
-
-```bash
-curl --fail --silent --show-error --location --connect-timeout 10 --max-time 45 --output /workspace/b03-tv-research/confirmed-snapshots/pass2/legacy.html --write-out '%{http_code} %{url_effective}' https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables
-```
-
-legacyTv pass1: 2026-10-07T15:59:30.206587Z; HTTP200; 88132 bytes; SHA256 `32278c21f1c8a5bb80fa8929bd8de50ea10b6eb83acdb6966d533741a0f44381`.
-
-```bash
-curl --fail --silent --show-error --location --connect-timeout 10 --max-time 45 --output /workspace/b03-tv-research/confirmed-snapshots/pass1/legacyTv.html --write-out '%{http_code} %{url_effective}' https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/
-```
-
-legacyTv pass2: 2026-10-07T15:59:31.336053Z; HTTP200; 88132 bytes; SHA256 `27c34793a46264a2c3179b88a3763517a64e4442a2c685d7331087a91181ed89`.
-
-```bash
-curl --fail --silent --show-error --location --connect-timeout 10 --max-time 45 --output /workspace/b03-tv-research/confirmed-snapshots/pass2/legacyTv.html --write-out '%{http_code} %{url_effective}' https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/
-```
-
-nintendo pass1: 2026-10-07T15:59:30.207225Z; HTTP200; 708005 bytes; SHA256 `260211938de49aa52e8267fec821034cc23108e9137abcce792e3ec63bf51881`.
-
-```bash
-curl --fail --silent --show-error --location --connect-timeout 10 --max-time 45 --output /workspace/b03-tv-research/confirmed-snapshots/pass1/nintendo.html --write-out '%{http_code} %{url_effective}' https://www.nintendo.com/us/store/products/super-mario-party-jamboree-nintendo-switch-2-edition-plus-jamboree-tv-switch-2/
-```
-
-nintendo pass2: 2026-10-07T15:59:31.336538Z; HTTP200; 708005 bytes; SHA256 `260211938de49aa52e8267fec821034cc23108e9137abcce792e3ec63bf51881`.
-
-```bash
-curl --fail --silent --show-error --location --connect-timeout 10 --max-time 45 --output /workspace/b03-tv-research/confirmed-snapshots/pass2/nintendo.html --write-out '%{http_code} %{url_effective}' https://www.nintendo.com/us/store/products/super-mario-party-jamboree-nintendo-switch-2-edition-plus-jamboree-tv-switch-2/
-```
-
-## Per-row list-label second pass
-
-All 132 wiki rows,112 Legacy base rows and20 Legacy TV rows were reparsed from later requests. The audit below is for list names/raw headings, never detailed mechanics.
-
-| Row | Wiki name | Edition | Wiki name/category pass two | Legacy name/category pass two |
-| ---: | --- | --- | --- | --- |
-| 1 | Lumber Tumble | base | verified | verified (legacy): Lumber Tumble |
-| 2 | Big-Top Quiz | base | verified | verified (legacy): Big-Top Quiz |
-| 3 | Camera-Ready | base | verified | verified (legacy): Camera-Ready |
-| 4 | Scare-ousel | base | verified | verified (legacy): Scare-ousel |
-| 5 | Snag the Flags | base | verified | verified (legacy): Snag the Flags |
-| 6 | Sandwiched | base | verified | no normalized match; identity UNVERIFIED |
-| 7 | Hot Cross Blocks | base | verified | verified (legacy): Hot Cross Blocks |
-| 8 | Light-Wave Battle | base | verified | verified (legacy): Light-Wave Battle |
-| 9 | Thwomp the Difference | base | verified | verified (legacy): Thwomp the Difference |
-| 10 | Cold Front | base | verified | verified (legacy): Cold Front |
-| 11 | Hot-Hot Hop | base | verified | verified (legacy): Hot-Hot Hop |
-| 12 | Domination | base | verified | verified (legacy): Domination |
-| 13 | Three Throw | base | verified | verified (legacy): Three Throw |
-| 14 | Granite Getaway | base | verified | verified (legacy): Granite Getaway |
-| 15 | Tilt-a-Golf | base | verified | verified (legacy): Tilt-a-Golf |
-| 16 | Night Lights | base | verified | verified (legacy): Night Lights |
-| 17 | Hammer It Home | base | verified | verified (legacy): Hammer It Home |
-| 18 | Twist and Sort | base | verified | verified (legacy): Twist and Sort |
-| 19 | Shuttle Scuttle | base | verified | verified (legacy): Shuttle Scuttle |
-| 20 | Tiny Triathlon | base | verified | verified (legacy): Tiny Triathlon |
-| 21 | Pickax Dash | base | verified | verified (legacy): Pickax Dash |
-| 22 | Gate Key-pers | base | verified | verified (legacy): Gate Key-pers |
-| 23 | Sled to the Edge | base | verified | verified (legacy): Sled to the Edge |
-| 24 | Rinks to Riches | base | verified | verified (legacy): Rinks to Riches |
-| 25 | Treetop Treasure | base | verified | verified (legacy): Treetop Treasure |
-| 26 | Treasure Divers | base | verified | verified (legacy): Treasure Divers |
-| 27 | Platform Peril | base | verified | verified (legacy): Platform Peril |
-| 28 | Stamp Out! | base | verified | verified (legacy): Stamp Out! |
-| 29 | Trample-line | base | verified | verified (legacy): Trample-line |
-| 30 | Sunset Standoff | base | verified | verified (legacy): Sunset Standoff |
-| 31 | Cookie Cutters | base | verified | verified (legacy): Cookie Cutters |
-| 32 | Unfriendly Flying Object | base | verified | verified (legacy): Unfriendly Flying Object |
-| 33 | Lost and Pound | base | verified | verified (legacy): Lost and Pound |
-| 34 | Arch Rivals | base | verified | verified (legacy): Arch Rivals |
-| 35 | On-Again, Off-Again | base | verified | verified (legacy): On-Again, Off-Again |
-| 36 | Broozer Bash | base | verified | verified (legacy): Broozer Bash |
-| 37 | Cage Catch | base | verified | verified (legacy): Cage Catch |
-| 38 | Income Stream | base | verified | verified (legacy): Income Stream |
-| 39 | Blame It on the Crane | base | verified | verified (legacy): Blame It on the Crane |
-| 40 | Snow Brawl | base | verified | verified (legacy): Snow Brawl |
-| 41 | Squeaky Shakedown | base | verified | no normalized match; identity UNVERIFIED |
-| 42 | Rocky Rope Race | base | verified | verified (legacy): Rocky Rope Race |
-| 43 | Pickin' Produce | base | verified | verified (legacy): Pickin’ Produce |
-| 44 | Prime Cut | base | verified | verified (legacy): Prime Cut |
-| 45 | Dorrie Pedal-Paddle | base | verified | verified (legacy): Dorrie Pedal-Paddle |
-| 46 | Robo Arm Wrestle | base | verified | verified (legacy): Robo Arm Wrestle |
-| 47 | Shadow Play | base | verified | verified (legacy): Shadow Play |
-| 48 | Match Makers | base | verified | verified (legacy): Match Makers |
-| 49 | Defuse or Lose | base | verified | verified (legacy): Defuse or Lose |
-| 50 | Jump the Gun | base | verified | verified (legacy): Jump the Gun |
-| 51 | Two-Axis Taxi | base | verified | verified (legacy): Two-Axis Taxi |
-| 52 | Tricky Turntable | base | verified | verified (legacy): Tricky Turntable |
-| 53 | Coin Corral | base | verified | verified (legacy): Coin Corral |
-| 54 | Fast Fishing | base | verified | verified (legacy): Fast Fishing |
-| 55 | Slappy-Go-Round | base | verified | verified (legacy): Slappy-Go-Round |
-| 56 | Stone-Eye Bowling | base | verified | verified (legacy): Stone-Eye Bowling |
-| 57 | Fuzzy Heights | base | verified | verified (legacy): Fuzzy Heights |
-| 58 | All the Marbles | base | verified | verified (legacy): All the Marbles |
-| 59 | Roll with It | base | verified | verified (legacy): Roll With It |
-| 60 | Prize Line | base | verified | verified (legacy): Prize Line |
-| 61 | A Stone's Throw | base | verified | verified (legacy): A Stone’s Throw |
-| 62 | Flip 'n Find | base | verified | verified (legacy): Flip ‘n Find |
-| 63 | Prize Drop | base | verified | verified (legacy): Prize Drop |
-| 64 | Mario's Three-peat | base | verified | verified (legacy): Mario’s Three-peat |
-| 65 | Luigi Rescue Operation | base | verified | verified (legacy): Luigi Rescue Operation |
-| 66 | Peach's Day Off | base | verified | verified (legacy): Peach’s Day Off |
-| 67 | Daisy's Field Day | base | verified | verified (legacy): Daisy’s Field Day |
-| 68 | Wario's Buzzer Beater | base | verified | verified (legacy): Wario’s Buzzer Beater |
-| 69 | Waluigi's Pinball Arcade | base | verified | verified (legacy): Waluigi’s Pinball Arcade |
-| 70 | Yoshi's Mountain Race | base | verified | verified (legacy): Yoshi’s Mountain Race |
-| 71 | Rosalina's Radical Race | base | verified | verified (legacy): Rosalina’s Radical Race |
-| 72 | DK's Konga Line | base | verified | verified (legacy): DK’s Konga Line |
-| 73 | Jr.'s Jauntlet | base | verified | verified (legacy): Jr.’s Jauntlet |
-| 74 | Dragoneel Slayers | base | verified | verified (legacy): Dragoneel Slayers |
-| 75 | Mega Stingby Stompers | base | verified | verified (legacy): Mega Stingby Stompers |
-| 76 | Mega Rocky Wrench Wreckers | base | verified | verified (legacy): Mega Rocky Wrench Wreckers |
-| 77 | Boss Sumo Bro Blitzers | base | verified | verified (legacy): Boss Sumo Bro Blitzers |
-| 78 | Bowser Crashers | base | verified | verified (legacy): Bowser Crashers |
-| 79 | Noggin Knock | base | verified | verified (legacy): Noggin Knock |
-| 80 | Brick Breaker | base | verified | verified (legacy): Brick Breaker |
-| 81 | Gold 'n Brown | base | verified | verified (legacy): Gold ‘n Brown |
-| 82 | Spike's Gambit | base | verified | verified (legacy): Spike’s Gambit |
-| 83 | Down the Hatch | base | verified | verified (legacy): Down the Hatch |
-| 84 | Lane Change | base | verified | verified (legacy): Lane Change |
-| 85 | Coin Conveyor | base | verified | verified (legacy): Coin Conveyor |
-| 86 | Which Door Has More? | base | verified | verified (legacy): Which Door Has More? |
-| 87 | Sky-High Cannons | base | verified | verified (legacy): Sky-High Cannons |
-| 88 | Burning Bridges | base | verified | verified (legacy): Burning Bridges |
-| 89 | Castle Hassle | base | verified | verified (legacy): Castle Hassle |
-| 90 | Sleight of Shell | base | verified | verified (legacy): Sleight of Shell |
-| 91 | Fire Away | base | verified | verified (legacy): Fire Away |
-| 92 | The Floor Is Falling | base | verified | verified (legacy): The Floor Is Falling |
-| 93 | Juiceworks | base | verified | verified (legacy): Juiceworks |
-| 94 | Ball Volley | base | verified | verified (legacy): Ball Volley |
-| 95 | Ballistic Bingo | base | verified | verified (legacy): Ballistic Bingo |
-| 96 | Bath Bob-ombs | base | verified | verified (legacy): Bath Bob-ombs |
-| 97 | Chomp Wash | base | verified | verified (legacy): Chomp Wash |
-| 98 | Match! That! Item! | base | verified | verified (legacy): Match! That! Item! |
-| 99 | Trading Cards | base | verified | verified (legacy): Trading Cards |
-| 100 | Ski-daddle | base | verified | verified (legacy): Ski-daddle |
-| 101 | Look This Way | base | verified | verified (legacy): Look This Way |
-| 102 | Puzzle Pandemonium | base | verified | verified (legacy): Puzzle Pandemonium |
-| 103 | Soup Troupe | base | verified | verified (legacy): Soup Troupe |
-| 104 | Parfait the Course | base | verified | verified (legacy): Parfait the Course |
-| 105 | Whisk Cream | base | verified | verified (legacy): Whisk Cream |
-| 106 | Spread 'n Butter | base | verified | verified (legacy): Spread ‘n Butter |
-| 107 | Short-Stack Chef | base | verified | verified (legacy): Short Stack Chef |
-| 108 | Burger Builders | base | verified | verified (legacy): Burger Builders |
-| 109 | Footlong Frenzy | base | verified | verified (legacy): Footlong Frenzy |
-| 110 | Copycat Curry | base | verified | verified (legacy): Copycat Curry |
-| 111 | En Barb! | base | verified | verified (legacy): En Barb! |
-| 112 | On the Beet | base | verified | verified (legacy): On the Beet |
-| 113 | Shell Hockey | jamboree_tv | verified | verified (legacyTv): Shell Hockey |
-| 114 | Bowser Filter | jamboree_tv | verified | verified (legacyTv): Bowser Filter |
-| 115 | Stuffie Stacker | jamboree_tv | verified | verified (legacyTv): Stuffie Stacker |
-| 116 | Pull-Back Attack | jamboree_tv | verified | verified (legacyTv): Pull-Back Attack |
-| 117 | Domino Effect | jamboree_tv | verified | verified (legacyTv): Domino Effect |
-| 118 | Bob-omb Makeover | jamboree_tv | verified | verified (legacyTv): Bob-omb Makeover |
-| 119 | Toad-ally Electric Escape | jamboree_tv | verified | verified (legacyTv): Toad-ally Electric Escape |
-| 120 | Ice and Easy | jamboree_tv | verified | verified (legacyTv): Ice and Easy |
-| 121 | Bob-omb Toss | jamboree_tv | verified | verified (legacyTv): Bob-omb Toss |
-| 122 | Net Gains | jamboree_tv | verified | verified (legacyTv): Net Gains |
-| 123 | Get a Grip | jamboree_tv | verified | verified (legacyTv): Get a Grip |
-| 124 | What's the Scoop? | jamboree_tv | verified | verified (legacyTv): What’s the Scoop? |
-| 125 | Knock-Knock Match | jamboree_tv | verified | verified (legacyTv): Knock-Knock Match |
-| 126 | Goomba Scoopas | jamboree_tv | verified | verified (legacyTv): Goomba Scoopas |
-| 127 | Talking Flower Says | jamboree_tv | verified | verified (legacyTv): Talking Flower Says |
-| 128 | Hitting It Rich | jamboree_tv | verified | verified (legacyTv): Hitting It Rich |
-| 129 | Goombalancing Act | jamboree_tv | verified | verified (legacyTv): Goombalancing Act |
-| 130 | Bowser Chicken | jamboree_tv | verified | verified (legacyTv): Bowser Chicken |
-| 131 | Speak Up, Junior! | jamboree_tv | verified | verified (legacyTv): Speak Up, Junior! |
-| 132 | Bowser Beats | jamboree_tv | verified | verified (legacyTv): Bowser Beats |
-
-Legacy-only base rows reopened: **Sandwhiched** (Free-for-All) and **Squeaky Showdown** (1-vs-3). Their exact labels are retained; their identity linkages remain unverified. No source-only TV row remains.
+| ID | English name | Article clips A/B | Independent contexts | Fields checked | Published row SHA-256 |
+| --- | --- | ---: | ---: | ---: | --- |
+| MG001 | Lumber Tumble | 10/10 | 3 | 18 | `3eea5b44662896d714125186dce32b90fa8dd035efe0116ac3f7a00dd2d64d78` |
+| MG002 | Big-Top Quiz | 10/10 | 3 | 18 | `be9996687fbcce9d253d01e1dde07b70ce45adb5c426bcaa58969b36497e2810` |
+| MG003 | Camera-Ready | 13/13 | 3 | 18 | `5f17a5238df131e897efc13de98de759b756e98e0383e540562a3907407d3a61` |
+| MG004 | Scare-ousel | 11/11 | 3 | 18 | `3b46ff71dc9140c2e8c159faa31dd4a3f5770b91df33a0d72f81589e4a21dd0a` |
+| MG005 | Snag the Flags | 9/9 | 3 | 18 | `135e76a45810cb3a58311400b435c3d8960f4b5577a448da64f3ff92c8ebad5b` |
+| MG006 | Sandwiched | 10/10 | 3 | 18 | `e8d0779374acd9a43bf26a599643cda81752e8c6615502dee0467430096b1a95` |
+| MG007 | Hot Cross Blocks | 9/9 | 3 | 18 | `97f9d00655198a8e04849d6e007a6e795b8f14d726f7e494ca5b32fce22638cf` |
+| MG008 | Light-Wave Battle | 8/8 | 3 | 18 | `ab208a02e92bfda866508b577f34d520bc653c707fc752658e6e2e00515b3291` |
+| MG009 | Thwomp the Difference | 10/10 | 3 | 18 | `ff377c07b23ec86b6823bb45c46a8ff841d9437465246f8c63ef0ff359e74ef8` |
+| MG010 | Cold Front | 10/10 | 3 | 18 | `426b706e680f3e4d225e3bb2dc40d1968491fed5328c0f410eec7ad38baa6688` |
+| MG011 | Hot-Hot Hop | 9/9 | 3 | 18 | `2bf3d9cec047d4a0002df753fdd01675b26643578364dae266a73f4d3e06d3fe` |
+| MG012 | Domination | 5/5 | 3 | 18 | `87623b57dc03906bb66d75cf1c98699680caee992ee9c73378bf1bd8897a994d` |
+| MG013 | Three Throw | 9/9 | 3 | 18 | `15ea2eb053aa197607019ce4f76483978a163492e6a25a7f28a6d0374f3998bb` |
+| MG014 | Granite Getaway | 4/4 | 3 | 18 | `3a155027966429770fbec1fbf0e50cd1ee433a6e751d0efbeb80ca029da08ad4` |
+| MG015 | Tilt-a-Golf | 12/12 | 3 | 18 | `84fe9f02e73b6bae5ef0dc0ddd03c54867b62ebf2dd108e41f67948c3d7505e5` |
+| MG016 | Night Lights | 8/8 | 3 | 18 | `52cc0fc77fafc02f4d5e90dd0f9d1ca4e5af57bba2ef2d4e9ed71ec5d2156af6` |
+| MG017 | Hammer It Home | 9/9 | 3 | 18 | `796780007fe5b95544094bd6e2fe09adb700204ea79e5455defc366393532fa3` |
+| MG018 | Twist and Sort | 7/7 | 3 | 18 | `12697acd1434fbf343b02786b1bca97d21d7bc0fff28180d86f8374cc9d34976` |
+| MG019 | Shuttle Scuttle | 7/7 | 3 | 18 | `5e1e591f5981efd0c3553efe6888e9c6201b75c51362547f2f5a17e5acd9d7da` |
+| MG020 | Tiny Triathlon | 10/10 | 3 | 18 | `48dda500ea2d320bb3c07d2652697dc4099bb623654b5dc3254fe70eb43f958d` |
+| MG021 | Pickax Dash | 9/9 | 3 | 18 | `3810d199a302111c9c8b44643d455f31858230220d7ca4c9e98f3c1048f6cdc9` |
+| MG022 | Gate Key-pers | 10/10 | 3 | 18 | `c7689601cb4713c0e53f96ff2812ddc58f9d72d5e0b19d4b806c4cde4dbf95c7` |
+| MG023 | Sled to the Edge | 10/10 | 3 | 18 | `c6881cce6086c192cc0b028242d2521caa4d9c2051f8567e0ad9ddf1b2b89c6e` |
+| MG024 | Rinks to Riches | 11/11 | 3 | 18 | `1bf03503f2face6acd400df65cc9171514cbe01855a077c4010cbae24267a91b` |
+| MG025 | Treetop Treasure | 12/12 | 3 | 18 | `ec84537b76e7b54f31477a47099d41c6594a7c8bcf690453025a6a5af3b6afcb` |
+| MG026 | Treasure Divers | 5/5 | 3 | 18 | `c3c3fdb7eac0fd8a1952fabe51b3896f21e643e69ecce0ae77d47321cdb2cc66` |
+| MG027 | Platform Peril | 5/5 | 3 | 18 | `971694fe90cbe16cf47bc8ab8ace309fe806ec1ff8296e580b92bbdbab86d49b` |
+| MG028 | Stamp Out! | 5/5 | 3 | 18 | `d812d9c15e4be61a3b126b617ed573f8feac34afae8347544e402fd64eda568a` |
+| MG029 | Trample-line | 8/8 | 3 | 18 | `8e183fa66e96584280c1285697985556c0d5b215bc69f930093c7513220b0e43` |
+| MG030 | Sunset Standoff | 6/6 | 3 | 18 | `292c7038e84aa55c82c08e1cb1cf074fab5d8999766823f4b96a5643be64bc2c` |
+| MG031 | Cookie Cutters | 11/11 | 3 | 18 | `aa9e48c5593c9b1473ab814670e3c823e170396725e5bc106daca18e8298b4a9` |
+| MG032 | Unfriendly Flying Object | 10/10 | 3 | 18 | `ff5b517ce249e7e0c93d9ec18bf89dd2845a83368c16d33cbe8e401518ba07ce` |
+| MG033 | Lost and Pound | 7/7 | 3 | 18 | `e890571b20a00a5f6a59bd3f2d84718cd2a798978bb76a452fa4f02ee44ca68a` |
+| MG034 | Arch Rivals | 10/10 | 3 | 18 | `a091f3010d4551b4a725871308f661c0bf63e852aec1b1d355a7791e0a7e86f7` |
+| MG035 | On-Again, Off-Again | 10/10 | 3 | 18 | `3be777d49463edf96080ff9f5507d6fe513e8f9c50175b0d742e905d76b6b5e4` |
+| MG036 | Broozer Bash | 10/10 | 3 | 18 | `1f8f968199a2ec3048ca84f8362ebd861bd86170b74d711db5be707f670ac040` |
+| MG037 | Cage Catch | 10/10 | 3 | 18 | `c3ae3ce067c0832ccf949aa8284ee6d3cef1d4141487cefd95d3d94ad1cce038` |
+| MG038 | Income Stream | 7/7 | 3 | 18 | `9a272a9ca08849c4bde6963a3c54d12a1fcd826892fb6537504eb0412e2aa7d4` |
+| MG039 | Blame It on the Crane | 7/7 | 3 | 18 | `389105c916efb6cbd20d38daaebf976da14b96cff09214a4f5e9fcbb8d94748c` |
+| MG040 | Snow Brawl | 6/6 | 3 | 18 | `167766b5885246263bd5a0eb8b76e11a74d3d1fe4185d1b1179fdae6f51896f7` |
+| MG041 | Squeaky Shakedown | 10/10 | 3 | 18 | `d4a3dd757c54b86330330d4f350865ae18422aef7379781a62c410713ecc7717` |
+| MG042 | Rocky Rope Race | 7/7 | 3 | 18 | `a731e5f101373ac74c1661a20b44e3e20eba8fd4360b5444db425da0b04fe9ec` |
+| MG043 | Pickin' Produce | 9/9 | 3 | 18 | `7ace2636df74ce869193161a1b67c6f5651f2caed278a80b8c57f8758f597093` |
+| MG044 | Prime Cut | 12/12 | 3 | 18 | `86f7e299f493252c5179fa96b801a454e6706b4e5e4f40a9d0dac9f060efd910` |
+| MG045 | Dorrie Pedal-Paddle | 10/10 | 3 | 18 | `5bcb2978a951921605cdcc4f1e743c413a80857d5730b71194f269f10818a644` |
+| MG046 | Robo Arm Wrestle | 6/6 | 3 | 18 | `9baa5e39ba08505d102f5c1367a33f8a18bb74b4e984c0deb519e6122c478caa` |
+| MG047 | Shadow Play | 10/10 | 3 | 18 | `c4c3f254086d86418ffaf6ebdfd8f9fd11977e05f1f4bbd1625510e695f60e43` |
+| MG048 | Match Makers | 9/9 | 3 | 18 | `469463f507d5bd15ef8fb5e82fcb23a8e53729a4575627ea65b10da402005959` |
+| MG049 | Defuse or Lose | 5/5 | 3 | 18 | `dd591775399d2413ba04cad80f053c31139211a0a8c06d47131bf70810bf26a1` |
+| MG050 | Jump the Gun | 9/9 | 3 | 18 | `5381a61f93328906ab0a3d712971ddd80982729897dcbce70daa2386f5319e9b` |
+| MG051 | Two-Axis Taxi | 9/9 | 3 | 18 | `f002c63fb8d113c3c6ce9d0fc2746467817262f37e5c3b1cff83dfae64482753` |
+| MG052 | Tricky Turntable | 8/8 | 3 | 18 | `dbd8c6d77d1fd28f14e85078cda063c6e67f35c93bcb79fb6f01f15b8a02678f` |
+| MG053 | Coin Corral | 11/11 | 3 | 18 | `4fb774920d87272e1cd83820f0d95f872044dd036d22937e85c511bd76738bf1` |
+| MG054 | Fast Fishing | 8/8 | 3 | 18 | `e69b8d16422d459aa269c75cde201a346be93b81c4f377817f80727240106b40` |
+| MG055 | Slappy-Go-Round | 8/8 | 3 | 18 | `7298d7c4b0113a868d338dcc929887071b1c3bd0dd6e4e13e35b342476b573e4` |
+| MG056 | Stone-Eye Bowling | 11/11 | 3 | 18 | `acca599b6ebe958fc24ff6c1876b8e9d5cb77736890661ccb5413d3bcd20f1b4` |
+| MG057 | Fuzzy Heights | 11/11 | 3 | 18 | `db7e8722a1599b833f09c144cde1f8e909bc0a53f0b6ff51a5777ac3e76833b9` |
+| MG058 | All the Marbles | 10/10 | 3 | 18 | `ac502bd17672789502c806e0250da864acf093ed2adcda54d13474c11f5ac399` |
+| MG059 | Roll with It | 11/11 | 3 | 18 | `3e9877b21c6c06c248b33553612573af6b0ddf1907f4eab20f86376277b6766a` |
+| MG060 | Prize Line | 13/13 | 3 | 18 | `e5c365babae95b18530036d71bc6bbb58ceccd6023a2807c690f833a12561d95` |
+| MG061 | A Stone's Throw | 12/12 | 3 | 18 | `5081b282c97f8db68089f9b5e6c05aebd4ee214d98c3638b9d3f3e31e4c1e250` |
+| MG062 | Flip 'n Find | 15/15 | 3 | 18 | `31acacf472b476b64168e5cdc9ab376f830f4649851054e64165fb4b6d0ace80` |
+| MG063 | Prize Drop | 8/8 | 3 | 18 | `e46a56339807777cf64fe84c23725c3bf54bb4cf96053dac8d743997c446ca2f` |
+| MG064 | Mario's Three-peat | 10/10 | 3 | 18 | `10dfedb1e7cddb39d0d121107bab75607514207348f0c71a3aa686285d277eec` |
+| MG065 | Luigi Rescue Operation | 9/9 | 3 | 18 | `ca691554e07b766afcf2b3b0bec4fcdff9e1a5ca0978f6466be73891725e581e` |
+| MG066 | Peach's Day Off | 10/10 | 3 | 18 | `a3ebb7cbf1197a425c0d88f700601f903f59ae360ede567ba4f0788e4adb416b` |
+| MG067 | Daisy's Field Day | 12/12 | 3 | 18 | `d0b3f5144d893064abb1e92708881002019b69c09f7cfa1b2d40ab38238d2ffb` |
+| MG068 | Wario's Buzzer Beater | 9/9 | 3 | 18 | `4c1a09eb34db06df67a1dceea2597210147b9798ae97c5ffcc9bbadbdfdd2d3c` |
+| MG069 | Waluigi's Pinball Arcade | 10/10 | 3 | 18 | `ccf116878caee1fb95c3f3cd6a3c8ac9bf3a02e0f21bccafa4c6c34352724e67` |
+| MG070 | Yoshi's Mountain Race | 9/9 | 3 | 18 | `4760ffebc236e3677821a5266c5eb0f63951701cc26c97a6c84ae322ea05776d` |
+| MG071 | Rosalina's Radical Race | 8/8 | 3 | 18 | `edeba6707e88949c0d1e54a190d46370d102ccb313a311daba6fe817546f7f56` |
+| MG072 | DK's Konga Line | 9/9 | 3 | 18 | `5d7bab3a0fa200365a768fc1d0e24d027b8e45cf4c67cd0928bf9effcfbaa865` |
+| MG073 | Jr.'s Jauntlet | 11/11 | 3 | 18 | `b79fa1203439471333771c597dc5f9391ae08e10e0b70b154ad3644d96ac4475` |
+| MG074 | Dragoneel Slayers | 10/10 | 3 | 18 | `18da2f139d5bdf114cbe3b3b791dd7d0b33f0be98abcae3845c9b17a32b87d87` |
+| MG075 | Mega Stingby Stompers | 8/8 | 3 | 18 | `d261cab1ecd01e1efbcbfed8dff19ce048c81b3fdef2d105a07b3a4d7372dde5` |
+| MG076 | Mega Rocky Wrench Wreckers | 8/8 | 3 | 18 | `7f87a2d6a7298b380c772ff832053967ca1c4b7c6ec8d89f09eb7bf5cf24c12c` |
+| MG077 | Boss Sumo Bro Blitzers | 11/11 | 3 | 18 | `c1cddbbb7ee732f5bf512859bee97816ed0e4f6a48d982e1fa16d8287925378f` |
+| MG078 | Bowser Crashers | 9/9 | 3 | 18 | `0480b5520d7df8dbc1fd1473b75c94972a3d3a39ad42202696d669235c457ef9` |
+| MG079 | Noggin Knock | 11/11 | 3 | 18 | `6d0b1db8667fbc8de10cb27f6a9be4db201b849595dfcdffd15f7a456b1988cc` |
+| MG080 | Brick Breaker | 11/11 | 3 | 18 | `813cc777e87baafd180924086957bf61c33d1175247a84bb0d0a261d035f160a` |
+| MG081 | Gold 'n Brown | 10/10 | 3 | 18 | `6387a8a568983fe07e99d06dde34bd7560a81c46d172944f1e02e100fb1585be` |
+| MG082 | Spike's Gambit | 12/12 | 3 | 18 | `4d402c43829cb141e82bc766ca339aa89149a7c4436291d7792473f7a0054b63` |
+| MG083 | Down the Hatch | 10/10 | 3 | 18 | `01353f0b13428556fc6bceb07dd79ed34b6091feca2d941352bb7dcdf03a907d` |
+| MG084 | Lane Change | 10/10 | 3 | 18 | `a60d363eee74de2b1505e361711a6458592526496bdfb73588cb82268e401322` |
+| MG085 | Coin Conveyor | 12/12 | 3 | 18 | `bf1c75fa6e5a417e99ea712c45b6f615151024027748e6cad9999e7d3a0fdcff` |
+| MG086 | Which Door Has More? | 9/9 | 3 | 18 | `566333565b7917eb2a2561957a555a1b8bb1c679fecbce18b1d87fb64366b33d` |
+| MG087 | Sky-High Cannons | 10/10 | 3 | 18 | `f4ef4cb5e40a6e1a21a44f53a3658bc5076ab8353f4481a57f68f59e1b7f842c` |
+| MG088 | Burning Bridges | 9/9 | 3 | 18 | `bc733da4610b0a1cfbe515075adc22a6c4f652af5bb81bce6b2850a83771c5aa` |
+| MG089 | Castle Hassle | 10/10 | 3 | 18 | `35e23bc5cab5a975cbb0a0b600fed9ee3827f539aab8c3aae9c2a9bb699852ee` |
+| MG090 | Sleight of Shell | 11/11 | 3 | 18 | `3f46b8e20e103fff7a2b1dab2fbd0d56a6c8654b7ff53410bd7336e624f5eb37` |
+| MG091 | Fire Away | 8/8 | 3 | 18 | `b22a73999e31516fd602ecc9ebc9cf08cfbedd0bb04f2a24dbf0f06121ea2c19` |
+| MG092 | The Floor Is Falling | 10/10 | 3 | 18 | `5e77f1a595925f0e2557c25863e0d48704df95b9413d23b5ebb6660a7a5f0100` |
+| MG093 | Juiceworks | 14/14 | 3 | 18 | `de87a054b0851b571591cc640625b42605c4cf401da5c15d7e29e07248956229` |
+| MG094 | Ball Volley | 13/13 | 3 | 18 | `7650fcac48caa47bf06d872b53416589f9b71d1920a4712166f26954fb1d70d4` |
+| MG095 | Ballistic Bingo | 10/10 | 3 | 18 | `e43bd9881de197bbc635db7fbb4b8f2e7b1e6919ecea69d0dee2678c1f267a1d` |
+| MG096 | Bath Bob-ombs | 11/11 | 3 | 18 | `4b487a39cfe4cb6dbed7870b9ce64b22bef2af0184374d1c4374809f7bc1cb61` |
+| MG097 | Chomp Wash | 12/12 | 3 | 18 | `7464a5b0bf5d33b78e98979c3d73682af69776f01d4c93ce60d043c60cc4d389` |
+| MG098 | Match! That! Item! | 14/14 | 3 | 18 | `0071db64e3d44e67cfe4f3fe083a0993342434560dd1f38c0f25b646cb6a655f` |
+| MG099 | Trading Cards | 13/13 | 3 | 18 | `6efef0467622231d1a0e0fff73067be48ac48d017e301446a658a6e42215830a` |
+| MG100 | Ski-daddle | 11/11 | 3 | 18 | `ecd81c29856da76e37207f7b19fc7112b07bf6dc0ceab162f4647c6ab0e7283b` |
+| MG101 | Look This Way | 12/12 | 3 | 18 | `3847945e856e7c08f44504d13630d9bb1539bd330cd89b6328d692d2de67fa74` |
+| MG102 | Puzzle Pandemonium | 14/14 | 3 | 18 | `8b3ae91bf04ef8e308e128c7fec3912117656441bca18b0e1e76dbd35c46bebf` |
+| MG103 | Soup Troupe | 9/9 | 4 | 18 | `85db3d4e66567fae3773468c2978e52a453ff436e3d4ce9ac1cf5dad765a11e6` |
+| MG104 | Parfait the Course | 9/9 | 4 | 18 | `d063f6a7b228e569c561ac6731a19a7203b9c11595858104d1927c226c099b7a` |
+| MG105 | Whisk Cream | 7/7 | 4 | 18 | `eeeac79bbc7437bd01fc6eae4f0db9d03668210a8163be32f02836491db12b3d` |
+| MG106 | Spread 'n Butter | 9/9 | 4 | 18 | `f28a313a4c3dcd55979d34c88aeaa2dbcca18ed35017ab313b7c919f97c90693` |
+| MG107 | Short-Stack Chef | 7/7 | 4 | 18 | `8cc14afdf6223d043befff4e014ccbf44edcc743839e1924e77ceca469c608c7` |
+| MG108 | Burger Builders | 8/8 | 4 | 18 | `702dcbc717aa9e05b4982e32afd574f5471edc02559da902f79e1ccff35c129a` |
+| MG109 | Footlong Frenzy | 8/8 | 4 | 18 | `47db2a0153a098e30b24d475c2d3a1ce4c4b44c1de6a5a70cfbbefe12deef3fe` |
+| MG110 | Copycat Curry | 9/9 | 4 | 18 | `e71c8dda5513c7393deb6a94fd1757e92b6dbb6202e185817dba9954f120b859` |
+| MG111 | En Barb! | 8/8 | 4 | 18 | `eaa52db558c1b9cb68dcd276c35cc3a7224a8f3b09e3b5472f28ef30edee835a` |
+| MG112 | On the Beet | 7/7 | 4 | 18 | `6f567eccfb26ceefdf42b942bd6f70555012f8d5507ece6b3300270e26b286da` |
+| MG113 | Shell Hockey | 14/14 | 4 | 18 | `df6bfa055b66dcd1c4f17d824be6156992e39b9c485e1dd81aca6e2c3c05c7df` |
+| MG114 | Bowser Filter | 10/10 | 4 | 18 | `3f7827ddef3be5866733d9a6936ef1ff74e38773b9afb0ec5cbbe78064b6f062` |
+| MG115 | Stuffie Stacker | 9/9 | 4 | 18 | `fa85408a1607de31c08ce57981f04b8c95ae61fd7787f13cfe49815405b7ed92` |
+| MG116 | Pull-Back Attack | 14/14 | 4 | 18 | `52aba07f5fb85b875ae1f99a7d4d4343934fbcdb81f94c96657743b99268e78d` |
+| MG117 | Domino Effect | 10/10 | 4 | 18 | `a14230be8c54a9dcfd646c3e474cd2c8adf584b3edb7bdc32725a757cdab8459` |
+| MG118 | Bob-omb Makeover | 13/13 | 4 | 18 | `c68e1617f941987d82fa9012fcdfc5538dd8dea40762d8caa6abc1777cff8413` |
+| MG119 | Toad-ally Electric Escape | 9/9 | 4 | 18 | `70b6b3d8d41da9296470bafd7364592b4ddfaca517f544965e25cce286597b33` |
+| MG120 | Ice and Easy | 17/17 | 4 | 18 | `39b5f263c387da68969b0cb15a77cdda7af468e3204f0d0897e7a121bd70136e` |
+| MG121 | Bob-omb Toss | 10/10 | 4 | 18 | `335d75450734d362d4c070de4d97b565aad1534fd7fcef7d8d81c9f0345766de` |
+| MG122 | Net Gains | 15/15 | 3 | 18 | `a6325fee684dfc8beb0625eacb189afea3a8bb23df9a3c5254145b35290d6be4` |
+| MG123 | Get a Grip | 15/15 | 4 | 18 | `007e2bb068b4da002728e252c14e6b8d687bb2e8f7db4e6570078771c5334b2c` |
+| MG124 | What's the Scoop? | 15/15 | 4 | 18 | `8bab88056c861d8d993e97a00493f894612e2d9bc4868d96e9a8062667e570e2` |
+| MG125 | Knock-Knock Match | 10/10 | 3 | 18 | `e570f78e3406be80e5a9d99d557a85a9209f60ef6f3b18e81e52cd75bfa4184f` |
+| MG126 | Goomba Scoopas | 17/17 | 3 | 18 | `eb584dec19c7d13910a350c0ae7aa8a328cf6acd5eb5f066f3caeb3a0b7db02b` |
+| MG127 | Talking Flower Says | 8/8 | 3 | 18 | `b4f976b30b6b048e7c980f16e288bb3b4abbf15580ed9ef7d3566094c87e78b6` |
+| MG128 | Hitting It Rich | 9/9 | 4 | 18 | `f04ffb0021ef835416c244197079b15104d8bd376d9d2a29f64465f74cd3fa16` |
+| MG129 | Goombalancing Act | 8/8 | 3 | 18 | `657e612f7c496465a5fb9b1949dbdf6c97f61b13807a3f0678f7979faf396c19` |
+| MG130 | Bowser Chicken | 7/7 | 3 | 18 | `531f35252395738fca267fe02ee7d3b9aa1850dc22524cd9b515b1e2ed4ef4dd` |
+| MG131 | Speak Up, Junior! | 7/7 | 3 | 18 | `e2969d586395785297c39f7dbfe7886c9eb3806cf685016bd6f4e8cab3c75097` |
+| MG132 | Bowser Beats | 7/7 | 3 | 18 | `e33dafdbfffb1bfa70ad0e050cd9901f10c4983ffaa11c9931ef2c51d5f19bf0` |
 
 ## UNVERIFIED
 
-- Prompt-required second complete wiki list page and its combined count. Legacy is an independent publisher, not a second wiki.
-- Final per-game format, time limit, controls, win/score/tie rules, coin/star rewards, two-sentence summaries, phoneFit scores and rationales for all 132 rows. Preliminary category headings do not complete these fields.
-- Independent sources for every final gameplay fact, all final confidence assessments and the full per-game fact second pass.
-- Identity linkage for Sandwiched/Sandwhiched and Squeaky Shakedown/Squeaky Showdown; independent English Squeaky Shakedown corroboration. Sandwiched spelling itself now has wiki/Destructoid support.
-- Category interpretations and conflicting Pull-Back Attack four-player availability.
-- Final minigames.json, minigames.csv and final per-game JSON Schema validation. The supplied schema validates the preliminary index only.
-- Completion PR and KEEP GOING completion gate. This remains a research milestone.
+**Strict research gate: NOT_MET; 459 narrowly corroborated fields out of 1,320; zero of 132 whole rows complete.** The exact remaining fields, limitations and retained citations are listed for every row in `reports/research-gaps.json`.
 
-## Integrity
+| Fact field | Corroborated | Single source | Conflict | Unknown |
+| --- | ---: | ---: | ---: | ---: |
+| name | 132 | 0 | 0 | 0 |
+| category | 118 | 14 | 0 | 0 |
+| format | 81 | 50 | 1 | 0 |
+| gameplay | 128 | 4 | 0 | 0 |
+| controls | 0 | 121 | 11 | 0 |
+| timeLimit | 0 | 100 | 3 | 29 |
+| winRules | 0 | 132 | 0 | 0 |
+| scoreRules | 0 | 78 | 0 | 54 |
+| tieRules | 0 | 31 | 0 | 101 |
+| reward | 0 | 19 | 0 | 113 |
 
-SHA256SUMS.txt covers every delivered file except itself. From this job folder run `sha256sum -c SHA256SUMS.txt`. Integrity checking does not establish research completeness.
+No Nintendo gameplay or phone adaptation was executed. Unknown coin and star awards are null. Available timers include scoped modes/stages; component durations and record caps are not universal time limits. Win, score and tie mechanics require independent corroboration. Four TV gameplay summaries lack an accepted second independent account. Source categories, player availability, camera actions, rhythm controls, stage counts, score tokens and release/preview differences retain explicit conflicts.
 
-## Preliminary gameplay evidence checks
+The count is supported by the Wiki, Nintendo Life’s 112-row base table and 20-name TV page, and Family Game Squad’s 112 base-game headings. The original request specifically says two wiki list pages; a second complete wiki list page has not been located. Independent publishers agree on total counts but raw spellings differ, as listed in CONFLICTS.md.
 
-All 132 actual game URLs returned article content in both fresh HTTPS passes. The following executed checks bind compact quotations to the retained raw captures. Every mechanics lead remains **UNVERIFIED, one source family**. Schema/evidence integrity does not complete final fields, independence, summaries or phoneFit.
+Some source clips are short name/column/context locators to keep total quotations per source bounded. Their presence alone is not proof of a complete gameplay rule; all source lineages and scope limitations remain explicit. No confidence is raised by raw retrieval success.
 
-Exact capture-bound command from the repository root (original raw captures must still exist):
-
-```bash
-PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research
-```
-
-| Test | Cases | Passed | Seed | Exact command |
-| --- | ---: | --- | --- | --- |
-| json_schema | 1 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
-| unique_index_rows | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
-| index_bound_rows | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
-| short_quotes | 987 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
-| field_reference_lists | 1056 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
-| source_pass_records | 264 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
-| https_url_tls_hash_byte_records | 264 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
-| raw_capture_hashes | 264 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
-| quotes_located_in_capture_sections | 1974 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
-| fresh_pass_extraction_comparisons | 264 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
-| ordered_pass_timestamps | 132 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
-| returning_game_scoped_quotes | 84 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
-| coverage_totals | 8 | yes | n/a | `PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/verify-gameplay-leads.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --schema jobs/B03-jamboree-minigames/gameplay-leads.schema.json --snapshots /workspace/b03-gameplay-research` |
-
-Actual validator output, scope and case counters (field coverage is in the full committed report):
-
-```json
-{
-  "passed": true,
-  "scope": "Preliminary evidence integrity only; final B03 research remains UNVERIFIED.",
-  "caseCounts": {
-    "json_schema": 1,
-    "unique_index_rows": 132,
-    "index_bound_rows": 132,
-    "short_quotes": 987,
-    "field_reference_lists": 1056,
-    "source_pass_records": 264,
-    "https_url_tls_hash_byte_records": 264,
-    "raw_capture_hashes": 264,
-    "quotes_located_in_capture_sections": 1974,
-    "fresh_pass_extraction_comparisons": 264,
-    "ordered_pass_timestamps": 132,
-    "returning_game_scoped_quotes": 84,
-    "coverage_totals": 8
-  }
-}
-```
-
-Exact guard-suite command:
+Strict command:
 
 ```bash
-PYTHONDONTWRITEBYTECODE=1 /workspace/.partybox-python/bin/python jobs/B03-jamboree-minigames/test-gameplay-evidence.py --evidence jobs/B03-jamboree-minigames/gameplay-leads.json --index jobs/B03-jamboree-minigames/catalogue-index.json --snapshots /workspace/b03-gameplay-research
+PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --strict --hashes
 ```
 
-The unchanged compact baseline and a new external output directory validate; **18** deliberately invalid cases reject. The raw-capture preflight validates **264** records. Actual `networkRequests` is **0**. This report is `gameplay-guard-validation-results.json`. Without `--snapshots`, sixteen invalid cases execute and raw-capture cases do not execute. They must not be counted as run.
-
-| Candidate field | Rows with a lead | TV rows with a lead |
-| --- | ---: | ---: |
-| controls | 132 | 20 |
-| winRules | 82 | 19 |
-| scoreRules | 57 | 11 |
-| timeLimit | 30 | 5 |
-| tieRules | 22 | 4 |
-| coinReward | 10 | 1 |
-| starReward | 0 | 0 |
-| gameplay | 132 | 20 |
-
-Quoted timer mentions can describe a round or component; coin mentions can describe an internal game/mode payout. They do not establish a whole-game timer or a universal Party-mode award. No star-reward lead exists; absent evidence is not a zero reward. `GAMEPLAY-RESEARCH.md` documents ten returning-game scope exclusions and all remaining limitations.
-
-The full original retrieval commands and raw webpages are outside the checkout. To make a new independent retrieval run, use `collect-gameplay.py` with a new external output directory as shown in the research notes. To validate committed metadata/schema alone, omit `--snapshots`; that does not execute raw-byte/location comparisons.
+Expected and observed exit code: **1**. Integrity CI succeeds while asserting this deliberate incomplete-research verdict.

@@ -70,3 +70,24 @@ The Pull-Back Attack discrepancy remains unresolved. Do not promote either claim
 - Wiki and Legacy both describe exclusions from TV Free Play using their own Koopathlon/Kaboom/Rhythm labels. These are documented source contexts; complete per-game availability and category interpretations still need review.
 - Nintendo’s mouse/HD-rumble/microphone count statement is marketing context, not independently sourced controls for every row.
 - Detailed gameplay fields, final JSON/CSV/schema and a complete per-game second pass remain unverified.
+
+## Current complete-catalogue disagreements
+
+The earlier preliminary text above is retained as historical provenance; current facts, progress and qualifiers are in the catalogue registry and VERIFY.md. Family Game Squad now independently agrees with all 112 canonical base names; this does not silently change Legacy’s two raw spellings or Nintendo Life’s three raw spellings.
+
+| ID | Kind | Canonical scope | Publisher claim | Treatment |
+| --- | --- | --- | --- | --- |
+| C01 | list_name | Sandwiched | Sandwhiched | Canonical title independently agrees in Wiki, Nintendo Life and Family Game Squad; Legacy identity linkage remains unaccepted. |
+| C02 | list_name | Squeaky Shakedown | Squeaky Showdown | Canonical title independently agrees in Wiki, Nintendo Life and Family Game Squad; Legacy identity linkage remains unaccepted. |
+| C03 | list_name | DK's Konga Line | DK's Conga Line | Raw names remain different; instruction correspondence is a research association, not a silent duplicate-normalization correction. |
+| C04 | list_name | Mega Stingby Stompers | Mega Stingby Stonkers | Raw names remain different; both source claims retained. |
+| C05 | list_name | Waluigi's Pinball Arcade | Walugi's Pinball Arcade | Raw names remain different; both source claims retained. |
+| C06 | category | Koopathlon | Kooplathon | Raw guide category misspelling retained; the fourteen games are not silently assigned Coin/Survivathon subcategories from this guide. |
+| C07 | availability | Pull-Back Attack | Shell Hockey is notably the only minigame not to have a Team of 4 variation. | Wiki list and article also exclude Pull-Back Attack; four-player Co-op remains UNVERIFIED. |
+| C08 | controls | Hitting It Rich | head bumps versus fists/punches in Legacy and Best Buy | Camera hitting is retained; exact head-only interpretation is not accepted. |
+| C09 | controls | Rhythm minigames | Motion Controls column is - for all ten rhythm entries | Nintendo explicitly calls Rhythm Kitchen motion-controlled, and all ten Wiki articles describe shaking Joy-Con; absent table markers are not accepted as no-motion proof. |
+| C10 | stage_count | Daisy's Field Day | three stages versus four in Wiki and Nintendo Life | The summary omits the disputed count; detailed four-stage report remains single-publisher qualified. |
+| C11 | score_token | Speak Up, Junior! | passing coins versus Bowser medals in Wiki | Retain generic collectibles in the summary and separate in-game score from unknown board payout. |
+| C12 | endless_timer | Scare-ousel, Sandwiched, Cold Front | Infobox Endless duration versus overview no-time-limit wording | Recorded maximum is not promoted to an enforced gameplay cutoff. |
+| C13 | score_metric | Bob-omb Makeover | team with most paint versus Wiki counts predominantly painted Bob-ombs | Core paint action is corroborated; complete scoring formula remains single source. |
+| C14 | date | GamingTrend preview | Exa metadata August 2026 versus article byline April 3, 2025 | Treat as prerelease hands-on preview; do not claim its mechanics prove release-version parity. |
