@@ -1,0 +1,26 @@
+name: B08 Monopoly exact landing odds + ROI
+on:
+  pull_request:
+    paths: ['jobs/B08-*/**']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: jobs/B08-monopoly-markov
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - run: npm install --ignore-scripts --no-audit --no-fund
+      - run: npm test
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: B08-verification
+          path: jobs/B08-monopoly-markov/.verification/
+          include-hidden-files: true
