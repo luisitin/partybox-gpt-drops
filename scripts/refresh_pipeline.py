@@ -40,7 +40,7 @@ def pr_notes(pull: dict) -> str:
     paragraphs = [plain(part, 320) for part in re.split(r"\n\s*\n", body) if plain(part, 320) and not part.strip().startswith("#")]
     description = paragraphs[0] if paragraphs else pull.get("title", "No PR description")
     match = re.search(r"### Verification status\s*(.*?)(?:\n### |\Z)", body, flags=re.S | re.I)
-    verification = plain(match.group(1), 520) if match else ""
+    verification = plain(match.group(1), 1200) if match else ""
     note = f"PR says: {description}"
     if verification:
         note += f" Verification note: {verification}"
