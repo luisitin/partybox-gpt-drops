@@ -30,17 +30,37 @@ support, source independence, wording, and distractors. Capital/year/unit
 templates are a known diversity weakness and are being revised. Length metrics
 are recorded with their editorial assessment pending.
 
+## Latest authoring milestone — 2026-10-07T18:33:45.906638+00:00
+
+Exact command: `python3 scripts/check-data.py --draft --exclude-in-progress music`.
+The recovered music draft is excluded from this publication snapshot while its author repairs23 unmatched quote fields and stale hashes; its actual failed run is preserved in `reports/music-recovery-failure.json`. Full acceptance forbids all category exclusions.
+Deterministic data checks; seed n/a. Full output: `reports/checks.json`.
+
+| Check | Cases | Passed |
+|---|---:|---:|
+| Authored rows against draft JSON Schema and row/index/source/hash checks | 310 | 310 |
+| Quote fields present in actual hash-checked source bodies | 832 | 832 |
+| Current fresh adversarial acceptances | 310 | 0 |
+| Current second source-reopen reviews | 310 | 0 |
+| Similarity >0.8 flagged pairs with concrete resolution | 2567 | 0 |
+
+Category counts: us-geography: 100, world-geography: 1, science-space: 100, animals-nature: 33, us-history-civics: 0, world-history: 76, movies-tv: 0, music: 0, sports-games: 0, food-everyday-life: 0.
+
+Quote matching demonstrates actual captured text presence. It does not replace
+fresh review of claim support, source independence, ambiguity or distractors.
+Root science100 is an authoring snapshot; US geography100 is being diversified.
+The authoring team is completing disjoint ranges and reserving cross-author
+review after final row-version hashes are held. Length metrics are in the report;
+editorial assessment remains pending.
+
 ## UNVERIFIED
 
-- Remaining 819 authored rows.
-- Fresh assessment of two independent sources supporting every factual claim.
-- Row-specific confidence judgments.
-- Fresh adversarial disproof attempts on every row.
-- Second full pass reopening both sources for every row.
-- All similarity >0.8 flags and their actual resolutions.
-- Difficulty and correct-index balance, option uniqueness and length-bias reports.
-- Full 1,000-row JSON Schema validation and recorded validator output.
-- Final checksum verification and final GitHub delivery.
+- Remaining 690 authored rows and final category balances.
+- Fresh adversarial disproof attempts and source-independence/support review on all1,000 finalized rows.
+- Second actual reopening of both source pages for every final row.
+- Every retained similarity flag’s concrete editorial resolution.
+- Final option-length editorial assessment and full1,000-row validator output.
+- Final checksum verification and ready-for-review GitHub delivery.
 
-No source candidate, search snippet, structural scaffold or absent review is
-reported as an accepted question or passed research gate.
+Author milestones preserve unfinished evidence. No missing review or structural
+scaffold is reported as a passed research gate.

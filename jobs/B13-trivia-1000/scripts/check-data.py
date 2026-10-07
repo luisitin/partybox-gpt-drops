@@ -16,13 +16,16 @@ def average(values):return round(statistics.mean(values),4) if values else None
 parser=argparse.ArgumentParser()
 parser.add_argument('--draft',action='store_true',help='Allow incomplete row and review counts, still reject actual data errors')
 parser.add_argument('--output',default='reports/checks.json')
+parser.add_argument('--exclude-in-progress', action='append', choices=CATEGORIES, default=[], help='Draft integration only: exclude an uncommitted category while its author repairs it')
 args=parser.parse_args()
+if args.exclude_in_progress and not args.draft:parser.error('Category exclusions are available only for --draft; full acceptance always checks all ten categories')
 schema=read(ROOT/'trivia.schema.json',None)
 if args.draft:
     schema={k:v for k,v in schema.items() if k not in ['minItems','maxItems']}
 validator=Draft202012Validator(schema,format_checker=FormatChecker())
 rows=[];sources={};authoring={};errors=[];capture_cache={}
 for category in CATEGORIES:
+    if category in args.exclude_in_progress:continue
     group=read(ROOT/f'categories/{category}.json',[])
     for row in group:
         if row.get('category')!=category:errors.append(f'{row.get("id")}: wrong category file')
@@ -119,7 +122,7 @@ pending={'targetRowsMissing':max(0,1000-len(rows)),'adversarialNotCurrent':len(r
 if not args.draft:
     for k,v in pending.items():
         if v:errors.append(f'Unfinished gate {k}: {v}')
-report={'mode':'draft' if args.draft else 'full','rows':len(rows),'categories':balances,
+report={'mode':'draft' if args.draft else 'full','excludedInProgressCategories':args.exclude_in_progress,'rows':len(rows),'categories':balances,
  'sourceRecords':len(sources),'quoteFields':quote_count,'quoteMatchesActualLocalCaptures':quote_matches,
  'quoteCapturesUnavailable':quote_unavailable,'schemaAndDataErrors':errors,
  'adversarialAcceptedCurrent':len(review_current),'reopenSupportedCurrent':len(reopen_current),

@@ -2,26 +2,21 @@
 
 Target: ten categories of 100 four-option questions, with two independent source
 quotes for every answer and fun fact, followed by a fresh adversarial review and
-a second full reopening of sources. See [CONTRACT.md](CONTRACT.md).
+second full reopening of sources. The original B13 prompt is the acceptance
+contract; [CONTRACT.md](CONTRACT.md) fixes row/source formats and ownership.
 
-Current milestone: 181 real authored rows across four category files, with
-363 quote fields matched against actual source captures and no schema/data
-errors. Fresh adversarial review and source reopening remain 0/181. The 2,566
-question pairs with normalized similarity >0.8 are retained for revision or
-specific editorial resolution. See [reports/checks.json](reports/checks.json).
+Latest authoring milestone (2026-10-07T18:33:45.906638+00:00): 310 real authored rows across 5 category files; 832/832 quote fields matched against actual source captures; 0 schema/data errors; 0 current fresh adversarial acceptances and 0 current source-reopen reviews.
+Research acceptance remains unfinished. Draft structural success is not a claim
+of independently verified questions. Every similarity flag and incomplete review
+remains visible in [reports/checks.json](reports/checks.json) and [VERIFY.md](VERIFY.md).
 
-The branch initially contained only repository instructions, with no previous
-B13 content to overwrite. These rows are an authoring milestone; they have not
-completed the research acceptance gates.
+Files: `categories/` contains current rows; `evidence/` contains actual source
+receipts and row-version evidence reads; `research/` records collection decisions;
+[SOURCES.md](SOURCES.md) lists row quotations and URLs; [CONFLICTS.md](CONFLICTS.md)
+records exclusions. Full copyrighted captures remain in ignored `.work/` locally.
 
-Source collection begins with official institutional pages and independently
-authored reference works. Searches discover candidates; only actual body reads
-and supporting quotations qualify as evidence. See [VERIFY.md](VERIFY.md) for
-actual completed checks and unfinished gates, and [NEXT.md](NEXT.md) for the next
-concrete step. Authoring and review workers use disjoint category files.
-
-The original B13 prompt is the acceptance contract. Progress commits preserve
-work; they are not claims that all 1,000 questions or research gates have passed.
-
-Draft checks: `python3 scripts/check-data.py --draft`. Full validation uses
-`python3 scripts/check-data.py` and fails while required rows/reviews are absent.
+Rerun: `python3 -m pip install -r requirements.txt`, then
+`python3 scripts/check-data.py --draft`. Full acceptance command:
+`python3 scripts/check-data.py`, which fails while required rows/reviews are absent.
+Source collection uses actual body reads; search results alone are not evidence.
+No files exceed 30 MB. [NEXT.md](NEXT.md) records the concrete next work.

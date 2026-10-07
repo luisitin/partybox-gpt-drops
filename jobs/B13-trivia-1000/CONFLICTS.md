@@ -28,3 +28,29 @@ retained in `reports/checks.json`; none is silently treated as resolved.
 
 Record each actual disagreement with row ID, source versions, competing claims,
 definition/date issue, reviewer reasoning and the concrete revision or exclusion.
+
+## Asian elephant herd leadership — excluded from new animal rows
+
+Actual captured Smithsonian Asian-elephant account (`animals-nature-s0015`)
+says: “Unlike African elephants, they do not have a matriarch.” The independently
+edited Animal Diversity Web account (`animals-nature-s0016`) says:
+“Elephas maximus has matriarchal social organization.” This is a real disagreement,
+not a settled fact. No Asian-elephant matriarch question or fun fact is authored.
+The selected rows instead use shared anatomical/diet/body-size facts.
+
+## Asian elephant female tusks — excluded from new animal rows
+
+The Smithsonian describes small female tusks called tushes, whereas Animal
+Diversity Web broadly says females lack tusks. The scope differs between small
+incisor structures and protruding tusks. No categorical “females never have tusks”
+question is included; the shared modified-upper-incisor anatomy is selected.
+
+## Recovered music evidence plumbing — actual failed draft retained
+
+The first resume check found23 proposed quote fields absent from the receipt's
+raw-HTML path and stale author row hashes. The recovered captures also contain
+separate plaintext bodies. The music owner is checking exact normalized-body
+matches and repairing receipt paths/hashes while preserving original raw hashes.
+The actual failed check is in `reports/music-recovery-failure.json`; it is not
+silently relabeled passed. Music is excluded only from this temporary authoring
+publication snapshot. Full acceptance prohibits exclusions.

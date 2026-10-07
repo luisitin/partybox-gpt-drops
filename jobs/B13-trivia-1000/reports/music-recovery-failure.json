@@ -1,9 +1,6 @@
 {
   "mode": "draft",
-  "excludedInProgressCategories": [
-    "music"
-  ],
-  "rows": 310,
+  "rows": 270,
   "categories": {
     "us-geography": {
       "rows": 100,
@@ -43,17 +40,17 @@
       }
     },
     "animals-nature": {
-      "rows": 33,
+      "rows": 17,
       "difficulty": {
-        "1": 11,
-        "2": 13,
-        "3": 9
+        "1": 6,
+        "2": 7,
+        "3": 4
       },
       "correctPositions": {
-        "0": 9,
-        "1": 8,
-        "2": 8,
-        "3": 8
+        "0": 5,
+        "1": 4,
+        "2": 4,
+        "3": 4
       }
     },
     "us-history-civics": {
@@ -62,17 +59,17 @@
       "correctPositions": {}
     },
     "world-history": {
-      "rows": 76,
+      "rows": 44,
       "difficulty": {
-        "1": 25,
-        "2": 27,
-        "3": 24
+        "1": 16,
+        "2": 16,
+        "3": 12
       },
       "correctPositions": {
-        "0": 19,
-        "1": 19,
-        "2": 19,
-        "3": 19
+        "0": 11,
+        "1": 11,
+        "2": 11,
+        "3": 11
       }
     },
     "movies-tv": {
@@ -81,9 +78,17 @@
       "correctPositions": {}
     },
     "music": {
-      "rows": 0,
-      "difficulty": {},
-      "correctPositions": {}
+      "rows": 8,
+      "difficulty": {
+        "1": 3,
+        "2": 5
+      },
+      "correctPositions": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2
+      }
     },
     "sports-games": {
       "rows": 0,
@@ -96,11 +101,41 @@
       "correctPositions": {}
     }
   },
-  "sourceRecords": 84,
-  "quoteFields": 832,
-  "quoteMatchesActualLocalCaptures": 832,
+  "sourceRecords": 64,
+  "quoteFields": 690,
+  "quoteMatchesActualLocalCaptures": 667,
   "quoteCapturesUnavailable": [],
-  "schemaAndDataErrors": [],
+  "schemaAndDataErrors": [
+    "B13-0701: missing/stale authoring hash",
+    "B13-0701: quote absent from actual capture music-s0001 quote",
+    "B13-0701: quote absent from actual capture music-s0001 funFactQuote",
+    "B13-0701: quote absent from actual capture music-s0002 quote",
+    "B13-0701: quote absent from actual capture music-s0002 funFactQuote",
+    "B13-0702: missing/stale authoring hash",
+    "B13-0702: quote absent from actual capture music-s0001 quote",
+    "B13-0702: quote absent from actual capture music-s0001 funFactQuote",
+    "B13-0702: quote absent from actual capture music-s0002 quote",
+    "B13-0702: quote absent from actual capture music-s0002 funFactQuote",
+    "B13-0703: quote absent from actual capture music-s0001 quote",
+    "B13-0703: quote absent from actual capture music-s0001 funFactQuote",
+    "B13-0703: quote absent from actual capture music-s0002 quote",
+    "B13-0704: missing/stale authoring hash",
+    "B13-0704: quote absent from actual capture music-s0001 quote",
+    "B13-0704: quote absent from actual capture music-s0001 funFactQuote",
+    "B13-0704: quote absent from actual capture music-s0002 funFactQuote",
+    "B13-0705: missing/stale authoring hash",
+    "B13-0705: quote absent from actual capture music-s0003 quote",
+    "B13-0705: quote absent from actual capture music-s0003 funFactQuote",
+    "B13-0706: missing/stale authoring hash",
+    "B13-0706: quote absent from actual capture music-s0003 quote",
+    "B13-0706: quote absent from actual capture music-s0003 funFactQuote",
+    "B13-0706: quote absent from actual capture music-s0004 quote",
+    "B13-0707: missing/stale authoring hash",
+    "B13-0707: quote absent from actual capture music-s0003 quote",
+    "B13-0707: quote absent from actual capture music-s0003 funFactQuote",
+    "B13-0708: quote absent from actual capture music-s0003 quote",
+    "B13-0708: quote absent from actual capture music-s0003 funFactQuote"
+  ],
   "adversarialAcceptedCurrent": 0,
   "reopenSupportedCurrent": 0,
   "similarityMethod": "Casefold, replace nonword sequences with spaces, SequenceMatcher character ratio >0.8; autojunk disabled.",
@@ -28346,22 +28381,22 @@
   "similarityFlagsResolved": 0,
   "optionLengths": {
     "unit": "Unicode code points",
-    "meanCorrect": 7.4677,
-    "meanIncorrect": 7.6849,
+    "meanCorrect": 7.0037,
+    "meanIncorrect": 7.1593,
     "meanOptionByPosition": {
-      "0": 7.5452,
-      "1": 7.5677,
-      "2": 7.6839,
-      "3": 7.7258
+      "0": 7.1,
+      "1": 7.1,
+      "2": 7.1148,
+      "3": 7.1667
     },
     "meanCorrectByPosition": {
-      "0": 8.2025,
-      "1": 6.6104,
-      "2": 7.8442,
-      "3": 7.1948
+      "0": 7.6377,
+      "1": 6.2836,
+      "2": 7.4179,
+      "3": 6.6567
     },
-    "uniquelyLongestCorrect": 34,
-    "uniquelyLongestCorrectFraction": 0.10968,
+    "uniquelyLongestCorrect": 28,
+    "uniquelyLongestCorrectFraction": 0.1037,
     "uniquelyLongestCorrectIds": [
       "B13-0013",
       "B13-0014",
@@ -28377,8 +28412,6 @@
       "B13-0307",
       "B13-0309",
       "B13-0314",
-      "B13-0321",
-      "B13-0332",
       "B13-0501",
       "B13-0505",
       "B13-0507",
@@ -28392,18 +28425,14 @@
       "B13-0537",
       "B13-0539",
       "B13-0544",
-      "B13-0545",
-      "B13-0554",
-      "B13-0563",
-      "B13-0564",
-      "B13-0565"
+      "B13-0703"
     ],
     "editorialAssessment": "PENDING: metrics alone do not certify absence of answer-length clues."
   },
   "pending": {
-    "targetRowsMissing": 690,
-    "adversarialNotCurrent": 310,
-    "reopenNotCurrent": 310,
+    "targetRowsMissing": 730,
+    "adversarialNotCurrent": 270,
+    "reopenNotCurrent": 270,
     "similarityFlagsUnresolved": 2567,
     "optionLengthEditorialAssessment": "PENDING"
   },
