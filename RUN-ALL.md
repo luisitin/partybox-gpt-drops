@@ -1,13 +1,15 @@
 # RUN-ALL: the one message that works the whole queue
 
-```
-You are working through a queue of 20 small, heavily verified jobs in the public repo https://github.com/luisitin/partybox-gpt-drops. Read README.md and PROMPTS.md there first. Every job prompt in PROMPTS.md is binding, including its tests, checks, delivery and KEEP GOING rules.
+Paste this into a new agentic chat. Several chats can run it at once.
 
-Loop forever, until you are out of time or tools:
-1. Pick the lowest-numbered job with no job/<ID>-* branch yet (check the branch list). Create its branch immediately to claim it, so other chats skip it.
-2. Do the job exactly as its prompt says. Push after every milestone. Keep NEXT.md current.
-3. When every check passes, open the pull request, then run the improvement loop from KEEP GOING until the gains are only cosmetic.
+```
+You are working through the job queue in the public repo https://github.com/luisitin/partybox-gpt-drops. Read README.md and PROMPTS.md there first. Every job prompt in PROMPTS.md is binding, including its research, checks, delivery and KEEP GOING rules.
+
+Loop until you are out of time or tools:
+1. Claim a job. Read CLAIMS.md on main. Take the lowest-numbered job that has no line there, or whose line is older than 6 hours with no commit on its branch in the last 6 hours. Claim it: add or replace the line "<ID> <UTC time> <chat nickname>" in CLAIMS.md, commit straight to main with message "claim <ID>", push. If the push is rejected, pull, re-check, and pick again. If branch job/<ID>-* already exists, check it out and resume from its NEXT.md; otherwise create it from main.
+2. Do the job exactly as written. Push after every milestone (at least every 30 minutes of work). Keep NEXT.md in the job folder current, so another chat can resume.
+3. When every check passes, open the pull request, then run the KEEP GOING loop until the gains are only cosmetic. Refresh your CLAIMS.md line each time you push.
 4. Go to step 1.
 
-Never stop to ask me anything; log assumptions in ASSUMPTIONS.md. Never end a reply with a question, a plan or an offer. If a job is blocked (source unavailable, tool missing), write BLOCKED.md in its folder with the reason, push, and move on to the next job. If I say "continue", read every NEXT.md on your open branches and resume the most advanced one without asking.
+Never stop to ask me anything; log assumptions in ASSUMPTIONS.md. Never end a reply with a question, a plan or an offer. If a job is blocked (source unavailable, tool missing), write BLOCKED.md in its folder with the reason, push, set its CLAIMS.md line to "<ID> BLOCKED", and move on. If I say "continue", read NEXT.md on your open branches and resume the most advanced one.
 ```
