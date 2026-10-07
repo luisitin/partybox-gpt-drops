@@ -1,0 +1,4444 @@
+{
+  "passNumber": 2,
+  "sourcesReopened": 14,
+  "factRowsRechecked": 264,
+  "passed": true,
+  "sources": {
+    "rob-routes": {
+      "url": "https://raw.githubusercontent.com/Rob217/TicketToRideAnalysis/master/data/USA/routes.csv",
+      "method": "actual urllib HTTPS GET with Cache-Control:no-cache",
+      "httpStatus": 200,
+      "sha256": "c216bd8f95d1ed56e0780e27a92fd22f3595d2427f683ed414f0721692341eb7",
+      "sameAsFirstBytes": true,
+      "bytes": 2360,
+      "snapshotKind": "original bytes"
+    },
+    "agnias-routes": {
+      "url": "https://raw.githubusercontent.com/AGnias47/ticket-to-ride-graph-analysis/main/mattgawarecki-ticket-to-ride/usa.routes.json",
+      "method": "actual urllib HTTPS GET with Cache-Control:no-cache",
+      "httpStatus": 200,
+      "sha256": "57d0e90bce929518bb0d5adabb6b717bc15dbfe9539acd5ca2f6f8e7d6cdefed",
+      "sameAsFirstBytes": true,
+      "bytes": 32523,
+      "snapshotKind": "original bytes"
+    },
+    "rob-cities": {
+      "url": "https://raw.githubusercontent.com/Rob217/TicketToRideAnalysis/master/data/USA/city_locations.json",
+      "method": "actual urllib HTTPS GET with Cache-Control:no-cache",
+      "httpStatus": 200,
+      "sha256": "aafb4b071b4358c22be8ca0d02a301abf4e2d33609ec7f9e062b7013de464317",
+      "sameAsFirstBytes": true,
+      "bytes": 2838,
+      "snapshotKind": "original bytes"
+    },
+    "agnias-cities": {
+      "url": "https://raw.githubusercontent.com/AGnias47/ticket-to-ride-graph-analysis/main/mattgawarecki-ticket-to-ride/usa.cities.json",
+      "method": "actual urllib HTTPS GET with Cache-Control:no-cache",
+      "httpStatus": 200,
+      "sha256": "e128af349b0d26bd77990142489fce27645f81d120e26f0068d4d24fe4f2181c",
+      "sameAsFirstBytes": true,
+      "bytes": 601,
+      "snapshotKind": "original bytes"
+    },
+    "rob-tickets": {
+      "url": "https://raw.githubusercontent.com/Rob217/TicketToRideAnalysis/master/data/USA/tickets.csv",
+      "method": "actual urllib HTTPS GET with Cache-Control:no-cache",
+      "httpStatus": 200,
+      "sha256": "4f760c2ea6a1b9644f5613ffa9671d76918e61c5ab1a04014ebb0d71f767df17",
+      "sameAsFirstBytes": true,
+      "bytes": 661,
+      "snapshotKind": "original bytes"
+    },
+    "agnias-base": {
+      "url": "https://raw.githubusercontent.com/AGnias47/ticket-to-ride-graph-analysis/main/mattgawarecki-ticket-to-ride/usa.tickets.json",
+      "method": "actual urllib HTTPS GET with Cache-Control:no-cache",
+      "httpStatus": 200,
+      "sha256": "feeb948aae3caf5123995fdee5c8718b48f09d263ad2acf199daa1f8cb952116",
+      "sameAsFirstBytes": true,
+      "bytes": 2349,
+      "snapshotKind": "original bytes"
+    },
+    "agnias-1910": {
+      "url": "https://raw.githubusercontent.com/AGnias47/ticket-to-ride-graph-analysis/main/mattgawarecki-ticket-to-ride/1910.usa.tickets.json",
+      "method": "actual urllib HTTPS GET with Cache-Control:no-cache",
+      "httpStatus": 200,
+      "sha256": "b11ad83fa0ac4cf54c0d563a3887e710db53457ac97ce4a67c93bdbe74acd57c",
+      "sameAsFirstBytes": true,
+      "bytes": 2784,
+      "snapshotKind": "original bytes"
+    },
+    "agnias-points": {
+      "url": "https://raw.githubusercontent.com/AGnias47/ticket-to-ride-graph-analysis/main/mattgawarecki-ticket-to-ride/route-point-values.json",
+      "method": "actual urllib HTTPS GET with Cache-Control:no-cache",
+      "httpStatus": 200,
+      "sha256": "d23d35a7c1a4ed578dd5b31be716b5ff9b164a4ad00fb213588d6a0f50f538c1",
+      "sameAsFirstBytes": true,
+      "bytes": 65,
+      "snapshotKind": "original bytes"
+    },
+    "official-base": {
+      "url": "https://ncdn0.daysofwonder.com/tickettoride/de/img/tt_rules_2015_en.pdf",
+      "method": "actual urllib HTTPS GET with Cache-Control:no-cache",
+      "httpStatus": 200,
+      "sha256": "2c331d825e863bf4850c058e29cf7b07c58798a0799a490e6706a14254d7ab19",
+      "sameAsFirstBytes": true,
+      "bytes": 3560487,
+      "snapshotKind": "original bytes"
+    },
+    "official-1910": {
+      "url": "https://cdn.svc.asmodee.net/staging-daysofwonder/uploads/2024/07/7216-T2R1910-EN-2018-1.pdf",
+      "method": "actual urllib HTTPS GET with Cache-Control:no-cache",
+      "httpStatus": 200,
+      "sha256": "70fb7ffda44aaef42031404a6072a00df34b5f548901445f10572a9106f4f6f0",
+      "sameAsFirstBytes": true,
+      "bytes": 872234,
+      "snapshotKind": "original bytes"
+    },
+    "supercheats": {
+      "url": "https://www.supercheats.com/ticket-to-ride/wiki/1910-mega-game-map-master-routes-list",
+      "method": "new Exa web_fetch_exa call, page reopened and full relevant fact table re-extracted",
+      "toolSuccess": true,
+      "retrievalSha256": "9beb6b69ee416185780427b963cfdab094c093b096987fad649fb3e5af6e8368",
+      "characters": 3238,
+      "snapshotKind": "factual re-extraction, page boilerplate can differ"
+    },
+    "bgg-mystery": {
+      "url": "https://boardgamegeek.com/boardgame/13297/ticket-to-ride-mystery-train-expansion",
+      "method": "new Exa web_fetch_exa call, page reopened and full relevant fact table re-extracted",
+      "toolSuccess": true,
+      "retrievalSha256": "66449e81472798333bd22792507376d897e1b578e974652af251a056a578a889",
+      "characters": 3885,
+      "snapshotKind": "factual re-extraction, page boilerplate can differ"
+    },
+    "guide": {
+      "url": "https://therulebook.com/board-games/ticket-to-ride-usa/",
+      "method": "new Exa web_fetch_exa call, page reopened and full relevant fact table re-extracted",
+      "toolSuccess": true,
+      "retrievalSha256": "6a5ee34dea53901c47718bbd16f75222eacc77178b51874f9764cc559c5c95ed",
+      "characters": 6258,
+      "snapshotKind": "factual re-extraction, page boilerplate can differ"
+    },
+    "se-inventory": {
+      "url": "https://boardgames.stackexchange.com/questions/8637/where-can-i-find-an-exhaustive-inventory-of-cards-in-ticket-to-ride",
+      "method": "new Exa web_fetch_exa call, page reopened and full relevant fact table re-extracted",
+      "toolSuccess": true,
+      "retrievalSha256": "adc5242d6922424e60e6d606bef3fc96d6af84c44fc93d4bb94eecc98d985455",
+      "characters": 2936,
+      "snapshotKind": "factual re-extraction, page boilerplate can differ"
+    }
+  },
+  "rows": [
+    {
+      "rowId": "cities/0",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/1",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/2",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/3",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/4",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/5",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/6",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/7",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/8",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/9",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/10",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/11",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/12",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/13",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/14",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/15",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/16",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/17",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/18",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/19",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/20",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/21",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/22",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/23",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/24",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/25",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/26",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/27",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/28",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/29",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/30",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/31",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/32",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/33",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/34",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cities/35",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "id",
+        "name"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/0",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/1",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/2",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/3",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/4",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/5",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/6",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/7",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/8",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/9",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/10",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/11",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/12",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/13",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/14",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/15",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/16",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/17",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/18",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/19",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/20",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/21",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/22",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/23",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/24",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/25",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/26",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/27",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/28",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/29",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/30",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/31",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/32",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/33",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/34",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/35",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/36",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/37",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/38",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/39",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/40",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/41",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/42",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/43",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/44",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/45",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/46",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/47",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/48",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/49",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/50",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/51",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/52",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/53",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/54",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/55",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/56",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/57",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/58",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/59",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/60",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/61",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/62",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/63",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/64",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/65",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/66",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/67",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/68",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/69",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/70",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/71",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/72",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/73",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/74",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/75",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/76",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/77",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/78",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/79",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/80",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/81",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/82",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/83",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/84",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/85",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/86",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/87",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/88",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/89",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/90",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/91",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/92",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/93",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/94",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/95",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/96",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/97",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/98",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routes/99",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "parallelGroup"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/0",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/1",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/2",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/3",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/4",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/5",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/6",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/7",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/8",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/9",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/10",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/11",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/12",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/13",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/14",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/15",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/16",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/17",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/18",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/19",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/20",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/21",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/22",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/23",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/24",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/25",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/26",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/27",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/28",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "baseTickets/29",
+      "sourceIds": [
+        "rob-tickets",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/0",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/1",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/2",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/3",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/4",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/5",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/6",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/7",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/8",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/9",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/10",
+      "sourceIds": [
+        "supercheats",
+        "bgg-mystery"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/11",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/12",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/13",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/14",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/15",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/16",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/17",
+      "sourceIds": [
+        "supercheats",
+        "bgg-mystery"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/18",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/19",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/20",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/21",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/22",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/23",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/24",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/25",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/26",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/27",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/28",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/29",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/30",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/31",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/32",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/33",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/34",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/35",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/36",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/37",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/38",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/39",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/40",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/41",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/42",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "revisedFrom",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/43",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "revisedFrom",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/44",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/45",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/46",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/47",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/48",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/49",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/50",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/51",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/52",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/53",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/54",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/55",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/56",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/57",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/58",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "revisedFrom",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/59",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "revisedFrom",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/60",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/61",
+      "sourceIds": [
+        "supercheats",
+        "bgg-mystery"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/62",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/63",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/64",
+      "sourceIds": [
+        "supercheats",
+        "bgg-mystery"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/65",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/66",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/67",
+      "sourceIds": [
+        "supercheats",
+        "agnias-base"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "usa1910Tickets/68",
+      "sourceIds": [
+        "supercheats",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cardCounts/0",
+      "sourceIds": [
+        "official-base",
+        "se-inventory"
+      ],
+      "checkedFields": [
+        "color",
+        "count"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cardCounts/1",
+      "sourceIds": [
+        "official-base",
+        "se-inventory"
+      ],
+      "checkedFields": [
+        "color",
+        "count"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cardCounts/2",
+      "sourceIds": [
+        "official-base",
+        "se-inventory"
+      ],
+      "checkedFields": [
+        "color",
+        "count"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cardCounts/3",
+      "sourceIds": [
+        "official-base",
+        "se-inventory"
+      ],
+      "checkedFields": [
+        "color",
+        "count"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cardCounts/4",
+      "sourceIds": [
+        "official-base",
+        "se-inventory"
+      ],
+      "checkedFields": [
+        "color",
+        "count"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cardCounts/5",
+      "sourceIds": [
+        "official-base",
+        "se-inventory"
+      ],
+      "checkedFields": [
+        "color",
+        "count"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cardCounts/6",
+      "sourceIds": [
+        "official-base",
+        "se-inventory"
+      ],
+      "checkedFields": [
+        "color",
+        "count"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cardCounts/7",
+      "sourceIds": [
+        "official-base",
+        "se-inventory"
+      ],
+      "checkedFields": [
+        "color",
+        "count"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "cardCounts/8",
+      "sourceIds": [
+        "official-base",
+        "se-inventory"
+      ],
+      "checkedFields": [
+        "color",
+        "count"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routePoints/0",
+      "sourceIds": [
+        "official-base",
+        "guide"
+      ],
+      "checkedFields": [
+        "length",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routePoints/1",
+      "sourceIds": [
+        "official-base",
+        "guide"
+      ],
+      "checkedFields": [
+        "length",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routePoints/2",
+      "sourceIds": [
+        "official-base",
+        "guide"
+      ],
+      "checkedFields": [
+        "length",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routePoints/3",
+      "sourceIds": [
+        "official-base",
+        "guide"
+      ],
+      "checkedFields": [
+        "length",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routePoints/4",
+      "sourceIds": [
+        "official-base",
+        "guide"
+      ],
+      "checkedFields": [
+        "length",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "routePoints/5",
+      "sourceIds": [
+        "official-base",
+        "guide"
+      ],
+      "checkedFields": [
+        "length",
+        "points"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "parameters/0",
+      "sourceIds": [
+        "official-base",
+        "guide"
+      ],
+      "checkedFields": [
+        "name",
+        "value"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "parameters/1",
+      "sourceIds": [
+        "official-base",
+        "guide"
+      ],
+      "checkedFields": [
+        "name",
+        "value"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "parameters/2",
+      "sourceIds": [
+        "official-base",
+        "guide"
+      ],
+      "checkedFields": [
+        "name",
+        "value"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "parameters/3",
+      "sourceIds": [
+        "official-base",
+        "se-inventory"
+      ],
+      "checkedFields": [
+        "name",
+        "value"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "parameters/4",
+      "sourceIds": [
+        "official-base",
+        "guide"
+      ],
+      "checkedFields": [
+        "name",
+        "value"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "parameters/5",
+      "sourceIds": [
+        "official-1910",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "name",
+        "value"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "parameters/6",
+      "sourceIds": [
+        "official-1910",
+        "bgg-mystery"
+      ],
+      "checkedFields": [
+        "name",
+        "value"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "parameters/7",
+      "sourceIds": [
+        "official-1910",
+        "agnias-1910"
+      ],
+      "checkedFields": [
+        "name",
+        "value"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "parameters/8",
+      "sourceIds": [
+        "official-1910",
+        "supercheats"
+      ],
+      "checkedFields": [
+        "name",
+        "value"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "parameters/9",
+      "sourceIds": [
+        "rob-cities",
+        "agnias-cities"
+      ],
+      "checkedFields": [
+        "name",
+        "value"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "parameters/10",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "name",
+        "value"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "parameters/11",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "name",
+        "value"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "parameters/12",
+      "sourceIds": [
+        "rob-routes",
+        "agnias-routes"
+      ],
+      "checkedFields": [
+        "name",
+        "value"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    },
+    {
+      "rowId": "parameters/13",
+      "sourceIds": [
+        "official-base",
+        "guide"
+      ],
+      "checkedFields": [
+        "name",
+        "value"
+      ],
+      "passed": true,
+      "confidence": "high",
+      "passNumber": 2
+    }
+  ],
+  "notes": "Network calls actually executed after first extraction. Direct reopened values, not first-pass cache, were used in every row comparison. Source inventory conflicts explicitly recorded; valid opposite direction matched canonical route."
+}
