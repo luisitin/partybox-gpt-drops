@@ -1,0 +1,24 @@
+{
+  "name": "b11-rummikub-solver",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Exact Rummikub end-turn validator and maximum meld-value play solver",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node test/run.mjs",
+    "test:unit": "npm run build && node test/unit.mjs",
+    "test:small": "npm run build && node test/small.mjs",
+    "test:bench": "npm run build && node test/bench.mjs",
+    "test:mutations": "npm run build && node test/mutations.mjs",
+    "test:contracts": "npm run build && node test/contracts.mjs",
+    "test:audit": "npm run build && node test/audit.mjs",
+    "check:hashes": "node test/checksums.mjs"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3"
+  }
+}

@@ -1,0 +1,400 @@
+{
+  "scope": "Observed local execution; not a GitHub Actions result",
+  "command": "npm test",
+  "exitCode": 0,
+  "elapsedMs": 221893.380764,
+  "sourceHashes": {
+    "package-lock.json": "8132ba5b102ffd1e940e687860c35cb6d57285f03d6a583b196269b37360c46b",
+    "package.json": "420728770122e93fc5c7e8ed8e3a3a54943f8d7e95b8905e48d7a33a15ef20fd",
+    "reference.ts": "ba5aff682de643b28dee70f0033fbc45cc773d0328964df4e1a4b56037cb7f03",
+    "rummikub.ts": "fa9b18e28b7f7917526f3c76e4f7cf7484de978dd23b96bce531d946c8ccf502",
+    "test/audit.mjs": "53a5bc8c9077bfe1d9b469ded2b21139b37cf65007ff5f43480e7e79b2791355",
+    "test/bench.mjs": "c4d49b89f8bcb6ebc91b021ac081454e1f999ca84af3b742008b665228b05333",
+    "test/checksums.mjs": "9a902917974d76cfdcf3e57b958167354487bd455b39f0e6bac7c237f8ca3f66",
+    "test/contracts.mjs": "243ce83942f94c4ffe8e43123e2fe4e3ce32cbd5e8d73accd423948e9c7e26f0",
+    "test/helpers.mjs": "00eca94d73edf7020167483679ad96c0ed46dd5122e25b81a9ce81a32d4d26e7",
+    "test/joker-cases.mjs": "2ab956f9da8684f022fc520db5354c538cd00f3d1092e9d269427d949ec45f04",
+    "test/mutations.mjs": "bc622e6f08f8b5b2dbb8d0273617527c757eea319204ed38718cf782d35b689f",
+    "test/run.mjs": "433bdaa998ed104b8e9ec3e059a1ecfaab19d6dc94c4bd86b5561d64a116af5a",
+    "test/small.mjs": "14ea02436d8bc77ffc0d712eecea17dd24831b47c99e9e43308c79092af9b01f",
+    "test/unit.mjs": "e449041ace64d75ab0c1360828872cc7d2c814e7a174d1e486e18b74c09b96fd",
+    "tsconfig.json": "0b049262d50c02e9529cd046ff0039aebeb59efe51318e872a26c73d02a81643"
+  },
+  "runs": [
+    {
+      "suite": "strict-TypeScript",
+      "seed": 1,
+      "cases": 2,
+      "passed": 2,
+      "command": "SEED=1 node node_modules/typescript/bin/tsc -p tsconfig.json"
+    },
+    {
+      "suite": "hand-written",
+      "seed": 1,
+      "cases": 61,
+      "passed": 61,
+      "jokerCases": 40,
+      "jokerPassed": 40,
+      "command": "SEED=1 node test/unit.mjs",
+      "orderSha256": "dc81746db6807038b0ed266b79077f95ab74545ab63a2940c5b3b9267ed1adcd"
+    },
+    {
+      "suite": "contracts-and-metamorphic",
+      "seed": 1,
+      "cases": 1004,
+      "passed": 1004,
+      "command": "SEED=1 node test/contracts.mjs",
+      "staticChecks": [
+        {
+          "name": "rummikub.ts: no runtime imports or ambient clocks/randomness",
+          "passed": true
+        },
+        {
+          "name": "reference.ts: no runtime imports or ambient clocks/randomness",
+          "passed": true
+        },
+        {
+          "name": "strict compiler settings and zero runtime dependencies",
+          "passed": true
+        },
+        {
+          "name": "seeded RNG determinism and range for 10000 draws",
+          "passed": true
+        }
+      ],
+      "metamorphicCases": 1000,
+      "semanticDiffSha256": "f26e0ffdbd51d7e1c549c6e371e8cd5b9f8d53f96324c07d2dd0c02ed7dbc406"
+    },
+    {
+      "suite": "physical-subset-brute-force",
+      "seed": 1,
+      "cases": 50000,
+      "passed": 50000,
+      "command": "SEED=1 node test/small.mjs",
+      "maxTiles": 14,
+      "tileCounts": [
+        315,
+        313,
+        347,
+        4000,
+        4080,
+        4032,
+        4062,
+        4157,
+        4224,
+        4067,
+        4051,
+        4137,
+        4091,
+        4125,
+        3999
+      ],
+      "jokerHistogram": [
+        16941,
+        13342,
+        19717
+      ],
+      "openings": 17438,
+      "plays": 31100,
+      "changedOldMelds": 8298,
+      "semanticDiffSha256": "446ecbf008875bc6a4e62716be1ffc1e8a9cece72025035c6b0d8518f5c4ab9c",
+      "elapsedMs": 43565.761762999995
+    },
+    {
+      "suite": "full-state-key-large-differential",
+      "seed": 1,
+      "cases": 200,
+      "passed": 200,
+      "command": "SEED=1 node test/audit.mjs",
+      "strictCompilePassed": true,
+      "implementation": "Derived full-inventory string-key Map; not independent authorship or brute force",
+      "corpusSha256": "fb9baa8b9339e5db4323a20c87d70c24c76ce11e789a8f85bbc46ffff51a0ad0",
+      "semanticDiffSha256": "30fea51c6e00c2b62efdcacb5fe8b59466e48b0382a258482c214e8e48815e81",
+      "derivedSourceSha256": "2ff15a1e5bf2c7e99e4f043ec7d769d371340104e52978cf6afcab0b81adfda5"
+    },
+    {
+      "suite": "one-at-a-time-mutations",
+      "seed": 1,
+      "cases": 25,
+      "passed": 25,
+      "command": "SEED=1 node test/mutations.mjs",
+      "killSuite": "61 hand-written tests (includes 40 joker cases)"
+    },
+    {
+      "suite": "40-table-20-hand-latency",
+      "seed": 1,
+      "cases": 200,
+      "warmupCases": 8,
+      "warmupPassed": 8,
+      "passed": 200,
+      "command": "SEED=1 node test/bench.mjs",
+      "limitMs": 500,
+      "p50Ms": 8.993882999999869,
+      "p99Ms": 114.71022500000026,
+      "maxMs": 179.63025900000002,
+      "totalJokerHistogram": [
+        10,
+        22,
+        168
+      ],
+      "corpusSha256": "fb9baa8b9339e5db4323a20c87d70c24c76ce11e789a8f85bbc46ffff51a0ad0",
+      "environment": {
+        "node": "v22.16.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor"
+      },
+      "worstCase": 77
+    },
+    {
+      "suite": "strict-TypeScript",
+      "seed": 2,
+      "cases": 2,
+      "passed": 2,
+      "command": "SEED=2 node node_modules/typescript/bin/tsc -p tsconfig.json"
+    },
+    {
+      "suite": "hand-written",
+      "seed": 2,
+      "cases": 61,
+      "passed": 61,
+      "jokerCases": 40,
+      "jokerPassed": 40,
+      "command": "SEED=2 node test/unit.mjs",
+      "orderSha256": "ed39969cfdef43f504272e815863bb1446ccab4f43f46b8cf0c07b3864cef2c1"
+    },
+    {
+      "suite": "contracts-and-metamorphic",
+      "seed": 2,
+      "cases": 1004,
+      "passed": 1004,
+      "command": "SEED=2 node test/contracts.mjs",
+      "staticChecks": [
+        {
+          "name": "rummikub.ts: no runtime imports or ambient clocks/randomness",
+          "passed": true
+        },
+        {
+          "name": "reference.ts: no runtime imports or ambient clocks/randomness",
+          "passed": true
+        },
+        {
+          "name": "strict compiler settings and zero runtime dependencies",
+          "passed": true
+        },
+        {
+          "name": "seeded RNG determinism and range for 10000 draws",
+          "passed": true
+        }
+      ],
+      "metamorphicCases": 1000,
+      "semanticDiffSha256": "afe6e8cba39202a52424f0e5fe182f8a45041e5f253d13ce8f100bc2825c42df"
+    },
+    {
+      "suite": "physical-subset-brute-force",
+      "seed": 2,
+      "cases": 50000,
+      "passed": 50000,
+      "command": "SEED=2 node test/small.mjs",
+      "maxTiles": 14,
+      "tileCounts": [
+        354,
+        337,
+        322,
+        4106,
+        4014,
+        4019,
+        4126,
+        4064,
+        4134,
+        4057,
+        4156,
+        4112,
+        4111,
+        4016,
+        4072
+      ],
+      "jokerHistogram": [
+        16693,
+        13497,
+        19810
+      ],
+      "openings": 17453,
+      "plays": 31121,
+      "changedOldMelds": 8262,
+      "semanticDiffSha256": "210b818d0868f2b26021cc67208e7e6c707ed9a23bc6a617193ddc708a43ed31",
+      "elapsedMs": 44590.834648000004
+    },
+    {
+      "suite": "full-state-key-large-differential",
+      "seed": 2,
+      "cases": 200,
+      "passed": 200,
+      "command": "SEED=2 node test/audit.mjs",
+      "strictCompilePassed": true,
+      "implementation": "Derived full-inventory string-key Map; not independent authorship or brute force",
+      "corpusSha256": "55a7cf536adfa14dbcd4906fcd333db9a41386308daf4b7df52616c12602dca0",
+      "semanticDiffSha256": "83268a59c20c369ec8d38ccc9d5daaf300e81df4022bd85a2da9609c8b681cbb",
+      "derivedSourceSha256": "2ff15a1e5bf2c7e99e4f043ec7d769d371340104e52978cf6afcab0b81adfda5"
+    },
+    {
+      "suite": "one-at-a-time-mutations",
+      "seed": 2,
+      "cases": 25,
+      "passed": 25,
+      "command": "SEED=2 node test/mutations.mjs",
+      "killSuite": "61 hand-written tests (includes 40 joker cases)"
+    },
+    {
+      "suite": "40-table-20-hand-latency",
+      "seed": 2,
+      "cases": 200,
+      "warmupCases": 8,
+      "warmupPassed": 8,
+      "passed": 200,
+      "command": "SEED=2 node test/bench.mjs",
+      "limitMs": 500,
+      "p50Ms": 8.183628999999996,
+      "p99Ms": 84.221543,
+      "maxMs": 120.53090099999997,
+      "totalJokerHistogram": [
+        11,
+        26,
+        163
+      ],
+      "corpusSha256": "55a7cf536adfa14dbcd4906fcd333db9a41386308daf4b7df52616c12602dca0",
+      "environment": {
+        "node": "v22.16.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor"
+      },
+      "worstCase": 22
+    },
+    {
+      "suite": "strict-TypeScript",
+      "seed": 3,
+      "cases": 2,
+      "passed": 2,
+      "command": "SEED=3 node node_modules/typescript/bin/tsc -p tsconfig.json"
+    },
+    {
+      "suite": "hand-written",
+      "seed": 3,
+      "cases": 61,
+      "passed": 61,
+      "jokerCases": 40,
+      "jokerPassed": 40,
+      "command": "SEED=3 node test/unit.mjs",
+      "orderSha256": "c9984ec6eaa406fd165dced2c4e8256e0de4809484a44e491b65ee5799d93537"
+    },
+    {
+      "suite": "contracts-and-metamorphic",
+      "seed": 3,
+      "cases": 1004,
+      "passed": 1004,
+      "command": "SEED=3 node test/contracts.mjs",
+      "staticChecks": [
+        {
+          "name": "rummikub.ts: no runtime imports or ambient clocks/randomness",
+          "passed": true
+        },
+        {
+          "name": "reference.ts: no runtime imports or ambient clocks/randomness",
+          "passed": true
+        },
+        {
+          "name": "strict compiler settings and zero runtime dependencies",
+          "passed": true
+        },
+        {
+          "name": "seeded RNG determinism and range for 10000 draws",
+          "passed": true
+        }
+      ],
+      "metamorphicCases": 1000,
+      "semanticDiffSha256": "2e24a457b82aa16a1c6f7ad0afd1d8991f89136b07c6f0ba5645da2fe3ecaa2c"
+    },
+    {
+      "suite": "physical-subset-brute-force",
+      "seed": 3,
+      "cases": 50000,
+      "passed": 50000,
+      "command": "SEED=3 node test/small.mjs",
+      "maxTiles": 14,
+      "tileCounts": [
+        339,
+        338,
+        333,
+        4206,
+        4082,
+        4034,
+        4120,
+        4049,
+        4090,
+        4124,
+        4062,
+        4002,
+        4041,
+        4053,
+        4127
+      ],
+      "jokerHistogram": [
+        16876,
+        13242,
+        19882
+      ],
+      "openings": 17484,
+      "plays": 31175,
+      "changedOldMelds": 8189,
+      "semanticDiffSha256": "2a27c8782af00762d2026c56c665ced4870c3e0278e35da5cbc1ee37490afb64",
+      "elapsedMs": 45332.556192000004
+    },
+    {
+      "suite": "full-state-key-large-differential",
+      "seed": 3,
+      "cases": 200,
+      "passed": 200,
+      "command": "SEED=3 node test/audit.mjs",
+      "strictCompilePassed": true,
+      "implementation": "Derived full-inventory string-key Map; not independent authorship or brute force",
+      "corpusSha256": "29a02955f8a1cb613876cbcaf2aa3d0f2a639436cee8ba3ee24615eb161be8fb",
+      "semanticDiffSha256": "4718d3853636996085e8fc4040a7ac55c751995e7f5d6c700126fa20e3e794f5",
+      "derivedSourceSha256": "2ff15a1e5bf2c7e99e4f043ec7d769d371340104e52978cf6afcab0b81adfda5"
+    },
+    {
+      "suite": "one-at-a-time-mutations",
+      "seed": 3,
+      "cases": 25,
+      "passed": 25,
+      "command": "SEED=3 node test/mutations.mjs",
+      "killSuite": "61 hand-written tests (includes 40 joker cases)"
+    },
+    {
+      "suite": "40-table-20-hand-latency",
+      "seed": 3,
+      "cases": 200,
+      "warmupCases": 8,
+      "warmupPassed": 8,
+      "passed": 200,
+      "command": "SEED=3 node test/bench.mjs",
+      "limitMs": 500,
+      "p50Ms": 8.667487000000165,
+      "p99Ms": 74.68640600000026,
+      "maxMs": 274.606131,
+      "totalJokerHistogram": [
+        7,
+        29,
+        164
+      ],
+      "corpusSha256": "29a02955f8a1cb613876cbcaf2aa3d0f2a639436cee8ba3ee24615eb161be8fb",
+      "environment": {
+        "node": "v22.16.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "AMD EPYC 9V74 80-Core Processor"
+      },
+      "worstCase": 123
+    }
+  ]
+}
