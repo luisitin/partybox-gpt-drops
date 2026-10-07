@@ -1,6 +1,6 @@
 # B05 — Party timeline and award rules
 
-**Research draft, not a verified implementation specification.** This document covers the requested phases, but preserves unresolved behavior instead of filling gaps from other Mario Party games. Read the status on each claim. `corroborated` means the retained core statement agrees across independent source lineages; it does not certify every related edge case. The strict acceptance gate fails.
+**Research draft, not a verified implementation specification.** This document covers the requested phases, but preserves unresolved behavior instead of filling gaps from other Mario Party games. Read the status on each claim. Seven additional core facts were independently corroborated in the 2026-10-07 audit. `corroborated` means the retained core statement agrees across independent source lineages; it does not certify every related edge case. The strict acceptance gate fails.
 
 The ordered headings below are an editorial framework, not proof of a complete engine event queue. In particular, item/Buddy ordering, branch prompts, landing-effect priority and board phase hooks remain open. Source URLs, locators, excerpt references and conflicts are in [SOURCES.md](SOURCES.md), [claims.json](claims.json), and [CONFLICTS.md](CONFLICTS.md).
 
@@ -40,7 +40,7 @@ An exact pre-roll state machine has not been established. Do not ship a guessed 
 
 ### 3.2 Dice and movement
 
-Ordinary movement uses a Dice Block numbered 1–10. [TURN01](SOURCES.md#turn01) — single_source; medium confidence.
+Ordinary movement uses a Dice Block numbered 1–10. [TURN01](SOURCES.md#turn01) — corroborated; high confidence.
 
 Players take turns rolling and traversing the board to collect coins and obtain Stars. [TURN02](SOURCES.md#turn02) — corroborated; high confidence.
 
@@ -72,19 +72,19 @@ Buddy effects include repeated landing-space interactions, including repeated ha
 
 ### 3.6 Landing and interruptions
 
-Blue adds 3 coins and Red removes 3 before Homestretch. [LAND01](SOURCES.md#land01) — single_source; medium confidence.
+Blue adds 3 coins and Red removes 3 before Homestretch. [LAND01](SOURCES.md#land01) — corroborated; high confidence.
 
-Event spaces invoke the board-specific event; Lucky and Unlucky spaces resolve their respective reward or penalty. [LAND02](SOURCES.md#land02) — single_source; medium confidence.
+Event spaces invoke the board-specific event; Lucky and Unlucky spaces resolve their respective reward or penalty. [LAND02](SOURCES.md#land02) — corroborated; high confidence.
 
 An Item Space can use a roulette or item minigame; no item is awarded on the final turn. [LAND03](SOURCES.md#land03) — single_source; medium confidence.
 
-Chance Time can transfer or exchange Stars or coins between selected players. [LAND04](SOURCES.md#land04) — single_source; medium confidence.
+Chance Time can transfer or exchange Stars or coins between selected players. [LAND04](SOURCES.md#land04) — corroborated; high confidence.
 
-VS spaces interrupt play for a pooled-coin minigame. [LAND05](SOURCES.md#land05) — single_source; medium confidence.
+VS spaces interrupt play for a pooled-coin minigame. [LAND05](SOURCES.md#land05) — corroborated; high confidence.
 
 Hidden Blocks can appear after landing on Blue or Red spaces in Party Rules. [LAND06](SOURCES.md#land06) — corroborated; high confidence. MPL explicitly confirms both colors. Its speculation about probabilities is excluded. Pro removal is separate in PRO02.
 
-A Bowser Space invokes Impostor Bowser; Party outcomes include coin or Star losses, redistribution, and position shuffling. [LAND07](SOURCES.md#land07) — single_source; medium confidence.
+A Bowser Space invokes Impostor Bowser; Party outcomes include coin or Star losses, redistribution, and position shuffling. [LAND07](SOURCES.md#land07) — corroborated; high confidence.
 
 Showdown, Item, Duel and VS interruptions are distinct from the ordinary round-ending minigame. [ROUND04](SOURCES.md#round04) — single_source; medium confidence. Exact interruption/resumption event priority remains unverified.
 
@@ -130,7 +130,7 @@ Each row below is triggered when that extra **Party Rules** Homestretch event is
 | extra-star | Add one temporary Star Exchange. It disappears permanently after its one purchase. Excluded on Mario's Rainbow Castle. | [EFFECT02](SOURCES.md#effect02) | medium; single_source |
 | star-steal-traps | Give all players a Star Steal Trap. Inventory-overflow resolution is unverified. No exclusion is documented here; this is not proof that none exists. | [EFFECT03](SOURCES.md#effect03) | medium; single_source |
 | double-dice | Give all players Double Dice. Inventory-overflow resolution is unverified. No exclusion is documented here; this is not proof that none exists. | [EFFECT04](SOURCES.md#effect04) | medium; single_source |
-| space-coins | Double Blue/Red values again to +12/−12. This is additional to the mandatory +6/−6 change. No exclusion is documented here; this is not proof that none exists. | [EFFECT05](SOURCES.md#effect05) | medium; single_source |
+| space-coins | Double Blue/Red values again to +12/−12. This is additional to the mandatory +6/−6 change. No exclusion is documented here; this is not proof that none exists. | [EFFECT05](SOURCES.md#effect05) | high; corroborated |
 | wallet-coins | Double each player's coins. Coin-cap and overflow behavior are unverified. No exclusion is documented here; this is not proof that none exists. | [EFFECT06](SOURCES.md#effect06) | medium; single_source |
 | more-bowser | Replace two or three spaces with Bowser Spaces. Exact candidate-space selection is unverified. Excluded on King Bowser's Keep. | [EFFECT07](SOURCES.md#effect07) | medium; single_source |
 | more-chance | Replace two to four spaces with Chance Time Spaces. Exact candidate-space selection is unverified. No exclusion is documented here; this is not proof that none exists. | [EFFECT08](SOURCES.md#effect08) | medium; single_source |
@@ -161,7 +161,7 @@ Postgame statistical Awards are separate from the nine scoring Bonus Star catego
 
 ## 7. All nine documented Bonus Star categories
 
-These are normalized English category labels, reported by the cited tracker/transcript sources. The label transcription itself is not a primary-screen capture. Overall bonus-record confidence is **low** because ties, eligibility and precise internal counters remain open; criterion confidence is separate.
+These are normalized English category labels, attested by the Jamboree transcript annotations; the tracker is a derived source with aliased headings. The label transcription itself is not a primary-screen capture. Overall bonus-record confidence is **low** because ties, eligibility and precise internal counters remain open; criterion confidence is separate.
 
 | Category | Reported criterion | Criterion evidence | Unresolved implementation detail |
 |---|---|---|---|
@@ -248,4 +248,4 @@ The five-turn Frenzy start must not receive an additional invented midgame Homes
 
 **UNVERIFIED U20:** Controlled game replay, independent second researcher and exhaustive event-priority tests were not performed.
 
-[strings.json](strings.json) contains **13 short exact source-transcribed excerpts**, including **11 voice lines and two host-text entries**. It is deliberately not the full dialogue script. Every entry has a URL, speaker attribution, medium, occurrence description, confidence and explicit absence of visual capture. No guessed timestamps are included. All remaining requested exact dialogue stays unverified.
+[strings.json](strings.json) contains **22 short exact source-transcribed excerpts**, including **11 voice lines and 11 host-text entries**, with all nine award descriptions. It is deliberately not the full dialogue script. Every entry has a URL, speaker attribution, medium, occurrence description, confidence and explicit absence of visual capture. No guessed timestamps are included. All remaining requested exact dialogue stays unverified.

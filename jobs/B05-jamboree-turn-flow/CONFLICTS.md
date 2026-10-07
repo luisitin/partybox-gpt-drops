@@ -48,7 +48,7 @@ IGN calls the bonus setting Random; the host transcript describes an On setting.
 
 Rows: SET04; U17. Sources: QUOTE (URLs in [SOURCES.md](SOURCES.md)).
 
-The supplied wiki transcript contains grammatical oddities and regional annotations. They were not silently corrected into invented in-game strings. The 13 retained excerpts are attributed to their Voice or Text headings, not certified against gameplay frames.
+The supplied wiki transcript contains grammatical oddities and regional annotations. They were not silently corrected into invented in-game strings. The 22 retained excerpts are attributed to their Voice or Text headings, not certified against gameplay frames.
 
 ## C09 — Base-game Pro Rules versus the Jamboree TV rulesets
 
@@ -56,8 +56,10 @@ Rows: TV04; COUNT04. Sources: TV, MPLTV, BONUS (URLs in [SOURCES.md](SOURCES.md)
 
 TV and MPLTV report that the TV rulesets omit Pro. Generic enhanced-edition wording elsewhere must not be interpreted as removing Pro from the separate original game. Keep these contexts separate.
 
-## C10 — Repository CI scope
+## C10 — Research verification workflow
 
-Rows: Delivery. Sources: repository README and user instruction (URLs in [SOURCES.md](SOURCES.md)).
+The B05 workflow checks all retained schemas, references, audits, quotation captures and file hashes. It also runs strict acceptance and expects the documented exit 1 while gaps remain. A green CI run verifies artifact integrity and the explicit unresolved verdict; it does not certify research completeness.
 
-The repository requests a workflow for code jobs; this job is a research drop with a local data validator. The user expressly forbids other folders. No workflow is added outside the job folder, and no green GitHub Actions run is claimed.
+## C11 — Tracker retrieval and exact names
+
+The fresh tracker text omitted edition icons and displayed aliased headings rather than exact Jamboree Bonus labels. Exact names now cite the Jamboree transcript's parenthetical award labels; the tracker remains one dependent Mario Wiki lineage. Its generic rolled-total/coin-spending descriptions do not establish Jamboree's counter behavior.

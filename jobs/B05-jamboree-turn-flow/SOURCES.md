@@ -1,751 +1,1155 @@
-# B05 — Sources and per-row evidence index
+# B05 — Sources and claim quotations
 
-**Strict two-independent-source acceptance is not met.** Different wiki pages and the tracker that credits those wikis count as one lineage. Independent-source status applies to the full retained claim, not merely to the existence of two URLs.
+Research date: 2026-10-07. Each quotation is at most 25 words; no retained source exceeds 200 quoted words. Reopening fingerprints and short quotation captures are in `reports/source-captures/`.
 
-The short verbatim excerpt catalog is stored once in `sources.json`; QUOTE excerpt IDs point to the exact strings in `strings.json`. This index lists URLs, excerpt IDs and contextual locators. **An empty excerpt list is missing requested per-row quote evidence**, not a passed quotation check. Short fragments locate passages; they do not independently establish every qualifier. Full claim text and notes are in `claims.json` and `turnflow.md`.
+## Source lineages
 
-## Sources
+### NIN — Nintendo: quick overview
 
-### NIN
+https://www.nintendo.com/au/news-and-articles/super-mario-party-jamboree-heres-a-quick-overview-of-the-game/
 
-[Nintendo: quick overview](https://www.nintendo.com/au/news-and-articles/super-mario-party-jamboree-heres-a-quick-overview-of-the-game/)
+Lineage: `nintendo`; kind: `primary`. 
 
-Lineage: `nintendo`; primary. 
+### GAME — Super Mario Wiki: Jamboree
 
-Excerpt IDs: NIN-E1, NIN-E2, NIN-E3, NIN-E4, NIN-E5, NIN-E6, NIN-E7.
+https://www.mariowiki.com/Super_Mario_Party_Jamboree
 
-### GAME
+Lineage: `mariowiki`; kind: `secondary`. 
 
-[Super Mario Wiki: Jamboree](https://www.mariowiki.com/Super_Mario_Party_Jamboree)
+### BONUS — Super Mario Wiki: Bonus Star
 
-Lineage: `mariowiki`; secondary. 
+https://www.mariowiki.com/Bonus_Star
 
-Excerpt IDs: GAME-E1, GAME-E2, GAME-E3, GAME-E4, GAME-E5, GAME-E6, GAME-E7, GAME-E8, GAME-E9, GAME-E10.
+Lineage: `mariowiki`; kind: `secondary`. Cross-series article. Only explicitly Jamboree-applicable passages accepted; tie paragraph is ambiguous.
 
-### BONUS
+### QUOTE — Super Mario Wiki: Jamboree quotes
 
-[Super Mario Wiki: Bonus Star](https://www.mariowiki.com/Bonus_Star)
+https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes
 
-Lineage: `mariowiki`; secondary. Cross-series article. Only explicitly Jamboree-applicable passages accepted; tie paragraph is ambiguous.
+Lineage: `mariowiki`; kind: `secondary_transcript`. Not a direct game capture. Separate Voice from Text headings. Regional variants are not interchangeable.
 
-Excerpt IDs: BONUS-E1, BONUS-E2, BONUS-E3, BONUS-E4, BONUS-E5, BONUS-E6, BONUS-E7.
+### HOME — Super Mario Wiki: Homestretch
 
-### QUOTE
+https://www.mariowiki.com/Homestretch
 
-[Super Mario Wiki: Jamboree quotes](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes)
+Lineage: `mariowiki`; kind: `secondary`. Only the Jamboree subsection is applicable. Eight effects listed despite wording about five.
 
-Lineage: `mariowiki`; secondary_transcript. Not a direct game capture. Separate Voice from Text headings. Regional variants are not interchangeable.
+### MNN — My Nintendo News hands-on preview
 
-Excerpt IDs: QUOTE-E1, QUOTE-E2, QUOTE-E3, QUOTE-E4, QUOTE-E5, QUOTE-E6, QUOTE-E7, QUOTE-E8, QUOTE-E9, QUOTE-E10, QUOTE-E11, QUOTE-E12, QUOTE-E13.
+https://mynintendonews.com/2024/10/01/preview-super-mario-party-jamboree/
 
-### HOME
+Lineage: `my-nintendo-news`; kind: `hands_on_review`. Pre-release review copy; its abbreviated Classic explanation omits the 30-turn exception.
 
-[Super Mario Wiki: Homestretch](https://www.mariowiki.com/Homestretch)
+### GR — GamesRadar: hands-on Pro Rules analysis
 
-Lineage: `mariowiki`; secondary. Only the Jamboree subsection is applicable. Eight effects listed despite wording about five.
+https://www.gamesradar.com/games/puzzle/with-super-mario-party-jamboree-nintendos-finally-letting-you-cut-out-the-random-nonsense-thats-defined-its-multiplayer-games-for-decades/
 
-Excerpt IDs: HOME-E1, HOME-E2, HOME-E3, HOME-E4, HOME-E5, HOME-E6, HOME-E7, HOME-E8, HOME-E9, HOME-E10.
+Lineage: `gamesradar`; kind: `hands_on_review`. Use Lucky stars section, not introductory jokes about hypothetical bonuses.
 
-### MNN
+### MPL — Mario Party Legacy: unlockables
 
-[My Nintendo News hands-on preview](https://mynintendonews.com/2024/10/01/preview-super-mario-party-jamboree/)
+https://mariopartylegacy.com/super-mario-party-jamboree/unlockables-rewards-achievements
 
-Lineage: `my-nintendo-news`; hands_on_review. Pre-release review copy; its abbreviated Classic explanation omits the 30-turn exception.
+Lineage: `mario-party-legacy`; kind: `secondary`. Uses Event/Coin/Minigame Star aliases. Does not identify which two Classic categories apply below 30 turns.
 
-Excerpt IDs: MNN-E1, MNN-E2, MNN-E3, MNN-E4, MNN-E5, MNN-E6, MNN-E7, MNN-E8, MNN-E9.
+### MPLTV — Mario Party Legacy: Jamboree TV
 
-### GR
+https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/
 
-[GamesRadar: hands-on Pro Rules analysis](https://www.gamesradar.com/games/puzzle/with-super-mario-party-jamboree-nintendos-finally-letting-you-cut-out-the-random-nonsense-thats-defined-its-multiplayer-games-for-decades/)
+Lineage: `mario-party-legacy`; kind: `secondary`. 
 
-Lineage: `gamesradar`; hands_on_review. Use Lucky stars section, not introductory jokes about hypothetical bonuses.
+### TV — Super Mario Wiki: Jamboree TV
 
-Excerpt IDs: GR-E1, GR-E2, GR-E3, GR-E4.
+https://www.mariowiki.com/Jamboree_TV
 
-### MPL
+Lineage: `mariowiki`; kind: `secondary`. Alias for the enhanced-edition article; not an independent wiki source.
 
-[Mario Party Legacy: unlockables](https://mariopartylegacy.com/super-mario-party-jamboree/unlockables-rewards-achievements)
+### IGN — IGN: Logan Plant review
 
-Lineage: `mario-party-legacy`; secondary. Uses Event/Coin/Minigame Star aliases. Does not identify which two Classic categories apply below 30 turns.
+https://me.ign.com/en/super-mario-party-jamboree/225526/review/super-mario-party-jamboree-review
 
-Excerpt IDs: MPL-E1, MPL-E2, MPL-E3, MPL-E4, MPL-E5.
+Lineage: `ign-logan-plant`; kind: `hands_on_review`. web.open failed. Readable via Exa. Syndicated IGN copies count as one source.
 
-### MPLTV
+### ZU — Zelda Universe: Jamboree review
 
-[Mario Party Legacy: Jamboree TV](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/)
+https://zeldauniverse.net/features/review-super-mario-party-jamboree/
 
-Lineage: `mario-party-legacy`; secondary. 
+Lineage: `zelda-universe`; kind: `hands_on_review`. Bowser zero-exceptions wording is overbroad; do not use for no-Star fallback.
 
-Excerpt IDs: MPLTV-E1, MPLTV-E2, MPLTV-E3, MPLTV-E4, MPLTV-E5, MPLTV-E6, MPLTV-E7.
+### TRACKER — blueYOSHI bonus tracker
 
-### TV
+https://blueyoshi9000.github.io/MarioPartyOverlay/bonus.html
 
-[Super Mario Wiki: Jamboree TV](https://www.mariowiki.com/Jamboree_TV)
+Lineage: `mariowiki`; kind: `derived`. Explicitly credits both wikis. NOT independent confirmation. Rich/Shopping sections include tentative language. The text retrieval omits edition icons; category-name provenance is now QUOTE rather than this derived tracker.
 
-Lineage: `mariowiki`; secondary. Alias for the enhanced-edition article; not an independent wiki source.
+### EXCHANGE — Super Mario Wiki: Star Exchange
 
-Excerpt IDs: TV-E1, TV-E2, TV-E3, TV-E4, TV-E5, TV-E6, TV-E7.
+https://www.mariowiki.com/Star_Exchange
 
-### IGN
+Lineage: `mariowiki`; kind: `secondary`. Non-counting-space statement is series-general, not a captured Jamboree movement test.
 
-[IGN: Logan Plant review](https://me.ign.com/en/super-mario-party-jamboree/225526/review/super-mario-party-jamboree-review)
+### MINI — Super Mario Wiki: Minigame
 
-Lineage: `ign-logan-plant`; hands_on_review. web.open failed. Readable via Exa. Syndicated IGN copies count as one source.
+https://www.mariowiki.com/Minigame
 
-Excerpt IDs: IGN-E1, IGN-E2, IGN-E3, IGN-E4, IGN-E5, IGN-E6, IGN-E7, IGN-E8.
+Lineage: `mariowiki`; kind: `secondary`. Cross-series selection descriptions must not be imported without a Jamboree-specific check.
 
-### ZU
+### BOWSER — Super Mario Wiki: Bowser Space
 
-[Zelda Universe: Jamboree review](https://zeldauniverse.net/features/review-super-mario-party-jamboree/)
+https://www.mariowiki.com/Bowser_Space
 
-Lineage: `zelda-universe`; hands_on_review. Bowser zero-exceptions wording is overbroad; do not use for no-Star fallback.
+Lineage: `mariowiki`; kind: `secondary`. 
 
-Excerpt IDs: ZU-E1, ZU-E2, ZU-E3, ZU-E4, ZU-E5, ZU-E6.
+### HIDDEN — Super Mario Wiki: Hidden Block
 
-### TRACKER
+https://www.mariowiki.com/Hidden_Block_(Mario_Party_series)
 
-[blueYOSHI bonus tracker](https://blueyoshi9000.github.io/MarioPartyOverlay/bonus.html)
+Lineage: `mariowiki`; kind: `secondary`. 
 
-Lineage: `mariowiki`; derived. Explicitly credits both wikis. NOT independent confirmation. Rich/Shopping sections include tentative language.
+### RACE — Super Mario Wiki: Roll em Raceway
 
-Excerpt IDs: TRACKER-E1, TRACKER-E2, TRACKER-E3, TRACKER-E4, TRACKER-E5, TRACKER-E6, TRACKER-E7, TRACKER-E8, TRACKER-E9, TRACKER-E10.
+https://www.mariowiki.com/Roll_%27em_Raceway
 
-### EXCHANGE
+Lineage: `mariowiki`; kind: `secondary`. 
 
-[Super Mario Wiki: Star Exchange](https://www.mariowiki.com/Star_Exchange)
+### CGM — CGMagazine: Jordan Biordi hands-on review
 
-Lineage: `mariowiki`; secondary. Non-counting-space statement is series-general, not a captured Jamboree movement test.
+https://www.cgmagonline.com/review/game/super-mario-party-jamboree-switch/
 
-Excerpt IDs: EXCHANGE-E1, EXCHANGE-E2, EXCHANGE-E3, EXCHANGE-E4, EXCHANGE-E5.
+Lineage: `cgm-jordan-biordi`; kind: `hands_on_review`. Independent review based on Nintendo Switch play. Dice and round-loop passages only.
 
-### MINI
+### MPLGAME — Mario Party Legacy: Jamboree game guide and spaces table
 
-[Super Mario Wiki: Minigame](https://www.mariowiki.com/Minigame)
+https://mariopartylegacy.com/games/super-mario-party-jamboree/
 
-Lineage: `mariowiki`; secondary. Cross-series selection descriptions must not be imported without a Jamboree-specific check.
+Lineage: `mario-party-legacy`; kind: `secondary`. Same publisher lineage as MPL and MPLTV; independently corroborates Mario Wiki, not other Mario Party Legacy pages.
 
-Excerpt IDs: MINI-E1, MINI-E2, MINI-E3, MINI-E4.
+### FAMI — Famiboards: Lyndis Lorca firsthand Homestretch report, 17 October 2024
 
-### BOWSER
+https://famiboards.com/threads/super-mario-party-jamboree-st-friendship-preserves-and-salt-spreads.11348/page-2
 
-[Super Mario Wiki: Bowser Space](https://www.mariowiki.com/Bowser_Space)
+Lineage: `famiboards-lyndis-lorca`; kind: `hands_on_review`. Firsthand Rainbow Galleria match report. Exact report corroborates +12/-12; it does not prove the complete event pool or probabilities.
 
-Lineage: `mariowiki`; secondary. 
+### NINTV — Nintendo: Jamboree TV release guide
 
-Excerpt IDs: BOWSER-E1, BOWSER-E2, BOWSER-E3, BOWSER-E4, BOWSER-E5, BOWSER-E6, BOWSER-E7, BOWSER-E8.
+https://www.nintendo.com/us/whatsnew/the-party-is-getting-even-bigger-with-jamboree-tv/
 
-### HIDDEN
+Lineage: `nintendo`; kind: `primary`. Official enhanced-edition release; strengthens Frenzy starting conditions without treating Nintendo overview as independent of Nintendo release.
 
-[Super Mario Wiki: Hidden Block](https://www.mariowiki.com/Hidden_Block_(Mario_Party_series))
+## SET01
 
-Lineage: `mariowiki`; secondary. 
+Party turn limits: 10, 15, 20, 25, or 30.
 
-Excerpt IDs: HIDDEN-E1, HIDDEN-E2.
+Status: **single_source**; confidence: **medium**. MNN lists every permitted length; IGN confirms only the endpoints 10 and 30. Do not treat endpoints as a second enumeration.
 
-### RACE
+- [MNN](https://mynintendonews.com/2024/10/01/preview-super-mario-party-jamboree/) — Party rules/settings paragraphs
+  - `MNN-E1`: “10, 15, 20, 25, or 30”
+- [IGN](https://me.ign.com/en/super-mario-party-jamboree/225526/review/super-mario-party-jamboree-review) — Party rules/settings paragraphs
+  - `IGN-E1`: “10 and 30 turns”
 
-[Super Mario Wiki: Roll em Raceway](https://www.mariowiki.com/Roll_%27em_Raceway)
+## SET02
 
-Lineage: `mariowiki`; secondary. 
+Party settings include bonus awards Off, random selection, or Classic; minigames can use Random or Vote.
 
-Excerpt IDs: RACE-E1.
+Status: **corroborated**; confidence: **high**. Random selection is a description here, not a certified exact menu label.
 
-## Row index
+- [MNN](https://mynintendonews.com/2024/10/01/preview-super-mario-party-jamboree/) — Party rules/settings paragraphs
+  - `MNN-E2`: “on/off”
+  - `MNN-E3`: “classic mode”
+  - `MNN-E4`: “randomly or by vote”
+- [IGN](https://me.ign.com/en/super-mario-party-jamboree/225526/review/super-mario-party-jamboree-review) — Party rules/settings paragraphs
+  - `IGN-E2`: “off, Random, and Classic”
+  - `IGN-E3`: “vote between three choices”
 
-Status/confidence and source-ID → locator/excerpt mapping follow. Resolve each source ID to the URL above. No source was established for U01–U20; these are unanswered requirements, not asserted rules.
+## SET03
 
-### SET01
+Motion minigames and minigame explanations can be disabled; handicaps can grant 1–5 starting Stars.
 
-single_source; medium. MNN lists every permitted length; IGN confirms only the endpoints 10 and 30. Do not treat endpoints as a second enumeration. 
+Status: **single_source**; confidence: **medium**. 
 
-- MNN: Party rules/settings paragraphs. Excerpts: MNN-E1.
-- IGN: Party rules/settings paragraphs. Excerpts: IGN-E1.
+- [MNN](https://mynintendonews.com/2024/10/01/preview-super-mario-party-jamboree/) — Before starting the game
+  - `MNN-E5`: “1-5 stars”
 
-### SET02
+## SET04
 
-corroborated; high. Random selection is a description here, not a certified exact menu label. 
+Yellow Toad supplies Party host text; Purple Toad supplies Pro host text.
 
-- MNN: Party rules/settings paragraphs. Excerpts: MNN-E2, MNN-E3, MNN-E4.
-- IGN: Party rules/settings paragraphs. Excerpts: IGN-E2, IGN-E3.
+Status: **single_source**; confidence: **medium**. 
 
-### SET03
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Text / Yellow Toad; Text / Purple Toad
+  - `QUOTE-SET04-14`: “Yellow Toad”
+  - `QUOTE-SET04-15`: “Purple Toad”
 
-single_source; medium. 
+## START01
 
-- MNN: Before starting the game. Excerpts: MNN-E5.
+The host welcomes players and offers a board explanation.
 
-### SET04
+Status: **single_source**; confidence: **medium**. 
 
-single_source; medium. 
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Text / Yellow Toad / pre-game board introduction
+  - `QUOTE-E12`: “Welcome, one and all!”
 
-- QUOTE: Text / Yellow Toad; Text / Purple Toad. Excerpts: **MISSING**.
+## START02
 
-### START01
+Players roll dice to establish turn order.
 
-single_source; medium. 
+Status: **single_source**; confidence: **medium**. 
 
-- QUOTE: Text / Yellow Toad / pre-game board introduction. Excerpts: QUOTE-E12.
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Text / Yellow Toad / determine the turn order
+  - `QUOTE-START02-16`: “determine the turn order.”
 
-### START02
+## START03
 
-single_source; medium. 
+The host distributes 10 starting coins to each player.
 
-- QUOTE: Text / Yellow Toad / determine the turn order. Excerpts: **MISSING**.
+Status: **single_source**; confidence: **medium**. 
 
-### START03
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Text / Yellow Toad / before we begin
+  - `QUOTE-START03-17`: “10 coins”
 
-single_source; medium. 
+## START04
 
-- QUOTE: Text / Yellow Toad / before we begin. Excerpts: **MISSING**.
+The host introduces the first Star target before ordinary movement; the transcript marks its roaming-Star prompt as excluding Mario's Rainbow Castle.
 
-### START04
+Status: **single_source**; confidence: **medium**. Board-specific introduction variants are not fully transcribed or independently checked.
 
-single_source; medium. Board-specific introduction variants are not fully transcribed or independently checked. 
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Text / Yellow Toad / first Star
+  - `QUOTE-START04-18`: “The first Star is...”
 
-- QUOTE: Text / Yellow Toad / first Star. Excerpts: **MISSING**.
+## TURN01
 
-### TURN01
+Ordinary movement uses a Dice Block numbered 1–10.
 
-single_source; medium. 
+Status: **corroborated**; confidence: **high**. Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open.
 
-- GAME: Game modes / Mario Party. Excerpts: GAME-E1.
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Game modes / Mario Party
+  - `GAME-E1`: “one and ten”
+- [CGM](https://www.cgmagonline.com/review/game/super-mario-party-jamboree-switch/) — Traditional Mario Party mechanics paragraphs
+  - `CGM-E1`: “a standard dice that rolls from one to ten”
 
-### TURN02
+## TURN02
 
-corroborated; high. 
+Players take turns rolling and traversing the board to collect coins and obtain Stars.
 
-- NIN: Mario Party overview. Excerpts: NIN-E2.
-- MNN: Mario Party overview. Excerpts: MNN-E8, MNN-E9.
+Status: **corroborated**; confidence: **high**. 
 
-### TURN03
+- [NIN](https://www.nintendo.com/au/news-and-articles/super-mario-party-jamboree-heres-a-quick-overview-of-the-game/) — Mario Party overview
+  - `NIN-E2`: “roll a Dice Block”
+- [MNN](https://mynintendonews.com/2024/10/01/preview-super-mario-party-jamboree/) — Mario Party overview
+  - `MNN-E8`: “take turns”
+  - `MNN-E9`: “gather more stars”
 
-single_source; medium. 
+## TURN03
 
-- EXCHANGE: Star Exchange opening paragraphs; Yellow Toad Star purchase dialogue. Excerpts: EXCHANGE-E1.
-- QUOTE: Star Exchange opening paragraphs; Yellow Toad Star purchase dialogue. Excerpts: **MISSING**.
+A Star purchase can be offered while passing its bearer; exact landing is not required.
 
-### TURN04
+Status: **single_source**; confidence: **medium**. 
 
-single_source; medium. 
+- [EXCHANGE](https://www.mariowiki.com/Star_Exchange) — Star Exchange opening paragraphs; Yellow Toad Star purchase dialogue
+  - `EXCHANGE-E1`: “Whoever passes it”
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Star Exchange opening paragraphs; Yellow Toad Star purchase dialogue
+  - `QUOTE-TURN03-19`: “passing a Star Exchange”
 
-- QUOTE: Yellow Toad Star exchange; Star Exchange opening paragraphs. Excerpts: **MISSING**.
-- EXCHANGE: Yellow Toad Star exchange; Star Exchange opening paragraphs. Excerpts: EXCHANGE-E2.
+## TURN04
 
-### TURN05
+The usual Star price is 20 coins; board and Buddy modifiers require separate handling.
 
-corroborated; high. 
+Status: **single_source**; confidence: **medium**. 
 
-- NIN: Jamboree Buddy descriptions. Excerpts: NIN-E4.
-- IGN: Jamboree Buddy descriptions. Excerpts: IGN-E5.
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Yellow Toad Star exchange; Star Exchange opening paragraphs
+  - `QUOTE-TURN04-20`: “20 coins”
+- [EXCHANGE](https://www.mariowiki.com/Star_Exchange) — Yellow Toad Star exchange; Star Exchange opening paragraphs
+  - `EXCHANGE-E2`: “20 coins”
 
-### TURN06
+## TURN05
 
-corroborated; high. 
+A recruited Buddy can allow two Star purchases instead of one.
 
-- GAME: Mario Party Buddy paragraph. Excerpts: **MISSING**.
-- MNN: Mario Party Buddy paragraph. Excerpts: MNN-E6.
+Status: **corroborated**; confidence: **high**. 
 
-### TURN07
+- [NIN](https://www.nintendo.com/au/news-and-articles/super-mario-party-jamboree-heres-a-quick-overview-of-the-game/) — Jamboree Buddy descriptions
+  - `NIN-E4`: “snag two Stars at once”
+- [IGN](https://me.ign.com/en/super-mario-party-jamboree/225526/review/super-mario-party-jamboree-review) — Jamboree Buddy descriptions
+  - `IGN-E5`: “two Stars”
 
-corroborated; high. 
+## TURN06
 
-- NIN: Jamboree Buddy ownership. Excerpts: NIN-E5.
-- MNN: Mario Party Buddy ownership. Excerpts: MNN-E7.
+Reaching an unclaimed Buddy starts a Showdown; the initiating player has an advantage and the winner recruits the Buddy.
 
-### TURN08
+Status: **corroborated**; confidence: **high**. 
 
-corroborated; high. 
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Mario Party Buddy paragraph
+  - `GAME-TURN06-11`: “the one who passed them is granted a slight advantage and the winner recruits the Jamboree Buddy.”
+- [MNN](https://mynintendonews.com/2024/10/01/preview-super-mario-party-jamboree/) — Mario Party Buddy paragraph
+  - `MNN-E6`: “advantage”
 
-- GAME: Buddy effects. Excerpts: GAME-E3.
-- IGN: Buddy effects. Excerpts: IGN-E6.
+## TURN07
 
-### TURN09
+Another player passing the Buddy holder can take the Buddy.
 
-corroborated; high. Pass A added independent IGN hands-on corroboration; passing stops must not be unconditional. 
+Status: **corroborated**; confidence: **high**. 
 
-- RACE: Opening / Turbo Dice. Excerpts: RACE-E1.
-- IGN: Board-specific items / Turbo Dice. Excerpts: IGN-E7.
+- [NIN](https://www.nintendo.com/au/news-and-articles/super-mario-party-jamboree-heres-a-quick-overview-of-the-game/) — Jamboree Buddy ownership
+  - `NIN-E5`: “passes them by”
+- [MNN](https://mynintendonews.com/2024/10/01/preview-super-mario-party-jamboree/) — Jamboree Buddy ownership
+  - `MNN-E7`: “immediately”
 
-### LAND01
+## TURN08
 
-single_source; medium. 
+Buddy effects include repeated landing-space interactions, including repeated harmful Bowser encounters.
 
-- GAME: Spaces table. Excerpts: GAME-E9.
+Status: **corroborated**; confidence: **high**. 
 
-### LAND02
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Buddy effects
+  - `GAME-E3`: “effect twice upon landing”
+- [IGN](https://me.ign.com/en/super-mario-party-jamboree/225526/review/super-mario-party-jamboree-review) — Buddy effects
+  - `IGN-E6`: “Bowser space”
 
-single_source; medium. 
+## TURN09
 
-- GAME: Spaces table. Excerpts: **MISSING**.
+Turbo Dice on Roll em Raceway bypasses interactions en route, including Star purchases.
 
-### LAND03
+Status: **corroborated**; confidence: **high**. Pass A added independent IGN hands-on corroboration; passing stops must not be unconditional.
 
-single_source; medium. 
+- [RACE](https://www.mariowiki.com/Roll_%27em_Raceway) — Opening / Turbo Dice
+  - `RACE-E1`: “not being able to interact with any board events (including star exchange)”
+- [IGN](https://me.ign.com/en/super-mario-party-jamboree/225526/review/super-mario-party-jamboree-review) — Board-specific items / Turbo Dice
+  - `IGN-E7`: “skipping all stops”
 
-- GAME: Spaces / Item Space. Excerpts: GAME-E8.
+## LAND01
 
-### LAND04
+Blue adds 3 coins and Red removes 3 before Homestretch.
 
-single_source; medium. 
+Status: **corroborated**; confidence: **high**. Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open.
 
-- GAME: Spaces / Chance Time; Yellow Toad Chance Time dialogue. Excerpts: **MISSING**.
-- QUOTE: Spaces / Chance Time; Yellow Toad Chance Time dialogue. Excerpts: **MISSING**.
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Spaces table
+  - `GAME-E9`: “three Coins”
+- [MPLGAME](https://mariopartylegacy.com/games/super-mario-party-jamboree/) — Spaces table
+  - `MPLGAME-E1`: “Blue Space | Gain three coins.”
+  - `MPLGAME-E2`: “Red Space | Lose three coins.”
 
-### LAND05
+## LAND02
 
-single_source; medium. 
+Event spaces invoke the board-specific event; Lucky and Unlucky spaces resolve their respective reward or penalty.
 
-- GAME: Spaces / VS Space; Yellow Toad VS dialogue. Excerpts: **MISSING**.
-- QUOTE: Spaces / VS Space; Yellow Toad VS dialogue. Excerpts: **MISSING**.
+Status: **corroborated**; confidence: **high**. Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open.
 
-### LAND06
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Spaces table
+  - `GAME-LAND02-12`: “The event that happens depends on the board and placement.”
+- [MPLGAME](https://mariopartylegacy.com/games/super-mario-party-jamboree/) — Spaces table
+  - `MPLGAME-E3`: “Start a unique event designed for that board and space.”
+  - `MPLGAME-E4`: “Randomly receive bonus coins, an item, or a board specific benefit.”
+  - `MPLGAME-E5`: “Randomly lose some of your coins, give coins to other players, or max out on Loadstones.”
 
-corroborated; high. MPL explicitly confirms both colors. Its speculation about probabilities is excluded. Pro removal is separate in PRO02. 
+## LAND03
 
-- HIDDEN: Jamboree subsection; return of prior Blue-space behavior plus Red. Excerpts: HIDDEN-E1.
-- MPL: Achievements / Lucky Star. Excerpts: MPL-E4.
+An Item Space can use a roulette or item minigame; no item is awarded on the final turn.
 
-### LAND07
+Status: **single_source**; confidence: **medium**. 
 
-single_source; medium. 
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Spaces / Item Space
+  - `GAME-E8`: “roulette”
 
-- BOWSER: Super Mario Party Jamboree subsection. Excerpts: BOWSER-E1, BOWSER-E2, BOWSER-E3, BOWSER-E4, BOWSER-E5.
+## LAND04
 
-### ROUND01
+Chance Time can transfer or exchange Stars or coins between selected players.
 
-single_source; medium. 
+Status: **corroborated**; confidence: **high**. Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open.
 
-- NIN: Mario Party mode overview. Excerpts: NIN-E1, NIN-E3.
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Spaces / Chance Time; Yellow Toad Chance Time dialogue
+  - `GAME-LAND04-13`: “Players who land on this space initiate Chance Time.”
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Spaces / Chance Time; Yellow Toad Chance Time dialogue
+  - `QUOTE-LAND04-21`: “trade the coins!”
+  - `QUOTE-LAND04-22`: “trade the Stars!”
+- [MPLGAME](https://mariopartylegacy.com/games/super-mario-party-jamboree/) — Spaces table
+  - `MPLGAME-E6`: “Activates Chance Time where coins and stars can be moved and swapped among players.”
 
-### ROUND02
+## LAND05
 
-single_source; medium. 
+VS spaces interrupt play for a pooled-coin minigame.
 
-- IGN: Pro Rules paragraph. Excerpts: IGN-E3.
+Status: **corroborated**; confidence: **high**. Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open.
 
-### ROUND03
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Spaces / VS Space; Yellow Toad VS dialogue
+  - `GAME-LAND05-14`: “before a VS minigame is played. The amount of Coins that the players pay is decided by a roulette.”
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Spaces / VS Space; Yellow Toad VS dialogue
+  - `QUOTE-LAND05-23`: “pool their coins”
+- [MPLGAME](https://mariopartylegacy.com/games/super-mario-party-jamboree/) — Spaces table
+  - `MPLGAME-E7`: “Each player chips in a select amount of coins, and a minigame is played”
 
-single_source; medium. 
+## LAND06
 
-- GAME: Game modes / Mario Party. Excerpts: GAME-E2.
+Hidden Blocks can appear after landing on Blue or Red spaces in Party Rules.
 
-### ROUND04
+Status: **corroborated**; confidence: **high**. MPL explicitly confirms both colors. Its speculation about probabilities is excluded. Pro removal is separate in PRO02.
 
-single_source; medium. Exact interruption/resumption event priority remains unverified. 
+- [HIDDEN](https://www.mariowiki.com/Hidden_Block_(Mario_Party_series)) — Jamboree subsection; return of prior Blue-space behavior plus Red
+  - `HIDDEN-E1`: “Red Space”
+- [MPL](https://mariopartylegacy.com/super-mario-party-jamboree/unlockables-rewards-achievements) — Achievements / Lucky Star
+  - `MPL-E4`: “Blue Spaces and Red Spaces”
 
-- GAME: Mario Party and minigame-category sections. Excerpts: **MISSING**.
-- MINI: Mario Party and minigame-category sections. Excerpts: MINI-E1.
+## LAND07
 
-### HOME01
+A Bowser Space invokes Impostor Bowser; Party outcomes include coin or Star losses, redistribution, and position shuffling.
 
-single_source; medium. 
+Status: **corroborated**; confidence: **high**. Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open.
 
-- HOME: Jamboree subsection; Yellow Toad Homestretch dialogue. Excerpts: **MISSING**.
-- QUOTE: Jamboree subsection; Yellow Toad Homestretch dialogue. Excerpts: **MISSING**.
+- [BOWSER](https://www.mariowiki.com/Bowser_Space) — Super Mario Party Jamboree subsection
+  - `BOWSER-E1`: “Impostor Bowser”
+  - `BOWSER-E2`: “negative events”
+  - `BOWSER-E3`: “Lose 1 Star”
+  - `BOWSER-E4`: “Bowser Revolution”
+  - `BOWSER-E5`: “Bowser Shuffle”
+- [MPLGAME](https://mariopartylegacy.com/games/super-mario-party-jamboree/) — Spaces table
+  - `MPLGAME-E8`: “lose your coins, shuffle all players, equalize all coins, or even take a Star from you.”
 
-### HOME02
+## ROUND01
 
-single_source; medium. 
+After all four players have moved, a minigame concludes the round.
 
-- HOME: Jamboree subsection; Yellow Toad Homestretch dialogue. Excerpts: **MISSING**.
-- QUOTE: Jamboree subsection; Yellow Toad Homestretch dialogue. Excerpts: **MISSING**.
+Status: **single_source**; confidence: **medium**. 
 
-### HOME03
+- [NIN](https://www.nintendo.com/au/news-and-articles/super-mario-party-jamboree-heres-a-quick-overview-of-the-game/) — Mario Party mode overview
+  - `NIN-E1`: “four players”
+  - `NIN-E3`: “After each player has moved”
+- [CGM](https://www.cgmagonline.com/review/game/super-mario-party-jamboree-switch/) — Traditional Mario Party mechanics paragraphs
+  - `CGM-E2`: “with each round culminating in a mini-game”
 
-single_source; medium. ZU corroborates Pro omission only. Chooser rules remain single-lineage. 
+## ROUND02
 
-- HOME: Jamboree subsection; Pro Rules paragraph. Excerpts: HOME-E10.
-- ZU: Jamboree subsection; Pro Rules paragraph. Excerpts: ZU-E2.
+Vote offers three minigame choices; all four players vote.
 
-### HOME04
+Status: **single_source**; confidence: **medium**. 
 
-conflict; low. C01. Do not infer eight simultaneous choices or uniform sampling. 
+- [IGN](https://me.ign.com/en/super-mario-party-jamboree/225526/review/super-mario-party-jamboree-review) — Pro Rules paragraph
+  - `IGN-E3`: “vote between three choices”
 
-- HOME: Jamboree subsection. Excerpts: HOME-E9.
+## ROUND03
 
-### HOME05
+Bonus Minigames double the coins won.
 
-single_source; medium. 
+Status: **single_source**; confidence: **medium**. 
 
-- HOME: Jamboree subsection final paragraph. Excerpts: **MISSING**.
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Game modes / Mario Party
+  - `GAME-E2`: “coins won are doubled”
 
-### END01
+## ROUND04
 
-single_source; medium. NIN supplies the round loop, not direct evidence of the final-round exception boundary. 
+Showdown, Item, Duel and VS interruptions are distinct from the ordinary round-ending minigame.
 
-- QUOTE: Announcer / final minigame; Yellow Toad / results. Excerpts: **MISSING**.
-- NIN: Announcer / final minigame; Yellow Toad / results. Excerpts: **MISSING**.
+Status: **single_source**; confidence: **medium**. Exact interruption/resumption event priority remains unverified.
 
-### END02
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Mario Party and minigame-category sections
+  - `GAME-ROUND04-15`: “When a player passes by an unaffiliated Jamboree Buddy on the board, all players participate in a Showdown minigame”
+- [MINI](https://www.mariowiki.com/Minigame) — Mario Party and minigame-category sections
+  - `MINI-E1`: “Showdown minigames”
 
-single_source; medium. 
+## HOME01
 
-- QUOTE: Text / Yellow Toad / ending. Excerpts: **MISSING**.
+Homestretch occurs with five turns remaining, before those remaining turns are played.
 
-### END03
+Status: **single_source**; confidence: **medium**. 
 
-corroborated; high. 
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Jamboree subsection; Yellow Toad Homestretch dialogue
+  - `QUOTE-HOME01-24`: “final five turns!”
 
-- BONUS: Bonus Star introduction; IGN standard-rules paragraph. Excerpts: **MISSING**.
-- IGN: Bonus Star introduction; IGN standard-rules paragraph. Excerpts: IGN-E4.
+## HOME02
 
-### END04
+The host announces standings, then Blue/Red become +6/−6 and same-space landings can trigger duels.
 
-corroborated; high. 
+Status: **single_source**; confidence: **medium**. 
 
-- NIN: Mario Party overview. Excerpts: NIN-E6.
-- MNN: Mario Party overview. Excerpts: MNN-E9.
+- [HOME](https://www.mariowiki.com/Homestretch) — Jamboree subsection; Yellow Toad Homestretch dialogue
+  - `HOME-HOME02-11`: “normal duels will occur when two or more players land on the same space.”
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Jamboree subsection; Yellow Toad Homestretch dialogue
+  - `QUOTE-HOME02-25`: “6 coins”
+  - `QUOTE-HOME02-26`: “a duel will begin!”
 
-### END05
+## HOME03
 
-single_source; medium. Evidence of a co-winner case, not proof of every tie-cardinality rule or a generic dice tiebreaker. 
+Party adds a special event chosen by a player or randomly; Pro omits this extra event.
 
-- QUOTE: Yellow Toad / ending / two winners. Excerpts: **MISSING**.
+Status: **single_source**; confidence: **medium**. ZU corroborates Pro omission only. Chooser rules remain single-lineage.
 
-### END06
+- [HOME](https://www.mariowiki.com/Homestretch) — Jamboree subsection; Pro Rules paragraph
+  - `HOME-E10`: “except in Pro Rules”
+- [ZU](https://zeldauniverse.net/features/review-super-mario-party-jamboree/) — Jamboree subsection; Pro Rules paragraph
+  - `ZU-E2`: “special events during the Homestretch”
 
-single_source; medium. 
+## HOME04
 
-- QUOTE: Yellow Toad / finer details; Bonus Star / Availability. Excerpts: **MISSING**.
-- BONUS: Yellow Toad / finer details; Bonus Star / Availability. Excerpts: **MISSING**.
+Eight possible special effects are listed, while the source wording refers to five; full menu-generation rules are unresolved.
 
-### COUNT01
+Status: **conflict**; confidence: **low**. C01. Do not infer eight simultaneous choices or uniform sampling.
 
-corroborated; high. 
+- [HOME](https://www.mariowiki.com/Homestretch) — Jamboree subsection
+  - `HOME-E9`: “five special events”
 
-- BONUS: Bonus Star distribution; IGN settings paragraph; Classic unlock section. Excerpts: **MISSING**.
-- IGN: Bonus Star distribution; IGN settings paragraph; Classic unlock section. Excerpts: IGN-E4.
-- MPL: Bonus Star distribution; IGN settings paragraph; Classic unlock section. Excerpts: MPL-E3.
+## HOME05
 
-### COUNT02
+After the special event, the host gives two tips and board play resumes.
 
-single_source; medium. BONUS explicitly states the 30-turn exception; MNN omits it and MPL does not identify the particular pair below 30. Full combined policy lacks a second explicit statement. See C02. 
+Status: **single_source**; confidence: **medium**. 
 
-- BONUS: Classic distribution passages. Excerpts: **MISSING**.
-- MPL: Classic distribution passages. Excerpts: MPL-E2, MPL-E3.
-- MNN: Classic distribution passages. Excerpts: MNN-E3.
+- [HOME](https://www.mariowiki.com/Homestretch) — Jamboree subsection final paragraph
+  - `HOME-HOME05-12`: “Toad will then give players two useful tips before the game continues.”
 
-### COUNT03
+## END01
 
-corroborated; high. 
+The final round still has a final minigame before the results ceremony.
 
-- MNN: Party rules settings. Excerpts: MNN-E2.
-- IGN: Party rules settings. Excerpts: IGN-E2.
+Status: **single_source**; confidence: **medium**. NIN supplies the round loop, not direct evidence of the final-round exception boundary.
 
-### COUNT04
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Announcer / final minigame; Yellow Toad / results
+  - `QUOTE-E6`: “Final minigame!”
 
-corroborated; high. Some prose says Happening instead of Eventful. Name normalization is logged, not proof of a Pro-specific on-screen label. 
+## END02
 
-- GAME: Pro Rules; Lucky stars; Pro overview. Excerpts: GAME-E4.
-- GR: Pro Rules; Lucky stars; Pro overview. Excerpts: GR-E1, GR-E2, GR-E3, GR-E4.
-- NIN: Pro Rules; Lucky stars; Pro overview. Excerpts: NIN-E7.
+The ceremony reviews Star totals and notable acquisitions before presenting enabled bonus awards.
 
-### TIE01
+Status: **single_source**; confidence: **medium**. 
 
-conflict; low. C03. No unconditional tie algorithm is certified in this drop. 
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Text / Yellow Toad / ending
+  - `QUOTE-END02-27`: “Star distribution”
 
-- BONUS: Introduction tie paragraph. Excerpts: **MISSING**.
+## END03
 
-### TIE02
+Enabled bonus awards are added before the winner is determined.
 
-single_source; medium. All-zero thresholds and Slowpoke zero-distance handling are not established. 
+Status: **corroborated**; confidence: **high**. 
 
-- QUOTE: Yellow Toad / ending / no one got the bonus. Excerpts: **MISSING**.
+- [BONUS](https://www.mariowiki.com/Bonus_Star) — Bonus Star introduction; IGN standard-rules paragraph
+  - `BONUS-END03-8`: “the player who appears to be in first place at the end of the final turn may ultimately lose”
+- [IGN](https://me.ign.com/en/super-mario-party-jamboree/225526/review/super-mario-party-jamboree-review) — Bonus Star introduction; IGN standard-rules paragraph
+  - `IGN-E4`: “three Bonus Stars”
 
-### PRO01
+## END04
 
-corroborated; high. 
+The largest final Star total wins.
 
-- GAME: Pro Rules. Excerpts: GAME-E5.
-- ZU: Pro Rules. Excerpts: ZU-E4, ZU-E5.
+Status: **corroborated**; confidence: **high**. 
 
-### PRO02
+- [NIN](https://www.nintendo.com/au/news-and-articles/super-mario-party-jamboree-heres-a-quick-overview-of-the-game/) — Mario Party overview
+  - `NIN-E6`: “most Stars”
+- [MNN](https://mynintendonews.com/2024/10/01/preview-super-mario-party-jamboree/) — Mario Party overview
+  - `MNN-E9`: “gather more stars”
 
-corroborated; high. 
+## END05
 
-- GAME: Pro Rules. Excerpts: **MISSING**.
-- ZU: Pro Rules. Excerpts: ZU-E1, ZU-E2.
+The quote list attests a two-winner announcement for equal Stars and coins.
 
-### PRO03
+Status: **single_source**; confidence: **medium**. Evidence of a co-winner case, not proof of every tie-cardinality rule or a generic dice tiebreaker.
 
-single_source; medium. 
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Yellow Toad / ending / two winners
+  - `QUOTE-END05-28`: “two winners”
 
-- GAME: Pro Rules / Homestretch. Excerpts: **MISSING**.
-- HOME: Pro Rules / Homestretch. Excerpts: **MISSING**.
+## END06
 
-### PRO04
+Postgame statistical Awards are separate from the nine scoring Bonus Star categories.
 
-single_source; medium. 
+Status: **single_source**; confidence: **medium**. 
 
-- GAME: Pro Rules changes. Excerpts: GAME-E6.
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Yellow Toad / finer details; Bonus Star / Availability
+  - `QUOTE-END06-29`: “giving awards”
 
-### PRO05
+## COUNT01
 
-single_source; medium. 
+With random bonuses enabled, 10/15/20/25 turns award two categories; 30 turns award three.
 
-- GAME: Pro Rules changes. Excerpts: GAME-E8.
+Status: **corroborated**; confidence: **high**. 
 
-### PRO06
+- [BONUS](https://www.mariowiki.com/Bonus_Star) — Bonus Star distribution; IGN settings paragraph; Classic unlock section
+  - `BONUS-COUNT01-9`: “three Bonus Stars are given if the game lasts”
+- [IGN](https://me.ign.com/en/super-mario-party-jamboree/225526/review/super-mario-party-jamboree-review) — Bonus Star distribution; IGN settings paragraph; Classic unlock section
+  - `IGN-E4`: “three Bonus Stars”
+- [MPL](https://mariopartylegacy.com/super-mario-party-jamboree/unlockables-rewards-achievements) — Bonus Star distribution; IGN settings paragraph; Classic unlock section
+  - `MPL-E3`: “fewer than 30 turns”
 
-single_source; medium. 
+## COUNT02
 
-- GAME: Pro Rules Star Stop Signs. Excerpts: **MISSING**.
+Classic below 30 turns uses Rich and Eventful; Classic at 30 additionally uses Minigame.
 
-### PRO07
+Status: **single_source**; confidence: **medium**. BONUS explicitly states the 30-turn exception; MNN omits it and MPL does not identify the particular pair below 30. Full combined policy lacks a second explicit statement. See C02.
 
-corroborated; high. The additional requirement that both participants have a Star is stated only by GAME and is not promoted to a dual-confirmed rule. 
+- [BONUS](https://www.mariowiki.com/Bonus_Star) — Classic distribution passages
+  - `BONUS-COUNT02-10`: “it restricts the Minigame Bonus to 30-turn games.”
+- [MPL](https://mariopartylegacy.com/super-mario-party-jamboree/unlockables-rewards-achievements) — Classic distribution passages
+  - `MPL-E2`: “Event Star, Coin Star, and Minigame Star”
+  - `MPL-E3`: “fewer than 30 turns”
+- [MNN](https://mynintendonews.com/2024/10/01/preview-super-mario-party-jamboree/) — Classic distribution passages
+  - `MNN-E3`: “classic mode”
 
-- GAME: Pro Rules duel. Excerpts: **MISSING**.
-- ZU: Pro Rules duel. Excerpts: ZU-E6.
+## COUNT03
 
-### PRO08
+Off disables Bonus Stars.
 
-single_source; medium. 
+Status: **corroborated**; confidence: **high**. 
 
-- GAME: Pro Rules VS. Excerpts: GAME-E7.
+- [MNN](https://mynintendonews.com/2024/10/01/preview-super-mario-party-jamboree/) — Party rules settings
+  - `MNN-E2`: “on/off”
+- [IGN](https://me.ign.com/en/super-mario-party-jamboree/225526/review/super-mario-party-jamboree-review) — Party rules settings
+  - `IGN-E2`: “off, Random, and Classic”
 
-### PRO09
+## COUNT04
 
-conflict; low. C05: GAME omits the board exception and ZU says zero exceptions. Preserve the board-specific report without calling it independently settled. 
+Pro lasts 12 turns and announces one bonus category before play: Eventful, Sightseer or Slowpoke.
 
-- BOWSER: Jamboree / Pro Rules. Excerpts: BOWSER-E3, BOWSER-E6, BOWSER-E7, BOWSER-E8.
-- GAME: Jamboree / Pro Rules. Excerpts: **MISSING**.
-- ZU: Jamboree / Pro Rules. Excerpts: ZU-E3.
+Status: **corroborated**; confidence: **high**. Some prose says Happening instead of Eventful. Name normalization is logged, not proof of a Pro-specific on-screen label.
 
-### TV01
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Pro Rules; Lucky stars; Pro overview
+  - `GAME-E4`: “12 turns”
+- [GR](https://www.gamesradar.com/games/puzzle/with-super-mario-party-jamboree-nintendos-finally-letting-you-cut-out-the-random-nonsense-thats-defined-its-multiplayer-games-for-decades/) — Pro Rules; Lucky stars; Pro overview
+  - `GR-E1`: “traveling the most spaces, traveling the fewest spaces, or landing on the most event spaces”
+  - `GR-E2`: “12-turn matches”
+  - `GR-E3`: “exactly one bonus star”
+  - `GR-E4`: “announced”
+- [NIN](https://www.nintendo.com/au/news-and-articles/super-mario-party-jamboree-heres-a-quick-overview-of-the-game/) — Pro Rules; Lucky stars; Pro overview
+  - `NIN-E7`: “before you even start”
 
-corroborated; high. 
+## TIE01
 
-- TV: Frenzy Rules. Excerpts: TV-E1, TV-E2, TV-E3.
-- MPLTV: Frenzy Rules. Excerpts: MPLTV-E1, MPLTV-E2.
+A series-level source describes tied bonus leaders each receiving a Star, but its adjacent Battle Royale/Tag Team exception is ambiguous for Jamboree.
 
-### TV02
+Status: **conflict**; confidence: **low**. C03. No unconditional tie algorithm is certified in this drop.
 
-corroborated; high. 
+- [BONUS](https://www.mariowiki.com/Bonus_Star) — Introduction tie paragraph
+  - `BONUS-TIE01-11`: “both, three, or all four players would receive one.”
 
-- TV: Frenzy Rules. Excerpts: TV-E4, TV-E5.
-- MPLTV: Frenzy Rules. Excerpts: MPLTV-E3, MPLTV-E4.
-- HOME: Frenzy Rules. Excerpts: **MISSING**.
+## TIE02
 
-### TV03
+The host transcript attests that an award can have no recipient.
 
-single_source; medium. Both sources confirm shared Stars/coins; only MPLTV explicitly supplies the opening-roll and alternating-order rules. Entire row is not dual-confirmed. 
+Status: **single_source**; confidence: **medium**. All-zero thresholds and Slowpoke zero-distance handling are not established.
 
-- TV: Tag-Team Rules. Excerpts: TV-E6.
-- MPLTV: Tag-Team Rules. Excerpts: MPLTV-E5, MPLTV-E6.
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Yellow Toad / ending / no one got the bonus
+  - `QUOTE-TIE02-30`: “No one got the bonus”
 
-### TV04
+## PRO01
 
-corroborated; high. The original game remains a separate context; do not infer Pro was removed from the base game. 
+Players choose a starting item; shop stock is limited to two copies per item without replenishment.
 
-- MPLTV: Mario Party / rulesets. Excerpts: MPLTV-E7.
-- TV: Mario Party / rulesets. Excerpts: TV-E7.
+Status: **corroborated**; confidence: **high**. 
 
-### U01
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Pro Rules
+  - `GAME-E5`: “limited to two”
+- [ZU](https://zeldauniverse.net/features/review-super-mario-party-jamboree/) — Pro Rules
+  - `ZU-E4`: “only two copies per item”
+  - `ZU-E5`: “gone for good”
 
-unverified; low. UNVERIFIED: Exact opening-roll range, descending-order display, and tied-order-roll resolution.
+## PRO02
 
-### U02
+Pro removes Chance Time, Hidden Blocks and the extra Homestretch event.
 
-unverified; low. UNVERIFIED: Exact input menu strings, input order, and whether all item classes obey a one-item-per-turn limit.
+Status: **corroborated**; confidence: **high**. 
 
-### U03
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Pro Rules
+  - `GAME-PRO02-16`: “which includes removing Hidden Blocks”
+- [ZU](https://zeldauniverse.net/features/review-super-mario-party-jamboree/) — Pro Rules
+  - `ZU-E1`: “Hidden Blocks, Chance Time Spaces”
+  - `ZU-E2`: “special events during the Homestretch”
 
-unverified; low. UNVERIFIED: Item-use versus Buddy-start-effect ordering, cancellation and unavailable-target behavior.
+## PRO03
 
-### U04
+Pro keeps Homestretch ±6 Blue/Red values and same-space duels.
 
-unverified; low. UNVERIFIED: Exact movement decrement rules for every shop, Star, Boo, gate and branch node; forced movement versus dice movement.
+Status: **single_source**; confidence: **medium**. 
 
-### U05
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Pro Rules / Homestretch
+  - `GAME-PRO03-17`: “the duel that occurs when two players land on the same space remain unchanged.”
+- [HOME](https://www.mariowiki.com/Homestretch) — Pro Rules / Homestretch
+  - `HOME-PRO03-13`: “normal duels will occur when two or more players land on the same space.”
 
-unverified; low. UNVERIFIED: The complete branch-choice interface, legal-edge constraints, gate/key consumption and prompt order.
+## PRO04
 
-### U06
+Pro Lucky spaces offer 10 coins or Double Dice; Unlucky transfers 7 coins to last place.
 
-unverified; low. UNVERIFIED: Complete priority order among traps, landing effects, Buddy repeats, Hidden Blocks and same-space duels.
+Status: **single_source**; confidence: **medium**. 
 
-### U07
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Pro Rules changes
+  - `GAME-E6`: “7 coins”
 
-unverified; low. UNVERIFIED: Board phase/tide/sale/conveyor hooks relative to round minigame, Buddy lifetime decrement and the next player.
+## PRO05
 
-### U08
+Pro uses item roulette without item minigames.
 
-unverified; low. UNVERIFIED: Complete landed-space-color to team mapping, green-space randomization and category probabilities in Jamboree.
+Status: **single_source**; confidence: **medium**. 
 
-### U09
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Pro Rules changes
+  - `GAME-E8`: “roulette”
 
-unverified; low. UNVERIFIED: Vote aggregation, weighting, ties, unvoted options, repeat suppression and candidate-pool algorithm.
+## PRO06
 
-### U10
+Pro marks future Star sites; a used site becomes eligible again after the other sites have been used.
 
-unverified; low. UNVERIFIED: Exact standard/coin/team/tied/Bonus Minigame payouts and which minigames count toward the Minigame award.
+Status: **single_source**; confidence: **medium**. 
 
-### U11
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Pro Rules Star Stop Signs
+  - `GAME-PRO06-18`: “a Star will no longer appear at a particular space until all Star Spaces have been used”
 
-unverified; low. UNVERIFIED: Chooser selection, rank ties, five-option sampling, event weights, slot order beyond reported Mushroom rule and board restrictions.
+## PRO07
 
-### U12
+Pro permits Star wagers in duels.
 
-unverified; low. UNVERIFIED: Inventory overflow, coin-cap behavior and atomic ordering when Homestretch grants items or doubles wallets.
+Status: **corroborated**; confidence: **high**. The additional requirement that both participants have a Star is stated only by GAME and is not promoted to a dual-confirmed rule.
 
-### U13
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Pro Rules duel
+  - `GAME-PRO07-19`: “Players being able to wager a Star during a Duel”
+- [ZU](https://zeldauniverse.net/features/review-super-mario-party-jamboree/) — Pro Rules duel
+  - `ZU-E6`: “wager a Star”
 
-unverified; low. UNVERIFIED: Final ranking tie rules for every cardinality, coin secondary ranking confirmation and animation ordering.
+## PRO08
 
-### U14
+Pro VS stakes are 20 coins; the landing player selects the minigame.
 
-unverified; low. UNVERIFIED: Independent second evidence for six non-Pro bonus criteria; exact internal counters for all nine categories.
+Status: **single_source**; confidence: **medium**. 
 
-### U15
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Pro Rules VS
+  - `GAME-E7`: “20 coins”
 
-unverified; low. UNVERIFIED: All tied-award cardinalities, zero-activity eligibility and whether a non-awarded category is replaced.
+## PRO09
 
-### U16
+Pro Bowser takes a Star; without one, the reported fallback is half the coins, or all coins at King Bowser Keep.
 
-unverified; low. UNVERIFIED: Random category sampling, probabilities, timing of selection, duplicate avoidance and complete Frenzy/Tag-Team award pools.
+Status: **conflict**; confidence: **low**. C05: GAME omits the board exception and ZU says zero exceptions. Preserve the board-specific report without calling it independently settled.
 
-### U17
+- [BOWSER](https://www.mariowiki.com/Bowser_Space) — Jamboree / Pro Rules
+  - `BOWSER-E3`: “Lose 1 Star”
+  - `BOWSER-E6`: “half of their coins”
+  - `BOWSER-E7`: “all of their coins”
+  - `BOWSER-E8`: “King Bowser's Keep”
+- [GAME](https://www.mariowiki.com/Super_Mario_Party_Jamboree) — Jamboree / Pro Rules
+  - `GAME-PRO09-20`: “If the player does not have a star, Impostor Bowser will take away half of their coins instead.”
+- [ZU](https://zeldauniverse.net/features/review-super-mario-party-jamboree/) — Jamboree / Pro Rules
+  - `ZU-E3`: “zero exceptions”
 
-unverified; low. UNVERIFIED: Complete exact English on-screen text inventory, regional/version variants, visual capture, voice attribution and punctuation.
+## TV01
 
-### U18
+Frenzy has five turns; players begin with 50 coins, one Star and Double Dice.
 
-unverified; low. UNVERIFIED: All board-specific Pro substitutions and every exception, including final-turn item/Lucky behavior.
+Status: **corroborated**; confidence: **high**. 
 
-### U19
+- [TV](https://www.mariowiki.com/Jamboree_TV) — Frenzy Rules
+  - `TV-E1`: “five turns”
+  - `TV-E2`: “fifty coins”
+  - `TV-E3`: “one Star”
+- [MPLTV](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/) — Frenzy Rules
+  - `MPLTV-E1`: “five turns”
+  - `MPLTV-E2`: “Double Dice, 50 coins, and one Star”
+- [NINTV](https://www.nintendo.com/us/whatsnew/the-party-is-getting-even-bigger-with-jamboree-tv/) — Mario Party / Frenzy Rules
+  - `NINTV-E1`: “in Frenzy Rules, you only have five turns to win”
+  - `NINTV-E2`: “Each player will start with 50 coins, a Double Dice item, and a Star.”
 
-unverified; low. UNVERIFIED: Complete Tag-Team turn resolution, team tie rules, bonus counters, modifiers and final presentation.
+## TV02
 
-### U20
+Frenzy begins with two Homestretch effects and same-space duels, and ends with one bonus category.
 
-unverified; low. UNVERIFIED: Controlled game replay, independent second researcher and exhaustive event-priority tests were not performed.
+Status: **corroborated**; confidence: **high**. 
 
-### BONUS01
+- [TV](https://www.mariowiki.com/Jamboree_TV) — Frenzy Rules
+  - `TV-E4`: “one Bonus Star”
+  - `TV-E5`: “two Homestretch events”
+- [MPLTV](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/) — Frenzy Rules
+  - `MPLTV-E3`: “two events are randomly selected”
+  - `MPLTV-E4`: “only one”
+- [HOME](https://www.mariowiki.com/Homestretch) — Frenzy Rules
+  - `HOME-TV02-14`: “two in Frenzy Rules at the start of the game”
 
-single_source; medium. No independent second criterion source established. TRACKER is derived and is excluded from independence counts. 
+## TV03
 
-- BONUS: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: BONUS-E6.
-- QUOTE: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: **MISSING**.
-- TRACKER: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: TRACKER-E5.
+Tag-Team shares Stars and coins; higher combined opening rolls act first, and teams alternate players.
 
-### BONUS02
+Status: **single_source**; confidence: **medium**. Both sources confirm shared Stars/coins; only MPLTV explicitly supplies the opening-roll and alternating-order rules. Entire row is not dual-confirmed.
 
-corroborated; high. GR independently corroborates this core criterion. Precise counters remain unverified. 
+- [TV](https://www.mariowiki.com/Jamboree_TV) — Tag-Team Rules
+  - `TV-E6`: “shares their coins, Stars, and items”
+- [MPLTV](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/) — Tag-Team Rules
+  - `MPLTV-E5`: “highest combined roll”
+  - `MPLTV-E6`: “alternate players”
 
-- BONUS: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: BONUS-E6.
-- QUOTE: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: **MISSING**.
-- GR: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: GR-E1.
+## TV04
 
-### BONUS03
+Jamboree TV does not offer Pro Rules within its own Mario Party rulesets.
 
-single_source; medium. No independent second criterion source established. TRACKER is derived and is excluded from independence counts. 
+Status: **corroborated**; confidence: **high**. The original game remains a separate context; do not infer Pro was removed from the base game.
 
-- BONUS: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: BONUS-E2.
-- QUOTE: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: **MISSING**.
-- TRACKER: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: TRACKER-E9.
+- [MPLTV](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/) — Mario Party / rulesets
+  - `MPLTV-E7`: “Pro Rules”
+- [TV](https://www.mariowiki.com/Jamboree_TV) — Mario Party / rulesets
+  - `TV-E7`: “Pro Rules does not reappear”
 
-### BONUS04
+## U01
 
-single_source; medium. No independent second criterion source established. TRACKER is derived and is excluded from independence counts. 
+Exact opening-roll range, descending-order display, and tied-order-roll resolution.
 
-- BONUS: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: BONUS-E1.
-- QUOTE: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: **MISSING**.
-- TRACKER: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: TRACKER-E2.
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
 
-### BONUS05
+UNVERIFIED: no retained source establishes this requirement.
 
-single_source; medium. No independent second criterion source established. TRACKER is derived and is excluded from independence counts. 
 
-- BONUS: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: BONUS-E3.
-- QUOTE: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: **MISSING**.
-- TRACKER: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: TRACKER-E4.
+## U02
 
-### BONUS06
+Exact input menu strings, input order, and whether all item classes obey a one-item-per-turn limit.
 
-single_source; medium. No independent second criterion source established. TRACKER is derived and is excluded from independence counts. 
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
 
-- BONUS: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: BONUS-E4.
-- QUOTE: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: **MISSING**.
-- TRACKER: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: TRACKER-E3.
+UNVERIFIED: no retained source establishes this requirement.
 
-### BONUS07
 
-single_source; medium. No independent second criterion source established. TRACKER is derived and is excluded from independence counts. 
+## U03
 
-- BONUS: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: BONUS-E5.
-- QUOTE: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: **MISSING**.
-- TRACKER: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: TRACKER-E8.
+Item-use versus Buddy-start-effect ordering, cancellation and unavailable-target behavior.
 
-### BONUS08
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
 
-corroborated; high. GR independently corroborates this core criterion. Precise counters remain unverified. 
+UNVERIFIED: no retained source establishes this requirement.
 
-- BONUS: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: BONUS-E7.
-- QUOTE: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: **MISSING**.
-- GR: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: GR-E1.
 
-### BONUS09
+## U04
 
-corroborated; high. GR independently corroborates this core criterion. Precise counters remain unverified. 
+Exact movement decrement rules for every shop, Star, Boo, gate and branch node; forced movement versus dice movement.
 
-- BONUS: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: **MISSING**.
-- QUOTE: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: **MISSING**.
-- GR: Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present. Excerpts: GR-E1.
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
 
-### EFFECT01
+UNVERIFIED: no retained source establishes this requirement.
 
-single_source; medium. If a player selects it, that player receives it; host selection uses a random recipient. 
 
-- HOME: Homestretch / Jamboree effect list. Excerpts: HOME-E1.
+## U05
 
-### EFFECT02
+The complete branch-choice interface, legal-edge constraints, gate/key consumption and prompt order.
 
-single_source; medium. It disappears permanently after its one purchase. 
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
 
-- HOME: Homestretch / Jamboree effect list. Excerpts: HOME-E2.
-- EXCHANGE: Homestretch / Jamboree effect list. Excerpts: EXCHANGE-E4, EXCHANGE-E5.
-- QUOTE: Homestretch / Jamboree effect list. Excerpts: **MISSING**.
+UNVERIFIED: no retained source establishes this requirement.
 
-### EFFECT03
 
-single_source; medium. Inventory-overflow resolution is unverified. 
+## U06
 
-- HOME: Homestretch / Jamboree effect list. Excerpts: HOME-E3.
+Complete priority order among traps, landing effects, Buddy repeats, Hidden Blocks and same-space duels.
 
-### EFFECT04
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
 
-single_source; medium. Inventory-overflow resolution is unverified. 
+UNVERIFIED: no retained source establishes this requirement.
 
-- HOME: Homestretch / Jamboree effect list. Excerpts: HOME-E4.
 
-### EFFECT05
+## U07
 
-single_source; medium. This is additional to the mandatory +6/−6 change. 
+Board phase/tide/sale/conveyor hooks relative to round minigame, Buddy lifetime decrement and the next player.
 
-- HOME: Homestretch / Jamboree effect list. Excerpts: HOME-E5.
-- QUOTE: Homestretch / Jamboree effect list. Excerpts: **MISSING**.
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
 
-### EFFECT06
+UNVERIFIED: no retained source establishes this requirement.
 
-single_source; medium. Coin-cap and overflow behavior are unverified. 
 
-- HOME: Homestretch / Jamboree effect list. Excerpts: HOME-E6.
+## U08
 
-### EFFECT07
+Complete landed-space-color to team mapping, green-space randomization and category probabilities in Jamboree.
 
-single_source; medium. Exact candidate-space selection is unverified. 
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
 
-- HOME: Homestretch / Jamboree effect list. Excerpts: HOME-E7.
+UNVERIFIED: no retained source establishes this requirement.
 
-### EFFECT08
 
-single_source; medium. Exact candidate-space selection is unverified. 
+## U09
 
-- HOME: Homestretch / Jamboree effect list. Excerpts: HOME-E8.
+Vote aggregation, weighting, ties, unvoted options, repeat suppression and candidate-pool algorithm.
 
-## Rejected access and evidence
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
 
-<https://www.dailymotion.com/video/x9t9gs8> failed video playback with a browser-compatibility error. No frames, host identity, duration or timestamps were verified. Automatic captions and the browser agent's guessed interpretations were rejected and did not become evidence. The failed attempt is recorded in `recheck.json.failedAccess`.
+UNVERIFIED: no retained source establishes this requirement.
 
-Wiki mirrors and syndicated copies of the same review were not treated as independent sources. Cross-series rules were not silently imported into Jamboree. No comprehensive dialogue dump, game assets or source-page snapshots are included.
+
+## U10
+
+Exact standard/coin/team/tied/Bonus Minigame payouts and which minigames count toward the Minigame award.
+
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
+
+UNVERIFIED: no retained source establishes this requirement.
+
+
+## U11
+
+Chooser selection, rank ties, five-option sampling, event weights, slot order beyond reported Mushroom rule and board restrictions.
+
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
+
+UNVERIFIED: no retained source establishes this requirement.
+
+
+## U12
+
+Inventory overflow, coin-cap behavior and atomic ordering when Homestretch grants items or doubles wallets.
+
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
+
+UNVERIFIED: no retained source establishes this requirement.
+
+
+## U13
+
+Final ranking tie rules for every cardinality, coin secondary ranking confirmation and animation ordering.
+
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
+
+UNVERIFIED: no retained source establishes this requirement.
+
+
+## U14
+
+Independent second evidence for six non-Pro bonus criteria; exact internal counters for all nine categories.
+
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
+
+UNVERIFIED: no retained source establishes this requirement.
+
+
+## U15
+
+All tied-award cardinalities, zero-activity eligibility and whether a non-awarded category is replaced.
+
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
+
+UNVERIFIED: no retained source establishes this requirement.
+
+
+## U16
+
+Random category sampling, probabilities, timing of selection, duplicate avoidance and complete Frenzy/Tag-Team award pools.
+
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
+
+UNVERIFIED: no retained source establishes this requirement.
+
+
+## U17
+
+Complete exact English on-screen text inventory, regional/version variants, visual capture, voice attribution and punctuation.
+
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
+
+UNVERIFIED: no retained source establishes this requirement.
+
+
+## U18
+
+All board-specific Pro substitutions and every exception, including final-turn item/Lucky behavior.
+
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
+
+UNVERIFIED: no retained source establishes this requirement.
+
+
+## U19
+
+Complete Tag-Team turn resolution, team tie rules, bonus counters, modifiers and final presentation.
+
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
+
+UNVERIFIED: no retained source establishes this requirement.
+
+
+## U20
+
+Controlled game replay, independent second researcher and exhaustive event-priority tests were not performed.
+
+Status: **unverified**; confidence: **low**. Unanswered requirement; this row is a question, not a proposed game rule.
+
+UNVERIFIED: no retained source establishes this requirement.
+
+
+## BONUS01
+
+Maximize Bowser-space landings.
+
+Status: **single_source**; confidence: **medium**. No independent second criterion source established. TRACKER is derived and is excluded from independence counts.
+
+- [BONUS](https://www.mariowiki.com/Bonus_Star) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `BONUS-E6`: “landed on the most”
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `QUOTE-BONUS01`: “This bonus is for the fearless player who landed on the most Bowser Spaces!”
+- [TRACKER](https://blueyoshi9000.github.io/MarioPartyOverlay/bonus.html) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `TRACKER-E5`: “Bowser Space”
+
+## BONUS02
+
+Maximize Event-space landings.
+
+Status: **corroborated**; confidence: **high**. GR independently corroborates this core criterion. Precise counters remain unverified.
+
+- [BONUS](https://www.mariowiki.com/Bonus_Star) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `BONUS-E6`: “landed on the most”
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `QUOTE-BONUS02`: “This bonus is for the lively player who landed on the most Event Spaces!”
+- [GR](https://www.gamesradar.com/games/puzzle/with-super-mario-party-jamboree-nintendos-finally-letting-you-cut-out-the-random-nonsense-thats-defined-its-multiplayer-games-for-decades/) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `GR-E1`: “traveling the most spaces, traveling the fewest spaces, or landing on the most event spaces”
+
+## BONUS03
+
+Maximize items used.
+
+Status: **single_source**; confidence: **medium**. No independent second criterion source established. TRACKER is derived and is excluded from independence counts.
+
+- [BONUS](https://www.mariowiki.com/Bonus_Star) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `BONUS-E2`: “used the most”
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `QUOTE-BONUS03`: “This bonus is for the resourceful player who used the most items!”
+- [TRACKER](https://blueyoshi9000.github.io/MarioPartyOverlay/bonus.html) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `TRACKER-E9`: “Item”
+
+## BONUS04
+
+Maximize minigame wins, not minigame coin income.
+
+Status: **single_source**; confidence: **medium**. No independent second criterion source established. TRACKER is derived and is excluded from independence counts.
+
+- [BONUS](https://www.mariowiki.com/Bonus_Star) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `BONUS-E1`: “minigame wins”
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `QUOTE-BONUS04`: “This bonus is for the top-tier player who won the most minigames!”
+- [TRACKER](https://blueyoshi9000.github.io/MarioPartyOverlay/bonus.html) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `TRACKER-E2`: “Minigame”
+
+## BONUS05
+
+Maximize combined Red-space and Unlucky-space landings.
+
+Status: **single_source**; confidence: **medium**. No independent second criterion source established. TRACKER is derived and is excluded from independence counts.
+
+- [BONUS](https://www.mariowiki.com/Bonus_Star) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `BONUS-E3`: “Red Spaces and Unlucky Spaces”
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `QUOTE-BONUS05`: “This bonus is for the ill-fated player who landed on the most Red Spaces or Unlucky Spaces!”
+- [TRACKER](https://blueyoshi9000.github.io/MarioPartyOverlay/bonus.html) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `TRACKER-E4`: “Misfortune”
+
+## BONUS06
+
+Maximize cumulative coins collected, including coins subsequently spent or stolen; not peak wallet size.
+
+Status: **single_source**; confidence: **medium**. No independent second criterion source established. TRACKER is derived and is excluded from independence counts.
+
+- [BONUS](https://www.mariowiki.com/Bonus_Star) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `BONUS-E4`: “including coins spent and stolen”
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `QUOTE-BONUS06`: “This bonus is for the fortunate player who made off with the most coins!”
+- [TRACKER](https://blueyoshi9000.github.io/MarioPartyOverlay/bonus.html) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `TRACKER-E3`: “Rich”
+
+## BONUS07
+
+Maximize items bought at shops, not coins spent there.
+
+Status: **single_source**; confidence: **medium**. No independent second criterion source established. TRACKER is derived and is excluded from independence counts.
+
+- [BONUS](https://www.mariowiki.com/Bonus_Star) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `BONUS-E5`: “items bought”
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `QUOTE-BONUS07`: “This bonus is for the clever player who bought the most items at shops!”
+- [TRACKER](https://blueyoshi9000.github.io/MarioPartyOverlay/bonus.html) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `TRACKER-E8`: “Shopping”
+
+## BONUS08
+
+Maximize spaces traveled.
+
+Status: **corroborated**; confidence: **high**. GR independently corroborates this core criterion. Precise counters remain unverified.
+
+- [BONUS](https://www.mariowiki.com/Bonus_Star) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `BONUS-E7`: “moved the most”
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `QUOTE-BONUS08`: “This bonus is for the intrepid player who traveled the most spaces!”
+- [GR](https://www.gamesradar.com/games/puzzle/with-super-mario-party-jamboree-nintendos-finally-letting-you-cut-out-the-random-nonsense-thats-defined-its-multiplayer-games-for-decades/) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `GR-E1`: “traveling the most spaces, traveling the fewest spaces, or landing on the most event spaces”
+
+## BONUS09
+
+Minimize spaces traveled.
+
+Status: **corroborated**; confidence: **high**. GR independently corroborates this core criterion. Precise counters remain unverified.
+
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `QUOTE-BONUS09`: “This bonus is for the easygoing player who moved the fewest spaces!”
+- [GR](https://www.gamesradar.com/games/puzzle/with-super-mario-party-jamboree-nintendos-finally-letting-you-cut-out-the-random-nonsense-thats-defined-its-multiplayer-games-for-decades/) — Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present
+  - `GR-E1`: “traveling the most spaces, traveling the fewest spaces, or landing on the most event spaces”
+
+## EFFECT01
+
+Grant one player a Mushroom.
+
+Status: **single_source**; confidence: **medium**. If a player selects it, that player receives it; host selection uses a random recipient.
+
+- [HOME](https://www.mariowiki.com/Homestretch) — Homestretch / Jamboree effect list
+  - `HOME-E1`: “Mushroom”
+
+## EFFECT02
+
+Add one temporary Star Exchange.
+
+Status: **single_source**; confidence: **medium**. It disappears permanently after its one purchase.
+
+- [HOME](https://www.mariowiki.com/Homestretch) — Homestretch / Jamboree effect list
+  - `HOME-E2`: “Star Exchange”
+- [EXCHANGE](https://www.mariowiki.com/Star_Exchange) — Homestretch / Jamboree effect list
+  - `EXCHANGE-E4`: “two Star Exchanges at once”
+  - `EXCHANGE-E5`: “Mario's Rainbow Castle”
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Homestretch / Jamboree effect list
+  - `QUOTE-EFFECT02-31`: “only one chance”
+
+## EFFECT03
+
+Give all players a Star Steal Trap.
+
+Status: **single_source**; confidence: **medium**. Inventory-overflow resolution is unverified.
+
+- [HOME](https://www.mariowiki.com/Homestretch) — Homestretch / Jamboree effect list
+  - `HOME-E3`: “Star Steal Trap”
+
+## EFFECT04
+
+Give all players Double Dice.
+
+Status: **single_source**; confidence: **medium**. Inventory-overflow resolution is unverified.
+
+- [HOME](https://www.mariowiki.com/Homestretch) — Homestretch / Jamboree effect list
+  - `HOME-E4`: “Double Dice”
+
+## EFFECT05
+
+Double Blue/Red values again to +12/−12.
+
+Status: **corroborated**; confidence: **high**. Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open.
+
+- [HOME](https://www.mariowiki.com/Homestretch) — Homestretch / Jamboree effect list
+  - `HOME-E5`: “12 coins”
+- [QUOTE](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes) — Homestretch / Jamboree effect list
+  - `QUOTE-EFFECT05-32`: “12 coins”
+- [FAMI](https://famiboards.com/threads/super-mario-party-jamboree-st-friendship-preserves-and-salt-spreads.11348/page-2) — Lyndis Lorca, 17 October 2024; mall-course Homestretch report
+  - `FAMI-E1`: “Our event this time was doubling the usual double blue and red spaces. So +12 or -12 when landing on those.”
+
+## EFFECT06
+
+Double each player's coins.
+
+Status: **single_source**; confidence: **medium**. Coin-cap and overflow behavior are unverified.
+
+- [HOME](https://www.mariowiki.com/Homestretch) — Homestretch / Jamboree effect list
+  - `HOME-E6`: “coins double”
+
+## EFFECT07
+
+Replace two or three spaces with Bowser Spaces.
+
+Status: **single_source**; confidence: **medium**. Exact candidate-space selection is unverified.
+
+- [HOME](https://www.mariowiki.com/Homestretch) — Homestretch / Jamboree effect list
+  - `HOME-E7`: “two or three”
+
+## EFFECT08
+
+Replace two to four spaces with Chance Time Spaces.
+
+Status: **single_source**; confidence: **medium**. Exact candidate-space selection is unverified.
+
+- [HOME](https://www.mariowiki.com/Homestretch) — Homestretch / Jamboree effect list
+  - `HOME-E8`: “two to four”
+

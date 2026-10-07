@@ -2,120 +2,109 @@
 
 ## Verdict
 
-**Structural result: PASS. Strict research acceptance: NOT MET.** There are 95 claim/gap rows: 22 corroborated, 50 single_source, three conflict and 20 explicit unknown requirements. Three of nine bonus criteria are independently corroborated. Zero complete bonus tie/counter specifications are certified. The 13-string bank is a limited excerpt selection, not the requested complete exact-text inventory.
+**Structural checks PASS; strict research acceptance NOT MET.** The 95 claim/gap records comprise 29 corroborated core claims, 43 single-source reports, three conflicts and 20 explicit unanswered requirements. Three of nine bonus criteria have independent corroboration. Nine tie procedures remain null. The selected 22-string bank contains 11 voice and 11 host-text excerpts with source URLs; it is not a full script or primary-frame capture.
 
-A second source can be present without covering every qualifier in a row. The lineage guard prevents counting dependent wikis as independent, but it cannot prove source truth. Schema success only establishes a correctly shaped, internally linked research draft.
+Both fresh source passes retrieved 22/22 URLs and recovered 182/182 registered short quotations, 364 across both passes. All 141 retained claim/bonus/effect/string/policy rows were reviewed in each pass. Bonus-row outcomes remain unverified where complete ties/counters are unresolved. The same assistant performed both passes; cached markdown may have been returned.
 
-## Executed tests
+## Executed commands and results
 
-All commands ran from this job folder. Seed: **N/A — deterministic**. No Monte Carlo, emulator, game replay or independent-researcher test is claimed.
+Environment: Python 3.12.14; jsonschema 4.26.0. Seed: N/A, deterministic. No Monte Carlo or controlled gameplay replay is claimed.
 
-| Test | Cases | Passed | Seed | Exact command |
-|---|---:|---:|---|---|
-| JSON_SCHEMA | 6 | 6 | N/A | `python verify.py --structural` |
-| UNIQUE_IDS | 7 | 7 | N/A | `python verify.py --structural` |
-| CLAIM_SOURCE_REFERENCES | 135 | 135 | N/A | `python verify.py --structural` |
-| CATALOG_REFERENCES | 24 | 24 | N/A | `python verify.py --structural` |
-| STRING_SOURCE_COMPLETENESS | 13 | 13 | N/A | `python verify.py --structural` |
-| SOURCE_EXCERPT_BUDGET | 18 | 18 | N/A | `python verify.py --structural` |
-| CORROBORATION_LINEAGE_GUARD | 23 | 23 | N/A | `python verify.py --structural` |
-| DOCUMENTED_CATALOG_COUNTS | 2 | 2 | N/A | `python verify.py --structural` |
-| UNKNOWN_BEHAVIOR_REMAINS_NULL | 11 | 11 | N/A | `python verify.py --structural` |
-| RECORDED_ROW_RECHECK_A | 125 | 125 | N/A | `python verify.py --structural` |
-| RECORDED_SOURCE_REOPEN_A | 18 | 18 | N/A | `python verify.py --structural` |
-| RECORDED_ROW_RECHECK_B | 125 | 125 | N/A | `python verify.py --structural` |
-| RECORDED_SOURCE_REOPEN_B | 18 | 18 | N/A | `python verify.py --structural` |
-| NEGATIVE_REJECTION_CASES | 8 | 8 | N/A | `python verify.py --structural` |
-| FILE_SIZE_LIMIT | 16 | 16 | N/A | `python verify.py --structural` |
-| Research dual-source gate | 95 | 22 | N/A | `python verify.py --strict` |
-| Bonus criterion dual-source gate | 9 | 3 | N/A | `python verify.py --strict` |
-| Complete bonus behavior gate | 9 | 0 | N/A | `python verify.py --strict` |
-| Primary string captures | 13 | 0 | N/A | `python verify.py --strict` |
-| Full timeline/string coverage | 1 | 0 | N/A | `python verify.py --strict` |
-| SHA-256 file integrity | 15 | 15 | N/A | `python verify.py --structural --checksums` and `sha256sum -c SHA256SUMS.txt` |
+`python verify.py --structural` exited 0 with **18/18 suites and 1074 suite cases**. `python verify.py --strict` completed the same structural suites and exited 1 for the recorded research gaps. `python verify.py --structural --checksums` adds a nineteenth suite with 65 file hashes. Three final manifest checks passed.
 
-The checksum manifest excludes itself. The full checksum command was run after this report was finalized. The negative tests actually injected six schema defects and two duplicate-key/ID defects; all eight were rejected. Recheck tests validate the recorded audit coverage, not live website content.
+| Suite | Cases passed |
+|---|---:|
+| JSON_SCHEMA | 6/6 |
+| UNIQUE_IDS | 7/7 |
+| CLAIM_SOURCE_REFERENCES | 140/140 |
+| CATALOG_REFERENCES | 24/24 |
+| STRING_SOURCE_COMPLETENESS | 22/22 |
+| SOURCE_EXCERPT_BUDGET | 22/22 |
+| CITATION_CAPTURE_SCHEMA | 44/44 |
+| REGISTERED_QUOTATIONS_RECOVERED | 364/364 |
+| AUDIT_REPORT_SCHEMAS_AND_COVERAGE | 2/2 |
+| CORROBORATION_LINEAGE_GUARD | 30/30 |
+| DOCUMENTED_CATALOG_COUNTS | 2/2 |
+| UNKNOWN_BEHAVIOR_REMAINS_NULL | 11/11 |
+| RECORDED_ROW_RECHECK_A | 141/141 |
+| RECORDED_SOURCE_REOPEN_A | 22/22 |
+| RECORDED_ROW_RECHECK_B | 141/141 |
+| RECORDED_SOURCE_REOPEN_B | 22/22 |
+| NEGATIVE_REJECTION_CASES | 8/8 |
+| FILE_SIZE_LIMIT | 66/66 |
+| SHA256_MANIFEST | 65/65 |
 
-## Validator output (executed)
+The final manifest covers all 65 delivered files except itself, including the B05 workflow. Every file is below 30,000,000 bytes. Checks run after this document and manifest are finalized; logs are written outside the checksummed folder.
+
+### Actual schema-validator output
 
 ```text
 $ python verify.py --structural
 PASS JSON_SCHEMA: 6/6
 PASS UNIQUE_IDS: 7/7
-PASS CLAIM_SOURCE_REFERENCES: 135/135
+PASS CLAIM_SOURCE_REFERENCES: 140/140
 PASS CATALOG_REFERENCES: 24/24
-PASS STRING_SOURCE_COMPLETENESS: 13/13
-PASS SOURCE_EXCERPT_BUDGET: 18/18
-PASS CORROBORATION_LINEAGE_GUARD: 23/23
+PASS STRING_SOURCE_COMPLETENESS: 22/22
+PASS SOURCE_EXCERPT_BUDGET: 22/22
+PASS CITATION_CAPTURE_SCHEMA: 44/44
+PASS REGISTERED_QUOTATIONS_RECOVERED: 364/364
+PASS AUDIT_REPORT_SCHEMAS_AND_COVERAGE: 2/2
+PASS CORROBORATION_LINEAGE_GUARD: 30/30
 PASS DOCUMENTED_CATALOG_COUNTS: 2/2
 PASS UNKNOWN_BEHAVIOR_REMAINS_NULL: 11/11
-PASS RECORDED_ROW_RECHECK_A: 125/125
-PASS RECORDED_SOURCE_REOPEN_A: 18/18
-PASS RECORDED_ROW_RECHECK_B: 125/125
-PASS RECORDED_SOURCE_REOPEN_B: 18/18
+PASS RECORDED_ROW_RECHECK_A: 141/141
+PASS RECORDED_SOURCE_REOPEN_A: 22/22
+PASS RECORDED_ROW_RECHECK_B: 141/141
+PASS RECORDED_SOURCE_REOPEN_B: 22/22
 PASS NEGATIVE_REJECTION_CASES: 8/8
-PASS FILE_SIZE_LIMIT: 16/16
-STRUCTURAL_RESULT=PASS; suites=15; seed=N/A (deterministic)
+PASS FILE_SIZE_LIMIT: 66/66
+STRUCTURAL_RESULT=PASS; suites=18; seed=N/A (deterministic)
 EXIT=0
 
 $ python verify.py --strict
 PASS JSON_SCHEMA: 6/6
 PASS UNIQUE_IDS: 7/7
-PASS CLAIM_SOURCE_REFERENCES: 135/135
+PASS CLAIM_SOURCE_REFERENCES: 140/140
 PASS CATALOG_REFERENCES: 24/24
-PASS STRING_SOURCE_COMPLETENESS: 13/13
-PASS SOURCE_EXCERPT_BUDGET: 18/18
-PASS CORROBORATION_LINEAGE_GUARD: 23/23
+PASS STRING_SOURCE_COMPLETENESS: 22/22
+PASS SOURCE_EXCERPT_BUDGET: 22/22
+PASS CITATION_CAPTURE_SCHEMA: 44/44
+PASS REGISTERED_QUOTATIONS_RECOVERED: 364/364
+PASS AUDIT_REPORT_SCHEMAS_AND_COVERAGE: 2/2
+PASS CORROBORATION_LINEAGE_GUARD: 30/30
 PASS DOCUMENTED_CATALOG_COUNTS: 2/2
 PASS UNKNOWN_BEHAVIOR_REMAINS_NULL: 11/11
-PASS RECORDED_ROW_RECHECK_A: 125/125
-PASS RECORDED_SOURCE_REOPEN_A: 18/18
-PASS RECORDED_ROW_RECHECK_B: 125/125
-PASS RECORDED_SOURCE_REOPEN_B: 18/18
+PASS RECORDED_ROW_RECHECK_A: 141/141
+PASS RECORDED_SOURCE_REOPEN_A: 22/22
+PASS RECORDED_ROW_RECHECK_B: 141/141
+PASS RECORDED_SOURCE_REOPEN_B: 22/22
 PASS NEGATIVE_REJECTION_CASES: 8/8
-PASS FILE_SIZE_LIMIT: 16/16
-STRUCTURAL_RESULT=PASS; suites=15; seed=N/A (deterministic)
-FACTS_DUAL_SOURCE=22/95; FAIL
+PASS FILE_SIZE_LIMIT: 66/66
+STRUCTURAL_RESULT=PASS; suites=18; seed=N/A (deterministic)
+FACTS_DUAL_SOURCE=29/95; FAIL
 BONUS_CRITERIA_DUAL_SOURCE=3/9; FAIL
-FULL_BONUS_BEHAVIOR_VERIFIED=0/9; FAIL
-STRING_PRIMARY_CAPTURES=0/13; FAIL
-FULL_TIMELINE_AND_STRING_COVERAGE=INCOMPLETE; FAIL
+BONUS_TIE_PROCEDURES_EVIDENCED=0/9; FAIL
+STRING_PRIMARY_CAPTURES=0/22; descriptive provenance, not an additional prompt requirement
+FULL_TIMELINE_COVERAGE=INCOMPLETE
 STRICT_RESEARCH_RESULT=NOT_MET; exit=1
 EXIT=1
 ```
 
-## Source reopens and two full retained-row reviews
+The six original data documents, 44 citation captures and two audit reports all underwent their closed Draft 2020-12 schemas. Eight deliberate malformed schema/duplicate fixtures were rejected. The lineage guard prevents the derived tracker, wiki aliases, or same-publisher pages from being counted independently. A retained quotation can support only part of a composite claim; all accepted full-core corroboration decisions were reviewed against the cited passages.
 
-Pass A and pass B each reopened all **18 retained source URLs** using `web.open` or `Exa.web_fetch_exa`. URLs are in `sources.json` and `SOURCES.md`; retrieval references and tools are recorded in `recheck.json.sourceReopens`. Each retained claim, bonus, effect and string has a separate A/B decision below, **125/125 records reviewed in each pass**. The statuses show that many rechecks did not establish verification. An unanswered requirement was reviewed as a gap, not passed as a game rule.
+### Integrity commands
 
-Both passes were by the same assistant. Tool reads may be cached. No immutable source snapshots, source byte hashes, fresh-origin guarantee or independent second researcher is claimed. The review includes scope/contradiction checks; it is not an exhaustive observation of every possible game state.
+```sh
+python verify.py --structural --checksums
+sha256sum -c SHA256SUMS.txt
+sha256sum -c SHA256SUMS.txt
+```
 
-| Source | Pass A | Pass B | Tool |
-|---|---|---|---|
-| NIN | reopened (1 retained retrieval references) | reopened (1 retained retrieval references) | web.open |
-| GAME | reopened (2 retained retrieval references) | reopened (3 retained retrieval references) | web.open |
-| BONUS | reopened (2 retained retrieval references) | reopened (3 retained retrieval references) | web.open |
-| QUOTE | reopened (4 retained retrieval references) | reopened (6 retained retrieval references) | web.open |
-| HOME | reopened (1 retained retrieval references) | reopened (1 retained retrieval references) | web.open |
-| MNN | reopened (1 retained retrieval references) | reopened (1 retained retrieval references) | web.open |
-| GR | reopened (1 retained retrieval references) | reopened (1 retained retrieval references) | web.open |
-| MPL | reopened (1 retained retrieval references) | reopened (2 retained retrieval references) | web.open |
-| MPLTV | reopened (2 retained retrieval references) | reopened (1 retained retrieval references) | web.open |
-| TV | reopened (2 retained retrieval references) | reopened (1 retained retrieval references) | web.open |
-| IGN | reopened (1 retained retrieval references) | reopened (1 retained retrieval references) | Exa.web_fetch_exa |
-| ZU | reopened (1 retained retrieval references) | reopened (1 retained retrieval references) | web.open |
-| TRACKER | reopened (1 retained retrieval references) | reopened (2 retained retrieval references) | web.open |
-| EXCHANGE | reopened (1 retained retrieval references) | reopened (1 retained retrieval references) | web.open |
-| MINI | reopened (1 retained retrieval references) | reopened (1 retained retrieval references) | web.open |
-| BOWSER | reopened (2 retained retrieval references) | reopened (1 retained retrieval references) | web.open |
-| HIDDEN | reopened (2 retained retrieval references) | reopened (1 retained retrieval references) | web.open |
-| RACE | reopened (2 retained retrieval references) | reopened (1 retained retrieval references) | web.open |
+## Second-pass row log
 
-### Per-row review log
+Canonical confidence and source references remain on each JSON record. `bonus:` outcomes cover the full record, including unknown ties; criterion confidence is separately recorded.
 
-Confidence and source lists are held on the canonical JSON row; this matrix does not duplicate or override them. `bonus:` decisions cover the whole record, so an independently supported criterion still has an unverified complete-row outcome.
-
-| Row | Pass A result | Pass B result |
+| Row | Pass A | Pass B |
 |---|---|---|
 | claim:SET01 | single_source | single_source |
 | claim:SET02 | corroborated | corroborated |
@@ -125,7 +114,7 @@ Confidence and source lists are held on the canonical JSON row; this matrix does
 | claim:START02 | single_source | single_source |
 | claim:START03 | single_source | single_source |
 | claim:START04 | single_source | single_source |
-| claim:TURN01 | single_source | single_source |
+| claim:TURN01 | corroborated | corroborated |
 | claim:TURN02 | corroborated | corroborated |
 | claim:TURN03 | single_source | single_source |
 | claim:TURN04 | single_source | single_source |
@@ -134,13 +123,13 @@ Confidence and source lists are held on the canonical JSON row; this matrix does
 | claim:TURN07 | corroborated | corroborated |
 | claim:TURN08 | corroborated | corroborated |
 | claim:TURN09 | corroborated | corroborated |
-| claim:LAND01 | single_source | single_source |
-| claim:LAND02 | single_source | single_source |
+| claim:LAND01 | corroborated | corroborated |
+| claim:LAND02 | corroborated | corroborated |
 | claim:LAND03 | single_source | single_source |
-| claim:LAND04 | single_source | single_source |
-| claim:LAND05 | single_source | single_source |
+| claim:LAND04 | corroborated | corroborated |
+| claim:LAND05 | corroborated | corroborated |
 | claim:LAND06 | corroborated | corroborated |
-| claim:LAND07 | single_source | single_source |
+| claim:LAND07 | corroborated | corroborated |
 | claim:ROUND01 | single_source | single_source |
 | claim:ROUND02 | single_source | single_source |
 | claim:ROUND03 | single_source | single_source |
@@ -208,7 +197,7 @@ Confidence and source lists are held on the canonical JSON row; this matrix does
 | claim:EFFECT02 | single_source | single_source |
 | claim:EFFECT03 | single_source | single_source |
 | claim:EFFECT04 | single_source | single_source |
-| claim:EFFECT05 | single_source | single_source |
+| claim:EFFECT05 | corroborated | corroborated |
 | claim:EFFECT06 | single_source | single_source |
 | claim:EFFECT07 | single_source | single_source |
 | claim:EFFECT08 | single_source | single_source |
@@ -225,7 +214,7 @@ Confidence and source lists are held on the canonical JSON row; this matrix does
 | effect:extra-star | single_source | single_source |
 | effect:star-steal-traps | single_source | single_source |
 | effect:double-dice | single_source | single_source |
-| effect:space-coins | single_source | single_source |
+| effect:space-coins | corroborated | corroborated |
 | effect:wallet-coins | single_source | single_source |
 | effect:more-bowser | single_source | single_source |
 | effect:more-chance | single_source | single_source |
@@ -242,10 +231,26 @@ Confidence and source lists are held on the canonical JSON row; this matrix does
 | string:ann-tie | single_source | single_source |
 | string:host-welcome | single_source | single_source |
 | string:host-choose-event | single_source | single_source |
+| string:host-bonus-01 | single_source | single_source |
+| string:host-bonus-02 | single_source | single_source |
+| string:host-bonus-03 | single_source | single_source |
+| string:host-bonus-04 | single_source | single_source |
+| string:host-bonus-05 | single_source | single_source |
+| string:host-bonus-06 | single_source | single_source |
+| string:host-bonus-07 | single_source | single_source |
+| string:host-bonus-08 | single_source | single_source |
+| string:host-bonus-09 | single_source | single_source |
+| policy:party-off | corroborated | corroborated |
+| policy:party-random-below-30 | corroborated | corroborated |
+| policy:party-random-30 | corroborated | corroborated |
+| policy:party-classic-below-30 | single_source | single_source |
+| policy:party-classic-30 | single_source | single_source |
+| policy:pro-12 | corroborated | corroborated |
+| policy:tv-frenzy-5 | corroborated | corroborated |
 
 ## UNVERIFIED
 
-### Every claim not independently established
+### Every claim without complete independent corroboration
 
 - **SET01 — single_source; medium:** Party turn limits: 10, 15, 20, 25, or 30.
 - **SET03 — single_source; medium:** Motion minigames and minigame explanations can be disabled; handicaps can grant 1–5 starting Stars.
@@ -254,15 +259,9 @@ Confidence and source lists are held on the canonical JSON row; this matrix does
 - **START02 — single_source; medium:** Players roll dice to establish turn order.
 - **START03 — single_source; medium:** The host distributes 10 starting coins to each player.
 - **START04 — single_source; medium:** The host introduces the first Star target before ordinary movement; the transcript marks its roaming-Star prompt as excluding Mario's Rainbow Castle.
-- **TURN01 — single_source; medium:** Ordinary movement uses a Dice Block numbered 1–10.
 - **TURN03 — single_source; medium:** A Star purchase can be offered while passing its bearer; exact landing is not required.
 - **TURN04 — single_source; medium:** The usual Star price is 20 coins; board and Buddy modifiers require separate handling.
-- **LAND01 — single_source; medium:** Blue adds 3 coins and Red removes 3 before Homestretch.
-- **LAND02 — single_source; medium:** Event spaces invoke the board-specific event; Lucky and Unlucky spaces resolve their respective reward or penalty.
 - **LAND03 — single_source; medium:** An Item Space can use a roulette or item minigame; no item is awarded on the final turn.
-- **LAND04 — single_source; medium:** Chance Time can transfer or exchange Stars or coins between selected players.
-- **LAND05 — single_source; medium:** VS spaces interrupt play for a pooled-coin minigame.
-- **LAND07 — single_source; medium:** A Bowser Space invokes Impostor Bowser; Party outcomes include coin or Star losses, redistribution, and position shuffling.
 - **ROUND01 — single_source; medium:** After all four players have moved, a minigame concludes the round.
 - **ROUND02 — single_source; medium:** Vote offers three minigame choices; all four players vote.
 - **ROUND03 — single_source; medium:** Bonus Minigames double the coins won.
@@ -316,31 +315,28 @@ Confidence and source lists are held on the canonical JSON row; this matrix does
 - **EFFECT02 — single_source; medium:** Add one temporary Star Exchange.
 - **EFFECT03 — single_source; medium:** Give all players a Star Steal Trap.
 - **EFFECT04 — single_source; medium:** Give all players Double Dice.
-- **EFFECT05 — single_source; medium:** Double Blue/Red values again to +12/−12.
 - **EFFECT06 — single_source; medium:** Double each player's coins.
 - **EFFECT07 — single_source; medium:** Replace two or three spaces with Bowser Spaces.
 - **EFFECT08 — single_source; medium:** Replace two to four spaces with Chance Time Spaces.
 
-### All nine bonus records still have open fields
+### Bonus counter/tie details
 
-- **bowser-space:** Whether repeated Buddy encounters, Bowser Phones, and one physical landing increment this counter differently. Independent tie and zero-activity behavior. Tie algorithm and eligibility minimum remain null.
-- **eventful:** Whether repeated effects count once per physical landing or once per activation. Independent tie and zero-activity behavior. Tie algorithm and eligibility minimum remain null.
-- **item:** Ticket uses, passive items, keys consumed while passing, item bundles and cancelled uses. Independent tie and zero-activity behavior. Tie algorithm and eligibility minimum remain null.
-- **minigame:** Team wins, ties, coin minigames, Duel, VS, Item and Showdown inclusion. Independent tie and zero-activity behavior. Tie algorithm and eligibility minimum remain null.
-- **misfortune:** Whether Buddy repeats change the combined Red/Unlucky landing count. Independent tie and zero-activity behavior. Tie algorithm and eligibility minimum remain null.
-- **rich:** Starting coins, gifts, stolen coins, redistribution, wallet doubling and other counter inclusions. Independent tie and zero-activity behavior. Tie algorithm and eligibility minimum remain null.
-- **shopping:** Free purchases, bundles, remote/event shops and two Buddy purchases. Independent tie and zero-activity behavior. Tie algorithm and eligibility minimum remain null.
-- **sightseer:** Forced transport, teleports, interrupted movement and actual distance versus rolled totals. Independent tie and zero-activity behavior. Tie algorithm and eligibility minimum remain null.
-- **slowpoke:** Forced transport, teleports, interrupted movement and zero-distance eligibility. Independent tie and zero-activity behavior. Tie algorithm and eligibility minimum remain null.
+- **bowser-space:** Whether repeated Buddy encounters, Bowser Phones, and one physical landing increment this counter differently. Independent tie and zero-activity behavior. Tie rule and eligibility minimum remain null.
+- **eventful:** Whether repeated effects count once per physical landing or once per activation. Independent tie and zero-activity behavior. Tie rule and eligibility minimum remain null.
+- **item:** Ticket uses, passive items, keys consumed while passing, item bundles and cancelled uses. Independent tie and zero-activity behavior. Tie rule and eligibility minimum remain null.
+- **minigame:** Team wins, ties, coin minigames, Duel, VS, Item and Showdown inclusion. Independent tie and zero-activity behavior. Tie rule and eligibility minimum remain null.
+- **misfortune:** Whether Buddy repeats change the combined Red/Unlucky landing count. Independent tie and zero-activity behavior. Tie rule and eligibility minimum remain null.
+- **rich:** Starting coins, gifts, stolen coins, redistribution, wallet doubling and other counter inclusions. Independent tie and zero-activity behavior. Tie rule and eligibility minimum remain null.
+- **shopping:** Free purchases, bundles, remote/event shops and two Buddy purchases. Independent tie and zero-activity behavior. Tie rule and eligibility minimum remain null.
+- **sightseer:** Forced transport, teleports, interrupted movement and actual distance versus rolled totals. Independent tie and zero-activity behavior. Tie rule and eligibility minimum remain null.
+- **slowpoke:** Forced transport, teleports, interrupted movement and zero-distance eligibility. Independent tie and zero-activity behavior. Tie rule and eligibility minimum remain null.
 
-### Exact strings and timestamps
+### Exact strings and scope
 
-All 13 strings have source URLs and transcript speaker attribution, but **none has a verified primary gameplay capture or independent second transcript**. Eleven are voiced announcements, not certified on-screen captions; only two are host-text excerpts. The remaining opening, item, branch, landing, Homestretch, bonus-award and ending dialogue is not comprehensively transcribed. Source typography and regional/version differences are not guaranteed by a wiki transcription. No fabricated timestamps are supplied.
+All 22 strings cite the retrieved Jamboree quote page. They remain one-lineage transcriptions; visual capture and independent second transcript fields are explicitly absent. No guessed timestamp is supplied. Exact to the source is distinct from visually confirmed in a particular Nintendo build or region. The original prompt accepts source-attributed strings; primary-frame capture is follow-up evidence and is not introduced as an extra universal gate.
 
-### Coverage and evidence limits
+### Limits on delivery evidence
 
-The full Homestretch menu-generation algorithm, exact probabilities, all restrictions, inventory overflow, complete Frenzy eligibility, complete Tag-Team scoring/turn order, minigame team/vote selection and payout algorithms, exact item/Buddy/landing event priority, all coin/Star tie cardinalities, and precise bonus counter inclusions remain unresolved. See U01–U20 and all entries in `CONFLICTS.md`.
+The requested universal two-independent-source standard is not met for 66 claim/gap rows. Six non-Pro bonus criteria remain one lineage, and ties/no-recipient thresholds remain ambiguous. Full Homestretch option generation, Classic qualifiers, several Pro/TV exceptions, hidden probabilities and the implementation-level event/counter details in U01–U19 remain open. U20 records unperformed controlled observation and independent-researcher work; no claim that these ran is made.
 
-Not every per-row citation has a retained quotation. `SOURCES.md` explicitly marks missing excerpts; even present one-word fragments are locators, not complete proposition proofs. Therefore the requested universal two-independent-URL-plus-quote evidence standard is **not satisfied**.
-
-The Dailymotion browser attempt could not play the game footage. Its auto-captions, guessed duration and inferred countdown meaning were rejected. No controlled gameplay tests were performed. No green GitHub Actions run is claimed, and no outside-folder workflow was added.
+The prior public-video playback failed; its captions and guessed timestamps were rejected. Short quotation captures fingerprint retrieved markdown, not origin HTML or installed game data. Green CI will check artifact integrity and the documented strict exit 1; it will not certify research completeness. The PR remains draft.

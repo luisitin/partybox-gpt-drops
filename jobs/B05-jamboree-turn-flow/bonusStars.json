@@ -1,35 +1,519 @@
 {
-"job":"B05",
-"catalogCompleteness":"Nine documented categories; no independent full-pool primary capture.",
-"policyClaimIds":[
-"COUNT01",
-"COUNT02",
-"COUNT03",
-"COUNT04",
-"TIE01",
-"TIE02",
-"TV02"
-],
-"selectionAlgorithm":null,
-"allCriteriaDualConfirmed":false,
-"bonuses":[
-{"id":"bowser-space","name":"Bowser Space Bonus","criterion":"Maximize Bowser-space landings.","metric":"bowser_landings","direction":"max","criterionClaimId":"BONUS01","criterionStatus":"single_source","confidence":"low","sourceIds":["BONUS","QUOTE","TRACKER"],"nameSourceId":"TRACKER","tieRule":{"value":null,"claimIds":["TIE01","TIE02"],"status":"unverified"},"starsPerQualifyingRecipient":{"value":1,"status":"single_source","sourceIds":["BONUS","TRACKER"]},"eligibilityMinimum":null,"counterEdgeCasesVerified":false,"selectionPolicyClaimIds":["COUNT01","COUNT02","COUNT03","COUNT04","TV02"],"unverified":["Whether repeated Buddy encounters, Bowser Phones, and one physical landing increment this counter differently.","Independent tie and zero-activity behavior."],"criterionConfidence":"medium"},
-{"id":"eventful","name":"Eventful Bonus","criterion":"Maximize Event-space landings.","metric":"event_landings","direction":"max","criterionClaimId":"BONUS02","criterionStatus":"corroborated","confidence":"low","sourceIds":["BONUS","QUOTE","GR"],"nameSourceId":"TRACKER","tieRule":{"value":null,"claimIds":["TIE01","TIE02"],"status":"unverified"},"starsPerQualifyingRecipient":{"value":1,"status":"single_source","sourceIds":["BONUS","TRACKER"]},"eligibilityMinimum":null,"counterEdgeCasesVerified":false,"selectionPolicyClaimIds":["COUNT01","COUNT02","COUNT03","COUNT04","TV02"],"unverified":["Whether repeated effects count once per physical landing or once per activation.","Independent tie and zero-activity behavior."],"criterionConfidence":"high"},
-{"id":"item","name":"Item Bonus","criterion":"Maximize items used.","metric":"items_used","direction":"max","criterionClaimId":"BONUS03","criterionStatus":"single_source","confidence":"low","sourceIds":["BONUS","QUOTE","TRACKER"],"nameSourceId":"TRACKER","tieRule":{"value":null,"claimIds":["TIE01","TIE02"],"status":"unverified"},"starsPerQualifyingRecipient":{"value":1,"status":"single_source","sourceIds":["BONUS","TRACKER"]},"eligibilityMinimum":null,"counterEdgeCasesVerified":false,"selectionPolicyClaimIds":["COUNT01","COUNT02","COUNT03","COUNT04","TV02"],"unverified":["Ticket uses, passive items, keys consumed while passing, item bundles and cancelled uses.","Independent tie and zero-activity behavior."],"criterionConfidence":"medium"},
-{"id":"minigame","name":"Minigame Bonus","criterion":"Maximize minigame wins, not minigame coin income.","metric":"minigame_wins","direction":"max","criterionClaimId":"BONUS04","criterionStatus":"single_source","confidence":"low","sourceIds":["BONUS","QUOTE","TRACKER"],"nameSourceId":"TRACKER","tieRule":{"value":null,"claimIds":["TIE01","TIE02"],"status":"unverified"},"starsPerQualifyingRecipient":{"value":1,"status":"single_source","sourceIds":["BONUS","TRACKER"]},"eligibilityMinimum":null,"counterEdgeCasesVerified":false,"selectionPolicyClaimIds":["COUNT01","COUNT02","COUNT03","COUNT04","TV02"],"unverified":["Team wins, ties, coin minigames, Duel, VS, Item and Showdown inclusion.","Independent tie and zero-activity behavior."],"criterionConfidence":"medium"},
-{"id":"misfortune","name":"Misfortune Bonus","criterion":"Maximize combined Red-space and Unlucky-space landings.","metric":"red_plus_unlucky_landings","direction":"max","criterionClaimId":"BONUS05","criterionStatus":"single_source","confidence":"low","sourceIds":["BONUS","QUOTE","TRACKER"],"nameSourceId":"TRACKER","tieRule":{"value":null,"claimIds":["TIE01","TIE02"],"status":"unverified"},"starsPerQualifyingRecipient":{"value":1,"status":"single_source","sourceIds":["BONUS","TRACKER"]},"eligibilityMinimum":null,"counterEdgeCasesVerified":false,"selectionPolicyClaimIds":["COUNT01","COUNT02","COUNT03","COUNT04","TV02"],"unverified":["Whether Buddy repeats change the combined Red/Unlucky landing count.","Independent tie and zero-activity behavior."],"criterionConfidence":"medium"},
-{"id":"rich","name":"Rich Bonus","criterion":"Maximize cumulative coins collected, including coins subsequently spent or stolen; not peak wallet size.","metric":"cumulative_coins_collected","direction":"max","criterionClaimId":"BONUS06","criterionStatus":"single_source","confidence":"low","sourceIds":["BONUS","QUOTE","TRACKER"],"nameSourceId":"TRACKER","tieRule":{"value":null,"claimIds":["TIE01","TIE02"],"status":"unverified"},"starsPerQualifyingRecipient":{"value":1,"status":"single_source","sourceIds":["BONUS","TRACKER"]},"eligibilityMinimum":null,"counterEdgeCasesVerified":false,"selectionPolicyClaimIds":["COUNT01","COUNT02","COUNT03","COUNT04","TV02"],"unverified":["Starting coins, gifts, stolen coins, redistribution, wallet doubling and other counter inclusions.","Independent tie and zero-activity behavior."],"criterionConfidence":"medium"},
-{"id":"shopping","name":"Shopping Bonus","criterion":"Maximize items bought at shops, not coins spent there.","metric":"shop_items_purchased","direction":"max","criterionClaimId":"BONUS07","criterionStatus":"single_source","confidence":"low","sourceIds":["BONUS","QUOTE","TRACKER"],"nameSourceId":"TRACKER","tieRule":{"value":null,"claimIds":["TIE01","TIE02"],"status":"unverified"},"starsPerQualifyingRecipient":{"value":1,"status":"single_source","sourceIds":["BONUS","TRACKER"]},"eligibilityMinimum":null,"counterEdgeCasesVerified":false,"selectionPolicyClaimIds":["COUNT01","COUNT02","COUNT03","COUNT04","TV02"],"unverified":["Free purchases, bundles, remote/event shops and two Buddy purchases.","Independent tie and zero-activity behavior."],"criterionConfidence":"medium"},
-{"id":"sightseer","name":"Sightseer Bonus","criterion":"Maximize spaces traveled.","metric":"spaces_traveled","direction":"max","criterionClaimId":"BONUS08","criterionStatus":"corroborated","confidence":"low","sourceIds":["BONUS","QUOTE","GR"],"nameSourceId":"TRACKER","tieRule":{"value":null,"claimIds":["TIE01","TIE02"],"status":"unverified"},"starsPerQualifyingRecipient":{"value":1,"status":"single_source","sourceIds":["BONUS","TRACKER"]},"eligibilityMinimum":null,"counterEdgeCasesVerified":false,"selectionPolicyClaimIds":["COUNT01","COUNT02","COUNT03","COUNT04","TV02"],"unverified":["Forced transport, teleports, interrupted movement and actual distance versus rolled totals.","Independent tie and zero-activity behavior."],"criterionConfidence":"high"},
-{"id":"slowpoke","name":"Slowpoke Bonus","criterion":"Minimize spaces traveled.","metric":"spaces_traveled","direction":"min","criterionClaimId":"BONUS09","criterionStatus":"corroborated","confidence":"low","sourceIds":["BONUS","QUOTE","GR"],"nameSourceId":"TRACKER","tieRule":{"value":null,"claimIds":["TIE01","TIE02"],"status":"unverified"},"starsPerQualifyingRecipient":{"value":1,"status":"single_source","sourceIds":["BONUS","TRACKER"]},"eligibilityMinimum":null,"counterEdgeCasesVerified":false,"selectionPolicyClaimIds":["COUNT01","COUNT02","COUNT03","COUNT04","TV02"],"unverified":["Forced transport, teleports, interrupted movement and zero-distance eligibility.","Independent tie and zero-activity behavior."],"criterionConfidence":"high"}
-],
-"awardPolicies":[
-{"id":"party-off","claimId":"COUNT03","categories":0,"eligibleBonusIds":[],"selection":"Disabled.","status":"corroborated"},
-{"id":"party-random-below-30","claimId":"COUNT01","categories":2,"eligibleBonusIds":["bowser-space","eventful","item","minigame","misfortune","rich","shopping","sightseer","slowpoke"],"selection":"Random selection reported; sampling weights and eligibility filters unknown.","status":"corroborated"},
-{"id":"party-random-30","claimId":"COUNT01","categories":3,"eligibleBonusIds":["bowser-space","eventful","item","minigame","misfortune","rich","shopping","sightseer","slowpoke"],"selection":"Random selection reported; sampling weights and eligibility filters unknown.","status":"corroborated"},
-{"id":"party-classic-below-30","claimId":"COUNT02","categories":2,"eligibleBonusIds":["rich","eventful"],"selection":"Fixed pair reported; full policy is not independently confirmed.","status":"single_source"},
-{"id":"party-classic-30","claimId":"COUNT02","categories":3,"eligibleBonusIds":["rich","eventful","minigame"],"selection":"Fixed trio reported; full policy is not independently confirmed.","status":"single_source"},
-{"id":"pro-12","claimId":"COUNT04","categories":1,"eligibleBonusIds":["eventful","sightseer","slowpoke"],"selection":"Announced before play; exact probabilities unknown.","status":"corroborated"},
-{"id":"tv-frenzy-5","claimId":"TV02","categories":1,"eligibleBonusIds":null,"selection":"One category; exact pool and weighting not independently established.","status":"corroborated"}
-]
+  "job": "B05",
+  "catalogCompleteness": "Nine documented categories; no independent full-pool primary capture.",
+  "policyClaimIds": [
+    "COUNT01",
+    "COUNT02",
+    "COUNT03",
+    "COUNT04",
+    "TIE01",
+    "TIE02",
+    "TV02"
+  ],
+  "selectionAlgorithm": null,
+  "allCriteriaDualConfirmed": false,
+  "bonuses": [
+    {
+      "id": "bowser-space",
+      "name": "Bowser Space Bonus",
+      "criterion": "Maximize Bowser-space landings.",
+      "metric": "bowser_landings",
+      "direction": "max",
+      "criterionClaimId": "BONUS01",
+      "criterionStatus": "single_source",
+      "confidence": "low",
+      "sourceIds": [
+        "BONUS",
+        "QUOTE",
+        "TRACKER"
+      ],
+      "nameSourceId": "QUOTE",
+      "tieRule": {
+        "value": null,
+        "claimIds": [
+          "TIE01",
+          "TIE02"
+        ],
+        "status": "unverified"
+      },
+      "starsPerQualifyingRecipient": {
+        "value": 1,
+        "status": "single_source",
+        "sourceIds": [
+          "BONUS",
+          "TRACKER"
+        ]
+      },
+      "eligibilityMinimum": null,
+      "counterEdgeCasesVerified": false,
+      "selectionPolicyClaimIds": [
+        "COUNT01",
+        "COUNT02",
+        "COUNT03",
+        "COUNT04",
+        "TV02"
+      ],
+      "unverified": [
+        "Whether repeated Buddy encounters, Bowser Phones, and one physical landing increment this counter differently.",
+        "Independent tie and zero-activity behavior."
+      ],
+      "criterionConfidence": "medium"
+    },
+    {
+      "id": "eventful",
+      "name": "Eventful Bonus",
+      "criterion": "Maximize Event-space landings.",
+      "metric": "event_landings",
+      "direction": "max",
+      "criterionClaimId": "BONUS02",
+      "criterionStatus": "corroborated",
+      "confidence": "low",
+      "sourceIds": [
+        "BONUS",
+        "QUOTE",
+        "GR"
+      ],
+      "nameSourceId": "QUOTE",
+      "tieRule": {
+        "value": null,
+        "claimIds": [
+          "TIE01",
+          "TIE02"
+        ],
+        "status": "unverified"
+      },
+      "starsPerQualifyingRecipient": {
+        "value": 1,
+        "status": "single_source",
+        "sourceIds": [
+          "BONUS",
+          "TRACKER"
+        ]
+      },
+      "eligibilityMinimum": null,
+      "counterEdgeCasesVerified": false,
+      "selectionPolicyClaimIds": [
+        "COUNT01",
+        "COUNT02",
+        "COUNT03",
+        "COUNT04",
+        "TV02"
+      ],
+      "unverified": [
+        "Whether repeated effects count once per physical landing or once per activation.",
+        "Independent tie and zero-activity behavior."
+      ],
+      "criterionConfidence": "high"
+    },
+    {
+      "id": "item",
+      "name": "Item Bonus",
+      "criterion": "Maximize items used.",
+      "metric": "items_used",
+      "direction": "max",
+      "criterionClaimId": "BONUS03",
+      "criterionStatus": "single_source",
+      "confidence": "low",
+      "sourceIds": [
+        "BONUS",
+        "QUOTE",
+        "TRACKER"
+      ],
+      "nameSourceId": "QUOTE",
+      "tieRule": {
+        "value": null,
+        "claimIds": [
+          "TIE01",
+          "TIE02"
+        ],
+        "status": "unverified"
+      },
+      "starsPerQualifyingRecipient": {
+        "value": 1,
+        "status": "single_source",
+        "sourceIds": [
+          "BONUS",
+          "TRACKER"
+        ]
+      },
+      "eligibilityMinimum": null,
+      "counterEdgeCasesVerified": false,
+      "selectionPolicyClaimIds": [
+        "COUNT01",
+        "COUNT02",
+        "COUNT03",
+        "COUNT04",
+        "TV02"
+      ],
+      "unverified": [
+        "Ticket uses, passive items, keys consumed while passing, item bundles and cancelled uses.",
+        "Independent tie and zero-activity behavior."
+      ],
+      "criterionConfidence": "medium"
+    },
+    {
+      "id": "minigame",
+      "name": "Minigame Bonus",
+      "criterion": "Maximize minigame wins, not minigame coin income.",
+      "metric": "minigame_wins",
+      "direction": "max",
+      "criterionClaimId": "BONUS04",
+      "criterionStatus": "single_source",
+      "confidence": "low",
+      "sourceIds": [
+        "BONUS",
+        "QUOTE",
+        "TRACKER"
+      ],
+      "nameSourceId": "QUOTE",
+      "tieRule": {
+        "value": null,
+        "claimIds": [
+          "TIE01",
+          "TIE02"
+        ],
+        "status": "unverified"
+      },
+      "starsPerQualifyingRecipient": {
+        "value": 1,
+        "status": "single_source",
+        "sourceIds": [
+          "BONUS",
+          "TRACKER"
+        ]
+      },
+      "eligibilityMinimum": null,
+      "counterEdgeCasesVerified": false,
+      "selectionPolicyClaimIds": [
+        "COUNT01",
+        "COUNT02",
+        "COUNT03",
+        "COUNT04",
+        "TV02"
+      ],
+      "unverified": [
+        "Team wins, ties, coin minigames, Duel, VS, Item and Showdown inclusion.",
+        "Independent tie and zero-activity behavior."
+      ],
+      "criterionConfidence": "medium"
+    },
+    {
+      "id": "misfortune",
+      "name": "Misfortune Bonus",
+      "criterion": "Maximize combined Red-space and Unlucky-space landings.",
+      "metric": "red_plus_unlucky_landings",
+      "direction": "max",
+      "criterionClaimId": "BONUS05",
+      "criterionStatus": "single_source",
+      "confidence": "low",
+      "sourceIds": [
+        "BONUS",
+        "QUOTE",
+        "TRACKER"
+      ],
+      "nameSourceId": "QUOTE",
+      "tieRule": {
+        "value": null,
+        "claimIds": [
+          "TIE01",
+          "TIE02"
+        ],
+        "status": "unverified"
+      },
+      "starsPerQualifyingRecipient": {
+        "value": 1,
+        "status": "single_source",
+        "sourceIds": [
+          "BONUS",
+          "TRACKER"
+        ]
+      },
+      "eligibilityMinimum": null,
+      "counterEdgeCasesVerified": false,
+      "selectionPolicyClaimIds": [
+        "COUNT01",
+        "COUNT02",
+        "COUNT03",
+        "COUNT04",
+        "TV02"
+      ],
+      "unverified": [
+        "Whether Buddy repeats change the combined Red/Unlucky landing count.",
+        "Independent tie and zero-activity behavior."
+      ],
+      "criterionConfidence": "medium"
+    },
+    {
+      "id": "rich",
+      "name": "Rich Bonus",
+      "criterion": "Maximize cumulative coins collected, including coins subsequently spent or stolen; not peak wallet size.",
+      "metric": "cumulative_coins_collected",
+      "direction": "max",
+      "criterionClaimId": "BONUS06",
+      "criterionStatus": "single_source",
+      "confidence": "low",
+      "sourceIds": [
+        "BONUS",
+        "QUOTE",
+        "TRACKER"
+      ],
+      "nameSourceId": "QUOTE",
+      "tieRule": {
+        "value": null,
+        "claimIds": [
+          "TIE01",
+          "TIE02"
+        ],
+        "status": "unverified"
+      },
+      "starsPerQualifyingRecipient": {
+        "value": 1,
+        "status": "single_source",
+        "sourceIds": [
+          "BONUS",
+          "TRACKER"
+        ]
+      },
+      "eligibilityMinimum": null,
+      "counterEdgeCasesVerified": false,
+      "selectionPolicyClaimIds": [
+        "COUNT01",
+        "COUNT02",
+        "COUNT03",
+        "COUNT04",
+        "TV02"
+      ],
+      "unverified": [
+        "Starting coins, gifts, stolen coins, redistribution, wallet doubling and other counter inclusions.",
+        "Independent tie and zero-activity behavior."
+      ],
+      "criterionConfidence": "medium"
+    },
+    {
+      "id": "shopping",
+      "name": "Shopping Bonus",
+      "criterion": "Maximize items bought at shops, not coins spent there.",
+      "metric": "shop_items_purchased",
+      "direction": "max",
+      "criterionClaimId": "BONUS07",
+      "criterionStatus": "single_source",
+      "confidence": "low",
+      "sourceIds": [
+        "BONUS",
+        "QUOTE",
+        "TRACKER"
+      ],
+      "nameSourceId": "QUOTE",
+      "tieRule": {
+        "value": null,
+        "claimIds": [
+          "TIE01",
+          "TIE02"
+        ],
+        "status": "unverified"
+      },
+      "starsPerQualifyingRecipient": {
+        "value": 1,
+        "status": "single_source",
+        "sourceIds": [
+          "BONUS",
+          "TRACKER"
+        ]
+      },
+      "eligibilityMinimum": null,
+      "counterEdgeCasesVerified": false,
+      "selectionPolicyClaimIds": [
+        "COUNT01",
+        "COUNT02",
+        "COUNT03",
+        "COUNT04",
+        "TV02"
+      ],
+      "unverified": [
+        "Free purchases, bundles, remote/event shops and two Buddy purchases.",
+        "Independent tie and zero-activity behavior."
+      ],
+      "criterionConfidence": "medium"
+    },
+    {
+      "id": "sightseer",
+      "name": "Sightseer Bonus",
+      "criterion": "Maximize spaces traveled.",
+      "metric": "spaces_traveled",
+      "direction": "max",
+      "criterionClaimId": "BONUS08",
+      "criterionStatus": "corroborated",
+      "confidence": "low",
+      "sourceIds": [
+        "BONUS",
+        "QUOTE",
+        "GR"
+      ],
+      "nameSourceId": "QUOTE",
+      "tieRule": {
+        "value": null,
+        "claimIds": [
+          "TIE01",
+          "TIE02"
+        ],
+        "status": "unverified"
+      },
+      "starsPerQualifyingRecipient": {
+        "value": 1,
+        "status": "single_source",
+        "sourceIds": [
+          "BONUS",
+          "TRACKER"
+        ]
+      },
+      "eligibilityMinimum": null,
+      "counterEdgeCasesVerified": false,
+      "selectionPolicyClaimIds": [
+        "COUNT01",
+        "COUNT02",
+        "COUNT03",
+        "COUNT04",
+        "TV02"
+      ],
+      "unverified": [
+        "Forced transport, teleports, interrupted movement and actual distance versus rolled totals.",
+        "Independent tie and zero-activity behavior."
+      ],
+      "criterionConfidence": "high"
+    },
+    {
+      "id": "slowpoke",
+      "name": "Slowpoke Bonus",
+      "criterion": "Minimize spaces traveled.",
+      "metric": "spaces_traveled",
+      "direction": "min",
+      "criterionClaimId": "BONUS09",
+      "criterionStatus": "corroborated",
+      "confidence": "low",
+      "sourceIds": [
+        "QUOTE",
+        "GR"
+      ],
+      "nameSourceId": "QUOTE",
+      "tieRule": {
+        "value": null,
+        "claimIds": [
+          "TIE01",
+          "TIE02"
+        ],
+        "status": "unverified"
+      },
+      "starsPerQualifyingRecipient": {
+        "value": 1,
+        "status": "single_source",
+        "sourceIds": [
+          "BONUS",
+          "TRACKER"
+        ]
+      },
+      "eligibilityMinimum": null,
+      "counterEdgeCasesVerified": false,
+      "selectionPolicyClaimIds": [
+        "COUNT01",
+        "COUNT02",
+        "COUNT03",
+        "COUNT04",
+        "TV02"
+      ],
+      "unverified": [
+        "Forced transport, teleports, interrupted movement and zero-distance eligibility.",
+        "Independent tie and zero-activity behavior."
+      ],
+      "criterionConfidence": "high"
+    }
+  ],
+  "awardPolicies": [
+    {
+      "id": "party-off",
+      "claimId": "COUNT03",
+      "categories": 0,
+      "eligibleBonusIds": [],
+      "selection": "Disabled.",
+      "status": "corroborated"
+    },
+    {
+      "id": "party-random-below-30",
+      "claimId": "COUNT01",
+      "categories": 2,
+      "eligibleBonusIds": [
+        "bowser-space",
+        "eventful",
+        "item",
+        "minigame",
+        "misfortune",
+        "rich",
+        "shopping",
+        "sightseer",
+        "slowpoke"
+      ],
+      "selection": "Random selection reported; sampling weights and eligibility filters unknown.",
+      "status": "corroborated"
+    },
+    {
+      "id": "party-random-30",
+      "claimId": "COUNT01",
+      "categories": 3,
+      "eligibleBonusIds": [
+        "bowser-space",
+        "eventful",
+        "item",
+        "minigame",
+        "misfortune",
+        "rich",
+        "shopping",
+        "sightseer",
+        "slowpoke"
+      ],
+      "selection": "Random selection reported; sampling weights and eligibility filters unknown.",
+      "status": "corroborated"
+    },
+    {
+      "id": "party-classic-below-30",
+      "claimId": "COUNT02",
+      "categories": 2,
+      "eligibleBonusIds": [
+        "rich",
+        "eventful"
+      ],
+      "selection": "Fixed pair reported; full policy is not independently confirmed.",
+      "status": "single_source"
+    },
+    {
+      "id": "party-classic-30",
+      "claimId": "COUNT02",
+      "categories": 3,
+      "eligibleBonusIds": [
+        "rich",
+        "eventful",
+        "minigame"
+      ],
+      "selection": "Fixed trio reported; full policy is not independently confirmed.",
+      "status": "single_source"
+    },
+    {
+      "id": "pro-12",
+      "claimId": "COUNT04",
+      "categories": 1,
+      "eligibleBonusIds": [
+        "eventful",
+        "sightseer",
+        "slowpoke"
+      ],
+      "selection": "Announced before play; exact probabilities unknown.",
+      "status": "corroborated"
+    },
+    {
+      "id": "tv-frenzy-5",
+      "claimId": "TV02",
+      "categories": 1,
+      "eligibleBonusIds": null,
+      "selection": "One category; exact pool and weighting not independently established.",
+      "status": "corroborated"
+    }
+  ]
 }
