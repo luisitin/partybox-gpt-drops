@@ -46,3 +46,5 @@
     All 1,200 rows pass structural checks; sealed grades and rejected rows remain.
 13. Corrected and regraded Q0621 after recording the failed missing-blank check; preserved the invalidated batch and added pre-seal genre guards. All 1,300 rows pass structural checks.
     Independent review remains partial; complete counts are recorded verbatim.
+14. Authored 100 domestic-product candidates with tangible evidence and adult procedural consequences; kept weak abstract and niche-name frames below 4. All 1,400 rows pass structural checks.
+    Independent review remains partial; complete counts are recorded verbatim.

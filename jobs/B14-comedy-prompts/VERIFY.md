@@ -3,6 +3,12 @@
 Draft checks cover only the rows actually authored and never establish completion
 of the required count or editorial work.
 
+Historical failed check at commit `bdd92bd`: the exact command
+`python3 scripts/verify.py --draft > results/draft.json` stopped at the fill-blank
+assertion (650 fill rows inspected; 649 had a blank and Q0621 did not). Seed:
+not applicable. That failed version and the fresh correction are preserved in
+`REVISIONS.md` and `superseded/013-v1/`. The corrected 1,300-row check passed.
+
 | Check | Cases | Passed | Failed | Seed | Exact command |
 | --- | ---: | ---: | ---: | --- | --- |
 | Draft JSON Schema validation | 100 | 100 | 0 | not applicable | `npm run check:draft` |
@@ -27,7 +33,7 @@ into `results/draft.json`; the npm alias runs the same validator.
 
 | Current measured check | Cases | Passed | Failed | Seed | Exact command |
 | --- | ---: | ---: | ---: | --- | --- |
-| JSON Schema / character limit / ID / genre checks | 1300 | 1300 | 0 | not applicable | `npm run check:draft` |
+| JSON Schema / character limit / ID / genre checks | 1400 | 1400 | 0 | not applicable | `npm run check:draft` |
 | Complete independent batch record and input-hash match | 400 | 400 | 0 | not applicable | `npm run check:draft` |
 
 The independent-record check validates completeness and input identity; it does
@@ -67,6 +73,12 @@ checks; 400 independent reviews are validated, with 284 meeting 4+ in both passe
 The complete measured partial rates are retained in `results/draft.json`.
 
 Measured milestone 013: 650 candidates per genre, 1,300/1,300 structural
+checks, maximum 90 characters. 400 independent rows validated;
+284 meet 4+ in both passes. Exact-score agreement is
+37.25%; threshold agreement is
+71.5% on reviewed rows only.
+
+Measured milestone 014: 700 candidates per genre, 1,400/1,400 structural
 checks, maximum 90 characters. 400 independent rows validated;
 284 meet 4+ in both passes. Exact-score agreement is
 37.25%; threshold agreement is
