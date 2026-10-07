@@ -33,8 +33,8 @@ into `results/draft.json`; the npm alias runs the same validator.
 
 | Current measured check | Cases | Passed | Failed | Seed | Exact command |
 | --- | ---: | ---: | ---: | --- | --- |
-| JSON Schema / character limit / ID / genre checks | 2900 | 2900 | 0 | not applicable | `npm run check:draft` |
-| Complete independent batch record and input-hash match | 2700 | 2700 | 0 | not applicable | `npm run check:draft` |
+| JSON Schema / character limit / ID / genre checks | 3000 | 3000 | 0 | not applicable | `npm run check:draft` |
+| Complete independent batch record and input-hash match | 3000 | 3000 | 0 | not applicable | `npm run check:draft` |
 
 The independent-record check validates completeness and input identity; it does
 not count low editorial grades as passing the humor rubric.
@@ -212,8 +212,8 @@ changed after sealing.
   reference. It cannot enter unchanged; Wendy's restaurant service references
   are distinct from a scene involving the child mascot.
 
-- The full pool currently contains 1,450 candidates per genre; the final batch remains.
-- Independent second grading is complete for batches 001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020, 021, 022, 023, 024, 025, 026, 027 only, not all 3,000 rows.
+- The complete 1,500+1,500 pool is authored and all 3,000 received independent second grading.
+- All batches 001–030 have complete independent second grading.
 - Final 600+600 selection, agreement rates, near-duplicate resolution, and the
   named-reference cap have not yet been established.
 - Adult-only content and no-slur editorial review remains pending.
@@ -223,3 +223,12 @@ changed after sealing.
 Measured milestone 029: 2,900 authored candidates and 2,700 independent reviews.
 1,765 meet grade 4+ in both passes. Exact agreement 41.7778%; keep-threshold
 agreement 73.2963%. No final pack or editorial acceptance is claimed.
+
+Measured full-pool milestone: 3,000 authored and independently graded rows.
+1978 meet grade 4+ in both passes. Exact grade agreement: 44.76666667%;
+keep-threshold agreement: 73.90000000%. Selection and final audits remain pending.
+
+Batch 030 had unsealed length failures before independent handoff; its original
+draft is preserved under `superseded/030-unsealed-length-draft/`. The corrected
+wording was sealed before the fresh reviewer read it. No independent grade was
+altered, and the input hash binds review 030 to its corrected wording.
