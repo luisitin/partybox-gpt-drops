@@ -10,8 +10,17 @@ const read=name=>JSON.parse(fs.readFileSync(name,'utf8'));
 const data=read('dice.json'), committed=read('odds.json');
 fs.mkdirSync('.test-output',{recursive:true});
 const records=[], failures=[];
-function cmd(command,args){const r=spawnSync(command,args,{encoding:'utf8',maxBuffer:64*1024*1024});if(r.error)throw r.error;assert.equal(r.status,0,r.stderr||r.stdout);return r.stdout;}
+function cmd(command,args,options={}){const r=spawnSync(command,args,{encoding:'utf8',maxBuffer:64*1024*1024,...options});if(r.error)throw r.error;assert.equal(r.status,0,r.stderr||r.stdout);return r.stdout;}
 function suite(seed,name,body){try{const result=body();records.push({seed,name,passed:true,...result});console.log(`PASS seed=${seed} ${name} cases=${result.cases}`);}catch(error){const message=String(error.stack||error);records.push({seed,name,passed:false,error:message});failures.push({seed,name,error:message});console.error(`FAIL seed=${seed} ${name}: ${message}`);}}
+function integrity(){
+ const manifest=fs.readFileSync('SHA256SUMS.txt','utf8');assert(Buffer.byteLength(manifest)<=30_000_000);
+ const entries=manifest.trim().split('\n');
+ for(const line of entries){const match=/^([a-f0-9]{64})  (.+)$/.exec(line);assert(match);
+  const bytes=fs.readFileSync(match[2]);assert(bytes.length<=30_000_000,match[2]+' exceeds file limit');
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),match[1],match[2]+' checksum');
+ }
+ return{cases:entries.length,command:'npm test (all delivered hashes and per-file 30000000-byte gate)'};
+}
 function* tuples(blocks,i=0,values=[]){if(i===blocks.length){yield values.slice();return;}for(const v of blocks[i]){values.push(v);yield*tuples(blocks,i+1,values);values.pop();}}
 const key=(m,c)=>`${m}:${c??'?'}`;
 function rational(s){const [n,d]=s.split('/').map(BigInt);assert(d>0n);return[n,d];}
@@ -64,6 +73,30 @@ function compare(A,oracle){let cases=0;for(let i=0;i<data.models.length;i++){
  const m=data.models[i], expected=oracle[i];assert.deepEqual(A.enumerate(m),expected.distribution,m.id+' A versus B distribution');assert.deepEqual(expected.distribution,committed.distributions[i],m.id+' B versus committed');let j=0;
  for(const r of tuples(m.blocks)){const out=A.evaluateRoll(m,r);assert.deepEqual([out.movement,out.coins],expected.cases[j],`${m.id} tuple ${j}`);j++;cases++;}assert.equal(j,Number(expected.distribution.sampleSpace));
  }return{cases,distributions:data.models.length,command:'npm test (TypeScript Cartesian enumeration versus Python convolution and independent per-tuple evaluator)'};}
+function blindComparisons(A,B){let cases=0;
+ const sealed=fs.readFileSync('tests/blind/SEALED-SHA256SUMS.txt','utf8').trim().split('\n');
+ for(const line of sealed){const[digest,name]=line.split('  ');assert.equal(createHash('sha256').update(fs.readFileSync('tests/blind/'+name)).digest('hex'),digest);}
+ for(let i=0;i<data.models.length;i++){
+  const model=data.models[i],expected=B.enumerate(model);
+  assert.deepEqual(A.enumerate(model),expected,model.id+' production versus sealed blind distribution');
+  assert.deepEqual(committed.distributions[i],expected,model.id+' lookup table versus sealed blind distribution');
+  for(const roll of tuples(model.blocks)){assert.deepEqual(A.evaluateRoll(model,roll),B.evaluateRoll(model,roll),model.id+' blind tuple');cases++;}
+ }
+ for(let n=-100;n<=100;n++)for(let d=-10;d<=10;d++)if(d!==0)
+  assert.equal(A.fraction(BigInt(n),BigInt(d)),B.fraction(BigInt(n),BigInt(d)));
+ const base=data.models[0];
+ const invalid=[{blocks:[]},{blocks:Array.from({length:6},()=>[1])},{blocks:[[1,1]]},
+  {blocks:[[]]},{blocks:[[0]]},{blocks:[[11]]},{blocks:[[1.5]]},{offset:-1},{offset:6},
+  {offset:.5},{bonusDice:1},{bonusDice:2},{bonusDice:-1},{bonusDice:.5},
+  {bonusRegular:-1},{bonusSevens:.5},{payday:'true'},{coinKnown:1}];
+ for(const patch of invalid)for(const engine of[A,B]){
+  assert.throws(()=>engine.enumerate({...base,...patch}),RangeError);
+  assert.throws(()=>engine.evaluateRoll({...base,...patch},[1]),RangeError);
+ }
+ return{cases,distributions:data.models.length,fractionComparisons:4020,invalidModelFixtures:invalid.length,
+  referenceSha256:createHash('sha256').update(fs.readFileSync('tests/blind/reference.ts')).digest('hex'),
+  command:'npm test (sealed blind mixed-radix oracle versus every production tuple, table, fraction and invalid model fixture)'};
+}
 function mutate(seed,A,oracle){const base=fs.readFileSync('.build/engine-a.js','utf8'), result=[];
  for(const[id,description,needle,replacement]of mutations){assert.equal(base.split(needle).length,2,`${id}: mutation anchor must occur once`);const module=new Module(path.resolve('.build/'+id+'.cjs'));module.filename=path.resolve('.build/'+id+'.cjs');module.paths=[];module._compile(base.replace(needle,replacement),module.filename);
  let witness=null;for(let i=0;i<data.models.length;i++){try{assert.deepEqual(module.exports.enumerate(data.models[i]),oracle[i].distribution);}catch(e){witness={model:data.models[i].id,message:String(e.message).slice(0,180)};break;}}
@@ -75,35 +108,62 @@ function rngChecks(R,seed){const a=R.seededRng(seed),b=R.seededRng(seed);for(let
  for(const v of[-1,1.5,4294967296,NaN])assert.throws(()=>R.randomIndex(10,()=>v));assert.throws(()=>R.seededRng(0));assert.throws(()=>R.randomIndex(0,a));assert.equal(R.randomIndex(1,()=>123),'0'|0);
  return{cases:1009,command:'npm test (RNG reproducibility, rejection branch and uint32 bounds)'};
 }
+function simulationInputs(seed,model,expected,A){
+ const widths=model.blocks.map(b=>b.length),bins=new Map(expected.joint.map((r,j)=>[key(r.movement,r.coins),j]));
+ const rankToBin=[];for(const roll of tuples(model.blocks)){const out=A.evaluateRoll(model,roll);rankToBin.push(bins.get(key(out.movement,out.coins)));}
+ const streamSeed=createHash('sha256').update(`B01:${seed}:${model.id}`).digest().readUInt32LE(0)||1;
+ return{widths,bins,rankToBin,streamSeed};
+}
+function nativeCounts(input,trials){
+ const text=[input.streamSeed,trials,input.widths.length,input.bins.size,...input.widths,...input.rankToBin].join(' ')+'\n';
+ return JSON.parse(cmd('.test-output/montecarlo',[],{input:text}));
+}
+function nativeEquivalence(seed,A,R){
+ const raw=JSON.parse(cmd('.test-output/montecarlo',['--raw'],{input:`${seed} 1024\n`}));
+ const generator=R.seededRng(seed);for(const value of raw)assert.equal(value,generator());
+ for(let i=0;i<data.models.length;i++){
+  const input=simulationInputs(seed,data.models[i],committed.distributions[i],A),rng=R.seededRng(input.streamSeed);
+  const js=Array(input.bins.size).fill(0);
+  for(let trial=0;trial<1000;trial++){
+   let rank=0;for(const width of input.widths)rank=rank*width+R.randomIndex(width,rng);
+   js[input.rankToBin[rank]]++;
+  }
+  assert.deepEqual(nativeCounts(input,1000).observed,js,data.models[i].id+' accelerated sampler parity');
+ }
+ return{cases:1024+data.models.length,models:data.models.length,
+  command:'npm test (C++ versus TypeScript PRNG values and 1000 complete sampled tuples for every model)'};
+}
 function simulate(seed,A,R){let cases=0;const results=[],statFailures=[];
  for(let i=0;i<data.models.length;i++){
- const model=data.models[i],expected=committed.distributions[i], widths=model.blocks.map(b=>b.length), bins=new Map(expected.joint.map((r,j)=>[key(r.movement,r.coins),j]));
- const rankToBin=new Uint16Array(Number(expected.sampleSpace));let rank=0;for(const r of tuples(model.blocks)){const out=A.evaluateRoll(model,r);rankToBin[rank++]=bins.get(key(out.movement,out.coins));}
- const streamSeed=createHash('sha256').update(`B01:${seed}:${model.id}`).digest().readUInt32LE(0)||1,rng=R.seededRng(streamSeed),observed=new Uint32Array(bins.size);
- for(let t=0;t<N;t++){let index=0;for(let b=0;b<widths.length;b++)index=index*widths[b]+R.randomIndex(widths[b],rng);observed[rankToBin[index]]++;}
+ const model=data.models[i],expected=committed.distributions[i],input=simulationInputs(seed,model,expected,A);
+ const {streamSeed}=input,native=nativeCounts(input,N),observed=native.observed;
  const movement={},coins={},checks=[];
  function check(label,count,p){const[n,d]=rational(p),delta=BigInt(count)*d-BigInt(N)*n,variance=BigInt(N)*n*(d-n),square=delta*delta;const passed=square<=16n*variance;checks.push({outcome:label,observed:count,probability:p,withinFourSigma:passed,zSquared:variance?`${square}/${variance}`:'0/1'});if(!passed)statFailures.push({model:model.id,seed,outcome:label,count,p});cases++;}
  for(let j=0;j<observed.length;j++){const r=expected.joint[j],count=observed[j];check(`joint:${key(r.movement,r.coins)}`,count,r.probability);movement[r.movement]=(movement[r.movement]??0)+count;if(r.coins!==null)coins[r.coins]=(coins[r.coins]??0)+count;}
  for(const[k,p]of Object.entries(expected.movement))check(`movement:${k}`,movement[k]??0,p);
  for(const[k,p]of Object.entries(expected.coins??{}))check(`coins:${k}`,coins[k]??0,p);
  assert.equal(observed.reduce((a,b)=>a+b,0),N);
- results.push({model:model.id,seed,streamSeed,trials:N,passed:checks.every(c=>c.withinFourSigma),checks});console.log(`MC seed=${seed} ${model.id} trials=${N} ${results.at(-1).passed?'PASS':'FAIL'}`);
+ results.push({model:model.id,seed,streamSeed,trials:N,rngDraws:native.rngDraws,rejectedDraws:native.rejectedDraws,passed:checks.every(c=>c.withinFourSigma),checks});console.log(`MC seed=${seed} ${model.id} trials=${N} ${results.at(-1).passed?'PASS':'FAIL'}`);
  }
  fs.writeFileSync(`.test-output/monte-carlo-seed-${seed}.json`,JSON.stringify(results,null,2)+'\n');assert.deepEqual(statFailures,[],'4-sigma excursions retained; never rerun/cherry-pick seeds');
  return{cases,models:results.length,trials:N*results.length,command:'npm test (10000000 independent face-sampled tuples per model; exact bigint 4-sigma inequalities)'};
 }
 for(const seed of[1,2,3]){
- suite(seed,'typescript-strict',()=>{cmd('tsc',['-p','tsconfig.json']);return{cases:3,command:'tsc -p tsconfig.json'};});
+ suite(seed,'artifact-integrity',integrity);
+ suite(seed,'typescript-strict',()=>{cmd('tsc',['-p','tsconfig.json']);return{cases:4,command:'tsc -p tsconfig.json'};});
+ suite(seed,'native-sampler-compile',()=>{cmd('g++',['-std=c++17','-O3','-Wall','-Wextra','-Werror','tests/montecarlo.cpp','-o','.test-output/montecarlo']);return{cases:1,command:'g++ -std=c++17 -O3 -Wall -Wextra -Werror tests/montecarlo.cpp -o .test-output/montecarlo'};});
  suite(seed,'json-schema',()=>{const output=cmd('python3',['tests/validate.py',String(seed)]);fs.writeFileSync(`.test-output/validator-seed-${seed}.txt`,output);console.log(output.trim());return{cases:2,command:`python3 tests/validate.py ${seed}`,output};});
- const A=require('../.build/engine-a.js'),L=require('../.build/odds.js'),R=require('../.build/rng.js');
+ const A=require('../.build/engine-a.js'),L=require('../.build/odds.js'),R=require('../.build/rng.js'),B=require('../.build/tests/blind/reference.js');
  const oracle=JSON.parse(cmd('python3',['tests/oracle_b.py']));
  suite(seed,'semantic-references',semantic);
  suite(seed,'exhaustive-A-B',()=>compare(A,oracle));
+ suite(seed,'blind-independent-odds',()=>blindComparisons(A,B));
  suite(seed,'exact-invariants',()=>invariants(A));
  suite(seed,'lookup-boundaries',()=>lookupChecks(A,L));
  suite(seed,'literal-goldens',()=>goldens(A));
  suite(seed,'seeded-rng',()=>rngChecks(R,seed));
- suite(seed,'mutation-testing',()=>mutate(seed,A,oracle));
+ suite(seed,'mutation-testing',()=>mutate(seed,A,data.models.map(model=>({distribution:B.enumerate(model)}))));
+ suite(seed,'native-sampler-equivalence',()=>nativeEquivalence(seed,A,R));
  suite(seed,'monte-carlo',()=>simulate(seed,A,R));
 }
 fs.writeFileSync('.test-output/suites.json',JSON.stringify(records,null,2)+'\n');

@@ -34,8 +34,14 @@ function validateModel(model: Model): void {
   if (!Number.isInteger(model.bonusDice) || model.bonusDice < 0 ||
       model.bonusDice > model.blocks.length || model.bonusDice === 1)
     throw new RangeError('Bonus dice count');
+  if (!Number.isSafeInteger(model.bonusRegular) || model.bonusRegular < 0 ||
+      !Number.isSafeInteger(model.bonusSevens) || model.bonusSevens < 0)
+    throw new RangeError('Coin bonus');
+  if (typeof model.payday !== 'boolean' || typeof model.coinKnown !== 'boolean')
+    throw new RangeError('Boolean rule flags');
 }
 export function evaluateRoll(model: Model, roll: readonly number[]): Outcome {
+  validateModel(model);
   if (roll.length !== model.blocks.length) throw new RangeError('Roll length');
   for (let i = 0; i < roll.length; ++i) {
     const value = roll[i];

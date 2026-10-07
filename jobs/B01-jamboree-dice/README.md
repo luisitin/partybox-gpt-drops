@@ -1,6 +1,6 @@
 # B01 Jamboree dice blocks + exact odds
 
-**Research status: PARTIAL. Mathematical model and implementation tests: see the executed results in VERIFY.md.** This is not a fully two-source-verified reproduction of Nintendo's RNG. Missing independent bonus confirmation, TV parity, blinded authorship and other open gates are explicitly listed under UNVERIFIED.
+**Research status: PARTIAL. Mathematical model and implementation tests: see the executed results in VERIFY.md.** This is not a fully two-source-verified reproduction of Nintendo's RNG. Missing independent bonus confirmation, TV parity and other open gates are explicitly listed under UNVERIFIED.
 
 ## The central correction
 
@@ -12,6 +12,8 @@ Jamboree does not give each playable character a distinct die. The 22 characters
 - `odds.json`: reduced fraction strings, exact ordered-outcome counts, movement/coin marginals, joint outcomes and expectations. `null` is unknown, never zero.
 - `odds.ts`: immutable, pure lookup API. It does not generate probabilities, mutate callers or sample randomness.
 - `engine-a.ts`: TypeScript recursive Cartesian enumeration using bigint arithmetic.
+- `tests/blind/`: a sealed reference authored from the public contract and dice.json before production access; 41 hand-derived self-check assertions passed. Its exact tables and every ordered tuple are compared with production.
+- `tests/montecarlo.cpp`: an accelerated test-only sampler, compared to the TypeScript generator and complete sampled outcomes for every model.
 - `tests/oracle_b.py`: Python polynomial convolution and a separate ordered-tuple evaluator using integers/Fraction. It reads only the research input, not implementation A or the committed odds.
 - `rng.ts`, `tests/run.mjs`, `tests/mutations.mjs`: injected seeded RNG, exact comparisons, three complete seeded runs and 25 one-at-a-time source mutations.
 - `schema.json`: closed JSON Schema, Draft 2020-12, for both data documents; validated by the real `jsonschema` implementation.
@@ -23,11 +25,11 @@ The only repository path outside this job is `.github/workflows/B01.yml`, as exp
 
 ## Run
 
-Prerequisites: Node 22+, npm, Python 3.12+ and internet access for initial development-tool installation. Runtime lookup dependencies: **zero**. TypeScript and Python jsonschema are development/test dependencies only.
+Prerequisites: Node 22+, npm, GNU g++, Python 3.12+ and internet access for initial development-tool installation. Runtime lookup dependencies: **zero**. TypeScript and Python jsonschema are development/test dependencies only.
 
 ```sh
 cd jobs/B01-jamboree-dice
-npm install --ignore-scripts --no-audit --no-fund
+npm ci --ignore-scripts --no-audit --no-fund
 python -m pip install -r requirements-dev.txt
 npm test
 ```
@@ -64,4 +66,4 @@ Every possible ordered tuple is checked against both algorithms, as are every jo
 
 `(c*d - N*n)^2 <= 16*N*n*(d-n)`
 
-Impossible/mandatory outcomes are handled exactly. PRNG streams are reproducible from the base seed and model ID; rejection sampling prevents modulo bias. They are test streams, not a reconstruction of Nintendo's generator. The RNG closure contains explicit sampler state; the lookup and probability functions do not. The two implementations are algorithmically independent but **not blind-authored by separate agents or humans**.
+Impossible/mandatory outcomes are handled exactly. PRNG streams are reproducible from the base seed and model ID; rejection sampling prevents modulo bias. They are test streams, not a reconstruction of Nintendo's generator. The RNG closure contains explicit sampler state; the lookup and probability functions do not. The sealed TypeScript oracle was authored by a separate agent context before production or prior test-source access. `tests/blind/AUTHORING.md` records the inputs and `SEALED-SHA256SUMS.txt` preserves the original hashes. The original Python reference is retained as an additional algorithmic check.
