@@ -1,0 +1,2118 @@
+{
+  "job": "B20",
+  "rules": [
+    {
+      "id": "PRO_LENGTH",
+      "mode": "pro-rules",
+      "field": "length",
+      "value": {
+        "turns": 12
+      },
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "game lasting for 12 turns only",
+          "locator": "pro-rules section",
+          "quoteId": "W_GAME-Q013"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "PRO_BONUS",
+      "mode": "pro-rules",
+      "field": "scoring",
+      "value": "One bonus category is announced before board play.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "ZU",
+          "quote": "There’s only one Bonus Star awarded",
+          "locator": "pro-rules section",
+          "quoteId": "ZU-Q002"
+        },
+        {
+          "sourceId": "N_OVERVIEW",
+          "quote": "the Bonus Star will be announced before you even start",
+          "locator": "pro-rules section",
+          "quoteId": "N_OVERVIEW-Q002"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "PRO_ITEMS",
+      "mode": "pro-rules",
+      "field": "flow",
+      "value": "Choose a starting item; shop copies are limited to two and do not replenish.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "limited to two and not restocking",
+          "locator": "pro-rules section",
+          "quoteId": "W_GAME-Q014"
+        },
+        {
+          "sourceId": "ZU",
+          "quote": "only two copies per item",
+          "locator": "pro-rules section",
+          "quoteId": "ZU-Q003"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "PRO_UNLOCK",
+      "mode": "pro-rules",
+      "field": "unlocks",
+      "value": "Complete one Mario Party board; game length and winning do not determine this unlock.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "MPL_UNLOCK",
+          "quote": "Play through and complete one board",
+          "locator": "pro-rules section",
+          "quoteId": "MPL_UNLOCK-Q001"
+        },
+        {
+          "sourceId": "MPL_UNLOCK",
+          "quote": "Board length and win condition does not matter.",
+          "locator": "pro-rules section",
+          "quoteId": "MPL_UNLOCK-Q002"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "BUDDY_RECRUIT",
+      "mode": "jamboree-buddies",
+      "field": "flow",
+      "value": "Reach an unaffiliated Buddy, play its Showdown, and recruit it by winning; the initiating player has an advantage.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "the winner recruits the Jamboree Buddy",
+          "locator": "jamboree-buddies section",
+          "quoteId": "W_GAME-Q015"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "Jamboree Buddies",
+          "locator": "jamboree-buddies section",
+          "quoteId": "MNN-Q001"
+        },
+        {
+          "sourceId": "TG_BUDDY",
+          "quote": "whoever won their minigame",
+          "locator": "Recruitment / Play Minigames To Earn Your Jamboree Buddy",
+          "quoteId": "TG_BUDDY-Q001"
+        }
+      ],
+      "note": "Full recruitment core corroborated by independent Buddy guide; tie-break die details remain one-source."
+    },
+    {
+      "id": "BUDDY_LIFETIME",
+      "mode": "jamboree-buddies",
+      "field": "length",
+      "value": {
+        "reportedTurns": 3,
+        "includesRecruitmentTurn": true,
+        "exactDecrementBoundary": null
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "CGM",
+          "quote": "after three turns, the buddy leaves",
+          "locator": "jamboree-buddies section",
+          "quoteId": "CGM-Q001"
+        },
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "only around for three turns total",
+          "locator": "Opening / duration",
+          "quoteId": "W_BUDDY-Q001"
+        },
+        {
+          "sourceId": "TG_BUDDY",
+          "quote": "This count of three turns begins when the buddy minigame is played",
+          "locator": "Recruitment / duration",
+          "quoteId": "TG_BUDDY-Q002"
+        }
+      ],
+      "note": "Three turns includes recruitment; exact per-player/round transfer decrement boundary is not certified."
+    },
+    {
+      "id": "BUDDY_STEAL",
+      "mode": "jamboree-buddies",
+      "field": "flow",
+      "value": "Passing the Buddy's owner transfers the Buddy.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "CGM",
+          "quote": "stolen by players who pass you",
+          "locator": "jamboree-buddies section",
+          "quoteId": "CGM-Q002"
+        },
+        {
+          "sourceId": "N_OVERVIEW",
+          "quote": "passes them by",
+          "locator": "jamboree-buddies section",
+          "quoteId": "N_OVERVIEW-Q003"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "KOOP_PLAYERS",
+      "mode": "koopathlon",
+      "field": "players",
+      "value": {
+        "offlineHumans": 1,
+        "totalRacers": 20,
+        "onlineMaximum": 20
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "N_SUPPORT",
+          "quote": "Koopathlon | 1 | 1-20",
+          "locator": "koopathlon section",
+          "quoteId": "N_SUPPORT-Q001"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "offline with 19 NPCs",
+          "locator": "koopathlon section",
+          "quoteId": "MNN-Q021"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "KOOP_LAPS",
+      "mode": "koopathlon",
+      "field": "length",
+      "value": {
+        "lapChoices": [
+          3,
+          5,
+          7
+        ]
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "3, 5, or 7 laps long",
+          "locator": "koopathlon section",
+          "quoteId": "W_GAME-Q016"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "3, 5, or 7 laps",
+          "locator": "koopathlon section",
+          "quoteId": "MNN-Q022"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "KOOP_SPACE",
+      "mode": "koopathlon",
+      "field": "scoring",
+      "value": {
+        "spacesPerCoin": 1,
+        "spacesPerLap": 150
+      },
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "MNN",
+          "quote": "each lap has 150 spaces",
+          "locator": "koopathlon section",
+          "quoteId": "MNN-Q023"
+        },
+        {
+          "sourceId": "TG",
+          "quote": "advancing one space per coin earned",
+          "locator": "koopathlon section",
+          "quoteId": "TG-Q002"
+        }
+      ],
+      "note": "Only the one-space-per-coin component has two-source support; 150-space lap length has one source."
+    },
+    {
+      "id": "KOOP_CADENCE",
+      "mode": "koopathlon",
+      "field": "flow",
+      "value": "Play three coin minigames, then a 20-player Survivathon; repeat until the race finishes.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "At the end of every third minigame",
+          "locator": "koopathlon section",
+          "quoteId": "W_GAME-Q017"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "After the three Coin Minigames",
+          "locator": "koopathlon section",
+          "quoteId": "MNN-Q024"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "KOOP_WIN",
+      "mode": "koopathlon",
+      "field": "scoring",
+      "value": "The first racer to complete the selected lap count wins.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "finish the race first wins",
+          "locator": "koopathlon section",
+          "quoteId": "W_GAME-Q018"
+        },
+        {
+          "sourceId": "TG",
+          "quote": "The first player to cross the finish line",
+          "locator": "koopathlon section",
+          "quoteId": "TG-Q003"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "KOOP_PENALTY",
+      "mode": "koopathlon",
+      "field": "scoring",
+      "value": {
+        "reportedSetbackSpaces": [
+          10,
+          40
+        ]
+      },
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "set back 10-40 spaces",
+          "locator": "koopathlon section",
+          "quoteId": "W_GAME-Q019"
+        }
+      ],
+      "note": "Range only; placement-to-penalty mapping remains unverified."
+    },
+    {
+      "id": "KOOP_ONLINE_UNLOCK",
+      "mode": "koopathlon",
+      "field": "unlocks",
+      "value": "Clear single-player mode before online play.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "N_SUPPORT",
+          "quote": "These modes must be cleared in single player mode",
+          "locator": "koopathlon section",
+          "quoteId": "N_SUPPORT-Q002"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "KABOOM_PLAYERS",
+      "mode": "bowser-kaboom-squad",
+      "field": "players",
+      "value": {
+        "offlineHumans": 1,
+        "totalPlayers": 8,
+        "onlineMaximum": 8
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "N_SUPPORT",
+          "quote": "Bowser Kaboom Squad | 1 | 1-8",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "N_SUPPORT-Q003"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "8-player cooperative Bowser Kaboom Squad",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "MNN-Q025"
+        }
+      ],
+      "note": "The review's online-only heading is narrowed by its NPC-play text and official human-per-console table."
+    },
+    {
+      "id": "KABOOM_ROUNDS",
+      "mode": "bowser-kaboom-squad",
+      "field": "length",
+      "value": {
+        "maximumRounds": 5,
+        "reportedRoundSeconds": 90
+      },
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_KABOOM",
+          "quote": "five rounds lasting one and a half minutes each",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "W_KABOOM-Q001"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "within five rounds",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "MNN-Q026"
+        }
+      ],
+      "note": "Five rounds is independently corroborated; 90 seconds currently has only one retained source."
+    },
+    {
+      "id": "KABOOM_BOMBS",
+      "mode": "bowser-kaboom-squad",
+      "field": "flow",
+      "value": "Break crates, carry bombs to the cannon, and fire at the normal 20-bomb threshold.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_KABOOM",
+          "quote": "if it has 20 bombs",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "W_KABOOM-Q002"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "20 bombs",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "MNN-Q027"
+        }
+      ],
+      "note": "Wiki additionally reports an enough-to-defeat shortcut; that qualifier is not independently certified."
+    },
+    {
+      "id": "KABOOM_BONUS",
+      "mode": "bowser-kaboom-squad",
+      "field": "scoring",
+      "value": {
+        "coinTrigger": 100,
+        "bonusSeconds": 30,
+        "damageMultiplier": 2
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_KABOOM",
+          "quote": "collecting 100 of them",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "W_KABOOM-Q003"
+        },
+        {
+          "sourceId": "W_KABOOM",
+          "quote": "thirty seconds",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "W_KABOOM-Q004"
+        },
+        {
+          "sourceId": "W_KABOOM",
+          "quote": "dealing double damage",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "W_KABOOM-Q005"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "collects 100 of them, 30 seconds",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "MNN-Q028"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "bombs will deal twice as much damage",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "MNN-Q029"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "KABOOM_REVIVE",
+      "mode": "bowser-kaboom-squad",
+      "field": "flow",
+      "value": "A hit bubbles the player; teammates strike the bubble to revive them.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_KABOOM",
+          "quote": "another player needs to hit the bubble to revive them",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "W_KABOOM-Q006"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "safety bubble and need help",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "MNN-Q030"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "KABOOM_REWARDS",
+      "mode": "bowser-kaboom-squad",
+      "field": "rewards",
+      "value": "Round-end cooperative minigame performance determines the selection of items available for the following round.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_KABOOM",
+          "quote": "final rank determining which items they can choose",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "W_KABOOM-Q007"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "The better your team does",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "MNN-Q031"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "KABOOM_ONLINE_UNLOCK",
+      "mode": "bowser-kaboom-squad",
+      "field": "unlocks",
+      "value": "Clear single-player mode before online play.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "N_SUPPORT",
+          "quote": "These modes must be cleared in single player mode",
+          "locator": "bowser-kaboom-squad section",
+          "quoteId": "N_SUPPORT-Q002"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "FLIGHT_PLAYERS",
+      "mode": "paratroopa-flight-school",
+      "field": "players",
+      "value": {
+        "localMaximum": 2,
+        "online": false,
+        "characters": [
+          "Mario",
+          "Luigi"
+        ]
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "N_MORE",
+          "quote": "Up to two players on the same system only.",
+          "locator": "paratroopa-flight-school section",
+          "quoteId": "N_MORE-Q001"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "Mario and Luigi",
+          "locator": "paratroopa-flight-school section",
+          "quoteId": "MNN-Q032"
+        },
+        {
+          "sourceId": "W_FLIGHT",
+          "quote": "Mario and Luigi",
+          "locator": "Opening / playable characters",
+          "quoteId": "W_FLIGHT-Q004"
+        }
+      ],
+      "note": "Nintendo corroborates local capacity; characters are also reported by the dedicated wiki."
+    },
+    {
+      "id": "FLIGHT_CONTROLS",
+      "mode": "paratroopa-flight-school",
+      "field": "controls",
+      "value": "Each player uses two Joy-Con and arm flapping for flight.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "N_MORE",
+          "quote": "each use a pair of Joy-Con",
+          "locator": "paratroopa-flight-school section",
+          "quoteId": "N_MORE-Q002"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "one Joy-Con in each hand",
+          "locator": "paratroopa-flight-school section",
+          "quoteId": "MNN-Q033"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "SKY_RULE",
+      "mode": "sky-battle",
+      "field": "scoring",
+      "value": "Collect more Para-Biddybuds than the other player before time expires; nearby opponents can steal trailing followers.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_FLIGHT",
+          "quote": "gather the most Para-Biddybuds in 120 seconds",
+          "locator": "sky-battle section",
+          "quoteId": "W_FLIGHT-Q005"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "collect more Para-Biddybuds",
+          "locator": "sky-battle section",
+          "quoteId": "MNN-Q034"
+        }
+      ],
+      "note": "Core collection contest is corroborated; stealing and exact 120-second limit currently have only dedicated-wiki evidence."
+    },
+    {
+      "id": "SKY_TIMER",
+      "mode": "sky-battle",
+      "field": "length",
+      "value": {
+        "reportedSeconds": 120
+      },
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_FLIGHT",
+          "quote": "in 120 seconds",
+          "locator": "sky-battle section",
+          "quoteId": "W_FLIGHT-Q006"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "TAXI_RULE",
+      "mode": "koopa-paratroopa-taxi",
+      "field": "flow",
+      "value": "Work together to carry balanced passengers to destinations; transported count determines the ending rank.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_FLIGHT",
+          "quote": "ranking depending on how many passengers were transported",
+          "locator": "koopa-paratroopa-taxi section",
+          "quoteId": "W_FLIGHT-Q007"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "pick up and drop off passengers",
+          "locator": "koopa-paratroopa-taxi section",
+          "quoteId": "MNN-Q035"
+        }
+      ],
+      "note": "Rank rule is one source; two independent texts corroborate cooperative passenger transport."
+    },
+    {
+      "id": "TAXI_DIFFICULTIES",
+      "mode": "koopa-paratroopa-taxi",
+      "field": "length",
+      "value": {
+        "difficulties": [
+          "Easy",
+          "Normal",
+          "Difficult"
+        ],
+        "numericTimers": null
+      },
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_FLIGHT",
+          "quote": "Easy, Normal, and Difficult",
+          "locator": "koopa-paratroopa-taxi section",
+          "quoteId": "W_FLIGHT-Q008"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "FREE_FLIGHT_END",
+      "mode": "free-flight",
+      "field": "length",
+      "value": {
+        "mainTimeLimit": null,
+        "mainObjective": null
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_FLIGHT",
+          "quote": "without any main objectives or time limit",
+          "locator": "free-flight section",
+          "quoteId": "W_FLIGHT-Q009"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "without any time limit",
+          "locator": "free-flight section",
+          "quoteId": "MNN-Q036"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "FREE_FLIGHT_COLLECT",
+      "mode": "free-flight",
+      "field": "scoring",
+      "value": {
+        "scatteredCoins": 100,
+        "reportedDrawingSeconds": 180
+      },
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_FLIGHT",
+          "quote": "100 coins scattered around the map",
+          "locator": "free-flight section",
+          "quoteId": "W_FLIGHT-Q010"
+        },
+        {
+          "sourceId": "W_FLIGHT",
+          "quote": "in 180 seconds",
+          "locator": "free-flight section",
+          "quoteId": "W_FLIGHT-Q011"
+        }
+      ],
+      "note": "Optional activities; absence of an overall timer does not imply all side activities are untimed."
+    },
+    {
+      "id": "FACTORY_PLAYERS",
+      "mode": "toads-item-factory",
+      "field": "players",
+      "value": {
+        "localMaximum": 4,
+        "online": false
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "N_MORE",
+          "quote": "Up to four players on the same system only.",
+          "locator": "toads-item-factory section",
+          "quoteId": "N_MORE-Q003"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "Toad’s Item Factory (1-4 players",
+          "locator": "toads-item-factory section",
+          "quoteId": "MNN-Q037"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "FACTORY_LEVELS",
+      "mode": "toads-item-factory",
+      "field": "length",
+      "value": {
+        "areas": 10,
+        "levelsPerArea": 3,
+        "totalLevels": 30
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "30 different levels",
+          "locator": "toads-item-factory section",
+          "quoteId": "W_GAME-Q020"
+        },
+        {
+          "sourceId": "W_GAME",
+          "quote": "split into 10 areas",
+          "locator": "toads-item-factory section",
+          "quoteId": "W_GAME-Q021"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "10 different areas with 3 levels",
+          "locator": "toads-item-factory section",
+          "quoteId": "MNN-Q038"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "FACTORY_GOAL",
+      "mode": "toads-item-factory",
+      "field": "flow",
+      "value": "Cooperatively move machinery to guide a ball through obstacles to the goal.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "guide a ball across obstacles",
+          "locator": "toads-item-factory section",
+          "quoteId": "W_GAME-Q022"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "guide a marble",
+          "locator": "toads-item-factory section",
+          "quoteId": "MNN-Q039"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "KITCHEN_PLAYERS",
+      "mode": "rhythm-kitchen",
+      "field": "players",
+      "value": {
+        "localMaximum": 4,
+        "online": false
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "N_MORE",
+          "quote": "Up to four players on the same system only.",
+          "locator": "rhythm-kitchen section",
+          "quoteId": "N_MORE-Q003"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "Rhythm Kitchen (1-4 players",
+          "locator": "rhythm-kitchen section",
+          "quoteId": "MNN-Q040"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "KITCHEN_SCORE",
+      "mode": "rhythm-kitchen",
+      "field": "scoring",
+      "value": "The group earns a collective cooking rating.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "work together to get the highest rating",
+          "locator": "rhythm-kitchen section",
+          "quoteId": "W_GAME-Q023"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "collective 1-5 star “Chef Rank”",
+          "locator": "rhythm-kitchen section",
+          "quoteId": "MNN-Q041"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "collective 1-5 star “Chef Rank”",
+          "locator": "rhythm-kitchen section",
+          "quoteId": "MNN-Q041"
+        }
+      ],
+      "note": "Individual accuracy is explicitly reported by the review; exact rating thresholds remain unknown."
+    },
+    {
+      "id": "NORMAL_LENGTH",
+      "mode": "kitchen-normal",
+      "field": "length",
+      "value": {
+        "minigames": 3
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "three minigames are played as-is",
+          "locator": "kitchen-normal section",
+          "quoteId": "W_GAME-Q024"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "Normal (3 minigames)",
+          "locator": "kitchen-normal section",
+          "quoteId": "MNN-Q042"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "LONG_LENGTH",
+      "mode": "kitchen-long",
+      "field": "length",
+      "value": {
+        "minigames": 6
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "for a total of six minigames",
+          "locator": "kitchen-long section",
+          "quoteId": "W_GAME-Q025"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "Long (6 minigames)",
+          "locator": "kitchen-long section",
+          "quoteId": "MNN-Q043"
+        }
+      ],
+      "note": "Six-game total is corroborated; exact repeat ordering is reported by the wiki."
+    },
+    {
+      "id": "CHALLENGING_LENGTH",
+      "mode": "kitchen-challenging",
+      "field": "length",
+      "value": {
+        "minigames": 3,
+        "increasedDifficulty": true
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "three challenging versions of minigames",
+          "locator": "kitchen-challenging section",
+          "quoteId": "W_GAME-Q026"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "Challenging (3 minigames",
+          "locator": "kitchen-challenging section",
+          "quoteId": "MNN-Q044"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "REMIX_RULE",
+      "mode": "kitchen-remix",
+      "field": "flow",
+      "value": "Play mixed portions of rhythm minigames against altered music.",
+      "status": "conflict",
+      "confidence": "low",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "randomly-selected portions of minigames",
+          "locator": "kitchen-remix section",
+          "quoteId": "W_GAME-Q027"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "Remix (6 minigames",
+          "locator": "kitchen-remix section",
+          "quoteId": "MNN-Q045"
+        }
+      ],
+      "note": "Sources describe Remix differently; exact chunk count and sequencing remain a conflict."
+    },
+    {
+      "id": "TREK_PLAYERS",
+      "mode": "party-planner-trek",
+      "field": "players",
+      "value": {
+        "players": 1
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "N_MORE",
+          "quote": "In this single-player mode",
+          "locator": "party-planner-trek section",
+          "quoteId": "N_MORE-Q004"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "Party-Planner Trek (single-player)",
+          "locator": "party-planner-trek section",
+          "quoteId": "MNN-Q046"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "TREK_BOARDS",
+      "mode": "party-planner-trek",
+      "field": "length",
+      "value": {
+        "boards": 5,
+        "totalTimeLimit": null
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "N_MORE",
+          "quote": "five of the new game boards",
+          "locator": "party-planner-trek section",
+          "quoteId": "N_MORE-Q005"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "five of the seven game boards",
+          "locator": "party-planner-trek section",
+          "quoteId": "MNN-Q047"
+        }
+      ],
+      "note": "Review completion time is personal experience, not a fixed timer."
+    },
+    {
+      "id": "TREK_FLOW",
+      "mode": "party-planner-trek",
+      "field": "flow",
+      "value": "Freely explore boards and complete character requests/minigames to collect Mini Stars.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "fulfilling requests for them to gain Mini Stars",
+          "locator": "party-planner-trek section",
+          "quoteId": "W_GAME-Q028"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "collect mini-stars",
+          "locator": "party-planner-trek section",
+          "quoteId": "MNN-Q048"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "TREK_GATE",
+      "mode": "party-planner-trek",
+      "field": "unlocks",
+      "value": {
+        "miniStarsPerBoardToAdvance": 30
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "at least 30 Mini Stars on a board",
+          "locator": "party-planner-trek section",
+          "quoteId": "W_GAME-Q029"
+        },
+        {
+          "sourceId": "TG",
+          "quote": "30 Mini Stars per board to move on",
+          "locator": "party-planner-trek section",
+          "quoteId": "TG-Q004"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "TREK_REWARDS",
+      "mode": "party-planner-trek",
+      "field": "rewards",
+      "value": "Progress unlocks decorations for the Party Plaza.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "N_MORE",
+          "quote": "unlock decorations",
+          "locator": "party-planner-trek section",
+          "quoteId": "N_MORE-Q006"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "unlock decorations for the Party Plaza",
+          "locator": "party-planner-trek section",
+          "quoteId": "MNN-Q049"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "TREK_PAYOUT",
+      "mode": "party-planner-trek",
+      "field": "scoring",
+      "value": {
+        "itemRequest": 1,
+        "individualMinigamePlacements": [
+          3,
+          2,
+          1
+        ],
+        "teamOrDuelWin": 2,
+        "itemMinigame": 1
+      },
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_GAME",
+          "quote": "rewarded with one Mini Star",
+          "locator": "party-planner-trek section",
+          "quoteId": "W_GAME-Q030"
+        },
+        {
+          "sourceId": "W_GAME",
+          "quote": "rewarding up to three Mini Stars",
+          "locator": "party-planner-trek section",
+          "quoteId": "W_GAME-Q031"
+        },
+        {
+          "sourceId": "W_GAME",
+          "quote": "earn two Mini Stars at once",
+          "locator": "party-planner-trek section",
+          "quoteId": "W_GAME-Q032"
+        }
+      ],
+      "note": "Exact payout mapping has one source; the array's interpretation follows the explicit first/second/third placement description."
+    },
+    {
+      "id": "BAY_PLAYERS",
+      "mode": "minigame-bay",
+      "field": "players",
+      "value": {
+        "localMaximum": 4,
+        "onlineMaximum": 4,
+        "submodeExceptions": true
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "N_SUPPORT",
+          "quote": "Minigame Bay | 1-4 | 1-4",
+          "locator": "minigame-bay section",
+          "quoteId": "N_SUPPORT-Q004"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "Minigame Bay (1-4 players",
+          "locator": "minigame-bay section",
+          "quoteId": "MNN-Q050"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "BAY_FREE_RULE",
+      "mode": "bay-free-play",
+      "field": "flow",
+      "value": "Choose individual minigames on demand from the base catalog.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BAY",
+          "quote": "all 112 minigames available",
+          "locator": "bay-free-play section",
+          "quoteId": "W_BAY-Q007"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "all 112 total minigames",
+          "locator": "bay-free-play section",
+          "quoteId": "MNN-Q051"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "DAILY_RULE",
+      "mode": "daily-challenge",
+      "field": "flow",
+      "value": "Daily themed sets each contain three preselected minigames.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BAY",
+          "quote": "The sets rotate daily",
+          "locator": "daily-challenge section",
+          "quoteId": "W_BAY-Q008"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "three sets of three",
+          "locator": "daily-challenge section",
+          "quoteId": "MNN-Q052"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "TAG_RULE",
+      "mode": "tag-match",
+      "field": "scoring",
+      "value": {
+        "teams": 2,
+        "playersPerTeam": 2,
+        "targetChoices": [
+          3,
+          5,
+          10
+        ]
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BAY",
+          "quote": "first team to reach 3, 5 or 10 Stars wins",
+          "locator": "tag-match section",
+          "quoteId": "W_BAY-Q009"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "3, 5, or 10 minigames",
+          "locator": "tag-match section",
+          "quoteId": "MNN-Q053"
+        }
+      ],
+      "note": "Stars represent wins here; not standard-board collectible Stars."
+    },
+    {
+      "id": "TAG_SELECT",
+      "mode": "tag-match",
+      "field": "flow",
+      "value": "After an initial random game, the previous losing team chooses subsequent minigames; worldwide play uses streak scoring.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_BAY",
+          "quote": "chosen by a member of the team who lost",
+          "locator": "tag-match section",
+          "quoteId": "W_BAY-Q010"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "SURVIVAL_RULE",
+      "mode": "survival",
+      "field": "flow",
+      "value": "Online-only repeated matchups affect Skill Grade; sufficiently long streaks trigger Duel minigames.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_BAY",
+          "quote": "Survival can only be played online",
+          "locator": "survival section",
+          "quoteId": "W_BAY-Q011"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "Survival is an online single-player only",
+          "locator": "survival section",
+          "quoteId": "MNN-Q054"
+        }
+      ],
+      "note": "Online scope is corroborated; duel trigger threshold is not independently established."
+    },
+    {
+      "id": "SHOWDOWN_RULE",
+      "mode": "showdown-minigame-battle",
+      "field": "scoring",
+      "value": {
+        "roundChoices": [
+          5,
+          7,
+          10
+        ],
+        "winner": "largest accumulated coin total"
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BAY",
+          "quote": "most coins after 5, 7 or 10 rounds",
+          "locator": "showdown-minigame-battle section",
+          "quoteId": "W_BAY-Q012"
+        },
+        {
+          "sourceId": "MNN",
+          "quote": "5, 7, or 10 Showdown Minigames",
+          "locator": "showdown-minigame-battle section",
+          "quoteId": "MNN-Q055"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "BOSS_RULE",
+      "mode": "boss-rush",
+      "field": "flow",
+      "value": "Four players play all five Boss minigames consecutively; placement points select the MVP.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_BAY",
+          "quote": "all five Boss Minigames in a row",
+          "locator": "boss-rush section",
+          "quoteId": "W_BAY-Q013"
+        },
+        {
+          "sourceId": "TG",
+          "quote": "boss battles to handle Impostor Bowser as a team",
+          "locator": "boss-rush section",
+          "quoteId": "TG-Q005"
+        }
+      ],
+      "note": "The independent article confirms activity presence/cooperative bosses; detailed point scoring is one source."
+    },
+    {
+      "id": "BOSS_UNLOCK",
+      "mode": "boss-rush",
+      "field": "unlocks",
+      "value": {
+        "achievements": 30,
+        "rank": "Platinum"
+      },
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_BAY",
+          "quote": "clearing 30 achievements and reaching Platinum Rank",
+          "locator": "boss-rush section",
+          "quoteId": "W_BAY-Q014"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "TV_CONTEXT",
+      "mode": "tv-mario-party",
+      "field": "flow",
+      "value": "Jamboree TV is separate from the original game and offers Party, Tag-Team and Frenzy instead of Pro Rules.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "MPL_TV",
+          "quote": "Pro Rules are not available",
+          "locator": "tv-mario-party section",
+          "quoteId": "MPL_TV-Q007"
+        },
+        {
+          "sourceId": "NL_TV",
+          "quote": "Pro mode is only available whilst playing the original",
+          "locator": "tv-mario-party section",
+          "quoteId": "NL_TV-Q007"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "TV_REWARDS",
+      "mode": "tv-mario-party",
+      "field": "rewards",
+      "value": "TV mode does not save minigame records or Party Points according to the guide.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "MPL_TV",
+          "quote": "Party Points aren’t saved either",
+          "locator": "tv-mario-party section",
+          "quoteId": "MPL_TV-Q008"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "FRENZY_START",
+      "mode": "frenzy-rules",
+      "field": "length",
+      "value": {
+        "turns": 5,
+        "startingCoins": 50,
+        "startingStars": 1,
+        "startingItem": "Double Dice"
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "N_TV",
+          "quote": "you only have five turns",
+          "locator": "frenzy-rules section",
+          "quoteId": "N_TV-Q001"
+        },
+        {
+          "sourceId": "N_TV",
+          "quote": "50 coins, a Double Dice item, and a Star",
+          "locator": "frenzy-rules section",
+          "quoteId": "N_TV-Q002"
+        },
+        {
+          "sourceId": "MPL_TV",
+          "quote": "Double Dice, 50 coins, and one Star",
+          "locator": "frenzy-rules section",
+          "quoteId": "MPL_TV-Q009"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "FRENZY_EVENTS",
+      "mode": "frenzy-rules",
+      "field": "flow",
+      "value": "Begin with two Homestretch events and same-space duels; award one ending bonus category.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "MPL_TV",
+          "quote": "two events are randomly selected",
+          "locator": "frenzy-rules section",
+          "quoteId": "MPL_TV-Q010"
+        },
+        {
+          "sourceId": "W_TV",
+          "quote": "two Homestretch events",
+          "locator": "frenzy-rules section",
+          "quoteId": "W_TV-Q001"
+        },
+        {
+          "sourceId": "MPL_TV",
+          "quote": "only one will be awarded",
+          "locator": "frenzy-rules section",
+          "quoteId": "MPL_TV-Q011"
+        },
+        {
+          "sourceId": "W_TV",
+          "quote": "only one Bonus Star",
+          "locator": "frenzy-rules section",
+          "quoteId": "W_TV-Q002"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "TV_TAG_POOL",
+      "mode": "tag-team-rules",
+      "field": "scoring",
+      "value": "Two teams of two share coins and Stars.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "MPL_TV",
+          "quote": "share your coins and Stars",
+          "locator": "tag-team-rules section",
+          "quoteId": "MPL_TV-Q012"
+        },
+        {
+          "sourceId": "W_TV",
+          "quote": "shares their coins, Stars, and items",
+          "locator": "Mario Party / Tag Team Rules",
+          "quoteId": "W_TV-Q003"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "TV_TAG_ORDER",
+      "mode": "tag-team-rules",
+      "field": "flow",
+      "value": "Combined opening roll sets team order; teammates alternate during a round.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "MPL_TV",
+          "quote": "highest combined roll",
+          "locator": "tag-team-rules section",
+          "quoteId": "MPL_TV-Q013"
+        },
+        {
+          "sourceId": "MPL_TV",
+          "quote": "alternate players",
+          "locator": "tag-team-rules section",
+          "quoteId": "MPL_TV-Q014"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "TV_TAG_DICE",
+      "mode": "tag-team-rules",
+      "field": "flow",
+      "value": "Together Dice calls the teammate for a combined two-die move; interactions are doubled.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "N_TV",
+          "quote": "items, Stars, and even space effects are doubled",
+          "locator": "tag-team-rules section",
+          "quoteId": "N_TV-Q003"
+        },
+        {
+          "sourceId": "MPL_TV",
+          "quote": "combined roll determines how many spaces both",
+          "locator": "tag-team-rules section",
+          "quoteId": "MPL_TV-Q015"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "TV_FREE_RULE",
+      "mode": "tv-free-play",
+      "field": "flow",
+      "value": "Play eligible base/new minigames individually; mouse games offer Battle or Co-op rules.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_TV",
+          "quote": "Battle rules",
+          "locator": "tv-free-play section",
+          "quoteId": "W_TV-Q004"
+        },
+        {
+          "sourceId": "MPL_TV",
+          "quote": "Free Play",
+          "locator": "tv-free-play section",
+          "quoteId": "MPL_TV-Q002"
+        }
+      ],
+      "note": "Mode presence is independently confirmed; detailed Battle/Co-op scope is retained as one-source."
+    },
+    {
+      "id": "TV_FREE_CATALOG",
+      "mode": "tv-free-play",
+      "field": "length",
+      "value": {
+        "newPlayableMinigames": 17,
+        "newCameraGamesExcluded": 3
+      },
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_TV",
+          "quote": "17 of the 20 new minigames",
+          "locator": "tv-free-play section",
+          "quoteId": "W_TV-Q005"
+        }
+      ],
+      "note": "Do not infer that the full 132-game union is available in TV Free Play."
+    },
+    {
+      "id": "LIVE_TEAMS",
+      "mode": "bowser-live",
+      "field": "players",
+      "value": {
+        "teams": 2,
+        "playersPerTeam": 2
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_LIVE",
+          "quote": "split into two teams",
+          "locator": "bowser-live section",
+          "quoteId": "W_LIVE-Q001"
+        },
+        {
+          "sourceId": "MPL_TV",
+          "quote": "two teams of two",
+          "locator": "bowser-live section",
+          "quoteId": "MPL_TV-Q016"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "LIVE_FLOW",
+      "mode": "bowser-live",
+      "field": "flow",
+      "value": "Play two selected camera or microphone minigames, then a final cheering challenge.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_LIVE",
+          "quote": "After two minigames",
+          "locator": "bowser-live section",
+          "quoteId": "W_LIVE-Q002"
+        },
+        {
+          "sourceId": "MPL_TV",
+          "quote": "Instead of a third minigame",
+          "locator": "bowser-live section",
+          "quoteId": "MPL_TV-Q017"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "LIVE_SCORE",
+      "mode": "bowser-live",
+      "field": "scoring",
+      "value": "The largest combined game and cheering point total wins.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_LIVE",
+          "quote": "most points after the two minigames and the cheering round",
+          "locator": "bowser-live section",
+          "quoteId": "W_LIVE-Q003"
+        },
+        {
+          "sourceId": "MPL_TV",
+          "quote": "team with the most points by the end wins",
+          "locator": "bowser-live section",
+          "quoteId": "MPL_TV-Q018"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "LIVE_TIE",
+      "mode": "bowser-live",
+      "field": "scoring",
+      "value": "A tied point total gives both teams a win, except when neither contributed, which gives both a loss.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_LIVE",
+          "quote": "both teams win unless neither team contributed",
+          "locator": "bowser-live section",
+          "quoteId": "W_LIVE-Q004"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "COASTER_RULE",
+      "mode": "carnival-coaster",
+      "field": "flow",
+      "value": "Aim using mouse controls at enemy waves; pipes insert cooperative minigames and performance adds time.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_TV",
+          "quote": "Players can gain bonus time by defeating enemies",
+          "locator": "carnival-coaster section",
+          "quoteId": "W_TV-Q006"
+        },
+        {
+          "sourceId": "MPL_TV",
+          "quote": "attack enemies that appear to add seconds",
+          "locator": "carnival-coaster section",
+          "quoteId": "MPL_TV-Q019"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "COASTER_FAIL",
+      "mode": "carnival-coaster",
+      "field": "length",
+      "value": "The shared countdown expiring ends the attempt.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_TV",
+          "quote": "players lose if it runs out",
+          "locator": "carnival-coaster section",
+          "quoteId": "W_TV-Q007"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "COASTER_COURSES",
+      "mode": "carnival-coaster",
+      "field": "length",
+      "value": {
+        "courses": 5
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_TV",
+          "quote": "five coasters in total",
+          "locator": "carnival-coaster section",
+          "quoteId": "W_TV-Q008"
+        },
+        {
+          "sourceId": "MPL_TV",
+          "quote": "five levels to pick from",
+          "locator": "carnival-coaster section",
+          "quoteId": "MPL_TV-Q020"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "COASTER_PLAYERS",
+      "mode": "carnival-coaster",
+      "field": "players",
+      "value": {
+        "reportedHumanMaximum": 4,
+        "coasterTeamSlots": [
+          2,
+          4
+        ]
+      },
+      "status": "conflict",
+      "confidence": "low",
+      "evidence": [
+        {
+          "sourceId": "N_SUPPORT_TV",
+          "quote": "Carnival Coaster** | 1-4",
+          "locator": "carnival-coaster section",
+          "quoteId": "N_SUPPORT_TV-Q001"
+        },
+        {
+          "sourceId": "W_TV",
+          "quote": "two or four players",
+          "locator": "carnival-coaster section",
+          "quoteId": "W_TV-Q009"
+        }
+      ],
+      "note": "Nintendo Life describes two participants; 1-4 humans may include CPU-filled slots. Exact solo/fill/version scope remains under audit."
+    },
+    {
+      "id": "COASTER_RANK_TIME",
+      "mode": "carnival-coaster",
+      "field": "scoring",
+      "value": {
+        "normal": {
+          "S": 25,
+          "A": 20,
+          "B": 15,
+          "C": 0
+        },
+        "trial": {
+          "S": 10,
+          "A": 7,
+          "B": 3,
+          "C": 0
+        }
+      },
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_TV",
+          "quote": "Rank S: +25 seconds (+10 seconds on Trial Coaster)",
+          "locator": "carnival-coaster section",
+          "quoteId": "W_TV-Q010"
+        },
+        {
+          "sourceId": "W_TV",
+          "quote": "Rank A: +20 seconds (+7 seconds on Trial Coaster)",
+          "locator": "carnival-coaster section",
+          "quoteId": "W_TV-Q011"
+        },
+        {
+          "sourceId": "W_TV",
+          "quote": "Rank B: +15 seconds (+3 seconds on Trial Coaster)",
+          "locator": "carnival-coaster section",
+          "quoteId": "W_TV-Q012"
+        }
+      ],
+      "note": "Rank thresholds and exact base countdowns remain unverified."
+    },
+    {
+      "id": "BUDDY_MARIO",
+      "mode": "jamboree-buddies",
+      "field": "flow",
+      "value": "Mario adds 3–8 movement to the roll.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "Adds 3 to 8 to the dice roll",
+          "locator": "Buddy table / BUDDY_MARIO",
+          "quoteId": "W_BUDDY-Q002"
+        },
+        {
+          "sourceId": "TG_BUDDY",
+          "quote": "Adds 3–8 to your dice roll",
+          "locator": "Buddy table / BUDDY_MARIO",
+          "quoteId": "TG_BUDDY-Q003"
+        }
+      ],
+      "note": "Trigger interactions and empirical RNG weights remain unverified; a +3–8 range does not prove uniformity."
+    },
+    {
+      "id": "BUDDY_LUIGI",
+      "mode": "jamboree-buddies",
+      "field": "flow",
+      "value": "Luigi can replace a roll with the maximum possible result.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "replace it with the maximum possible roll",
+          "locator": "Buddy table / BUDDY_LUIGI",
+          "quoteId": "W_BUDDY-Q003"
+        },
+        {
+          "sourceId": "DUAL_BUDDY",
+          "quote": "Has a chance to maximize your dice rolls.",
+          "locator": "Buddy table / BUDDY_LUIGI",
+          "quoteId": "DUAL_BUDDY-Q001"
+        }
+      ],
+      "note": "Activation probability and its roll-dependent mapping remain unknown."
+    },
+    {
+      "id": "BUDDY_PEACH",
+      "mode": "jamboree-buddies",
+      "field": "flow",
+      "value": "Peach halves Star purchase prices.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "Purchase Stars at half the cost",
+          "locator": "Buddy table / BUDDY_PEACH",
+          "quoteId": "W_BUDDY-Q004"
+        },
+        {
+          "sourceId": "TG_BUDDY",
+          "quote": "Stars are half-off.",
+          "locator": "Buddy table / BUDDY_PEACH",
+          "quoteId": "TG_BUDDY-Q004"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "BUDDY_DAISY",
+      "mode": "jamboree-buddies",
+      "field": "flow",
+      "value": "Daisy halves item purchase prices.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "Purchase items at half the cost",
+          "locator": "Buddy table / BUDDY_DAISY",
+          "quoteId": "W_BUDDY-Q005"
+        },
+        {
+          "sourceId": "TG_BUDDY",
+          "quote": "Daisy | Everything at any store is half-off.",
+          "locator": "Buddy table / BUDDY_DAISY",
+          "quoteId": "TG_BUDDY-Q005"
+        }
+      ],
+      "note": "Rounding and special-shop scope are not settled."
+    },
+    {
+      "id": "BUDDY_WARIO",
+      "mode": "jamboree-buddies",
+      "field": "flow",
+      "value": "Wario grants 3–8 coins before the die is hit.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "Get 3 to 8 coins",
+          "locator": "Buddy table / BUDDY_WARIO",
+          "quoteId": "W_BUDDY-Q006"
+        },
+        {
+          "sourceId": "TG_BUDDY",
+          "quote": "Get 3–8 coins at the start of each turn.",
+          "locator": "Buddy table / BUDDY_WARIO",
+          "quoteId": "TG_BUDDY-Q006"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "BUDDY_WALUIGI",
+      "mode": "jamboree-buddies",
+      "field": "flow",
+      "value": "Waluigi steals 3–8 coins from passed opponents; another article reports 3–9.",
+      "status": "conflict",
+      "confidence": "low",
+      "evidence": [
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "Steal 3 to 8 coins",
+          "locator": "Buddy table / BUDDY_WALUIGI",
+          "quoteId": "W_BUDDY-Q007"
+        },
+        {
+          "sourceId": "TG_BUDDY",
+          "quote": "Steal 3–8 coins from any opponent you pass.",
+          "locator": "Buddy table / BUDDY_WALUIGI",
+          "quoteId": "TG_BUDDY-Q007"
+        },
+        {
+          "sourceId": "TG_BEST",
+          "quote": "between three to nine coins",
+          "locator": "Buddy table / BUDDY_WALUIGI",
+          "quoteId": "TG_BEST-Q001"
+        }
+      ],
+      "note": "Two same-publisher articles disagree; DualShockers also reports 3–8. No verified RNG weights or same-opponent-repeat rule is inferred."
+    },
+    {
+      "id": "BUDDY_YOSHI",
+      "mode": "jamboree-buddies",
+      "field": "flow",
+      "value": "Yoshi copies an item from a passed opponent.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "Copy items from opponents you pass",
+          "locator": "Buddy table / BUDDY_YOSHI",
+          "quoteId": "W_BUDDY-Q008"
+        },
+        {
+          "sourceId": "TG_BUDDY",
+          "quote": "Copy an item from any opponent you pass.",
+          "locator": "Buddy table / BUDDY_YOSHI",
+          "quoteId": "TG_BUDDY-Q008"
+        }
+      ],
+      "note": "The wiki's once-per-turn cap and random item choice are only one-source qualifiers."
+    },
+    {
+      "id": "BUDDY_ROSALINA",
+      "mode": "jamboree-buddies",
+      "field": "flow",
+      "value": "Rosalina gives a random cheap item before the die is hit.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "Get one cheap item at random",
+          "locator": "Buddy table / BUDDY_ROSALINA",
+          "quoteId": "W_BUDDY-Q009"
+        },
+        {
+          "sourceId": "TG_BUDDY",
+          "quote": "Get a random cheap item at the start",
+          "locator": "Buddy table / BUDDY_ROSALINA",
+          "quoteId": "TG_BUDDY-Q009"
+        }
+      ],
+      "note": "Eligible-item list, item weights and exact cheap-price threshold remain one-source."
+    },
+    {
+      "id": "BUDDY_DK",
+      "mode": "jamboree-buddies",
+      "field": "flow",
+      "value": "Donkey Kong offers optional transport to a random board space before the die is hit.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "chooses whether to activate this ability",
+          "locator": "Buddy table / BUDDY_DK",
+          "quoteId": "W_BUDDY-Q010"
+        },
+        {
+          "sourceId": "DUAL_BUDDY",
+          "quote": "At least using the ability isn't mandatory!",
+          "locator": "Buddy table / BUDDY_DK",
+          "quoteId": "DUAL_BUDDY-Q002"
+        },
+        {
+          "sourceId": "TG_BUDDY",
+          "quote": "random spot on the board before each turn",
+          "locator": "Buddy table / BUDDY_DK",
+          "quoteId": "TG_BUDDY-Q010"
+        }
+      ],
+      "note": "Destination weights and movement-counter interaction are unknown."
+    },
+    {
+      "id": "BUDDY_JUNIOR",
+      "mode": "jamboree-buddies",
+      "field": "flow",
+      "value": "Bowser Jr. sets a Half-Coins Steal Trap on the landing space.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "Set a Half-Coins Steal Trap on the space",
+          "locator": "Buddy table / BUDDY_JUNIOR",
+          "quoteId": "W_BUDDY-Q011"
+        },
+        {
+          "sourceId": "TG_BUDDY",
+          "quote": "Set a half-coin steal trap on any space you land on.",
+          "locator": "Buddy table / BUDDY_JUNIOR",
+          "quoteId": "TG_BUDDY-Q011"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "BUDDY_GALLERIA",
+      "mode": "jamboree-buddies",
+      "field": "flow",
+      "value": "The current wiki says Peach and Daisy do not appear as Buddies on Rainbow Galleria.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "Peach cannot appear as a Jamboree Buddy on Rainbow Galleria",
+          "locator": "Buddy table / BUDDY_GALLERIA",
+          "quoteId": "W_BUDDY-Q012"
+        },
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "Daisy cannot appear as a Jamboree Buddy on Rainbow Galleria",
+          "locator": "Buddy table / BUDDY_GALLERIA",
+          "quoteId": "W_BUDDY-Q013"
+        }
+      ],
+      "note": "Older published Galleria combo advice conflicts with this rule; patch/version scope must be established before treating it as universal."
+    },
+    {
+      "id": "BUDDY_TV_TAG",
+      "mode": "jamboree-buddies",
+      "field": "flow",
+      "value": "Jamboree Buddies do not appear under Jamboree TV Tag Team Rules.",
+      "status": "single_source",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "Jamboree Buddies will not appear in Tag Team Rules.",
+          "locator": "Buddy table / BUDDY_TV_TAG",
+          "quoteId": "W_BUDDY-Q014"
+        }
+      ],
+      "note": "Together Dice supplies similar doubled interactions without a literal Buddy."
+    },
+    {
+      "id": "BUDDY_DOUBLE",
+      "mode": "jamboree-buddies",
+      "field": "scoring",
+      "value": "Blue/Red rewards and penalties and shop, Star and Boo interactions can repeat twice.",
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "all board actions to occur twice",
+          "locator": "Opening / shared effects",
+          "quoteId": "W_BUDDY-Q015"
+        },
+        {
+          "sourceId": "TG_BUDDY",
+          "quote": "Boo will steal from your opponents twice",
+          "locator": "What Do Buddies Do / doubled effects",
+          "quoteId": "TG_BUDDY-Q012"
+        }
+      ],
+      "note": "Conditional opportunities depend on money, stock and board state. Complete counter and harmful-event ordering is not established."
+    },
+    {
+      "id": "BUDDY_PLAYERS",
+      "mode": "jamboree-buddies",
+      "field": "players",
+      "value": {
+        "boardParticipants": 4
+      },
+      "status": "corroborated",
+      "confidence": "high",
+      "evidence": [
+        {
+          "sourceId": "W_BUDDY",
+          "quote": "four board participants",
+          "locator": "Opening / eligibility",
+          "quoteId": "W_BUDDY-Q016"
+        },
+        {
+          "sourceId": "N_OVERVIEW",
+          "quote": "four players",
+          "locator": "Mario Party",
+          "quoteId": "N_OVERVIEW-Q004"
+        }
+      ],
+      "note": "A board mechanic, not a standalone mode; the prototype demonstration separately uses four phone slots."
+    }
+  ]
+}
