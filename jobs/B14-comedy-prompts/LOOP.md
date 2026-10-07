@@ -60,3 +60,5 @@
     Independent review remains partial; complete counts are recorded verbatim.
 20. Authored 100 pantry-product candidates with separate physical and adult procedural premises; integrated all newly available independent reviews unchanged and documented strict mascot-brand alias aggregation. All 2,000 rows pass structural checks.
     Independent review remains partial; complete counts are recorded verbatim.
+21. Authored 100 new household-brand scenarios with distinct genre premises, shortened one overlength draft before sealing, and integrated all available independent reviews unchanged. All 2,100 rows pass structural checks.
+    Independent review remains partial; complete counts are recorded verbatim.
