@@ -6,6 +6,6 @@ The required two-independent-source and fresh full source-reopening checks canno
 
 Code is runnable: current-instance `npm test` exited 0 with 48/48 suites, seeds 1, 2, 3; 870,000,000 Monte Carlo trials and 75 mutation kills. This is a blocked research deliverable, not a completed job. Existing PR: https://github.com/luisitin/partybox-gpt-drops/pull/8 . Earlier exact head 45c35626d09940336ec0907311b4e72cbf7ed7b7 has successful CI run https://github.com/luisitin/partybox-gpt-drops/actions/runs/37639171675 ; this checkpoint creates a new head whose hosted result has not yet been observed.
 
-## Checkpoint publication also blocked
+## Publication recovered
 
-The new cloud checkpoint push and main status updates were rejected with `remote: Internal Server Error`. Remote read-back confirmed these updates were not applied; changing to HTTP/1.1 did not resolve the rejection. Only the initial B01 claim is shared on remote main. Local BLOCKED statuses and B02 claim/status commits are pending. The B01 checkpoint is preserved in local Git and in /workspace/partybox-delivery/B01-jamboree-dice.zip. This fallback is not a published PR update or fresh hosted CI result.
+The final atomic push succeeded. Remote read-back confirmed checkpoint 299dfb2db6058b420958d13f191cacf75d507ac7 and main status b3bb0303c68d7532dda7f86f8022ed8b7c33daf7; B01 BLOCKED is now shared. Prior Git server errors are resolved. This documentation correction creates a later head whose exact hosted CI result must be observed separately. Research-source and GitHub API hosts remain denied by the current runtime allowlist; source reopening and PR description updates remain blocked.
