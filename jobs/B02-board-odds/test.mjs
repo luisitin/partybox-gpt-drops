@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import * as engine from './build/boardOdds.js';
-import { referenceByFace } from './build/reference.js';
+import { referenceByFace } from './build/blind-reference.js';
 import { q, one, zero, plus, times, number, delta, same, invariant, mixture, rng, pick,
   randomDag, randomCyclic, randomDie, pathChoices, brute, golden, stringify } from './support.mjs';
 
@@ -134,7 +134,7 @@ try {
     record({ name: 'golden-regression-arithmetic-validation', ...results, passed: true });
     const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
     assert.deepEqual(pkg.dependencies, {});
-    for (const file of ['boardOdds.ts', 'reference.ts']) {
+    for (const file of ['boardOdds.ts', 'blind-reference.ts']) {
       const source = readFileSync(file, 'utf8');
       assert.ok(!/Math\s*\.\s*random\s*\(|Date\s*\.\s*now\s*\(/.test(source), file);
       assert.ok(!/^\s*import\s/m.test(source), 'Implementations must share no runtime code');

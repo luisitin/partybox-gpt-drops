@@ -1,6 +1,6 @@
 # B02 verification — observed local results
 
-**PASS:** the single `npm test` command completed with exit code **0**, with full seeds **1, 2, 3**. Local runtime: Node.js **v22.16.0**; TypeScript **5.8.3**. No reduced/smoke option was used in this run. The source hashes recorded by the runner match the delivered implementation and test sources.
+**Historical run (prior oracle): PASS.** The new blind-reference integration is pending its complete rerun. The historical single `npm test` command completed with exit code **0**, with full seeds **1, 2, 3**. Local runtime: Node.js **v22.16.0**; TypeScript **5.8.3**. No reduced/smoke option was used in this run. The source hashes recorded by the runner match the delivered implementation and test sources.
 
 GitHub CI is a separate, subsequent check. Its read-confirmed result belongs in the pull request description; this report does not infer a green run from local success.
 
@@ -169,7 +169,7 @@ The committed source files are the tested source files; documentation and compac
 
 ## UNVERIFIED
 
-- **Blind independent authorship:** not established. Both algorithmically distinct implementations were written by the same assistant. The oracle was written first and retains its original SHA-256, but that does not meet an attestation of two authors/agents unable to see one another's work.
+- **Current integrated full-suite run:** pending at this milestone. The independent reference is sealed and its authoring self-checks passed, but the prior numerical results below were produced with the historical oracle. Historical raw report hashes and compact results are preserved under `evidence/historical-*`.
 - **Universal correctness / formal verification:** no machine-checked proof or claim that bugs are impossible. PROOF.md is a mathematical design argument; tests establish the recorded cases only.
 - **Literal infinite-path enumeration:** not performed for zero-cost cycles because those path families can be infinite. Exact state elimination and matrix inversion, plus hand-derived cyclic regressions, are the substitute, explicitly identified above.
 - **Unbounded scale:** random-graph coverage is up to 25 nodes and faces 0–10, with targeted enormous-face closed-form cases. Arbitrarily large dense graphs or exploding rational bit sizes are not performance-certified.

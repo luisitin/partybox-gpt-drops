@@ -48,7 +48,7 @@ Within a finite closed irreducible class, each member is revisited infinitely of
 
 ## 6. Independent checks and their limits
 
-The oracle performs sparse stochastic state elimination rather than computing a matrix inverse. Eliminating a self-loop of probability p multiplies its exits and accumulated reward terms by 1/(1 − p), which is the exact geometric sum. It uses separately implemented fractions, policy searches, and class detection. Its forward occupation recurrence provides an independent route to the same distribution/reward quantities.
+The sealed blind oracle restricts its unknowns to each transient pass-through component. It multiplies uniform branch equations by their degree and solves the component with exact forward elimination/back substitution, combining already solved successor components. Its dynamic program recurs only through ordinary entry destinations, treating pass-through dead ends as terminal outputs. This was independently authored before production source exchange. The historical supplemental oracle uses sparse state elimination and geometric self-loop resummation; it does not supply required comparisons.
 
 The third implementation explicitly enumerates all finite edge paths on the acyclic and step-consuming-cycle test families. Its guard detects accidentally supplied zero-cost cyclic inputs; it never truncates them into a guessed answer. Infinite families of paths in zero-cost loops are checked by the resummation oracle and hand-calculated regressions instead of pretending finite enumeration is exhaustive there.
 

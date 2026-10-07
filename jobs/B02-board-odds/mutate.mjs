@@ -5,7 +5,7 @@ import { pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
 import ts from 'typescript';
 import { golden } from './support.mjs';
-import { referenceByFace } from './build/reference.js';
+import { referenceByFace } from './build/blind-reference.js';
 
 const seedAt = process.argv.indexOf('--seed');
 const seed = Number(seedAt < 0 ? 1 : process.argv[seedAt + 1]);

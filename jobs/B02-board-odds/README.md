@@ -10,7 +10,7 @@ Requirements: Node.js 22 or newer; npm. Install the sole development dependency 
 npm test
 ```
 
-That one test command verifies checksums, compiles both TypeScript implementations with strict checks, runs every full test suite with seeds **1, 2, 3**, and checks 25 isolated, strictly type-checked mutants per seed. Nothing is skipped because of CI environment variables. Every failing comparison exits nonzero. Raw results are written to `.verification/`; no clocks or unseeded randomness influence the tests.
+That one test command verifies checksums, compiles the production module, sealed blind reference, and historical supplemental oracle with strict checks, runs every full test suite with seeds **1, 2, 3**, and checks 25 isolated, strictly type-checked mutants per seed. Nothing is skipped because of CI environment variables. Every failing comparison exits nonzero. Raw results are written to `.verification/`; no clocks or unseeded randomness influence the tests.
 
 To compile without running tests: `npm run build`. To run one full test seed after building: `node test.mjs --seed 1`. To run one mutation seed: `node mutate.mjs --seed 1`. `--smoke` is explicitly a reduced diagnostic run and is **not** used by `npm test` or CI.
 
@@ -86,7 +86,7 @@ Valid dead ends, loops, disconnected components, and unreachable targets do not 
 
 The production implementation identifies closed pass-through communicating classes using iterative Kosaraju traversal, solves the remaining zero-cost closure by exact Gauss–Jordan inversion, and composes transition/reward kernels. It uses no recursion or simulation. Matrix operations are performed on reduced BigInt fractions. Binary powering uses logarithmically many kernel compositions, although exact numerators/denominators can themselves become large.
 
-The test-only `reference.ts` has no imports from the production implementation. It uses separate tuple-based arithmetic, forward target searches, reachability-based recurrent-class detection, sparse state elimination with geometric loop resummation, and forward occupation propagation. `support.mjs` adds a third arithmetic implementation and genuinely enumerates finite paths without memoization, merging, or truncation.
+The required test oracle is `blind-reference.ts`, authored in an isolated directory by a separate agent from the movement contract and original prompt, before viewing production, tests, historical oracle, or algorithm documentation. Its SHA-256 was sealed before source exchange and the integrated file is unchanged. It solves each transient pass-through component by exact forward elimination/back substitution, then recurs across faces. `blind-authoring/` preserves the original authoring record, source, compiler configuration, self-check driver, and seal. The former `reference.ts` remains a historical supplement; it is compiled but is no longer the required test oracle. `support.mjs` separately implements rational arithmetic and literally enumerates finite paths without memoization, merging, or truncation.
 
 Per seed, the full tests cover 2,000 random directed acyclic graphs with 1–25 nodes, plus 500 cyclic graphs with 2–25 nodes. The first 250 cyclic graphs guarantee that every cycle consumes a step and are also brute-force enumerated; the other 250 permit arbitrary pass-through cycles and use exact independent resummation. All starts, faces 0–10, both policies, randomized exact die mixtures, normalization, and node/edge order invariance are checked. See `VERIFY.md` for actual case and path counts rather than estimates.
 
@@ -94,11 +94,11 @@ Monte Carlo uses 50 independently generated boards per seed, one fixed documente
 
 The 25 mutations are isolated, not stacked. Each must compile strictly and then be killed by a runtime test failure; compilation errors do not count as successful kills. The focused regression/oracle/arithmetic/validation suite is used for mutation testing, not 150 million new simulations per mutant. `VERIFY.md` lists every defect and witness.
 
-**Independence limit:** both files were written by the same assistant. Different algorithms and separate source files are verified, but genuinely blind authorship by two independent people/agents is **not** established. That requirement is explicitly recorded under `UNVERIFIED`; no such attestation is implied by passing differential tests.
+**Blind authorship provenance:** the new reference was completed and sealed before its author viewed any existing B02 implementation or tests. Every required comparison and mutation witness now uses that sealed reference. `INDEPENDENCE.md` records the boundary and artifact hashes. Passing differential tests establishes agreement on the tested cases; it does not establish universal correctness.
 
 ## Files and integrity
 
-`boardOdds.ts` is the deliverable; `reference.ts`, `support.mjs`, `test.mjs`, and `mutate.mjs` are verification code. `run.mjs` is the complete test orchestrator. `PROOF.md` derives the invariants. `VERIFY.md` and `evidence/` record completed runs. `SOURCES.md` records the repository and tooling references, not game-specific movement claims.
+`boardOdds.ts` is the deliverable; `blind-reference.ts`, `reference.ts`, `support.mjs`, `test.mjs`, and `mutate.mjs` are verification code. `run.mjs` is the complete test orchestrator. `PROOF.md` derives the invariants. `VERIFY.md` and `evidence/` record completed runs. `SOURCES.md` records the repository and tooling references, not game-specific movement claims.
 
 `SHA256SUMS.txt` covers all committed job files and `../../.github/workflows/B02.yml`; it excludes itself, `node_modules/`, `build/`, and `.verification/`. `node hashes.mjs` checks both file hashes and the complete manifest inventory. `node hashes.mjs --write` deliberately regenerates it after reviewed changes. No dependencies, build directories, or machine-specific symlinks are shipped.
 
