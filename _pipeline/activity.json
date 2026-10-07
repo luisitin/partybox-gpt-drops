@@ -1,46 +1,42 @@
 {
-  "updatedAt": "2026-10-07T14:22:00Z",
-  "summary": "Six parallel workers are finishing the original 20 jobs. Motion (B18) is delivered with a green final check; the other entries show actual work and the next queued project. No project PR is merged yet.",
+  "updatedAt": "2026-10-07T14:41:00Z",
+  "summary": "B02 board odds, B09 Clue, B17 sound effects and B18 motion are delivered with successful final GitHub checks. Six workers and the coordinator are continuing through the remaining projects; no PR has been merged.",
   "workers": [
     {
-      "current": "B02",
-      "summary": "A separately written exact board calculator is now wired into every required comparison. The full three-seed check is running; production code is unchanged.",
-      "next": "Finish all graph, simulation and deliberate-bug checks, then confirm the final GitHub run.",
-      "queue": [
-        "B08"
-      ]
+      "current": "B08",
+      "summary": "B02 board odds is finished and green. Work has begun on the Monopoly probability model; a separately written checker is already sealed.",
+      "next": "Build and compare both jail strategies, then check the published tables and property returns.",
+      "queue": []
     },
     {
-      "current": "B09",
-      "summary": "The Clue solver is implemented and pushed. All three original runs passed; a second full run now includes a long, difficult game log.",
-      "next": "Publish the final results and confirm the GitHub check for the latest commit.",
+      "current": "B10",
+      "summary": "B09 Clue is finished and green. A new independently written Battleship checker is pushed before the old implementation is reviewed.",
+      "next": "Compare the exact board densities and shot choices, then address the speed-limit failures.",
       "queue": [
-        "B10",
         "B11",
         "B07"
       ]
     },
     {
-      "current": "B17",
-      "summary": "All 40 sound files, spectrograms and the listening gallery are committed. Full local checks passed again; the final evidence commit is on GitHub.",
-      "next": "Confirm the final GitHub run, then begin the accessible player colors.",
+      "current": "B16",
+      "summary": "B17's 40 sounds and gallery are finished and green. The player-color math is now being calibrated against published test cases.",
+      "next": "Search for a palette that meets the original contrast and color-separation rules.",
       "queue": [
-        "B16",
         "B12"
       ]
     },
     {
       "current": "B19",
-      "summary": "B18 motion is finished and green. The worker is now writing a separate name-filter checker before reviewing the old implementation.",
-      "next": "Compare all required cases and fix the strict speed-limit failure.",
+      "summary": "A separate name-filter checker agrees on every required input. The optimized filter still failed the strict speed limit on GitHub.",
+      "next": "Identify the slow inputs and reduce work per call; retain the failed gate until it passes.",
       "queue": [
         "B15"
       ]
     },
     {
       "current": "B01",
-      "summary": "A new independently written dice-odds checker has been sealed and self-checked. Research and code gaps in the existing draft are being reviewed.",
-      "next": "Run every exact comparison and improve missing independent source evidence.",
+      "summary": "The new dice checker passed all three full runs, including 870 million simulated rolls. Source pages have been reopened and archived; 12 rule claims still lack full verification.",
+      "next": "Confirm the final GitHub run and improve the remaining source gaps before declaring research finished.",
       "queue": [
         "B05",
         "B20",
@@ -50,20 +46,18 @@
     },
     {
       "current": "B14",
-      "summary": "The original creative brief is read and isolated branches are prepared. Work is starting on the required candidate pool and grading evidence.",
-      "next": "Write and review the candidate pool, then obtain a separate second grading pass.",
+      "summary": "300 original candidates are authored and pushed. A separate review of the first 100 retained 63 that both reviewers graded at least 4.",
+      "next": "Continue the full 3,000-candidate pool and separate second review, then select the final 1,200.",
       "queue": [
         "B13"
       ]
     },
     {
-      "current": "B21",
+      "current": "B06",
       "title": "Live project dashboard",
-      "summary": "The dashboard and GitHub tracker are being updated with current work, queues and check results for each latest commit.",
-      "next": "Publish the live update, then start the CPU policy project.",
-      "queue": [
-        "B06"
-      ]
+      "summary": "The live dashboard is published. The previously empty CPU-policy job now has a branch and a documented state and decision contract.",
+      "next": "Implement and independently compare the policy, then run all scenarios, random states and toy games.",
+      "queue": []
     }
   ]
 }
