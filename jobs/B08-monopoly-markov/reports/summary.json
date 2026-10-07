@@ -1,0 +1,3075 @@
+{
+  "passed": true,
+  "node": "v24.19.0",
+  "typescript": "5.8.3",
+  "command": "npm test",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "sourceSHA256": {
+    "monopolyOdds.ts": "b43bcb333a028cb622e027ea4563b3bfc86afbada8e189e7fae892b01b538c58",
+    "reference.ts": "d9bce69c3c9dd7e27ec528a61e8b3feab5068b94e5fa85ad8ff44f0432e8df5b",
+    "roi-reference.ts": "ee9b607e9217a5eab63fc3f84c436028cbcb7b39f3d1c2a2da48e8ed6cb8042a",
+    "checks.mjs": "1333e4a83b31ec42d2bfc94bcd70183c270cb488fbdaf2200d85eb156f167bd9",
+    "test.mjs": "10089a926623b0f135da0db45f680ade443ee63aa50b1e10ff2c045a754a1d6a",
+    "simulate.mjs": "611323b91c4ac8fc1e6ebca53b19abad48cece39d040c9b953a21abdecde4c8b",
+    "sampling-variance.mjs": "5c51a8bdc753692e2079983afd32cbd16be0679ada5e8f88d1d9c20f87efd790",
+    "mutate.mjs": "2d04aca9a3311316dd67ebada4f7b986fb9709364c3a48867ffb0233699ad3cb",
+    "run.mjs": "4e62718fdeb13e82ea60f2775fff55477927e62777d800cfce7cddab7a15e870",
+    "export.mjs": "c409a12258111ec1387e190e6b2f351e766926f69cc37bd096b3e8b678b93785",
+    "hashes.mjs": "7e14be5ddeb276585c2e77ad8d733c1c7d95f56aa3a91f093de6c81c8c85aa67",
+    "tsconfig.json": "dd08bd00b5dc4689b7feb543b9f5e21ab4c2893620e2f6d57e01f68e50708def",
+    "package.json": "2629d059dffe1f3a7bdddcd55009a1071faa49263e2b409368af73a319b7f6fb",
+    "package-lock.json": "530aad73d4db6073a6f2c337b4db25b33a229622f7f71da16d9b7cdf25ca821b",
+    "data/published-tables.json": "f4589de8da277a6783a88b800829c1d98c3d34af50a1a5bf22205ee99789d088",
+    "data/us-properties.json": "a289b125cc5249f6444b3ec9daa121f3447401737b4642834036432707d71458",
+    "data/collins-table.json": "82afaef2d9eb800542251fd9002f6ab5d41285aa45357f1926b7749e9856baec"
+  },
+  "totals": {
+    "exactTransitionCells": 86400,
+    "stationaryStates": 720,
+    "publishedSquares": 720,
+    "matchedPublishedSquares": 717,
+    "documentedPublishedGaps": 3,
+    "requiredButlerComparisons": 480,
+    "roiScenarios": 1044,
+    "simulationRolls": 600000000,
+    "simulationSquares": 240,
+    "strictCompiledMutants": 75,
+    "runtimeKilledMutants": 75
+  },
+  "runs": [
+    {
+      "seed": 1,
+      "exact": {
+        "suite": "exact-and-published",
+        "seed": 1,
+        "passed": true,
+        "assertions": 37981,
+        "exactTransitionCells": 28800,
+        "stationaryStates": 240,
+        "publishedSquares": 240,
+        "matchedPublishedSquares": 239,
+        "documentedPublishedGaps": 1,
+        "properties": 56,
+        "ownershipScenarios": 348,
+        "observations": [
+          {
+            "strategy": "leave ASAP",
+            "maxStateDifference": 9.194034422677078e-16,
+            "iterations": 197,
+            "residual": 3.469446951953614e-17,
+            "turnStartMass": 0.8427269589619967,
+            "rollsPerTurn": 1.186623958525926,
+            "tableComparisons": [
+              {
+                "id": "butler-per-roll",
+                "squares": 40,
+                "maxDifference": 4.782849026552238e-9,
+                "tolerance": 0.0001
+              },
+              {
+                "id": "butler-end-turn",
+                "squares": 40,
+                "maxDifference": 4.964513661276371e-10,
+                "tolerance": 0.0001
+              },
+              {
+                "id": "collins-per-roll",
+                "squares": 40,
+                "maxDifference": 0.0000011468197552155779,
+                "tolerance": 0.0001,
+                "matchedSquares": 40,
+                "documentedGaps": [],
+                "conflictRecord": null
+              }
+            ]
+          },
+          {
+            "strategy": "stay max",
+            "maxStateDifference": 8.847089727481716e-16,
+            "iterations": 255,
+            "residual": 2.7755575615628914e-17,
+            "turnStartMass": 0.8577091677010615,
+            "rollsPerTurn": 1.165896364009171,
+            "tableComparisons": [
+              {
+                "id": "butler-per-roll",
+                "squares": 40,
+                "maxDifference": 6.87574422397752e-9,
+                "tolerance": 0.0001
+              },
+              {
+                "id": "butler-end-turn",
+                "squares": 40,
+                "maxDifference": 4.994465015173422e-10,
+                "tolerance": 0.0001
+              },
+              {
+                "id": "collins-per-roll",
+                "squares": 40,
+                "maxDifference": 0.0006835468757442065,
+                "tolerance": 0.0001,
+                "matchedSquares": 39,
+                "documentedGaps": [
+                  {
+                    "position": 10,
+                    "difference": -0.0006835468757442065
+                  }
+                ],
+                "conflictRecord": "CONFLICTS.md"
+              }
+            ]
+          }
+        ],
+        "samplingVariance": [
+          {
+            "strategy": "leave ASAP",
+            "variances": [
+              0.026613383249758912,
+              0.018537207143268626,
+              0.016695977296185372,
+              0.01880765318380988,
+              0.020151592852817035,
+              0.02506683893005137,
+              0.01952404884250239,
+              0.008201581257409666,
+              0.01999204132993807,
+              0.019866169362448585,
+              0.051605484207472845,
+              0.023291678538621446,
+              0.022366055322301768,
+              0.020610846806919277,
+              0.02143054713816162,
+              0.024971917958302267,
+              0.024026658498918194,
+              0.022609108977854325,
+              0.02508379943090426,
+              0.026281465267327588,
+              0.0246595323278581,
+              0.024272676363004796,
+              0.009918546187377808,
+              0.023479329787661006,
+              0.027061913069615872,
+              0.025748831200859322,
+              0.023083868057078395,
+              0.02278834212376164,
+              0.023645131031664476,
+              0.021963052756172337,
+              0,
+              0.02252166549844406,
+              0.022132954077860024,
+              0.020419613364652877,
+              0.02122707715310983,
+              0.020740122167995263,
+              0.008211042621326877,
+              0.018929153308334324,
+              0.01887406652966402,
+              0.02275638123120873
+            ],
+            "maxResidual": 1.5379335085874474e-15,
+            "method": "Markov CLT: 2*pi(f*h)-pi(f^2), (I-P+1*pi)h=f"
+          },
+          {
+            "strategy": "stay max",
+            "variances": [
+              0.025437640502654225,
+              0.01767142140927016,
+              0.01589768844314272,
+              0.017940020883577885,
+              0.019247767108686083,
+              0.02406964500517829,
+              0.01865069176542563,
+              0.00777287526466449,
+              0.019108113332228893,
+              0.018985409333934635,
+              0.21807658043943717,
+              0.022352216221632856,
+              0.02256625819278323,
+              0.019035171637096206,
+              0.021058497717648877,
+              0.022609166234033716,
+              0.022909808877061507,
+              0.019981292460336385,
+              0.023905073028416105,
+              0.02386215338031839,
+              0.024000682561278575,
+              0.022275431658684137,
+              0.009875254378231389,
+              0.02192180131700525,
+              0.02537939320744161,
+              0.02426653695122559,
+              0.021703877796503353,
+              0.021531385913892146,
+              0.022526832388599906,
+              0.02092550354112125,
+              0,
+              0.021497248767947424,
+              0.021137632118025787,
+              0.019450248871076128,
+              0.020251906351536977,
+              0.01976860419351542,
+              0.007771637772785259,
+              0.018033837103569966,
+              0.017991693601981835,
+              0.021801850242838518
+            ],
+            "maxResidual": 2.8171909249863347e-15,
+            "method": "Markov CLT: 2*pi(f*h)-pi(f^2), (I-P+1*pi)h=f"
+          }
+        ]
+      },
+      "simulation": {
+        "passed": true,
+        "results": [
+          {
+            "strategy": "leave ASAP",
+            "seed": 1,
+            "rolls": 100000000,
+            "burnIn": 10000,
+            "passed": true,
+            "maxSigma": 1.9794398220894414,
+            "varianceMethod": "Markov CLT: 2*pi(f*h)-pi(f^2), (I-P+1*pi)h=f",
+            "poissonResidual": 1.5379335085874474e-15,
+            "squares": [
+              {
+                "position": 0,
+                "count": 3095979,
+                "expected": 3096123.0334103354,
+                "difference": -144.0334103354253,
+                "standardDeviation": 1631.3608812816037,
+                "sigma": 0.08829034212360913
+              },
+              {
+                "position": 1,
+                "count": 2128936,
+                "expected": 2131377.3374645626,
+                "difference": -2441.3374645626172,
+                "standardDeviation": 1361.5141256435288,
+                "sigma": 1.7931047637193647
+              },
+              {
+                "position": 2,
+                "count": 1882733,
+                "expected": 1884880.0052371735,
+                "difference": -2147.005237173522,
+                "standardDeviation": 1292.1291458745666,
+                "sigma": 1.6616026687644598
+              },
+              {
+                "position": 3,
+                "count": 2163723,
+                "expected": 2162402.189535373,
+                "difference": 1320.8104646271095,
+                "standardDeviation": 1371.409974581266,
+                "sigma": 0.9631040236748999
+              },
+              {
+                "position": 4,
+                "count": 2330194,
+                "expected": 2328523.018961241,
+                "difference": 1670.9810387589969,
+                "standardDeviation": 1419.5630613966057,
+                "sigma": 1.1771094107753404
+              },
+              {
+                "position": 5,
+                "count": 2962709,
+                "expected": 2963103.2008512295,
+                "difference": -394.2008512294851,
+                "standardDeviation": 1583.2510517934725,
+                "sigma": 0.24898189758531533
+              },
+              {
+                "position": 6,
+                "count": 2262607,
+                "expected": 2262139.678893011,
+                "difference": 467.32110698893666,
+                "standardDeviation": 1397.2848257424967,
+                "sigma": 0.3344494253278741
+              },
+              {
+                "position": 7,
+                "count": 864421,
+                "expected": 865047.8139361498,
+                "difference": -626.8139361498179,
+                "standardDeviation": 905.6258199394309,
+                "sigma": 0.6921334643393225
+              },
+              {
+                "position": 8,
+                "count": 2321956,
+                "expected": 2320960.171215176,
+                "difference": 995.8287848238833,
+                "standardDeviation": 1413.9321528962437,
+                "sigma": 0.704297432365525
+              },
+              {
+                "position": 9,
+                "count": 2299907,
+                "expected": 2300335.0088667828,
+                "difference": -428.00886678276584,
+                "standardDeviation": 1409.4739927522105,
+                "sigma": 0.30366567172127384
+              },
+              {
+                "position": 10,
+                "count": 6218221,
+                "expected": 6219514.681975561,
+                "difference": -1293.6819755611941,
+                "standardDeviation": 2271.684049498804,
+                "sigma": 0.5694814716186505
+              },
+              {
+                "position": 11,
+                "count": 2700827,
+                "expected": 2701657.817770986,
+                "difference": -830.8177709858865,
+                "standardDeviation": 1526.1611493751716,
+                "sigma": 0.5443840392123945
+              },
+              {
+                "position": 12,
+                "count": 2606024,
+                "expected": 2604037.521715098,
+                "difference": 1986.4782849019393,
+                "standardDeviation": 1495.5285126770993,
+                "sigma": 1.328278443415302
+              },
+              {
+                "position": 13,
+                "count": 2371543,
+                "expected": 2372090.292590742,
+                "difference": -547.2925907419994,
+                "standardDeviation": 1435.6478261370119,
+                "sigma": 0.38121646602888265
+              },
+              {
+                "position": 14,
+                "count": 2466715,
+                "expected": 2464888.4255086766,
+                "difference": 1826.5744913234375,
+                "standardDeviation": 1463.917591197046,
+                "sigma": 1.247730406620667
+              },
+              {
+                "position": 15,
+                "count": 2918572,
+                "expected": 2919969.335250798,
+                "difference": -1397.3352507981472,
+                "standardDeviation": 1580.2505484353505,
+                "sigma": 0.8842491794618816
+              },
+              {
+                "position": 16,
+                "count": 2791322,
+                "expected": 2792416.8535581618,
+                "difference": -1094.8535581617616,
+                "standardDeviation": 1550.0534990418296,
+                "sigma": 0.7063327548620411
+              },
+              {
+                "position": 17,
+                "count": 2595150,
+                "expected": 2594464.843407433,
+                "difference": 685.1565925669856,
+                "standardDeviation": 1503.6325674131406,
+                "sigma": 0.45566756627633676
+              },
+              {
+                "position": 18,
+                "count": 2936613,
+                "expected": 2935585.4595096963,
+                "difference": 1027.5404903036542,
+                "standardDeviation": 1583.7865838206947,
+                "sigma": 0.6487872171671238
+              },
+              {
+                "position": 19,
+                "count": 3084849,
+                "expected": 3085168.877835798,
+                "difference": -319.8778357980773,
+                "standardDeviation": 1621.1559230168943,
+                "sigma": 0.19731466372636125
+              },
+              {
+                "position": 20,
+                "count": 2883279,
+                "expected": 2883601.2851659055,
+                "difference": -322.2851659054868,
+                "standardDeviation": 1570.335388630661,
+                "sigma": 0.20523333310759861
+              },
+              {
+                "position": 21,
+                "count": 2837553,
+                "expected": 2835843.139001527,
+                "difference": 1709.8609984731302,
+                "standardDeviation": 1557.9690742439273,
+                "sigma": 1.0974935425485999
+              },
+              {
+                "position": 22,
+                "count": 1048181,
+                "expected": 1048032.9373315276,
+                "difference": 148.06266847241204,
+                "standardDeviation": 995.9189820149934,
+                "sigma": 0.14866939093061987
+              },
+              {
+                "position": 23,
+                "count": 2737054,
+                "expected": 2735685.8038021917,
+                "difference": 1368.1961978082545,
+                "standardDeviation": 1532.29663536996,
+                "sigma": 0.8929055681688651
+              },
+              {
+                "position": 24,
+                "count": 3182535,
+                "expected": 3185766.2866549804,
+                "difference": -3231.2866549803875,
+                "standardDeviation": 1645.0505484518058,
+                "sigma": 1.9642476384822487
+              },
+              {
+                "position": 25,
+                "count": 3065995,
+                "expected": 3065904.738653013,
+                "difference": 90.26134698698297,
+                "standardDeviation": 1604.6442347405023,
+                "sigma": 0.05625006779249092
+              },
+              {
+                "position": 26,
+                "count": 2706028,
+                "expected": 2707203.8246359606,
+                "difference": -1175.8246359606273,
+                "standardDeviation": 1519.3376207110252,
+                "sigma": 0.7739060890300081
+              },
+              {
+                "position": 27,
+                "count": 2679422,
+                "expected": 2678857.694427637,
+                "difference": 564.3055723630823,
+                "standardDeviation": 1509.580806838827,
+                "sigma": 0.37381607516909254
+              },
+              {
+                "position": 28,
+                "count": 2808017,
+                "expected": 2807418.382909076,
+                "difference": 598.6170909241773,
+                "standardDeviation": 1537.697337959082,
+                "sigma": 0.3892944834766349
+              },
+              {
+                "position": 29,
+                "count": 2585194,
+                "expected": 2586048.8874876574,
+                "difference": -854.8874876573682,
+                "standardDeviation": 1481.9936827183958,
+                "sigma": 0.5768496165849119
+              },
+              {
+                "position": 30,
+                "count": 0,
+                "expected": 0,
+                "difference": 0,
+                "standardDeviation": 0,
+                "sigma": 0
+              },
+              {
+                "position": 31,
+                "count": 2678490,
+                "expected": 2677370.475281738,
+                "difference": 1119.5247182617895,
+                "standardDeviation": 1500.722009515555,
+                "sigma": 0.7459907372339938
+              },
+              {
+                "position": 32,
+                "count": 2625518,
+                "expected": 2625173.0101095377,
+                "difference": 344.98989046225324,
+                "standardDeviation": 1487.7148274403944,
+                "sigma": 0.23189248644903712
+              },
+              {
+                "position": 33,
+                "count": 2365437,
+                "expected": 2366054.88084604,
+                "difference": -617.8808460398577,
+                "standardDeviation": 1428.9721258531558,
+                "sigma": 0.43239531049001895
+              },
+              {
+                "position": 34,
+                "count": 2501904,
+                "expected": 2500628.007466057,
+                "difference": 1275.9925339431502,
+                "standardDeviation": 1456.9515143994954,
+                "sigma": 0.8757961547327605
+              },
+              {
+                "position": 35,
+                "count": 2431771,
+                "expected": 2432637.9827060257,
+                "difference": -866.9827060257085,
+                "standardDeviation": 1440.1431237205302,
+                "sigma": 0.602011488820574
+              },
+              {
+                "position": 36,
+                "count": 867167,
+                "expected": 866873.3545006053,
+                "difference": 293.6454993947409,
+                "standardDeviation": 906.1480354405055,
+                "sigma": 0.3240590807571426
+              },
+              {
+                "position": 37,
+                "count": 2189121,
+                "expected": 2186397.6221719435,
+                "difference": 2723.3778280564584,
+                "standardDeviation": 1375.8325954975164,
+                "sigma": 1.9794398220894414
+              },
+              {
+                "position": 38,
+                "count": 2180819,
+                "expected": 2179852.766354558,
+                "difference": 966.2336454419419,
+                "standardDeviation": 1373.8291935194864,
+                "sigma": 0.7033142475060069
+              },
+              {
+                "position": 39,
+                "count": 2623514,
+                "expected": 2625963.3530000844,
+                "difference": -2449.353000084404,
+                "standardDeviation": 1508.521833823055,
+                "sigma": 1.6236775266798726
+              }
+            ]
+          },
+          {
+            "strategy": "stay max",
+            "seed": 1,
+            "rolls": 100000000,
+            "burnIn": 10000,
+            "passed": true,
+            "maxSigma": 2.389731545521216,
+            "varianceMethod": "Markov CLT: 2*pi(f*h)-pi(f^2), (I-P+1*pi)h=f",
+            "poissonResidual": 2.8171909249863347e-15,
+            "squares": [
+              {
+                "position": 0,
+                "count": 2920859,
+                "expected": 2918262.4945617085,
+                "difference": 2596.5054382914677,
+                "standardDeviation": 1594.9181954775681,
+                "sigma": 1.627986592449648
+              },
+              {
+                "position": 1,
+                "count": 2006852,
+                "expected": 2010028.7633106387,
+                "difference": -3176.763310638722,
+                "standardDeviation": 1329.3389864616986,
+                "sigma": 2.389731545521216
+              },
+              {
+                "position": 2,
+                "count": 1777206,
+                "expected": 1777507.6630087434,
+                "difference": -301.6630087434314,
+                "standardDeviation": 1260.860358768675,
+                "sigma": 0.23925171938788528
+              },
+              {
+                "position": 3,
+                "count": 2039535,
+                "expected": 2039764.4352501875,
+                "difference": -229.43525018752553,
+                "standardDeviation": 1339.4036316054203,
+                "sigma": 0.17129657167833906
+              },
+              {
+                "position": 4,
+                "count": 2195075,
+                "expected": 2196593.508561789,
+                "difference": -1518.5085617890581,
+                "standardDeviation": 1387.363222400179,
+                "sigma": 1.0945284819947827
+              },
+              {
+                "position": 5,
+                "count": 2805446,
+                "expected": 2804960.0355690448,
+                "difference": 485.96443095523864,
+                "standardDeviation": 1551.4394930250514,
+                "sigma": 0.3132345367898867
+              },
+              {
+                "position": 6,
+                "count": 2133270,
+                "expected": 2134574.265848859,
+                "difference": -1304.2658488592133,
+                "standardDeviation": 1365.67535547163,
+                "sigma": 0.9550335983098932
+              },
+              {
+                "position": 7,
+                "count": 815487,
+                "expected": 816362.5941513422,
+                "difference": -875.5941513421712,
+                "standardDeviation": 881.63911350759,
+                "sigma": 0.9931434959352371
+              },
+              {
+                "position": 8,
+                "count": 2189714,
+                "expected": 2190343.039291144,
+                "difference": -629.039291143883,
+                "standardDeviation": 1382.3209950018445,
+                "sigma": 0.4550602164174202
+              },
+              {
+                "position": 9,
+                "count": 2170728,
+                "expected": 2171177.1211689683,
+                "difference": -449.12116896826774,
+                "standardDeviation": 1377.875514476349,
+                "sigma": 0.32595191963981796
+              },
+              {
+                "position": 10,
+                "count": 11532767,
+                "expected": 11527745.312425608,
+                "difference": 5021.687574392185,
+                "standardDeviation": 4669.867026366353,
+                "sigma": 1.0753384509750346
+              },
+              {
+                "position": 11,
+                "count": 2561252,
+                "expected": 2559552.1243550316,
+                "difference": 1699.875644968357,
+                "standardDeviation": 1495.0657584746182,
+                "sigma": 1.136990553982523
+              },
+              {
+                "position": 12,
+                "count": 2614475,
+                "expected": 2615482.5106106084,
+                "difference": -1007.510610608384,
+                "standardDeviation": 1502.2069828350297,
+                "sigma": 0.670686944023497
+              },
+              {
+                "position": 13,
+                "count": 2177583,
+                "expected": 2176000.2587590306,
+                "difference": 1582.7412409693934,
+                "standardDeviation": 1379.6800946993546,
+                "sigma": 1.1471798767338799
+              },
+              {
+                "position": 14,
+                "count": 2425495,
+                "expected": 2425270.4185339017,
+                "difference": 224.581466098316,
+                "standardDeviation": 1451.1546339949052,
+                "sigma": 0.15476053401701398
+              },
+              {
+                "position": 15,
+                "count": 2638151,
+                "expected": 2636572.803883631,
+                "difference": 1578.1961163692176,
+                "standardDeviation": 1503.6344713404824,
+                "sigma": 1.0495876135123876
+              },
+              {
+                "position": 16,
+                "count": 2682046,
+                "expected": 2678918.665052352,
+                "difference": 3127.3349476479925,
+                "standardDeviation": 1513.5986547649118,
+                "sigma": 2.0661586463511505
+              },
+              {
+                "position": 17,
+                "count": 2293102,
+                "expected": 2295130.8644971866,
+                "difference": -2028.864497186616,
+                "standardDeviation": 1413.551996225692,
+                "sigma": 1.4352952721964687
+              },
+              {
+                "position": 18,
+                "count": 2818404,
+                "expected": 2819684.076886218,
+                "difference": -1280.0768862180412,
+                "standardDeviation": 1546.1265481329822,
+                "sigma": 0.82792504130001
+              },
+              {
+                "position": 19,
+                "count": 2812279,
+                "expected": 2811562.2192468126,
+                "difference": 716.7807531873696,
+                "standardDeviation": 1544.7379512499324,
+                "sigma": 0.46401446446459277
+              },
+              {
+                "position": 20,
+                "count": 2826198,
+                "expected": 2824797.33971896,
+                "difference": 1400.6602810397744,
+                "standardDeviation": 1549.2153678968775,
+                "sigma": 0.9041094673242412
+              },
+              {
+                "position": 21,
+                "count": 2614487,
+                "expected": 2614214.316878806,
+                "difference": 272.6831211941317,
+                "standardDeviation": 1492.4956166998995,
+                "sigma": 0.18270279533354292
+              },
+              {
+                "position": 22,
+                "count": 1043994,
+                "expected": 1044953.4808390322,
+                "difference": -959.4808390322141,
+                "standardDeviation": 993.7431447930289,
+                "sigma": 0.9655219701988981
+              },
+              {
+                "position": 23,
+                "count": 2567707,
+                "expected": 2567279.3220093534,
+                "difference": 427.6779906465672,
+                "standardDeviation": 1480.601273706235,
+                "sigma": 0.2888542636303462
+              },
+              {
+                "position": 24,
+                "count": 2998004,
+                "expected": 2995492.0405779094,
+                "difference": 2511.9594220905565,
+                "standardDeviation": 1593.0911212934936,
+                "sigma": 1.576783266515852
+              },
+              {
+                "position": 25,
+                "count": 2890101,
+                "expected": 2892847.4098033225,
+                "difference": -2746.4098033225164,
+                "standardDeviation": 1557.7720292528554,
+                "sigma": 1.763037050190046
+              },
+              {
+                "position": 26,
+                "count": 2541181,
+                "expected": 2540084.1080187,
+                "difference": 1096.8919812999666,
+                "standardDeviation": 1473.2236013756824,
+                "sigma": 0.7445522731754359
+              },
+              {
+                "position": 27,
+                "count": 2518461,
+                "expected": 2519201.37586186,
+                "difference": -740.3758618598804,
+                "standardDeviation": 1467.3576903363455,
+                "sigma": 0.5045639974055491
+              },
+              {
+                "position": 28,
+                "count": 2655348,
+                "expected": 2654752.202094441,
+                "difference": 595.7979055591859,
+                "standardDeviation": 1500.8941464540364,
+                "sigma": 0.39696197561087077
+              },
+              {
+                "position": 29,
+                "count": 2438014,
+                "expected": 2438722.4063321548,
+                "difference": -708.4063321547583,
+                "standardDeviation": 1446.5650189715377,
+                "sigma": 0.4897162055380082
+              },
+              {
+                "position": 30,
+                "count": 0,
+                "expected": 0,
+                "difference": 0,
+                "standardDeviation": 0,
+                "sigma": 0
+              },
+              {
+                "position": 31,
+                "count": 2522847,
+                "expected": 2524915.099975396,
+                "difference": -2068.0999753959477,
+                "standardDeviation": 1466.194010625723,
+                "sigma": 1.410522727830099
+              },
+              {
+                "position": 32,
+                "count": 2476321,
+                "expected": 2476921.3909871783,
+                "difference": -600.3909871783108,
+                "standardDeviation": 1453.8786785019506,
+                "sigma": 0.41295810720392595
+              },
+              {
+                "position": 33,
+                "count": 2229179,
+                "expected": 2229189.516109854,
+                "difference": -10.516109853982925,
+                "standardDeviation": 1394.6414905299544,
+                "sigma": 0.0075403678475009905
+              },
+              {
+                "position": 34,
+                "count": 2354738,
+                "expected": 2357635.9052898376,
+                "difference": -2897.905289837625,
+                "standardDeviation": 1423.0919278647102,
+                "sigma": 2.036344408323509
+              },
+              {
+                "position": 35,
+                "count": 2292005,
+                "expected": 2292474.6181039554,
+                "difference": -469.6181039554067,
+                "standardDeviation": 1406.008683953105,
+                "sigma": 0.33400796831143187
+              },
+              {
+                "position": 36,
+                "count": 817388,
+                "expected": 817445.439300505,
+                "difference": -57.439300504978746,
+                "standardDeviation": 881.5689293972002,
+                "sigma": 0.06515576784705267
+              },
+              {
+                "position": 37,
+                "count": 2063134,
+                "expected": 2061619.1594829776,
+                "difference": 1514.8405170224141,
+                "standardDeviation": 1342.9012288165488,
+                "sigma": 1.128035692064553
+              },
+              {
+                "position": 38,
+                "count": 2055410,
+                "expected": 2055841.4364580163,
+                "difference": -431.4364580162801,
+                "standardDeviation": 1341.331189601652,
+                "sigma": 0.32164797282049923
+              },
+              {
+                "position": 39,
+                "count": 2485757,
+                "expected": 2486120.2571848724,
+                "difference": -363.25718487240374,
+                "standardDeviation": 1476.5449618226503,
+                "sigma": 0.24601837009013142
+              }
+            ]
+          }
+        ]
+      },
+      "mutation": {
+        "passed": true,
+        "seed": 1,
+        "mutations": 25,
+        "strictCompiled": 25,
+        "runtimeKilled": 25,
+        "productionSHA256": "b43bcb333a028cb622e027ea4563b3bfc86afbada8e189e7fae892b01b538c58",
+        "results": [
+          {
+            "name": "M01 denominator",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Exact common denominator\n\n9217 !== 9216\n"
+          },
+          {
+            "name": "M02 early triple-double jail",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Invalid free state"
+          },
+          {
+            "name": "M03 reversed doubles",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/0\n\n16 !== 96\n"
+          },
+          {
+            "name": "M04 premature third jail attempt",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition stay max/118/0\n\n112 !== 16\n"
+          },
+          {
+            "name": "M05 jail doubles extra roll",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition stay max/117/0\n\n0 !== 16\n"
+          },
+          {
+            "name": "M06 ASAP inherited jail streak",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/117/1\n\n0 !== 16\n"
+          },
+          {
+            "name": "M07 ordinary streak reset",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/0\n\n0 !== 96\n"
+          },
+          {
+            "name": "M08 movement off by one",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/0\n\n64 !== 96\n"
+          },
+          {
+            "name": "M09 GoToJail relocation",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Invalid free state"
+          },
+          {
+            "name": "M10 CC jail card visiting",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/31\n\n272 !== 256\n"
+          },
+          {
+            "name": "M11 Chance jail card visiting",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/30\n\n608 !== 512\n"
+          },
+          {
+            "name": "M12 CC card multiplicity",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Transition row mass invariant"
+          },
+          {
+            "name": "M13 Chance stay multiplicity",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Transition row mass invariant"
+          },
+          {
+            "name": "M14 missing second railroad card",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Transition row mass invariant"
+          },
+          {
+            "name": "M15 nearest railroad mapping",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/15\n\n1312 !== 1120\n"
+          },
+          {
+            "name": "M16 nearest utility mapping",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/36\n\n0 !== 96\n"
+          },
+          {
+            "name": "M17 back-three card",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/12\n\n512 !== 608\n"
+          },
+          {
+            "name": "M18 jail does not reset streak",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/30\n\n608 !== 512\n"
+          },
+          {
+            "name": "M19 end-turn filter",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind turn landing: 0.022518443650798692 != 0.031357958722416555"
+          },
+          {
+            "name": "M20 Marvin Gardens rent edition",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Official street rents\n+ actual - expected\n\n  [\n+   22,\n-   24,\n    120,\n    360,\n    850,\n    1025,\n    1200\n"
+          },
+          {
+            "name": "M21 missing full-set rent doubling",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI ordinaryRent\n\n2 !== 4\n"
+          },
+          {
+            "name": "M22 hotel construction investment",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI investment\n\n260 !== 310\n"
+          },
+          {
+            "name": "M23 railroad premium missing",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI expectedRentPerRoll: 0.7407758002128082 != 0.8130152464211912"
+          },
+          {
+            "name": "M24 utility Chance premium",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI expectedRentPerRoll: 0.8099534939406092 != 0.8503649878708002"
+          },
+          {
+            "name": "M25 per-turn rent conversion",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI expectedRentPerOpponentTurn: 0.03592338284004056 != 0.05058286826589295"
+          }
+        ]
+      }
+    },
+    {
+      "seed": 2,
+      "exact": {
+        "suite": "exact-and-published",
+        "seed": 2,
+        "passed": true,
+        "assertions": 37981,
+        "exactTransitionCells": 28800,
+        "stationaryStates": 240,
+        "publishedSquares": 240,
+        "matchedPublishedSquares": 239,
+        "documentedPublishedGaps": 1,
+        "properties": 56,
+        "ownershipScenarios": 348,
+        "observations": [
+          {
+            "strategy": "leave ASAP",
+            "maxStateDifference": 9.194034422677078e-16,
+            "iterations": 197,
+            "residual": 3.469446951953614e-17,
+            "turnStartMass": 0.8427269589619967,
+            "rollsPerTurn": 1.186623958525926,
+            "tableComparisons": [
+              {
+                "id": "butler-per-roll",
+                "squares": 40,
+                "maxDifference": 4.782849026552238e-9,
+                "tolerance": 0.0001
+              },
+              {
+                "id": "butler-end-turn",
+                "squares": 40,
+                "maxDifference": 4.964513661276371e-10,
+                "tolerance": 0.0001
+              },
+              {
+                "id": "collins-per-roll",
+                "squares": 40,
+                "maxDifference": 0.0000011468197552155779,
+                "tolerance": 0.0001,
+                "matchedSquares": 40,
+                "documentedGaps": [],
+                "conflictRecord": null
+              }
+            ]
+          },
+          {
+            "strategy": "stay max",
+            "maxStateDifference": 8.847089727481716e-16,
+            "iterations": 255,
+            "residual": 2.7755575615628914e-17,
+            "turnStartMass": 0.8577091677010615,
+            "rollsPerTurn": 1.165896364009171,
+            "tableComparisons": [
+              {
+                "id": "butler-per-roll",
+                "squares": 40,
+                "maxDifference": 6.87574422397752e-9,
+                "tolerance": 0.0001
+              },
+              {
+                "id": "butler-end-turn",
+                "squares": 40,
+                "maxDifference": 4.994465015173422e-10,
+                "tolerance": 0.0001
+              },
+              {
+                "id": "collins-per-roll",
+                "squares": 40,
+                "maxDifference": 0.0006835468757442065,
+                "tolerance": 0.0001,
+                "matchedSquares": 39,
+                "documentedGaps": [
+                  {
+                    "position": 10,
+                    "difference": -0.0006835468757442065
+                  }
+                ],
+                "conflictRecord": "CONFLICTS.md"
+              }
+            ]
+          }
+        ],
+        "samplingVariance": [
+          {
+            "strategy": "leave ASAP",
+            "variances": [
+              0.026613383249758912,
+              0.018537207143268626,
+              0.016695977296185372,
+              0.01880765318380988,
+              0.020151592852817035,
+              0.02506683893005137,
+              0.01952404884250239,
+              0.008201581257409666,
+              0.01999204132993807,
+              0.019866169362448585,
+              0.051605484207472845,
+              0.023291678538621446,
+              0.022366055322301768,
+              0.020610846806919277,
+              0.02143054713816162,
+              0.024971917958302267,
+              0.024026658498918194,
+              0.022609108977854325,
+              0.02508379943090426,
+              0.026281465267327588,
+              0.0246595323278581,
+              0.024272676363004796,
+              0.009918546187377808,
+              0.023479329787661006,
+              0.027061913069615872,
+              0.025748831200859322,
+              0.023083868057078395,
+              0.02278834212376164,
+              0.023645131031664476,
+              0.021963052756172337,
+              0,
+              0.02252166549844406,
+              0.022132954077860024,
+              0.020419613364652877,
+              0.02122707715310983,
+              0.020740122167995263,
+              0.008211042621326877,
+              0.018929153308334324,
+              0.01887406652966402,
+              0.02275638123120873
+            ],
+            "maxResidual": 1.5379335085874474e-15,
+            "method": "Markov CLT: 2*pi(f*h)-pi(f^2), (I-P+1*pi)h=f"
+          },
+          {
+            "strategy": "stay max",
+            "variances": [
+              0.025437640502654225,
+              0.01767142140927016,
+              0.01589768844314272,
+              0.017940020883577885,
+              0.019247767108686083,
+              0.02406964500517829,
+              0.01865069176542563,
+              0.00777287526466449,
+              0.019108113332228893,
+              0.018985409333934635,
+              0.21807658043943717,
+              0.022352216221632856,
+              0.02256625819278323,
+              0.019035171637096206,
+              0.021058497717648877,
+              0.022609166234033716,
+              0.022909808877061507,
+              0.019981292460336385,
+              0.023905073028416105,
+              0.02386215338031839,
+              0.024000682561278575,
+              0.022275431658684137,
+              0.009875254378231389,
+              0.02192180131700525,
+              0.02537939320744161,
+              0.02426653695122559,
+              0.021703877796503353,
+              0.021531385913892146,
+              0.022526832388599906,
+              0.02092550354112125,
+              0,
+              0.021497248767947424,
+              0.021137632118025787,
+              0.019450248871076128,
+              0.020251906351536977,
+              0.01976860419351542,
+              0.007771637772785259,
+              0.018033837103569966,
+              0.017991693601981835,
+              0.021801850242838518
+            ],
+            "maxResidual": 2.8171909249863347e-15,
+            "method": "Markov CLT: 2*pi(f*h)-pi(f^2), (I-P+1*pi)h=f"
+          }
+        ]
+      },
+      "simulation": {
+        "passed": true,
+        "results": [
+          {
+            "strategy": "leave ASAP",
+            "seed": 2,
+            "rolls": 100000000,
+            "burnIn": 10000,
+            "passed": true,
+            "maxSigma": 2.5024991114465203,
+            "varianceMethod": "Markov CLT: 2*pi(f*h)-pi(f^2), (I-P+1*pi)h=f",
+            "poissonResidual": 1.5379335085874474e-15,
+            "squares": [
+              {
+                "position": 0,
+                "count": 3095263,
+                "expected": 3096123.0334103354,
+                "difference": -860.0334103354253,
+                "standardDeviation": 1631.3608812816037,
+                "sigma": 0.527187711930287
+              },
+              {
+                "position": 1,
+                "count": 2132006,
+                "expected": 2131377.3374645626,
+                "difference": 628.6625354373828,
+                "standardDeviation": 1361.5141256435288,
+                "sigma": 0.46173779882029586
+              },
+              {
+                "position": 2,
+                "count": 1883340,
+                "expected": 1884880.0052371735,
+                "difference": -1540.005237173522,
+                "standardDeviation": 1292.1291458745666,
+                "sigma": 1.191835384326992
+              },
+              {
+                "position": 3,
+                "count": 2161155,
+                "expected": 2162402.189535373,
+                "difference": -1247.1895353728905,
+                "standardDeviation": 1371.409974581266,
+                "sigma": 0.9094213681460909
+              },
+              {
+                "position": 4,
+                "count": 2330089,
+                "expected": 2328523.018961241,
+                "difference": 1565.9810387589969,
+                "standardDeviation": 1419.5630613966057,
+                "sigma": 1.1031429890957722
+              },
+              {
+                "position": 5,
+                "count": 2961533,
+                "expected": 2963103.2008512295,
+                "difference": -1570.2008512294851,
+                "standardDeviation": 1583.2510517934725,
+                "sigma": 0.9917573397161465
+              },
+              {
+                "position": 6,
+                "count": 2265178,
+                "expected": 2262139.678893011,
+                "difference": 3038.3211069889367,
+                "standardDeviation": 1397.2848257424967,
+                "sigma": 2.1744465058327798
+              },
+              {
+                "position": 7,
+                "count": 867024,
+                "expected": 865047.8139361498,
+                "difference": 1976.186063850182,
+                "standardDeviation": 905.6258199394309,
+                "sigma": 2.182122042393128
+              },
+              {
+                "position": 8,
+                "count": 2321787,
+                "expected": 2320960.171215176,
+                "difference": 826.8287848238833,
+                "standardDeviation": 1413.9321528962437,
+                "sigma": 0.5847726025115416
+              },
+              {
+                "position": 9,
+                "count": 2298502,
+                "expected": 2300335.0088667828,
+                "difference": -1833.0088667827658,
+                "standardDeviation": 1409.4739927522105,
+                "sigma": 1.3004914430549652
+              },
+              {
+                "position": 10,
+                "count": 6218811,
+                "expected": 6219514.681975561,
+                "difference": -703.6819755611941,
+                "standardDeviation": 2271.684049498804,
+                "sigma": 0.30976225576635347
+              },
+              {
+                "position": 11,
+                "count": 2699787,
+                "expected": 2701657.817770986,
+                "difference": -1870.8177709858865,
+                "standardDeviation": 1526.1611493751716,
+                "sigma": 1.2258323911284346
+              },
+              {
+                "position": 12,
+                "count": 2605220,
+                "expected": 2604037.521715098,
+                "difference": 1182.4782849019393,
+                "standardDeviation": 1495.5285126770993,
+                "sigma": 0.7906758546416621
+              },
+              {
+                "position": 13,
+                "count": 2375683,
+                "expected": 2372090.292590742,
+                "difference": 3592.7074092580006,
+                "standardDeviation": 1435.6478261370119,
+                "sigma": 2.5024991114465203
+              },
+              {
+                "position": 14,
+                "count": 2464545,
+                "expected": 2464888.4255086766,
+                "difference": -343.42550867656246,
+                "standardDeviation": 1463.917591197046,
+                "sigma": 0.23459347079485757
+              },
+              {
+                "position": 15,
+                "count": 2917585,
+                "expected": 2919969.335250798,
+                "difference": -2384.335250798147,
+                "standardDeviation": 1580.2505484353505,
+                "sigma": 1.5088336803040143
+              },
+              {
+                "position": 16,
+                "count": 2793338,
+                "expected": 2792416.8535581618,
+                "difference": 921.1464418382384,
+                "standardDeviation": 1550.0534990418296,
+                "sigma": 0.5942675155455266
+              },
+              {
+                "position": 17,
+                "count": 2593614,
+                "expected": 2594464.843407433,
+                "difference": -850.8434074330144,
+                "standardDeviation": 1503.6325674131406,
+                "sigma": 0.5658585919675915
+              },
+              {
+                "position": 18,
+                "count": 2934238,
+                "expected": 2935585.4595096963,
+                "difference": -1347.4595096963458,
+                "standardDeviation": 1583.7865838206947,
+                "sigma": 0.8507835105193036
+              },
+              {
+                "position": 19,
+                "count": 3084414,
+                "expected": 3085168.877835798,
+                "difference": -754.8778357980773,
+                "standardDeviation": 1621.1559230168943,
+                "sigma": 0.46564172210732535
+              },
+              {
+                "position": 20,
+                "count": 2883924,
+                "expected": 2883601.2851659055,
+                "difference": 322.7148340945132,
+                "standardDeviation": 1570.335388630661,
+                "sigma": 0.20550694866268146
+              },
+              {
+                "position": 21,
+                "count": 2836826,
+                "expected": 2835843.139001527,
+                "difference": 982.8609984731302,
+                "standardDeviation": 1557.9690742439273,
+                "sigma": 0.6308604032786123
+              },
+              {
+                "position": 22,
+                "count": 1045865,
+                "expected": 1048032.9373315276,
+                "difference": -2167.937331527588,
+                "standardDeviation": 995.9189820149934,
+                "sigma": 2.1768209770852125
+              },
+              {
+                "position": 23,
+                "count": 2737519,
+                "expected": 2735685.8038021917,
+                "difference": 1833.1961978082545,
+                "standardDeviation": 1532.29663536996,
+                "sigma": 1.1963716133629991
+              },
+              {
+                "position": 24,
+                "count": 3184509,
+                "expected": 3185766.2866549804,
+                "difference": -1257.2866549803875,
+                "standardDeviation": 1645.0505484518058,
+                "sigma": 0.764284511599749
+              },
+              {
+                "position": 25,
+                "count": 3066421,
+                "expected": 3065904.738653013,
+                "difference": 516.261346986983,
+                "standardDeviation": 1604.6442347405023,
+                "sigma": 0.32172947486423437
+              },
+              {
+                "position": 26,
+                "count": 2707041,
+                "expected": 2707203.8246359606,
+                "difference": -162.82463596062735,
+                "standardDeviation": 1519.3376207110252,
+                "sigma": 0.10716817232790436
+              },
+              {
+                "position": 27,
+                "count": 2678225,
+                "expected": 2678857.694427637,
+                "difference": -632.6944276369177,
+                "standardDeviation": 1509.580806838827,
+                "sigma": 0.4191192844865498
+              },
+              {
+                "position": 28,
+                "count": 2808057,
+                "expected": 2807418.382909076,
+                "difference": 638.6170909241773,
+                "standardDeviation": 1537.697337959082,
+                "sigma": 0.4153074048835811
+              },
+              {
+                "position": 29,
+                "count": 2588166,
+                "expected": 2586048.8874876574,
+                "difference": 2117.112512342632,
+                "standardDeviation": 1481.9936827183958,
+                "sigma": 1.4285570424694716
+              },
+              {
+                "position": 30,
+                "count": 0,
+                "expected": 0,
+                "difference": 0,
+                "standardDeviation": 0,
+                "sigma": 0
+              },
+              {
+                "position": 31,
+                "count": 2677902,
+                "expected": 2677370.475281738,
+                "difference": 531.5247182617895,
+                "standardDeviation": 1500.722009515555,
+                "sigma": 0.3541793316094364
+              },
+              {
+                "position": 32,
+                "count": 2621819,
+                "expected": 2625173.0101095377,
+                "difference": -3354.0101095377468,
+                "standardDeviation": 1487.7148274403944,
+                "sigma": 2.2544711174979035
+              },
+              {
+                "position": 33,
+                "count": 2365256,
+                "expected": 2366054.88084604,
+                "difference": -798.8808460398577,
+                "standardDeviation": 1428.9721258531558,
+                "sigma": 0.5590597826132491
+              },
+              {
+                "position": 34,
+                "count": 2501873,
+                "expected": 2500628.007466057,
+                "difference": 1244.9925339431502,
+                "standardDeviation": 1456.9515143994954,
+                "sigma": 0.8545188509284695
+              },
+              {
+                "position": 35,
+                "count": 2433019,
+                "expected": 2432637.9827060257,
+                "difference": 381.01729397429153,
+                "standardDeviation": 1440.1431237205302,
+                "sigma": 0.26456904713050633
+              },
+              {
+                "position": 36,
+                "count": 866331,
+                "expected": 866873.3545006053,
+                "difference": -542.3545006052591,
+                "standardDeviation": 906.1480354405055,
+                "sigma": 0.5985274804923065
+              },
+              {
+                "position": 37,
+                "count": 2186338,
+                "expected": 2186397.6221719435,
+                "difference": -59.622171943541616,
+                "standardDeviation": 1375.8325954975164,
+                "sigma": 0.043335339007564054
+              },
+              {
+                "position": 38,
+                "count": 2180181,
+                "expected": 2179852.766354558,
+                "difference": 328.2336454419419,
+                "standardDeviation": 1373.8291935194864,
+                "sigma": 0.2389188168298203
+              },
+              {
+                "position": 39,
+                "count": 2627616,
+                "expected": 2625963.3530000844,
+                "difference": 1652.646999915596,
+                "standardDeviation": 1508.521833823055,
+                "sigma": 1.0955406563306307
+              }
+            ]
+          },
+          {
+            "strategy": "stay max",
+            "seed": 2,
+            "rolls": 100000000,
+            "burnIn": 10000,
+            "passed": true,
+            "maxSigma": 1.570822181594039,
+            "varianceMethod": "Markov CLT: 2*pi(f*h)-pi(f^2), (I-P+1*pi)h=f",
+            "poissonResidual": 2.8171909249863347e-15,
+            "squares": [
+              {
+                "position": 0,
+                "count": 2917970,
+                "expected": 2918262.4945617085,
+                "difference": -292.4945617085323,
+                "standardDeviation": 1594.9181954775681,
+                "sigma": 0.18339157615601112
+              },
+              {
+                "position": 1,
+                "count": 2011473,
+                "expected": 2010028.7633106387,
+                "difference": 1444.236689361278,
+                "standardDeviation": 1329.3389864616986,
+                "sigma": 1.0864322073374246
+              },
+              {
+                "position": 2,
+                "count": 1779327,
+                "expected": 1777507.6630087434,
+                "difference": 1819.3369912565686,
+                "standardDeviation": 1260.860358768675,
+                "sigma": 1.4429329771563981
+              },
+              {
+                "position": 3,
+                "count": 2040246,
+                "expected": 2039764.4352501875,
+                "difference": 481.5647498124745,
+                "standardDeviation": 1339.4036316054203,
+                "sigma": 0.35953669114310743
+              },
+              {
+                "position": 4,
+                "count": 2194800,
+                "expected": 2196593.508561789,
+                "difference": -1793.5085617890581,
+                "standardDeviation": 1387.363222400179,
+                "sigma": 1.2927462201904385
+              },
+              {
+                "position": 5,
+                "count": 2802523,
+                "expected": 2804960.0355690448,
+                "difference": -2437.0355690447614,
+                "standardDeviation": 1551.4394930250514,
+                "sigma": 1.570822181594039
+              },
+              {
+                "position": 6,
+                "count": 2134554,
+                "expected": 2134574.265848859,
+                "difference": -20.265848859213293,
+                "standardDeviation": 1365.67535547163,
+                "sigma": 0.014839433675080541
+              },
+              {
+                "position": 7,
+                "count": 817022,
+                "expected": 816362.5941513422,
+                "difference": 659.4058486578288,
+                "standardDeviation": 881.63911350759,
+                "sigma": 0.7479317087400886
+              },
+              {
+                "position": 8,
+                "count": 2189705,
+                "expected": 2190343.039291144,
+                "difference": -638.039291143883,
+                "standardDeviation": 1382.3209950018445,
+                "sigma": 0.4615710051796122
+              },
+              {
+                "position": 9,
+                "count": 2172870,
+                "expected": 2171177.1211689683,
+                "difference": 1692.8788310317323,
+                "standardDeviation": 1377.875514476349,
+                "sigma": 1.2286152219455746
+              },
+              {
+                "position": 10,
+                "count": 11528944,
+                "expected": 11527745.312425608,
+                "difference": 1198.6875743921846,
+                "standardDeviation": 4669.867026366353,
+                "sigma": 0.25668559032287686
+              },
+              {
+                "position": 11,
+                "count": 2557376,
+                "expected": 2559552.1243550316,
+                "difference": -2176.124355031643,
+                "standardDeviation": 1495.0657584746182,
+                "sigma": 1.4555375525768803
+              },
+              {
+                "position": 12,
+                "count": 2617812,
+                "expected": 2615482.5106106084,
+                "difference": 2329.489389391616,
+                "standardDeviation": 1502.2069828350297,
+                "sigma": 1.550711330735065
+              },
+              {
+                "position": 13,
+                "count": 2174289,
+                "expected": 2176000.2587590306,
+                "difference": -1711.2587590306066,
+                "standardDeviation": 1379.6800946993546,
+                "sigma": 1.240330106671218
+              },
+              {
+                "position": 14,
+                "count": 2426563,
+                "expected": 2425270.4185339017,
+                "difference": 1292.581466098316,
+                "standardDeviation": 1451.1546339949052,
+                "sigma": 0.8907262091979469
+              },
+              {
+                "position": 15,
+                "count": 2636392,
+                "expected": 2636572.803883631,
+                "difference": -180.80388363078237,
+                "standardDeviation": 1503.6344713404824,
+                "sigma": 0.1202445721197098
+              },
+              {
+                "position": 16,
+                "count": 2676592,
+                "expected": 2678918.665052352,
+                "difference": -2326.6650523520075,
+                "standardDeviation": 1513.5986547649118,
+                "sigma": 1.5371743658911874
+              },
+              {
+                "position": 17,
+                "count": 2295331,
+                "expected": 2295130.8644971866,
+                "difference": 200.13550281338394,
+                "standardDeviation": 1413.551996225692,
+                "sigma": 0.14158340361568822
+              },
+              {
+                "position": 18,
+                "count": 2821025,
+                "expected": 2819684.076886218,
+                "difference": 1340.9231137819588,
+                "standardDeviation": 1546.1265481329822,
+                "sigma": 0.8672790176206366
+              },
+              {
+                "position": 19,
+                "count": 2813186,
+                "expected": 2811562.2192468126,
+                "difference": 1623.7807531873696,
+                "standardDeviation": 1544.7379512499324,
+                "sigma": 1.0511690684322732
+              },
+              {
+                "position": 20,
+                "count": 2825711,
+                "expected": 2824797.33971896,
+                "difference": 913.6602810397744,
+                "standardDeviation": 1549.2153678968775,
+                "sigma": 0.589756789128748
+              },
+              {
+                "position": 21,
+                "count": 2614608,
+                "expected": 2614214.316878806,
+                "difference": 393.6831211941317,
+                "standardDeviation": 1492.4956166998995,
+                "sigma": 0.26377506023409025
+              },
+              {
+                "position": 22,
+                "count": 1043877,
+                "expected": 1044953.4808390322,
+                "difference": -1076.4808390322141,
+                "standardDeviation": 993.7431447930289,
+                "sigma": 1.0832586314408412
+              },
+              {
+                "position": 23,
+                "count": 2566784,
+                "expected": 2567279.3220093534,
+                "difference": -495.3220093534328,
+                "standardDeviation": 1480.601273706235,
+                "sigma": 0.33454112065805863
+              },
+              {
+                "position": 24,
+                "count": 2994309,
+                "expected": 2995492.0405779094,
+                "difference": -1183.0405779094435,
+                "standardDeviation": 1593.0911212934936,
+                "sigma": 0.7426069746398977
+              },
+              {
+                "position": 25,
+                "count": 2892938,
+                "expected": 2892847.4098033225,
+                "difference": 90.59019667748362,
+                "standardDeviation": 1557.7720292528554,
+                "sigma": 0.05815369320819866
+              },
+              {
+                "position": 26,
+                "count": 2540309,
+                "expected": 2540084.1080187,
+                "difference": 224.89198129996657,
+                "standardDeviation": 1473.2236013756824,
+                "sigma": 0.15265298566352356
+              },
+              {
+                "position": 27,
+                "count": 2520957,
+                "expected": 2519201.37586186,
+                "difference": 1755.6241381401196,
+                "standardDeviation": 1467.3576903363455,
+                "sigma": 1.1964527461178862
+              },
+              {
+                "position": 28,
+                "count": 2654017,
+                "expected": 2654752.202094441,
+                "difference": -735.2020944408141,
+                "standardDeviation": 1500.8941464540364,
+                "sigma": 0.489842735530536
+              },
+              {
+                "position": 29,
+                "count": 2436983,
+                "expected": 2438722.4063321548,
+                "difference": -1739.4063321547583,
+                "standardDeviation": 1446.5650189715377,
+                "sigma": 1.2024390949197856
+              },
+              {
+                "position": 30,
+                "count": 0,
+                "expected": 0,
+                "difference": 0,
+                "standardDeviation": 0,
+                "sigma": 0
+              },
+              {
+                "position": 31,
+                "count": 2524469,
+                "expected": 2524915.099975396,
+                "difference": -446.0999753959477,
+                "standardDeviation": 1466.194010625723,
+                "sigma": 0.3042571257030078
+              },
+              {
+                "position": 32,
+                "count": 2475897,
+                "expected": 2476921.3909871783,
+                "difference": -1024.3909871783108,
+                "standardDeviation": 1453.8786785019506,
+                "sigma": 0.7045917945738251
+              },
+              {
+                "position": 33,
+                "count": 2228635,
+                "expected": 2229189.516109854,
+                "difference": -554.5161098539829,
+                "standardDeviation": 1394.6414905299544,
+                "sigma": 0.3976047705588269
+              },
+              {
+                "position": 34,
+                "count": 2359063,
+                "expected": 2357635.9052898376,
+                "difference": 1427.0947101623751,
+                "standardDeviation": 1423.0919278647102,
+                "sigma": 1.0028127362816757
+              },
+              {
+                "position": 35,
+                "count": 2293280,
+                "expected": 2292474.6181039554,
+                "difference": 805.3818960445933,
+                "standardDeviation": 1406.008683953105,
+                "sigma": 0.5728143113456442
+              },
+              {
+                "position": 36,
+                "count": 817321,
+                "expected": 817445.439300505,
+                "difference": -124.43930050497875,
+                "standardDeviation": 881.5689293972002,
+                "sigma": 0.1411566314956993
+              },
+              {
+                "position": 37,
+                "count": 2061627,
+                "expected": 2061619.1594829776,
+                "difference": 7.840517022414133,
+                "standardDeviation": 1342.9012288165488,
+                "sigma": 0.005838491211541822
+              },
+              {
+                "position": 38,
+                "count": 2056419,
+                "expected": 2055841.4364580163,
+                "difference": 577.5635419837199,
+                "standardDeviation": 1341.331189601652,
+                "sigma": 0.430589809929973
+              },
+              {
+                "position": 39,
+                "count": 2484796,
+                "expected": 2486120.2571848724,
+                "difference": -1324.2571848724037,
+                "standardDeviation": 1476.5449618226503,
+                "sigma": 0.8968620794572607
+              }
+            ]
+          }
+        ]
+      },
+      "mutation": {
+        "passed": true,
+        "seed": 2,
+        "mutations": 25,
+        "strictCompiled": 25,
+        "runtimeKilled": 25,
+        "productionSHA256": "b43bcb333a028cb622e027ea4563b3bfc86afbada8e189e7fae892b01b538c58",
+        "results": [
+          {
+            "name": "M01 denominator",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Exact common denominator\n\n9217 !== 9216\n"
+          },
+          {
+            "name": "M02 early triple-double jail",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Invalid free state"
+          },
+          {
+            "name": "M03 reversed doubles",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/0\n\n16 !== 96\n"
+          },
+          {
+            "name": "M04 premature third jail attempt",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition stay max/118/0\n\n112 !== 16\n"
+          },
+          {
+            "name": "M05 jail doubles extra roll",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition stay max/117/0\n\n0 !== 16\n"
+          },
+          {
+            "name": "M06 ASAP inherited jail streak",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/117/1\n\n0 !== 16\n"
+          },
+          {
+            "name": "M07 ordinary streak reset",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/0\n\n0 !== 96\n"
+          },
+          {
+            "name": "M08 movement off by one",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/0\n\n64 !== 96\n"
+          },
+          {
+            "name": "M09 GoToJail relocation",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Invalid free state"
+          },
+          {
+            "name": "M10 CC jail card visiting",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/31\n\n272 !== 256\n"
+          },
+          {
+            "name": "M11 Chance jail card visiting",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/30\n\n608 !== 512\n"
+          },
+          {
+            "name": "M12 CC card multiplicity",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Transition row mass invariant"
+          },
+          {
+            "name": "M13 Chance stay multiplicity",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Transition row mass invariant"
+          },
+          {
+            "name": "M14 missing second railroad card",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Transition row mass invariant"
+          },
+          {
+            "name": "M15 nearest railroad mapping",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/15\n\n1312 !== 1120\n"
+          },
+          {
+            "name": "M16 nearest utility mapping",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/36\n\n0 !== 96\n"
+          },
+          {
+            "name": "M17 back-three card",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/12\n\n512 !== 608\n"
+          },
+          {
+            "name": "M18 jail does not reset streak",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/30\n\n608 !== 512\n"
+          },
+          {
+            "name": "M19 end-turn filter",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind turn landing: 0.022518443650798692 != 0.031357958722416555"
+          },
+          {
+            "name": "M20 Marvin Gardens rent edition",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Official street rents\n+ actual - expected\n\n  [\n+   22,\n-   24,\n    120,\n    360,\n    850,\n    1025,\n    1200\n"
+          },
+          {
+            "name": "M21 missing full-set rent doubling",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI ordinaryRent\n\n2 !== 4\n"
+          },
+          {
+            "name": "M22 hotel construction investment",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI investment\n\n260 !== 310\n"
+          },
+          {
+            "name": "M23 railroad premium missing",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI expectedRentPerRoll: 0.7407758002128082 != 0.8130152464211912"
+          },
+          {
+            "name": "M24 utility Chance premium",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI expectedRentPerRoll: 0.8099534939406092 != 0.8503649878708002"
+          },
+          {
+            "name": "M25 per-turn rent conversion",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI expectedRentPerOpponentTurn: 0.03592338284004056 != 0.05058286826589295"
+          }
+        ]
+      }
+    },
+    {
+      "seed": 3,
+      "exact": {
+        "suite": "exact-and-published",
+        "seed": 3,
+        "passed": true,
+        "assertions": 37981,
+        "exactTransitionCells": 28800,
+        "stationaryStates": 240,
+        "publishedSquares": 240,
+        "matchedPublishedSquares": 239,
+        "documentedPublishedGaps": 1,
+        "properties": 56,
+        "ownershipScenarios": 348,
+        "observations": [
+          {
+            "strategy": "leave ASAP",
+            "maxStateDifference": 9.194034422677078e-16,
+            "iterations": 197,
+            "residual": 3.469446951953614e-17,
+            "turnStartMass": 0.8427269589619967,
+            "rollsPerTurn": 1.186623958525926,
+            "tableComparisons": [
+              {
+                "id": "butler-per-roll",
+                "squares": 40,
+                "maxDifference": 4.782849026552238e-9,
+                "tolerance": 0.0001
+              },
+              {
+                "id": "butler-end-turn",
+                "squares": 40,
+                "maxDifference": 4.964513661276371e-10,
+                "tolerance": 0.0001
+              },
+              {
+                "id": "collins-per-roll",
+                "squares": 40,
+                "maxDifference": 0.0000011468197552155779,
+                "tolerance": 0.0001,
+                "matchedSquares": 40,
+                "documentedGaps": [],
+                "conflictRecord": null
+              }
+            ]
+          },
+          {
+            "strategy": "stay max",
+            "maxStateDifference": 8.847089727481716e-16,
+            "iterations": 255,
+            "residual": 2.7755575615628914e-17,
+            "turnStartMass": 0.8577091677010615,
+            "rollsPerTurn": 1.165896364009171,
+            "tableComparisons": [
+              {
+                "id": "butler-per-roll",
+                "squares": 40,
+                "maxDifference": 6.87574422397752e-9,
+                "tolerance": 0.0001
+              },
+              {
+                "id": "butler-end-turn",
+                "squares": 40,
+                "maxDifference": 4.994465015173422e-10,
+                "tolerance": 0.0001
+              },
+              {
+                "id": "collins-per-roll",
+                "squares": 40,
+                "maxDifference": 0.0006835468757442065,
+                "tolerance": 0.0001,
+                "matchedSquares": 39,
+                "documentedGaps": [
+                  {
+                    "position": 10,
+                    "difference": -0.0006835468757442065
+                  }
+                ],
+                "conflictRecord": "CONFLICTS.md"
+              }
+            ]
+          }
+        ],
+        "samplingVariance": [
+          {
+            "strategy": "leave ASAP",
+            "variances": [
+              0.026613383249758912,
+              0.018537207143268626,
+              0.016695977296185372,
+              0.01880765318380988,
+              0.020151592852817035,
+              0.02506683893005137,
+              0.01952404884250239,
+              0.008201581257409666,
+              0.01999204132993807,
+              0.019866169362448585,
+              0.051605484207472845,
+              0.023291678538621446,
+              0.022366055322301768,
+              0.020610846806919277,
+              0.02143054713816162,
+              0.024971917958302267,
+              0.024026658498918194,
+              0.022609108977854325,
+              0.02508379943090426,
+              0.026281465267327588,
+              0.0246595323278581,
+              0.024272676363004796,
+              0.009918546187377808,
+              0.023479329787661006,
+              0.027061913069615872,
+              0.025748831200859322,
+              0.023083868057078395,
+              0.02278834212376164,
+              0.023645131031664476,
+              0.021963052756172337,
+              0,
+              0.02252166549844406,
+              0.022132954077860024,
+              0.020419613364652877,
+              0.02122707715310983,
+              0.020740122167995263,
+              0.008211042621326877,
+              0.018929153308334324,
+              0.01887406652966402,
+              0.02275638123120873
+            ],
+            "maxResidual": 1.5379335085874474e-15,
+            "method": "Markov CLT: 2*pi(f*h)-pi(f^2), (I-P+1*pi)h=f"
+          },
+          {
+            "strategy": "stay max",
+            "variances": [
+              0.025437640502654225,
+              0.01767142140927016,
+              0.01589768844314272,
+              0.017940020883577885,
+              0.019247767108686083,
+              0.02406964500517829,
+              0.01865069176542563,
+              0.00777287526466449,
+              0.019108113332228893,
+              0.018985409333934635,
+              0.21807658043943717,
+              0.022352216221632856,
+              0.02256625819278323,
+              0.019035171637096206,
+              0.021058497717648877,
+              0.022609166234033716,
+              0.022909808877061507,
+              0.019981292460336385,
+              0.023905073028416105,
+              0.02386215338031839,
+              0.024000682561278575,
+              0.022275431658684137,
+              0.009875254378231389,
+              0.02192180131700525,
+              0.02537939320744161,
+              0.02426653695122559,
+              0.021703877796503353,
+              0.021531385913892146,
+              0.022526832388599906,
+              0.02092550354112125,
+              0,
+              0.021497248767947424,
+              0.021137632118025787,
+              0.019450248871076128,
+              0.020251906351536977,
+              0.01976860419351542,
+              0.007771637772785259,
+              0.018033837103569966,
+              0.017991693601981835,
+              0.021801850242838518
+            ],
+            "maxResidual": 2.8171909249863347e-15,
+            "method": "Markov CLT: 2*pi(f*h)-pi(f^2), (I-P+1*pi)h=f"
+          }
+        ]
+      },
+      "simulation": {
+        "passed": true,
+        "results": [
+          {
+            "strategy": "leave ASAP",
+            "seed": 3,
+            "rolls": 100000000,
+            "burnIn": 10000,
+            "passed": true,
+            "maxSigma": 2.1157739420388237,
+            "varianceMethod": "Markov CLT: 2*pi(f*h)-pi(f^2), (I-P+1*pi)h=f",
+            "poissonResidual": 1.5379335085874474e-15,
+            "squares": [
+              {
+                "position": 0,
+                "count": 3096378,
+                "expected": 3096123.0334103354,
+                "difference": 254.9665896645747,
+                "standardDeviation": 1631.3608812816037,
+                "sigma": 0.15629073406754238
+              },
+              {
+                "position": 1,
+                "count": 2131882,
+                "expected": 2131377.3374645626,
+                "difference": 504.66253543738276,
+                "standardDeviation": 1361.5141256435288,
+                "sigma": 0.3706627246330262
+              },
+              {
+                "position": 2,
+                "count": 1886868,
+                "expected": 1884880.0052371735,
+                "difference": 1987.994762826478,
+                "standardDeviation": 1292.1291458745666,
+                "sigma": 1.5385418471316354
+              },
+              {
+                "position": 3,
+                "count": 2163018,
+                "expected": 2162402.189535373,
+                "difference": 615.8104646271095,
+                "standardDeviation": 1371.409974581266,
+                "sigma": 0.44903455278946436
+              },
+              {
+                "position": 4,
+                "count": 2329531,
+                "expected": 2328523.018961241,
+                "difference": 1007.9810387589969,
+                "standardDeviation": 1419.5630613966057,
+                "sigma": 0.7100642910272102
+              },
+              {
+                "position": 5,
+                "count": 2963309,
+                "expected": 2963103.2008512295,
+                "difference": 205.79914877051488,
+                "standardDeviation": 1583.2510517934725,
+                "sigma": 0.12998516472633323
+              },
+              {
+                "position": 6,
+                "count": 2263933,
+                "expected": 2262139.678893011,
+                "difference": 1793.3211069889367,
+                "standardDeviation": 1397.2848257424967,
+                "sigma": 1.2834327503957486
+              },
+              {
+                "position": 7,
+                "count": 864796,
+                "expected": 865047.8139361498,
+                "difference": -251.8139361498179,
+                "standardDeviation": 905.6258199394309,
+                "sigma": 0.27805516429142824
+              },
+              {
+                "position": 8,
+                "count": 2319744,
+                "expected": 2320960.171215176,
+                "difference": -1216.1712151761167,
+                "standardDeviation": 1413.9321528962437,
+                "sigma": 0.8601340684451929
+              },
+              {
+                "position": 9,
+                "count": 2299138,
+                "expected": 2300335.0088667828,
+                "difference": -1197.0088667827658,
+                "standardDeviation": 1409.4739927522105,
+                "sigma": 0.8492592789494651
+              },
+              {
+                "position": 10,
+                "count": 6217916,
+                "expected": 6219514.681975561,
+                "difference": -1598.6819755611941,
+                "standardDeviation": 2271.684049498804,
+                "sigma": 0.703743100152465
+              },
+              {
+                "position": 11,
+                "count": 2701637,
+                "expected": 2701657.817770986,
+                "difference": -20.817770985886455,
+                "standardDeviation": 1526.1611493751716,
+                "sigma": 0.013640611277786423
+              },
+              {
+                "position": 12,
+                "count": 2605978,
+                "expected": 2604037.521715098,
+                "difference": 1940.4782849019393,
+                "standardDeviation": 1495.5285126770993,
+                "sigma": 1.2975200863461633
+              },
+              {
+                "position": 13,
+                "count": 2373301,
+                "expected": 2372090.292590742,
+                "difference": 1210.7074092580006,
+                "standardDeviation": 1435.6478261370119,
+                "sigma": 0.8433178299135711
+              },
+              {
+                "position": 14,
+                "count": 2463452,
+                "expected": 2464888.4255086766,
+                "difference": -1436.4255086765625,
+                "standardDeviation": 1463.917591197046,
+                "sigma": 0.9812201979907876
+              },
+              {
+                "position": 15,
+                "count": 2919532,
+                "expected": 2919969.335250798,
+                "difference": -437.3352507981472,
+                "standardDeviation": 1580.2505484353505,
+                "sigma": 0.2767505768190777
+              },
+              {
+                "position": 16,
+                "count": 2793143,
+                "expected": 2792416.8535581618,
+                "difference": 726.1464418382384,
+                "standardDeviation": 1550.0534990418296,
+                "sigma": 0.4684654060566994
+              },
+              {
+                "position": 17,
+                "count": 2594352,
+                "expected": 2594464.843407433,
+                "difference": -112.84340743301436,
+                "standardDeviation": 1503.6325674131406,
+                "sigma": 0.0750471956238291
+              },
+              {
+                "position": 18,
+                "count": 2936734,
+                "expected": 2935585.4595096963,
+                "difference": 1148.5404903036542,
+                "standardDeviation": 1583.7865838206947,
+                "sigma": 0.7251863995039902
+              },
+              {
+                "position": 19,
+                "count": 3082596,
+                "expected": 3085168.877835798,
+                "difference": -2572.8778357980773,
+                "standardDeviation": 1621.1559230168943,
+                "sigma": 1.5870637729960444
+              },
+              {
+                "position": 20,
+                "count": 2882877,
+                "expected": 2883601.2851659055,
+                "difference": -724.2851659054868,
+                "standardDeviation": 1570.335388630661,
+                "sigma": 0.4612296017458197
+              },
+              {
+                "position": 21,
+                "count": 2836878,
+                "expected": 2835843.139001527,
+                "difference": 1034.8609984731302,
+                "standardDeviation": 1557.9690742439273,
+                "sigma": 0.6642371890310735
+              },
+              {
+                "position": 22,
+                "count": 1049125,
+                "expected": 1048032.9373315276,
+                "difference": 1092.062668472412,
+                "standardDeviation": 995.9189820149934,
+                "sigma": 1.0965376583774875
+              },
+              {
+                "position": 23,
+                "count": 2737474,
+                "expected": 2735685.8038021917,
+                "difference": 1788.1961978082545,
+                "standardDeviation": 1532.29663536996,
+                "sigma": 1.1670039315700185
+              },
+              {
+                "position": 24,
+                "count": 3185608,
+                "expected": 3185766.2866549804,
+                "difference": -158.28665498038754,
+                "standardDeviation": 1645.0505484518058,
+                "sigma": 0.09621993386729343
+              },
+              {
+                "position": 25,
+                "count": 3063920,
+                "expected": 3065904.738653013,
+                "difference": -1984.738653013017,
+                "standardDeviation": 1604.6442347405023,
+                "sigma": 1.2368714572635362
+              },
+              {
+                "position": 26,
+                "count": 2706866,
+                "expected": 2707203.8246359606,
+                "difference": -337.82463596062735,
+                "standardDeviation": 1519.3376207110252,
+                "sigma": 0.22234994470980776
+              },
+              {
+                "position": 27,
+                "count": 2680104,
+                "expected": 2678857.694427637,
+                "difference": 1246.3055723630823,
+                "standardDeviation": 1509.580806838827,
+                "sigma": 0.8255971238617811
+              },
+              {
+                "position": 28,
+                "count": 2805073,
+                "expected": 2807418.382909076,
+                "difference": -2345.3829090758227,
+                "standardDeviation": 1537.697337959082,
+                "sigma": 1.5252565320746059
+              },
+              {
+                "position": 29,
+                "count": 2583345,
+                "expected": 2586048.8874876574,
+                "difference": -2703.887487657368,
+                "standardDeviation": 1481.9936827183958,
+                "sigma": 1.8244932614676692
+              },
+              {
+                "position": 30,
+                "count": 0,
+                "expected": 0,
+                "difference": 0,
+                "standardDeviation": 0,
+                "sigma": 0
+              },
+              {
+                "position": 31,
+                "count": 2678299,
+                "expected": 2677370.475281738,
+                "difference": 928.5247182617895,
+                "standardDeviation": 1500.722009515555,
+                "sigma": 0.6187186649988059
+              },
+              {
+                "position": 32,
+                "count": 2622857,
+                "expected": 2625173.0101095377,
+                "difference": -2316.0101095377468,
+                "standardDeviation": 1487.7148274403944,
+                "sigma": 1.5567567566174159
+              },
+              {
+                "position": 33,
+                "count": 2367232,
+                "expected": 2366054.88084604,
+                "difference": 1177.1191539601423,
+                "standardDeviation": 1428.9721258531558,
+                "sigma": 0.8237523550414625
+              },
+              {
+                "position": 34,
+                "count": 2502815,
+                "expected": 2500628.007466057,
+                "difference": 2186.99253394315,
+                "standardDeviation": 1456.9515143994954,
+                "sigma": 1.5010743407233784
+              },
+              {
+                "position": 35,
+                "count": 2435685,
+                "expected": 2432637.9827060257,
+                "difference": 3047.0172939742915,
+                "standardDeviation": 1440.1431237205302,
+                "sigma": 2.1157739420388237
+              },
+              {
+                "position": 36,
+                "count": 866581,
+                "expected": 866873.3545006053,
+                "difference": -292.3545006052591,
+                "standardDeviation": 906.1480354405055,
+                "sigma": 0.3226343700708206
+              },
+              {
+                "position": 37,
+                "count": 2185212,
+                "expected": 2186397.6221719435,
+                "difference": -1185.6221719435416,
+                "standardDeviation": 1375.8325954975164,
+                "sigma": 0.8617488608887096
+              },
+              {
+                "position": 38,
+                "count": 2179245,
+                "expected": 2179852.766354558,
+                "difference": -607.7663545580581,
+                "standardDeviation": 1373.8291935194864,
+                "sigma": 0.44238858616847226
+              },
+              {
+                "position": 39,
+                "count": 2623566,
+                "expected": 2625963.3530000844,
+                "difference": -2397.353000084404,
+                "standardDeviation": 1508.521833823055,
+                "sigma": 1.589206696471061
+              }
+            ]
+          },
+          {
+            "strategy": "stay max",
+            "seed": 3,
+            "rolls": 100000000,
+            "burnIn": 10000,
+            "passed": true,
+            "maxSigma": 2.136073308429187,
+            "varianceMethod": "Markov CLT: 2*pi(f*h)-pi(f^2), (I-P+1*pi)h=f",
+            "poissonResidual": 2.8171909249863347e-15,
+            "squares": [
+              {
+                "position": 0,
+                "count": 2917240,
+                "expected": 2918262.4945617085,
+                "difference": -1022.4945617085323,
+                "standardDeviation": 1594.9181954775681,
+                "sigma": 0.6410953016949973
+              },
+              {
+                "position": 1,
+                "count": 2008659,
+                "expected": 2010028.7633106387,
+                "difference": -1369.763310638722,
+                "standardDeviation": 1329.3389864616986,
+                "sigma": 1.0304093422285168
+              },
+              {
+                "position": 2,
+                "count": 1776076,
+                "expected": 1777507.6630087434,
+                "difference": -1431.6630087434314,
+                "standardDeviation": 1260.860358768675,
+                "sigma": 1.1354651597910161
+              },
+              {
+                "position": 3,
+                "count": 2038854,
+                "expected": 2039764.4352501875,
+                "difference": -910.4352501875255,
+                "standardDeviation": 1339.4036316054203,
+                "sigma": 0.679731806532636
+              },
+              {
+                "position": 4,
+                "count": 2198554,
+                "expected": 2196593.508561789,
+                "difference": 1960.4914382109419,
+                "standardDeviation": 1387.363222400179,
+                "sigma": 1.4131061041240767
+              },
+              {
+                "position": 5,
+                "count": 2805416,
+                "expected": 2804960.0355690448,
+                "difference": 455.96443095523864,
+                "standardDeviation": 1551.4394930250514,
+                "sigma": 0.29389765634119774
+              },
+              {
+                "position": 6,
+                "count": 2135034,
+                "expected": 2134574.265848859,
+                "difference": 459.7341511407867,
+                "standardDeviation": 1365.67535547163,
+                "sigma": 0.33663502039400833
+              },
+              {
+                "position": 7,
+                "count": 815712,
+                "expected": 816362.5941513422,
+                "difference": -650.5941513421712,
+                "standardDeviation": 881.63911350759,
+                "sigma": 0.7379370327092122
+              },
+              {
+                "position": 8,
+                "count": 2190919,
+                "expected": 2190343.039291144,
+                "difference": 575.960708856117,
+                "standardDeviation": 1382.3209950018445,
+                "sigma": 0.41666205674272383
+              },
+              {
+                "position": 9,
+                "count": 2170344,
+                "expected": 2171177.1211689683,
+                "difference": -833.1211689682677,
+                "standardDeviation": 1377.875514476349,
+                "sigma": 0.6046418273750144
+              },
+              {
+                "position": 10,
+                "count": 11530924,
+                "expected": 11527745.312425608,
+                "difference": 3178.6875743921846,
+                "standardDeviation": 4669.867026366353,
+                "sigma": 0.6806805325387472
+              },
+              {
+                "position": 11,
+                "count": 2560973,
+                "expected": 2559552.1243550316,
+                "difference": 1420.875644968357,
+                "standardDeviation": 1495.0657584746182,
+                "sigma": 0.950376688727086
+              },
+              {
+                "position": 12,
+                "count": 2616225,
+                "expected": 2615482.5106106084,
+                "difference": 742.489389391616,
+                "standardDeviation": 1502.2069828350297,
+                "sigma": 0.49426570231377703
+              },
+              {
+                "position": 13,
+                "count": 2176116,
+                "expected": 2176000.2587590306,
+                "difference": 115.7412409693934,
+                "standardDeviation": 1379.6800946993546,
+                "sigma": 0.0838899114469101
+              },
+              {
+                "position": 14,
+                "count": 2423312,
+                "expected": 2425270.4185339017,
+                "difference": -1958.418533901684,
+                "standardDeviation": 1451.1546339949052,
+                "sigma": 1.3495588189043124
+              },
+              {
+                "position": 15,
+                "count": 2636562,
+                "expected": 2636572.803883631,
+                "difference": -10.803883630782366,
+                "standardDeviation": 1503.6344713404824,
+                "sigma": 0.00718517953445877
+              },
+              {
+                "position": 16,
+                "count": 2678297,
+                "expected": 2678918.665052352,
+                "difference": -621.6650523520075,
+                "standardDeviation": 1513.5986547649118,
+                "sigma": 0.410719876365484
+              },
+              {
+                "position": 17,
+                "count": 2296867,
+                "expected": 2295130.8644971866,
+                "difference": 1736.135502813384,
+                "standardDeviation": 1413.551996225692,
+                "sigma": 1.2282077401107412
+              },
+              {
+                "position": 18,
+                "count": 2818260,
+                "expected": 2819684.076886218,
+                "difference": -1424.0768862180412,
+                "standardDeviation": 1546.1265481329822,
+                "sigma": 0.9210610140144598
+              },
+              {
+                "position": 19,
+                "count": 2811586,
+                "expected": 2811562.2192468126,
+                "difference": 23.780753187369555,
+                "standardDeviation": 1544.7379512499324,
+                "sigma": 0.015394684365802783
+              },
+              {
+                "position": 20,
+                "count": 2824417,
+                "expected": 2824797.33971896,
+                "difference": -380.3397189602256,
+                "standardDeviation": 1549.2153678968775,
+                "sigma": 0.24550474184654655
+              },
+              {
+                "position": 21,
+                "count": 2614095,
+                "expected": 2614214.316878806,
+                "difference": -119.31687880586833,
+                "standardDeviation": 1492.4956166998995,
+                "sigma": 0.07994454219550295
+              },
+              {
+                "position": 22,
+                "count": 1046758,
+                "expected": 1044953.4808390322,
+                "difference": 1804.5191609677859,
+                "standardDeviation": 993.7431447930289,
+                "sigma": 1.815880864610765
+              },
+              {
+                "position": 23,
+                "count": 2565120,
+                "expected": 2567279.3220093534,
+                "difference": -2159.322009353433,
+                "standardDeviation": 1480.601273706235,
+                "sigma": 1.458408855713211
+              },
+              {
+                "position": 24,
+                "count": 2998895,
+                "expected": 2995492.0405779094,
+                "difference": 3402.9594220905565,
+                "standardDeviation": 1593.0911212934936,
+                "sigma": 2.136073308429187
+              },
+              {
+                "position": 25,
+                "count": 2892482,
+                "expected": 2892847.4098033225,
+                "difference": -365.4098033225164,
+                "standardDeviation": 1557.7720292528554,
+                "sigma": 0.2345720660408671
+              },
+              {
+                "position": 26,
+                "count": 2539856,
+                "expected": 2540084.1080187,
+                "difference": -228.10801870003343,
+                "standardDeviation": 1473.2236013756824,
+                "sigma": 0.15483597906456853
+              },
+              {
+                "position": 27,
+                "count": 2518510,
+                "expected": 2519201.37586186,
+                "difference": -691.3758618598804,
+                "standardDeviation": 1467.3576903363455,
+                "sigma": 0.4711706398604176
+              },
+              {
+                "position": 28,
+                "count": 2653859,
+                "expected": 2654752.202094441,
+                "difference": -893.2020944408141,
+                "standardDeviation": 1500.8941464540364,
+                "sigma": 0.5951133173189224
+              },
+              {
+                "position": 29,
+                "count": 2437622,
+                "expected": 2438722.4063321548,
+                "difference": -1100.4063321547583,
+                "standardDeviation": 1446.5650189715377,
+                "sigma": 0.7607029879217684
+              },
+              {
+                "position": 30,
+                "count": 0,
+                "expected": 0,
+                "difference": 0,
+                "standardDeviation": 0,
+                "sigma": 0
+              },
+              {
+                "position": 31,
+                "count": 2524429,
+                "expected": 2524915.099975396,
+                "difference": -486.0999753959477,
+                "standardDeviation": 1466.194010625723,
+                "sigma": 0.33153864486767093
+              },
+              {
+                "position": 32,
+                "count": 2478116,
+                "expected": 2476921.3909871783,
+                "difference": 1194.6090128216892,
+                "standardDeviation": 1453.8786785019506,
+                "sigma": 0.8216703570153405
+              },
+              {
+                "position": 33,
+                "count": 2227940,
+                "expected": 2229189.516109854,
+                "difference": -1249.516109853983,
+                "standardDeviation": 1394.6414905299544,
+                "sigma": 0.8959407262286275
+              },
+              {
+                "position": 34,
+                "count": 2357092,
+                "expected": 2357635.9052898376,
+                "difference": -543.9052898376249,
+                "standardDeviation": 1423.0919278647102,
+                "sigma": 0.38219968730602805
+              },
+              {
+                "position": 35,
+                "count": 2292354,
+                "expected": 2292474.6181039554,
+                "difference": -120.6181039554067,
+                "standardDeviation": 1406.008683953105,
+                "sigma": 0.0857875952915734
+              },
+              {
+                "position": 36,
+                "count": 816961,
+                "expected": 817445.439300505,
+                "difference": -484.43930050497875,
+                "standardDeviation": 881.5689293972002,
+                "sigma": 0.549519480951114
+              },
+              {
+                "position": 37,
+                "count": 2060301,
+                "expected": 2061619.1594829776,
+                "difference": -1318.1594829775859,
+                "standardDeviation": 1342.9012288165488,
+                "sigma": 0.9815759005144652
+              },
+              {
+                "position": 38,
+                "count": 2056237,
+                "expected": 2055841.4364580163,
+                "difference": 395.5635419837199,
+                "standardDeviation": 1341.331189601652,
+                "sigma": 0.29490370838330704
+              },
+              {
+                "position": 39,
+                "count": 2489026,
+                "expected": 2486120.2571848724,
+                "difference": 2905.7428151275963,
+                "standardDeviation": 1476.5449618226503,
+                "sigma": 1.9679338525125174
+              }
+            ]
+          }
+        ]
+      },
+      "mutation": {
+        "passed": true,
+        "seed": 3,
+        "mutations": 25,
+        "strictCompiled": 25,
+        "runtimeKilled": 25,
+        "productionSHA256": "b43bcb333a028cb622e027ea4563b3bfc86afbada8e189e7fae892b01b538c58",
+        "results": [
+          {
+            "name": "M01 denominator",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Exact common denominator\n\n9217 !== 9216\n"
+          },
+          {
+            "name": "M02 early triple-double jail",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Invalid free state"
+          },
+          {
+            "name": "M03 reversed doubles",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/0\n\n16 !== 96\n"
+          },
+          {
+            "name": "M04 premature third jail attempt",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition stay max/118/0\n\n112 !== 16\n"
+          },
+          {
+            "name": "M05 jail doubles extra roll",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition stay max/117/0\n\n0 !== 16\n"
+          },
+          {
+            "name": "M06 ASAP inherited jail streak",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/117/1\n\n0 !== 16\n"
+          },
+          {
+            "name": "M07 ordinary streak reset",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/0\n\n0 !== 96\n"
+          },
+          {
+            "name": "M08 movement off by one",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/0\n\n64 !== 96\n"
+          },
+          {
+            "name": "M09 GoToJail relocation",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Invalid free state"
+          },
+          {
+            "name": "M10 CC jail card visiting",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/31\n\n272 !== 256\n"
+          },
+          {
+            "name": "M11 Chance jail card visiting",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/30\n\n608 !== 512\n"
+          },
+          {
+            "name": "M12 CC card multiplicity",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Transition row mass invariant"
+          },
+          {
+            "name": "M13 Chance stay multiplicity",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Transition row mass invariant"
+          },
+          {
+            "name": "M14 missing second railroad card",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Transition row mass invariant"
+          },
+          {
+            "name": "M15 nearest railroad mapping",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/15\n\n1312 !== 1120\n"
+          },
+          {
+            "name": "M16 nearest utility mapping",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/36\n\n0 !== 96\n"
+          },
+          {
+            "name": "M17 back-three card",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/12\n\n512 !== 608\n"
+          },
+          {
+            "name": "M18 jail does not reset streak",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind transition leave ASAP/0/30\n\n608 !== 512\n"
+          },
+          {
+            "name": "M19 end-turn filter",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind turn landing: 0.022518443650798692 != 0.031357958722416555"
+          },
+          {
+            "name": "M20 Marvin Gardens rent edition",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Official street rents\n+ actual - expected\n\n  [\n+   22,\n-   24,\n    120,\n    360,\n    850,\n    1025,\n    1200\n"
+          },
+          {
+            "name": "M21 missing full-set rent doubling",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI ordinaryRent\n\n2 !== 4\n"
+          },
+          {
+            "name": "M22 hotel construction investment",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI investment\n\n260 !== 310\n"
+          },
+          {
+            "name": "M23 railroad premium missing",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI expectedRentPerRoll: 0.7407758002128082 != 0.8130152464211912"
+          },
+          {
+            "name": "M24 utility Chance premium",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI expectedRentPerRoll: 0.8099534939406092 != 0.8503649878708002"
+          },
+          {
+            "name": "M25 per-turn rent conversion",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "failure": "Blind ROI expectedRentPerOpponentTurn: 0.03592338284004056 != 0.05058286826589295"
+          }
+        ]
+      }
+    }
+  ]
+}

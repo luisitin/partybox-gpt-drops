@@ -17,6 +17,8 @@ Full local `npm test` passed on Node v24.19.0 with pinned TypeScript 5.8.3. Fres
 | Isolated strict/runtime mutation checks | 25 strict compilations and 25 runtime kills | yes | 1,2,3 | `node mutate.mjs <seed>` |
 | Computed delivered outputs | 80 roll/80 turn square values, 240 states, 348 ROI rows | yes | each full run | `node export.mjs` |
 
+Each exact suite passed 37,981 assertions (113,943 across the three seeds). ROI numeric fields use relative tolerance 1e-12 scaled by max(1, absolute expected value); probability comparisons use absolute 1e-12.
+
 Three seed suites comprise 86,400 exact cells, 720 stationary states, 1,044 ROI scenarios, 600,000,000 simulated movement rolls, 240 statistical square checks and 75 strictly compiled runtime-killed mutants. Published comparisons examine 720 values: 717 within 1e-4 and the same known Collins maximum-stay Jail gap in each seed. All 480 required Butler comparisons pass. There is no accepted gap between the independently authored implementations.
 
 Power/linear maximum state differences: 9.194034422677078e-16 (ASAP), 8.847089727481716e-16 (maximum stay), below 1e-12. Power stationary residuals: 3.469446951953614e-17 and 2.7755575615628914e-17; 197 and 255 iterations. Butler roll maximum errors: 4.782849027e-9 and 6.875744224e-9; turn errors: 4.964513661e-10 and 4.994465015e-10. Collins ASAP maximum error 1.146819755e-6; maximum-stay aggregate Jail error 0.00068354687574421 (`CONFLICTS.md`).

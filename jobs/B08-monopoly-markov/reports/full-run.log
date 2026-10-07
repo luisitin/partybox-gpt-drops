@@ -1,0 +1,165 @@
+
+> b08-monopoly-markov@1.0.0 test
+> node run.mjs
+
+RUN node hashes.mjs
+SHA256: 43 files verified
+RUN node node_modules/typescript/bin/tsc -p tsconfig.json
+RUN node export.mjs
+{"suite":"computed-outputs","passed":true,"strategies":2,"squares":80,"roiRows":348}
+RUN node test.mjs 1
+{"suite":"exact-and-published","seed":1,"passed":true,"assertions":37981,"exactTransitionCells":28800,"stationaryStates":240,"publishedSquares":240,"ownershipScenarios":348,"observations":[{"strategy":"leave ASAP","maxStateDifference":9.194034422677078e-16,"iterations":197,"residual":3.469446951953614e-17,"turnStartMass":0.8427269589619967,"rollsPerTurn":1.186623958525926,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":4.782849026552238e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.964513661276371e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0000011468197552155779,"tolerance":0.0001,"matchedSquares":40,"documentedGaps":[],"conflictRecord":null}]},{"strategy":"stay max","maxStateDifference":8.847089727481716e-16,"iterations":255,"residual":2.7755575615628914e-17,"turnStartMass":0.8577091677010615,"rollsPerTurn":1.165896364009171,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":6.87574422397752e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.994465015173422e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0006835468757442065,"tolerance":0.0001,"matchedSquares":39,"documentedGaps":[{"position":10,"difference":-0.0006835468757442065}],"conflictRecord":"CONFLICTS.md"}]}]}
+RUN node simulate.mjs 1
+simulation seed=1 strategy=leave ASAP rolls=10000000
+simulation seed=1 strategy=leave ASAP rolls=20000000
+simulation seed=1 strategy=leave ASAP rolls=30000000
+simulation seed=1 strategy=leave ASAP rolls=40000000
+simulation seed=1 strategy=leave ASAP rolls=50000000
+simulation seed=1 strategy=leave ASAP rolls=60000000
+simulation seed=1 strategy=leave ASAP rolls=70000000
+simulation seed=1 strategy=leave ASAP rolls=80000000
+simulation seed=1 strategy=leave ASAP rolls=90000000
+simulation seed=1 strategy=leave ASAP rolls=100000000
+{"suite":"simulation","strategy":"leave ASAP","seed":1,"rolls":100000000,"passed":true,"maxSigma":1.9794398220894414,"poissonResidual":1.5379335085874474e-15}
+simulation seed=1 strategy=stay max rolls=10000000
+simulation seed=1 strategy=stay max rolls=20000000
+simulation seed=1 strategy=stay max rolls=30000000
+simulation seed=1 strategy=stay max rolls=40000000
+simulation seed=1 strategy=stay max rolls=50000000
+simulation seed=1 strategy=stay max rolls=60000000
+simulation seed=1 strategy=stay max rolls=70000000
+simulation seed=1 strategy=stay max rolls=80000000
+simulation seed=1 strategy=stay max rolls=90000000
+simulation seed=1 strategy=stay max rolls=100000000
+{"suite":"simulation","strategy":"stay max","seed":1,"rolls":100000000,"passed":true,"maxSigma":2.389731545521216,"poissonResidual":2.8171909249863347e-15}
+RUN node mutate.mjs 1
+{"suite":"mutation","seed":1,"name":"M01 denominator","strictCompilation":true,"runtimeKilled":true,"failure":"Exact common denominator\n\n9217 !== 9216\n"}
+{"suite":"mutation","seed":1,"name":"M02 early triple-double jail","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+{"suite":"mutation","seed":1,"name":"M03 reversed doubles","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n16 !== 96\n"}
+{"suite":"mutation","seed":1,"name":"M04 premature third jail attempt","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/118/0\n\n112 !== 16\n"}
+{"suite":"mutation","seed":1,"name":"M05 jail doubles extra roll","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/117/0\n\n0 !== 16\n"}
+{"suite":"mutation","seed":1,"name":"M06 ASAP inherited jail streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/117/1\n\n0 !== 16\n"}
+{"suite":"mutation","seed":1,"name":"M07 ordinary streak reset","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n0 !== 96\n"}
+{"suite":"mutation","seed":1,"name":"M08 movement off by one","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n64 !== 96\n"}
+{"suite":"mutation","seed":1,"name":"M09 GoToJail relocation","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+{"suite":"mutation","seed":1,"name":"M10 CC jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/31\n\n272 !== 256\n"}
+{"suite":"mutation","seed":1,"name":"M11 Chance jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+{"suite":"mutation","seed":1,"name":"M12 CC card multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+{"suite":"mutation","seed":1,"name":"M13 Chance stay multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+{"suite":"mutation","seed":1,"name":"M14 missing second railroad card","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+{"suite":"mutation","seed":1,"name":"M15 nearest railroad mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/15\n\n1312 !== 1120\n"}
+{"suite":"mutation","seed":1,"name":"M16 nearest utility mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/36\n\n0 !== 96\n"}
+{"suite":"mutation","seed":1,"name":"M17 back-three card","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/12\n\n512 !== 608\n"}
+{"suite":"mutation","seed":1,"name":"M18 jail does not reset streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+{"suite":"mutation","seed":1,"name":"M19 end-turn filter","strictCompilation":true,"runtimeKilled":true,"failure":"Blind turn landing: 0.022518443650798692 != 0.031357958722416555"}
+{"suite":"mutation","seed":1,"name":"M20 Marvin Gardens rent edition","strictCompilation":true,"runtimeKilled":true,"failure":"Official street rents\n+ actual - expected\n\n  [\n+   22,\n-   24,\n    120,\n    360,\n    850,\n    1025,\n    1200\n"}
+{"suite":"mutation","seed":1,"name":"M21 missing full-set rent doubling","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI ordinaryRent\n\n2 !== 4\n"}
+{"suite":"mutation","seed":1,"name":"M22 hotel construction investment","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI investment\n\n260 !== 310\n"}
+{"suite":"mutation","seed":1,"name":"M23 railroad premium missing","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.7407758002128082 != 0.8130152464211912"}
+{"suite":"mutation","seed":1,"name":"M24 utility Chance premium","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.8099534939406092 != 0.8503649878708002"}
+{"suite":"mutation","seed":1,"name":"M25 per-turn rent conversion","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerOpponentTurn: 0.03592338284004056 != 0.05058286826589295"}
+RUN node test.mjs 2
+{"suite":"exact-and-published","seed":2,"passed":true,"assertions":37981,"exactTransitionCells":28800,"stationaryStates":240,"publishedSquares":240,"ownershipScenarios":348,"observations":[{"strategy":"leave ASAP","maxStateDifference":9.194034422677078e-16,"iterations":197,"residual":3.469446951953614e-17,"turnStartMass":0.8427269589619967,"rollsPerTurn":1.186623958525926,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":4.782849026552238e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.964513661276371e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0000011468197552155779,"tolerance":0.0001,"matchedSquares":40,"documentedGaps":[],"conflictRecord":null}]},{"strategy":"stay max","maxStateDifference":8.847089727481716e-16,"iterations":255,"residual":2.7755575615628914e-17,"turnStartMass":0.8577091677010615,"rollsPerTurn":1.165896364009171,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":6.87574422397752e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.994465015173422e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0006835468757442065,"tolerance":0.0001,"matchedSquares":39,"documentedGaps":[{"position":10,"difference":-0.0006835468757442065}],"conflictRecord":"CONFLICTS.md"}]}]}
+RUN node simulate.mjs 2
+simulation seed=2 strategy=leave ASAP rolls=10000000
+simulation seed=2 strategy=leave ASAP rolls=20000000
+simulation seed=2 strategy=leave ASAP rolls=30000000
+simulation seed=2 strategy=leave ASAP rolls=40000000
+simulation seed=2 strategy=leave ASAP rolls=50000000
+simulation seed=2 strategy=leave ASAP rolls=60000000
+simulation seed=2 strategy=leave ASAP rolls=70000000
+simulation seed=2 strategy=leave ASAP rolls=80000000
+simulation seed=2 strategy=leave ASAP rolls=90000000
+simulation seed=2 strategy=leave ASAP rolls=100000000
+{"suite":"simulation","strategy":"leave ASAP","seed":2,"rolls":100000000,"passed":true,"maxSigma":2.5024991114465203,"poissonResidual":1.5379335085874474e-15}
+simulation seed=2 strategy=stay max rolls=10000000
+simulation seed=2 strategy=stay max rolls=20000000
+simulation seed=2 strategy=stay max rolls=30000000
+simulation seed=2 strategy=stay max rolls=40000000
+simulation seed=2 strategy=stay max rolls=50000000
+simulation seed=2 strategy=stay max rolls=60000000
+simulation seed=2 strategy=stay max rolls=70000000
+simulation seed=2 strategy=stay max rolls=80000000
+simulation seed=2 strategy=stay max rolls=90000000
+simulation seed=2 strategy=stay max rolls=100000000
+{"suite":"simulation","strategy":"stay max","seed":2,"rolls":100000000,"passed":true,"maxSigma":1.570822181594039,"poissonResidual":2.8171909249863347e-15}
+RUN node mutate.mjs 2
+{"suite":"mutation","seed":2,"name":"M01 denominator","strictCompilation":true,"runtimeKilled":true,"failure":"Exact common denominator\n\n9217 !== 9216\n"}
+{"suite":"mutation","seed":2,"name":"M02 early triple-double jail","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+{"suite":"mutation","seed":2,"name":"M03 reversed doubles","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n16 !== 96\n"}
+{"suite":"mutation","seed":2,"name":"M04 premature third jail attempt","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/118/0\n\n112 !== 16\n"}
+{"suite":"mutation","seed":2,"name":"M05 jail doubles extra roll","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/117/0\n\n0 !== 16\n"}
+{"suite":"mutation","seed":2,"name":"M06 ASAP inherited jail streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/117/1\n\n0 !== 16\n"}
+{"suite":"mutation","seed":2,"name":"M07 ordinary streak reset","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n0 !== 96\n"}
+{"suite":"mutation","seed":2,"name":"M08 movement off by one","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n64 !== 96\n"}
+{"suite":"mutation","seed":2,"name":"M09 GoToJail relocation","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+{"suite":"mutation","seed":2,"name":"M10 CC jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/31\n\n272 !== 256\n"}
+{"suite":"mutation","seed":2,"name":"M11 Chance jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+{"suite":"mutation","seed":2,"name":"M12 CC card multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+{"suite":"mutation","seed":2,"name":"M13 Chance stay multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+{"suite":"mutation","seed":2,"name":"M14 missing second railroad card","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+{"suite":"mutation","seed":2,"name":"M15 nearest railroad mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/15\n\n1312 !== 1120\n"}
+{"suite":"mutation","seed":2,"name":"M16 nearest utility mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/36\n\n0 !== 96\n"}
+{"suite":"mutation","seed":2,"name":"M17 back-three card","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/12\n\n512 !== 608\n"}
+{"suite":"mutation","seed":2,"name":"M18 jail does not reset streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+{"suite":"mutation","seed":2,"name":"M19 end-turn filter","strictCompilation":true,"runtimeKilled":true,"failure":"Blind turn landing: 0.022518443650798692 != 0.031357958722416555"}
+{"suite":"mutation","seed":2,"name":"M20 Marvin Gardens rent edition","strictCompilation":true,"runtimeKilled":true,"failure":"Official street rents\n+ actual - expected\n\n  [\n+   22,\n-   24,\n    120,\n    360,\n    850,\n    1025,\n    1200\n"}
+{"suite":"mutation","seed":2,"name":"M21 missing full-set rent doubling","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI ordinaryRent\n\n2 !== 4\n"}
+{"suite":"mutation","seed":2,"name":"M22 hotel construction investment","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI investment\n\n260 !== 310\n"}
+{"suite":"mutation","seed":2,"name":"M23 railroad premium missing","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.7407758002128082 != 0.8130152464211912"}
+{"suite":"mutation","seed":2,"name":"M24 utility Chance premium","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.8099534939406092 != 0.8503649878708002"}
+{"suite":"mutation","seed":2,"name":"M25 per-turn rent conversion","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerOpponentTurn: 0.03592338284004056 != 0.05058286826589295"}
+RUN node test.mjs 3
+{"suite":"exact-and-published","seed":3,"passed":true,"assertions":37981,"exactTransitionCells":28800,"stationaryStates":240,"publishedSquares":240,"ownershipScenarios":348,"observations":[{"strategy":"leave ASAP","maxStateDifference":9.194034422677078e-16,"iterations":197,"residual":3.469446951953614e-17,"turnStartMass":0.8427269589619967,"rollsPerTurn":1.186623958525926,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":4.782849026552238e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.964513661276371e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0000011468197552155779,"tolerance":0.0001,"matchedSquares":40,"documentedGaps":[],"conflictRecord":null}]},{"strategy":"stay max","maxStateDifference":8.847089727481716e-16,"iterations":255,"residual":2.7755575615628914e-17,"turnStartMass":0.8577091677010615,"rollsPerTurn":1.165896364009171,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":6.87574422397752e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.994465015173422e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0006835468757442065,"tolerance":0.0001,"matchedSquares":39,"documentedGaps":[{"position":10,"difference":-0.0006835468757442065}],"conflictRecord":"CONFLICTS.md"}]}]}
+RUN node simulate.mjs 3
+simulation seed=3 strategy=leave ASAP rolls=10000000
+simulation seed=3 strategy=leave ASAP rolls=20000000
+simulation seed=3 strategy=leave ASAP rolls=30000000
+simulation seed=3 strategy=leave ASAP rolls=40000000
+simulation seed=3 strategy=leave ASAP rolls=50000000
+simulation seed=3 strategy=leave ASAP rolls=60000000
+simulation seed=3 strategy=leave ASAP rolls=70000000
+simulation seed=3 strategy=leave ASAP rolls=80000000
+simulation seed=3 strategy=leave ASAP rolls=90000000
+simulation seed=3 strategy=leave ASAP rolls=100000000
+{"suite":"simulation","strategy":"leave ASAP","seed":3,"rolls":100000000,"passed":true,"maxSigma":2.1157739420388237,"poissonResidual":1.5379335085874474e-15}
+simulation seed=3 strategy=stay max rolls=10000000
+simulation seed=3 strategy=stay max rolls=20000000
+simulation seed=3 strategy=stay max rolls=30000000
+simulation seed=3 strategy=stay max rolls=40000000
+simulation seed=3 strategy=stay max rolls=50000000
+simulation seed=3 strategy=stay max rolls=60000000
+simulation seed=3 strategy=stay max rolls=70000000
+simulation seed=3 strategy=stay max rolls=80000000
+simulation seed=3 strategy=stay max rolls=90000000
+simulation seed=3 strategy=stay max rolls=100000000
+{"suite":"simulation","strategy":"stay max","seed":3,"rolls":100000000,"passed":true,"maxSigma":2.136073308429187,"poissonResidual":2.8171909249863347e-15}
+RUN node mutate.mjs 3
+{"suite":"mutation","seed":3,"name":"M01 denominator","strictCompilation":true,"runtimeKilled":true,"failure":"Exact common denominator\n\n9217 !== 9216\n"}
+{"suite":"mutation","seed":3,"name":"M02 early triple-double jail","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+{"suite":"mutation","seed":3,"name":"M03 reversed doubles","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n16 !== 96\n"}
+{"suite":"mutation","seed":3,"name":"M04 premature third jail attempt","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/118/0\n\n112 !== 16\n"}
+{"suite":"mutation","seed":3,"name":"M05 jail doubles extra roll","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/117/0\n\n0 !== 16\n"}
+{"suite":"mutation","seed":3,"name":"M06 ASAP inherited jail streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/117/1\n\n0 !== 16\n"}
+{"suite":"mutation","seed":3,"name":"M07 ordinary streak reset","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n0 !== 96\n"}
+{"suite":"mutation","seed":3,"name":"M08 movement off by one","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n64 !== 96\n"}
+{"suite":"mutation","seed":3,"name":"M09 GoToJail relocation","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+{"suite":"mutation","seed":3,"name":"M10 CC jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/31\n\n272 !== 256\n"}
+{"suite":"mutation","seed":3,"name":"M11 Chance jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+{"suite":"mutation","seed":3,"name":"M12 CC card multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+{"suite":"mutation","seed":3,"name":"M13 Chance stay multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+{"suite":"mutation","seed":3,"name":"M14 missing second railroad card","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+{"suite":"mutation","seed":3,"name":"M15 nearest railroad mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/15\n\n1312 !== 1120\n"}
+{"suite":"mutation","seed":3,"name":"M16 nearest utility mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/36\n\n0 !== 96\n"}
+{"suite":"mutation","seed":3,"name":"M17 back-three card","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/12\n\n512 !== 608\n"}
+{"suite":"mutation","seed":3,"name":"M18 jail does not reset streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+{"suite":"mutation","seed":3,"name":"M19 end-turn filter","strictCompilation":true,"runtimeKilled":true,"failure":"Blind turn landing: 0.022518443650798692 != 0.031357958722416555"}
+{"suite":"mutation","seed":3,"name":"M20 Marvin Gardens rent edition","strictCompilation":true,"runtimeKilled":true,"failure":"Official street rents\n+ actual - expected\n\n  [\n+   22,\n-   24,\n    120,\n    360,\n    850,\n    1025,\n    1200\n"}
+{"suite":"mutation","seed":3,"name":"M21 missing full-set rent doubling","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI ordinaryRent\n\n2 !== 4\n"}
+{"suite":"mutation","seed":3,"name":"M22 hotel construction investment","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI investment\n\n260 !== 310\n"}
+{"suite":"mutation","seed":3,"name":"M23 railroad premium missing","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.7407758002128082 != 0.8130152464211912"}
+{"suite":"mutation","seed":3,"name":"M24 utility Chance premium","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.8099534939406092 != 0.8503649878708002"}
+{"suite":"mutation","seed":3,"name":"M25 per-turn rent conversion","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerOpponentTurn: 0.03592338284004056 != 0.05058286826589295"}
+RUN node hashes.mjs
+SHA256: 43 files verified
+{"suite":"complete","passed":true,"node":"v24.19.0","typescript":"5.8.3","seeds":[1,2,3],"totals":{"exactTransitionCells":86400,"stationaryStates":720,"publishedSquares":720,"matchedPublishedSquares":717,"documentedPublishedGaps":3,"requiredButlerComparisons":480,"roiScenarios":1044,"simulationRolls":600000000,"simulationSquares":240,"strictCompiledMutants":75,"runtimeKilledMutants":75}}
