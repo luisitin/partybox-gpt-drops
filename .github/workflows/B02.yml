@@ -1,0 +1,24 @@
+name: B02 Board movement odds engine
+on:
+  pull_request:
+    paths: ['jobs/B02-*/**']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Install the pinned development compiler
+        working-directory: jobs/B02-board-odds
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Full verification, seeds 1, 2, 3
+        working-directory: jobs/B02-board-odds
+        run: npm test
