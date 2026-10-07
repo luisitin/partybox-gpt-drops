@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { findBestPlay, validatePosition, validateTable, validatePlay } from '../dist/rummikub.js';
-import { referenceBestPlay, referenceValidateTable, referenceValidatePlay } from '../dist/reference.js';
+import { referenceBestPlay, referenceValidateTable, referenceValidatePlay } from './blind-adapter.mjs';
 import { rng, smallPosition, freeze, receipt, seedArg, hash } from './helpers.mjs';
 import { performance } from 'node:perf_hooks';
 const seed = seedArg(), random = rng(seed), cases = 50000;

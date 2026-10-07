@@ -64,3 +64,7 @@ Both sources were written by the same assistant, with the reference written firs
 Successful plays are revalidated by the production transition validator before return, and their value is recomputed from physical IDs. Passes copy a previously validated table. Tests recheck both kinds of output using both table validators; play outputs additionally pass both transition validators. Invalid ordinary input shapes return error values rather than entering search.
 
 This is an end-state solver, not a complete game engine or an adversarial JavaScript-object sandbox. Optimality is for the documented additive immediate objective. Test results establish the reported cases, not a universal performance theorem or perfect implementation correctness.
+
+## 8. Separately authored blind reference
+
+`blindReference.ts` was sealed at 8564ea3 before its author or the integrating lead inspected production. Its own validators, literal small physical-subset enumeration and larger exact cover are independent of production helpers. The primary tests now use that source; `reference.ts` is retained as historical supplemental code. The large reference path is undergoing independent performance work. Actual completed coverage is recorded in VERIFY.md.

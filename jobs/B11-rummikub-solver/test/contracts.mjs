@@ -3,11 +3,11 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import ts from 'typescript';
 import { findBestPlay, validateTable, validatePlay } from '../dist/rummikub.js';
-import { referenceBestPlay, referenceValidateTable, referenceValidatePlay } from '../dist/reference.js';
+import { referenceBestPlay, referenceValidateTable, referenceValidatePlay } from './blind-adapter.mjs';
 import { root, rng, smallPosition, colors, freeze, receipt, seedArg, hash } from './helpers.mjs';
 const seed=seedArg(), random=rng(seed), checks=[];
 const check=(name,fn)=>{fn();checks.push({name,passed:true});};
-for(const filename of ['rummikub.ts','reference.ts']) check(`${filename}: no runtime imports or ambient clocks/randomness`,()=>{
+for(const filename of ['rummikub.ts','reference.ts','blindReference.ts']) check(`${filename}: no runtime imports or ambient clocks/randomness`,()=>{
  const text=readFileSync(resolve(root,filename),'utf8'), ast=ts.createSourceFile(filename,text,ts.ScriptTarget.Latest,true);
  const visit=node=>{
   assert.ok(!ts.isImportDeclaration(node)&&!ts.isImportEqualsDeclaration(node),'no runtime imports');
@@ -30,8 +30,10 @@ let transcript='';
 // meld-order reversal, and repeated-call equality cannot change the optimum.
 for(let i=0;i<1000;i++) {
  const p=freeze(smallPosition(random,i)), a=findBestPlay(p);
- assert.ok(a.ok);const again=findBestPlay(p);assert.deepEqual(again,a);
- for(const table of [a.table,again.table]){
+ assert.ok(a.ok);const firstOracle=referenceBestPlay(p);assert.ok(firstOracle.ok);
+ assert.equal(a.value,firstOracle.value);assert.equal(a.played.length,firstOracle.playedCount);
+ const again=findBestPlay(p);assert.deepEqual(again,a);
+ for(const table of [a.table,again.table,firstOracle.table]){
   assert.ok(validateTable(table).ok);assert.ok(referenceValidateTable(table));
   if(a.action==='play'){assert.ok(validatePlay(p,table).ok);assert.ok(referenceValidatePlay(p,table));}
  }

@@ -14,10 +14,10 @@ function run(args,seed){
 for(const seed of [1,2,3]){
  run(['test/checksums.mjs'],seed);
  run(['node_modules/typescript/bin/tsc','-p','tsconfig.json'],seed);
- const compile={suite:'strict-TypeScript',seed,cases:2,passed:2,command:`SEED=${seed} node node_modules/typescript/bin/tsc -p tsconfig.json`};
+ const compile={suite:'strict-TypeScript',seed,cases:3,passed:3,command:`SEED=${seed} node node_modules/typescript/bin/tsc -p tsconfig.json`};
  receipt(`compile-seed-${seed}`,compile);runs.push(compile);
  // Deliberately serial: no suite competes with the latency measurement.
- for(const suite of ['unit','contracts','small','audit','mutations','bench']){
+ for(const suite of ['unit','contracts','small','large-independent','audit','mutations','bench']){
   run([`test/${suite}.mjs`],seed);
   const data=JSON.parse(readFileSync(resolve(root,`.test-output/${suite}-seed-${seed}.json`),'utf8'));
   assert.equal(data.seed,seed);assert.equal(data.passed,data.cases);

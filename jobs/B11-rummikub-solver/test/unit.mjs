@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { pathToFileURL } from 'node:url';
 import { resolve } from 'node:path';
-import * as ref from '../dist/reference.js';
+import * as ref from './blind-adapter.mjs';
 import { jokerCases, N, J, HJ, R, G, P } from './joker-cases.mjs';
 import { freeze, rng, int, stock, receipt, seedArg, root, hash } from './helpers.mjs';
 const api = await import(pathToFileURL(process.env.B11_IMPL ? resolve(process.env.B11_IMPL)

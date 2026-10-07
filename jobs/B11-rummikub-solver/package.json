@@ -12,10 +12,10 @@
     "test": "node test/run.mjs",
     "test:unit": "npm run build && node test/unit.mjs",
     "test:small": "npm run build && node test/small.mjs",
-    "test:bench": "npm run build && node test/bench.mjs",
+    "test:bench": "npm run build && node test/large-independent.mjs && node test/bench.mjs",
     "test:mutations": "npm run build && node test/mutations.mjs",
     "test:contracts": "npm run build && node test/contracts.mjs",
-    "test:audit": "npm run build && node test/audit.mjs",
+    "test:audit": "npm run build && node test/large-independent.mjs && node test/audit.mjs",
     "check:hashes": "node test/checksums.mjs"
   },
   "devDependencies": {

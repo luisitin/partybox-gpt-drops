@@ -4,9 +4,11 @@ import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import ts from 'typescript';
 import { findBestPlay,validateTable,validatePlay } from '../dist/rummikub.js';
-import { referenceValidateTable,referenceValidatePlay } from '../dist/reference.js';
+import { referenceValidateTable,referenceValidatePlay } from './blind-adapter.mjs';
+import {loadIndependentLedger} from './independent-ledger.mjs';
 import { root,rng,largePosition,freeze,receipt,seedArg,hash } from './helpers.mjs';
 const seed=seedArg(),original=readFileSync(resolve(root,'rummikub.ts'),'utf8');
+const independentAnswer=loadIndependentLedger(seed);
 // This is a DERIVED implementation, not a second independent author. Replace
 // BOTH the frontier key and the custom hash table with full-state string keys
 // and the built-in Map. This detects unsafe frontier compression and memo bugs.
@@ -38,10 +40,12 @@ for(let i=0;i<cases;i++) {
  const p=freeze(largePosition(random,i));corpus+=JSON.stringify(p)+'\n';
  const a=findBestPlay(p),b=audit.findBestPlay(p),context=`seed=${seed} case=${i}`;
  assert.ok(a.ok,context);assert.ok(b.ok,context);
+ const independent=independentAnswer('main',i,p);assert.ok(independent.ok,context);
+ assert.equal(a.value,independent.value,context);assert.equal(a.played.length,independent.playedCount,context);
  assert.equal(a.value,b.value,context);assert.equal(a.played.length,b.played.length,context);
  // The same search order and tie rule should also return the identical witness.
  assert.deepEqual(a.table,b.table,context);
- for(const table of [a.table,b.table]) {
+ for(const table of [a.table,b.table,independent.table]) {
   assert.ok(validateTable(table).ok,context);assert.ok(referenceValidateTable(table),context);
   if(a.action==='play'){assert.ok(validatePlay(p,table).ok,context);assert.ok(referenceValidatePlay(p,table),context);}
   else assert.deepEqual(table,p.table,context);
@@ -51,7 +55,7 @@ for(let i=0;i<cases;i++) {
 }
 rmSync(path);rmSync(jsPath);
 receipt(`audit-seed-${seed}`,{suite:'full-state-key-large-differential',seed,cases,passed:cases,
- command:`SEED=${seed} node test/audit.mjs`,strictCompilePassed:true,
+ command:`SEED=${seed} node test/audit.mjs`,strictCompilePassed:true,blindOptimumComparisons:cases,
  implementation:'Derived full-inventory string-key Map; not independent authorship or brute force',
  corpusSha256:hash(corpus),semanticDiffSha256:hash(transcript),derivedSourceSha256:hash(transformed)});
 console.log(`full-state audit seed=${seed}: ${cases} passed`);

@@ -5,6 +5,9 @@ import { spawnSync } from 'node:child_process';
 import ts from 'typescript';
 import { root, seedArg, receipt, hash } from './helpers.mjs';
 const seed=seedArg(), source=readFileSync(resolve(root,'rummikub.ts'),'utf8');
+const baseline=spawnSync(process.execPath,['test/unit.mjs'],{cwd:root,env:{...process.env,SEED:String(seed)},encoding:'utf8',timeout:30000,maxBuffer:4*1024*1024});
+assert.equal(baseline.error,undefined,'Baseline launch/timeout failed');assert.equal(baseline.signal,null);
+assert.equal(baseline.status,0,`A failing baseline cannot kill a mutant: ${baseline.stderr}`);
 // Exactly one source change per mutant; no mutation flags exist in production.
 const mutations=[
  ['M01','Accept two-tile melds','if (raw.length < 3)','if (raw.length < 2)'],

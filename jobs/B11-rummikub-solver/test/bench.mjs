@@ -2,15 +2,17 @@ import assert from 'node:assert/strict';
 import { cpus, platform, arch } from 'node:os';
 import { performance } from 'node:perf_hooks';
 import { findBestPlay, validatePosition, validateTable, validatePlay } from '../dist/rummikub.js';
-import { referenceValidateTable, referenceValidatePlay } from '../dist/reference.js';
+import { referenceValidateTable, referenceValidatePlay } from './blind-adapter.mjs';
+import {loadIndependentLedger} from './independent-ledger.mjs';
 import { rng, largePosition, freeze, receipt, seedArg, hash } from './helpers.mjs';
 const seed = seedArg(), random = rng(seed), cases = 200;
+const independentAnswer=loadIndependentLedger(seed);
 const samples = [], values = [], counts = [0, 0, 0];
 let corpus = '', worstInput, worstMs = -1;
 // Warm up V8 only: distinct positions, and no caches survive a solver call.
 const warm = rng(0xB1100000 + seed);
 for (let i = 0; i < 8; i++) {
-  const p=freeze(largePosition(warm,i)),a=findBestPlay(p);assert.ok(a.ok);
+  const p=freeze(largePosition(warm,i)),a=findBestPlay(p);assert.ok(a.ok);const b=independentAnswer('warm',i,p);assert.ok(b.ok);assert.equal(a.value,b.value);assert.equal(a.played.length,b.playedCount);
   assert.ok(validateTable(a.table).ok);assert.ok(referenceValidateTable(a.table));
   if(a.action==='play'){assert.ok(validatePlay(p,a.table).ok);assert.ok(referenceValidatePlay(p,a.table));}
 }
@@ -27,6 +29,10 @@ for (let i = 0; i < cases; i++) {
   const ms = performance.now() - start;
   assert.ok(answer.ok, JSON.stringify(answer));
   assert.ok(answer.optimal);
+  const reference = independentAnswer('main',i,p);assert.ok(reference.ok);
+  assert.equal(answer.value,reference.value);assert.equal(answer.played.length,reference.playedCount);
+  assert.ok(validateTable(reference.table).ok);assert.ok(referenceValidateTable(reference.table));
+  if(reference.action==='play'){assert.ok(validatePlay(p,reference.table).ok);assert.ok(referenceValidatePlay(p,reference.table));}
   assert.ok(validateTable(answer.table).ok);
   assert.ok(referenceValidateTable(answer.table));
   if (answer.action === 'play') {
@@ -42,7 +48,7 @@ for (let i = 0; i < cases; i++) {
 }
 values.sort((a, b) => a - b);
 const result = {
-  suite: '40-table-20-hand-latency', seed, cases, warmupCases: 8, warmupPassed: 8, passed: samples.filter(x => x.ms <= 500).length,
+  suite: '40-table-20-hand-latency', seed, cases, warmupCases: 8, warmupPassed: 8, blindOptimumComparisons: cases + 8, passed: samples.filter(x => x.ms <= 500).length,
   command: `SEED=${seed} node test/bench.mjs`, limitMs: 500,
   p50Ms: values[Math.ceil(cases * 0.50) - 1], p99Ms: values[Math.ceil(cases * 0.99) - 1],
   maxMs: values.at(-1), totalJokerHistogram: counts, corpusSha256: hash(corpus),
