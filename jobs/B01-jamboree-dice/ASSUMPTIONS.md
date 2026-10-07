@@ -12,3 +12,7 @@ reference supplies the requested blind comparison.
 
 Unresolved research claims retain their confidence and explicit UNVERIFIED status.
 Two pages reusing one underlying publication do not count as independent sources.
+
+## Cloud queue interpretation
+
+The user's explicit queue instructions authorize CLAIMS.md-only commits directly to main, overriding the generic prohibition on main pushes solely for claims. Job changes remain on their existing branch. Unclaimed jobs are selected by ID even when a pre-existing job branch exists; resume that branch instead of skipping it. Current network denials are external blockers, not evidence that any source is false.

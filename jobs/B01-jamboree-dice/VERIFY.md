@@ -388,3 +388,9 @@ Each mutant is compiled separately from pristine source. Only an AssertionError 
 The initial integration run passed 42/42 suites. After the fresh evidence and source-row audit were added, the complete run passed 48/48. The repeated run additionally requires assertion-only mutant kills and passed 48/48. The final citation packaging run verifies the exact archived short quotations and retrieved-content hashes and also passed 48/48. No Monte Carlo failure was discarded.
 
 The delivered manifest covers all tracked job artifacts and the B01 workflow, excluding itself, installed tools and transient outputs. Final reports and documentation are packaged after the numerical run, followed by regeneration and three explicit manifest checks. These packaging checks supplement the numerical run; GitHub CI repeats the complete numerical command on the final published manifest. Every individual delivered file is below 30,000,000 bytes.
+
+## Cloud instance revalidation (2026-10-07T15:07:38Z)
+
+From `jobs/B01-jamboree-dice`: `npm ci --ignore-scripts --no-audit --no-fund --cache /workspace/.cache/npm` exited 0; locked TypeScript 5.8.3 installed. Python jsonschema 4.26.0, Node v24.19.0, Python 3.12.14 and GNU g++ 14.2.0 were already available. `npm test > /workspace/b01-current-test.log 2>&1` exited 0. All 48 suites passed for seeds 1, 2, 3, with the full 870,000,000 trials and 75/75 mutation kills. Exact per-suite names, cases, seeds and commands are in reports/cloud-suites.json; individual mutation results are in reports/cloud-mutations-seed-1.json through -3.json.
+
+UNVERIFIED: current source access and fresh source pass. All 34 attempted GETs failed with proxy HTTP 403; no new research claim was verified. B01 remains blocked as documented in BLOCKED.md.
