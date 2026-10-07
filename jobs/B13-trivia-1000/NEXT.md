@@ -1,6 +1,6 @@
 # B13 next work
 
-Current delivered milestone: 920 authored rows and 400 final versions independently accepted with supported actual source reopens. US history/civics has 20 rows; the author is completing the remaining 80.
+Current delivered milestone: 940 authored rows and 400 final versions independently accepted with supported actual source reopens. US history/civics has 40 rows; the author is completing the remaining 60.
 
 - Root is challenging the held world-geography 100-row snapshot; preserve every rejected version before author repair and obtain fresh review of each changed hash. Nature’s 100 final versions are sealed.
 - Lead is independently reviewing food’s 100 final author rows, with 64 actual fresh HTTP source reopenings. Lead will review US history after its final author seal.

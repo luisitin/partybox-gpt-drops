@@ -30,7 +30,7 @@ support, source independence, wording, and distractors. Capital/year/unit
 templates are a known diversity weakness and are being revised. Length metrics
 are recorded with their editorial assessment pending.
 
-## Latest authoring milestone — 2026-10-07T19:17:08.893321+00:00
+## Latest authoring milestone — 2026-10-07T19:53:08.645072+00:00
 
 Exact command: `python3 scripts/check-data.py --draft`.
 All currently authored category files are checked, including repaired music. The earlier actual failed music recovery is preserved in `reports/music-recovery-failure.json`. No missing row or pending independent review is waived.
@@ -38,24 +38,25 @@ Deterministic data checks; seed n/a. Full output: `reports/checks.json`.
 
 | Check | Cases | Passed |
 |---|---:|---:|
-| Authored rows against draft JSON Schema and row/index/source/hash checks | 682 | 682 |
-| Quote fields present in actual hash-checked source bodies | 2281 | 2281 |
-| Current fresh adversarial acceptances | 682 | 60 |
-| Current second source-reopen reviews | 682 | 60 |
-| Similarity >0.8 flagged pairs with concrete resolution | 2207 | 0 |
+| Authored rows against draft JSON Schema and row/index/source/hash checks | 940 | 940 |
+| Quote fields present in actual hash-checked source bodies | 3260 | 3260 |
+| Current fresh adversarial acceptances | 940 | 491 |
+| Current second source-reopen reviews | 940 | 491 |
+| Similarity >0.8 flagged pairs with concrete resolution | 2210 | 0 |
 
-Category counts: us-geography: 100, world-geography: 15, science-space: 100, animals-nature: 100, us-history-civics: 0, world-history: 100, movies-tv: 100, music: 100, sports-games: 60, food-everyday-life: 7.
+Category counts: us-geography: 100, world-geography: 100, science-space: 100, animals-nature: 100, us-history-civics: 40, world-history: 100, movies-tv: 100, music: 100, sports-games: 100, food-everyday-life: 100.
 
 Quote matching demonstrates actual captured text presence. It does not replace
 fresh review of claim support, source independence, ambiguity or distractors.
-Root science100 and diversified US geography100 are authoring snapshots.
-The authoring team is completing disjoint ranges and reserving cross-author
-review after final row-version hashes are held. Length metrics are in the report;
-editorial assessment remains pending.
+Nature, movies/TV, science/space and US geography each have 100 current
+fresh acceptances and supported source reopens. Original rejected versions and
+subsequent fresh assessments are preserved. World geography is held for root
+review; food is held for lead review; music revisions await fresh confirmation.
+Length metrics are in the report; full-set editorial assessment remains pending.
 
 ## UNVERIFIED
 
-- Remaining 318 authored rows and final category balances.
+- Remaining 60 authored rows and final category balances.
 - Fresh adversarial disproof attempts and source-independence/support review on all1,000 finalized rows.
 - Second actual reopening of both source pages for every final row.
 - Every retained similarity flag’s concrete editorial resolution.

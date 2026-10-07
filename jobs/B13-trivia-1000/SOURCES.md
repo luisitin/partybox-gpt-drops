@@ -1,6 +1,6 @@
 # B13 source quotations
 
-Current authoring milestone: 682 rows. Current fresh acceptance coverage is recorded per version in the report; remaining support review and second reopening remain pending. Source ledger ownership, actual retrieval timestamps, method/status where returned and content hashes are in `evidence/*-sources.json`. Quotes are contiguous actual captured text, ≤25 words each; two separately edited source accounts are selected per row. Full captures are excluded from delivery.
+Current authoring milestone: 940 rows. Current fresh acceptance coverage is recorded per version in the report; remaining support review and second reopening remain pending. Source ledger ownership, actual retrieval timestamps, method/status where returned and content hashes are in `evidence/*-sources.json`. Quotes are contiguous actual captured text, ≤25 words each. Two source accounts are selected per row; fresh claim-specific independence review remains pending where final acceptance is absent. Full captures are excluded from delivery.
 
 ## B13-0001 — Which city is the state capital of Alabama?
 
@@ -1510,6 +1510,1252 @@ Answer: Water management. Fun fact: Channels and reservoirs helped conserve wate
 
   Additional fun-fact quote: “water conduit systems” (3 words).
 
+## B13-0116 — Giza’s famous pyramid complex is in which country?
+
+Answer: Egypt. Fun fact: Temples are also part of its archaeological landscape.
+
+- world-geography-s0009: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/86/)
+
+  Answer/context quote: “The capital of the Old Kingdom of Egypt has some extraordinary funerary monuments, including rock tombs, ornate mastabas, temples and pyramids.” (21 words).
+
+- world-geography-s0010: [Wikipedia contributors](https://en.wikipedia.org/wiki/Giza_pyramid_complex)
+
+  Answer/context quote: “The Giza pyramid complex (also called the Giza necropolis ) in Egypt” (12 words).
+
+  Additional fun-fact quote: “The site also includes several temples” (6 words).
+
+## B13-0117 — How many main royal pyramids dominate the Giza complex?
+
+Answer: Three. Fun fact: Smaller subsidiary pyramids also form part of the complex.
+
+- world-geography-s0051: [Egyptian Ministry of Tourism and Antiquities](https://egymonuments.gov.eg/archaeological-sites/giza-plateau/)
+
+  Answer/context quote: “Although the three pyramids dominate the plateau” (7 words).
+
+  Additional fun-fact quote: “a larger complex that included smaller, subsidiary, queens’ pyramids” (9 words).
+
+- world-geography-s0010: [Wikipedia contributors](https://en.wikipedia.org/wiki/Giza_pyramid_complex)
+
+  Answer/context quote: “The three main pyramids at Giza” (6 words).
+
+  Additional fun-fact quote: “together with subsidiary pyramids” (4 words).
+
+## B13-0118 — The Great Pyramid at Giza was built for which king?
+
+Answer: Khufu. Fun fact: Khafre also has a main pyramid at the site.
+
+- world-geography-s0051: [Egyptian Ministry of Tourism and Antiquities](https://egymonuments.gov.eg/archaeological-sites/giza-plateau/)
+
+  Answer/context quote: “The Great Pyramid of Giza was built for king Khufu” (10 words).
+
+  Additional fun-fact quote: “the other two for Khafre and Menkaure” (7 words).
+
+- world-geography-s0010: [Wikipedia contributors](https://en.wikipedia.org/wiki/Giza_pyramid_complex)
+
+  Answer/context quote: “the Great Pyramid (also known as the Pyramid of Cheops or Khufu” (12 words).
+
+  Additional fun-fact quote: “the slightly smaller Pyramid of Khafre” (6 words).
+
+## B13-0119 — Which ancient monument stands beside the pyramids at Giza?
+
+Answer: The Great Sphinx. Fun fact: Giza’s site includes pyramid complexes as well as that monument.
+
+- world-geography-s0051: [Egyptian Ministry of Tourism and Antiquities](https://egymonuments.gov.eg/archaeological-sites/giza-plateau/)
+
+  Answer/context quote: “The pyramids of Giza and the Great Sphinx” (8 words).
+
+- world-geography-s0010: [Wikipedia contributors](https://en.wikipedia.org/wiki/Giza_pyramid_complex)
+
+  Answer/context quote: “along with their associated pyramid complexes and the Great Sphinx” (10 words).
+
+## B13-0120 — Giza’s three main royal pyramids were built during which Egyptian dynasty?
+
+Answer: Fourth. Fun fact: The royal pyramids served as tombs for their kings.
+
+- world-geography-s0051: [Egyptian Ministry of Tourism and Antiquities](https://egymonuments.gov.eg/archaeological-sites/giza-plateau/)
+
+  Answer/context quote: “a king of the 4th Dynasty” (6 words).
+
+  Additional fun-fact quote: “Each of these spectacular structures served as the final resting place of a king” (14 words).
+
+- world-geography-s0010: [Wikipedia contributors](https://en.wikipedia.org/wiki/Giza_pyramid_complex)
+
+  Answer/context quote: “All were built during the Fourth Dynasty of the Old Kingdom of ancient Egypt” (14 words).
+
+  Additional fun-fact quote: “The pyramids were built as tombs for their respective Pharaohs” (10 words).
+
+## B13-0121 — Angkor’s archaeological ruins are in which country?
+
+Answer: Cambodia. Fun fact: They are associated with the Khmer Empire.
+
+- world-geography-s0011: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/668/)
+
+  Answer/context quote: “Angkor, in Cambodia’s northern province of Siem Reap” (8 words).
+
+  Additional fun-fact quote: “the different capitals of the Khmer Empire” (7 words).
+
+- world-geography-s0053: [Wikipedia contributors](https://en.wikipedia.org/wiki/Angkor)
+
+  Answer/context quote: “was the capital city of the Khmer Empire , located in present-day Cambodia” (13 words).
+
+## B13-0122 — Which empire made Angkor its great capital region?
+
+Answer: Khmer. Fun fact: Angkor Wat is one of the region’s famous temples.
+
+- world-geography-s0011: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/668/)
+
+  Answer/context quote: “the magnificent remains of the different capitals of the Khmer Empire” (11 words).
+
+  Additional fun-fact quote: “They include the famous Temple of Angkor Wat” (8 words).
+
+- world-geography-s0053: [Wikipedia contributors](https://en.wikipedia.org/wiki/Angkor)
+
+  Answer/context quote: “was the capital city of the Khmer Empire” (8 words).
+
+  Additional fun-fact quote: “Angkor Wat , a temple complex” (6 words).
+
+## B13-0123 — Near which modern Cambodian city are Angkor’s ruins found?
+
+Answer: Siem Reap. Fun fact: The archaeological landscape contains many temples.
+
+- world-geography-s0011: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/668/)
+
+  Answer/context quote: “Angkor, in Cambodia’s northern province of Siem Reap” (8 words).
+
+  Additional fun-fact quote: “consists of scores of temples” (5 words).
+
+- world-geography-s0053: [Wikipedia contributors](https://en.wikipedia.org/wiki/Angkor)
+
+  Answer/context quote: “near modern-day Siem Reap city” (5 words).
+
+  Additional fun-fact quote: “The site of Angkor has a variety of religious temples” (10 words).
+
+## B13-0124 — What kind of infrastructure made Angkor famous as a “hydraulic city”?
+
+Answer: Water-management networks. Fun fact: Reservoirs and canals were parts of the landscape.
+
+- world-geography-s0011: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/668/)
+
+  Answer/context quote: “hydraulic structures (basins, dykes, reservoirs, canals)” (6 words).
+
+- world-geography-s0053: [Wikipedia contributors](https://en.wikipedia.org/wiki/Angkor)
+
+  Answer/context quote: “a complicated water management network, which was used for systematically stabilizing, storing, and dispersing water throughout the area.” (18 words).
+
+  Additional fun-fact quote: “he also constructed a massive reservoir called baray” (8 words).
+
+## B13-0125 — The ancient Acropolis that is most famous in Greek architecture stands above which city?
+
+Answer: Athens. Fun fact: The Acropolis occupies a rocky hill.
+
+- world-geography-s0013: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/404/)
+
+  Answer/context quote: “The Acropolis of Athens” (4 words).
+
+  Additional fun-fact quote: “transformed the rocky hill into a unique monument” (8 words).
+
+- world-geography-s0014: [Wikipedia contributors](https://en.wikipedia.org/wiki/Acropolis_of_Athens)
+
+  Answer/context quote: “on a rocky outcrop above the city of Athens , Greece” (11 words).
+
+  Additional fun-fact quote: “an ancient citadel located on a rocky outcrop above the city of Athens” (13 words).
+
+## B13-0126 — What name is given to the monumental entrance of the Athenian Acropolis?
+
+Answer: Propylaea. Fun fact: It serves as the gateway to the site.
+
+- world-geography-s0013: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/404/)
+
+  Answer/context quote: “the Propylaea, the monumental entrance to the Acropolis” (8 words).
+
+- world-geography-s0014: [Wikipedia contributors](https://en.wikipedia.org/wiki/Acropolis_of_Athens)
+
+  Answer/context quote: “The entrance to the Acropolis was a monumental gateway termed the Propylaea.” (12 words).
+
+## B13-0127 — Which Athenian statesman coordinated the great fifth-century-BC Acropolis building program?
+
+Answer: Pericles. Fun fact: The program included the Parthenon.
+
+- world-geography-s0013: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/404/)
+
+  Answer/context quote: “the ambitious plans of Athenian statesman Pericles” (7 words).
+
+  Additional fun-fact quote: “the Parthenon, built by Ictinus” (5 words).
+
+- world-geography-s0014: [Wikipedia contributors](https://en.wikipedia.org/wiki/Acropolis_of_Athens)
+
+  Answer/context quote: “were rebuilt by order of Pericles during the so-called Golden Age of Athens (460–430 BC).” (15 words).
+
+  Additional fun-fact quote: “including the Parthenon” (3 words).
+
+## B13-0128 — Which architect designed the Acropolis gateway known as the Propylaea?
+
+Answer: Mnesicles. Fun fact: The structure formed the monumental entrance.
+
+- world-geography-s0013: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/404/)
+
+  Answer/context quote: “the Propylaea, the monumental entrance to the Acropolis, designed by Mnesicles” (11 words).
+
+- world-geography-s0014: [Wikipedia contributors](https://en.wikipedia.org/wiki/Acropolis_of_Athens)
+
+  Answer/context quote: “Mnesicles started building the Propylaea , a monumental gate” (9 words).
+
+## B13-0129 — Rome is the capital of which country?
+
+Answer: Italy. Fun fact: The city stands by the Tiber.
+
+- world-geography-s0015: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/91/)
+
+  Answer/context quote: “it is also the centre of the capital of Italy” (10 words).
+
+  Additional fun-fact quote: “Founded on the banks of the Tiber river” (8 words).
+
+- world-geography-s0052: [Wikipedia contributors](https://en.wikipedia.org/wiki/Rome)
+
+  Answer/context quote: “Rome [ b ] is the capital and largest city of Italy” (12 words).
+
+  Additional fun-fact quote: “along the shores of the Tiber Valley” (7 words).
+
+## B13-0130 — Which river runs through Rome?
+
+Answer: Tiber. Fun fact: Rome was a centre of the Roman Republic.
+
+- world-geography-s0015: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/91/)
+
+  Answer/context quote: “Founded on the banks of the Tiber river” (8 words).
+
+  Additional fun-fact quote: “Rome was first the centre of the Roman Republic” (9 words).
+
+- world-geography-s0052: [Wikipedia contributors](https://en.wikipedia.org/wiki/Rome)
+
+  Answer/context quote: “along the shores of the Tiber Valley” (7 words).
+
+  Additional fun-fact quote: “the capital of the Roman Kingdom , the Roman Republic and the Roman Empire” (14 words).
+
+## B13-0131 — What year does Roman legend traditionally give for Rome’s founding?
+
+Answer: 753 BC. Fun fact: This is a legendary date, rather than proof of the first human settlement.
+
+- world-geography-s0015: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/91/)
+
+  Answer/context quote: “Founded, according to legend, by Romulus and Remus in 753 BC” (11 words).
+
+- world-geography-s0052: [Wikipedia contributors](https://en.wikipedia.org/wiki/Rome)
+
+  Answer/context quote: “While Roman mythology dates the founding of Rome at around 753 BC, the site has been inhabited for much longer” (20 words).
+
+## B13-0132 — Which pair of brothers is associated with the legend of Rome’s founding?
+
+Answer: Romulus and Remus. Fun fact: The story is presented as myth, rather than established archaeology.
+
+- world-geography-s0015: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/91/)
+
+  Answer/context quote: “Founded, according to legend, by Romulus and Remus” (8 words).
+
+- world-geography-s0052: [Wikipedia contributors](https://en.wikipedia.org/wiki/Rome)
+
+  Answer/context quote: “the story of Romulus and Remus , the twins” (9 words).
+
+  Additional fun-fact quote: “in terms of legend and myth” (6 words).
+
+## B13-0133 — Stonehenge stands in which English county?
+
+Answer: Wiltshire. Fun fact: Its setting contains prehistoric stone circles.
+
+- world-geography-s0017: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/373/)
+
+  Answer/context quote: “Stonehenge and Avebury, in Wiltshire” (5 words).
+
+  Additional fun-fact quote: “The two sanctuaries consist of circles of menhirs” (8 words).
+
+- world-geography-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Stonehenge)
+
+  Answer/context quote: “Stonehenge is a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England” (12 words).
+
+  Additional fun-fact quote: “an outer ring of vertical sarsen standing stones” (8 words).
+
+## B13-0134 — Stonehenge’s famous monument is notably aligned with sunrise and sunset around which annual events?
+
+Answer: Solstices. Fun fact: Its standing stones are part of a prehistoric complex.
+
+- world-geography-s0017: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/373/)
+
+  Answer/context quote: “retained their alignment on the Solstice sunrise and sunset” (9 words).
+
+  Additional fun-fact quote: “Stonehenge is one of the most impressive prehistoric megalithic monuments” (10 words).
+
+- world-geography-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Stonehenge)
+
+  Answer/context quote: “aligned towards the sunrise on the summer solstice and sunset on the winter solstice” (14 words).
+
+## B13-0135 — What is the name for a horizontal stone resting across two upright supports at Stonehenge?
+
+Answer: Lintel. Fun fact: Horizontal stones cap parts of its circles and trilithons.
+
+- world-geography-s0017: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/373/)
+
+  Answer/context quote: “huge horizontal stone lintels capping the outer circle and the trilithons” (11 words).
+
+- world-geography-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Stonehenge)
+
+  Answer/context quote: “two bulkier vertical sarsens joined by a single lintel” (9 words).
+
+## B13-0136 — Which pair of stone types is prominent in Stonehenge’s construction?
+
+Answer: Sarsen and bluestone. Fun fact: The smaller inner stones include bluestones.
+
+- world-geography-s0017: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/373/)
+
+  Answer/context quote: “the unique use of two different kinds of stones (Bluestones and Sarsens)” (12 words).
+
+- world-geography-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Stonehenge)
+
+  Answer/context quote: “vertical sarsen standing stones” (4 words).
+
+  Additional fun-fact quote: “Inside is a ring of smaller bluestones” (7 words).
+
+## B13-0137 — The Sydney Opera House overlooks which Australian city’s harbor?
+
+Answer: Sydney. Fun fact: It is a centre for performing arts.
+
+- world-geography-s0019: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/166/)
+
+  Answer/context quote: “a peninsula projecting into Sydney Harbour” (6 words).
+
+  Additional fun-fact quote: “two main performance halls” (4 words).
+
+- world-geography-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/Sydney_Opera_House)
+
+  Answer/context quote: “a multi-venue performing arts centre in Sydney” (7 words).
+
+  Additional fun-fact quote: “Located on the foreshore of Sydney Harbour” (7 words).
+
+## B13-0138 — Which Danish architect won the original Sydney Opera House design competition?
+
+Answer: Jørn Utzon. Fun fact: An international jury selected his design in 1957.
+
+- world-geography-s0019: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/166/)
+
+  Answer/context quote: “In 1957, when the project of the Sydney Opera House was awarded by an international jury to Danish architect Jørn Utzon” (21 words).
+
+- world-geography-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/Sydney_Opera_House)
+
+  Answer/context quote: “Designed by Danish architect Jørn Utzon” (6 words).
+
+  Additional fun-fact quote: “Utzon's 1957 selection as winner of an international design competition” (10 words).
+
+## B13-0139 — In what year was the Sydney Opera House officially opened?
+
+Answer: 1973. Fun fact: Its opening followed Utzon’s design-competition victory.
+
+- world-geography-s0019: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/166/)
+
+  Answer/context quote: “Inaugurated in 1973, the Sydney Opera House” (7 words).
+
+  Additional fun-fact quote: “the project of the Sydney Opera House was awarded by an international jury” (13 words).
+
+- world-geography-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/Sydney_Opera_House)
+
+  Answer/context quote: “formally opened by Queen Elizabeth II on 20 October 1973” (10 words).
+
+  Additional fun-fact quote: “Utzon's 1957 selection as winner of an international design competition” (10 words).
+
+## B13-0140 — The Sydney Opera House roof is popularly described as groups of what shapes?
+
+Answer: Shells. Fun fact: The term describes its distinctive roof forms.
+
+- world-geography-s0019: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/166/)
+
+  Answer/context quote: “three groups of interlocking vaulted ‘shells’ which roof” (8 words).
+
+- world-geography-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/Sydney_Opera_House)
+
+  Answer/context quote: “the roof structures are commonly referred to as "shells"” (9 words).
+
+## B13-0141 — Easter Island is a special territory of which country?
+
+Answer: Chile. Fun fact: The island is also known as Rapa Nui.
+
+- world-geography-s0021: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/715/)
+
+  Answer/context quote: “Rapa Nui National Park is a protected Chilean wildlife area located in Easter Island” (14 words).
+
+  Additional fun-fact quote: “Rapa Nui, the indigenous name of Easter Island” (8 words).
+
+- world-geography-s0022: [Wikipedia contributors](https://en.wikipedia.org/wiki/Easter_Island)
+
+  Answer/context quote: “an island and special territory of Chile” (7 words).
+
+  Additional fun-fact quote: “Rapa Nui : Rapa Nui” (5 words).
+
+## B13-0142 — What is the traditional name for Easter Island’s large monumental stone figures?
+
+Answer: Moai. Fun fact: They were created by the Rapa Nui people.
+
+- world-geography-s0021: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/715/)
+
+  Answer/context quote: “erected enormous stone figures known as moai” (7 words).
+
+  Additional fun-fact quote: “the legacy of the Rapa Nui culture” (7 words).
+
+- world-geography-s0022: [Wikipedia contributors](https://en.wikipedia.org/wiki/Easter_Island)
+
+  Answer/context quote: “monumental statues, called moai , which were created by the early Rapa Nui people” (14 words).
+
+## B13-0143 — Easter Island’s indigenous cultural tradition is associated with which broad Pacific cultural region?
+
+Answer: Polynesia. Fun fact: Its traditional monumental figures are called moai.
+
+- world-geography-s0021: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/715/)
+
+  Answer/context quote: “A society of Polynesian origin” (5 words).
+
+  Additional fun-fact quote: “enormous stone figures known as moai” (6 words).
+
+- world-geography-s0022: [Wikipedia contributors](https://en.wikipedia.org/wiki/Easter_Island)
+
+  Answer/context quote: “the southeasternmost point of the Polynesian Triangle in Oceania” (9 words).
+
+  Additional fun-fact quote: “monumental statues, called moai” (4 words).
+
+## B13-0144 — Rapa Nui is another name for which island?
+
+Answer: Easter Island. Fun fact: It is famous for monumental stone statues.
+
+- world-geography-s0021: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/715/)
+
+  Answer/context quote: “Rapa Nui, the indigenous name of Easter Island” (8 words).
+
+  Additional fun-fact quote: “enormous stone figures known as moai” (6 words).
+
+- world-geography-s0022: [Wikipedia contributors](https://en.wikipedia.org/wiki/Easter_Island)
+
+  Answer/context quote: “Easter Island ( Spanish : Isla de Pascua” (8 words).
+
+  Additional fun-fact quote: “Rapa Nui : Rapa Nui” (5 words).
+
+## B13-0145 — Serengeti National Park is in which country?
+
+Answer: Tanzania. Fun fact: It is famous for annual animal migration.
+
+- world-geography-s0023: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/156/)
+
+  Answer/context quote: “United Republic of Tanzania Date of Inscription” (7 words).
+
+  Additional fun-fact quote: “The annual migration to permanent water holes of vast herds of herbivores” (12 words).
+
+- world-geography-s0024: [Wikipedia contributors](https://en.wikipedia.org/wiki/Serengeti_National_Park)
+
+  Answer/context quote: “The Serengeti National Park is a large national park in northern Tanzania” (12 words).
+
+  Additional fun-fact quote: “known for the largest annual animal migration” (7 words).
+
+## B13-0146 — Which antelope is the main emblem of the enormous Serengeti migration herds?
+
+Answer: Wildebeest. Fun fact: Zebras and gazelles also participate in the migration.
+
+- world-geography-s0023: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/156/)
+
+  Answer/context quote: “the annual migration of two million wildebeests plus hundreds of thousands of gazelles and zebras” (15 words).
+
+- world-geography-s0024: [Wikipedia contributors](https://en.wikipedia.org/wiki/Serengeti_National_Park)
+
+  Answer/context quote: “over 1.5 million western white-bearded wildebeest and 250,000 Grant's zebra , along with between 400-500,000 Thomson's gazelle” (17 words).
+
+## B13-0147 — What broad landscape type characterizes much of Serengeti National Park?
+
+Answer: Savannah. Fun fact: Its plains support large migrating herbivore herds.
+
+- world-geography-s0023: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/156/)
+
+  Answer/context quote: “The vast plains of the Serengeti comprise 1.5 million ha of savannah.” (12 words).
+
+  Additional fun-fact quote: “herds of herbivores (wildebeest, gazelles and zebras)” (7 words).
+
+- world-geography-s0024: [Wikipedia contributors](https://en.wikipedia.org/wiki/Serengeti_National_Park)
+
+  Answer/context quote: “contains over 15,000 km 2 (5,800 sq mi) of savanna” (10 words).
+
+  Additional fun-fact quote: “known for the largest annual animal migration” (7 words).
+
+## B13-0148 — Which striped horse-family animal joins wildebeest in the Serengeti migration?
+
+Answer: Zebra. Fun fact: Gazelles are also among the migrating herbivores.
+
+- world-geography-s0023: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/156/)
+
+  Answer/context quote: “herds of herbivores (wildebeest, gazelles and zebras)” (7 words).
+
+- world-geography-s0024: [Wikipedia contributors](https://en.wikipedia.org/wiki/Serengeti_National_Park)
+
+  Answer/context quote: “Common eland , plains zebra, and Thomson's gazelle join the wildebeest.” (11 words).
+
+## B13-0149 — The Galápagos Islands belong to which country?
+
+Answer: Ecuador. Fun fact: They are an island archipelago in the Pacific.
+
+- world-geography-s0025: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/1/)
+
+  Answer/context quote: “Ecuador Date of Inscription” (4 words).
+
+  Additional fun-fact quote: “Situated in the Pacific Ocean” (5 words).
+
+- world-geography-s0026: [Wikipedia contributors](https://en.wikipedia.org/wiki/Gal%C3%A1pagos_Islands)
+
+  Answer/context quote: “They form the Galápagos Province of the Republic of Ecuador” (10 words).
+
+  Additional fun-fact quote: “an archipelago of volcanic islands in the Eastern Pacific” (9 words).
+
+## B13-0150 — Which naturalist’s visit to the Galápagos famously influenced his thinking about evolution?
+
+Answer: Charles Darwin. Fun fact: The islands have many distinctive endemic species.
+
+- world-geography-s0025: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/1/)
+
+  Answer/context quote: “unusual animal life” (3 words).
+
+  Additional fun-fact quote: “that inspired Charles Darwin’s theory of evolution by natural selection following his visit in 1835.” (15 words).
+
+- world-geography-s0026: [Wikipedia contributors](https://en.wikipedia.org/wiki/Gal%C3%A1pagos_Islands)
+
+  Answer/context quote: “endemic species , which were studied by Charles Darwin in the 1830s and inspired his theory of evolution by means of natural selection” (23 words).
+
+## B13-0151 — Which geological process chiefly formed the Galápagos Islands?
+
+Answer: Volcanism. Fun fact: Volcanic activity remains part of the archipelago’s geology.
+
+- world-geography-s0025: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/1/)
+
+  Answer/context quote: “Ongoing seismic and volcanic activity reflects the processes that formed the islands.” (12 words).
+
+- world-geography-s0026: [Wikipedia contributors](https://en.wikipedia.org/wiki/Gal%C3%A1pagos_Islands)
+
+  Answer/context quote: “an archipelago of volcanic islands in the Eastern Pacific” (9 words).
+
+## B13-0152 — In which ocean are the Galápagos Islands located?
+
+Answer: Pacific. Fun fact: The archipelago consists of volcanic islands.
+
+- world-geography-s0025: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/1/)
+
+  Answer/context quote: “Situated in the Pacific Ocean” (5 words).
+
+  Additional fun-fact quote: “Ongoing seismic and volcanic activity reflects the processes that formed the islands.” (12 words).
+
+- world-geography-s0026: [Wikipedia contributors](https://en.wikipedia.org/wiki/Gal%C3%A1pagos_Islands)
+
+  Answer/context quote: “an archipelago of volcanic islands in the Eastern Pacific” (9 words).
+
+## B13-0153 — The Great Barrier Reef lies off the northeast coast of which country?
+
+Answer: Australia. Fun fact: It is a vast coral-reef system.
+
+- world-geography-s0027: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/154/)
+
+  Answer/context quote: “the north-east coast of Australia” (5 words).
+
+  Additional fun-fact quote: “the world’s largest collection of coral reefs” (7 words).
+
+- world-geography-s0028: [Wikipedia contributors](https://en.wikipedia.org/wiki/Great_Barrier_Reef)
+
+  Answer/context quote: “off the coast of Queensland , Australia” (7 words).
+
+  Additional fun-fact quote: “The Great Barrier Reef is the world's largest coral reef system” (11 words).
+
+## B13-0154 — Which Australian state’s coast faces the Great Barrier Reef?
+
+Answer: Queensland. Fun fact: The reef lies offshore rather than in an inland lake.
+
+- world-geography-s0027: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/154/)
+
+  Answer/context quote: “The GBR, extending 2,000 kilometres along Queensland's coast” (8 words).
+
+  Additional fun-fact quote: “up to 250 kilometres offshore” (5 words).
+
+- world-geography-s0028: [Wikipedia contributors](https://en.wikipedia.org/wiki/Great_Barrier_Reef)
+
+  Answer/context quote: “The reef is located in the Coral Sea , off the coast of Queensland , Australia.” (16 words).
+
+## B13-0155 — Which marine mammal is a noted inhabitant of the Great Barrier Reef?
+
+Answer: Dugong. Fun fact: The reef supports a wide variety of marine life.
+
+- world-geography-s0027: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/154/)
+
+  Answer/context quote: “the habitat of species such as the dugong” (8 words).
+
+  Additional fun-fact quote: “remarkable variety and beauty” (4 words).
+
+- world-geography-s0028: [Wikipedia contributors](https://en.wikipedia.org/wiki/Great_Barrier_Reef)
+
+  Answer/context quote: “Large populations of dugongs live there.” (6 words).
+
+  Additional fun-fact quote: “It supports a wide diversity of life” (7 words).
+
+## B13-0156 — The Great Barrier Reef is chiefly a vast system of what?
+
+Answer: Coral reefs. Fun fact: It is considered the world’s largest coral-reef system.
+
+- world-geography-s0027: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/154/)
+
+  Answer/context quote: “the world’s largest collection of coral reefs” (7 words).
+
+- world-geography-s0028: [Wikipedia contributors](https://en.wikipedia.org/wiki/Great_Barrier_Reef)
+
+  Answer/context quote: “The Great Barrier Reef is the world's largest coral reef system” (11 words).
+
+## B13-0157 — Iguazú Falls span the border between which two countries?
+
+Answer: Argentina and Brazil. Fun fact: They form a large system of waterfalls.
+
+- world-geography-s0029: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/303/)
+
+  Answer/context quote: “spanning the border between Argentina and Brazil” (7 words).
+
+  Additional fun-fact quote: “Made up of many cascades” (5 words).
+
+- world-geography-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Iguazu_Falls)
+
+  Answer/context quote: “Waterfalls on the Iguazú River on the border of Argentina and Brazil” (12 words).
+
+## B13-0158 — Which river forms Iguazú Falls?
+
+Answer: Iguazu. Fun fact: Downstream, it joins the Paraná River.
+
+- world-geography-s0029: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/303/)
+
+  Answer/context quote: “the Iguazú or Iguaçu River, drops vertically” (7 words).
+
+  Additional fun-fact quote: “before it flows into the mighty Parana River” (8 words).
+
+- world-geography-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Iguazu_Falls)
+
+  Answer/context quote: “waterfalls of the Iguazu River” (5 words).
+
+  Additional fun-fact quote: “drains into the Paraná River” (5 words).
+
+## B13-0159 — The bedrock steps of Iguazú Falls are associated with which rock?
+
+Answer: Basalt. Fun fact: The waterfalls descend over a series of rock steps or cascades.
+
+- world-geography-s0029: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/303/)
+
+  Answer/context quote: “situated on a basaltic line” (5 words).
+
+  Additional fun-fact quote: “Made up of many cascades” (5 words).
+
+- world-geography-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Iguazu_Falls)
+
+  Answer/context quote: “a two-step waterfall formed by three layers of basalt” (9 words).
+
+## B13-0160 — The name Iguazú is commonly interpreted as what?
+
+Answer: Great or big water. Fun fact: It is associated with the spectacular waterfall system.
+
+- world-geography-s0029: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/303/)
+
+  Answer/context quote: “The river, aptly named after the indigenous term for “great water”” (11 words).
+
+- world-geography-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Iguazu_Falls)
+
+  Answer/context quote: “meaning 'water', and ûasú [ waˈsu ] , meaning 'big'” (10 words).
+
+## B13-0161 — Victoria Falls lies on the border between which countries?
+
+Answer: Zambia and Zimbabwe. Fun fact: The falls are on the Zambezi River.
+
+- world-geography-s0031: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/509/)
+
+  Answer/context quote: “Mosi-oa-Tunya National Park (Zambia), 2340 ha of Victoria Falls National Park (Zimbabwe)” (12 words).
+
+  Additional fun-fact quote: “The Zambezi River” (3 words).
+
+- world-geography-s0032: [Wikipedia contributors](https://en.wikipedia.org/wiki/Victoria_Falls)
+
+  Answer/context quote: “on the Zambezi River, located on the border between Zambia and Zimbabwe” (12 words).
+
+## B13-0162 — Which river plunges over Victoria Falls?
+
+Answer: Zambezi. Fun fact: The falls create conspicuous spray and mist.
+
+- world-geography-s0031: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/509/)
+
+  Answer/context quote: “The Zambezi River” (3 words).
+
+  Additional fun-fact quote: “raises an iridescent mist” (4 words).
+
+- world-geography-s0032: [Wikipedia contributors](https://en.wikipedia.org/wiki/Victoria_Falls)
+
+  Answer/context quote: “a waterfall on the Zambezi River” (6 words).
+
+  Additional fun-fact quote: “Spray from the falls creates a local rainforest.” (8 words).
+
+## B13-0163 — The gorges around Victoria Falls cut through which type of rock?
+
+Answer: Basalt. Fun fact: The falls lie on the Zambezi River.
+
+- world-geography-s0031: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/509/)
+
+  Answer/context quote: “plunges noisily down a series of basalt gorges” (8 words).
+
+  Additional fun-fact quote: “The Zambezi River” (3 words).
+
+- world-geography-s0032: [Wikipedia contributors](https://en.wikipedia.org/wiki/Victoria_Falls)
+
+  Answer/context quote: “along a fracture zone in the basalt plateau.” (8 words).
+
+  Additional fun-fact quote: “a waterfall on the Zambezi River” (6 words).
+
+## B13-0164 — Which traditional name is also used for Victoria Falls?
+
+Answer: Mosi-oa-Tunya. Fun fact: The World Heritage property recognizes both names.
+
+- world-geography-s0031: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/509/)
+
+  Answer/context quote: “Mosi-oa-Tunya / Victoria Falls” (4 words).
+
+- world-geography-s0032: [Wikipedia contributors](https://en.wikipedia.org/wiki/Victoria_Falls)
+
+  Answer/context quote: “the Lozi language name Mosi-oa-Tunya” (5 words).
+
+  Additional fun-fact quote: “Both names are recognised in the World Heritage List” (9 words).
+
+## B13-0165 — Mount Kilimanjaro is in which country?
+
+Answer: Tanzania. Fun fact: It is the highest mountain in Africa.
+
+- world-geography-s0033: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/403/)
+
+  Answer/context quote: “United Republic of Tanzania Date of Inscription” (7 words).
+
+  Additional fun-fact quote: “Kilimanjaro is the highest point in Africa” (7 words).
+
+- world-geography-s0034: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mount_Kilimanjaro)
+
+  Answer/context quote: “a large dormant stratovolcano in Tanzania” (6 words).
+
+  Additional fun-fact quote: “It is the highest mountain in Africa” (7 words).
+
+## B13-0166 — Kilimanjaro is the highest mountain on which continent?
+
+Answer: Africa. Fun fact: The mountain is volcanic.
+
+- world-geography-s0033: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/403/)
+
+  Answer/context quote: “Kilimanjaro is the highest point in Africa. This volcanic massif” (10 words).
+
+- world-geography-s0034: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mount_Kilimanjaro)
+
+  Answer/context quote: “It is the highest mountain in Africa” (7 words).
+
+  Additional fun-fact quote: “a large dormant stratovolcano” (4 words).
+
+## B13-0167 — What geological kind of mountain is Kilimanjaro?
+
+Answer: A volcano. Fun fact: Its volcanic mass includes several main peaks.
+
+- world-geography-s0033: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/403/)
+
+  Answer/context quote: “This volcanic massif” (3 words).
+
+  Additional fun-fact quote: “It has three main volcanic peaks, Kibo, Mawenzi, and Shira.” (10 words).
+
+- world-geography-s0034: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mount_Kilimanjaro)
+
+  Answer/context quote: “a large dormant stratovolcano composed of three distinct volcanic cones” (10 words).
+
+## B13-0168 — Which is one of Kilimanjaro’s three main volcanic peaks?
+
+Answer: Kibo. Fun fact: Mawenzi and Shira are the other two.
+
+- world-geography-s0033: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/403/)
+
+  Answer/context quote: “It has three main volcanic peaks, Kibo, Mawenzi, and Shira.” (10 words).
+
+- world-geography-s0034: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mount_Kilimanjaro)
+
+  Answer/context quote: “Kibo, the highest; Mawenzi at 5,149 m (16,893 ft) ; [ 13 ] and Shira, the lowest” (17 words).
+
+## B13-0169 — Mount Fuji is an iconic mountain of which country?
+
+Answer: Japan. Fun fact: Its volcanic form has inspired art.
+
+- world-geography-s0035: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/1418/)
+
+  Answer/context quote: “Fujisan an internationally recognized icon of Japan” (7 words).
+
+  Additional fun-fact quote: “19th century woodblock prints of views” (6 words).
+
+- world-geography-s0036: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mount_Fuji)
+
+  Answer/context quote: “located on the Japanese island of Honshu” (7 words).
+
+  Additional fun-fact quote: “It is a Japanese cultural icon and is frequently depicted in art and photography” (14 words).
+
+## B13-0170 — Which shape is particularly associated with Mount Fuji?
+
+Answer: A symmetrical volcanic cone. Fun fact: The mountain is a stratovolcano.
+
+- world-geography-s0035: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/1418/)
+
+  Answer/context quote: “the almost perfect, snow-capped conical form of Fujisan” (8 words).
+
+  Additional fun-fact quote: “Fujisan is a solitary strato-volcano” (5 words).
+
+- world-geography-s0036: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mount_Fuji)
+
+  Answer/context quote: “It has an exceptionally symmetrical cone” (6 words).
+
+  Additional fun-fact quote: “is an active stratovolcano” (4 words).
+
+## B13-0171 — Mount Fuji lies approximately southwest of which Japanese capital city?
+
+Answer: Tokyo. Fun fact: It has been a longstanding subject of Japanese art.
+
+- world-geography-s0035: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/1418/)
+
+  Answer/context quote: “around 100 km south-west of Tokyo” (6 words).
+
+  Additional fun-fact quote: “Its representation in Japanese art goes back to the 11th century” (11 words).
+
+- world-geography-s0036: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mount_Fuji)
+
+  Answer/context quote: “It is located about 100 km (62 mi) southwest of Tokyo” (11 words).
+
+  Additional fun-fact quote: “It has been a frequent subject of Japanese art” (9 words).
+
+## B13-0172 — Which Japanese artist is famous for woodblock views of Mount Fuji?
+
+Answer: Katsushika Hokusai. Fun fact: Fuji’s form is a prominent subject in Japanese art.
+
+- world-geography-s0035: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/1418/)
+
+  Answer/context quote: “the wood block prints of Katsushika Hokusai, such as the Thirty-Six Views of Mount Fuji” (15 words).
+
+- world-geography-s0036: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mount_Fuji)
+
+  Answer/context quote: “as depicted by the woodblock artist Katsushika Hokusai” (8 words).
+
+  Additional fun-fact quote: “It has been a frequent subject of Japanese art” (9 words).
+
+## B13-0173 — Which mountain has the highest summit above sea level on Earth?
+
+Answer: Mount Everest. Fun fact: It is also known in Nepali as Sagarmatha.
+
+- world-geography-s0037: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/120/)
+
+  Answer/context quote: “Mount Sagarmatha (Everest; 8,848 m)” (5 words).
+
+  Additional fun-fact quote: “Mount Everest, the highest peak in the world” (8 words).
+
+- world-geography-s0038: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mount_Everest)
+
+  Answer/context quote: “Mount Everest (known in Nepali as Sagarmāthā” (7 words).
+
+  Additional fun-fact quote: “is the highest mountain on Earth above sea level” (9 words).
+
+## B13-0174 — Mount Everest belongs to which mountain range?
+
+Answer: Himalayas. Fun fact: Its summit lies at the Nepal–China border.
+
+- world-geography-s0037: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/120/)
+
+  Answer/context quote: “peaks of the Great Himalayan Range” (6 words).
+
+  Additional fun-fact quote: “the International boundary between Nepal and the Tibetan Autonomous Region of the People’s Republic of China” (16 words).
+
+- world-geography-s0038: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mount_Everest)
+
+  Answer/context quote: “the Mahalangur Himal sub-range of the Himalayas” (7 words).
+
+  Additional fun-fact quote: “marks part of the China–Nepal border at its summit” (9 words).
+
+## B13-0175 — Sagarmatha National Park, protecting the southern side of Everest, is in which country?
+
+Answer: Nepal. Fun fact: The park includes dramatic mountains and glaciers.
+
+- world-geography-s0037: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/120/)
+
+  Answer/context quote: “Sagarmatha National Park (SNP) covers an area of 124,400 hectares in the Solu-Khumbu district of Nepal.” (16 words).
+
+  Additional fun-fact quote: “An exceptional area with dramatic mountains, glaciers, deep valleys” (9 words).
+
+- world-geography-s0038: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mount_Everest)
+
+  Answer/context quote: “On the Nepalese side, Everest is protected as part of Sagarmatha National Park” (13 words).
+
+  Additional fun-fact quote: “The base camp for Everest expeditions based out of Nepal is located by Khumbu Glacier” (15 words).
+
+## B13-0176 — What Nepali name is used for Mount Everest?
+
+Answer: Sagarmatha. Fun fact: Everest is the world’s highest summit above sea level.
+
+- world-geography-s0037: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/120/)
+
+  Answer/context quote: “Mount Sagarmatha (Everest; 8,848 m)” (5 words).
+
+  Additional fun-fact quote: “Mount Everest, the highest peak in the world” (8 words).
+
+- world-geography-s0038: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mount_Everest)
+
+  Answer/context quote: “Mount Everest (known in Nepali as Sagarmāthā” (7 words).
+
+  Additional fun-fact quote: “is the highest mountain on Earth above sea level” (9 words).
+
+## B13-0177 — Lake Baikal is in which country?
+
+Answer: Russia. Fun fact: It lies in Siberia.
+
+- world-geography-s0039: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/754/)
+
+  Answer/context quote: “Known as the 'Galapagos of Russia'” (6 words).
+
+  Additional fun-fact quote: “Situated in south-east Siberia” (4 words).
+
+- world-geography-s0040: [Wikipedia contributors](https://en.wikipedia.org/wiki/Lake_Baikal)
+
+  Answer/context quote: “It is situated in southern Siberia , Russia” (8 words).
+
+## B13-0178 — Which lake is recognized as the world’s deepest?
+
+Answer: Lake Baikal. Fun fact: It contains freshwater.
+
+- world-geography-s0039: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/754/)
+
+  Answer/context quote: “deepest (1,700 m) lake in the world” (7 words).
+
+  Additional fun-fact quote: “unusual freshwater faunas” (3 words).
+
+- world-geography-s0040: [Wikipedia contributors](https://en.wikipedia.org/wiki/Lake_Baikal)
+
+  Answer/context quote: “Lake Baikal [ a ] is a rift lake and the deepest lake in the world.” (16 words).
+
+  Additional fun-fact quote: “the world's largest freshwater lake by volume” (7 words).
+
+## B13-0179 — Which Siberian lake is widely described as the world’s oldest existing lake?
+
+Answer: Lake Baikal. Fun fact: Many of its species are endemic to the region.
+
+- world-geography-s0039: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/754/)
+
+  Answer/context quote: “Lake Baikal is the oldest” (5 words).
+
+  Additional fun-fact quote: “an outstanding variety of endemic flora and fauna” (8 words).
+
+- world-geography-s0040: [Wikipedia contributors](https://en.wikipedia.org/wiki/Lake_Baikal)
+
+  Answer/context quote: “It is also the world's oldest lake” (7 words).
+
+  Additional fun-fact quote: “many of them endemic to the region” (7 words).
+
+## B13-0180 — Lake Baikal is primarily which kind of lake by water salinity?
+
+Answer: Freshwater. Fun fact: It is a vast inland freshwater reservoir.
+
+- world-geography-s0039: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/754/)
+
+  Answer/context quote: “the world's total unfrozen freshwater reserve” (6 words).
+
+- world-geography-s0040: [Wikipedia contributors](https://en.wikipedia.org/wiki/Lake_Baikal)
+
+  Answer/context quote: “Freshwater rift lake in Russia” (5 words).
+
+  Additional fun-fact quote: “the world's largest freshwater lake by volume” (7 words).
+
+## B13-0181 — Pamukkale’s famous mineral terraces are in which country?
+
+Answer: Turkey. Fun fact: The site is associated with thermal spring water.
+
+- world-geography-s0041: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/485/)
+
+  Answer/context quote: “the plain of Cürüksu in south-west Turkey” (7 words).
+
+  Additional fun-fact quote: “Its hot springs” (3 words).
+
+- world-geography-s0042: [Wikipedia contributors](https://en.wikipedia.org/wiki/Pamukkale)
+
+  Answer/context quote: “is a natural site in Denizli Province in southwestern Turkey” (10 words).
+
+  Additional fun-fact quote: “thermal spring water” (3 words).
+
+## B13-0182 — Which ancient spa city stands beside Pamukkale’s mineral terraces?
+
+Answer: Hierapolis. Fun fact: The archaeological remains include baths and temples.
+
+- world-geography-s0041: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/485/)
+
+  Answer/context quote: “established the thermal spa of Hierapolis. The ruins of the baths, temples” (12 words).
+
+  Additional fun-fact quote: “at Pamukkale” (2 words).
+
+- world-geography-s0042: [Wikipedia contributors](https://en.wikipedia.org/wiki/Pamukkale)
+
+  Answer/context quote: “The ancient Greek city of Hierapolis was built on top of the travertine formation” (14 words).
+
+  Additional fun-fact quote: “Hierapolis was founded as a thermal spa” (7 words).
+
+## B13-0183 — Pamukkale’s terraces are mainly formed by deposits of which mineral compound?
+
+Answer: Calcium carbonate. Fun fact: The deposits build pale mineral terraces and pools.
+
+- world-geography-s0041: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/485/)
+
+  Answer/context quote: “Fresh deposits of calcium carbonate give these formations a dazzling white coating.” (12 words).
+
+  Additional fun-fact quote: “a series of terraced basins” (5 words).
+
+- world-geography-s0042: [Wikipedia contributors](https://en.wikipedia.org/wiki/Pamukkale)
+
+  Answer/context quote: “calcium carbonate is deposited” (4 words).
+
+  Additional fun-fact quote: “mineral-rich waters collect in and cascade down the mineral terraces, into pools below.” (13 words).
+
+## B13-0184 — What color is characteristic of Pamukkale’s mineral terraces?
+
+Answer: White. Fun fact: Spring minerals create that pale coating.
+
+- world-geography-s0041: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/485/)
+
+  Answer/context quote: “Fresh deposits of calcium carbonate give these formations a dazzling white coating.” (12 words).
+
+- world-geography-s0042: [Wikipedia contributors](https://en.wikipedia.org/wiki/Pamukkale)
+
+  Answer/context quote: “the shimmering, snow-white limestone, shaped over millennia by calcite-rich springs” (10 words).
+
+## B13-0185 — The Cappadocia region with Göreme’s rock-cut sites is in which country?
+
+Answer: Turkey. Fun fact: Erosion has sculpted much of its unusual rocky landscape.
+
+- world-geography-s0043: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/357/)
+
+  Answer/context quote: “Türkiye Date of Inscription” (4 words).
+
+  Additional fun-fact quote: “a volcanic landscape sculpted by erosion” (6 words).
+
+- world-geography-s0054: [Encyclopaedia Britannica](https://www.britannica.com/place/Cappadocia)
+
+  Answer/context quote: “in the centre of present-day Turkey” (6 words).
+
+  Additional fun-fact quote: “soft volcanic rock , shaped by erosion into towers, cones, valleys, and caves” (13 words).
+
+## B13-0186 — Which natural process sculpted Cappadocia’s soft volcanic rock into towers and cones?
+
+Answer: Erosion. Fun fact: The region also contains carved churches and underground complexes.
+
+- world-geography-s0043: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/357/)
+
+  Answer/context quote: “a volcanic landscape sculpted by erosion” (6 words).
+
+  Additional fun-fact quote: “rock-hewn cells, churches, troglodyte villages and subterranean cities” (8 words).
+
+- world-geography-s0054: [Encyclopaedia Britannica](https://www.britannica.com/place/Cappadocia)
+
+  Answer/context quote: “soft volcanic rock , shaped by erosion into towers, cones, valleys, and caves.” (13 words).
+
+  Additional fun-fact quote: “Rock-cut churches and underground tunnel complexes” (6 words).
+
+## B13-0187 — Cappadocia’s decorated rock-cut churches are strongly associated with which artistic tradition?
+
+Answer: Byzantine. Fun fact: The churches were carved into the rocky landscape.
+
+- world-geography-s0043: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/357/)
+
+  Answer/context quote: “rock-hewn sanctuaries that provide unique evidence of Byzantine art” (9 words).
+
+- world-geography-s0054: [Encyclopaedia Britannica](https://www.britannica.com/place/Cappadocia)
+
+  Answer/context quote: “Rock-cut churches and underground tunnel complexes from the Byzantine and Islamic eras” (12 words).
+
+## B13-0188 — Cappadocia’s Derinkuyu and Kaymaklı are famous primarily as what?
+
+Answer: Underground cities. Fun fact: They form part of the region’s cave and tunnel heritage.
+
+- world-geography-s0043: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/357/)
+
+  Answer/context quote: “the subterranean cities of Kaymaklı and Derinkuyu.” (7 words).
+
+  Additional fun-fact quote: “cave-dwelling complexes” (2 words).
+
+- world-geography-s0054: [Encyclopaedia Britannica](https://www.britannica.com/place/Cappadocia)
+
+  Answer/context quote: “the sprawling underground cites of Derinkuyu and Kaymaklı” (8 words).
+
+  Additional fun-fact quote: “Cappadocia’s large complexes of man-made caves and tunnels” (8 words).
+
+## B13-0189 — Venice is a famous lagoon city in which country?
+
+Answer: Italy. Fun fact: It is in the Veneto region.
+
+- world-geography-s0045: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/394/)
+
+  Answer/context quote: “Venice and its lagoon situated in the Veneto Region of Northeast Italy” (12 words).
+
+- world-geography-s0046: [Wikipedia contributors](https://en.wikipedia.org/wiki/Venice)
+
+  Answer/context quote: “Venice [ a ] is a coastal city in northeastern Italy and the capital of the region of Veneto” (19 words).
+
+## B13-0190 — Venice lies in which Italian region?
+
+Answer: Veneto. Fun fact: Venice was historically a major maritime power.
+
+- world-geography-s0045: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/394/)
+
+  Answer/context quote: “the Veneto Region of Northeast Italy” (6 words).
+
+  Additional fun-fact quote: “Venice became a major maritime power” (6 words).
+
+- world-geography-s0046: [Wikipedia contributors](https://en.wikipedia.org/wiki/Venice)
+
+  Answer/context quote: “the capital of the region of Veneto” (7 words).
+
+  Additional fun-fact quote: “a major financial and maritime power during the Middle Ages and Renaissance” (12 words).
+
+## B13-0191 — What kind of water feature surrounds Venice’s historic island city?
+
+Answer: A coastal lagoon. Fun fact: Canals also divide and connect parts of the city.
+
+- world-geography-s0045: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/394/)
+
+  Answer/context quote: “Venice and its lagoon” (4 words).
+
+  Additional fun-fact quote: “canals, such as the Giudecca Canal, St Mark's Canal and the Great Canal” (13 words).
+
+- world-geography-s0046: [Wikipedia contributors](https://en.wikipedia.org/wiki/Venice)
+
+  Answer/context quote: “The islands are in the shallow Venetian Lagoon , an enclosed bay” (12 words).
+
+  Additional fun-fact quote: “separated by expanses of open water and by canals” (9 words).
+
+## B13-0192 — Medieval Venice was especially influential as what kind of power?
+
+Answer: Maritime trading power. Fun fact: Its commerce linked it with other Mediterranean powers.
+
+- world-geography-s0045: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/394/)
+
+  Answer/context quote: “Venice became a major maritime power” (6 words).
+
+  Additional fun-fact quote: “defend its trading markets against the commercial undertakings of the Arabs, the Genoese and the Ottoman Turks” (17 words).
+
+- world-geography-s0046: [Wikipedia contributors](https://en.wikipedia.org/wiki/Venice)
+
+  Answer/context quote: “a major financial and maritime power during the Middle Ages and Renaissance” (12 words).
+
+  Additional fun-fact quote: “a flourishing trade centre between Western Europe and the rest of the world” (13 words).
+
+## B13-0193 — Plitvice Lakes National Park is in which country?
+
+Answer: Croatia. Fun fact: Its lakes are linked by waterfalls.
+
+- world-geography-s0049: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/98/)
+
+  Answer/context quote: “Plitvice Lakes National Park, Croatia's largest national park” (8 words).
+
+  Additional fun-fact quote: “Interconnected by many waterfalls and watercourses” (6 words).
+
+- world-geography-s0050: [Wikipedia contributors](https://en.wikipedia.org/wiki/Plitvice_Lakes_National_Park)
+
+  Answer/context quote: “Plitvice Lakes National Park is one of the oldest and largest national parks in Croatia” (15 words).
+
+  Additional fun-fact quote: “connected waterfalls” (2 words).
+
+## B13-0194 — What mineral-built natural barriers help form the Plitvice lake system?
+
+Answer: Tufa or travertine barriers. Fun fact: These barriers slow or hold flowing water.
+
+- world-geography-s0049: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/98/)
+
+  Answer/context quote: “deposited travertine barriers, creating natural dams” (6 words).
+
+- world-geography-s0050: [Wikipedia contributors](https://en.wikipedia.org/wiki/Plitvice_Lakes_National_Park)
+
+  Answer/context quote: “The emerging travertine barriers decelerated and retained the flowing water.” (10 words).
+
+## B13-0195 — Which landscape term describes the geological setting of Plitvice Lakes?
+
+Answer: Karst. Fun fact: The landscape contains interconnected lakes and waterfalls.
+
+- world-geography-s0049: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/98/)
+
+  Answer/context quote: “Within a beautiful karst landscape” (5 words).
+
+  Additional fun-fact quote: “Interconnected by many waterfalls and watercourses” (6 words).
+
+- world-geography-s0050: [Wikipedia contributors](https://en.wikipedia.org/wiki/Plitvice_Lakes_National_Park)
+
+  Answer/context quote: “the mountainous karst area of central Croatia” (7 words).
+
+  Additional fun-fact quote: “series of tufa lakes, caves, and connected waterfalls” (8 words).
+
+## B13-0196 — Which pair of large wild mammals occurs in Plitvice Lakes National Park?
+
+Answer: Bears and wolves. Fun fact: These animals are among the park’s notable fauna.
+
+- world-geography-s0049: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/98/)
+
+  Answer/context quote: “The forests in the park are home to bears, wolves” (10 words).
+
+- world-geography-s0050: [Wikipedia contributors](https://en.wikipedia.org/wiki/Plitvice_Lakes_National_Park)
+
+  Answer/context quote: “home to the European brown bear , grey wolf” (9 words).
+
+## B13-0197 — The Amazon rainforest is principally associated with which continent?
+
+Answer: South America. Fun fact: Jaguars are among its notable animals.
+
+- world-geography-s0059: [National Geographic Kids](https://www.natgeokids.com/uk/discover/geography/physical-geography/amazon-facts/)
+
+  Answer/context quote: “The Amazon is found in South America” (7 words).
+
+  Additional fun-fact quote: “poison dart frogs , jaguars and some seriously venomous snakes” (10 words).
+
+- world-geography-s0056: [Encyclopaedia Britannica](https://www.britannica.com/place/Amazon-Rainforest)
+
+  Answer/context quote: “in northern South America” (4 words).
+
+  Additional fun-fact quote: “Major wildlife includes jaguar” (4 words).
+
+## B13-0198 — Which of these countries contains a large part of the Amazon rainforest?
+
+Answer: Brazil. Fun fact: The forest also extends beyond that country’s borders.
+
+- world-geography-s0061: [National Geographic Society](https://education.nationalgeographic.org/resource/amazon-rainforest/)
+
+  Answer/context quote: “Occupying much of Brazil and Peru, and also parts of Guyana, Colombia, Ecuador, Bolivia, Suriname, French Guiana, and Venezuela” (19 words).
+
+- world-geography-s0056: [Encyclopaedia Britannica](https://www.britannica.com/place/Amazon-Rainforest)
+
+  Answer/context quote: “Comprising about 40 percent of Brazil ’s total area” (9 words).
+
+  Additional fun-fact quote: “In 2007 Ecuador initiated a unique plan to preserve a portion of the forest within its borders” (17 words).
+
+## B13-0199 — Which mountain range borders the Amazon rainforest on its western side?
+
+Answer: Andes. Fun fact: The Amazon basin stretches toward the Atlantic at the other end.
+
+- world-geography-s0056: [Encyclopaedia Britannica](https://www.britannica.com/place/Amazon-Rainforest)
+
+  Answer/context quote: “the Andes Mountains to the west” (6 words).
+
+  Additional fun-fact quote: “the Atlantic Ocean to the east” (6 words).
+
+- world-geography-s0060: [National Geographic Society](https://blog.education.nationalgeographic.org/2024/09/10/beyond-the-canopy-exploring-the-amazon-from-the-andes-to-the-atlantic/)
+
+  Answer/context quote: “the entire Amazon River Basin, from the Andes to the Atlantic.” (11 words).
+
+## B13-0200 — At its eastern end, the Amazon basin reaches which ocean?
+
+Answer: Atlantic. Fun fact: The basin stretches from the Andean region.
+
+- world-geography-s0056: [Encyclopaedia Britannica](https://www.britannica.com/place/Amazon-Rainforest)
+
+  Answer/context quote: “the Atlantic Ocean to the east” (6 words).
+
+  Additional fun-fact quote: “the Andes Mountains to the west” (6 words).
+
+- world-geography-s0060: [National Geographic Society](https://blog.education.nationalgeographic.org/2024/09/10/beyond-the-canopy-exploring-the-amazon-from-the-andes-to-the-atlantic/)
+
+  Answer/context quote: “the entire Amazon River Basin, from the Andes to the Atlantic.” (11 words).
+
 ## B13-0201 — Which chemical element has the symbol H?
 
 Answer: Hydrogen. Fun fact: Hydrogen has atomic number 1.
@@ -2114,9 +3360,9 @@ Answer: Sn. Fun fact: Tin has atomic number 50.
 
 Answer: meter. Fun fact: The symbol for the meter is m.
 
-- science-space-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/SI_base_unit)
+- science-space-s0024: [OpenStax, Rice University](https://openstax.org/books/university-physics-volume-1/pages/1-2-units-and-standards)
 
-  Answer/context quote: “m metre length” (3 words).
+  Answer/context quote: “Length meter (m)” (3 words).
 
 - science-space-s0005: [National Institute of Standards and Technology](https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes)
 
@@ -2126,9 +3372,9 @@ Answer: meter. Fun fact: The symbol for the meter is m.
 
 Answer: kilogram. Fun fact: The symbol for the kilogram is kg.
 
-- science-space-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/SI_base_unit)
+- science-space-s0024: [OpenStax, Rice University](https://openstax.org/books/university-physics-volume-1/pages/1-2-units-and-standards)
 
-  Answer/context quote: “kg kilogram mass” (3 words).
+  Answer/context quote: “Mass kilogram (kg)” (3 words).
 
 - science-space-s0005: [National Institute of Standards and Technology](https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes)
 
@@ -2138,9 +3384,9 @@ Answer: kilogram. Fun fact: The symbol for the kilogram is kg.
 
 Answer: second. Fun fact: The symbol for the second is s.
 
-- science-space-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/SI_base_unit)
+- science-space-s0024: [OpenStax, Rice University](https://openstax.org/books/university-physics-volume-1/pages/1-2-units-and-standards)
 
-  Answer/context quote: “s second time” (3 words).
+  Answer/context quote: “Time second (s)” (3 words).
 
 - science-space-s0005: [National Institute of Standards and Technology](https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes)
 
@@ -2150,9 +3396,9 @@ Answer: second. Fun fact: The symbol for the second is s.
 
 Answer: ampere. Fun fact: The symbol for the ampere is A.
 
-- science-space-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/SI_base_unit)
+- science-space-s0024: [OpenStax, Rice University](https://openstax.org/books/university-physics-volume-1/pages/1-2-units-and-standards)
 
-  Answer/context quote: “A ampere electric current” (4 words).
+  Answer/context quote: “Electrical current ampere (A)” (4 words).
 
 - science-space-s0005: [National Institute of Standards and Technology](https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes)
 
@@ -2162,9 +3408,9 @@ Answer: ampere. Fun fact: The symbol for the ampere is A.
 
 Answer: kelvin. Fun fact: The symbol for the kelvin is K.
 
-- science-space-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/SI_base_unit)
+- science-space-s0024: [OpenStax, Rice University](https://openstax.org/books/university-physics-volume-1/pages/1-2-units-and-standards)
 
-  Answer/context quote: “K kelvin thermodynamic temperature” (4 words).
+  Answer/context quote: “Thermodynamic temperature kelvin (K)” (4 words).
 
 - science-space-s0005: [National Institute of Standards and Technology](https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes)
 
@@ -2174,9 +3420,9 @@ Answer: kelvin. Fun fact: The symbol for the kelvin is K.
 
 Answer: mole. Fun fact: The symbol for the mole is mol.
 
-- science-space-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/SI_base_unit)
+- science-space-s0024: [OpenStax, Rice University](https://openstax.org/books/university-physics-volume-1/pages/1-2-units-and-standards)
 
-  Answer/context quote: “mol mole amount of substance” (5 words).
+  Answer/context quote: “Amount of substance mole (mol)” (5 words).
 
 - science-space-s0005: [National Institute of Standards and Technology](https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes)
 
@@ -2186,9 +3432,9 @@ Answer: mole. Fun fact: The symbol for the mole is mol.
 
 Answer: candela. Fun fact: The symbol for the candela is cd.
 
-- science-space-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/SI_base_unit)
+- science-space-s0024: [OpenStax, Rice University](https://openstax.org/books/university-physics-volume-1/pages/1-2-units-and-standards)
 
-  Answer/context quote: “cd candela luminous intensity” (4 words).
+  Answer/context quote: “Luminous intensity candela (cd)” (4 words).
 
 - science-space-s0005: [National Institute of Standards and Technology](https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes)
 
@@ -2656,33 +3902,35 @@ Answer: 98 degrees. Fun fact: This extreme tilt makes Uranus appear to orbit on 
 
 ## B13-0293 — Which trio is included among the “icy” interior materials of Uranus?
 
-Answer: Water, methane and ammonia. Fun fact: “Icy” describes their chemical composition; the interior material can be a hot dense fluid.
+Answer: Water, methane and ammonia. Fun fact: Uranus is classified as an ice giant, like Neptune.
 
 - science-space-s0019: [NASA Science](https://science.nasa.gov/uranus/facts/)
 
   Answer/context quote: “a hot dense fluid of "icy" materials – water, methane, and ammonia – above a small rocky core.” (18 words).
 
+  Additional fun-fact quote: “Uranus is one of two ice giants in the outer solar system (the other is Neptune).” (16 words).
+
 - science-space-s0013: [OpenStax, Rice University](https://openstax.org/books/astronomy-2e/pages/11-1-exploring-the-outer-planets)
 
   Answer/context quote: “Common ices are water, methane, and ammonia” (7 words).
 
-  Additional fun-fact quote: “the term “ices” refers to composition only and not whether a substance is actually in a solid state.” (18 words).
+  Additional fun-fact quote: “Uranus and Neptune are sometimes called “ice giants”” (8 words).
 
 ## B13-0294 — Which of the eight major planets is farthest from the Sun?
 
-Answer: Neptune. Fun fact: Neptune is one of the two ice giants.
+Answer: Neptune. Fun fact: Neptune takes about 165 Earth years to orbit the Sun.
 
 - science-space-s0014: [NASA Science](https://science.nasa.gov/neptune/facts/)
 
   Answer/context quote: “Neptune is the eighth and most distant planet in our solar system.” (12 words).
 
-  Additional fun-fact quote: “the ice giant” (3 words).
+  Additional fun-fact quote: “Neptune makes a complete orbit around the Sun (a year in Neptunian time) in about 165 Earth years” (18 words).
 
 - science-space-s0018: [OpenStax, Rice University](https://openstax.org/books/astronomy-2e/pages/11-2-the-giant-planets)
 
   Answer/context quote: “Uranus 19.2 84.1 51,200 14 1.3 17.2 Neptune 30.0 164.8” (10 words).
 
-  Additional fun-fact quote: “these ice giants” (3 words).
+  Additional fun-fact quote: “Neptune 30.0 164.8 49,500 17 1.6 16.1” (7 words).
 
 ## B13-0295 — On which planet is the volcano Olympus Mons?
 
@@ -2760,17 +4008,19 @@ Answer: Mercury, Venus, Earth and Mars. Fun fact: Terrestrial planets have solid
 
 ## B13-0300 — What two elements make up most of Saturn?
 
-Answer: Hydrogen and helium. Fun fact: Saturn and Jupiter are both called gas giants.
+Answer: Hydrogen and helium. Fun fact: Saturn’s average density is lower than that of water.
 
 - science-space-s0017: [NASA Science](https://science.nasa.gov/saturn/facts/)
 
   Answer/context quote: “Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.” (16 words).
 
+  Additional fun-fact quote: “Saturn is the only planet in our solar system with an average density that is less than water.” (18 words).
+
 - science-space-s0018: [OpenStax, Rice University](https://openstax.org/books/astronomy-2e/pages/11-2-the-giant-planets)
 
   Answer/context quote: “the interiors of Jupiter and Saturn are composed primarily of hydrogen and helium.” (13 words).
 
-  Additional fun-fact quote: “the gas giants” (3 words).
+  Additional fun-fact quote: “Since this is less than the density of water, Saturn would be light enough to float.” (16 words).
 
 ## B13-0301 — Giant pandas use their 'pseudo-thumb' to hold stalks of which plant?
 
@@ -3060,7 +4310,7 @@ Answer: Branches and leaves. Fun fact: These nests may be built either on the gr
 
 ## B13-0322 — What is the characteristic hair color of a Bornean orangutan?
 
-Answer: Orange-red. Fun fact: Its long arms help it move through the tree canopy.
+Answer: Reddish. Fun fact: Its arms are very long.
 
 - animals-nature-s0013: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/orangutan)
 
@@ -3068,9 +4318,9 @@ Answer: Orange-red. Fun fact: Its long arms help it move through the tree canopy
 
   Additional fun-fact quote: “are very well adapted to life in the trees, with arms much longer than their legs.” (16 words).
 
-- animals-nature-s0014: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Pongo_pygmaeus/)
+- animals-nature-s0060: [Wikipedia contributors](https://en.wikipedia.org/wiki/Bornean_orangutan)
 
-  Answer/context quote: “Bornean orangutans have orange-red hair and long arms, which are advantageous for traveling through the canopy.” (16 words).
+  Answer/context quote: “It has a coarse, reddish coat and up to 1.5 m (4 ft 11 in) long arms.” (17 words).
 
 ## B13-0323 — What name is used for the broad cheek pads of some adult male orangutans?
 
@@ -3080,39 +4330,39 @@ Answer: Flanges. Fun fact: Adult males can develop these conspicuous facial pads
 
   Answer/context quote: “Flanged males (males with flanges, also known as cheek pads)” (10 words).
 
-- animals-nature-s0014: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Pongo_pygmaeus/)
+- animals-nature-s0060: [Wikipedia contributors](https://en.wikipedia.org/wiki/Bornean_orangutan)
 
-  Answer/context quote: “Males also develop large cheek pads known as flanges” (9 words).
+  Answer/context quote: “It also has large, fatty cheek pads known as flanges” (10 words).
 
-## B13-0324 — Where do Bornean orangutans normally construct their sleeping nests?
+## B13-0324 — How often do orangutans usually build a fresh sleeping nest?
 
-Answer: In trees. Fun fact: Their hair is characteristically orange or reddish.
+Answer: Each night. Fun fact: They sometimes reuse an older nest.
 
 - animals-nature-s0013: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/orangutan)
 
-  Answer/context quote: “Orangutans typically build sleeping nests above the ground in various positions of one or more trees.” (16 words).
+  Answer/context quote: “They usually build and sleep in a fresh nest each night” (11 words).
 
-  Additional fun-fact quote: “Orangutans have long, sparse orange or reddish hair” (8 words).
+  Additional fun-fact quote: “they will sometimes re-enter or rebuild an older nest.” (9 words).
 
-- animals-nature-s0014: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Pongo_pygmaeus/)
+- animals-nature-s0063: [San Diego Zoo Animals & Plants](https://animals.sandiegozoo.org/animals/orangutan)
 
-  Answer/context quote: “Bornean orangutans sleep in nest platforms made of vegetation 40 to 60 feet off the ground.” (16 words).
-
-  Additional fun-fact quote: “Bornean orangutans have orange-red hair” (5 words).
+  Answer/context quote: “They usually build a new nest every night, but may occasionally reuse one.” (13 words).
 
 ## B13-0325 — Which food is the main component of a Bornean orangutan’s diet?
 
-Answer: Fruit. Fun fact: By eating fruit, orangutans help disperse seeds.
+Answer: Fruit. Fun fact: Flowers are also among their foods.
 
 - animals-nature-s0013: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/orangutan)
 
   Answer/context quote: “Orangutans eat primarily fruit and play an important role dispersing seeds through defecation.” (13 words).
 
-- animals-nature-s0014: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Pongo_pygmaeus/)
+  Additional fun-fact quote: “orangutans also eat insects and flowers” (6 words).
 
-  Answer/context quote: “Bornean orangutans are frugivorous” (4 words).
+- animals-nature-s0063: [San Diego Zoo Animals & Plants](https://animals.sandiegozoo.org/animals/orangutan)
 
-  Additional fun-fact quote: “they play a vital role in seed dispersal” (8 words).
+  Answer/context quote: “Orangutans eat lots of ripe fruits—up to 100 kinds. Figs, along with fruit of the durian tree, are most common.” (20 words).
+
+  Additional fun-fact quote: “they eat leaves, flowers, bark, honey, termites, ants and other insects, and even bird eggs.” (15 words).
 
 ## B13-0326 — How many fingerlike projections are at the tip of an Asian elephant’s trunk?
 
@@ -3230,15 +4480,15 @@ Answer: Dense fur. Fun fact: Its feet have fur even on their undersides.
 
 ## B13-0334 — What supplies the pigments responsible for an American flamingo’s pink plumage?
 
-Answer: Its food. Fun fact: Dietary pigments become incorporated into growing feathers.
+Answer: Its food. Fun fact: The pink coloration depends on pigments in what the birds eat.
 
 - animals-nature-s0023: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/american-flamingo)
 
   Answer/context quote: “A pigment in their food gives their feathers their flamboyant pink color.” (12 words).
 
-- animals-nature-s0024: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Phoenicopterus_ruber/)
+- animals-nature-s0064: [San Diego Zoo Animals & Plants](https://animals.sandiegozoo.org/animals/flamingo)
 
-  Answer/context quote: “as the flamingo ages and incorporates carotenoid compounds from its diet into new growth.” (14 words).
+  Answer/context quote: “color comes from the rich sources of carotenoid pigments (like the pigments of carrots) in the algae and small crustaceans the birds eat.” (23 words).
 
 ## B13-0335 — What color are an adult American flamingo’s flight feathers?
 
@@ -3248,9 +4498,11 @@ Answer: Black. Fun fact: These dark feathers contrast with its pink body plumage
 
   Answer/context quote: “A flamingo's plumage is a distinctive pink color with black flight feathers along the edges of the wings.” (18 words).
 
-- animals-nature-s0024: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Phoenicopterus_ruber/)
+- animals-nature-s0061: [Wikipedia contributors](https://en.wikipedia.org/wiki/American_flamingo)
 
-  Answer/context quote: “Adults have primarily pink plumage with black flight feathers only visible in flight.” (13 words).
+  Answer/context quote: “the primary and secondary flight feathers are black.” (8 words).
+
+  Additional fun-fact quote: “Most of its plumage is pink” (6 words).
 
 ## B13-0336 — What general shape does an American flamingo’s nest have?
 
@@ -3260,11 +4512,11 @@ Answer: A raised mound. Fun fact: Both partners help build the nest.
 
   Answer/context quote: “both parents help build a volcano-shaped nest” (7 words).
 
-- animals-nature-s0024: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Phoenicopterus_ruber/)
+- animals-nature-s0064: [San Diego Zoo Animals & Plants](https://animals.sandiegozoo.org/animals/flamingo)
 
-  Answer/context quote: “The nest is a small mound approximately twelve inches high, circular, and with a depressed center” (16 words).
+  Answer/context quote: “A flamingo nest is not fancy, just a mound of mud” (11 words).
 
-  Additional fun-fact quote: “When the mating is complete, both birds will build a nest from the mud.” (14 words).
+  Additional fun-fact quote: “Both the male and female build the nest” (8 words).
 
 ## B13-0337 — How many eggs does an American flamingo pair usually lay in one breeding cycle?
 
@@ -3276,11 +4528,11 @@ Answer: One. Fun fact: Both parents take part in incubation.
 
   Additional fun-fact quote: “both parents help build a volcano-shaped nest, where they lay a single egg that they then incubate for about 28 days.” (21 words).
 
-- animals-nature-s0024: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Phoenicopterus_ruber/)
+- animals-nature-s0061: [Wikipedia contributors](https://en.wikipedia.org/wiki/American_flamingo)
 
-  Answer/context quote: “A pair of flamingos will usually lay a single egg once per breeding cycle.” (14 words).
+  Answer/context quote: “it lays a single chalky-white egg on a mud mound” (10 words).
 
-  Additional fun-fact quote: “The egg is incubated by both parents” (7 words).
+  Additional fun-fact quote: “The egg is attended constantly and equally by alternating parents.” (10 words).
 
 ## B13-0338 — Which species is the largest living bird?
 
@@ -3402,11 +4654,13 @@ Answer: A casque. Fun fact: The structure is on top of the head.
 
   Answer/context quote: “One of the cassowary’s most unique and dinosaur-like features is the casque atop its head.” (15 words).
 
-- animals-nature-s0030: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Casuarius_casuarius/)
+- animals-nature-s0062: [Wikipedia contributors](https://en.wikipedia.org/wiki/Southern_cassowary)
 
-  Answer/context quote: “On their heads there is a large bony casque which is made of trabecular bone and cartilage.” (17 words).
+  Answer/context quote: “A horn-like brown casque” (4 words).
 
-## B13-0347 — What is the main food in a southern cassowary’s diet?
+  Additional fun-fact quote: “sits atop the head.” (4 words).
+
+## B13-0347 — Southern cassowaries commonly forage for which fallen food in forests?
 
 Answer: Fruit. Fun fact: It eats fruit in its forest habitat.
 
@@ -3414,9 +4668,9 @@ Answer: Fruit. Fun fact: It eats fruit in its forest habitat.
 
   Answer/context quote: “cassowaries mostly eat fruits.” (4 words).
 
-- animals-nature-s0030: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Casuarius_casuarius/)
+- animals-nature-s0062: [Wikipedia contributors](https://en.wikipedia.org/wiki/Southern_cassowary)
 
-  Answer/context quote: “Southern cassowaries are frugivorous, feeding mostly on fruits from canopy species in the forests where they live.” (17 words).
+  Answer/context quote: “Southern cassowaries forage on the forest floor for fallen fruit and seeds” (12 words).
 
 ## B13-0348 — How are southern cassowary eggs normally incubated?
 
@@ -3428,11 +4682,11 @@ Answer: The male broods them. Fun fact: Female cassowaries are generally larger 
 
   Additional fun-fact quote: “Females are slightly larger than males” (6 words).
 
-- animals-nature-s0030: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Casuarius_casuarius/)
+- animals-nature-s0062: [Wikipedia contributors](https://en.wikipedia.org/wiki/Southern_cassowary)
 
-  Answer/context quote: “Incubation, which is exclusively done by the males” (8 words).
+  Answer/context quote: “The male also incubates the eggs and raises the chicks alone.” (11 words).
 
-  Additional fun-fact quote: “Females are 127 to 170 cm long and up to 59 kg, are larger than the males” (17 words).
+  Additional fun-fact quote: “the female is dominant and larger” (6 words).
 
 ## B13-0349 — Female-biased adult body size is characteristic of which animal here?
 
@@ -3444,11 +4698,11 @@ Answer: Southern cassowary. Fun fact: Males incubate the eggs.
 
   Additional fun-fact quote: “Males are the sole caregivers, incubating the eggs by themselves” (10 words).
 
-- animals-nature-s0030: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Casuarius_casuarius/)
+- animals-nature-s0062: [Wikipedia contributors](https://en.wikipedia.org/wiki/Southern_cassowary)
 
-  Answer/context quote: “Females are 127 to 170 cm long and up to 59 kg, are larger than the males” (17 words).
+  Answer/context quote: “the female is dominant and larger” (6 words).
 
-  Additional fun-fact quote: “Incubation, which is exclusively done by the males” (8 words).
+  Additional fun-fact quote: “The male also incubates the eggs and raises the chicks alone.” (11 words).
 
 ## B13-0350 — Which insects are a staple food for sloth bears?
 
@@ -3840,7 +5094,7 @@ Answer: To protect its claws. Fun fact: Its front claws are used to open insect 
 
   Additional fun-fact quote: “Using the long, sharp claws on their forelimbs, they open insect colonies and tree trunks.” (15 words).
 
-## B13-0378 — How can a southern three-banded armadillo defend itself when threatened?
+## B13-0378 — How does a three-banded armadillo completely enclose its body in its own armor?
 
 Answer: Roll into a complete ball. Fun fact: Its shell can close around the body.
 
@@ -4038,7 +5292,7 @@ Answer: Crabs and mollusks. Fun fact: Shellfish are among their aquatic prey.
 
   Answer/context quote: “It feeds on molluscs , crabs and other small aquatic animals .” (12 words).
 
-## B13-0393 — Which coastal habitat can support Asian small-clawed otters?
+## B13-0393 — Which forested tidal wetland habitat do Asian small-clawed otters inhabit?
 
 Answer: Mangrove swamps. Fun fact: They also live in rivers.
 
@@ -4147,6 +5401,646 @@ Answer: Bears. Fun fact: Strong jaws help it crush bamboo.
   Answer/context quote: “scientists have confirmed the panda's relationship with bears.” (8 words).
 
   Additional fun-fact quote: “Strong jawbones and cheek muscles help pandas crush and chew the thick stalks” (13 words).
+
+## B13-0401 — On which date was the Declaration of Independence adopted?
+
+Answer: July 4, 1776. Fun fact: The Declaration announced the independence of thirteen colonies.
+
+- us-history-civics-s0001: [Encyclopaedia Britannica](https://www.britannica.com/topic/Declaration-of-Independence)
+
+  Answer/context quote: “approved by the Continental Congress on July 4, 1776” (9 words).
+
+  Additional fun-fact quote: “separation of 13 North American British colonies” (7 words).
+
+- us-history-civics-s0002: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence)
+
+  Answer/context quote: “On July 4, 1776, it was adopted unanimously by the Second Continental Congress” (13 words).
+
+  Additional fun-fact quote: “The Declaration explains why the Thirteen Colonies regarded themselves as independent sovereign states” (13 words).
+
+## B13-0402 — How many British colonies declared their independence in 1776?
+
+Answer: 13. Fun fact: The thirteen colonies declared independence from Great Britain.
+
+- us-history-civics-s0001: [Encyclopaedia Britannica](https://www.britannica.com/topic/Declaration-of-Independence)
+
+  Answer/context quote: “separation of 13 North American British colonies” (7 words).
+
+  Additional fun-fact quote: “British colonies from Great Britain” (5 words).
+
+- us-history-civics-s0002: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence)
+
+  Answer/context quote: “The Declaration explains why the Thirteen Colonies regarded themselves as independent sovereign states” (13 words).
+
+  Additional fun-fact quote: “independence from the Kingdom of Great Britain” (7 words).
+
+## B13-0403 — The Declaration of Independence announced separation from which country?
+
+Answer: Great Britain. Fun fact: Congress adopted the Declaration at the Pennsylvania State House in Philadelphia.
+
+- us-history-civics-s0001: [Encyclopaedia Britannica](https://www.britannica.com/topic/Declaration-of-Independence)
+
+  Answer/context quote: “British colonies from Great Britain” (5 words).
+
+  Additional fun-fact quote: “Pennsylvania State House (now Independence Hall) in Philadelphia” (8 words).
+
+- us-history-civics-s0002: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence)
+
+  Answer/context quote: “independence from the Kingdom of Great Britain” (7 words).
+
+  Additional fun-fact quote: “Pennsylvania State House, later renamed Independence Hall , in Philadelphia” (10 words).
+
+## B13-0404 — In which city did Congress adopt the Declaration of Independence?
+
+Answer: Philadelphia. Fun fact: Congress adopted the Declaration of Independence on July 4, 1776.
+
+- us-history-civics-s0001: [Encyclopaedia Britannica](https://www.britannica.com/topic/Declaration-of-Independence)
+
+  Answer/context quote: “Pennsylvania State House (now Independence Hall) in Philadelphia” (8 words).
+
+  Additional fun-fact quote: “approved by the Continental Congress on July 4, 1776” (9 words).
+
+- us-history-civics-s0002: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence)
+
+  Answer/context quote: “Pennsylvania State House, later renamed Independence Hall , in Philadelphia” (10 words).
+
+  Additional fun-fact quote: “On July 4, 1776, it was adopted unanimously by the Second Continental Congress” (13 words).
+
+## B13-0405 — In what year was the US Constitution drafted at its convention?
+
+Answer: 1787. Fun fact: The Constitution superseded the Articles of Confederation.
+
+- us-history-civics-s0003: [Encyclopaedia Britannica](https://www.britannica.com/topic/Constitution-of-the-United-States-of-America)
+
+  Answer/context quote: “written during the summer of 1787” (6 words).
+
+  Additional fun-fact quote: “called ostensibly to amend the Articles of Confederation” (8 words).
+
+- us-history-civics-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Constitution_of_the_United_States)
+
+  Answer/context quote: “between May 25 and September 17, 1787” (7 words).
+
+  Additional fun-fact quote: “It superseded the Articles of Confederation” (6 words).
+
+## B13-0406 — Which governing document did the US Constitution replace?
+
+Answer: Articles of Confederation. Fun fact: The Great Compromise produced a bicameral Congress with a Senate and House.
+
+- us-history-civics-s0003: [Encyclopaedia Britannica](https://www.britannica.com/topic/Constitution-of-the-United-States-of-America)
+
+  Answer/context quote: “called ostensibly to amend the Articles of Confederation” (8 words).
+
+  Additional fun-fact quote: “created a bicameral legislature with a Senate” (7 words).
+
+- us-history-civics-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Constitution_of_the_United_States)
+
+  Answer/context quote: “It superseded the Articles of Confederation” (6 words).
+
+  Additional fun-fact quote: “the legislative , bicameral Congress” (5 words).
+
+## B13-0407 — The Great Compromise created a Congress with how many chambers?
+
+Answer: Two. Fun fact: Article VII required nine states to ratify the Constitution.
+
+- us-history-civics-s0003: [Encyclopaedia Britannica](https://www.britannica.com/topic/Constitution-of-the-United-States-of-America)
+
+  Answer/context quote: “created a bicameral legislature with a Senate” (7 words).
+
+  Additional fun-fact quote: “ratified by nine states (as required by Article VII)” (9 words).
+
+- us-history-civics-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Constitution_of_the_United_States)
+
+  Answer/context quote: “the legislative , bicameral Congress” (5 words).
+
+  Additional fun-fact quote: “Article VII called for ratification by just nine of the 13 states” (12 words).
+
+## B13-0408 — How many states had to ratify the Constitution for it to take effect under Article VII?
+
+Answer: Nine. Fun fact: The Constitutional Convention drafted the Constitution in 1787.
+
+- us-history-civics-s0003: [Encyclopaedia Britannica](https://www.britannica.com/topic/Constitution-of-the-United-States-of-America)
+
+  Answer/context quote: “ratified by nine states (as required by Article VII)” (9 words).
+
+  Additional fun-fact quote: “written during the summer of 1787” (6 words).
+
+- us-history-civics-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Constitution_of_the_United_States)
+
+  Answer/context quote: “Article VII called for ratification by just nine of the 13 states” (12 words).
+
+  Additional fun-fact quote: “between May 25 and September 17, 1787” (7 words).
+
+## B13-0409 — How many amendments make up the US Bill of Rights?
+
+Answer: Ten. Fun fact: The first ten amendments were ratified on December 15, 1791.
+
+- us-history-civics-s0005: [Encyclopaedia Britannica](https://www.britannica.com/topic/Bill-of-Rights-United-States-Constitution)
+
+  Answer/context quote: “the first 10 amendments to the U.S. Constitution” (8 words).
+
+  Additional fun-fact quote: “adopted as a single unit on December 15, 1791” (9 words).
+
+- us-history-civics-s0006: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Bill_of_Rights)
+
+  Answer/context quote: “the first ten amendments to the United States Constitution” (9 words).
+
+  Additional fun-fact quote: “ratified as additions to the Constitution on December 15, 1791” (10 words).
+
+## B13-0410 — In which year were the first ten Bill of Rights amendments ratified?
+
+Answer: 1791. Fun fact: Congress initially submitted twelve proposed amendments.
+
+- us-history-civics-s0005: [Encyclopaedia Britannica](https://www.britannica.com/topic/Bill-of-Rights-United-States-Constitution)
+
+  Answer/context quote: “adopted as a single unit on December 15, 1791” (9 words).
+
+  Additional fun-fact quote: “submitting to the states 12 amendments. Ten were ratified” (9 words).
+
+- us-history-civics-s0006: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Bill_of_Rights)
+
+  Answer/context quote: “ratified as additions to the Constitution on December 15, 1791” (10 words).
+
+  Additional fun-fact quote: “Congress approved twelve articles of amendment on September 25, 1789” (10 words).
+
+## B13-0411 — How many amendments did Congress originally submit in the Bill of Rights proposal?
+
+Answer: Twelve. Fun fact: The Bill of Rights expressly protects freedom of speech.
+
+- us-history-civics-s0005: [Encyclopaedia Britannica](https://www.britannica.com/topic/Bill-of-Rights-United-States-Constitution)
+
+  Answer/context quote: “submitting to the states 12 amendments. Ten were ratified” (9 words).
+
+  Additional fun-fact quote: “abridging freedom of speech or press” (6 words).
+
+- us-history-civics-s0006: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Bill_of_Rights)
+
+  Answer/context quote: “Congress approved twelve articles of amendment on September 25, 1789” (10 words).
+
+  Additional fun-fact quote: “specific guarantees of personal freedoms, such as freedom of speech” (10 words).
+
+## B13-0412 — Which freedom is expressly protected by the US Bill of Rights?
+
+Answer: Freedom of speech. Fun fact: The Bill of Rights comprises the first ten constitutional amendments.
+
+- us-history-civics-s0005: [Encyclopaedia Britannica](https://www.britannica.com/topic/Bill-of-Rights-United-States-Constitution)
+
+  Answer/context quote: “abridging freedom of speech or press” (6 words).
+
+  Additional fun-fact quote: “the first 10 amendments to the U.S. Constitution” (8 words).
+
+- us-history-civics-s0006: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Bill_of_Rights)
+
+  Answer/context quote: “specific guarantees of personal freedoms, such as freedom of speech” (10 words).
+
+  Additional fun-fact quote: “the first ten amendments to the United States Constitution” (9 words).
+
+## B13-0413 — Which 1789 law organized the original US Supreme Court?
+
+Answer: Judiciary Act. Fun fact: The president nominates Supreme Court justices.
+
+- us-history-civics-s0007: [Encyclopaedia Britannica](https://www.britannica.com/topic/Supreme-Court-of-the-United-States)
+
+  Answer/context quote: “Congress passed the Judiciary Act of 1789” (7 words).
+
+  Additional fun-fact quote: “appointments to the Supreme Court and to lower federal courts are made by the president” (15 words).
+
+- us-history-civics-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/Supreme_Court_of_the_United_States)
+
+  Answer/context quote: “originally established by the 1st Congress through the Judiciary Act of 1789” (12 words).
+
+  Additional fun-fact quote: “the president , with the advice and consent of the Senate , appoints a new justice” (16 words).
+
+## B13-0414 — Which official nominates justices to the US Supreme Court?
+
+Answer: President. Fun fact: The Senate gives advice and consent to Supreme Court appointments.
+
+- us-history-civics-s0007: [Encyclopaedia Britannica](https://www.britannica.com/topic/Supreme-Court-of-the-United-States)
+
+  Answer/context quote: “appointments to the Supreme Court and to lower federal courts are made by the president” (15 words).
+
+  Additional fun-fact quote: “made by the president with the advice and consent of the Senate” (12 words).
+
+- us-history-civics-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/Supreme_Court_of_the_United_States)
+
+  Answer/context quote: “the president , with the advice and consent of the Senate , appoints a new justice” (16 words).
+
+  Additional fun-fact quote: “the president , with the advice and consent of the Senate , appoints a new justice” (16 words).
+
+## B13-0415 — Which chamber gives advice and consent on Supreme Court appointments?
+
+Answer: Senate. Fun fact: The original Supreme Court had one chief justice and five associate justices.
+
+- us-history-civics-s0007: [Encyclopaedia Britannica](https://www.britannica.com/topic/Supreme-Court-of-the-United-States)
+
+  Answer/context quote: “made by the president with the advice and consent of the Senate” (12 words).
+
+  Additional fun-fact quote: “From 1789 to 1807 the Court comprised six justices” (9 words).
+
+- us-history-civics-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/Supreme_Court_of_the_United_States)
+
+  Answer/context quote: “the president , with the advice and consent of the Senate , appoints a new justice” (16 words).
+
+  Additional fun-fact quote: “a chief justice and five associate justices through the Judiciary Act of 1789” (13 words).
+
+## B13-0416 — Under the Judiciary Act of 1789, how many Supreme Court seats were initially established?
+
+Answer: Six. Fun fact: The Judiciary Act of 1789 organized the original Supreme Court.
+
+- us-history-civics-s0007: [Encyclopaedia Britannica](https://www.britannica.com/topic/Supreme-Court-of-the-United-States)
+
+  Answer/context quote: “From 1789 to 1807 the Court comprised six justices” (9 words).
+
+  Additional fun-fact quote: “Congress passed the Judiciary Act of 1789” (7 words).
+
+- us-history-civics-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/Supreme_Court_of_the_United_States)
+
+  Answer/context quote: “a chief justice and five associate justices through the Judiciary Act of 1789” (13 words).
+
+  Additional fun-fact quote: “originally established by the 1st Congress through the Judiciary Act of 1789” (12 words).
+
+## B13-0417 — Under the US Constitution, how many senators represent each state?
+
+Answer: Two. Fun fact: US senators serve staggered six-year terms.
+
+- us-history-civics-s0009: [Encyclopaedia Britannica](https://www.britannica.com/topic/Senate-United-States-government)
+
+  Answer/context quote: “Each state elects two senators” (5 words).
+
+  Additional fun-fact quote: “two senators for six-year terms” (5 words).
+
+- us-history-civics-s0010: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Senate)
+
+  Answer/context quote: “Each of the 50 states is represented by two senators” (10 words).
+
+  Additional fun-fact quote: “two senators who serve staggered six-year terms” (7 words).
+
+## B13-0418 — How long is one regular term for a US senator?
+
+Answer: Six years. Fun fact: The Seventeenth Amendment replaced legislative selection with popular election of senators.
+
+- us-history-civics-s0009: [Encyclopaedia Britannica](https://www.britannica.com/topic/Senate-United-States-government)
+
+  Answer/context quote: “two senators for six-year terms” (5 words).
+
+  Additional fun-fact quote: “until the Seventeenth Amendment of the Constitution (1913), election to the Senate was indirect” (14 words).
+
+- us-history-civics-s0010: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Senate)
+
+  Answer/context quote: “two senators who serve staggered six-year terms” (7 words).
+
+  Additional fun-fact quote: “following ratification of the Seventeenth Amendment , senators have been elected by statewide popular vote” (15 words).
+
+## B13-0419 — Which amendment established direct popular election of US senators?
+
+Answer: Seventeenth. Fun fact: The vice president presides over the Senate and can break a tie.
+
+- us-history-civics-s0009: [Encyclopaedia Britannica](https://www.britannica.com/topic/Senate-United-States-government)
+
+  Answer/context quote: “until the Seventeenth Amendment of the Constitution (1913), election to the Senate was indirect” (14 words).
+
+  Additional fun-fact quote: “vice president of the United States serves as the president of the Senate but can vote only in instances where there is a tie” (24 words).
+
+- us-history-civics-s0010: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Senate)
+
+  Answer/context quote: “following ratification of the Seventeenth Amendment , senators have been elected by statewide popular vote” (15 words).
+
+  Additional fun-fact quote: “they vote only if and when the Senate is equally divided” (11 words).
+
+## B13-0420 — Which US official may cast a Senate vote when senators are tied?
+
+Answer: Vice president. Fun fact: Each state has two US senators.
+
+- us-history-civics-s0009: [Encyclopaedia Britannica](https://www.britannica.com/topic/Senate-United-States-government)
+
+  Answer/context quote: “vice president of the United States serves as the president of the Senate but can vote only in instances where there is a tie” (24 words).
+
+  Additional fun-fact quote: “Each state elects two senators” (5 words).
+
+- us-history-civics-s0010: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Senate)
+
+  Answer/context quote: “they vote only if and when the Senate is equally divided” (11 words).
+
+  Additional fun-fact quote: “Each of the 50 states is represented by two senators” (10 words).
+
+## B13-0421 — How long is a regular term in the US House of Representatives?
+
+Answer: Two years. Fun fact: House seats are apportioned according to state population.
+
+- us-history-civics-s0011: [Encyclopaedia Britannica](https://www.britannica.com/topic/House-of-Representatives-United-States-government)
+
+  Answer/context quote: “House members are elected for two-year terms” (7 words).
+
+  Additional fun-fact quote: “The allocation of seats is based on the population within the states” (12 words).
+
+- us-history-civics-s0012: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_House_of_Representatives)
+
+  Answer/context quote: “Members of the House serve a fixed term of two years” (11 words).
+
+  Additional fun-fact quote: “on the basis of population as measured by the United States census” (12 words).
+
+## B13-0422 — Seats in the US House are apportioned among states primarily according to what?
+
+Answer: Population. Fun fact: The House initiates impeachment; the Senate conducts the trial.
+
+- us-history-civics-s0011: [Encyclopaedia Britannica](https://www.britannica.com/topic/House-of-Representatives-United-States-government)
+
+  Answer/context quote: “The allocation of seats is based on the population within the states” (12 words).
+
+  Additional fun-fact quote: “right to initiate impeachment proceedings” (5 words).
+
+- us-history-civics-s0012: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_House_of_Representatives)
+
+  Answer/context quote: “on the basis of population as measured by the United States census” (12 words).
+
+  Additional fun-fact quote: “The House's exclusive powers include initiating all revenue bills, impeaching federal officers” (12 words).
+
+## B13-0423 — Which congressional chamber has the power to impeach federal officials?
+
+Answer: House of Representatives. Fun fact: The constitutional minimum age for a representative is twenty-five.
+
+- us-history-civics-s0011: [Encyclopaedia Britannica](https://www.britannica.com/topic/House-of-Representatives-United-States-government)
+
+  Answer/context quote: “right to initiate impeachment proceedings” (5 words).
+
+  Additional fun-fact quote: “a minimum age of 25 years” (6 words).
+
+- us-history-civics-s0012: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_House_of_Representatives)
+
+  Answer/context quote: “The House's exclusive powers include initiating all revenue bills, impeaching federal officers” (12 words).
+
+  Additional fun-fact quote: “be at least twenty-five (25) years old” (7 words).
+
+## B13-0424 — What minimum age does the Constitution require for a US representative?
+
+Answer: 25. Fun fact: Representatives serve two-year terms.
+
+- us-history-civics-s0011: [Encyclopaedia Britannica](https://www.britannica.com/topic/House-of-Representatives-United-States-government)
+
+  Answer/context quote: “a minimum age of 25 years” (6 words).
+
+  Additional fun-fact quote: “House members are elected for two-year terms” (7 words).
+
+- us-history-civics-s0012: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_House_of_Representatives)
+
+  Answer/context quote: “be at least twenty-five (25) years old” (7 words).
+
+  Additional fun-fact quote: “Members of the House serve a fixed term of two years” (11 words).
+
+## B13-0425 — The US Electoral College formally votes for which two offices?
+
+Answer: President and vice president. Fun fact: A state's elector total equals its congressional delegation: representatives plus senators.
+
+- us-history-civics-s0013: [Encyclopaedia Britannica](https://www.britannica.com/topic/Electoral-College-United-States)
+
+  Answer/context quote: “the president and vice president of the United States are chosen” (11 words).
+
+  Additional fun-fact quote: “congressional representation (senators plus representatives)” (5 words).
+
+- us-history-civics-s0014: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Electoral_College)
+
+  Answer/context quote: “voting for the president and vice president in the presidential election” (11 words).
+
+  Additional fun-fact quote: “the number of senators (two) plus the number of Representatives for that state” (13 words).
+
+## B13-0426 — A state's Electoral College allocation equals its representatives plus what?
+
+Answer: Its senators. Fun fact: The Twenty-third Amendment gave the District of Columbia presidential electors.
+
+- us-history-civics-s0013: [Encyclopaedia Britannica](https://www.britannica.com/topic/Electoral-College-United-States)
+
+  Answer/context quote: “congressional representation (senators plus representatives)” (5 words).
+
+  Additional fun-fact quote: “The Twenty-Third Amendment , adopted in 1961, provided Electoral College representation for Washington, D.C.” (14 words).
+
+- us-history-civics-s0014: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Electoral_College)
+
+  Answer/context quote: “the number of senators (two) plus the number of Representatives for that state” (13 words).
+
+  Additional fun-fact quote: “the Twenty-third Amendment granted the federal District of Columbia three electors” (11 words).
+
+## B13-0427 — Which amendment gave Washington, DC representation in the Electoral College?
+
+Answer: Twenty-third. Fun fact: The presidential elector system is described in Article II of the Constitution.
+
+- us-history-civics-s0013: [Encyclopaedia Britannica](https://www.britannica.com/topic/Electoral-College-United-States)
+
+  Answer/context quote: “The Twenty-Third Amendment , adopted in 1961, provided Electoral College representation for Washington, D.C.” (14 words).
+
+  Additional fun-fact quote: “Article II, Section 1, of the Constitution stipulated” (8 words).
+
+- us-history-civics-s0014: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Electoral_College)
+
+  Answer/context quote: “the Twenty-third Amendment granted the federal District of Columbia three electors” (11 words).
+
+  Additional fun-fact quote: “This process is described in Article Two of the Constitution” (10 words).
+
+## B13-0428 — Which original constitutional article describes the presidential elector system?
+
+Answer: Article II. Fun fact: The Electoral College votes for the president and vice president.
+
+- us-history-civics-s0013: [Encyclopaedia Britannica](https://www.britannica.com/topic/Electoral-College-United-States)
+
+  Answer/context quote: “Article II, Section 1, of the Constitution stipulated” (8 words).
+
+  Additional fun-fact quote: “the president and vice president of the United States are chosen” (11 words).
+
+- us-history-civics-s0014: [Wikipedia contributors](https://en.wikipedia.org/wiki/United_States_Electoral_College)
+
+  Answer/context quote: “This process is described in Article Two of the Constitution” (10 words).
+
+  Additional fun-fact quote: “voting for the president and vice president in the presidential election” (11 words).
+
+## B13-0429 — In which year did the United States acquire the Louisiana Purchase?
+
+Answer: 1803. Fun fact: The United States bought the Louisiana territory from France.
+
+- us-history-civics-s0015: [Encyclopaedia Britannica](https://www.britannica.com/event/Louisiana-Purchase)
+
+  Answer/context quote: “purchased in 1803 from France by the United States” (9 words).
+
+  Additional fun-fact quote: “purchased in 1803 from France by the United States” (9 words).
+
+- us-history-civics-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Louisiana_Purchase)
+
+  Answer/context quote: “from the French First Republic in 1803” (7 words).
+
+  Additional fun-fact quote: “by the United States from the French First Republic in 1803” (11 words).
+
+## B13-0430 — Which country sold the Louisiana territory to the United States in 1803?
+
+Answer: France. Fun fact: Thomas Jefferson was president during the Louisiana Purchase.
+
+- us-history-civics-s0015: [Encyclopaedia Britannica](https://www.britannica.com/event/Louisiana-Purchase)
+
+  Answer/context quote: “purchased in 1803 from France by the United States” (9 words).
+
+  Additional fun-fact quote: “Pres. Thomas Jefferson was confronted” (5 words).
+
+- us-history-civics-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Louisiana_Purchase)
+
+  Answer/context quote: “by the United States from the French First Republic in 1803” (11 words).
+
+  Additional fun-fact quote: “Acquisition of Louisiana was a long-term goal of President Thomas Jefferson” (11 words).
+
+## B13-0431 — Who was US president when the Louisiana Purchase was made?
+
+Answer: Thomas Jefferson. Fun fact: Jefferson sought control of the port of New Orleans.
+
+- us-history-civics-s0015: [Encyclopaedia Britannica](https://www.britannica.com/event/Louisiana-Purchase)
+
+  Answer/context quote: “Pres. Thomas Jefferson was confronted” (5 words).
+
+  Additional fun-fact quote: “to try to purchase at least New Orleans” (8 words).
+
+- us-history-civics-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Louisiana_Purchase)
+
+  Answer/context quote: “Acquisition of Louisiana was a long-term goal of President Thomas Jefferson” (11 words).
+
+  Additional fun-fact quote: “especially eager to gain control of the crucial Mississippi River port of New Orleans” (14 words).
+
+## B13-0432 — Which Mississippi River port was Jefferson initially especially eager to buy?
+
+Answer: New Orleans. Fun fact: The Louisiana Purchase occurred in 1803.
+
+- us-history-civics-s0015: [Encyclopaedia Britannica](https://www.britannica.com/event/Louisiana-Purchase)
+
+  Answer/context quote: “to try to purchase at least New Orleans” (8 words).
+
+  Additional fun-fact quote: “purchased in 1803 from France by the United States” (9 words).
+
+- us-history-civics-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Louisiana_Purchase)
+
+  Answer/context quote: “especially eager to gain control of the crucial Mississippi River port of New Orleans” (14 words).
+
+  Additional fun-fact quote: “from the French First Republic in 1803” (7 words).
+
+## B13-0433 — Who was Meriwether Lewis's co-commander in the western expedition?
+
+Answer: William Clark. Fun fact: The Lewis and Clark expedition reached the Pacific Ocean.
+
+- us-history-civics-s0017: [Encyclopaedia Britannica](https://www.britannica.com/event/Lewis-and-Clark-Expedition)
+
+  Answer/context quote: “led by Capt. Meriwether Lewis and Lieut. William Clark” (9 words).
+
+  Additional fun-fact quote: “from St. Louis , Missouri, to the Pacific Ocean and back” (11 words).
+
+- us-history-civics-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Lewis_and_Clark_Expedition)
+
+  Answer/context quote: “under the command of Captain Meriwether Lewis and his close friend Second Lieutenant William Clark” (15 words).
+
+  Additional fun-fact quote: “eventually coming to the Columbia River , and the Pacific Ocean in 1805” (13 words).
+
+## B13-0434 — The Corps of Discovery expedition reached which ocean?
+
+Answer: Pacific. Fun fact: The expedition company was called the Corps of Discovery.
+
+- us-history-civics-s0017: [Encyclopaedia Britannica](https://www.britannica.com/event/Lewis-and-Clark-Expedition)
+
+  Answer/context quote: “from St. Louis , Missouri, to the Pacific Ocean and back” (11 words).
+
+  Additional fun-fact quote: “the Corps of Discovery , as the expedition company was called” (11 words).
+
+- us-history-civics-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Lewis_and_Clark_Expedition)
+
+  Answer/context quote: “eventually coming to the Columbia River , and the Pacific Ocean in 1805” (13 words).
+
+  Additional fun-fact quote: “also known as the Corps of Discovery Expedition” (8 words).
+
+## B13-0435 — What name was given to the Lewis and Clark expedition company?
+
+Answer: Corps of Discovery. Fun fact: Sacagawea was the Shoshone woman who accompanied the expedition.
+
+- us-history-civics-s0017: [Encyclopaedia Britannica](https://www.britannica.com/event/Lewis-and-Clark-Expedition)
+
+  Answer/context quote: “the Corps of Discovery , as the expedition company was called” (11 words).
+
+  Additional fun-fact quote: “his Shoshone wife, Sacagawea” (4 words).
+
+- us-history-civics-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Lewis_and_Clark_Expedition)
+
+  Answer/context quote: “also known as the Corps of Discovery Expedition” (8 words).
+
+  Additional fun-fact quote: “his young Shoshone wife, Sacagawea” (5 words).
+
+## B13-0436 — Which Shoshone woman accompanied Lewis and Clark and helped the expedition?
+
+Answer: Sacagawea. Fun fact: Meriwether Lewis and William Clark commanded the expedition.
+
+- us-history-civics-s0017: [Encyclopaedia Britannica](https://www.britannica.com/event/Lewis-and-Clark-Expedition)
+
+  Answer/context quote: “his Shoshone wife, Sacagawea” (4 words).
+
+  Additional fun-fact quote: “led by Capt. Meriwether Lewis and Lieut. William Clark” (9 words).
+
+- us-history-civics-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Lewis_and_Clark_Expedition)
+
+  Answer/context quote: “his young Shoshone wife, Sacagawea” (5 words).
+
+  Additional fun-fact quote: “under the command of Captain Meriwether Lewis and his close friend Second Lieutenant William Clark” (15 words).
+
+## B13-0437 — In which year did the American Civil War begin?
+
+Answer: 1861. Fun fact: The Civil War began with the bombardment of Fort Sumter.
+
+- us-history-civics-s0019: [Encyclopaedia Britannica](https://www.britannica.com/event/American-Civil-War)
+
+  Answer/context quote: “four-year war (1861–65)” (3 words).
+
+  Additional fun-fact quote: “In the early morning hours of April 12, 1861, rebels opened fire on Fort Sumter” (15 words).
+
+- us-history-civics-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/American_Civil_War)
+
+  Answer/context quote: “The war began on April 12, 1861” (7 words).
+
+  Additional fun-fact quote: “The war began on April 12, 1861, when the Confederacy bombarded Fort Sumter” (13 words).
+
+## B13-0438 — The bombardment of which fort marked the start of the American Civil War?
+
+Answer: Fort Sumter. Fun fact: Lincoln won the1860 presidential election before Southern secession.
+
+- us-history-civics-s0019: [Encyclopaedia Britannica](https://www.britannica.com/event/American-Civil-War)
+
+  Answer/context quote: “In the early morning hours of April 12, 1861, rebels opened fire on Fort Sumter” (15 words).
+
+  Additional fun-fact quote: “When Abraham Lincoln , the candidate of the explicitly antislavery Republican Party , won the 1860 presidential election” (18 words).
+
+- us-history-civics-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/American_Civil_War)
+
+  Answer/context quote: “The war began on April 12, 1861, when the Confederacy bombarded Fort Sumter” (13 words).
+
+  Additional fun-fact quote: “Abraham Lincoln, a Republican who opposed slavery's expansion, won the 1860 presidential election” (13 words).
+
+## B13-0439 — Which president's 1860 election preceded Southern secession and the Civil War?
+
+Answer: Abraham Lincoln. Fun fact: Eleven Southern states seceded and formed the Confederacy.
+
+- us-history-civics-s0019: [Encyclopaedia Britannica](https://www.britannica.com/event/American-Civil-War)
+
+  Answer/context quote: “When Abraham Lincoln , the candidate of the explicitly antislavery Republican Party , won the 1860 presidential election” (18 words).
+
+  Additional fun-fact quote: “11 Southern states that seceded from the Union” (8 words).
+
+- us-history-civics-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/American_Civil_War)
+
+  Answer/context quote: “Abraham Lincoln, a Republican who opposed slavery's expansion, won the 1860 presidential election” (13 words).
+
+  Additional fun-fact quote: “the Confederacy comprised eleven states” (5 words).
+
+## B13-0440 — How many Southern states formally seceded to join the Confederacy?
+
+Answer: Eleven. Fun fact: The American Civil War began in 1861.
+
+- us-history-civics-s0019: [Encyclopaedia Britannica](https://www.britannica.com/event/American-Civil-War)
+
+  Answer/context quote: “11 Southern states that seceded from the Union” (8 words).
+
+  Additional fun-fact quote: “four-year war (1861–65)” (3 words).
+
+- us-history-civics-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/American_Civil_War)
+
+  Answer/context quote: “the Confederacy comprised eleven states” (5 words).
+
+  Additional fun-fact quote: “The war began on April 12, 1861” (7 words).
 
 ## B13-0501 — Who was the first emperor of ancient Rome?
 
@@ -6356,7 +8250,7 @@ Answer: DeLorean. Fun fact: Michael J. Fox played Marty McFly.
 
   Additional fun-fact quote: “Michael J. Fox Marty McFly” (5 words).
 
-## B13-0639 — Who portrayed the eccentric Doc Brown?
+## B13-0639 — Who portrayed Doc Brown in the original 1985 Back to the Future?
 
 Answer: Christopher Lloyd. Fun fact: Back to the Future's time machine was built from a DeLorean.
 
@@ -7476,7 +9370,7 @@ Answer: Tupelo. Fun fact: His family moved to Memphis while he was growing up.
 
   Additional fun-fact quote: “In the late 1940s the Presleys moved to Memphis, Tennessee.” (10 words).
 
-## B13-0709 — Who was Queen's flamboyant lead singer on “Bohemian Rhapsody”?
+## B13-0709 — Who was Queen's lead singer in its classic four-member lineup?
 
 Answer: Freddie Mercury. Fun fact: Brian May played guitar in Queen.
 
@@ -7488,9 +9382,9 @@ Answer: Freddie Mercury. Fun fact: Brian May played guitar in Queen.
 
 - music-s0006: [Encyclopaedia Britannica](https://www.britannica.com/topic/Queen-British-rock-group)
 
-  Answer/context quote: “lead singer Freddie Mercury” (4 words).
+  Answer/context quote: “overdubbed vocal harmonies enlivened by the flamboyant performance of front man and principal songwriter Freddie Mercury” (16 words).
 
-  Additional fun-fact quote: “guitarist Brian May” (3 words).
+  Additional fun-fact quote: “guitar work by virtuoso Brian May” (6 words).
 
 ## B13-0710 — Which Queen member is known for his guitar playing?
 
@@ -7540,7 +9434,7 @@ Answer: John Deacon. Fun fact: Queen released its self-titled debut album in 197
 
   Additional fun-fact quote: “The group debuted on record with Queen (1973)” (8 words).
 
-## B13-0713 — Which singer fronts the Rolling Stones?
+## B13-0713 — Who was the lead singer in the Rolling Stones' classic lineup?
 
 Answer: Mick Jagger. Fun fact: Keith Richards played guitar in the Rolling Stones.
 
@@ -7552,9 +9446,9 @@ Answer: Mick Jagger. Fun fact: Keith Richards played guitar in the Rolling Stone
 
 - music-s0008: [Encyclopaedia Britannica](https://www.britannica.com/topic/the-Rolling-Stones)
 
-  Answer/context quote: “lead vocalist Mick Jagger” (4 words).
+  Answer/context quote: “the Rolling Stones’ nucleus of singer Mick Jagger , guitarist Keith Richards , and drummer Charlie Watts” (17 words).
 
-  Additional fun-fact quote: “rhythm guitarist Keith Richards” (4 words).
+  Additional fun-fact quote: “guitarist Keith Richards” (3 words).
 
 ## B13-0714 — Who was the Rolling Stones' longtime drummer before his death in 2021?
 
@@ -7620,7 +9514,7 @@ Answer: Robert Plant. Fun fact: John Bonham was Led Zeppelin's drummer.
 
   Additional fun-fact quote: “John Bonham on drums” (4 words).
 
-## B13-0718 — Which guitarist co-founded Led Zeppelin?
+## B13-0718 — Who played guitar in Led Zeppelin's original lineup?
 
 Answer: Jimmy Page. Fun fact: The group disbanded in 1980 after John Bonham died.
 
@@ -7670,7 +9564,7 @@ Answer: Swan Song. Fun fact: John Bonham was Led Zeppelin's drummer.
 
 ## B13-0721 — Which Nirvana album contains “Smells Like Teen Spirit”?
 
-Answer: Nevermind. Fun fact: Nirvana formed in Aberdeen, near Seattle.
+Answer: Nevermind. Fun fact: Nirvana formed in Aberdeen.
 
 - music-s0011: [Wikipedia](https://en.wikipedia.org/wiki/Nirvana_(band))
 
@@ -7718,7 +9612,7 @@ Answer: Sub Pop. Fun fact: Nirvana's third studio album was In Utero, released i
 
 ## B13-0724 — Nirvana followed Nevermind with which third studio album?
 
-Answer: In Utero. Fun fact: Nirvana formed in Aberdeen, near Seattle.
+Answer: In Utero. Fun fact: Nirvana formed in Aberdeen.
 
 - music-s0011: [Wikipedia](https://en.wikipedia.org/wiki/Nirvana_(band))
 
@@ -7892,7 +9786,7 @@ Answer: Minneapolis. Fun fact: Purple Rain was released in 1984.
 
   Additional fun-fact quote: “Purple Rain (1984)” (3 words).
 
-## B13-0735 — What was the name of Prince's home and recording complex?
+## B13-0735 — What was Prince's own recording studio called?
 
 Answer: Paisley Park. Fun fact: Prince was born in Minneapolis.
 
@@ -8234,7 +10128,7 @@ Answer: June Carter. Fun fact: Sun Records signed Johnny Cash in 1955.
 
 - music-s0027: [Wikipedia](https://en.wikipedia.org/wiki/Johnny_Cash)
 
-  Answer/context quote: “Cash proposed onstage to June on February 22, 1968” (9 words).
+  Answer/context quote: “The couple married on March 1, 1968, in Franklin, Kentucky” (10 words).
 
   Additional fun-fact quote: “In 1955, when signing with Sun Records” (7 words).
 
@@ -8468,7 +10362,7 @@ Answer: Salzburg. Fun fact: Mozart died in Vienna in 1791.
 
   Additional fun-fact quote: “died December 5, 1791, Vienna” (5 words).
 
-## B13-0771 — What was the first name of Mozart's father and early teacher?
+## B13-0771 — What was the first name of Mozart's father?
 
 Answer: Leopold. Fun fact: Mozart was born in Salzburg.
 
@@ -8714,7 +10608,7 @@ Answer: Evermore. Fun fact: Swift was born in West Reading, Pennsylvania.
 
 - music-s0043: [Wikipedia](https://en.wikipedia.org/wiki/Taylor_Swift)
 
-  Answer/context quote: “She explored indie folk on the 2020 albums Folklore and Evermore” (11 words).
+  Answer/context quote: “two "sister albums" surprise-released in 2020: Folklore on July 24, and Evermore on December 11.” (15 words).
 
   Additional fun-fact quote: “Swift was born on December 13, 1989, in West Reading, Pennsylvania” (11 words).
 
@@ -8956,7 +10850,7 @@ Answer: 11. Fun fact: Only the goalkeeper may handle the ball inside its own pen
 
   Answer/context quote: “two teams of 11 players” (5 words).
 
-  Additional fun-fact quote: “handling the ball (except by a goalkeeper inside their own penalty area)” (12 words).
+  Additional fun-fact quote: “Only the goalkeeper is permitted to handle the ball and may do so only within the penalty area surrounding the goal.” (21 words).
 
 - sports-games-s0002: [Wikipedia contributors](https://en.wikipedia.org/wiki/Association_football)
 
@@ -8970,7 +10864,7 @@ Answer: Goalkeeper. Fun fact: A player receiving a red card is dismissed from th
 
 - sports-games-s0001: [Encyclopaedia Britannica](https://www.britannica.com/sports/football-soccer)
 
-  Answer/context quote: “handling the ball (except by a goalkeeper inside their own penalty area)” (12 words).
+  Answer/context quote: “Only the goalkeeper is permitted to handle the ball and may do so only within the penalty area surrounding the goal.” (21 words).
 
   Additional fun-fact quote: “they are ejected from the game and must leave the pitch” (11 words).
 
@@ -9020,7 +10914,7 @@ Answer: Five. Fun fact: James Naismith invented basketball.
 
   Answer/context quote: “two teams, typically of five players each” (7 words).
 
-  Additional fun-fact quote: “Basketball was invented by James Naismith” (6 words).
+  Additional fun-fact quote: “basketball was invented by James Naismith in 1891” (8 words).
 
 - sports-games-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Basketball)
 
@@ -9030,11 +10924,11 @@ Answer: Five. Fun fact: James Naismith invented basketball.
 
 ## B13-0806 — Who invented basketball?
 
-Answer: James Naismith. Fun fact: Basketball was invented in1891.
+Answer: James Naismith. Fun fact: Basketball was invented in 1891.
 
 - sports-games-s0003: [Encyclopaedia Britannica](https://www.britannica.com/sports/basketball)
 
-  Answer/context quote: “Basketball was invented by James Naismith” (6 words).
+  Answer/context quote: “basketball was invented by James Naismith in 1891” (8 words).
 
   Additional fun-fact quote: “basketball was invented by James Naismith in 1891” (8 words).
 
@@ -9052,7 +10946,7 @@ Answer: 1891. Fun fact: Naismith invented basketball in Springfield, Massachuset
 
   Answer/context quote: “basketball was invented by James Naismith in 1891” (8 words).
 
-  Additional fun-fact quote: “Training School, Springfield , Massachusetts , where Naismith was an instructor” (11 words).
+  Additional fun-fact quote: “Training School (now Springfield College), Springfield , Massachusetts” (8 words).
 
 - sports-games-s0004: [Wikipedia contributors](https://en.wikipedia.org/wiki/Basketball)
 
@@ -9066,7 +10960,7 @@ Answer: Springfield. Fun fact: Standard basketball uses five on-court players pe
 
 - sports-games-s0003: [Encyclopaedia Britannica](https://www.britannica.com/sports/basketball)
 
-  Answer/context quote: “Training School, Springfield , Massachusetts , where Naismith was an instructor” (11 words).
+  Answer/context quote: “Training School (now Springfield College), Springfield , Massachusetts” (8 words).
 
   Additional fun-fact quote: “two teams, typically of five players each” (7 words).
 
@@ -9110,7 +11004,7 @@ Answer: Four. Fun fact: Three outs end a baseball half-inning.
 
 ## B13-0811 — As of 2025, how many outs end a team’s half-inning in baseball?
 
-Answer: Three. Fun fact: Jackie Robinson broke modern Major League Baseball’s color barrier in1947.
+Answer: Three. Fun fact: Jackie Robinson broke modern Major League Baseball’s color barrier in 1947.
 
 - sports-games-s0005: [Encyclopaedia Britannica](https://www.britannica.com/sports/baseball)
 
@@ -9144,11 +11038,11 @@ Answer: 1947. Fun fact: A standard baseball fielding team has nine players.
 
 Answer: Six. Fun fact: An American-football field goal scores three points.
 
-- sports-games-s0051: [Encyclopaedia Britannica](https://www.britannica.com/sports/American-football)
+- sports-games-s0078: [National Football League](https://static.www.nfl.com/image/upload/fl_attachment/league/tautmcaqh6x5stgtl2yl.pdf)
 
-  Answer/context quote: “A touchdown , worth six points” (6 words).
+  Answer/context quote: “Touchdown: 6 points” (3 words).
 
-  Additional fun-fact quote: “A field goal , worth three points” (7 words).
+  Additional fun-fact quote: “Field goal: 3 points” (4 words).
 
 - sports-games-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/American_football)
 
@@ -9160,11 +11054,11 @@ Answer: Six. Fun fact: An American-football field goal scores three points.
 
 Answer: Three. Fun fact: An American-football offense normally has four downs to gain a first down.
 
-- sports-games-s0051: [Encyclopaedia Britannica](https://www.britannica.com/sports/American-football)
+- sports-games-s0078: [National Football League](https://static.www.nfl.com/image/upload/fl_attachment/league/tautmcaqh6x5stgtl2yl.pdf)
 
-  Answer/context quote: “A field goal , worth three points” (7 words).
+  Answer/context quote: “Field goal: 3 points” (4 words).
 
-  Additional fun-fact quote: “10 yards in four downs to get a first down” (10 words).
+  Additional fun-fact quote: “A series of downs is the four consecutive charged scrimmage downs allotted to the offensive team” (16 words).
 
 - sports-games-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/American_football)
 
@@ -9176,11 +11070,11 @@ Answer: Three. Fun fact: An American-football offense normally has four downs to
 
 Answer: Four. Fun fact: An American-football offense normally needs ten yards for a first down.
 
-- sports-games-s0051: [Encyclopaedia Britannica](https://www.britannica.com/sports/American-football)
+- sports-games-s0078: [National Football League](https://static.www.nfl.com/image/upload/fl_attachment/league/tautmcaqh6x5stgtl2yl.pdf)
 
-  Answer/context quote: “10 yards in four downs to get a first down” (10 words).
+  Answer/context quote: “A series of downs is the four consecutive charged scrimmage downs allotted to the offensive team” (16 words).
 
-  Additional fun-fact quote: “advance the ball at least 10 yards in four downs to earn a first down” (15 words).
+  Additional fun-fact quote: “The line to gain is the spot 10 yards in advance of the spot of the snap that starts a series” (21 words).
 
 - sports-games-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/American_football)
 
@@ -9192,11 +11086,11 @@ Answer: Four. Fun fact: An American-football offense normally needs ten yards fo
 
 Answer: Ten. Fun fact: An American-football touchdown is worth six points before the try.
 
-- sports-games-s0051: [Encyclopaedia Britannica](https://www.britannica.com/sports/American-football)
+- sports-games-s0078: [National Football League](https://static.www.nfl.com/image/upload/fl_attachment/league/tautmcaqh6x5stgtl2yl.pdf)
 
-  Answer/context quote: “advance the ball at least 10 yards in four downs to earn a first down” (15 words).
+  Answer/context quote: “The line to gain is the spot 10 yards in advance of the spot of the snap that starts a series” (21 words).
 
-  Additional fun-fact quote: “A touchdown , worth six points” (6 words).
+  Additional fun-fact quote: “Touchdown: 6 points” (3 words).
 
 - sports-games-s0008: [Wikipedia contributors](https://en.wikipedia.org/wiki/American_football)
 
@@ -9222,7 +11116,7 @@ Answer: Singles. Fun fact: A doubles tennis match has four players, two per side
 
 ## B13-0818 — How many total players take part in a doubles tennis match?
 
-Answer: Four. Fun fact: The third won point in an ordinary tennis game is scored40.
+Answer: Four. Fun fact: The third won point in an ordinary tennis game is scored 40.
 
 - sports-games-s0009: [Encyclopaedia Britannica](https://www.britannica.com/sports/tennis)
 
@@ -9238,7 +11132,7 @@ Answer: Four. Fun fact: The third won point in an ordinary tennis game is scored
 
 ## B13-0819 — As of 2025, what score is called after a tennis player wins the third point of an ordinary game?
 
-Answer: 40. Fun fact: The first Wimbledon tennis championships were held in1877.
+Answer: 40. Fun fact: The first Wimbledon tennis championships were held in 1877.
 
 - sports-games-s0009: [Encyclopaedia Britannica](https://www.britannica.com/sports/tennis)
 
@@ -9274,9 +11168,9 @@ Answer: Six. Fun fact: William G. Morgan invented volleyball.
 
 - sports-games-s0011: [Encyclopaedia Britannica](https://www.britannica.com/sports/volleyball)
 
-  Answer/context quote: “each team consists of six players” (6 words).
+  Answer/context quote: “game played by two teams, usually of six players on a side” (12 words).
 
-  Additional fun-fact quote: “volleyball was invented in 1895 by William G. Morgan” (9 words).
+  Additional fun-fact quote: “Volleyball was invented in 1895 by William G. Morgan” (9 words).
 
 - sports-games-s0012: [Wikipedia contributors](https://en.wikipedia.org/wiki/Volleyball)
 
@@ -9290,7 +11184,7 @@ Answer: William G. Morgan. Fun fact: Morgan originally called volleyball mintone
 
 - sports-games-s0011: [Encyclopaedia Britannica](https://www.britannica.com/sports/volleyball)
 
-  Answer/context quote: “volleyball was invented in 1895 by William G. Morgan” (9 words).
+  Answer/context quote: “Volleyball was invented in 1895 by William G. Morgan” (9 words).
 
   Additional fun-fact quote: “Morgan called the sport “mintonette”” (5 words).
 
@@ -9302,13 +11196,13 @@ Answer: William G. Morgan. Fun fact: Morgan originally called volleyball mintone
 
 ## B13-0823 — What was volleyball originally called?
 
-Answer: Mintonette. Fun fact: Volleyball was invented in1895.
+Answer: Mintonette. Fun fact: Volleyball was invented in 1895.
 
 - sports-games-s0011: [Encyclopaedia Britannica](https://www.britannica.com/sports/volleyball)
 
   Answer/context quote: “Morgan called the sport “mintonette”” (5 words).
 
-  Additional fun-fact quote: “volleyball was invented in 1895 by William G. Morgan” (9 words).
+  Additional fun-fact quote: “Volleyball was invented in 1895 by William G. Morgan” (9 words).
 
 - sports-games-s0012: [Wikipedia contributors](https://en.wikipedia.org/wiki/Volleyball)
 
@@ -9322,9 +11216,9 @@ Answer: 1895. Fun fact: Standard indoor volleyball uses six on-court players per
 
 - sports-games-s0011: [Encyclopaedia Britannica](https://www.britannica.com/sports/volleyball)
 
-  Answer/context quote: “volleyball was invented in 1895 by William G. Morgan” (9 words).
+  Answer/context quote: “Volleyball was invented in 1895 by William G. Morgan” (9 words).
 
-  Additional fun-fact quote: “each team consists of six players” (6 words).
+  Additional fun-fact quote: “game played by two teams, usually of six players on a side” (12 words).
 
 - sports-games-s0012: [Wikipedia contributors](https://en.wikipedia.org/wiki/Volleyball)
 
@@ -9366,7 +11260,7 @@ Answer: Six. Fun fact: A standard ice-hockey puck is made from vulcanized rubber
 
 ## B13-0827 — What material is a standard ice-hockey puck made from?
 
-Answer: Vulcanized rubber. Fun fact: The first organized indoor ice-hockey game was held in Montreal in1875.
+Answer: Vulcanized rubber. Fun fact: The first organized indoor ice-hockey game was held in Montreal in 1875.
 
 - sports-games-s0013: [Encyclopaedia Britannica](https://www.britannica.com/sports/ice-hockey)
 
@@ -9380,7 +11274,7 @@ Answer: Vulcanized rubber. Fun fact: The first organized indoor ice-hockey game 
 
   Additional fun-fact quote: “Montreal , where the first indoor game was played on March 3, 1875” (13 words).
 
-## B13-0828 — Which Canadian city hosted the first organized indoor ice-hockey game in1875?
+## B13-0828 — Which Canadian city hosted the first organized indoor ice-hockey game in 1875?
 
 Answer: Montreal. Fun fact: Ice hockey is played with a puck.
 
@@ -9398,13 +11292,13 @@ Answer: Montreal. Fun fact: Ice hockey is played with a puck.
 
 ## B13-0829 — Which feathered or synthetic object is struck back and forth in badminton?
 
-Answer: Shuttlecock. Fun fact: Under the standard badminton scoring used in2025, a game normally goes to21 points.
+Answer: Shuttlecock. Fun fact: Under the standard badminton scoring used in 2025, a game normally goes to 21 points.
 
 - sports-games-s0015: [Encyclopaedia Britannica](https://www.britannica.com/sports/badminton)
 
-  Answer/context quote: “using a shuttlecock.” (3 words).
+  Answer/context quote: “court or lawn game played with lightweight rackets and a shuttlecock” (11 words).
 
-  Additional fun-fact quote: “To win a game, a player must score 21 points.” (10 words).
+  Additional fun-fact quote: “games, each played to 21 points” (6 words).
 
 - sports-games-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Badminton)
 
@@ -9412,13 +11306,13 @@ Answer: Shuttlecock. Fun fact: Under the standard badminton scoring used in2025,
 
   Additional fun-fact quote: “Each game is played to 21 points” (7 words).
 
-## B13-0830 — As of2025, how many points normally win a badminton game before any required extension?
+## B13-0830 — As of 2025, how many points normally win a badminton game before any required extension?
 
-Answer: 21. Fun fact: Badminton became an official Summer Olympic sport in1992.
+Answer: 21. Fun fact: Badminton became an official Summer Olympic sport in 1992.
 
 - sports-games-s0015: [Encyclopaedia Britannica](https://www.britannica.com/sports/badminton)
 
-  Answer/context quote: “To win a game, a player must score 21 points.” (10 words).
+  Answer/context quote: “games, each played to 21 points” (6 words).
 
   Additional fun-fact quote: “1992: Recognition as an official Olympic sport at the Barcelona Olympic Games” (12 words).
 
@@ -9452,7 +11346,7 @@ Answer: Poona. Fun fact: Badminton players strike a shuttlecock.
 
   Answer/context quote: “badminton was first known as “poona,” after the city of Poona (Pune)” (12 words).
 
-  Additional fun-fact quote: “using a shuttlecock.” (3 words).
+  Additional fun-fact quote: “court or lawn game played with lightweight rackets and a shuttlecock” (11 words).
 
 - sports-games-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Badminton)
 
@@ -9460,9 +11354,9 @@ Answer: Poona. Fun fact: Badminton players strike a shuttlecock.
 
   Additional fun-fact quote: “racquets to hit a shuttlecock across a net” (8 words).
 
-## B13-0833 — As of2025, how many players are on each standard cricket team?
+## B13-0833 — As of 2025, how many players are on each standard cricket team?
 
-Answer: Eleven. Fun fact: A standard cricket pitch is22 yards long.
+Answer: Eleven. Fun fact: A standard cricket pitch is 22 yards long.
 
 - sports-games-s0017: [Encyclopaedia Britannica](https://www.britannica.com/sports/cricket-sport)
 
@@ -9492,7 +11386,7 @@ Answer: 22 yards. Fun fact: A standard cricket over consists of six legal balls 
 
   Additional fun-fact quote: “six legal balls (deliveries)” (4 words).
 
-## B13-0835 — As of2025, how many legal deliveries make up a standard cricket over?
+## B13-0835 — As of 2025, how many legal deliveries make up a standard cricket over?
 
 Answer: Six. Fun fact: A cricket wicket has three upright stumps.
 
@@ -9542,7 +11436,7 @@ Answer: Table tennis. Fun fact: Table tennis originated in England.
 
 ## B13-0838 — In which country did table tennis originate?
 
-Answer: England. Fun fact: Table tennis became an Olympic sport in1988.
+Answer: England. Fun fact: Table tennis became an Olympic sport in 1988.
 
 - sports-games-s0019: [Encyclopaedia Britannica](https://www.britannica.com/sports/table-tennis)
 
@@ -9558,7 +11452,7 @@ Answer: England. Fun fact: Table tennis became an Olympic sport in1988.
 
 ## B13-0839 — In what year did table tennis first become an Olympic sport?
 
-Answer: 1988. Fun fact: The International Table Tennis Federation was founded in1926.
+Answer: 1988. Fun fact: The International Table Tennis Federation was founded in 1926.
 
 - sports-games-s0019: [Encyclopaedia Britannica](https://www.britannica.com/sports/table-tennis)
 
@@ -9590,7 +11484,7 @@ Answer: 1926. Fun fact: Table tennis is also called ping-pong.
 
 ## B13-0841 — Rugby developed from a style of football played at Rugby School in which country?
 
-Answer: England. Fun fact: Standard rugby union teams have15 players.
+Answer: England. Fun fact: Standard rugby union teams have 15 players.
 
 - sports-games-s0021: [Encyclopaedia Britannica](https://www.britannica.com/sports/rugby)
 
@@ -9604,7 +11498,7 @@ Answer: England. Fun fact: Standard rugby union teams have15 players.
 
   Additional fun-fact quote: “two teams of 15 players each” (6 words).
 
-## B13-0842 — As of2025, how many players start on each full-sided rugby union team?
+## B13-0842 — As of 2025, how many players start on each full-sided rugby union team?
 
 Answer: 15. Fun fact: A rugby union try is worth five points.
 
@@ -9620,7 +11514,7 @@ Answer: 15. Fun fact: A rugby union try is worth five points.
 
   Additional fun-fact quote: “is worth 5 points” (4 words).
 
-## B13-0843 — As of2025, how many points is a try worth in rugby union?
+## B13-0843 — As of 2025, how many points is a try worth in rugby union?
 
 Answer: Five. Fun fact: A successful rugby union conversion is worth two points.
 
@@ -9636,7 +11530,7 @@ Answer: Five. Fun fact: A successful rugby union conversion is worth two points.
 
   Additional fun-fact quote: “conversion kick scores 2 points” (5 words).
 
-## B13-0844 — As of2025, how many points is a successful conversion worth in rugby union?
+## B13-0844 — As of 2025, how many points is a successful conversion worth in rugby union?
 
 Answer: Two. Fun fact: A rugby union try is worth five points.
 
@@ -9732,7 +11626,7 @@ Answer: Backstroke. Fun fact: Backstroke uses a flutter kick.
 
   Additional fun-fact quote: “flutter kick” (2 words).
 
-## B13-0850 — As of2025, how many different strokes are used in an individual swimming medley?
+## B13-0850 — As of 2025, how many different strokes are used in an individual swimming medley?
 
 Answer: Four. Fun fact: Individual medleys include butterfly.
 
@@ -9766,7 +11660,7 @@ Answer: Butterfly. Fun fact: In butterfly, both arms recover above the water.
 
 ## B13-0852 — At which first modern Olympic Games was men’s swimming included?
 
-Answer: Athens1896. Fun fact: Women’s Olympic swimming was added in1912.
+Answer: Athens 1896. Fun fact: Women’s Olympic swimming was added in 1912.
 
 - sports-games-s0025: [Encyclopaedia Britannica](https://www.britannica.com/sports/swimming-sport)
 
@@ -9782,7 +11676,7 @@ Answer: Athens1896. Fun fact: Women’s Olympic swimming was added in1912.
 
 ## B13-0853 — What is the official marathon distance in kilometres?
 
-Answer: 42.195. Fun fact: The standard distance traces to the1908 London Olympic race.
+Answer: 42.195. Fun fact: The standard distance traces to the 1908 London Olympic race.
 
 - sports-games-s0063: [Encyclopaedia Britannica](https://www.britannica.com/sports/marathon-race)
 
@@ -9830,7 +11724,7 @@ Answer: Seven. Fun fact: The women’s heptathlon includes javelin throwing.
 
 ## B13-0856 — Which running event requires athletes to clear a water jump?
 
-Answer: Steeplechase. Fun fact: The standard3000-metre steeplechase has seven water jumps.
+Answer: Steeplechase. Fun fact: The standard 3000-metre steeplechase has seven water jumps.
 
 - sports-games-s0062: [Encyclopaedia Britannica](https://www.britannica.com/sports/steeplechase-athletics)
 
@@ -9878,7 +11772,7 @@ Answer: Three minutes. Fun fact: The Marquess of Queensberry lent his name to in
 
 ## B13-0859 — Which titled aristocrat lent his name to boxing’s influential gloved-fighting rules?
 
-Answer: Marquess of Queensberry. Fun fact: The Queensberry boxing rules were introduced in1867.
+Answer: Marquess of Queensberry. Fun fact: The Queensberry boxing rules were introduced in 1867.
 
 - sports-games-s0059: [Encyclopaedia Britannica](https://www.britannica.com/sports/boxing/The-Queensberry-rules)
 
@@ -9907,6 +11801,646 @@ Answer: 1867. Fun fact: The Queensberry rules required boxing gloves.
   Answer/context quote: “Marquess of Queensberry Rules in 1867” (6 words).
 
   Additional fun-fact quote: “The introduction of boxing gloves of "fair-size"” (7 words).
+
+## B13-0861 — In modern Olympic fencing, which weapon allows both cutting and thrusting attacks?
+
+Answer: Sabre. Fun fact: The entire body is a valid target in épée fencing.
+
+- sports-games-s0069: [Encyclopaedia Britannica](https://www.britannica.com/sports/fencing/Organized-sport)
+
+  Answer/context quote: “sabre is characterized by cutting rather than thrusts of the tip” (11 words).
+
+  Additional fun-fact quote: “In épée, as in foil, hits are made with the point, but, unlike in foil, the target area is the entire body.” (22 words).
+
+- sports-games-s0032: [Wikipedia contributors](https://en.wikipedia.org/wiki/Fencing)
+
+  Answer/context quote: “The sabre is a cutting and thrusting weapon” (8 words).
+
+  Additional fun-fact quote: “In épée, the entire body is a valid target.” (9 words).
+
+## B13-0862 — In sport fencing, which weapon treats the whole body as a valid target?
+
+Answer: Épée. Fun fact: A foil-fencing touch must land with the weapon’s tip.
+
+- sports-games-s0069: [Encyclopaedia Britannica](https://www.britannica.com/sports/fencing/Organized-sport)
+
+  Answer/context quote: “In épée, as in foil, hits are made with the point, but, unlike in foil, the target area is the entire body.” (22 words).
+
+  Additional fun-fact quote: “In foil, hits must be made with the point of the weapon” (12 words).
+
+- sports-games-s0032: [Wikipedia contributors](https://en.wikipedia.org/wiki/Fencing)
+
+  Answer/context quote: “In épée, the entire body is a valid target.” (9 words).
+
+  Additional fun-fact quote: “Touches are scored only with the tip” (7 words).
+
+## B13-0863 — As of 2025, a valid touch in foil fencing must land with which part of the weapon?
+
+Answer: Its tip. Fun fact: Men’s fencing appeared at the first revived modern Olympics in 1896.
+
+- sports-games-s0069: [Encyclopaedia Britannica](https://www.britannica.com/sports/fencing/Organized-sport)
+
+  Answer/context quote: “In foil, hits must be made with the point of the weapon” (12 words).
+
+  Additional fun-fact quote: “fencing for men had been part of the Olympic Games since their revival in 1896.” (15 words).
+
+- sports-games-s0032: [Wikipedia contributors](https://en.wikipedia.org/wiki/Fencing)
+
+  Answer/context quote: “Touches are scored only with the tip” (7 words).
+
+  Additional fun-fact quote: “Fencing was part of the Olympic Games in the summer of 1896” (12 words).
+
+## B13-0864 — In what year did men’s fencing first feature at the revived modern Olympics?
+
+Answer: 1896. Fun fact: In sport fencing, the sabre permits cutting and thrusting.
+
+- sports-games-s0069: [Encyclopaedia Britannica](https://www.britannica.com/sports/fencing/Organized-sport)
+
+  Answer/context quote: “fencing for men had been part of the Olympic Games since their revival in 1896.” (15 words).
+
+  Additional fun-fact quote: “sabre is characterized by cutting rather than thrusts of the tip” (11 words).
+
+- sports-games-s0032: [Wikipedia contributors](https://en.wikipedia.org/wiki/Fencing)
+
+  Answer/context quote: “Fencing was part of the Olympic Games in the summer of 1896” (12 words).
+
+  Additional fun-fact quote: “The sabre is a cutting and thrusting weapon” (8 words).
+
+## B13-0865 — What does the martial-art name judo mean?
+
+Answer: Gentle way. Fun fact: Jigoro Kano founded modern judo.
+
+- sports-games-s0033: [Encyclopaedia Britannica](https://www.britannica.com/sports/judo)
+
+  Answer/context quote: “meaning “gentle way”” (3 words).
+
+  Additional fun-fact quote: “Kanō Jigorō (1860–1938) collected the knowledge of the old jujitsu schools” (11 words).
+
+- sports-games-s0034: [Wikipedia contributors](https://en.wikipedia.org/wiki/Judo)
+
+  Answer/context quote: “lit. ' gentle way '” (5 words).
+
+  Additional fun-fact quote: “Judo was created in 1882 by Kanō Jigorō” (8 words).
+
+## B13-0866 — Who founded the modern martial art of judo?
+
+Answer: Jigoro Kano. Fun fact: Kano established the Kodokan judo school in 1882.
+
+- sports-games-s0033: [Encyclopaedia Britannica](https://www.britannica.com/sports/judo)
+
+  Answer/context quote: “Kanō Jigorō (1860–1938) collected the knowledge of the old jujitsu schools of the Japanese samurai and in 1882 founded his Kōdōkan School of judo” (24 words).
+
+  Additional fun-fact quote: “in 1882 founded his Kōdōkan School of judo” (8 words).
+
+- sports-games-s0034: [Wikipedia contributors](https://en.wikipedia.org/wiki/Judo)
+
+  Answer/context quote: “Judo was created in 1882 by Kanō Jigorō” (8 words).
+
+  Additional fun-fact quote: “In February 1882, Kano founded a school and dōjō at the Eisho-ji” (12 words).
+
+## B13-0867 — In which year did Kano establish the Kodokan school that began modern judo?
+
+Answer: 1882. Fun fact: Men’s judo first became an Olympic medal sport in 1964.
+
+- sports-games-s0033: [Encyclopaedia Britannica](https://www.britannica.com/sports/judo)
+
+  Answer/context quote: “in 1882 founded his Kōdōkan School of judo” (8 words).
+
+  Additional fun-fact quote: “Men’s judo competitions were first included at the Olympic Games in Tokyo in 1964” (14 words).
+
+- sports-games-s0034: [Wikipedia contributors](https://en.wikipedia.org/wiki/Judo)
+
+  Answer/context quote: “In February 1882, Kano founded a school and dōjō at the Eisho-ji” (12 words).
+
+  Additional fun-fact quote: “Contested since 1964 [ 1 ] (men)” (7 words).
+
+## B13-0868 — At which year’s Olympic Games did men’s judo first become a medal sport?
+
+Answer: 1964. Fun fact: Judo means gentle way.
+
+- sports-games-s0033: [Encyclopaedia Britannica](https://www.britannica.com/sports/judo)
+
+  Answer/context quote: “Men’s judo competitions were first included at the Olympic Games in Tokyo in 1964” (14 words).
+
+  Additional fun-fact quote: “meaning “gentle way”” (3 words).
+
+- sports-games-s0034: [Wikipedia contributors](https://en.wikipedia.org/wiki/Judo)
+
+  Answer/context quote: “Contested since 1964 [ 1 ] (men)” (7 words).
+
+  Additional fun-fact quote: “lit. ' gentle way '” (5 words).
+
+## B13-0869 — What is the traditional name for an archer’s arrow-carrying container?
+
+Answer: Quiver. Fun fact: An archery bracer protects the inside forearm from the bowstring.
+
+- sports-games-s0070: [Encyclopaedia Britannica](https://www.britannica.com/sports/archery/Equipment)
+
+  Answer/context quote: “The archer usually carries arrows in a quiver” (8 words).
+
+  Additional fun-fact quote: “a bracer is fitted to the inside forearm of the bow arm to protect against the released bowstring.” (18 words).
+
+- sports-games-s0036: [Wikipedia contributors](https://en.wikipedia.org/wiki/Archery)
+
+  Answer/context quote: “carried in a container known as a quiver” (8 words).
+
+  Additional fun-fact quote: “wear a bracer (also known as an arm-guard) to protect the inside of the bow arm” (16 words).
+
+## B13-0870 — What archery equipment protects the inside forearm from a released bowstring?
+
+Answer: Bracer. Fun fact: Field archery uses targets at varied distances around a course.
+
+- sports-games-s0070: [Encyclopaedia Britannica](https://www.britannica.com/sports/archery/Equipment)
+
+  Answer/context quote: “a bracer is fitted to the inside forearm of the bow arm to protect against the released bowstring.” (18 words).
+
+  Additional fun-fact quote: “In field archery , competitors shoot arrows at different-sized targets set at varying and undetermined distances around a course.” (19 words).
+
+- sports-games-s0036: [Wikipedia contributors](https://en.wikipedia.org/wiki/Archery)
+
+  Answer/context quote: “wear a bracer (also known as an arm-guard) to protect the inside of the bow arm” (16 words).
+
+  Additional fun-fact quote: “field archery or 3D Archery , shot at targets generally set at various distances in a wooded setting.” (18 words).
+
+## B13-0871 — Which archery format uses targets set at varied distances around a course?
+
+Answer: Field archery. Fun fact: Archery returned to the Olympic program in 1972.
+
+- sports-games-s0070: [Encyclopaedia Britannica](https://www.britannica.com/sports/archery/Equipment)
+
+  Answer/context quote: “In field archery , competitors shoot arrows at different-sized targets set at varying and undetermined distances around a course.” (19 words).
+
+  Additional fun-fact quote: “They were then suspended until the 1972 Games, when they were reintroduced for both men and women” (17 words).
+
+- sports-games-s0036: [Wikipedia contributors](https://en.wikipedia.org/wiki/Archery)
+
+  Answer/context quote: “field archery or 3D Archery , shot at targets generally set at various distances in a wooded setting.” (18 words).
+
+  Additional fun-fact quote: “Archery returned to the Olympics in 1972.” (7 words).
+
+## B13-0872 — In which year did archery return to the Olympic program after its long absence?
+
+Answer: 1972. Fun fact: An archer carries arrows in a quiver.
+
+- sports-games-s0070: [Encyclopaedia Britannica](https://www.britannica.com/sports/archery/Equipment)
+
+  Answer/context quote: “They were then suspended until the 1972 Games, when they were reintroduced for both men and women” (17 words).
+
+  Additional fun-fact quote: “The archer usually carries arrows in a quiver” (8 words).
+
+- sports-games-s0036: [Wikipedia contributors](https://en.wikipedia.org/wiki/Archery)
+
+  Answer/context quote: “Archery returned to the Olympics in 1972.” (7 words).
+
+  Additional fun-fact quote: “carried in a container known as a quiver” (8 words).
+
+## B13-0873 — How many players make up a conventional curling team, excluding doubles?
+
+Answer: Four. Fun fact: Curling stones are traditionally made from granite.
+
+- sports-games-s0037: [Encyclopaedia Britannica](https://www.britannica.com/sports/curling)
+
+  Answer/context quote: “Two teams of four players” (5 words).
+
+  Additional fun-fact quote: “Virtually all curling stones are made from an especially dense granite” (11 words).
+
+- sports-games-s0038: [Wikipedia contributors](https://en.wikipedia.org/wiki/Curling)
+
+  Answer/context quote: “Two teams, each with four players” (6 words).
+
+  Additional fun-fact quote: “heavy, polished granite stones” (4 words).
+
+## B13-0874 — Curling stones are traditionally made from what rock?
+
+Answer: Granite. Fun fact: The captain of a curling team is the skip.
+
+- sports-games-s0037: [Encyclopaedia Britannica](https://www.britannica.com/sports/curling)
+
+  Answer/context quote: “Virtually all curling stones are made from an especially dense granite” (11 words).
+
+  Additional fun-fact quote: “the skip, who is also the team captain” (8 words).
+
+- sports-games-s0038: [Wikipedia contributors](https://en.wikipedia.org/wiki/Curling)
+
+  Answer/context quote: “heavy, polished granite stones” (4 words).
+
+  Additional fun-fact quote: “The skip , or the captain of the team” (9 words).
+
+## B13-0875 — What is the name of a curling team’s captain?
+
+Answer: Skip. Fun fact: Curlers use a brush or broom to sweep in front of the stone.
+
+- sports-games-s0037: [Encyclopaedia Britannica](https://www.britannica.com/sports/curling)
+
+  Answer/context quote: “the skip, who is also the team captain” (8 words).
+
+  Additional fun-fact quote: “the use of a brush, or broom, to sweep the ice in front of the sliding stone.” (17 words).
+
+- sports-games-s0038: [Wikipedia contributors](https://en.wikipedia.org/wiki/Curling)
+
+  Answer/context quote: “The skip , or the captain of the team” (9 words).
+
+  Additional fun-fact quote: “using brooms or brushes, who move alongside it and sweep the ice in its path.” (15 words).
+
+## B13-0876 — Curlers sweep the ice in front of a moving stone using what tool?
+
+Answer: Brush or broom. Fun fact: A conventional curling team has four players.
+
+- sports-games-s0037: [Encyclopaedia Britannica](https://www.britannica.com/sports/curling)
+
+  Answer/context quote: “the use of a brush, or broom, to sweep the ice in front of the sliding stone.” (17 words).
+
+  Additional fun-fact quote: “Two teams of four players” (5 words).
+
+- sports-games-s0038: [Wikipedia contributors](https://en.wikipedia.org/wiki/Curling)
+
+  Answer/context quote: “using brooms or brushes, who move alongside it and sweep the ice in its path.” (15 words).
+
+  Additional fun-fact quote: “Two teams, each with four players” (6 words).
+
+## B13-0877 — In tenpin bowling, knocking down every pin with the first delivery is called what?
+
+Answer: Strike. Fun fact: Clearing all pins with the second delivery is a tenpin-bowling spare.
+
+- sports-games-s0071: [Encyclopaedia Britannica](https://www.britannica.com/sports/bowling/Play-of-the-game)
+
+  Answer/context quote: “knock down all pins on the first for a strike” (10 words).
+
+  Additional fun-fact quote: “If all remaining pins are knocked down, a spare is recorded.” (11 words).
+
+- sports-games-s0040: [Wikipedia contributors](https://en.wikipedia.org/wiki/Ten-pin_bowling)
+
+  Answer/context quote: “knock down all ten pins on the first delivery (a strike)” (11 words).
+
+  Additional fun-fact quote: “or failing that, on the second delivery (a spare).” (9 words).
+
+## B13-0878 — In tenpin bowling, clearing all remaining pins with the second delivery is called what?
+
+Answer: Spare. Fun fact: A perfect standard tenpin-bowling game scores 300.
+
+- sports-games-s0071: [Encyclopaedia Britannica](https://www.britannica.com/sports/bowling/Play-of-the-game)
+
+  Answer/context quote: “If all remaining pins are knocked down, a spare is recorded.” (11 words).
+
+  Additional fun-fact quote: “A perfect game is 300” (5 words).
+
+- sports-games-s0040: [Wikipedia contributors](https://en.wikipedia.org/wiki/Ten-pin_bowling)
+
+  Answer/context quote: “or failing that, on the second delivery (a spare).” (9 words).
+
+  Additional fun-fact quote: “The maximum score is 300” (5 words).
+
+## B13-0879 — What is the maximum score in a standard tenpin-bowling game?
+
+Answer: 300. Fun fact: A perfect standard tenpin-bowling game requires twelve consecutive strikes.
+
+- sports-games-s0071: [Encyclopaedia Britannica](https://www.britannica.com/sports/bowling/Play-of-the-game)
+
+  Answer/context quote: “A perfect game is 300” (5 words).
+
+  Additional fun-fact quote: “consists of 12 strikes in a row” (7 words).
+
+- sports-games-s0040: [Wikipedia contributors](https://en.wikipedia.org/wiki/Ten-pin_bowling)
+
+  Answer/context quote: “The maximum score is 300” (5 words).
+
+  Additional fun-fact quote: “achieved by getting twelve strikes in a row within the same game” (12 words).
+
+## B13-0880 — How many consecutive strikes make a perfect standard tenpin-bowling game?
+
+Answer: Twelve. Fun fact: Knocking down all pins with the first delivery is a tenpin-bowling strike.
+
+- sports-games-s0071: [Encyclopaedia Britannica](https://www.britannica.com/sports/bowling/Play-of-the-game)
+
+  Answer/context quote: “consists of 12 strikes in a row” (7 words).
+
+  Additional fun-fact quote: “knock down all pins on the first for a strike” (10 words).
+
+- sports-games-s0040: [Wikipedia contributors](https://en.wikipedia.org/wiki/Ten-pin_bowling)
+
+  Answer/context quote: “achieved by getting twelve strikes in a row within the same game” (12 words).
+
+  Additional fun-fact quote: “knock down all ten pins on the first delivery (a strike)” (11 words).
+
+## B13-0881 — How many squares are on a standard chessboard?
+
+Answer: 64. Fun fact: Each player starts a standard chess game with sixteen pieces.
+
+- sports-games-s0041: [Encyclopaedia Britannica](https://www.britannica.com/topic/chess)
+
+  Answer/context quote: “Chess is played on a board of 64 squares” (9 words).
+
+  Additional fun-fact quote: “A player’s army consists of 16 pieces” (7 words).
+
+- sports-games-s0042: [Wikipedia contributors](https://en.wikipedia.org/wiki/Chess)
+
+  Answer/context quote: “a square board consisting of 64 squares” (7 words).
+
+  Additional fun-fact quote: “each control sixteen pieces” (4 words).
+
+## B13-0882 — How many pieces does each player start with in standard chess?
+
+Answer: Sixteen. Fun fact: A player with no legal move while not in check is stalemated, and the game is drawn.
+
+- sports-games-s0041: [Encyclopaedia Britannica](https://www.britannica.com/topic/chess)
+
+  Answer/context quote: “A player’s army consists of 16 pieces” (7 words).
+
+  Additional fun-fact quote: “when a player who is not in check has no legal move ( stalemate)” (14 words).
+
+- sports-games-s0042: [Wikipedia contributors](https://en.wikipedia.org/wiki/Chess)
+
+  Answer/context quote: “each control sixteen pieces” (4 words).
+
+  Additional fun-fact quote: “If the player to move has no legal move, but is not in check, the position is a stalemate, and the game is drawn.” (24 words).
+
+## B13-0883 — What chess result occurs when the player to move has no legal move but is not in check?
+
+Answer: Stalemate draw. Fun fact: Checkmate targets the opposing king.
+
+- sports-games-s0041: [Encyclopaedia Britannica](https://www.britannica.com/topic/chess)
+
+  Answer/context quote: “when a player who is not in check has no legal move ( stalemate)” (14 words).
+
+  Additional fun-fact quote: “the opponent’s principal piece, the king, into checkmate” (8 words).
+
+- sports-games-s0042: [Wikipedia contributors](https://en.wikipedia.org/wiki/Chess)
+
+  Answer/context quote: “If the player to move has no legal move, but is not in check, the position is a stalemate, and the game is drawn.” (24 words).
+
+  Additional fun-fact quote: “The objective of the game is to checkmate (threaten with inescapable capture) the enemy king.” (15 words).
+
+## B13-0884 — Which enemy piece must be checkmated to win a chess game by checkmate?
+
+Answer: King. Fun fact: A standard chessboard contains 64 squares.
+
+- sports-games-s0041: [Encyclopaedia Britannica](https://www.britannica.com/topic/chess)
+
+  Answer/context quote: “the opponent’s principal piece, the king, into checkmate” (8 words).
+
+  Additional fun-fact quote: “Chess is played on a board of 64 squares” (9 words).
+
+- sports-games-s0042: [Wikipedia contributors](https://en.wikipedia.org/wiki/Chess)
+
+  Answer/context quote: “The objective of the game is to checkmate (threaten with inescapable capture) the enemy king.” (15 words).
+
+  Additional fun-fact quote: “a square board consisting of 64 squares” (7 words).
+
+## B13-0885 — The board game Go is generally believed to have originated in which country?
+
+Answer: China. Fun fact: A standard full-size Go board has nineteen lines in each direction.
+
+- sports-games-s0043: [Encyclopaedia Britannica](https://www.britannica.com/topic/go-game)
+
+  Answer/context quote: “is thought to have originated in China” (7 words).
+
+  Additional fun-fact quote: “19 vertical lines and 19 horizontal lines” (7 words).
+
+- sports-games-s0044: [Wikipedia contributors](https://en.wikipedia.org/wiki/Go_(game))
+
+  Answer/context quote: “The game was invented in China” (6 words).
+
+  Additional fun-fact quote: “The standard Go board has a 19×19 grid of lines” (10 words).
+
+## B13-0886 — How many lines in each direction does a standard full-size Go board have?
+
+Answer: Nineteen. Fun fact: Black plays first in an even Go game without a handicap.
+
+- sports-games-s0043: [Encyclopaedia Britannica](https://www.britannica.com/topic/go-game)
+
+  Answer/context quote: “19 vertical lines and 19 horizontal lines” (7 words).
+
+  Additional fun-fact quote: “Each player in turn (black moves first)” (7 words).
+
+- sports-games-s0044: [Wikipedia contributors](https://en.wikipedia.org/wiki/Go_(game))
+
+  Answer/context quote: “The standard Go board has a 19×19 grid of lines” (10 words).
+
+  Additional fun-fact quote: “Black plays first unless given a handicap of two or more stones” (12 words).
+
+## B13-0887 — In an even Go game with no handicap, which color plays first?
+
+Answer: Black. Fun fact: A standard 19-by-19 Go board has 361 intersections.
+
+- sports-games-s0043: [Encyclopaedia Britannica](https://www.britannica.com/topic/go-game)
+
+  Answer/context quote: “Each player in turn (black moves first)” (7 words).
+
+  Additional fun-fact quote: “to form 361 intersections” (4 words).
+
+- sports-games-s0044: [Wikipedia contributors](https://en.wikipedia.org/wiki/Go_(game))
+
+  Answer/context quote: “Black plays first unless given a handicap of two or more stones” (12 words).
+
+  Additional fun-fact quote: “a 19×19 grid of lines, containing 361 points” (8 words).
+
+## B13-0888 — On a standard 19-by-19 Go board, how many line intersections can hold stones?
+
+Answer: 361. Fun fact: Go is generally identified as originating in China.
+
+- sports-games-s0043: [Encyclopaedia Britannica](https://www.britannica.com/topic/go-game)
+
+  Answer/context quote: “to form 361 intersections” (4 words).
+
+  Additional fun-fact quote: “is thought to have originated in China” (7 words).
+
+- sports-games-s0044: [Wikipedia contributors](https://en.wikipedia.org/wiki/Go_(game))
+
+  Answer/context quote: “a 19×19 grid of lines, containing 361 points” (8 words).
+
+  Additional fun-fact quote: “The game was invented in China” (6 words).
+
+## B13-0889 — Which New Jersey city inspired the properties in the original US Monopoly board?
+
+Answer: Atlantic City. Fun fact: Parker Brothers marketed Monopoly in 1935.
+
+- sports-games-s0045: [Encyclopaedia Britannica](https://www.britannica.com/sports/Monopoly-board-game)
+
+  Answer/context quote: “properties were named for streets in Atlantic City , New Jersey” (11 words).
+
+  Additional fun-fact quote: “sold the concept to Parker Brothers in 1935” (8 words).
+
+- sports-games-s0046: [Wikipedia contributors](https://en.wikipedia.org/wiki/Monopoly_(game))
+
+  Answer/context quote: “named after locations in and around Atlantic City, New Jersey” (10 words).
+
+  Additional fun-fact quote: “Parker Brothers began marketing the game on November 5, 1935.” (10 words).
+
+## B13-0890 — Which company first marketed the famous US Monopoly game in 1935?
+
+Answer: Parker Brothers. Fun fact: Lizzie Magie designed the Landlord’s Game that preceded Monopoly.
+
+- sports-games-s0045: [Encyclopaedia Britannica](https://www.britannica.com/sports/Monopoly-board-game)
+
+  Answer/context quote: “sold the concept to Parker Brothers in 1935” (8 words).
+
+  Additional fun-fact quote: “the Landlord’s Game, a board game designed and patented by Lizzie G. Magie” (13 words).
+
+- sports-games-s0046: [Wikipedia contributors](https://en.wikipedia.org/wiki/Monopoly_(game))
+
+  Answer/context quote: “Parker Brothers began marketing the game on November 5, 1935.” (10 words).
+
+  Additional fun-fact quote: “The Landlord's Game , created in 1903 in the United States by Lizzie Magie” (14 words).
+
+## B13-0891 — Who designed the Landlord’s Game, an important predecessor of Monopoly?
+
+Answer: Lizzie Magie. Fun fact: The Monopoly property Marvin Gardens misspells the real name Marven Gardens.
+
+- sports-games-s0045: [Encyclopaedia Britannica](https://www.britannica.com/sports/Monopoly-board-game)
+
+  Answer/context quote: “the Landlord’s Game, a board game designed and patented by Lizzie G. Magie” (13 words).
+
+  Additional fun-fact quote: “Marvin Gardens, which is a misspelling of the real Marven Gardens” (11 words).
+
+- sports-games-s0046: [Wikipedia contributors](https://en.wikipedia.org/wiki/Monopoly_(game))
+
+  Answer/context quote: “The Landlord's Game , created in 1903 in the United States by Lizzie Magie” (14 words).
+
+  Additional fun-fact quote: “Marvin Gardens, the furthest yellow property, is a misspelling of its actual name, Marven Gardens” (15 words).
+
+## B13-0892 — Which US Monopoly property famously misspells the real name Marven Gardens?
+
+Answer: Marvin Gardens. Fun fact: The original US Monopoly properties refer to Atlantic City, New Jersey.
+
+- sports-games-s0045: [Encyclopaedia Britannica](https://www.britannica.com/sports/Monopoly-board-game)
+
+  Answer/context quote: “Marvin Gardens, which is a misspelling of the real Marven Gardens” (11 words).
+
+  Additional fun-fact quote: “properties were named for streets in Atlantic City , New Jersey” (11 words).
+
+- sports-games-s0046: [Wikipedia contributors](https://en.wikipedia.org/wiki/Monopoly_(game))
+
+  Answer/context quote: “Marvin Gardens, the furthest yellow property, is a misspelling of its actual name, Marven Gardens” (15 words).
+
+  Additional fun-fact quote: “named after locations in and around Atlantic City, New Jersey” (10 words).
+
+## B13-0893 — How many tiles does each player initially draw in standard Scrabble?
+
+Answer: Seven. Fun fact: A standard Scrabble board contains 225 squares.
+
+- sports-games-s0047: [Encyclopaedia Britannica](https://www.britannica.com/sports/Scrabble)
+
+  Answer/context quote: “Players draw seven tiles from a pool at the start” (10 words).
+
+  Additional fun-fact quote: “on a 225-square board” (4 words).
+
+- sports-games-s0048: [Wikipedia contributors](https://en.wikipedia.org/wiki/Scrabble)
+
+  Answer/context quote: “Each player then draws seven tiles” (6 words).
+
+  Additional fun-fact quote: “Scrabble is played on a 15x15 board, containing 225 squares.” (10 words).
+
+## B13-0894 — How many squares make up a standard Scrabble board?
+
+Answer: 225. Fun fact: The architect Alfred Butts developed the game that became Scrabble.
+
+- sports-games-s0047: [Encyclopaedia Britannica](https://www.britannica.com/sports/Scrabble)
+
+  Answer/context quote: “on a 225-square board” (4 words).
+
+  Additional fun-fact quote: “was developed by Alfred M. Butts, an architect” (8 words).
+
+- sports-games-s0048: [Wikipedia contributors](https://en.wikipedia.org/wiki/Scrabble)
+
+  Answer/context quote: “Scrabble is played on a 15x15 board, containing 225 squares.” (10 words).
+
+  Additional fun-fact quote: “American architect Alfred Mosher Butts invented the game” (8 words).
+
+## B13-0895 — Which architect developed the game that became Scrabble?
+
+Answer: Alfred Butts. Fun fact: Butts developed the word game that became Scrabble in 1931.
+
+- sports-games-s0047: [Encyclopaedia Britannica](https://www.britannica.com/sports/Scrabble)
+
+  Answer/context quote: “was developed by Alfred M. Butts, an architect” (8 words).
+
+  Additional fun-fact quote: “was developed by Alfred M. Butts, an architect, in 1931” (10 words).
+
+- sports-games-s0048: [Wikipedia contributors](https://en.wikipedia.org/wiki/Scrabble)
+
+  Answer/context quote: “American architect Alfred Mosher Butts invented the game” (8 words).
+
+  Additional fun-fact quote: “American architect Alfred Mosher Butts invented the game in 1931.” (10 words).
+
+## B13-0896 — In what year did Alfred Butts develop the word game that became Scrabble?
+
+Answer: 1931. Fun fact: Each player initially draws seven tiles in standard Scrabble.
+
+- sports-games-s0047: [Encyclopaedia Britannica](https://www.britannica.com/sports/Scrabble)
+
+  Answer/context quote: “was developed by Alfred M. Butts, an architect, in 1931” (10 words).
+
+  Additional fun-fact quote: “Players draw seven tiles from a pool at the start” (10 words).
+
+- sports-games-s0048: [Wikipedia contributors](https://en.wikipedia.org/wiki/Scrabble)
+
+  Answer/context quote: “American architect Alfred Mosher Butts invented the game in 1931.” (10 words).
+
+  Additional fun-fact quote: “Each player then draws seven tiles” (6 words).
+
+## B13-0897 — At which Greek sanctuary were the ancient Olympic Games held?
+
+Answer: Olympia. Fun fact: The ancient Olympic Games honored Zeus.
+
+- sports-games-s0049: [Encyclopaedia Britannica](https://www.britannica.com/sports/Olympic-Games)
+
+  Answer/context quote: “the Olympic Games, held at Olympia” (6 words).
+
+  Additional fun-fact quote: “They were held in honor of Zeus at Olympia” (9 words).
+
+- sports-games-s0050: [Wikipedia contributors](https://en.wikipedia.org/wiki/Olympic_Games)
+
+  Answer/context quote: “held in Olympia, Greece” (4 words).
+
+  Additional fun-fact quote: “at the sanctuary of Zeus in Olympia, Greece” (8 words).
+
+## B13-0898 — The ancient Olympic Games honored which Greek god?
+
+Answer: Zeus. Fun fact: The traditional first recorded ancient Olympic Games date is 776 BCE.
+
+- sports-games-s0049: [Encyclopaedia Britannica](https://www.britannica.com/sports/Olympic-Games)
+
+  Answer/context quote: “They were held in honor of Zeus at Olympia” (9 words).
+
+  Additional fun-fact quote: “the sprint race in 776 bce” (6 words).
+
+- sports-games-s0050: [Wikipedia contributors](https://en.wikipedia.org/wiki/Olympic_Games)
+
+  Answer/context quote: “at the sanctuary of Zeus in Olympia, Greece” (8 words).
+
+  Additional fun-fact quote: “this is based on inscriptions, found at Olympia , listing the winners of a footrace held every four years starting in 776 BC.” (23 words).
+
+## B13-0899 — What is the traditional first recorded year of the ancient Olympic Games?
+
+Answer: 776 BCE. Fun fact: The ancient Olympic pentathlon comprised five events.
+
+- sports-games-s0049: [Encyclopaedia Britannica](https://www.britannica.com/sports/Olympic-Games)
+
+  Answer/context quote: “the sprint race in 776 bce” (6 words).
+
+  Additional fun-fact quote: “an all-around competition consisting of five events” (7 words).
+
+- sports-games-s0050: [Wikipedia contributors](https://en.wikipedia.org/wiki/Olympic_Games)
+
+  Answer/context quote: “this is based on inscriptions, found at Olympia , listing the winners of a footrace held every four years starting in 776 BC.” (23 words).
+
+  Additional fun-fact quote: “a pentathlon (consisting of a jumping event, discus and javelin throws , a foot race, and wrestling)” (17 words).
+
+## B13-0900 — How many events were included in the ancient Olympic pentathlon?
+
+Answer: Five. Fun fact: The ancient Olympic Games were held at Olympia.
+
+- sports-games-s0049: [Encyclopaedia Britannica](https://www.britannica.com/sports/Olympic-Games)
+
+  Answer/context quote: “an all-around competition consisting of five events” (7 words).
+
+  Additional fun-fact quote: “the Olympic Games, held at Olympia” (6 words).
+
+- sports-games-s0050: [Wikipedia contributors](https://en.wikipedia.org/wiki/Olympic_Games)
+
+  Answer/context quote: “a pentathlon (consisting of a jumping event, discus and javelin throws , a foot race, and wrestling)” (17 words).
+
+  Additional fun-fact quote: “held in Olympia, Greece” (4 words).
 
 ## B13-0901 — Allspice is made from which part of the Pimenta dioica tree?
 
@@ -10019,3 +12553,1491 @@ Answer: Piperine. Fun fact: Whole black peppercorns are dried fruits of the pepp
   Answer/context quote: “Its spiciness is due to the chemical compound piperine” (9 words).
 
   Additional fun-fact quote: “cultivated for its fruit (the peppercorn ), which is usually dried and used as a spice” (16 words).
+
+## B13-0908 — Chocolate starts with processed beans from which plant?
+
+Answer: Cacao. Fun fact: Chocolate production uses fermented and roasted cocoa beans.
+
+- food-everyday-life-s0015: [Encyclopaedia Britannica](https://www.britannica.com/topic/chocolate)
+
+  Answer/context quote: “food product made from cocoa beans” (6 words).
+
+  Additional fun-fact quote: “kernels of fermented and roasted cocoa beans” (7 words).
+
+- food-everyday-life-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Chocolate)
+
+  Answer/context quote: “Cocoa beans are the processed seeds of the cacao tree” (10 words).
+
+  Additional fun-fact quote: “They are usually fermented to develop the flavor, then dried, cleaned, and roasted.” (13 words).
+
+## B13-0909 — Before chocolate liquor is made, cocoa beans normally undergo which heat treatment?
+
+Answer: Roasting. Fun fact: White chocolate is made with cocoa butter and milk products.
+
+- food-everyday-life-s0015: [Encyclopaedia Britannica](https://www.britannica.com/topic/chocolate)
+
+  Answer/context quote: “kernels of fermented and roasted cocoa beans” (7 words).
+
+  Additional fun-fact quote: “White chocolate is made from cocoa butter with added milk products” (11 words).
+
+- food-everyday-life-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Chocolate)
+
+  Answer/context quote: “They are usually fermented to develop the flavor, then dried, cleaned, and roasted.” (13 words).
+
+  Additional fun-fact quote: “Making chocolate with only cocoa butter and milk produces white chocolate .” (12 words).
+
+## B13-0910 — Which cacao ingredient supplies the fat in white chocolate?
+
+Answer: Cocoa butter. Fun fact: Adding milk to sweet chocolate produces milk chocolate.
+
+- food-everyday-life-s0015: [Encyclopaedia Britannica](https://www.britannica.com/topic/chocolate)
+
+  Answer/context quote: “White chocolate is made from cocoa butter with added milk products” (11 words).
+
+  Additional fun-fact quote: “The addition of dried or concentrated milk to sweet chocolate produces milk chocolate” (13 words).
+
+- food-everyday-life-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Chocolate)
+
+  Answer/context quote: “Making chocolate with only cocoa butter and milk produces white chocolate .” (12 words).
+
+  Additional fun-fact quote: “with the addition of milk , can be made into milk chocolate” (12 words).
+
+## B13-0911 — Which ingredient distinguishes milk chocolate from otherwise similar dark chocolate?
+
+Answer: Milk. Fun fact: Chocolate is made from cocoa beans, the seeds of the cacao tree.
+
+- food-everyday-life-s0015: [Encyclopaedia Britannica](https://www.britannica.com/topic/chocolate)
+
+  Answer/context quote: “The addition of dried or concentrated milk to sweet chocolate produces milk chocolate” (13 words).
+
+  Additional fun-fact quote: “food product made from cocoa beans” (6 words).
+
+- food-everyday-life-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Chocolate)
+
+  Answer/context quote: “with the addition of milk , can be made into milk chocolate” (12 words).
+
+  Additional fun-fact quote: “Cocoa beans are the processed seeds of the cacao tree” (10 words).
+
+## B13-0912 — Flower nectar is the main raw material bees turn into which sweetener?
+
+Answer: Honey. Fun fact: Honeycomb consists of hexagonal storage cells made of beeswax.
+
+- food-everyday-life-s0017: [Encyclopaedia Britannica](https://www.britannica.com/topic/honey)
+
+  Answer/context quote: “produced in the honey sacs of various bees from the nectar of flowers” (13 words).
+
+  Additional fun-fact quote: “uniform hexagonal cells constructed of beeswax” (6 words).
+
+- food-everyday-life-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Honey)
+
+  Answer/context quote: “primarily floral nectar” (3 words).
+
+  Additional fun-fact quote: “hexagonal cells, into which the bees regurgitate honey for storage” (10 words).
+
+## B13-0913 — The cells in a honeybee honeycomb have which usual shape?
+
+Answer: Hexagonal. Fun fact: Honey contains the simple sugars fructose and glucose.
+
+- food-everyday-life-s0017: [Encyclopaedia Britannica](https://www.britannica.com/topic/honey)
+
+  Answer/context quote: “uniform hexagonal cells constructed of beeswax” (6 words).
+
+  Additional fun-fact quote: “the sugars levulose ( fructose ) and dextrose ( glucose )” (11 words).
+
+- food-everyday-life-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Honey)
+
+  Answer/context quote: “hexagonal cells, into which the bees regurgitate honey for storage” (10 words).
+
+  Additional fun-fact quote: “high concentrations of the monosaccharides fructose and glucose” (8 words).
+
+## B13-0914 — Which pair of simple sugars contributes most of honey's sweetness?
+
+Answer: Fructose and glucose. Fun fact: Mead is a fermented honey beverage.
+
+- food-everyday-life-s0017: [Encyclopaedia Britannica](https://www.britannica.com/topic/honey)
+
+  Answer/context quote: “the sugars levulose ( fructose ) and dextrose ( glucose )” (11 words).
+
+  Additional fun-fact quote: “mead , a fermented beverage” (5 words).
+
+- food-everyday-life-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Honey)
+
+  Answer/context quote: “high concentrations of the monosaccharides fructose and glucose” (8 words).
+
+  Additional fun-fact quote: “mead ("honey wine") is the alcoholic product made by adding yeast to honey-water must” (14 words).
+
+## B13-0915 — What is the traditional alcoholic drink made by fermenting honey?
+
+Answer: Mead. Fun fact: Bees make honey mainly from flower nectar.
+
+- food-everyday-life-s0017: [Encyclopaedia Britannica](https://www.britannica.com/topic/honey)
+
+  Answer/context quote: “mead , a fermented beverage” (5 words).
+
+  Additional fun-fact quote: “produced in the honey sacs of various bees from the nectar of flowers” (13 words).
+
+- food-everyday-life-s0018: [Wikipedia contributors](https://en.wikipedia.org/wiki/Honey)
+
+  Answer/context quote: “mead ("honey wine") is the alcoholic product made by adding yeast to honey-water must” (14 words).
+
+  Additional fun-fact quote: “primarily floral nectar” (3 words).
+
+## B13-0916 — What process turns milk into ordinary yogurt?
+
+Answer: Bacterial fermentation. Fun fact: Lactic acid gives yogurt its sour or tart flavor.
+
+- food-everyday-life-s0019: [Encyclopaedia Britannica](https://www.britannica.com/topic/yogurt)
+
+  Answer/context quote: “semifluid fermented milk food” (4 words).
+
+  Additional fun-fact quote: “mildly sour flavour because of its lactic acid content” (9 words).
+
+- food-everyday-life-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/Yogurt)
+
+  Answer/context quote: “a food produced by bacterial fermentation of milk” (8 words).
+
+  Additional fun-fact quote: “produce lactic acid , which acts on milk protein to give yogurt its texture and characteristic tart flavor” (18 words).
+
+## B13-0917 — Which acid gives yogurt its characteristic tartness?
+
+Answer: Lactic acid. Fun fact: Cow's milk is commonly used to make yogurt.
+
+- food-everyday-life-s0019: [Encyclopaedia Britannica](https://www.britannica.com/topic/yogurt)
+
+  Answer/context quote: “mildly sour flavour because of its lactic acid content” (9 words).
+
+  Additional fun-fact quote: “Cow’s milk is used in the United States” (8 words).
+
+- food-everyday-life-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/Yogurt)
+
+  Answer/context quote: “produce lactic acid , which acts on milk protein to give yogurt its texture and characteristic tart flavor” (18 words).
+
+  Additional fun-fact quote: “Yogurt is most commonly made from cow's milk” (8 words).
+
+## B13-0918 — Which animal provides the milk most commonly used for US dairy yogurt?
+
+Answer: Cow. Fun fact: Raita is a yogurt condiment associated with the Indian subcontinent.
+
+- food-everyday-life-s0019: [Encyclopaedia Britannica](https://www.britannica.com/topic/yogurt)
+
+  Answer/context quote: “Cow’s milk is used in the United States” (8 words).
+
+  Additional fun-fact quote: “A salad of yogurt, cucumbers , and spices is served in India ( raita )” (15 words).
+
+- food-everyday-life-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/Yogurt)
+
+  Answer/context quote: “Yogurt is most commonly made from cow's milk” (8 words).
+
+  Additional fun-fact quote: “Raita is a condiment made with yogurt in the Indian subcontinent.” (11 words).
+
+## B13-0919 — Raita uses which cultured dairy food as its base?
+
+Answer: Yogurt. Fun fact: Yogurt is fermented milk produced using bacterial cultures.
+
+- food-everyday-life-s0019: [Encyclopaedia Britannica](https://www.britannica.com/topic/yogurt)
+
+  Answer/context quote: “A salad of yogurt, cucumbers , and spices is served in India ( raita )” (15 words).
+
+  Additional fun-fact quote: “semifluid fermented milk food” (4 words).
+
+- food-everyday-life-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/Yogurt)
+
+  Answer/context quote: “Raita is a condiment made with yogurt in the Indian subcontinent.” (11 words).
+
+  Additional fun-fact quote: “a food produced by bacterial fermentation of milk” (8 words).
+
+## B13-0920 — Which mechanical action separates butter from cream?
+
+Answer: Churning. Fun fact: Traditional buttermilk is the liquid separated during butter making.
+
+- food-everyday-life-s0021: [Encyclopaedia Britannica](https://www.britannica.com/topic/butter)
+
+  Answer/context quote: “produced by churning the cream” (5 words).
+
+  Additional fun-fact quote: “This process leaves approximately 18 litres of skim milk and buttermilk” (11 words).
+
+- food-everyday-life-s0022: [Wikipedia contributors](https://en.wikipedia.org/wiki/Butter)
+
+  Answer/context quote: “components of churned cream” (4 words).
+
+  Additional fun-fact quote: “This watery liquid was traditionally called buttermilk” (7 words).
+
+## B13-0921 — What was the liquid left after traditional butter churning called?
+
+Answer: Buttermilk. Fun fact: Carotene and related pigments contribute to butter's yellow color.
+
+- food-everyday-life-s0021: [Encyclopaedia Britannica](https://www.britannica.com/topic/butter)
+
+  Answer/context quote: “This process leaves approximately 18 litres of skim milk and buttermilk” (11 words).
+
+  Additional fun-fact quote: “The colour of butter is caused by carotene and other fat-soluble pigments” (12 words).
+
+- food-everyday-life-s0022: [Wikipedia contributors](https://en.wikipedia.org/wiki/Butter)
+
+  Answer/context quote: “This watery liquid was traditionally called buttermilk” (7 words).
+
+  Additional fun-fact quote: “β-carotene and other pigments typically present in pasture-fed cow milk will turn the butter yellow” (15 words).
+
+## B13-0922 — Which yellow pigment can contribute to butter's natural color?
+
+Answer: Beta-carotene. Fun fact: Butter contains a high proportion of butterfat.
+
+- food-everyday-life-s0021: [Encyclopaedia Britannica](https://www.britannica.com/topic/butter)
+
+  Answer/context quote: “The colour of butter is caused by carotene and other fat-soluble pigments” (12 words).
+
+  Additional fun-fact quote: “It has a high content of butterfat , or milk fat” (11 words).
+
+- food-everyday-life-s0022: [Wikipedia contributors](https://en.wikipedia.org/wiki/Butter)
+
+  Answer/context quote: “β-carotene and other pigments typically present in pasture-fed cow milk will turn the butter yellow” (15 words).
+
+  Additional fun-fact quote: “consisting of approximately 81% butterfat” (5 words).
+
+## B13-0923 — Butter is concentrated mainly in which component of milk?
+
+Answer: Milk fat. Fun fact: Butter is made by churning cream.
+
+- food-everyday-life-s0021: [Encyclopaedia Britannica](https://www.britannica.com/topic/butter)
+
+  Answer/context quote: “It has a high content of butterfat , or milk fat” (11 words).
+
+  Additional fun-fact quote: “produced by churning the cream” (5 words).
+
+- food-everyday-life-s0022: [Wikipedia contributors](https://en.wikipedia.org/wiki/Butter)
+
+  Answer/context quote: “consisting of approximately 81% butterfat” (5 words).
+
+  Additional fun-fact quote: “components of churned cream” (4 words).
+
+## B13-0924 — Traditional mayonnaise uses which part of an egg?
+
+Answer: Yolk. Fun fact: Mayonnaise is an emulsion containing oil and egg yolk.
+
+- food-everyday-life-s0023: [Encyclopaedia Britannica](https://www.britannica.com/topic/mayonnaise)
+
+  Answer/context quote: “an emulsion of raw egg yolks and vegetable oil” (9 words).
+
+  Additional fun-fact quote: “an emulsion of raw egg yolks and vegetable oil” (9 words).
+
+- food-everyday-life-s0024: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mayonnaise)
+
+  Answer/context quote: “Mayonnaise is an emulsion of oil , egg yolk” (9 words).
+
+  Additional fun-fact quote: “Mayonnaise is an emulsion of oil , egg yolk” (9 words).
+
+## B13-0925 — Which mixture type describes mayonnaise?
+
+Answer: Emulsion. Fun fact: Lemon juice or vinegar can flavor and acidify mayonnaise.
+
+- food-everyday-life-s0023: [Encyclopaedia Britannica](https://www.britannica.com/topic/mayonnaise)
+
+  Answer/context quote: “an emulsion of raw egg yolks and vegetable oil” (9 words).
+
+  Additional fun-fact quote: “Plain mayonnaise is flavoured with lemon juice, mustard , or vinegar” (11 words).
+
+- food-everyday-life-s0024: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mayonnaise)
+
+  Answer/context quote: “Mayonnaise is an emulsion of oil , egg yolk” (9 words).
+
+  Additional fun-fact quote: “an acid, either vinegar or lemon juice” (7 words).
+
+## B13-0926 — Which ingredient can supply the acidic component of mayonnaise?
+
+Answer: Lemon juice. Fun fact: Mayonnaise forms a base for remoulade.
+
+- food-everyday-life-s0023: [Encyclopaedia Britannica](https://www.britannica.com/topic/mayonnaise)
+
+  Answer/context quote: “Plain mayonnaise is flavoured with lemon juice, mustard , or vinegar” (11 words).
+
+  Additional fun-fact quote: “base of dozens of variations, such as mayonnaise verte (with puréed green herbs ), sauce rémoulade” (16 words).
+
+- food-everyday-life-s0024: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mayonnaise)
+
+  Answer/context quote: “an acid, either vinegar or lemon juice” (7 words).
+
+  Additional fun-fact quote: “It also forms the base for other sauces, including tartar sauce , fry sauce , remoulade” (16 words).
+
+## B13-0927 — Which French sauce commonly has mayonnaise as its base?
+
+Answer: Remoulade. Fun fact: Traditional mayonnaise combines egg yolk with oil.
+
+- food-everyday-life-s0023: [Encyclopaedia Britannica](https://www.britannica.com/topic/mayonnaise)
+
+  Answer/context quote: “base of dozens of variations, such as mayonnaise verte (with puréed green herbs ), sauce rémoulade” (16 words).
+
+  Additional fun-fact quote: “an emulsion of raw egg yolks and vegetable oil” (9 words).
+
+- food-everyday-life-s0024: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mayonnaise)
+
+  Answer/context quote: “It also forms the base for other sauces, including tartar sauce , fry sauce , remoulade” (16 words).
+
+  Additional fun-fact quote: “Mayonnaise is an emulsion of oil , egg yolk” (9 words).
+
+## B13-0928 — Which acid is the defining acidic ingredient in vinegar?
+
+Answer: Acetic acid. Fun fact: Yeast turns sugars into alcohol before vinegar bacteria make acetic acid.
+
+- food-everyday-life-s0025: [Encyclopaedia Britannica](https://www.britannica.com/topic/vinegar)
+
+  Answer/context quote: “a liquid containing acetic acid” (5 words).
+
+  Additional fun-fact quote: “sugar, which is converted into alcohol and carbon dioxide gas by the actions of yeast enzymes” (16 words).
+
+- food-everyday-life-s0026: [Wikipedia contributors](https://en.wikipedia.org/wiki/Vinegar)
+
+  Answer/context quote: “aqueous solution of diluted acetic acid” (6 words).
+
+  Additional fun-fact quote: “converting simple sugars to ethanol using yeast” (7 words).
+
+## B13-0929 — In a two-stage vinegar fermentation, yeast first converts sugar into what?
+
+Answer: Alcohol. Fun fact: Acetic acid bacteria carry out vinegar's alcohol-to-acid conversion.
+
+- food-everyday-life-s0025: [Encyclopaedia Britannica](https://www.britannica.com/topic/vinegar)
+
+  Answer/context quote: “sugar, which is converted into alcohol and carbon dioxide gas by the actions of yeast enzymes” (16 words).
+
+  Additional fun-fact quote: “by the action of Acetobacter bacteria, forming acetic acid and water” (11 words).
+
+- food-everyday-life-s0026: [Wikipedia contributors](https://en.wikipedia.org/wiki/Vinegar)
+
+  Answer/context quote: “converting simple sugars to ethanol using yeast” (7 words).
+
+  Additional fun-fact quote: “converting ethanol to acetic acid using acetic acid bacteria” (9 words).
+
+## B13-0930 — Which organisms convert alcohol into acetic acid during vinegar making?
+
+Answer: Acetic acid bacteria. Fun fact: Vinegar is widely used for pickling vegetables.
+
+- food-everyday-life-s0025: [Encyclopaedia Britannica](https://www.britannica.com/topic/vinegar)
+
+  Answer/context quote: “by the action of Acetobacter bacteria, forming acetic acid and water” (11 words).
+
+  Additional fun-fact quote: “widely used in the pickling of cucumbers and other vegetables” (10 words).
+
+- food-everyday-life-s0026: [Wikipedia contributors](https://en.wikipedia.org/wiki/Vinegar)
+
+  Answer/context quote: “converting ethanol to acetic acid using acetic acid bacteria” (9 words).
+
+  Additional fun-fact quote: “salad dressing, or pickling agent” (5 words).
+
+## B13-0931 — Which food-preservation method commonly uses vinegar?
+
+Answer: Pickling. Fun fact: Vinegar contains diluted acetic acid.
+
+- food-everyday-life-s0025: [Encyclopaedia Britannica](https://www.britannica.com/topic/vinegar)
+
+  Answer/context quote: “widely used in the pickling of cucumbers and other vegetables” (10 words).
+
+  Additional fun-fact quote: “a liquid containing acetic acid” (5 words).
+
+- food-everyday-life-s0026: [Wikipedia contributors](https://en.wikipedia.org/wiki/Vinegar)
+
+  Answer/context quote: “salad dressing, or pickling agent” (5 words).
+
+  Additional fun-fact quote: “aqueous solution of diluted acetic acid” (6 words).
+
+## B13-0932 — Which legume is the main ingredient of tofu?
+
+Answer: Soybean. Fun fact: Tofu is formed by coagulating soy milk.
+
+- food-everyday-life-s0027: [Encyclopaedia Britannica](https://www.britannica.com/topic/tofu)
+
+  Answer/context quote: “food product made from soybeans” (5 words).
+
+  Additional fun-fact quote: “added to the soy milk to separate the curds from the whey” (12 words).
+
+- food-everyday-life-s0028: [Wikipedia contributors](https://en.wikipedia.org/wiki/Tofu)
+
+  Answer/context quote: “curds of coagulated soy milk” (5 words).
+
+  Additional fun-fact quote: “curds of coagulated soy milk” (5 words).
+
+## B13-0933 — In tofu making, which liquid is coagulated to produce the curds?
+
+Answer: Soy milk. Fun fact: Okara is the solid soybean pulp separated in tofu production.
+
+- food-everyday-life-s0027: [Encyclopaedia Britannica](https://www.britannica.com/topic/tofu)
+
+  Answer/context quote: “added to the soy milk to separate the curds from the whey” (12 words).
+
+  Additional fun-fact quote: “solid pulp ( okara ) and soy “milk.”” (8 words).
+
+- food-everyday-life-s0028: [Wikipedia contributors](https://en.wikipedia.org/wiki/Tofu)
+
+  Answer/context quote: “curds of coagulated soy milk” (5 words).
+
+  Additional fun-fact quote: “okara is a tofu by-product consisting of the fiber, protein, and starch left over when soy milk has been extracted” (20 words).
+
+## B13-0934 — What is the name for the soybean pulp left during soy milk and tofu production?
+
+Answer: Okara. Fun fact: Calcium sulfate is used as a tofu coagulant.
+
+- food-everyday-life-s0027: [Encyclopaedia Britannica](https://www.britannica.com/topic/tofu)
+
+  Answer/context quote: “solid pulp ( okara ) and soy “milk.”” (8 words).
+
+  Additional fun-fact quote: “calcium and magnesium chlorides and sulfates” (6 words).
+
+- food-everyday-life-s0028: [Wikipedia contributors](https://en.wikipedia.org/wiki/Tofu)
+
+  Answer/context quote: “okara is a tofu by-product consisting of the fiber, protein, and starch left over when soy milk has been extracted” (20 words).
+
+  Additional fun-fact quote: “Calcium sulfate ( gypsum )” (5 words).
+
+## B13-0935 — Which calcium compound is a common salt coagulant used for tofu?
+
+Answer: Calcium sulfate. Fun fact: Ordinary tofu is made from soybeans.
+
+- food-everyday-life-s0027: [Encyclopaedia Britannica](https://www.britannica.com/topic/tofu)
+
+  Answer/context quote: “calcium and magnesium chlorides and sulfates” (6 words).
+
+  Additional fun-fact quote: “food product made from soybeans” (5 words).
+
+- food-everyday-life-s0028: [Wikipedia contributors](https://en.wikipedia.org/wiki/Tofu)
+
+  Answer/context quote: “Calcium sulfate ( gypsum )” (5 words).
+
+  Additional fun-fact quote: “curds of coagulated soy milk” (5 words).
+
+## B13-0936 — Coffee beans are botanically which part of the coffee plant?
+
+Answer: Seeds. Fun fact: Caffeine supplies coffee's stimulating effect.
+
+- food-everyday-life-s0029: [Encyclopaedia Britannica](https://www.britannica.com/topic/coffee)
+
+  Answer/context quote: “roasted and ground seeds” (4 words).
+
+  Additional fun-fact quote: “invigorating effect, which is produced by caffeine” (7 words).
+
+- food-everyday-life-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Coffee)
+
+  Answer/context quote: “the seeds from coffee cherries” (5 words).
+
+  Additional fun-fact quote: “stimulating effect on humans due to its caffeine content” (9 words).
+
+## B13-0937 — Which stimulant is naturally present in ordinary coffee?
+
+Answer: Caffeine. Fun fact: Arabica and robusta are major commercial coffee types.
+
+- food-everyday-life-s0029: [Encyclopaedia Britannica](https://www.britannica.com/topic/coffee)
+
+  Answer/context quote: “invigorating effect, which is produced by caffeine” (7 words).
+
+  Additional fun-fact quote: “Coffea arabica and C. canephora” (5 words).
+
+- food-everyday-life-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Coffee)
+
+  Answer/context quote: “stimulating effect on humans due to its caffeine content” (9 words).
+
+  Additional fun-fact quote: “C. canephora (predominantly a form known as 'robusta') and C. arabica” (11 words).
+
+## B13-0938 — Which species gives its name to arabica coffee?
+
+Answer: Coffea arabica. Fun fact: Robusta belongs to Coffea canephora.
+
+- food-everyday-life-s0029: [Encyclopaedia Britannica](https://www.britannica.com/topic/coffee)
+
+  Answer/context quote: “Coffea arabica and C. canephora” (5 words).
+
+  Additional fun-fact quote: “Robusta, the main variety of C. canephora” (7 words).
+
+- food-everyday-life-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Coffee)
+
+  Answer/context quote: “C. canephora (predominantly a form known as 'robusta') and C. arabica” (11 words).
+
+  Additional fun-fact quote: “C. canephora (predominantly a form known as 'robusta')” (8 words).
+
+## B13-0939 — Robusta coffee is chiefly a variety of which species?
+
+Answer: Coffea canephora. Fun fact: Coffee is brewed from roasted and ground seeds.
+
+- food-everyday-life-s0029: [Encyclopaedia Britannica](https://www.britannica.com/topic/coffee)
+
+  Answer/context quote: “Robusta, the main variety of C. canephora” (7 words).
+
+  Additional fun-fact quote: “roasted and ground seeds” (4 words).
+
+- food-everyday-life-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Coffee)
+
+  Answer/context quote: “C. canephora (predominantly a form known as 'robusta')” (8 words).
+
+  Additional fun-fact quote: “the seeds from coffee cherries” (5 words).
+
+## B13-0940 — What is the scientific name of the plant used for true tea?
+
+Answer: Camellia sinensis. Fun fact: Tea is made by steeping tea-plant leaves in hot water.
+
+- food-everyday-life-s0031: [Encyclopaedia Britannica](https://www.britannica.com/topic/tea-beverage)
+
+  Answer/context quote: “the tea plant , Camellia sinensis” (6 words).
+
+  Additional fun-fact quote: “young leaves and leaf buds of the tea plant” (9 words).
+
+- food-everyday-life-s0032: [Wikipedia contributors](https://en.wikipedia.org/wiki/Tea)
+
+  Answer/context quote: “fresh or cured leaves of Camellia sinensis” (7 words).
+
+  Additional fun-fact quote: “Traditionally, tea is made by steeping loose tea leaves in hot water” (12 words).
+
+## B13-0941 — Which plant parts are normally steeped to make tea?
+
+Answer: Leaves and leaf buds. Fun fact: Caffeine contributes to tea's stimulating character.
+
+- food-everyday-life-s0031: [Encyclopaedia Britannica](https://www.britannica.com/topic/tea-beverage)
+
+  Answer/context quote: “young leaves and leaf buds of the tea plant” (9 words).
+
+  Additional fun-fact quote: “caffeine , which gives the beverage its stimulating character” (9 words).
+
+- food-everyday-life-s0032: [Wikipedia contributors](https://en.wikipedia.org/wiki/Tea)
+
+  Answer/context quote: “Traditionally, tea is made by steeping loose tea leaves in hot water” (12 words).
+
+  Additional fun-fact quote: “Tea has a stimulant effect in humans primarily due to its caffeine content.” (13 words).
+
+## B13-0942 — What naturally occurring stimulant is found in tea?
+
+Answer: Caffeine. Fun fact: Polyphenols help give tea its astringent taste.
+
+- food-everyday-life-s0031: [Encyclopaedia Britannica](https://www.britannica.com/topic/tea-beverage)
+
+  Answer/context quote: “caffeine , which gives the beverage its stimulating character” (9 words).
+
+  Additional fun-fact quote: “tannins , or polyphenols, which are colourless, bitter-tasting substances that give the drink its astringency” (15 words).
+
+- food-everyday-life-s0032: [Wikipedia contributors](https://en.wikipedia.org/wiki/Tea)
+
+  Answer/context quote: “Tea has a stimulant effect in humans primarily due to its caffeine content.” (13 words).
+
+  Additional fun-fact quote: “The astringency in tea can be attributed to the presence of polyphenols” (12 words).
+
+## B13-0943 — Which group of compounds contributes to tea's astringency?
+
+Answer: Polyphenols. Fun fact: True tea is made from Camellia sinensis leaves.
+
+- food-everyday-life-s0031: [Encyclopaedia Britannica](https://www.britannica.com/topic/tea-beverage)
+
+  Answer/context quote: “tannins , or polyphenols, which are colourless, bitter-tasting substances that give the drink its astringency” (15 words).
+
+  Additional fun-fact quote: “the tea plant , Camellia sinensis” (6 words).
+
+- food-everyday-life-s0032: [Wikipedia contributors](https://en.wikipedia.org/wiki/Tea)
+
+  Answer/context quote: “The astringency in tea can be attributed to the presence of polyphenols” (12 words).
+
+  Additional fun-fact quote: “fresh or cured leaves of Camellia sinensis” (7 words).
+
+## B13-0944 — Which tiny insects are important pollinators of cacao flowers?
+
+Answer: Midges. Fun fact: Theobroma comes from Greek words meaning food of the gods.
+
+- food-everyday-life-s0033: [Encyclopaedia Britannica](https://www.britannica.com/plant/cacao)
+
+  Answer/context quote: “pollinated by tiny flies called midges” (6 words).
+
+  Additional fun-fact quote: “whose scientific name means “food of the gods” in Greek” (10 words).
+
+- food-everyday-life-s0034: [Wikipedia contributors](https://en.wikipedia.org/wiki/Theobroma_cacao)
+
+  Answer/context quote: “cacao flowers are pollinated by tiny flies, Forcipomyia biting midges” (10 words).
+
+  Additional fun-fact quote: “The generic name Theobroma is derived from the Greek for "food of the gods"” (14 words).
+
+## B13-0945 — What does the cacao genus name Theobroma mean?
+
+Answer: Food of the gods. Fun fact: Cacao flowers emerge from the trunk and branches.
+
+- food-everyday-life-s0033: [Encyclopaedia Britannica](https://www.britannica.com/plant/cacao)
+
+  Answer/context quote: “whose scientific name means “food of the gods” in Greek” (10 words).
+
+  Additional fun-fact quote: “flowers grow in clusters directly from the trunk and limbs” (10 words).
+
+- food-everyday-life-s0034: [Wikipedia contributors](https://en.wikipedia.org/wiki/Theobroma_cacao)
+
+  Answer/context quote: “The generic name Theobroma is derived from the Greek for "food of the gods"” (14 words).
+
+  Additional fun-fact quote: “flowers are produced in clusters directly on the trunk and older branches” (12 words).
+
+## B13-0946 — Cacao flowers grow directly from the trunk and what other part?
+
+Answer: Older branches. Fun fact: Cacao beans develop inside pods containing white pulp.
+
+- food-everyday-life-s0033: [Encyclopaedia Britannica](https://www.britannica.com/plant/cacao)
+
+  Answer/context quote: “flowers grow in clusters directly from the trunk and limbs” (10 words).
+
+  Additional fun-fact quote: “covered with a sweet sticky white pulp” (7 words).
+
+- food-everyday-life-s0034: [Wikipedia contributors](https://en.wikipedia.org/wiki/Theobroma_cacao)
+
+  Answer/context quote: “flowers are produced in clusters directly on the trunk and older branches” (12 words).
+
+  Additional fun-fact quote: “seeds , usually called "beans", embedded in a white pulp” (10 words).
+
+## B13-0947 — Inside a cacao pod, the beans are surrounded by what?
+
+Answer: Sweet white pulp. Fun fact: Tiny flies called midges pollinate cacao flowers.
+
+- food-everyday-life-s0033: [Encyclopaedia Britannica](https://www.britannica.com/plant/cacao)
+
+  Answer/context quote: “covered with a sweet sticky white pulp” (7 words).
+
+  Additional fun-fact quote: “pollinated by tiny flies called midges” (6 words).
+
+- food-everyday-life-s0034: [Wikipedia contributors](https://en.wikipedia.org/wiki/Theobroma_cacao)
+
+  Answer/context quote: “seeds , usually called "beans", embedded in a white pulp” (10 words).
+
+  Additional fun-fact quote: “cacao flowers are pollinated by tiny flies, Forcipomyia biting midges” (10 words).
+
+## B13-0948 — Which ingredient is the usual grain-based foundation of bread dough?
+
+Answer: Flour. Fun fact: Ordinary bread loaves are baked.
+
+- food-everyday-life-s0035: [Encyclopaedia Britannica](https://www.britannica.com/topic/bread)
+
+  Answer/context quote: “made of flour or meal that is moistened” (8 words).
+
+  Additional fun-fact quote: “bread , baked food product” (5 words).
+
+- food-everyday-life-s0036: [Wikipedia contributors](https://en.wikipedia.org/wiki/Bread)
+
+  Answer/context quote: “made from water, flour , and often yeast” (8 words).
+
+  Additional fun-fact quote: “Bread is a baked food product” (6 words).
+
+## B13-0949 — Which cooking method normally turns bread dough into a loaf?
+
+Answer: Baking. Fun fact: Gluten contributes elasticity to wheat bread dough.
+
+- food-everyday-life-s0035: [Encyclopaedia Britannica](https://www.britannica.com/topic/bread)
+
+  Answer/context quote: “bread , baked food product” (5 words).
+
+  Additional fun-fact quote: “gluten (elastic protein )” (4 words).
+
+- food-everyday-life-s0036: [Wikipedia contributors](https://en.wikipedia.org/wiki/Bread)
+
+  Answer/context quote: “Bread is a baked food product” (6 words).
+
+  Additional fun-fact quote: “gluten (which give the dough sponginess and elasticity)” (8 words).
+
+## B13-0950 — Which wheat protein network helps bread dough stretch and trap gas?
+
+Answer: Gluten. Fun fact: Sourdough relies on naturally occurring microbes for fermentation.
+
+- food-everyday-life-s0035: [Encyclopaedia Britannica](https://www.britannica.com/topic/bread)
+
+  Answer/context quote: “gluten (elastic protein )” (4 words).
+
+  Additional fun-fact quote: “yeasts that are naturally present in the air combine with the mixture and begin to ferment” (16 words).
+
+- food-everyday-life-s0036: [Wikipedia contributors](https://en.wikipedia.org/wiki/Bread)
+
+  Answer/context quote: “gluten (which give the dough sponginess and elasticity)” (8 words).
+
+  Additional fun-fact quote: “naturally occurring microbes (e.g. sourdough )” (6 words).
+
+## B13-0951 — Which bread style is leavened with a naturally fermented flour-and-water starter?
+
+Answer: Sourdough. Fun fact: Bread is made from moistened flour or meal.
+
+- food-everyday-life-s0035: [Encyclopaedia Britannica](https://www.britannica.com/topic/bread)
+
+  Answer/context quote: “yeasts that are naturally present in the air combine with the mixture and begin to ferment” (16 words).
+
+  Additional fun-fact quote: “made of flour or meal that is moistened” (8 words).
+
+- food-everyday-life-s0036: [Wikipedia contributors](https://en.wikipedia.org/wiki/Bread)
+
+  Answer/context quote: “naturally occurring microbes (e.g. sourdough )” (6 words).
+
+  Additional fun-fact quote: “made from water, flour , and often yeast” (8 words).
+
+## B13-0952 — Cheese is principally made from which milk fraction after coagulation?
+
+Answer: Curds. Fun fact: Whey is the liquid separated when milk coagulates during cheese making.
+
+- food-everyday-life-s0037: [Encyclopaedia Britannica](https://www.britannica.com/topic/cheese)
+
+  Answer/context quote: “consisting primarily of the curd” (5 words).
+
+  Additional fun-fact quote: “releases whey , a watery fluid” (6 words).
+
+- food-everyday-life-s0038: [Wikipedia contributors](https://en.wikipedia.org/wiki/Cheese)
+
+  Answer/context quote: “solid curds , consisting of proteins and milkfat” (8 words).
+
+  Additional fun-fact quote: “separated from the liquid whey” (5 words).
+
+## B13-0953 — What is the liquid separated from cheese curds called?
+
+Answer: Whey. Fun fact: Casein is the principal milk protein involved in cheese curds.
+
+- food-everyday-life-s0037: [Encyclopaedia Britannica](https://www.britannica.com/topic/cheese)
+
+  Answer/context quote: “releases whey , a watery fluid” (6 words).
+
+  Additional fun-fact quote: “chief protein in milk, casein” (5 words).
+
+- food-everyday-life-s0038: [Wikipedia contributors](https://en.wikipedia.org/wiki/Cheese)
+
+  Answer/context quote: “separated from the liquid whey” (5 words).
+
+  Additional fun-fact quote: “cause the protein casein to coagulate” (6 words).
+
+## B13-0954 — Which major milk protein coagulates into cheese curds?
+
+Answer: Casein. Fun fact: Rennet supplies enzymes that help coagulate milk for cheese.
+
+- food-everyday-life-s0037: [Encyclopaedia Britannica](https://www.britannica.com/topic/cheese)
+
+  Answer/context quote: “chief protein in milk, casein” (5 words).
+
+  Additional fun-fact quote: “a brine extract called rennet” (5 words).
+
+- food-everyday-life-s0038: [Wikipedia contributors](https://en.wikipedia.org/wiki/Cheese)
+
+  Answer/context quote: “cause the protein casein to coagulate” (6 words).
+
+  Additional fun-fact quote: “enzymes of rennet or bacterial enzymes with similar activity” (9 words).
+
+## B13-0955 — What is the name of the enzyme preparation traditionally used to curdle milk for cheese?
+
+Answer: Rennet. Fun fact: Cheese is formed from coagulated milk curds.
+
+- food-everyday-life-s0037: [Encyclopaedia Britannica](https://www.britannica.com/topic/cheese)
+
+  Answer/context quote: “a brine extract called rennet” (5 words).
+
+  Additional fun-fact quote: “consisting primarily of the curd” (5 words).
+
+- food-everyday-life-s0038: [Wikipedia contributors](https://en.wikipedia.org/wiki/Cheese)
+
+  Answer/context quote: “enzymes of rennet or bacterial enzymes with similar activity” (9 words).
+
+  Additional fun-fact quote: “solid curds , consisting of proteins and milkfat” (8 words).
+
+## B13-0956 — Traditional dried Italian pasta is usually made from which type of wheat?
+
+Answer: Durum wheat. Fun fact: Al dente pasta remains firm to the bite.
+
+- food-everyday-life-s0039: [Encyclopaedia Britannica](https://www.britannica.com/topic/pasta)
+
+  Answer/context quote: “a type of wheat called durum” (6 words).
+
+  Additional fun-fact quote: “firm and resilient to the bite ( al dente )” (10 words).
+
+- food-everyday-life-s0040: [Wikipedia contributors](https://en.wikipedia.org/wiki/Pasta)
+
+  Answer/context quote: “Pasta was originally only made with durum” (7 words).
+
+  Additional fun-fact quote: “al dente , such that it is still firm to the bite” (12 words).
+
+## B13-0957 — What does pasta cooked al dente remain like at the center of the bite?
+
+Answer: Firm. Fun fact: Eggs are often added to some pasta doughs.
+
+- food-everyday-life-s0039: [Encyclopaedia Britannica](https://www.britannica.com/topic/pasta)
+
+  Answer/context quote: “firm and resilient to the bite ( al dente )” (10 words).
+
+  Additional fun-fact quote: “Eggs are frequently added to homemade pastas” (7 words).
+
+- food-everyday-life-s0040: [Wikipedia contributors](https://en.wikipedia.org/wiki/Pasta)
+
+  Answer/context quote: “al dente , such that it is still firm to the bite” (12 words).
+
+  Additional fun-fact quote: “egg for color and richness (in some types of pasta)” (10 words).
+
+## B13-0958 — Which ingredient is often added to homemade pasta dough?
+
+Answer: Eggs. Fun fact: Commercial dried pasta is often formed by extrusion.
+
+- food-everyday-life-s0039: [Encyclopaedia Britannica](https://www.britannica.com/topic/pasta)
+
+  Answer/context quote: “Eggs are frequently added to homemade pastas” (7 words).
+
+  Additional fun-fact quote: “kneaded into a smooth stiff dough and extruded” (8 words).
+
+- food-everyday-life-s0040: [Wikipedia contributors](https://en.wikipedia.org/wiki/Pasta)
+
+  Answer/context quote: “egg for color and richness (in some types of pasta)” (10 words).
+
+  Additional fun-fact quote: “Most dried pasta is produced commercially via an extrusion process” (10 words).
+
+## B13-0959 — What industrial process forces pasta dough through shaped dies?
+
+Answer: Extrusion. Fun fact: Traditional pasta commonly uses durum wheat.
+
+- food-everyday-life-s0039: [Encyclopaedia Britannica](https://www.britannica.com/topic/pasta)
+
+  Answer/context quote: “kneaded into a smooth stiff dough and extruded” (8 words).
+
+  Additional fun-fact quote: “a type of wheat called durum” (6 words).
+
+- food-everyday-life-s0040: [Wikipedia contributors](https://en.wikipedia.org/wiki/Pasta)
+
+  Answer/context quote: “Most dried pasta is produced commercially via an extrusion process” (10 words).
+
+  Additional fun-fact quote: “Pasta was originally only made with durum” (7 words).
+
+## B13-0960 — Gelatin is derived mainly from which structural animal protein?
+
+Answer: Collagen. Fun fact: Gelatin is commonly extracted from animal skin, bones or related tissues.
+
+- food-everyday-life-s0041: [Encyclopaedia Britannica](https://www.britannica.com/topic/gelatin)
+
+  Answer/context quote: “Derived from collagen , a protein found in animal skin and bone” (12 words).
+
+  Additional fun-fact quote: “extracted by boiling animal hides, skins, bones, and tissue” (9 words).
+
+- food-everyday-life-s0042: [Wikipedia contributors](https://en.wikipedia.org/wiki/Gelatin)
+
+  Answer/context quote: “commonly derived from collagen taken from animal body parts” (9 words).
+
+  Additional fun-fact quote: “collagen taken from animal body parts” (6 words).
+
+## B13-0961 — Ordinary culinary gelatin is usually obtained from which broad source?
+
+Answer: Animal tissues. Fun fact: Conventional gelatin gels can reverse to a fluid state when heated.
+
+- food-everyday-life-s0041: [Encyclopaedia Britannica](https://www.britannica.com/topic/gelatin)
+
+  Answer/context quote: “extracted by boiling animal hides, skins, bones, and tissue” (9 words).
+
+  Additional fun-fact quote: “The gel state is reversible to a sol state at higher temperatures” (12 words).
+
+- food-everyday-life-s0042: [Wikipedia contributors](https://en.wikipedia.org/wiki/Gelatin)
+
+  Answer/context quote: “collagen taken from animal body parts” (6 words).
+
+  Additional fun-fact quote: “Gelatin dissolves well in water and can form reversible gel-like substances” (11 words).
+
+## B13-0962 — How does gelatin's physical sol-to-gel transition behave?
+
+Answer: It is thermally reversible. Fun fact: Gelatin is derived from collagen.
+
+- food-everyday-life-s0041: [Encyclopaedia Britannica](https://www.britannica.com/topic/gelatin)
+
+  Answer/context quote: “The gel state is reversible to a sol state at higher temperatures” (12 words).
+
+  Additional fun-fact quote: “Derived from collagen , a protein found in animal skin and bone” (12 words).
+
+- food-everyday-life-s0042: [Wikipedia contributors](https://en.wikipedia.org/wiki/Gelatin)
+
+  Answer/context quote: “The gel formed by gelatin can be melted by reheating” (10 words).
+
+  Additional fun-fact quote: “commonly derived from collagen taken from animal body parts” (9 words).
+
+## B13-0963 — Which plant-derived substance commonly helps jams and jellies set?
+
+Answer: Pectin. Fun fact: Pectin occurs in plant cell walls.
+
+- food-everyday-life-s0043: [Encyclopaedia Britannica](https://www.britannica.com/science/pectin)
+
+  Answer/context quote: “preparation of jellies , jams, and marmalades” (7 words).
+
+  Additional fun-fact quote: “found in the cell walls and intercellular tissues” (8 words).
+
+- food-everyday-life-s0044: [Wikipedia contributors](https://en.wikipedia.org/wiki/Pectin)
+
+  Answer/context quote: “edible gelling agent , especially in jams and jellies” (9 words).
+
+  Additional fun-fact quote: “contained in the cell walls and middle lamellae of terrestrial plants” (11 words).
+
+## B13-0964 — Where does pectin naturally occur in plant structure?
+
+Answer: Cell walls. Fun fact: Commercial pectin is commonly extracted from citrus fruits.
+
+- food-everyday-life-s0043: [Encyclopaedia Britannica](https://www.britannica.com/science/pectin)
+
+  Answer/context quote: “found in the cell walls and intercellular tissues” (8 words).
+
+  Additional fun-fact quote: “chief sources of commercial pectin are the peels of citrus fruits” (11 words).
+
+- food-everyday-life-s0044: [Wikipedia contributors](https://en.wikipedia.org/wiki/Pectin)
+
+  Answer/context quote: “contained in the cell walls and middle lamellae of terrestrial plants” (11 words).
+
+  Additional fun-fact quote: “produced from citrus fruits” (4 words).
+
+## B13-0965 — Which fruit-processing material is a major commercial source of pectin?
+
+Answer: Citrus peels. Fun fact: Pectin is used as a gelling agent in jams and jellies.
+
+- food-everyday-life-s0043: [Encyclopaedia Britannica](https://www.britannica.com/science/pectin)
+
+  Answer/context quote: “chief sources of commercial pectin are the peels of citrus fruits” (11 words).
+
+  Additional fun-fact quote: “preparation of jellies , jams, and marmalades” (7 words).
+
+- food-everyday-life-s0044: [Wikipedia contributors](https://en.wikipedia.org/wiki/Pectin)
+
+  Answer/context quote: “produced from citrus fruits” (4 words).
+
+  Additional fun-fact quote: “edible gelling agent , especially in jams and jellies” (9 words).
+
+## B13-0966 — What chemical compound makes up ordinary table salt?
+
+Answer: Sodium chloride. Fun fact: Iodized salt is used to help prevent iodine deficiency.
+
+- food-everyday-life-s0045: [Encyclopaedia Britannica](https://www.britannica.com/science/salt)
+
+  Answer/context quote: “salt (NaCl)” (2 words).
+
+  Additional fun-fact quote: “Iodized salt —that is, salt to which small quantities of potassium iodide have been added” (15 words).
+
+- food-everyday-life-s0046: [Wikipedia contributors](https://en.wikipedia.org/wiki/Salt)
+
+  Answer/context quote: “Salt is a mineral composed primarily of sodium chloride (NaCl)” (10 words).
+
+  Additional fun-fact quote: “may be iodised to prevent iodine deficiency” (7 words).
+
+## B13-0967 — Which nutrient is intentionally added to iodized salt?
+
+Answer: Iodine. Fun fact: Halite is the mineral form of common salt.
+
+- food-everyday-life-s0045: [Encyclopaedia Britannica](https://www.britannica.com/science/salt)
+
+  Answer/context quote: “Iodized salt —that is, salt to which small quantities of potassium iodide have been added” (15 words).
+
+  Additional fun-fact quote: “The mineral form halite , or rock salt” (8 words).
+
+- food-everyday-life-s0046: [Wikipedia contributors](https://en.wikipedia.org/wiki/Salt)
+
+  Answer/context quote: “may be iodised to prevent iodine deficiency” (7 words).
+
+  Additional fun-fact quote: “rock salt or halite” (4 words).
+
+## B13-0968 — What is the mineral name for natural rock salt?
+
+Answer: Halite. Fun fact: Table salt is chiefly sodium chloride, NaCl.
+
+- food-everyday-life-s0045: [Encyclopaedia Britannica](https://www.britannica.com/science/salt)
+
+  Answer/context quote: “The mineral form halite , or rock salt” (8 words).
+
+  Additional fun-fact quote: “salt (NaCl)” (2 words).
+
+- food-everyday-life-s0046: [Wikipedia contributors](https://en.wikipedia.org/wiki/Salt)
+
+  Answer/context quote: “rock salt or halite” (4 words).
+
+  Additional fun-fact quote: “Salt is a mineral composed primarily of sodium chloride (NaCl)” (10 words).
+
+## B13-0969 — What process can recover sea salt from seawater in shallow ponds?
+
+Answer: Evaporation. Fun fact: Commercial salt also comes from mined rock salt.
+
+- food-everyday-life-s0063: [Encyclopaedia Britannica](https://www.britannica.com/science/salt/Salt-manufacture)
+
+  Answer/context quote: “salt used in commerce was produced from the evaporation of seawater” (11 words).
+
+  Additional fun-fact quote: “Commercial salt is manufactured from rock salt” (7 words).
+
+- food-everyday-life-s0046: [Wikipedia contributors](https://en.wikipedia.org/wiki/Salt)
+
+  Answer/context quote: “the evaporation of seawater ( sea salt )” (8 words).
+
+  Additional fun-fact quote: “Salt is processed from salt mines” (6 words).
+
+## B13-0970 — Which sugar is the main ingredient of ordinary white table sugar?
+
+Answer: Sucrose. Fun fact: Sucrose is a disaccharide, or double sugar.
+
+- food-everyday-life-s0047: [Encyclopaedia Britannica](https://www.britannica.com/science/sugar-chemical-compound)
+
+  Answer/context quote: “The most common sugar is sucrose , a crystalline tabletop and industrial sweetener” (13 words).
+
+  Additional fun-fact quote: “Sucrose is a disaccharide , or double sugar” (8 words).
+
+- food-everyday-life-s0048: [Wikipedia contributors](https://en.wikipedia.org/wiki/Sugar)
+
+  Answer/context quote: “White sugar is almost pure sucrose” (6 words).
+
+  Additional fun-fact quote: “common examples are sucrose (glucose + fructose)” (7 words).
+
+## B13-0971 — Sucrose is classified as which type of sugar molecule?
+
+Answer: Disaccharide. Fun fact: Sucrose consists of linked glucose and fructose units.
+
+- food-everyday-life-s0047: [Encyclopaedia Britannica](https://www.britannica.com/science/sugar-chemical-compound)
+
+  Answer/context quote: “Sucrose is a disaccharide , or double sugar” (8 words).
+
+  Additional fun-fact quote: “one molecule of glucose linked to one molecule of fructose” (10 words).
+
+- food-everyday-life-s0048: [Wikipedia contributors](https://en.wikipedia.org/wiki/Sugar)
+
+  Answer/context quote: “common examples are sucrose (glucose + fructose)” (7 words).
+
+  Additional fun-fact quote: “sucrose (glucose + fructose)” (4 words).
+
+## B13-0972 — Which two simple sugars are joined together in sucrose?
+
+Answer: Glucose and fructose. Fun fact: Sugar beets and sugarcane are major sources of sucrose.
+
+- food-everyday-life-s0047: [Encyclopaedia Britannica](https://www.britannica.com/science/sugar-chemical-compound)
+
+  Answer/context quote: “one molecule of glucose linked to one molecule of fructose” (10 words).
+
+  Additional fun-fact quote: “sugar beets ( Beta vulgaris )” (6 words).
+
+- food-everyday-life-s0048: [Wikipedia contributors](https://en.wikipedia.org/wiki/Sugar)
+
+  Answer/context quote: “sucrose (glucose + fructose)” (4 words).
+
+  Additional fun-fact quote: “Sucrose is especially concentrated in sugarcane and sugar beet” (9 words).
+
+## B13-0973 — Which root crop is a major source of commercially extracted sugar?
+
+Answer: Sugar beet. Fun fact: White table sugar is chiefly sucrose.
+
+- food-everyday-life-s0047: [Encyclopaedia Britannica](https://www.britannica.com/science/sugar-chemical-compound)
+
+  Answer/context quote: “sugar beets ( Beta vulgaris )” (6 words).
+
+  Additional fun-fact quote: “The most common sugar is sucrose , a crystalline tabletop and industrial sweetener” (13 words).
+
+- food-everyday-life-s0048: [Wikipedia contributors](https://en.wikipedia.org/wiki/Sugar)
+
+  Answer/context quote: “Sucrose is especially concentrated in sugarcane and sugar beet” (9 words).
+
+  Additional fun-fact quote: “White sugar is almost pure sucrose” (6 words).
+
+## B13-0974 — Turmeric powder typically gives food which color?
+
+Answer: Orange-yellow. Fun fact: Turmeric spice comes from the plant's rhizomes, or underground stems.
+
+- food-everyday-life-s0049: [Encyclopaedia Britannica](https://www.britannica.com/plant/turmeric)
+
+  Answer/context quote: “strong staining orange-yellow color” (4 words).
+
+  Additional fun-fact quote: “tuberous rhizomes (underground stems)” (4 words).
+
+- food-everyday-life-s0050: [Wikipedia contributors](https://en.wikipedia.org/wiki/Turmeric)
+
+  Answer/context quote: “deep orange-yellow shelf-stable spice powder” (5 words).
+
+  Additional fun-fact quote: “Plants are gathered each year for their rhizomes” (8 words).
+
+## B13-0975 — Which part of the turmeric plant is used to make the spice?
+
+Answer: Rhizome. Fun fact: Turmeric is a member of the ginger family.
+
+- food-everyday-life-s0049: [Encyclopaedia Britannica](https://www.britannica.com/plant/turmeric)
+
+  Answer/context quote: “tuberous rhizomes (underground stems)” (4 words).
+
+  Additional fun-fact quote: “plant of the ginger family” (5 words).
+
+- food-everyday-life-s0050: [Wikipedia contributors](https://en.wikipedia.org/wiki/Turmeric)
+
+  Answer/context quote: “Plants are gathered each year for their rhizomes” (8 words).
+
+  Additional fun-fact quote: “a flowering plant in the ginger family Zingiberaceae” (8 words).
+
+## B13-0976 — Turmeric belongs to which familiar spice plant's family?
+
+Answer: Ginger. Fun fact: Curcumin is a yellow compound produced by turmeric.
+
+- food-everyday-life-s0049: [Encyclopaedia Britannica](https://www.britannica.com/plant/turmeric)
+
+  Answer/context quote: “plant of the ginger family” (5 words).
+
+  Additional fun-fact quote: “The coloring matter is curcumin” (5 words).
+
+- food-everyday-life-s0050: [Wikipedia contributors](https://en.wikipedia.org/wiki/Turmeric)
+
+  Answer/context quote: “a flowering plant in the ginger family Zingiberaceae” (8 words).
+
+  Additional fun-fact quote: “Curcumin, a bright yellow chemical produced by the turmeric plant” (10 words).
+
+## B13-0977 — Which compound is chiefly responsible for turmeric's yellow coloring?
+
+Answer: Curcumin. Fun fact: Turmeric is commonly used as an orange-yellow food coloring and spice.
+
+- food-everyday-life-s0049: [Encyclopaedia Britannica](https://www.britannica.com/plant/turmeric)
+
+  Answer/context quote: “The coloring matter is curcumin” (5 words).
+
+  Additional fun-fact quote: “strong staining orange-yellow color” (4 words).
+
+- food-everyday-life-s0050: [Wikipedia contributors](https://en.wikipedia.org/wiki/Turmeric)
+
+  Answer/context quote: “Curcumin, a bright yellow chemical produced by the turmeric plant” (10 words).
+
+  Additional fun-fact quote: “deep orange-yellow shelf-stable spice powder” (5 words).
+
+## B13-0978 — The part of ginger normally used in cooking is botanically what?
+
+Answer: A rhizome. Fun fact: Ginger and turmeric both belong to the family Zingiberaceae.
+
+- food-everyday-life-s0065: [Encyclopaedia Britannica](https://www.britannica.com/plant/Zingiberaceae)
+
+  Answer/context quote: “Ginger is obtained from the fresh or dried rhizomes of Zingiber officinale” (12 words).
+
+  Additional fun-fact quote: “The dried thick rhizome of turmeric ( Curcuma longa )” (10 words).
+
+- food-everyday-life-s0052: [Wikipedia contributors](https://en.wikipedia.org/wiki/Ginger)
+
+  Answer/context quote: “whose rhizome , ginger root or ginger, is widely used as a spice” (13 words).
+
+  Additional fun-fact quote: “Ginger is in the family Zingiberaceae , which also includes turmeric” (11 words).
+
+## B13-0979 — Which other yellow spice is in the same family as ginger?
+
+Answer: Turmeric. Fun fact: Common culinary ginger is Zingiber officinale.
+
+- food-everyday-life-s0065: [Encyclopaedia Britannica](https://www.britannica.com/plant/Zingiberaceae)
+
+  Answer/context quote: “The dried thick rhizome of turmeric ( Curcuma longa )” (10 words).
+
+  Additional fun-fact quote: “Ginger is obtained from the fresh or dried rhizomes of Zingiber officinale” (12 words).
+
+- food-everyday-life-s0052: [Wikipedia contributors](https://en.wikipedia.org/wiki/Ginger)
+
+  Answer/context quote: “Ginger is in the family Zingiberaceae , which also includes turmeric” (11 words).
+
+  Additional fun-fact quote: “Ginger ( Zingiber officinale )” (5 words).
+
+## B13-0980 — What is the scientific name of common culinary ginger?
+
+Answer: Zingiber officinale. Fun fact: Ginger has long been associated with origins in Southeast Asia.
+
+- food-everyday-life-s0051: [Encyclopaedia Britannica](https://www.britannica.com/plant/ginger)
+
+  Answer/context quote: “ginger , ( Zingiber officinale )” (6 words).
+
+  Additional fun-fact quote: “probably native to southeastern Asia” (5 words).
+
+- food-everyday-life-s0052: [Wikipedia contributors](https://en.wikipedia.org/wiki/Ginger)
+
+  Answer/context quote: “Ginger ( Zingiber officinale )” (5 words).
+
+  Additional fun-fact quote: “Ginger originated in Maritime Southeast Asia” (6 words).
+
+## B13-0981 — Cultivated ginger is thought to have originated in which broad region?
+
+Answer: Southeast Asia. Fun fact: Culinary ginger comes from a rhizome, an underground stem.
+
+- food-everyday-life-s0051: [Encyclopaedia Britannica](https://www.britannica.com/plant/ginger)
+
+  Answer/context quote: “probably native to southeastern Asia” (5 words).
+
+  Additional fun-fact quote: “rhizome (underground stem) used as a spice” (7 words).
+
+- food-everyday-life-s0052: [Wikipedia contributors](https://en.wikipedia.org/wiki/Ginger)
+
+  Answer/context quote: “Ginger originated in Maritime Southeast Asia” (6 words).
+
+  Additional fun-fact quote: “whose rhizome , ginger root or ginger, is widely used as a spice” (13 words).
+
+## B13-0982 — Mustard condiment is primarily made from which part of the plant?
+
+Answer: Seeds. Fun fact: Mustard is commonly paired with sausages and hot dogs.
+
+- food-everyday-life-s0053: [Encyclopaedia Britannica](https://www.britannica.com/plant/mustard)
+
+  Answer/context quote: “condiment made from the pungent seeds” (6 words).
+
+  Additional fun-fact quote: “particularly cold meats, sausages” (4 words).
+
+- food-everyday-life-s0054: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mustard_(condiment))
+
+  Answer/context quote: “Mustard is a condiment made from the seeds of a mustard plant” (12 words).
+
+  Additional fun-fact quote: “condiment for sandwiches , hamburgers , and hot dogs” (9 words).
+
+## B13-0983 — Which yellow condiment is commonly served with hot dogs and sausages?
+
+Answer: Mustard. Fun fact: Brassica juncea is brown or Indian mustard.
+
+- food-everyday-life-s0053: [Encyclopaedia Britannica](https://www.britannica.com/plant/mustard)
+
+  Answer/context quote: “particularly cold meats, sausages” (4 words).
+
+  Additional fun-fact quote: “brown, or Indian, mustard ( Brassica juncea )” (8 words).
+
+- food-everyday-life-s0054: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mustard_(condiment))
+
+  Answer/context quote: “condiment for sandwiches , hamburgers , and hot dogs” (9 words).
+
+  Additional fun-fact quote: “brown mustard ( Brassica juncea )” (6 words).
+
+## B13-0984 — Brown mustard is commonly identified with which scientific species?
+
+Answer: Brassica juncea. Fun fact: Sinapis alba is white or yellow mustard.
+
+- food-everyday-life-s0053: [Encyclopaedia Britannica](https://www.britannica.com/plant/mustard)
+
+  Answer/context quote: “brown, or Indian, mustard ( Brassica juncea )” (8 words).
+
+  Additional fun-fact quote: “white, or yellow, mustard ( Sinapis alba )” (8 words).
+
+- food-everyday-life-s0054: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mustard_(condiment))
+
+  Answer/context quote: “brown mustard ( Brassica juncea )” (6 words).
+
+  Additional fun-fact quote: “white/yellow mustard ( Sinapis alba )” (6 words).
+
+## B13-0985 — White or yellow mustard is commonly identified with which species?
+
+Answer: Sinapis alba. Fun fact: Mustard condiment is made from mustard seeds.
+
+- food-everyday-life-s0053: [Encyclopaedia Britannica](https://www.britannica.com/plant/mustard)
+
+  Answer/context quote: “white, or yellow, mustard ( Sinapis alba )” (8 words).
+
+  Additional fun-fact quote: “condiment made from the pungent seeds” (6 words).
+
+- food-everyday-life-s0054: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mustard_(condiment))
+
+  Answer/context quote: “white/yellow mustard ( Sinapis alba )” (6 words).
+
+  Additional fun-fact quote: “Mustard is a condiment made from the seeds of a mustard plant” (12 words).
+
+## B13-0986 — Which spice is produced by drying and grinding red peppers?
+
+Answer: Paprika. Fun fact: Paprika commonly provides a red coloring in food.
+
+- food-everyday-life-s0055: [Encyclopaedia Britannica](https://www.britannica.com/topic/paprika)
+
+  Answer/context quote: “The pods are then dried and ground to produce paprika” (10 words).
+
+  Additional fun-fact quote: “used to impart a bright red color” (7 words).
+
+- food-everyday-life-s0056: [Wikipedia contributors](https://en.wikipedia.org/wiki/Paprika)
+
+  Answer/context quote: “a spice made from dried and ground red peppers” (9 words).
+
+  Additional fun-fact quote: “paprika or cayenne pepper is bright red when it is freshest” (11 words).
+
+## B13-0987 — Fresh red paprika commonly adds which color to a garnish?
+
+Answer: Red. Fun fact: Paprika is a major seasoning in Hungarian cuisine.
+
+- food-everyday-life-s0055: [Encyclopaedia Britannica](https://www.britannica.com/topic/paprika)
+
+  Answer/context quote: “used to impart a bright red color” (7 words).
+
+  Additional fun-fact quote: “It is especially associated with Hungarian cuisine” (7 words).
+
+- food-everyday-life-s0056: [Wikipedia contributors](https://en.wikipedia.org/wiki/Paprika)
+
+  Answer/context quote: “paprika or cayenne pepper is bright red when it is freshest” (11 words).
+
+  Additional fun-fact quote: “European cuisines in which paprika is a frequent and major ingredient include those of Hungary” (15 words).
+
+## B13-0988 — Paprika is especially associated with the cuisine of which Central European country?
+
+Answer: Hungary. Fun fact: Paprika is normally made from Capsicum annuum peppers.
+
+- food-everyday-life-s0055: [Encyclopaedia Britannica](https://www.britannica.com/topic/paprika)
+
+  Answer/context quote: “It is especially associated with Hungarian cuisine” (7 words).
+
+  Additional fun-fact quote: “spice made from the pods of Capsicum annuum” (8 words).
+
+- food-everyday-life-s0056: [Wikipedia contributors](https://en.wikipedia.org/wiki/Paprika)
+
+  Answer/context quote: “European cuisines in which paprika is a frequent and major ingredient include those of Hungary” (15 words).
+
+  Additional fun-fact quote: “red peppers, Capsicum annuum” (4 words).
+
+## B13-0989 — The peppers normally used for paprika belong to which species?
+
+Answer: Capsicum annuum. Fun fact: Paprika is made from dried and ground peppers.
+
+- food-everyday-life-s0055: [Encyclopaedia Britannica](https://www.britannica.com/topic/paprika)
+
+  Answer/context quote: “spice made from the pods of Capsicum annuum” (8 words).
+
+  Additional fun-fact quote: “The pods are then dried and ground to produce paprika” (10 words).
+
+- food-everyday-life-s0056: [Wikipedia contributors](https://en.wikipedia.org/wiki/Paprika)
+
+  Answer/context quote: “red peppers, Capsicum annuum” (4 words).
+
+  Additional fun-fact quote: “a spice made from dried and ground red peppers” (9 words).
+
+## B13-0990 — Which compound supplies much of chili peppers' spicy heat?
+
+Answer: Capsaicin. Fun fact: Chili peppers originated in the Americas.
+
+- food-everyday-life-s0057: [Encyclopaedia Britannica](https://www.britannica.com/plant/chili-pepper)
+
+  Answer/context quote: “The fruits derive their pungency from capsaicin” (7 words).
+
+  Additional fun-fact quote: “Chili peppers are native to the Americas” (7 words).
+
+- food-everyday-life-s0058: [Wikipedia contributors](https://en.wikipedia.org/wiki/Chili_pepper)
+
+  Answer/context quote: “Capsaicin and the related capsaicinoids give chili peppers their intensity” (10 words).
+
+  Additional fun-fact quote: “Chili peppers originated in Central or South America” (8 words).
+
+## B13-0991 — Chili peppers are native to which broad part of the world?
+
+Answer: The Americas. Fun fact: Chili peppers belong to the nightshade family, Solanaceae.
+
+- food-everyday-life-s0057: [Encyclopaedia Britannica](https://www.britannica.com/plant/chili-pepper)
+
+  Answer/context quote: “Chili peppers are native to the Americas” (7 words).
+
+  Additional fun-fact quote: “nightshade family ( Solanaceae )” (5 words).
+
+- food-everyday-life-s0058: [Wikipedia contributors](https://en.wikipedia.org/wiki/Chili_pepper)
+
+  Answer/context quote: “Chili peppers originated in Central or South America” (8 words).
+
+  Additional fun-fact quote: “members of the nightshade family Solanaceae” (6 words).
+
+## B13-0992 — Chili peppers are members of which plant family?
+
+Answer: Nightshade. Fun fact: Jalapeno peppers are cultivars of Capsicum annuum.
+
+- food-everyday-life-s0057: [Encyclopaedia Britannica](https://www.britannica.com/plant/chili-pepper)
+
+  Answer/context quote: “nightshade family ( Solanaceae )” (5 words).
+
+  Additional fun-fact quote: “cultivars of Capsicum annuum , including the cayenne , jalapeño” (10 words).
+
+- food-everyday-life-s0058: [Wikipedia contributors](https://en.wikipedia.org/wiki/Chili_pepper)
+
+  Answer/context quote: “members of the nightshade family Solanaceae” (6 words).
+
+  Additional fun-fact quote: “C. annuum : bell peppers , wax , cayenne , jalapeño” (11 words).
+
+## B13-0993 — The jalapeno is usually classified as a cultivar of which species?
+
+Answer: Capsicum annuum. Fun fact: Capsaicin contributes chili peppers' pungency.
+
+- food-everyday-life-s0057: [Encyclopaedia Britannica](https://www.britannica.com/plant/chili-pepper)
+
+  Answer/context quote: “cultivars of Capsicum annuum , including the cayenne , jalapeño” (10 words).
+
+  Additional fun-fact quote: “The fruits derive their pungency from capsaicin” (7 words).
+
+- food-everyday-life-s0058: [Wikipedia contributors](https://en.wikipedia.org/wiki/Chili_pepper)
+
+  Answer/context quote: “C. annuum : bell peppers , wax , cayenne , jalapeño” (11 words).
+
+  Additional fun-fact quote: “Capsaicin and the related capsaicinoids give chili peppers their intensity” (10 words).
+
+## B13-0994 — Baker's yeast belongs to which broad biological group?
+
+Answer: Fungi. Fun fact: Yeast fermentation produces carbon dioxide and alcohol.
+
+- food-everyday-life-s0059: [Encyclopaedia Britannica](https://www.britannica.com/science/yeast-fungus)
+
+  Answer/context quote: “species of single-celled fungi” (4 words).
+
+  Additional fun-fact quote: “producing alcohol ( ethanol ) and carbon dioxide” (8 words).
+
+- food-everyday-life-s0060: [Wikipedia contributors](https://en.wikipedia.org/wiki/Yeast)
+
+  Answer/context quote: “A yeast is any species of fungus that grows primarily in a unicellular form” (14 words).
+
+  Additional fun-fact quote: “converts carbohydrates to carbon dioxide and alcohols through the process of fermentation” (12 words).
+
+## B13-0995 — During fermentation, bread yeast converts sugars chiefly into which two products?
+
+Answer: Carbon dioxide and alcohol. Fun fact: Many yeasts reproduce asexually by budding.
+
+- food-everyday-life-s0059: [Encyclopaedia Britannica](https://www.britannica.com/science/yeast-fungus)
+
+  Answer/context quote: “producing alcohol ( ethanol ) and carbon dioxide” (8 words).
+
+  Additional fun-fact quote: “Most yeasts reproduce asexually by budding” (6 words).
+
+- food-everyday-life-s0060: [Wikipedia contributors](https://en.wikipedia.org/wiki/Yeast)
+
+  Answer/context quote: “converts carbohydrates to carbon dioxide and alcohols through the process of fermentation” (12 words).
+
+  Additional fun-fact quote: “many do so by the asymmetric division process known as budding” (11 words).
+
+## B13-0996 — Which asexual reproduction method is common in many yeasts?
+
+Answer: Budding. Fun fact: Saccharomyces cerevisiae is widely used in baking and alcoholic fermentation.
+
+- food-everyday-life-s0059: [Encyclopaedia Britannica](https://www.britannica.com/science/yeast-fungus)
+
+  Answer/context quote: “Most yeasts reproduce asexually by budding” (6 words).
+
+  Additional fun-fact quote: “bread , beer , and wine are selected strains of Saccharomyces cerevisiae” (12 words).
+
+- food-everyday-life-s0060: [Wikipedia contributors](https://en.wikipedia.org/wiki/Yeast)
+
+  Answer/context quote: “many do so by the asymmetric division process known as budding” (11 words).
+
+  Additional fun-fact quote: “The yeast species Saccharomyces cerevisiae converts carbohydrates to carbon dioxide and alcohols” (12 words).
+
+## B13-0997 — What is the scientific name of the yeast commonly used for bread, beer and wine?
+
+Answer: Saccharomyces cerevisiae. Fun fact: Yeasts are fungi that commonly grow as single cells.
+
+- food-everyday-life-s0059: [Encyclopaedia Britannica](https://www.britannica.com/science/yeast-fungus)
+
+  Answer/context quote: “bread , beer , and wine are selected strains of Saccharomyces cerevisiae” (12 words).
+
+  Additional fun-fact quote: “species of single-celled fungi” (4 words).
+
+- food-everyday-life-s0060: [Wikipedia contributors](https://en.wikipedia.org/wiki/Yeast)
+
+  Answer/context quote: “The yeast species Saccharomyces cerevisiae converts carbohydrates to carbon dioxide and alcohols” (12 words).
+
+  Additional fun-fact quote: “A yeast is any species of fungus that grows primarily in a unicellular form” (14 words).
+
+## B13-0998 — Which gas released by baking powder helps batter rise?
+
+Answer: Carbon dioxide. Fun fact: Baking powder contains a carbonate or bicarbonate base and a weak acid.
+
+- food-everyday-life-s0061: [Encyclopaedia Britannica](https://www.britannica.com/topic/baking-powder)
+
+  Answer/context quote: “end products of the baking-powder reaction are carbon dioxide” (9 words).
+
+  Additional fun-fact quote: “a mixture of a base ( carbonate or bicarbonate) and a weak acid” (13 words).
+
+- food-everyday-life-s0062: [Wikipedia contributors](https://en.wikipedia.org/wiki/Baking_powder)
+
+  Answer/context quote: “releasing carbon dioxide gas into a batter or dough” (9 words).
+
+  Additional fun-fact quote: “a mixture of a carbonate or bicarbonate and a weak acid” (11 words).
+
+## B13-0999 — Baking powder combines a weak acid with which other type of chemical?
+
+Answer: A base. Fun fact: Starch helps prevent premature reaction of baking powder ingredients.
+
+- food-everyday-life-s0061: [Encyclopaedia Britannica](https://www.britannica.com/topic/baking-powder)
+
+  Answer/context quote: “a mixture of a base ( carbonate or bicarbonate) and a weak acid” (13 words).
+
+  Additional fun-fact quote: “starch , which act as a buffer between the base and acid” (12 words).
+
+- food-everyday-life-s0062: [Wikipedia contributors](https://en.wikipedia.org/wiki/Baking_powder)
+
+  Answer/context quote: “a mixture of a carbonate or bicarbonate and a weak acid” (11 words).
+
+  Additional fun-fact quote: “prevented from reacting prematurely by the inclusion of a desiccant such as cornstarch” (13 words).
+
+## B13-1000 — Which common dry ingredient helps keep baking powder's acid and base apart until use?
+
+Answer: Starch. Fun fact: Baking powder releases carbon dioxide to leaven batter.
+
+- food-everyday-life-s0061: [Encyclopaedia Britannica](https://www.britannica.com/topic/baking-powder)
+
+  Answer/context quote: “starch , which act as a buffer between the base and acid” (12 words).
+
+  Additional fun-fact quote: “end products of the baking-powder reaction are carbon dioxide” (9 words).
+
+- food-everyday-life-s0062: [Wikipedia contributors](https://en.wikipedia.org/wiki/Baking_powder)
+
+  Answer/context quote: “prevented from reacting prematurely by the inclusion of a desiccant such as cornstarch” (13 words).
+
+  Additional fun-fact quote: “releasing carbon dioxide gas into a batter or dough” (9 words).

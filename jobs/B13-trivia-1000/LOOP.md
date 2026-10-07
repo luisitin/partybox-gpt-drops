@@ -30,3 +30,11 @@ Preserved previous rows/captures and recovered the previous lead’s source coll
 ## Integrated fresh-review milestone — 2026-10-07T19:52:24.534243+00:00
 
 920 authored rows; 3,180/3,180 exact quote fields; zero schema/data errors. Current finalized nature, movies/TV, science/space and US geography each have 100 independent accepts and supported actual source reopens. Root nature review preserved initial 38 rejected rows, subsequent intermediate challenges and final changed-version assessments. World geography is held for fresh root review; food fresh source reopens are underway. Music’s nine precise author repairs remain pending reviewer confirmation. The full 1,000-row research gate, 2,210 actual bidirectional similarity flags and final length assessment remain unfinished.
+
+## Resume authoring snapshot — 2026-10-07T19:53:08.645072+00:00
+
+Preserved previous rows/captures and recovered the previous lead’s source collection. Added actually supported animal rows; a stale unpublished cheetah newborn-spots quote failed exact matching and was replaced with the separately supported cub-mantle fact. 940 real authored rows across 10 category files; 3260/3260 quote fields matched against actual source captures; 0 schema/data errors; 491 current fresh adversarial acceptances and 491 current source-reopen reviews. No fresh-review completion is claimed.
+
+## Coherent held integration snapshot — 2026-10-07T19:53:08.791600+00:00
+
+US-history author held writes at 40 rows while the deterministic draft checker and source documentation were regenerated. Actual result: 940 authored rows, 3260/3260 exact quote fields, zero schema/data errors, 491 current independent accepts and supported reopens. Food fresh reopening actually completed all64 URLs HTTP200; individual challenges remain pending. The prior authoring report was superseded after US history advanced during rendering.
