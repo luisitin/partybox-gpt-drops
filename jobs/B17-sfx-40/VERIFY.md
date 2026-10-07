@@ -12,6 +12,9 @@ successful summary fingerprints all 15 code/configuration files; recording
 rejects a changed source fingerprint. SHA256 coverage includes every deliverable
 and checks the 30 MB per-file cap.
 
+The FFT accuracy fixtures also assert that both caller input arrays remain
+byte-for-byte unchanged, so the public FFT returns new arrays.
+
 ## Per-seed suites
 
 | Test name | Cases per seed | Seeds | Passed | Exact command |
@@ -147,6 +150,10 @@ ORACLE_AMENDMENTS.md. Source was never viewed by the reference author.
 The first complete hosted run passed:
 https://github.com/luisitin/partybox-gpt-drops/actions/runs/37634170473
 (code revision 28dd7ba; full logs were inspected, all 3 seeds and 25 mutations present).
+Pure-function code revision df5ae5d also passed with all three seeds and all
+25 mutations in the full inspected 891-line log:
+https://github.com/luisitin/partybox-gpt-drops/actions/runs/37636217776
+
 The PR description links the final successful hosted run after publication.
 The workflow has read-only contents permission, no secrets, a 30 minute timeout,
 and only actions/* pinned to major versions.

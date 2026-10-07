@@ -39,3 +39,10 @@ copy its real/imaginary inputs and return new arrays, preserving all numeric and
 PNG output. Added assertions of unchanged caller arrays alongside independent
 direct-DFT comparisons for all six sizes under each seed. Full rerun required
 before recording or handing off this code change.
+
+Purity improvement complete: both FFT inputs remain unchanged for every tested
+size/seed, every canonical spectrogram remains byte-identical, and the full local
+suite passed again (120 audio, 30 rebuilt EBU, 75 mutation cases). Hosted code
+revision df5ae5d also passed; its full 891-line log contains all three successful
+seeds and all 25 detected mutations. Final evidence publication changes reports
+and documentation; exact-head CI will be inspected before the B16 handoff.
