@@ -54,3 +54,13 @@ matches and repairing receipt paths/hashes while preserving original raw hashes.
 The actual failed check is in `reports/music-recovery-failure.json`; it is not
 silently relabeled passed. Music is excluded only from this temporary authoring
 publication snapshot. Full acceptance prohibits exclusions.
+
+## Final world-geography exclusions and source independence
+
+Actual source/row hashes are in `evidence/world-geography-author-seal.json` and source receipts. Excluded disagreements are documented in `research/world-geography-notes.md`: Rapa Nui settlement dates, Great Barrier Reef area/counts, Serengeti area/herd counts, Baikal depth/age/freshwater denominators, Venice island counts, Pamukkale English-name translations and Everest exact survey heights. These conflicting figures are not used as settled answers or fun facts. The final100 author version still requires fresh review.
+
+Göreme’s UNESCO-derived Wikipedia text and the Amazon Wikipedia/Britannica geography pair were rejected for independence. Current Cappadocia uses separately authored Britannica topic paragraphs; current Amazon geography uses Britannica plus independently authored National Geographic material. An actualHTTP200 NASA homepage redirect was rejected because it lacked the selected article.
+
+## Music geographical and formation conflicts — excluded
+
+The fresh reviewer actually reopened Tupac’s two accounts: Wikipedia says Manhattan and Britannica Brooklyn. The selected question asks only the agreed New York City, with no borough claim. Queen formation1970 in Wikipedia versus1971 in Britannica is omitted; no disputed formation-year answer is authored. Exact row versions and original challenge records remain in music evidence/reviews.

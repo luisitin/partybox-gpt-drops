@@ -1,7 +1,12 @@
-# Exact next work
+# B13 next work
 
-Author world-geography remaining85, sports-games remaining40, US-history-civics100 and food-everyday-life remaining93. Complete current-version cross-author review/source reopening, including changed animal versions and root science fixes. Retain every earlier rejection and source-conflict record.
+Current delivered milestone: 920 authored rows and 400 final versions independently accepted with supported actual source reopens. US history/civics has 20 rows; the author is completing the remaining 80.
 
-Current coverage: 682 actual authored rows, 60 fresh current-version acceptances and 60 current reopen approvals. All similarity flags require concrete version-bound editorial resolution. The option-length gate accepts only an actual editorial assessment bound to the current complete row-set and metric hashes.
+- Root is challenging the held world-geography 100-row snapshot; preserve every rejected version before author repair and obtain fresh review of each changed hash. Nature’s 100 final versions are sealed.
+- Lead is independently reviewing food’s 100 final author rows, with 64 actual fresh HTTP source reopenings. Lead will review US history after its final author seal.
+- History worker is fresh-reviewing movie/music; movies/TV’s 100 current versions pass, while nine changed music versions await actual rereview. Food/US-history author owns fresh history/sports review.
+- Root-category reviewer is individually adjudicating its 2,199 similarity flags; integrate concrete per-pair evidence and resolve remaining cross-category flags, preserving current version hashes.
+- Complete the actual option-length editorial assessment against final row and metric hashes.
+- Rerun the full validator on 1,000 final reviewed rows, verify final delivery checksums, push and open/update the review pull request.
 
-Lead alone commits shared integration; workers edit assigned files. Never merge/push main. Run `python3 scripts/check-data.py --draft` at real milestones; full `python3 scripts/check-data.py` must remain failing until every original gate is met.
+The latest exact counts and all unresolved gates are in reports/checks.json. No full research acceptance is claimed.

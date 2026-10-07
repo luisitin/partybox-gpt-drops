@@ -26,3 +26,7 @@ Preserved previous rows/captures and recovered the previous lead’s source coll
 ## Resume authoring snapshot — 2026-10-07T19:17:08.893321+00:00
 
 Preserved previous rows/captures and recovered the previous lead’s source collection. Added actually supported animal rows; a stale unpublished cheetah newborn-spots quote failed exact matching and was replaced with the separately supported cub-mantle fact. 682 real authored rows across 9 category files; 2281/2281 quote fields matched against actual source captures; 0 schema/data errors; 60 current fresh adversarial acceptances and 60 current source-reopen reviews. No fresh-review completion is claimed.
+
+## Integrated fresh-review milestone — 2026-10-07T19:52:24.534243+00:00
+
+920 authored rows; 3,180/3,180 exact quote fields; zero schema/data errors. Current finalized nature, movies/TV, science/space and US geography each have 100 independent accepts and supported actual source reopens. Root nature review preserved initial 38 rejected rows, subsequent intermediate challenges and final changed-version assessments. World geography is held for fresh root review; food fresh source reopens are underway. Music’s nine precise author repairs remain pending reviewer confirmation. The full 1,000-row research gate, 2,210 actual bidirectional similarity flags and final length assessment remain unfinished.

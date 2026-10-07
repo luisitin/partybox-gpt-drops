@@ -2353,5 +2353,1032 @@
     "currentRowSha256": "7aeec65a3959ffadc14db259fbca8ec171f5117227bf6dc1dd55a0fabc61f98e",
     "reason": "Update claim source IDs after replacing the rejected near-parallel ADW account; no factual wording change.",
     "reviewer": "/root fresh revision review pending"
+  },
+  {
+    "id": "B13-0322",
+    "supersededRowSha256": "d7e9b3cdc87260054acca3ea1ebb61093969c75042d06b8ce155d58ad54fe3b9",
+    "supersededRow": {
+      "id": "B13-0322",
+      "category": "animals-nature",
+      "question": "What is the characteristic hair color of a Bornean orangutan?",
+      "difficulty": 1,
+      "options": [
+        "Jet black",
+        "Orange-red",
+        "Snow white",
+        "Silver-gray"
+      ],
+      "correctIndex": 1,
+      "correctAnswer": "Orange-red",
+      "funFact": "Its long arms help it move through the tree canopy.",
+      "confidence": "high",
+      "confidenceReason": "The zoo covers orangutans and the university specifically Bornean orangutans; both agree on orange-red hair and tree-adapted long arms.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0013",
+          "url": "https://nationalzoo.si.edu/animals/orangutan",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "Orangutans have long, sparse orange or reddish hair unequally distributed over their bodies.",
+          "funFactQuote": "are very well adapted to life in the trees, with arms much longer than their legs."
+        },
+        {
+          "sourceId": "animals-nature-s0014",
+          "url": "https://animaldiversity.org/accounts/Pongo_pygmaeus/",
+          "publisher": "Animal Diversity Web, University of Michigan",
+          "quote": "Bornean orangutans have orange-red hair and long arms, which are advantageous for traveling through the canopy."
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Bornean orangutans have orange or reddish hair.",
+          "sourceIds": [
+            "animals-nature-s0013",
+            "animals-nature-s0014"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "Its long arms help it move through the tree canopy.",
+          "sourceIds": [
+            "animals-nature-s0013",
+            "animals-nature-s0014"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "fc3896d1885b88e17b24cea60d8fdd97e7e8cdba16f7ecece49e4446a39cb08f",
+    "reviewer": "/root",
+    "reason": "Reject an unresolved source-dependency pair: ADW bibliography cites Smithsonian without selected-claim separation. Replace with actually read, independently compiled/editorial evidence; retained earlier versions remain pending fresh review."
+  },
+  {
+    "id": "B13-0323",
+    "supersededRowSha256": "bd7077028fefec9c6c91e8310c271a5220c694b743cf1c2ef9ecb25ffe4f6633",
+    "supersededRow": {
+      "id": "B13-0323",
+      "category": "animals-nature",
+      "question": "What name is used for the broad cheek pads of some adult male orangutans?",
+      "difficulty": 3,
+      "options": [
+        "Wattles",
+        "Dewlaps",
+        "Flanges",
+        "Antlers"
+      ],
+      "correctIndex": 2,
+      "correctAnswer": "Flanges",
+      "funFact": "Adult males can develop these conspicuous facial pads.",
+      "confidence": "high",
+      "confidenceReason": "Both accounts explicitly equate flanges with male cheek pads; some avoids claiming every sexually mature male is flanged.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0013",
+          "url": "https://nationalzoo.si.edu/animals/orangutan",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "Flanged males (males with flanges, also known as cheek pads)"
+        },
+        {
+          "sourceId": "animals-nature-s0014",
+          "url": "https://animaldiversity.org/accounts/Pongo_pygmaeus/",
+          "publisher": "Animal Diversity Web, University of Michigan",
+          "quote": "Males also develop large cheek pads known as flanges"
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Male orangutan cheek pads are called flanges.",
+          "sourceIds": [
+            "animals-nature-s0013",
+            "animals-nature-s0014"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "Adult males can develop these conspicuous facial pads.",
+          "sourceIds": [
+            "animals-nature-s0013",
+            "animals-nature-s0014"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "7423dc459b2e8ecc87d1b3e79ec67e44821525536407b864b4bf558715b81eed",
+    "reviewer": "/root",
+    "reason": "Reject an unresolved source-dependency pair: ADW bibliography cites Smithsonian without selected-claim separation. Replace with actually read, independently compiled/editorial evidence; retained earlier versions remain pending fresh review."
+  },
+  {
+    "id": "B13-0324",
+    "supersededRowSha256": "587d9bb2f2d41dd51db3ab221872319db1ecd30681f5b15027695b8c66c48c4c",
+    "supersededRow": {
+      "id": "B13-0324",
+      "category": "animals-nature",
+      "question": "Where do Bornean orangutans normally construct their sleeping nests?",
+      "difficulty": 2,
+      "options": [
+        "On the forest floor",
+        "In rocky crevices",
+        "Inside fallen hollow logs",
+        "In trees"
+      ],
+      "correctIndex": 3,
+      "correctAnswer": "In trees",
+      "funFact": "Their hair is characteristically orange or reddish.",
+      "confidence": "high",
+      "confidenceReason": "Both sources explicitly describe above-ground tree nests and orange/reddish hair. No exact nest height or construction material is asserted.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0013",
+          "url": "https://nationalzoo.si.edu/animals/orangutan",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "Orangutans typically build sleeping nests above the ground in various positions of one or more trees.",
+          "funFactQuote": "Orangutans have long, sparse orange or reddish hair"
+        },
+        {
+          "sourceId": "animals-nature-s0014",
+          "url": "https://animaldiversity.org/accounts/Pongo_pygmaeus/",
+          "publisher": "Animal Diversity Web, University of Michigan",
+          "quote": "Bornean orangutans sleep in nest platforms made of vegetation 40 to 60 feet off the ground.",
+          "funFactQuote": "Bornean orangutans have orange-red hair"
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Bornean orangutans sleep in nests above the ground in trees.",
+          "sourceIds": [
+            "animals-nature-s0013",
+            "animals-nature-s0014"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "Their hair is characteristically orange or reddish.",
+          "sourceIds": [
+            "animals-nature-s0013",
+            "animals-nature-s0014"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "530cca854d44fa32af35e01221adc68952f055a2954ccd0a4fd36ce650f825db",
+    "reviewer": "/root",
+    "reason": "Reject an unresolved source-dependency pair: ADW bibliography cites Smithsonian without selected-claim separation. Replace with actually read, independently compiled/editorial evidence; retained earlier versions remain pending fresh review."
+  },
+  {
+    "id": "B13-0325",
+    "supersededRowSha256": "6f2f20056a8915567abc52a2ded4ad4e3397bf76d50a068cc8d9c344095ae8e1",
+    "supersededRow": {
+      "id": "B13-0325",
+      "category": "animals-nature",
+      "question": "Which food is the main component of a Bornean orangutan’s diet?",
+      "difficulty": 2,
+      "options": [
+        "Fruit",
+        "Grass seeds",
+        "Fish",
+        "Tree resin"
+      ],
+      "correctIndex": 0,
+      "correctAnswer": "Fruit",
+      "funFact": "By eating fruit, orangutans help disperse seeds.",
+      "confidence": "high",
+      "confidenceReason": "Both accounts directly identify fruit as the main diet and describe seed dispersal; a precise percentage is deliberately omitted.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0013",
+          "url": "https://nationalzoo.si.edu/animals/orangutan",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "Orangutans eat primarily fruit and play an important role dispersing seeds through defecation."
+        },
+        {
+          "sourceId": "animals-nature-s0014",
+          "url": "https://animaldiversity.org/accounts/Pongo_pygmaeus/",
+          "publisher": "Animal Diversity Web, University of Michigan",
+          "quote": "Bornean orangutans are frugivorous",
+          "funFactQuote": "they play a vital role in seed dispersal"
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Bornean orangutans primarily eat fruit.",
+          "sourceIds": [
+            "animals-nature-s0013",
+            "animals-nature-s0014"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "By eating fruit, orangutans help disperse seeds.",
+          "sourceIds": [
+            "animals-nature-s0013",
+            "animals-nature-s0014"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "edd0f517120e23391c8b90115b13d6d020c5d4191506b950d80e15132fbc3fb7",
+    "reviewer": "/root",
+    "reason": "Reject an unresolved source-dependency pair: ADW bibliography cites Smithsonian without selected-claim separation. Replace with actually read, independently compiled/editorial evidence; retained earlier versions remain pending fresh review."
+  },
+  {
+    "id": "B13-0334",
+    "supersededRowSha256": "bbb6e605c7148c8d831b660cc4895be4107b41c003d091bd533baa80fc8b071c",
+    "supersededRow": {
+      "id": "B13-0334",
+      "category": "animals-nature",
+      "question": "What supplies the pigments responsible for an American flamingo’s pink plumage?",
+      "difficulty": 1,
+      "options": [
+        "Pink lake water alone",
+        "Its food",
+        "Sunlight alone",
+        "Pink-colored mud"
+      ],
+      "correctIndex": 1,
+      "correctAnswer": "Its food",
+      "funFact": "Dietary pigments become incorporated into growing feathers.",
+      "confidence": "high",
+      "confidenceReason": "The zoo identifies food pigment and the university describes dietary carotenoids incorporated into plumage; no unsupported exact food percentage is used.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0023",
+          "url": "https://nationalzoo.si.edu/animals/american-flamingo",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "A pigment in their food gives their feathers their flamboyant pink color."
+        },
+        {
+          "sourceId": "animals-nature-s0024",
+          "url": "https://animaldiversity.org/accounts/Phoenicopterus_ruber/",
+          "publisher": "Animal Diversity Web, University of Michigan",
+          "quote": "as the flamingo ages and incorporates carotenoid compounds from its diet into new growth."
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "American flamingos obtain pink plumage pigments from food.",
+          "sourceIds": [
+            "animals-nature-s0023",
+            "animals-nature-s0024"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "Dietary pigments become incorporated into growing feathers.",
+          "sourceIds": [
+            "animals-nature-s0023",
+            "animals-nature-s0024"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "643637ff35f951905f5c6b0fa47b9828f88e423629406d4994d9b4c5a0dd4b0b",
+    "reviewer": "/root",
+    "reason": "Reject an unresolved source-dependency pair: ADW bibliography cites Smithsonian without selected-claim separation. Replace with actually read, independently compiled/editorial evidence; retained earlier versions remain pending fresh review."
+  },
+  {
+    "id": "B13-0335",
+    "supersededRowSha256": "dbc3e862c1b26a089bdfa88c258fe884dac7fd22be6aa8544195b82f380a82ae",
+    "supersededRow": {
+      "id": "B13-0335",
+      "category": "animals-nature",
+      "question": "What color are an adult American flamingo’s flight feathers?",
+      "difficulty": 3,
+      "options": [
+        "White",
+        "Bright green",
+        "Black",
+        "Royal blue"
+      ],
+      "correctIndex": 2,
+      "correctAnswer": "Black",
+      "funFact": "These dark feathers contrast with its pink body plumage.",
+      "confidence": "high",
+      "confidenceReason": "Both physical descriptions explicitly identify the contrasting pink body and black flight feathers, rather than generalizing every feather as pink.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0023",
+          "url": "https://nationalzoo.si.edu/animals/american-flamingo",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "A flamingo's plumage is a distinctive pink color with black flight feathers along the edges of the wings."
+        },
+        {
+          "sourceId": "animals-nature-s0024",
+          "url": "https://animaldiversity.org/accounts/Phoenicopterus_ruber/",
+          "publisher": "Animal Diversity Web, University of Michigan",
+          "quote": "Adults have primarily pink plumage with black flight feathers only visible in flight."
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "American flamingos have black flight feathers and pink plumage.",
+          "sourceIds": [
+            "animals-nature-s0023",
+            "animals-nature-s0024"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "These dark feathers contrast with its pink body plumage.",
+          "sourceIds": [
+            "animals-nature-s0023",
+            "animals-nature-s0024"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "23b593093783654b2821d1e982820b0994211a085a37d39d1180221f916e4dd8",
+    "reviewer": "/root",
+    "reason": "Reject an unresolved source-dependency pair: ADW bibliography cites Smithsonian without selected-claim separation. Replace with actually read, independently compiled/editorial evidence; retained earlier versions remain pending fresh review."
+  },
+  {
+    "id": "B13-0336",
+    "supersededRowSha256": "b6cfcf89902fe609cdc1cea15e1d0e6bca8eec32d2439c2fd57a3197fc5d6791",
+    "supersededRow": {
+      "id": "B13-0336",
+      "category": "animals-nature",
+      "question": "What general shape does an American flamingo’s nest have?",
+      "difficulty": 2,
+      "options": [
+        "A hanging pouch",
+        "A flat leaf raft",
+        "A deep tree cavity",
+        "A raised mound"
+      ],
+      "correctIndex": 3,
+      "correctAnswer": "A raised mound",
+      "funFact": "Both partners help build the nest.",
+      "confidence": "high",
+      "confidenceReason": "The zoo’s volcano-shaped description and the university’s small mound agree on a raised nest; both describe construction by the pair.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0023",
+          "url": "https://nationalzoo.si.edu/animals/american-flamingo",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "both parents help build a volcano-shaped nest"
+        },
+        {
+          "sourceId": "animals-nature-s0024",
+          "url": "https://animaldiversity.org/accounts/Phoenicopterus_ruber/",
+          "publisher": "Animal Diversity Web, University of Michigan",
+          "quote": "The nest is a small mound approximately twelve inches high, circular, and with a depressed center",
+          "funFactQuote": "When the mating is complete, both birds will build a nest from the mud."
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "American flamingos build mound-shaped nests.",
+          "sourceIds": [
+            "animals-nature-s0023",
+            "animals-nature-s0024"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "Both partners help build the nest.",
+          "sourceIds": [
+            "animals-nature-s0023",
+            "animals-nature-s0024"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "e01b0ba3d4642e299886e5da4ca98c5a36284ac5c6cbb95645a57e419d99f153",
+    "reviewer": "/root",
+    "reason": "Reject an unresolved source-dependency pair: ADW bibliography cites Smithsonian without selected-claim separation. Replace with actually read, independently compiled/editorial evidence; retained earlier versions remain pending fresh review."
+  },
+  {
+    "id": "B13-0337",
+    "supersededRowSha256": "1db31d626dfcdce285ef664b63d24b688045e0e43e23ef99df74b3f9eaecfb55",
+    "supersededRow": {
+      "id": "B13-0337",
+      "category": "animals-nature",
+      "question": "How many eggs does an American flamingo pair usually lay in one breeding cycle?",
+      "difficulty": 3,
+      "options": [
+        "One",
+        "Two",
+        "Four",
+        "Six"
+      ],
+      "correctIndex": 0,
+      "correctAnswer": "One",
+      "funFact": "Both parents take part in incubation.",
+      "confidence": "high",
+      "confidenceReason": "Both breeding descriptions agree on a single egg; usually avoids turning a typical clutch into an exceptionless rule.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0023",
+          "url": "https://nationalzoo.si.edu/animals/american-flamingo",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "they lay a single egg that they then incubate",
+          "funFactQuote": "both parents help build a volcano-shaped nest, where they lay a single egg that they then incubate for about 28 days."
+        },
+        {
+          "sourceId": "animals-nature-s0024",
+          "url": "https://animaldiversity.org/accounts/Phoenicopterus_ruber/",
+          "publisher": "Animal Diversity Web, University of Michigan",
+          "quote": "A pair of flamingos will usually lay a single egg once per breeding cycle.",
+          "funFactQuote": "The egg is incubated by both parents"
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "American flamingos normally lay one egg per breeding cycle.",
+          "sourceIds": [
+            "animals-nature-s0023",
+            "animals-nature-s0024"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "Both parents take part in incubation.",
+          "sourceIds": [
+            "animals-nature-s0023",
+            "animals-nature-s0024"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "5f5ce6ea17bc0627418c721b237c727d4c1d1cae6c2f9df01006af2bca73e0b5",
+    "reviewer": "/root",
+    "reason": "Reject an unresolved source-dependency pair: ADW bibliography cites Smithsonian without selected-claim separation. Replace with actually read, independently compiled/editorial evidence; retained earlier versions remain pending fresh review."
+  },
+  {
+    "id": "B13-0346",
+    "supersededRowSha256": "cb053643dc1caec16cfeb4d93392721e21eb57ed0f86a049713c1ea9c5a1172f",
+    "supersededRow": {
+      "id": "B13-0346",
+      "category": "animals-nature",
+      "question": "What is the helmet-like structure on a southern cassowary’s head called?",
+      "difficulty": 3,
+      "options": [
+        "A comb",
+        "A casque",
+        "A crest of feathers",
+        "An antler"
+      ],
+      "correctIndex": 1,
+      "correctAnswer": "A casque",
+      "funFact": "The structure is on top of the head.",
+      "confidence": "high",
+      "confidenceReason": "Both accounts explicitly name the casque and locate it on the head; its debated function is deliberately omitted.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0029",
+          "url": "https://nationalzoo.si.edu/animals/southern-cassowary",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "One of the cassowary’s most unique and dinosaur-like features is the casque atop its head."
+        },
+        {
+          "sourceId": "animals-nature-s0030",
+          "url": "https://animaldiversity.org/accounts/Casuarius_casuarius/",
+          "publisher": "Animal Diversity Web, University of Michigan",
+          "quote": "On their heads there is a large bony casque which is made of trabecular bone and cartilage."
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Southern cassowaries have a casque atop the head.",
+          "sourceIds": [
+            "animals-nature-s0029",
+            "animals-nature-s0030"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "The structure is on top of the head.",
+          "sourceIds": [
+            "animals-nature-s0029",
+            "animals-nature-s0030"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "116a0a49a53d45825358d35adc0d6cbc27a00946fb21f29db59119ea9d934ef6",
+    "reviewer": "/root",
+    "reason": "Reject an unresolved source-dependency pair: ADW bibliography cites Smithsonian without selected-claim separation. Replace with actually read, independently compiled/editorial evidence; retained earlier versions remain pending fresh review."
+  },
+  {
+    "id": "B13-0347",
+    "supersededRowSha256": "9739bafbd78aee18054cf1d089b897ec7a697b5a7de40f89b344999d0efc9f93",
+    "supersededRow": {
+      "id": "B13-0347",
+      "category": "animals-nature",
+      "question": "What is the main food in a southern cassowary’s diet?",
+      "difficulty": 1,
+      "options": [
+        "Fish",
+        "Grass seeds",
+        "Fruit",
+        "Termites"
+      ],
+      "correctIndex": 2,
+      "correctAnswer": "Fruit",
+      "funFact": "It eats fruit in its forest habitat.",
+      "confidence": "high",
+      "confidenceReason": "Both food accounts directly describe fruit-dominated diets; the question says main rather than falsely excluding every other food.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0029",
+          "url": "https://nationalzoo.si.edu/animals/southern-cassowary",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "cassowaries mostly eat fruits."
+        },
+        {
+          "sourceId": "animals-nature-s0030",
+          "url": "https://animaldiversity.org/accounts/Casuarius_casuarius/",
+          "publisher": "Animal Diversity Web, University of Michigan",
+          "quote": "Southern cassowaries are frugivorous, feeding mostly on fruits from canopy species in the forests where they live."
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Southern cassowaries chiefly eat fruit.",
+          "sourceIds": [
+            "animals-nature-s0029",
+            "animals-nature-s0030"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "It eats fruit in its forest habitat.",
+          "sourceIds": [
+            "animals-nature-s0029",
+            "animals-nature-s0030"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "d9e03907bc6cd5eef64fcc5e0a37b3a7cfce6e30a524c695d242c20ba18c1c80",
+    "reviewer": "/root",
+    "reason": "Reject an unresolved source-dependency pair: ADW bibliography cites Smithsonian without selected-claim separation. Replace with actually read, independently compiled/editorial evidence; retained earlier versions remain pending fresh review."
+  },
+  {
+    "id": "B13-0348",
+    "supersededRowSha256": "00440a470e22b7e24cabd43021339be3b7c2b409b723461738580c3c83dd8048",
+    "supersededRow": {
+      "id": "B13-0348",
+      "category": "animals-nature",
+      "question": "How are southern cassowary eggs normally incubated?",
+      "difficulty": 2,
+      "options": [
+        "The female broods them",
+        "The parents alternate brooding",
+        "Heat from decomposing nest material warms them",
+        "The male broods them"
+      ],
+      "correctIndex": 3,
+      "correctAnswer": "The male broods them",
+      "funFact": "Female cassowaries are generally larger than males.",
+      "confidence": "high",
+      "confidenceReason": "Both reproductive descriptions specify male incubation, and the university’s parental-care context confirms male care; both size accounts give larger females.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0029",
+          "url": "https://nationalzoo.si.edu/animals/southern-cassowary",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "Males are the sole caregivers, incubating the eggs by themselves and raising the chicks",
+          "funFactQuote": "Females are slightly larger than males"
+        },
+        {
+          "sourceId": "animals-nature-s0030",
+          "url": "https://animaldiversity.org/accounts/Casuarius_casuarius/",
+          "publisher": "Animal Diversity Web, University of Michigan",
+          "quote": "Incubation, which is exclusively done by the males",
+          "funFactQuote": "Females are 127 to 170 cm long and up to 59 kg, are larger than the males"
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Male southern cassowaries incubate and care for young.",
+          "sourceIds": [
+            "animals-nature-s0029",
+            "animals-nature-s0030"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "Female cassowaries are generally larger than males.",
+          "sourceIds": [
+            "animals-nature-s0029",
+            "animals-nature-s0030"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "ada0bd3eaa85f55e4051c06f052f4dbab32ca6b8b730c4fa3129c0621c223432",
+    "reviewer": "/root",
+    "reason": "Reject an unresolved source-dependency pair: ADW bibliography cites Smithsonian without selected-claim separation. Replace with actually read, independently compiled/editorial evidence; retained earlier versions remain pending fresh review."
+  },
+  {
+    "id": "B13-0349",
+    "supersededRowSha256": "ca116e6f6341d04fadab5c180e6993be4092ed5ccf684d95ae0386c1535588f0",
+    "supersededRow": {
+      "id": "B13-0349",
+      "category": "animals-nature",
+      "question": "Female-biased adult body size is characteristic of which animal here?",
+      "difficulty": 3,
+      "options": [
+        "Southern cassowary",
+        "American alligator",
+        "Sloth bear",
+        "Clouded leopard"
+      ],
+      "correctIndex": 0,
+      "correctAnswer": "Southern cassowary",
+      "funFact": "Males incubate the eggs.",
+      "confidence": "high",
+      "confidenceReason": "Both sources agree on larger females while their specific mass ranges differ; the shared qualitative comparison avoids the numerical disagreement.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0029",
+          "url": "https://nationalzoo.si.edu/animals/southern-cassowary",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "Females are slightly larger than males",
+          "funFactQuote": "Males are the sole caregivers, incubating the eggs by themselves"
+        },
+        {
+          "sourceId": "animals-nature-s0030",
+          "url": "https://animaldiversity.org/accounts/Casuarius_casuarius/",
+          "publisher": "Animal Diversity Web, University of Michigan",
+          "quote": "Females are 127 to 170 cm long and up to 59 kg, are larger than the males",
+          "funFactQuote": "Incubation, which is exclusively done by the males"
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Female southern cassowaries are generally larger than males.",
+          "sourceIds": [
+            "animals-nature-s0029",
+            "animals-nature-s0030"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "Males incubate the eggs.",
+          "sourceIds": [
+            "animals-nature-s0029",
+            "animals-nature-s0030"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "8df4066de856e176452dfb1a565162f1a02cfc97b26f2eff23b29c4f4e60733e",
+    "reviewer": "/root",
+    "reason": "Reject an unresolved source-dependency pair: ADW bibliography cites Smithsonian without selected-claim separation. Replace with actually read, independently compiled/editorial evidence; retained earlier versions remain pending fresh review."
+  },
+  {
+    "id": "B13-0365",
+    "supersededRowSha256": "7aeec65a3959ffadc14db259fbca8ec171f5117227bf6dc1dd55a0fabc61f98e",
+    "supersededRow": {
+      "id": "B13-0365",
+      "category": "animals-nature",
+      "question": "What shape is an Aldabra giant tortoise’s upper shell?",
+      "difficulty": 2,
+      "options": [
+        "Highly domed",
+        "Flat like a pancake",
+        "Spiral like a snail",
+        "Long and needle-shaped"
+      ],
+      "correctIndex": 0,
+      "correctAnswer": "Highly domed",
+      "funFact": "This tortoise has a long neck.",
+      "confidence": "high",
+      "confidenceReason": "Smithsonian and the separately compiled Wikipedia account explicitly support the selected range/feeding/anatomy facts. Their coat colors differ; the question and fun fact omit color. Copied Michigan paragraph evidence is retained as superseded.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0033",
+          "url": "https://nationalzoo.si.edu/animals/aldabra-tortoise",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "They are dark gray to black in color with a highly domed, thick carapace.",
+          "funFactQuote": "They have long necks"
+        },
+        {
+          "sourceId": "animals-nature-s0059",
+          "url": "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise",
+          "publisher": "Wikipedia contributors",
+          "quote": "with a high, domed shape.",
+          "funFactQuote": "The neck of the Aldabra giant tortoise is very long"
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Aldabra tortoises have thick domed carapaces.",
+          "sourceIds": [
+            "animals-nature-s0033",
+            "animals-nature-s0059"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "This tortoise has a long neck.",
+          "sourceIds": [
+            "animals-nature-s0033",
+            "animals-nature-s0059"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "68ec017f1e7bfeaf7488f907429e40928ef53ff27a705dd0e1ed05a8a0892671",
+    "reviewer": "/root",
+    "reason": "Renewed independent review: replace impossible spiral/needle armor shapes with real turtle shell profiles."
+  },
+  {
+    "id": "B13-0377",
+    "supersededRowSha256": "468e9b383417d95dc8477bc73d3977ab1b4bd23c72245c699eba31498fe29868",
+    "supersededRow": {
+      "id": "B13-0377",
+      "category": "animals-nature",
+      "question": "Why does a giant anteater walk on the knuckles of its front feet?",
+      "difficulty": 3,
+      "options": [
+        "To protect its claws",
+        "To improve traction",
+        "To spread body weight",
+        "To keep the claws sharp"
+      ],
+      "correctIndex": 0,
+      "correctAnswer": "To protect its claws",
+      "funFact": "Its front claws are used to open insect nests.",
+      "confidence": "high",
+      "confidenceReason": "Both independently edited accounts explicitly support Giant anteaters use front-knuckle walking to protect their claws. The wording distinguishes front-foot posture from the hind feet.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0039",
+          "url": "https://nationalzoo.si.edu/animals/giant-anteater",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "Giant anteaters protect their sharp front claws by tucking them into their palms and walking on their front knuckles.",
+          "funFactQuote": "whose nests they rip open with their powerful forelimbs and claws"
+        },
+        {
+          "sourceId": "animals-nature-s0040",
+          "url": "https://animaldiversity.org/accounts/Myrmecophaga_tridactyla/",
+          "publisher": "Animal Diversity Web, University of Michigan",
+          "quote": "Their weight is born on the knuckles and wrist to protect the claws.",
+          "funFactQuote": "Using the long, sharp claws on their forelimbs, they open insect colonies and tree trunks."
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Giant anteaters use front-knuckle walking to protect their claws.",
+          "sourceIds": [
+            "animals-nature-s0039",
+            "animals-nature-s0040"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "Its front claws are used to open insect nests.",
+          "sourceIds": [
+            "animals-nature-s0039",
+            "animals-nature-s0040"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "a24b47bd6172ef34d9a28d9c3306cb542edb797dc4e1ba336148d2403ce2c705",
+    "reviewer": "/root",
+    "reason": "Renewed independent review: keeping claws sharp can overlap protecting claws; replace with a distinct plausible walking function."
+  },
+  {
+    "id": "B13-0378",
+    "supersededRowSha256": "374f0ef1cb0362c87136d65e739c131d48ff2b2b4f51202246c0f35ab47cd863",
+    "supersededRow": {
+      "id": "B13-0378",
+      "category": "animals-nature",
+      "question": "How can a southern three-banded armadillo defend itself when threatened?",
+      "difficulty": 1,
+      "options": [
+        "Burrow rapidly into soil",
+        "Roll into a complete ball",
+        "Flatten against the ground",
+        "Flee into vegetation"
+      ],
+      "correctIndex": 1,
+      "correctAnswer": "Roll into a complete ball",
+      "funFact": "Its shell can close around the body.",
+      "confidence": "high",
+      "confidenceReason": "Both independently edited accounts explicitly support Southern three-banded armadillos can curl into a closed ball. No false only-species claim is copied from the zoo’s broader introduction.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0056",
+          "url": "https://nationalzoo.si.edu/animals/la-plata-three-banded-armadillo",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "allowing the head, legs and tail to tuck inside when the animal rolls into a ball."
+        },
+        {
+          "sourceId": "animals-nature-s0052",
+          "url": "https://animaldiversity.org/accounts/Tolypeutes_matacus/",
+          "publisher": "Animal Diversity Web, University of Michigan",
+          "quote": "It can completely close its shell around its entire body."
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Southern three-banded armadillos can curl into a closed ball.",
+          "sourceIds": [
+            "animals-nature-s0056",
+            "animals-nature-s0052"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "Its shell can close around the body.",
+          "sourceIds": [
+            "animals-nature-s0056",
+            "animals-nature-s0052"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "823d76f399953414eea11854a71f1cc15355e96be14c44628df792c593ae0f28",
+    "reviewer": "/root",
+    "reason": "Renewed independent review: fleeing or flattening can also be defenses; specify the unique complete armor-enclosure posture."
+  },
+  {
+    "id": "B13-0393",
+    "supersededRowSha256": "7481d75518276075f28fdc7828f6a71c3ea2e73491a7f5f1309ea39b7e161393",
+    "supersededRow": {
+      "id": "B13-0393",
+      "category": "animals-nature",
+      "question": "Which coastal habitat can support Asian small-clawed otters?",
+      "difficulty": 3,
+      "options": [
+        "Mangrove swamps",
+        "Rocky surf shores",
+        "Open sandy beaches",
+        "Offshore kelp beds"
+      ],
+      "correctIndex": 0,
+      "correctAnswer": "Mangrove swamps",
+      "funFact": "They also live in rivers.",
+      "confidence": "high",
+      "confidenceReason": "Both independently edited accounts explicitly support Asian small-clawed otters live in mangroves and freshwater wetlands. The direct common habitat description is used instead of a changing geographic status claim.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0047",
+          "url": "https://nationalzoo.si.edu/animals/asian-small-clawed-otter",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "These otters live in small streams, rivers, marshes, rice paddies, seacoasts and in mangroves."
+        },
+        {
+          "sourceId": "animals-nature-s0058",
+          "url": "https://en.wikipedia.org/wiki/Asian_small-clawed_otter",
+          "publisher": "Wikipedia contributors",
+          "quote": "The Asian small-clawed otter lives in riverine habitats, freshwater wetlands and mangrove swamps ."
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Asian small-clawed otters live in mangroves and freshwater wetlands.",
+          "sourceIds": [
+            "animals-nature-s0047",
+            "animals-nature-s0058"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "They also live in rivers.",
+          "sourceIds": [
+            "animals-nature-s0047",
+            "animals-nature-s0058"
+          ]
+        }
+      ]
+    },
+    "currentRowSha256": "80e82b7daffad39124ae7a66498a59cd5a1c53df08972621879e63c63e8f1b2c",
+    "reviewer": "/root",
+    "reason": "Renewed independent review: other coasts may also support this otter; scope to the actual forested tidal wetland habitat."
+  },
+  {
+    "id": "B13-0365",
+    "supersededRow": {
+      "id": "B13-0365",
+      "category": "animals-nature",
+      "question": "What shape is an Aldabra giant tortoise’s upper shell?",
+      "difficulty": 2,
+      "options": [
+        "Highly domed",
+        "A flat, streamlined shell",
+        "A low saddle-shaped shell",
+        "A roof-like ridged shell"
+      ],
+      "correctIndex": 0,
+      "correctAnswer": "Highly domed",
+      "funFact": "This tortoise has a long neck.",
+      "confidence": "high",
+      "confidenceReason": "Smithsonian and the separately compiled Wikipedia account explicitly support the selected range/feeding/anatomy facts. Their coat colors differ; the question and fun fact omit color. Copied Michigan paragraph evidence is retained as superseded.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0033",
+          "url": "https://nationalzoo.si.edu/animals/aldabra-tortoise",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "They are dark gray to black in color with a highly domed, thick carapace.",
+          "funFactQuote": "They have long necks"
+        },
+        {
+          "sourceId": "animals-nature-s0059",
+          "url": "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise",
+          "publisher": "Wikipedia contributors",
+          "quote": "with a high, domed shape.",
+          "funFactQuote": "The neck of the Aldabra giant tortoise is very long"
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Aldabra tortoises have thick domed carapaces.",
+          "sourceIds": [
+            "animals-nature-s0033",
+            "animals-nature-s0059"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "This tortoise has a long neck.",
+          "sourceIds": [
+            "animals-nature-s0033",
+            "animals-nature-s0059"
+          ]
+        }
+      ]
+    },
+    "supersededRowSha256": "68ec017f1e7bfeaf7488f907429e40928ef53ff27a705dd0e1ed05a8a0892671",
+    "currentRowSha256": "68ec017f1e7bfeaf7488f907429e40928ef53ff27a705dd0e1ed05a8a0892671",
+    "reviewer": "/root",
+    "reason": "Final actual source check: remove unsupported thickness claim; both accounts support a domed carapace and long neck. Fresh final hash recheck pending."
+  },
+  {
+    "id": "B13-0365",
+    "supersededRow": {
+      "id": "B13-0365",
+      "category": "animals-nature",
+      "question": "What shape is an Aldabra giant tortoise’s upper shell?",
+      "difficulty": 2,
+      "options": [
+        "Highly domed",
+        "A flat, streamlined shell",
+        "A low saddle-shaped shell",
+        "A roof-like ridged shell"
+      ],
+      "correctIndex": 0,
+      "correctAnswer": "Highly domed",
+      "funFact": "This tortoise has a long neck.",
+      "confidence": "high",
+      "confidenceReason": "Smithsonian and the separately compiled Wikipedia account explicitly support the selected range/feeding/anatomy facts. Their coat colors differ; the question and fun fact omit color. Copied Michigan paragraph evidence is retained as superseded.",
+      "sources": [
+        {
+          "sourceId": "animals-nature-s0033",
+          "url": "https://nationalzoo.si.edu/animals/aldabra-tortoise",
+          "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+          "quote": "They are dark gray to black in color with a highly domed, thick carapace.",
+          "funFactQuote": "They have long necks"
+        },
+        {
+          "sourceId": "animals-nature-s0059",
+          "url": "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise",
+          "publisher": "Wikipedia contributors",
+          "quote": "with a high, domed shape.",
+          "funFactQuote": "The neck of the Aldabra giant tortoise is very long"
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Aldabra tortoises have thick domed carapaces.",
+          "sourceIds": [
+            "animals-nature-s0033",
+            "animals-nature-s0059"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "This tortoise has a long neck.",
+          "sourceIds": [
+            "animals-nature-s0033",
+            "animals-nature-s0059"
+          ]
+        }
+      ]
+    },
+    "supersededRowSha256": "68ec017f1e7bfeaf7488f907429e40928ef53ff27a705dd0e1ed05a8a0892671",
+    "currentRowSha256": "107ad8cc0c1b8b5adb796b48fc25f006b03165e418842fca7243b1acf9b66172",
+    "reviewer": "/root",
+    "reason": "Remove unsupported thickness from answer claim; unchanged question, options and long-neck context. Final fresh row-hash recheck pending."
   }
 ]

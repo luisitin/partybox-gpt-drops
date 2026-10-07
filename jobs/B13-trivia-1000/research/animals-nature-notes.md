@@ -52,3 +52,11 @@ inferred food-access fun fact was replaced with natal-group retention explicitly
 stated in both accounts; two stale confidence explanations were corrected.
 The independent root reviewer receives the current category SHA, all source
 captures and exactly changed IDs. Every changed row must receive fresh review.
+
+## Actual fresh-review revisions and source-dependency audit
+
+Root performed the100-row independent review and second source reopening; the original row/review snapshot and every revision are retained. Forty row versions changed to resolve unsupported context, false/implausible distractors, duplicated binary-sex options and the near-parallel Aldabra physical-description pair. All changed versions require a new independent review; previous acceptances never transfer automatically.
+
+The university bibliographies for orangutan source0014, American flamingo0024 and southern cassowary0030 explicitly cite Smithsonian National Zoo. Since selected claims are not assigned separate citations, twelve paired rows0322–0325,0334–0337 and0346–0349 were conservatively changed to actual separately compiled Wikipedia descriptions and independently authored San Diego Zoo education. Selected encyclopedic references/context were read rather than asserting independence from hostname alone. The earlier excerpts and failed pairing decisions remain in the source ledger/revision log.
+
+Replacement quotes deliberately omit inferred seed dispersal, exact nest heights, disputed flamingo taxonomy and post2025 cassowary discoveries. Orangutan0324 now asks the actual shared nightly nest-building frequency with occasional reuse. The selected otter references remain separately traceable to literature; no blanket Smithsonian-hostname dependency is inferred.
