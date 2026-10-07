@@ -3,7 +3,7 @@
 > node run.mjs
 
 RUN node hashes.mjs
-SHA256: 43 files verified
+SHA256: 54 files verified
 RUN node node_modules/typescript/bin/tsc -p tsconfig.json
 RUN node export.mjs
 {"suite":"computed-outputs","passed":true,"strategies":2,"squares":80,"roiRows":348}
@@ -161,5 +161,5 @@ RUN node mutate.mjs 3
 {"suite":"mutation","seed":3,"name":"M24 utility Chance premium","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.8099534939406092 != 0.8503649878708002"}
 {"suite":"mutation","seed":3,"name":"M25 per-turn rent conversion","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerOpponentTurn: 0.03592338284004056 != 0.05058286826589295"}
 RUN node hashes.mjs
-SHA256: 43 files verified
+SHA256: 54 files verified
 {"suite":"complete","passed":true,"node":"v24.19.0","typescript":"5.8.3","seeds":[1,2,3],"totals":{"exactTransitionCells":86400,"stationaryStates":720,"publishedSquares":720,"matchedPublishedSquares":717,"documentedPublishedGaps":3,"requiredButlerComparisons":480,"roiScenarios":1044,"simulationRolls":600000000,"simulationSquares":240,"strictCompiledMutants":75,"runtimeKilledMutants":75}}

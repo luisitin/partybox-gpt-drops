@@ -7,3 +7,5 @@ Milestone 2: Completed the full three-seed pipeline for local and CI: exact/sour
 Improvement loop: The weakest published comparison used two tables from one author. Added an independent Collins table for all 40 ASAP values and explicit 40-cell maximum-stay diagnostics. Recorded the jail-release gap in `CONFLICTS.md`; retained specified rules, seeds and thresholds. Added complete source/mathematical records, raw evidence, original-source verification after each mutant and full-run hash preservation. Rerun every required suite with these improvements and no count reductions before final delivery.
 
 GitHub full-suite final-head CI observation and its URL are recorded in the PR description after the delivery push. Continue with the next assigned independent authoring job when verification is complete.
+
+Three complete local runs passed, including the packaged 54-file delivery. GitHub run 37642906455 at fded37c also passed the same full suites on Node 22.16.0. Archived its actual full logs/metadata, updated evidence docs and preserved the hashes. The final evidence commit receives another full CI run; its green URL/head are recorded in PR14 after observation.

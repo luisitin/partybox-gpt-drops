@@ -1,5 +1,5 @@
 # Resume point
 
-Preserve the full improved `npm test` reports, regenerate the deliverable inventory after copying raw reports, push the delivery milestone, open the exact-title B08 PR and observe the full GitHub run at the final head. Put the actual run URL/head/counts in the PR. All local required checks passed; final GitHub observation must not be claimed until obtained.
+B08 implementation, all full local runs, independent authoring/seals, delivered outputs, research/conflicts, raw evidence and GitHub full-suite verification are complete. PR14 records the exact final head and observed green run: https://github.com/luisitin/partybox-gpt-drops/pull/14. Original production/reference sources remain sealed and unchanged.
 
-After final CI, continue the parent-assigned B12 independent reference in a separate workspace using the original prompt and public contract from its primary author. Do not inspect B12 production before authoring/self-checking and sealing independent source. Coordinate with `/root/finish_b17`.
+Continue the parent-assigned B12 independent reference in `/workspace/blind-b12`, using the original prompt and public contract from `/root/finish_b17`. Do not inspect B12 production, tests or computed answers until independently authored/self-checked source is sealed. Author and seal exact route legality/application, connectivity, weighted longest edge trail, scoring and the public deterministic seeded RNG contract. The primary owner will integrate and run required full suites.

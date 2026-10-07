@@ -39,8 +39,8 @@ Pre-exchange self-checks are additional archived evidence: production 30,494, bl
 
 ## CI
 
-`.github/workflows/B08.yml` performs a fresh locked install on Node 22.16.0, runs the same full `npm test` and uploads complete `.verification/` evidence. The PR description records the observed green run and exact final head after completion. No reduced-count CI or historical run is treated as final-head evidence.
+`.github/workflows/B08.yml` performs a fresh locked install on Node 22.16.0, runs the same full `npm test` and uploads complete `.verification/` evidence. The PR description records the observed green run and exact final head after completion. Observed green full run: [37642906455](https://github.com/luisitin/partybox-gpt-drops/actions/runs/37642906455), head `fded37c9d208377386c0b1730eb90b487a10406f`, Node v22.16.0, TypeScript 5.8.3. The complete logs and metadata are preserved in `reports/github-fded37c.log` and `.json`: fresh install, 54-file hash checks at both boundaries, all three seeds, 600M rolls and 75 strict/runtime kills actually ran. A further full workflow run verifies this evidence-documentation commit; its actual final head and green run URL are recorded in [PR14](https://github.com/luisitin/partybox-gpt-drops/pull/14). No reduced-count CI or historical run is treated as final-head evidence.
 
 ## UNVERIFIED
 
-Final-head GitHub Actions observation is pending this local delivery commit; its actual URL and head SHA will be recorded in the PR after completion. Physical rotating decks, held/used GOJF, other US editions, competitive ownership/payment/bankruptcy policies and net-profit forecasting are outside the specified IID/gross-rent model and have not been verified by these results.
+Physical rotating decks, held/used GOJF, other US editions, competitive ownership/payment/bankruptcy policies and net-profit forecasting are outside the specified IID/gross-rent model and have not been verified by these results.
