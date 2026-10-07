@@ -1,0 +1,190 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "independence",
+    "job",
+    "quotationPolicy",
+    "sources"
+  ],
+  "properties": {
+    "independence": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "job": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "quotationPolicy": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "kind",
+          "passes",
+          "publisherLineage",
+          "quotes",
+          "title",
+          "uniqueQuotedWords",
+          "url"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "kind": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "passes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "pass",
+                "recoveredQuoteIds",
+                "retrieval"
+              ],
+              "properties": {
+                "bodyBytes": {
+                  "type": "integer"
+                },
+                "bodySha256": {
+                  "type": "string",
+                  "maxLength": 20000
+                },
+                "fullArticleScopeSha256": {
+                  "type": "string",
+                  "maxLength": 20000
+                },
+                "httpStatus": {
+                  "type": "integer"
+                },
+                "observedAtUTC": {
+                  "type": "string",
+                  "maxLength": 20000
+                },
+                "pass": {
+                  "type": "string",
+                  "maxLength": 20000
+                },
+                "recoveredQuoteIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "maxLength": 20000
+                  }
+                },
+                "requestOrder": {
+                  "type": "integer"
+                },
+                "retrieval": {
+                  "type": "string",
+                  "maxLength": 20000
+                },
+                "retrievalTimestampUTC": {
+                  "type": "null"
+                },
+                "textCharacters": {
+                  "type": "integer"
+                },
+                "textSha256": {
+                  "type": "string",
+                  "maxLength": 20000
+                },
+                "tlsVerified": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "publisherLineage": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "quotes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "locator",
+                "scope",
+                "text"
+              ],
+              "properties": {
+                "controllerImageLabels": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "alt",
+                      "src",
+                      "title"
+                    ],
+                    "properties": {
+                      "alt": {
+                        "type": "string",
+                        "maxLength": 20000
+                      },
+                      "src": {
+                        "type": "string",
+                        "maxLength": 20000
+                      },
+                      "title": {
+                        "type": "string",
+                        "maxLength": 20000
+                      }
+                    }
+                  }
+                },
+                "id": {
+                  "type": "string",
+                  "maxLength": 20000
+                },
+                "locator": {
+                  "type": "string",
+                  "maxLength": 20000
+                },
+                "scope": {
+                  "type": "string",
+                  "maxLength": 20000
+                },
+                "text": {
+                  "type": "string",
+                  "maxLength": 20000
+                }
+              }
+            }
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "uniqueQuotedWords": {
+            "type": "integer"
+          },
+          "url": {
+            "type": "string",
+            "maxLength": 20000
+          }
+        }
+      },
+      "minItems": 142,
+      "maxItems": 142
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "B03 catalogue-sources closed evidence schema"
+}
