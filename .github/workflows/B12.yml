@@ -1,0 +1,36 @@
+name: B12 Ticket to Ride USA
+on:
+  pull_request:
+    paths:
+      - 'jobs/B12-*/**'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: jobs/B12-ttr-usa
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify committed checksums
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Install pinned development compiler
+        run: npm install --ignore-scripts
+      - name: Full suite, seeds 1, 2, 3
+        run: npm test
+      - name: Independent standards-compliant schema audit
+        run: |
+          python -m pip install --disable-pip-version-check 'jsonschema==4.26.0'
+          for seed in 1 2 3; do echo "Schema audit repetition $seed"; python validate_schema.py; done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: B12-verification-results
+          path: jobs/B12-ttr-usa/test-output/
