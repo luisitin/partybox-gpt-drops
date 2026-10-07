@@ -7,6 +7,7 @@ import os from 'node:os';
 import { integrity } from '../scripts/integrity.mjs';
 import { nameFilter, isAllowedName } from '../dist/nameFilter.js';
 import { reference } from '../dist/tests/reference.js';
+import { createReference } from './blind/reference.mjs';
 
 const root = new URL('../', import.meta.url);
 process.chdir(root.pathname);
@@ -14,13 +15,14 @@ const coreOnly = process.argv.includes('--core');
 const out = 'reports/latest';
 mkdirSync(out, {recursive:true});
 const policy = JSON.parse(readFileSync('data/policy.json', 'utf8'));
+const blind = createReference(policy);
 const source = readFileSync('nameFilter.ts', 'utf8');
 const compiled = readFileSync('dist/nameFilter.js', 'utf8');
 const refSource = readFileSync('tests/reference.ts', 'utf8');
 const sha = x => createHash('sha256').update(x).digest('hex');
 const label = x => x.ok ? 'ok' : x.reason;
 const json = (path, data) => writeFileSync(`${out}/${path}`, JSON.stringify(data,null,2)+'\n');
-const result = {mode:coreOnly?'core-only':'full', environment:{node:process.version,platform:process.platform,arch:process.arch,cpu:os.cpus()[0]?.model,unicode:process.versions.unicode},sourceSha256:sha(source),referenceSha256:sha(refSource),suites:[],failures:[],unverified:[]};
+const result = {mode:coreOnly?'core-only':'full', environment:{node:process.version,platform:process.platform,arch:process.arch,cpu:os.cpus()[0]?.model,unicode:process.versions.unicode},sourceSha256:sha(source),referenceSha256:sha(refSource),blindReferenceSha256:sha(readFileSync('tests/blind/reference.mjs')),suites:[],failures:[],unverified:[]};
 function record(name, cases, passed, seed, details={}) {
   const row={name,cases,passed,seed,command:`node tests/run.mjs${coreOnly?' --core':''}`, ...details};
   result.suites.push(row);
@@ -99,7 +101,7 @@ const mutations = [
  ['M15','Resolve ambiguous one only as i', "c === 'i' || c === 'l'", "c === 'i'"],
  ['M16','Drop Cyrillic e mapping', "['e', '3еεϵ℮']", "['e', '3εϵ℮']"],
  ['M17','Drop Greek epsilon mapping', "['e', '3еεϵ℮']", "['e', '3еϵ℮']"],
- ['M18','Disable reversed scan', "REVERSE.test(text)", 'false'],
+ ['M18','Disable reversed scan', "TERMS.map(term => [...term].reverse().join(''))", '[]'],
  ['M19','Disable repetition at single letters', "run.length === 1 ? '+'", "run.length === 1 ? ''"],
  ['M20','Delete a blocked lexicon entry', ' fellatio fuck gook ', ' fellatio gook '],
  ['M21','Use substring rather than whole-word exceptions', 'SAFE.has(plain)', '[...SAFE].some(word => plain.includes(word))'],
@@ -183,12 +185,13 @@ for(const seed of [1,2,3]) {
  }
  const fuzz=makeFuzz(seed);
  const all=[...fixed,...mappingCases,...generated.rows,...fuzz,...corpusCases];
- let agreements=0,deterministic=0,wrapper=0;
+ let agreements=0,blindAgreements=0,deterministic=0,wrapper=0;
  for(const row of all){
-  try{const a=label(nameFilter(row.input)),b=label(reference(row.input));if(a===b)agreements++;if(a===label(nameFilter(row.input)))deterministic++;if(isAllowedName(row.input)===(a==='ok'))wrapper++;}
+  try{const a=label(nameFilter(row.input)),b=label(reference(row.input));if(a===b)agreements++;if(a===label(blind.nameFilter(row.input)))blindAgreements++;if(a===label(nameFilter(row.input)))deterministic++;if(isAllowedName(row.input)===(a==='ok'))wrapper++;}
   catch(e){result.failures.push({name:'differential-throw',seed,input:String(row.input).slice(0,100),error:String(e)});}
  }
  record('regex-vs-bitset-NFA-differential',all.length,agreements,seed);
+ record('sealed-blind-reference-differential',all.length,blindAgreements,seed);
  record('repeat-call-purity',all.length,deterministic,seed);
  record('boolean-wrapper',all.length,wrapper,seed);
  const mutationRows=[];
@@ -218,7 +221,6 @@ for(const seed of [1,2,3]) {
  record('latency-every-observed-check-under-005ms',bench.calls,bench.calls-bench.over005Ms,seed,bench);
 }
 result.unverified.push('Literal all-pass corpus target is not met: reviewed blocked/overlength rows stay rejected. Exact exceptions were tuned on this corpus, so it is not held-out evidence.');
-result.unverified.push('Clean-room independent authorship: both implementations were produced in one session; only algorithmic separation is verified.');
 result.unverified.push('All Unicode homoglyphs, all languages/slurs, intent, and arbitrary unseen obfuscations: not claimed. See POLICY.md.');
 result.unverified.push('Hard real-time 0.05ms bound on every platform: not established by a finite benchmark.');
 json('summary.json',result);

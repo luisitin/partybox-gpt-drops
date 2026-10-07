@@ -1,6 +1,7 @@
 # B19 Player-name filter
 
-Pure TypeScript name moderation, a separately structured bitset-NFA reference,
+Pure TypeScript name moderation, a sealed independently authored reference,
+and a supplemental bitset-NFA reference,
 seeded generation, public-corpus regression tests, 25 actual executable mutations,
 and a literal per-observation latency gate. There are no runtime dependencies.
 
@@ -10,7 +11,7 @@ Node 22+, Python 3, and TypeScript 5.8.3 (development dependency):
 
 ```sh
 cd jobs/B19-name-filter
-npm install --ignore-scripts --no-audit --no-fund
+npm ci --ignore-scripts --no-audit --no-fund
 npm test
 ```
 
@@ -43,7 +44,7 @@ text with textContent, never innerHTML; moderation is not an HTML sanitizer.
 ## Acceptance status and policy
 
 See VERIFY.md for measured results and UNVERIFIED items. This delivery does not
-claim universal vocabulary coverage, blinded authorship, or zero real-name false
+claim universal vocabulary coverage or zero real-name false
 positives. A finite English-policy lexicon, selected lookalikes, NFKD, letter-run
 matching, reversed matching, and exact benign-word exceptions are documented in
 POLICY.md and data/policy.json.
@@ -58,12 +59,15 @@ false positives are regression results, not held-out generalization estimates.
 
 The 0.05 ms gate measures individual calls without discarding outliers. Failures
 stay failures; an average or p99 does not substitute for the requested maximum.
-Two algorithms agree on tested inputs, but both were authored in one session:
-clean-room independent authorship remains UNVERIFIED.
+The sealed reference was authored from the original instructions, public API
+contract and policy JSON before its author read production or existing tests.
+All 43,830 inputs per seed are compared with it, in addition to the historical
+NFA comparison. Its authoring record and source hashes are in tests/blind/.
 
 ## Contents
 
-nameFilter.ts is the only runtime file. tests/reference.ts is the NFA oracle;
+nameFilter.ts is the only runtime file. tests/blind/reference.mjs is the sealed
+independent oracle; tests/reference.ts is the historical supplemental NFA oracle;
 tests/run.mjs generates and executes suites and mutants. scripts/fetch-data.py
 retrieves aggregate corpora and verifies the committed snapshot manifest.
 scripts/integrity.mjs verifies delivery checksums and size. data/ records policy,

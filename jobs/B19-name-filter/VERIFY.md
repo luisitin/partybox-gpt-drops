@@ -104,10 +104,26 @@ The PR description links the inspected final workflow run and states its real co
 
 ## UNVERIFIED / unmet requirements
 
-- Blinded, independently authored implementations: NOT fulfilled. Separate regex and bitset-NFA algorithms were authored in one session and share explicit policy data; no clean-room authorship claim is made.
+- The original regex/NFA authorship limitation is resolved by the new sealed independent reference; every full case is now compared with it. The historical NFA remains supplemental.
 - Literal every-name/every-word/every-place allowance: NOT fulfilled. Identical-string conflicts and overlength inputs remain rejected with per-row explanations. Reviewed-policy passed counts must not be mistaken for all-allowed counts.
 - At most 0.05 ms for every call: NOT fulfilled by the local observations; hardware-independent hard real-time behavior is not established.
 - Complete slang, languages, Unicode homoglyphs, phonetic/multi-character substitutions, and unseen adversarial obfuscations: not exhaustively verified. The finite policy and transformations are fully declared.
 - Zero false positives on unseen names: not established. Exact exception spellings were refined using this corpus, so it is a regression set, not held-out evidence.
 - A certified combined 20,000-most-common current U.S. first/last ranking: not established. The exact historical Census selection rule is disclosed in SOURCES.md.
 - Future availability of unchanged external corpora: not guaranteed. Changed hashes fail closed; use the retained cache for snapshot replay.
+
+## Resumed verification milestone
+
+A sealed independent author wrote `tests/blind/reference.mjs` before production
+or previous test/reference access. Its original SHA256 is
+`40449357a616619cc649d6b8efab2f6664a187de178511b8b0f17e28e92eea9a`.
+The full resumed run on Node v24.19.0 retained all original counts and added
+43,830 blind-reference comparisons per seed. All 131,490 blind comparisons,
+15,000 generated obfuscations and 75 executed mutants passed. Census/word/place
+accepted counts remained 19,989 / 9,951 / 1,943 per seed.
+
+The printable-ASCII normalization and single regex scan reduced measured
+median latency, but the first local optimized run still failed the unchanged
+literal maximum: 20 / 12 / 24 calls over 0.05 ms, maxima 0.379979 / 0.274470 /
+0.759725 ms. These are measured failures, not an all-pass claim. Final measured
+reports and hosted status will be published after the final source is tested.

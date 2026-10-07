@@ -11,8 +11,10 @@ place and one word length rejections are format failures, not lexical matches.
 4. The Census sources are historical and separated by category. Our disclosed
 5,000-given-plus-15,000-distinct-surname selection is not a certified combined
 national top-20,000 ranking. No data are invented to fill missing downloads.
-5. Algorithmic separation is not blinded independent authorship. Both algorithms
-were produced in the same session and share the explicit policy data.
+5. The original regex and NFA sources were authored in the same session.
+A newly sealed independent reference now checks every case; its author read
+only the original instructions, public contract and policy data before sealing.
+The historical NFA remains supplemental rather than a blind-authorship claim.
 6. Low mean/p99 latency does not prove a maximum bound. Individual observed
 outliers over 0.05 ms fail npm test and are never discarded or turned into passes.
 7. Exceptions were reviewed after observing the corpus. Zero unexpected

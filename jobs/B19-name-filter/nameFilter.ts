@@ -26,8 +26,7 @@ const pattern = (terms: readonly string[]): string => terms.map(term => term.rep
   // Preserve required repeats: 'boob' needs two o's; never turn 'Bob' into it.
   return (c === 'i' || c === 'l' ? `[${c}#]` : c) + (run.length === 1 ? '+' : `{${run.length},}`);
 })).join('|');
-const BAD = new RegExp(pattern(TERMS)); // No g/y: .test has no state.
-const REVERSE = new RegExp(pattern(TERMS.map(term => [...term].reverse().join(''))));
+const BAD = new RegExp(pattern(TERMS) + '|' + pattern(TERMS.map(term => [...term].reverse().join(''))));
 const OK: NameResult = Object.freeze({ ok: true });
 const FAILURE = {
   type: Object.freeze({ ok: false, reason: 'type' } as const),
@@ -47,18 +46,21 @@ export function nameFilter(input: unknown): NameResult {
   // Reject unpaired surrogates, C0/C1 controls, and bidi formatting controls.
   if (/[\u0000-\u001f\u007f-\u009f\ud800-\udfff\u202a-\u202e\u2066-\u2069]/u.test(input))
     return FAILURE.control;
-  const plain = input.normalize('NFKD').toLowerCase().replace(/\p{M}/gu, '').replace(/\p{Cf}/gu, '').trim();
-  if (!/[\p{L}\p{N}]/u.test(plain)) return FAILURE.empty;
+  const ascii = /^[\x20-\x7e]*$/.test(input);
+  let plain = (ascii ? input : input.normalize('NFKD')).toLowerCase();
+  if (!ascii) plain = plain.replace(/\p{M}/gu, '').replace(/\p{Cf}/gu, '');
+  plain = plain.trim();
+  if (!(ascii ? /[a-z0-9]/.test(plain) : /[\p{L}\p{N}]/u.test(plain))) return FAILURE.empty;
   if (SAFE.has(plain)) return OK;
   let text = '';
   for (const c of plain) {
+    if (c >= 'a' && c <= 'z') { text += c; continue; }
     const mapped = MAP.get(c);
     if (mapped !== undefined) text += mapped;
-    else if (c >= 'a' && c <= 'z') text += c;
-    else if (/^[\p{P}\p{S}\p{Z}]$/u.test(c)) continue;
+    else if (c <= '\x7f' || /^[\p{P}\p{S}\p{Z}]$/u.test(c)) continue;
     else text += '~'; // Unmapped letters are barriers, never silently deleted.
   }
-  if (BAD.test(text) || REVERSE.test(text))
+  if (BAD.test(text))
     return FAILURE.blocked;
   return OK;
 }
