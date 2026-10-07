@@ -1,8 +1,8 @@
 # B02 verification — observed local results
 
-**Historical run (prior oracle): PASS.** The new blind-reference integration is pending its complete rerun. The historical single `npm test` command completed with exit code **0**, with full seeds **1, 2, 3**. Local runtime: Node.js **v22.16.0**; TypeScript **5.8.3**. No reduced/smoke option was used in this run. The source hashes recorded by the runner match the delivered implementation and test sources.
+**PASS:** the integrated single `npm test` command completed with exit code **0**, with full seeds **1, 2, 3**, using the unchanged sealed blind reference for every required comparison. Local runtime: Node.js **v24.19.0**; TypeScript **5.8.3**. No reduced/smoke option was used. Every source hash recorded by the runner matches the delivered file listed there.
 
-GitHub CI is a separate, subsequent check. Its read-confirmed result belongs in the pull request description; this report does not infer a green run from local success.
+GitHub independently completed the same integrated full suite successfully at code milestone `fc7f7b8a5476f0e20d3f65d1478c166b75f1d41c`: [observed green run 37635686808](https://github.com/luisitin/partybox-gpt-drops/actions/runs/37635686808). Fresh locked `npm ci` succeeded there. The run metadata and completed logs were read back, including all three seeds, graph counters, 150 million trajectories, and 75 runtime mutation kills. The final documentation head is checked separately and its observed run is linked in PR #4.
 
 ## Exact commands actually executed
 
@@ -15,7 +15,7 @@ node test.mjs --seed S
 node mutate.mjs --seed S
 ```
 
-Here `S` is replaced literally by `1`, `2`, and `3`; the fully expanded commands and exit codes are in `evidence/local-runs.json`. All 12 subprocess invocations exited 0. Integrity and strict compilation each ran three times. Each strict compilation covered both `.ts` implementations; each mutation additionally passed strict type checking before its runtime test.
+Here `S` is replaced literally by `1`, `2`, and `3`; the fully expanded commands and exit codes are in `evidence/local-runs.json`. All 12 subprocess invocations exited 0. Integrity and strict compilation each ran three times. Each strict compilation covered production, the sealed blind reference, and the historical supplemental oracle; each mutation additionally passed strict type checking before its runtime test.
 
 ## Recorded case counts
 
@@ -163,15 +163,17 @@ Exact commands: `node mutate.mjs --seed 1`; `node mutate.mjs --seed 2`; `node mu
 
 ## Evidence and integrity
 
+Blind independent authorship is now established by the pre-exchange seal and the preserved authoring record in `blind-authoring/`. The integrated `blind-reference.ts` is byte-for-byte the sealed source. The author only viewed existing production/tests after its independent implementation was completed, self-checked, sealed, and reported. `INDEPENDENCE.md` records that boundary; the runner verifies all four sealed artifacts and the integrated reference hash. The author's separate local self-checks passed 24 fixtures, 600 DAGs / 36,460 comparisons, and 600 cyclic graphs / 34,280 result checks across seeds 1–3.
+
+The numerical counts and outcomes below were freshly reproduced with the blind reference and checked against the archived historical counters before this report was finalized. `evidence/historical-*` retains the earlier prior-oracle evidence as historical provenance.
+
 `evidence/local-runs.json` contains the runner version/source hashes, all actual subprocess commands and exit codes, the per-seed suite counters, and all per-seed mutation kill witnesses. `evidence/raw-report-sha256.json` records the raw run-report digests. `npm test` regenerates detailed per-board, per-outcome simulation data and full mutation witnesses under `.verification/`; these generated files are intentionally not runtime dependencies.
 
 The committed source files are the tested source files; documentation and compact evidence were finalized after the run. The final manifest is regenerated and checked before publication. SHA256SUMS.txt excludes itself and generated/dependency directories, and includes the single allowed root workflow. No file approaches the 30 MB limit.
 
 ## UNVERIFIED
 
-- **Current integrated full-suite run:** pending at this milestone. The independent reference is sealed and its authoring self-checks passed, but the prior numerical results below were produced with the historical oracle. Historical raw report hashes and compact results are preserved under `evidence/historical-*`.
 - **Universal correctness / formal verification:** no machine-checked proof or claim that bugs are impossible. PROOF.md is a mathematical design argument; tests establish the recorded cases only.
-- **Literal infinite-path enumeration:** not performed for zero-cost cycles because those path families can be infinite. Exact state elimination and matrix inversion, plus hand-derived cyclic regressions, are the substitute, explicitly identified above.
+- **Literal infinite-path enumeration:** not performed for zero-cost cycles because those path families can be infinite. Exact independent component equations and production matrix inversion, plus hand-derived cyclic regressions, are the substitute, explicitly identified above.
 - **Unbounded scale:** random-graph coverage is up to 25 nodes and faces 0–10, with targeted enormous-face closed-form cases. Arbitrarily large dense graphs or exploding rational bit sizes are not performance-certified.
-- **Fresh local npm installation:** the local container could not resolve the npm registry. Tests used its already installed TypeScript 5.8.3; the portable lockfile uses the official registry integrity value. The CI workflow separately performs a fresh `npm ci` before the same full suite. No local fresh-install success is claimed.
 - **Game-specific interpretation:** directed edge-hop distance, dead-end absorption, duplicate-edge deduplication, and explicit nontermination are documented resolutions of the abstract brief, not externally verified rules of a particular game.

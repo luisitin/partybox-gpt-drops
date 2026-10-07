@@ -7,7 +7,7 @@ process.chdir(dirname(fileURLToPath(import.meta.url)));
 const ignored = new Set(['node_modules', 'build', '.verification', '.git']);
 function walk(path = '.') {
   return readdirSync(path, { withFileTypes: true }).flatMap(entry => {
-    if (ignored.has(entry.name) || entry.name === 'SHA256SUMS.txt') return [];
+    if (ignored.has(entry.name) || (path === '.' && entry.name === 'SHA256SUMS.txt')) return [];
     const name = join(path, entry.name).replaceAll('\\', '/');
     return entry.isDirectory() ? walk(name) : [name];
   });
