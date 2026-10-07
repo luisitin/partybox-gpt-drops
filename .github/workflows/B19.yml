@@ -1,0 +1,28 @@
+name: B19 Player-name filter
+on:
+  pull_request:
+    paths: ['jobs/B19-*/**']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: jobs/B19-name-filter
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --ignore-scripts --no-audit --no-fund
+      - run: npm test
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: B19-verification
+          path: |
+            jobs/B19-name-filter/reports/latest/
+            jobs/B19-name-filter/data/cache/
+          retention-days: 30
