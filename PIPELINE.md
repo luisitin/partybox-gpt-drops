@@ -1,6 +1,6 @@
 # ChatGPT project pipeline
 
-_Last refreshed: 2026-10-07 03:55 UTC_
+_Last refreshed: 2026-10-07 03:57 UTC_
 
 This tracker covers the 20 jobs in [PROMPTS.md](PROMPTS.md). It reads branch commits, changed files, and pull-request notes from GitHub.
 
@@ -11,7 +11,7 @@ The notes below describe what the GitHub record suggests is being worked on. The
 ## Stage meanings
 
 - **Pre-pipeline:** no job branch or pull request exists.
-- **Pipeline:** a job branch exists, but its pull request is not open.
+- **Pipeline:** a job branch exists, or a previous pull request was closed without merging.
 - **Review:** a pull request is open.
 - **Completed:** a pull request has been merged.
 
