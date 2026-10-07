@@ -6,6 +6,7 @@ import {createHash} from 'node:crypto';
 import {gzipSync} from 'node:zlib';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import ts from 'typescript';
+import {rk4Step as blindRk4, spring as blindSpring, settleTime as blindSettle} from './blind/spring-oracle.mjs';
 
 process.chdir(path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'));
 const args=process.argv.slice(2);
@@ -95,7 +96,7 @@ for(const seed of seeds) {
   // Every RK4 integration step is compared, not only each spring's final frame.
   {
     const random=rng(seed), h=1e-4;
-    let states=0,maxX=0,maxV=0,maxMatrix=0,worstX,worstV;
+    let states=0,maxX=0,maxV=0,maxMatrix=0,maxBlindSpring=0,worstX,worstV;
     const digest=createHash('sha256'),tags={under:0,critical:0,over:0};
     for(let i=0;i<10000;i++) {
       const params=randomSpring(random,i),[m,k,c,x0,v0]=params;
@@ -109,18 +110,24 @@ for(const seed of seeds) {
         if(dx>maxX){maxX=dx;worstX={case:i,step:j,t,params,closed:xx,rk4:x};}
         if(dv>maxV){maxV=dv;worstV={case:i,step:j,t,params,closed:vv,rk4:v};}
         if(!(dx<1e-6&&dv<1e-6)) assert.fail(`RK4 mismatch seed ${seed} case ${i} step ${j}: ${dx}, ${dv}`);
-        if(j<steps) [x,v]=ref.rk4(x,v,m,k,c,h);
+        if(j<steps) [x,v]=blindRk4([x,v],h,m,k,c);
       }
       const analytic=prod.spring(steps*h,...params),matrix=ref.matrixSpring(steps*h,...params);
+      const blindEndpoint=blindSpring(steps*h,...params);
+      for(let component=0;component<2;component++){
+        maxBlindSpring=Math.max(maxBlindSpring,Math.abs(analytic[component]-blindEndpoint[component]));
+        close(analytic[component],blindEndpoint[component],1e-7,`blind spring endpoint ${seed}/${i}/${component}`);
+      }
       for(let j=0;j<2;j++) {
         const delta=Math.abs(analytic[j]-matrix[j]);maxMatrix=Math.max(maxMatrix,delta);
         close(analytic[j],matrix[j],1e-7,`matrix spring ${seed}/${i}/${j}`);
       }
       digest.update(JSON.stringify([params,steps,x,v]));
     }
-    record('closed form vs RK4, every dt=1e-4 frame',10000,
+    record('closed form vs blindly authored RK4, every dt=1e-4 frame',10000,
       {comparedStates:states,componentComparisons:2*states,actualDampingRegimes:tags,maxPositionError:maxX,maxVelocityError:maxV,worstX,worstV,traceSha256:digest.digest('hex')});
     record('closed form vs scaling/squaring matrix exponential',10000,{maxAbsoluteError:maxMatrix});
+    record('closed form vs blindly authored spring solution',10000,{maxAbsoluteError:maxBlindSpring});
   }
 
   // All 1,000,000 inputs are checked against 113-bit arithmetic; none are sampled
@@ -130,6 +137,13 @@ for(const seed of seeds) {
     const result=command('.work/oracle',[String(seed),'1000000'],{encoding:null});
     const buffer=result.stdout;
     assert.equal(buffer.length,1040004*56);
+    command('g++',['-std=gnu++17','-O2','-Wall','-Wextra','-Werror','-fno-fast-math','tests/blind/bezier-quad.cpp','-lquadmath','-o','.work/blind-bezier']);
+    const blindInputs=Buffer.allocUnsafe(1040004*40);
+    for(let row=0;row<1040004;row++) for(let column=0;column<5;column++)
+      blindInputs.writeDoubleLE(buffer.readDoubleLE(row*56+(column+1)*8),row*40+column*8);
+    const blindResults=command('.work/blind-bezier',[],{input:blindInputs,encoding:null}).stdout;
+    assert.equal(blindResults.length,1040004*8);
+    let blindMax=0,blindNamedMax=0,blindOracleDifference=0;
     let max=0,namedMax=0,oracleMax=0,worst,namedCount=0;
     const named=['','ease','ease-in','ease-out','ease-in-out'];
     for(let i=0;i<1040004;i++) {
@@ -137,6 +151,11 @@ for(const seed of seeds) {
       const [kind,p,a,b,c,d,expected]=row;
       const actual=kind?prod.easings[named[kind]](p):prod.cubicBezier(p,a,b,c,d);
       const delta=Math.abs(actual-expected);
+      const blindExpected=blindResults.readDoubleLE(i*8);
+      close(actual,blindExpected,1e-7,`blind high-precision bezier ${seed}/${i}`);
+      if(kind)blindNamedMax=Math.max(blindNamedMax,Math.abs(actual-blindExpected));
+      else blindMax=Math.max(blindMax,Math.abs(actual-blindExpected));
+      blindOracleDifference=Math.max(blindOracleDifference,Math.abs(expected-blindExpected));
       close(actual,expected,1e-7,`113-bit bezier ${seed}/${i}`);
       if(kind){namedCount++;namedMax=Math.max(namedMax,delta);}
       else if(delta>max){max=delta;worst={case:i,input:[p,a,b,c,d],actual,reference:expected};}
@@ -147,19 +166,29 @@ for(const seed of seeds) {
       }
     }
     record('cubic Bezier vs 113-bit reference',1000000,{maxAbsoluteError:max,worst,streamSha256:hash(buffer),referenceSignificandBits:113,bisectionIterations:116});
+    record('cubic Bezier vs blindly authored high-precision oracle',1000000,{maxAbsoluteError:blindMax,maxPriorOracleDifference:blindOracleDifference,inputSha256:hash(blindInputs),outputSha256:hash(blindResults)});
+    record('all four CSS named easings vs blindly authored high-precision oracle',namedCount,{maxAbsoluteError:blindNamedMax});
     record('all four CSS named easings vs 113-bit reference',namedCount,{perName:10001,progressRange:[-1,2],maxAbsoluteError:namedMax});
     record('113-bit oracle vs exact-integer Q160 Bernstein reference',5000,{maxAbsoluteDifference:oracleMax});
   }
 
   {
     const random=rng(seed^0x5641),M=Number.MAX_VALUE;
-    let maxDelta=0,tailSamples=0,maxTailRatio=0;
+    let maxDelta=0,tailSamples=0,maxTailRatio=0,blindTailSamples=0,maxBlindTailRatio=0;
     for(let i=0;i<10000;i++) {
       const params=randomSpring(random,i),epsilon=10**(-2-4*random());
       const t=prod.settleTime(...params,epsilon),expected=ref.referenceSettle(...params,epsilon);
       const delta=Math.abs(t-expected);maxDelta=Math.max(maxDelta,delta);
       close(t,expected,1e-9*Math.max(1,expected),`settle reference ${seed}/${i}`);
       assert.ok(t>=0&&Number.isFinite(t));
+      const blindT=blindSettle(...params,epsilon);
+      assert.ok(Number.isFinite(blindT)&&blindT>=0,'blind finite settling bound');
+      if(blindT!==M)for(let sample=0;sample<64;sample++){
+        const state=prod.spring(blindT*(1+sample/8),...params);
+        const ratio=Math.max(Math.abs(state[0]),Math.abs(state[1]))/epsilon;
+        maxBlindTailRatio=Math.max(maxBlindTailRatio,ratio);blindTailSamples++;
+        assert.ok(ratio<=1+1e-10,`blind settle bound ${seed}/${i}/${sample}: ${ratio}`);
+      }
       if(t===M) continue;
       for(let j=0;j<64;j++) {
         const state=prod.spring(t*(1+j/8),...params);
@@ -170,6 +199,7 @@ for(const seed of seeds) {
     }
     record('settle estimate vs independent envelope bisection',10000,{maxAbsoluteTimeDifference:maxDelta});
     record('settle-tail position AND velocity bounds',tailSamples,{maxFractionOfTolerance:maxTailRatio});
+    record('blindly authored settling-bound tail check',blindTailSamples,{maxFractionOfTolerance:maxBlindTailRatio});
   }
 
   {
