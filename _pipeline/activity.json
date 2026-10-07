@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-10-07T14:41:00Z",
-  "summary": "B02 board odds, B09 Clue, B17 sound effects and B18 motion are delivered with successful final GitHub checks. Six workers and the coordinator are continuing through the remaining projects; no PR has been merged.",
+  "updatedAt": "2026-10-07T15:06:42.260603Z",
+  "summary": "Four deliveries have final green GitHub checks: B02 board odds, B09 Clue, B17 sounds and B18 motion. All remaining jobs are assigned across six workers and the coordinator; source gaps and failed gates remain visible. Hourly background reports are enabled; the open dashboard refreshes every 30 minutes.",
   "workers": [
     {
       "current": "B08",
-      "summary": "B02 board odds is finished and green. Work has begun on the Monopoly probability model; a separately written checker is already sealed.",
-      "next": "Build and compare both jail strategies, then check the published tables and property returns.",
+      "summary": "Both Monopoly implementations agree on all 28,800 exact transitions. The independent property-return checker is now sealed.",
+      "next": "Run the full simulations and mutation tests and finish source comparisons.",
       "queue": []
     },
     {
       "current": "B10",
-      "summary": "B09 Clue is finished and green. A new independently written Battleship checker is pushed before the old implementation is reviewed.",
-      "next": "Compare the exact board densities and shot choices, then address the speed-limit failures.",
+      "summary": "The independently written Battleship checker is pushed. Allocation-heavy shot calculations are being optimized after genuine slow calls were observed.",
+      "next": "Compare every policy and run all 900,000 games with the original speed gates.",
       "queue": [
         "B11",
         "B07"
@@ -19,44 +19,41 @@
     },
     {
       "current": "B16",
-      "summary": "B17's 40 sounds and gallery are finished and green. The player-color math is now being calibrated against published test cases.",
-      "next": "Search for a palette that meets the original contrast and color-separation rules.",
+      "summary": "A refined palette passes all original contrast and color-separation requirements in a separate checker, including actual 16-bit colors.",
+      "next": "Generate the exact swatches, tables and full acceptance and mutation checks.",
       "queue": [
         "B12"
       ]
     },
     {
-      "current": "B19",
-      "summary": "A separate name-filter checker agrees on every required input. The optimized filter still failed the strict speed limit on GitHub.",
-      "next": "Identify the slow inputs and reduce work per call; retain the failed gate until it passes.",
+      "current": "B15",
+      "summary": "The icon project now has a separately written SVG/PNG checker, sealed before the old code was opened. The name filter still has a failed speed gate.",
+      "next": "Compare all 120 icons and fix any real decoding defects, then return to name-filter speed.",
       "queue": [
-        "B15"
+        "B19"
       ]
     },
     {
-      "current": "B01",
-      "summary": "The new dice checker passed all three full runs, including 870 million simulated rolls. Source pages have been reopened and archived; 12 rule claims still lack full verification.",
-      "next": "Confirm the final GitHub run and improve the remaining source gaps before declaring research finished.",
+      "current": "B20",
+      "summary": "Turn-flow evidence was expanded and pushed; 29 claim or gap rows, bonus criteria and tie procedures still lack complete verification. Work has moved to modes.",
+      "next": "Research the modes from original instructions, preserving all unresolved claims.",
       "queue": [
-        "B05",
-        "B20",
         "B04",
         "B03"
       ]
     },
     {
       "current": "B14",
-      "summary": "300 original candidates are authored and pushed. A separate review of the first 100 retained 63 that both reviewers graded at least 4.",
-      "next": "Continue the full 3,000-candidate pool and separate second review, then select the final 1,200.",
+      "summary": "600 of the required 3,000 original comedy candidates are authored and pushed. The first 100 received a separate second review.",
+      "next": "Continue original writing and independent grading before selecting the final 1,200.",
       "queue": [
         "B13"
       ]
     },
     {
       "current": "B06",
-      "title": "Live project dashboard",
-      "summary": "The live dashboard is published. The previously empty CPU-policy job now has a branch and a documented state and decision contract.",
-      "next": "Implement and independently compare the policy, then run all scenarios, random states and toy games.",
+      "summary": "The CPU policy and separate implementation are written and sealed. The full scenario, random-state and toy-board suite is being built.",
+      "next": "Run every original code gate and audit the CPU-behavior research.",
       "queue": []
     }
   ]
