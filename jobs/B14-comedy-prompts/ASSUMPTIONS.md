@@ -8,7 +8,9 @@ allowances. A canonical tag still needs an explicit name or recognizable named
 alias in the prompt; generic coffee or social media does not establish a brand.
 
 - Adult friends in the US are the audience; no prompt involves minors.
-- The 90-character limit counts Unicode code points; authored text uses ASCII.
+- The 90-character limit counts Unicode code points. Authored wording is mostly
+  ASCII, with accented spellings of some brand and person names; those accented
+  letters count as one code point each.
 - "At most 3 prompts per named brand/person" applies across the combined final
   1,200 prompts, not separately by genre. Named shows, chains, organizations, and
   recognizable characters will also receive canonical reference keys.

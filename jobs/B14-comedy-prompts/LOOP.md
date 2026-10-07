@@ -66,3 +66,5 @@
     Independent review remains partial; complete counts are recorded verbatim.
 23. Authored 100 concrete financial and adult beverage scenarios, shortened six overlength drafts before sealing, and integrated independent grades through022 unchanged. All 2,300 rows pass structural checks.
     Independent review remains partial; complete counts are recorded verbatim.
+24. Authored 100 travel and public-service scenarios; shortened nine overlength drafts before sealing; corrected the documented character-count assumption to include accented names. All 2,400 rows pass structural checks.
+    Independent review remains partial; complete counts are recorded verbatim.
