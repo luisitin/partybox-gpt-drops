@@ -1,0 +1,23 @@
+{
+  "name": "@partybox/b15-icons-120",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "120 original chunky SVG icons and deterministic verification",
+  "exports": "./dist/src/icons.js",
+  "types": "./dist/src/icons.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "generate": "npm run build && node dist/test/generate.js --write",
+    "test": "npm run build && node dist/test/run.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "sharp": "0.34.1",
+    "@types/node": "25.1.0",
+    "typescript": "5.8.3"
+  }
+}
