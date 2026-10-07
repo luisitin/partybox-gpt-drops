@@ -1,5 +1,16 @@
 # B20 — Exact next step
 
-Research follow-up: obtain independent full-qualifier evidence for the 26 single-source rules and three conflicts listed in VERIFY.md; fill the 84 missing category slots without inferring undocumented rewards, clocks or RNG. Reopen all changed source evidence and re-review every changed row, then rerun structural and strict checks and regenerate every hash. Waluigi’s range, Remix structure, Coaster player fill and Buddy patch exceptions are the priority disagreements.
+The bounded Pro/Coaster recovery adds four narrowly corroborated rules, with
+actual two-pass short-quote/context checks and preserved prior versions. Current
+counts: 60/85 corroborated, 23 single-source, two conflicts, 84/168 empty fields.
+The unchanged complete Python structural/checksum and strict checks are recorded
+in VERIFY.md and validator-output.txt. Inspect the exact-head CI linked in draft
+PR16, then pursue substantive factual gaps on job/B20-jamboree-modes.
 
-The current original phone/TV prototypes provide explicit controls, state, scoring and 196 phase exits, but their equations have not been executed as gameplay. Do not label them Nintendo faithful or complete from schema success. Exact-head artifact CI is linked in draft PR16 after observation. Assigned next jobs are B04 then B03.
+Next factual work needs independent full-qualifier evidence for the remaining
+23 single-source rows and two conflicts. Exact Flight School clocks, Coaster
+rank-to-second tables and solo CPU fill, Remix sequence, Waluigi range, Buddy
+patch/TV restrictions, rewards and unlocks remain priorities. Rank/achievement
+candidates contain unresolved counter/version ambiguity; do not silently choose
+a number. Original phone/TV equations remain proposals with 196 explicit phase
+exits, never asserted as executed physical gameplay or Nintendo reconstruction.

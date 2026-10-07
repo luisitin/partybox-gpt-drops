@@ -8,7 +8,7 @@
       "value": {
         "turns": 12
       },
-      "status": "corroborated",
+      "status": "single_source",
       "confidence": "medium",
       "evidence": [
         {
@@ -16,15 +16,9 @@
           "quote": "game lasting for 12 turns only",
           "locator": "pro-rules section",
           "quoteId": "W_GAME-Q013"
-        },
-        {
-          "sourceId": "PT_UNLOCK",
-          "quote": "capping the match at 12 turns",
-          "locator": "How to unlock Pro Rules; fixed match length",
-          "quoteId": "PT_UNLOCK-Q001"
         }
       ],
-      "note": "The 12-turn rule is independently reported by Mario Wiki and the authored Pocket Tactics guide; no gameplay or installed build was inspected."
+      "note": ""
     },
     {
       "id": "PRO_BONUS",
@@ -77,7 +71,7 @@
       "mode": "pro-rules",
       "field": "unlocks",
       "value": "Complete one Mario Party board; game length and winning do not determine this unlock.",
-      "status": "corroborated",
+      "status": "single_source",
       "confidence": "medium",
       "evidence": [
         {
@@ -91,21 +85,9 @@
           "quote": "Board length and win condition does not matter.",
           "locator": "pro-rules section",
           "quoteId": "MPL_UNLOCK-Q002"
-        },
-        {
-          "sourceId": "PT_UNLOCK",
-          "quote": "complete one game of Mario Party",
-          "locator": "How to unlock Pro Rules; completion condition",
-          "quoteId": "PT_UNLOCK-Q002"
-        },
-        {
-          "sourceId": "PT_UNLOCK",
-          "quote": "The board, game length, and whether you win or lose don't matter.",
-          "locator": "How to unlock Pro Rules; board/length/win qualifiers",
-          "quoteId": "PT_UNLOCK-Q003"
         }
       ],
-      "note": "Mario Party Legacy and Pocket Tactics independently report completing one game, regardless of board length or winning."
+      "note": ""
     },
     {
       "id": "BUDDY_RECRUIT",
@@ -1694,7 +1676,7 @@
       "mode": "carnival-coaster",
       "field": "length",
       "value": "The shared countdown expiring ends the attempt.",
-      "status": "corroborated",
+      "status": "single_source",
       "confidence": "medium",
       "evidence": [
         {
@@ -1702,15 +1684,9 @@
           "quote": "players lose if it runs out",
           "locator": "carnival-coaster section",
           "quoteId": "W_TV-Q007"
-        },
-        {
-          "sourceId": "SR_TV",
-          "quote": "goal of reaching the end before the clock runs out",
-          "locator": "Carnival Coaster review; reaching the end before countdown expiry",
-          "quoteId": "SR_TV-Q001"
         }
       ],
-      "note": "The wiki explicitly reports loss at countdown expiry; the independent hands-on review describes reaching the end before the clock runs out. Exact starting clocks and all timeout animations remain unverified."
+      "note": ""
     },
     {
       "id": "COASTER_COURSES",
@@ -1748,8 +1724,8 @@
           4
         ]
       },
-      "status": "corroborated",
-      "confidence": "medium",
+      "status": "conflict",
+      "confidence": "low",
       "evidence": [
         {
           "sourceId": "N_SUPPORT_TV",
@@ -1762,21 +1738,9 @@
           "quote": "two or four players",
           "locator": "carnival-coaster section",
           "quoteId": "W_TV-Q009"
-        },
-        {
-          "sourceId": "SR_TV",
-          "quote": "four-player support",
-          "locator": "Carnival Coaster paragraph; four-player support",
-          "quoteId": "SR_TV-Q002"
-        },
-        {
-          "sourceId": "NWR_TV",
-          "quote": "two or four players",
-          "locator": "Carnival Coaster paragraph; two/four participant groups",
-          "quoteId": "NWR_TV-Q001"
         }
       ],
-      "note": "Narrow reported counts only: Nintendo support and ScreenRant corroborate up to four humans; Mario Wiki and Nintendo World Report corroborate two/four participant groups. Nintendo Life describes a two-player option without stating a two-player maximum. Solo CPU fill, per-course allocation and installed-version/patch behavior remain unverified."
+      "note": "Nintendo Life describes two participants; 1-4 humans may include CPU-filled slots. Exact solo/fill/version scope remains under audit."
     },
     {
       "id": "COASTER_RANK_TIME",

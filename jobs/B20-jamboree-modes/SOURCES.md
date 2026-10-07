@@ -380,9 +380,11 @@ Frenzy Rules; rule_variant; tv.
 
 {"turns": 12}
 
-**single_source; medium**. 
+**corroborated; medium**. The 12-turn rule is independently reported by Mario Wiki and the authored Pocket Tactics guide; no gameplay or installed build was inspected.
 
 - https://www.mariowiki.com/Super_Mario_Party_Jamboree — “game lasting for 12 turns only” (W_GAME-Q013; pro-rules section).
+- https://www.pockettactics.com/super-mario-party-jamboree/unlockables — “capping the match at 12 turns” (PT_UNLOCK-Q001; How to unlock Pro Rules; fixed match length).
+
 
 ## PRO_BONUS
 
@@ -406,10 +408,13 @@ Choose a starting item; shop copies are limited to two and do not replenish.
 
 Complete one Mario Party board; game length and winning do not determine this unlock.
 
-**single_source; medium**. 
+**corroborated; medium**. Mario Party Legacy and Pocket Tactics independently report completing one game, regardless of board length or winning.
 
 - https://mariopartylegacy.com/super-mario-party-jamboree/unlockables-rewards-achievements — “Play through and complete one board” (MPL_UNLOCK-Q001; pro-rules section).
 - https://mariopartylegacy.com/super-mario-party-jamboree/unlockables-rewards-achievements — “Board length and win condition does not matter.” (MPL_UNLOCK-Q002; pro-rules section).
+- https://www.pockettactics.com/super-mario-party-jamboree/unlockables — “complete one game of Mario Party” (PT_UNLOCK-Q002; How to unlock Pro Rules; completion condition).
+- https://www.pockettactics.com/super-mario-party-jamboree/unlockables — “The board, game length, and whether you win or lose don't matter.” (PT_UNLOCK-Q003; How to unlock Pro Rules; board/length/win qualifiers).
+
 
 ## BUDDY_RECRUIT
 
@@ -984,9 +989,11 @@ Aim using mouse controls at enemy waves; pipes insert cooperative minigames and 
 
 The shared countdown expiring ends the attempt.
 
-**single_source; medium**. 
+**corroborated; medium**. The wiki explicitly reports loss at countdown expiry; the independent hands-on review describes reaching the end before the clock runs out. Exact starting clocks and all timeout animations remain unverified.
 
 - https://www.mariowiki.com/Carnival_Coaster — “players lose if it runs out” (W_TV-Q007; carnival-coaster section).
+- https://screenrant.com/super-mario-party-switch2-jamboree-tv-review/ — “goal of reaching the end before the clock runs out” (SR_TV-Q001; Carnival Coaster review; reaching the end before countdown expiry).
+
 
 ## COASTER_COURSES
 
@@ -1001,10 +1008,13 @@ The shared countdown expiring ends the attempt.
 
 {"reportedHumanMaximum": 4, "coasterTeamSlots": [2, 4]}
 
-**conflict; low**. Nintendo Life describes two participants; 1-4 humans may include CPU-filled slots. Exact solo/fill/version scope remains under audit.
+**corroborated; medium**. Narrow reported counts only: Nintendo support and ScreenRant corroborate up to four humans; Mario Wiki and Nintendo World Report corroborate two/four participant groups. Nintendo Life describes a two-player option without stating a two-player maximum. Solo CPU fill, per-course allocation and installed-version/patch behavior remain unverified.
 
 - https://en-americas-support.nintendo.com/app/answers/detail/a_id/68617/~/how-to-start-a-multiplayer-game-%2528super-mario-party-jamboree-%25E2%2580%2593-nintendo — “Carnival Coaster** | 1-4” (N_SUPPORT_TV-Q001; carnival-coaster section).
 - https://www.mariowiki.com/Carnival_Coaster — “two or four players” (W_TV-Q009; carnival-coaster section).
+- https://screenrant.com/super-mario-party-switch2-jamboree-tv-review/ — “four-player support” (SR_TV-Q002; Carnival Coaster paragraph; four-player support).
+- https://www.nintendoworldreport.com/review/72291/super-mario-party-jamboree-nintendo-switch-2-edition--jamboree-tv-switch-2-review — “two or four players” (NWR_TV-Q001; Carnival Coaster paragraph; two/four participant groups).
+
 
 ## COASTER_RANK_TIME
 
@@ -1143,3 +1153,31 @@ Blue/Red rewards and penalties and shop, Star and Boo interactions can repeat tw
 - https://www.mariowiki.com/Jamboree_Buddy — “four board participants” (W_BUDDY-Q016; Opening / eligibility).
 - https://www.nintendo.com/us/whatsnew/super-mario-party-jamboree-heres-a-quick-overview-of-the-game/ — “four players” (N_OVERVIEW-Q004; Mario Party).
 
+
+## Incremental publisher roster and provenance
+
+Seven relevant sources were reopened/read in both incremental passes. Four existing capture pairs were refreshed and three independent publisher sources added; every prior capture and original changed-row version remains under reports/historical-before-pro-coaster/. Other current source captures retain their original full-pass evidence. Exa may return cached extraction, and no origin-HTML HTTP status or physical gameplay is claimed.
+
+### PT_UNLOCK
+
+All Mario Party Jamboree unlockables — Daz Skubich, Pocket Tactics
+
+https://www.pockettactics.com/super-mario-party-jamboree/unlockables
+
+Lineage: `pocket-tactics`; kind: `secondary_guide`. Both short-quote capture records are in reports/source-captures/.
+
+### SR_TV
+
+Super Mario Party Jamboree + Jamboree TV Review — Chris Carter, ScreenRant
+
+https://screenrant.com/super-mario-party-switch2-jamboree-tv-review/
+
+Lineage: `screen-rant`; kind: `hands_on_review`. Both short-quote capture records are in reports/source-captures/.
+
+### NWR_TV
+
+Super Mario Party Jamboree — Nintendo Switch 2 Edition + Jamboree TV Review — Neal Ronaghan
+
+https://www.nintendoworldreport.com/review/72291/super-mario-party-jamboree-nintendo-switch-2-edition--jamboree-tv-switch-2-review
+
+Lineage: `nintendo-world-report`; kind: `hands_on_review`. Both short-quote capture records are in reports/source-captures/.

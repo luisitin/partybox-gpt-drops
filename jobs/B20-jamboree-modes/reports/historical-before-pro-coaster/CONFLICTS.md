@@ -10,7 +10,7 @@ TheGamer says five modes but lists six names including Boss Rush. Dedicated wiki
 
 ## C03 — Carnival Coaster multiplayer scope
 
-Nintendo Life describes a ride with another player; Nintendo support lists 1–4 humans; the wiki describes two/four participant slots. The original conflict/low assessment and captures are preserved. Additional authored reviews now explicitly support two/four participants (Nintendo World Report) and four-player support (ScreenRant). Nintendo Life describes a two-player option without stating a two-player maximum. COASTER_PLAYERS now corroborates only the published human maximum and two/four participant counts at medium confidence. Solo CPU fill, each course/variant allocation and installed-version/patch scope remain unknown; the prototype still independently chooses four slots.
+Nintendo Life describes a ride with another player; Nintendo support lists 1–4 humans; the wiki describes two/four participant slots. CPU fill, selected variant and update scope have not been independently settled. COASTER_PLAYERS remains conflict/low; the prototype explicitly chooses four slots.
 
 ## C04 — Rhythm Kitchen competition and Remix descriptions
 
@@ -35,7 +35,3 @@ The current wiki bars Peach/Daisy Buddy appearances on Rainbow Galleria and bars
 ## C09 — Prototype design versus sourced behavior
 
 The phone/TV specs deliberately choose original reaction games, a small board, sensor substitutes, score thresholds and fallback/tie behavior. Their coherent phase exits do not verify original Nintendo event order, minigame physics or exact reward algorithms. Both datasets are explicitly labeled.
-
-## C10 — Candidate rank and unlock ambiguity
-
-The Pocket Tactics guide gives inconsistent Classic Stars/rank wording versus its own reward table, and its Boss Rush heading discusses individual boss-minigame unlocks. GameFAQs separately lists a 30-achievement/Platinum Boss Rush claim and level-50 Platinum staff credits. These candidate descriptions do not establish that achievement counts and rank levels are the same counter. No Boss Rush unlock improvement or rank reconciliation is claimed; the existing one-source rule stays partial. Only the fully corroborated Pro Rules passage is retained from Pocket Tactics.

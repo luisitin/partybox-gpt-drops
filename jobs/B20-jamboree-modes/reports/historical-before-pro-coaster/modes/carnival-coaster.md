@@ -11,11 +11,11 @@ Mode presence has two publisher lineages; individual rule status is separate. Th
 
 ### Players
 
-- `COASTER_PLAYERS`: {"reportedHumanMaximum": 4, "coasterTeamSlots": [2, 4]} — **corroborated; medium**. Narrow reported counts only: Nintendo support and ScreenRant corroborate up to four humans; Mario Wiki and Nintendo World Report corroborate two/four participant groups. Nintendo Life describes a two-player option without stating a two-player maximum. Solo CPU fill, per-course allocation and installed-version/patch behavior remain unverified.
+- `COASTER_PLAYERS`: {"reportedHumanMaximum": 4, "coasterTeamSlots": [2, 4]} — **conflict; low**. Nintendo Life describes two participants; 1-4 humans may include CPU-filled slots. Exact solo/fill/version scope remains under audit.
 
 ### Length
 
-- `COASTER_FAIL`: The shared countdown expiring ends the attempt. — **corroborated; medium**. The wiki explicitly reports loss at countdown expiry; the independent hands-on review describes reaching the end before the clock runs out. Exact starting clocks and all timeout animations remain unverified.
+- `COASTER_FAIL`: The shared countdown expiring ends the attempt. — **single_source; medium**. 
 - `COASTER_COURSES`: {"courses": 5} — **corroborated; high**. 
 
 ### Flow
@@ -57,11 +57,11 @@ UNVERIFIED: no complete retained Nintendo rule record for this field.
 
 The terminal done phase accepts no inputs. Host cancellation, disconnection expiry and the 3600-second global cap provide exits from untimed activities. Parent selectors delegate to documented child specs and return their immutable results.
 
-
 ## UNVERIFIED
 
 - rewards: exact full Nintendo behavior or qualifiers have no complete retained rule record.
 - unlocks: exact full Nintendo behavior or qualifiers have no complete retained rule record.
 - Exact hidden random weights, all tie/counter exceptions and content-specific timers are not inferred from prose.
-- Solo CPU fill, the participant allocation for each coaster variant, and installed-version/patch behavior remain unverified; the corroborated player rule reports only the narrow published counts.
+- COASTER_FAIL: 
+- COASTER_PLAYERS: Nintendo Life describes two participants; 1-4 humans may include CPU-filled slots. Exact solo/fill/version scope remains under audit.
 - COASTER_RANK_TIME: Rank thresholds and exact base countdowns remain unverified.

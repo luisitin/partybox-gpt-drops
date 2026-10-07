@@ -1,7 +1,7 @@
 {
   "job": "B20",
   "reviewDate": "2026-10-07",
-  "method": "Same assistant reopened all retained URLs in two passes, checked quotations, audited every retained mode and rule and reviewed every proposed phase for finite exits. Proposal review is not Nintendo-source verification. Incremental Pro/Coaster recovery preserves original audits and rechecks all four changed factual rows in both passes; unchanged row decisions remain from the recorded original complete reviews.",
+  "method": "Same assistant reopened all retained URLs in two passes, checked quotations, audited every retained mode and rule and reviewed every proposed phase for finite exits. Proposal review is not Nintendo-source verification.",
   "rows": [
     {
       "rowId": "phase:pro-rules:lobby",
@@ -1881,14 +1881,13 @@
     },
     {
       "rowId": "rule:PRO_LENGTH",
-      "passA": "corroborated",
-      "passB": "corroborated",
+      "passA": "single_source",
+      "passB": "single_source",
       "confidence": "medium",
       "sourceIds": [
-        "W_GAME",
-        "PT_UNLOCK"
+        "W_GAME"
       ],
-      "basis": "reported Nintendo behavior; independently reviewed narrow claim and qualifiers in both incremental source passes"
+      "basis": "reported Nintendo behavior"
     },
     {
       "rowId": "rule:PRO_BONUS",
@@ -1914,14 +1913,14 @@
     },
     {
       "rowId": "rule:PRO_UNLOCK",
-      "passA": "corroborated",
-      "passB": "corroborated",
+      "passA": "single_source",
+      "passB": "single_source",
       "confidence": "medium",
       "sourceIds": [
         "MPL_UNLOCK",
-        "PT_UNLOCK"
+        "MPL_UNLOCK"
       ],
-      "basis": "reported Nintendo behavior; independently reviewed narrow claim and qualifiers in both incremental source passes"
+      "basis": "reported Nintendo behavior"
     },
     {
       "rowId": "rule:BUDDY_RECRUIT",
@@ -2620,14 +2619,13 @@
     },
     {
       "rowId": "rule:COASTER_FAIL",
-      "passA": "corroborated",
-      "passB": "corroborated",
+      "passA": "single_source",
+      "passB": "single_source",
       "confidence": "medium",
       "sourceIds": [
-        "W_TV",
-        "SR_TV"
+        "W_TV"
       ],
-      "basis": "reported Nintendo behavior; independently reviewed narrow claim and qualifiers in both incremental source passes"
+      "basis": "reported Nintendo behavior"
     },
     {
       "rowId": "rule:COASTER_COURSES",
@@ -2642,16 +2640,14 @@
     },
     {
       "rowId": "rule:COASTER_PLAYERS",
-      "passA": "corroborated",
-      "passB": "corroborated",
-      "confidence": "medium",
+      "passA": "conflict",
+      "passB": "conflict",
+      "confidence": "low",
       "sourceIds": [
         "N_SUPPORT_TV",
-        "W_TV",
-        "SR_TV",
-        "NWR_TV"
+        "W_TV"
       ],
-      "basis": "reported Nintendo behavior; independently reviewed narrow claim and qualifiers in both incremental source passes"
+      "basis": "reported Nintendo behavior"
     },
     {
       "rowId": "rule:COASTER_RANK_TIME",
@@ -2822,8 +2818,8 @@
     }
   ],
   "ruleStatuses": {
-    "corroborated": 60,
-    "single_source": 23,
-    "conflict": 2
+    "single_source": 26,
+    "corroborated": 56,
+    "conflict": 3
   }
 }

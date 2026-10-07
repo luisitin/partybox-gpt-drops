@@ -15,7 +15,7 @@ UNVERIFIED: no complete retained Nintendo rule record for this field.
 
 ### Length
 
-- `PRO_LENGTH`: {"turns": 12} — **corroborated; medium**. The 12-turn rule is independently reported by Mario Wiki and the authored Pocket Tactics guide; no gameplay or installed build was inspected.
+- `PRO_LENGTH`: {"turns": 12} — **single_source; medium**. 
 
 ### Flow
 
@@ -31,7 +31,7 @@ UNVERIFIED: no complete retained Nintendo rule record for this field.
 
 ### Unlocks
 
-- `PRO_UNLOCK`: Complete one Mario Party board; game length and winning do not determine this unlock. — **corroborated; medium**. Mario Party Legacy and Pocket Tactics independently report completing one game, regardless of board length or winning.
+- `PRO_UNLOCK`: Complete one Mario Party board; game length and winning do not determine this unlock. — **single_source; medium**. 
 
 ## Buildable phone + one TV prototype
 
@@ -56,9 +56,10 @@ UNVERIFIED: no complete retained Nintendo rule record for this field.
 
 The terminal done phase accepts no inputs. Host cancellation, disconnection expiry and the 3600-second global cap provide exits from untimed activities. Parent selectors delegate to documented child specs and return their immutable results.
 
-
 ## UNVERIFIED
 
 - players: exact full Nintendo behavior or qualifiers have no complete retained rule record.
 - rewards: exact full Nintendo behavior or qualifiers have no complete retained rule record.
 - Exact hidden random weights, all tie/counter exceptions and content-specific timers are not inferred from prose.
+- PRO_LENGTH: 
+- PRO_UNLOCK: 
