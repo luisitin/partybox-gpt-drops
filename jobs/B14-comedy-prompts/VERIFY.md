@@ -27,8 +27,8 @@ into `results/draft.json`; the npm alias runs the same validator.
 
 | Current measured check | Cases | Passed | Failed | Seed | Exact command |
 | --- | ---: | ---: | ---: | --- | --- |
-| JSON Schema / character limit / ID / genre checks | 800 | 800 | 0 | not applicable | `npm run check:draft` |
-| Complete independent batch record and input-hash match | 100 | 100 | 0 | not applicable | `npm run check:draft` |
+| JSON Schema / character limit / ID / genre checks | 900 | 900 | 0 | not applicable | `npm run check:draft` |
+| Complete independent batch record and input-hash match | 200 | 200 | 0 | not applicable | `npm run check:draft` |
 
 The independent-record check validates completeness and input identity; it does
 not count low editorial grades as passing the humor rubric.
@@ -45,6 +45,12 @@ performance briefs; no invented real lyrics or alleged real incidents are used.
 Eighth measured draft milestone: 400 candidates per genre, 800/800 structural
 checks, maximum 90 characters. Television premises are imagined episode briefs
 and adult behavior; they do not claim the described episodes actually exist.
+
+Ninth measured draft milestone: 450 candidates per genre, 900/900 structural
+checks, maximum 90 characters. All 200 rows in independent batches 001-002 have
+complete grade/reason records and matching input hashes. 120 received second
+grades of 4+, and 118 meet that threshold in both passes. On these 200 reviewed
+rows, exact-grade agreement is 33.5% and keep-threshold agreement is 59%.
 
 At milestone 005, `npm run checksums` size-checked 36 files (largest 185,166
 bytes), and `sha256sum -c SHA256SUMS.txt` passed all 35 listed file hashes.
@@ -80,7 +86,7 @@ changed after sealing.
 ## UNVERIFIED
 
 - The 1,500+1,500 candidate pool is not yet complete.
-- Independent second grading is complete for batch 001 only, not all 3,000 rows.
+- Independent second grading is complete for batches 001-002 only, not all 3,000 rows.
 - Final 600+600 selection, agreement rates, near-duplicate resolution, and the
   named-reference cap have not yet been established.
 - Adult-only content and no-slur editorial review remains pending.

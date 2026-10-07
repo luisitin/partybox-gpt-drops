@@ -30,3 +30,7 @@
 8. Authored 100 television-related candidates. Shortened two 91-character rows
    before sealing; all 800 current rows pass structural checks. The independent
    review queue contains sealed grade-free inputs for batches 002-008.
+9. Authored 100 service-specific candidates; six overlength drafts were shortened
+   before sealing. All 900 rows pass structural checks. Preserved the complete
+   second independent review: 118 of 200 reviewed candidates meet 4+ in both
+   passes. Current agreement rates are reported explicitly as partial results.
