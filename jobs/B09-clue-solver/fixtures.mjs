@@ -41,6 +41,17 @@ export function randomReduced(random) {
   return game;
 }
 export const classic = CLASSIC_DECK;
+export function denseClassic() {
+  const envelope = ['Green','Dagger','Study'], ownHand = ['Ballroom','Hall','Dining Room'];
+  const rest = [...classic.suspects,...classic.weapons,...classic.rooms].filter(c => !envelope.includes(c) && !ownHand.includes(c));
+  const hands = [ownHand, ...Array.from({ length: 5 }, (_, i) => rest.slice(i * 3, i * 3 + 3))];
+  const suggestions = [];
+  for (let owner = 1; owner < 6; owner++) for (const suspect of classic.suspects) for (const weapon of classic.weapons) for (const room of classic.rooms) {
+    const cards = [suspect,weapon,room];
+    if (cards.some(card => hands[owner].includes(card))) suggestions.push({ player: owner - 1, cards, refutedBy: owner });
+  }
+  return { envelope, log: { deck: classic, handSizes: [3,3,3,3,3,3], me: 0, ownHand, suggestions } };
+}
 export function adversarialCases() {
   const base = { deck: reduced, handSizes: [3,2,2], me: 0, ownHand: ['s0','w0','r0'], suggestions: [] };
   const clone = () => structuredClone(base);

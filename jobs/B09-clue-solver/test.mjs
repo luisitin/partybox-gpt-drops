@@ -3,7 +3,7 @@ import { performance } from 'node:perf_hooks';
 import { writeFileSync } from 'node:fs';
 import { solveClue } from './dist/clueSolver.js';
 import { solveReference } from './dist/reference.js';
-import { rng, randomReduced, deal, suggest, classic, reduced, adversarialCases } from './fixtures.mjs';
+import { rng, randomReduced, deal, suggest, classic, reduced, adversarialCases, denseClassic } from './fixtures.mjs';
 
 const fractionEqual = (a, b) => a.numerator * b.denominator === b.numerator * a.denominator;
 function compare(log, production = solveClue) {
@@ -58,6 +58,8 @@ export function smoke(production = solveClue, seed = 1) {
   const first = compare(untouched, production), second = compare(untouched, production);
   assert.equal(JSON.stringify(untouched), snapshot, 'solver does not mutate a deeply frozen log');
   assert.deepEqual(first, second, 'identical inputs give identical exact outputs'); count += 2;
+  const dense = denseClassic(), denseSolution = compare(dense.log, production);
+  conservation(denseSolution, dense.log); assert.equal(denseSolution.totalDeals, 1n); count++;
   return count;
 }
 
@@ -115,10 +117,14 @@ if (!process.env.B09_IMPORT_ONLY) {
         for (const card of game.envelope) assert.ok(solution.cards[card].envelope.numerator > 0n);
       }
     }
+    const dense = denseClassic(), denseStart = performance.now(), denseSolution = solveClue(dense.log), denseMilliseconds = performance.now() - denseStart;
+    const denseReference = solveReference(dense.log);
+    assert.deepEqual(denseSolution, denseReference); conservation(denseSolution, dense.log); assert.equal(denseSolution.totalDeals, 1n);
+    timings.push(denseMilliseconds);
     timings.sort((a,b) => a-b);
     const p50 = timings[Math.floor((timings.length - 1) * .5)], p99 = timings[Math.floor((timings.length - 1) * .99)], maximum = timings.at(-1);
     assert.ok(maximum <= 200, `every observed six-player update <=200ms; max=${maximum}`);
-    const report = { seed, fixedCases, reducedCases, reducedSuggestions, fullGames: 5000, playerCounts: playerCounts.slice(3), fullSuggestions, fullUpdates: updates.length, sparseSixPlayerStressUpdates: stressTimings.length, sparseSixPlayerStressMaximum: Math.max(...stressTimings), sixPlayerUpdates: timings.length, sixPlayerMilliseconds: { p50, p99, maximum } };
+    const report = { seed, fixedCases, reducedCases, reducedSuggestions, fullGames: 5000, playerCounts: playerCounts.slice(3), fullSuggestions, fullUpdates: updates.length, sparseSixPlayerStressUpdates: stressTimings.length, sparseSixPlayerStressMaximum: Math.max(...stressTimings), denseSixPlayerSuggestions: dense.log.suggestions.length, denseSixPlayerMilliseconds: denseMilliseconds, sixPlayerUpdates: timings.length, sixPlayerMilliseconds: { p50, p99, maximum } };
     reports.push(report); console.log(JSON.stringify(report));
   }
   writeFileSync(process.env.B09_REPORT ?? 'results.json', JSON.stringify(reports, null, 2) + '\n');

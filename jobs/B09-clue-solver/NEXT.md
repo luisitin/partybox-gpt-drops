@@ -1,3 +1,3 @@
 # Next step
 
-Implement the exact deal counter independently of the blind reference implementation, then execute the full original verification counts for seeds 1, 2, and 3 and 25 individually planted mutations.
+Finish the improvement-loop full npm test (all seeds and mutations) with the new dense BigInt-mask fixture, record actual results, refresh all hashes, push, and wait for exact final-head B09 GitHub Actions. Update PR 12 with the green run and mark ready only after all required checks pass.
