@@ -10266,13 +10266,14 @@ Answer: A rhizome. Fun fact: Ginger and turmeric both belong to the family Zingi
   quote: “whose rhizome , ginger root or ginger, is widely used as a spice” (13 words).
   funFactQuote: “Ginger is in the family Zingiberaceae , which also includes turmeric” (11 words).
 
-## B13-0979 — Which of these spices belongs to the same plant family as ginger?
+## B13-0979 — What is the botanical family name shared by ginger and turmeric?
 
-Answer: Turmeric. Fun fact: Common culinary ginger is Zingiber officinale.
+Answer: Zingiberaceae. Fun fact: Common culinary ginger is Zingiber officinale.
 
 - food-everyday-life-s0065: [Encyclopaedia Britannica](https://www.britannica.com/plant/Zingiberaceae)
-  quote: “The dried thick rhizome of turmeric ( Curcuma longa )” (10 words).
+  quote: “Zingiberaceae , the ginger family of flowering plants” (8 words).
   funFactQuote: “Ginger is obtained from the fresh or dried rhizomes of Zingiber officinale” (12 words).
+  extraQuote: “The dried thick rhizome of turmeric ( Curcuma longa )” (10 words).
 - food-everyday-life-s0052: [Wikipedia contributors](https://en.wikipedia.org/wiki/Ginger)
   quote: “Ginger is in the family Zingiberaceae , which also includes turmeric” (11 words).
   funFactQuote: “Ginger ( Zingiber officinale )” (5 words).

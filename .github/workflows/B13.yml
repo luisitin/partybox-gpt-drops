@@ -24,3 +24,6 @@ jobs:
       - name: Validate all original acceptance metadata
         run: python scripts/check-data.py --output reports/ci-checks.json
         working-directory: jobs/B13-trivia-1000
+      - name: Reject missing evidence and rejected duplicate fixtures
+        run: python scripts/verify-guard-fixtures.py .
+        working-directory: jobs/B13-trivia-1000

@@ -42,3 +42,13 @@ US-history author held writes at 40 rows while the deterministic draft checker a
 ## Held full author/fact-review milestone — 2026-10-07T21:10:25.921222+00:00
 
 Exactly 1,000 authored rows, all 1,000 current independent acceptances and supported second-pass reviews, 3,506/3,506 author quote fields in actual hash-checked bodies, zero schema/data errors. The strengthened checker exposed four actual stale music capture chains, independently recovered with actual fresh GET/context reads. Final editorial acceptance still withheld for 11 similarity resolutions, full-pack length judgment and demonstrated100%ID-cycle shortcut. Read-only 30-minute Ubuntu CI added to run exact delivered checksums and full acceptance; no source retrieval or human inspection is falsely attributed to CI.
+
+## Final local acceptance — 2026-10-07T21:28:06.663335+00:00
+
+All 1,000 final ordered option sets received actual separate reviewer reads. The first final world-history pass rejected 0515's geographically weak distractors; the separate author replaced them with contemporary Chinese schools and the reviewer read the actual corrected version. The food reviewer rejected 0979's inverse repetition of 0976; the separate final food reviewer actually reopened both sources and inspected the formal Zingiberaceae-family amendment, all four family-name choices and five short quotes. Immutable original shuffle and exact two-amendment overlay remain separate.
+
+The original full local checker now passes all 1,000 rows, 3,507 author quote matches, 3,507 second-pass quote matches, 4,000 actual receipt associations, 1,000 current independent accepts/supports and 2,210 of 2,210 similarity flags, with zero errors and no pending research gates. The original numeric-ID position heuristic fell from 100% to 27.8%; independently audited final length strategies are 23.908333% longest and 25.075% shortest with uniform ties. These are descriptive metrics, not universal predictive guarantees. Next is the separate immutable delivered-file/body audit, then branch push and actual exact-head CI.
+
+## Separate immutable-copy acceptance — 2026-10-07T21:31:22.419498+00:00
+
+The independent auditor copied 244 delivered files and 1,051 referenced plaintext bodies; all before/after hashes and sizes remain unchanged. Its one original full-local run passed all gates and produced the exact same report hash as the lead. Separate source-document, current-review, body/receipt/quote and schema audits had zero issues. The next documentary delta adds only immutable audit results, guard reproduction and docs/inventory/checksums; factual data, reviews, sources and checker stay unchanged. Final pushed-head hosted CI is checked before PR22 becomes ready.

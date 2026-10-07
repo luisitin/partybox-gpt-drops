@@ -10,6 +10,7 @@ for p in sorted((R/'categories').glob('*.json')):rows.extend(json.loads(p.read_t
 rows.sort(key=lambda x:x['id']);versions=[{'id':r['id'],'rowSha256':h(r)} for r in rows]
 assert report['optionLengths']['rowVersionsSha256']==h(versions),'Rows changed after check: rerun checker before rendering documentation.'
 now=datetime.now(timezone.utc).isoformat();N=len(rows);errors=report['schemaAndDataErrors'];complete=report['researchComplete']
+check_command='python scripts/check-data.py'+(' --draft' if report['mode']=='draft' else '')+(' --require-local-captures' if report['captureProofMode']=='required local author and second-pass bodies' else '')
 status='All original research gates passed for the checked local version.' if complete else 'The authored pack is complete; independent research/editorial acceptance remains unfinished.'
 summary=f"{N} questions in ten categories; {report['adversarialAcceptedCurrent']} current independent acceptances; {report['reopenSupportedCurrent']} current second-pass support reviews."
 (R/'README.md').write_text(f'''# B13 — 1,000 verified trivia questions
@@ -30,25 +31,29 @@ totals=[('Authored rows against JSON Schema, IDs, four unique options, answer/in
 table='\n'.join(f'| {name} | {cases} | {passed} |' for name,cases,passed in totals)
 (R/'VERIFY.md').write_text(f'''# B13 verification
 
-## Actual current progress check — {now}
+## Actual current acceptance check — {now}
 
-Command actually executed: `python scripts/check-data.py --draft --require-local-captures`.
+Command actually executed: `{check_command}`.
 Deterministic research validation; random seed n/a. Full raw validator output: [reports/checks.json](reports/checks.json). This table records that exact checked row set, whose canonical version-list SHA is `{report['optionLengths']['rowVersionsSha256']}`.
 
 | Check | Cases | Passed |
 |---|---:|---:|
 {table}
 
-Schema/data errors: {len(errors)}. Ten category files each have100 real rows. Quote matching proves retained text presence, not factual entailment or independent editorial origin: the independent per-row reviewers read actual surrounding paragraphs/footnotes, tried concrete counterexamples, checked scope/fun facts/options and preserved original rejects. Source GET timestamps are actual original opens, not refreshed when a later choice order is reviewed.
+Schema/data errors: {len(errors)}. Ten category files each have 100 real rows. Quote matching proves retained text presence, not factual entailment or independent editorial origin: the independent per-row reviewers read actual surrounding paragraphs/footnotes, tried concrete counterexamples, checked scope/fun facts/options and preserved original rejects. Source GET timestamps are actual original opens, not refreshed when a later choice order is reviewed.
 
 The near-duplicate scan compares all {N*(N-1)//2:,} unordered normalized question pairs, takes the maximum of both SequenceMatcher directions and flags every ratio>0.8. Only current accepted keep/distinct decisions resolve a flag; rejection metadata cannot be counted as a pass. All historical flag payloads and substantive duplicate repairs remain retained.
 
-The original answer-position draft cycled A/B/C/D by numeric ID, allowing100% prediction. That actual challenge is preserved in `evidence/fullset-position-pattern-challenge.json`; final balanced seeded random option ordering and actual full ordered-choice rereads are pending until their final manifests/reviews are accepted. Global option-length metrics are in the report, with actual independent full-pack editorial assessment required rather than acceptance from means alone.
+The original answer-position draft cycled A/B/C/D by numeric ID, allowing 100% prediction. That actual challenge is preserved in `evidence/fullset-position-pattern-challenge.json`. The seeded final shuffle (root seed 20261007, separately derived category seeds) preserves all original facts and choice multisets in `evidence/final-option-permutation-manifest.json`; every reviewer then actually read every final ordered option set. Two late independent rejections produced explicitly declared author amendments to 0515 and 0979, each reread by its separate reviewer. `evidence/final-option-post-shuffle-amendments.json` preserves both changes; these two amendments do change options and are not claimed to preserve their original multisets. Independent audits prove the other 998 rows match the original shuffle exactly, and all 1,000 final indices remain unchanged with exactly 25 answers per position per category.
+
+The final original-cycle heuristic scores {report['answerPositionPattern']['numericIdModulo4Matches']}/{N}. Full-pack length strategy metrics and the actual editorial assessment bind the exact current row hashes in `evidence/option-length-assessment.json`. The independent position audit reports all category pairs, preserved selected answers and actual descriptive metrics; it does not certify randomness or promise that no possible fitted heuristic exists.
 
 ## Local evidence and hosted CI scope
 
-Full local command: `python scripts/check-data.py --require-local-captures`. Missing required author or second-pass bodies fail. Every retained body is SHA256 checked; each selected answer/fun-fact/additional-scope quote is checked for contiguous presence and≤25words.
-Full hosted command: `python scripts/check-data.py --output reports/ci-checks.json`. It validates exact row/source identities, actual HTTP200 receipts, UTC times, requested/resolved URL chains, hashes, quote associations, context/claim assessments, review hashes, full counts and editorial gates. Full source bodies are excluded; unavailable bodies are explicitly reported and are never described as matched or newly reopened by CI. Hosted checksum checking runs before validation. GitHub CI evidence is added only after its actual exact-head conclusion is known.
+Full local command: `python scripts/check-data.py --require-local-captures`. Missing required author or second-pass bodies fail. Every retained body is SHA256 checked; each selected answer/fun-fact/additional-scope quote is checked for contiguous presence and at most 25 words.
+Full hosted command: `python scripts/check-data.py --output reports/ci-checks.json`. It validates exact row/source identities, actual HTTP 200 receipts, UTC times, requested/resolved URL chains, hashes, quote associations, context/claim assessments, review hashes, full counts and editorial gates. Full source bodies are excluded; unavailable bodies are explicitly reported and are never described as matched or newly reopened by CI. Hosted checksum checking runs before validation. GitHub CI evidence is added only after its actual exact-head conclusion is known.
+
+The separately authored guard audit in `evidence/independent-post-repair-checker-guard-tests.json` records actual production-function negative cases: a missing mandatory local body, a naked incomplete reopen receipt and an explicitly rejected duplicate decision. All three are rejected as required; the earlier demonstrated gaps and original audit are preserved outside delivery. This compact audit records the actual function tests, not an invented rerun or source GET.
 
 ## Preserved failed and rejected evidence
 
@@ -57,9 +62,7 @@ Initial music quote-path recovery failure, original per-category rejects, real T
 ## UNVERIFIED
 
 - Current original-gate pending values: `{json.dumps(report['pending'],sort_keys=True)}`.
-- Final balanced random ordering and actual per-row review of all final ordered options.
-- Final exact-version similarity resolutions and option-length editorial acceptance.
-- Full held-version local acceptance, independent immutable delivery audit, final checksums and exact final-head hosted CI while those records remain pending.
+- Independent immutable delivery audit and exact final-head hosted CI remain pending until their actual integration records below are written.
 - Factual correctness and independence are reasoned source judgments, not mathematical guarantees; no human party playtest or empirical US-audience difficulty calibration is claimed.
 ''')
 source=['# B13 source quotations','',f'{N} current actual questions. Source ledgers record actual authorship, licensing/credit, retrieval timestamps/method/HTTP status and content hashes. Every selected fact is associated with two source accounts; final current acceptance coverage remains in the version-bound report. Full copyrighted captures are excluded.']
@@ -70,12 +73,14 @@ for r in rows:
   for f in ['quote','funFactQuote','extraQuote']:
    if f in l:source.append(f"  {f}: “{l[f]}” ({len(l[f].split())} words).")
 (R/'SOURCES.md').write_text('\n'.join(source)+'\n')
-(R/'NEXT.md').write_text('''# B13 concrete continuation
+(R/'NEXT.md').write_text('''# B13 delivery continuation
 
-1. Finish root exact-version world/nature reviewer checks and US-history independent requested repairs. Preserve every original rejected row/hash and actual source receipt.
-2. Lead holds the ten finalized categories, preserves the original A/B/C/D cycle, shuffles each category to exactly25answers per position with a published deterministic seed, and seals full before/after permutations.
-3. Every category reviewer actually reads every final ordered option set, records concrete counterexamples and binds current row hashes; original source GET times remain unchanged unless actually refetched.
-4. Independently resolve every final similarity pair after actual final question/fun-fact reads; examine exact full-pack length metrics and bind the actual editorial assessment to all final row hashes.
-5. Run full original local acceptance with `--require-local-captures`, render coherent docs and manifests, have the independent auditor copy/verify an immutable delivered+body snapshot and run its full acceptance, push only job/B13-trivia-1000 and its one read-only CI workflow, inspect exact-head hosted CI and publish an honest ready-for-review PR22. Never merge or push main.
+All 1,000 current question versions, source support reviews, final ordered-option reads, similarity decisions and the full-pack option-length assessment are closed in the actual full local report. The original rejects and two declared post-shuffle amendments remain preserved.
+
+1. Hold all delivered files and referenced local bodies for the separate immutable-copy auditor. It must run the original full local checker once on its verified snapshot and preserve its actual output, exit status and before/after hashes.
+2. Record the actual auditor result, final checksum and file-size results, then push only job/B13-trivia-1000 and its one read-only CI workflow. Inspect the hosted CI result for the exact pushed head.
+3. Once the exact-head CI and separate audit actually pass, mark PR22 ready for review while leaving it unmerged. Retain factual judgment and human-playtest limits in the PR. Never merge or push main.
+
+Further editorial changes must preserve these final held versions, invalidate affected row-bound acceptance, receive a separate actual rereview and repeat the affected checks. A future party playtest or empirical difficulty study can use this delivered pack without pretending one has already happened.
 ''')
 print(json.dumps({'renderedAt':now,'rows':N,'summary':summary,'researchComplete':complete}))
