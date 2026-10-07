@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-07T16:55:32.583667Z",
-  "summary": "Nine deliveries have passed their complete final GitHub checks: board odds, Monopoly, Clue, icons, colors, sounds, motion, Rummikub and Ticket to Ride. They await maintainer review; no PR is merged. Battleship passed the full 900,000-game source run and its final evidence run is underway. Hourly background reports are enabled; the open dashboard refreshes every 30 minutes.",
+  "updatedAt": "2026-10-07T17:08:05.464244Z",
+  "summary": "Ten deliveries have passed their complete final GitHub checks and their PRs are ready for maintainer review: board odds, Monopoly, Clue, Battleship, Rummikub, Ticket to Ride, icons, colors, sounds and motion. No PR is merged. Yahtzee simulation proofs, full comedy review and independently sourced trivia and minigame research continue in parallel. Hourly background reports are enabled; the open dashboard refreshes every30minutes.",
   "workers": [
     {
       "current": "B07",
@@ -10,23 +10,23 @@
     },
     {
       "current": "B10",
-      "summary": "Battleship passed all 900,000 hosted games, 47,091,168 blind shot comparisons, exact-state checks and all 75 mutations. No measured call exceeded 50 ms; maximum was 5.980390 ms. Final evidence-commit CI is running. Older local timing failures and the timeout remain recorded.",
-      "next": "Confirm the final evidence commit, update its PR and support the trivia project.",
+      "summary": "Battleship final head34d91e8 passed CI37653999825 across all three full seed jobs and the strict aggregate.900,000 games,47,091,168 blind decisions,13,459,483 density checks and75 mutations passed; literal maximum6.782618ms, zero calls above50ms. PR6 is ready. Earlier failed local timing records remain preserved.",
+      "next": "Author assigned world-history and sports-games trivia categories, with two independent sources per answer and fun fact.",
       "queue": [
         "B13"
       ]
     },
     {
       "current": "B11",
-      "summary": "Rummikub final commit 575139d passed GitHub CI37654587097: 150,000 exact small states, 3,000 fresh model comparisons, 624 independently certified large calls including 24 cold starts, 600 derived audits and 75 mutations. Maximum call was 334.467 ms against the 500 ms limit. GitHub PR metadata changes are temporarily returning upstream errors.",
-      "next": "Retry PR metadata and ready status, then help the trivia lead with assigned categories and independent review.",
+      "summary": "Rummikub final head575139d passed CI37654587097, including150,000 exact small states,624 large certified calls/timers,24 cold starts and75 mutations. Hosted maximum334.467ms; complete final local rerun maximum404.198ms, both under500ms. PR7 is ready after GitHub recovered.",
+      "next": "Support the trivia lead in assigned authoring and independent review.",
       "queue": [
         "B13"
       ]
     },
     {
       "current": "B12",
-      "summary": "Ticket to Ride final commit9a5d8c6 passed CI37654164782. Full counts include60,000 brute-force graphs,6,000 complete USA games,186,053 independent helper comparisons,75 mutations and13,880,102 conservation checks. PR19 is open; metadata publishing is being retried after GitHub errors.",
+      "summary": "Ticket to Ride final head9a5d8c6 passed CI37654164782:60,000 brute-force graphs,6,000 completed USA games,186,053 helper comparisons,75 mutations and13,880,102 conservation checks. PR19 is ready with its final evidence link.",
       "next": "Complete PR handoff and independently grade comedy batches023\u2013030 as sealed inputs arrive.",
       "queue": [
         "B14 independent review"
@@ -48,7 +48,7 @@
     },
     {
       "current": "B13",
-      "summary": "A dedicated trivia lead has started the full1,000-question project, with10 categories of100, explicit ID ranges, balanced difficulty and answer positions, and two independent sources per answer and fun fact. Category authoring and source-verification contracts are being established for parallel contributors.",
+      "summary": "The1,000-question project is split into10 reserved100-row categories among five authors. Root has written100 actual sourced US geography questions with200 matched brief quotes and balanced difficulty/answer positions; fresh adversarial review, source reopens and variety improvements remain.",
       "next": "Author and verify all1,000 rows, reopen every source, then conduct a fresh adversarial review of every question.",
       "queue": []
     },
