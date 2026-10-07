@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/b13/trivia.schema.json",
+  "$id": "urn:partybox:B13:trivia-schema",
   "title": "B13 1000 sourced trivia questions",
   "type": "array",
   "minItems": 1000,
@@ -120,6 +120,10 @@
                 "minLength": 1
               },
               "quote": {
+                "type": "string",
+                "minLength": 1
+              },
+              "funFactQuote": {
                 "type": "string",
                 "minLength": 1
               }

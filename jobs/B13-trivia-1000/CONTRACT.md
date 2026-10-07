@@ -29,12 +29,15 @@ its evidence files and its research notes. Do not overwrite another worker.
 - `correctAnswer`: exact correct option string; `correctIndex`: its zero-based index.
 - `funFact`: one interesting, one-line contextual fact, grounded in both sources.
 - `confidence`: high/medium/low, plus `confidenceReason` specific to this row.
-- `sources`: exactly two `{sourceId,url,publisher,quote}` records. Each quote is
+- `sources`: exactly two `{sourceId,url,publisher,quote,funFactQuote?}` records.
+  `quote` supports the answer; optional `funFactQuote` independently supports
+  additional contextual facts when the answer quote does not cover them. Each is
   actual contiguous source text, at most 25 whitespace-delimited words; formatting
   whitespace may be normalized. No paraphrase, stitched fragments or invented quote.
 - `claims`: an array of `{kind,text,sourceIds}`. Kind is `answer` or `funFact`;
   every distinct factual claim in wording/answer/fun fact is represented and cites
-  both source IDs. Quotes must actually support those claims, not merely name a topic.
+  both source IDs. Every fact has its own <=25-word supporting quote from each
+  source when needed. Quotes must actually support claims, not merely name a topic.
 
 Per category, difficulty counts are 34/33/33, and each correct index occurs 25
 times. These are editorial targets, not permission to invent or pad questions.
