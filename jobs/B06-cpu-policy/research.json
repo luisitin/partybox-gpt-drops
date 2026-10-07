@@ -83,6 +83,22 @@
       "quotes": {
         "names": "Easy Normal Hard Master"
       }
+    },
+    {
+      "id": "Y",
+      "author": "Switch Squad, original-game settings walkthrough author",
+      "url": "https://www.youtube.com/watch?v=uY822KQNdu0",
+      "quotes": {
+        "names": "change the computer difficulty from Easy normal or hard or master"
+      }
+    },
+    {
+      "id": "R",
+      "author": "ResetEra HylianSeven, eyewitness post #200",
+      "url": "https://www.resetera.com/threads/super-mario-party-jamboree-ot-salt-it-itll-last-longer.1014315/page-4",
+      "quotes": {
+        "buddy": "He had a buddy and a ton of money, and hit boo at the top of the map, got two stars."
+      }
     }
   ],
   "rows": [
@@ -257,34 +273,43 @@
         "hard",
         "master"
       ],
-      "claim": "The speedrun category selector lists Easy, Normal, Hard and Master.",
-      "status": "unverified",
-      "confidence": "low",
+      "claim": "The original all-board Speedrun category selector and original-game Koopathlon walkthrough list Easy, Normal, Hard and Master.",
+      "status": "verified-fact",
+      "confidence": "medium",
       "evidence": [
         {
           "source": "S",
           "quote": "names"
+        },
+        {
+          "source": "Y",
+          "quote": "names"
         }
       ],
-      "scope": "Selector read directly, but a second independent source displaying all four labels together has not been recovered.",
+      "scope": "S displays all four labels in the original all-board category selector. Y explicitly reads all four CPU labels in the original-game Koopathlon settings and describes Easy through Master for Mario Party mode. This does not assert that every mode has four levels: the same video describes three Bowser Kaboom Squad stage difficulties.",
       "conflicts": []
     },
     {
       "id": "F09",
       "topic": "buddy",
       "difficulties": [
-        "hard"
+        "hard",
+        "master"
       ],
-      "claim": "One player reports Hard+ CPUs using a Buddy at Boo.",
-      "status": "unverified",
+      "claim": "Two independent players report CPUs using a Jamboree Buddy at Boo.",
+      "status": "corroborated-report",
       "confidence": "low",
       "evidence": [
         {
           "source": "B",
           "quote": "buddy"
+        },
+        {
+          "source": "R",
+          "quote": "buddy"
         }
       ],
-      "scope": "One anecdote; no second independent corroboration or controlled difficulty comparison.",
+      "scope": "B describes Hard or above. R describes playing with Master AI and reports Monty Mole obtaining two stars at Boo with a Buddy. These are two anecdotes, not controlled frequencies, a universal rule, or a complete difficulty comparison.",
       "conflicts": []
     },
     {

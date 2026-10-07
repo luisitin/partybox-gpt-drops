@@ -67,3 +67,19 @@ https://www.speedrun.com/supermariopartyjamboree?h=all-boards-party-rules-1p4c&x
 
 - `names`: “Easy Normal Hard Master”
 
+
+## Recovered label and CPU Buddy corroboration
+
+The additional sources were read with two separate full-source Exa fetch calls; full extraction hashes and exact registered quote recovery are in reports/labels-buddy-recovery.json. Exa extraction may be cached; no origin HTTP status or personally watched video frame is invented. The Speedrun selector also received two fresh direct HTTPS reopens, both HTTP 200 with the exact labels recovered. Only short registered excerpts and hashes are committed; full capture bodies stay in ignored .work/.
+
+## Y — Switch Squad, original-game settings walkthrough author
+
+https://www.youtube.com/watch?v=uY822KQNdu0
+
+- `names`: “change the computer difficulty from Easy normal or hard or master”
+
+## R — ResetEra HylianSeven, eyewitness post #200
+
+https://www.resetera.com/threads/super-mario-party-jamboree-ot-salt-it-itll-last-longer.1014315/page-4
+
+- `buddy`: “He had a buddy and a ton of money, and hit boo at the top of the map, got two stars.”

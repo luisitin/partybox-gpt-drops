@@ -6,3 +6,6 @@
 - **C04 Shop reserves:** Burritozi11a reports Hard+ skipping items near a star. Patrick Zwarts describes buying shop items and falling below the star budget despite difficulty setting. Neither provides a controlled frequency, version or state log. The implemented reserve penalty is a transparent design assumption.
 
 The exact per-difficulty probabilities in the code are original model parameters. None is silently chosen from conflicting Nintendo behavior reports.
+
+- **C05 Difficulty setting scope:** The original-game video explicitly lists Easy, Normal, Hard and Master for Koopathlon CPU difficulty and describes Easy through Master in Mario Party mode. Its Bowser Kaboom Squad Easy/Normal/Hard selection concerns stage difficulty. These settings are not silently treated as identical or evidence that all modes offer four levels.
+- **C06 Buddy anecdote scope:** HylianSeven describes Master AI and Monty Mole using Boo with a Buddy; Burritozi11a describes Hard+. The agreement supports two player reports, not a deterministic Nintendo rule or controlled rate. Exact per-difficulty behavior remains a gap.

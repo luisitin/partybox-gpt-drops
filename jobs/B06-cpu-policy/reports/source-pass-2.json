@@ -179,7 +179,10 @@
     {
       "source": "S",
       "url": "https://www.speedrun.com/supermariopartyjamboree?h=all-boards-party-rules-1p4c&x=xd1p0j7d-0nwmwkr8.qvvrnzrq-2lge9g78.1w4dk3mq",
-      "openedAt": "2026-10-07T15:17:12.775411+00:00",
+      "openedAt": "2026-10-07T19:28:43.366758+00:00",
+      "httpStatus": 200,
+      "textSha256": "b0b6289ca27537dc5375f9f40a3d8cd34a0fcd6884142e02ef4eaf3fa5bfd0f9",
+      "status": "passed",
       "quotes": {
         "names": {
           "registeredQuote": "Easy Normal Hard Master",
@@ -187,8 +190,38 @@
           "recovered": true
         }
       },
-      "httpStatus": 200,
-      "textSha256": "b0b6289ca27537dc5375f9f40a3d8cd34a0fcd6884142e02ef4eaf3fa5bfd0f9",
+      "retrievalMethod": "Direct HTTPS GET and rendered-text HTML extraction"
+    },
+    {
+      "source": "Y",
+      "url": "https://www.youtube.com/watch?v=uY822KQNdu0",
+      "retrievalMethod": "Exa web_fetch_exa full-source extraction, separate call for this pass",
+      "originHttpStatus": "not observed",
+      "captureRecordedAt": "2026-10-07T19:32:45.221194+00:00",
+      "textSha256": "967291b009da733e2d4bf843289fc767f7e8d4bf6a1cd908d371fffd6fb10ed8",
+      "quotes": {
+        "names": {
+          "registeredQuote": "change the computer difficulty from Easy normal or hard or master",
+          "words": 11,
+          "recovered": true
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "source": "R",
+      "url": "https://www.resetera.com/threads/super-mario-party-jamboree-ot-salt-it-itll-last-longer.1014315/page-4",
+      "retrievalMethod": "Exa web_fetch_exa full-source extraction, separate call for this pass",
+      "originHttpStatus": "not observed",
+      "captureRecordedAt": "2026-10-07T19:32:45.221257+00:00",
+      "textSha256": "27278dd7760ef277eb3fce737f2c4ded963e8cc4d127a79625ad6a193775faae",
+      "quotes": {
+        "buddy": {
+          "registeredQuote": "He had a buddy and a ton of money, and hit boo at the top of the map, got two stars.",
+          "words": 21,
+          "recovered": true
+        }
+      },
       "status": "passed"
     }
   ],
@@ -341,32 +374,43 @@
     },
     {
       "row": "F08",
-      "status": "unverified",
-      "confidence": "low",
+      "status": "verified-fact",
+      "confidence": "medium",
       "evidence": [
         {
           "source": "S",
           "quote": "names",
           "recovered": true
+        },
+        {
+          "source": "Y",
+          "quote": "names",
+          "recovered": true
         }
       ],
       "allRegisteredQuotesRecovered": true,
-      "assessment": "qualitative source scope retained; no numeric behavior inferred"
+      "assessment": "S displays all four labels in the original all-board category selector. Y explicitly reads all four CPU labels in the original-game Koopathlon settings and describes Easy through Master for Mario Party mode. This does not assert that every mode has four levels: the same video describes three Bowser Kaboom Squad stage difficulties.",
+      "claim": "The original all-board Speedrun category selector and original-game Koopathlon walkthrough list Easy, Normal, Hard and Master."
     },
     {
       "row": "F09",
-      "status": "unverified",
+      "status": "corroborated-report",
       "confidence": "low",
       "evidence": [
         {
           "source": "B",
           "quote": "buddy",
-          "recovered": true,
-          "provider": "native web browser"
+          "recovered": true
+        },
+        {
+          "source": "R",
+          "quote": "buddy",
+          "recovered": true
         }
       ],
       "allRegisteredQuotesRecovered": true,
-      "assessment": "qualitative source scope retained; no numeric behavior inferred"
+      "assessment": "B describes Hard or above. R describes playing with Master AI and reports Monty Mole obtaining two stars at Boo with a Buddy. These are two anecdotes, not controlled frequencies, a universal rule, or a complete difficulty comparison.",
+      "claim": "Two independent players report CPUs using a Jamboree Buddy at Boo."
     },
     {
       "row": "G-easy-branches",
@@ -643,5 +687,14 @@
       "registeredExcerptSha256": "44b5842c44101e3a489e41be92fff3e7adebd41294e921b8c511365414e208af",
       "captureScope": "Hash of source URL plus only registered excerpts recovered from the actual reopened native-browser source section. Full page text is not archived."
     }
-  ]
+  ],
+  "incrementalRecovery": {
+    "changedRows": [
+      "F08",
+      "F09"
+    ],
+    "retainedOriginalAudit": "historical-before-labels-buddy/source-pass-2.json",
+    "newSourcesReadAndReopened": 2,
+    "unchangedSourceRowsRetainOriginalAuditTimestamps": true
+  }
 }

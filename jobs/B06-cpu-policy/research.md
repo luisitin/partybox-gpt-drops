@@ -46,15 +46,15 @@ Evidence: [B.shop](https://www.reddit.com/r/MARIOPARTY/comments/1g862fp/ai_in_ja
 
 ## F08 — difficulty
 
-**unverified; confidence low.** The speedrun category selector lists Easy, Normal, Hard and Master. Selector read directly, but a second independent source displaying all four labels together has not been recovered.
+**verified-fact; confidence medium.** The original all-board Speedrun category selector and original-game Koopathlon walkthrough list Easy, Normal, Hard and Master. S displays all four labels in the original all-board category selector. Y explicitly reads all four CPU labels in the original-game Koopathlon settings and describes Easy through Master for Mario Party mode. This does not assert that every mode has four levels: the same video describes three Bowser Kaboom Squad stage difficulties.
 
-Evidence: [S.names](https://www.speedrun.com/supermariopartyjamboree?h=all-boards-party-rules-1p4c&x=xd1p0j7d-0nwmwkr8.qvvrnzrq-2lge9g78.1w4dk3mq).
+Evidence: [S.names](https://www.speedrun.com/supermariopartyjamboree?h=all-boards-party-rules-1p4c&x=xd1p0j7d-0nwmwkr8.qvvrnzrq-2lge9g78.1w4dk3mq), [Y.names](https://www.youtube.com/watch?v=uY822KQNdu0).
 
 ## F09 — buddy
 
-**unverified; confidence low.** One player reports Hard+ CPUs using a Buddy at Boo. One anecdote; no second independent corroboration or controlled difficulty comparison.
+**corroborated-report; confidence low.** Two independent players report CPUs using a Jamboree Buddy at Boo. B describes Hard or above. R describes playing with Master AI and reports Monty Mole obtaining two stars at Boo with a Buddy. These are two anecdotes, not controlled frequencies, a universal rule, or a complete difficulty comparison.
 
-Evidence: [B.buddy](https://www.reddit.com/r/MARIOPARTY/comments/1g862fp/ai_in_jamboree_plus_a_surprise/).
+Evidence: [B.buddy](https://www.reddit.com/r/MARIOPARTY/comments/1g862fp/ai_in_jamboree_plus_a_surprise/), [R.buddy](https://www.resetera.com/threads/super-mario-party-jamboree-ot-salt-it-itll-last-longer.1014315/page-4).
 
 ## G-easy-branches — branches
 
