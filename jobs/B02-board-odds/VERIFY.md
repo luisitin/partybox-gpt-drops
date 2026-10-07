@@ -196,3 +196,7 @@ Here S is literally 1, 2 or 3; every expansion is recorded in evidence/cloud-ful
 ### UNVERIFIED for the cloud checkpoint
 
 Publishing the claim/checkpoint and hosted CI for this new source hash are blocked. The existing PR4 green run verified the earlier 952733df head only. See BLOCKED.md; no completed-job claim is made for the new checkpoint. The interrupted pre-fix full run is not counted. Packaging checks supplement the numerical run and do not substitute for fresh hosted CI.
+
+## Access recovery
+
+Native Git checkpoint pushes and standard gh API reads now succeed with existing authentication. The prior delivery blocker is resolved and BLOCKED.md is removed. The source fix and full local run remain unchanged. GitHub reruns the complete suite for this documentation checkpoint; its exact-head result and green URL are recorded in PR #4 only after successful completion is observed. No publication or new-task restoration is inferred from saving the environment draft.
