@@ -12,16 +12,16 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out main
+      - name: Check out the tracker branch
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: job/B21-pipeline-tracker
       - name: Refresh tracker
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: python3 scripts/refresh_pipeline.py
-      - name: Commit refreshed tracker to the tracker branch
+      - name: Commit refreshed tracker
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
