@@ -80,7 +80,7 @@ For almost-surely terminating inputs, `nonTermination` is zero, so the physical 
 
 Example: `S -> {P, A}`, where `P` is a pass-through self-loop and `A` is an ordinary sink. A positive face gives landing at A = 1/2, nontermination = 1/2, and expected passes at P = infinity. A zero face remains at S with zero passes.
 
-Valid dead ends, loops, disconnected components, and unreachable targets do not cause topology errors. An empty graph returns an empty map. Malformed inputs such as duplicate node IDs, dangling edges, a missing required target, an invalid policy, negative/nonintegral/unsafe faces, or invalid die weights are rejected rather than silently repaired. Faces are nonnegative safe integers. Map keys such as `__proto__`, `constructor`, and an empty string are supported.
+Valid dead ends, loops, disconnected components, and unreachable targets do not cause topology errors. An empty graph returns an empty map. Malformed inputs such as missing/non-array `next`, non-string edge IDs, duplicate node IDs, dangling edges, a missing required target, an invalid policy, negative/nonintegral/unsafe faces, or invalid die weights are rejected rather than silently repaired. Faces are nonnegative safe integers. Map keys such as `__proto__`, `constructor`, and an empty string are supported.
 
 ## Implementations and verification
 

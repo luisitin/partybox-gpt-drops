@@ -177,3 +177,22 @@ The committed source files are the tested source files; documentation and compac
 - **Literal infinite-path enumeration:** not performed for zero-cost cycles because those path families can be infinite. Exact independent component equations and production matrix inversion, plus hand-derived cyclic regressions, are the substitute, explicitly identified above.
 - **Unbounded scale:** random-graph coverage is up to 25 nodes and faces 0–10, with targeted enormous-face closed-form cases. Arbitrarily large dense graphs or exploding rational bit sizes are not performance-certified.
 - **Game-specific interpretation:** directed edge-hop distance, dead-end absorption, duplicate-edge deduplication, and explicit nontermination are documented resolutions of the abstract brief, not externally verified rules of a particular game.
+
+## Cloud fix revalidation — 2026-10-07T15:19:49Z
+
+`npm ci --ignore-scripts --no-audit --no-fund --cache /workspace/.cache/npm` exited 0. New regression command `node test.mjs --seed 1 --mode golden` failed against the original compiled production code with `Missing expected exception (TypeError)`; see evidence/cloud-regression-before-fix.log. After the fix, `npm test > /workspace/b02-fixed-test.log 2>&1` exited 0. All 12 subprocesses completed with exit 0; exact commands and new production/test source hashes are in evidence/cloud-full-suite.json.
+
+| Suite | Seeds | Case count per seed | Passed | Exact command per seed S |
+| --- | --- | --- | --- | --- |
+| Named fixtures plus direct boundary checks | 1,2,3 | 25 graphs; 350 differential cases; 25 direct assertions; 36 malformed-input cases (20 new) | All | `node test.mjs --seed S` |
+| Rational arithmetic | 1,2,3 | 1,000 pairs | All | `node test.mjs --seed S` |
+| Random DAGs, both policies/every start | 1,2,3 | 2,000 graphs; 44,000 graph/policy/face cases | All | `node test.mjs --seed S` |
+| Cyclic graphs | 1,2,3 | 500 graphs; 11,000 graph/policy/face cases | All | `node test.mjs --seed S` |
+| Seeded complete roll trajectories | 1,2,3 | 50 graphs x 1,000,000 = 50,000,000 | All four-sigma gates | `node test.mjs --seed S` |
+| Isolated compiled/runtime mutants | 1,2,3 | 25 each, 75 total | All compiled and killed | `node mutate.mjs --seed S` |
+
+Here S is literally 1, 2 or 3; every expansion is recorded in evidence/cloud-full-suite.json. Detailed per-case, per-bin, mutation results and exact seed counters are in evidence/cloud-tests-seed-*.json, cloud-simulation-seed-*.json and cloud-mutations-seed-*.json. All 150,000,000 required trajectories ran. The integrated blind reference and archived authoring source remain byte-identical to their original seal, SHA256 fb3358b51f3c8d6f00ca649da54d283129613cd0229ac33e626519f7daf22e5f.
+
+### UNVERIFIED for the cloud checkpoint
+
+Publishing the claim/checkpoint and hosted CI for this new source hash are blocked. The existing PR4 green run verified the earlier 952733df head only. See BLOCKED.md; no completed-job claim is made for the new checkpoint. The interrupted pre-fix full run is not counted. Packaging checks supplement the numerical run and do not substitute for fresh hosted CI.

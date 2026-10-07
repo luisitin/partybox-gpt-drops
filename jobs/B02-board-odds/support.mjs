@@ -185,6 +185,7 @@ export function fixtures() {
     ['diamond', graph(node('S', ['A', 'B']), node('A', ['T']), node('B', ['T']), node('T'))],
     ['uneven', graph(node('S', ['A', 'B', 'C']), node('A', ['T']), node('B', ['C']), node('C', ['T']), node('T'))],
     ['target-near', graph(node('S', ['A', 'B']), node('A', ['B']), node('B', ['T']), node('T'))],
+    ['target-hops-not-cost', graph(node('S', ['A', 'P']), node('A', ['T']), node('P', ['Q'], true), node('Q', ['T'], true), node('T'))],
     ['directed', graph(node('S', ['A', 'B']), node('A', ['T']), node('B'), node('T', ['B']))],
     ['unreachable', graph(node('S', ['A', 'B']), node('A'), node('B'), node('T'))],
     ['duplicate', graph(node('S', ['A', 'B', 'B']), node('A'), node('B'))],
@@ -230,6 +231,7 @@ export function golden(engine, reference, seed = 1) {
   check(at('diamond', 1).landing.get('A'), q(1, 2));
   check(at('uneven', 1).landing.get('A'), q(1, 3));
   check(at('target-near', 1, 'S', 'toward target', 'T').landing.get('B'), one);
+  check(at('target-hops-not-cost', 1, 'S', 'toward target', 'T').landing.get('A'), one);
   check(at('pass-loop-exit', 1).expectedPasses.get('P'), q(2));
   check(at('pass-loop-exit', 1, 'P').expectedPasses.get('P'), one);
   check(at('pass-loop-exit', 0, 'P').expectedPasses.get('P'), zero);
@@ -275,6 +277,19 @@ export function golden(engine, reference, seed = 1) {
     () => engine.boardOddsByFace(list.get('line'), -1),
   ];
   invalid.forEach(fn => assert.throws(fn));
+  // JSON/untyped callers must not turn missing adjacency into a dead end or
+  // a string into character-by-character branch IDs.
+  const malformedNext = [undefined, null, '', 'AB', new Set(['A']), {0: 'A', length: 1}, [1], [null], [undefined], Array(1)];
+  for (const next of malformedNext) {
+    const board = graph({...node('S'), next}, node('A'), node('B'));
+    for (const fn of [
+      () => engine.boardOdds(board, delta(1)),
+      () => engine.boardOddsByFace(board, 1),
+    ]) {
+      assert.throws(fn, TypeError);
+      invalid.push(fn);
+    }
+  }
   // Repeatability and output isolation: modifying one output must not affect a subsequent call.
   const original = engine.boardOdds(list.get('line'), delta(1));
   original.get('S').landing.clear();

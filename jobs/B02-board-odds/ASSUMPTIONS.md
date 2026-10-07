@@ -20,3 +20,9 @@
   both policies, faces zero through ten, and exact die mixtures.
 - The production API rejects malformed inputs, including an omitted target for
   the target policy. Random valid-input comparisons always supply a target ID.
+
+## Cloud queue and boundary handling
+
+The current user's CLAIMS.md-only main updates override the generic README ban solely for queue coordination. Existing job branches are resumed in lowest-ID claim order rather than skipped. A claim is shared only after a confirmed successful push. No queue ownership is inferred from a local-only main commit.
+
+BoardNode.next is an array of string IDs, as declared by the public type. Untyped/JSON calls with missing, null, string, Set, array-like or non-string entries are malformed and must be rejected, while genuine valid dead ends, self-loops and unreachable targets remain supported. No sealed oracle was altered.

@@ -1,0 +1,308 @@
+
+> b02-board-odds@1.0.0 test
+> node run.mjs
+
+
+=== seed 1: node hashes.mjs ===
+SHA256: 30 files verified
+
+=== seed 1: node node_modules/typescript/bin/tsc -p tsconfig.json ===
+
+=== seed 1: node test.mjs --seed 1 ===
+{"name":"golden-regression-arithmetic-validation","fixtureDifferentialCases":350,"arithmeticCases":1000,"invalidInputCases":36,"directRegressionAssertions":25,"fixtureGraphs":25,"passed":true}
+{"name":"dependency-purity-static-guards","checkedSources":2,"passed":true}
+random-acyclic-brute-force: 250/2000 graphs
+random-acyclic-brute-force: 500/2000 graphs
+random-acyclic-brute-force: 750/2000 graphs
+random-acyclic-brute-force: 1000/2000 graphs
+random-acyclic-brute-force: 1250/2000 graphs
+random-acyclic-brute-force: 1500/2000 graphs
+random-acyclic-brute-force: 1750/2000 graphs
+random-acyclic-brute-force: 2000/2000 graphs
+{"name":"random-acyclic-brute-force","graphs":2000,"policies":2,"faces":"0..10 inclusive","minimumNodes":1,"maximumNodes":25,"graphPolicyFaceCases":44000,"startFaceChecks":576576,"mixtureCases":4000,"permutationCases":4000,"bruteForceCases":44000,"enumeratedTerminalPaths":1400694,"passed":true}
+cyclic-graphs: 250/500 graphs
+cyclic-graphs: 500/500 graphs
+{"name":"cyclic-graphs","graphs":500,"policies":2,"faces":"0..10 inclusive","minimumNodes":2,"maximumNodes":25,"graphPolicyFaceCases":11000,"startFaceChecks":153670,"mixtureCases":1000,"permutationCases":1000,"bruteForceCases":5500,"enumeratedTerminalPaths":734049,"passed":true}
+simulation: seed=1, graph=1/50, rolls=1000000, failures=0
+simulation: seed=1, graph=2/50, rolls=1000000, failures=0
+simulation: seed=1, graph=3/50, rolls=1000000, failures=0
+simulation: seed=1, graph=4/50, rolls=1000000, failures=0
+simulation: seed=1, graph=5/50, rolls=1000000, failures=0
+simulation: seed=1, graph=6/50, rolls=1000000, failures=0
+simulation: seed=1, graph=7/50, rolls=1000000, failures=0
+simulation: seed=1, graph=8/50, rolls=1000000, failures=0
+simulation: seed=1, graph=9/50, rolls=1000000, failures=0
+simulation: seed=1, graph=10/50, rolls=1000000, failures=0
+simulation: seed=1, graph=11/50, rolls=1000000, failures=0
+simulation: seed=1, graph=12/50, rolls=1000000, failures=0
+simulation: seed=1, graph=13/50, rolls=1000000, failures=0
+simulation: seed=1, graph=14/50, rolls=1000000, failures=0
+simulation: seed=1, graph=15/50, rolls=1000000, failures=0
+simulation: seed=1, graph=16/50, rolls=1000000, failures=0
+simulation: seed=1, graph=17/50, rolls=1000000, failures=0
+simulation: seed=1, graph=18/50, rolls=1000000, failures=0
+simulation: seed=1, graph=19/50, rolls=1000000, failures=0
+simulation: seed=1, graph=20/50, rolls=1000000, failures=0
+simulation: seed=1, graph=21/50, rolls=1000000, failures=0
+simulation: seed=1, graph=22/50, rolls=1000000, failures=0
+simulation: seed=1, graph=23/50, rolls=1000000, failures=0
+simulation: seed=1, graph=24/50, rolls=1000000, failures=0
+simulation: seed=1, graph=25/50, rolls=1000000, failures=0
+simulation: seed=1, graph=26/50, rolls=1000000, failures=0
+simulation: seed=1, graph=27/50, rolls=1000000, failures=0
+simulation: seed=1, graph=28/50, rolls=1000000, failures=0
+simulation: seed=1, graph=29/50, rolls=1000000, failures=0
+simulation: seed=1, graph=30/50, rolls=1000000, failures=0
+simulation: seed=1, graph=31/50, rolls=1000000, failures=0
+simulation: seed=1, graph=32/50, rolls=1000000, failures=0
+simulation: seed=1, graph=33/50, rolls=1000000, failures=0
+simulation: seed=1, graph=34/50, rolls=1000000, failures=0
+simulation: seed=1, graph=35/50, rolls=1000000, failures=0
+simulation: seed=1, graph=36/50, rolls=1000000, failures=0
+simulation: seed=1, graph=37/50, rolls=1000000, failures=0
+simulation: seed=1, graph=38/50, rolls=1000000, failures=0
+simulation: seed=1, graph=39/50, rolls=1000000, failures=0
+simulation: seed=1, graph=40/50, rolls=1000000, failures=0
+simulation: seed=1, graph=41/50, rolls=1000000, failures=0
+simulation: seed=1, graph=42/50, rolls=1000000, failures=0
+simulation: seed=1, graph=43/50, rolls=1000000, failures=0
+simulation: seed=1, graph=44/50, rolls=1000000, failures=0
+simulation: seed=1, graph=45/50, rolls=1000000, failures=0
+simulation: seed=1, graph=46/50, rolls=1000000, failures=0
+simulation: seed=1, graph=47/50, rolls=1000000, failures=0
+simulation: seed=1, graph=48/50, rolls=1000000, failures=0
+simulation: seed=1, graph=49/50, rolls=1000000, failures=0
+simulation: seed=1, graph=50/50, rolls=1000000, failures=0
+{"name":"seeded-simulation","graphs":50,"rollsPerGraph":1000000,"totalRolls":50000000,"landingChecks":706,"passChecks":235,"maxLandingZ":3.4147728105056014,"maxPassZ":2.057548703889658,"enumeratedMomentPaths":4239,"passed":true}
+
+=== seed 1: node mutate.mjs --seed 1 ===
+M01: KILLED - Subtract instead of adding rational numerators
+M02: KILLED - Add instead of multiplying rational numerators
+M03: KILLED - Stop reducing fractions to lowest terms
+M04: KILLED - Charge a step for pass-through destinations
+M05: KILLED - Make ordinary destinations cost zero steps
+M06: KILLED - Count every pass-through entry twice
+M07: KILLED - Do not count an entered pass-through dead end
+M08: KILLED - Count the initial pass-through node as an entry
+M09: KILLED - Divide branch probabilities by one too many choices
+M10: KILLED - Uniform policy always selects the first branch
+M11: KILLED - Break target-distance ties by taking only the first branch
+M12: KILLED - Select the farthest rather than the nearest target route
+M13: KILLED - Use forward edges in the reverse target-distance search
+M14: KILLED - Choose the first route when the target is unreachable
+M15: KILLED - Treat duplicate next IDs as extra probability tickets
+M16: KILLED - Drop self-loop edges
+M17: KILLED - Lose probability mass at dead ends
+M18: KILLED - Zero-step movement loses its identity distribution
+M19: KILLED - Move one extra step on every die face
+M20: KILLED - Ignore die weights when accumulating landing mass
+M21: KILLED - Discard the nontermination probability
+M22: KILLED - Report recurrent expected pass counts as finite zero
+M23: KILLED - Misclassify mixed ordinary/pass-through cycles as zero-cost traps
+M24: KILLED - Omit geometric resummation of pass-through self-loops
+M25: KILLED - Forget rewards earned in the first part of composed movement
+
+=== seed 2: node hashes.mjs ===
+SHA256: 30 files verified
+
+=== seed 2: node node_modules/typescript/bin/tsc -p tsconfig.json ===
+
+=== seed 2: node test.mjs --seed 2 ===
+{"name":"golden-regression-arithmetic-validation","fixtureDifferentialCases":350,"arithmeticCases":1000,"invalidInputCases":36,"directRegressionAssertions":25,"fixtureGraphs":25,"passed":true}
+{"name":"dependency-purity-static-guards","checkedSources":2,"passed":true}
+random-acyclic-brute-force: 250/2000 graphs
+random-acyclic-brute-force: 500/2000 graphs
+random-acyclic-brute-force: 750/2000 graphs
+random-acyclic-brute-force: 1000/2000 graphs
+random-acyclic-brute-force: 1250/2000 graphs
+random-acyclic-brute-force: 1500/2000 graphs
+random-acyclic-brute-force: 1750/2000 graphs
+random-acyclic-brute-force: 2000/2000 graphs
+{"name":"random-acyclic-brute-force","graphs":2000,"policies":2,"faces":"0..10 inclusive","minimumNodes":1,"maximumNodes":25,"graphPolicyFaceCases":44000,"startFaceChecks":568524,"mixtureCases":4000,"permutationCases":4000,"bruteForceCases":44000,"enumeratedTerminalPaths":1369925,"passed":true}
+cyclic-graphs: 250/500 graphs
+cyclic-graphs: 500/500 graphs
+{"name":"cyclic-graphs","graphs":500,"policies":2,"faces":"0..10 inclusive","minimumNodes":2,"maximumNodes":25,"graphPolicyFaceCases":11000,"startFaceChecks":149534,"mixtureCases":1000,"permutationCases":1000,"bruteForceCases":5500,"enumeratedTerminalPaths":1080031,"passed":true}
+simulation: seed=2, graph=1/50, rolls=1000000, failures=0
+simulation: seed=2, graph=2/50, rolls=1000000, failures=0
+simulation: seed=2, graph=3/50, rolls=1000000, failures=0
+simulation: seed=2, graph=4/50, rolls=1000000, failures=0
+simulation: seed=2, graph=5/50, rolls=1000000, failures=0
+simulation: seed=2, graph=6/50, rolls=1000000, failures=0
+simulation: seed=2, graph=7/50, rolls=1000000, failures=0
+simulation: seed=2, graph=8/50, rolls=1000000, failures=0
+simulation: seed=2, graph=9/50, rolls=1000000, failures=0
+simulation: seed=2, graph=10/50, rolls=1000000, failures=0
+simulation: seed=2, graph=11/50, rolls=1000000, failures=0
+simulation: seed=2, graph=12/50, rolls=1000000, failures=0
+simulation: seed=2, graph=13/50, rolls=1000000, failures=0
+simulation: seed=2, graph=14/50, rolls=1000000, failures=0
+simulation: seed=2, graph=15/50, rolls=1000000, failures=0
+simulation: seed=2, graph=16/50, rolls=1000000, failures=0
+simulation: seed=2, graph=17/50, rolls=1000000, failures=0
+simulation: seed=2, graph=18/50, rolls=1000000, failures=0
+simulation: seed=2, graph=19/50, rolls=1000000, failures=0
+simulation: seed=2, graph=20/50, rolls=1000000, failures=0
+simulation: seed=2, graph=21/50, rolls=1000000, failures=0
+simulation: seed=2, graph=22/50, rolls=1000000, failures=0
+simulation: seed=2, graph=23/50, rolls=1000000, failures=0
+simulation: seed=2, graph=24/50, rolls=1000000, failures=0
+simulation: seed=2, graph=25/50, rolls=1000000, failures=0
+simulation: seed=2, graph=26/50, rolls=1000000, failures=0
+simulation: seed=2, graph=27/50, rolls=1000000, failures=0
+simulation: seed=2, graph=28/50, rolls=1000000, failures=0
+simulation: seed=2, graph=29/50, rolls=1000000, failures=0
+simulation: seed=2, graph=30/50, rolls=1000000, failures=0
+simulation: seed=2, graph=31/50, rolls=1000000, failures=0
+simulation: seed=2, graph=32/50, rolls=1000000, failures=0
+simulation: seed=2, graph=33/50, rolls=1000000, failures=0
+simulation: seed=2, graph=34/50, rolls=1000000, failures=0
+simulation: seed=2, graph=35/50, rolls=1000000, failures=0
+simulation: seed=2, graph=36/50, rolls=1000000, failures=0
+simulation: seed=2, graph=37/50, rolls=1000000, failures=0
+simulation: seed=2, graph=38/50, rolls=1000000, failures=0
+simulation: seed=2, graph=39/50, rolls=1000000, failures=0
+simulation: seed=2, graph=40/50, rolls=1000000, failures=0
+simulation: seed=2, graph=41/50, rolls=1000000, failures=0
+simulation: seed=2, graph=42/50, rolls=1000000, failures=0
+simulation: seed=2, graph=43/50, rolls=1000000, failures=0
+simulation: seed=2, graph=44/50, rolls=1000000, failures=0
+simulation: seed=2, graph=45/50, rolls=1000000, failures=0
+simulation: seed=2, graph=46/50, rolls=1000000, failures=0
+simulation: seed=2, graph=47/50, rolls=1000000, failures=0
+simulation: seed=2, graph=48/50, rolls=1000000, failures=0
+simulation: seed=2, graph=49/50, rolls=1000000, failures=0
+simulation: seed=2, graph=50/50, rolls=1000000, failures=0
+{"name":"seeded-simulation","graphs":50,"rollsPerGraph":1000000,"totalRolls":50000000,"landingChecks":608,"passChecks":177,"maxLandingZ":2.813716536895541,"maxPassZ":2.8137165368955404,"enumeratedMomentPaths":11972,"passed":true}
+
+=== seed 2: node mutate.mjs --seed 2 ===
+M01: KILLED - Subtract instead of adding rational numerators
+M02: KILLED - Add instead of multiplying rational numerators
+M03: KILLED - Stop reducing fractions to lowest terms
+M04: KILLED - Charge a step for pass-through destinations
+M05: KILLED - Make ordinary destinations cost zero steps
+M06: KILLED - Count every pass-through entry twice
+M07: KILLED - Do not count an entered pass-through dead end
+M08: KILLED - Count the initial pass-through node as an entry
+M09: KILLED - Divide branch probabilities by one too many choices
+M10: KILLED - Uniform policy always selects the first branch
+M11: KILLED - Break target-distance ties by taking only the first branch
+M12: KILLED - Select the farthest rather than the nearest target route
+M13: KILLED - Use forward edges in the reverse target-distance search
+M14: KILLED - Choose the first route when the target is unreachable
+M15: KILLED - Treat duplicate next IDs as extra probability tickets
+M16: KILLED - Drop self-loop edges
+M17: KILLED - Lose probability mass at dead ends
+M18: KILLED - Zero-step movement loses its identity distribution
+M19: KILLED - Move one extra step on every die face
+M20: KILLED - Ignore die weights when accumulating landing mass
+M21: KILLED - Discard the nontermination probability
+M22: KILLED - Report recurrent expected pass counts as finite zero
+M23: KILLED - Misclassify mixed ordinary/pass-through cycles as zero-cost traps
+M24: KILLED - Omit geometric resummation of pass-through self-loops
+M25: KILLED - Forget rewards earned in the first part of composed movement
+
+=== seed 3: node hashes.mjs ===
+SHA256: 30 files verified
+
+=== seed 3: node node_modules/typescript/bin/tsc -p tsconfig.json ===
+
+=== seed 3: node test.mjs --seed 3 ===
+{"name":"golden-regression-arithmetic-validation","fixtureDifferentialCases":350,"arithmeticCases":1000,"invalidInputCases":36,"directRegressionAssertions":25,"fixtureGraphs":25,"passed":true}
+{"name":"dependency-purity-static-guards","checkedSources":2,"passed":true}
+random-acyclic-brute-force: 250/2000 graphs
+random-acyclic-brute-force: 500/2000 graphs
+random-acyclic-brute-force: 750/2000 graphs
+random-acyclic-brute-force: 1000/2000 graphs
+random-acyclic-brute-force: 1250/2000 graphs
+random-acyclic-brute-force: 1500/2000 graphs
+random-acyclic-brute-force: 1750/2000 graphs
+random-acyclic-brute-force: 2000/2000 graphs
+{"name":"random-acyclic-brute-force","graphs":2000,"policies":2,"faces":"0..10 inclusive","minimumNodes":1,"maximumNodes":25,"graphPolicyFaceCases":44000,"startFaceChecks":568810,"mixtureCases":4000,"permutationCases":4000,"bruteForceCases":44000,"enumeratedTerminalPaths":1388665,"passed":true}
+cyclic-graphs: 250/500 graphs
+cyclic-graphs: 500/500 graphs
+{"name":"cyclic-graphs","graphs":500,"policies":2,"faces":"0..10 inclusive","minimumNodes":2,"maximumNodes":25,"graphPolicyFaceCases":11000,"startFaceChecks":145772,"mixtureCases":1000,"permutationCases":1000,"bruteForceCases":5500,"enumeratedTerminalPaths":511497,"passed":true}
+simulation: seed=3, graph=1/50, rolls=1000000, failures=0
+simulation: seed=3, graph=2/50, rolls=1000000, failures=0
+simulation: seed=3, graph=3/50, rolls=1000000, failures=0
+simulation: seed=3, graph=4/50, rolls=1000000, failures=0
+simulation: seed=3, graph=5/50, rolls=1000000, failures=0
+simulation: seed=3, graph=6/50, rolls=1000000, failures=0
+simulation: seed=3, graph=7/50, rolls=1000000, failures=0
+simulation: seed=3, graph=8/50, rolls=1000000, failures=0
+simulation: seed=3, graph=9/50, rolls=1000000, failures=0
+simulation: seed=3, graph=10/50, rolls=1000000, failures=0
+simulation: seed=3, graph=11/50, rolls=1000000, failures=0
+simulation: seed=3, graph=12/50, rolls=1000000, failures=0
+simulation: seed=3, graph=13/50, rolls=1000000, failures=0
+simulation: seed=3, graph=14/50, rolls=1000000, failures=0
+simulation: seed=3, graph=15/50, rolls=1000000, failures=0
+simulation: seed=3, graph=16/50, rolls=1000000, failures=0
+simulation: seed=3, graph=17/50, rolls=1000000, failures=0
+simulation: seed=3, graph=18/50, rolls=1000000, failures=0
+simulation: seed=3, graph=19/50, rolls=1000000, failures=0
+simulation: seed=3, graph=20/50, rolls=1000000, failures=0
+simulation: seed=3, graph=21/50, rolls=1000000, failures=0
+simulation: seed=3, graph=22/50, rolls=1000000, failures=0
+simulation: seed=3, graph=23/50, rolls=1000000, failures=0
+simulation: seed=3, graph=24/50, rolls=1000000, failures=0
+simulation: seed=3, graph=25/50, rolls=1000000, failures=0
+simulation: seed=3, graph=26/50, rolls=1000000, failures=0
+simulation: seed=3, graph=27/50, rolls=1000000, failures=0
+simulation: seed=3, graph=28/50, rolls=1000000, failures=0
+simulation: seed=3, graph=29/50, rolls=1000000, failures=0
+simulation: seed=3, graph=30/50, rolls=1000000, failures=0
+simulation: seed=3, graph=31/50, rolls=1000000, failures=0
+simulation: seed=3, graph=32/50, rolls=1000000, failures=0
+simulation: seed=3, graph=33/50, rolls=1000000, failures=0
+simulation: seed=3, graph=34/50, rolls=1000000, failures=0
+simulation: seed=3, graph=35/50, rolls=1000000, failures=0
+simulation: seed=3, graph=36/50, rolls=1000000, failures=0
+simulation: seed=3, graph=37/50, rolls=1000000, failures=0
+simulation: seed=3, graph=38/50, rolls=1000000, failures=0
+simulation: seed=3, graph=39/50, rolls=1000000, failures=0
+simulation: seed=3, graph=40/50, rolls=1000000, failures=0
+simulation: seed=3, graph=41/50, rolls=1000000, failures=0
+simulation: seed=3, graph=42/50, rolls=1000000, failures=0
+simulation: seed=3, graph=43/50, rolls=1000000, failures=0
+simulation: seed=3, graph=44/50, rolls=1000000, failures=0
+simulation: seed=3, graph=45/50, rolls=1000000, failures=0
+simulation: seed=3, graph=46/50, rolls=1000000, failures=0
+simulation: seed=3, graph=47/50, rolls=1000000, failures=0
+simulation: seed=3, graph=48/50, rolls=1000000, failures=0
+simulation: seed=3, graph=49/50, rolls=1000000, failures=0
+simulation: seed=3, graph=50/50, rolls=1000000, failures=0
+{"name":"seeded-simulation","graphs":50,"rollsPerGraph":1000000,"totalRolls":50000000,"landingChecks":691,"passChecks":245,"maxLandingZ":3.278256273801876,"maxPassZ":2.921021740703357,"enumeratedMomentPaths":2920,"passed":true}
+
+=== seed 3: node mutate.mjs --seed 3 ===
+M01: KILLED - Subtract instead of adding rational numerators
+M02: KILLED - Add instead of multiplying rational numerators
+M03: KILLED - Stop reducing fractions to lowest terms
+M04: KILLED - Charge a step for pass-through destinations
+M05: KILLED - Make ordinary destinations cost zero steps
+M06: KILLED - Count every pass-through entry twice
+M07: KILLED - Do not count an entered pass-through dead end
+M08: KILLED - Count the initial pass-through node as an entry
+M09: KILLED - Divide branch probabilities by one too many choices
+M10: KILLED - Uniform policy always selects the first branch
+M11: KILLED - Break target-distance ties by taking only the first branch
+M12: KILLED - Select the farthest rather than the nearest target route
+M13: KILLED - Use forward edges in the reverse target-distance search
+M14: KILLED - Choose the first route when the target is unreachable
+M15: KILLED - Treat duplicate next IDs as extra probability tickets
+M16: KILLED - Drop self-loop edges
+M17: KILLED - Lose probability mass at dead ends
+M18: KILLED - Zero-step movement loses its identity distribution
+M19: KILLED - Move one extra step on every die face
+M20: KILLED - Ignore die weights when accumulating landing mass
+M21: KILLED - Discard the nontermination probability
+M22: KILLED - Report recurrent expected pass counts as finite zero
+M23: KILLED - Misclassify mixed ordinary/pass-through cycles as zero-cost traps
+M24: KILLED - Omit geometric resummation of pass-through self-loops
+M25: KILLED - Forget rewards earned in the first part of composed movement
+
+PASS: full suite, seeds 1/2/3, all 75 isolated mutations caught.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

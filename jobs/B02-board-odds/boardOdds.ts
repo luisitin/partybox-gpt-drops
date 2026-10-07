@@ -102,8 +102,9 @@ function prepare(board: BoardGraph, policy: BranchPolicy, target?: string): Prep
   if (policy === 'toward target' && target === undefined) throw new RangeError('A target ID is required');
   const nodes = board.nodes, n = nodes.length, indices = new Map<string, number>();
   nodes.forEach((v, i) => {
-    if (typeof v.id !== 'string' || typeof v.kind !== 'string' || typeof v.passThrough !== 'boolean')
+    if (typeof v.id !== 'string' || typeof v.kind !== 'string' || typeof v.passThrough !== 'boolean' || !Array.isArray(v.next))
       throw new TypeError('Invalid board node');
+    for (const id of v.next) if (typeof id !== 'string') throw new TypeError('Next IDs must be strings');
     if (indices.has(v.id)) throw new RangeError('Duplicate node ID');
     indices.set(v.id, i);
   });

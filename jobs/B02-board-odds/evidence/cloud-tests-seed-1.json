@@ -1,0 +1,63 @@
+{
+  "seed": 1,
+  "smoke": false,
+  "suites": [
+    {
+      "name": "golden-regression-arithmetic-validation",
+      "fixtureDifferentialCases": 350,
+      "arithmeticCases": 1000,
+      "invalidInputCases": 36,
+      "directRegressionAssertions": 25,
+      "fixtureGraphs": 25,
+      "passed": true
+    },
+    {
+      "name": "dependency-purity-static-guards",
+      "checkedSources": 2,
+      "passed": true
+    },
+    {
+      "name": "random-acyclic-brute-force",
+      "graphs": 2000,
+      "policies": 2,
+      "faces": "0..10 inclusive",
+      "minimumNodes": 1,
+      "maximumNodes": 25,
+      "graphPolicyFaceCases": 44000,
+      "startFaceChecks": 576576,
+      "mixtureCases": 4000,
+      "permutationCases": 4000,
+      "bruteForceCases": 44000,
+      "enumeratedTerminalPaths": 1400694,
+      "passed": true
+    },
+    {
+      "name": "cyclic-graphs",
+      "graphs": 500,
+      "policies": 2,
+      "faces": "0..10 inclusive",
+      "minimumNodes": 2,
+      "maximumNodes": 25,
+      "graphPolicyFaceCases": 11000,
+      "startFaceChecks": 153670,
+      "mixtureCases": 1000,
+      "permutationCases": 1000,
+      "bruteForceCases": 5500,
+      "enumeratedTerminalPaths": 734049,
+      "passed": true
+    },
+    {
+      "name": "seeded-simulation",
+      "graphs": 50,
+      "rollsPerGraph": 1000000,
+      "totalRolls": 50000000,
+      "landingChecks": 706,
+      "passChecks": 235,
+      "maxLandingZ": 3.4147728105056014,
+      "maxPassZ": 2.057548703889658,
+      "enumeratedMomentPaths": 4239,
+      "passed": true
+    }
+  ],
+  "passed": true
+}
