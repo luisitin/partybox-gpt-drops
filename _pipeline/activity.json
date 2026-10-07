@@ -1,42 +1,40 @@
 {
-  "updatedAt": "2026-10-07T15:06:42.260603Z",
-  "summary": "Four deliveries have final green GitHub checks: B02 board odds, B09 Clue, B17 sounds and B18 motion. All remaining jobs are assigned across six workers and the coordinator; source gaps and failed gates remain visible. Hourly background reports are enabled; the open dashboard refreshes every 30 minutes.",
+  "updatedAt": "2026-10-07T15:30:26.627132Z",
+  "summary": "Seven deliveries now have final successful GitHub checks: B02 board odds, B08 Monopoly, B09 Clue, B15 icons, B16 colors, B17 sounds and B18 motion. They await maintainer review; no PR has been merged. Hourly background reports are enabled and the open dashboard refreshes every 30 minutes.",
   "workers": [
     {
-      "current": "B08",
-      "summary": "Both Monopoly implementations agree on all 28,800 exact transitions. The independent property-return checker is now sealed.",
-      "next": "Run the full simulations and mutation tests and finish source comparisons.",
+      "current": "B12",
+      "summary": "Monopoly is finished and green after 600 million rolls and all mutation checks. A separate Ticket to Ride checker is being written before seeing its implementation.",
+      "next": "Seal the independent route and scoring checker, then compare with the separate implementation.",
       "queue": []
     },
     {
       "current": "B10",
-      "summary": "The independently written Battleship checker is pushed. Allocation-heavy shot calculations are being optimized after genuine slow calls were observed.",
-      "next": "Compare every policy and run all 900,000 games with the original speed gates.",
+      "summary": "Battleship now checks every simulated shot against the independent policy and density checker. The full 900,000-game run is still in progress.",
+      "next": "Complete the full speed and win-rate measurements without excluding slow calls.",
       "queue": [
         "B11",
         "B07"
       ]
     },
     {
-      "current": "B16",
-      "summary": "A refined palette passes all original contrast and color-separation requirements in a separate checker, including actual 16-bit colors.",
-      "next": "Generate the exact swatches, tables and full acceptance and mutation checks.",
-      "queue": [
-        "B12"
-      ]
+      "current": "B12",
+      "summary": "The player color palette and exact swatches are finished and green. Ticket to Ride rules and implementation are now being built.",
+      "next": "Finish route legality, tickets and longest trails, then run the original small and full-game counts.",
+      "queue": []
     },
     {
-      "current": "B15",
-      "summary": "The icon project now has a separately written SVG/PNG checker, sealed before the old code was opened. The name filter still has a failed speed gate.",
-      "next": "Compare all 120 icons and fix any real decoding defects, then return to name-filter speed.",
+      "current": "B19",
+      "summary": "All 120 icons are finished and green. The Unicode name filter was optimized again and pushed; GitHub passes, while failed local timings remain recorded.",
+      "next": "Inspect the exact hosted timing logs and report both environments, while independently preparing the Rummikub checker.",
       "queue": [
-        "B19"
+        "B11 independent checker"
       ]
     },
     {
       "current": "B20",
-      "summary": "Turn-flow evidence was expanded and pushed; 29 claim or gap rows, bonus criteria and tie procedures still lack complete verification. Work has moved to modes.",
-      "next": "Research the modes from original instructions, preserving all unresolved claims.",
+      "summary": "The modes project has a published draft PR with 28 roster records. Rule details, Buddy restrictions and phone/TV requirements are being researched.",
+      "next": "Finish the source audits and preserve conflicts before continuing board and minigame research.",
       "queue": [
         "B04",
         "B03"
@@ -44,16 +42,16 @@
     },
     {
       "current": "B14",
-      "summary": "600 of the required 3,000 original comedy candidates are authored and pushed. The first 100 received a separate second review.",
-      "next": "Continue original writing and independent grading before selecting the final 1,200.",
+      "summary": "900 of 3,000 original comedy candidates are published. A separate second review now covers 300 candidates; every score and rejection is kept.",
+      "next": "Complete the full candidate pool and second review before selecting the final 1,200.",
       "queue": [
         "B13"
       ]
     },
     {
       "current": "B06",
-      "summary": "The CPU policy and separate implementation are written and sealed. The full scenario, random-state and toy-board suite is being built.",
-      "next": "Run every original code gate and audit the CPU-behavior research.",
+      "summary": "The CPU policy and independent checker passed all original local code gates. The draft PR is online; exact Nintendo behavior evidence remains incomplete.",
+      "next": "Finish the final artifact rerun and hosted checks, retaining all 26 research gaps.",
       "queue": []
     }
   ]
