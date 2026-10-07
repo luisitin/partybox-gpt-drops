@@ -4,22 +4,23 @@ A pure, deterministic, exact TypeScript solver with zero runtime dependencies. R
 
 ## Run
 
-Use Node 22, then run:
+Use Node 22 and Python 3.12.14, then run:
 
 ```sh
 npm ci --ignore-scripts --no-audit --no-fund
+python3 -m pip install --disable-pip-version-check -r requirements-dev.txt
 npm test
 ```
 
-The full command strictly compiles all three TypeScript sources and runs every suite for seeds 1, 2 and 3. Each seed includes 50,000 positions with at most 14 physical tiles, all 40 joker fixtures, 25 individually planted source bugs, contract/metamorphic checks, 200 full 40-table/20-hand positions and eight distinct warm-up positions. The production timing bracket includes validation, search, reconstruction and its own output validation. Independent work is outside that bracket. Both p99 and the literal maximum must be at most 500 ms.
+The full command strictly compiles all three TypeScript sources and runs every suite for seeds 1, 2 and 3. Each seed includes 50,000 positions with at most 14 physical tiles, all 40 joker fixtures, 25 individually planted source bugs, contract/metamorphic checks, 1,000 fresh accelerator-versus-literal checks, 200 full 40-table/20-hand positions and eight distinct warm-up positions. The production timing bracket includes validation, search, reconstruction and its own output validation. Independent work is outside that bracket. Both p99 and the literal maximum must be at most 500 ms.
 
 ## Independent reference
 
 `blindReference.ts` was independently authored from the original prompt, public API and official English 2019 rules before its author inspected production, old tests or the old reference. It was sealed and pushed at commit 8564ea3. Source/provenance and its 54 semantic selfchecks are preserved under `evidence/blind-seal/`.
 
-The blind reference enumerates every physical subset for small inputs and uses a complete exact search for larger inputs. Every correctness case compares validity and optimum value/count with this reference. Every output is checked by both validators. The earlier same-author `reference.ts` remains historical supplemental material and is not the primary differential reference.
+The unchanged blind TypeScript reference enumerates every physical subset for all small inputs. Its first full-size physical-cover search was too slow. The same blind author independently formulated a development-only integer multiset model, sealed under `evidence/blind-milp-seal/` before integration. NumPy 2.3.5 and SciPy 1.17.0 are pinned development requirements; production has zero runtime dependencies. Every large solve must report OPTIMAL with exact integer resource checks and a primal/dual gap below one encoded objective unit. This trusts the disclosed floating-point HiGHS bound rather than an exact rational dual proof. All 624 large calls, including 24 warmups, use freshly generated independent answers; 3,000 additional small cases compare the accelerator to the unchanged literal oracle. Both validators check every output. The earlier same-author `reference.ts` remains historical supplemental material and is not the primary differential reference.
 
-For the identical large corpus used by the full-state audit and timing benchmark, the reference computes fresh answers once per seed. A run-local ledger records each input hash, reference source hash, generator hash and independently computed answer. Both suites compare their fresh production answers to that ledger and revalidate both witnesses. No production solver answer is used to generate the independent ledger. The production solver has no cross-call cache.
+For the identical large corpus used by the full-state audit and timing benchmark, the reference computes fresh answers once per seed. A run-local ledger records each input hash, reference source and integer-model hashes, generator hash and independently computed answer. Both suites compare their fresh production answers to that ledger and revalidate both witnesses. No production solver answer is used to generate the independent ledger. The production solver has no cross-call cache.
 
 ## API and rules
 

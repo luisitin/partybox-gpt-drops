@@ -111,6 +111,7 @@ export function freeze(x) {
 export const hash = x => createHash('sha256').update(x).digest('hex');
 export function sourceHashes() {
   const files=['rummikub.ts','reference.ts','blindReference.ts','package.json','package-lock.json','tsconfig.json',
+    'requirements-dev.txt','test/milp-reference.py',
     ...readdirSync(resolve(root,'test')).filter(f=>f.endsWith('.mjs')).map(f=>`test/${f}`)];
   return Object.fromEntries(files.sort().map(f=>[f,hash(readFileSync(resolve(root,f)))]));
 }
