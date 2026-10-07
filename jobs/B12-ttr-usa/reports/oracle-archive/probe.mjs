@@ -1,11 +1,10 @@
 import assert from 'node:assert/strict';
 import { readFileSync,writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import * as oracle from '../dist/reference.js';
-import * as primary from '../dist/ttr.js';
-import {brute} from './brute.mjs';
+import * as oracle from './probe-build/amended-reference.js';
+import * as primary from './probe-build/primary-probe.js';
 const sha=file=>createHash('sha256').update(readFileSync(file)).digest('hex');
-const sourceHashes={original:sha('reference.snapshot.ts.txt'),amended:sha('reference.ts'),primary:sha('ttr.ts')};
+const sourceHashes={original:sha('reference.ts'),amended:sha('amended-reference.ts'),primary:sha('primary-probe.ts')};
 let assertions=0;
 const discrepancies=[];
 function compare(name,args,label) {
@@ -26,11 +25,10 @@ for(const seed of [1,2,3]) {
     const routes=Array.from({length:n},(_,i)=>edge(`r${i}`,`v${Math.floor(random()*v)}`,`v${Math.floor(random()*v)}`,1+Math.floor(random()*6)));
     const ids=routes.map(r=>r.id);
     compare('longestTrail',[routes,ids],`seed${seed}/graph${sample}`);
-    const exact=brute(routes);assertions++;assert.equal(primary.longestTrail(routes,ids),exact,`seed${seed}/exhaustive-subsets${sample}`);
     const ticket={id:'t',a:`v${Math.floor(random()*(v+2))}`,b:`v${Math.floor(random()*(v+2))}`,points:1+Math.floor(random()*22)};
     compare('ticketComplete',[routes,ids,ticket],`seed${seed}/ticket${sample}`);
   }
-  seeds.push({seed,graphs:20000,exhaustiveSubsetComparisons:20000,checks:assertions-before});
+  seeds.push({seed,graphs:20000,checks:assertions-before});
   console.log(JSON.stringify({seed,assertions,discrepancies:discrepancies.length}));
 }
 const routes=[edge('r','A','B',2,'red'),edge('p','B','A',2,'red'),edge('g','B','C',3),edge('__proto__','C','D',1,'blue')];
@@ -58,7 +56,7 @@ for(const n of [2,3,4,5]) {
 for(const seed of [1,2,3,0,-1,4294967295]) {
   const a=oracle.seeded(seed),b=primary.seeded(seed);for(let i=0;i<1000;i++){assertions++;assert.equal(a(),b(),'RNG replay');}
 }
-for(const [file,hash] of [['reference.snapshot.ts.txt',sourceHashes.original],['reference.ts',sourceHashes.amended],['ttr.ts',sourceHashes.primary]])assert.equal(sha(file),hash,'Read-only sources');
+for(const [file,hash] of [['reference.ts',sourceHashes.original],['amended-reference.ts',sourceHashes.amended],['primary-probe.ts',sourceHashes.primary]])assert.equal(sha(file),hash,'Read-only sources');
 const report={passed:discrepancies.length===0,assertions,seeds,sourceHashes,discrepancies};
-writeFileSync('test-output/graphs.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
+writeFileSync('DIFFERENTIAL-PROBE.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 assert.equal(discrepancies.length,0,'Every public contract case matches');

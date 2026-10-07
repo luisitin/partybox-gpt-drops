@@ -42,3 +42,23 @@ amended primary with zero disagreements; see helper-full-differential.json.
 Initial oracle317c... is separately preserved as reference.snapshot.ts.txt.
 The helper's independently agreed sparse ownedID repair is the sole oracle
 amendment; currentreference matches reference.amended.snapshot.ts.txt exactly.
+
+## Portable archive and driver paths
+
+All original helper files, including the three independent seals, are copied
+unchanged to `reports/oracle-archive/`. `tests/oracle-self.mjs` verifies those
+seals, copies the archive to test-output, and reruns both original and amended
+self-checks plus the concrete sparse-array replay. Those new compilation and
+report writes do not alter the archive. Current TypeScript 5.9.3 is additionally
+used; the original sealed authoring run used 5.8.3.
+
+`tests/graphs.mjs` retains `tests/helper-probe.snapshot.mjs.txt`'s comparisons
+and counts. Its path adaptations are portable imports (`../dist/`), local
+snapshot source-hash paths and writing its report to `test-output/graphs.json`.
+All original 20,000-per-seed differential comparisons are retained. An additional
+comparison on every identical graph calls the blind author's exhaustive
+edge-subset `brute` function, copied unchanged from the sealed self-check driver
+to `tests/brute.mjs` (only its export and provenance header added). This checks
+all subsets up to 2^12, retaining the Euler criterion and valid weight pruning.
+The core independently authored trail algorithms remain unchanged. Current immutable-input goldens and full-game harness were written
+after exchange and are identified as integration tests, not blind authorship.

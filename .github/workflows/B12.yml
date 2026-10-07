@@ -18,11 +18,13 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '22.16.0'
       - name: Verify committed checksums
         run: sha256sum -c SHA256SUMS.txt
       - name: Install pinned development compiler
-        run: npm install --ignore-scripts
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Install pinned independent schema validator
+        run: python -m pip install --disable-pip-version-check 'jsonschema==4.26.0'
       - name: Full suite, seeds 1, 2, 3
         run: npm test
       - name: Independent standards-compliant schema audit
