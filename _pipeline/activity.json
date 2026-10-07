@@ -1,52 +1,49 @@
 {
-  "updatedAt": "2026-10-07T19:50:38.807323Z",
-  "summary": "Eleven deliveries have passed full final GitHub checks and are ready for maintainer review: board odds, Monopoly, Clue, Battleship, Rummikub, Ticket to Ride, Yahtzee, icons, colors, sounds and motion. None is merged. Comedy has passed its full local 3,000-candidate/1,200-selected delivery check; exact-head GitHub verification is running. Trivia now has920 actual authored rows in the active workspace, including nine complete categories;400 current versions have independently accepted/reopened records. Its latest published milestone will show the committed subset, and all remaining reviews and full-pack editorial checks remain open. Turn-flow and CPU-strategy fact recoveries are pushed with full green checks, but their original research gates are still incomplete. Name-filter correctness passes; its original0.05ms maximum failed one hosted call. Six workers continue source recovery, remaining trivia authorship/reviews and comedy verification. Hourly background reports are enabled; the open dashboard refreshes every30minutes.",
+  "updatedAt": "2026-10-07T20:13:55.881520Z",
+  "summary": "Twelve deliveries have passed full final GitHub checks and are ready for maintainer review: board odds, Monopoly, Clue, Battleship, Rummikub, Ticket to Ride, Yahtzee, comedy, icons, colors, sounds and motion. None is merged. All 1,000 trivia questions are now drafted in the active workspace; 638 current versions have accepted independent reviews, including 78 world-geography rows and 60 food rows so far. Those numbers can change when authors repair a reviewed version: every changed hash needs fresh review. The committed milestone previously contained 940 rows. Full-pack checks have found a genuine cross-category Taj Mahal duplicate and category-specific answer-length clues, now being repaired. Turn-flow, CPU strategy, board-layout and modes recoveries are pushed with green checks but still have explicit research gaps. The name filter passes correctness but fails its original 0.05 ms maximum on one hosted call. Parallel work continues the remaining reviews, source repairs and editorial fixes. Hourly background reports are enabled; the open dashboard refreshes every 30 minutes.",
   "workers": [
     {
       "current": "B14",
-      "summary": "Final1,200 unchanged prompts selected from3,000 authored and separately graded candidates;1,978 passed both graders. Local exhaustive4,498,500original-pool comparisons and719,400selected comparisons pass; all57 flags individually adjudicated,630 canonical references,max3 combined. Pushed7985b824 PR13; full final-head CI37675775829 is still running.",
-      "next": "Inspect the entire final hosted result and repeated local run, then mark ready only if every original gate passes.",
-      "queue": [
-        "B13 remaining US-history/civics authorship",
-        "B13 history/sports fresh review"
-      ]
+      "summary": "Comedy is ready on PR13 at 7985b824. All 3,000 authored candidates and 3,000 independent grades are retained; 1,200 unchanged prompts passed both graders and the complete local and hosted checks. The exhaustive 4,498,500 original-pool comparisons and 719,400 final comparisons are complete, with 57 actual flags resolved. This worker also finished all 100 US-history and 100 food author rows.",
+      "next": "Freshly review and actually reopen all sources for the separate 100 world-history and 100 sports questions. Record real objections and recheck each repaired version.",
+      "queue": []
     },
     {
       "current": "B13",
-      "summary": "Active workspace has920 real rows: nine100-row categories plus20 US-history/civics. Four400-row categories currently have accepted and source-reopened records. Nature100 closed only after38 initial rejected rows and four later failures were corrected, with every earlier hash preserved. Latest pushed milestone previously had682; integration is now publishing the larger actual set.",
-      "next": "Finish final80history/civics rows, freshly challenge/reopen all remaining categories, resolve every bidirectional similarity flag and assess all1,000 option lengths before original full acceptance.",
-      "queue": [
-        "B13 food/history review"
-      ]
+      "summary": "All 1,000 actual questions are drafted. Root geography/science/nature plus separately reviewed film/music give 500 accepted current versions. World geography has 78 current acceptances and 22 recorded required repairs; food has 60 acceptances and 40 requested repairs. Every rejected original version is retained. The active author team is fixing exact source-scope, distractor and answer-length problems.",
+      "next": "Finish US-history/food independent reviews, author requested world/nature repairs, integrate all fresh exact-version logs, then run every full original delivery gate and publish its exact-head GitHub result.",
+      "queue": []
     },
     {
       "current": "B13 independent editorial review",
-      "summary": "All200 root-authored geography/science questions now have fresh accepted versions and actual reopened support after ten science corrections. This reviewer is individually checking2,199 similarity flags within those200rows and has found14/200 uniquely-longest answers. That is a category slice, not a full1,000-row editorial verdict.",
-      "next": "Preserve and repair film/music author versions requested by the separate reviewer, then finish exact-version pair reasons and option-length findings for integration.",
+      "summary": "All 2,199 flagged root geography/science pairs have unique version-bound manual reasons and no duplicate. The full 1,000-row review found a real Taj Mahal commissioner duplicate across two categories. It also found longest-answer guessing at 37.58% in music and shortest-answer guessing at 39.08% in nature and 34.58% in world geography, which whole-pack averages hid.",
+      "next": "Review every remaining first-half pair, require a substantive replacement of the duplicate, and independently evaluate repaired option groups on the final 1,000-row version.",
       "queue": []
     },
     {
       "current": "B13 history and sports",
-      "summary": "World-history100 and sports100 are authored and sealed; sports61actualURLs400shortquotes excludes inherited generated-summary citations. Film100 now separately accepted/reopened with the DocBrown1985 scope corrected. All100music rows have been personally read and50sources reopened; nine requested citation/scope revisions await fresh acceptance.",
-      "next": "Finish current-hash film/music review evidence and freshly recheck every requested author change.",
+      "summary": "All 100 movie and 100 music questions have current independent acceptance and source reopens after ten precise repairs. World history and sports are being checked by a different reviewer. That fresh pass found a repeated Elizabeth I fact, a Timurid alternative that could also fit, and four Mehmed II source-dependency problems; this author is correcting them.",
+      "next": "Complete requested history/sports author repairs and independently adjudicate all remaining second-half similarity flags. Recheck music length repairs before accepting their changed hashes.",
       "queue": []
     },
     {
       "current": "B13 world/nature review",
-      "summary": "Root completed nature100 fresh acceptances plus200root-author rows passed the separate reviewer. World-geography100 is author-sealed; root actually reopened all53selectedURLs with HTTP200 and is now checking every question, alternative, fact and source context.",
-      "next": "Record real world-geography counterexamples and dependencies, require narrow author repairs, and recheck each changed exact version. Keep dashboard/GitHub updates current.",
+      "summary": "Root actually reopened all 53 world-geography URLs, read all 100 questions and both contexts, and recovered 327 short quotation fields. The separate manual result is 78 acceptances and 22 required changes; 17 involve source support, independence or factual scope. The preceding nature pass closed all 100 factual reviews while preserving every earlier rejection.",
+      "next": "Freshly read all changed world and nature versions, challenge the alternatives and factual scope, reopen new source URLs, and retain old hashes before any final seal. Publish dashboard/GitHub milestones.",
       "queue": []
     },
     {
       "current": "B04",
-      "summary": "Turn-flow PR9 head a84fd4e passes19suites1,201cases72hashes;33/95claims now confirmed,62incomplete,sixBonuscriteria and allnine tie rules unresolved. B01 external e33a588 was preserved and is green; further actual retrievals found no valid closure of its12 research gaps. Worker now recovers independent board-layout evidence.",
-      "next": "Seek actual independent corroboration for board facts without inventing numbered adjacency; publish only supported narrow improvements.",
-      "queue": []
+      "summary": "Board-layout PR18 head 484dbbf passed 25 suites and 5,407 cases. Boo Shop and Pro Homestretch now have independent corroboration, raising complete facts from 29 to 31 of 518. All 22 retained source URLs and 10 maps were actually reopened twice. Nine conflicts, 477 single-source facts, one unknown event and numbered map topology remain unresolved. Turn-flow PR9 remains green at 33/95 confirmed claims.",
+      "next": "This worker is recovering specific remaining minigame facts from independent original articles, preserving all 857 existing gaps until actual evidence supports a closure.",
+      "queue": [
+        "B03 minigame research"
+      ]
     },
     {
       "current": "B20",
-      "summary": "CPU-strategy PR17 head4f030d4 is green for original1.2Mstates30Ktoygames75mutants44quote recoveries49hashes. Two scoped fact closures reduce research gaps26to24. Name-filter PR2 head04f8ece remains draft: one hosted0.089284ms call exceeds original0.05ms maximum despite full correctness. This worker now researches modes.",
-      "next": "Recover original mode rules and TV corroboration; retain unexecuted phone/TV plans as proposals and preserve remaining source conflicts.",
+      "summary": "Modes PR16 head de8cc669 passed 19 suites and 2,947 cases. Four actual closures cover Pro Rules length/unlock and Coaster timeout/player counts: 60/85 rules corroborated, 23 single-source and two conflicting. All 84 empty field slots and all unexecuted phone/TV plans remain explicit. CPU PR17 remains green with 24 research gaps; name-filter PR2 still exceeds the literal 0.05 ms timing gate.",
+      "next": "Independently audit trivia delivery coverage, review/hash freshness and original full acceptance checks after the final version is held. Flag concrete missing evidence without treating schema success as factual proof.",
       "queue": []
     }
   ]
