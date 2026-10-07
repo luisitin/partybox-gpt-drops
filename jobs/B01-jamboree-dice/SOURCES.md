@@ -392,3 +392,7 @@ Pass 1: `reports/source-captures/new-source-nintendo-tv.json`. Pass 2: `reports/
 | F34 | Turbo Dice reportedly still allows choosing a route at junctions. | S14 | single-source | medium |
 
 Ten targeted follow-up searches examined 50 result slots, alongside two initial ten-result searches. Overlap and mirrors were rejected; this is 70 reviewed search result slots, not 70 distinct publications. The ten targeted follow-up searches and unsuccessful leads are archived; the two initial searches are retained in the tool transcript. The matching Double Dice player report promoted F05; missing specific bonuses and unresolved probabilities retain their recorded status.
+
+## Current source re-open status
+
+Two post-recovery passes retrieved all 25 accepted sources and matched their registered quotations; precise times/hashes and per-fact references are in reports/cloud-post-recovery-research.json. The original source-family assignments and unresolved statuses are unchanged. Rejected mirror S23 remains unavailable and is not independent corroboration.
