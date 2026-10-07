@@ -134,6 +134,12 @@ for job_id, title in jobs:
     if worker:
         work = f"**Active work:** {worker['summary']} **Next step:** {worker['next']} " + work
     matching_runs = [run for run in workflow_runs if run.get("head_sha") == head_sha and f"/{job_id}.yml" in run.get("path", "")]
+    if not matching_runs and head_sha and workflow:
+        try:
+            exact_runs = get_json(f"{API}/actions/runs?head_sha={head_sha}&per_page=100")["workflow_runs"]
+            matching_runs = [run for run in exact_runs if run.get("head_sha") == head_sha and f"/{job_id}.yml" in run.get("path", "")]
+        except Exception:
+            pass
     matching_runs.sort(key=lambda run: (run.get("run_number", 0), run.get("run_attempt", 0)), reverse=True)
     latest_run = matching_runs[0] if matching_runs else None
     if latest_run:
@@ -142,7 +148,7 @@ for job_id, title in jobs:
     elif not checks_available:
         checks = "GitHub check results could not be loaded."
     elif head_sha:
-        checks = f"No exact-commit check found in the latest 100 runs for `{head_sha[:7]}`."
+        checks = f"No exact-commit workflow result available for `{head_sha[:7]}`."
     else:
         checks = "No project commit to check yet."
     if pull and pull.get("draft"):
