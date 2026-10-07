@@ -76,7 +76,7 @@ for job_id, title in jobs:
         stage = "Completed"
     elif pull and pull["state"] == "open":
         stage = "Review"
-    elif branch:
+    elif branch or pull:
         stage = "Pipeline"
     else:
         stage = "Pre-pipeline"
@@ -111,6 +111,8 @@ for job_id, title in jobs:
             work += f", and {len(names) - 5} more"
     elif branch:
         work = "Branch is reserved, but has no commits beyond main."
+    elif pull and pull.get("state") == "closed":
+        work = "Previous pull request closed without merge; branch is no longer available."
     elif pull:
         work = "Pull request exists, but its branch is no longer available."
     else:
@@ -163,7 +165,7 @@ lines = [
     "## Stage meanings",
     "",
     "- **Pre-pipeline:** no job branch or pull request exists.",
-    "- **Pipeline:** a job branch exists, but its pull request is not open.",
+    "- **Pipeline:** a job branch exists, or a previous pull request was closed without merging.",
     "- **Review:** a pull request is open.",
     "- **Completed:** a pull request has been merged.",
     "",
