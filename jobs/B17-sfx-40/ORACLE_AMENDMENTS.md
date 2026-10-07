@@ -8,6 +8,12 @@ comparison, was:
 2f3121ed2c3d7563f5e46ed83715297dca0d0e051adc4fe43ea879e2893add15  ORACLE.md
 ```
 
+The exact original source is preserved as `reference.snapshot.ts.txt`.
+Its SHA256 is the original `625ea76450a7f7edf57a1637efae8bd037c0d5da5c889c6c0eba3d424fe22323`.
+The `.txt` suffix excludes it from TypeScript compilation. It was reconstructed
+by reversing the two documented amendments and its original hash was verified
+before writing the snapshot; the current `reference.ts` was left unchanged.
+
 After the seal, the coordinating agent reported that the public sound
 catalogue uses an empty `notes` array for sound kinds that do not select
 sequence notes. The oracle unnecessarily rejected that unused property.

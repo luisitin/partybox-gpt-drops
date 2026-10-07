@@ -2,15 +2,13 @@ import assert from 'node:assert/strict';
 import {readFile,writeFile,mkdir,readdir} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {probe,calibration,fftCheck,compareArrays,compareMeters,independentMaster,parsePng,rng,fade} from './check.mjs';
-import {referenceRaw,referenceMeter,referenceEncode,referenceDecode} from '../dist/reference.js';
+import {probe,calibration,fftCheck,compareArrays,compareMeters,independentMaster,independentMasterDetail,parsePng,rng} from './check.mjs';
+import {referenceRaw,referenceMeter,referenceEncode,referenceDecode,referenceFade} from '../dist/reference.js';
 import * as metering from '../dist/meter.js';import * as synthesis from '../dist/sfx.js';import * as wave from '../dist/wav.js';import * as spectrum from '../dist/spectrogram.js';
 import {mutations} from './mutations.mjs';
 const p={...metering,...synthesis,...wave,...spectrum};
 await mkdir('reports-run',{recursive:true});
 const hash=b=>createHash('sha256').update(b).digest('hex');
-function ffmpeg(bytes,name){const path=`reports-run/${name}.wav`;execFileSync(process.execPath,['-e',`require('node:fs').writeFileSync(process.argv[1],Buffer.from(process.argv[2],'base64'))`,path,Buffer.from(bytes).toString('base64')],{stdio:'pipe'});const run=execFileSync('ffmpeg',['-hide_banner','-nostats','-i',path,'-af','ebur128=peak=true','-f','null','-'],{encoding:'utf8',stdio:['ignore','pipe','pipe']});return run;}
-function ffmpegPath(path){try{const result=execFileSync('ffmpeg',['-hide_banner','-nostats','-i',path,'-af','ebur128=peak=true','-f','null','-'],{encoding:'utf8',stdio:['ignore','pipe','pipe']});return result;}catch(e){throw new Error(String(e.stderr));}}
 // stderr contains ebur128's summary. spawnSync supplies both streams without noisy output.
 import {spawnSync} from 'node:child_process';
 function external(path){const run=spawnSync('ffmpeg',['-hide_banner','-nostats','-i',path,'-af','ebur128=peak=true','-f','null','-'],{encoding:'utf8'});assert.equal(run.status,0,`ffmpeg ${run.stderr}`);const integrated=[...run.stderr.matchAll(/I:\s+(-?[\d.]+) LUFS/g)].at(-1),peak=[...run.stderr.matchAll(/Peak:\s+(-?[\d.]+) dBFS/g)].at(-1);assert.ok(integrated&&peak,'ffmpeg summary');return{lufs:Number(integrated[1]),truePeakDb:Number(peak[1]),summary:run.stderr.slice(run.stderr.lastIndexOf('Summary:'))};}
@@ -22,6 +20,7 @@ for(const seed of [1,2,3]){
  for(const sound of p.SOUNDS){
   const s=p.soundSeed(sound.id,seed),raw=p.synthesizeRaw(sound,p.seeded(s)),reference=referenceRaw(sound,rng(s));
   const rawError=compareArrays(raw,reference,1e-10,`${sound.id} raw`),out=p.synthesize(sound,p.seeded(s)),expected=independentMaster(reference);
+  assert.ok(referenceFade(out,240,independentMasterDetail(reference).preFadePeak),'full five ms edge envelope');
   const masterError=compareArrays(out,expected,1e-9,`${sound.id} mastered`),bytes=p.encodeWav(out),second=p.encodeWav(p.synthesize(sound,p.seeded(s)));
   assert.deepEqual(bytes,second,`${sound.id} regeneration`);assert.deepEqual(bytes,referenceEncode(out),`${sound.id} encoder`);
   const decoded=p.decodeWav(bytes),rw=referenceDecode(bytes);assert.equal(rw.rate,48000);assert.equal(rw.channels,1);assert.equal(rw.bits,16);compareArrays(decoded,rw.samples,0,`${sound.id} PCM`);
@@ -49,7 +48,7 @@ for(const seed of [1,2,3]){
  for(const bad of [NaN,-.1,1,Infinity])assert.throws(()=>p.synthesizeRaw(p.SOUNDS[0],()=>bad),RangeError);
  assert.throws(()=>p.finishAudio(new Float64Array(2399)),RangeError);assert.throws(()=>p.finishAudio(new Float64Array(144001)),RangeError);assert.throws(()=>p.finishAudio(new Float64Array(24000)),RangeError);
  const source=await Promise.all(['meter.ts','wav.ts','sfx.ts','spectrogram.ts','reference.ts'].map(f=>readFile(f,'utf8')));for(const text of source)assert.doesNotMatch(text,/Math\.random|Date\.now|from ['"](?:node:|[^.])/,'pure runtime source');
- const counts={independentRaw:40,independentMaster:40,independentWav:40,independentMeter:40,audioRequirements:40,fadeOperation:40,byteRegeneration:40,spectrogramPng:40,spectrogramRegeneration:40,externalFfmpeg:40,ebu3341MonoAdaptations:10,fftVsDft:6,invalidAndBoundary:49,probe:1};
+ const counts={independentRaw:40,independentMaster:40,independentWav:40,independentMeter:40,audioRequirements:40,fadeOperation:40,byteRegeneration:40,spectrogramPng:40,spectrogramRegeneration:40,externalFfmpeg:40,ebu3341MonoAdaptations:10,fftVsDft:6,invalidAndBoundary:53,probe:1};
  await writeFile(`reports-run/seed${seed}.json`,JSON.stringify({seed,command:'npm test',counts,sounds:rows,ebu,passed:true},null,2)+'\n');
  console.log(`Seed ${seed} passed: all 40 sounds; EBU rebuilt subset 10/10; external40/40.`);
 }
