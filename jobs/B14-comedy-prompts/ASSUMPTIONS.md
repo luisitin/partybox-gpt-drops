@@ -1,0 +1,14 @@
+# Assumptions
+
+- Adult friends in the US are the audience; no prompt involves minors.
+- The 90-character limit counts Unicode code points; authored text uses ASCII.
+- "At most 3 prompts per named brand/person" applies across the combined final
+  1,200 prompts, not separately by genre. Named shows, chains, organizations, and
+  recognizable characters will also receive canonical reference keys.
+- Similarity must be reported with a documented deterministic method. Common
+  most-likely wording is structural boilerplate and also gets a separate scan.
+- The two grading passes must be real editorial passes, each with per-row
+  reasons. The second reviewer should not read the first author's grades.
+- Scenarios are explicitly fictional creative writing. There are no factual
+  trivia assertions to cite; research source verification is inapplicable to
+  fictional premises. Any factual note added later will require real citations.
