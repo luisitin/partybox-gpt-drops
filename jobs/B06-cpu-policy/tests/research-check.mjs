@@ -1,0 +1,5 @@
+import fs from'node:fs';import assert from'node:assert/strict';import Ajv from'ajv';
+export function researchCheck(){const data=JSON.parse(fs.readFileSync('research.json')),schema=JSON.parse(fs.readFileSync('research.schema.json'));const validate=new Ajv({allErrors:true,strict:true}).compile(schema);assert.ok(validate(data),JSON.stringify(validate.errors));
+ const ids=new Set;for(const row of data.rows){assert.ok(!ids.has(row.id));ids.add(row.id);for(const e of row.evidence){const s=data.sources.find(x=>x.id===e.source);assert.ok(s&&s.quotes[e.quote]);assert.ok(s.quotes[e.quote].split(/\s+/).length<=25);}
+ if(row.status!=='unverified')assert.ok(new Set(row.evidence.map(e=>data.sources.find(s=>s.id===e.source).author)).size>=2,'two independent named authors');}
+ const gaps=data.rows.filter(r=>r.status==='unverified').map(r=>r.id);const result={validator:'Ajv 8.17.1',schemaValid:true,rows:data.rows.length,sources:data.sources.length,coverageGaps:gaps,strictResearchAcceptance:gaps.length===0?'passed':'NOT_MET'};console.log(JSON.stringify(result));return result;}

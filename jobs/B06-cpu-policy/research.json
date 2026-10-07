@@ -1,0 +1,603 @@
+{
+  "edition": "Super Mario Party Jamboree original Switch base game",
+  "sources": [
+    {
+      "id": "N",
+      "author": "Nintendo",
+      "url": "https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Super-Mario-Party-Jamboree-2591147.html",
+      "quotes": {
+        "setting": "Configure the difficulty of CPU players"
+      }
+    },
+    {
+      "id": "T",
+      "author": "TechRadar reviewer Rhys Wood",
+      "url": "https://www.techradar.com/gaming/nintendo/super-mario-party-jamboree-plus-jamboree-tv-review",
+      "quotes": {
+        "setting": "allows you to adjust the difficulty of CPU"
+      }
+    },
+    {
+      "id": "B",
+      "author": "Reddit Burritozi11a",
+      "url": "https://www.reddit.com/r/MARIOPARTY/comments/1g862fp/ai_in_jamboree_plus_a_surprise/",
+      "quotes": {
+        "branch": "avoid landing on unlucky spaces in branching paths",
+        "shop": "skip out on buying items if they're about to buy a star",
+        "hard": "especially when set to Hard difficulty or above",
+        "buddy": "use Jamboree buddies at the Boo"
+      }
+    },
+    {
+      "id": "A",
+      "author": "Reddit Tastana",
+      "url": "https://www.reddit.com/r/MARIOPARTY/comments/1h44ohe/list_things_you_noticed_about_the_cpus/",
+      "quotes": {
+        "branch": "always avoid landing on the Bowser Space",
+        "items": "The CPUs are very bad at at strategically using items.",
+        "custom": "If CPUs get Custom Dice Blocks, they will often not even use them.",
+        "luigi": "The CPU is ridiculously good at Luigi Rescue Operation on Master difficulty.",
+        "flying": "the CPU is pretty bad at the minigame even on Master",
+        "counter": "the thing about the bowser spaces on Bowser’s keep has not been what I observed."
+      }
+    },
+    {
+      "id": "P",
+      "author": "PlaySense reviewer Patrick Zwarts",
+      "url": "https://playsense.nl/600835/review-super-mario-party-jamboree/",
+      "quotes": {
+        "shop": "besluiten een item in de winkel aan te schaffen",
+        "buddy": "kunt kopen, kun je er dankzij je partner twee kopen in plaats van één."
+      }
+    },
+    {
+      "id": "L",
+      "author": "Nintendo Life reviewer PJ O'Reilly",
+      "url": "https://www.nintendolife.com/reviews/nintendo-switch/super-mario-party-jamboree",
+      "quotes": {
+        "buddy": "buy two stars at once"
+      }
+    },
+    {
+      "id": "M",
+      "author": "Reddit Necessary_Shit",
+      "url": "https://www.reddit.com/r/MARIOPARTY/comments/1hktj9s/playing_with_cpu/",
+      "quotes": {
+        "master": "I always play them on master and even then they make stupid decisions",
+        "minigame": "they’re hard when it comes to some games in jamboree tbh."
+      }
+    },
+    {
+      "id": "G",
+      "author": "GameFAQs Aurolis and Joel2K (distinct comments)",
+      "url": "https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80844196",
+      "quotes": {
+        "hard": "put up a great fight on Hard mode",
+        "item": "win a golden pipe 5 turns before the end and never use it."
+      }
+    },
+    {
+      "id": "S",
+      "author": "Speedrun.com Jamboree category moderators",
+      "url": "https://www.speedrun.com/supermariopartyjamboree?h=all-boards-party-rules-1p4c&x=xd1p0j7d-0nwmwkr8.qvvrnzrq-2lge9g78.1w4dk3mq",
+      "quotes": {
+        "names": "Easy Normal Hard Master"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "F01",
+      "topic": "difficulty",
+      "difficulties": [],
+      "claim": "CPU difficulty can be configured.",
+      "status": "verified-fact",
+      "confidence": "high",
+      "evidence": [
+        {
+          "source": "N",
+          "quote": "setting"
+        },
+        {
+          "source": "T",
+          "quote": "setting"
+        }
+      ],
+      "scope": "Nintendo documents the original Switch game; TechRadar reports the unchanged base game in the Switch 2 edition.",
+      "conflicts": []
+    },
+    {
+      "id": "F02",
+      "topic": "branches",
+      "difficulties": [
+        "hard"
+      ],
+      "claim": "Two independent players report CPU avoidance of harmful branch landings.",
+      "status": "corroborated-report",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source": "B",
+          "quote": "branch"
+        },
+        {
+          "source": "A",
+          "quote": "branch"
+        }
+      ],
+      "scope": "B reports Hard or above; A does not isolate difficulty. These describe different harmful spaces, without proving a universal avoidance rule.",
+      "conflicts": [
+        "C01"
+      ]
+    },
+    {
+      "id": "F03",
+      "topic": "items",
+      "difficulties": [],
+      "claim": "Two independent players report CPUs retaining usable items instead of using them.",
+      "status": "corroborated-report",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source": "A",
+          "quote": "custom"
+        },
+        {
+          "source": "G",
+          "quote": "item"
+        }
+      ],
+      "scope": "A describes Custom Dice, G describes a Golden Pipe. Neither provides a controlled frequency or complete difficulty matrix.",
+      "conflicts": [
+        "C02"
+      ]
+    },
+    {
+      "id": "F04",
+      "topic": "difficulty",
+      "difficulties": [
+        "hard"
+      ],
+      "claim": "Two independent players describe Hard CPUs as challenging or improved.",
+      "status": "corroborated-report",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source": "B",
+          "quote": "hard"
+        },
+        {
+          "source": "G",
+          "quote": "hard"
+        }
+      ],
+      "scope": "Subjective reports; no measured win rate or proof of a specific decision algorithm.",
+      "conflicts": [
+        "C02"
+      ]
+    },
+    {
+      "id": "F05",
+      "topic": "minigames",
+      "difficulties": [
+        "master"
+      ],
+      "claim": "Two independent players report that Master can be strong at some minigames without reliable board decisions.",
+      "status": "corroborated-report",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source": "A",
+          "quote": "luigi"
+        },
+        {
+          "source": "M",
+          "quote": "master"
+        },
+        {
+          "source": "M",
+          "quote": "minigame"
+        }
+      ],
+      "scope": "A names Luigi Rescue Operation; M is unspecific. No measured reaction times, precision or per-minigame rates.",
+      "conflicts": [
+        "C03"
+      ]
+    },
+    {
+      "id": "F06",
+      "topic": "buddy",
+      "difficulties": [],
+      "claim": "A Jamboree Buddy can enable purchasing two stars at a star encounter.",
+      "status": "verified-fact",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source": "P",
+          "quote": "buddy"
+        },
+        {
+          "source": "L",
+          "quote": "buddy"
+        }
+      ],
+      "scope": "General mechanic; this does not verify CPU buddy-route selection or purchase frequency. PlaySense quote is Dutch.",
+      "conflicts": []
+    },
+    {
+      "id": "F07",
+      "topic": "shop",
+      "difficulties": [
+        "hard"
+      ],
+      "claim": "Reports about reserving star money while shopping conflict.",
+      "status": "conflicting-reports",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source": "B",
+          "quote": "shop"
+        },
+        {
+          "source": "P",
+          "quote": "shop"
+        }
+      ],
+      "scope": "B reports Hard+ skipping items near stars. P reports CPU shop spending below the star budget regardless of chosen difficulty. Exact coin thresholds and rates are unresolved.",
+      "conflicts": [
+        "C04"
+      ]
+    },
+    {
+      "id": "F08",
+      "topic": "difficulty",
+      "difficulties": [
+        "easy",
+        "normal",
+        "hard",
+        "master"
+      ],
+      "claim": "The speedrun category selector lists Easy, Normal, Hard and Master.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source": "S",
+          "quote": "names"
+        }
+      ],
+      "scope": "Selector read directly, but a second independent source displaying all four labels together has not been recovered.",
+      "conflicts": []
+    },
+    {
+      "id": "F09",
+      "topic": "buddy",
+      "difficulties": [
+        "hard"
+      ],
+      "claim": "One player reports Hard+ CPUs using a Buddy at Boo.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source": "B",
+          "quote": "buddy"
+        }
+      ],
+      "scope": "One anecdote; no second independent corroboration or controlled difficulty comparison.",
+      "conflicts": []
+    },
+    {
+      "id": "G-easy-branches",
+      "topic": "branches",
+      "difficulties": [
+        "easy"
+      ],
+      "claim": "Exact easy CPU branches decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-easy-items",
+      "topic": "items",
+      "difficulties": [
+        "easy"
+      ],
+      "claim": "Exact easy CPU items decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-easy-shop",
+      "topic": "shop",
+      "difficulties": [
+        "easy"
+      ],
+      "claim": "Exact easy CPU shop decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-easy-stars",
+      "topic": "stars",
+      "difficulties": [
+        "easy"
+      ],
+      "claim": "Exact easy CPU stars decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-easy-buddy",
+      "topic": "buddy",
+      "difficulties": [
+        "easy"
+      ],
+      "claim": "Exact easy CPU buddy decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-easy-minigames",
+      "topic": "minigames",
+      "difficulties": [
+        "easy"
+      ],
+      "claim": "Exact easy CPU minigames decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-normal-branches",
+      "topic": "branches",
+      "difficulties": [
+        "normal"
+      ],
+      "claim": "Exact normal CPU branches decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-normal-items",
+      "topic": "items",
+      "difficulties": [
+        "normal"
+      ],
+      "claim": "Exact normal CPU items decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-normal-shop",
+      "topic": "shop",
+      "difficulties": [
+        "normal"
+      ],
+      "claim": "Exact normal CPU shop decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-normal-stars",
+      "topic": "stars",
+      "difficulties": [
+        "normal"
+      ],
+      "claim": "Exact normal CPU stars decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-normal-buddy",
+      "topic": "buddy",
+      "difficulties": [
+        "normal"
+      ],
+      "claim": "Exact normal CPU buddy decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-normal-minigames",
+      "topic": "minigames",
+      "difficulties": [
+        "normal"
+      ],
+      "claim": "Exact normal CPU minigames decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-hard-branches",
+      "topic": "branches",
+      "difficulties": [
+        "hard"
+      ],
+      "claim": "Exact hard CPU branches decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-hard-items",
+      "topic": "items",
+      "difficulties": [
+        "hard"
+      ],
+      "claim": "Exact hard CPU items decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-hard-shop",
+      "topic": "shop",
+      "difficulties": [
+        "hard"
+      ],
+      "claim": "Exact hard CPU shop decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-hard-stars",
+      "topic": "stars",
+      "difficulties": [
+        "hard"
+      ],
+      "claim": "Exact hard CPU stars decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-hard-buddy",
+      "topic": "buddy",
+      "difficulties": [
+        "hard"
+      ],
+      "claim": "Exact hard CPU buddy decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-hard-minigames",
+      "topic": "minigames",
+      "difficulties": [
+        "hard"
+      ],
+      "claim": "Exact hard CPU minigames decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-master-branches",
+      "topic": "branches",
+      "difficulties": [
+        "master"
+      ],
+      "claim": "Exact master CPU branches decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-master-items",
+      "topic": "items",
+      "difficulties": [
+        "master"
+      ],
+      "claim": "Exact master CPU items decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-master-shop",
+      "topic": "shop",
+      "difficulties": [
+        "master"
+      ],
+      "claim": "Exact master CPU shop decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-master-stars",
+      "topic": "stars",
+      "difficulties": [
+        "master"
+      ],
+      "claim": "Exact master CPU stars decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-master-buddy",
+      "topic": "buddy",
+      "difficulties": [
+        "master"
+      ],
+      "claim": "Exact master CPU buddy decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    },
+    {
+      "id": "G-master-minigames",
+      "topic": "minigames",
+      "difficulties": [
+        "master"
+      ],
+      "claim": "Exact master CPU minigames decision rules or measured probabilities remain unverified.",
+      "status": "unverified",
+      "confidence": "low",
+      "evidence": [],
+      "scope": "Coverage gap, not an asserted Nintendo rule. Public anecdotes do not supply a controlled numeric model.",
+      "conflicts": []
+    }
+  ]
+}

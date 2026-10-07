@@ -15,7 +15,8 @@ The host supplies actual effect estimates and legal-action flags.
 
 No action is possible with zero turns left. Branches require affordable cost;
 items and shop offers require legal=true and affordable cost. Shopping is disabled
-with three inventory items. Item and shop selection includes a null (decline)
+with three inventory items. When no actual item or shop action is eligible,
+return null without consuming a random draw. Item and shop selection includes a null (decline)
 option with utility zero. Branch selection includes null only if no branch is
 affordable. Input order determines tie order; null is last when included.
 
