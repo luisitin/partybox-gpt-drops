@@ -1,74 +1,193 @@
 # B19 verification ledger
 
-**Status: functional regression suite passes; the strict per-call latency requirement fails locally.**
+The complete functional, corpus-policy, independent differential and mutation
+suites passed for seeds 1, 2 and 3. **The unchanged literal 0.05 ms per-observation
+latency gate failed locally. This is an incomplete acceptance result.**
 
-Run: `npm test` from `jobs/B19-name-filter/`. This expands to `npm run build && node tests/run.mjs`; the build command is `tsc -p tsconfig.json`. All seeds are internal and mandatory. The table records the full local run of the final runtime implementation, before delivery-document sealing. The later tuple-only serialization of reviewed decisions does not change the runtime; the PR workflow reruns the complete final harness.
+Exact command: `npm test` from this job directory, expanding to
+`npm run build && node tests/run.mjs`. No corpus suite was skipped. The final
+source and full measured reports are committed in `results/`; new runs write
+`reports/latest/`. Clean local `npm ci --ignore-scripts --no-audit --no-fund`
+succeeded. The source compiler and each seed's repeated strict no-emit check
+use the pinned TypeScript 5.8.3 package.
 
-Runtime SHA-256: `858b265ffe53368e41b50bed4ccc0c0d37d9b12f3913abae2ce56dbe09b862a0`.
-Reference SHA-256: `962bab309ddf9cc2d8ccc7237f782d69db6aa2b603417f1a8935c3d5b167b5f6`.
-Environment: `{"node": "v22.16.0", "platform": "linux", "arch": "x64", "cpu": "INTEL(R) XEON(R) PLATINUM 8573C", "unicode": "16.0"}`.
+Runtime SHA256: `679235b2f6b3eed9c002d5f3c4d83e4ecae43f87a450351bea8ea2baf2fa0405`.
 
-## Every executed suite
+Sealed blind reference SHA256: `40449357a616619cc649d6b8efab2f6664a187de178511b8b0f17e28e92eea9a`.
 
-Unless the command column overrides it, the exact suite command is `node tests/run.mjs` (via `npm test`); it runs all three seeds, not a single-seed subset. `Cases` is per seed. `Passed 1/2/3` preserves failures.
+Executed environment: `{"node": "v24.19.0", "platform": "linux", "arch": "x64", "cpu": "INTEL(R) XEON(R) PLATINUM 8573C", "unicode": "17.0"}`.
 
-| Test name | Cases | Passed seed 1 / 2 / 3 | Command override |
-|---|---:|---|---|
-| public-corpus-acquisition (setup) | 1 | 1 (shared setup; cached corpus digests checked) | `python3 scripts/fetch-data.py` |
-| delivery-file-size-and-checksums | 2 | 2 / 2 / 2 |  |
-| immutable-return-values | 3 | 3 / 3 / 3 |  |
-| policy-copy-consistency-and-no-duplicate-terms | 3 | 3 / 3 / 3 |  |
-| strict-TypeScript | 1 | 1 / 1 / 1 | `tsc -p tsconfig.json --noEmit` |
-| generator-byte-identical-replay-and-coverage | 2 | 2 / 2 / 2 |  |
-| handwritten-format-and-Scunthorpe | 459 | 459 / 459 / 459 |  |
-| exhaustive-declared-single-glyph-substitution | 1371 | 1371 / 1371 / 1371 |  |
-| generated-obfuscations | 5000 | 5000 / 5000 / 5000 |  |
-| names-count-and-uniqueness | 2 | 2 / 2 / 2 |  |
-| names-reviewed-corpus-policy | 20000 | 20000 / 20000 / 20000 |  |
-| names-reviewed-baseline-no-stale-entries | 1 | 1 / 1 / 1 |  |
-| words-count-and-uniqueness | 2 | 2 / 2 / 2 |  |
-| words-reviewed-corpus-policy | 10000 | 10000 / 10000 / 10000 |  |
-| words-reviewed-baseline-no-stale-entries | 1 | 1 / 1 / 1 |  |
-| places-count-and-uniqueness | 2 | 2 / 2 / 2 |  |
-| places-reviewed-corpus-policy | 2000 | 2000 / 2000 / 2000 |  |
-| places-reviewed-baseline-no-stale-entries | 1 | 1 / 1 / 1 |  |
-| regex-vs-bitset-NFA-differential | 43830 | 43830 / 43830 / 43830 |  |
-| repeat-call-purity | 43830 | 43830 / 43830 / 43830 |  |
-| boolean-wrapper | 43830 | 43830 / 43830 / 43830 |  |
-| mutation-baseline-truth | 43830 | 43830 / 43830 / 43830 |  |
-| 25-real-executed-mutations | 25 | 25 / 25 / 25 |  |
-| runtime-gzip-size | 2 | 2 / 2 / 2 |  |
-| zero-runtime-dependencies-and-forbidden-APIs | 5 | 5 / 5 / 5 |  |
-| latency-every-observed-check-under-005ms | 10000 | 9984 / 9993 / 9981 |  |
+## Every executed suite, seed and exact command
 
-The local integrity row had no root manifest yet: it checked per-file size and generated a checksum inventory. Final SHA256SUMS.txt verification is rerun by CI after sealing; do not interpret the earlier row as verifying a file that did not yet exist.
+The acquisition setup verifies every pinned source and output digest, and
+selects all 20,000 names, 10,000 words and 2,000 places without moderation-based
+exclusion. Reviewed-policy passed counts include explicitly retained rejections;
+they are not all-allowed counts. Every differential input is also checked
+against the sealed reference; none is replaced with a sample.
 
-## Quantitative outcomes
+| Test | Cases | Passed | Failed | Seed | Exact command |
+| --- | ---: | ---: | ---: | --- | --- |
+| public-corpus-acquisition | 1 | 1 | 0 | shared setup | `node tests/run.mjs` |
+| delivery-file-size-and-checksums | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
+| immutable-return-values | 3 | 3 | 0 | 1 | `node tests/run.mjs` |
+| policy-copy-consistency-and-no-duplicate-terms | 3 | 3 | 0 | 1 | `node tests/run.mjs` |
+| strict-TypeScript | 1 | 1 | 0 | 1 | `tsc -p tsconfig.json --noEmit` |
+| generator-byte-identical-replay-and-coverage | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
+| handwritten-format-and-Scunthorpe | 459 | 459 | 0 | 1 | `node tests/run.mjs` |
+| exhaustive-declared-single-glyph-substitution | 1,371 | 1,371 | 0 | 1 | `node tests/run.mjs` |
+| generated-obfuscations | 5,000 | 5,000 | 0 | 1 | `node tests/run.mjs` |
+| names-count-and-uniqueness | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
+| names-reviewed-corpus-policy | 20,000 | 20,000 | 0 | 1 | `node tests/run.mjs` |
+| names-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 1 | `node tests/run.mjs` |
+| words-count-and-uniqueness | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
+| words-reviewed-corpus-policy | 10,000 | 10,000 | 0 | 1 | `node tests/run.mjs` |
+| words-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 1 | `node tests/run.mjs` |
+| places-count-and-uniqueness | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
+| places-reviewed-corpus-policy | 2,000 | 2,000 | 0 | 1 | `node tests/run.mjs` |
+| places-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 1 | `node tests/run.mjs` |
+| regex-vs-bitset-NFA-differential | 43,830 | 43,830 | 0 | 1 | `node tests/run.mjs` |
+| sealed-blind-reference-differential | 43,830 | 43,830 | 0 | 1 | `node tests/run.mjs` |
+| repeat-call-purity | 43,830 | 43,830 | 0 | 1 | `node tests/run.mjs` |
+| boolean-wrapper | 43,830 | 43,830 | 0 | 1 | `node tests/run.mjs` |
+| mutation-baseline-truth | 43,830 | 43,830 | 0 | 1 | `node tests/run.mjs` |
+| 25-real-executed-mutations | 25 | 25 | 0 | 1 | `node tests/run.mjs` |
+| runtime-gzip-size | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
+| zero-runtime-dependencies-and-forbidden-APIs | 5 | 5 | 0 | 1 | `node tests/run.mjs` |
+| latency-every-observed-check-under-005ms | 10,000 | 9,978 | 22 | 1 | `node tests/run.mjs` |
+| delivery-file-size-and-checksums | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
+| immutable-return-values | 3 | 3 | 0 | 2 | `node tests/run.mjs` |
+| policy-copy-consistency-and-no-duplicate-terms | 3 | 3 | 0 | 2 | `node tests/run.mjs` |
+| strict-TypeScript | 1 | 1 | 0 | 2 | `tsc -p tsconfig.json --noEmit` |
+| generator-byte-identical-replay-and-coverage | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
+| handwritten-format-and-Scunthorpe | 459 | 459 | 0 | 2 | `node tests/run.mjs` |
+| exhaustive-declared-single-glyph-substitution | 1,371 | 1,371 | 0 | 2 | `node tests/run.mjs` |
+| generated-obfuscations | 5,000 | 5,000 | 0 | 2 | `node tests/run.mjs` |
+| names-count-and-uniqueness | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
+| names-reviewed-corpus-policy | 20,000 | 20,000 | 0 | 2 | `node tests/run.mjs` |
+| names-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 2 | `node tests/run.mjs` |
+| words-count-and-uniqueness | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
+| words-reviewed-corpus-policy | 10,000 | 10,000 | 0 | 2 | `node tests/run.mjs` |
+| words-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 2 | `node tests/run.mjs` |
+| places-count-and-uniqueness | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
+| places-reviewed-corpus-policy | 2,000 | 2,000 | 0 | 2 | `node tests/run.mjs` |
+| places-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 2 | `node tests/run.mjs` |
+| regex-vs-bitset-NFA-differential | 43,830 | 43,830 | 0 | 2 | `node tests/run.mjs` |
+| sealed-blind-reference-differential | 43,830 | 43,830 | 0 | 2 | `node tests/run.mjs` |
+| repeat-call-purity | 43,830 | 43,830 | 0 | 2 | `node tests/run.mjs` |
+| boolean-wrapper | 43,830 | 43,830 | 0 | 2 | `node tests/run.mjs` |
+| mutation-baseline-truth | 43,830 | 43,830 | 0 | 2 | `node tests/run.mjs` |
+| 25-real-executed-mutations | 25 | 25 | 0 | 2 | `node tests/run.mjs` |
+| runtime-gzip-size | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
+| zero-runtime-dependencies-and-forbidden-APIs | 5 | 5 | 0 | 2 | `node tests/run.mjs` |
+| latency-every-observed-check-under-005ms | 10,000 | 9,992 | 8 | 2 | `node tests/run.mjs` |
+| delivery-file-size-and-checksums | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
+| immutable-return-values | 3 | 3 | 0 | 3 | `node tests/run.mjs` |
+| policy-copy-consistency-and-no-duplicate-terms | 3 | 3 | 0 | 3 | `node tests/run.mjs` |
+| strict-TypeScript | 1 | 1 | 0 | 3 | `tsc -p tsconfig.json --noEmit` |
+| generator-byte-identical-replay-and-coverage | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
+| handwritten-format-and-Scunthorpe | 459 | 459 | 0 | 3 | `node tests/run.mjs` |
+| exhaustive-declared-single-glyph-substitution | 1,371 | 1,371 | 0 | 3 | `node tests/run.mjs` |
+| generated-obfuscations | 5,000 | 5,000 | 0 | 3 | `node tests/run.mjs` |
+| names-count-and-uniqueness | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
+| names-reviewed-corpus-policy | 20,000 | 20,000 | 0 | 3 | `node tests/run.mjs` |
+| names-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 3 | `node tests/run.mjs` |
+| words-count-and-uniqueness | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
+| words-reviewed-corpus-policy | 10,000 | 10,000 | 0 | 3 | `node tests/run.mjs` |
+| words-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 3 | `node tests/run.mjs` |
+| places-count-and-uniqueness | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
+| places-reviewed-corpus-policy | 2,000 | 2,000 | 0 | 3 | `node tests/run.mjs` |
+| places-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 3 | `node tests/run.mjs` |
+| regex-vs-bitset-NFA-differential | 43,830 | 43,830 | 0 | 3 | `node tests/run.mjs` |
+| sealed-blind-reference-differential | 43,830 | 43,830 | 0 | 3 | `node tests/run.mjs` |
+| repeat-call-purity | 43,830 | 43,830 | 0 | 3 | `node tests/run.mjs` |
+| boolean-wrapper | 43,830 | 43,830 | 0 | 3 | `node tests/run.mjs` |
+| mutation-baseline-truth | 43,830 | 43,830 | 0 | 3 | `node tests/run.mjs` |
+| 25-real-executed-mutations | 25 | 25 | 0 | 3 | `node tests/run.mjs` |
+| runtime-gzip-size | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
+| zero-runtime-dependencies-and-forbidden-APIs | 5 | 5 | 0 | 3 | `node tests/run.mjs` |
+| latency-every-observed-check-under-005ms | 10,000 | 9,987 | 13 | 3 | `node tests/run.mjs` |
 
-- Generated obfuscations: 5,000 unique in-domain strings per seed, 15,000 total; misses = 0 for seeds 1, 2, 3. All 63 blocked terms are covered in every seed. Generator replay is byte-identical.
-- Differential comparisons: 43,830 inputs per seed, 131,490 total; zero disagreements. This includes every 32,000-entry corpus run, handwritten/exception cases, all declared one-glyph substitutions, generated obfuscations and random Unicode fuzz.
-- Corpus allowances per seed: 19,989/20,000 Census names; 9,951/10,000 word tokens; 1,943/2,000 place names. These are the actual accepted counts, not the reviewed-policy passed counts.
-- Remaining rejections: 11 real-name false positives; 48 deliberate lexical word rejections; one overlength word; 57 overlength places. Every original string and reason is in data/kept-rejections.json. No corpus entries were dropped or replaced.
-- All 289 exact benign exceptions are exercised. Scunthorpe-style cases and the Bob/boob regression are explicit.
+## Independent reference and complete behavioral results
 
-Size: source 6485 bytes / 3040 bytes gzipped; compiled runtime 5420 bytes / 2393 bytes gzipped. The gate is 6,000 bytes for both gzip artifacts, level 9.
+The independent author read only the original B19 instructions, repository
+README, supplied public contract and `data/policy.json` before authoring and
+sealing `tests/blind/reference.mjs`. The author did not inspect production,
+existing tests/references or prior PR descriptions during authoring.
+`tests/blind/AUTHORING.md`, `SELFCHECK.json` and `SEALED-SHA256SUMS.txt` retain
+provenance, 1,000 passed author self-checks and the original reported hashes.
+Production inspection and integration began after sealing; the reference stayed
+unchanged. The original bitset-NFA is a supplemental reference and is not
+asserted to have blind authorship.
 
-## Latency (milliseconds)
+- All 43,830 inputs per seed agree with the sealed reference: **131,490 complete
+  independent comparisons, zero disagreements**. The historical NFA also
+  agrees on every case. This includes all 32,000 corpus inputs, generated
+  obfuscations, fixed/Scunthorpe/exception cases, declared single-glyph mappings
+  and Unicode fuzz.
+- Each seed has 5,000 unique generated in-domain obfuscations, covering all 63
+  terms: **15,000 total, zero misses**. Generator replay is byte-identical.
+- All 1,371 declared single-glyph substitutions and all 289 exact benign
+  exceptions are exercised at every seed. Original required repeats are
+  preserved; Bob/boob and ambiguous i/l have explicit regressions.
+- Each seed allows **19,989/20,000 Census names, 9,951/10,000 words, and
+  1,943/2,000 places**. Retained rejections are 11 names, 48 lexical words, one
+  overlength word and 57 overlength places. All originals and explanations
+  remain in `data/kept-rejections.json`; actual per-seed rejection reports are
+  delivered in `results/`. Zero unexpected rejections and zero stale reviewed
+  rows were observed. No entry was dropped, changed or silently truncated.
+
+## Size, dependencies and source optimization
+
+Source: **6,838 bytes / 3,186 gzip bytes**. Emitted runtime: **5,897 bytes / 2,572 gzip bytes**. Both gzip artifacts are gated at 6,000 bytes, level 9.
+
+Runtime has zero dependencies, imports, ambient RNG or clocks. It adds no
+result cache or benchmark-specific path. Printable ASCII avoids unnecessary
+Unicode normalization/replacement. Plain ASCII words enter the matcher without
+building a new mapped string. Character-property regexes are compiled once at
+module initialization, and one scan handles forward and reversed patterns.
+All original policy decisions and guards retain the complete differential and
+mutation checks above.
+
+## Literal latency results in milliseconds
 
 | Seed | Calls | Mean | p50 | p99 | Maximum | Above 0.05 |
-|---|---:|---:|---:|---:|---:|---:|
-| 1 | 10000 | 0.001798480 | 0.001243000 | 0.004713000 | 0.162469000 | 16 |
-| 2 | 10000 | 0.001588267 | 0.001173000 | 0.004252000 | 0.468655000 | 7 |
-| 3 | 10000 | 0.001722202 | 0.001176000 | 0.004235000 | 0.473782000 | 19 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 1 | 10000 | 0.003667145 | 0.000847000 | 0.005783000 | 3.485158000 | 22 |
+| 2 | 10000 | 0.001489924 | 0.000635000 | 0.003996000 | 3.132775000 | 8 |
+| 3 | 10000 | 0.002425181 | 0.000642000 | 0.004188000 | 3.852742000 | 13 |
 
-No outliers are discarded. The average includes harness overhead; individual observations enclose the actual check and result access. Each seed warms up 100,000 calls, then measures 10,000 seeded mixed inputs. These observations do not establish a worst-case execution-time proof. The maximum gate fails npm test here.
+Each seed warms 100,000 calls and measures 10,000 seeded mixed inputs, using the
+original unchanged timer window around the call and result access. No outlier
+is discarded or retimed. No average or percentile substitutes for the maximum.
+Inputs, indices and times for all measured failures are collected only after
+measurement and retained in `results/benchmark-seed*.json`. Outlier witnesses
+include ordinary ASCII names as well as obfuscated Unicode strings.
 
-## All 25 executed mutations
+A separate `node --trace-gc tests/run.mjs` diagnostic retained GC events and
+slow-input witnesses; it was not substituted for the full `npm test` result.
+The direct invocation exposed an ambient tsc-path dependency in the old harness;
+the harness now invokes the pinned compiler through Node, so complete direct
+invocations also use the correct compiler. The profile does not establish a
+hardware-independent bound or prove the cause of every timing outlier.
 
-Each mutant replaces exactly one unique compiled-code anchor, imports the modified module successfully, and executes the entire baseline-passing case set. A preexisting baseline error or syntax error cannot count as a kill. Each runs at all three seeds; all 75 executions were killed. The first witness below is from seed 1. Full witness/disagreement logs are in the CI artifact and delivery reports.
+Historical failures remain in `LOOP.md`. The first optimized hosted run,
+https://github.com/luisitin/partybox-gpt-drops/actions/runs/37637661735,
+failed only latency: one 0.065583 ms call in seed 1 and one 0.308360 ms call in
+seed 3; seed 2's maximum was 0.013380 ms. Later source improvements do not erase
+those observed failures. PR #2 records the inspected final-head hosted result.
 
-| ID | Deliberate bug | First witness | Killed seeds |
-|---|---|---|---|
+## All 25 actual executed mutations
+
+Each mutant replaces one unique emitted-code anchor, parses/imports successfully,
+and executes the complete baseline-passing case set. A baseline failure or
+syntax/import error cannot count as a kill. All 25 mutations were caught in
+all three seeds: **75 executed kills, zero survivors**. Source digests, numbers
+of disagreements and first witnesses are retained in each delivered mutation
+report. The normalization and reversed-scan anchors were updated to the actual
+optimized expressions while preserving the same deliberate bugs.
+
+| ID | Deliberate bug | First seed-1 witness | Caught seeds |
+| --- | --- | --- | --- |
 | M01 | Remove lowercasing | `"Lana"` | 1, 2, 3 |
 | M02 | Lose compatibility normalization | `"\uff53\uff45\uff58"` | 1, 2, 3 |
 | M03 | Keep combining marks | `"s\u0301ex"` | 1, 2, 3 |
@@ -86,7 +205,7 @@ Each mutant replaces exactly one unique compiled-code anchor, imports the modifi
 | M15 | Resolve ambiguous one only as i | `"c1it"` | 1, 2, 3 |
 | M16 | Drop Cyrillic e mapping | `"s\u0435x"` | 1, 2, 3 |
 | M17 | Drop Greek epsilon mapping | `"s\u03b5x"` | 1, 2, 3 |
-| M18 | Disable reversed scan | `"Lana"` | 1, 2, 3 |
+| M18 | Disable reversed scan | `"Titus"` | 1, 2, 3 |
 | M19 | Disable repetition at single letters | `"Bonner"` | 1, 2, 3 |
 | M20 | Delete a blocked lexicon entry | `"fuck"` | 1, 2, 3 |
 | M21 | Use substring rather than whole-word exceptions | `"Hancocksex"` | 1, 2, 3 |
@@ -95,35 +214,35 @@ Each mutant replaces exactly one unique compiled-code anchor, imports the modifi
 | M24 | Silently delete unmapped letters | `"s\u4e2dex"` | 1, 2, 3 |
 | M25 | Forget required original double letters | `"Bob"` | 1, 2, 3 |
 
-## GitHub CI and provenance
+## Packaging and hosted CI
 
-PR: https://github.com/luisitin/partybox-gpt-drops/pull/2
-Initial unrefined full CI run: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37568665319 (failed). It confirmed 0 generated misses and exposed 84 name, 92 word and 61 place rejections plus three seed-1 timing outliers. That report is not substituted for the final implementation.
+`SHA256SUMS.txt` covers all delivered source, documentation and measured report
+files plus `../../.github/workflows/B19.yml`, excluding itself and generated
+`reports/latest`, `dist`, `node_modules` and the separately snapshot-locked
+corpus cache. `sha256sum -c SHA256SUMS.txt` verifies the final delivery.
 
-The PR description links the inspected final workflow run and states its real conclusion. Every CI run executes npm test, uploads all reports/source/corpus cache even on failure, and has no continue-on-error. A green link is provided only if GitHub actually reports success; the local failed maximum remains disclosed even then.
+The scoped read-only Ubuntu workflow uses actions/* major pins and a 30-minute
+timeout. It performs clean `npm ci --ignore-scripts --no-audit --no-fund`, runs
+the full `npm test`, and uploads fresh reports/corpora even on failure. There is
+no continue-on-error. The PR description gives the observed exact final head,
+run URL and actual conclusion. A green link is asserted only for a run GitHub
+reports successful, and cannot erase separately recorded local failures.
 
-## UNVERIFIED / unmet requirements
+## UNVERIFIED and unmet acceptance requirements
 
-- The original regex/NFA authorship limitation is resolved by the new sealed independent reference; every full case is now compared with it. The historical NFA remains supplemental.
-- Literal every-name/every-word/every-place allowance: NOT fulfilled. Identical-string conflicts and overlength inputs remain rejected with per-row explanations. Reviewed-policy passed counts must not be mistaken for all-allowed counts.
-- At most 0.05 ms for every call: NOT fulfilled by the local observations; hardware-independent hard real-time behavior is not established.
-- Complete slang, languages, Unicode homoglyphs, phonetic/multi-character substitutions, and unseen adversarial obfuscations: not exhaustively verified. The finite policy and transformations are fully declared.
-- Zero false positives on unseen names: not established. Exact exception spellings were refined using this corpus, so it is a regression set, not held-out evidence.
-- A certified combined 20,000-most-common current U.S. first/last ranking: not established. The exact historical Census selection rule is disclosed in SOURCES.md.
-- Future availability of unchanged external corpora: not guaranteed. Changed hashes fail closed; use the retained cache for snapshot replay.
-
-## Resumed verification milestone
-
-A sealed independent author wrote `tests/blind/reference.mjs` before production
-or previous test/reference access. Its original SHA256 is
-`40449357a616619cc649d6b8efab2f6664a187de178511b8b0f17e28e92eea9a`.
-The full resumed run on Node v24.19.0 retained all original counts and added
-43,830 blind-reference comparisons per seed. All 131,490 blind comparisons,
-15,000 generated obfuscations and 75 executed mutants passed. Census/word/place
-accepted counts remained 19,989 / 9,951 / 1,943 per seed.
-
-The printable-ASCII normalization and single regex scan reduced measured
-median latency, but the first local optimized run still failed the unchanged
-literal maximum: 20 / 12 / 24 calls over 0.05 ms, maxima 0.379979 / 0.274470 /
-0.759725 ms. These are measured failures, not an all-pass claim. Final measured
-reports and hosted status will be published after the final source is tested.
+- The literal all-name/all-word/all-place allowance target is not fulfilled.
+  Identical-string conflicts such as Lana/reversed anal and Bonner/repeated
+  boner, actual blocked words and overlength inputs remain rejected with
+  per-row explanations. Reviewed-policy passes do not imply universal allowance.
+- The 0.05 ms maximum is not fulfilled by the final local measurements. A hard
+  real-time wall-clock bound on arbitrary hardware, scheduler or garbage
+  collection conditions is not established.
+- All languages, slang, Unicode lookalikes, intent and unseen adversarial
+  transformations are not exhaustively verified. This is the explicit finite
+  English policy and declared transformations.
+- Zero unseen-name false positives are not established. Exact exceptions were
+  refined on these corpora, so this is regression coverage, not held-out evidence.
+- The historical 5,000-given-plus-distinct-surname selection is not a certified
+  current combined U.S. top-20,000 ranking; selection and sources are disclosed.
+- Future availability of identical upstream snapshots is not guaranteed.
+  Changed hashes fail closed; the retained cache reproduces the measured data.

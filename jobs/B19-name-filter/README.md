@@ -26,6 +26,8 @@ and all mutation witnesses are written to `reports/latest/`. CI uploads these
 alongside the source files and cached public corpora, including on failure.
 Upstream data changes fail the snapshot lock rather than silently changing tests.
 GeoNames is a daily source: a future fresh download may need the retained cache.
+The final measured local summary, benchmarks, mutation witnesses and all corpus
+rejections are also committed in `results/`. Its timing failures remain visible.
 
 ## API
 
@@ -59,6 +61,9 @@ false positives are regression results, not held-out generalization estimates.
 
 The 0.05 ms gate measures individual calls without discarding outliers. Failures
 stay failures; an average or p99 does not substitute for the requested maximum.
+The final local run still fails that maximum, so the PR remains a draft with
+unmet acceptance requirements. It passes every complete behavioral and mutation
+suite, including all comparisons with the sealed independent reference.
 The sealed reference was authored from the original instructions, public API
 contract and policy JSON before its author read production or existing tests.
 All 43,830 inputs per seed are compared with it, in addition to the historical

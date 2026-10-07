@@ -27,6 +27,14 @@ const pattern = (terms: readonly string[]): string => terms.map(term => term.rep
   return (c === 'i' || c === 'l' ? `[${c}#]` : c) + (run.length === 1 ? '+' : `{${run.length},}`);
 })).join('|');
 const BAD = new RegExp(pattern(TERMS) + '|' + pattern(TERMS.map(term => [...term].reverse().join(''))));
+const CONTROLS = /[\u0000-\u001f\u007f-\u009f\ud800-\udfff\u202a-\u202e\u2066-\u2069]/u;
+const ASCII = /^[\x20-\x7e]*$/;
+const WORD = /^[a-z]+$/;
+const ASCII_CONTENT = /[a-z0-9]/;
+const CONTENT = /[\p{L}\p{N}]/u;
+const MARKS = /\p{M}/gu;
+const FORMATS = /\p{Cf}/gu;
+const SEPARATOR = /^[\p{P}\p{S}\p{Z}]$/u;
 const OK: NameResult = Object.freeze({ ok: true });
 const FAILURE = {
   type: Object.freeze({ ok: false, reason: 'type' } as const),
@@ -44,21 +52,24 @@ export function nameFilter(input: unknown): NameResult {
   if (typeof input !== 'string') return FAILURE.type;
   if (input.length > 32 || (input.length > 16 && [...input].length > 16)) return FAILURE.length;
   // Reject unpaired surrogates, C0/C1 controls, and bidi formatting controls.
-  if (/[\u0000-\u001f\u007f-\u009f\ud800-\udfff\u202a-\u202e\u2066-\u2069]/u.test(input))
+  if (CONTROLS.test(input))
     return FAILURE.control;
-  const ascii = /^[\x20-\x7e]*$/.test(input);
+  const ascii = ASCII.test(input);
   let plain = (ascii ? input : input.normalize('NFKD')).toLowerCase();
-  if (!ascii) plain = plain.replace(/\p{M}/gu, '').replace(/\p{Cf}/gu, '');
+  if (!ascii) plain = plain.replace(MARKS, '').replace(FORMATS, '');
   plain = plain.trim();
-  if (!(ascii ? /[a-z0-9]/.test(plain) : /[\p{L}\p{N}]/u.test(plain))) return FAILURE.empty;
+  if (!(ascii ? ASCII_CONTENT.test(plain) : CONTENT.test(plain))) return FAILURE.empty;
   if (SAFE.has(plain)) return OK;
-  let text = '';
-  for (const c of plain) {
+  let text = plain;
+  if (!WORD.test(plain)) {
+   text = '';
+   for (const c of plain) {
     if (c >= 'a' && c <= 'z') { text += c; continue; }
     const mapped = MAP.get(c);
     if (mapped !== undefined) text += mapped;
-    else if (c <= '\x7f' || /^[\p{P}\p{S}\p{Z}]$/u.test(c)) continue;
+    else if (c <= '\x7f' || SEPARATOR.test(c)) continue;
     else text += '~'; // Unmapped letters are barriers, never silently deleted.
+   }
   }
   if (BAD.test(text))
     return FAILURE.blocked;

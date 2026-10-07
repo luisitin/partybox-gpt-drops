@@ -23,3 +23,20 @@ and hosted execution will independently measure the final source.
 All original upstream bytes matched the pinned snapshot hashes, including
 GeoNames, and the complete 32,000-row cache was recovered without changing the
 lock. Clean local `npm ci --ignore-scripts --no-audit --no-fund` succeeded.
+
+## Further allocation reduction and retained final measurements
+
+Moved character-property regexes to module initialization and added a plain
+ASCII-word path that matches the already-normalized text directly. Updated
+mutation anchors retain the original mark/format/reversed-scan defects. The
+strict type-check invocation now resolves the pinned compiler without relying
+on an ambient executable path. The complete final local npm test still passes
+every functional, independent-reference and mutation suite, but its unchanged
+literal timing gate fails. Final measured reports and every outlier input/time
+are committed under results/. No benchmark filters, extra warm-up, timer-window
+change or benchmark-specific runtime bypass was introduced.
+
+The first optimized hosted run was also inspected and failed latency only:
+https://github.com/luisitin/partybox-gpt-drops/actions/runs/37637661735.
+It observed two outliers over the three seeds. The PR description retains the
+subsequent final-head result and the local failures remain disclosed.

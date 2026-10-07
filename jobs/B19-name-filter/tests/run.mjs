@@ -86,8 +86,8 @@ for(const term of policy.terms)for(let i=0;i<term.length;i++)for(const v of vari
 const mutations = [
  ['M01','Remove lowercasing', '.toLowerCase()', ''],
  ['M02','Lose compatibility normalization', "normalize('NFKD')", "normalize('NFD')"],
- ['M03','Keep combining marks', ".replace(/\\p{M}/gu, '')", ''],
- ['M04','Keep zero-width format characters', ".replace(/\\p{Cf}/gu, '')", ''],
+ ['M03','Keep combining marks', ".replace(MARKS, '')", ''],
+ ['M04','Keep zero-width format characters', ".replace(FORMATS, '')", ''],
  ['M05','Treat spaces as letter barriers', "const mapped = MAP.get(c);", "if (c === ' ') { text += '~'; continue; } const mapped = MAP.get(c);"],
  ['M06','Treat dots as letter barriers', "const mapped = MAP.get(c);", "if (c === '.') { text += '~'; continue; } const mapped = MAP.get(c);"],
  ['M07','Drop zero-to-o mapping', "['o', '0оοσօ']", "['o', 'оοσօ']"],
@@ -128,8 +128,11 @@ function benchmark(seed, inputs) {
  for(let round=0;round<10;round++)for(const s of sample)sink+=nameFilter(s).ok?1:0;
  const times=new Float64Array(sample.length);let index=0;const start=performance.now();
  for(const s of sample){const t=performance.now();sink+=nameFilter(s).ok?1:0;times[index++]=performance.now()-t;}
- const elapsed=performance.now()-start;times.sort((a,b)=>a-b);
- return {calls:sample.length,meanMs:elapsed/sample.length,p50Ms:times[4999],p99Ms:times[9899],maxMs:times[9999],over005Ms:times.filter(x=>x>0.05).length,sink};
+ const end=performance.now();const elapsed=end-start;
+ const outliers=[];
+ for(let i=0;i<times.length;i++)if(times[i]>0.05)outliers.push({index:i,input:sample[i],timeMs:times[i]});
+ times.sort((a,b)=>a-b);
+ return {calls:sample.length,meanMs:elapsed/sample.length,p50Ms:times[4999],p99Ms:times[9899],maxMs:times[9999],over005Ms:outliers.length,outliers,measurementStartMs:start,measurementEndMs:end,sink};
 }
 // Full command must never silently fall back to small/synthetic corpora.
 let corpora=null;
@@ -152,7 +155,7 @@ for(const seed of [1,2,3]) {
  const safeSource=source.match(/const SAFE = new Set\('([^']*)'/)[1].split(' ');
  const sourceChecks=[new Set(termsSource).size===termsSource.length,JSON.stringify(termsSource)===JSON.stringify(policy.terms),JSON.stringify([...new Set(safeSource)].sort())===JSON.stringify(policy.safe)];
  record('policy-copy-consistency-and-no-duplicate-terms',sourceChecks.length,sourceChecks.filter(Boolean).length,seed);
- const typecheck=spawnSync('tsc',['-p','tsconfig.json','--noEmit'],{encoding:'utf8'});
+ const typecheck=spawnSync(process.execPath,['node_modules/typescript/bin/tsc','-p','tsconfig.json','--noEmit'],{encoding:'utf8'});
  record('strict-TypeScript',1,Number(typecheck.status===0),seed,{command:'tsc -p tsconfig.json --noEmit',output:(typecheck.stdout??'')+(typecheck.stderr??'')});
 
  const generated=makeObfuscations(seed);

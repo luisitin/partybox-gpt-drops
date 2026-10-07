@@ -1,11 +1,16 @@
 # B19 continuation point
 
-The sealed independent reference is integrated and compares every full input at
-all three seeds. Behavioral, corpus-policy and mutation gates pass locally.
-The first ASCII-path optimization still has local per-call latency outliers;
-the 0.05 ms maximum remains unchanged and failures remain visible.
+PR #2 is an honest draft with complete independent-reference verification,
+all original three-seed corpus/generator/mutation suites and measured reports.
+The final local literal 0.05 ms maximum remains unmet; all outlier inputs and
+times are delivered in results/benchmark-seed*.json. Eleven reviewed name
+collisions and the documented word/length conflicts remain explicit.
 
-Next: inspect hosted results for the current PR #2 head, improve measured
-runtime allocation or execution costs if the maximum still fails, then publish
-actual final results and update the final-head CI link. Rerun with
-`npm ci --ignore-scripts --no-audit --no-fund && npm test` from this job folder.
+For substantive future optimization, inspect those witnesses and reduce actual
+per-check allocation or execution work. Retain every original input/count/seed,
+all 25 real mutations per seed and the unchanged per-observation maximum. Do
+not filter outliers, alter the timer window, add benchmark-specific behavior or
+rerun an unchanged source until a lucky green result. Rerun the complete command
+from this directory: npm ci --ignore-scripts --no-audit --no-fund && npm test.
+
+The PR description identifies the inspected final head and hosted CI conclusion.
