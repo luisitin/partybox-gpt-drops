@@ -48,3 +48,5 @@
     Independent review remains partial; complete counts are recorded verbatim.
 14. Authored 100 domestic-product candidates with tangible evidence and adult procedural consequences; kept weak abstract and niche-name frames below 4. All 1,400 rows pass structural checks.
     Independent review remains partial; complete counts are recorded verbatim.
+15. Authored 100 technology candidates and integrated two fresh independent reviews unchanged, including every rejected casting premise. All 1,500 rows pass structural checks.
+    Independent review remains partial; complete counts are recorded verbatim.
