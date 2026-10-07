@@ -66,6 +66,8 @@ groups = {"Pre-pipeline": [], "Pipeline": [], "Review": [], "Completed": []}
 for job_id, title in jobs:
     prefix = f"job/{job_id}-"
     branch_name = next((name for name in branch_by_name if name.startswith(prefix)), None)
+    if branch_name is None:
+        branch_name = next((name for name in latest_by_head if name.startswith(prefix)), None)
     branch = branch_by_name.get(branch_name) if branch_name else None
     pull = latest_by_head.get(branch_name) if branch_name else None
     head_sha = branch["commit"]["sha"] if branch else (pull or {}).get("head", {}).get("sha")
