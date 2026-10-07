@@ -17,3 +17,12 @@ any later second review must use the new hash.
 
 The serializer now checks genre structure before writing a seal. The corrected
 batch will receive complete independent grading with no reuse of an old grade.
+
+## Batch 030 unsealed length edits
+
+The initial hand-authored final batch contained overlength draft wording.
+Structural serialization stopped before sealing or independent handoff. The
+original TSV remains under `superseded/030-unsealed-length-draft/`; only concise
+pre-seal wording was handed to the independent reviewer. The completed input's
+SHA256 is `0d861f69e79e8a4d5ee44ca59763cdb1c67f37e561d2ec4e1b9d34ebec2957d0`.
+No second-pass grade was reused across changed wording.

@@ -21,3 +21,16 @@ alias in the prompt; generic coffee or social media does not establish a brand.
 - Scenarios are explicitly fictional creative writing. There are no factual
   trivia assertions to cite; research source verification is inapplicable to
   fictional premises. Any factual note added later will require real citations.
+
+- A television title or a packaged-product brand containing a word such as
+  "Kids" or "Children" is a cultural title, not a scene involving minors.
+  Selected scenes contain adult activities and never depict underage participants.
+  Explicit child mascots are excluded. Brand mascots with no child depiction
+  (for example the adult Mr. Peanut persona) share the parent's canonical cap.
+- Dexter the show and Dexter Morgan the character share the stricter `dexter`
+  bucket. Microsoft Teams shares Microsoft; Oculus shares the conservative Meta
+  product-family bucket. Unmentioned corporate parents are not generally inferred.
+- Equal editorial scores are broken deterministically by ID; final curation also
+  removes repeated mechanisms and unverifiable reference tags. "Best" reflects
+  the two documented editorial judgments and these diversity constraints, not
+  an empirically proven audience ranking.

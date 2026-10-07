@@ -76,3 +76,19 @@
     Independent review remains partial; complete counts are recorded verbatim.
 28. Authored 100 concrete adult television scenarios with specific first-pass reasons; integrated all 100 independent batch 026 grades unchanged. All 2,800 rows pass structural checks.
     Independent review remains partial; complete counts are recorded verbatim.
+
+29. Completed all 3,000 actual candidates and every independent second grade,
+    retaining every rejected row and exact input hash. The two real passes
+    jointly qualified 1,978 candidates; agreement was measured, not assumed.
+30. Selected 600 rows per genre under a combined canonical cap of three and
+    personally reviewed the final wording, literal references and adult scope.
+    Preserved removed repetitions, the unmentioned USPS-tag miss and all earlier
+    child-mascot failures. Replacement rows remained unchanged and independently
+    qualified; no grade was altered to satisfy a count.
+31. Identified order sensitivity as the weakest similarity check. Added both
+    argument directions while keeping all 4,498,500 original-pool pairs and both
+    text forms. The extra merchandising repetition was excluded; all 55 original
+    flags survived in the 57-flag strengthened scan. All 719,400 final pairs and
+    four individual retained-pair resolutions passed the separate release scan.
+    Interrupted environment scan output is retained locally; the complete resumed
+    scan produced fresh 12-segment evidence in 695.593576 seconds.

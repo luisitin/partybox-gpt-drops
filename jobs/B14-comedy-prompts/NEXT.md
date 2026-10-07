@@ -1,9 +1,10 @@
 # Exact next step
 
-All 3,000 candidates have both editorial grading passes. Select the best 600
-per genre that passed both, audit canonical aliases and the combined cap of
-three, resolve every >0.75 textual similarity flag, and record a real adult-only,
-no-slur and named-reference check for all 1,200 selected rows. Preserve every
-rejected candidate and every original review. Then run and publish the full
-release validator and exact-head hosted workflow. Do not claim editorial
-completion from the pool milestone alone.
+The final 600+600 pack has passed the full local release validator and the
+exhaustive bidirectional scan. Run `npm test` after the file manifest is rebuilt,
+push only `job/B14-comedy-prompts`, and inspect the workflow run for that exact
+commit. Link the green full run and mark PR13 ready only when all original
+checks pass. Preserve all candidate/review/seal/curation evidence. Do not merge
+or push GitHub main. Then continue B13 US history/civics and food authoring,
+followed by fresh independent adversarial reviews of the assigned history and
+sports categories. Humor audience testing remains a disclosed limitation.

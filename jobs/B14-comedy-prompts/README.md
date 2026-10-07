@@ -1,19 +1,38 @@
-# B14 comedy prompts
+# B14: 600 comedy prompts + 600 most-likely prompts
 
-This branch is an authoring milestone, not a finished 600+600 prompt pack.
-The required pool is 1,500 original fill-in-the-blank candidates and 1,500
-original most-likely candidates. Each candidate receives a specific first-author
-grade and reason. A fresh independent reviewer must grade every candidate before
-the final 600 of each kind can be selected.
+`prompts.json` is the final adult-party fiction pack: 600 fill-in-the-blank
+prompts and 600 most-likely prompts, each at most 90 Unicode characters.
+Every selected row was graded 4 or 5 by both its author and a fresh independent
+reviewer. The complete 1,500+1,500 original candidate pool, every low grade and
+all grading reasons remain in `candidates.json`, `batches/` and `grading/`.
 
-`batches/*.tsv` contains hand-authored wording and grades; `npm run build` only
-converts those rows to JSON. It neither writes jokes nor assigns grades.
-`review-input.json` deliberately omits first-pass grades and reasons.
+The combined final pack has 630 canonical named references, at most three
+appearances each across both genres. `named-reference-audit.json` and
+`editorial-review.json` record the actual names visible in each selected row;
+`similarity-resolutions.json` explains every retained pair above 0.75 similarity.
+The full original pool also receives an exhaustive pair scan, comparing both
+argument directions because SequenceMatcher can be order-sensitive.
 
-Install Python dependencies with `python3 -m pip install -r requirements.txt`.
-Use `npm run build`, `npm run check:draft`, and finally `npm test`.
-The last command requires the complete pool and completed independent grading.
+Install the pinned validator and rerun all checks:
 
-Every scenario is original fiction. Named references supply cultural context;
-the pack does not assert real misconduct by any person or organization.
-See `VERIFY.md` for measured checks and outstanding requirements.
+```sh
+python3 -m pip install -r requirements.txt
+npm test
+```
+
+`npm test` reruns every original-pool pair comparison, the final selection
+checks and the file manifest. It uses no randomness; seeds are not applicable.
+`npm run build` serializes hand-authored TSVs and refuses to modify sealed
+batches. It never writes jokes or assigns grades. `npm run checksums` rebuilds
+the manifest only when deliberately publishing a changed artifact.
+
+`prompts.schema.json` validates the final import file; `candidates.schema.json`
+validates the full candidate pool. Confidence describes editorial agreement,
+not factual reliability or an audience playtest: high means two grades of 5,
+medium means two grades of at least 4. The rejected pool also contains low
+confidence records in `candidate-confidence.json`.
+
+All scenarios, quoted fictional labels and imagined dialogue are original
+fiction. Cultural references do not assert real incidents, endorsements,
+product features, or misconduct. Read `SOURCES.md` and `ASSUMPTIONS.md` for
+that scope. Humor was independently reviewed, but has not been audience-tested.
