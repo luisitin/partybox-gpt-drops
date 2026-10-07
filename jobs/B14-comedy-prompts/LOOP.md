@@ -70,3 +70,5 @@
     Independent review remains partial; complete counts are recorded verbatim.
 25. Authored 100 adult screen-personality scenarios with specific traits and retained weak cameo failures; shortened eight overlength rows before sealing and integrated independent023–024 unchanged. All 2,500 rows pass structural checks.
     Independent review remains partial; complete counts are recorded verbatim.
+26. Authored 100 fresh actress and entertainer scenarios with individual reasons; integrated the complete independent batch 025 review without changing scores. All 2,600 rows pass structural checks.
+    Independent review remains partial; complete counts are recorded verbatim.
