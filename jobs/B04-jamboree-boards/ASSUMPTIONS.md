@@ -8,3 +8,6 @@
 - Regional map labels are editorial, not numbered game space IDs. No unobserved direction, gate endpoint or missing connection is invented. Visual map details have one game-image lineage and no identified installed build.
 - Both passes use the same assistant; Exa may return cached content. Capture hashes fingerprint retrieved markdown; map hashes fingerprint retrieved JPEG representations. Full articles and images are not republished.
 - No RNG, passcode uniformity, live gameplay, controller physics or actual Nintendo executable is tested. Unknown exact values remain explicit.
+
+- Recovery source excerpts are intentionally short; each evidence locator identifies its complete paragraph or table context. GameFAQs cites original credited post #10 rather than another reply quoting it.
+- Reviewed-row SHA-256 binds the canonical factual/profile/board/map object to the recorded review. It detects subsequent edits; it is not an additional source or independent-person audit.

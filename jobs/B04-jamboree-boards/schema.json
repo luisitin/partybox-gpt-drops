@@ -3424,13 +3424,25 @@
                   },
                   "visualReview": {
                     "type": "boolean"
+                  },
+                  "retrievedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "httpStatus": {
+                    "type": "integer",
+                    "enum": [
+                      200
+                    ]
                   }
                 },
                 "required": [
                   "bytes",
                   "retrieved",
                   "sha256",
-                  "visualReview"
+                  "visualReview",
+                  "retrievedAt",
+                  "httpStatus"
                 ],
                 "additionalProperties": false
               },
@@ -3453,6 +3465,16 @@
                   },
                   "visualReview": {
                     "type": "boolean"
+                  },
+                  "retrievedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "httpStatus": {
+                    "type": "integer",
+                    "enum": [
+                      200
+                    ]
                   }
                 },
                 "required": [
@@ -3460,7 +3482,9 @@
                   "retrieved",
                   "sameBytesAsA",
                   "sha256",
-                  "visualReview"
+                  "visualReview",
+                  "retrievedAt",
+                  "httpStatus"
                 ],
                 "additionalProperties": false
               },
@@ -3622,6 +3646,10 @@
                   "type": "string",
                   "minLength": 1
                 }
+              },
+              "reviewedRowSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
               }
             },
             "required": [
@@ -3631,7 +3659,8 @@
               "passB",
               "review",
               "rowId",
-              "sourceIds"
+              "sourceIds",
+              "reviewedRowSha256"
             ],
             "additionalProperties": false
           },
@@ -4045,6 +4074,10 @@
           "minLength": 1,
           "format": "uri",
           "pattern": "^https://"
+        },
+        "retrievedAt": {
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
@@ -4056,7 +4089,8 @@
         "retrieval",
         "retrievedTextSha256",
         "sourceId",
-        "url"
+        "url",
+        "retrievedAt"
       ],
       "additionalProperties": false
     }

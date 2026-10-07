@@ -6,3 +6,7 @@
 4. Reopen all 21 publisher URLs and ten maps; recover all 357 quotes in both passes. Compare 391 exact numerical/table rows per pass and review all 593 retained rows per pass.
 5. Weakest-part review corrects Tag Team modifier scope, initial Steamer Ticket price, historical event placeholders and Raceway singular/plural shop interpretation. Demote partial composite claims and document Wiggler’s JPEG change.
 6. Complete 23 structural suites / 4,712 cases and 12 rejection fixtures; strict returns the documented 1. Final manifest adds 67 hashes. Push the checked head and observe exact-head CI while keeping factual gaps explicit.
+
+7. Recovery: open independently authored board guides and original player posts. Corroborate two complete narrow rows (Boo Shop and Pro Homestretch), increasing full facts from 29 to 31. Retain all nine disagreements, 477 single-source rows and the current Steamer Event Space unknown.
+8. Reopen all 22 retained source URLs twice; recover 364 quotations per pass, compare all 391 exact numeric/table rows in each pass and review all 593 retained rows twice. Fetch and visually inspect all ten original map URLs twice. Record actual UTC receipt times; preserve the earlier Wiggler representation difference.
+9. Add canonical content hashes for all reviewed rows and two meaningful rejection fixtures: malformed receipt hash and a changed Star price after review. Rerun the original full structural/schema, strict and manifest commands, push the exact job branch, and observe final-head CI while the PR remains draft.

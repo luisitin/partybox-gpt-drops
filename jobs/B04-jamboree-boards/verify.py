@@ -22,6 +22,15 @@ def facts(v):
  if isinstance(v,list):return [f for x in v for f in facts(x)]
  if isinstance(v,dict):return ([v] if {'id','kind','evidence'}<=v.keys() else [])+[f for x in v.values() for f in facts(x)]
  return []
+def row_fingerprint(value):return hashlib.sha256(json.dumps(value,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
+def retained_rows(boards,fs,maps):
+ rows=dict(fs)
+ for b in boards:
+  rows[b['id']+':board_record']=b;rows[b['id']+':map_description']=b['map']
+  for p in b['spaceCounts']:rows[b['id']+':profile:'+p['profile']]=p
+  for s in b['shops']:rows[s['id']]=s
+ for m in maps:rows['map_asset:'+m['id']]=m
+ return rows
 def lineage(f,sources):
  if f['status']=='corroborated':need(len({sources[e['sourceId']]['group'] for e in f['evidence']})>=2,'dependent corroboration '+f['id'])
 def profile_ok(p):
@@ -33,6 +42,8 @@ def audit_ok(a,boards,fs,maps):
  expected=set(fs)|{b['id']+':board_record' for b in boards}|{b['id']+':map_description' for b in boards}|{b['id']+':profile:'+p['profile'] for b in boards for p in b['spaceCounts']}|{s['id'] for b in boards for s in b['shops']}|{'map_asset:'+m['id'] for m in maps}
  rows=index(a['rows'],'rowId');need(len(rows)==a['rowsPerPass']==593 and set(rows)==expected,'audit coverage');need(a['factStatuses']==dict(Counter(f['status'] for f in fs.values())),'audit verdict count')
  for rid,r in rows.items():need(r['passA']==r['passB']==(fs[rid]['status'] if rid in fs else 'partial' if r['kind']=='board_record' else 'single_source'),'audit status drift')
+ current=retained_rows(boards,fs,maps)
+ for rid,r in rows.items():need(r['reviewedRowSha256']==row_fingerprint(current[rid]),'changed row after source review '+rid)
  return rows
 def run(strict=False,hashes=False):
  schema=read('schema.json');Draft202012Validator.check_schema(schema);docs={'boards':read('boards.json'),'sources':read('sources.json'),'maps':read('map-assets.json'),'rowAudit':read('reports/research-row-audit.json'),'sourceAudit':read('reports/source-reopen-audit.json'),'contexts':read('reports/context-checks.json')}
@@ -82,6 +93,7 @@ def run(strict=False,hashes=False):
  for a in maps:need(all(a[k]['retrieved'] and a[k]['visualReview'] and a[k]['bytes']>0 and len(a[k]['sha256'])==64 for k in ['passA','passB']),'map reopen missing');need(a['passB']['sameBytesAsA']==(a['passA']['sha256']==a['passB']['sha256']),'false map identity')
  passed('MAP_IMAGE_REOPEN_AND_VISUAL_REVIEW_A_B',len(maps)*2)
  audit=audit_ok(docs['rowAudit'],boards,fs,maps);passed('ALL_RETAINED_ROWS_PASS_A',len(audit));passed('ALL_RETAINED_ROWS_PASS_B',len(audit))
+ passed('REVIEWED_ROW_CONTENT_FINGERPRINTS',len(audit))
  for b in boards:
   t=(ROOT/'boards'/(b['id']+'.md')).read_text();need('## UNVERIFIED' in t and b['map']['description'] in t and all(f['id'] in t for f in b['events']),'board docs drift')
  need(len(list((ROOT/'boards').glob('*.md')))==len(boards),'extra board doc');passed('BOARD_DOCUMENT_REQUIRED_SECTIONS',len(boards))
@@ -104,7 +116,9 @@ def run(strict=False,hashes=False):
  broken=copy.deepcopy(fs);first=next(f for f in broken.values() if f['kind']=='shop_item');first['value']['coins']+=1;rejects(lambda:context_ok(docs['contexts'],broken))
  dual=next(f for f in fs.values() if f['status']=='corroborated');fake=copy.deepcopy(ss)
  for e in dual['evidence']:fake[e['sourceId']]['group']='same-owner'
- rejects(lambda:lineage(dual,fake));broken=copy.deepcopy(docs['rowAudit']);broken['rows'].pop();rejects(lambda:audit_ok(broken,boards,fs,maps));rejects(lambda:index([{'id':'x'},{'id':'x'}]));rejects(lambda:json.loads('{"x":1,"x":2}',object_pairs_hook=no_duplicates));passed('DELIBERATE_REJECTION_FIXTURES',len(negatives)+7)
+ rejects(lambda:lineage(dual,fake));broken=copy.deepcopy(docs['rowAudit']);broken['rows'].pop();rejects(lambda:audit_ok(broken,boards,fs,maps));rejects(lambda:index([{'id':'x'},{'id':'x'}]));rejects(lambda:json.loads('{"x":1,"x":2}',object_pairs_hook=no_duplicates))
+ broken=copy.deepcopy(docs['rowAudit']);broken['rows'][0]['reviewedRowSha256']='invalid';need(not validators['rowAudit'].is_valid(broken),'invalid audit fingerprint survived')
+ changed=copy.deepcopy(fs);changed['shared:star_cost']['value']['standardCoins']=21;rejects(lambda:audit_ok(docs['rowAudit'],boards,changed,maps));passed('DELIBERATE_REJECTION_FIXTURES',len(negatives)+9)
  files=[f for f in ROOT.rglob('*') if f.is_file() and '__pycache__' not in f.parts];need(WORKFLOW.is_file(),'missing own workflow');files.append(WORKFLOW);need(all(f.stat().st_size<=30_000_000 for f in files),'file size limit');passed('FILE_SIZE_LIMIT',len(files))
  if hashes:
   paths=set()

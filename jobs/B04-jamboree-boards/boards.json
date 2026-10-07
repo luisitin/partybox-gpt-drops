@@ -3755,8 +3755,8 @@
         {
           "id": "rainbow-galleria:events:boo_shop",
           "kind": "events",
-          "status": "single_source",
-          "confidence": "medium",
+          "status": "corroborated",
+          "confidence": "high",
           "value": {
             "name": "Boo Shop",
             "trigger": "Land on the shop's Event Space(s).",
@@ -3768,9 +3768,45 @@
               "quote": "Boo Bell for 15 coins",
               "locator": "Event spaces Boo Shop",
               "quoteId": "W_GALLERIA-Q031"
+            },
+            {
+              "sourceId": "W_GALLERIA",
+              "quote": "hosted by a Peepa",
+              "locator": "Event Spaces → Boo Shop host paragraph",
+              "quoteId": "W_GALLERIA-Q047"
+            },
+            {
+              "sourceId": "W_GALLERIA",
+              "quote": "landing on either",
+              "locator": "Event Spaces introductory paragraph explicitly applies landing-only activation to special shops and singles out Boo Shop’s one Event Space",
+              "quoteId": "W_GALLERIA-Q048"
+            },
+            {
+              "sourceId": "GR_GALLERIA",
+              "quote": "Boo Bell, which can be purchased for 15 coins.",
+              "locator": "Jessica Bell → Peepa Sells Only One Item → Boo Shop purchase sentence",
+              "quoteId": "GR_GALLERIA-Q022"
+            },
+            {
+              "sourceId": "GR_GALLERIA",
+              "quote": "singular event space",
+              "locator": "Same Boo Shop paragraph: the only shop with a singular event space",
+              "quoteId": "GR_GALLERIA-Q023"
+            },
+            {
+              "sourceId": "GR_GALLERIA",
+              "quote": "difficult to land on",
+              "locator": "Same sentence requires landing; next sentence recommends Custom Dice Block to ensure landing on this shop",
+              "quoteId": "GR_GALLERIA-Q024"
+            },
+            {
+              "sourceId": "GR_GALLERIA",
+              "quote": "Ran by: Peepa",
+              "locator": "Same Boo Shop section owner header",
+              "quoteId": "GR_GALLERIA-Q025"
             }
           ],
-          "note": "Full special-shop stock, trigger and price scope is recorded below; independently supported item costs do not verify all event qualifiers."
+          "note": "Both independently written pages explicitly identify landing activation, Boo Bell at 15 coins and Peepa. Unlimited Pro stock, final-turn closure and regional location remain separate claims."
         },
         {
           "id": "rainbow-galleria:events:thrift",
@@ -13516,8 +13552,8 @@
     {
       "id": "shared:pro_homestretch",
       "kind": "shared_rule",
-      "status": "single_source",
-      "confidence": "medium",
+      "status": "corroborated",
+      "confidence": "high",
       "value": {
         "trigger": "Homestretch in Pro Rules.",
         "effect": "No special random event; doubled spaces and same-space duel behavior remain."
@@ -13534,9 +13570,15 @@
           "quote": "remain unchanged",
           "locator": "ProRules Homestretch nextbullet",
           "quoteId": "W_GAME-Q014"
+        },
+        {
+          "sourceId": "GFAQ_PRO",
+          "quote": "No last 5 turns event. x2 Blue/Red and Duels still happen",
+          "locator": "Ice_Dragon14 original post #10, complete final-five-turn Pro rule bullet; original author, not replies quoting it",
+          "quoteId": "GFAQ_PRO-Q001"
         }
       ],
-      "note": ""
+      "note": "Opened original credited player report independently states all retained Pro Homestretch qualifiers. Party Rules special-event candidates remain separate unverified records."
     },
     {
       "id": "shared:shop_period",
