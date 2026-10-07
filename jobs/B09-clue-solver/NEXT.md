@@ -1,3 +1,3 @@
 # Next step
 
-Finish the improvement-loop full npm test (all seeds and mutations) with the new dense BigInt-mask fixture, record actual results, refresh all hashes, push, and wait for exact final-head B09 GitHub Actions. Update PR 12 with the green run and mark ready only after all required checks pass.
+B09 implementation and full improvement-loop checks are complete. For future B09 maintenance, reproduce with npm ci && npm test and preserve exact counting, all original counts, the literal 200 ms maximum gate, and blind reference independence. PR 12 contains the final-head CI link. No B09 merge or main-branch push is authorized by this drop.

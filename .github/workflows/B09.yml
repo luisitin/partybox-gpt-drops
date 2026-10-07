@@ -15,5 +15,7 @@ jobs:
           node-version: '24'
       - run: npm ci
         working-directory: jobs/B09-clue-solver
+      - run: sha256sum -c SHA256SUMS.txt
+        working-directory: jobs/B09-clue-solver
       - run: npm test
         working-directory: jobs/B09-clue-solver

@@ -1,0 +1,55 @@
+
+> b09-clue-exact-solver@1.0.0 test
+> npm run build && node test.mjs && node mutations.mjs
+
+
+> b09-clue-exact-solver@1.0.0 build
+> tsc -p tsconfig.json
+
+seed 1: 20,000 reduced random logs agree exactly
+seed 1: 1000/5000 full games
+seed 1: 2000/5000 full games
+seed 1: 3000/5000 full games
+seed 1: 4000/5000 full games
+seed 1: 5000/5000 full games
+{"seed":1,"fixedCases":194,"reducedCases":20000,"reducedSuggestions":180714,"fullGames":5000,"playerCounts":[1250,1250,1250,1250],"fullSuggestions":40266,"fullUpdates":45266,"sparseSixPlayerStressUpdates":420,"sparseSixPlayerStressMaximum":86.53810499999963,"denseSixPlayerSuggestions":690,"denseSixPlayerMilliseconds":5.4685369999933755,"sixPlayerUpdates":11795,"sixPlayerMilliseconds":{"p50":1.7749279999989085,"p99":7.063843999989331,"maximum":86.53810499999963}}
+seed 2: 20,000 reduced random logs agree exactly
+seed 2: 1000/5000 full games
+seed 2: 2000/5000 full games
+seed 2: 3000/5000 full games
+seed 2: 4000/5000 full games
+seed 2: 5000/5000 full games
+{"seed":2,"fixedCases":194,"reducedCases":20000,"reducedSuggestions":180702,"fullGames":5000,"playerCounts":[1250,1250,1250,1250],"fullSuggestions":39878,"fullUpdates":44878,"sparseSixPlayerStressUpdates":420,"sparseSixPlayerStressMaximum":20.55410999999731,"denseSixPlayerSuggestions":690,"denseSixPlayerMilliseconds":4.032630000001518,"sixPlayerUpdates":11714,"sixPlayerMilliseconds":{"p50":1.8968779999995604,"p99":12.560377999994671,"maximum":180.50403000001097}}
+seed 3: 20,000 reduced random logs agree exactly
+seed 3: 1000/5000 full games
+seed 3: 2000/5000 full games
+seed 3: 3000/5000 full games
+seed 3: 4000/5000 full games
+seed 3: 5000/5000 full games
+{"seed":3,"fixedCases":194,"reducedCases":20000,"reducedSuggestions":181296,"fullGames":5000,"playerCounts":[1250,1250,1250,1250],"fullSuggestions":40247,"fullUpdates":45247,"sparseSixPlayerStressUpdates":420,"sparseSixPlayerStressMaximum":29.844413999991957,"denseSixPlayerSuggestions":690,"denseSixPlayerMilliseconds":4.242406000033952,"sixPlayerUpdates":11796,"sixPlayerMilliseconds":{"p50":1.916553000046406,"p99":13.985190999985207,"maximum":161.40083399997093}}
+mutation 1/25 exclude-envelope: killed for seeds 1,2,3
+mutation 2/25 exclude-wrong-player: killed for seeds 1,2,3
+mutation 3/25 own-card-wrong-owner: killed for seeds 1,2,3
+mutation 4/25 known-owner-union: killed for seeds 1,2,3
+mutation 5/25 forbid-refuter: killed for seeds 1,2,3
+mutation 6/25 ignore-no-refuter-denials: killed for seeds 1,2,3
+mutation 7/25 ignore-refuter-disjunction: killed for seeds 1,2,3
+mutation 8/25 require-all-refuter-cards: killed for seeds 1,2,3
+mutation 9/25 reject-exact-full-hand: killed for seeds 1,2,3
+mutation 10/25 reject-exact-capacity-domains: killed for seeds 1,2,3
+mutation 11/25 wrong-clause-singleton-owner: killed for seeds 1,2,3
+mutation 12/25 missing-room-envelope: killed for seeds 1,2,3
+mutation 13/25 require-unsatisfied-refuter-constraints: killed for seeds 1,2,3
+mutation 14/25 merge-envelope-categories: killed for seeds 1,2,3
+mutation 15/25 memo-omits-envelope-state: killed for seeds 1,2,3
+mutation 16/25 drop-initial-refuter-constraints: killed for seeds 1,2,3
+mutation 17/25 never-satisfy-refuter-constraints: killed for seeds 1,2,3
+mutation 18/25 wrong-total-deal-count: killed for seeds 1,2,3
+mutation 19/25 increment-probability-numerator: killed for seeds 1,2,3
+mutation 20/25 reverse-player-probabilities: killed for seeds 1,2,3
+mutation 21/25 wrong-envelope-marginal: killed for seeds 1,2,3
+mutation 22/25 omit-prefix-multiplicity: killed for seeds 1,2,3
+mutation 23/25 collapse-prefix-multiplicity: killed for seeds 1,2,3
+mutation 24/25 shift-fixed-owner: killed for seeds 1,2,3
+mutation 25/25 wrong-clockwise-start: killed for seeds 1,2,3
+25/25 independently planted, compiling production mutations caught for all three seeds

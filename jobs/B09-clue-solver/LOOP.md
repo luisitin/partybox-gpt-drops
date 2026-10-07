@@ -6,3 +6,5 @@
 
 4. The allocation improvement passed all original three-seed checks: 60,000 reduced logs, 15,000 classic games and every update, 1,260 sparse six-player updates, and all 75 compiling mutation kills. Six-player maxima were 114.053, 119.284, and 54.364 ms. Hosted CI passed at commit 60ed9c0: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37634714317.
 5. Weakest remaining coverage was arbitrary-width refuter masks. Added a 690-suggestion six-player fixture with a three-room observer hand, ensuring more than 30 unresolved clauses survive propagation; both independent counters find exactly one deal. Full npm test is rerunning for all three seeds with this fixture and the unchanged timing gate.
+
+6. The full improvement-loop npm test passed all three seeds with the dense fixture and all 75 mutation kills. Local six-player maxima were 86.538, 180.504, and 161.401 ms; all are below the unchanged 200 ms gate. The full hosted source-and-suite run at 99cf1e4 also passed; hosted maxima were 14.681, 9.943, and 19.008 ms. Final evidence and checksum workflow are being published, with final-head CI linked from PR 12.
