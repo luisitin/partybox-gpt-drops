@@ -50,3 +50,5 @@
     Independent review remains partial; complete counts are recorded verbatim.
 15. Authored 100 technology candidates and integrated two fresh independent reviews unchanged, including every rejected casting premise. All 1,500 rows pass structural checks.
     Independent review remains partial; complete counts are recorded verbatim.
+16. Authored 100 explicit adult fictional-character candidates using recognizable powers and concrete consequences; supernatural scenarios remain original fiction. All 1,600 rows pass structural checks.
+    Independent review remains partial; complete counts are recorded verbatim.

@@ -33,7 +33,7 @@ into `results/draft.json`; the npm alias runs the same validator.
 
 | Current measured check | Cases | Passed | Failed | Seed | Exact command |
 | --- | ---: | ---: | ---: | --- | --- |
-| JSON Schema / character limit / ID / genre checks | 1500 | 1500 | 0 | not applicable | `npm run check:draft` |
+| JSON Schema / character limit / ID / genre checks | 1600 | 1600 | 0 | not applicable | `npm run check:draft` |
 | Complete independent batch record and input-hash match | 600 | 600 | 0 | not applicable | `npm run check:draft` |
 
 The independent-record check validates completeness and input identity; it does
@@ -85,6 +85,12 @@ checks, maximum 90 characters. 400 independent rows validated;
 71.5% on reviewed rows only.
 
 Measured milestone 015: 750 candidates per genre, 1,500/1,500 structural
+checks, maximum 90 characters. 600 independent rows validated;
+420 meet 4+ in both passes. Exact-score agreement is
+36%; threshold agreement is
+71.6667% on reviewed rows only.
+
+Measured milestone 016: 800 candidates per genre, 1,600/1,600 structural
 checks, maximum 90 characters. 600 independent rows validated;
 420 meet 4+ in both passes. Exact-score agreement is
 36%; threshold agreement is
