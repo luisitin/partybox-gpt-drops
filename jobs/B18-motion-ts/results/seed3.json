@@ -1,0 +1,372 @@
+{
+  "seed": 3,
+  "command": "node tests/run.mjs --seed 3",
+  "sourceSha256": "aafcd38287f38219e945852de786b465cc3cfa127d5414ef9a3688239c3bd964",
+  "suites": [
+    {
+      "name": "SHA256 integrity and per-file 30 MB limit",
+      "cases": 17,
+      "passed": 17,
+      "failed": 0,
+      "seed": 3
+    },
+    {
+      "name": "TypeScript strict compile",
+      "cases": 2,
+      "passed": 2,
+      "failed": 0,
+      "seed": 3
+    },
+    {
+      "name": "zero runtime deps / no ambient RNG or clock",
+      "cases": 3,
+      "passed": 3,
+      "failed": 0,
+      "seed": 3
+    },
+    {
+      "name": "gzip size (level 9)",
+      "cases": 2,
+      "passed": 2,
+      "failed": 0,
+      "seed": 3,
+      "sourceBytes": 1614,
+      "typescriptGzipBytes": 842,
+      "javascriptGzipBytes": 946,
+      "limitBytes": 1200
+    },
+    {
+      "name": "fixed numeric and contract regressions",
+      "cases": 86,
+      "passed": 86,
+      "failed": 0,
+      "seed": 3
+    },
+    {
+      "name": "closed form vs RK4, every dt=1e-4 frame",
+      "cases": 10000,
+      "passed": 10000,
+      "failed": 0,
+      "seed": 3,
+      "comparedStates": 50924501,
+      "componentComparisons": 101849002,
+      "actualDampingRegimes": {
+        "under": 3583,
+        "critical": 2000,
+        "over": 4417
+      },
+      "maxPositionError": 1.9971668763218986e-10,
+      "maxVelocityError": 5.87239235017023e-8,
+      "worstX": {
+        "case": 4837,
+        "step": 34,
+        "t": 0.0034000000000000002,
+        "params": [
+          5.896720199892298,
+          9254.021766325257,
+          1765.33110261417,
+          -4.785351036116481,
+          0.989124234765768
+        ],
+        "closed": -4.751514771143726,
+        "rk4": -4.751514770944009
+      },
+      "worstV": {
+        "case": 4837,
+        "step": 34,
+        "t": 0.0034000000000000002,
+        "params": [
+          5.896720199892298,
+          9254.021766325257,
+          1765.33110261417,
+          -4.785351036116481,
+          0.989124234765768
+        ],
+        "closed": 16.325553950145633,
+        "rk4": 16.32555389142171
+      },
+      "traceSha256": "4901f7283002768bc2e03d54310400c62bcc9db7f1c9ba233d89b9270b0e3c14"
+    },
+    {
+      "name": "closed form vs scaling/squaring matrix exponential",
+      "cases": 10000,
+      "passed": 10000,
+      "failed": 0,
+      "seed": 3,
+      "maxAbsoluteError": 5.53370682609966e-11
+    },
+    {
+      "name": "cubic Bezier vs 113-bit reference",
+      "cases": 1000000,
+      "passed": 1000000,
+      "failed": 0,
+      "seed": 3,
+      "maxAbsoluteError": 3.637978807091713e-12,
+      "worst": {
+        "case": 618146,
+        "input": [
+          -1.672930712113157,
+          0.00021142186596989632,
+          2.7059412095695734,
+          0.6802161741070449,
+          1.264162192121148
+        ],
+        "actual": -21411.466282802216,
+        "reference": -21411.466282802212
+      },
+      "streamSha256": "060fafd43b55a2bc19a3669fb86fae116ac4d6fa456f91ec5d6b686c66f3981d",
+      "referenceSignificandBits": 113,
+      "bisectionIterations": 116
+    },
+    {
+      "name": "all four CSS named easings vs 113-bit reference",
+      "cases": 40004,
+      "passed": 40004,
+      "failed": 0,
+      "seed": 3,
+      "perName": 10001,
+      "progressRange": [
+        -1,
+        2
+      ],
+      "maxAbsoluteError": 4.440892098500626e-16
+    },
+    {
+      "name": "113-bit oracle vs exact-integer Q160 Bernstein reference",
+      "cases": 5000,
+      "passed": 5000,
+      "failed": 0,
+      "seed": 3,
+      "maxAbsoluteDifference": 2.842170943040401e-14
+    },
+    {
+      "name": "settle estimate vs independent envelope bisection",
+      "cases": 10000,
+      "passed": 10000,
+      "failed": 0,
+      "seed": 3,
+      "maxAbsoluteTimeDifference": 1.4551915228366852e-11
+    },
+    {
+      "name": "settle-tail position AND velocity bounds",
+      "cases": 640000,
+      "passed": 640000,
+      "failed": 0,
+      "seed": 3,
+      "maxFractionOfTolerance": 0.06068469951048798
+    },
+    {
+      "name": "semigroup / physical scale / time-unit invariance",
+      "cases": 60000,
+      "passed": 60000,
+      "failed": 0,
+      "seed": 3,
+      "maxAbsoluteError": 5.186961971048731e-13
+    },
+    {
+      "name": "finite-output boundaries and random IEEE-754 inputs",
+      "cases": 466524,
+      "passed": 466524,
+      "failed": 0,
+      "seed": 3,
+      "randomTuples": 450000,
+      "boundaryValues": 17,
+      "includesNonfiniteBonusInputs": true
+    },
+    {
+      "name": "repeat-call determinism on boundary/fuzz corpus",
+      "cases": 3673,
+      "passed": 3673,
+      "failed": 0,
+      "seed": 3
+    },
+    {
+      "name": "isolated deliberate mutation kills",
+      "cases": 25,
+      "passed": 25,
+      "failed": 0,
+      "seed": 3,
+      "compiled": 25,
+      "killed": 25,
+      "survived": 0,
+      "compileErrors": 0,
+      "kills": [
+        {
+          "id": "M01",
+          "description": "accept zero mass",
+          "sourceSha256": "ac1fd96c636540237b26ebe0ff5020190745c9681ef13ab40b5e0bb61118b4cf",
+          "killed": true,
+          "failingAssertion": "zero mass at t=0: got [7,3] expected [0,0]"
+        },
+        {
+          "id": "M02",
+          "description": "accept negative stiffness",
+          "sourceSha256": "dd91a94e0abe340cfd2c300b6c347b6dbaa975a678f4eaa1d667fc327c996dbe",
+          "killed": true,
+          "failingAssertion": "negative stiffness disabled: got [1.9555649904622385,1.6134164167282448] expected [0,0]"
+        },
+        {
+          "id": "M03",
+          "description": "omit division by mass",
+          "sourceSha256": "178d575b09981f85aa056ebbc173ab48d5c4d34a420a1e71ac1d07455fbd9855",
+          "killed": true,
+          "failingAssertion": "mass normalization: got [0.9535567824335851,-0.8913258025763322] expected [0.9766826339569753,-0.44940861079883787]"
+        },
+        {
+          "id": "M04",
+          "description": "lose initial velocity",
+          "sourceSha256": "e692364f76886119712e0f4a69d57527f652857808b06cba8ed5fd19a9da6c70",
+          "killed": true,
+          "failingAssertion": "negative time holds initial state: got [3,0] expected [3,7]"
+        },
+        {
+          "id": "M05",
+          "description": "double decay coefficient",
+          "sourceSha256": "496aedb6ac3738410c11582586cd0e4c49585b85ba680364f335497fc89b2fd1",
+          "killed": true,
+          "failingAssertion": "underdamped published form: got [0.9781138863410178,-0.4086834419680277] expected [0.9766826339569754,-0.4494086107988378]"
+        },
+        {
+          "id": "M06",
+          "description": "wrong discriminant sign",
+          "sourceSha256": "24b5331b862eacc8519ca6f8d72491f2507513818cdb37c64c0549ac25488583",
+          "killed": true,
+          "failingAssertion": "underdamped published form: got [0.9641995836404816,-0.37098688629458854] expected [0.9766826339569754,-0.4494086107988378]"
+        },
+        {
+          "id": "M07",
+          "description": "treat underdamping as critical",
+          "sourceSha256": "998b8626ed679f0eb19e30540e6341669d0bfe52246f7fc1637e1a55ee01d4a2",
+          "killed": true,
+          "failingAssertion": "underdamped published form: got [0.9953211598395555,-0.4524187090179798] expected [0.9766826339569754,-0.4494086107988378]"
+        },
+        {
+          "id": "M08",
+          "description": "exponential growth instead of decay",
+          "sourceSha256": "95f45c8e044342f17ce5f2cbec55bd587f8a031bc50a2c02356db9d4355ec879",
+          "killed": true,
+          "failingAssertion": "underdamped published form: got [1.1929228629621893,-0.5489089167706309] expected [0.9766826339569754,-0.4494086107988378]"
+        },
+        {
+          "id": "M09",
+          "description": "omit sine frequency divisor",
+          "sourceSha256": "11f3b9e292b2773879afd1e6bbe9d46009825014a8d4aa76615c9f802ca3015c",
+          "killed": true,
+          "failingAssertion": "underdamped published form: got [1.0665643561167428,-0.8988172215976757] expected [0.9766826339569754,-0.4494086107988378]"
+        },
+        {
+          "id": "M10",
+          "description": "wrong restoring-force velocity sign",
+          "sourceSha256": "e033d5acbd64b5d1ba5ce1556ee973b5e83641ba19bcb553decb2ad6e6ee38c2",
+          "killed": true,
+          "failingAssertion": "underdamped published form: got [0.9766826339569753,0.44940861079883787] expected [0.9766826339569754,-0.4494086107988378]"
+        },
+        {
+          "id": "M11",
+          "description": "lose critical polynomial time",
+          "sourceSha256": "1751555d9ae1bfae7ce37f966b7c2c62247a8fbdf8b11b8e2bc8e78ee35257e6",
+          "killed": true,
+          "failingAssertion": "critical published form: got [2.4561922592339456,-3.2749230123119273] expected [0.9824769036935781,-0.3274923012311928]"
+        },
+        {
+          "id": "M12",
+          "description": "use fast rather than slow root",
+          "sourceSha256": "a6f708ac5613752f90267c27b347d04e062bc199eff7c02ebbc7b0cfc5c5c743",
+          "killed": true,
+          "failingAssertion": "overdamped published form: got [0.9422495621353444,-0.6042940243608799] expected [0.9868470167130805,-0.24602879603136274]"
+        },
+        {
+          "id": "M13",
+          "description": "wrong expm1 sign",
+          "sourceSha256": "2eff1552e864474de774cad6b4443f3acef8d58b16fc5bfc4e4bde6e1d47d936",
+          "killed": true,
+          "failingAssertion": "overdamped published form: got [0.8228278193588386,-0.08200959867712088] expected [0.9868470167130805,-0.24602879603136274]"
+        },
+        {
+          "id": "M14",
+          "description": "halve overdamped root gap",
+          "sourceSha256": "d6c4d1a679218274288f8daf5966212d065fa1463d8779ce4edf354999eb7dfa",
+          "killed": true,
+          "failingAssertion": "overdamped published form: got [1.0688566153902013,-0.3280383947084835] expected [0.9868470167130805,-0.24602879603136274]"
+        },
+        {
+          "id": "M15",
+          "description": "wrong overdamped initial coefficient",
+          "sourceSha256": "af98d8cd08d0c66c05c13e02823b720f02246ac68a28f03966baab93a15cb16b",
+          "killed": true,
+          "failingAssertion": "overdamped published form: got [0.8228278193588386,-1.5636460400405565] expected [0.9868470167130805,-0.24602879603136274]"
+        },
+        {
+          "id": "M16",
+          "description": "remove finite-output guard",
+          "sourceSha256": "f1a062335280110ed089da2e7b90e4eb41043ab4a7782145f474ee07fd832b54",
+          "killed": true,
+          "failingAssertion": "spring overflow is saturated"
+        },
+        {
+          "id": "M17",
+          "description": "drop settling polynomial envelope",
+          "sourceSha256": "061fbed35af928a548747b460cadea419be93bc5965cba8882f8fa5d6289374e",
+          "killed": true,
+          "failingAssertion": "settle reference bisection: got [13.815510557964274] expected [16.901591502782946]"
+        },
+        {
+          "id": "M18",
+          "description": "use decay rather than slow settling rate",
+          "sourceSha256": "3f4cf4ac9196fb8639d383bd1f3c15f4afb9ee2fb1701ee41255ea7c9d982492",
+          "killed": true,
+          "failingAssertion": "settle reference bisection: got [7.651423659610816] expected [16.146354918935465]"
+        },
+        {
+          "id": "M19",
+          "description": "halve settling bound",
+          "sourceSha256": "1994a1bd0f9c0b62c0ece73fddcfadcc49f6d353834aa9d9bcac845b312e62ac",
+          "killed": true,
+          "failingAssertion": "settle reference bisection: got [8.450795751391471] expected [16.901591502782946]"
+        },
+        {
+          "id": "M20",
+          "description": "mistake either zero for equilibrium",
+          "sourceSha256": "7d47d1f75ba18cf3a820653f940f7d016f6cd54a3609a4a86512e6f4eec4d5c0",
+          "killed": true,
+          "failingAssertion": "settle reference bisection: got [0] expected [16.901591502782946]"
+        },
+        {
+          "id": "M21",
+          "description": "evaluate Bezier at progress not root",
+          "sourceSha256": "7b47c4b834df94a36bd896311b96bc1680314c22da511f3881cac059886af4c2",
+          "killed": true,
+          "failingAssertion": "cubic inversion not parameter evaluation: got [0.002997001] expected [0.271]"
+        },
+        {
+          "id": "M22",
+          "description": "stop before bisection converges",
+          "sourceSha256": "b181d54b0ddaeade0235075950f5afd8f14e20cfb27930d3f8b4eb7237fc65b5",
+          "killed": true,
+          "failingAssertion": "cubic inversion not parameter evaluation: got [0.27100012107850013] expected [0.271]"
+        },
+        {
+          "id": "M23",
+          "description": "lose start secondary tangent",
+          "sourceSha256": "915f690874aacdc4700e73c9c1ce067a40a4fe0c7914640f1c642402ccc3b246",
+          "killed": true,
+          "failingAssertion": "CSS start secondary tangent: got [0] expected [-2]"
+        },
+        {
+          "id": "M24",
+          "description": "lose end secondary tangent",
+          "sourceSha256": "9ddc571c3ef12a6889cca98a5687b492b88ac3f872e345cc5a779a5ac86191d9",
+          "killed": true,
+          "failingAssertion": "CSS end secondary tangent: got [1] expected [1.75]"
+        },
+        {
+          "id": "M25",
+          "description": "wrong named ease-in control",
+          "sourceSha256": "383ba034b22f9434229dde18b63f40eb0db29f17784b9f445004c7735011181f",
+          "killed": true,
+          "failingAssertion": "named easing ease-in: got [0.1459205097110314] expected [0.09346465071882484]"
+        }
+      ]
+    }
+  ]
+}
