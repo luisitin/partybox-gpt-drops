@@ -1,57 +1,47 @@
 {
-  "updatedAt": "2026-10-07T15:30:26.627132Z",
-  "summary": "Seven deliveries now have final successful GitHub checks: B02 board odds, B08 Monopoly, B09 Clue, B15 icons, B16 colors, B17 sounds and B18 motion. They await maintainer review; no PR has been merged. Hourly background reports are enabled and the open dashboard refreshes every 30 minutes.",
+  "updatedAt": "2026-10-07T15:29:00Z",
+  "summary": "No job PR has merged. Seven open deliveries currently have an exact-head green run and describe their implementation or artifact checks as complete (B08, B09, B11, B15, B16, B17, B18), but they remain review candidates rather than completed jobs. B01 and B05 have green artifact checks with research gaps; B19 still misses its literal latency gate; other active work is tracked below.",
   "workers": [
     {
-      "current": "B12",
-      "summary": "Monopoly is finished and green after 600 million rolls and all mutation checks. A separate Ticket to Ride checker is being written before seeing its implementation.",
-      "next": "Seal the independent route and scoring checker, then compare with the separate implementation.",
+      "current": "B02",
+      "summary": "The board-odds implementation and full local verification are recorded at a new head; the exact-head hosted run is the remaining delivery check.",
+      "next": "Inspect the exact 4ee574b run to completion and record its result without substituting an earlier green head.",
       "queue": []
     },
     {
       "current": "B10",
-      "summary": "Battleship now checks every simulated shot against the independent policy and density checker. The full 900,000-game run is still in progress.",
-      "next": "Complete the full speed and win-rate measurements without excluding slow calls.",
-      "queue": [
-        "B11",
-        "B07"
-      ]
+      "summary": "Battleship has a sealed independent checker and ongoing performance work; the branch is still changing and the PR remains draft.",
+      "next": "Run all three correctness and mutation seeds, then the full 900,000 games while keeping the 50 ms per-shot gate unchanged.",
+      "queue": ["B11", "B07"]
+    },
+    {
+      "current": "B14",
+      "summary": "The comedy pool has reached 900 candidates with 200 independently graded; the requested release needs 3,000 candidates and 1,200 selected prompts.",
+      "next": "Continue batches to 1,500 candidates per genre and independently grade every batch before final selection.",
+      "queue": ["B13"]
+    },
+    {
+      "current": "B20",
+      "summary": "A sourced roster foundation is present, but exact rules, scoring, rewards, unlocks, phone/TV phase contracts and full row audits are not finished.",
+      "next": "Enrich and re-check every mode record, validate closed schemas, then run exact-head CI.",
+      "queue": ["B04", "B03"]
+    },
+    {
+      "current": "B06",
+      "summary": "The CPU policy, sealed reference and local code gates are present in a draft PR; research corroboration and the hosted final-head check remain.",
+      "next": "Finish the artifact and source audit, collect independent behavior evidence, and inspect the exact-head GitHub run.",
+      "queue": []
     },
     {
       "current": "B12",
-      "summary": "The player color palette and exact swatches are finished and green. Ticket to Ride rules and implementation are now being built.",
-      "next": "Finish route legality, tickets and longest trails, then run the original small and full-game counts.",
+      "summary": "Ticket to Ride now has an independent-primary and source-discovery milestone, but complete routes, tickets, scoring data, longest-path verification and the full two-source audit are not delivered yet.",
+      "next": "Seal the primary engine, complete the two-source data pass, then run the full three-seed graph/game and mutation suite with exact-head CI.",
       "queue": []
     },
     {
       "current": "B19",
-      "summary": "All 120 icons are finished and green. The Unicode name filter was optimized again and pushed; GitHub passes, while failed local timings remain recorded.",
-      "next": "Inspect the exact hosted timing logs and report both environments, while independently preparing the Rummikub checker.",
-      "queue": [
-        "B11 independent checker"
-      ]
-    },
-    {
-      "current": "B20",
-      "summary": "The modes project has a published draft PR with 28 roster records. Rule details, Buddy restrictions and phone/TV requirements are being researched.",
-      "next": "Finish the source audits and preserve conflicts before continuing board and minigame research.",
-      "queue": [
-        "B04",
-        "B03"
-      ]
-    },
-    {
-      "current": "B14",
-      "summary": "900 of 3,000 original comedy candidates are published. A separate second review now covers 300 candidates; every score and rejection is kept.",
-      "next": "Complete the full candidate pool and second review before selecting the final 1,200.",
-      "queue": [
-        "B13"
-      ]
-    },
-    {
-      "current": "B06",
-      "summary": "The CPU policy and independent checker passed all original local code gates. The draft PR is online; exact Nintendo behavior evidence remains incomplete.",
-      "next": "Finish the final artifact rerun and hosted checks, retaining all 26 research gaps.",
+      "summary": "Functional and mutation checks are extensive, but the literal 0.05 ms maximum still fails after the latest Unicode normalization attempt.",
+      "next": "Reduce real per-check work without filtering outliers or relaxing the timer, then rerun the complete unchanged gate.",
       "queue": []
     }
   ]
