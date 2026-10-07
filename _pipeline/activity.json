@@ -1,20 +1,19 @@
 {
-  "updatedAt": "2026-10-07T15:30:26.627132Z",
+  "updatedAt": "2026-10-07T15:42:33.932882Z",
   "summary": "Seven deliveries now have final successful GitHub checks: B02 board odds, B08 Monopoly, B09 Clue, B15 icons, B16 colors, B17 sounds and B18 motion. They await maintainer review; no PR has been merged. Hourly background reports are enabled and the open dashboard refreshes every 30 minutes.",
   "workers": [
     {
-      "current": "B12",
-      "summary": "Monopoly is finished and green after 600 million rolls and all mutation checks. A separate Ticket to Ride checker is being written before seeing its implementation.",
-      "next": "Seal the independent route and scoring checker, then compare with the separate implementation.",
+      "current": "B07",
+      "summary": "Monopoly is finished and green. The separate Ticket to Ride checker is sealed and delivered. Work has begun on the previously empty exact Yahtzee solver.",
+      "next": "Define the exact official-rule state model and compute the full optimal-value table without hardcoding its answer.",
       "queue": []
     },
     {
       "current": "B10",
-      "summary": "Battleship now checks every simulated shot against the independent policy and density checker. The full 900,000-game run is still in progress.",
-      "next": "Complete the full speed and win-rate measurements without excluding slow calls.",
+      "summary": "Battleship allocation and shot-choice work has been improved and pushed. All correctness and mutation checks pass; the latest full GitHub benchmark is running.",
+      "next": "Observe all 900,000 games and literal speed limits at the final source commit.",
       "queue": [
-        "B11",
-        "B07"
+        "B11"
       ]
     },
     {
@@ -24,12 +23,10 @@
       "queue": []
     },
     {
-      "current": "B19",
-      "summary": "All 120 icons are finished and green. The Unicode name filter was optimized again and pushed; GitHub passes, while failed local timings remain recorded.",
-      "next": "Inspect the exact hosted timing logs and report both environments, while independently preparing the Rummikub checker.",
-      "queue": [
-        "B11 independent checker"
-      ]
+      "current": "B11",
+      "summary": "Icons are finished and green. The optimized name filter passes GitHub timing but has recorded local failures. A separate Rummikub checker is now being written from official rules.",
+      "next": "Seal the independent joker, opening, rearrangement and maximum-play checker before comparing with production.",
+      "queue": []
     },
     {
       "current": "B20",
@@ -42,17 +39,19 @@
     },
     {
       "current": "B14",
-      "summary": "900 of 3,000 original comedy candidates are published. A separate second review now covers 300 candidates; every score and rejection is kept.",
-      "next": "Complete the full candidate pool and second review before selecting the final 1,200.",
+      "summary": "1,000 of 3,000 original comedy candidates are authored. A separate second review covers 400; 284 satisfy both grade thresholds so far.",
+      "next": "Continue the full candidate pool and independent review before choosing the final 1,200.",
       "queue": [
         "B13"
       ]
     },
     {
       "current": "B06",
-      "summary": "The CPU policy and independent checker passed all original local code gates. The draft PR is online; exact Nintendo behavior evidence remains incomplete.",
-      "next": "Finish the final artifact rerun and hosted checks, retaining all 26 research gaps.",
-      "queue": []
+      "summary": "The CPU code, two implementations, full tests and all final artifacts passed on GitHub. Its draft retains 26 gaps in evidence about actual Nintendo decisions.",
+      "next": "Pursue original-game evidence and continue the independent comedy review and live project updates.",
+      "queue": [
+        "B07 independent checker"
+      ]
     }
   ]
 }
