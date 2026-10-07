@@ -11,3 +11,7 @@
 3. Authored 100 additional candidates with explicit cultural names and concrete
    adult stakes. All 300 draft rows pass schema, length, ID, and genre checks.
    Maximum measured length is 87 characters; independent review remains partial.
+4. Authored 100 travel, bureaucracy, and shopping candidates. All 400 draft rows
+   pass structural validation. Added strict final similarity and per-row adult
+   content review gates; their required evidence remains unverified until it is
+   actually produced. Regional names receive conservative first-pass grades.

@@ -16,6 +16,18 @@ candidates, 300/300 JSON Schema and structural checks, maximum 87 characters.
 Batch 003 applies the independent reviewer's feedback to concrete banking,
 insurance, and adult drinking premises rather than generic product replacements.
 
+Fourth measured draft milestone: 200 fill candidates and 200 most-likely
+candidates, 400/400 JSON Schema and structural checks, maximum 90 characters.
+The exact current validator output is retained in `results/draft.json`.
+
+The strict release gate scans every selected pair using punctuation-insensitive,
+lowercase `difflib.SequenceMatcher` character similarity with `autojunk=False`.
+It compares both full wording and wording without the shared most-likely prefix.
+Any ratio strictly above 0.75 requires an individual editorial resolution; stale
+resolutions are rejected. This is a deterministic textual scan, not a claim of
+exhaustive semantic duplicate detection. Final review also checks substantive
+repetition and mechanical premise reuse.
+
 Independent batch 001 grading was performed by the root coordinator without
 opening first-pass scores or reasons. All 100 candidates have specific second
 grades and reasons in `grading/pass2-001.json`; 65 received grade 4 or 5. Failed
