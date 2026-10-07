@@ -1,10 +1,10 @@
 # B04 — Assumptions and scope
 
-- Seven current Jamboree boards; remastered MarioParty/2 historical counts and mechanics are excluded. Base application, TVTagTeam, Pro and Frenzy are distinct scopes.
+- Seven current Jamboree boards; remastered Mario Party / 2 historical counts and mechanics are excluded. Base application, TV Tag Team, Pro and Frenzy are distinct scopes.
 - Count profiles includeStart and use exactly the located table’s baseline/parenthesized angry columns. Keep conditional replacement minima are not asserted as simultaneous realized states.
 - Inventory profiles are host/ruleset alternatives, not physical shop locations/counts. Availability scopes preserveTagTeam qualifiers and unknown odd-length update rounding.
 - Evidence statuses apply to whole claims. A matching price, award vector or core flow does not verify a differing trigger or inventory condition. Same publisher lineages count once.
-- Missing current SteamerEventSpace mechanics stay null. Historical statements are retained only to explain the research gap.
+- Missing current Steamer Event Space mechanics stay null. Historical statements are retained only to explain the research gap.
 - Regional map labels are editorial, not numbered game space IDs. No unobserved direction, gate endpoint or missing connection is invented. Visual map details have one game-image lineage and no identified installed build.
 - Both passes use the same assistant; Exa may return cached content. Capture hashes fingerprint retrieved markdown; map hashes fingerprint retrieved JPEG representations. Full articles and images are not republished.
 - No RNG, passcode uniformity, live gameplay, controller physics or actual Nintendo executable is tested. Unknown exact values remain explicit.

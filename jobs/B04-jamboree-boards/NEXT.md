@@ -1,5 +1,5 @@
 # B04 — Exact next step
 
-Finish structural/schema/reference/rejection-fixture checks, record actual output, regenerate the complete manifest and perform three final hash checks. Push only theB04folder/ownworkflow and observe the exact latestgreenCIhead on draftPR18. Then continue assignedB03.
+Research continuation: locate independent complete type-count tables and current numbered maps/gate endpoints; verify every current event trigger/effect; resolve the nine documented disagreements and current Steamer Event Space nulls. Every single-source qualifier remains UNVERIFIED. Reopen changed sources, review changed rows, rerun structural/strict checks and regenerate hashes. Keep the PR draft until the original factual standard is met.
 
-Research continuation: locate genuinely independent full type-count tables; obtain current numbered maps/gate endpoints and complete event triggers/effects; resolve the9source conflicts and current SteamerEventSpace nulls. Every single-source qualifier remainsUNVERIFIED. Reopen changed sources, recheck all changed rows, rerun checks, regenerate hashes and retain the draft until original factual completeness is actually met.
+The current delivery supplies cited regional topology without guessed links and has reproducible schema/reference/integrity checks. Its exact latest-head artifact CI is linked in PR18 after observation. Assigned next job is B03.

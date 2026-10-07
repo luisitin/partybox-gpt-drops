@@ -2,7 +2,7 @@
 
 ## Per-board count gaps
 
-The original count test permits unresolved totals in this file. Every normal/TagTeam/angry profile has only one retained publisher; correct arithmetic is not a second source. Historical MarioParty/2 totals are excluded.
+The original count test permits unresolved totals in this file. Every normal/TagTeam/angry profile has only one retained publisher; correct arithmetic is not a second source. Historical Mario Party / 2 totals are excluded.
 
 | Board | Profile | Reported total inclStart | Source |
 |---|---|---:|---|
@@ -40,7 +40,7 @@ The original count test permits unresolved totals in this file. Every normal/Tag
 - Raceway generic shop-page singular wording initially appeared to clash with plural local wording. Reopening both normal/swapped diagrams shows one displayed host at a time; this is recorded as a single-source scope qualifier, not an invented factual contradiction.
 - Wiggler’s PocketTactics lowercase “unlucky spaces” may be generic language rather than the named Unlucky tile; no literal tile substitution is inferred from it.
 - DS “10 Coins per lap completed” can describe the incrementing lap reward ambiguously; it is not used as independent confirmation of the complete payout formula.
-- DS TowerTurner “about50%” is an approximation from one publisher, not a verified RNG weight. Wiki vault1in81 similarly does not establish independent uniform passcode generation.
-- Historical Castle40coinZtar, Western5cointrain/banks and historical EventSpace direction logic are not imported into current Jamboree. Current SteamerEventSpace exact movement remains explicitly unknown.
+- DS Tower Turner “about 50%” is an approximation from one publisher, not a verified RNG weight. Wiki vault 1 in 81 similarly does not establish independent uniform passcode generation.
+- Historical Castle 40 coin Ztar, Western 5 coin train/banks and historical EventSpace direction logic are not imported into current Jamboree. Current Steamer Event Space exact movement remains explicitly unknown.
 - Wiggler’s second JPEG retrieval differs in bytes; both representations were reopened visually and regional observations agree. No origin-byte identity or installed game-version claim is made.
 - All single-source rows, partial qualifier support, absent physical shop positions and exact numbered topology remain UNVERIFIED in VERIFY.md.

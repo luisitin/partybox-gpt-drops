@@ -1,12 +1,12 @@
 # B04 — Sources and claim quotations
 
-21 retained publisher URLs were reopened in both passes. All357 short quotation strings were recovered twice (714recoveries). Same-publisher pages count once; GameRant and DualShockers are grouped under Valnet. Maps share one underlying game screenshot lineage. No full articles or images are published.
+21 retained publisher URLs were reopened in both passes. All 357 short quotation strings were recovered twice (714 recoveries). Same-publisher pages count once; GameRant and DualShockers are grouped under Valnet. Maps share one underlying game screenshot lineage. No full articles or images are published.
 
 ## W_WIGGLER
 
 Mega Wiggler's Tree Party - Super Mario Wiki, the Mario encyclopedia — https://www.mariowiki.com/Mega_Wiggler%27s_Tree_Party
 
-Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `mariowiki`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -46,7 +46,7 @@ Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is �
 
 Rainbow Galleria - Super Mario Wiki, the Mario encyclopedia — https://www.mariowiki.com/Rainbow_Galleria
 
-Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `mariowiki`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -101,7 +101,7 @@ Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is �
 
 Goomba Lagoon - Super Mario Wiki, the Mario encyclopedia — https://www.mariowiki.com/Goomba_Lagoon
 
-Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `mariowiki`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -149,7 +149,7 @@ Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is �
 
 Roll 'em Raceway - Super Mario Wiki, the Mario encyclopedia — https://www.mariowiki.com/Roll_%27em_Raceway
 
-Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `mariowiki`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -191,7 +191,7 @@ Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is �
 
 King Bowser's Keep - Super Mario Wiki, the Mario encyclopedia — https://www.mariowiki.com/King_Bowser%27s_Keep
 
-Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `mariowiki`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -247,7 +247,7 @@ Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is �
 
 Mario's Rainbow Castle - Super Mario Wiki, the Mario encyclopedia — https://www.mariowiki.com/Mario%27s_Rainbow_Castle
 
-Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `mariowiki`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -277,7 +277,7 @@ Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is �
 
 Western Land - Super Mario Wiki, the Mario encyclopedia — https://www.mariowiki.com/Western_Land
 
-Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `mariowiki`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -314,7 +314,7 @@ Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is �
 
 Super Mario Party Jamboree: All Boards List And How To Unlock | Nintendo Life — https://www.nintendolife.com/guides/super-mario-party-jamboree-all-boards-list-and-how-to-unlock
 
-Publisher lineage: `nintendolife`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `nintendolife`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -330,7 +330,7 @@ Publisher lineage: `nintendolife`; accessed2026-10-07. Every registered quote is
 
 Super Mario Party Jamboree Boards - List, Tips, and Strategies - Mario Party Legacy — https://mariopartylegacy.com/super-mario-party-jamboree/boards-list-tips-and-unlockables
 
-Publisher lineage: `mariopartylegacy`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `mariopartylegacy`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -360,7 +360,7 @@ Publisher lineage: `mariopartylegacy`; accessed2026-10-07. Every registered quot
 
 All Mario Party Jamboree boards - Pocket Tactics — https://www.pockettactics.com/super-mario-party-jamboree/boards
 
-Publisher lineage: `pockettactics`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `pockettactics`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -370,7 +370,7 @@ Publisher lineage: `pockettactics`; accessed2026-10-07. Every registered quote i
 
 Super Mario Party Jamboree Rainbow Galleria Board Guide — https://gamerant.com/super-mario-party-jamboree-rainbow-galleria-board-guide/
 
-Publisher lineage: `valnet`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `valnet`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -400,7 +400,7 @@ Publisher lineage: `valnet`; accessed2026-10-07. Every registered quote is ≤25
 
 Every Super Mario Party Jamboree Game Board, Ranked — https://www.dualshockers.com/every-super-mario-party-jamboree-game-board-ranked/
 
-Publisher lineage: `valnet`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `valnet`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -414,7 +414,7 @@ Publisher lineage: `valnet`; accessed2026-10-07. Every registered quote is ≤25
 
 Super Mario Party Jamboree - Super Mario Wiki, the Mario encyclopedia — https://www.mariowiki.com/Super_Mario_Party_Jamboree
 
-Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `mariowiki`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -437,7 +437,7 @@ Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is �
 
 Super Mario Party Jamboree – Nintendo Switch 2 Edition + Jamboree TV - Super Mario Wiki, the Mario encyclopedia — https://www.mariowiki.com/Super_Mario_Party_Jamboree_%E2%80%93_Nintendo_Switch_2_Edition_%2B_Jamboree_TV
 
-Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `mariowiki`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -456,7 +456,7 @@ Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is �
 
 Homestretch - Super Mario Wiki, the Mario encyclopedia — https://www.mariowiki.com/Homestretch
 
-Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `mariowiki`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -477,7 +477,7 @@ Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is �
 
 Super Mario Party Jamboree - Mario Party Legacy — https://mariopartylegacy.com/games/super-mario-party-jamboree/
 
-Publisher lineage: `mariopartylegacy`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `mariopartylegacy`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -490,7 +490,7 @@ Publisher lineage: `mariopartylegacy`; accessed2026-10-07. Every registered quot
 
 Jamboree TV - Super Mario Party Jamboree - Mario Party Legacy — https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/
 
-Publisher lineage: `mariopartylegacy`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `mariopartylegacy`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -506,7 +506,7 @@ Publisher lineage: `mariopartylegacy`; accessed2026-10-07. Every registered quot
 
 Super Mario Party Jamboree |ST| Friendship Preserves and Salt Spreads | Page 2 | Famiboards — https://famiboards.com/threads/super-mario-party-jamboree-st-friendship-preserves-and-salt-spreads.11348/page-2
 
-Publisher lineage: `famiboards`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `famiboards`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -516,7 +516,7 @@ Publisher lineage: `famiboards`; accessed2026-10-07. Every registered quote is �
 
 Super Mario Party Jamboree — https://www.nintendo.com/au/games/nintendo-switch/super-mario-party-jamboree/
 
-Publisher lineage: `nintendo`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `nintendo`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -528,7 +528,7 @@ Publisher lineage: `nintendo`; accessed2026-10-07. Every registered quote is ≤
 
 Item Shop (Mario Party series) - Super Mario Wiki, the Mario encyclopedia — https://www.mariowiki.com/Item_Shop_(Mario_Party_series)
 
-Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `mariowiki`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
@@ -542,7 +542,7 @@ Publisher lineage: `mariowiki`; accessed2026-10-07. Every registered quote is �
 
 Super Mario Party Jamboree – Nintendo Switch 2 Edition + Jamboree TV - Game Review - Cloud Dosage — https://clouddosage.com/super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv-game-review/
 
-Publisher lineage: `clouddosage`; accessed2026-10-07. Every registered quote is ≤25words; unique retained quotes total≤200words/source.
+Publisher lineage: `clouddosage`; accessed 2026-10-07. Every registered quote is ≤25 words; unique retained quotes total ≤200 words/source.
 
 | Quote ID | Short quotation |
 |---|---|
