@@ -92,8 +92,8 @@ export function createModel(size=10,fleet:readonly number[]=[5,4,3,3,2]):Result<
 export function initialState(model:Model):State {
   return {cells:Array<Cell>(model.size*model.size).fill(0),hitShip:Array<number|null>(model.size*model.size).fill(null),sunk:[]};
 }
-interface Candidates { ship:number; ps:readonly Placement[] }
-interface Prepared { groups:Candidates[]; hits:Mask; blocked:Mask; hasHits:boolean }
+interface Candidates { ship:number; ps:readonly Placement[]; namedHits:number }
+interface Prepared { groups:Candidates[]; hits:Mask; blocked:Mask; hasHits:boolean; hasAnonymous:boolean }
 function suffixMasks(groups:readonly Candidates[]):Mask[] {
   const suffix:Mask[]=Array.from({length:groups.length+1},zero);
   for(let i=groups.length-1;i>=0;i--) {
@@ -119,6 +119,7 @@ function prepare(model:Model,state:State):Result<Prepared> {
     sunken.add(s.ship);for(const c of s.cells)fixed.add(c);
   }
   const hits:number[]=[], blocked:number[]=[], own:number[][]=model.fleet.map(()=>[]);
+  let hasAnonymous=false;
   for(let c=0;c<n;c++) {
     const status=state.cells[c]!, owner=state.hitShip?.[c]??null;
     if((status===3)!==fixed.has(c))return fail('invalid-input','Sunk cells must match identified hulls exactly.');
@@ -129,6 +130,7 @@ function prepare(model:Model,state:State):Result<Prepared> {
     if(status===2) {
       hits.push(c);
       if(owner!==null) {if(sunken.has(owner))return fail('contradiction','An unresolved hit belongs to a sunk ship.');own[owner]!.push(c);}
+      else hasAnonymous=true;
     }
     if(status===1||status===3)blocked.push(c);
   }
@@ -139,15 +141,18 @@ function prepare(model:Model,state:State):Result<Prepared> {
     const forbidden=mask(hits.filter(c=>state.hitShip?.[c]!=null&&state.hitShip[c]!==ship));
     const ps=model.placements[ship]!.filter(p=>!overlaps(p,blockedMask)&&!overlaps(p,forbidden)&&contains(p,required)&&p.cells.some(c=>state.cells[c]===0));
     if(!ps.length)return fail('contradiction','An unsunk ship has no legal placement.');
-    groups.push({ship,ps});
+    groups.push({ship,ps,namedHits:own[ship]!.length});
   }
   groups.sort((x,y)=>x.ps.length-y.ps.length||x.ship-y.ship);
-  let a=0,b=0,c=0,d=0;
-  for(const g of groups)for(const placement of g.ps){a|=placement.a;b|=placement.b;c|=placement.c;d|=placement.d;}
-  const possible:Mask={a,b,c,d};
   const hitMask=mask(hits);
-  if(!contains(possible,hitMask))return fail('contradiction','An unresolved hit cannot be covered.');
-  return {ok:true,value:{groups,hits:hitMask,blocked:blockedMask,hasHits:hits.length>0}};
+  // Every candidate already covers its own named hits. Only anonymous hits
+  // need the union-of-candidates necessary coverage check.
+  if(hasAnonymous) {
+    let a=0,b=0,c=0,d=0;
+    for(const g of groups)for(const placement of g.ps){a|=placement.a;b|=placement.b;c|=placement.c;d|=placement.d;}
+    if(!contains({a,b,c,d},hitMask))return fail('contradiction','An unresolved hit cannot be covered.');
+  }
+  return {ok:true,value:{groups,hits:hitMask,blocked:blockedMask,hasHits:hits.length>0,hasAnonymous}};
 }
 function exact(model:Model,state:State,p:Prepared,maxNodes:number):Result<Density> {
   const n=model.size*model.size,counts=Array<number>(n).fill(0),targets=Array<number>(n).fill(0);
@@ -185,7 +190,7 @@ function sampled(model:Model,state:State,p:Prepared,rng:Rng,samples:number,audit
   let denominator=0,sumSquares=0,accepted=0;
   // Proposal weights are needed only on the sampled path. Exact inference,
   // Easy/Medium decisions and feedback validation avoid these allocations.
-  const hasAnonymous=state.cells.some((value,cell)=>value===2&&state.hitShip?.[cell]==null);
+  const hasAnonymous=p.hasAnonymous;
   const groups=p.groups.map(g=>({...g,weights:hasAnonymous?g.ps.map(move=>{
     let anonymous=0;for(const cell of move.cells)if(state.cells[cell]===2&&state.hitShip?.[cell]==null)anonymous++;
     return Math.pow(32,anonymous);
@@ -262,7 +267,8 @@ export function chooseShot(model:Model,state:State,difficulty:Difficulty,rng:Rng
   if(!['easy','medium','hard'].includes(difficulty))return fail('invalid-input','Unknown difficulty.');
   const prepared=prepare(model,state);if(!prepared.ok)return prepared;
   if(!prepared.value.groups.length)return fail('game-over','All ships have been sunk.');
-  const unshot=state.cells.flatMap((status,c)=>status===0?[c]:[]);
+  const unshot:number[]=[];
+  for(let c=0;c<state.cells.length;c++)if(state.cells[c]===0)unshot.push(c);
   if(!unshot.length)return fail('game-over','No unshot cells remain.');
   if(difficulty==='hard') {
     let result=infer(model,state,prepared.value,rng,options);
@@ -280,7 +286,8 @@ export function chooseShot(model:Model,state:State,difficulty:Difficulty,rng:Rng
     const pool=!hasHits&&parity.length?parity:unshot;
     const values=hasHits?d.target:d.probability;
     let best=-Infinity;const ties:number[]=[];
-    for(const c of pool){const score=values[c]!;if(score>best+1e-12){best=score;ties.length=0;ties.push(c);}else if(Math.abs(score-best)<=1e-12)ties.push(c);}
+    for(const c of pool)best=Math.max(best,values[c]!);
+    for(const c of pool)if(best-values[c]!<=1e-12)ties.push(c);
     const pick=choose(ties,rng);return pick.ok?{ok:true,value:{cell:pick.value,method:d.method,density:d}}:pick;
   }
   const scores=Array<number>(state.cells.length).fill(0);
@@ -289,9 +296,13 @@ export function chooseShot(model:Model,state:State,difficulty:Difficulty,rng:Rng
       for(const t of neighbours(c,model.size))if(state.cells[t]===0)scores[t]=1;
   }else {
     // Target legal straight extensions; never merge neighbouring ships into one hull.
-    for(const g of prepared.value.groups)for(const p of g.ps) {
-      let hits=0;for(const cell of p.cells)if(state.cells[cell]===2)hits++;
+    for(const g of prepared.value.groups) {
+      if(!prepared.value.hasAnonymous&&g.namedHits===0)continue;
+      for(const p of g.ps) {
+      let hits=g.namedHits;
+      if(prepared.value.hasAnonymous){hits=0;for(const cell of p.cells)if(state.cells[cell]===2)hits++;}
       if(hits)for(const c of p.cells)if(state.cells[c]===0)scores[c]!+=hits*hits;
+      }
     }
   }
   const best=Math.max(...unshot.map(c=>scores[c]!));

@@ -29,7 +29,7 @@ export const mutations=[
  ['M21','Forget sampled target probability','hit = !empty(need);','hit = false;'],
  ['M22','Discard importance-sampling correction','weight *= z / (g.weights?.[pick] ?? 1);','weight *= 1;'],
  ['M23','Allow overlapping conditional moves','if (!overlaps(move, other) && contains(move, need))','if (contains(move, need))'],
- ['M24','Allow already-fired misses into shot choices','status === 0 ? [c] : []','status !== 3 ? [c] : []'],
+ ['M24','Allow already-fired misses into shot choices','if (state.cells[c] === 0)\n            unshot.push(c);','if (state.cells[c] !== 3)\n            unshot.push(c);'],
  ['M25','Accept RNG value one and index past the candidates','x >= 0 && x < 1','x >= 0 && x <= 1']
 ];
 export async function runMutations(AI,seed=1) {

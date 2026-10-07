@@ -23,3 +23,10 @@ Final 100,000 games per difficulty per seed, all literal 50 ms maxima, Hard mean
 below 45 on all three seeds, and hosted exact-head CI are pending. An exploratory
 1,000-game run had one 72.618 ms call and is explicitly a failed latency gate. No
 cause is assigned without a trace and no outlier is waived.
+
+## Additional optimization checks
+
+- Independent Medium zero-contribution derivation:30,000 named/anonymous public states, every cell/method matched the sealed implementation. Strict standalone compilation into `/tmp/B10-reference-opt` preceded the comparison.
+- Independent audit candidate/conditional word representation:1,800 states(1,500 six-by-six,300 ten-by-ten),132,181 accepted worlds; exact deep equality of full occupancy/target arrays against sealed grid reduction. Strict standalone compilation into `/tmp/B10-reference-opt3` preceded the comparison.
+- Allocation-change complete correctness: `npm run build && node test/run.mjs --no-bench`, seeds1/2/3;30,000 exact states,600 sample audits,90,000 policies,75/75 mutation kills; passed. Raw report/log: `evidence/allocation-correctness.json` and `.log`.
+- Allocation-change exploratory Hard pilot: `node test/benchmark.mjs 1 1000 hard`,44,751 policy and density comparisons passed, mean44.751, max35.187ms,0 calls>50ms. Raw report: `evidence/allocation-pilot-1000.json`. This is additional evidence only; full required benchmark remains pending.

@@ -85,17 +85,18 @@ export function blindAuditDensity(model: BlindModel, state: BlindState, samples:
   try {
     if (samples.length === 0 || samples.some(sample => !Number.isFinite(sample.weight) || sample.weight <= 0)) return invalid("Positive finite audited sample weights required");
     const afloat = remaining(model, state), shapes = blindHulls(model);
-    const namedCounts = Array<number>(model.fleet.length).fill(0);
-    for (let cell = 0; cell < state.cells.length; cell++) if (state.cells[cell] === 2 && state.hitShip?.[cell] != null) namedCounts[state.hitShip[cell]!] = namedCounts[state.hitShip[cell]!]! + 1;
+    const named = new Int32Array(4), own = new Int32Array(model.fleet.length * 4), blocked = new Int32Array(4), unknown = new Int32Array(4);
+    for (let cell = 0; cell < state.cells.length; cell++) {
+      const word = cell >>> 5, bit = 1 << (cell & 31), value = state.cells[cell], label = state.hitShip?.[cell];
+      if (value === 1 || value === 3) blocked[word] = blocked[word]! | bit;
+      if (value === 0) unknown[word] = unknown[word]! | bit;
+      if (value === 2 && label != null) { named[word] = named[word]! | bit; own[label * 4 + word] = own[label * 4 + word]! | bit; }
+    }
     const candidates = shapes.map((placements, ship) => afloat.includes(ship) ? placements.filter(hull => {
-      let unknown = false, covered = 0;
-      for (const cell of hull.cells) {
-        const value = state.cells[cell]!, label = state.hitShip?.[cell];
-        if (value === 1 || value === 3 || (value === 2 && label != null && label !== ship)) return false;
-        if (value === 0) unknown = true;
-        if (value === 2 && label === ship) covered++;
-      }
-      return unknown && covered === namedCounts[ship];
+      const w = hull.words, base = ship * 4;
+      if (((w[0]! & blocked[0]!) | (w[1]! & blocked[1]!) | (w[2]! & blocked[2]!) | (w[3]! & blocked[3]!)) !== 0) return false;
+      if (((w[0]! & unknown[0]!) | (w[1]! & unknown[1]!) | (w[2]! & unknown[2]!) | (w[3]! & unknown[3]!)) === 0) return false;
+      return (w[0]! & named[0]!) === own[base] && (w[1]! & named[1]!) === own[base+1] && (w[2]! & named[2]!) === own[base+2] && (w[3]! & named[3]!) === own[base+3];
     }) : []);
     const occupancy = Array<number>(state.cells.length).fill(0), target = Array<number>(state.cells.length).fill(0);
     const maximum = Math.max(...samples.map(sample => sample.weight));
