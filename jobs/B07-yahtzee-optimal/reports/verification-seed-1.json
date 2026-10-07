@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "seed": 1,
+  "boundaries": {
+    "passed": true,
+    "assertions": 1056
+  },
+  "fullTables": {
+    "passed": true,
+    "tolerance": 1e-10,
+    "modes": [
+      {
+        "mode": "official",
+        "statesCompared": 536448,
+        "maximumDifference": 8.526512829121202e-13,
+        "worstIndex": 245800,
+        "primaryStartingValue": 254.58772873449593,
+        "independentStartingValue": 254.5877287344961
+      },
+      {
+        "mode": "published",
+        "statesCompared": 536448,
+        "maximumDifference": 9.379164112033322e-13,
+        "worstIndex": 368677,
+        "primaryStartingValue": 254.58960948196315,
+        "independentStartingValue": 254.58960948196366
+      }
+    ]
+  },
+  "scoring": {
+    "passed": true,
+    "seed": 1,
+    "orderedRolls": 7776,
+    "categories": 13,
+    "modes": 2,
+    "scoringCases": 202176
+  },
+  "random": {
+    "passed": true,
+    "seed": 1,
+    "states": 50000,
+    "distinctScorecards": 47533,
+    "modes": {
+      "official": 25000,
+      "published": 25000
+    },
+    "rollLayers": [
+      16667,
+      16667,
+      16666
+    ],
+    "orderedHoldChecks": 33333,
+    "tolerance": 1e-10,
+    "maximumValueDifference": 7.389644451905042e-13,
+    "maximumHoldResidual": 1.0103917702508625e-11,
+    "holdAlternates": 317,
+    "categoryAlternates": 0,
+    "alternateMeaning": "Different floating evaluation orders may select different holds within the declared roundoff tolerance; every selected hold was directly evaluated with ordered chance outcomes."
+  }
+}

@@ -1,21 +1,24 @@
-# Original target and official joker rules
+# Original target and official Joker rules
 
-The prompt demands both the official forced joker rules and an empty-card
-expected value rounding to254.5896. Verhoeff's rules page permits any open
-category for an extra Yahtzee, giving joker fixed scores only when matching
-upper is filled. Hasbro40958 instead forces matching upper, then open lower,
-then remaining upper0, even when the Yahtzee box has0. These conventions are
-different games. A recent independent exact engine reports official254.5877
-and published254.5896, but those are research leads, not our computed results.
+The prompt requires official rules and empty-card EV rounding to254.5896.
+These requirements select different scoring conventions.
 
-We will independently solve both rule modes, preserve the official default,
-test the published mode against its published target, and record the actual
-computed gap. The number will never be returned as a hardcoded production
-answer. At this early milestone no full-state result is yet verified.
+Hasbro US40958 forces a later Yahtzee into matching upper if open, otherwise
+open lower, otherwise another upper for0. It applies even when Yahtzee was
+scratched0; only extra100 disappears. Verhoeff's historically published OSYP
+rules permit any open category and apply fixed Joker scores only when matching
+upper is filled.
 
-Primary sources:
-https://www.hasbro.com/common/instruct/40958.pdf
-https://hasbro-apac-eng.custhelp.com/app/answers/detail/a_id/211
-https://www-set.win.tue.nl/~wstomv/misc/yahtzee/rules.html
-https://www-set.win.tue.nl/~wstomv/misc/yahtzee/trivia.html
-Research lead: https://github.com/jdh8/yahtzee-engine
+| Convention | Actual primary EV | Independent EV | Four decimals |
+|---|---:|---:|---:|
+| Hasbro forced default |254.58772873449593|254.5877287344961|254.5877|
+| Explicit published |254.58960948196315|254.58960948196366|254.5896|
+
+The computed gap is about0.00188074746722 points. Both independently generated
+tables agree below1e-12 at every valid state. No target enters either generator
+or production result. The coordinator approved official default plus explicit
+historical mode. The literal contradictory conjunction is not claimed passed.
+
+The newer English-Canadian00950 download has different threshold/Joker
+wording. This job fixes US40958 and63-inclusive upper threshold, matching the
+specified US model. SOURCES.md and reports/research-exa-raw.json retain evidence.
