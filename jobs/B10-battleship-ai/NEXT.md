@@ -1,3 +1,3 @@
 # Next step
 
-Observe the complete B10 seed-matrix CI and required aggregate. Preserve the old frozen-head full local run and all failed timing witnesses. Refresh final evidence/hashes and PR6 with actual results; keep it incomplete if any required gate fails. B11 blind reference is sealed at8564ea3 and integrated in its own worktree; finish its complete50,000small cases/seed and every large optimum comparison. Coordinated ownership is B10 and B11 only.
+Observe the complete hosted seed-matrix run on the final evidence-publication head and link its exact SHA/checks from PR 6. Review and merge the ready PR when desired. Preserve all successful and failed ledgers. The original counts, means and literal timing gates have passed; further all-input latency claims or a separately authored private proposal sampler would require additional evidence. B11 remains the separately coordinated active job.

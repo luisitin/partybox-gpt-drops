@@ -1,0 +1,914 @@
+verify seed 1	Set up job	﻿2026-10-07T15:55:02.7805447Z Current runner version: '2.337.0'
+verify seed 1	Set up job	2026-10-07T15:55:02.7830361Z ##[group]Runner Image Provisioner
+verify seed 1	Set up job	2026-10-07T15:55:02.7831227Z Hosted Compute Agent
+verify seed 1	Set up job	2026-10-07T15:55:02.7831950Z Version: 20261002.596
+verify seed 1	Set up job	2026-10-07T15:55:02.7832589Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+verify seed 1	Set up job	2026-10-07T15:55:02.7833623Z Build Date: 2026-10-02T22:28:27Z
+verify seed 1	Set up job	2026-10-07T15:55:02.7834404Z Worker ID: {ea7d2057-4f1c-4ff6-a2c6-a0c360488ed0}
+verify seed 1	Set up job	2026-10-07T15:55:02.7835160Z Region: westus
+verify seed 1	Set up job	2026-10-07T15:55:02.7835783Z Cloud: Azure
+verify seed 1	Set up job	2026-10-07T15:55:02.7836326Z ##[endgroup]
+verify seed 1	Set up job	2026-10-07T15:55:02.7837788Z ##[group]Operating System
+verify seed 1	Set up job	2026-10-07T15:55:02.7838531Z Ubuntu
+verify seed 1	Set up job	2026-10-07T15:55:02.7839069Z 24.04.5
+verify seed 1	Set up job	2026-10-07T15:55:02.7839652Z LTS
+verify seed 1	Set up job	2026-10-07T15:55:02.7840183Z ##[endgroup]
+verify seed 1	Set up job	2026-10-07T15:55:02.7840741Z ##[group]Runner Image
+verify seed 1	Set up job	2026-10-07T15:55:02.7841471Z Image: ubuntu-24.04
+verify seed 1	Set up job	2026-10-07T15:55:02.7842066Z Version: 20261004.327.1
+verify seed 1	Set up job	2026-10-07T15:55:02.7843487Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+verify seed 1	Set up job	2026-10-07T15:55:02.7845234Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+verify seed 1	Set up job	2026-10-07T15:55:02.7846298Z ##[endgroup]
+verify seed 1	Set up job	2026-10-07T15:55:02.7847410Z ##[group]GITHUB_TOKEN Permissions
+verify seed 1	Set up job	2026-10-07T15:55:02.7849324Z Contents: read
+verify seed 1	Set up job	2026-10-07T15:55:02.7849970Z Metadata: read
+verify seed 1	Set up job	2026-10-07T15:55:02.7850599Z ##[endgroup]
+verify seed 1	Set up job	2026-10-07T15:55:02.7852619Z Secret source: Actions
+verify seed 1	Set up job	2026-10-07T15:55:02.7853948Z Cache mode: write
+verify seed 1	Set up job	2026-10-07T15:55:02.7854672Z Prepare workflow directory
+verify seed 1	Set up job	2026-10-07T15:55:02.8298727Z Prepare all required actions
+verify seed 1	Set up job	2026-10-07T15:55:02.8357050Z Getting action download info
+verify seed 1	Set up job	2026-10-07T15:55:03.2069469Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verify seed 1	Set up job	2026-10-07T15:55:03.3044567Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+verify seed 1	Set up job	2026-10-07T15:55:03.4037949Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+verify seed 1	Set up job	2026-10-07T15:55:03.6214055Z Complete job name: verify seed 1
+verify seed 1	Run actions/checkout@v4	﻿2026-10-07T15:55:03.6909808Z ##[group]Run actions/checkout@v4
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6910702Z with:
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6911183Z   repository: luisitin/partybox-gpt-drops
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6915118Z   token: ***
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6915562Z   ssh-strict: true
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6915998Z   ssh-user: git
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6916441Z   persist-credentials: true
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6916925Z   clean: true
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6917372Z   sparse-checkout-cone-mode: true
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6917904Z   fetch-depth: 1
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6918340Z   fetch-tags: false
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6918794Z   show-progress: true
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6919239Z   lfs: false
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6919653Z   submodules: false
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6920102Z   set-safe-directory: true
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6920613Z   allow-unsafe-pr-checkout: false
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.6921401Z ##[endgroup]
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.7984933Z Syncing repository: luisitin/partybox-gpt-drops
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.7987558Z ##[group]Getting Git version info
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.7988899Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.7990799Z [command]/usr/bin/git version
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8051222Z git version 2.55.0
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8076810Z ##[endgroup]
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8092195Z Temporarily overriding HOME='/home/runner/work/_temp/71f91885-e057-44d0-9ff4-ebdbbcc71faf' before making global git config changes
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8094962Z Adding repository directory to the temporary git global config as a safe directory
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8098214Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8168397Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8176827Z ##[group]Initializing the repository
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8189455Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8326253Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8327808Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8329106Z hint: to use in all of your new repositories, which will suppress this warning,
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8330792Z hint: call:
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8331503Z hint:
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8332128Z hint: 	git config --global init.defaultBranch <name>
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8332762Z hint:
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8333740Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8334685Z hint: 'development'. The just-created branch can be renamed via this command:
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8335443Z hint:
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8335870Z hint: 	git branch -m <name>
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8336408Z hint:
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8337177Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8338290Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8340142Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8387284Z ##[endgroup]
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8388893Z ##[group]Disabling automatic garbage collection
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8390764Z [command]/usr/bin/git config --local gc.auto 0
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8434040Z ##[endgroup]
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8435194Z ##[group]Setting up auth
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8436432Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8469400Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.8950670Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.9015542Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.9268686Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.9305554Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.9531176Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.9573295Z ##[endgroup]
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.9582447Z ##[group]Fetching the repository
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:03.9584644Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e44982dcc463768f4542e868e9051dc1ca03f76a:refs/remotes/pull/6/merge
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5007915Z From https://github.com/luisitin/partybox-gpt-drops
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5010275Z  * [new ref]         e44982dcc463768f4542e868e9051dc1ca03f76a -> pull/6/merge
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5014929Z ##[endgroup]
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5016974Z ##[group]Determining the checkout info
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5019547Z ##[endgroup]
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5025808Z [command]/usr/bin/git sparse-checkout disable
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5088429Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5119601Z ##[group]Checking out the ref
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5123507Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/6/merge
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5213160Z Note: switching to 'refs/remotes/pull/6/merge'.
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5214279Z 
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5216316Z You are in 'detached HEAD' state. You can look around, make experimental
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5217663Z changes and commit them, and you can discard any commits you make in this
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5218905Z state without impacting any branches by switching back to a branch.
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5219680Z 
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5220367Z If you want to create a new branch to retain commits you create, you may
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5223217Z do so (now or later) by using -c with the switch command. Example:
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5224525Z 
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5225058Z   git switch -c <new-branch-name>
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5225815Z 
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5226246Z Or undo this operation with:
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5226911Z 
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5227307Z   git switch -
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5227868Z 
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5228676Z Turn off this advice by setting config variable advice.detachedHead to false
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5229852Z 
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5231272Z HEAD is now at e44982d Merge 740d13f3aabb56c4fee3f55b3d1e30c706eea7ae into f31ad2c4bc0df558a199963f55d76d6b32386127
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5235044Z ##[endgroup]
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5271493Z [command]/usr/bin/git log -1 --format=%H
+verify seed 1	Run actions/checkout@v4	2026-10-07T15:55:04.5298052Z e44982dcc463768f4542e868e9051dc1ca03f76a
+verify seed 1	Run actions/setup-node@v4	﻿2026-10-07T15:55:04.5840583Z ##[group]Run actions/setup-node@v4
+verify seed 1	Run actions/setup-node@v4	2026-10-07T15:55:04.5841601Z with:
+verify seed 1	Run actions/setup-node@v4	2026-10-07T15:55:04.5842321Z   node-version: 22
+verify seed 1	Run actions/setup-node@v4	2026-10-07T15:55:04.5843321Z   always-auth: false
+verify seed 1	Run actions/setup-node@v4	2026-10-07T15:55:04.5843906Z   check-latest: false
+verify seed 1	Run actions/setup-node@v4	2026-10-07T15:55:04.5848635Z   token: ***
+verify seed 1	Run actions/setup-node@v4	2026-10-07T15:55:04.5849409Z ##[endgroup]
+verify seed 1	Run actions/setup-node@v4	2026-10-07T15:55:04.7425790Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+verify seed 1	Run actions/setup-node@v4	2026-10-07T15:55:04.7430383Z (node:2279) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify seed 1	Run actions/setup-node@v4	2026-10-07T15:55:04.7432614Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify seed 1	Run actions/setup-node@v4	2026-10-07T15:55:04.7434814Z ##[group]Environment details
+verify seed 1	Run actions/setup-node@v4	2026-10-07T15:55:05.1834183Z node: v22.23.3
+verify seed 1	Run actions/setup-node@v4	2026-10-07T15:55:05.1837489Z npm: 10.9.9
+verify seed 1	Run actions/setup-node@v4	2026-10-07T15:55:05.1838784Z yarn: 1.22.22
+verify seed 1	Run actions/setup-node@v4	2026-10-07T15:55:05.1841421Z ##[endgroup]
+verify seed 1	Run npm ci --ignore-scripts --no-audit --no-fund	﻿2026-10-07T15:55:05.2042251Z ##[group]Run npm ci --ignore-scripts --no-audit --no-fund
+verify seed 1	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:05.2044568Z [36;1mnpm ci --ignore-scripts --no-audit --no-fund[0m
+verify seed 1	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:05.2340903Z shell: /usr/bin/bash -e {0}
+verify seed 1	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:05.2342474Z ##[endgroup]
+verify seed 1	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:06.2427247Z 
+verify seed 1	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:06.2433401Z added 1 package in 946ms
+verify seed 1	Run npm test -- --seed=1	﻿2026-10-07T15:55:06.2873865Z ##[group]Run npm test -- --seed=1
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:06.2874253Z [36;1mnpm test -- --seed=1[0m
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:06.2939991Z shell: /usr/bin/bash -e {0}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:06.2940301Z ##[endgroup]
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:06.4011890Z 
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:06.4012542Z > partybox-b10-battleship-ai@1.0.0 test
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:06.4013583Z > npm run build && node test/run.mjs --seed=1
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:06.4013915Z 
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:06.5006422Z 
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:06.5007424Z > partybox-b10-battleship-ai@1.0.0 build
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:06.5008246Z > tsc -p tsconfig.json
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:06.5008444Z 
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:12.5475258Z {"verifiedSeed":1,"differential":{"name":"6x6 full-enumeration differential","seed":1,"cases":10000,"passed":10000,"enumeratedLayouts":"1624793","policyChecks":30000,"feedbackChecks":23625,"seconds":3.2978610720000003},"mutationsKilled":25}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:23.2929775Z {"progress":true,"seed":1,"difficulty":"easy","games":10000,"mean":62.186,"seconds":10.694583748000001}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:33.6788093Z {"progress":true,"seed":1,"difficulty":"easy","games":20000,"mean":62.15915,"seconds":21.082165000999996}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:43.9945090Z {"progress":true,"seed":1,"difficulty":"easy","games":30000,"mean":62.146433333333334,"seconds":31.397788695}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:55:54.3608802Z {"progress":true,"seed":1,"difficulty":"easy","games":40000,"mean":62.157375,"seconds":41.764210964}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:56:04.7587803Z {"progress":true,"seed":1,"difficulty":"easy","games":50000,"mean":62.14748,"seconds":52.161919589}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:56:15.1413151Z {"progress":true,"seed":1,"difficulty":"easy","games":60000,"mean":62.132533333333335,"seconds":62.544304937}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:56:25.5282497Z {"progress":true,"seed":1,"difficulty":"easy","games":70000,"mean":62.13644285714286,"seconds":72.931261666}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:56:35.9337753Z {"progress":true,"seed":1,"difficulty":"easy","games":80000,"mean":62.14455,"seconds":83.337139713}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:56:46.3399973Z {"progress":true,"seed":1,"difficulty":"easy","games":90000,"mean":62.15756666666667,"seconds":93.743043421}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:56:56.7532259Z {"progress":true,"seed":1,"difficulty":"easy","games":100000,"mean":62.15892,"seconds":104.15656600199999}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:56:56.7544516Z {"seed":1,"games":100000,"difficulty":"easy","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":104.907728,"mean":62.15892,"meanExact":"6215892/100000","median":62,"standardDeviation":14.02500450770388,"min":21,"max":100,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,8,11,16,21,46,47,90,126,153,210,273,336,413,514,641,797,845,957,1043,1234,1312,1445,1579,1723,1767,1933,2068,2321,2373,2402,2394,2488,2558,2670,2696,2609,2499,2673,2605,2681,2496,2448,2587,2539,2350,2375,2276,2171,2042,1980,1834,1866,1771,1692,1663,1518,1419,1343,1286,1179,1055,1001,879,791,724,661,584,572,429,408,370,304,244,190,162,116,57,39],"shots":6215892,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.013,"p99":0.027,"max":1.9705449999999942,"over50":0},"elapsedSeconds":104.15708854699999,"sampledShots":0,"exactShots":0,"policyComparisons":6215892,"densityComparisons":0,"maxAuditDifference":0,"slowCases":[],"hardUnder45":null,"allShotsUnder50ms":true}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:57:07.0493251Z {"progress":true,"seed":1,"difficulty":"medium","games":10000,"mean":49.9802,"seconds":10.239048757}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:57:16.9914893Z {"progress":true,"seed":1,"difficulty":"medium","games":20000,"mean":49.92745,"seconds":20.181879966}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:57:26.8960488Z {"progress":true,"seed":1,"difficulty":"medium","games":30000,"mean":49.8944,"seconds":30.086441548}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:57:36.8097832Z {"progress":true,"seed":1,"difficulty":"medium","games":40000,"mean":49.8926,"seconds":40.000211319}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:57:46.7005241Z {"progress":true,"seed":1,"difficulty":"medium","games":50000,"mean":49.88474,"seconds":49.890678973}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:57:56.5982156Z {"progress":true,"seed":1,"difficulty":"medium","games":60000,"mean":49.88895,"seconds":59.788448391}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:58:06.4859066Z {"progress":true,"seed":1,"difficulty":"medium","games":70000,"mean":49.89635714285714,"seconds":69.676059838}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:58:16.3266675Z {"progress":true,"seed":1,"difficulty":"medium","games":80000,"mean":49.8795,"seconds":79.517038789}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:58:26.2228478Z {"progress":true,"seed":1,"difficulty":"medium","games":90000,"mean":49.88545555555555,"seconds":89.41284267}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:58:36.1495192Z {"progress":true,"seed":1,"difficulty":"medium","games":100000,"mean":49.88569,"seconds":99.33983752}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T15:58:36.1510558Z {"seed":1,"games":100000,"difficulty":"medium","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":100.030233,"mean":49.88569,"meanExact":"4988569/100000","median":50,"standardDeviation":8.686100258877799,"min":18,"max":78,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,5,13,25,40,52,90,140,194,281,354,449,564,688,847,982,1217,1412,1570,1774,1941,2287,2527,2874,3032,3438,3460,3681,4060,4182,4308,4275,4280,4182,4155,4040,4083,3863,3799,3612,3497,3172,2907,2219,1590,1046,698,504,434,314,240,181,139,111,87,43,20,11,5,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"shots":4988569,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.013,"p99":0.028,"max":1.1741719999999987,"over50":0},"elapsedSeconds":99.340406231,"sampledShots":0,"exactShots":0,"policyComparisons":4988569,"densityComparisons":0,"maxAuditDifference":0,"slowCases":[],"hardUnder45":null,"allShotsUnder50ms":true}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T16:00:14.7070285Z {"progress":true,"seed":1,"difficulty":"hard","games":10000,"mean":44.7905,"seconds":98.5025914}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T16:01:52.1899087Z {"progress":true,"seed":1,"difficulty":"hard","games":20000,"mean":44.78715,"seconds":195.984680422}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T16:03:30.7565490Z {"progress":true,"seed":1,"difficulty":"hard","games":30000,"mean":44.805933333333336,"seconds":294.552549685}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T16:05:09.2919864Z {"progress":true,"seed":1,"difficulty":"hard","games":40000,"mean":44.835575,"seconds":393.08844925200003}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T16:06:46.8221216Z {"progress":true,"seed":1,"difficulty":"hard","games":50000,"mean":44.82664,"seconds":490.61832889}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T16:08:24.4532550Z {"progress":true,"seed":1,"difficulty":"hard","games":60000,"mean":44.82286666666667,"seconds":588.2496655509999}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T16:10:01.6785139Z {"progress":true,"seed":1,"difficulty":"hard","games":70000,"mean":44.818957142857144,"seconds":685.474718912}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T16:11:38.7682204Z {"progress":true,"seed":1,"difficulty":"hard","games":80000,"mean":44.8315125,"seconds":782.564449345}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T16:13:15.7740232Z {"progress":true,"seed":1,"difficulty":"hard","games":90000,"mean":44.83817777777778,"seconds":879.5704545389999}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T16:14:52.8560521Z {"progress":true,"seed":1,"difficulty":"hard","games":100000,"mean":44.83574,"seconds":976.6525128159999}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T16:14:52.8574109Z {"seed":1,"games":100000,"difficulty":"hard","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":994.217448,"mean":44.83574,"meanExact":"4483574/100000","median":45,"standardDeviation":8.397647519230528,"min":19,"max":65,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,11,30,42,89,137,216,340,468,696,906,1109,1459,1750,2001,2390,2773,3038,3469,3709,3929,3986,4276,4241,4138,4107,3903,3933,3977,3891,3881,3611,3379,3205,3017,3013,2815,2566,2275,1954,1786,1530,1119,561,226,40,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"shots":4483574,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.087,"p99":0.408,"max":5.523980999999999,"over50":0},"elapsedSeconds":976.653892001,"sampledShots":2785130,"exactShots":1698444,"policyComparisons":4483574,"densityComparisons":4483574,"maxAuditDifference":2.3314683517128287e-15,"slowCases":[],"hardUnder45":true,"allShotsUnder50ms":true}
+verify seed 1	Run npm test -- --seed=1	2026-10-07T16:14:52.9380240Z {"complete":false,"passed":true,"failures":[],"seconds":1184.6263488989998,"report":"reports/latest.json"}
+verify seed 1	Run actions/upload-artifact@v4	﻿2026-10-07T16:14:52.9553492Z ##[group]Run actions/upload-artifact@v4
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:52.9553822Z with:
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:52.9554027Z   name: B10-seed-1
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:52.9554260Z   path: jobs/B10-battleship-ai/reports/
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:52.9554538Z   if-no-files-found: warn
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:52.9554770Z   compression-level: 6
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:52.9554982Z   overwrite: false
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:52.9555190Z   include-hidden-files: false
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:52.9555437Z ##[endgroup]
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:53.1241645Z (node:3328) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:53.1242573Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:53.1325276Z With the provided path, there will be 4 files uploaded
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:53.1330894Z Artifact name is valid!
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:53.1331708Z Root directory input is valid!
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:53.5225945Z Beginning upload of artifact content to blob storage
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:53.5494186Z (node:3328) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:53.8233434Z Uploaded bytes 6876
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:53.8976690Z Finished uploading artifact content to blob storage!
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:53.8978379Z SHA256 digest of uploaded artifact zip is c6e45d91f8fad002a1bc7e942dcd2047239cfc83adab4e2a621f0508a6ab5aa3
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:53.8979473Z Finalizing artifact upload
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:54.1830932Z Artifact B10-seed-1.zip successfully finalized. Artifact ID 11495958302
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:54.1832558Z Artifact B10-seed-1 has been successfully uploaded! Final size is 6876 bytes. Artifact ID is 11495958302
+verify seed 1	Run actions/upload-artifact@v4	2026-10-07T16:14:54.1839527Z Artifact download URL: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37647836440/artifacts/11495958302
+verify seed 1	Post Run actions/setup-node@v4	﻿2026-10-07T16:14:54.2018722Z Post job cleanup.
+verify seed 1	Post Run actions/setup-node@v4	2026-10-07T16:14:54.3232134Z (node:3340) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify seed 1	Post Run actions/setup-node@v4	2026-10-07T16:14:54.3233979Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify seed 1	Post Run actions/checkout@v4	﻿2026-10-07T16:14:54.3410811Z Post job cleanup.
+verify seed 1	Post Run actions/checkout@v4	2026-10-07T16:14:54.4363792Z [command]/usr/bin/git version
+verify seed 1	Post Run actions/checkout@v4	2026-10-07T16:14:54.4413752Z git version 2.55.0
+verify seed 1	Post Run actions/checkout@v4	2026-10-07T16:14:54.4456492Z Temporarily overriding HOME='/home/runner/work/_temp/521dab5e-cc2d-4d5f-8fca-021efb403b5d' before making global git config changes
+verify seed 1	Post Run actions/checkout@v4	2026-10-07T16:14:54.4458404Z Adding repository directory to the temporary git global config as a safe directory
+verify seed 1	Post Run actions/checkout@v4	2026-10-07T16:14:54.4463277Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify seed 1	Post Run actions/checkout@v4	2026-10-07T16:14:54.4513308Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify seed 1	Post Run actions/checkout@v4	2026-10-07T16:14:54.4561133Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify seed 1	Post Run actions/checkout@v4	2026-10-07T16:14:54.4909710Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify seed 1	Post Run actions/checkout@v4	2026-10-07T16:14:54.4934340Z http.https://github.com/.extraheader
+verify seed 1	Post Run actions/checkout@v4	2026-10-07T16:14:54.4961027Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verify seed 1	Post Run actions/checkout@v4	2026-10-07T16:14:54.5015741Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify seed 1	Post Run actions/checkout@v4	2026-10-07T16:14:54.5315105Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify seed 1	Post Run actions/checkout@v4	2026-10-07T16:14:54.5363062Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify seed 1	Complete job	﻿2026-10-07T16:14:54.5738922Z Cleaning up orphan processes
+verify seed 1	Complete job	2026-10-07T16:14:54.6159844Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+verify seed 3	Set up job	﻿2026-10-07T15:55:02.4219712Z Current runner version: '2.337.0'
+verify seed 3	Set up job	2026-10-07T15:55:02.4248655Z ##[group]Runner Image Provisioner
+verify seed 3	Set up job	2026-10-07T15:55:02.4249605Z Hosted Compute Agent
+verify seed 3	Set up job	2026-10-07T15:55:02.4250211Z Version: 20261002.596
+verify seed 3	Set up job	2026-10-07T15:55:02.4250968Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+verify seed 3	Set up job	2026-10-07T15:55:02.4251725Z Build Date: 2026-10-02T22:28:27Z
+verify seed 3	Set up job	2026-10-07T15:55:02.4252463Z Worker ID: {e35fd191-52d9-4062-8048-ba1c18864f6c}
+verify seed 3	Set up job	2026-10-07T15:55:02.4253204Z Region: westus2
+verify seed 3	Set up job	2026-10-07T15:55:02.4253763Z Cloud: Azure
+verify seed 3	Set up job	2026-10-07T15:55:02.4254693Z ##[endgroup]
+verify seed 3	Set up job	2026-10-07T15:55:02.4256240Z ##[group]Operating System
+verify seed 3	Set up job	2026-10-07T15:55:02.4257010Z Ubuntu
+verify seed 3	Set up job	2026-10-07T15:55:02.4257576Z 24.04.5
+verify seed 3	Set up job	2026-10-07T15:55:02.4258103Z LTS
+verify seed 3	Set up job	2026-10-07T15:55:02.4258711Z ##[endgroup]
+verify seed 3	Set up job	2026-10-07T15:55:02.4259281Z ##[group]Runner Image
+verify seed 3	Set up job	2026-10-07T15:55:02.4259891Z Image: ubuntu-24.04
+verify seed 3	Set up job	2026-10-07T15:55:02.4260538Z Version: 20261004.327.1
+verify seed 3	Set up job	2026-10-07T15:55:02.4261649Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+verify seed 3	Set up job	2026-10-07T15:55:02.4263568Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+verify seed 3	Set up job	2026-10-07T15:55:02.4265135Z ##[endgroup]
+verify seed 3	Set up job	2026-10-07T15:55:02.4266452Z ##[group]GITHUB_TOKEN Permissions
+verify seed 3	Set up job	2026-10-07T15:55:02.4268505Z Contents: read
+verify seed 3	Set up job	2026-10-07T15:55:02.4269352Z Metadata: read
+verify seed 3	Set up job	2026-10-07T15:55:02.4269935Z ##[endgroup]
+verify seed 3	Set up job	2026-10-07T15:55:02.4272213Z Secret source: Actions
+verify seed 3	Set up job	2026-10-07T15:55:02.4273279Z Cache mode: write
+verify seed 3	Set up job	2026-10-07T15:55:02.4274088Z Prepare workflow directory
+verify seed 3	Set up job	2026-10-07T15:55:02.4728523Z Prepare all required actions
+verify seed 3	Set up job	2026-10-07T15:55:02.4778389Z Getting action download info
+verify seed 3	Set up job	2026-10-07T15:55:02.8811875Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verify seed 3	Set up job	2026-10-07T15:55:02.9852700Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+verify seed 3	Set up job	2026-10-07T15:55:03.0850888Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+verify seed 3	Set up job	2026-10-07T15:55:03.3006941Z Complete job name: verify seed 3
+verify seed 3	Run actions/checkout@v4	﻿2026-10-07T15:55:03.3758361Z ##[group]Run actions/checkout@v4
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3759311Z with:
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3759817Z   repository: luisitin/partybox-gpt-drops
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3763651Z   token: ***
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3764110Z   ssh-strict: true
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3764984Z   ssh-user: git
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3765461Z   persist-credentials: true
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3765971Z   clean: true
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3766439Z   sparse-checkout-cone-mode: true
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3766982Z   fetch-depth: 1
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3767444Z   fetch-tags: false
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3767906Z   show-progress: true
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3768372Z   lfs: false
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3768803Z   submodules: false
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3769272Z   set-safe-directory: true
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3769806Z   allow-unsafe-pr-checkout: false
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.3770696Z ##[endgroup]
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.4845143Z Syncing repository: luisitin/partybox-gpt-drops
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.4848354Z ##[group]Getting Git version info
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.4849725Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.4851626Z [command]/usr/bin/git version
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.4967005Z git version 2.55.0
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.4976463Z ##[endgroup]
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.4992095Z Temporarily overriding HOME='/home/runner/work/_temp/12977120-44ba-4a5f-bd77-5615f6a713c9' before making global git config changes
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.4994697Z Adding repository directory to the temporary git global config as a safe directory
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.4998766Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5055976Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5065708Z ##[group]Initializing the repository
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5067110Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5198277Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5200117Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5201795Z hint: to use in all of your new repositories, which will suppress this warning,
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5202997Z hint: call:
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5203687Z hint:
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5204819Z hint: 	git config --global init.defaultBranch <name>
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5205837Z hint:
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5206754Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5208290Z hint: 'development'. The just-created branch can be renamed via this command:
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5209580Z hint:
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5210286Z hint: 	git branch -m <name>
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5211038Z hint:
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5212032Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5213965Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5230548Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5278625Z ##[endgroup]
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5280012Z ##[group]Disabling automatic garbage collection
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5284744Z [command]/usr/bin/git config --local gc.auto 0
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5321361Z ##[endgroup]
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5322842Z ##[group]Setting up auth
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5330991Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5375298Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5872666Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.5912852Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.6170047Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.6209212Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.6446240Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.6490044Z ##[endgroup]
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.6500161Z ##[group]Fetching the repository
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:03.6501763Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e44982dcc463768f4542e868e9051dc1ca03f76a:refs/remotes/pull/6/merge
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0228785Z From https://github.com/luisitin/partybox-gpt-drops
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0318634Z  * [new ref]         e44982dcc463768f4542e868e9051dc1ca03f76a -> pull/6/merge
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0322399Z ##[endgroup]
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0323897Z ##[group]Determining the checkout info
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0325207Z ##[endgroup]
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0325795Z [command]/usr/bin/git sparse-checkout disable
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0327314Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0360913Z ##[group]Checking out the ref
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0365591Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/6/merge
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0465969Z Note: switching to 'refs/remotes/pull/6/merge'.
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0467099Z 
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0467717Z You are in 'detached HEAD' state. You can look around, make experimental
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0468924Z changes and commit them, and you can discard any commits you make in this
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0470139Z state without impacting any branches by switching back to a branch.
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0470929Z 
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0471459Z If you want to create a new branch to retain commits you create, you may
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0473053Z do so (now or later) by using -c with the switch command. Example:
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0473771Z 
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0474132Z   git switch -c <new-branch-name>
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0475190Z 
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0475760Z Or undo this operation with:
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0476565Z 
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0477085Z   git switch -
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0477720Z 
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0478660Z Turn off this advice by setting config variable advice.detachedHead to false
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0480011Z 
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0481767Z HEAD is now at e44982d Merge 740d13f3aabb56c4fee3f55b3d1e30c706eea7ae into f31ad2c4bc0df558a199963f55d76d6b32386127
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0489619Z ##[endgroup]
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0544824Z [command]/usr/bin/git log -1 --format=%H
+verify seed 3	Run actions/checkout@v4	2026-10-07T15:55:04.0579821Z e44982dcc463768f4542e868e9051dc1ca03f76a
+verify seed 3	Run actions/setup-node@v4	﻿2026-10-07T15:55:04.1099317Z ##[group]Run actions/setup-node@v4
+verify seed 3	Run actions/setup-node@v4	2026-10-07T15:55:04.1100527Z with:
+verify seed 3	Run actions/setup-node@v4	2026-10-07T15:55:04.1101335Z   node-version: 22
+verify seed 3	Run actions/setup-node@v4	2026-10-07T15:55:04.1102252Z   always-auth: false
+verify seed 3	Run actions/setup-node@v4	2026-10-07T15:55:04.1103158Z   check-latest: false
+verify seed 3	Run actions/setup-node@v4	2026-10-07T15:55:04.1112964Z   token: ***
+verify seed 3	Run actions/setup-node@v4	2026-10-07T15:55:04.1113824Z ##[endgroup]
+verify seed 3	Run actions/setup-node@v4	2026-10-07T15:55:04.2787484Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+verify seed 3	Run actions/setup-node@v4	2026-10-07T15:55:04.2792950Z (node:2305) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify seed 3	Run actions/setup-node@v4	2026-10-07T15:55:04.2797798Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify seed 3	Run actions/setup-node@v4	2026-10-07T15:55:04.2801618Z ##[group]Environment details
+verify seed 3	Run actions/setup-node@v4	2026-10-07T15:55:04.7485744Z node: v22.23.3
+verify seed 3	Run actions/setup-node@v4	2026-10-07T15:55:04.7486855Z npm: 10.9.9
+verify seed 3	Run actions/setup-node@v4	2026-10-07T15:55:04.7487237Z yarn: 1.22.22
+verify seed 3	Run actions/setup-node@v4	2026-10-07T15:55:04.7488394Z ##[endgroup]
+verify seed 3	Run npm ci --ignore-scripts --no-audit --no-fund	﻿2026-10-07T15:55:04.7649127Z ##[group]Run npm ci --ignore-scripts --no-audit --no-fund
+verify seed 3	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:04.7649989Z [36;1mnpm ci --ignore-scripts --no-audit --no-fund[0m
+verify seed 3	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:04.7970722Z shell: /usr/bin/bash -e {0}
+verify seed 3	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:04.7971374Z ##[endgroup]
+verify seed 3	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:06.9018464Z 
+verify seed 3	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:06.9422177Z added 1 package in 2s
+verify seed 3	Run npm test -- --seed=3	﻿2026-10-07T15:55:06.9463783Z ##[group]Run npm test -- --seed=3
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:06.9464152Z [36;1mnpm test -- --seed=3[0m
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:06.9530215Z shell: /usr/bin/bash -e {0}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:06.9530507Z ##[endgroup]
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:07.0596035Z 
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:07.0597263Z > partybox-b10-battleship-ai@1.0.0 test
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:07.0598224Z > npm run build && node test/run.mjs --seed=3
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:07.0598671Z 
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:07.1610392Z 
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:07.1611137Z > partybox-b10-battleship-ai@1.0.0 build
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:07.1611687Z > tsc -p tsconfig.json
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:07.1611896Z 
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:13.2592154Z {"verifiedSeed":3,"differential":{"name":"6x6 full-enumeration differential","seed":3,"cases":10000,"passed":10000,"enumeratedLayouts":"1635715","policyChecks":30000,"feedbackChecks":23850,"seconds":3.3122821320000004},"mutationsKilled":25}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:24.0133491Z {"progress":true,"seed":3,"difficulty":"easy","games":10000,"mean":61.7684,"seconds":10.705531199000001}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:34.5232267Z {"progress":true,"seed":3,"difficulty":"easy","games":20000,"mean":62.11985,"seconds":21.216679461}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:44.9712078Z {"progress":true,"seed":3,"difficulty":"easy","games":30000,"mean":62.126866666666665,"seconds":31.664250683000002}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:55:55.4883286Z {"progress":true,"seed":3,"difficulty":"easy","games":40000,"mean":62.174375,"seconds":42.181620807}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:56:05.9396169Z {"progress":true,"seed":3,"difficulty":"easy","games":50000,"mean":62.17296,"seconds":52.632850312}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:56:16.3809703Z {"progress":true,"seed":3,"difficulty":"easy","games":60000,"mean":62.17525,"seconds":63.074288879}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:56:26.8837307Z {"progress":true,"seed":3,"difficulty":"easy","games":70000,"mean":62.17098571428571,"seconds":73.577084227}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:56:37.3562953Z {"progress":true,"seed":3,"difficulty":"easy","games":80000,"mean":62.1819625,"seconds":84.049797691}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:56:47.8200434Z {"progress":true,"seed":3,"difficulty":"easy","games":90000,"mean":62.207233333333335,"seconds":94.513298142}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:56:58.2641216Z {"progress":true,"seed":3,"difficulty":"easy","games":100000,"mean":62.2104,"seconds":104.957453645}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:56:58.2650720Z {"seed":3,"games":100000,"difficulty":"easy","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":105.686091,"mean":62.2104,"meanExact":"6221040/100000","median":62,"standardDeviation":14.074546982717697,"min":22,"max":100,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,4,7,14,26,30,45,87,129,163,231,278,370,432,529,620,740,816,976,1090,1230,1383,1416,1585,1726,1782,2027,1962,2168,2262,2306,2529,2466,2528,2597,2596,2706,2598,2647,2678,2595,2657,2548,2553,2428,2402,2246,2298,2120,2142,1986,1923,1844,1807,1635,1562,1483,1423,1355,1320,1129,1051,987,911,753,788,685,599,550,461,403,352,341,260,222,170,114,76,41],"shots":6221040,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.013,"p99":0.027,"max":3.0617590000001655,"over50":0},"elapsedSeconds":104.958022416,"sampledShots":0,"exactShots":0,"policyComparisons":6221040,"densityComparisons":0,"maxAuditDifference":0,"slowCases":[],"hardUnder45":null,"allShotsUnder50ms":true}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:57:08.5920120Z {"progress":true,"seed":3,"difficulty":"medium","games":10000,"mean":49.943,"seconds":10.270034996}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:57:18.6031991Z {"progress":true,"seed":3,"difficulty":"medium","games":20000,"mean":49.8895,"seconds":20.282055255}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:57:28.6095637Z {"progress":true,"seed":3,"difficulty":"medium","games":30000,"mean":49.92146666666667,"seconds":30.288349379}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:57:38.5893381Z {"progress":true,"seed":3,"difficulty":"medium","games":40000,"mean":49.931275,"seconds":40.267896048}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:57:48.5584687Z {"progress":true,"seed":3,"difficulty":"medium","games":50000,"mean":49.91802,"seconds":50.23710478}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:57:58.5700038Z {"progress":true,"seed":3,"difficulty":"medium","games":60000,"mean":49.92765,"seconds":60.248560894}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:58:08.6098789Z {"progress":true,"seed":3,"difficulty":"medium","games":70000,"mean":49.926114285714284,"seconds":70.288719251}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:58:18.5812515Z {"progress":true,"seed":3,"difficulty":"medium","games":80000,"mean":49.9184875,"seconds":80.259802602}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:58:28.5115908Z {"progress":true,"seed":3,"difficulty":"medium","games":90000,"mean":49.93066666666667,"seconds":90.19035585799999}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:58:38.4460769Z {"progress":true,"seed":3,"difficulty":"medium","games":100000,"mean":49.92109,"seconds":100.12470578}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T15:58:38.4470881Z {"seed":3,"games":100000,"difficulty":"medium","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":100.873702,"mean":49.92109,"meanExact":"4992109/100000","median":50,"standardDeviation":8.683721395926565,"min":18,"max":78,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,5,4,9,19,40,45,88,154,182,291,318,433,532,706,836,1028,1157,1370,1597,1765,2080,2234,2502,2838,3145,3234,3530,3869,3927,4044,4214,4370,4359,4218,4234,4150,3914,3812,3654,3613,3507,3300,2894,2295,1635,1062,677,496,414,311,258,223,132,95,81,46,27,15,9,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"shots":4992109,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.013,"p99":0.028,"max":1.3554970000004687,"over50":0},"elapsedSeconds":100.12528039200001,"sampledShots":0,"exactShots":0,"policyComparisons":4992109,"densityComparisons":0,"maxAuditDifference":0,"slowCases":[],"hardUnder45":null,"allShotsUnder50ms":true}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T16:00:19.9079827Z {"progress":true,"seed":3,"difficulty":"hard","games":10000,"mean":44.9195,"seconds":101.405763592}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T16:02:00.1691060Z {"progress":true,"seed":3,"difficulty":"hard","games":20000,"mean":44.9124,"seconds":201.66746287100003}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T16:03:40.2134770Z {"progress":true,"seed":3,"difficulty":"hard","games":30000,"mean":44.9076,"seconds":301.71206219900006}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T16:05:21.1812973Z {"progress":true,"seed":3,"difficulty":"hard","games":40000,"mean":44.912175,"seconds":402.67988942200003}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T16:07:02.7417243Z {"progress":true,"seed":3,"difficulty":"hard","games":50000,"mean":44.93274,"seconds":504.240356802}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T16:08:44.2072195Z {"progress":true,"seed":3,"difficulty":"hard","games":60000,"mean":44.92735,"seconds":605.70585454}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T16:10:24.6565969Z {"progress":true,"seed":3,"difficulty":"hard","games":70000,"mean":44.9173,"seconds":706.1549206149999}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T16:12:05.5741183Z {"progress":true,"seed":3,"difficulty":"hard","games":80000,"mean":44.9139375,"seconds":807.0726603239999}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T16:13:46.5287168Z {"progress":true,"seed":3,"difficulty":"hard","games":90000,"mean":44.91806666666667,"seconds":908.027033151}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T16:15:27.0745499Z {"progress":true,"seed":3,"difficulty":"hard","games":100000,"mean":44.91006,"seconds":1008.573117033}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T16:15:27.0761192Z {"seed":3,"games":100000,"difficulty":"hard","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":1026.866995,"mean":44.91006,"meanExact":"4491006/100000","median":45,"standardDeviation":8.370384186506275,"min":17,"max":66,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,7,14,36,70,126,221,315,467,647,884,1097,1461,1722,2071,2364,2747,2923,3421,3619,4034,4106,4168,4201,4060,3965,3994,4003,3988,3996,3929,3609,3451,3161,3096,2978,2907,2642,2300,1975,1727,1545,1074,606,223,43,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"shots":4491006,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.088,"p99":0.43,"max":5.616438000000002,"over50":0},"elapsedSeconds":1008.5746201759999,"sampledShots":2790722,"exactShots":1700284,"policyComparisons":4491006,"densityComparisons":4491006,"maxAuditDifference":2.7755575615628914e-15,"slowCases":[],"hardUnder45":true,"allShotsUnder50ms":true}
+verify seed 3	Run npm test -- --seed=3	2026-10-07T16:15:27.1659774Z {"complete":false,"passed":true,"failures":[],"seconds":1218.160522999,"report":"reports/latest.json"}
+verify seed 3	Run actions/upload-artifact@v4	﻿2026-10-07T16:15:27.1846282Z ##[group]Run actions/upload-artifact@v4
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.1846612Z with:
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.1846839Z   name: B10-seed-3
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.1847080Z   path: jobs/B10-battleship-ai/reports/
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.1847360Z   if-no-files-found: warn
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.1847601Z   compression-level: 6
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.1847831Z   overwrite: false
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.1848051Z   include-hidden-files: false
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.1848306Z ##[endgroup]
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.3530768Z (node:2688) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.3532360Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.3617543Z With the provided path, there will be 4 files uploaded
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.3624361Z Artifact name is valid!
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.3625252Z Root directory input is valid!
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.7510247Z Beginning upload of artifact content to blob storage
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:27.7769864Z (node:2688) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:28.0627494Z Uploaded bytes 6890
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:28.1456101Z Finished uploading artifact content to blob storage!
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:28.1457149Z SHA256 digest of uploaded artifact zip is 354151b820591fb10b86ecf3ed1d999a14087d33f2588f64337600423d1a3f28
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:28.1459428Z Finalizing artifact upload
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:28.4404095Z Artifact B10-seed-3.zip successfully finalized. Artifact ID 11495943505
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:28.4405899Z Artifact B10-seed-3 has been successfully uploaded! Final size is 6890 bytes. Artifact ID is 11495943505
+verify seed 3	Run actions/upload-artifact@v4	2026-10-07T16:15:28.4412398Z Artifact download URL: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37647836440/artifacts/11495943505
+verify seed 3	Post Run actions/setup-node@v4	﻿2026-10-07T16:15:28.4600116Z Post job cleanup.
+verify seed 3	Post Run actions/setup-node@v4	2026-10-07T16:15:28.5904499Z (node:2701) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify seed 3	Post Run actions/setup-node@v4	2026-10-07T16:15:28.5906365Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify seed 3	Post Run actions/checkout@v4	﻿2026-10-07T16:15:28.6135948Z Post job cleanup.
+verify seed 3	Post Run actions/checkout@v4	2026-10-07T16:15:28.7363734Z [command]/usr/bin/git version
+verify seed 3	Post Run actions/checkout@v4	2026-10-07T16:15:28.7424678Z git version 2.55.0
+verify seed 3	Post Run actions/checkout@v4	2026-10-07T16:15:28.7486159Z Temporarily overriding HOME='/home/runner/work/_temp/9519c9db-b147-48be-9552-d95e7e633ccf' before making global git config changes
+verify seed 3	Post Run actions/checkout@v4	2026-10-07T16:15:28.7499291Z Adding repository directory to the temporary git global config as a safe directory
+verify seed 3	Post Run actions/checkout@v4	2026-10-07T16:15:28.7506201Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify seed 3	Post Run actions/checkout@v4	2026-10-07T16:15:28.7552324Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify seed 3	Post Run actions/checkout@v4	2026-10-07T16:15:28.7606583Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify seed 3	Post Run actions/checkout@v4	2026-10-07T16:15:28.7901265Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify seed 3	Post Run actions/checkout@v4	2026-10-07T16:15:28.7952079Z http.https://github.com/.extraheader
+verify seed 3	Post Run actions/checkout@v4	2026-10-07T16:15:28.7995656Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verify seed 3	Post Run actions/checkout@v4	2026-10-07T16:15:28.8045587Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify seed 3	Post Run actions/checkout@v4	2026-10-07T16:15:28.8343135Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify seed 3	Post Run actions/checkout@v4	2026-10-07T16:15:28.8390142Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify seed 3	Complete job	﻿2026-10-07T16:15:28.8805165Z Cleaning up orphan processes
+verify seed 3	Complete job	2026-10-07T16:15:28.9195526Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+verify seed 2	Set up job	﻿2026-10-07T15:55:01.6285148Z Current runner version: '2.337.0'
+verify seed 2	Set up job	2026-10-07T15:55:01.6310555Z ##[group]Runner Image Provisioner
+verify seed 2	Set up job	2026-10-07T15:55:01.6311446Z Hosted Compute Agent
+verify seed 2	Set up job	2026-10-07T15:55:01.6312124Z Version: 20260901.588
+verify seed 2	Set up job	2026-10-07T15:55:01.6312843Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+verify seed 2	Set up job	2026-10-07T15:55:01.6313595Z Build Date: 2026-09-01T19:56:44Z
+verify seed 2	Set up job	2026-10-07T15:55:01.6314352Z Worker ID: {52761408-00cb-4e9e-8daf-e3d5c561e2d3}
+verify seed 2	Set up job	2026-10-07T15:55:01.6315084Z Azure Region: westus2
+verify seed 2	Set up job	2026-10-07T15:55:01.6315639Z ##[endgroup]
+verify seed 2	Set up job	2026-10-07T15:55:01.6317141Z ##[group]Operating System
+verify seed 2	Set up job	2026-10-07T15:55:01.6317852Z Ubuntu
+verify seed 2	Set up job	2026-10-07T15:55:01.6318460Z 24.04.5
+verify seed 2	Set up job	2026-10-07T15:55:01.6319282Z LTS
+verify seed 2	Set up job	2026-10-07T15:55:01.6319958Z ##[endgroup]
+verify seed 2	Set up job	2026-10-07T15:55:01.6320662Z ##[group]Runner Image
+verify seed 2	Set up job	2026-10-07T15:55:01.6321275Z Image: ubuntu-24.04
+verify seed 2	Set up job	2026-10-07T15:55:01.6321889Z Version: 20260927.320.1
+verify seed 2	Set up job	2026-10-07T15:55:01.6322991Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+verify seed 2	Set up job	2026-10-07T15:55:01.6324819Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+verify seed 2	Set up job	2026-10-07T15:55:01.6325804Z ##[endgroup]
+verify seed 2	Set up job	2026-10-07T15:55:01.6326962Z ##[group]GITHUB_TOKEN Permissions
+verify seed 2	Set up job	2026-10-07T15:55:01.6328873Z Contents: read
+verify seed 2	Set up job	2026-10-07T15:55:01.6330009Z Metadata: read
+verify seed 2	Set up job	2026-10-07T15:55:01.6330619Z ##[endgroup]
+verify seed 2	Set up job	2026-10-07T15:55:01.6332668Z Secret source: Actions
+verify seed 2	Set up job	2026-10-07T15:55:01.6333736Z Cache mode: write
+verify seed 2	Set up job	2026-10-07T15:55:01.6334429Z Prepare workflow directory
+verify seed 2	Set up job	2026-10-07T15:55:01.6744319Z Prepare all required actions
+verify seed 2	Set up job	2026-10-07T15:55:01.6790758Z Getting action download info
+verify seed 2	Set up job	2026-10-07T15:55:02.0858772Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verify seed 2	Set up job	2026-10-07T15:55:02.1977592Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+verify seed 2	Set up job	2026-10-07T15:55:02.2911541Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+verify seed 2	Set up job	2026-10-07T15:55:02.5020845Z Complete job name: verify seed 2
+verify seed 2	Run actions/checkout@v4	﻿2026-10-07T15:55:02.5732831Z ##[group]Run actions/checkout@v4
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5733741Z with:
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5734244Z   repository: luisitin/partybox-gpt-drops
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5738104Z   token: ***
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5738559Z   ssh-strict: true
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5739295Z   ssh-user: git
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5739867Z   persist-credentials: true
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5740378Z   clean: true
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5740837Z   sparse-checkout-cone-mode: true
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5741375Z   fetch-depth: 1
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5741817Z   fetch-tags: false
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5742281Z   show-progress: true
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5742741Z   lfs: false
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5743168Z   submodules: false
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5743624Z   set-safe-directory: true
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5744138Z   allow-unsafe-pr-checkout: false
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.5744972Z ##[endgroup]
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.6752714Z Syncing repository: luisitin/partybox-gpt-drops
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.6755558Z ##[group]Getting Git version info
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.6756495Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.6757728Z [command]/usr/bin/git version
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.6881871Z git version 2.55.0
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.6898754Z ##[endgroup]
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.6915038Z Temporarily overriding HOME='/home/runner/work/_temp/d15dbab7-f3da-48a8-9786-6422ca8e7b32' before making global git config changes
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.6918090Z Adding repository directory to the temporary git global config as a safe directory
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.6921453Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7007176Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7009848Z ##[group]Initializing the repository
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7011879Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7163040Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7165440Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7167160Z hint: to use in all of your new repositories, which will suppress this warning,
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7168538Z hint: call:
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7169603Z hint:
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7170601Z hint: 	git config --global init.defaultBranch <name>
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7171770Z hint:
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7172891Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7174582Z hint: 'development'. The just-created branch can be renamed via this command:
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7176819Z hint:
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7177733Z hint: 	git branch -m <name>
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7178673Z hint:
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7180095Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7182245Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7186672Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7251510Z ##[endgroup]
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7252941Z ##[group]Disabling automatic garbage collection
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7256667Z [command]/usr/bin/git config --local gc.auto 0
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7320453Z ##[endgroup]
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7322111Z ##[group]Setting up auth
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7323755Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7367986Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7807007Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.7846477Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.8070747Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.8105880Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.8327878Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.8367896Z ##[endgroup]
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.8368860Z ##[group]Fetching the repository
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:02.8378368Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e44982dcc463768f4542e868e9051dc1ca03f76a:refs/remotes/pull/6/merge
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.1967491Z From https://github.com/luisitin/partybox-gpt-drops
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.1969372Z  * [new ref]         e44982dcc463768f4542e868e9051dc1ca03f76a -> pull/6/merge
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.1973188Z ##[endgroup]
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.1974012Z ##[group]Determining the checkout info
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.1975865Z ##[endgroup]
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.1982295Z [command]/usr/bin/git sparse-checkout disable
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2039230Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2072572Z ##[group]Checking out the ref
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2077294Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/6/merge
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2169856Z Note: switching to 'refs/remotes/pull/6/merge'.
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2170700Z 
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2171358Z You are in 'detached HEAD' state. You can look around, make experimental
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2172909Z changes and commit them, and you can discard any commits you make in this
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2173874Z state without impacting any branches by switching back to a branch.
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2174419Z 
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2174799Z If you want to create a new branch to retain commits you create, you may
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2175887Z do so (now or later) by using -c with the switch command. Example:
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2176388Z 
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2176664Z   git switch -c <new-branch-name>
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2177053Z 
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2177284Z Or undo this operation with:
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2177615Z 
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2177818Z   git switch -
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2178076Z 
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2178476Z Turn off this advice by setting config variable advice.detachedHead to false
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2179323Z 
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2180035Z HEAD is now at e44982d Merge 740d13f3aabb56c4fee3f55b3d1e30c706eea7ae into f31ad2c4bc0df558a199963f55d76d6b32386127
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2183128Z ##[endgroup]
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2222698Z [command]/usr/bin/git log -1 --format=%H
+verify seed 2	Run actions/checkout@v4	2026-10-07T15:55:03.2249028Z e44982dcc463768f4542e868e9051dc1ca03f76a
+verify seed 2	Run actions/setup-node@v4	﻿2026-10-07T15:55:03.2667549Z ##[group]Run actions/setup-node@v4
+verify seed 2	Run actions/setup-node@v4	2026-10-07T15:55:03.2668146Z with:
+verify seed 2	Run actions/setup-node@v4	2026-10-07T15:55:03.2668571Z   node-version: 22
+verify seed 2	Run actions/setup-node@v4	2026-10-07T15:55:03.2669341Z   always-auth: false
+verify seed 2	Run actions/setup-node@v4	2026-10-07T15:55:03.2669865Z   check-latest: false
+verify seed 2	Run actions/setup-node@v4	2026-10-07T15:55:03.2673589Z   token: ***
+verify seed 2	Run actions/setup-node@v4	2026-10-07T15:55:03.2674030Z ##[endgroup]
+verify seed 2	Run actions/setup-node@v4	2026-10-07T15:55:03.4067701Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+verify seed 2	Run actions/setup-node@v4	2026-10-07T15:55:03.4072863Z (node:2308) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify seed 2	Run actions/setup-node@v4	2026-10-07T15:55:03.4075257Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify seed 2	Run actions/setup-node@v4	2026-10-07T15:55:03.4077347Z ##[group]Environment details
+verify seed 2	Run actions/setup-node@v4	2026-10-07T15:55:03.8721849Z node: v22.23.3
+verify seed 2	Run actions/setup-node@v4	2026-10-07T15:55:03.8722874Z npm: 10.9.9
+verify seed 2	Run actions/setup-node@v4	2026-10-07T15:55:03.8723254Z yarn: 1.22.22
+verify seed 2	Run actions/setup-node@v4	2026-10-07T15:55:03.8724418Z ##[endgroup]
+verify seed 2	Run npm ci --ignore-scripts --no-audit --no-fund	﻿2026-10-07T15:55:03.8879632Z ##[group]Run npm ci --ignore-scripts --no-audit --no-fund
+verify seed 2	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:03.8880541Z [36;1mnpm ci --ignore-scripts --no-audit --no-fund[0m
+verify seed 2	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:03.9205504Z shell: /usr/bin/bash -e {0}
+verify seed 2	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:03.9206086Z ##[endgroup]
+verify seed 2	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:04.9283940Z 
+verify seed 2	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:55:04.9293570Z added 1 package in 943ms
+verify seed 2	Run npm test -- --seed=2	﻿2026-10-07T15:55:04.9737439Z ##[group]Run npm test -- --seed=2
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:04.9737866Z [36;1mnpm test -- --seed=2[0m
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:04.9805060Z shell: /usr/bin/bash -e {0}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:04.9805390Z ##[endgroup]
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:05.0814416Z 
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:05.0815225Z > partybox-b10-battleship-ai@1.0.0 test
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:05.0815832Z > npm run build && node test/run.mjs --seed=2
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:05.0816110Z 
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:05.1860804Z 
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:05.1861907Z > partybox-b10-battleship-ai@1.0.0 build
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:05.1862800Z > tsc -p tsconfig.json
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:05.1863140Z 
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:11.5363081Z {"verifiedSeed":2,"differential":{"name":"6x6 full-enumeration differential","seed":2,"cases":10000,"passed":10000,"enumeratedLayouts":"1426510","policyChecks":30000,"feedbackChecks":23517,"seconds":3.392432669},"mutationsKilled":25}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:22.1068360Z {"progress":true,"seed":2,"difficulty":"easy","games":10000,"mean":62.1303,"seconds":10.528368494}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:32.4627220Z {"progress":true,"seed":2,"difficulty":"easy","games":20000,"mean":62.19385,"seconds":20.885431679999996}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:42.8153549Z {"progress":true,"seed":2,"difficulty":"easy","games":30000,"mean":62.2218,"seconds":31.238000515}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:55:53.0984495Z {"progress":true,"seed":2,"difficulty":"easy","games":40000,"mean":62.22195,"seconds":41.521213827}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:56:03.3843951Z {"progress":true,"seed":2,"difficulty":"easy","games":50000,"mean":62.22424,"seconds":51.806992865}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:56:13.6340501Z {"progress":true,"seed":2,"difficulty":"easy","games":60000,"mean":62.1846,"seconds":62.056643674}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:56:23.9389273Z {"progress":true,"seed":2,"difficulty":"easy","games":70000,"mean":62.19278571428571,"seconds":72.361591488}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:56:34.2322030Z {"progress":true,"seed":2,"difficulty":"easy","games":80000,"mean":62.1981125,"seconds":82.654849669}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:56:44.5193783Z {"progress":true,"seed":2,"difficulty":"easy","games":90000,"mean":62.201633333333334,"seconds":92.94197950499999}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:56:54.7871601Z {"progress":true,"seed":2,"difficulty":"easy","games":100000,"mean":62.19901,"seconds":103.209862958}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:56:54.7884549Z {"seed":2,"games":100000,"difficulty":"easy","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":103.880149,"mean":62.19901,"meanExact":"6219901/100000","median":62,"standardDeviation":14.037893561516151,"min":21,"max":100,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,4,11,13,24,42,58,83,106,156,186,275,338,470,510,661,714,864,969,1109,1165,1354,1494,1648,1698,1884,1925,2021,2076,2194,2356,2376,2563,2621,2624,2596,2668,2656,2651,2626,2552,2601,2542,2435,2462,2429,2316,2355,2217,2161,1927,1963,1897,1831,1685,1584,1453,1393,1384,1163,1158,1040,991,860,820,757,684,617,547,478,429,356,295,243,191,155,135,74,30],"shots":6219901,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.013,"p99":0.026,"max":1.2138849999999977,"over50":0},"elapsedSeconds":103.210421763,"sampledShots":0,"exactShots":0,"policyComparisons":6219901,"densityComparisons":0,"maxAuditDifference":0,"slowCases":[],"hardUnder45":null,"allShotsUnder50ms":true}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:57:04.9446000Z {"progress":true,"seed":2,"difficulty":"medium","games":10000,"mean":49.8811,"seconds":10.103356754}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:57:14.8186015Z {"progress":true,"seed":2,"difficulty":"medium","games":20000,"mean":49.8983,"seconds":19.978073089}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:57:24.6886015Z {"progress":true,"seed":2,"difficulty":"medium","games":30000,"mean":49.8671,"seconds":29.847853871999998}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:57:34.5748612Z {"progress":true,"seed":2,"difficulty":"medium","games":40000,"mean":49.9298,"seconds":39.734295431999996}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:57:44.4405259Z {"progress":true,"seed":2,"difficulty":"medium","games":50000,"mean":49.94392,"seconds":49.600015857}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:57:54.2888201Z {"progress":true,"seed":2,"difficulty":"medium","games":60000,"mean":49.95543333333333,"seconds":59.44816456}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:58:04.1318075Z {"progress":true,"seed":2,"difficulty":"medium","games":70000,"mean":49.96485714285714,"seconds":69.29125443999999}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:58:13.9672442Z {"progress":true,"seed":2,"difficulty":"medium","games":80000,"mean":49.9575375,"seconds":79.12648313899999}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:58:23.7993955Z {"progress":true,"seed":2,"difficulty":"medium","games":90000,"mean":49.95514444444444,"seconds":88.958743894}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:58:33.6203934Z {"progress":true,"seed":2,"difficulty":"medium","games":100000,"mean":49.94174,"seconds":98.77985414}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T15:58:33.6213960Z {"seed":2,"games":100000,"difficulty":"medium","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":99.489294,"mean":49.94174,"meanExact":"4994174/100000","median":50,"standardDeviation":8.700818514072573,"min":19,"max":78,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,2,9,24,35,63,95,116,183,270,338,465,559,692,847,981,1174,1357,1584,1732,2049,2271,2555,2871,3053,3363,3477,3754,3867,4165,4296,4321,4257,4295,4179,4091,3907,3856,3737,3534,3479,3318,2779,2370,1621,1053,741,570,425,338,252,205,144,106,74,51,20,16,9,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"shots":4994174,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.013,"p99":0.027,"max":1.2060979999999972,"over50":0},"elapsedSeconds":98.78044183,"sampledShots":0,"exactShots":0,"policyComparisons":4994174,"densityComparisons":0,"maxAuditDifference":0,"slowCases":[],"hardUnder45":null,"allShotsUnder50ms":true}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T16:00:10.4211268Z {"progress":true,"seed":2,"difficulty":"hard","games":10000,"mean":44.849,"seconds":96.747192923}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T16:01:47.2858962Z {"progress":true,"seed":2,"difficulty":"hard","games":20000,"mean":44.80545,"seconds":193.612912604}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T16:03:23.9388239Z {"progress":true,"seed":2,"difficulty":"hard","games":30000,"mean":44.7892,"seconds":290.2660807}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T16:05:00.0892032Z {"progress":true,"seed":2,"difficulty":"hard","games":40000,"mean":44.7931,"seconds":386.416421892}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T16:06:36.4938212Z {"progress":true,"seed":2,"difficulty":"hard","games":50000,"mean":44.8124,"seconds":482.82080875099996}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T16:08:12.8465521Z {"progress":true,"seed":2,"difficulty":"hard","games":60000,"mean":44.80671666666667,"seconds":579.1735173110001}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T16:09:49.2793224Z {"progress":true,"seed":2,"difficulty":"hard","games":70000,"mean":44.81381428571429,"seconds":675.6065046370001}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T16:11:26.2157126Z {"progress":true,"seed":2,"difficulty":"hard","games":80000,"mean":44.8368375,"seconds":772.542930305}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T16:13:02.2922502Z {"progress":true,"seed":2,"difficulty":"hard","games":90000,"mean":44.83625555555555,"seconds":868.619442581}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T16:14:38.8106972Z {"progress":true,"seed":2,"difficulty":"hard","games":100000,"mean":44.84903,"seconds":965.137897576}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T16:14:38.8123467Z {"seed":2,"games":100000,"difficulty":"hard","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":982.442233,"mean":44.84903,"meanExact":"4484903/100000","median":45,"standardDeviation":8.390880891057934,"min":18,"max":66,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,10,16,51,109,138,226,329,519,665,904,1105,1421,1699,2032,2419,2654,3043,3425,3783,3909,4128,4247,4138,4161,3901,3948,3909,4012,3992,3872,3589,3498,3228,3141,2946,2823,2615,2336,1947,1680,1455,1101,601,217,48,6,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"shots":4484903,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.085,"p99":0.399,"max":5.98039,"over50":0},"elapsedSeconds":965.139371556,"sampledShots":2784185,"exactShots":1700718,"policyComparisons":4484903,"densityComparisons":4484903,"maxAuditDifference":2.220446049250313e-15,"slowCases":[],"hardUnder45":true,"allShotsUnder50ms":true}
+verify seed 2	Run npm test -- --seed=2	2026-10-07T16:14:38.8982046Z {"complete":false,"passed":true,"failures":[],"seconds":1171.68149997,"report":"reports/latest.json"}
+verify seed 2	Run actions/upload-artifact@v4	﻿2026-10-07T16:14:38.9164783Z ##[group]Run actions/upload-artifact@v4
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:38.9165111Z with:
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:38.9165343Z   name: B10-seed-2
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:38.9165579Z   path: jobs/B10-battleship-ai/reports/
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:38.9165873Z   if-no-files-found: warn
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:38.9166103Z   compression-level: 6
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:38.9166325Z   overwrite: false
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:38.9166556Z   include-hidden-files: false
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:38.9166828Z ##[endgroup]
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:39.0831016Z (node:2662) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:39.0832055Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:39.0922374Z With the provided path, there will be 4 files uploaded
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:39.0950584Z Artifact name is valid!
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:39.0951407Z Root directory input is valid!
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:39.4843281Z Beginning upload of artifact content to blob storage
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:39.5089423Z (node:2662) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:39.7932646Z Uploaded bytes 6855
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:39.8709870Z Finished uploading artifact content to blob storage!
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:39.8711455Z SHA256 digest of uploaded artifact zip is ddd0182a57a18e92534a719eddd3cb0c0309648850ea73fbf01d39fd29798ea0
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:39.8713842Z Finalizing artifact upload
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:40.1550372Z Artifact B10-seed-2.zip successfully finalized. Artifact ID 11496537115
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:40.1552173Z Artifact B10-seed-2 has been successfully uploaded! Final size is 6855 bytes. Artifact ID is 11496537115
+verify seed 2	Run actions/upload-artifact@v4	2026-10-07T16:14:40.1558357Z Artifact download URL: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37647836440/artifacts/11496537115
+verify seed 2	Post Run actions/setup-node@v4	﻿2026-10-07T16:14:40.1746758Z Post job cleanup.
+verify seed 2	Post Run actions/setup-node@v4	2026-10-07T16:14:40.2950585Z (node:2675) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify seed 2	Post Run actions/setup-node@v4	2026-10-07T16:14:40.2952020Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify seed 2	Post Run actions/checkout@v4	﻿2026-10-07T16:14:40.3151759Z Post job cleanup.
+verify seed 2	Post Run actions/checkout@v4	2026-10-07T16:14:40.4107681Z [command]/usr/bin/git version
+verify seed 2	Post Run actions/checkout@v4	2026-10-07T16:14:40.4170988Z git version 2.55.0
+verify seed 2	Post Run actions/checkout@v4	2026-10-07T16:14:40.4245133Z Temporarily overriding HOME='/home/runner/work/_temp/a8297bff-7165-47f5-8631-4833c6218d86' before making global git config changes
+verify seed 2	Post Run actions/checkout@v4	2026-10-07T16:14:40.4246805Z Adding repository directory to the temporary git global config as a safe directory
+verify seed 2	Post Run actions/checkout@v4	2026-10-07T16:14:40.4252791Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify seed 2	Post Run actions/checkout@v4	2026-10-07T16:14:40.4289740Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify seed 2	Post Run actions/checkout@v4	2026-10-07T16:14:40.4336430Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify seed 2	Post Run actions/checkout@v4	2026-10-07T16:14:40.4646895Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify seed 2	Post Run actions/checkout@v4	2026-10-07T16:14:40.4674638Z http.https://github.com/.extraheader
+verify seed 2	Post Run actions/checkout@v4	2026-10-07T16:14:40.4692975Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verify seed 2	Post Run actions/checkout@v4	2026-10-07T16:14:40.4753093Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify seed 2	Post Run actions/checkout@v4	2026-10-07T16:14:40.5101839Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify seed 2	Post Run actions/checkout@v4	2026-10-07T16:14:40.5154352Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify seed 2	Complete job	﻿2026-10-07T16:14:40.5584605Z Cleaning up orphan processes
+verify seed 2	Complete job	2026-10-07T16:14:40.5946080Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+complete all three seeds	Set up job	﻿2026-10-07T16:15:35.5763282Z Current runner version: '2.337.0'
+complete all three seeds	Set up job	2026-10-07T16:15:35.5789467Z ##[group]Runner Image Provisioner
+complete all three seeds	Set up job	2026-10-07T16:15:35.5790369Z Hosted Compute Agent
+complete all three seeds	Set up job	2026-10-07T16:15:35.5790964Z Version: 20260901.588
+complete all three seeds	Set up job	2026-10-07T16:15:35.5791727Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+complete all three seeds	Set up job	2026-10-07T16:15:35.5792469Z Build Date: 2026-09-01T19:56:44Z
+complete all three seeds	Set up job	2026-10-07T16:15:35.5793198Z Worker ID: {1f14a17e-9f06-48fb-8647-0f1059bfe687}
+complete all three seeds	Set up job	2026-10-07T16:15:35.5793942Z Azure Region: eastus
+complete all three seeds	Set up job	2026-10-07T16:15:35.5794512Z ##[endgroup]
+complete all three seeds	Set up job	2026-10-07T16:15:35.5796282Z ##[group]Operating System
+complete all three seeds	Set up job	2026-10-07T16:15:35.5796964Z Ubuntu
+complete all three seeds	Set up job	2026-10-07T16:15:35.5797476Z 24.04.5
+complete all three seeds	Set up job	2026-10-07T16:15:35.5798089Z LTS
+complete all three seeds	Set up job	2026-10-07T16:15:35.5798611Z ##[endgroup]
+complete all three seeds	Set up job	2026-10-07T16:15:35.5799225Z ##[group]Runner Image
+complete all three seeds	Set up job	2026-10-07T16:15:35.5799872Z Image: ubuntu-24.04
+complete all three seeds	Set up job	2026-10-07T16:15:35.5800420Z Version: 20260927.320.1
+complete all three seeds	Set up job	2026-10-07T16:15:35.5801579Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+complete all three seeds	Set up job	2026-10-07T16:15:35.5803428Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+complete all three seeds	Set up job	2026-10-07T16:15:35.5804405Z ##[endgroup]
+complete all three seeds	Set up job	2026-10-07T16:15:35.5805503Z ##[group]GITHUB_TOKEN Permissions
+complete all three seeds	Set up job	2026-10-07T16:15:35.5807820Z Contents: read
+complete all three seeds	Set up job	2026-10-07T16:15:35.5808510Z Metadata: read
+complete all three seeds	Set up job	2026-10-07T16:15:35.5809210Z ##[endgroup]
+complete all three seeds	Set up job	2026-10-07T16:15:35.5811674Z Secret source: Actions
+complete all three seeds	Set up job	2026-10-07T16:15:35.5812777Z Cache mode: write
+complete all three seeds	Set up job	2026-10-07T16:15:35.5813763Z Prepare workflow directory
+complete all three seeds	Set up job	2026-10-07T16:15:35.6211996Z Prepare all required actions
+complete all three seeds	Set up job	2026-10-07T16:15:35.6260088Z Getting action download info
+complete all three seeds	Set up job	2026-10-07T16:15:36.0417274Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+complete all three seeds	Set up job	2026-10-07T16:15:36.1385581Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+complete all three seeds	Set up job	2026-10-07T16:15:36.2301047Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+complete all three seeds	Set up job	2026-10-07T16:15:36.4250028Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+complete all three seeds	Set up job	2026-10-07T16:15:36.6431365Z Complete job name: complete all three seeds
+complete all three seeds	Run actions/checkout@v4	﻿2026-10-07T16:15:36.7259788Z ##[group]Run actions/checkout@v4
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7260962Z with:
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7261525Z   repository: luisitin/partybox-gpt-drops
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7266810Z   token: ***
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7267321Z   ssh-strict: true
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7267825Z   ssh-user: git
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7268329Z   persist-credentials: true
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7268908Z   clean: true
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7269411Z   sparse-checkout-cone-mode: true
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7270015Z   fetch-depth: 1
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7270520Z   fetch-tags: false
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7271032Z   show-progress: true
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7271555Z   lfs: false
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7272018Z   submodules: false
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7272528Z   set-safe-directory: true
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7273131Z   allow-unsafe-pr-checkout: false
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.7274087Z ##[endgroup]
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8327685Z Syncing repository: luisitin/partybox-gpt-drops
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8330244Z ##[group]Getting Git version info
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8331838Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8333341Z [command]/usr/bin/git version
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8387518Z git version 2.55.0
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8420121Z ##[endgroup]
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8447862Z Temporarily overriding HOME='/home/runner/work/_temp/7276a66b-5681-4c14-8366-03bfabe135a7' before making global git config changes
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8450911Z Adding repository directory to the temporary git global config as a safe directory
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8453396Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8503224Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8512812Z ##[group]Initializing the repository
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8520888Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8632068Z hint: Using 'master' as the name for the initial branch. This default branch name
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8634478Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8636839Z hint: to use in all of your new repositories, which will suppress this warning,
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8638490Z hint: call:
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8639277Z hint:
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8640366Z hint: 	git config --global init.defaultBranch <name>
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8641609Z hint:
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8642729Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8644579Z hint: 'development'. The just-created branch can be renamed via this command:
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8646048Z hint:
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8646954Z hint: 	git branch -m <name>
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8647874Z hint:
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8649105Z hint: Disable this message with "git config set advice.defaultBranchName false"
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8650959Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8654228Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8725825Z ##[endgroup]
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8727471Z ##[group]Disabling automatic garbage collection
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8728889Z [command]/usr/bin/git config --local gc.auto 0
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8752286Z ##[endgroup]
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8753866Z ##[group]Setting up auth
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8761190Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.8800985Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.9179293Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.9220816Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.9474008Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.9512689Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.9741676Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.9783672Z ##[endgroup]
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.9785184Z ##[group]Fetching the repository
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:36.9793936Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e44982dcc463768f4542e868e9051dc1ca03f76a:refs/remotes/pull/6/merge
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2254096Z From https://github.com/luisitin/partybox-gpt-drops
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2257955Z  * [new ref]         e44982dcc463768f4542e868e9051dc1ca03f76a -> pull/6/merge
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2261856Z ##[endgroup]
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2263791Z ##[group]Determining the checkout info
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2266252Z ##[endgroup]
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2270734Z [command]/usr/bin/git sparse-checkout disable
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2333914Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2367084Z ##[group]Checking out the ref
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2371441Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/6/merge
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2478643Z Note: switching to 'refs/remotes/pull/6/merge'.
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2550500Z 
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2551520Z You are in 'detached HEAD' state. You can look around, make experimental
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2553590Z changes and commit them, and you can discard any commits you make in this
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2555578Z state without impacting any branches by switching back to a branch.
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2557383Z 
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2558189Z If you want to create a new branch to retain commits you create, you may
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2560134Z do so (now or later) by using -c with the switch command. Example:
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2561300Z 
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2561734Z   git switch -c <new-branch-name>
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2562482Z 
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2562903Z Or undo this operation with:
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2563601Z 
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2563989Z   git switch -
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2564538Z 
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2565533Z Turn off this advice by setting config variable advice.detachedHead to false
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2568137Z 
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2569702Z HEAD is now at e44982d Merge 740d13f3aabb56c4fee3f55b3d1e30c706eea7ae into f31ad2c4bc0df558a199963f55d76d6b32386127
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2573944Z ##[endgroup]
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2577176Z [command]/usr/bin/git log -1 --format=%H
+complete all three seeds	Run actions/checkout@v4	2026-10-07T16:15:37.2578431Z e44982dcc463768f4542e868e9051dc1ca03f76a
+complete all three seeds	Run actions/setup-node@v4	﻿2026-10-07T16:15:37.2994776Z ##[group]Run actions/setup-node@v4
+complete all three seeds	Run actions/setup-node@v4	2026-10-07T16:15:37.2995815Z with:
+complete all three seeds	Run actions/setup-node@v4	2026-10-07T16:15:37.2996341Z   node-version: 22
+complete all three seeds	Run actions/setup-node@v4	2026-10-07T16:15:37.2996936Z   always-auth: false
+complete all three seeds	Run actions/setup-node@v4	2026-10-07T16:15:37.2997542Z   check-latest: false
+complete all three seeds	Run actions/setup-node@v4	2026-10-07T16:15:37.3007022Z   token: ***
+complete all three seeds	Run actions/setup-node@v4	2026-10-07T16:15:37.3007561Z ##[endgroup]
+complete all three seeds	Run actions/setup-node@v4	2026-10-07T16:15:37.4498897Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+complete all three seeds	Run actions/setup-node@v4	2026-10-07T16:15:37.4501809Z (node:2277) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+complete all three seeds	Run actions/setup-node@v4	2026-10-07T16:15:37.4504529Z (Use `node --trace-deprecation ...` to show where the warning was created)
+complete all three seeds	Run actions/setup-node@v4	2026-10-07T16:15:37.4506764Z ##[group]Environment details
+complete all three seeds	Run actions/setup-node@v4	2026-10-07T16:15:37.8698650Z node: v22.23.3
+complete all three seeds	Run actions/setup-node@v4	2026-10-07T16:15:37.8700602Z npm: 10.9.9
+complete all three seeds	Run actions/setup-node@v4	2026-10-07T16:15:37.8701673Z yarn: 1.22.22
+complete all three seeds	Run actions/setup-node@v4	2026-10-07T16:15:37.8703601Z ##[endgroup]
+complete all three seeds	Run actions/download-artifact@v4	﻿2026-10-07T16:15:37.8945154Z ##[group]Run actions/download-artifact@v4
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:37.8946764Z with:
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:37.8947679Z   pattern: B10-seed-*
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:37.8948852Z   path: jobs/B10-battleship-ai/reports/ci-seeds
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:37.8950192Z   merge-multiple: false
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:37.8951321Z   repository: luisitin/partybox-gpt-drops
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:37.8952571Z   run-id: 37647836440
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:37.8953547Z ##[endgroup]
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.0617378Z (node:2308) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.0621932Z (Use `node --trace-deprecation ...` to show where the warning was created)
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.1578000Z Found 3 artifact(s)
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.1581242Z Filtering artifacts by pattern 'B10-seed-*'
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.1606228Z Preparing to download the following artifacts:
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.1615446Z - B10-seed-2 (ID: 11496537115, Size: 6855, Expected Digest: sha256:ddd0182a57a18e92534a719eddd3cb0c0309648850ea73fbf01d39fd29798ea0)
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.1620797Z - B10-seed-1 (ID: 11495958302, Size: 6876, Expected Digest: sha256:c6e45d91f8fad002a1bc7e942dcd2047239cfc83adab4e2a621f0508a6ab5aa3)
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.1627933Z - B10-seed-3 (ID: 11495943505, Size: 6890, Expected Digest: sha256:354151b820591fb10b86ecf3ed1d999a14087d33f2588f64337600423d1a3f28)
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.2971581Z Redirecting to blob download url: https://productionresultssa8.blob.core.windows.net/actions-results/42154254-18cc-86df-83c6-1c75c9bca367/workflow-job-run-2c495bff-8ba8-5a73-90c4-aeecaa130cb8/artifacts/3206a4e900a18d5b5cb895e33b44f21de1c208fdb13f4789f15625335d319c72.zip
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.2979507Z Starting download of artifact to: /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/jobs/B10-battleship-ai/reports/ci-seeds/B10-seed-2
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.3329944Z Redirecting to blob download url: https://productionresultssa8.blob.core.windows.net/actions-results/42154254-18cc-86df-83c6-1c75c9bca367/workflow-job-run-3e4c6923-0e45-578f-9041-f45598259127/artifacts/f0eac3700d30df3a3ec5003b648c187095cd042e5cecb6eddea848719954f946.zip
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.3336512Z Starting download of artifact to: /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/jobs/B10-battleship-ai/reports/ci-seeds/B10-seed-1
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.3383516Z (node:2308) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.3452217Z SHA256 digest of downloaded artifact is ddd0182a57a18e92534a719eddd3cb0c0309648850ea73fbf01d39fd29798ea0
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.3455322Z Artifact download completed successfully.
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.3821395Z SHA256 digest of downloaded artifact is c6e45d91f8fad002a1bc7e942dcd2047239cfc83adab4e2a621f0508a6ab5aa3
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.3824033Z Artifact download completed successfully.
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.3976531Z Redirecting to blob download url: https://productionresultssa8.blob.core.windows.net/actions-results/42154254-18cc-86df-83c6-1c75c9bca367/workflow-job-run-f6d34203-f39c-5fb4-b9af-4cfd68fbe932/artifacts/831df54a775b6439662ef8489ed438327cca897d189d59e28c5a4b7efe26ece4.zip
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.3982796Z Starting download of artifact to: /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/jobs/B10-battleship-ai/reports/ci-seeds/B10-seed-3
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.4140484Z SHA256 digest of downloaded artifact is 354151b820591fb10b86ecf3ed1d999a14087d33f2588f64337600423d1a3f28
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.4143493Z Artifact download completed successfully.
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.4145465Z Total of 3 artifact(s) downloaded
+complete all three seeds	Run actions/download-artifact@v4	2026-10-07T16:15:38.4148031Z Download artifact has finished successfully
+complete all three seeds	Run node test/ci-aggregate.mjs reports/ci-seeds	﻿2026-10-07T16:15:38.4326195Z ##[group]Run node test/ci-aggregate.mjs reports/ci-seeds
+complete all three seeds	Run node test/ci-aggregate.mjs reports/ci-seeds	2026-10-07T16:15:38.4328029Z [36;1mnode test/ci-aggregate.mjs reports/ci-seeds[0m
+complete all three seeds	Run node test/ci-aggregate.mjs reports/ci-seeds	2026-10-07T16:15:38.4582316Z shell: /usr/bin/bash -e {0}
+complete all three seeds	Run node test/ci-aggregate.mjs reports/ci-seeds	2026-10-07T16:15:38.4583522Z ##[endgroup]
+complete all three seeds	Run node test/ci-aggregate.mjs reports/ci-seeds	2026-10-07T16:15:38.5051872Z {"complete":true,"passed":true,"seeds":[1,2,3],"games":900000,"exactStates":30000,"mutationKills":75}
+complete all three seeds	Run actions/upload-artifact@v4	﻿2026-10-07T16:15:38.5245391Z ##[group]Run actions/upload-artifact@v4
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.5246933Z with:
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.5247823Z   name: B10-full-verification
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.5249118Z   path: jobs/B10-battleship-ai/reports/ci-aggregate.json
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.5250509Z   if-no-files-found: warn
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.5251537Z   compression-level: 6
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.5252510Z   overwrite: false
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.5253485Z   include-hidden-files: false
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.5254547Z ##[endgroup]
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.6937093Z (node:2329) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.6942157Z (Use `node --trace-deprecation ...` to show where the warning was created)
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.7021472Z With the provided path, there will be 1 file uploaded
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.7026802Z Artifact name is valid!
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.7029541Z Root directory input is valid!
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.9676977Z Beginning upload of artifact content to blob storage
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:38.9886025Z (node:2329) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:39.0491002Z Uploaded bytes 10680
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:39.0673173Z Finished uploading artifact content to blob storage!
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:39.0677917Z SHA256 digest of uploaded artifact zip is 85b102d6767ab181d97f8ad6630a4604e6a229745ffb0418105f1ee58c60b34d
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:39.0681632Z Finalizing artifact upload
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:39.2839255Z Artifact B10-full-verification.zip successfully finalized. Artifact ID 11495943528
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:39.2842374Z Artifact B10-full-verification has been successfully uploaded! Final size is 10680 bytes. Artifact ID is 11495943528
+complete all three seeds	Run actions/upload-artifact@v4	2026-10-07T16:15:39.2846684Z Artifact download URL: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37647836440/artifacts/11495943528
+complete all three seeds	Post Run actions/setup-node@v4	﻿2026-10-07T16:15:39.3156017Z Post job cleanup.
+complete all three seeds	Post Run actions/setup-node@v4	2026-10-07T16:15:39.4412428Z (node:2341) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+complete all three seeds	Post Run actions/setup-node@v4	2026-10-07T16:15:39.4417625Z (Use `node --trace-deprecation ...` to show where the warning was created)
+complete all three seeds	Post Run actions/checkout@v4	﻿2026-10-07T16:15:39.4882733Z Post job cleanup.
+complete all three seeds	Post Run actions/checkout@v4	2026-10-07T16:15:39.5879093Z [command]/usr/bin/git version
+complete all three seeds	Post Run actions/checkout@v4	2026-10-07T16:15:39.5928915Z git version 2.55.0
+complete all three seeds	Post Run actions/checkout@v4	2026-10-07T16:15:39.5967497Z Temporarily overriding HOME='/home/runner/work/_temp/f816c5b5-6fcc-46f6-9b13-4312fbf81c28' before making global git config changes
+complete all three seeds	Post Run actions/checkout@v4	2026-10-07T16:15:39.5969564Z Adding repository directory to the temporary git global config as a safe directory
+complete all three seeds	Post Run actions/checkout@v4	2026-10-07T16:15:39.5977739Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+complete all three seeds	Post Run actions/checkout@v4	2026-10-07T16:15:39.6027916Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+complete all three seeds	Post Run actions/checkout@v4	2026-10-07T16:15:39.6070323Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+complete all three seeds	Post Run actions/checkout@v4	2026-10-07T16:15:39.6356437Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+complete all three seeds	Post Run actions/checkout@v4	2026-10-07T16:15:39.6372158Z http.https://github.com/.extraheader
+complete all three seeds	Post Run actions/checkout@v4	2026-10-07T16:15:39.6386697Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+complete all three seeds	Post Run actions/checkout@v4	2026-10-07T16:15:39.6426854Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+complete all three seeds	Post Run actions/checkout@v4	2026-10-07T16:15:39.6697305Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+complete all three seeds	Post Run actions/checkout@v4	2026-10-07T16:15:39.6739325Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+complete all three seeds	Complete job	﻿2026-10-07T16:15:39.7131152Z Cleaning up orphan processes
+complete all three seeds	Complete job	2026-10-07T16:15:39.7447775Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/download-artifact@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

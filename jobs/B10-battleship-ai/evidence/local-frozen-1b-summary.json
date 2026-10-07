@@ -1,0 +1,125 @@
+{
+  "purpose": "Historical failed frozen-source baseline; not current-source acceptance",
+  "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node test/run.mjs",
+  "sourceSHA256": "5887871a928d0d483f7d93531827c6fdec736a12eece4f6875501d42b31882e1",
+  "complete": true,
+  "passed": false,
+  "games": 900000,
+  "policyComparisons": 47091168,
+  "over50": 3474,
+  "maxMs": 2751.3871289999224,
+  "failures": [
+    "easy seed 3: 23 calls exceeded 50 ms (max 205.53997100000015)",
+    "easy seed 2: 55 calls exceeded 50 ms (max 265.85891900002025)",
+    "easy seed 1: 54 calls exceeded 50 ms (max 483.70676699996693)",
+    "medium seed 1: 106 calls exceeded 50 ms (max 1216.5186209999956)",
+    "medium seed 3: 148 calls exceeded 50 ms (max 715.3881219999748)",
+    "medium seed 2: 134 calls exceeded 50 ms (max 2648.4426730000123)",
+    "hard seed 2: 964 calls exceeded 50 ms (max 1963.5372700002044)",
+    "hard seed 1: 958 calls exceeded 50 ms (max 1567.4438960002735)",
+    "hard seed 3: 1032 calls exceeded 50 ms (max 2751.3871289999224)"
+  ],
+  "comparisons": [
+    {
+      "seed": 1,
+      "difficulty": "easy",
+      "games": 100000,
+      "shots": 6215892,
+      "histogramEqual": true,
+      "meanFractionEqual": true,
+      "localMaxMs": 483.70676699996693,
+      "localOver50": 54,
+      "localAllPolicyChecks": true
+    },
+    {
+      "seed": 1,
+      "difficulty": "hard",
+      "games": 100000,
+      "shots": 4483574,
+      "histogramEqual": true,
+      "meanFractionEqual": true,
+      "localMaxMs": 1567.4438960002735,
+      "localOver50": 958,
+      "localAllPolicyChecks": true
+    },
+    {
+      "seed": 1,
+      "difficulty": "medium",
+      "games": 100000,
+      "shots": 4988569,
+      "histogramEqual": true,
+      "meanFractionEqual": true,
+      "localMaxMs": 1216.5186209999956,
+      "localOver50": 106,
+      "localAllPolicyChecks": true
+    },
+    {
+      "seed": 2,
+      "difficulty": "easy",
+      "games": 100000,
+      "shots": 6219901,
+      "histogramEqual": true,
+      "meanFractionEqual": true,
+      "localMaxMs": 265.85891900002025,
+      "localOver50": 55,
+      "localAllPolicyChecks": true
+    },
+    {
+      "seed": 2,
+      "difficulty": "hard",
+      "games": 100000,
+      "shots": 4484903,
+      "histogramEqual": true,
+      "meanFractionEqual": true,
+      "localMaxMs": 1963.5372700002044,
+      "localOver50": 964,
+      "localAllPolicyChecks": true
+    },
+    {
+      "seed": 2,
+      "difficulty": "medium",
+      "games": 100000,
+      "shots": 4994174,
+      "histogramEqual": true,
+      "meanFractionEqual": true,
+      "localMaxMs": 2648.4426730000123,
+      "localOver50": 134,
+      "localAllPolicyChecks": true
+    },
+    {
+      "seed": 3,
+      "difficulty": "easy",
+      "games": 100000,
+      "shots": 6221040,
+      "histogramEqual": true,
+      "meanFractionEqual": true,
+      "localMaxMs": 205.53997100000015,
+      "localOver50": 23,
+      "localAllPolicyChecks": true
+    },
+    {
+      "seed": 3,
+      "difficulty": "hard",
+      "games": 100000,
+      "shots": 4491006,
+      "histogramEqual": true,
+      "meanFractionEqual": true,
+      "localMaxMs": 2751.3871289999224,
+      "localOver50": 1032,
+      "localAllPolicyChecks": true
+    },
+    {
+      "seed": 3,
+      "difficulty": "medium",
+      "games": 100000,
+      "shots": 4992109,
+      "histogramEqual": true,
+      "meanFractionEqual": true,
+      "localMaxMs": 715.3881219999748,
+      "localOver50": 148,
+      "localAllPolicyChecks": true
+    }
+  ],
+  "allHistogramsMatchFinalHosted": true,
+  "causeAssigned": false
+}

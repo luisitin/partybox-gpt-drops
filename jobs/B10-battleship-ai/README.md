@@ -4,8 +4,7 @@ This drop contains a dependency-free TypeScript AI, exact joint-fleet inference,
 importance-sampled joint inference, a separate array/set oracle, adversarial
 regressions, live mutation tests, and reproducible game benchmarks.
 
-Verification status is in VERIFY.md. The takeover adds sealed blind references and every-shot benchmark comparisons.
-Final full-count latency verification is underway; no all-green result is claimed yet.
+The complete hosted suite passed all 900,000 games and every original gate. Every shot has an independent public-policy replay and every Hard density return has an independent count or sample reduction. Hard means were 44.83574, 44.84903 and 44.91006; the literal maximum production call was 5.980390 ms. See VERIFY.md for evidence, failed history and boundaries.
 
 ## Run
 
@@ -165,6 +164,6 @@ The prior frozen verification is preserved in evidence/previous-VERIFY.md and th
 original raw-reports.zip. The three >50 ms historical calls remain recorded. A new
 1,000-game exploratory run matched all 44,751 shots and densities but recorded one
 72.618 ms call; it remains a failed timing run in LOOP.md. Final 900,000-game
-verification and exact-head hosted evidence are pending.
+verification passed in two hosted full-suite runs; complete results are in VERIFY.md.
 
-CI uses three full seed jobs and a required aggregation job after an observed30-minute timeout with the additional independent checks. The aggregate requires the complete900,000-game corpus and every per-seed gate; no seed job uses quick or reduced mode. Default `npm test` still runs allseeds locally.
+CI uses three complete seed jobs and a required aggregation job after an observed 30-minute timeout. The aggregate requires all 900,000 games and every per-seed gate. Each seed runs every suite; default `npm test` runs all three seeds locally.
