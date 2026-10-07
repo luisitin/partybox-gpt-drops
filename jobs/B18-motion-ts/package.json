@@ -1,0 +1,13 @@
+{
+  "name": "b18-motion-ts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Tiny closed-form spring and CSS cubic Bezier, with full deterministic verification",
+  "exports": "./dist/motion.js",
+  "types": "./dist/motion.d.ts",
+  "scripts": { "build": "tsc -p tsconfig.json", "test": "node tests/run.mjs" },
+  "engines": { "node": ">=22" },
+  "dependencies": {},
+  "devDependencies": { "typescript": "5.8.3" }
+}
