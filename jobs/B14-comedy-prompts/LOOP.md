@@ -52,3 +52,5 @@
     Independent review remains partial; complete counts are recorded verbatim.
 16. Authored 100 explicit adult fictional-character candidates using recognizable powers and concrete consequences; supernatural scenarios remain original fiction. All 1,600 rows pass structural checks.
     Independent review remains partial; complete counts are recorded verbatim.
+17. Authored 100 fictional adult sports scenes with specific physical actions, retaining sport-specific and generic cases below 4; integrated independent music review unchanged. All 1,700 rows pass structural checks.
+    Independent review remains partial; complete counts are recorded verbatim.
