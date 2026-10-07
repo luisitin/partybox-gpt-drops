@@ -40,7 +40,7 @@ def pr_notes(pull: dict) -> str:
     paragraphs = [plain(part, 320) for part in re.split(r"\n\s*\n", body) if plain(part, 320) and not part.strip().startswith("#")]
     description = paragraphs[0] if paragraphs else pull.get("title", "No PR description")
     match = re.search(r"### Verification status\s*(.*?)(?:\n### |\Z)", body, flags=re.S | re.I)
-    verification = plain(match.group(1), 360) if match else ""
+    verification = plain(match.group(1), 520) if match else ""
     note = f"PR says: {description}"
     if verification:
         note += f" Verification note: {verification}"
@@ -82,7 +82,12 @@ for job_id, title in jobs:
         stage = "Pre-pipeline"
 
     compare = {}
-    if head_sha and head_sha != main_sha:
+    if pull and pull.get("merged_at"):
+        try:
+            compare = {"files": get_json(f"{API}/pulls/{pull['number']}/files?per_page=100")}
+        except Exception:
+            compare = {}
+    elif head_sha and head_sha != main_sha:
         try:
             compare = get_json(f"{API}/compare/{main_sha}...{head_sha}")
         except Exception:
@@ -115,7 +120,10 @@ for job_id, title in jobs:
         work += " " + pr_notes(pull)
 
     commits = compare.get("commits", [])
-    if commits:
+    if pull and pull.get("merged_at"):
+        date = datetime.fromisoformat(pull["merged_at"].replace("Z", "+00:00")).astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+        evidence = f"{date} — merged PR #{pull['number']}: {plain(pull['title'], 180)}"
+    elif commits:
         commit = commits[-1]
         message = plain(commit.get("commit", {}).get("message", "").splitlines()[0], 180)
         date = commit.get("commit", {}).get("author", {}).get("date", "")
