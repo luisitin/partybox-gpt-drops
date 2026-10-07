@@ -54,3 +54,5 @@
     Independent review remains partial; complete counts are recorded verbatim.
 17. Authored 100 fictional adult sports scenes with specific physical actions, retaining sport-specific and generic cases below 4; integrated independent music review unchanged. All 1,700 rows pass structural checks.
     Independent review remains partial; complete counts are recorded verbatim.
+18. Authored 100 adult-character service scenarios, retained niche-reference failures, and integrated independent television review unchanged. All 1,800 rows pass structural checks.
+    Independent review remains partial; complete counts are recorded verbatim.
