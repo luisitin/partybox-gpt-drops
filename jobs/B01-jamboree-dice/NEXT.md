@@ -1,6 +1,5 @@
-# Exact next step
+# Next action
 
-Finish blind oracle integration and full three-seed verification; reopen and
-strengthen the research sources, retaining irreducible gaps explicitly. Publish
-fresh measured reports and checksums to PR 8 and observe the latest exact CI head.
-Then continue with B05, B20, B04, and B03 in that order.
+B01 code and research evidence are packaged for PR 8; verify the observed CI run matches the latest pushed head before reporting delivery. Remaining empirical gaps are F07, F09, F11, F16, F22, F25, F28, F30, F31, F32, F33 and F34; resolve them only from new independent sources or controlled primary captures, never guessed probabilities.
+
+Continue the assigned queue with B05, then B20, B04 and B03.

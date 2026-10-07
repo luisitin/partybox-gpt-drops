@@ -8,7 +8,7 @@ Jamboree does not give each playable character a distinct die. The 22 characters
 
 ## Contents
 
-- `dice.json`: 26 source records, 34 fact rows, all 22 character aliases, complete listed outcome sets, 12 items, compatibility decisions and 29 explicit mathematical models.
+- `dice.json`: 28 source records, 34 fact rows, all 22 character aliases, complete listed outcome sets, 12 items, compatibility decisions and 29 explicit mathematical models.
 - `odds.json`: reduced fraction strings, exact ordered-outcome counts, movement/coin marginals, joint outcomes and expectations. `null` is unknown, never zero.
 - `odds.ts`: immutable, pure lookup API. It does not generate probabilities, mutate callers or sample randomness.
 - `engine-a.ts`: TypeScript recursive Cartesian enumeration using bigint arithmetic.
@@ -18,7 +18,7 @@ Jamboree does not give each playable character a distinct die. The 22 characters
 - `rng.ts`, `tests/run.mjs`, `tests/mutations.mjs`: injected seeded RNG, exact comparisons, three complete seeded runs and 25 one-at-a-time source mutations.
 - `schema.json`: closed JSON Schema, Draft 2020-12, for both data documents; validated by the real `jsonschema` implementation.
 - `SOURCES.md`, `CONFLICTS.md`, `VERIFY.md`: evidence, dissent, source-reopening results, per-row audit and actual test output.
-- `reports/`: executed suite results and compact Monte Carlo/mutation summaries. Full per-bin reports are regenerated in `.test-output/` and uploaded by CI.
+- `reports/`: actual source captures for two fresh passes, complete row and quote audits, executed suite results, and compact Monte Carlo/mutation summaries. Full per-bin reports are regenerated in `.test-output/` and uploaded by CI.
 - `SHA256SUMS.txt`: hashes of delivered job files and the root workflow; the checksum file itself is necessarily excluded.
 
 The only repository path outside this job is `.github/workflows/B01.yml`, as expressly permitted by the repository README. No root build files or other jobs are changed.
@@ -54,7 +54,7 @@ sha256sum -c SHA256SUMS.txt
 
 The normal, Double and Triple models use one, two and three independent uniform 1–10 outcomes. Creepy uses 1–3; Mushroom adds five. Custom has ten separate deterministic choices, not a randomized 1–10 policy. Tickets reuse the single-use effect; their disputed quantity distribution is not guessed. Super Creepy shares the affected player's Creepy model rather than inventing a three-die movement roll.
 
-Payday adds the rolled total to the matching reward. Reported matching rewards are 10 for doubles, 20 for non-seven triples / 50 for triple sevens, and 30 for non-seven quadruples / 70 for quadruple sevens. Special rewards replace ordinary rewards. Those reward values lack a second independent confirmation and remain medium-confidence rule inputs, despite exact arithmetic.
+Payday adds the rolled total to the matching reward. Reported matching rewards are 10 for doubles, 20 for non-seven triples / 50 for triple sevens, and 30 for non-seven quadruples / 70 for quadruple sevens. Special rewards replace ordinary rewards. The +10 Double Dice matching reward now has independent player corroboration. The other listed matching rewards lack a second independent confirmation and remain medium-confidence rule inputs, despite exact arithmetic.
 
 `together` supplies movement with unknown rewards. `together-reported-bonus` adds the single-source reported 10-coin match reward. Its modeled reward is the reported award; per-member team accounting was not observed. `mario-*` means a player has Mario as a buddy, not that playing as Mario gives a special die. The buddy contributes one extra 3–8 result, not one per item die. Eligibility of every possible character/buddy pairing is not modeled. Custom does not gain this extra result. A Creepy curse is canceled by Double/Triple/Custom rather than yielding 2d3 or 3d3.
 

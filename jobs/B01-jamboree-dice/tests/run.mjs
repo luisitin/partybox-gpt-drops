@@ -29,7 +29,7 @@ function gcd(a,b){while(b){[a,b]=[b,a%b];}return a<0n?-a:a;}
 function semantic(){
  const sources=new Map(data.sources.map(s=>[s.id,s])), facts=new Map(data.facts.map(f=>[f.id,f]));
  for(const list of [data.sources,data.facts,data.characters,data.dice,data.items,data.models])assert.equal(new Set(list.map(x=>x.id)).size,list.length);
- for(const s of sources.values())assert(s.quotes.join(' ').split(/\s+/).filter(Boolean).length<=25,s.id);
+ for(const s of sources.values())for(const quote of s.quotes)assert(quote.split(/\s+/).filter(Boolean).length<=25,s.id);
  for(const f of facts.values()){for(const s of f.sources)assert(sources.has(s));if(f.status==='two-source')assert(new Set(f.sources.map(s=>sources.get(s).independenceGroup)).size>=2,f.id);}
  for(const collection of [data.characters,data.dice,data.items,data.compatibility,data.models])for(const r of collection)for(const f of r.facts)assert(facts.has(f));
  assert.equal(data.characters.length,22);for(const c of data.characters){assert.equal(c.dieId,'normal');assert.deepEqual([c.single,c.double,c.triple],['normal','double','triple']);}
@@ -39,6 +39,21 @@ function semantic(){
  assert.deepEqual(Object.keys(read('package.json').dependencies),[]);
  for(const file of ['engine-a.ts','odds.ts','rng.ts'])assert(!/Math\.random\s*\(|Date\.now\s*\(/.test(fs.readFileSync(file,'utf8')));
  return{cases:data.facts.length+data.sources.length+data.characters.length+data.models.length,command:'npm test (semantic references, aliases, quote budgets, dependency/purity scan)'};
+}
+function researchRecheck(){
+ const audit=read('reports/source-reopen-audit.json'),rows=read('reports/research-row-audit.json').rows;
+ assert.deepEqual(audit.map(row=>row.id),data.sources.map(source=>source.id));
+ for(const source of audit)if(source.kind!=='rejected'){
+  assert(source.firstRetrieved&&source.secondRetrieved,source.id+' both source passes');
+  assert(source.firstQuoteMatches.every(Boolean)&&source.secondQuoteMatches.every(Boolean),source.id+' quote recovery');
+ }
+ const expected=data.facts.length+data.characters.length+data.dice.reduce((n,die)=>n+die.faces.length,0)+
+  data.items.length+data.models.length+data.compatibility.length;
+ assert.equal(rows.length,expected);assert.equal(new Set(rows.map(row=>row[0])).size,expected);
+ for(const row of rows)assert.equal(row[4],true,row[0]+' source recheck');
+ return{cases:audit.length+rows.length,recheckedRows:rows.length,retrievedSources:audit.filter(s=>s.secondRetrieved).length,
+  unresolvedResearchFacts:data.facts.filter(f=>f.status!=='two-source').map(f=>f.id),
+  command:'npm test (complete per-row second-pass coverage and all accepted source quotes recovered in both archived passes)'};
 }
 function invariants(A){let cases=0;for(const d of committed.distributions){
  sumOne(Object.values(d.movement));sumOne(d.joint.map(x=>x.probability));if(d.coins)sumOne(Object.values(d.coins));
@@ -97,11 +112,22 @@ function blindComparisons(A,B){let cases=0;
   referenceSha256:createHash('sha256').update(fs.readFileSync('tests/blind/reference.ts')).digest('hex'),
   command:'npm test (sealed blind mixed-radix oracle versus every production tuple, table, fraction and invalid model fixture)'};
 }
+function blindAuthorSelfcheck(){
+ const destination='.test-output/blind-selfcheck';fs.mkdirSync(destination+'/compiled',{recursive:true});
+ for(const name of['package.json','reference.ts','selfcheck.mjs'])
+  fs.copyFileSync('tests/blind/'+name,destination+'/'+name);
+ const tsc=path.resolve('node_modules/typescript/bin/tsc');
+ cmd(process.execPath,[tsc,'--target','ES2022','--module','NodeNext','--moduleResolution','NodeNext',
+  '--strict','--noUncheckedIndexedAccess','--outDir','compiled','reference.ts'],{cwd:destination});
+ const output=cmd(process.execPath,['selfcheck.mjs'],{cwd:destination});
+ assert.equal(fs.readFileSync(destination+'/SELFCHECK.json','utf8'),fs.readFileSync('tests/blind/SELFCHECK.json','utf8'));
+ return{cases:41,command:'npm test (rerun original sealed author self-check in transient directory)',output:output.trim()};
+}
 function mutate(seed,A,oracle){const base=fs.readFileSync('.build/engine-a.js','utf8'), result=[];
  for(const[id,description,needle,replacement]of mutations){assert.equal(base.split(needle).length,2,`${id}: mutation anchor must occur once`);const module=new Module(path.resolve('.build/'+id+'.cjs'));module.filename=path.resolve('.build/'+id+'.cjs');module.paths=[];module._compile(base.replace(needle,replacement),module.filename);
- let witness=null;for(let i=0;i<data.models.length;i++){try{assert.deepEqual(module.exports.enumerate(data.models[i]),oracle[i].distribution);}catch(e){witness={model:data.models[i].id,message:String(e.message).slice(0,180)};break;}}
- assert(witness,`${id}: SURVIVED`);result.push({id,description,killed:true,witness});
- }fs.writeFileSync(`.test-output/mutations-seed-${seed}.json`,JSON.stringify(result,null,2)+'\n');return{cases:result.length,killed:result.length,command:'npm test (25 individual compiled-source mutants; pristine baseline separately passed)'};
+ let witness=null;for(let i=0;i<data.models.length;i++){try{assert.deepEqual(module.exports.enumerate(data.models[i]),oracle[i].distribution);}catch(e){assert(e instanceof assert.AssertionError,`${id}: runtime error is not an assertion kill`);witness={model:data.models[i].id,message:String(e.message).slice(0,180)};break;}}
+ assert(witness,`${id}: SURVIVED`);result.push({id,description,compiled:true,killed:true,sourceSha256:createHash('sha256').update(base.replace(needle,replacement)).digest('hex'),witness});
+ }fs.writeFileSync(`.test-output/mutations-seed-${seed}.json`,JSON.stringify(result,null,2)+'\n');return{cases:result.length,compiled:result.length,killed:result.length,survived:0,compileErrors:0,command:'npm test (25 individual compiled-source mutants; only assertion failures against sealed blind distributions count as kills)'};
 }
 function rngChecks(R,seed){const a=R.seededRng(seed),b=R.seededRng(seed);for(let i=0;i<1000;i++)assert.equal(a(),b());
  let values=[4294967295,4294967294,9],calls=0;assert.equal(R.randomIndex(10,()=>{calls++;return values.shift();}),9);assert.equal(calls,3);
@@ -156,8 +182,10 @@ for(const seed of[1,2,3]){
  const A=require('../.build/engine-a.js'),L=require('../.build/odds.js'),R=require('../.build/rng.js'),B=require('../.build/tests/blind/reference.js');
  const oracle=JSON.parse(cmd('python3',['tests/oracle_b.py']));
  suite(seed,'semantic-references',semantic);
+ suite(seed,'research-source-recheck',researchRecheck);
  suite(seed,'exhaustive-A-B',()=>compare(A,oracle));
  suite(seed,'blind-independent-odds',()=>blindComparisons(A,B));
+ suite(seed,'blind-author-selfcheck',blindAuthorSelfcheck);
  suite(seed,'exact-invariants',()=>invariants(A));
  suite(seed,'lookup-boundaries',()=>lookupChecks(A,L));
  suite(seed,'literal-goldens',()=>goldens(A));
