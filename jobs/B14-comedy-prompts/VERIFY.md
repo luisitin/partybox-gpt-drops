@@ -33,8 +33,8 @@ into `results/draft.json`; the npm alias runs the same validator.
 
 | Current measured check | Cases | Passed | Failed | Seed | Exact command |
 | --- | ---: | ---: | ---: | --- | --- |
-| JSON Schema / character limit / ID / genre checks | 2100 | 2100 | 0 | not applicable | `npm run check:draft` |
-| Complete independent batch record and input-hash match | 1800 | 1800 | 0 | not applicable | `npm run check:draft` |
+| JSON Schema / character limit / ID / genre checks | 2200 | 2200 | 0 | not applicable | `npm run check:draft` |
+| Complete independent batch record and input-hash match | 2000 | 2000 | 0 | not applicable | `npm run check:draft` |
 
 The independent-record check validates completeness and input identity; it does
 not count low editorial grades as passing the humor rubric.
@@ -126,6 +126,12 @@ checks, maximum 90 characters. 1800 independent rows validated;
 40.6667%; threshold agreement is
 73.4444% on reviewed rows only.
 
+Measured milestone 022: 1100 candidates per genre, 2,200/2,200 structural
+checks, maximum 90 characters. 2000 independent rows validated;
+1282 meet 4+ in both passes. Exact-score agreement is
+40.2%; threshold agreement is
+72.35% on reviewed rows only.
+
 At milestone 005, `npm run checksums` size-checked 36 files (largest 185,166
 bytes), and `sha256sum -c SHA256SUMS.txt` passed all 35 listed file hashes.
 These packaging checks do not establish content or editorial completion.
@@ -159,8 +165,19 @@ changed after sealing.
 
 ## UNVERIFIED
 
+- Independent batch 020 identified Q0997 and M0997 as references to the Morton
+  Salt child mascot. Both scored 1. These sealed rejected drafts cannot enter the
+  adult-only final pack unchanged; a changed current candidate needs a fresh
+  second grade. This records a first-author editorial miss.
+- Final canonical aggregation must merge Kraft mac and cheese with Kraft and
+  Ninja appliances with Ninja, and Reese's Puffs with Reese's. Known mappings are in `named-reference-aliases.json`;
+  the complete alias audit remains pending.
+- The independent reviewer also flagged Q1040's explicit Wendy's child-mascot
+  reference. It cannot enter unchanged; Wendy's restaurant service references
+  are distinct from a scene involving the child mascot.
+
 - The 1,500+1,500 candidate pool is not yet complete.
-- Independent second grading is complete for batches 001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018 only, not all 3,000 rows.
+- Independent second grading is complete for batches 001, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 016, 017, 018, 019, 020 only, not all 3,000 rows.
 - Final 600+600 selection, agreement rates, near-duplicate resolution, and the
   named-reference cap have not yet been established.
 - Adult-only content and no-slur editorial review remains pending.

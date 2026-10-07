@@ -61,12 +61,16 @@ else:
     assert final_counts == {"fill": 600, "most-likely": 600}, "incomplete final selections"
     by_id = {row["id"]: row for row in rows}
     assert len({row["id"] for row in selected}) == 1200, "duplicate selected ID"
+    alias_registry = json.loads((ROOT / "named-reference-aliases.json").read_text())
+    aliases = alias_registry["tagToCanonical"]
+    assert all(isinstance(key, str) and isinstance(value, str) and value not in aliases for key, value in aliases.items()), "invalid or chained canonical aliases"
+    assert alias_registry["auditStatus"] == "complete", "full named-reference alias audit pending"
     named = Counter()
     for row in selected:
         original = by_id[row["id"]]
         assert row["text"] == original["text"] and row["kind"] == original["kind"], "selection differs from graded input"
         assert original["firstPass"]["grade"] >= 4 and second[row["id"]]["grade"] >= 4, "selected prompt failed a grading pass"
-        named.update(original["namedReferences"])
+        named.update({aliases.get(reference, reference) for reference in original["namedReferences"]})
     assert max(named.values(), default=0) <= 3, "named brand/person appears more than three times"
     normalize = lambda text: re.sub(r"[^a-z0-9]+", " ", text.lower()).strip()
     flagged = []

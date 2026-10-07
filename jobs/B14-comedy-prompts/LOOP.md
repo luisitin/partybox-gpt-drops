@@ -62,3 +62,5 @@
     Independent review remains partial; complete counts are recorded verbatim.
 21. Authored 100 new household-brand scenarios with distinct genre premises, shortened one overlength draft before sealing, and integrated all available independent reviews unchanged. All 2,100 rows pass structural checks.
     Independent review remains partial; complete counts are recorded verbatim.
+22. First-author self-edit lowered 22 generic or unclear fill setups before sealing; authored 50 distinct fixed most-likely actions; added strict alias-aware final name-cap gating and documented child-mascot failures. All 2,200 rows pass structural checks.
+    Independent review remains partial; complete counts are recorded verbatim.
