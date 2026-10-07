@@ -88,6 +88,11 @@ for(const term of policy.terms)for(let i=0;i<term.length;i++)for(const v of vari
 const knownCharacters=new Set([...policy.groups.flatMap(([,group])=>[...group]),...'\u00ad\u034f\u061c\u180e\u200b\u200c\u200d\u200e\u200f\u2060\u2061\u2062\u2063\u2064\ufeff']);
 for(const character of [...knownCharacters]){knownCharacters.add(character.toUpperCase());knownCharacters.add(character.toLowerCase());}
 const knownCases=[...knownCharacters].flatMap(c=>[c,'a'+c,c+'a','s'+c+'ex','se'+c+'x','Σ'+c+'A','A'+c+'Σ','AΣ'+c,'ſ'+c+'ex'].map(input=>({input,expected:label(blind.nameFilter(input)),kind:'precompiled-Unicode-policy'})));
+// The original suites and their counts are unchanged. Independently challenge
+// every extra compiled code point in ordinary, contextual-case and fallback
+// positions; expected outcomes come from the original sealed reference.
+const rangeCharacters=[...Array.from({length:64},(_,i)=>String.fromCharCode(0x00c0+i)),...Array.from({length:94},(_,i)=>String.fromCharCode(0xff01+i))];
+const rangeCases=rangeCharacters.flatMap(c=>[c,'a'+c,c+'a','s'+c+'ex','se'+c+'x','Σ'+c+'A','A'+c+'Σ','AΣ'+c,'ſ'+c+'ex'].map(input=>({input,expected:label(blind.nameFilter(input)),kind:'precompiled-Unicode-ranges'})));
 const mutations = [
  ['M01','Remove lowercasing', '.toLowerCase()', ''],
  ['M02','Lose compatibility normalization', "normalize('NFKD')", "normalize('NFD')"],
@@ -170,6 +175,7 @@ for(const seed of [1,2,3]) {
  const baseline=evalCases(nameFilter,fixed);record('handwritten-format-and-Scunthorpe',fixed.length,baseline.passed,seed,{errors:baseline.errors});
  const mapResult=evalCases(nameFilter,mappingCases);record('exhaustive-declared-single-glyph-substitution',mappingCases.length,mapResult.passed,seed,{errors:mapResult.errors});
  const knownResult=evalCases(nameFilter,knownCases);record('precompiled-Unicode-policy-context-differential',knownCases.length,knownResult.passed,seed,{errors:knownResult.errors});
+ const rangeResult=evalCases(nameFilter,rangeCases);record('precompiled-printable-width-and-latin1-context-differential',rangeCases.length,rangeResult.passed,seed,{errors:rangeResult.errors});
  const obf=evalCases(nameFilter,generated.rows);
  record('generated-obfuscations',5000,obf.passed,seed,{misses:5000-obf.passed,errors:obf.errors,coverage:generated.coverage,attempts:generated.attempts});
  const corpusCases=[];

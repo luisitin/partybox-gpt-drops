@@ -29,7 +29,6 @@ const pattern = (terms: readonly string[]): string => terms.map(term => term.rep
 const BAD = new RegExp(pattern(TERMS) + '|' + pattern(TERMS.map(term => [...term].reverse().join(''))));
 const CONTROLS = /[\u0000-\u001f\u007f-\u009f\ud800-\udfff\u202a-\u202e\u2066-\u2069]/u;
 const ASCII = /^[\x20-\x7e]*$/;
-const SIMPLE_ASCII = /^[A-Za-z]+$/;
 const WORD = /^[a-z]+$/;
 const ASCII_CONTENT = /[a-z0-9]/;
 const CONTENT = /[\p{L}\p{N}]/u;
@@ -40,16 +39,10 @@ const lower = (value: string): string => value.toLowerCase();
 const normalize = (value: string): string => value.normalize('NFKD');
 const clean = (value: string): string => value.replace(MARKS, '').replace(FORMATS, '');
 interface KnownCharacter { readonly plain: string; readonly mapped: string; readonly meaningful: boolean; }
-// Compiled once from the declared glyph policy, case variants, printable
-// fullwidth ASCII, Latin-1 and common ignorable formats. No names or results
-// are cached. Other Unicode falls back.
+// Compiled once from the declared glyph policy, case variants and common
+// ignorable formats. No names or results are cached. Other Unicode falls back.
 const KNOWN: ReadonlyMap<string, KnownCharacter> = (() => {
   const candidates = new Set<string>([...'\u00ad\u034f\u061c\u180e\u200b\u200c\u200d\u200e\u200f\u2060\u2061\u2062\u2063\u2064\ufeff']);
-  // These finite Unicode ranges are compiled through the same normalization
-  // policy rather than a second hand-maintained mapping. Real accented names
-  // and fullwidth text then avoid per-call normalization/replacement passes.
-  for (let code = 0x00c0; code <= 0x00ff; code++) candidates.add(String.fromCharCode(code));
-  for (let code = 0xff01; code <= 0xff5e; code++) candidates.add(String.fromCharCode(code));
   for (const [, group] of GROUPS) for (const character of group) {
     candidates.add(character); candidates.add(lower(character)); candidates.add(character.toUpperCase());
   }
@@ -103,22 +96,17 @@ const FAILURE = {
 export function nameFilter(input: unknown): NameResult {
   if (typeof input !== 'string') return FAILURE.type;
   if (input.length > 32 || (input.length > 16 && [...input].length > 16)) return FAILURE.length;
-  // ASCII letters contain no controls, separators or empty content. They need
-  // only case folding before the shared exception and blocked-term matchers.
-  const simple = SIMPLE_ASCII.test(input);
   // Reject unpaired surrogates, C0/C1 controls, and bidi formatting controls.
-  if (!simple && CONTROLS.test(input))
+  if (CONTROLS.test(input))
     return FAILURE.control;
-  const ascii = simple || ASCII.test(input);
+  const ascii = ASCII.test(input);
   const known = ascii ? undefined : knownPlain(input);
   let plain = ascii ? lower(input) : known === undefined ? clean(lower(normalize(input))) : lower(known);
-  if (!simple) {
-    plain = plain.trim();
-    if (!(ascii ? ASCII_CONTENT.test(plain) : hasContent(plain))) return FAILURE.empty;
-  }
+  plain = plain.trim();
+  if (!(ascii ? ASCII_CONTENT.test(plain) : hasContent(plain))) return FAILURE.empty;
   if (SAFE.has(plain)) return OK;
   let text = plain;
-  if (!simple && !WORD.test(plain)) {
+  if (!WORD.test(plain)) {
    text = '';
    for (const c of plain) {
     if (c >= 'a' && c <= 'z') { text += c; continue; }

@@ -40,16 +40,10 @@ const lower = (value: string): string => value.toLowerCase();
 const normalize = (value: string): string => value.normalize('NFKD');
 const clean = (value: string): string => value.replace(MARKS, '').replace(FORMATS, '');
 interface KnownCharacter { readonly plain: string; readonly mapped: string; readonly meaningful: boolean; }
-// Compiled once from the declared glyph policy, case variants, printable
-// fullwidth ASCII, Latin-1 and common ignorable formats. No names or results
-// are cached. Other Unicode falls back.
+// Compiled once from the declared glyph policy, case variants and common
+// ignorable formats. No names or results are cached. Other Unicode falls back.
 const KNOWN: ReadonlyMap<string, KnownCharacter> = (() => {
   const candidates = new Set<string>([...'\u00ad\u034f\u061c\u180e\u200b\u200c\u200d\u200e\u200f\u2060\u2061\u2062\u2063\u2064\ufeff']);
-  // These finite Unicode ranges are compiled through the same normalization
-  // policy rather than a second hand-maintained mapping. Real accented names
-  // and fullwidth text then avoid per-call normalization/replacement passes.
-  for (let code = 0x00c0; code <= 0x00ff; code++) candidates.add(String.fromCharCode(code));
-  for (let code = 0xff01; code <= 0xff5e; code++) candidates.add(String.fromCharCode(code));
   for (const [, group] of GROUPS) for (const character of group) {
     candidates.add(character); candidates.add(lower(character)); candidates.add(character.toUpperCase());
   }

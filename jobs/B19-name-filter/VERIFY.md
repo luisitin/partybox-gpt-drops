@@ -6,12 +6,12 @@ latency gate failed locally. This is an incomplete acceptance result.**
 
 Exact command: `npm test` from this job directory, expanding to
 `npm run build && node tests/run.mjs`. No corpus suite was skipped. The final
-source and full measured reports are committed in `results/`; new runs write
+source and full measured reports are committed in `results/optimization-width-latin1/`; earlier failures remain in `results/` and `results/optimization-ascii-word/`. New runs write
 `reports/latest/`. Clean local `npm ci --ignore-scripts --no-audit --no-fund`
 succeeded. The source compiler and each seed's repeated strict no-emit check
 use the pinned TypeScript 5.8.3 package.
 
-Runtime SHA256: `94b9bfcfd9c37d40e42bcc717fcf08bbef2c23b861ed3a0ca03ed0d5ee1e0bf2`.
+Runtime SHA256: `124dce60c560faf5c101be03e0d24856f7bcbd293b5bcecbd0ad4d0b2e93502b`.
 
 Sealed blind reference SHA256: `40449357a616619cc649d6b8efab2f6664a187de178511b8b0f17e28e92eea9a`.
 
@@ -36,6 +36,7 @@ against the sealed reference; none is replaced with a sample.
 | handwritten-format-and-Scunthorpe | 459 | 459 | 0 | 1 | `node tests/run.mjs` |
 | exhaustive-declared-single-glyph-substitution | 1,371 | 1,371 | 0 | 1 | `node tests/run.mjs` |
 | precompiled-Unicode-policy-context-differential | 1,296 | 1,296 | 0 | 1 | `node tests/run.mjs` |
+| precompiled-printable-width-and-latin1-context-differential | 1,422 | 1,422 | 0 | 1 | `node tests/run.mjs` |
 | generated-obfuscations | 5,000 | 5,000 | 0 | 1 | `node tests/run.mjs` |
 | names-count-and-uniqueness | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
 | names-reviewed-corpus-policy | 20,000 | 20,000 | 0 | 1 | `node tests/run.mjs` |
@@ -54,7 +55,7 @@ against the sealed reference; none is replaced with a sample.
 | 25-real-executed-mutations | 25 | 25 | 0 | 1 | `node tests/run.mjs` |
 | runtime-gzip-size | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
 | zero-runtime-dependencies-and-forbidden-APIs | 5 | 5 | 0 | 1 | `node tests/run.mjs` |
-| latency-every-observed-check-under-005ms | 10,000 | 9,963 | 37 | 1 | `node tests/run.mjs` |
+| latency-every-observed-check-under-005ms | 10,000 | 9,995 | 5 | 1 | `node tests/run.mjs` |
 | delivery-file-size-and-checksums | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
 | immutable-return-values | 3 | 3 | 0 | 2 | `node tests/run.mjs` |
 | policy-copy-consistency-and-no-duplicate-terms | 3 | 3 | 0 | 2 | `node tests/run.mjs` |
@@ -63,6 +64,7 @@ against the sealed reference; none is replaced with a sample.
 | handwritten-format-and-Scunthorpe | 459 | 459 | 0 | 2 | `node tests/run.mjs` |
 | exhaustive-declared-single-glyph-substitution | 1,371 | 1,371 | 0 | 2 | `node tests/run.mjs` |
 | precompiled-Unicode-policy-context-differential | 1,296 | 1,296 | 0 | 2 | `node tests/run.mjs` |
+| precompiled-printable-width-and-latin1-context-differential | 1,422 | 1,422 | 0 | 2 | `node tests/run.mjs` |
 | generated-obfuscations | 5,000 | 5,000 | 0 | 2 | `node tests/run.mjs` |
 | names-count-and-uniqueness | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
 | names-reviewed-corpus-policy | 20,000 | 20,000 | 0 | 2 | `node tests/run.mjs` |
@@ -81,7 +83,7 @@ against the sealed reference; none is replaced with a sample.
 | 25-real-executed-mutations | 25 | 25 | 0 | 2 | `node tests/run.mjs` |
 | runtime-gzip-size | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
 | zero-runtime-dependencies-and-forbidden-APIs | 5 | 5 | 0 | 2 | `node tests/run.mjs` |
-| latency-every-observed-check-under-005ms | 10,000 | 9,985 | 15 | 2 | `node tests/run.mjs` |
+| latency-every-observed-check-under-005ms | 10,000 | 9,989 | 11 | 2 | `node tests/run.mjs` |
 | delivery-file-size-and-checksums | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
 | immutable-return-values | 3 | 3 | 0 | 3 | `node tests/run.mjs` |
 | policy-copy-consistency-and-no-duplicate-terms | 3 | 3 | 0 | 3 | `node tests/run.mjs` |
@@ -90,6 +92,7 @@ against the sealed reference; none is replaced with a sample.
 | handwritten-format-and-Scunthorpe | 459 | 459 | 0 | 3 | `node tests/run.mjs` |
 | exhaustive-declared-single-glyph-substitution | 1,371 | 1,371 | 0 | 3 | `node tests/run.mjs` |
 | precompiled-Unicode-policy-context-differential | 1,296 | 1,296 | 0 | 3 | `node tests/run.mjs` |
+| precompiled-printable-width-and-latin1-context-differential | 1,422 | 1,422 | 0 | 3 | `node tests/run.mjs` |
 | generated-obfuscations | 5,000 | 5,000 | 0 | 3 | `node tests/run.mjs` |
 | names-count-and-uniqueness | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
 | names-reviewed-corpus-policy | 20,000 | 20,000 | 0 | 3 | `node tests/run.mjs` |
@@ -108,7 +111,7 @@ against the sealed reference; none is replaced with a sample.
 | 25-real-executed-mutations | 25 | 25 | 0 | 3 | `node tests/run.mjs` |
 | runtime-gzip-size | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
 | zero-runtime-dependencies-and-forbidden-APIs | 5 | 5 | 0 | 3 | `node tests/run.mjs` |
-| latency-every-observed-check-under-005ms | 10,000 | 9,988 | 12 | 3 | `node tests/run.mjs` |
+| latency-every-observed-check-under-005ms | 10,000 | 9,991 | 9 | 3 | `node tests/run.mjs` |
 
 ## Independent reference and complete behavioral results
 
@@ -141,7 +144,7 @@ asserted to have blind authorship.
 
 ## Size, dependencies and source optimization
 
-Source: **9,161 bytes / 3,946 gzip bytes**. Emitted runtime: **7,864 bytes / 3,114 gzip bytes**. Both gzip artifacts are gated at 6,000 bytes, level 9.
+Source: **9,912 bytes / 4,239 gzip bytes**. Emitted runtime: **8,220 bytes / 3,225 gzip bytes**. Both gzip artifacts are gated at 6,000 bytes, level 9.
 
 Runtime has zero dependencies, imports, ambient RNG or clocks. It adds no
 result cache or benchmark-specific path. Printable ASCII avoids unnecessary
@@ -150,28 +153,28 @@ building a new mapped string. Character-property regexes are compiled once at
 module initialization, and one scan handles forward and reversed patterns.
 A private table compiled at module initialization contains NFKD expansions,
 mapping results and letter/number classification for declared glyphs, case
-variants and known ignorable formats. Those inputs avoid repeated normalization
+variants, printable fullwidth ASCII, Latin-1 and known ignorable formats. Those inputs avoid repeated normalization
 and mark/format replacement. Other Unicode keeps the original fallback.
 Whole-string lowercasing preserves contextual Greek final sigma; only
 Case_Ignorable marks/formats may be removed before that operation. No names or
 filter results are cached. All original policy decisions and guards retain the
 complete differential and mutation checks above. An additional 1,296 mixed
 character/context cases per seed agree with the sealed reference: 3,888 passed
-checks, including Greek sigma and fallback boundaries.
+checks, including Greek sigma and fallback boundaries. A further 1,422 independent contexts per seed exercise every one of the 158 extra compiled range code points: 4,266 additional passed checks. Both supplemental suites use the original sealed reference without changing its source or the original differential suite counts.
 
 ## Literal latency results in milliseconds
 
 | Seed | Calls | Mean | p50 | p99 | Maximum | Above 0.05 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 1 | 10000 | 0.016340163 | 0.000817000 | 0.008403000 | 41.188051000 | 37 |
-| 2 | 10000 | 0.001290300 | 0.000624000 | 0.004348000 | 0.714895000 | 15 |
-| 3 | 10000 | 0.003125306 | 0.000645000 | 0.004366000 | 19.354561000 | 12 |
+| 1 | 10000 | 0.001119125 | 0.000616000 | 0.004343000 | 0.154320000 | 5 |
+| 2 | 10000 | 0.001075296 | 0.000546000 | 0.004276000 | 0.582158000 | 11 |
+| 3 | 10000 | 0.001004105 | 0.000541000 | 0.004139000 | 0.227552000 | 9 |
 
 Each seed warms 100,000 calls and measures 10,000 seeded mixed inputs, using the
 original unchanged timer window around the call and result access. No outlier
 is discarded or retimed. No average or percentile substitutes for the maximum.
 Inputs, indices and times for all measured failures are collected only after
-measurement and retained in `results/benchmark-seed*.json`. Outlier witnesses
+measurement and retained in `results/optimization-width-latin1/benchmark-seed*.json`; all earlier attempt reports remain delivered. Outlier witnesses
 include ordinary ASCII names as well as obfuscated Unicode strings.
 
 A separate `node --trace-gc tests/run.mjs` diagnostic retained GC events and
@@ -181,7 +184,7 @@ the harness now invokes the pinned compiler through Node, so complete direct
 invocations also use the correct compiler. The profile does not establish a
 hardware-independent bound or prove the cause of every timing outlier.
 
-Historical failures remain in `LOOP.md`. The first optimized hosted run,
+Historical failures remain in `LOOP.md` and their original result files. The ASCII-letter-only predecessor failed 19/21/12 calls, with maxima 0.470704/0.480532/0.196494 ms. The new finite-range compilation failed 5/11/9 calls. These observations are separate measurements, not a controlled attribution of the difference or a waiver of either failure. The first optimized hosted run,
 https://github.com/luisitin/partybox-gpt-drops/actions/runs/37637661735,
 failed only latency: one 0.065583 ms call in seed 1 and one 0.308360 ms call in
 seed 3; seed 2's maximum was 0.013380 ms. Later source improvements do not erase

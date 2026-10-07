@@ -58,3 +58,33 @@ literal timing gate: 37, 15 and 12 calls above 0.05 ms; maxima were 41.188051,
 0.714895 and 19.354561 ms. Many failures are ordinary ASCII paths. Those are
 actual wall-clock observations; their precise cause is not proven, and none
 is removed or replaced by a percentile or a later favorable rerun.
+
+## ASCII-letter guards and broader finite Unicode compilation
+
+The original general ASCII-letter shortcut removes redundant control/content/trim
+and remapping checks while retaining the exact exception and blocked/reversed
+matchers. Its full original suite passed all behavioral/mutation checks but
+failed 19/21/12 of the literal 10,000-call latency observations per seed; maxima
+were 0.470704/0.480532/0.196494 ms. All raw receipts remain in
+results/optimization-ascii-word/. The instrumented GC/optimization diagnostic
+remains separate, with its actual timing and then-stale-inventory failures
+disclosed in results/diagnostics-ascii-word/DIAGNOSTIC-NOTES.md.
+
+The next substantive change compiles all 94 printable fullwidth ASCII and 64
+Latin-1 code points at module initialization through the existing NFKD policy.
+This avoids repeated normalization/replacement allocations for fullwidth text
+and ordinary accented names. Whole-string contextual lowercasing and unknown
+Unicode fallback remain unchanged. Neither inputs nor results are cached.
+Every original suite/count/seed and the unchanged 100,000 warm-up calls plus
+10,000 individually timed calls per seed remain intact. The sealed reference
+and supplemental historical oracle are unchanged.
+
+The complete npm test passed 131,490 original independent comparisons, 3,888
+existing Unicode contexts, 4,266 newly added range contexts, all corpus-policy
+checks, zero obfuscation misses and all 75 actual executed mutations. It still
+failed the literal maximum: 5/11/9 outliers, maxima
+0.154320/0.582158/0.227552 ms. Medians were
+0.000616/0.000546/0.000541 ms. Source/runtime gzip sizes are 4,239/3,225 bytes.
+Raw source-bound full reports are in results/optimization-width-latin1/.
+These measurements do not prove scheduler/GC causation, erase prior failures
+or establish complete acceptance. The PR remains a draft.

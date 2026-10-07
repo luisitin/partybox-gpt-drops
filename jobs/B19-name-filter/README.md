@@ -27,7 +27,7 @@ alongside the source files and cached public corpora, including on failure.
 Upstream data changes fail the snapshot lock rather than silently changing tests.
 GeoNames is a daily source: a future fresh download may need the retained cache.
 The final measured local summary, benchmarks, mutation witnesses and all corpus
-rejections are also committed in `results/`. Its timing failures remain visible.
+rejections are also committed in `results/optimization-width-latin1/`, with earlier measured failures retained in `results/` and `results/optimization-ascii-word/`. Its timing failures remain visible.
 
 ## API
 
@@ -69,9 +69,9 @@ contract and policy JSON before its author read production or existing tests.
 All 43,830 inputs per seed are compared with it, in addition to the historical
 NFA comparison. Its authoring record and source hashes are in tests/blind/.
 A finite private table compiles declared glyphs/case variants/known ignorable
-formats once, preserving whole-string contextual lowercasing and the full
+formats, printable fullwidth ASCII and Latin-1 once, preserving whole-string contextual lowercasing and the full
 normalization fallback for other Unicode. Another 1,296 context checks per seed
-agree with the sealed reference. No input or result cache is used.
+agree with the sealed reference; a further 1,422 new character/context checks per seed cover the additional ranges. No input or result cache is used.
 
 ## Contents
 
