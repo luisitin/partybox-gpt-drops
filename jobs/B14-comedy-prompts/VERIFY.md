@@ -27,7 +27,7 @@ into `results/draft.json`; the npm alias runs the same validator.
 
 | Current measured check | Cases | Passed | Failed | Seed | Exact command |
 | --- | ---: | ---: | ---: | --- | --- |
-| JSON Schema / character limit / ID / genre checks | 1000 | 1000 | 0 | not applicable | `npm run check:draft` |
+| JSON Schema / character limit / ID / genre checks | 1100 | 1100 | 0 | not applicable | `npm run check:draft` |
 | Complete independent batch record and input-hash match | 400 | 400 | 0 | not applicable | `npm run check:draft` |
 
 The independent-record check validates completeness and input identity; it does
@@ -57,6 +57,10 @@ checks, maximum 90 characters. All 400 rows in independent batches 001-004 have
 complete grade/reason records and matching input hashes. 288 received second
 grades of 4+, and 284 meet that threshold in both passes. On these 400 reviewed
 rows, exact-grade agreement is 37.25% and keep-threshold agreement is 71.5%.
+
+Eleventh measured draft milestone: 550 candidates per genre, 1,100/1,100 structural
+checks, maximum 90 characters. The exact current independent counts and
+agreement rates remain in `results/draft.json`.
 
 At milestone 005, `npm run checksums` size-checked 36 files (largest 185,166
 bytes), and `sha256sum -c SHA256SUMS.txt` passed all 35 listed file hashes.

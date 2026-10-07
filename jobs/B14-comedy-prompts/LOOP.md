@@ -38,3 +38,6 @@
     draft before sealing. All 1,000 rows pass structural checks. Integrated
     independent batches 003-004 without changing rejected or accepted grades:
     284 of 400 reviewed candidates meet 4+ in both passes.
+11. Authored and first-graded 100 specific snack-related candidates, retaining
+    weak literal-name frames below 4. All 1,100 current rows pass structural checks;
+    the complete grade-free snack batch is sealed for independent review.
