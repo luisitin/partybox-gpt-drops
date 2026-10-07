@@ -34,6 +34,10 @@ its evidence files and its research notes. Do not overwrite another worker.
   additional contextual facts when the answer quote does not cover them. Each is
   actual contiguous source text, at most 25 whitespace-delimited words; formatting
   whitespace may be normalized. No paraphrase, stitched fragments or invented quote.
+  An optional `extraQuote` is allowed when an added answer-scope clause needs a
+  third distinct brief excerpt from that source. It follows exactly the same
+  contiguous≤25-word author-body, actual second-pass body and independent
+  per-row claim-support review checks; it never relaxes two-source support.
 - `claims`: an array of `{kind,text,sourceIds}`. Kind is `answer` or `funFact`;
   every distinct factual claim in wording/answer/fun fact is represented and cites
   both source IDs. Every fact has its own <=25-word supporting quote from each

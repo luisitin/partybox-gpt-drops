@@ -363,7 +363,7 @@
   },
   {
     "id": "B13-0909",
-    "rowSha256": "f28497c7943f5f5f64aa6c2ba8dfb6b7cef11be440fdcba45ce81fa987558760",
+    "rowSha256": "052126a5ccb70314e7429b1bb2a26960ad5ba5da287b8914864113dd28e1b850",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -373,9 +373,9 @@
         "retrievedAt": "2026-10-07T19:01:00.201268+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Chocolate production uses fermented and roasted cocoa beans.",
-        "funFactSupport": "White chocolate is made with cocoa butter and milk products."
+        "answerSupport": "Before chocolate liquor is made, cocoa beans normally undergo which heat treatment? Answer: Roasting",
+        "funFactSupport": "White chocolate is made with cocoa butter and milk products.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0016",
@@ -384,12 +384,12 @@
         "retrievedAt": "2026-10-07T19:00:59.803801+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Chocolate production uses fermented and roasted cocoa beans.",
-        "funFactSupport": "White chocolate is made with cocoa butter and milk products."
+        "answerSupport": "Before chocolate liquor is made, cocoa beans normally undergo which heat treatment? Answer: Roasting",
+        "funFactSupport": "White chocolate is made with cocoa butter and milk products.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both accounts explicitly describe roasting, not brewing or boiling, before grinding.",
+    "confidenceReason": "Both accounts explicitly describe roasting, not brewing or boiling, before grinding. Fresh-review repair: Roasting is supported as the normal step before grinding chocolate liquor; freezing is not a heat treatment and supplies an invalid distractor in the present wording. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -594,36 +594,43 @@
   },
   {
     "id": "B13-0916",
-    "rowSha256": "2864b3e488cfba3ce053b566295800c31f0127ae200549fac19cb0e326ac6a5f",
-    "author": "/root/continue_b14_author",
+    "rowSha256": "660f27a984e11d71f0fb6e6c006b35b5b0f3ffbe6d327f993534d1f2e26b8d18",
+    "author": "/root/r2048_nature",
     "evidenceReads": [
       {
         "sourceId": "food-everyday-life-s0019",
-        "captureSha256": "5044282c411aeff66cb093e71b464550592cf0e9ae2a160adf558fd74215663e",
+        "contentSha256": "5044282c411aeff66cb093e71b464550592cf0e9ae2a160adf558fd74215663e",
+        "quote": "semifluid fermented milk food",
+        "exactQuoteMatched": true,
+        "claimsSupported": [
+          "answer",
+          "funFact"
+        ],
         "capturePath": ".work/food-everyday-life/author/food-everyday-life-s0019.txt",
-        "retrievedAt": "2026-10-07T19:00:59.964799+00:00",
-        "answerQuoteExactMatch": true,
-        "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Yogurt is fermented milk produced using bacterial cultures.",
-        "funFactSupport": "Lactic acid gives yogurt its sour or tart flavor."
+        "actualRetrievalTimeReused": "2026-10-07T19:00:59.964799+00:00",
+        "funFactQuote": "mildly sour flavour because of its lactic acid content",
+        "exactFunFactQuoteMatched": true
       },
       {
         "sourceId": "food-everyday-life-s0020",
-        "captureSha256": "7e917cb736b255f18121008ab2ac34becffc05e7e824edf599cdf1d65acd8c94",
+        "contentSha256": "7e917cb736b255f18121008ab2ac34becffc05e7e824edf599cdf1d65acd8c94",
+        "quote": "a food produced by bacterial fermentation of milk",
+        "exactQuoteMatched": true,
+        "claimsSupported": [
+          "answer",
+          "funFact"
+        ],
         "capturePath": ".work/food-everyday-life/author/food-everyday-life-s0020.txt",
-        "retrievedAt": "2026-10-07T19:00:59.989814+00:00",
-        "answerQuoteExactMatch": true,
-        "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Yogurt is fermented milk produced using bacterial cultures.",
-        "funFactSupport": "Lactic acid gives yogurt its sour or tart flavor."
+        "actualRetrievalTimeReused": "2026-10-07T19:00:59.989814+00:00",
+        "funFactQuote": "produce lactic acid , which acts on milk protein to give yogurt its texture and characteristic tart flavor",
+        "exactFunFactQuoteMatched": true
       }
     ],
-    "confidenceReason": "Both bodies identify fermented milk, and Britannica later specifies the inoculating bacteria.",
+    "confidenceReason": "Both actual bodies identify fermented milk, and Britannica explicitly describes inoculating bacteria. Direct acid addition differs from bacterial production of lactic acid; both sources independently support the tart-flavor fun fact.",
     "unresolvedProblems": [
-      "Fresh adversarial review and second source reopening are pending."
-    ]
+      "Independent exact changed-version fresh review pending."
+    ],
+    "revisionReadAt": "2026-10-07T20:59:52.736579+00:00"
   },
   {
     "id": "B13-0917",
@@ -858,7 +865,7 @@
   },
   {
     "id": "B13-0924",
-    "rowSha256": "7f7a07ebcf5d3fc528ef0966ca159915c307c4508930268f7022406416d2c229",
+    "rowSha256": "fefbc6865f3af1373aba807648861d56bdc694981cbc48b06320855e76808615",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -868,9 +875,9 @@
         "retrievedAt": "2026-10-07T19:01:00.916776+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Traditional mayonnaise combines egg yolk with oil.",
-        "funFactSupport": "Mayonnaise is an emulsion containing oil and egg yolk."
+        "answerSupport": "In traditional mayonnaise, which ingredient supplies the principal emulsifier? Answer: Egg yolk",
+        "funFactSupport": "Mayonnaise is an emulsion containing oil and egg yolk.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0024",
@@ -879,19 +886,19 @@
         "retrievedAt": "2026-10-07T19:01:01.227883+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Traditional mayonnaise combines egg yolk with oil.",
-        "funFactSupport": "Mayonnaise is an emulsion containing oil and egg yolk."
+        "answerSupport": "In traditional mayonnaise, which ingredient supplies the principal emulsifier? Answer: Egg yolk",
+        "funFactSupport": "Mayonnaise is an emulsion containing oil and egg yolk.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both article bodies identify yolk; the question explicitly excludes eggless commercial alternatives.",
+    "confidenceReason": "Both article bodies identify yolk; the question explicitly excludes eggless commercial alternatives. Fresh-review repair: Yolk is supported, but shell and chalaza-only are not credible mayonnaise ingredient alternatives. A four-food or four-ingredient question can avoid forcing an effectively two-edible-egg-part choice. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
   },
   {
     "id": "B13-0925",
-    "rowSha256": "46794b156430b24cfba9c732bbd13dfaf1dd2fa66416dfd5e800940afd10a71c",
+    "rowSha256": "a19b5d569499dc56dfee035ed09aa9bb22a9fcbb1a551470ee0db1608222120f",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -917,7 +924,7 @@
         "funFactSupport": "Lemon juice or vinegar can flavor and acidify mayonnaise."
       }
     ],
-    "confidenceReason": "Both definitions directly name an emulsion, not a homogeneous molecular solution.",
+    "confidenceReason": "Both definitions directly name an emulsion, not a homogeneous molecular solution. Option-length review repair: comparable alternatives use concise standard terms; longer qualifying words no longer make the correct answer uniquely short. Fresh challenge required for this revised version.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -1155,7 +1162,7 @@
   },
   {
     "id": "B13-0933",
-    "rowSha256": "dd626d41d10bf188b3ca7a6139702da350473ba2acc3ba39a83dc509e9842d41",
+    "rowSha256": "33e8c597c5b21aac4a494513ec9dd318648376203d1a2c7333ba337d07997c53",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -1165,9 +1172,9 @@
         "retrievedAt": "2026-10-07T19:01:01.861112+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "answerSupport": "In tofu making, which liquid is coagulated to produce the curds? Answer: Soy milk",
+        "answerSupport": "In conventional tofu production, which liquid is coagulated into curds? Answer: Soy milk",
         "funFactSupport": "Okara is the solid soybean pulp separated in tofu production.",
-        "readingScope": "Actual credited article body read; new row still requires fresh independent adversarial review."
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0028",
@@ -1176,12 +1183,12 @@
         "retrievedAt": "2026-10-07T19:01:01.886435+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "answerSupport": "In tofu making, which liquid is coagulated to produce the curds? Answer: Soy milk",
+        "answerSupport": "In conventional tofu production, which liquid is coagulated into curds? Answer: Soy milk",
         "funFactSupport": "Okara is the solid soybean pulp separated in tofu production.",
-        "readingScope": "Actual credited article body read; new row still requires fresh independent adversarial review."
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both descriptions directly identify soy milk, not an unrelated plant drink.",
+    "confidenceReason": "Both descriptions directly identify soy milk, not an unrelated plant drink. Fresh-review repair: Soy milk is supported, but olive oil is not a plausible milk-coagulation input; use three comparable plant drinks as wrong alternatives. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -1419,7 +1426,7 @@
   },
   {
     "id": "B13-0941",
-    "rowSha256": "0d04d1f2b436093a9a78cac26d48ccd69e5ca2b7a621f0e1d417c38ea35ab4e2",
+    "rowSha256": "5de7b837483d5ba55ce4c2f8d0fffcfeb2ad752876e6ba9587e77d0dcb14bc4c",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -1429,9 +1436,9 @@
         "retrievedAt": "2026-10-07T19:01:02.672472+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Tea is made by steeping tea-plant leaves in hot water.",
-        "funFactSupport": "Caffeine contributes to tea's stimulating character."
+        "answerSupport": "Which plant parts are normally steeped to make tea? Answer: Leaves and leaf buds",
+        "funFactSupport": "Caffeine contributes to tea's stimulating character.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0032",
@@ -1440,12 +1447,12 @@
         "retrievedAt": "2026-10-07T19:01:02.723117+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Tea is made by steeping tea-plant leaves in hot water.",
-        "funFactSupport": "Caffeine contributes to tea's stimulating character."
+        "answerSupport": "Which plant parts are normally steeped to make tea? Answer: Leaves and leaf buds",
+        "funFactSupport": "Caffeine contributes to tea's stimulating character.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both source contexts name leaves; Britannica also identifies young leaf buds, and Wikipedia describes tender shoots elsewhere.",
+    "confidenceReason": "Both source contexts name leaves; Britannica also identifies young leaf buds, and Wikipedia describes tender shoots elsewhere. Fresh-review repair: Leaves/leaf buds is factually supported by the full Wiki harvest passage These buds and leaves are called flushes, but the current Wiki quote/fun-fact quotes name only leaves. Strengthen the selected exact quote to support the complete two-part answer. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -1518,7 +1525,7 @@
   },
   {
     "id": "B13-0944",
-    "rowSha256": "05fb76cfbe6a80ba7d358cc4cc443668e36a470348f44d3e944db2d0bb5b3292",
+    "rowSha256": "2b8fb3d999e3d0b5c195155cc256693ff695409465725a42ed2c449a73e34290",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -1528,9 +1535,9 @@
         "retrievedAt": "2026-10-07T19:01:03.102306+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Tiny flies called midges pollinate cacao flowers.",
-        "funFactSupport": "Theobroma comes from Greek words meaning food of the gods."
+        "answerSupport": "Which tiny insects are important pollinators of cacao flowers? Answer: Midges",
+        "funFactSupport": "Theobroma comes from Greek words meaning food of the gods.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0034",
@@ -1539,12 +1546,12 @@
         "retrievedAt": "2026-10-07T19:01:03.102563+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Tiny flies called midges pollinate cacao flowers.",
-        "funFactSupport": "Theobroma comes from Greek words meaning food of the gods."
+        "answerSupport": "Which tiny insects are important pollinators of cacao flowers? Answer: Midges",
+        "funFactSupport": "Theobroma comes from Greek words meaning food of the gods.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both sources identify midges, despite other plants often relying on bees or butterflies.",
+    "confidenceReason": "Both sources identify midges, despite other plants often relying on bees or butterflies. Fresh-review repair: Midges are supported, but dragonflies and grasshoppers conflict with tiny and are not plausible cacao microflower pollinators. Compare three plausible small pollinator groups. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -1617,7 +1624,7 @@
   },
   {
     "id": "B13-0947",
-    "rowSha256": "f4616d74c4ffc6d96884f5932319372af7c1b09a527015577ec001996ec180d3",
+    "rowSha256": "b14aab18c814415fe8bbe983c5a189051f4a70bb6ef2a4f1540e469a061f3e8e",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -1627,9 +1634,9 @@
         "retrievedAt": "2026-10-07T19:01:03.102306+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Cacao beans develop inside pods containing white pulp.",
-        "funFactSupport": "Tiny flies called midges pollinate cacao flowers."
+        "answerSupport": "What immediately coats the individual seeds inside a cacao pod? Answer: White pulp",
+        "funFactSupport": "Tiny flies called midges pollinate cacao flowers.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0034",
@@ -1638,19 +1645,19 @@
         "retrievedAt": "2026-10-07T19:01:03.102563+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Cacao beans develop inside pods containing white pulp.",
-        "funFactSupport": "Tiny flies called midges pollinate cacao flowers."
+        "answerSupport": "What immediately coats the individual seeds inside a cacao pod? Answer: White pulp",
+        "funFactSupport": "Tiny flies called midges pollinate cacao flowers.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both passages describe white pulp; the sensory sweetness is explicitly in Britannica and independently described in the Wikipedia context.",
+    "confidenceReason": "Both passages describe white pulp; the sensory sweetness is explicitly in Britannica and independently described in the Wikipedia context. Fresh-review repair: White pulp is supported, but Wiki selected body never calls this pulp sweet; the only sweet text is a taxonomic author surname. Hard woody shell can also surround beans at the outer pod level. Remove unsupported sweet and specify the immediate coating around individual seeds. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
   },
   {
     "id": "B13-0948",
-    "rowSha256": "8e205ebb0ca764ff7bdda00aec057040a8e2cc449033bec31fc35e35c601e318",
+    "rowSha256": "06b8f92095c6252e2a9ffc4a74ab1523085115c5fb08e8536cd89b4f26e66834",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -1660,9 +1667,9 @@
         "retrievedAt": "2026-10-07T19:18:48.427011+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Bread is made from moistened flour or meal.",
-        "funFactSupport": "Ordinary bread loaves are baked."
+        "answerSupport": "What is the basic dry ingredient in an ordinary loaf of bread? Answer: Flour",
+        "funFactSupport": "Ordinary bread loaves are baked.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0036",
@@ -1671,12 +1678,12 @@
         "retrievedAt": "2026-10-07T19:18:48.326278+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Bread is made from moistened flour or meal.",
-        "funFactSupport": "Ordinary bread loaves are baked."
+        "answerSupport": "What is the basic dry ingredient in an ordinary loaf of bread? Answer: Flour",
+        "funFactSupport": "Ordinary bread loaves are baked.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both definitions identify flour; alternative grain flours exist, so no universal wheat-only claim is made.",
+    "confidenceReason": "Both definitions identify flour; alternative grain flours exist, so no universal wheat-only claim is made. Fresh-review repair: Flour is supported, but grain-based in the stem excludes all three wrong options (cocoa, gelatin, salt) before bread knowledge is used. Use comparable plausible dry bread ingredients and a stem without that giveaway. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -1716,7 +1723,7 @@
   },
   {
     "id": "B13-0950",
-    "rowSha256": "590a9e4e3ce23c62872444ae4afa3b91d76bc1f2470e9de19d4ac710574fbaf6",
+    "rowSha256": "df3cbe62d98444c77c0e5fbaec475e27f1432e8aa99ba363846cf361f35bc322",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -1726,9 +1733,9 @@
         "retrievedAt": "2026-10-07T19:18:48.427011+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Gluten contributes elasticity to wheat bread dough.",
-        "funFactSupport": "Sourdough relies on naturally occurring microbes for fermentation."
+        "answerSupport": "Which wheat protein network gives bread dough its elasticity? Answer: Gluten",
+        "funFactSupport": "Sourdough relies on naturally occurring microbes for fermentation.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0036",
@@ -1737,19 +1744,19 @@
         "retrievedAt": "2026-10-07T19:18:48.326278+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Gluten contributes elasticity to wheat bread dough.",
-        "funFactSupport": "Sourdough relies on naturally occurring microbes for fermentation."
+        "answerSupport": "Which wheat protein network gives bread dough its elasticity? Answer: Gluten",
+        "funFactSupport": "Sourdough relies on naturally occurring microbes for fermentation.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both sources identify elastic gluten; none of the distractors is the wheat-dough protein network.",
+    "confidenceReason": "Both sources identify elastic gluten; none of the distractors is the wheat-dough protein network. Fresh-review repair: Gluten elasticity is supported, but Britannica actual topic paragraphs do not say trap gas; that detail appears only in its AI question widget. Narrow the stem to stretching/elasticity or add a real independently edited corroborating excerpt. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
   },
   {
     "id": "B13-0951",
-    "rowSha256": "5585ce2c141d17c2c44574d71899348d18e2421dfff23a82b107b735310003ed",
+    "rowSha256": "cc2341276457c4ac22ddc5600ec84f0d8b23e7e0a1854edfe614ab80a0e972ee",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -1759,9 +1766,9 @@
         "retrievedAt": "2026-10-07T19:18:48.427011+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Sourdough relies on naturally occurring microbes for fermentation.",
-        "funFactSupport": "Bread is made from moistened flour or meal."
+        "answerSupport": "What is the usual name for bread made using a naturally fermented flour-and-water starter? Answer: Sourdough",
+        "funFactSupport": "Bread is made from moistened flour or meal.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0036",
@@ -1770,12 +1777,12 @@
         "retrievedAt": "2026-10-07T19:18:48.326278+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Sourdough relies on naturally occurring microbes for fermentation.",
-        "funFactSupport": "Bread is made from moistened flour or meal."
+        "answerSupport": "What is the usual name for bread made using a naturally fermented flour-and-water starter? Answer: Sourdough",
+        "funFactSupport": "Bread is made from moistened flour or meal.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both passages support microbial sourdough fermentation; no single-organism or airborne-only origin is asserted.",
+    "confidenceReason": "Both passages support microbial sourdough fermentation; no single-organism or airborne-only origin is asserted. Fresh-review repair: Sourdough starter is supported, but Unleavened tortilla explicitly rules itself out by wording and makes a weak distractor. Compare unqualified plausible bread styles or rewrite around the actual natural-starter process. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -1881,7 +1888,7 @@
   },
   {
     "id": "B13-0955",
-    "rowSha256": "f384a9d81f915d6902a5abb82b0f59b9c6db1b757a63bf279e2cd035c1d979b2",
+    "rowSha256": "43ead697ab6176581fb5b837c9198f1cdf120aebd232519cb18434c3a6875cfa",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -1891,9 +1898,9 @@
         "retrievedAt": "2026-10-07T19:18:48.354896+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Rennet supplies enzymes that help coagulate milk for cheese.",
-        "funFactSupport": "Cheese is formed from coagulated milk curds."
+        "answerSupport": "What is the name of the enzyme preparation traditionally used to curdle milk for cheese? Answer: Rennet",
+        "funFactSupport": "Cheese is formed from coagulated milk curds.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0038",
@@ -1902,12 +1909,12 @@
         "retrievedAt": "2026-10-07T19:18:48.381048+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Rennet supplies enzymes that help coagulate milk for cheese.",
-        "funFactSupport": "Cheese is formed from coagulated milk curds."
+        "answerSupport": "What is the name of the enzyme preparation traditionally used to curdle milk for cheese? Answer: Rennet",
+        "funFactSupport": "Cheese is formed from coagulated milk curds.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both accounts identify the preparation; animal-derived, microbial and plant-derived alternatives are not conflated.",
+    "confidenceReason": "Both accounts identify the preparation; animal-derived, microbial and plant-derived alternatives are not conflated. Fresh-review repair: Rennet is supported, but pectin and gelatin are not enzyme preparations. Compare three real enzymes/preparations rather than making half the choices incompatible with the stem. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -1947,7 +1954,7 @@
   },
   {
     "id": "B13-0957",
-    "rowSha256": "e599bae60b192e6d775018fdaac7936c82334dd76b44d3c584e1fbb29afb3db0",
+    "rowSha256": "d8bd7cc43be65537b3425c0dbca0cc395374e587cc169043eaaeceebcecbd7ae",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -1959,7 +1966,7 @@
         "funFactQuoteExactMatch": true,
         "answerSupport": "What does pasta cooked al dente remain like at the center of the bite? Answer: Firm",
         "funFactSupport": "Eggs are often added to some pasta doughs.",
-        "readingScope": "Actual credited article body read; new row still requires fresh independent adversarial review."
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0040",
@@ -1970,10 +1977,10 @@
         "funFactQuoteExactMatch": true,
         "answerSupport": "What does pasta cooked al dente remain like at the center of the bite? Answer: Firm",
         "funFactSupport": "Eggs are often added to some pasta doughs.",
-        "readingScope": "Actual credited article body read; new row still requires fresh independent adversarial review."
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both directly define the texture; the question does not demand a universally fixed cooking time.",
+    "confidenceReason": "Both directly define the texture; the question does not demand a universally fixed cooking time. Fresh-review repair: Firm al dente is supported, but Liquid is not a plausible cooked-pasta bite texture. Use three comparable credible over/undercooked textures. The final wording/options remove that specific problem; a new independent verdict is still required. Option-length review repair: comparable alternatives use concise standard terms; longer qualifying words no longer make the correct answer uniquely short. Fresh challenge required for this revised version.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -2013,7 +2020,7 @@
   },
   {
     "id": "B13-0959",
-    "rowSha256": "2fc1931f1b268c36a2cd1dc91d27616e17de7a6a917460a2dfcc3b54c3b9a42b",
+    "rowSha256": "09d986091a26a89e6cf254467d36edef573a711c9e4a75d10d25bb192ddcce3b",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -2023,9 +2030,9 @@
         "retrievedAt": "2026-10-07T19:18:48.448892+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Commercial dried pasta is often formed by extrusion.",
-        "funFactSupport": "Traditional pasta commonly uses durum wheat."
+        "answerSupport": "What is the industrial term for pushing pasta dough through shaped dies? Answer: Extrusion",
+        "funFactSupport": "Traditional pasta commonly uses durum wheat.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0040",
@@ -2034,12 +2041,12 @@
         "retrievedAt": "2026-10-07T19:18:48.464098+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Commercial dried pasta is often formed by extrusion.",
-        "funFactSupport": "Traditional pasta commonly uses durum wheat."
+        "answerSupport": "What is the industrial term for pushing pasta dough through shaped dies? Answer: Extrusion",
+        "funFactSupport": "Traditional pasta commonly uses durum wheat.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both accounts identify extrusion; handmade rolling remains a different legitimate process.",
+    "confidenceReason": "Both accounts identify extrusion; handmade rolling remains a different legitimate process. Fresh-review repair: Extrusion is supported, but distillation, fermentation and freeze-drying are not plausible processes for forcing dough through shape dies. Compare actual mechanical forming processes. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -2112,7 +2119,7 @@
   },
   {
     "id": "B13-0962",
-    "rowSha256": "5d27fcd58ff7cec44582a98fefcd42b63971c62065b781a091db4ae93a36b346",
+    "rowSha256": "62fa5f60b5c8c3a3737f1fec077278b479634034bdb02e5572ddb428ff09a168",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -2122,9 +2129,9 @@
         "retrievedAt": "2026-10-07T19:18:49.114706+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "answerSupport": "How does gelatin's physical sol-to-gel transition behave? Answer: It is thermally reversible",
+        "answerSupport": "Which change reverses the physical setting of a gelatin gel? Answer: Raising its temperature",
         "funFactSupport": "Gelatin is derived from collagen.",
-        "readingScope": "Actual credited article body read; new row still requires fresh independent adversarial review."
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0042",
@@ -2133,12 +2140,12 @@
         "retrievedAt": "2026-10-07T19:18:49.011986+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "answerSupport": "How does gelatin's physical sol-to-gel transition behave? Answer: It is thermally reversible",
+        "answerSupport": "Which change reverses the physical setting of a gelatin gel? Answer: Raising its temperature",
         "funFactSupport": "Gelatin is derived from collagen.",
-        "readingScope": "Actual credited article body read; new row still requires fresh independent adversarial review."
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both bodies describe reversible physical gel formation; collagen hydrolysis during manufacture is a separate irreversible chemical process.",
+    "confidenceReason": "Both bodies describe reversible physical gel formation; collagen hydrolysis during manufacture is a separate irreversible chemical process. Fresh-review repair: Thermal reversibility is supported, but two options discuss starch hydrolysis/freezing requirements rather than comparable transition behavior; this is effectively a binary reversible-versus-irreversible question padded with incompatible alternatives. Rewrite as a four-process/action question or another supported fact. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -2178,7 +2185,7 @@
   },
   {
     "id": "B13-0964",
-    "rowSha256": "de35fe9bef2b35d6e20cf06f29da74a77b8200844b057d7c3de41c754ee71e6e",
+    "rowSha256": "f656a62edf7053fcdeb0be7b4a6825ab8e12dce6b8540f290236fd0c0fb5b6a9",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -2188,9 +2195,9 @@
         "retrievedAt": "2026-10-07T19:18:49.586466+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Pectin occurs in plant cell walls.",
-        "funFactSupport": "Commercial pectin is commonly extracted from citrus fruits."
+        "answerSupport": "Where does pectin naturally occur in plant structure? Answer: Cell walls",
+        "funFactSupport": "Commercial pectin is commonly extracted from citrus fruits.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0044",
@@ -2199,19 +2206,19 @@
         "retrievedAt": "2026-10-07T19:18:49.887606+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Pectin occurs in plant cell walls.",
-        "funFactSupport": "Commercial pectin is commonly extracted from citrus fruits."
+        "answerSupport": "Where does pectin naturally occur in plant structure? Answer: Cell walls",
+        "funFactSupport": "Commercial pectin is commonly extracted from citrus fruits.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both identify plant cell walls; pectin is a polysaccharide, not an oil or chlorophyll pigment.",
+    "confidenceReason": "Both identify plant cell walls; pectin is a polysaccharide, not an oil or chlorophyll pigment. Fresh-review repair: Cell walls is supported, but only appears in all wrong options and the choices mix membranes with oils/resin ducts. Use four comparable real cellular structures without one-sided qualifiers. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
   },
   {
     "id": "B13-0965",
-    "rowSha256": "0cae27e5cc94d4a670671a657c2a10cec1944b8f92ce55d711c8b24b12a6bef3",
+    "rowSha256": "d370d990952129b914d807f6df7e00e5ec05f781e584782d8f7622b4bf1faca6",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -2221,9 +2228,9 @@
         "retrievedAt": "2026-10-07T19:18:49.586466+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Commercial pectin is commonly extracted from citrus fruits.",
-        "funFactSupport": "Pectin is used as a gelling agent in jams and jellies."
+        "answerSupport": "Which fruit-processing material is a major commercial source of pectin? Answer: Citrus peels",
+        "funFactSupport": "Pectin is used as a gelling agent in jams and jellies.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0044",
@@ -2232,12 +2239,12 @@
         "retrievedAt": "2026-10-07T19:18:49.887606+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Commercial pectin is commonly extracted from citrus fruits.",
-        "funFactSupport": "Pectin is used as a gelling agent in jams and jellies."
+        "answerSupport": "Which fruit-processing material is a major commercial source of pectin? Answer: Citrus peels",
+        "funFactSupport": "Pectin is used as a gelling agent in jams and jellies.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both sources identify citrus as a commercial source; exact processing yield and health effects are excluded.",
+    "confidenceReason": "Both sources identify citrus as a commercial source; exact processing yield and health effects are excluded. Fresh-review repair: Citrus peels is supported by Wiki actual Production sentence main raw materials dried citrus peels and Britannica chief sources. However current Wiki excerpt only says citrus fruits, and banana seeds/coconut oil are poor competing fruit-processing by-products. Strengthen the exact peel quote and use three plausible by-products. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -2343,7 +2350,7 @@
   },
   {
     "id": "B13-0969",
-    "rowSha256": "b2b9d0b347f96f8465d9a46426f53a059de1a7083a1b38e4dd1e61765795f860",
+    "rowSha256": "5a2a093e60c0432887ae16f553ae0d5975b6d3e8fe28a05f54bea708c35489e7",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -2355,7 +2362,7 @@
         "funFactQuoteExactMatch": true,
         "answerSupport": "What process can recover sea salt from seawater in shallow ponds? Answer: Evaporation",
         "funFactSupport": "Commercial salt also comes from mined rock salt.",
-        "readingScope": "Actual credited article body read; new row still requires fresh independent adversarial review."
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0046",
@@ -2366,10 +2373,10 @@
         "funFactQuoteExactMatch": true,
         "answerSupport": "What process can recover sea salt from seawater in shallow ponds? Answer: Evaporation",
         "funFactSupport": "Commercial salt also comes from mined rock salt.",
-        "readingScope": "Actual credited article body read; new row still requires fresh independent adversarial review."
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "The credited Britannica manufacture section explicitly explains seawater evaporation and rock-salt recovery, independently supported by Wikipedia; a mere table-of-contents heading is not evidence.",
+    "confidenceReason": "The credited Britannica manufacture section explicitly explains seawater evaporation and rock-salt recovery, independently supported by Wikipedia; a mere table-of-contents heading is not evidence. Fresh-review repair: Evaporation is supported, but magnetic separation and fermenting are implausible recovery of dissolved sea salt in shallow ponds. Compare plausible physical water/separation processes. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -2541,7 +2548,7 @@
   },
   {
     "id": "B13-0975",
-    "rowSha256": "68544c946498c68679324b498162d90cf2810666efed9db3bf68a45bf0f6a486",
+    "rowSha256": "d2edfbb6a45253f2b79e6d70bad7d47c0cdebb4208df3437fa2cb809f252d152",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -2567,7 +2574,7 @@
         "funFactSupport": "Turmeric is a member of the ginger family."
       }
     ],
-    "confidenceReason": "Both botanical descriptions identify rhizomes; these are stems rather than botanical roots.",
+    "confidenceReason": "Both botanical descriptions identify rhizomes; these are stems rather than botanical roots. Option-length review repair: comparable alternatives use concise standard terms; longer qualifying words no longer make the correct answer uniquely short. Fresh challenge required for this revised version.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -2673,36 +2680,43 @@
   },
   {
     "id": "B13-0979",
-    "rowSha256": "ae59a8020f98d7ccf0cdb3729166adf2900dc108219ddd66b3b12a4a9e2afe61",
-    "author": "/root/continue_b14_author",
+    "rowSha256": "af29ed581f89019fd0dc575f180aa57437b765ecb27350da2fdeafb4e41fb789",
+    "author": "/root/r2048_nature",
     "evidenceReads": [
       {
         "sourceId": "food-everyday-life-s0065",
-        "captureSha256": "6d6f0a05310b983f9a7f8e30aa584538451dee239db078f22f59a716c888954f",
+        "contentSha256": "6d6f0a05310b983f9a7f8e30aa584538451dee239db078f22f59a716c888954f",
+        "quote": "The dried thick rhizome of turmeric ( Curcuma longa )",
+        "exactQuoteMatched": true,
+        "claimsSupported": [
+          "answer",
+          "funFact"
+        ],
         "capturePath": ".work/food-everyday-life/author/food-everyday-life-s0065.txt",
-        "retrievedAt": "2026-10-07T19:46:08.073524+00:00",
-        "answerQuoteExactMatch": true,
-        "funFactQuoteExactMatch": true,
-        "answerSupport": "Which other yellow spice is in the same family as ginger? Answer: Turmeric",
-        "funFactSupport": "Common culinary ginger is Zingiber officinale.",
-        "readingScope": "Actual credited article body read; new row still requires fresh independent adversarial review."
+        "actualRetrievalTimeReused": "2026-10-07T19:46:08.073524+00:00",
+        "funFactQuote": "Ginger is obtained from the fresh or dried rhizomes of Zingiber officinale",
+        "exactFunFactQuoteMatched": true
       },
       {
         "sourceId": "food-everyday-life-s0052",
-        "captureSha256": "410cd01824a1d50d12159c80f1ddce6a95862104df833360acad4c1c63539c21",
+        "contentSha256": "410cd01824a1d50d12159c80f1ddce6a95862104df833360acad4c1c63539c21",
+        "quote": "Ginger is in the family Zingiberaceae , which also includes turmeric",
+        "exactQuoteMatched": true,
+        "claimsSupported": [
+          "answer",
+          "funFact"
+        ],
         "capturePath": ".work/food-everyday-life/author/food-everyday-life-s0052.txt",
-        "retrievedAt": "2026-10-07T19:18:51.611722+00:00",
-        "answerQuoteExactMatch": true,
-        "funFactQuoteExactMatch": true,
-        "answerSupport": "Which other yellow spice is in the same family as ginger? Answer: Turmeric",
-        "funFactSupport": "Common culinary ginger is Zingiber officinale.",
-        "readingScope": "Actual credited article body read; new row still requires fresh independent adversarial review."
+        "actualRetrievalTimeReused": "2026-10-07T19:18:51.611722+00:00",
+        "funFactQuote": "Ginger ( Zingiber officinale )",
+        "exactFunFactQuoteMatched": true
       }
     ],
-    "confidenceReason": "The credited Britannica ginger-family article identifies turmeric among its economically valuable members, while independently edited Wikipedia explicitly groups ginger and turmeric in Zingiberaceae; both identify common ginger as Zingiber officinale.",
+    "confidenceReason": "The credited Britannica ginger-family body identifies turmeric among its economically valuable members, while separately compiled Wikipedia groups ginger and turmeric in Zingiberaceae. Both identify common ginger as Zingiber officinale; the revised stem asserts no selected-source color claim.",
     "unresolvedProblems": [
-      "Fresh adversarial review and second source reopening are pending."
-    ]
+      "Independent exact changed-version fresh review pending."
+    ],
+    "revisionReadAt": "2026-10-07T20:59:52.736579+00:00"
   },
   {
     "id": "B13-0980",
@@ -2805,7 +2819,7 @@
   },
   {
     "id": "B13-0983",
-    "rowSha256": "d4194cc88e06c25857f45d801872765bce50ff3d610e771cf1f3b80ab5902b8d",
+    "rowSha256": "108ca838b86e83cf24eb04cf61952ce53ffe6a41b3034d92016e0abd7100bf45",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -2815,9 +2829,9 @@
         "retrievedAt": "2026-10-07T19:18:51.633263+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Mustard is commonly paired with sausages and hot dogs.",
-        "funFactSupport": "Brassica juncea is brown or Indian mustard."
+        "answerSupport": "Which condiment is traditionally made by mixing ground pungent seeds with a liquid such as vinegar? Answer: Mustard",
+        "funFactSupport": "Brassica juncea is brown or Indian mustard.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0054",
@@ -2826,19 +2840,19 @@
         "retrievedAt": "2026-10-07T19:18:51.720375+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Mustard is commonly paired with sausages and hot dogs.",
-        "funFactSupport": "Brassica juncea is brown or Indian mustard."
+        "answerSupport": "Which condiment is traditionally made by mixing ground pungent seeds with a liquid such as vinegar? Answer: Mustard",
+        "funFactSupport": "Brassica juncea is brown or Indian mustard.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "The broad sausage/hot-dog association is independently described; no particular brand or recipe is required.",
+    "confidenceReason": "The broad sausage/hot-dog association is independently described; no particular brand or recipe is required. Fresh-review repair: Mustard is supported, but yellow excludes maple syrup, chocolate sauce and mint jelly without testing condiment knowledge. Revise to comparable plausible condiments with unambiguous scope. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
   },
   {
     "id": "B13-0984",
-    "rowSha256": "c128717a842479d0d549dc8da6d8c6b4f48dff1fafbe0b030286941318ed20f5",
+    "rowSha256": "1ce8fb24a664cc3719a583442d9ed05ee34f1413c3faed115bfb664fe93293c4",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -2848,9 +2862,9 @@
         "retrievedAt": "2026-10-07T19:18:51.633263+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Brassica juncea is brown or Indian mustard.",
-        "funFactSupport": "Sinapis alba is white or yellow mustard."
+        "answerSupport": "Brown mustard is commonly identified with which scientific species? Answer: Brassica juncea",
+        "funFactSupport": "Sinapis alba is white or yellow mustard.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0054",
@@ -2859,19 +2873,19 @@
         "retrievedAt": "2026-10-07T19:18:51.720375+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Brassica juncea is brown or Indian mustard.",
-        "funFactSupport": "Sinapis alba is white or yellow mustard."
+        "answerSupport": "Brown mustard is commonly identified with which scientific species? Answer: Brassica juncea",
+        "funFactSupport": "Sinapis alba is white or yellow mustard.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both bodies name the species directly; yellow mustard is deliberately a different option.",
+    "confidenceReason": "Both bodies name the species directly; yellow mustard is deliberately a different option. Fresh-review repair: Brassica juncea identity is supported. Piper nigrum and Curcuma longa are pepper/ginger-family spices rather than credible competing mustard identities; use three plausible mustard/Brassicaceae botanical choices. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
   },
   {
     "id": "B13-0985",
-    "rowSha256": "e5fc4874286f6cb752ddd8713936b0cebc777a8cb5a759cf4efce7389f02f9fe",
+    "rowSha256": "68ee9f819d67ee4646f2834af7189947a90f4d34cc2916ae9fa5f68a2400063d",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -2881,9 +2895,9 @@
         "retrievedAt": "2026-10-07T19:18:51.633263+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Sinapis alba is white or yellow mustard.",
-        "funFactSupport": "Mustard condiment is made from mustard seeds."
+        "answerSupport": "White or yellow mustard is commonly identified with which species? Answer: Sinapis alba",
+        "funFactSupport": "Mustard condiment is made from mustard seeds.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0054",
@@ -2892,19 +2906,19 @@
         "retrievedAt": "2026-10-07T19:18:51.720375+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Sinapis alba is white or yellow mustard.",
-        "funFactSupport": "Mustard condiment is made from mustard seeds."
+        "answerSupport": "White or yellow mustard is commonly identified with which species? Answer: Sinapis alba",
+        "funFactSupport": "Mustard condiment is made from mustard seeds.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both independent botanical descriptions agree; no changing crop-production ranking is asked.",
+    "confidenceReason": "Both independent botanical descriptions agree; no changing crop-production ranking is asked. Fresh-review repair: Sinapis alba identity is supported, but pepper and ginger binomials are weak alternative identities for mustard. Use three plausible mustard relatives. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
   },
   {
     "id": "B13-0986",
-    "rowSha256": "e56ab848ad48b285af5daf64751c98456cfb5c7b7b35e27cff57ced27b66bcad",
+    "rowSha256": "445d55b09aad9218e3ef182c396459d0b959e18f565cd970c1583353e448eb30",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -2930,14 +2944,14 @@
         "readingScope": "Actual credited article body read; new row still requires fresh independent adversarial review."
       }
     ],
-    "confidenceReason": "Both bodies directly explain paprika processing; the wording asks the familiar spice product rather than a disputed cultivar ranking.",
+    "confidenceReason": "Both bodies directly explain paprika processing; the wording asks the familiar spice product rather than a disputed cultivar ranking. Option-length review repair: comparable alternatives use concise standard terms; longer qualifying words no longer make the correct answer uniquely short. Fresh challenge required for this revised version.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
   },
   {
     "id": "B13-0987",
-    "rowSha256": "715b48ea20fa0c137a552e0e424f9b6a5952a2b4a761cdaa6fd60b2b55c90592",
+    "rowSha256": "4c87af991c22f49813b8b13befc8206a126cf847d3990dbe121ddb9b2a75ca32",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -2947,9 +2961,9 @@
         "retrievedAt": "2026-10-07T19:18:51.755611+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Paprika commonly provides a red coloring in food.",
-        "funFactSupport": "Paprika is a major seasoning in Hungarian cuisine."
+        "answerSupport": "What color does fresh paprika most commonly add to a garnish? Answer: Red",
+        "funFactSupport": "Paprika is a major seasoning in Hungarian cuisine.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0056",
@@ -2958,19 +2972,19 @@
         "retrievedAt": "2026-10-07T19:18:51.902177+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Paprika commonly provides a red coloring in food.",
-        "funFactSupport": "Paprika is a major seasoning in Hungarian cuisine."
+        "answerSupport": "What color does fresh paprika most commonly add to a garnish? Answer: Red",
+        "funFactSupport": "Paprika is a major seasoning in Hungarian cuisine.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both passages support the red color; brown discoloration with age is not claimed impossible.",
+    "confidenceReason": "Both passages support the red color; brown discoloration with age is not claimed impossible. Fresh-review repair: The correct red answer is disclosed by Fresh red paprika in the stem. Remove the redundant red descriptor and compare plausible food-color choices. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
   },
   {
     "id": "B13-0988",
-    "rowSha256": "d59e4adc79b0648106693d2a5784365842babfc505a7e1275607ac0c5249cd64",
+    "rowSha256": "448ae4dc268db0563bd24f10a47bb98fceda4b15f7ddc20fd33c927160a436b2",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -2980,9 +2994,9 @@
         "retrievedAt": "2026-10-07T19:18:51.755611+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Paprika is a major seasoning in Hungarian cuisine.",
-        "funFactSupport": "Paprika is normally made from Capsicum annuum peppers."
+        "answerSupport": "Paprika is especially associated with the cuisine of which Central European country? Answer: Hungary",
+        "funFactSupport": "Paprika is normally made from Capsicum annuum peppers.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0056",
@@ -2991,19 +3005,19 @@
         "retrievedAt": "2026-10-07T19:18:51.902177+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Paprika is a major seasoning in Hungarian cuisine.",
-        "funFactSupport": "Paprika is normally made from Capsicum annuum peppers."
+        "answerSupport": "Paprika is especially associated with the cuisine of which Central European country? Answer: Hungary",
+        "funFactSupport": "Paprika is normally made from Capsicum annuum peppers.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both independently written bodies identify Hungary; Spain is also important and therefore is not offered as a wrong choice.",
+    "confidenceReason": "Both independently written bodies identify Hungary; Spain is also important and therefore is not offered as a wrong choice. Fresh-review repair: Hungary is supported, but Norway, Ireland and Iceland are not Central European alternatives. Use three real Central European countries. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
   },
   {
     "id": "B13-0989",
-    "rowSha256": "2a5701bafa4fba8a51634584f5b69e677f9a9e42685551dcbcf9c117ac6a4ece",
+    "rowSha256": "69e8fe6b36e59f9486d584c786405e75b883bdd3acea1084cecdceb032ddf150",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -3013,9 +3027,9 @@
         "retrievedAt": "2026-10-07T19:18:51.755611+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Paprika is normally made from Capsicum annuum peppers.",
-        "funFactSupport": "Paprika is made from dried and ground peppers."
+        "answerSupport": "The peppers normally used for paprika belong to which species? Answer: Capsicum annuum",
+        "funFactSupport": "Paprika is made from dried and ground peppers.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0056",
@@ -3024,12 +3038,12 @@
         "retrievedAt": "2026-10-07T19:18:51.902177+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Paprika is normally made from Capsicum annuum peppers.",
-        "funFactSupport": "Paprika is made from dried and ground peppers."
+        "answerSupport": "The peppers normally used for paprika belong to which species? Answer: Capsicum annuum",
+        "funFactSupport": "Paprika is made from dried and ground peppers.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both botanical descriptions agree, distinguishing chili peppers from unrelated black-pepper vines.",
+    "confidenceReason": "Both botanical descriptions agree, distinguishing chili peppers from unrelated black-pepper vines. Fresh-review repair: Capsicum annuum is supported, but coffee/cacao binomials are poor alternative pepper identities. Compare three other actual Capsicum species to make all options plausible. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -3069,7 +3083,7 @@
   },
   {
     "id": "B13-0991",
-    "rowSha256": "3e4172967f65c33fedd6ab31f93eacaa5bd3e87a97f3f461ef3a1f533ec2d86e",
+    "rowSha256": "b365e9764dae3b1e9a8b0f18bd3c1b0b140c492d7bff109891c46055784e4058",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -3079,9 +3093,9 @@
         "retrievedAt": "2026-10-07T19:18:51.932128+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Chili peppers originated in the Americas.",
-        "funFactSupport": "Chili peppers belong to the nightshade family, Solanaceae."
+        "answerSupport": "Chili peppers are native to which broad part of the world? Answer: The Americas",
+        "funFactSupport": "Chili peppers belong to the nightshade family, Solanaceae.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0058",
@@ -3090,12 +3104,12 @@
         "retrievedAt": "2026-10-07T19:18:52.320777+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Chili peppers originated in the Americas.",
-        "funFactSupport": "Chili peppers belong to the nightshade family, Solanaceae."
+        "answerSupport": "Chili peppers are native to which broad part of the world? Answer: The Americas",
+        "funFactSupport": "Chili peppers belong to the nightshade family, Solanaceae.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both independently written accounts support the Americas; exact domestication sites differ by species and are not silently conflated.",
+    "confidenceReason": "Both independently written accounts support the Americas; exact domestication sites differ by species and are not silently conflated. Fresh-review repair: Americas origin is supported, but Antarctica is not a plausible native chili origin. Use comparable credible geographic regions/continents. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -3201,7 +3215,7 @@
   },
   {
     "id": "B13-0995",
-    "rowSha256": "27899a3aca80ed1246f4badc88e9c959f1fae871b23fe886dbe5c50dc6259592",
+    "rowSha256": "8c78dd2a6a5e8d28092e052cd5cd872c5c30cfa981a440c5d9bd32d915530c99",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -3211,9 +3225,9 @@
         "retrievedAt": "2026-10-07T19:18:52.859706+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Yeast fermentation produces carbon dioxide and alcohol.",
-        "funFactSupport": "Many yeasts reproduce asexually by budding."
+        "answerSupport": "During fermentation, bread yeast converts sugars chiefly into which two products? Answer: Carbon dioxide and alcohol",
+        "funFactSupport": "Many yeasts reproduce asexually by budding.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0060",
@@ -3222,19 +3236,19 @@
         "retrievedAt": "2026-10-07T19:18:52.901090+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Yeast fermentation produces carbon dioxide and alcohol.",
-        "funFactSupport": "Many yeasts reproduce asexually by budding."
+        "answerSupport": "During fermentation, bread yeast converts sugars chiefly into which two products? Answer: Carbon dioxide and alcohol",
+        "funFactSupport": "Many yeasts reproduce asexually by budding.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both accounts describe the reaction; gas leavens dough while the alcohol is largely driven off in baking.",
+    "confidenceReason": "Both accounts describe the reaction; gas leavens dough while the alcohol is largely driven off in baking. Fresh-review repair: Correct yeast products are supported, but nitrogen/fat and hydrogen/salt are implausible chief sugar-fermentation product pairs. Compare plausible alternative biochemical products and keep option length comparable. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
   },
   {
     "id": "B13-0996",
-    "rowSha256": "134d76b33104aa72375f60d7ebfc4b82816232dedc06a4753645d948a83ae67d",
+    "rowSha256": "8ba070df35b94b07a95afa9ed7acc2d2dcbf038a9c7422560cf62435d3151daa",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -3244,9 +3258,9 @@
         "retrievedAt": "2026-10-07T19:18:52.859706+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Many yeasts reproduce asexually by budding.",
-        "funFactSupport": "Saccharomyces cerevisiae is widely used in baking and alcoholic fermentation."
+        "answerSupport": "What is the term for yeast reproduction in which a small outgrowth develops on the parent cell? Answer: Budding",
+        "funFactSupport": "Saccharomyces cerevisiae is widely used in baking and alcoholic fermentation.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0060",
@@ -3255,12 +3269,12 @@
         "retrievedAt": "2026-10-07T19:18:52.901090+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Many yeasts reproduce asexually by budding.",
-        "funFactSupport": "Saccharomyces cerevisiae is widely used in baking and alcoholic fermentation."
+        "answerSupport": "What is the term for yeast reproduction in which a small outgrowth develops on the parent cell? Answer: Budding",
+        "funFactSupport": "Saccharomyces cerevisiae is widely used in baking and alcoholic fermentation.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both sources directly identify budding; fission is also possible, so it is not offered as an incorrect choice.",
+    "confidenceReason": "Both sources directly identify budding; fission is also possible, so it is not offered as an incorrect choice. Fresh-review repair: Budding is supported, but pollination, seed germination and spore fusion do not provide three plausible yeast asexual reproduction methods. Rewrite around the defined parent-cell outgrowth versus other actual cell-division modes, with scope avoiding fission as a second correct many-yeasts answer. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
@@ -3333,7 +3347,7 @@
   },
   {
     "id": "B13-0999",
-    "rowSha256": "f929755f4c8893150af8efc0c5002821272420ace9e2853b08f26855e8d911dd",
+    "rowSha256": "1693b57a5cc799c6cd03607573235114e16f70fd5d46085da67496d251fbf836",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -3359,14 +3373,14 @@
         "funFactSupport": "Starch helps prevent premature reaction of baking powder ingredients."
       }
     ],
-    "confidenceReason": "Both definitions identify an acid-base mixture; this distinguishes powder from baking soda alone.",
+    "confidenceReason": "Both definitions identify an acid-base mixture; this distinguishes powder from baking soda alone. Option-length review repair: comparable alternatives use concise standard terms; longer qualifying words no longer make the correct answer uniquely short. Fresh challenge required for this revised version.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]
   },
   {
     "id": "B13-1000",
-    "rowSha256": "ba33938d2f9e86914920a7bc60f3f1fa8843eeea2d3388fe714a8cbe19a2aff8",
+    "rowSha256": "235ee04fa591efde4cd10e348a8a2151b0ed95729fe2773d3d56e02be34081bc",
     "author": "/root/continue_b14_author",
     "evidenceReads": [
       {
@@ -3376,9 +3390,9 @@
         "retrievedAt": "2026-10-07T19:18:53.235351+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Starch helps prevent premature reaction of baking powder ingredients.",
-        "funFactSupport": "Baking powder releases carbon dioxide to leaven batter."
+        "answerSupport": "Which common dry ingredient helps keep baking powder's acid and base apart until use? Answer: Starch",
+        "funFactSupport": "Baking powder releases carbon dioxide to leaven batter.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       },
       {
         "sourceId": "food-everyday-life-s0062",
@@ -3387,12 +3401,12 @@
         "retrievedAt": "2026-10-07T19:18:53.316969+00:00",
         "answerQuoteExactMatch": true,
         "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Starch helps prevent premature reaction of baking powder ingredients.",
-        "funFactSupport": "Baking powder releases carbon dioxide to leaven batter."
+        "answerSupport": "Which common dry ingredient helps keep baking powder's acid and base apart until use? Answer: Starch",
+        "funFactSupport": "Baking powder releases carbon dioxide to leaven batter.",
+        "readingScope": "Author re-read actual credited body while repairing independent-review defect; fresh revised-row verdict pending."
       }
     ],
-    "confidenceReason": "Both accounts support the separating dry ingredient; no claim that all formulations use exactly the same starch is made.",
+    "confidenceReason": "Both accounts support the separating dry ingredient; no claim that all formulations use exactly the same starch is made. Fresh-review repair: Starch is supported, but lard and honey are not comparable dry ingredients. Use three actual dry powders plausibly confused with the buffering/diluent ingredient. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "unresolvedProblems": [
       "Fresh adversarial review and second source reopening are pending."
     ]

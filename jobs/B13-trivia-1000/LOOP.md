@@ -38,3 +38,7 @@ Preserved previous rows/captures and recovered the previous lead’s source coll
 ## Coherent held integration snapshot — 2026-10-07T19:53:08.791600+00:00
 
 US-history author held writes at 40 rows while the deterministic draft checker and source documentation were regenerated. Actual result: 940 authored rows, 3260/3260 exact quote fields, zero schema/data errors, 491 current independent accepts and supported reopens. Food fresh reopening actually completed all64 URLs HTTP200; individual challenges remain pending. The prior authoring report was superseded after US history advanced during rendering.
+
+## Held full author/fact-review milestone — 2026-10-07T21:10:25.921222+00:00
+
+Exactly 1,000 authored rows, all 1,000 current independent acceptances and supported second-pass reviews, 3,506/3,506 author quote fields in actual hash-checked bodies, zero schema/data errors. The strengthened checker exposed four actual stale music capture chains, independently recovered with actual fresh GET/context reads. Final editorial acceptance still withheld for 11 similarity resolutions, full-pack length judgment and demonstrated100%ID-cycle shortcut. Read-only 30-minute Ubuntu CI added to run exact delivered checksums and full acceptance; no source retrieval or human inspection is falsely attributed to CI.

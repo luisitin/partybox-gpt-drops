@@ -9,3 +9,6 @@ Six replacement URLs were actually reopened with HTTP200 at19:29UTC. The reviewe
 All100 current versions now have accepted adversarial reviews and supported actual-source reopen records bound to their exact row hashes. The current set uses52 active source IDs and290 short quote fields checked against the actual captured bodies. Every original timestamp and body hash is retained. Reviewing a changed row against an already reopened body is explicitly distinguished from a new HTTP fetch. No population estimate, undated annual ranking or disputed exact anatomical dimension was added.
 
 The category is factually reviewed; full-set similarity adjudication and the1000-question answer-length editorial assessment still determine delivery acceptance.
+
+
+At 2026-10-07T21:02:25.021388+00:00, independently reread and accepted all15 option/question repairs at category hash cadcd92517dbc49f31a71e72a74a9dba149dd5c9e14db6684e705135dd5ff2aa. All100 current rows accepted/supported;52 selected source IDs and292 selected short fields. Five competing-species sources were separately actually fetched/read for the two new species-choice questions. Original rejects, earlier passes and the first factual seal are preserved; final random-position ordering is still pending actual reread.

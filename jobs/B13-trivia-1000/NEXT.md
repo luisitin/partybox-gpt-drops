@@ -1,12 +1,7 @@
-# B13 next work
+# B13 concrete continuation
 
-Current delivered milestone: 940 authored rows and 400 final versions independently accepted with supported actual source reopens. US history/civics has 40 rows; the author is completing the remaining 60.
-
-- Root is challenging the held world-geography 100-row snapshot; preserve every rejected version before author repair and obtain fresh review of each changed hash. Nature’s 100 final versions are sealed.
-- Lead is independently reviewing food’s 100 final author rows, with 64 actual fresh HTTP source reopenings. Lead will review US history after its final author seal.
-- History worker is fresh-reviewing movie/music; movies/TV’s 100 current versions pass, while nine changed music versions await actual rereview. Food/US-history author owns fresh history/sports review.
-- Root-category reviewer is individually adjudicating its 2,199 similarity flags; integrate concrete per-pair evidence and resolve remaining cross-category flags, preserving current version hashes.
-- Complete the actual option-length editorial assessment against final row and metric hashes.
-- Rerun the full validator on 1,000 final reviewed rows, verify final delivery checksums, push and open/update the review pull request.
-
-The latest exact counts and all unresolved gates are in reports/checks.json. No full research acceptance is claimed.
+1. Finish root exact-version world/nature reviewer checks and US-history independent requested repairs. Preserve every original rejected row/hash and actual source receipt.
+2. Lead holds the ten finalized categories, preserves the original A/B/C/D cycle, shuffles each category to exactly25answers per position with a published deterministic seed, and seals full before/after permutations.
+3. Every category reviewer actually reads every final ordered option set, records concrete counterexamples and binds current row hashes; original source GET times remain unchanged unless actually refetched.
+4. Independently resolve every final similarity pair after actual final question/fun-fact reads; examine exact full-pack length metrics and bind the actual editorial assessment to all final row hashes.
+5. Run full original local acceptance with `--require-local-captures`, render coherent docs and manifests, have the independent auditor copy/verify an immutable delivered+body snapshot and run its full acceptance, push only job/B13-trivia-1000 and its one read-only CI workflow, inspect exact-head hosted CI and publish an honest ready-for-review PR22. Never merge or push main.

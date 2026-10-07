@@ -1,7 +1,8 @@
 {
   "mode": "draft",
+  "captureProofMode": "required local author and second-pass bodies",
   "excludedInProgressCategories": [],
-  "rows": 940,
+  "rows": 1000,
   "categories": {
     "us-geography": {
       "rows": 100,
@@ -60,17 +61,17 @@
       }
     },
     "us-history-civics": {
-      "rows": 40,
+      "rows": 100,
       "difficulty": {
-        "1": 15,
-        "2": 13,
-        "3": 12
+        "1": 34,
+        "2": 33,
+        "3": 33
       },
       "correctPositions": {
-        "0": 10,
-        "1": 10,
-        "2": 10,
-        "3": 10
+        "0": 25,
+        "1": 25,
+        "2": 25,
+        "3": 25
       }
     },
     "world-history": {
@@ -144,13 +145,17 @@
       }
     }
   },
-  "sourceRecords": 483,
-  "quoteFields": 3260,
-  "quoteMatchesActualLocalCaptures": 3260,
+  "sourceRecords": 528,
+  "quoteFields": 3506,
+  "quoteMatchesActualLocalCaptures": 3506,
   "quoteCapturesUnavailable": [],
   "schemaAndDataErrors": [],
-  "adversarialAcceptedCurrent": 491,
-  "reopenSupportedCurrent": 491,
+  "receiptAssociationsChecked": 4000,
+  "reopenQuoteAssociationsChecked": 3506,
+  "reopenQuoteMatchesActualLocalCaptures": 3506,
+  "reopenQuoteCapturesUnavailable": [],
+  "adversarialAcceptedCurrent": 1000,
+  "reopenSupportedCurrent": 1000,
   "similarityMethod": "Casefold, replace nonword sequences with spaces, maximum of both SequenceMatcher character-ratio directions >0.8; autojunk disabled.",
   "similarityFlags": [
     {
@@ -19577,19 +19582,6 @@
     },
     {
       "ids": [
-        "B13-0103",
-        "B13-0533"
-      ],
-      "rowSha256": [
-        "fa593c96206a752fc8675f6cff417362312de584e54efd42ba00c892095b3b51",
-        "0eb168281f3023f08e65f9617d1f0d3bd0c701960085dd74973c586edea87940"
-      ],
-      "similarity": 1.0,
-      "forwardSimilarity": 1.0,
-      "reverseSimilarity": 1.0
-    },
-    {
-      "ids": [
         "B13-0157",
         "B13-0161"
       ],
@@ -28772,7 +28764,7 @@
         "B13-0386"
       ],
       "rowSha256": [
-        "fc3896d1885b88e17b24cea60d8fdd97e7e8cdba16f7ecece49e4446a39cb08f",
+        "d86bde5f060820c4ab8fa23d0e95dca2a52e0537e8b803531208c57133015828",
         "3e1d4842cb322a9994c6e11946e79e83397ba82e608638987f00207bf6aa055b"
       ],
       "similarity": 0.803279,
@@ -28807,6 +28799,19 @@
     },
     {
       "ids": [
+        "B13-0462",
+        "B13-0467"
+      ],
+      "rowSha256": [
+        "d74c4e6009e94f45067687df532c802a61e011fc14060f9320f915d97bcd0406",
+        "8ce734fe9fb99af060b42b3e47f6ca83bb15fb44afd4aaa3c385b7fb28faf51b"
+      ],
+      "similarity": 0.811321,
+      "forwardSimilarity": 0.811321,
+      "reverseSimilarity": 0.811321
+    },
+    {
+      "ids": [
         "B13-0517",
         "B13-0743"
       ],
@@ -28838,7 +28843,7 @@
       ],
       "rowSha256": [
         "fc9213d08be3d9f510b16ea583c0e9d0d45f7fa844e92d2603d281e93870792d",
-        "eddbe2d1faca5b1678e4f33a7c658ccbc4cda2a18ac5907cd1d5d978f14cb84f"
+        "dacb47132d205d814a5b253c80823459106dc87ae512beedec2f5726b28883e8"
       ],
       "similarity": 0.855615,
       "forwardSimilarity": 0.855615,
@@ -28876,33 +28881,33 @@
         "B13-0985"
       ],
       "rowSha256": [
-        "c128717a842479d0d549dc8da6d8c6b4f48dff1fafbe0b030286941318ed20f5",
-        "e5fc4874286f6cb752ddd8713936b0cebc777a8cb5a759cf4efce7389f02f9fe"
+        "1ce8fb24a664cc3719a583442d9ed05ee34f1413c3faed115bfb664fe93293c4",
+        "68ee9f819d67ee4646f2834af7189947a90f4d34cc2916ae9fa5f68a2400063d"
       ],
       "similarity": 0.80916,
       "forwardSimilarity": 0.80916,
       "reverseSimilarity": 0.80916
     }
   ],
-  "similarityFlagsResolved": 0,
+  "similarityFlagsResolved": 2199,
   "optionLengths": {
     "unit": "Unicode code points",
-    "meanCorrect": 9.6149,
-    "meanIncorrect": 9.9514,
+    "meanCorrect": 9.823,
+    "meanIncorrect": 9.9843,
     "meanOptionByPosition": {
-      "0": 9.6798,
-      "1": 9.6383,
-      "2": 9.9638,
-      "3": 10.1872
+      "0": 9.727,
+      "1": 9.704,
+      "2": 10.1,
+      "3": 10.245
     },
     "meanCorrectByPosition": {
-      "0": 9.7191,
-      "1": 9.017,
-      "2": 9.8255,
-      "3": 9.8979
+      "0": 9.988,
+      "1": 9.22,
+      "2": 9.92,
+      "3": 10.164
     },
-    "uniquelyLongestCorrect": 161,
-    "uniquelyLongestCorrectFraction": 0.17128,
+    "uniquelyLongestCorrect": 162,
+    "uniquelyLongestCorrectFraction": 0.162,
     "uniquelyLongestCorrectIds": [
       "B13-0013",
       "B13-0014",
@@ -28916,17 +28921,19 @@
       "B13-0096",
       "B13-0099",
       "B13-0103",
+      "B13-0108",
       "B13-0112",
       "B13-0114",
       "B13-0117",
-      "B13-0124",
       "B13-0133",
+      "B13-0146",
       "B13-0157",
       "B13-0160",
       "B13-0165",
       "B13-0170",
       "B13-0172",
       "B13-0183",
+      "B13-0192",
       "B13-0194",
       "B13-0200",
       "B13-0273",
@@ -28934,8 +28941,10 @@
       "B13-0285",
       "B13-0307",
       "B13-0309",
+      "B13-0311",
       "B13-0314",
       "B13-0321",
+      "B13-0322",
       "B13-0332",
       "B13-0339",
       "B13-0353",
@@ -28950,6 +28959,17 @@
       "B13-0423",
       "B13-0432",
       "B13-0435",
+      "B13-0445",
+      "B13-0453",
+      "B13-0459",
+      "B13-0466",
+      "B13-0470",
+      "B13-0475",
+      "B13-0481",
+      "B13-0491",
+      "B13-0495",
+      "B13-0496",
+      "B13-0499",
       "B13-0501",
       "B13-0505",
       "B13-0507",
@@ -28959,7 +28979,6 @@
       "B13-0517",
       "B13-0528",
       "B13-0529",
-      "B13-0533",
       "B13-0537",
       "B13-0539",
       "B13-0544",
@@ -28994,20 +29013,9 @@
       "B13-0681",
       "B13-0686",
       "B13-0696",
-      "B13-0703",
-      "B13-0709",
       "B13-0711",
-      "B13-0714",
-      "B13-0720",
-      "B13-0725",
-      "B13-0734",
-      "B13-0735",
-      "B13-0736",
       "B13-0744",
-      "B13-0747",
       "B13-0748",
-      "B13-0754",
-      "B13-0755",
       "B13-0757",
       "B13-0759",
       "B13-0762",
@@ -29015,7 +29023,6 @@
       "B13-0765",
       "B13-0767",
       "B13-0768",
-      "B13-0769",
       "B13-0770",
       "B13-0771",
       "B13-0773",
@@ -29024,8 +29031,6 @@
       "B13-0782",
       "B13-0784",
       "B13-0788",
-      "B13-0789",
-      "B13-0791",
       "B13-0794",
       "B13-0795",
       "B13-0799",
@@ -29041,6 +29046,7 @@
       "B13-0848",
       "B13-0858",
       "B13-0859",
+      "B13-0860",
       "B13-0889",
       "B13-0890",
       "B13-0901",
@@ -29052,29 +29058,36 @@
       "B13-0941",
       "B13-0945",
       "B13-0946",
+      "B13-0951",
       "B13-0956",
       "B13-0960",
       "B13-0961",
       "B13-0973",
       "B13-0974",
-      "B13-0979",
       "B13-0980",
       "B13-0984",
       "B13-0990",
+      "B13-0991",
       "B13-0992",
-      "B13-0995",
       "B13-0997",
       "B13-0998"
     ],
-    "rowVersionsSha256": "36741d366964731dc8dd742c63aeb1d5dffae6b766e5d4537ee1e3b1b6fdb4df",
-    "metricsSha256": "e8148053c49aaf103136d9a784570b993946f757ff7fe45efd20099190dbdffe",
+    "rowVersionsSha256": "74712c3d244f8d96b481862f38d03cd4ffb47bbfb88dd09177d0c6f271d33de7",
+    "metricsSha256": "67c2768acb43c3fa89d6aca0f8737595a46f3218e3be5d356bd38c3af80e843a",
     "editorialAssessment": "PENDING: metrics alone do not certify absence of answer-length clues."
   },
+  "answerPositionPattern": {
+    "numericIdModulo4Matches": 1000,
+    "rows": 1000,
+    "knownDraftCycleStillExact": true,
+    "interpretation": "The original exact A/B/C/D cycle gives100% answer prediction despite balanced totals. Final order must remove that demonstrated clue; descriptive counts do not themselves certify randomness."
+  },
   "pending": {
-    "targetRowsMissing": 60,
-    "adversarialNotCurrent": 449,
-    "reopenNotCurrent": 449,
-    "similarityFlagsUnresolved": 2210,
+    "targetRowsMissing": 0,
+    "adversarialNotCurrent": 0,
+    "reopenNotCurrent": 0,
+    "similarityFlagsUnresolved": 11,
+    "knownExactAnswerCycle": true,
     "optionLengthEditorialAssessment": "PENDING"
   },
   "researchComplete": false

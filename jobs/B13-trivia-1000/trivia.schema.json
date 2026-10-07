@@ -126,6 +126,11 @@
               "funFactQuote": {
                 "type": "string",
                 "minLength": 1
+              },
+              "extraQuote": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Additional contiguous <=25-word answer-scope support, checked by the same actual capture and fresh-review gates."
               }
             }
           }

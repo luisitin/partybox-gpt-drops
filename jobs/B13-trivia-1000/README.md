@@ -1,22 +1,13 @@
 # B13 — 1,000 verified trivia questions
 
-Target: ten categories of 100 four-option questions, with two independent source
-quotes for every answer and fun fact, followed by a fresh adversarial review and
-second full reopening of sources. The original B13 prompt is the acceptance
-contract; [CONTRACT.md](CONTRACT.md) fixes row/source formats and ownership.
+The authored pack is complete; independent research/editorial acceptance remains unfinished. 1000 questions in ten categories; 1000 current independent acceptances; 1000 current second-pass support reviews.
+Latest actually checked version rendered 2026-10-07T21:09:44.934532+00:00; exact hashes and every open gate are in [reports/checks.json](reports/checks.json).
 
-Latest authoring milestone (2026-10-07T19:53:08.645072+00:00): 940 real authored rows across 10 category files; 3260/3260 quote fields matched against actual source captures; 0 schema/data errors; 491 current fresh adversarial acceptances and 491 current source-reopen reviews.
-Research acceptance remains unfinished. Draft structural success is not a claim
-of independently verified questions. Every similarity flag and incomplete review
-remains visible in [reports/checks.json](reports/checks.json) and [VERIFY.md](VERIFY.md).
+The original B13 prompt and [CONTRACT.md](CONTRACT.md) require four plausible choices, balanced difficulty/positions, two independent actual source accounts per factual claim, 100% fresh adversarial review and second-pass source reopening. JSON categories, schema, brief source quotes, immutable retrieval receipts, rejected versions and concrete corrections are included. Full copyrighted bodies remain in ignored local `.work/`.
 
-Files: `categories/` contains current rows; `evidence/` contains actual source
-receipts and row-version evidence reads; `research/` records collection decisions;
-[SOURCES.md](SOURCES.md) lists row quotations and URLs; [CONFLICTS.md](CONFLICTS.md)
-records exclusions. Full copyrighted captures remain in ignored `.work/` locally.
+Install: `python -m pip install -r requirements.txt`.
+Full local evidence acceptance: `python scripts/check-data.py --require-local-captures`.
+Full delivered/hosted metadata acceptance: `python scripts/check-data.py`.
+Draft progress check: `python scripts/check-data.py --draft --require-local-captures`.
 
-Rerun: `python3 -m pip install -r requirements.txt`, then
-`python3 scripts/check-data.py --draft`. Full acceptance command:
-`python3 scripts/check-data.py`, which fails while required rows/reviews are absent.
-Source collection uses actual body reads; search results alone are not evidence.
-No files exceed 30 MB. [NEXT.md](NEXT.md) records the concrete next work.
+Local acceptance checks retained author and actual second-pass bodies against their original hashes and selected quotes. Hosted CI checks immutable receipt/quotation/context associations because full copyrighted bodies are excluded; CI does not make new external source opens or human factual assessments. Both modes require every final review and editorial gate. [VERIFY.md](VERIFY.md) records actual commands/counts and remaining limits; [SOURCES.md](SOURCES.md) lists all selected short quotes; [CONFLICTS.md](CONFLICTS.md) preserves disagreements and exclusions. [NEXT.md](NEXT.md) names the concrete remaining work. No GitHub main changes or merges are made.

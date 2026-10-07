@@ -1,0 +1,100 @@
+{
+  "excludedSource": {
+    "sourceId": "world-history-s0042",
+    "url": "https://www.worldhistory.org/Mehmed_II/",
+    "title": "Mehmed II - World History Encyclopedia",
+    "publisher": "World History Encyclopedia",
+    "editorialOwner": "World History Publishing / World History Foundation",
+    "quality": "Actual encyclopedia article body and selected surrounding fact context inspected.",
+    "independenceNotes": "Different editorial owners and independently written article bodies, not mirrored or syndicated texts. Selected fact passages have different wording and context. Fresh independent review remains pending.",
+    "licenseNotes": "Article footer states Creative Commons Attribution-NonCommercial-ShareAlike; attribution retained. Full body excluded; no unrestricted commercial license asserted.",
+    "retrievals": [
+      {
+        "pass": "author",
+        "retrievedAt": "2026-10-07T17:21:38.409469+00:00",
+        "method": "urllib-http-get",
+        "requestedUrl": "https://www.worldhistory.org/Mehmed_II/",
+        "resolvedUrl": "https://www.worldhistory.org/Mehmed_II/",
+        "status": 200,
+        "contentType": "text/html",
+        "rawSha256": "66554df6007b34ceb37b7162bf9fa931f15f9113d3f020a954064dd1d61590c9",
+        "rawPath": ".work/world-history/author/world-history-s0042.raw",
+        "title": "Mehmed II - World History Encyclopedia",
+        "contentSha256": "2937334e67d48d9cb8765fb6827ef3f2afde329433d0cf25d0f0b721c08d7dfe",
+        "capturePath": ".work/world-history/author/world-history-s0042.txt",
+        "captureComplete": true,
+        "characters": 27227
+      }
+    ]
+  },
+  "reason": "Fresh reviewer found its bibliography directly links the paired Britannica biography; independent provenance is insufficiently demonstrated. Replaced in all four current rows.",
+  "replacementSourceId": "world-history-s0060",
+  "otherActualAttempts": [
+    {
+      "pass": "author",
+      "retrievedAt": "2026-10-07T20:12:43.034040+00:00",
+      "method": "urllib-http-get",
+      "requestedUrl": "https://www.nationalgallery.org.uk/paintings/gentile-bellini-the-sultan-mehmet-ii",
+      "resolvedUrl": "https://www.nationalgallery.org.uk/paintings/gentile-bellini-the-sultan-mehmet-ii",
+      "status": 200,
+      "contentType": "text/html",
+      "rawSha256": "70d0448984f7f582c854c9d9cf743f72cb95cc5ccd8f5b988425b9a0ce098678",
+      "rawPath": ".work/world-history/author/world-history-s0056.raw",
+      "title": "Gentile Bellini | The Sultan Mehmet II | NG3099 | National Gallery, London",
+      "contentSha256": "de72ffe28806f5efb69402a68a327a99834b88e0e11d82cb5a70867b0a2c4f29",
+      "capturePath": ".work/world-history/author/world-history-s0056.txt",
+      "captureComplete": true,
+      "characters": 16309
+    },
+    {
+      "pass": "author",
+      "retrievedAt": "2026-10-07T20:13:37.875184+00:00",
+      "method": "urllib-http-get",
+      "requestedUrl": "https://www.metmuseum.org/essays/venice-and-the-islamic-world",
+      "error": "HTTP Error 404: Not Found",
+      "status": 404
+    },
+    {
+      "pass": "author",
+      "retrievedAt": "2026-10-07T20:15:36.499053+00:00",
+      "method": "urllib-http-get",
+      "requestedUrl": "https://press.princeton.edu/books/paperback/9780691010786/mehmed-the-conqueror-and-his-time",
+      "resolvedUrl": "https://press.princeton.edu/books/paperback/9780691010786/mehmed-the-conqueror-and-his-time",
+      "status": 200,
+      "contentType": "text/html",
+      "rawSha256": "81df8c350f78d29e338158437a045f0cc0ff0f5a6052e9711f09019aebb4e04b",
+      "rawPath": ".work/world-history/author/world-history-s0058.raw",
+      "title": "Mehmed the Conqueror and His Time | Princeton University Press",
+      "contentSha256": "0956ba89874c84ee0f86634de74899085eb6fd6f7533388df56ec2dc4f05e78a",
+      "capturePath": ".work/world-history/author/world-history-s0058.txt",
+      "captureComplete": true,
+      "characters": 3543
+    },
+    {
+      "pass": "author",
+      "retrievedAt": "2026-10-07T20:17:42.890029+00:00",
+      "method": "urllib-http-get",
+      "requestedUrl": "https://www.encyclopedia.com/people/history/turkish-and-ottoman-history-biographies/muhammad-ii",
+      "resolvedUrl": "https://www.encyclopedia.com/people/history/turkish-and-ottoman-history-biographies/muhammad-ii",
+      "status": 200,
+      "contentType": "text/html",
+      "rawSha256": "e305549aa013bac02d25498e1c4d02a20d4e7773307dec2ed19662eb2d50d49a",
+      "rawPath": ".work/world-history/author/world-history-s0059.raw",
+      "title": "Muhammad Ii | Encyclopedia.com",
+      "contentSha256": "41b04fc2003b979a4e0e24faa566da1efea2ae316755b905bb0243a23b756112",
+      "capturePath": ".work/world-history/author/world-history-s0059.txt",
+      "captureComplete": true,
+      "characters": 14605
+    }
+  ],
+  "attemptAssessments": [
+    "National Gallery portrait narrative independently supports Ottoman rulership but does not explicitly connect Mehmed’s capture to1453 in its body.",
+    "Met essay guessed route returned actual HTTP404.",
+    "Princeton scholarly book page is independent but its short publisher blurb and quoted reviews are less direct than an encyclopedia body.",
+    "Composite Encyclopedia.com page contains a named Kate Fleet article plus another World Encyclopedia entry with conflicting birth-year metadata; avoid mixing their provenance."
+  ],
+  "excludedUnselectedGaleDefects": [
+    "Opening spells Fatih as Faith; the quiz uses only independently corroborated Conqueror.",
+    "Its unselected Otluk-beli battle paragraph gives1472, while other histories give1473; no quiz claim uses that date."
+  ]
+}

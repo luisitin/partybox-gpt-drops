@@ -414,15 +414,15 @@
     "difficulty": 2,
     "options": [
       "Roasting",
-      "Freezing",
       "Steaming",
-      "Boiling"
+      "Boiling",
+      "Blanching"
     ],
     "correctIndex": 0,
     "correctAnswer": "Roasting",
     "funFact": "White chocolate is made with cocoa butter and milk products.",
     "confidence": "high",
-    "confidenceReason": "Both accounts explicitly describe roasting, not brewing or boiling, before grinding.",
+    "confidenceReason": "Both accounts explicitly describe roasting, not brewing or boiling, before grinding. Fresh-review repair: Roasting is supported as the normal step before grinding chocolate liquor; freezing is not a heat treatment and supplies an invalid distractor in the present wording. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0015",
@@ -442,7 +442,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Chocolate production uses fermented and roasted cocoa beans.",
+        "text": "Before chocolate liquor is made, cocoa beans normally undergo which heat treatment? Answer: Roasting",
         "sourceIds": [
           "food-everyday-life-s0015",
           "food-everyday-life-s0016"
@@ -770,16 +770,16 @@
     "question": "What process turns milk into ordinary yogurt?",
     "difficulty": 1,
     "options": [
-      "Caramelization",
-      "Distillation",
-      "Deep frying",
+      "Enzyme coagulation",
+      "Direct acid addition",
+      "Cream separation",
       "Bacterial fermentation"
     ],
     "correctIndex": 3,
     "correctAnswer": "Bacterial fermentation",
     "funFact": "Lactic acid gives yogurt its sour or tart flavor.",
     "confidence": "high",
-    "confidenceReason": "Both bodies identify fermented milk, and Britannica later specifies the inoculating bacteria.",
+    "confidenceReason": "Both actual bodies identify fermented milk, and Britannica explicitly describes inoculating bacteria. Direct acid addition differs from bacterial production of lactic acid; both sources independently support the tart-flavor fun fact.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0019",
@@ -799,7 +799,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Yogurt is fermented milk produced using bacterial cultures.",
+        "text": "What process turns milk into ordinary yogurt? Answer: Bacterial fermentation",
         "sourceIds": [
           "food-everyday-life-s0019",
           "food-everyday-life-s0020"
@@ -1175,19 +1175,19 @@
   {
     "id": "B13-0924",
     "category": "food-everyday-life",
-    "question": "Traditional mayonnaise uses which part of an egg?",
+    "question": "In traditional mayonnaise, which ingredient supplies the principal emulsifier?",
     "difficulty": 1,
     "options": [
-      "Shell",
-      "White only",
-      "Chalaza only",
-      "Yolk"
+      "Corn starch",
+      "Dairy cream",
+      "Wheat flour",
+      "Egg yolk"
     ],
     "correctIndex": 3,
-    "correctAnswer": "Yolk",
+    "correctAnswer": "Egg yolk",
     "funFact": "Mayonnaise is an emulsion containing oil and egg yolk.",
     "confidence": "high",
-    "confidenceReason": "Both article bodies identify yolk; the question explicitly excludes eggless commercial alternatives.",
+    "confidenceReason": "Both article bodies identify yolk; the question explicitly excludes eggless commercial alternatives. Fresh-review repair: Yolk is supported, but shell and chalaza-only are not credible mayonnaise ingredient alternatives. A four-food or four-ingredient question can avoid forcing an effectively two-edible-egg-part choice. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0023",
@@ -1207,7 +1207,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Traditional mayonnaise combines egg yolk with oil.",
+        "text": "In traditional mayonnaise, which ingredient supplies the principal emulsifier? Answer: Egg yolk",
         "sourceIds": [
           "food-everyday-life-s0023",
           "food-everyday-life-s0024"
@@ -1230,15 +1230,15 @@
     "difficulty": 2,
     "options": [
       "Emulsion",
-      "Dry blend",
-      "Suspension of crystals",
-      "Pure solution"
+      "Solution",
+      "Foam",
+      "Aerosol"
     ],
     "correctIndex": 0,
     "correctAnswer": "Emulsion",
     "funFact": "Lemon juice or vinegar can flavor and acidify mayonnaise.",
     "confidence": "high",
-    "confidenceReason": "Both definitions directly name an emulsion, not a homogeneous molecular solution.",
+    "confidenceReason": "Both definitions directly name an emulsion, not a homogeneous molecular solution. Option-length review repair: comparable alternatives use concise standard terms; longer qualifying words no longer make the correct answer uniquely short. Fresh challenge required for this revised version.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0023",
@@ -1634,19 +1634,19 @@
   {
     "id": "B13-0933",
     "category": "food-everyday-life",
-    "question": "In tofu making, which liquid is coagulated to produce the curds?",
+    "question": "In conventional tofu production, which liquid is coagulated into curds?",
     "difficulty": 2,
     "options": [
       "Soy milk",
       "Coconut milk",
-      "Rice water",
-      "Olive oil"
+      "Almond milk",
+      "Oat milk"
     ],
     "correctIndex": 0,
     "correctAnswer": "Soy milk",
     "funFact": "Okara is the solid soybean pulp separated in tofu production.",
     "confidence": "high",
-    "confidenceReason": "Both descriptions directly identify soy milk, not an unrelated plant drink.",
+    "confidenceReason": "Both descriptions directly identify soy milk, not an unrelated plant drink. Fresh-review repair: Soy milk is supported, but olive oil is not a plausible milk-coagulation input; use three comparable plant drinks as wrong alternatives. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0027",
@@ -1666,7 +1666,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "In tofu making, which liquid is coagulated to produce the curds? Answer: Soy milk",
+        "text": "In conventional tofu production, which liquid is coagulated into curds? Answer: Soy milk",
         "sourceIds": [
           "food-everyday-life-s0027",
           "food-everyday-life-s0028"
@@ -2054,7 +2054,7 @@
     "correctAnswer": "Leaves and leaf buds",
     "funFact": "Caffeine contributes to tea's stimulating character.",
     "confidence": "high",
-    "confidenceReason": "Both source contexts name leaves; Britannica also identifies young leaf buds, and Wikipedia describes tender shoots elsewhere.",
+    "confidenceReason": "Both source contexts name leaves; Britannica also identifies young leaf buds, and Wikipedia describes tender shoots elsewhere. Fresh-review repair: Leaves/leaf buds is factually supported by the full Wiki harvest passage These buds and leaves are called flushes, but the current Wiki quote/fun-fact quotes name only leaves. Strengthen the selected exact quote to support the complete two-part answer. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0031",
@@ -2067,14 +2067,14 @@
         "sourceId": "food-everyday-life-s0032",
         "url": "https://en.wikipedia.org/wiki/Tea",
         "publisher": "Wikipedia contributors",
-        "quote": "Traditionally, tea is made by steeping loose tea leaves in hot water",
+        "quote": "These buds and leaves are called 'flushes'.",
         "funFactQuote": "Tea has a stimulant effect in humans primarily due to its caffeine content."
       }
     ],
     "claims": [
       {
         "kind": "answer",
-        "text": "Tea is made by steeping tea-plant leaves in hot water.",
+        "text": "Which plant parts are normally steeped to make tea? Answer: Leaves and leaf buds",
         "sourceIds": [
           "food-everyday-life-s0031",
           "food-everyday-life-s0032"
@@ -2198,16 +2198,16 @@
     "question": "Which tiny insects are important pollinators of cacao flowers?",
     "difficulty": 3,
     "options": [
-      "Dragonflies",
-      "Grasshoppers",
-      "Termites",
+      "Thrips",
+      "Aphids",
+      "Tiny wasps",
       "Midges"
     ],
     "correctIndex": 3,
     "correctAnswer": "Midges",
     "funFact": "Theobroma comes from Greek words meaning food of the gods.",
     "confidence": "high",
-    "confidenceReason": "Both sources identify midges, despite other plants often relying on bees or butterflies.",
+    "confidenceReason": "Both sources identify midges, despite other plants often relying on bees or butterflies. Fresh-review repair: Midges are supported, but dragonflies and grasshoppers conflict with tiny and are not plausible cacao microflower pollinators. Compare three plausible small pollinator groups. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0033",
@@ -2227,7 +2227,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Tiny flies called midges pollinate cacao flowers.",
+        "text": "Which tiny insects are important pollinators of cacao flowers? Answer: Midges",
         "sourceIds": [
           "food-everyday-life-s0033",
           "food-everyday-life-s0034"
@@ -2348,19 +2348,19 @@
   {
     "id": "B13-0947",
     "category": "food-everyday-life",
-    "question": "Inside a cacao pod, the beans are surrounded by what?",
+    "question": "What immediately coats the individual seeds inside a cacao pod?",
     "difficulty": 2,
     "options": [
-      "Dry brown husks",
-      "A hard woody shell",
-      "Sweet white pulp",
-      "A red oily gel"
+      "Dark purple pulp",
+      "Bright red pulp",
+      "White pulp",
+      "Orange pulp"
     ],
     "correctIndex": 2,
-    "correctAnswer": "Sweet white pulp",
+    "correctAnswer": "White pulp",
     "funFact": "Tiny flies called midges pollinate cacao flowers.",
     "confidence": "high",
-    "confidenceReason": "Both passages describe white pulp; the sensory sweetness is explicitly in Britannica and independently described in the Wikipedia context.",
+    "confidenceReason": "Both passages describe white pulp; the sensory sweetness is explicitly in Britannica and independently described in the Wikipedia context. Fresh-review repair: White pulp is supported, but Wiki selected body never calls this pulp sweet; the only sweet text is a taxonomic author surname. Hard woody shell can also surround beans at the outer pod level. Remove unsupported sweet and specify the immediate coating around individual seeds. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0033",
@@ -2380,7 +2380,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Cacao beans develop inside pods containing white pulp.",
+        "text": "What immediately coats the individual seeds inside a cacao pod? Answer: White pulp",
         "sourceIds": [
           "food-everyday-life-s0033",
           "food-everyday-life-s0034"
@@ -2399,19 +2399,19 @@
   {
     "id": "B13-0948",
     "category": "food-everyday-life",
-    "question": "Which ingredient is the usual grain-based foundation of bread dough?",
+    "question": "What is the basic dry ingredient in an ordinary loaf of bread?",
     "difficulty": 1,
     "options": [
-      "Cocoa powder",
-      "Gelatin",
-      "Salt",
+      "Powdered sugar",
+      "Baking powder",
+      "Table salt",
       "Flour"
     ],
     "correctIndex": 3,
     "correctAnswer": "Flour",
     "funFact": "Ordinary bread loaves are baked.",
     "confidence": "high",
-    "confidenceReason": "Both definitions identify flour; alternative grain flours exist, so no universal wheat-only claim is made.",
+    "confidenceReason": "Both definitions identify flour; alternative grain flours exist, so no universal wheat-only claim is made. Fresh-review repair: Flour is supported, but grain-based in the stem excludes all three wrong options (cocoa, gelatin, salt) before bread knowledge is used. Use comparable plausible dry bread ingredients and a stem without that giveaway. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0035",
@@ -2431,7 +2431,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Bread is made from moistened flour or meal.",
+        "text": "What is the basic dry ingredient in an ordinary loaf of bread? Answer: Flour",
         "sourceIds": [
           "food-everyday-life-s0035",
           "food-everyday-life-s0036"
@@ -2501,7 +2501,7 @@
   {
     "id": "B13-0950",
     "category": "food-everyday-life",
-    "question": "Which wheat protein network helps bread dough stretch and trap gas?",
+    "question": "Which wheat protein network gives bread dough its elasticity?",
     "difficulty": 3,
     "options": [
       "Casein",
@@ -2513,7 +2513,7 @@
     "correctAnswer": "Gluten",
     "funFact": "Sourdough relies on naturally occurring microbes for fermentation.",
     "confidence": "high",
-    "confidenceReason": "Both sources identify elastic gluten; none of the distractors is the wheat-dough protein network.",
+    "confidenceReason": "Both sources identify elastic gluten; none of the distractors is the wheat-dough protein network. Fresh-review repair: Gluten elasticity is supported, but Britannica actual topic paragraphs do not say trap gas; that detail appears only in its AI question widget. Narrow the stem to stretching/elasticity or add a real independently edited corroborating excerpt. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0035",
@@ -2533,7 +2533,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Gluten contributes elasticity to wheat bread dough.",
+        "text": "Which wheat protein network gives bread dough its elasticity? Answer: Gluten",
         "sourceIds": [
           "food-everyday-life-s0035",
           "food-everyday-life-s0036"
@@ -2552,19 +2552,19 @@
   {
     "id": "B13-0951",
     "category": "food-everyday-life",
-    "question": "Which bread style is leavened with a naturally fermented flour-and-water starter?",
+    "question": "What is the usual name for bread made using a naturally fermented flour-and-water starter?",
     "difficulty": 2,
     "options": [
-      "Matzo",
-      "Unleavened tortilla",
+      "Brioche",
+      "Ciabatta",
       "Sourdough",
-      "Plain chapati"
+      "Focaccia"
     ],
     "correctIndex": 2,
     "correctAnswer": "Sourdough",
     "funFact": "Bread is made from moistened flour or meal.",
     "confidence": "high",
-    "confidenceReason": "Both passages support microbial sourdough fermentation; no single-organism or airborne-only origin is asserted.",
+    "confidenceReason": "Both passages support microbial sourdough fermentation; no single-organism or airborne-only origin is asserted. Fresh-review repair: Sourdough starter is supported, but Unleavened tortilla explicitly rules itself out by wording and makes a weak distractor. Compare unqualified plausible bread styles or rewrite around the actual natural-starter process. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0035",
@@ -2584,7 +2584,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Sourdough relies on naturally occurring microbes for fermentation.",
+        "text": "What is the usual name for bread made using a naturally fermented flour-and-water starter? Answer: Sourdough",
         "sourceIds": [
           "food-everyday-life-s0035",
           "food-everyday-life-s0036"
@@ -2759,8 +2759,8 @@
     "question": "What is the name of the enzyme preparation traditionally used to curdle milk for cheese?",
     "difficulty": 3,
     "options": [
-      "Pectin",
-      "Gelatin",
+      "Lactase",
+      "Lipase",
       "Rennet",
       "Amylase"
     ],
@@ -2768,7 +2768,7 @@
     "correctAnswer": "Rennet",
     "funFact": "Cheese is formed from coagulated milk curds.",
     "confidence": "high",
-    "confidenceReason": "Both accounts identify the preparation; animal-derived, microbial and plant-derived alternatives are not conflated.",
+    "confidenceReason": "Both accounts identify the preparation; animal-derived, microbial and plant-derived alternatives are not conflated. Fresh-review repair: Rennet is supported, but pectin and gelatin are not enzyme preparations. Compare three real enzymes/preparations rather than making half the choices incompatible with the stem. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0037",
@@ -2788,7 +2788,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Rennet supplies enzymes that help coagulate milk for cheese.",
+        "text": "What is the name of the enzyme preparation traditionally used to curdle milk for cheese? Answer: Rennet",
         "sourceIds": [
           "food-everyday-life-s0037",
           "food-everyday-life-s0038"
@@ -2862,15 +2862,15 @@
     "difficulty": 2,
     "options": [
       "Firm",
-      "Crunchy and raw",
-      "Liquid",
-      "Completely mushy"
+      "Soft",
+      "Mushy",
+      "Gummy"
     ],
     "correctIndex": 0,
     "correctAnswer": "Firm",
     "funFact": "Eggs are often added to some pasta doughs.",
     "confidence": "high",
-    "confidenceReason": "Both directly define the texture; the question does not demand a universally fixed cooking time.",
+    "confidenceReason": "Both directly define the texture; the question does not demand a universally fixed cooking time. Fresh-review repair: Firm al dente is supported, but Liquid is not a plausible cooked-pasta bite texture. Use three comparable credible over/undercooked textures. The final wording/options remove that specific problem; a new independent verdict is still required. Option-length review repair: comparable alternatives use concise standard terms; longer qualifying words no longer make the correct answer uniquely short. Fresh challenge required for this revised version.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0039",
@@ -2960,19 +2960,19 @@
   {
     "id": "B13-0959",
     "category": "food-everyday-life",
-    "question": "What industrial process forces pasta dough through shaped dies?",
+    "question": "What is the industrial term for pushing pasta dough through shaped dies?",
     "difficulty": 3,
     "options": [
-      "Distillation",
-      "Fermentation",
+      "Lamination",
+      "Kneading",
       "Extrusion",
-      "Freeze-drying"
+      "Rolling"
     ],
     "correctIndex": 2,
     "correctAnswer": "Extrusion",
     "funFact": "Traditional pasta commonly uses durum wheat.",
     "confidence": "high",
-    "confidenceReason": "Both accounts identify extrusion; handmade rolling remains a different legitimate process.",
+    "confidenceReason": "Both accounts identify extrusion; handmade rolling remains a different legitimate process. Fresh-review repair: Extrusion is supported, but distillation, fermentation and freeze-drying are not plausible processes for forcing dough through shape dies. Compare actual mechanical forming processes. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0039",
@@ -2992,7 +2992,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Commercial dried pasta is often formed by extrusion.",
+        "text": "What is the industrial term for pushing pasta dough through shaped dies? Answer: Extrusion",
         "sourceIds": [
           "food-everyday-life-s0039",
           "food-everyday-life-s0040"
@@ -3113,19 +3113,19 @@
   {
     "id": "B13-0962",
     "category": "food-everyday-life",
-    "question": "How does gelatin's physical sol-to-gel transition behave?",
+    "question": "Which change reverses the physical setting of a gelatin gel?",
     "difficulty": 3,
     "options": [
-      "It is chemically irreversible",
-      "It is thermally reversible",
-      "It requires hydrolyzing starch",
-      "It requires freezing water"
+      "Lowering its temperature",
+      "Raising its temperature",
+      "Increasing its resting time",
+      "Removing its dissolved water"
     ],
     "correctIndex": 1,
-    "correctAnswer": "It is thermally reversible",
+    "correctAnswer": "Raising its temperature",
     "funFact": "Gelatin is derived from collagen.",
     "confidence": "high",
-    "confidenceReason": "Both bodies describe reversible physical gel formation; collagen hydrolysis during manufacture is a separate irreversible chemical process.",
+    "confidenceReason": "Both bodies describe reversible physical gel formation; collagen hydrolysis during manufacture is a separate irreversible chemical process. Fresh-review repair: Thermal reversibility is supported, but two options discuss starch hydrolysis/freezing requirements rather than comparable transition behavior; this is effectively a binary reversible-versus-irreversible question padded with incompatible alternatives. Rewrite as a four-process/action question or another supported fact. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0041",
@@ -3145,7 +3145,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "How does gelatin's physical sol-to-gel transition behave? Answer: It is thermally reversible",
+        "text": "Which change reverses the physical setting of a gelatin gel? Answer: Raising its temperature",
         "sourceIds": [
           "food-everyday-life-s0041",
           "food-everyday-life-s0042"
@@ -3218,16 +3218,16 @@
     "question": "Where does pectin naturally occur in plant structure?",
     "difficulty": 3,
     "options": [
-      "Chloroplast membranes only",
-      "Seed oils only",
-      "Wood resin ducts only",
+      "Cell membranes",
+      "Chloroplasts",
+      "Vacuoles",
       "Cell walls"
     ],
     "correctIndex": 3,
     "correctAnswer": "Cell walls",
     "funFact": "Commercial pectin is commonly extracted from citrus fruits.",
     "confidence": "high",
-    "confidenceReason": "Both identify plant cell walls; pectin is a polysaccharide, not an oil or chlorophyll pigment.",
+    "confidenceReason": "Both identify plant cell walls; pectin is a polysaccharide, not an oil or chlorophyll pigment. Fresh-review repair: Cell walls is supported, but only appears in all wrong options and the choices mix membranes with oils/resin ducts. Use four comparable real cellular structures without one-sided qualifiers. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0043",
@@ -3247,7 +3247,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Pectin occurs in plant cell walls.",
+        "text": "Where does pectin naturally occur in plant structure? Answer: Cell walls",
         "sourceIds": [
           "food-everyday-life-s0043",
           "food-everyday-life-s0044"
@@ -3270,15 +3270,15 @@
     "difficulty": 2,
     "options": [
       "Citrus peels",
-      "Banana seeds",
-      "Coconut oil",
-      "Grape juice"
+      "Grape skins",
+      "Peach stones",
+      "Pineapple cores"
     ],
     "correctIndex": 0,
     "correctAnswer": "Citrus peels",
     "funFact": "Pectin is used as a gelling agent in jams and jellies.",
     "confidence": "high",
-    "confidenceReason": "Both sources identify citrus as a commercial source; exact processing yield and health effects are excluded.",
+    "confidenceReason": "Both sources identify citrus as a commercial source; exact processing yield and health effects are excluded. Fresh-review repair: Citrus peels is supported by Wiki actual Production sentence main raw materials dried citrus peels and Britannica chief sources. However current Wiki excerpt only says citrus fruits, and banana seeds/coconut oil are poor competing fruit-processing by-products. Strengthen the exact peel quote and use three plausible by-products. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0043",
@@ -3291,14 +3291,14 @@
         "sourceId": "food-everyday-life-s0044",
         "url": "https://en.wikipedia.org/wiki/Pectin",
         "publisher": "Wikipedia contributors",
-        "quote": "produced from citrus fruits",
+        "quote": "The main raw materials for pectin production are dried citrus peels",
         "funFactQuote": "edible gelling agent , especially in jams and jellies"
       }
     ],
     "claims": [
       {
         "kind": "answer",
-        "text": "Commercial pectin is commonly extracted from citrus fruits.",
+        "text": "Which fruit-processing material is a major commercial source of pectin? Answer: Citrus peels",
         "sourceIds": [
           "food-everyday-life-s0043",
           "food-everyday-life-s0044"
@@ -3474,15 +3474,15 @@
     "difficulty": 2,
     "options": [
       "Evaporation",
-      "Freezing alone",
-      "Magnetic separation",
-      "Fermenting"
+      "Filtration",
+      "Sedimentation",
+      "Centrifugation"
     ],
     "correctIndex": 0,
     "correctAnswer": "Evaporation",
     "funFact": "Commercial salt also comes from mined rock salt.",
     "confidence": "high",
-    "confidenceReason": "The credited Britannica manufacture section explicitly explains seawater evaporation and rock-salt recovery, independently supported by Wikipedia; a mere table-of-contents heading is not evidence.",
+    "confidenceReason": "The credited Britannica manufacture section explicitly explains seawater evaporation and rock-salt recovery, independently supported by Wikipedia; a mere table-of-contents heading is not evidence. Fresh-review repair: Evaporation is supported, but magnetic separation and fermenting are implausible recovery of dissolved sea salt in shallow ponds. Compare plausible physical water/separation processes. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0063",
@@ -3779,16 +3779,16 @@
     "question": "Which part of the turmeric plant is used to make the spice?",
     "difficulty": 2,
     "options": [
-      "Flower petal",
-      "Fruit seed",
+      "Taproot",
+      "Seed",
       "Rhizome",
-      "Outer bark"
+      "Petal"
     ],
     "correctIndex": 2,
     "correctAnswer": "Rhizome",
     "funFact": "Turmeric is a member of the ginger family.",
     "confidence": "high",
-    "confidenceReason": "Both botanical descriptions identify rhizomes; these are stems rather than botanical roots.",
+    "confidenceReason": "Both botanical descriptions identify rhizomes; these are stems rather than botanical roots. Option-length review repair: comparable alternatives use concise standard terms; longer qualifying words no longer make the correct answer uniquely short. Fresh challenge required for this revised version.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0049",
@@ -3980,19 +3980,19 @@
   {
     "id": "B13-0979",
     "category": "food-everyday-life",
-    "question": "Which other yellow spice is in the same family as ginger?",
+    "question": "Which of these spices belongs to the same plant family as ginger?",
     "difficulty": 2,
     "options": [
       "Saffron",
-      "Paprika",
+      "Mustard",
       "Turmeric",
-      "Mustard"
+      "Fenugreek"
     ],
     "correctIndex": 2,
     "correctAnswer": "Turmeric",
     "funFact": "Common culinary ginger is Zingiber officinale.",
     "confidence": "high",
-    "confidenceReason": "The credited Britannica ginger-family article identifies turmeric among its economically valuable members, while independently edited Wikipedia explicitly groups ginger and turmeric in Zingiberaceae; both identify common ginger as Zingiber officinale.",
+    "confidenceReason": "The credited Britannica ginger-family body identifies turmeric among its economically valuable members, while separately compiled Wikipedia groups ginger and turmeric in Zingiberaceae. Both identify common ginger as Zingiber officinale; the revised stem asserts no selected-source color claim.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0065",
@@ -4012,7 +4012,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Which other yellow spice is in the same family as ginger? Answer: Turmeric",
+        "text": "Which of these spices belongs to the same plant family as ginger? Answer: Turmeric",
         "sourceIds": [
           "food-everyday-life-s0065",
           "food-everyday-life-s0052"
@@ -4184,39 +4184,39 @@
   {
     "id": "B13-0983",
     "category": "food-everyday-life",
-    "question": "Which yellow condiment is commonly served with hot dogs and sausages?",
+    "question": "Which condiment is traditionally made by mixing ground pungent seeds with a liquid such as vinegar?",
     "difficulty": 1,
     "options": [
-      "Maple syrup",
-      "Chocolate sauce",
+      "Ketchup",
+      "Mayonnaise",
       "Mustard",
-      "Mint jelly"
+      "Pickle relish"
     ],
     "correctIndex": 2,
     "correctAnswer": "Mustard",
     "funFact": "Brassica juncea is brown or Indian mustard.",
     "confidence": "high",
-    "confidenceReason": "The broad sausage/hot-dog association is independently described; no particular brand or recipe is required.",
+    "confidenceReason": "The broad sausage/hot-dog association is independently described; no particular brand or recipe is required. Fresh-review repair: Mustard is supported, but yellow excludes maple syrup, chocolate sauce and mint jelly without testing condiment knowledge. Revise to comparable plausible condiments with unambiguous scope. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0053",
         "url": "https://www.britannica.com/plant/mustard",
         "publisher": "Encyclopaedia Britannica",
-        "quote": "particularly cold meats, sausages",
+        "quote": "prepared as a paste with other spices or herbs, vinegar or wine",
         "funFactQuote": "brown, or Indian, mustard ( Brassica juncea )"
       },
       {
         "sourceId": "food-everyday-life-s0054",
         "url": "https://en.wikipedia.org/wiki/Mustard_(condiment)",
         "publisher": "Wikipedia contributors",
-        "quote": "condiment for sandwiches , hamburgers , and hot dogs",
+        "quote": "The whole, ground, cracked, or bruised mustard seeds are mixed with water, vinegar",
         "funFactQuote": "brown mustard ( Brassica juncea )"
       }
     ],
     "claims": [
       {
         "kind": "answer",
-        "text": "Mustard is commonly paired with sausages and hot dogs.",
+        "text": "Which condiment is traditionally made by mixing ground pungent seeds with a liquid such as vinegar? Answer: Mustard",
         "sourceIds": [
           "food-everyday-life-s0053",
           "food-everyday-life-s0054"
@@ -4239,15 +4239,15 @@
     "difficulty": 2,
     "options": [
       "Sinapis alba",
-      "Piper nigrum",
-      "Curcuma longa",
+      "Brassica nigra",
+      "Brassica rapa",
       "Brassica juncea"
     ],
     "correctIndex": 3,
     "correctAnswer": "Brassica juncea",
     "funFact": "Sinapis alba is white or yellow mustard.",
     "confidence": "high",
-    "confidenceReason": "Both bodies name the species directly; yellow mustard is deliberately a different option.",
+    "confidenceReason": "Both bodies name the species directly; yellow mustard is deliberately a different option. Fresh-review repair: Brassica juncea identity is supported. Piper nigrum and Curcuma longa are pepper/ginger-family spices rather than credible competing mustard identities; use three plausible mustard/Brassicaceae botanical choices. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0053",
@@ -4267,7 +4267,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Brassica juncea is brown or Indian mustard.",
+        "text": "Brown mustard is commonly identified with which scientific species? Answer: Brassica juncea",
         "sourceIds": [
           "food-everyday-life-s0053",
           "food-everyday-life-s0054"
@@ -4291,14 +4291,14 @@
     "options": [
       "Sinapis alba",
       "Brassica juncea",
-      "Piper nigrum",
-      "Zingiber officinale"
+      "Brassica nigra",
+      "Brassica rapa"
     ],
     "correctIndex": 0,
     "correctAnswer": "Sinapis alba",
     "funFact": "Mustard condiment is made from mustard seeds.",
     "confidence": "high",
-    "confidenceReason": "Both independent botanical descriptions agree; no changing crop-production ranking is asked.",
+    "confidenceReason": "Both independent botanical descriptions agree; no changing crop-production ranking is asked. Fresh-review repair: Sinapis alba identity is supported, but pepper and ginger binomials are weak alternative identities for mustard. Use three plausible mustard relatives. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0053",
@@ -4318,7 +4318,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Sinapis alba is white or yellow mustard.",
+        "text": "White or yellow mustard is commonly identified with which species? Answer: Sinapis alba",
         "sourceIds": [
           "food-everyday-life-s0053",
           "food-everyday-life-s0054"
@@ -4340,16 +4340,16 @@
     "question": "Which spice is produced by drying and grinding red peppers?",
     "difficulty": 1,
     "options": [
-      "Cocoa powder",
+      "Turmeric",
       "Paprika",
-      "Cinnamon powder",
-      "Mustard powder"
+      "Cinnamon",
+      "Mustard"
     ],
     "correctIndex": 1,
     "correctAnswer": "Paprika",
     "funFact": "Paprika commonly provides a red coloring in food.",
     "confidence": "high",
-    "confidenceReason": "Both bodies directly explain paprika processing; the wording asks the familiar spice product rather than a disputed cultivar ranking.",
+    "confidenceReason": "Both bodies directly explain paprika processing; the wording asks the familiar spice product rather than a disputed cultivar ranking. Option-length review repair: comparable alternatives use concise standard terms; longer qualifying words no longer make the correct answer uniquely short. Fresh challenge required for this revised version.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0055",
@@ -4388,19 +4388,19 @@
   {
     "id": "B13-0987",
     "category": "food-everyday-life",
-    "question": "Fresh red paprika commonly adds which color to a garnish?",
+    "question": "What color does fresh paprika most commonly add to a garnish?",
     "difficulty": 1,
     "options": [
-      "Blue",
-      "Black",
+      "Yellow",
+      "Green",
       "Red",
-      "White"
+      "Brown"
     ],
     "correctIndex": 2,
     "correctAnswer": "Red",
     "funFact": "Paprika is a major seasoning in Hungarian cuisine.",
     "confidence": "high",
-    "confidenceReason": "Both passages support the red color; brown discoloration with age is not claimed impossible.",
+    "confidenceReason": "Both passages support the red color; brown discoloration with age is not claimed impossible. Fresh-review repair: The correct red answer is disclosed by Fresh red paprika in the stem. Remove the redundant red descriptor and compare plausible food-color choices. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0055",
@@ -4420,7 +4420,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Paprika commonly provides a red coloring in food.",
+        "text": "What color does fresh paprika most commonly add to a garnish? Answer: Red",
         "sourceIds": [
           "food-everyday-life-s0055",
           "food-everyday-life-s0056"
@@ -4442,16 +4442,16 @@
     "question": "Paprika is especially associated with the cuisine of which Central European country?",
     "difficulty": 2,
     "options": [
-      "Norway",
-      "Ireland",
-      "Iceland",
+      "Austria",
+      "Poland",
+      "Czechia",
       "Hungary"
     ],
     "correctIndex": 3,
     "correctAnswer": "Hungary",
     "funFact": "Paprika is normally made from Capsicum annuum peppers.",
     "confidence": "high",
-    "confidenceReason": "Both independently written bodies identify Hungary; Spain is also important and therefore is not offered as a wrong choice.",
+    "confidenceReason": "Both independently written bodies identify Hungary; Spain is also important and therefore is not offered as a wrong choice. Fresh-review repair: Hungary is supported, but Norway, Ireland and Iceland are not Central European alternatives. Use three real Central European countries. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0055",
@@ -4471,7 +4471,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Paprika is a major seasoning in Hungarian cuisine.",
+        "text": "Paprika is especially associated with the cuisine of which Central European country? Answer: Hungary",
         "sourceIds": [
           "food-everyday-life-s0055",
           "food-everyday-life-s0056"
@@ -4494,15 +4494,15 @@
     "difficulty": 3,
     "options": [
       "Capsicum annuum",
-      "Piper nigrum",
-      "Coffea arabica",
-      "Theobroma cacao"
+      "Capsicum chinense",
+      "Capsicum frutescens",
+      "Capsicum baccatum"
     ],
     "correctIndex": 0,
     "correctAnswer": "Capsicum annuum",
     "funFact": "Paprika is made from dried and ground peppers.",
     "confidence": "high",
-    "confidenceReason": "Both botanical descriptions agree, distinguishing chili peppers from unrelated black-pepper vines.",
+    "confidenceReason": "Both botanical descriptions agree, distinguishing chili peppers from unrelated black-pepper vines. Fresh-review repair: Capsicum annuum is supported, but coffee/cacao binomials are poor alternative pepper identities. Compare three other actual Capsicum species to make all options plausible. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0055",
@@ -4522,7 +4522,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Paprika is normally made from Capsicum annuum peppers.",
+        "text": "The peppers normally used for paprika belong to which species? Answer: Capsicum annuum",
         "sourceIds": [
           "food-everyday-life-s0055",
           "food-everyday-life-s0056"
@@ -4595,16 +4595,16 @@
     "question": "Chili peppers are native to which broad part of the world?",
     "difficulty": 1,
     "options": [
-      "Northern Europe",
-      "Australia",
+      "South Asia",
+      "West Africa",
       "The Americas",
-      "Antarctica"
+      "Australia"
     ],
     "correctIndex": 2,
     "correctAnswer": "The Americas",
     "funFact": "Chili peppers belong to the nightshade family, Solanaceae.",
     "confidence": "high",
-    "confidenceReason": "Both independently written accounts support the Americas; exact domestication sites differ by species and are not silently conflated.",
+    "confidenceReason": "Both independently written accounts support the Americas; exact domestication sites differ by species and are not silently conflated. Fresh-review repair: Americas origin is supported, but Antarctica is not a plausible native chili origin. Use comparable credible geographic regions/continents. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0057",
@@ -4624,7 +4624,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Chili peppers originated in the Americas.",
+        "text": "Chili peppers are native to which broad part of the world? Answer: The Americas",
         "sourceIds": [
           "food-everyday-life-s0057",
           "food-everyday-life-s0058"
@@ -4799,16 +4799,16 @@
     "question": "During fermentation, bread yeast converts sugars chiefly into which two products?",
     "difficulty": 2,
     "options": [
-      "Oxygen and starch",
-      "Nitrogen and fat",
+      "Carbon dioxide and lactic acid",
+      "Lactic acid and acetic acid",
       "Carbon dioxide and alcohol",
-      "Hydrogen and salt"
+      "Ethanol and lactic acid"
     ],
     "correctIndex": 2,
     "correctAnswer": "Carbon dioxide and alcohol",
     "funFact": "Many yeasts reproduce asexually by budding.",
     "confidence": "high",
-    "confidenceReason": "Both accounts describe the reaction; gas leavens dough while the alcohol is largely driven off in baking.",
+    "confidenceReason": "Both accounts describe the reaction; gas leavens dough while the alcohol is largely driven off in baking. Fresh-review repair: Correct yeast products are supported, but nitrogen/fat and hydrogen/salt are implausible chief sugar-fermentation product pairs. Compare plausible alternative biochemical products and keep option length comparable. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0059",
@@ -4828,7 +4828,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Yeast fermentation produces carbon dioxide and alcohol.",
+        "text": "During fermentation, bread yeast converts sugars chiefly into which two products? Answer: Carbon dioxide and alcohol",
         "sourceIds": [
           "food-everyday-life-s0059",
           "food-everyday-life-s0060"
@@ -4847,39 +4847,39 @@
   {
     "id": "B13-0996",
     "category": "food-everyday-life",
-    "question": "Which asexual reproduction method is common in many yeasts?",
+    "question": "What is the term for yeast reproduction in which a small outgrowth develops on the parent cell?",
     "difficulty": 3,
     "options": [
-      "Pollination",
-      "Seed germination",
-      "Spore fusion",
+      "Binary fission",
+      "Fragmentation",
+      "Spore formation",
       "Budding"
     ],
     "correctIndex": 3,
     "correctAnswer": "Budding",
     "funFact": "Saccharomyces cerevisiae is widely used in baking and alcoholic fermentation.",
     "confidence": "high",
-    "confidenceReason": "Both sources directly identify budding; fission is also possible, so it is not offered as an incorrect choice.",
+    "confidenceReason": "Both sources directly identify budding; fission is also possible, so it is not offered as an incorrect choice. Fresh-review repair: Budding is supported, but pollination, seed germination and spore fusion do not provide three plausible yeast asexual reproduction methods. Rewrite around the defined parent-cell outgrowth versus other actual cell-division modes, with scope avoiding fission as a second correct many-yeasts answer. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0059",
         "url": "https://www.britannica.com/science/yeast-fungus",
         "publisher": "Encyclopaedia Britannica",
-        "quote": "Most yeasts reproduce asexually by budding",
+        "quote": "budding : a small bump protrudes from a parent cell",
         "funFactQuote": "bread , beer , and wine are selected strains of Saccharomyces cerevisiae"
       },
       {
         "sourceId": "food-everyday-life-s0060",
         "url": "https://en.wikipedia.org/wiki/Yeast",
         "publisher": "Wikipedia contributors",
-        "quote": "many do so by the asymmetric division process known as budding",
-        "funFactQuote": "The yeast species Saccharomyces cerevisiae converts carbohydrates to carbon dioxide and alcohols"
+        "quote": "a small bud (also known as a bleb or daughter cell) is formed on the parent cell",
+        "funFactQuote": "The products of this reaction have been used in baking and the production of alcoholic beverages"
       }
     ],
     "claims": [
       {
         "kind": "answer",
-        "text": "Many yeasts reproduce asexually by budding.",
+        "text": "What is the term for yeast reproduction in which a small outgrowth develops on the parent cell? Answer: Budding",
         "sourceIds": [
           "food-everyday-life-s0059",
           "food-everyday-life-s0060"
@@ -5003,8 +5003,8 @@
     "question": "Baking powder combines a weak acid with which other type of chemical?",
     "difficulty": 2,
     "options": [
-      "A strong oxidizer",
-      "A neutral oil",
+      "An oxidizer",
+      "An oil",
       "A base",
       "An alcohol"
     ],
@@ -5012,7 +5012,7 @@
     "correctAnswer": "A base",
     "funFact": "Starch helps prevent premature reaction of baking powder ingredients.",
     "confidence": "high",
-    "confidenceReason": "Both definitions identify an acid-base mixture; this distinguishes powder from baking soda alone.",
+    "confidenceReason": "Both definitions identify an acid-base mixture; this distinguishes powder from baking soda alone. Option-length review repair: comparable alternatives use concise standard terms; longer qualifying words no longer make the correct answer uniquely short. Fresh challenge required for this revised version.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0061",
@@ -5054,16 +5054,16 @@
     "question": "Which common dry ingredient helps keep baking powder's acid and base apart until use?",
     "difficulty": 3,
     "options": [
-      "Gelatin",
-      "Lard",
-      "Honey",
+      "Powdered sugar",
+      "Table salt",
+      "Milk powder",
       "Starch"
     ],
     "correctIndex": 3,
     "correctAnswer": "Starch",
     "funFact": "Baking powder releases carbon dioxide to leaven batter.",
     "confidence": "high",
-    "confidenceReason": "Both accounts support the separating dry ingredient; no claim that all formulations use exactly the same starch is made.",
+    "confidenceReason": "Both accounts support the separating dry ingredient; no claim that all formulations use exactly the same starch is made. Fresh-review repair: Starch is supported, but lard and honey are not comparable dry ingredients. Use three actual dry powders plausibly confused with the buffering/diluent ingredient. The final wording/options remove that specific problem; a new independent verdict is still required.",
     "sources": [
       {
         "sourceId": "food-everyday-life-s0061",
@@ -5083,7 +5083,7 @@
     "claims": [
       {
         "kind": "answer",
-        "text": "Starch helps prevent premature reaction of baking powder ingredients.",
+        "text": "Which common dry ingredient helps keep baking powder's acid and base apart until use? Answer: Starch",
         "sourceIds": [
           "food-everyday-life-s0061",
           "food-everyday-life-s0062"

@@ -1,67 +1,39 @@
 # B13 verification
 
-## Completed at initial contract milestone
+## Actual current progress check — 2026-10-07T21:09:44.934532+00:00
 
-| Check | Cases | Passed | Seed | Command / evidence |
-|---|---:|---:|---|---|
-| Original B13 prompt and repository rules read | 2 documents | 2 | n/a | PROMPTS.md B13; root README.md |
-| Existing B13 work preserved | 1 branch/worktree | 1 | n/a | `git status --short`; branch `job/B13-trivia-1000`; no pre-existing B13 folder |
-| Category/ID ranges specified | 10 ranges | 10 | n/a | CONTRACT.md, disjoint 100-ID ranges |
-
-## First actual data milestone
-
-Command: `python3 scripts/check-data.py --draft` (Python 3.12.14,
-jsonschema 4.26.0). Actual output is retained in `reports/checks.json`.
-
-| Check | Actual result |
-|---|---:|
-| Authored rows | 181/1,000 |
-| Source ledger records | 12 |
-| Quote fields matched to actual captured bodies | 363/363 |
-| Schema/data errors | 0 |
-| US geography initial balance | 100 rows; difficulties 34/33/33; positions 25/25/25/25 |
-| Current fresh adversarial acceptance | 0/181 |
-| Current second source-reopen review | 0/181 |
-| Similarity >0.8 flagged pairs, unresolved | 2,566 |
-
-The 79 science rows and two one-row categories are incomplete. Quote matching
-checks actual text presence; the fresh reviewer must still challenge factual
-support, source independence, wording, and distractors. Capital/year/unit
-templates are a known diversity weakness and are being revised. Length metrics
-are recorded with their editorial assessment pending.
-
-## Latest authoring milestone — 2026-10-07T19:53:08.645072+00:00
-
-Exact command: `python3 scripts/check-data.py --draft`.
-All currently authored category files are checked, including repaired music. The earlier actual failed music recovery is preserved in `reports/music-recovery-failure.json`. No missing row or pending independent review is waived.
-Deterministic data checks; seed n/a. Full output: `reports/checks.json`.
+Command actually executed: `python scripts/check-data.py --draft --require-local-captures`.
+Deterministic research validation; random seed n/a. Full raw validator output: [reports/checks.json](reports/checks.json). This table records that exact checked row set, whose canonical version-list SHA is `74712c3d244f8d96b481862f38d03cd4ffb47bbfb88dd09177d0c6f271d33de7`.
 
 | Check | Cases | Passed |
 |---|---:|---:|
-| Authored rows against draft JSON Schema and row/index/source/hash checks | 940 | 940 |
-| Quote fields present in actual hash-checked source bodies | 3260 | 3260 |
-| Current fresh adversarial acceptances | 940 | 491 |
-| Current second source-reopen reviews | 940 | 491 |
-| Similarity >0.8 flagged pairs with concrete resolution | 2210 | 0 |
+| Authored rows against JSON Schema, IDs, four unique options, answer/index and author hashes | 1000 | 1000 |
+| Category difficulty 34/33/33 and exact answer positions 25/25/25/25 | 10 | 10 |
+| Author quotation fields in actual hash-checked retained bodies | 3506 | 3506 |
+| Current independent adversarial acceptances | 1000 | 1000 |
+| Current actual second-pass source support reviews | 1000 | 1000 |
+| Second-pass quotation associations/body matches | 3506 | 3506 |
+| Retained similarity flags with current accepted concrete resolutions | 2210 | 2199 |
 
-Category counts: us-geography: 100, world-geography: 100, science-space: 100, animals-nature: 100, us-history-civics: 40, world-history: 100, movies-tv: 100, music: 100, sports-games: 100, food-everyday-life: 100.
+Schema/data errors: 0. Ten category files each have100 real rows. Quote matching proves retained text presence, not factual entailment or independent editorial origin: the independent per-row reviewers read actual surrounding paragraphs/footnotes, tried concrete counterexamples, checked scope/fun facts/options and preserved original rejects. Source GET timestamps are actual original opens, not refreshed when a later choice order is reviewed.
 
-Quote matching demonstrates actual captured text presence. It does not replace
-fresh review of claim support, source independence, ambiguity or distractors.
-Nature, movies/TV, science/space and US geography each have 100 current
-fresh acceptances and supported source reopens. Original rejected versions and
-subsequent fresh assessments are preserved. World geography is held for root
-review; food is held for lead review; music revisions await fresh confirmation.
-Length metrics are in the report; full-set editorial assessment remains pending.
+The near-duplicate scan compares all 499,500 unordered normalized question pairs, takes the maximum of both SequenceMatcher directions and flags every ratio>0.8. Only current accepted keep/distinct decisions resolve a flag; rejection metadata cannot be counted as a pass. All historical flag payloads and substantive duplicate repairs remain retained.
+
+The original answer-position draft cycled A/B/C/D by numeric ID, allowing100% prediction. That actual challenge is preserved in `evidence/fullset-position-pattern-challenge.json`; final balanced seeded random option ordering and actual full ordered-choice rereads are pending until their final manifests/reviews are accepted. Global option-length metrics are in the report, with actual independent full-pack editorial assessment required rather than acceptance from means alone.
+
+## Local evidence and hosted CI scope
+
+Full local command: `python scripts/check-data.py --require-local-captures`. Missing required author or second-pass bodies fail. Every retained body is SHA256 checked; each selected answer/fun-fact/additional-scope quote is checked for contiguous presence and≤25words.
+Full hosted command: `python scripts/check-data.py --output reports/ci-checks.json`. It validates exact row/source identities, actual HTTP200 receipts, UTC times, requested/resolved URL chains, hashes, quote associations, context/claim assessments, review hashes, full counts and editorial gates. Full source bodies are excluded; unavailable bodies are explicitly reported and are never described as matched or newly reopened by CI. Hosted checksum checking runs before validation. GitHub CI evidence is added only after its actual exact-head conclusion is known.
+
+## Preserved failed and rejected evidence
+
+Initial music quote-path recovery failure, original per-category rejects, real Taj Mahal repeated-question challenge, source-dependency challenges, full1000-row position-pattern failure, actual citation/hash-encoding mismatch corrections, overwritten music capture-chain failures and their real fresh-GET recovery are retained in `evidence/`, `reviews/`, and `reports/`. Original decisions are not relabeled after a fact/choice edit.
 
 ## UNVERIFIED
 
-- Remaining 60 authored rows and final category balances.
-- Fresh adversarial disproof attempts and source-independence/support review on all1,000 finalized rows.
-- Second actual reopening of both source pages for every final row.
-- Every retained similarity flag’s concrete editorial resolution.
-- Final option-length editorial assessment and full1,000-row validator output.
-- Final checksum verification and ready-for-review GitHub delivery.
-
-Author milestones preserve unfinished evidence. No missing review or structural
-scaffold is reported as a passed research gate.
+- Current original-gate pending values: `{"adversarialNotCurrent": 0, "knownExactAnswerCycle": true, "optionLengthEditorialAssessment": "PENDING", "reopenNotCurrent": 0, "similarityFlagsUnresolved": 11, "targetRowsMissing": 0}`.
+- Final balanced random ordering and actual per-row review of all final ordered options.
+- Final exact-version similarity resolutions and option-length editorial acceptance.
+- Full held-version local acceptance, independent immutable delivery audit, final checksums and exact final-head hosted CI while those records remain pending.
+- Factual correctness and independence are reasoned source judgments, not mathematical guarantees; no human party playtest or empirical US-audience difficulty calibration is claimed.

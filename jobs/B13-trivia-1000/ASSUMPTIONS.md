@@ -15,3 +15,7 @@
 - Full copyrighted web captures remain ignored local research files. Delivered
   excerpts stay brief and carry URLs/attribution; openly licensed materials retain
   their actual license notes.
+
+- Final option order uses deterministic independent per-category seeds and exactly 25 correct answers in each position. Determinism is for reproducibility; it must not create a repeated shared category pattern or preserve the demonstrated numeric-ID answer cycle. Every final ordered choice set receives an actual independent reread before its row hash can be accepted.
+- Retained local author/second-pass bodies are required for the full local evidence proof. Hosted validation checks immutable receipt/quote/context metadata, with full copyrighted bodies excluded; it does not claim new hosted external opens or human factual review.
+- The optional extraQuote field carries a third contiguous excerpt of at most 25 words when needed for an additional stem clause, under the same actual body/fresh review checks as the two original quote fields.
