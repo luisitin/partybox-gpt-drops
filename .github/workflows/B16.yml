@@ -13,8 +13,6 @@ jobs:
         working-directory: jobs/B16-player-colors
     steps:
       - uses: actions/checkout@v4
-      - name: Expand bundled tiny source and evidence files
-        run: unzip -q payload.zip
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
