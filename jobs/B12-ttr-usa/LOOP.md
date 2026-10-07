@@ -41,3 +41,12 @@ remains. Deep freezing caches only objects already recursively frozen by the
 harness, without assuming externally frozen objects are deep-frozen. Full
 counts, checks and game replay digests must match the preserved pre-loop run.
 The whole full suite is rerun after these changes; no test threshold is relaxed.
+
+The post-fix complete npm test passed:186,053 graph comparisons including60k
+exhaustive subset results,6k completed games,375 schema cases,525 immutable
+integration checks and75 compiled mutation kills. All3 game replay hashes,
+turn/move counts and13,880,102 conservation checks equal the preserved pre-loop
+run. Final source hash7d489f2084a990b5043d0121a62195cc86cab721443bf275a788da7aa37a9a8b.
+Research remains264 rows/528 citations across14 actually reopened source URLs.
+No further semantic weakness was found in this completed review; external CI
+is the final publication check, and the next independent job handoff is root's.

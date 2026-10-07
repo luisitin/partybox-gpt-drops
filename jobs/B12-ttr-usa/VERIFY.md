@@ -488,10 +488,14 @@ After the first extraction, ten selected raw inventories/PDFs were reopened with
 | parameters/12 | high | rob-routes, agnias-routes | name, value | 2: passed |
 | parameters/13 | high | official-base, guide | name, value | 2: passed |
 
+## Hosted verification
+
+The exact-head GitHub Actions run is linked in the PR description after every step and full log is inspected. This committed report records the completed local run produced before hosted execution. Hosted status is maintained on the PR; no hosted success is inferred from local results.
+
 ## UNVERIFIED
 
 - Exhaustive enumeration of all possible full USA games and strategic playing strength. The 6,000 games are actual completed seeded legal games, not a claim about every possible game.
 - Expansion variant scoring policies (1910 Globetrotter/Big Cities) and the newer 33-ticket base edition; catalogs and differences are explicit, while scoreGame implements classic USA scoring.
 - Worst-case search performance on arbitrary large dense cyclic graphs. Exactness has no cap; exponential time is possible.
 - Future changes to live source URLs. The two actually opened authoring passes and immutable local factual snapshots are the verified evidence.
-- Hosted CI until the exact-head run is inspected; its final green URL is recorded in the PR after completion.
+
