@@ -4,8 +4,8 @@ This drop contains a dependency-free TypeScript AI, exact joint-fleet inference,
 importance-sampled joint inference, a separate array/set oracle, adversarial
 regressions, live mutation tests, and reproducible game benchmarks.
 
-Verification status is in VERIFY.md. The takeover adds sealed blind references and every-shot benchmark comparisons.
-Final full-count latency verification is underway; no all-green result is claimed yet.
+Verification status is in VERIFY.md. A strict local latency failure and the unmet
+blind-authorship requirement must not be mistaken for an all-green delivery.
 
 ## Run
 
@@ -143,26 +143,13 @@ no secrets, a 30-minute timeout, and actions/* major-version pins. Every deliver
 file is below 30 MB. `SHA256SUMS.txt` covers the payload except itself; its workflow
 entry is relative to this job directory. Check it with `sha256sum -c SHA256SUMS.txt`.
 
-## Independent verification
+## Independence limitation
 
-The production implementation predated the new reference author. `blindOracle.ts`
-was sealed and pushed at f09cc5b and `blindPolicy.ts` at 63abeae before reading
-production, the old oracle, job README, or tests. Exact densities are compared to
-literal labeled-fleet enumeration. Every benchmark shot is independently replayed;
-every Hard exact return is independently counted and every sampled return is
-independently reduced from validated complete public audit worlds. No private
-simulator fleet is passed to these checks. BLIND-REFERENCE.md records the exact
-boundary and subsequent integration changes. The private proposal sampler is not
-replicated by the blind author; the separately retained proposal-weight audits and
-all 25 mutation checks supplement legal-world and conditional-marginal validation.
-
-Readonly audit hull arrays may share the model/state's readonly hulls; consumers
-must respect the declared immutable contract. Production and references do not
-mutate their inputs. The complete three-seed build/static checks now run literally
-three times in the full command.
-
-The prior frozen verification is preserved in evidence/previous-VERIFY.md and the
-original raw-reports.zip. The three >50 ms historical calls remain recorded. A new
-1,000-game exploratory run matched all 44,751 shots and densities but recorded one
-72.618 ms call; it remains a failed timing run in LOOP.md. Final 900,000-game
-verification and exact-head hosted evidence are pending.
+The implementations use different algorithms/data structures and share no
+production helpers. They were nevertheless authored in one assistant session, not
+by two isolated authors that could not see each other's work. The initial oracle
+was written before the production implementation; later test extensions were added
+in the same session. Blind independent authorship is NOT certified. Exact cases and
+shot policies are differentially checked; the full 900,000-game benchmark does not
+run a second complete sampled AI on every shot. Those unmet requirements are listed
+under UNVERIFIED in VERIFY.md, not represented as satisfied by a green CI badge.

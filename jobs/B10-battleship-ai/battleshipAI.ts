@@ -92,8 +92,17 @@ export function createModel(size=10,fleet:readonly number[]=[5,4,3,3,2]):Result<
 export function initialState(model:Model):State {
   return {cells:Array<Cell>(model.size*model.size).fill(0),hitShip:Array<number|null>(model.size*model.size).fill(null),sunk:[]};
 }
-interface Candidates { ship:number; ps:readonly Placement[]; weights:readonly number[] }
+interface Candidates { ship:number; ps:readonly Placement[] }
 interface Prepared { groups:Candidates[]; hits:Mask; blocked:Mask; hasHits:boolean }
+function suffixMasks(groups:readonly Candidates[]):Mask[] {
+  const suffix:Mask[]=Array.from({length:groups.length+1},zero);
+  for(let i=groups.length-1;i>=0;i--) {
+    let {a,b,c,d}=suffix[i+1]!;
+    for(const move of groups[i]!.ps){a|=move.a;b|=move.b;c|=move.c;d|=move.d;}
+    suffix[i]={a,b,c,d};
+  }
+  return suffix;
+}
 function prepare(model:Model,state:State):Result<Prepared> {
   const n=model.size*model.size;
   if(!state||!Array.isArray(state.cells)||state.cells.length!==n||!Array.isArray(state.sunk)||
@@ -130,12 +139,12 @@ function prepare(model:Model,state:State):Result<Prepared> {
     const forbidden=mask(hits.filter(c=>state.hitShip?.[c]!=null&&state.hitShip[c]!==ship));
     const ps=model.placements[ship]!.filter(p=>!overlaps(p,blockedMask)&&!overlaps(p,forbidden)&&contains(p,required)&&p.cells.some(c=>state.cells[c]===0));
     if(!ps.length)return fail('contradiction','An unsunk ship has no legal placement.');
-    // Full support, but encourage coverage of anonymous hits to reduce rejected proposals.
-    const weights=ps.map(p=>Math.pow(32,p.cells.filter(c=>state.cells[c]===2&&state.hitShip?.[c]==null).length));
-    groups.push({ship,ps,weights});
+    groups.push({ship,ps});
   }
   groups.sort((x,y)=>x.ps.length-y.ps.length||x.ship-y.ship);
-  let possible=zero();for(const g of groups)for(const p of g.ps)possible=union(possible,p);
+  let a=0,b=0,c=0,d=0;
+  for(const g of groups)for(const placement of g.ps){a|=placement.a;b|=placement.b;c|=placement.c;d|=placement.d;}
+  const possible:Mask={a,b,c,d};
   const hitMask=mask(hits);
   if(!contains(possible,hitMask))return fail('contradiction','An unresolved hit cannot be covered.');
   return {ok:true,value:{groups,hits:hitMask,blocked:blockedMask,hasHits:hits.length>0}};
@@ -144,10 +153,7 @@ function exact(model:Model,state:State,p:Prepared,maxNodes:number):Result<Densit
   const n=model.size*model.size,counts=Array<number>(n).fill(0),targets=Array<number>(n).fill(0);
   let total=0,nodes=0,exhausted=false;
   const chosen:Placement[]=[];
-  const suffix:Mask[]=Array.from({length:p.groups.length+1},zero);
-  for(let i=p.groups.length-1;i>=0;i--) {
-    let m=suffix[i+1]!;for(const q of p.groups[i]!.ps)m=union(m,q);suffix[i]=m;
-  }
+  const suffix=suffixMasks(p.groups);
   function visit(depth:number,used:Mask):void {
     if(++nodes>maxNodes){exhausted=true;return;}
     if(!contains(union(used,suffix[depth]!),p.hits))return;
@@ -177,45 +183,51 @@ function sampled(model:Model,state:State,p:Prepared,rng:Rng,samples:number,audit
   const n=model.size*model.size, density=Array<number>(n).fill(0),target=Array<number>(n).fill(0);
   const records:AuditSample[]=[];
   let denominator=0,sumSquares=0,accepted=0;
+  // Proposal weights are needed only on the sampled path. Exact inference,
+  // Easy/Medium decisions and feedback validation avoid these allocations.
+  const hasAnonymous=state.cells.some((value,cell)=>value===2&&state.hitShip?.[cell]==null);
+  const groups=p.groups.map(g=>({...g,weights:hasAnonymous?g.ps.map(move=>{
+    let anonymous=0;for(const cell of move.cells)if(state.cells[cell]===2&&state.hitShip?.[cell]==null)anonymous++;
+    return Math.pow(32,anonymous);
+  }):null}));
   const chosen:Placement[]=[];
-  const suffix:Mask[]=Array.from({length:p.groups.length+1},zero);
-  for(let i=p.groups.length-1;i>=0;i--) {
-    let m=suffix[i+1]!;for(const q of p.groups[i]!.ps)m=union(m,q);suffix[i]=m;
-  }
+  const suffix=suffixMasks(p.groups),conditional:Placement[]=[];
   for(let attempt=0;attempt<samples;attempt++) {
     chosen.length=0;
     let used=zero(),weight=1,rejected=false;
     for(let depth=0;depth<p.groups.length;depth++) {
-      const g=p.groups[depth]!, mandatory=subtract(p.hits,union(used,suffix[depth+1]!));
+      const g=groups[depth]!, mandatory=subtract(p.hits,union(used,suffix[depth+1]!));
       let z=0;
-      for(let j=0;j<g.ps.length;j++)if(!overlaps(g.ps[j]!,used)&&contains(g.ps[j]!,mandatory))z+=g.weights[j]!;
+      for(let j=0;j<g.ps.length;j++)if(!overlaps(g.ps[j]!,used)&&contains(g.ps[j]!,mandatory))z+=g.weights?.[j]??1;
       if(!z){rejected=true;break;}
       const u=random(rng);if(u===null)return fail('invalid-rng','RNG must return a finite number in [0,1).');
       let cut=u*z,pick=-1;
       for(let j=0;j<g.ps.length;j++)if(!overlaps(g.ps[j]!,used)&&contains(g.ps[j]!,mandatory)) {
-        cut-=g.weights[j]!;if(cut<0){pick=j;break;}
+        cut-=g.weights?.[j]??1;if(cut<0){pick=j;break;}
       }
       // Integer z/weights guarantee a pick even for the largest valid binary64 RNG value.
       if(pick<0)return fail('invalid-rng','RNG selection overflow.');
-      weight*=z/g.weights[pick]!;
+      weight*=z/(g.weights?.[pick]??1);
       const q=g.ps[pick]!;chosen.push(q);used=union(used,q);
     }
     if(rejected||!contains(used,p.hits))continue;
     accepted++;denominator+=weight;sumSquares+=weight*weight;
     if(audit) {
-      const world:readonly number[][]=model.fleet.map(()=>[]);
-      for(const s of state.sunk)(world as number[][])[s.ship]=[...s.cells];
-      for(let i=0;i<p.groups.length;i++)(world as number[][])[p.groups[i]!.ship]=[...chosen[i]!.cells];
+      const world:(readonly number[])[]=Array(model.fleet.length);
+      // These hulls belong to readonly model/state inputs. Sharing them keeps
+      // complete per-shot audits inexpensive; no input hull is modified.
+      for(const s of state.sunk)world[s.ship]=s.cells;
+      for(let i=0;i<p.groups.length;i++)world[p.groups[i]!.ship]=chosen[i]!.cells;
       records.push({world,weight});
     }
     // Rao-Blackwellization: condition on the other ships, then enumerate this ship's
     // legal conditional placements uniformly. NEVER count overlapping partial fleets.
     for(let i=0;i<p.groups.length;i++) {
       const q=chosen[i]!,other=subtract(used,q),need=subtract(p.hits,other),g=p.groups[i]!;
-      let count=0;
-      for(const move of g.ps)if(!overlaps(move,other)&&contains(move,need))count++;
-      const contribution=weight/count,hit=!empty(need);
-      for(const move of g.ps)if(!overlaps(move,other)&&contains(move,need))
+      conditional.length=0;
+      for(const move of g.ps)if(!overlaps(move,other)&&contains(move,need))conditional.push(move);
+      const contribution=weight/conditional.length,hit=!empty(need);
+      for(const move of conditional)
         for(const c of move.cells){density[c]!+=contribution;if(hit)target[c]!+=contribution;}
     }
   }
@@ -278,7 +290,7 @@ export function chooseShot(model:Model,state:State,difficulty:Difficulty,rng:Rng
   }else {
     // Target legal straight extensions; never merge neighbouring ships into one hull.
     for(const g of prepared.value.groups)for(const p of g.ps) {
-      const hits=p.cells.filter(c=>state.cells[c]===2).length;
+      let hits=0;for(const cell of p.cells)if(state.cells[cell]===2)hits++;
       if(hits)for(const c of p.cells)if(state.cells[c]===0)scores[c]!+=hits*hits;
     }
   }

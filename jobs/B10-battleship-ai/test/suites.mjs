@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {performance} from 'node:perf_hooks';
-import {oracleDensity,oraclePositions,referenceCandidates,oracleSampleDensity,validWorld} from '../dist/test/oracle.js';
+import {oraclePositions,referenceCandidates,oracleSampleDensity,validWorld} from '../dist/test/oracle.js';
+import {oracleDensity,auditDensity} from './blind-adapter.mjs';
 import {policyOracle} from './policy-oracle.mjs';
 import {smallCase,unwrap,applyShot,rng} from './support.mjs';
 const close=(a,b,eps=1e-10)=>assert.ok(Math.abs(a-b)<=eps,`${a} != ${b}; tolerance ${eps}`);
@@ -83,6 +84,7 @@ export function runUnit(AI,seed=1) {
     const d=unwrap(AI.probabilityDensity(m,s,AI.seededRng(seed),{mode:'sampled',samples:64,audit:true}));
     assert.ok(d.accepted>0);assert.equal(d.accepted,d.audit.length);assert.ok(d.audit.every(x=>validWorld(asInput(m,s),x.world)));
     checkDensity(m,s,d);checkWeights(asInput(m,s),d.audit);
+    auditDensity(asInput(m,s),s,d);
     const expected=oracleSampleDensity(asInput(m,s),d.audit);d.probability.forEach((p,c)=>close(p,expected[c]));
   });
   test('one ship conditional sampling equals exact posterior',()=>{
@@ -166,6 +168,7 @@ export function runSampleAudit(AI,seed,count=200) {
     const r=AI.probabilityDensity(m,state,AI.seededRng(seed*65537+i),{mode:'sampled',samples:64,audit:true});
     if(!r.ok){assert.equal(r.error,'sample-exhausted');exhausted++;continue;}
     const d=r.value;checkDensity(m,state,d);checkWeights(input,d.audit);
+    maxDifference=Math.max(maxDifference,auditDensity(input,state,d));
     const expected=oracleSampleDensity(input,d.audit);
     for(let c=0;c<state.cells.length;c++){const error=Math.abs(expected[c]-d.probability[c]);maxDifference=Math.max(maxDifference,error);close(expected[c],d.probability[c],1e-10);}
     checkedWorlds+=d.audit.length;

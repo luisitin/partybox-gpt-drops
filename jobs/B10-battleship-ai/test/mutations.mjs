@@ -27,8 +27,8 @@ export const mutations=[
  ['M19','Normalize exact density by the wrong count','probability: counts.map(x => x / total)','probability: counts.map(x => x / (total + 1))'],
  ['M20','Increment exact per-cell counts twice','counts[c]++;','counts[c] += 2;'],
  ['M21','Forget sampled target probability','hit = !empty(need);','hit = false;'],
- ['M22','Discard importance-sampling correction','weight *= z / g.weights[pick];','weight *= 1;'],
- ['M23','Include overlapping moves in conditional denominator','if (!overlaps(move, other) && contains(move, need))','if (contains(move, need))'],
+ ['M22','Discard importance-sampling correction','weight *= z / (g.weights?.[pick] ?? 1);','weight *= 1;'],
+ ['M23','Allow overlapping conditional moves','if (!overlaps(move, other) && contains(move, need))','if (contains(move, need))'],
  ['M24','Allow already-fired misses into shot choices','status === 0 ? [c] : []','status !== 3 ? [c] : []'],
  ['M25','Accept RNG value one and index past the candidates','x >= 0 && x < 1','x >= 0 && x <= 1']
 ];

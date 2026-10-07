@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {cpus,platform,arch,availableParallelism} from 'node:os';
-import {spawn} from 'node:child_process';
+import {spawn,execFileSync} from 'node:child_process';
 import {performance} from 'node:perf_hooks';
 import * as AI from '../dist/battleshipAI.js';
 import {runUnit,runDifferential,runSampleAudit} from './suites.mjs';
@@ -17,7 +17,7 @@ const report={command,complete:!quick&&!noBench&&!single,node:process.version,pl
 const start=performance.now();mkdirSync('reports',{recursive:true});
 const hash=path=>createHash('sha256').update(readFileSync(path)).digest('hex');
 function save(){report.elapsedSeconds=(performance.now()-start)/1000;writeFileSync('reports/latest.json',JSON.stringify(report,null,2)+'\n');}
-function checks() {
+function checks(seed) {
   const packageJson=JSON.parse(readFileSync('package.json','utf8')),config=JSON.parse(readFileSync('tsconfig.json','utf8'));
   assert.equal(config.compilerOptions.strict,true);assert.equal(config.compilerOptions.noUncheckedIndexedAccess,true);
   assert.equal(config.compilerOptions.exactOptionalPropertyTypes,true);
@@ -25,13 +25,13 @@ function checks() {
   const source=readFileSync('battleshipAI.ts','utf8');
   assert.ok(!/Math\s*\.\s*random\s*\(|Date\s*\.\s*now\s*\(/.test(source));
   assert.ok(!/^\s*import\s/m.test(source),'Production implementation has no imports');
-  report.sourceSHA256=hash('battleshipAI.ts');report.oracleSHA256=hash('test/oracle.ts');
+  report.sourceSHA256=hash('battleshipAI.ts');report.oracleSHA256=hash('blindOracle.ts');report.policyReferenceSHA256=hash('blindPolicy.ts');
   if(existsSync('SHA256SUMS.txt')) {
     const lines=readFileSync('SHA256SUMS.txt','utf8').trim().split('\n');
     for(const line of lines){const [expected,path]=line.split(/  /);assert.equal(hash(path),expected,`SHA256 ${path}`);}
     report.integrityFiles=lines.length;
   }else if(!quick)throw new Error('SHA256SUMS.txt is required for the full suite');
-  report.staticChecks.push({name:'strict configuration, dependency and RNG checks',cases:6,passed:6});
+  report.staticChecks.push({name:'strict configuration, dependency and RNG checks',cases:6,passed:6,seed});
 }
 async function worker(seed,difficulty,games) {
   await new Promise((resolve,reject)=>{
@@ -45,8 +45,9 @@ async function worker(seed,difficulty,games) {
   if(r.repeatedShots||r.errors)report.failures.push(`${difficulty} seed ${seed}: repeated shots or errors`);
 }
 try {
-  checks();
   for(const seed of seeds) {
+    if(seed!==seeds[0])execFileSync(process.execPath,['node_modules/typescript/bin/tsc','-p','tsconfig.json'],{stdio:'inherit'});
+    checks(seed);
     report.units.push(...runUnit(AI,seed));
     report.differential.push(runDifferential(AI,seed,quick?1000:10000));
     report.sampleAudits.push(runSampleAudit(AI,seed,quick?50:200));

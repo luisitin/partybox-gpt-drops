@@ -1,0 +1,6 @@
+# Improvement loop
+
+1. Took over the existing incomplete verification at commit 3d3d286. Its 900,000-game run recorded three >50 ms calls and lacked blind authorship and per-shot full-benchmark differential checks.
+2. Authored and pushed the independent exact oracle at f09cc5b, then independent public policy replay and sample-audit reduction at 63abeae, before inspecting production, old oracle, job README or tests. Analytic 2x2 cases and standalone strict compilation passed.
+3. Integrated blind references and full-benchmark comparison of every policy choice and every Hard exact/sample density. Added bounded reusable independent geometry and grid-based audit reduction after sealing; these optimizations use no production geometry or mask helpers. Changed production candidate preparation and suffix masks to avoid hundreds of temporary mask objects, deferred anonymous sample weights, reused a conditional-placement buffer, and shared readonly audit hulls. RNG draws and the first 1,000-game Hard shot histogram remain identical.
+4. A 1,000-game exploratory run completed all 44,751 per-shot comparisons with maximum sampled discrepancy 1.554e-15, but one measured call was 72.618 ms. That remains a failed timing run. Slow-case capture was added; full correctness, mutation and benchmark verification remain pending.
