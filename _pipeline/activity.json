@@ -1,62 +1,61 @@
 {
-  "updatedAt": "2026-10-07T17:29:04.949775Z",
-  "summary": "Ten deliveries have passed their complete final GitHub checks and their PRs are ready for maintainer review: board odds, Monopoly, Clue, Battleship, Rummikub, Ticket to Ride, icons, colors, sounds and motion. No PR is merged. Draft PR22 now exposes the 181-row trivia milestone; minigame and comedy research also advanced, but none of those three jobs meets its original acceptance gates. Hourly background reports are enabled; the open dashboard refreshes every 30 minutes.",
+  "updatedAt": "2026-10-07T18:26:27.714950Z",
+  "summary": "Ten deliveries have passed their complete final GitHub checks and their PRs await maintainer review: board odds, Monopoly, Clue, Battleship, Rummikub, Ticket to Ride, icons, colors, sounds and motion. No PR is merged. Yahtzee completed the full local six-million-game proof run and is being published for hosted checks. Six parallel workers are resumed for Yahtzee, minigames, comedy and trivia. Hourly background reports are enabled; the open dashboard refreshes every 30 minutes.",
   "workers": [
     {
       "current": "B07",
-      "summary": "Both independently authored Yahtzee tables agree across all 1,072,896 valid entries. All three TypeScript suites passed 150,000 exact mid-game comparisons, 606,528 scoring cases and 75 mutations. Six million paired simulations are underway with a separate check that native decisions match both actual TypeScript implementations.",
-      "next": "Complete every paired simulation, actual TypeScript decision proof and exact-head GitHub checks; preserve the official versus published rules distinction.",
-      "queue": []
-    },
-    {
-      "current": "B10",
-      "summary": "Battleship final head34d91e8 passed CI37653999825 across all three full seed jobs and the strict aggregate.900,000 games,47,091,168 blind decisions,13,459,483 density checks and75 mutations passed; literal maximum6.782618ms, zero calls above50ms. PR6 is ready. Earlier failed local timing records remain preserved.",
-      "next": "Author assigned world-history and sports-games trivia categories, with two independent sources per answer and fun fact.",
+      "summary": "All six million paired local games passed, with 234 million decision comparisons and 78 million scorer transitions. All 150,000 exact mid-game states, 606,528 scoring cases and 75 mutations passed. Of 985,883 observed full strategy components, 364,338 were directly checked against both actual TypeScript implementations; 621,545 exact-record proofs were reused within that same fingerprint-bound run.",
+      "next": "Publish the complete preserved evidence and run all original checks on the exact GitHub commit.",
       "queue": [
-        "B13"
-      ]
-    },
-    {
-      "current": "B11",
-      "summary": "Rummikub final head575139d passed CI37654587097, including150,000 exact small states,624 large certified calls/timers,24 cold starts and75 mutations. Hosted maximum334.467ms; complete final local rerun maximum404.198ms, both under500ms. PR7 is ready after GitHub recovered.",
-      "next": "Support the trivia lead in assigned authoring and independent review.",
-      "queue": [
-        "B13"
-      ]
-    },
-    {
-      "current": "B12",
-      "summary": "Ticket to Ride final head9a5d8c6 passed CI37654164782:60,000 brute-force graphs,6,000 completed USA games,186,053 helper comparisons,75 mutations and13,880,102 conservation checks. PR19 is ready with its final evidence link.",
-      "next": "Complete PR handoff and independently grade comedy batches023\u2013030 as sealed inputs arrive.",
-      "queue": [
-        "B14 independent review"
+        "B13 or research support"
       ]
     },
     {
       "current": "B03",
-      "summary": "The 132-row minigame draft now includes JSON/CSV, original summaries and phone-fit ratings, 142 source URLs, 1,796 short clips, 132 reopened article scopes and 418 independently reviewed guide contexts. No whole row has every mechanic independently corroborated; only 103 timers, 78 scoring details and 31 tie details are known, while all 132 win-rule descriptions remain qualified single-source reports.",
-      "next": "Complete the offline verifier, hostile schema fixtures, strict completeness report, hashes and exact-head CI; then fill the remaining reward, control, timer, score and tie evidence without guessing.",
-      "queue": []
+      "summary": "PR20 contains a 132-game JSON/CSV catalogue, two-sentence descriptions and proposed phone suitability. Current draft reports 103 timers, 78 scoring rules and 31 tie procedures. All 132 article URLs were actually reopened twice; independent guide excerpts are recorded. Unsupported payouts and other mechanics stay unknown.",
+      "next": "Audit and publish the validation evidence, run exact-head structural CI, then continue independently corroborating the remaining mechanics.",
+      "queue": [
+        "Remaining research gaps"
+      ]
     },
     {
       "current": "B14",
-      "summary": "2,800 of 3,000 required comedy candidates are authored and pass draft structural checks. 2,600 have independent second reviews; 1,688 satisfy both 4+ thresholds provisionally. Batches 027-028 remain sealed but ungraded. Final duplicate resolution, adult-content review, named-reference caps and 600-per-genre selection remain.",
-      "next": "Author the final 200 candidates, independently grade batches 027-030, replace rejected child-mascot drafts through fresh reviews, and curate the final 1,200-item pack.",
+      "summary": "2,800 of the required 3,000 comedy candidates are saved. Review027 is written; sealed028 and draft029 remain available. The writer and separate reviewer are resumed for the last200 candidates, changed-row reviews, name caps, duplicate resolution and final600-per-genre selection.",
+      "next": "Finish the complete pool and all fresh grades, correct hard editorial misses with newly reviewed versions, then publish the curated1,200 items and final checks.",
       "queue": [
-        "B13 assigned support"
+        "B13 US history and food"
+      ]
+    },
+    {
+      "current": "B14 independent review",
+      "summary": "Completed independent grades are preserved. The fresh reviewer owns remaining sealed batches028\u2013030 and changed-row reviews, then movies/TV and music trivia. They will later independently challenge all200 geography/science questions.",
+      "next": "Read only grade-free inputs, retain every low grade, and verify each changed item before selection.",
+      "queue": [
+        "B13 movies and music",
+        "B13 geography/science review"
       ]
     },
     {
       "current": "B13",
-      "summary": "Draft PR22 preserves 181 of 1,000 authored trivia rows across four categories. All 363 quoted fields match captured source bodies and draft schema/data checks report zero errors, but 819 rows are missing, fresh adversarial review and second source reopening remain 0/181, and 2,566 similarity flags are unresolved.",
-      "next": "Complete all ten 100-row categories, replace repetitive drafts, resolve every similarity and length-bias finding, reopen both sources per row and conduct fresh cross-author adversarial review before full validation.",
+      "summary": "The trivia project currently has230 authored rows:100 geography,100 science,20 world history,8 music and one each in world geography and nature. Full source quotations, receipts and row hashes are being collected. Fresh adversarial reviews, second source openings and full-set acceptance remain pending.",
+      "next": "Complete all ten100-question categories, then execute the separate review cycle and all structural and editorial gates.",
       "queue": []
     },
     {
-      "current": "B07 independent checker",
-      "summary": "The CPU code is green with26 original research gaps retained. The independent Yahtzee reference is sealed; a native adapter passed1,000 full strategy components,65,520 scorer cases and16 negative parser fixtures. A preserved amendment removes repeated dice-array allocations while retaining every proof check.",
-      "next": "Deliver the amended checker, support all full simulation proofs and keep GitHub and the live site current.",
-      "queue": []
+      "current": "B13 history and sports",
+      "summary": "The author resumes the existing20 world-history rows and their evidence, and owns the full100 history plus100 sports/game questions. They will later review the separate film and music categories.",
+      "next": "Finish both categories with two independent supporting sources per answer and fact, and retain each ambiguity or failed source attempt.",
+      "queue": [
+        "B13 film/music review"
+      ]
+    },
+    {
+      "current": "B13 geography and science",
+      "summary": "Root has100 sourced geography and100 sourced science questions with balanced answer positions and difficulty. Science measurement conflicts are recorded and exact disputed dimensions excluded. Geography is being diversified before its fresh review. Root\u2019s original Yahtzee checker and adapter seals are preserved.",
+      "next": "Improve the geography set, seal its final version for independent review, then independently challenge the lead\u2019s geography/nature categories and keep the dashboard current.",
+      "queue": [
+        "B13 world/nature review"
+      ]
     }
   ]
 }
