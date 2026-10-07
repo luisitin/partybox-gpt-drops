@@ -1,5 +1,9 @@
 # Verification
 
+| Check | Cases | Result | Seed | Exact command |
+|---|---:|---|---|---|
+| Strict TypeScript compilation | 1 build | Passed | deterministic | `npm run build` |
+
 ## UNVERIFIED
 
-Implementation, independent comparison, required random suites, mutation checks, timing, and hosted CI are pending. No verification results are claimed at this milestone.
+Full independent comparisons, required random suites, mutation checks, required timing gate, and hosted CI remain pending. Exploratory timing is not acceptance evidence.

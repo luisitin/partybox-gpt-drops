@@ -1,0 +1,12 @@
+{
+  "name": "b09-clue-exact-solver",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node test.mjs && node mutations.mjs",
+    "test:seed": "npm run build && node test.mjs"
+  },
+  "devDependencies": { "typescript": "5.9.3" }
+}

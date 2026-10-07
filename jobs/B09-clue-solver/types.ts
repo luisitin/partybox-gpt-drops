@@ -6,6 +6,7 @@ export interface Deck {
 }
 export interface Suggestion {
   readonly player: number;
+  /** Ordered suspect, weapon, room. */
   readonly cards: readonly [string, string, string];
   /** First player clockwise who showed a card; null means nobody could show. */
   readonly refutedBy: number | null;
