@@ -20,6 +20,19 @@ Fourth measured draft milestone: 200 fill candidates and 200 most-likely
 candidates, 400/400 JSON Schema and structural checks, maximum 90 characters.
 The exact current validator output is retained in `results/draft.json`.
 
+Fifth measured draft milestone: 250 fill candidates and 250 most-likely
+candidates, 500/500 JSON Schema and structural checks, maximum 90 characters.
+The current output is copied verbatim from `python3 scripts/verify.py --draft`
+into `results/draft.json`; the npm alias runs the same validator.
+
+| Current measured check | Cases | Passed | Failed | Seed | Exact command |
+| --- | ---: | ---: | ---: | --- | --- |
+| JSON Schema / character limit / ID / genre checks | 500 | 500 | 0 | not applicable | `npm run check:draft` |
+| Complete independent batch record and input-hash match | 100 | 100 | 0 | not applicable | `npm run check:draft` |
+
+The independent-record check validates completeness and input identity; it does
+not count low editorial grades as passing the humor rubric.
+
 The strict release gate scans every selected pair using punctuation-insensitive,
 lowercase `difflib.SequenceMatcher` character similarity with `autojunk=False`.
 It compares both full wording and wording without the shared most-likely prefix.

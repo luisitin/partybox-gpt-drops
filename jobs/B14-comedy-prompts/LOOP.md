@@ -15,3 +15,8 @@
    pass structural validation. Added strict final similarity and per-row adult
    content review gates; their required evidence remains unverified until it is
    actually produced. Regional names receive conservative first-pass grades.
+5. Authored 100 screen-personality candidates with specific adult contexts;
+   all 500 draft rows pass structural checks. Kept the entire first independent
+   review record and measured partial agreement instead of treating a second
+   pass as automatic approval. Added a 30,000,000-byte delivered-file guard to
+   manifest generation; integrity is checked after packaging.
