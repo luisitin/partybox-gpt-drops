@@ -2,7 +2,9 @@
 
 _Last refreshed: 2026-10-07 03:46 UTC_
 
-This tracker follows the 20 jobs listed in [PROMPTS.md](PROMPTS.md). It checks the job branches and pull requests in this repository.\n\nLive dashboard: https://partybox-project-tracker.artificiallysloppy.chatgpt.site
+This tracker follows the 20 jobs listed in [PROMPTS.md](PROMPTS.md). It checks the job branches and pull requests in this repository.
+
+Live dashboard: https://partybox-project-tracker.artificiallysloppy.chatgpt.site
 
 ## Stage meanings
 
