@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 REPO = os.environ.get("GITHUB_REPOSITORY", "luisitin/partybox-gpt-drops")
-TOKEN = os.environ["GITHUB_TOKEN"]
+TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ["GH_TOKEN"]
 API = f"https://api.github.com/repos/{REPO}"
 HEADERS = {
     "Accept": "application/vnd.github+json",
@@ -39,8 +39,9 @@ def pr_notes(pull: dict) -> str:
     body = pull.get("body") or ""
     paragraphs = [plain(part, 320) for part in re.split(r"\n\s*\n", body) if plain(part, 320) and not part.strip().startswith("#")]
     description = paragraphs[0] if paragraphs else pull.get("title", "No PR description")
-    match = re.search(r"### Verification status\s*(.*?)(?:\n### |\Z)", body, flags=re.S | re.I)
-    verification = plain(match.group(1), 1200) if match else ""
+    sections = re.findall(r"^#{1,6}\s+([^\n]+)\n(.*?)(?=^#{1,6}\s|\Z)", body, flags=re.S | re.M)
+    relevant = [f"{heading}: {content}" for heading, content in sections if re.search(r"verif|check|valid|test|not.met|remaining|unverified|limitation|evidence|status", heading, flags=re.I)]
+    verification = plain("\n".join(relevant) or body, 1600)
     note = f"PR says: {description}"
     if verification:
         note += f" Verification note: {verification}"
@@ -54,6 +55,15 @@ if not jobs:
 
 branches = get_json(f"{API}/branches?per_page=100")
 pulls = get_json(f"{API}/pulls?state=all&per_page=100")
+try:
+    workflow_runs = get_json(f"{API}/actions/runs?per_page=100")["workflow_runs"]
+    checks_available = True
+except Exception:
+    workflow_runs = []
+    checks_available = False
+activity_path = Path("_pipeline/activity.json")
+activity = json.loads(activity_path.read_text()) if activity_path.exists() else {}
+current_work = {worker["current"]: worker for worker in activity.get("workers", [])}
 branch_by_name = {item["name"]: item for item in branches}
 main_sha = branch_by_name["main"]["commit"]["sha"]
 latest_by_head = {}
@@ -120,6 +130,23 @@ for job_id, title in jobs:
 
     if pull:
         work += " " + pr_notes(pull)
+    worker = current_work.get(job_id)
+    if worker:
+        work = f"**Active work:** {worker['summary']} **Next step:** {worker['next']} " + work
+    matching_runs = [run for run in workflow_runs if run.get("head_sha") == head_sha and f"/{job_id}.yml" in run.get("path", "")]
+    matching_runs.sort(key=lambda run: (run.get("run_number", 0), run.get("run_attempt", 0)), reverse=True)
+    latest_run = matching_runs[0] if matching_runs else None
+    if latest_run:
+        result = latest_run.get("conclusion") if latest_run["status"] == "completed" else latest_run["status"]
+        checks = f"Exact latest commit `{head_sha[:7]}`: **{result}**, [full GitHub check]({latest_run['html_url']})."
+    elif not checks_available:
+        checks = "GitHub check results could not be loaded."
+    elif head_sha:
+        checks = f"No exact-commit check found in the latest 100 runs for `{head_sha[:7]}`."
+    else:
+        checks = "No project commit to check yet."
+    if pull and pull.get("draft"):
+        checks += " Draft review; original acceptance requirements still need review."
 
     commits = compare.get("commits", [])
     if pull and pull.get("merged_at"):
@@ -148,7 +175,7 @@ for job_id, title in jobs:
         f"https://github.com/{REPO}/tree/{branch_name}" if branch_name else
         f"https://github.com/{REPO}/blob/main/PROMPTS.md"
     )
-    groups[stage].append((job_id, title, stage, work, evidence, link))
+    groups[stage].append((job_id, title, stage, work, checks.replace("|", "\\|"), evidence, link))
 
 now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 lines = [
@@ -156,7 +183,7 @@ lines = [
     "",
     f"_Last refreshed: {now}_",
     "",
-    "This tracker covers the 20 jobs in [PROMPTS.md](PROMPTS.md). It reads branch commits, changed files, and pull-request notes from GitHub.",
+    "This tracker covers the 20 jobs in [PROMPTS.md](PROMPTS.md). It reads branch commits, changed files, pull-request notes and checks for the exact latest commit from GitHub.",
     "",
     "Live dashboard: https://partybox-project-tracker.artificiallysloppy.chatgpt.site",
     "",
@@ -172,12 +199,18 @@ lines = [
     f"**Current count:** {len(groups['Pre-pipeline'])} pre-pipeline, {len(groups['Pipeline'])} pipeline, {len(groups['Review'])} in review, {len(groups['Completed'])} completed.",
     "",
 ]
+if activity.get("workers"):
+    lines.extend(["## Current work and queue", "", f"_Work notes recorded: {activity['updatedAt']}; checks below are freshly queried._", "", activity.get("summary", ""), "", "| Working on | Current detail | Next step | Queued after this |", "|---|---|---|---|"])
+    for worker in activity["workers"]:
+        values = [worker["current"], worker["summary"], worker["next"], ", ".join(worker["queue"]) or "Delivery review"]
+        lines.append("| " + " | ".join(value.replace("|", "\\|") for value in values) + " |")
+    lines.append("")
 for stage, items in groups.items():
     lines.extend([f"## {stage} ({len(items)})", ""])
     if items:
-        lines.extend(["| Job | What seems to be worked on | Latest evidence |", "|---|---|---|"])
-        for job_id, title, status, work, evidence, link in items:
-            lines.append(f"| [{job_id} {title}]({link}) | {work} | {evidence} |")
+        lines.extend(["| Job | What seems to be worked on | Checks / open items | Latest evidence |", "|---|---|---|---|"])
+        for job_id, title, status, work, checks, evidence, link in items:
+            lines.append(f"| [{job_id} {title}]({link}) | {work} | {checks} | {evidence} |")
     else:
         lines.append("_None._")
     lines.append("")
