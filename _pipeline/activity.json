@@ -1,45 +1,44 @@
 {
-  "updatedAt": "2026-10-07T15:42:33.932882Z",
-  "summary": "Seven deliveries now have final successful GitHub checks: B02 board odds, B08 Monopoly, B09 Clue, B15 icons, B16 colors, B17 sounds and B18 motion. They await maintainer review; no PR has been merged. Hourly background reports are enabled and the open dashboard refreshes every 30 minutes.",
+  "updatedAt": "2026-10-07T15:52:41.076744Z",
+  "summary": "Seven deliveries have passed their complete GitHub checks: board odds, Monopoly, Clue, icons, colors, sounds and motion. They await maintainer review; no PR has been merged. The CPU code and modes draft also passed structural checks, with research gaps retained. Hourly background reports are active and the open dashboard refreshes every 30 minutes.",
   "workers": [
     {
       "current": "B07",
-      "summary": "Monopoly is finished and green. The separate Ticket to Ride checker is sealed and delivered. Work has begun on the previously empty exact Yahtzee solver.",
-      "next": "Define the exact official-rule state model and compute the full optimal-value table without hardcoding its answer.",
+      "summary": "The previously empty Yahtzee solver is now being built. Official Joker rules and the published target use different rule conventions; both are being solved and labelled.",
+      "next": "Compute the full value tables and compare a separately written checker without hardcoding the target.",
       "queue": []
     },
     {
       "current": "B10",
-      "summary": "Battleship allocation and shot-choice work has been improved and pushed. All correctness and mutation checks pass; the latest full GitHub benchmark is running.",
-      "next": "Observe all 900,000 games and literal speed limits at the final source commit.",
+      "summary": "Battleship correctness and mutation checks pass. Full benchmarks are running with timing failures retained; Rummikub integration has also begun with a sealed independent checker.",
+      "next": "Finish all 900,000 Battleship games at the final source commit, and compare both Rummikub implementations.",
       "queue": [
         "B11"
       ]
     },
     {
       "current": "B12",
-      "summary": "The player color palette and exact swatches are finished and green. Ticket to Ride rules and implementation are now being built.",
-      "next": "Finish route legality, tickets and longest trails, then run the original small and full-game counts.",
+      "summary": "Ticket to Ride production and the separately written checker are sealed. Large differential checks exposed and fixed a sparse-array defect with the original seal retained.",
+      "next": "Finish the route and ticket source audit, full-game tests, longest-trail benchmarks and mutation checks.",
       "queue": []
     },
     {
-      "current": "B11",
-      "summary": "Icons are finished and green. The optimized name filter passes GitHub timing but has recorded local failures. A separate Rummikub checker is now being written from official rules.",
-      "next": "Seal the independent joker, opening, rearrangement and maximum-play checker before comparing with production.",
+      "current": "B14 second review",
+      "summary": "The separate Rummikub checker is sealed and delivered. This reviewer is now helping independently grade the comedy candidates.",
+      "next": "Read each grade-free prompt, score it with a specific reason and preserve rejected candidates.",
       "queue": []
     },
     {
-      "current": "B20",
-      "summary": "The modes project has a published draft PR with 28 roster records. Rule details, Buddy restrictions and phone/TV requirements are being researched.",
-      "next": "Finish the source audits and preserve conflicts before continuing board and minigame research.",
+      "current": "B04",
+      "summary": "The modes draft passed 19 suites and source audits: 28 modes, 85 rules and 196 proposed screen phases. Single-source claims, conflicts and 84 missing coverage slots remain explicit. Board research is now underway.",
+      "next": "Audit all seven boards against independent sources, then continue the minigame research.",
       "queue": [
-        "B04",
         "B03"
       ]
     },
     {
       "current": "B14",
-      "summary": "1,000 of 3,000 original comedy candidates are authored. A separate second review covers 400; 284 satisfy both grade thresholds so far.",
+      "summary": "1,200 of 3,000 comedy candidates are authored. Four hundred have a separate second review; 284 satisfy both grade thresholds so far. Another independent reviewer is clearing the next batches.",
       "next": "Continue the full candidate pool and independent review before choosing the final 1,200.",
       "queue": [
         "B13"
@@ -48,7 +47,7 @@
     {
       "current": "B06",
       "summary": "The CPU code, two implementations, full tests and all final artifacts passed on GitHub. Its draft retains 26 gaps in evidence about actual Nintendo decisions.",
-      "next": "Pursue original-game evidence and continue the independent comedy review and live project updates.",
+      "next": "Write and seal the independent Yahtzee checker, maintain live reports, and pursue the CPU evidence gaps.",
       "queue": [
         "B07 independent checker"
       ]
