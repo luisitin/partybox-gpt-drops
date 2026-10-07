@@ -62,3 +62,15 @@ to `tests/brute.mjs` (only its export and provenance header added). This checks
 all subsets up to 2^12, retaining the Euler criterion and valid weight pruning.
 The core independently authored trail algorithms remain unchanged. Current immutable-input goldens and full-game harness were written
 after exchange and are identified as integration tests, not blind authorship.
+
+## Final purity improvement
+
+After the full integrated suite passed, a real JavaScript replay mutated the
+primary's exported readonly constants and altered later scores for identical
+inputs. `reports/exported-constant-pre-repair.json` preserves that failure.
+The final primary wraps those two primitive-value constants in Object.freeze.
+Scoring/trail/legality algorithms and values remain unchanged. Four runtime
+mutation-rejection assertions per seed and another complete suite establish
+the final source. The historical79982cb... primary is still preserved as
+reports/oracle-archive/primary-probe.ts; its independent helper probe is
+historical evidence, while final graph/game reports identify the current hash.

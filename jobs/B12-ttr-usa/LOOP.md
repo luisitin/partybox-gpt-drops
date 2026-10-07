@@ -25,3 +25,19 @@ The first full-game harness was slow because it repeatedly searched the
 route array inside parallel checks. Route-ID and endpoint-pair caches in the
 harness reduced overhead without changing random policy, counts or either
 algorithm. The abandoned performance run is not counted as a completed suite.
+
+## Completed full-suite improvement
+
+The coherent `npm test` command passed all60,000 exhaustive graph checks,
+6,000 completed games,375 standard schema cases and75 mutation kills. Its
+pre-loop source fingerprints and game digests are preserved separately.
+A real JavaScript replay then showed exported readonly scoring/card constants
+could be mutated, changing later scores for the same inputs. The constants are
+now frozen, and four explicit mutation-rejection assertions are added per seed.
+
+The slowest suite was full games. A single tally over physical cards replaces
+repeated deck filtering; every one of the same nine conservation assertions
+remains. Deep freezing caches only objects already recursively frozen by the
+harness, without assuming externally frozen objects are deep-frozen. Full
+counts, checks and game replay digests must match the preserved pre-loop run.
+The whole full suite is rerun after these changes; no test threshold is relaxed.

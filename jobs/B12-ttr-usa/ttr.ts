@@ -1,5 +1,5 @@
 /** Independently authored primary B12 implementation. No external state or I/O. */
-export const CARDS=['pink','white','blue','yellow','orange','black','red','green','locomotive'] as const;
+export const CARDS=Object.freeze(['pink','white','blue','yellow','orange','black','red','green','locomotive'] as const);
 export type Card=typeof CARDS[number];
 export interface Route {readonly id:string;readonly a:string;readonly b:string;readonly length:number;readonly color:Exclude<Card,'locomotive'>|'gray';readonly parallelGroup?:string}
 export interface Ticket {readonly id:string;readonly a:string;readonly b:string;readonly points:number}
@@ -7,7 +7,7 @@ export interface Player {readonly id:string;readonly cards:Readonly<Record<Card,
 export interface Game {readonly playerCount:number;readonly players:readonly Player[];readonly claims:Readonly<Record<string,string>>}
 export interface Claim {readonly routeId:string;readonly playerId:string;readonly cards:readonly Card[]}
 export interface Score {readonly playerId:string;readonly routePoints:number;readonly ticketPoints:number;readonly longestLength:number;readonly longestBonus:number;readonly total:number;readonly completedTicketIds:readonly string[]}
-export const ROUTE_POINTS:Readonly<Record<number,number>>={1:1,2:2,3:4,4:7,5:10,6:15};
+export const ROUTE_POINTS:Readonly<Record<number,number>>=Object.freeze({1:1,2:2,3:4,4:7,5:10,6:15});
 const validName=(v:unknown):v is string=>typeof v==='string'&&v.length>0;
 const whole=(v:number):boolean=>Number.isFinite(v)&&Number.isSafeInteger(v)&&v>=0;
 const parallel=(r:Route):string=>JSON.stringify([r.a,r.b].sort());
