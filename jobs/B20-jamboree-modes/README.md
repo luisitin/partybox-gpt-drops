@@ -10,6 +10,8 @@ Both reopening passes retrieved all 22 retained URLs and recovered all 223 regis
 
 ## Verification
 
-The substantive milestone is awaiting closed-schema, graph/reference, negative-fixture and integrity verification; no completed test or CI result is claimed until VERIFY.md records it. The original full-source standard remains unmet for the listed single-source/conflicting rules and field gaps. Keep PR16 draft.
+The completed local structural run passes 18/18 suites and 2,761 cases; the final manifest adds a nineteenth suite and 90 hashes (2,851 cases). All 12 deliberately invalid fixtures are rejected. `--strict` completes and returns 1 because the original research standard remains unmet. CI checks this explicit outcome as well as data integrity; a green run does not certify the unresolved research or execute the prototype gameplay. The original full-source standard remains unmet for the listed single-source/conflicting rules and field gaps. Keep PR16 draft.
+
+Rerun from this folder with `python3 -m pip install -r requirements.txt`, `python3 verify.py --structural --checksums`, `python3 verify.py --strict` (expected exit 1), and `sha256sum -c SHA256SUMS.txt`. Actual output is in `validator-output.txt`.
 
 Repository `luisitin/partybox-gpt-drops`; branch `job/B20-jamboree-modes`; files confined to this job and its B20 verification workflow. All files remain below 30,000,000 bytes.

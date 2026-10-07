@@ -6,4 +6,4 @@
 4. Add 85 rules, including all ten Buddy powers, explicit confidence, source quotations and unresolved numeric/exception qualifiers. Preserve contradictory ranges, partial roster counts and edition scope.
 5. Reopen every retained source in a second pass; all 223 quotation texts recovered twice. Audit each mode/rule and every proposed phase, 309 rows per pass.
 6. Provide 28 original phone/TV prototypes with 196 phase records. Review timeout arithmetic and correct play caps; add task idempotence, movement normalization and single-activation limits.
-7. Next delivery step is the complete closed-schema, graph/reference, rejection-fixture and manifest run. Actual results replace provisional status in VERIFY.md before final head observation.
+7. Closed schemas validate all 50 retained JSON documents. The structural run passes 18 suites and 2,761 cases, including 12 deliberate rejection fixtures; strict completes with the documented unmet research verdict. Final manifest checks add 90 hashes. Publish the checked head and observe its exact CI result. Actual outputs and every retained row are logged in VERIFY.md.
