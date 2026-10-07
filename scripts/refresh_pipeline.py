@@ -37,7 +37,7 @@ def plain(text: str, limit: int = 360) -> str:
 
 def pr_notes(pull: dict) -> str:
     body = pull.get("body") or ""
-    paragraphs = [plain(part, 320) for part in re.split(r"\n\s*\n", body) if plain(part, 320)]
+    paragraphs = [plain(part, 320) for part in re.split(r"\n\s*\n", body) if plain(part, 320) and not part.strip().startswith("#")]
     description = paragraphs[0] if paragraphs else pull.get("title", "No PR description")
     match = re.search(r"### Verification status\s*(.*?)(?:\n### |\Z)", body, flags=re.S | re.I)
     verification = plain(match.group(1), 360) if match else ""
@@ -106,6 +106,8 @@ for job_id, title in jobs:
             work += f", and {len(names) - 5} more"
     elif branch:
         work = "Branch is reserved, but has no commits beyond main."
+    elif pull:
+        work = "Pull request exists, but its branch is no longer available."
     else:
         work = "No job branch or pull request found."
 
