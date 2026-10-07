@@ -1,10 +1,10 @@
 # Exact resume step
 
-B02's malformed-next fix and full local verification are complete; publication and fresh hosted CI are blocked. See BLOCKED.md and evidence/cloud-full-suite.json. B01 is separately blocked by research access and twelve unresolved research gates.
+B02 code and full local verification are complete and the checkpoint is now pushed. main records B02 BLOCKED because the official GitHub API is denied.
 
-1. Read remote main's CLAIMS.md and the remote B02 head using existing HTTPS authentication. The B02 claim/status commits are local-only; recheck eligibility and reconcile this chat's pending claim commits before pushing main. Never overwrite another fresh claim or force-push. Keep the user's explicit claim-order protocol.
-2. Once delivery works and the claim is valid, push the preserved B02 checkpoint to job/B02-board-odds, refresh the claim line on main, and use the existing PR #4 with the requested title.
-3. Observe the complete B02 workflow success for the exact new full branch SHA; link that run in PR #4. The older green run is not proof for this fix.
-4. Run KEEP GOING only after every required delivery/check gate passes. The substantive improvement in this checkpoint is malformed-adjacency validation and an explicit shortest-hop fixture. Run npm test from this job directory (locked TypeScript 5.8.3, Node >=22), keeping seeds 1, 2, 3 and full counts. Then continue the lowest eligible job on main, ordinarily B03 if still unclaimed.
+1. Fetch and verify the current job/B02-board-odds full SHA and observe the B02 GitHub Actions run for that exact head. Keep the complete npm test counts/seeds; no earlier green run substitutes.
+2. After environment networking changes, retry gh api repos/luisitin/partybox-gpt-drops/pulls/4 using existing injected authentication. Link the current exact-head green run in the existing PR description (required title: B02 Board movement odds engine). Do not ask for another token merely because the API host is denied.
+3. Once all delivery gates pass, run KEEP GOING. The substantive repair is malformed-adjacency validation plus the shortest-hop fixture. Full local results and hashes are in evidence/cloud-*. Preserve the unchanged sealed oracle.
+4. Continue the user's lowest-eligible-job claim protocol; later research jobs may be blocked by the same source-host allowlist. Never force-push or overwrite another fresh claim.
 
-No main merge is requested. Preserve this checkpoint, assumptions, sealed blind-reference artifacts and complete ZIP fallback.
+No merge into main is requested. Earlier source-access and push error records are history, not current unresolved push failures.
