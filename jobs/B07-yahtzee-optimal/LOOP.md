@@ -13,3 +13,23 @@ seed1mutations25passed. Initial1M own official games passed0.3522SE.
 Weakest remaining part: accelerated simulation must genuinely diff independent
 decisions/scoring and match actual deployed TS for every visited component;
 building those full paired gates before claiming simulation completeness.
+
+2026-10-07 complete local run: all seeds and six million paired games passed,
+with 234 million strategy and 78 million scorer comparisons. Bound every visited
+native vector to both actual TypeScript bodies; reuse requires identical full
+record bytes and source/compiler fingerprints during this fresh invocation.
+Worst simulation deviation was 1.754 SE. Preserved this raw log and complete
+receipts before the final integration rerun. Weakest remaining part was transport
+reporting and broader model invariants; added explicit fresh-cache negative
+checks and the full 536,448-state action-superset invariant, while preserving
+all sealed sources and every original workload count. Final current-source local
+run and exact-head hosted verification follow those concrete changes.
+
+2026-10-07 final current-code local rerun: npm ci passed and full npm test exited
+0 after 23m20.454s on actual Node 24.19.0. All original aggregate counts, all six
+four-standard-error gates, all fresh-cache negative fixtures and the full
+per-seed action-superset invariant passed. Verified every recorded source hash
+still matched at exit. Preserved full raw output, receipt and the earlier full
+run separately. Publication-only document changes are recorded with hashes;
+next gate is the unchanged full Node 22.16.0 Ubuntu workflow for this exact
+published commit. Continue B19 production timing work while hosted proof runs.

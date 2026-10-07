@@ -97,6 +97,13 @@ export function completeTableComparison(api,reference) {
     assert.equal(api.expectedValue(card),data[0]);assert.equal(reference.expectedValue(card),other[0]);
     result.modes.push({mode,statesCompared:count,maximumDifference,worstIndex,primaryStartingValue:data[0],independentStartingValue:other[0]});
   }
+  const official=loadBinary('tables/official.bin'),published=loadBinary('tables/published.bin');
+  let monotonicPairs=0,minimumGap=Infinity,maximumGap=-Infinity,worstIndex=-1;
+  for(let index=0;index<official.length;index++)if(Number.isFinite(official[index])){
+    const gap=published[index]-official[index];assert.ok(gap>=-1e-10,`Published action superset must not reduce EV ${index}: ${gap}`);
+    minimumGap=Math.min(minimumGap,gap);if(gap>maximumGap){maximumGap=gap;worstIndex=index;}monotonicPairs++;
+  }
+  assert.equal(monotonicPairs,536448);result.actionSupersetInvariant={passed:true,monotonicPairs,minimumGap,maximumGap,worstIndex,tolerance:1e-10};
   return result;
 }
 

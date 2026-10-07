@@ -1,13 +1,14 @@
 # Exact resume step
 
-Finish root's post-seal native reference adapter and sealedTS bridge integration.
-Pair primary native decisions/scoring against independent optimum on every roll
-in6M full games across both modes and seeds1/2/3. Compare every visited component's
-252-hand native strategies/values against actual compiled primary and sealed
-reference TS bodies; own simulation alone is supplemental.
+The complete final local npm test passed all original counts and new verifier
+invariants in 23m20.454s; receipts and raw stdout are committed. Watch PR21's
+workflow for the exact final published SHA, not an older green commit. If it
+passes, link the actual run and SHA in the PR body and mark the PR ready for
+maintainer review. Never merge or push main. Preserve any hosted failure before
+repairing it and rerun every original workload unchanged.
 
-Complete run.mjs and30-minute readonly workflow .github/workflows/B07.yml.
-Run fresh npm ci && npm test, retaining all50k/7776×13/25mutant counts perseed,
-both full generator regenerations and paired simulation gates. Update actual
-reports/docs/manifest, push exact branch, open PR exact title, observe final-head
-full CI green. Original seals remain unchanged; snapshot and AMENDMENT remain.
+The official/published rule conflict and IEEE754 comparison boundary remain
+explicit. Neither a contradictory literal pass nor rational/bitwise equality
+is claimed. While GitHub's full hosted proof runs, the coordinator assigned
+B19's legitimate production timing optimization in its separate exact checkout;
+read B19's original instructions and retain its strict failed receipts first.
