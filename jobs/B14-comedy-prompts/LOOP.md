@@ -27,3 +27,6 @@
 7. Authored 100 music-related candidates and preserved weak-frame first-pass
    failures. All 700 current rows pass schema, format, and character limits.
    The grade-free musician batch is sealed for independent review.
+8. Authored 100 television-related candidates. Shortened two 91-character rows
+   before sealing; all 800 current rows pass structural checks. The independent
+   review queue contains sealed grade-free inputs for batches 002-008.
