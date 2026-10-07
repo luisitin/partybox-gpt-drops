@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {readFile,writeFile,mkdir,readdir} from 'node:fs/promises';
+import {readFile,writeFile,mkdir,readdir,rm} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {probe,calibration,fftCheck,compareArrays,compareMeters,independentMaster,independentMasterDetail,parsePng,rng} from './check.mjs';
@@ -7,15 +7,16 @@ import {referenceRaw,referenceMeter,referenceEncode,referenceDecode,referenceFad
 import * as metering from '../dist/meter.js';import * as synthesis from '../dist/sfx.js';import * as wave from '../dist/wav.js';import * as spectrum from '../dist/spectrogram.js';
 import {mutations} from './mutations.mjs';
 const p={...metering,...synthesis,...wave,...spectrum};
-await mkdir('reports-run',{recursive:true});
+await mkdir('reports-run',{recursive:true});await rm('reports-run/summary.json',{force:true});
 const hash=b=>createHash('sha256').update(b).digest('hex');
 // stderr contains ebur128's summary. spawnSync supplies both streams without noisy output.
 import {spawnSync} from 'node:child_process';
 function external(path){const run=spawnSync('ffmpeg',['-hide_banner','-nostats','-i',path,'-af','ebur128=peak=true','-f','null','-'],{encoding:'utf8'});assert.equal(run.status,0,`ffmpeg ${run.stderr}`);const integrated=[...run.stderr.matchAll(/I:\s+(-?[\d.]+) LUFS/g)].at(-1),peak=[...run.stderr.matchAll(/Peak:\s+(-?[\d.]+) dBFS/g)].at(-1);assert.ok(integrated&&peak,'ffmpeg summary');return{lufs:Number(integrated[1]),truePeakDb:Number(peak[1]),summary:run.stderr.slice(run.stderr.lastIndexOf('Summary:'))};}
 const manifest=JSON.parse(await readFile('manifest.json','utf8'));
+async function deliverablePaths(directory=''){const paths=[];for(const entry of await readdir(directory||'.',{withFileTypes:true})){const path=directory?`${directory}/${entry.name}`:entry.name;if(['node_modules','dist','reports-run','.mutations'].includes(entry.name))continue;if(entry.isDirectory())paths.push(...await deliverablePaths(path));else if(entry.isFile()&&path!=='SHA256SUMS.txt')paths.push(path);}return paths.sort();}
 for(const seed of [1,2,3]){
  assert.equal(manifest.sounds.length,40);assert.equal((await readdir('audio')).filter(x=>x.endsWith('.wav')).length,40);assert.equal((await readdir('spectrograms')).filter(x=>x.endsWith('.png')).length,40);assert.equal(new Set(p.SOUNDS.map(s=>s.id)).size,40);
- const checksumLines=(await readFile('SHA256SUMS.txt','utf8')).trim().split('\n');for(const line of checksumLines){const match=/^([a-f0-9]{64})  (.+)$/.exec(line);assert.ok(match,'checksum line');assert.equal(hash(await readFile(match[2])),match[1],`checksum ${match[2]}`);}
+ const checksumLines=(await readFile('SHA256SUMS.txt','utf8')).trim().split('\n');const listedPaths=[];for(const line of checksumLines){const match=/^([a-f0-9]{64})  (.+)$/.exec(line);assert.ok(match,'checksum line');const bytes=await readFile(match[2]);assert.ok(bytes.length<=30000000,'file size cap');assert.equal(hash(bytes),match[1],`checksum ${match[2]}`);listedPaths.push(match[2]);}assert.deepEqual(listedPaths.sort(),await deliverablePaths(),'complete checksum coverage');
  console.log(`Seed ${seed}: independent DSP, delivered media, standards calibration, external meter`);
  probe(p,seed);fftCheck(p,seed);
  const rows=[],audioHashes=new Set(),pngHashes=new Set();
@@ -55,5 +56,6 @@ for(const seed of [1,2,3]){
  console.log(`Seed ${seed} passed: all 40 sounds; EBU rebuilt subset 10/10; external40/40.`);
 }
 const mutationResults=await mutations();await writeFile('reports-run/mutations.json',JSON.stringify({command:'npm test',mutations:mutationResults,compiled:25,killed:25,seeds:[1,2,3],seededKills:75,passed:true},null,2)+'\n');
-await writeFile('reports-run/summary.json',JSON.stringify({command:'npm test',seeds:[1,2,3],sounds:40,audioCases:120,ebuCases:30,mutationSources:25,mutationSeedCases:75,strict:true,runtimeDependencies:0,passed:true},null,2)+'\n');
+const sourceSha256={};for(const file of ['meter.ts','wav.ts','sfx.ts','spectrogram.ts','reference.ts','reference.snapshot.ts.txt','tests/run.mjs','tests/check.mjs','tests/mutations.mjs','tests/mutant-probe.mjs','tools/generate.mjs','tools/record.mjs','tsconfig.json','package.json','package-lock.json'])sourceSha256[file]=hash(await readFile(file));
+await writeFile('reports-run/summary.json',JSON.stringify({sourceSha256,command:'npm test',seeds:[1,2,3],sounds:40,audioCases:120,ebuCases:30,mutationSources:25,mutationSeedCases:75,strict:true,runtimeDependencies:0,passed:true},null,2)+'\n');
 console.log('PASS: strict compile; 120 audio comparisons; 30 rebuilt EBU cases; 75/75 isolated mutation kills.');

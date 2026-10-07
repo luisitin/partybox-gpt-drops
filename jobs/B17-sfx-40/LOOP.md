@@ -18,3 +18,10 @@ byte comparison against the complete independently reconstructed PCM pipeline
 for all40 effects under all3 seeds. Added SHA256 integrity checks under eachseed
 and repeat canonical-file/manifest checks under eachseed. Acceptance limits and
 calibration tolerances are unchanged.
+
+Improvement 2 completed: the entire independent PCM pipeline now matches every
+WAV byte for all 120 cases, canonical WAV/PNG/manifest checks repeat under all
+three seeds, and all listed deliverable hashes are checked under every seed.
+The full rerun passed again: 120 audio, 30 EBU and 75 mutation checks. Remaining
+improvements are presentation and subjective sound selection; original measured
+acceptance thresholds remain satisfied. Final hosted commit verification pending.
