@@ -1,0 +1,84 @@
+{
+  "grantUtc": "2026-10-08T22:32:02.890081+00:00",
+  "kind": "first-changed-DFA-source-local-original-full-and-required-after-green-KEEP-rerun",
+  "head": "559969f514d8c943a837e4759576c81d27b8a7c0",
+  "rootZeroWorkloadAndWriter": true,
+  "acknowledgments": {
+    "G04": {
+      "staticReviewClosedUtc": "2026-10-08T22:29:18Z",
+      "staticAccepted": true,
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "G08": {
+      "latestFiniteReaderBoundaryUtc": "2026-10-08T22:28:23Z",
+      "exactAckUtcCaptured": false,
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "G09": {
+      "functionalReaderNaturalClosedUtc": "2026-10-08T22:28:57.769471Z",
+      "zeroAuditUtc": "2026-10-08T22:30:55Z",
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "G10": {
+      "actualAckUtc": "2026-10-08T22:29:04Z",
+      "freshReaffirmedBeforeGrant": true,
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "tracker": {
+      "actualAckMinuteUtc": "2026-10-08T22:28Z",
+      "exactAckUtcCaptured": false,
+      "zeroWorkload": true,
+      "zeroWriter": true
+    }
+  },
+  "globalRunnableWorkloads": [],
+  "liveProcesses": [
+    "      1       0       0 S+   tail             0.0   876",
+    "      2       1       0 S+   caas-prefix-tra  0.0   252",
+    "    199       1     199 Ssl  dockerd          0.0 35536",
+    "    248     199     248 Ssl  containerd       0.4 21436",
+    "    464       0       0 Sl+  codex            0.1 46460",
+    " 207671     464  207671 Ss   bash            20.0  1888",
+    " 207674  207671  207671 S    python3         66.6 10468",
+    " 207676  207674  207671 R    ps               400  3952"
+  ],
+  "ignoredZombieEntries": 2421,
+  "STOPorCONTUsed": false,
+  "controllerSha256": "1b82d60bef3957ee5d1fa15c71cf0fada7aa27c780991f788b22df3570ff1175",
+  "argv": [
+    "python3",
+    ".work/B19-dfa-production-acceptance/run-first-full.py"
+  ],
+  "originalFullCommand": [
+    "npm",
+    "test"
+  ],
+  "genuineFullGreenAcceptedBeforeGrantUtc": "2026-10-08T22:31:05.337579+00:00",
+  "genuineGreenRun": 37853546762,
+  "genuineGreenArtifact": 11582468572,
+  "genuineGreenZipSha256": "5183b8e4acd8ba461012ce56573bb47121381623b33cdcfc0f48c7d59ed3efc0",
+  "genuineGreenReceiptSha256": "a110d2b6f388551fe97230211c2ee2561de673129bf5fdf5edd1ed3b85abc14e",
+  "singleRunServesBothFirstLocalAndOriginalAfterGreenRequirement": true,
+  "originalThresholdTimersSeedsWarmupUnchanged": true,
+  "allPriorFailuresRetained": true,
+  "naturalClosedUtc": "2026-10-08T22:32:23.725160+00:00",
+  "exitCode": 1,
+  "sourceGuards": 584,
+  "allSourceGuardsUnchanged": true,
+  "allOwnersDirectlyReleased": true,
+  "ownersDirectlyReleased": [
+    "G04",
+    "G08",
+    "G09/G06",
+    "G10",
+    "tracker",
+    "root"
+  ],
+  "releaseRecordedUtc": "2026-10-08T22:39:55.318361+00:00",
+  "exactFirstReleaseMessageUtcCaptured": false,
+  "releaseScope": "Direct messages were sent after observed natural closure; this later receipt time is not the first message time."
+}

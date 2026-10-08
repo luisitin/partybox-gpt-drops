@@ -15,19 +15,37 @@ from phase gains; only table matching avoids per-call allocation. Strict
 production build and 3 actual controls pass, exact measured JS reproduced.
 Archive: results/dfa-scanner-diagnostic-20261008/, original .work paths retained.
 
-Next exact step: finish current docs/checksum checkpoint, normally push the
-isolated branch, bind its actual head and source in a once-only first full
-controller, then send root READY. Obtain fresh all-owner quiet ACKs and an
-actual delegated grant before first current-source original npm test; let it
-close naturally and release owners directly. Read exact-head full hosted
-checks and independently validate the genuine artifact. Preserve every
-failure and remain draft unless all binding checks plus actual KEEP pass.
+Current exact-head 559969f full hosted run 37853546762 passes all 100 suites,
+75 mutants and 565 delivery hashes. Genuine artifact 11582468572 has
+8,686,127 bytes / SHA256 5183b8e4acd8ba461012ce56573bb47121381623b33cdcfc0f48c7d59ed3efc0;
+2,909 independent assertions pass at 22:31:05.337579 UTC. After that genuine
+green acceptance, the one first local original full run also serves required
+KEEP: START 22:32:03.925505, natural CLOSED 22:32:23.725160 / EXIT 1,
+all 584 guards unchanged. Only literal latency fails, 6/3/5 outliers with
+maxima 0.202218/0.159765/0.087073 ms. Every other full suite and all 75 mutants
+pass. All owners were directly released; KEEP remains open and PR23 draft.
+Archive: results/first-DFA-original-acceptance-20261008/. Do not run an extra
+unchanged full attempt by relabeling this first local and after-green check.
+
+Next exact step: publish the current truthful evidence/docs/checksum checkpoint,
+read its automatic current-head workflow and independently verify any genuine
+artifact, preserving all failure scopes. Then prepare one private raw ASCII
+letter DFA-fold shortcut against current ae8dc388 bytes. G04's static review
+finds it distinct from the rejected classifier scans, but no new candidate has
+been authored or measured at this continuation point. Keep full original length
+guard first, use SIMPLE_ASCII and SCAN availability, honor SCAN.empty, derive
+folding through existing lower(), retain one original SAFE.has(plain) anchor
+on matches, and leave Unicode/fallback unchanged. Require strict/full complete
+semantics, all actual mutation effects and consistent balanced whole-call gains
+before adoption. Obtain root delegation, fresh all-owner quiet ACKs and actual
+grant for any elapsed mixed experiment or changed-source literal full attempt.
+Let native elapsed work close naturally and release every owner directly.
 Never change original runner bff0c17b, fixture ac400db6, corpora/reference,
 459 fixed cases, 43830 comparisons/seed, 48 positives, 100k warmup, original
 10k individual timers, seed or 0.05 ms gate. No unchanged favorable rerun.
 
-After actual green, perform the one required original full KEEP rerun, retain
-its outcome, rank the weakest real issue and pursue only concrete meaningful
+The one required original full KEEP rerun has actually executed and failed.
+Retain its outcome, rank the weakest real issue and pursue concrete meaningful
 improvements. A failed rerun is not a cosmetic stop or permission to hunt a
 pass. Root coordinates shared native timing; no STOP/pause/fake clocks.
 

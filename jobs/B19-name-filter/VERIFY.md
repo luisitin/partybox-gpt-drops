@@ -49,18 +49,64 @@ emitted JS. Initial supplementary lexical-reader failure is preserved with
 original source/actual receipt; complete initial stderr and closure time were
 not captured. Its reader alone changed to the actual TypeScript parser.
 
-### UNVERIFIED: current full acceptance and KEEP
+### Actual current full hosted pass and failed after-green local KEEP
 
-The first original full npm test and exact new-head CI are not yet run for
-this newly adopted source. Private 25-mutant seed-1 controls do not replace
-all 75 original mutants or a literal timing gate. Historical 41442670 hosted
-greens and first/full KEEP failures remain separate and cannot transfer
-acceptance to ae8dc388. PR23 remains draft; no unchanged favorable retry,
-outlier cause, universal timing bound or cosmetic-only stop is claimed.
+Exact head 559969f514d8c943a837e4759576c81d27b8a7c0 passes full hosted
+run [37853546762](https://github.com/luisitin/partybox-gpt-drops/actions/runs/37853546762),
+job 113572188397, completed SUCCESS at 22:27:30 UTC. Every one of the 100
+original suite rows passes, including all 75 executed mutants, 131,490
+original comparisons, all 32,000 locked corpus rows and 565 delivery hashes.
+The genuine artifact 11582468572 is 8,686,127 bytes, SHA256
+5183b8e4acd8ba461012ce56573bb47121381623b33cdcfc0f48c7d59ed3efc0.
+Independent immutable-byte validation passes 2,909 assertions at
+22:31:05.337579 UTC, including every actual current delivery byte and complete
+native-log/fresh-report agreement. The hosted runtime dist file is absent;
+no hosted compiled-byte equality or reconstructed individual times is claimed.
+
+The first local original full check starts after that accepted green. This
+one actual run also fulfills the original after-green KEEP rerun obligation;
+it is not duplicated by applying two labels. Exact command `npm test` from
+jobs/B19-name-filter, via `python3 .work/B19-dfa-production-acceptance/run-first-full.py`
+from repository root. Actual grant 22:32:02.890081 UTC;
+START 22:32:03.925505; natural CLOSED 22:32:23.725160 / EXIT 1.
+All 584 guarded inputs remain unchanged. All 100 suites execute, every
+non-latency row passes, and all 75 original mutants execute and are killed.
+Only the literal per-call gate fails; each raw outlier remains retained.
+
+| Scope | Seed | Cases | Passed | Outliers | Maximum ms | Exact command |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| Hosted full | 1 | 10000 | 10000 | 0 | 0.025608999999803927 | `npm test` |
+| Hosted full | 2 | 10000 | 10000 | 0 | 0.012829000000238011 | `npm test` |
+| Hosted full | 3 | 10000 | 10000 | 0 | 0.012138999999478983 | `npm test` |
+| First local and required KEEP | 1 | 10000 | 9994 | 6 | 0.20221800000035728 | `npm test` |
+| First local and required KEEP | 2 | 10000 | 9997 | 3 | 0.1597650000003341 | `npm test` |
+| First local and required KEEP | 3 | 10000 | 9995 | 5 | 0.0870729999987816 | `npm test` |
+
+All per-test name/case/pass/seed/command ledgers, complete raw stdout/stderr,
+coordinator, source guards and original controller paths are retained in
+results/first-DFA-original-acceptance-20261008/. Full summary SHA256
+259d6e55875396c7c059231a2f48b1d0e6a8050c64b3bec38e89ffbf7d0bf98a;
+natural CLOSED receipt SHA256
+fae5696cb132ccbcdce4d1f73da18191a5d9998203295c5c1f39e3091086e9f9.
+All owners were directly released after observed closure. The release receipt
+time is separately recorded; exact first release-message time was not captured.
+No STOP/pause/fake clock, original test change or unchanged retry occurred.
+Copied archive paths were not executed. The complete local report snapshot
+also contains labeled pre-existing diagnostics not executed by this attempt.
+The supplementary artifact reader's first count-edit failure is retained;
+only that reader changed, using exact numeric-token boundaries. Actual corpus,
+source, artifact bytes and original tests were unchanged.
+
+### UNVERIFIED: complete acceptance and KEEP
+
+The required after-green rerun fails, so PR23 remains draft and KEEP remains
+open despite the genuine current hosted green. Historical 41442670 greens
+and failures remain separate. No outlier cause, startup bound, universal
+timing guarantee, favorable unchanged retry or cosmetic stop is claimed.
 
 ## Historical exact prefix-trie source 41442670, October 8
 
-Current production source SHA256 is
+Historical prefix-trie production source SHA256 is
 `41442670786856c1dfa98a5755bd21273287047750035f419249ab7402e8505d`.
 This is exactly the measured prefix-trie candidate. It retains the external
 suggestion keys and three exact benign spellings. Every original policy byte,

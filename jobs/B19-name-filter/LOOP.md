@@ -267,3 +267,32 @@ actual M15/M19/M25 controls pass 22:24:20.187. Every source, phase, GC, command,
 baseline and failure scope is retained in the original-path evidence archive.
 The first changed-source original full gates and new-head CI are pending;
 KEEP remains open and PR23 draft. No unchanged extra test is run to hunt luck.
+
+## First DFA full green and actual required KEEP failure
+
+At exact 559969f the automatic original full workflow 37853546762 succeeds,
+100 suite rows / 75 actual mutants / 565 delivery hashes, literal outliers
+0/0/0. The complete native log and genuine artifact 11582468572 independently
+agree on every fresh row and every committed delivery byte; 2,909 assertions
+pass at 22:31:05.337579 UTC. Original source ae8dc388 and compiled 330968b3
+remain unchanged. No hosted runtime dist byte equality is claimed.
+
+The first local full run begins after that genuine green, so the one actual
+run also satisfies the original post-green rerun instruction. Actual grant
+22:32:02.890081 UTC; START 22:32:03.925505; natural CLOSED
+22:32:23.725160 / EXIT 1. All 584 guards stay unchanged. Every non-latency
+suite and all 75 mutants pass; the literal gate fails 6/3/5 calls, maxima
+0.202218/0.159765/0.087073 ms. All raw outcomes and original paths remain in
+results/first-DFA-original-acceptance-20261008/. All owners are directly
+released after natural closure, with a separately labeled later receipt time.
+No original timer, threshold, sample, warmup or case is altered; no unchanged
+extra acceptance run occurs. Complete acceptance and KEEP remain open.
+
+Weakest actual part remains literal latency, with unknown cause. A bounded
+independent static review finds the prospective raw-letter fold-table DFA
+shortcut distinct from earlier rejected ASCII classifiers: a proven nonmatch
+could return frozen OK before lower()/SAFE allocation, while matches retain
+the original single exception anchor. No candidate is authored or measured at
+this checkpoint; original guards, actual mutants, full Unicode semantics and
+consistent balanced whole-call benefit are required before any adoption.
+This is substantive unfinished work, not a cosmetic KEEP stop.

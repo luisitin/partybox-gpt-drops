@@ -130,3 +130,21 @@
 - Private 25-mutant seed-1 proof and 214,308 semantic comparisons supplement,
   but never replace, original three-seed full checks and literal 0.05 ms gate.
   All prior failures and verified historical greens remain separate.
+
+## First DFA full pass and failed required after-green rerun
+
+- Genuine exact-head 559 full CI and immutable-artifact validation finish
+  before the first local original full run starts. That single actual local
+  run also serves the binding after-green KEEP rerun. Labels do not authorize
+  a second unchanged attempt; all 6/3/5 literal failures remain binding.
+- All original non-latency suites and 75 executed mutants pass in both scopes.
+  The later failed local gate leaves complete acceptance and KEEP open; the
+  earlier genuine green does not erase that result or establish a cause.
+- The first supplementary artifact reader accidentally changes an expected
+  hash while replacing a count. Its actual failure/source remain preserved.
+  Correct only that reader with numeric-token boundaries; no corpus, product,
+  artifact, original workload or acceptance gate changes.
+- A prospective raw ASCII-letter DFA shortcut is distinct from the archived
+  rejected classifiers. It is private and unwritten at this checkpoint; scoped
+  static acceptance is not behavioral verification or measured benefit.
+  Any allocation reduction is prospective, not a diagnosis of observed outliers.

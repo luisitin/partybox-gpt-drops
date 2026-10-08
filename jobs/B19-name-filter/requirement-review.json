@@ -6,7 +6,7 @@
     {
       "rank": 1,
       "part": "Literal 0.05 ms per-check acceptance",
-      "status": "New measured DFA source awaits first original full literal acceptance; old mandatory 9/11/4 failure stays retained."
+      "status": "Exact 559 hosted full passes with 0/0/0 outliers; the single first-local and required after-green full run fails 6/3/5. Literal acceptance remains incomplete; no cause or unchanged retry."
     },
     {
       "rank": 2,
@@ -16,7 +16,7 @@
     {
       "rank": 3,
       "part": "Real mutant execution",
-      "status": "All 25 original mutants execute and fail seed-1 truth; production M15/M19/M25 raise actual assertion failures. Required full 75 checks pending."
+      "status": "All 75 original mutants execute and are killed in genuine hosted and local full runs. Supplemental seed-1 and three assertion controls remain distinct."
     },
     {
       "rank": 4,
@@ -26,58 +26,14 @@
     {
       "rank": 5,
       "part": "Source-bound delivery and mandatory KEEP",
-      "status": "All historical source-bound failures/greens preserved. New changed-source checkpoint/full checks and actual KEEP remain pending."
+      "status": "Exact 559 full green artifact passes 2,909 assertions; its single genuinely after-green local full rerun fails. KEEP remains open and PR23 draft."
     }
   ],
   "keepCompleted": false,
   "literalAcceptanceCompleted": false,
-  "diagnosticGainsPercent": [
-    35.75963522110504,
-    37.984631587882056,
-    29.657297572282335
-  ],
   "priorFailuresPreserved": true,
   "timingCause": "unknown",
   "strictBuildCompleted": true,
-  "supplementalAssertionControls": {
-    "cases": 3,
-    "passed": 3,
-    "closedUtc": "2026-10-08T21:17:00.409Z"
-  },
-  "firstOriginalAcceptance": {
-    "hosted": {
-      "run": 37846119304,
-      "outliers": [
-        1,
-        0,
-        0
-      ],
-      "passed": false,
-      "artifactStructuralChecks": 1457
-    },
-    "local": {
-      "closedUtc": "2026-10-08T21:33:35.191788+00:00",
-      "outliers": [
-        9,
-        5,
-        13
-      ],
-      "passed": false,
-      "guards": 287,
-      "sourcesUnchanged": true
-    }
-  },
-  "requiredPostGreenKEEP": {
-    "closedUtc": "2026-10-08T21:58:31.844316+00:00",
-    "exitCode": 1,
-    "outliers": [
-      9,
-      11,
-      4
-    ],
-    "guards": 368,
-    "sourcesUnchanged": true
-  },
   "rejectedMappingCandidate": {
     "sha256": "0e9c0bdcbf52ac2b7802f2485151ca33016b502454dca24fa2306f70038de1cb",
     "behaviorCases": 214308,
@@ -104,7 +60,7 @@
     "matchingAllocationFreeOnly": true,
     "startupInPhaseGains": false,
     "originalWarmupUnchanged": true,
-    "fullLiteralAcceptanceRun": false,
+    "fullLiteralAcceptanceRun": true,
     "adoptedExactly": true
   },
   "historicalCurrentHostedGreen": {
@@ -130,5 +86,115 @@
       0,
       0
     ]
+  },
+  "historicalPrefixDiagnosticGainsPercent": [
+    35.75963522110504,
+    37.984631587882056,
+    29.657297572282335
+  ],
+  "diagnosticGainsPercent": [
+    53.300560144283345,
+    46.667905928723705,
+    35.85338583174498
+  ],
+  "historicalPrefixSupplementalAssertionControls": {
+    "cases": 3,
+    "passed": 3,
+    "closedUtc": "2026-10-08T21:17:00.409Z"
+  },
+  "supplementalAssertionControls": {
+    "cases": 3,
+    "passed": 3,
+    "closedUtc": "2026-10-08T22:24:20.187Z"
+  },
+  "historicalPrefixFirstOriginalAcceptance": {
+    "hosted": {
+      "run": 37846119304,
+      "outliers": [
+        1,
+        0,
+        0
+      ],
+      "passed": false,
+      "artifactStructuralChecks": 1457
+    },
+    "local": {
+      "closedUtc": "2026-10-08T21:33:35.191788+00:00",
+      "outliers": [
+        9,
+        5,
+        13
+      ],
+      "passed": false,
+      "guards": 287,
+      "sourcesUnchanged": true
+    }
+  },
+  "historicalPrefixRequiredPostGreenKEEP": {
+    "closedUtc": "2026-10-08T21:58:31.844316+00:00",
+    "exitCode": 1,
+    "outliers": [
+      9,
+      11,
+      4
+    ],
+    "guards": 368,
+    "sourcesUnchanged": true
+  },
+  "currentHostedFull": {
+    "head": "559969f514d8c943a837e4759576c81d27b8a7c0",
+    "run": 37853546762,
+    "job": 113572188397,
+    "completedUtc": "2026-10-08T22:27:30Z",
+    "artifact": 11582468572,
+    "artifactBytes": 8686127,
+    "artifactSha256": "5183b8e4acd8ba461012ce56573bb47121381623b33cdcfc0f48c7d59ed3efc0",
+    "artifactStructuralChecks": 2909,
+    "artifactValidatedUtc": "2026-10-08T22:31:05.337579+00:00",
+    "suiteRows": 100,
+    "deliveredHashes": 565,
+    "outliers": [
+      0,
+      0,
+      0
+    ],
+    "originalMutantsExecutedAndKilled": 75,
+    "passed": true,
+    "artifactCompiledRuntimeAbsent": true
+  },
+  "firstLocalAndRequiredAfterGreenKEEP": {
+    "oneActualRunServesBoth": true,
+    "head": "559969f514d8c943a837e4759576c81d27b8a7c0",
+    "grantUtc": "2026-10-08T22:32:02.890081+00:00",
+    "startedUtc": "2026-10-08T22:32:03.925505+00:00",
+    "closedUtc": "2026-10-08T22:32:23.725160+00:00",
+    "exitCode": 1,
+    "outliers": [
+      6,
+      3,
+      5
+    ],
+    "maxMs": [
+      0.20221800000035728,
+      0.1597650000003341,
+      0.0870729999987816
+    ],
+    "sourceGuards": 584,
+    "sourcesUnchanged": true,
+    "allNonLatencySuitesPassed": true,
+    "originalMutantsExecutedAndKilled": 75,
+    "summarySha256": "259d6e55875396c7c059231a2f48b1d0e6a8050c64b3bec38e89ffbf7d0bf98a",
+    "closedReceiptSha256": "fae5696cb132ccbcdce4d1f73da18191a5d9998203295c5c1f39e3091086e9f9",
+    "allOwnersDirectlyReleased": true,
+    "unchangedRetryRun": false
+  },
+  "prospectiveNextImprovement": {
+    "scope": "raw ASCII letter DFA folding and proven-no-match return before plain allocation",
+    "authored": false,
+    "compiled": false,
+    "behaviorVerified": false,
+    "measured": false,
+    "adopted": false,
+    "boundedStaticReviewFoundDistinctFromRejectedCandidates": true
   }
 }

@@ -1,0 +1,44 @@
+{
+  "kind": "actual-green-hosted-artifact-independent-structural-and-byte-validation",
+  "head": "559969f514d8c943a837e4759576c81d27b8a7c0",
+  "runId": 37853546762,
+  "jobId": 113572188397,
+  "artifactId": 11582468572,
+  "actualZipBytes": 8686127,
+  "actualZipSha256": "5183b8e4acd8ba461012ce56573bb47121381623b33cdcfc0f48c7d59ed3efc0",
+  "validatedAt": "2026-10-08T22:31:05.337579+00:00",
+  "actualFreshSummaryPath": "jobs/B19-name-filter/reports/latest/summary.json",
+  "sourceSha256": "ae8dc388665a4b4241b40b7ce1b86ba98e9eaadde7facefddf8ee47a00858e8a",
+  "freshSuiteRowsExecuted": 100,
+  "freshSuiteRowsPassed": 100,
+  "literalAcceptancePassed": true,
+  "previousFailedLiteralGatesPreserved": true,
+  "KEEPCompleted": false,
+  "actualDeliveredHashesChecked": 565,
+  "originalFullCasesPerSeed": 43830,
+  "recordedBenchmarks": [
+    {
+      "seed": 1,
+      "calls": 10000,
+      "recordedMaximumMs": 0.025608999999803927,
+      "recordedOutliers": 0,
+      "originalSink": 94721
+    },
+    {
+      "seed": 2,
+      "calls": 10000,
+      "recordedMaximumMs": 0.012829000000238011,
+      "recordedOutliers": 0,
+      "originalSink": 93467
+    },
+    {
+      "seed": 3,
+      "calls": 10000,
+      "recordedMaximumMs": 0.012138999999478983,
+      "recordedOutliers": 0,
+      "originalSink": 94479
+    }
+  ],
+  "checksPassed": 2909,
+  "scope": "Actual green artifact bytes and fresh full receipts are independently bound to exact559969f source and compared with the complete native job log. Recorded summaries and zero outliers are validated as recorded; every individual call time is not reconstructed. The earlier hosted 1/0/0 and local 9/5/13 failures remain valid. The historical prior-source mandatory rerun failed 9/11/4 and remains preserved. The first local full check of this changed source has not yet started; it can serve the required after-green rerun when launched after this verified green, and no cause or universal hardware bound is established."
+}
