@@ -1,0 +1,9 @@
+{
+  "observedUtc": "2026-10-08T23:19:15.166363+00:00",
+  "stage": "supplementary reader preparation before file write",
+  "actualExit": 1,
+  "reason": "Plain count token substitution of 9999 also altered the historical floating-point maximum, so the later exact-token assertion failed before any new reader was written.",
+  "productOriginalCorpusAndArtifactsUnchanged": true,
+  "newReaderWritten": false,
+  "correction": "Use numeric token boundaries and replace the exact historical benchmark condition before count substitutions."
+}

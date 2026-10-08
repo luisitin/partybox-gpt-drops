@@ -167,3 +167,7 @@
 - One genuine first local original full run may also fulfill the original
   required after-green rerun only when it actually starts after accepted full
   green evidence. Do not duplicate an unchanged run solely from labels.
+
+## First current ASCII-DFA full failures
+
+Current hosted2/0/0 and first-local12/9/2 are distinct genuine failures; all non-latency checks/all75 mutants pass. The one current first-local attempt has760 unchanged guards and is not after-green KEEP. No unchanged retry or cause claim. Preserve actual failed artifact privately and actual fresh reports publicly without recursive ZIP nesting. Supplementary reader/doc preparation errors affect no product, corpus, reference or original workload. Prospective UTF16 optimization waits for G10 release and retains genuine M22/M23 boundaries.

@@ -61,13 +61,49 @@ natural closure; uncaptured first-message times and later receipt times
 remain accurately labeled. No STOP/pause, fake clock, filter, settling or
 extra phase is used. All historical greens, failures and rejections remain.
 
-### UNVERIFIED: current original full acceptance and KEEP
+### Current original full checks: actual failures retained
 
-Original current-source full `npm test`, all 75 three-seed mutants and
-literal 0.05 ms per-call acceptance have not yet run on 7817/e4b. The prior
-ae8 full hosted greens and failed 6/3/5 required after-green local run remain
-actual historical scopes and cannot transfer acceptance. PR23 stays draft;
-KEEP remains open. No unchanged local retry or cosmetic stop is claimed.
+| Test | Cases | Passed | Seed | Exact command |
+| --- | ---: | ---: | --- | --- |
+| Hosted full suite rows | 100 | 99 | 1,2,3 | `npm test`, job113583058802/run37856872614 |
+| Hosted actual executable mutants | 75 | 75 | 1,2,3 | same original full command |
+| Hosted literal calls | 10000 each | 9998/10000/10000 | 1,2,3 | same original full command |
+| Genuine failed artifact actual-byte assertions | 3786 | 3786 | immutable5a | `python3 .work/B19-failed-hosted-5a/validate.py` from repository root |
+| First local full suite rows | 100 | 97 | 1,2,3 | `python3 .work/B19-ascii-DFA-first-local-preparation/run-first-full.py` from repository root, runs original `npm test` |
+| First local actual executable mutants | 75 | 75 | 1,2,3 | same original full command |
+| First local literal calls | 10000 each | 9988/9991/9998 | 1,2,3 | same original full command |
+| First local source/runtime/controller guards | 760 | 760 | before/after | same first-local controller |
+
+Hosted2/0/0 fails, maxima0.053330/0.013736/0.016556ms. Genuine artifact
+11584531927,10319256 bytes,SHA256
+c640c891e31f215b86968a094dfddcc3c9be2c87fdf570c440a6ff693587b760.
+All740 immutable delivered files, original corpora/all75 actual mutants and
+all100 fresh rows equal the complete native log. Independent reader natural
+CLOSED PASS23:19:19.410668UTC. This proves failure, not latency acceptance.
+
+Actual grant23:24:15.063016; original first-local START23:24:16.514021;
+natural CLOSED23:24:33.285692UTC/EXIT1. All760 guards unchanged. Literal
+12/9/2 fails, maxima0.168686/0.165839/0.076408ms. Every non-latency row/
+all75 mutants pass. Full raw reports/logs/controllers/guards/source/compiled
+maps, actual outliers and direct release provenance remain in
+results/first-ascii-DFA-original-acceptance-20261008/.
+
+This is first local only, not after-green KEEP, since hosted full failed.
+No unchanged retry/pause/SIGSTOP/filter/settling/extra warmup/threshold change
+or outlier cause. Original runner records summaries/outliers, not every
+individual elapsed value; absent values and absent hosted compiled runtime
+bytes are not reconstructed. Copied archives were not executed. Original
+sources/reference/corpus/driver/workload stay fixed; supplementary helper
+preparation errors are preserved and corrected separately.
+
+### UNVERIFIED: complete acceptance and KEEP
+
+Both actual current-source full attempts fail the literal0.05ms gate.
+Complete acceptance/KEEP remain incomplete; PR23 draft. Previous ae8 source
+hosted greens and required6/3/5 local failure stay historical. No cosmetic
+stop. Prospective indexed UTF16 length preflight is not authored or measured;
+original genuine M22/M23 boundaries must stay live. No further elapsed work
+is authorized while the coordinated G10 trial is pending.
 
 ## Historical exact deterministic scanner ae8 adoption, October 8
 
