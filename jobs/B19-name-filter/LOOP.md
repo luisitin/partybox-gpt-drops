@@ -127,3 +127,21 @@ exact scripts remain delivered, including slower batches. Existing runtime
 5371665d and its actual failed latency receipts remain untouched. This source/
 packaging correction requires fresh hosted complete checks; it is not a
 completed acceptance or cosmetic KEEP round. PR2 stays draft.
+
+## Four rejected optimization hypotheses and current complete CI
+
+The exact snapshot restores all required hosted corpus workloads. Full current
+head b3f5231 CI37807137561 still fails one0.063416ms seed3call. Actual complete
+log read confirms all91suites and all original43,830sealed inputs perseed,
+75mutants/15,000obfuscations/24snapshot tests/156checksums pass.
+
+Double-regex ASCII folding, single charCode ASCII folding, lazy known-string
+construction and a compiled unchanged-known-string proof were tested privately.
+Every candidate preserves independent semantics on its declared complete
+inputs/contexts, but none demonstrated consistent mixed whole-call gains.
+All raw batches/GC observations and exact scripts remain delivered, including
+slower batches and one corrected-before-measurement diagnostic quoting failure.
+Only the earlier measured length pruning and exact snapshot replay were
+installed. Production is frozen; literal acceptance still fails and PR2
+remains draft. These are unfinished verification investigations, not cosmetic
+KEEP rounds or proof of a hard realtime bound.

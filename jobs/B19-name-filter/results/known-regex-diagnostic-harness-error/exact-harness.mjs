@@ -19,7 +19,7 @@ if(knownRegex){
  const anchor='function knownPlain(input) {';
  if(candidateSource.split(anchor).length!==2)throw Error('Known-plain anchor must be unique');
  const addition="const UNCHANGED_KNOWN = new RegExp('^[\\\\x00-\\\\x7f'+[...KNOWN].filter(([character, entry])=>character.length===1&&entry.plain===character).map(([character])=>'\\\\u'+character.charCodeAt(0).toString(16).padStart(4,'0')).join('')+']*$');\n";
- candidateSource=candidateSource.replace(anchor,()=>addition+anchor+'\n if(UNCHANGED_KNOWN.test(input))return input;');
+ candidateSource=candidateSource.replace(anchor,addition+anchor+'\n if(UNCHANGED_KNOWN.test(input))return input;');
 }else if(lazy){
  const begin=candidateSource.indexOf('function knownPlain(input) {');
  const end=candidateSource.indexOf('function hasContent(plain) {',begin);

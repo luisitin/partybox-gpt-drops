@@ -42,3 +42,10 @@
   candidate slowed all mixed batches, and the single-scan balanced batches
   showed0.06/1.8/6.8%slower total time despite fewer GC observations. Witness
   improvements alone do not justify installing a mixed-workload regression.
+
+- The private lazy/regexp known-character candidates preserve independent
+  semantics but fail the mixed-whole-call gain condition; neither enters
+  production. Reduced fixed-witness GC observations alone are insufficient.
+- Production remains frozen after bounded measured investigations. An unmet
+  literal latency check is recorded as incomplete acceptance, not a fabricated
+  source/toolBLOCKED state or an excuse to change the user threshold.

@@ -317,3 +317,29 @@ results/ascii-scan-balanced-diagnostic/. Balanced single-scan mixed totals
 show a whole-call gain. Runtime source remains5371665d, and its prior complete
 local literal-latency failures still stand. No unchanged local full retry was
 performed for this packaging fix; exact new hosted checks are pending.
+
+## Current complete hosted replay, still failed literal latency
+
+https://github.com/luisitin/partybox-gpt-drops/actions/runs/37807137561 at exact
+b3f5231 completedFAILURE2026-10-08T16:14:08Z. The actual complete59,313-character
+decoded job log was read. The snapshot fix restores all91suite rows, all32,000
+original corpus entries and43,830sealed comparisons perseed;24snapshot tests,
+156checksums,75mutants,15,000obfuscations and74,619added length boundaries pass.
+Only literal latency fails: maxima0.045157/0.015059/0.063416ms;0/0/1outliers.
+The seed3witness is index6880,5-codepoint mixed knownUnicode. Source-bound
+actual-log summary is results/retained-snapshot-checks/current-hosted.json.
+No artifact bytes or additional raw timings were independently downloaded.
+
+Two further known-character candidates also remain rejected. Lazy string
+building and a compiled policy proof that replacements are unchanged retain
+39,728independent contextual agreements each, but balanced mixed500,000-call
+batches do not establish a consistent whole-call speed gain. All reports,
+private code and exact scripts are in results/known-plain-{lazy,regex}-diagnostic/.
+The first regex diagnostic had a private-harness String.replace substitution
+error before import/measurements. Its exact failed harness/metadata remains
+results/known-regex-diagnostic-harness-error/; callback replacement corrected
+only the diagnostic. No production defect or acceptance attempt occurred.
+
+Production is frozen at source5371665d absent a justified general improvement.
+No failed receipt is deleted, no timing gate/count/warmup/seed is changed, and
+no unchanged local full rerun is used to hunt a passing observation.
