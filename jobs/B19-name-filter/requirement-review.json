@@ -1,12 +1,12 @@
 {
-  "kind": "current-prefix-trie-requirement-review",
-  "productionSourceSha256": "41442670786856c1dfa98a5755bd21273287047750035f419249ab7402e8505d",
+  "kind": "current-exact-regex-DFA-requirement-review",
+  "productionSourceSha256": "ae8dc388665a4b4241b40b7ce1b86ba98e9eaadde7facefddf8ee47a00858e8a",
   "originalWorkloadRunnerSha256": "bff0c17b62aa75d342527a8ced855678380411053476557acde61f2e1b6fbdd9",
   "weakestFive": [
     {
       "rank": 1,
       "part": "Literal 0.05 ms per-check acceptance",
-      "status": "Verified 1255490 hosted green; required post-green full rerun fails 9/11/4 literal calls. All failures retained; private mapping candidate rejected after mixed gains."
+      "status": "New measured DFA source awaits first original full literal acceptance; old mandatory 9/11/4 failure stays retained."
     },
     {
       "rank": 2,
@@ -16,7 +16,7 @@
     {
       "rank": 3,
       "part": "Real mutant execution",
-      "status": "All 75 original mutations parse, execute and fail actual truth; all controls retained."
+      "status": "All 25 original mutants execute and fail seed-1 truth; production M15/M19/M25 raise actual assertion failures. Required full 75 checks pending."
     },
     {
       "rank": 4,
@@ -26,7 +26,7 @@
     {
       "rank": 5,
       "part": "Source-bound delivery and mandatory KEEP",
-      "status": "Genuine green artifact passes 1844 byte/structure checks; earlier failed artifact passes 1457 with failure required. Mandatory KEEP rerun fails, completion remains open."
+      "status": "All historical source-bound failures/greens preserved. New changed-source checkpoint/full checks and actual KEEP remain pending."
     }
   ],
   "keepCompleted": false,
@@ -67,18 +67,6 @@
       "sourcesUnchanged": true
     }
   },
-  "currentHostedGreen": {
-    "head": "12554906b884a4c4afd8443edf470f0cc5ec371e",
-    "run": 37849845219,
-    "artifact": 11580638498,
-    "artifactStructuralChecks": 1844,
-    "suiteRows": 100,
-    "outliers": [
-      0,
-      0,
-      0
-    ]
-  },
   "requiredPostGreenKEEP": {
     "closedUtc": "2026-10-08T21:58:31.844316+00:00",
     "exitCode": 1,
@@ -99,5 +87,48 @@
       0.6856226499275819
     ],
     "adopted": false
+  },
+  "compiledSourceSha256": "330968b37089918bf450bb0a8a4546133e855c55df2aafe462d36be7aa4c6b8e",
+  "dfaDiagnostic": {
+    "cases": 214308,
+    "guards": 480,
+    "seedGainsPercent": [
+      53.300560144283345,
+      46.667905928723705,
+      35.85338583174498
+    ],
+    "allSixBlocksFavorCandidate": true,
+    "privateOriginalMutants": 25,
+    "privateMutantSeed": 1,
+    "states": 539,
+    "matchingAllocationFreeOnly": true,
+    "startupInPhaseGains": false,
+    "originalWarmupUnchanged": true,
+    "fullLiteralAcceptanceRun": false,
+    "adoptedExactly": true
+  },
+  "historicalCurrentHostedGreen": {
+    "head": "12554906b884a4c4afd8443edf470f0cc5ec371e",
+    "run": 37849845219,
+    "artifact": 11580638498,
+    "artifactStructuralChecks": 1844,
+    "suiteRows": 100,
+    "outliers": [
+      0,
+      0,
+      0
+    ]
+  },
+  "historicalFddHostedGreen": {
+    "head": "fddfd508bd108a09fe04a65398de2aac43682213",
+    "run": 37851475091,
+    "artifact": 11581888418,
+    "artifactStructuralChecks": 2399,
+    "suiteRows": 100,
+    "outliers": [
+      0,
+      0,
+      0
+    ]
   }
 }

@@ -111,3 +111,22 @@
   full Unicode/frozen suggestions, original workloads and the actual effects
   of all 25 mutation anchors. A deterministic scan is prospective only until
   full semantics and consistent whole-call benefit are measured.
+
+## Exact-regex deterministic scan adoption
+
+- Adopt exactly measured ae8dc388 source / 330968b3 compiled bytes after all
+  six balanced blocks and three seed totals show meaningful whole-call gains.
+  The fixed generated-regex grammar, not user input, builds the 539-state
+  deterministic table. All original mutation anchors still change actual
+  behavior; only source comments/empty lines were removed to meet size.
+- Complete matching uses the existing generated language, with explicit
+  construction bound and original complete regex fallback. Normalization,
+  controls, exact exceptions, full suggestions/frozen results and raw input
+  domain remain unchanged. All original tests/reference/fixtures stay fixed.
+- Whole-call measurements preserve the original existing warmup and samples;
+  startup construction is excluded. Allocation-free describes table matching
+  only, not normalization or construction. No startup time or universal
+  per-call bound follows, and no historical outlier cause is inferred.
+- Private 25-mutant seed-1 proof and 214,308 semantic comparisons supplement,
+  but never replace, original three-seed full checks and literal 0.05 ms gate.
+  All prior failures and verified historical greens remain separate.

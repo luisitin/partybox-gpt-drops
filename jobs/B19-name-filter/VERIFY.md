@@ -1,6 +1,64 @@
 # B19 verification ledger
 
-## Current exact measured trie adoption, October 8
+## Current exact deterministic scanner adoption, October 8
+
+Production is exactly candidate source SHA256
+`ae8dc388665a4b4241b40b7ce1b86ba98e9eaadde7facefddf8ee47a00858e8a`,
+compiled `330968b37089918bf450bb0a8a4546133e855c55df2aafe462d36be7aa4c6b8e`.
+The existing pattern() language is compiled into a bounded 539-state table;
+normalization, controls, exact exceptions, result/suggestion/frozen values
+and wrapper are unchanged. Original minima, ambiguity and substring matching
+remain, with complete regex fallback for long expansions/construction bounds.
+Only table matching avoids per-call allocation; normalization and startup
+still allocate. The measured whole calls use the original existing warmup;
+startup construction is not included and no startup time/bound is claimed.
+
+The exact source passes strict TypeScript and all 214,308 private complete
+comparisons, including 131,490 original inputs. One coordinated experiment
+retains every 24 ABBA/BAAB phase / 12 million whole calls and all 480 guards,
+which remain unchanged. Gains are 53.300560%, 46.667906%, 35.853386%; all
+six blocks favor the candidate (21.73–55.06%). These are diagnostic gains,
+not the original literal per-call acceptance. Every original policy, fixture,
+459 fixed cases / 43,830 comparisons per seed, 48 timed positives, seeded
+samples, 100,000-call warmups, timers, references and 0.05 ms gate remains.
+
+| Test | Cases | Passed | Seed | Exact command from repository root |
+| --- | ---: | ---: | --- | --- |
+| Strict candidate build | 1 | 1 | shared setup | `node jobs/B19-name-filter/node_modules/typescript/bin/tsc -p .work/B19-dfa-compact-candidate/tsconfig.json` |
+| Original comparisons | 43830 | 43830 | 1, 2, 3 separately | `node .work/B19-dfa-compact-candidate/exact-harness.mjs equivalence` |
+| Unicode-policy comparisons | 1296 | 1296 | 1, 2, 3 separately | same equivalence command |
+| Unicode-range comparisons | 1422 | 1422 | 1, 2, 3 separately | same equivalence command |
+| Length-boundary comparisons | 24873 | 24873 | 1, 2, 3 separately | same equivalence command |
+| Added-name bypass comparisons | 15 | 15 | 1, 2, 3 separately | same equivalence command |
+| Equal emitted JS / actual M15,M19,M25 assertion controls | 3 | 3 | shared setup | `node .work/B19-dfa-compact-candidate/structural-control.mjs` |
+| Original 25 actual mutants, 43830 truth cases each | 25 | 25 | 1 (supplemental) | `node .work/B19-dfa-full-mutation/full-mutation.mjs` |
+| Mixed 24 phases / 12m calls; guards and sinks | 24 | 24 | 1, 2, 3 | `node .work/B19-dfa-compact-candidate/exact-harness.mjs timing` |
+| Production strict build | 1 | 1 | shared setup | `npm run build` from jobs/B19-name-filter |
+| Production M15,M19,M25 actual assertion controls | 3 | 3 | shared setup | `node .work/B19-dfa-production-acceptance/mutation-anchor-check.mjs` |
+
+Strict candidate compile closes 22:12:35.108541 UTC; full equivalence naturally
+CLOSED 22:14:39.123. Corrected structural control closes 22:14:09.361;
+all 25 actual seed-1 mutants close 22:16:00.771. Mixed grant is
+22:20:42.114254; harness START 22:20:42.407; natural CLOSED 22:20:51.845,
+EXIT 0. Production strict build closes 22:23:38.406719, compiling the exact
+measured JS; production controls close 22:24:20.187. Complete rows, sources,
+GC and raw outputs are in results/dfa-scanner-diagnostic-20261008/.
+Copied archive paths were not executed. The original uncompact source size
+fails (6,258 bytes); only comments/empty lines are removed, with byte-equal
+emitted JS. Initial supplementary lexical-reader failure is preserved with
+original source/actual receipt; complete initial stderr and closure time were
+not captured. Its reader alone changed to the actual TypeScript parser.
+
+### UNVERIFIED: current full acceptance and KEEP
+
+The first original full npm test and exact new-head CI are not yet run for
+this newly adopted source. Private 25-mutant seed-1 controls do not replace
+all 75 original mutants or a literal timing gate. Historical 41442670 hosted
+greens and first/full KEEP failures remain separate and cannot transfer
+acceptance to ae8dc388. PR23 remains draft; no unchanged favorable retry,
+outlier cause, universal timing bound or cosmetic-only stop is claimed.
+
+## Historical exact prefix-trie source 41442670, October 8
 
 Current production source SHA256 is
 `41442670786856c1dfa98a5755bd21273287047750035f419249ab7402e8505d`.

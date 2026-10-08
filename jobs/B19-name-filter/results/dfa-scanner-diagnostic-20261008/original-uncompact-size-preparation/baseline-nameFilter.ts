@@ -1,10 +1,19 @@
+/** B19: bounded, English-policy name moderation. See POLICY.md for collisions.
+ * No I/O, clock, randomness, dependencies, or caller-controlled regular expressions.
+ * Normalization is a documented subset, NOT full Unicode UTS #39 conformance.
+ */
+/** Machine-readable failure reason. Map each to UI text (L('…')) in the host, never show it raw. */
 export type NameReason = 'type' | 'length' | 'empty' | 'control' | 'blocked';
+/** What the player should do next. Stable keys; the host owns the wording and translation. */
 export type NameSuggestion = 'use-text' | 'shorten' | 'add-letters' | 'remove-characters' | 'choose-another';
 export type NameResult =
   | { readonly ok: true }
   | { readonly ok: false; readonly reason: NameReason; readonly suggestion: NameSuggestion };
+
 const TERMS = 'anal anus arsehole asshole bastard bitch blowjob bollocks boner boob boobs bukkake chink clit cock coon cunt cum cumshot dick dildo douche dyke ejaculation fag faggot fellatio fuck gook handjob hentai jizz kike masturbate masturbation motherfucker nigga nigger orgasm paedophile pedophile penis porn pussy rape retard rimjob semen sex shemale slut spic spunk testicle tits titties titty tranny twat vagina wank wetback whore'.split(' ');
+// Only whole, normally spelled benign words are exceptions. Never substring exceptions.
 const SAFE = new Set('adcock advertisement advertisements alana alanna alcock analia analisa analise analog analogies analogous analogue analogues analogy analyse analysed analyses analysing analysis analyst analysts analytical analytically analyze analyzed analyzes analyzing annalee annalisa antofagasta arsenal arsene arsenic arsenio assassin assassination assassins assistance assistant assistants association associations atwater aycock babcock badcock bangkok basement bass bassoon benedict boxes branscum breast breastplate breasts breaststroke burdick callanan canal canale canales canals cassandra cassidy cassie cassius chastity chinkapin chinkapins circumcision circumstance circumstances circumvent classic classical classics cockapoo cockatiel cockatiels cockatoo cockatoos cockburn cockcroft cockerel cockerels cockerham cockfield cockle cockles cockney cockneys cockpit cockpits cockrell cockrells cockrill cockroach cockroaches cockrum cocktail cocktails compass compassion constitute constitutes constitution constitutional cooney coonhound coonrod cucumber cucumbers cumana cumberbatch cumberland cumbie cumbria cumming cummings cummins cumulative delana department departmental departments departure dicke dicken dickens dickenson dickerson dickert dickey dickhaut dickie dickinson dickison dickman dickmann dickson document documentary documentation documented documents drapeau draper edick elana endorsement essex explanation fagan fager fagin fagundes fixes flanagan flanary flannagan fosdick gaffney gafford glasscock grass grasshopper gurganus haggins hancock hathcock heacock hickock hitchcock ilana indexes institute institutes institution institutional institutions jepara kiker kokomo linthicum manus marcum marlana massachusetts mcanally mcclanahan mccumber mcmanus middlesex molasses montenegrin montenegrins montenegro much mucha nigel nigella niger nigeria nigerian nigerians niggard niggardly orellana osuna passage passenger passengers passion passionate peacock penistone pitcock preparation prepare prepared preparing raccoon raccoons reddick riddick schmucker schwanke scunthorpe scunthorpes separate separated separately separation sextant sextants sexto sexton sextuple sextuplet sextuplets shepard shepardson sheppard shih shihtzu shiitake shittake shitz skoog slocum snigger sniggered sniggering sniggers spica spicas spice spiced spicer spices spicier spiciest spicing spick spickard spicy spraggins stites stith substitute sussex sussexes swank taxes therapeutic transexual transexuales transsexual tsunami tulsa tzu vacuum vanallen vandyke wessex wilcock wilcox woodcock wrapped yocum'.split(' '));
+// Auditable single-code-point mappings; NFKD handles fullwidth/math letters/accents.
 const GROUPS: ReadonlyArray<readonly [string, string]> = [
   ['a', '4@аɑα'], ['b', '8ЬьƄƅвβ'], ['c', 'сϲς'], ['d', 'ԁժ'],
   ['e', '3еεϵ℮'], ['f', 'ғϝ'], ['g', '69ɡց'], ['h', 'һнη'],
@@ -16,6 +25,8 @@ const GROUPS: ReadonlyArray<readonly [string, string]> = [
 ];
 const MAP = new Map<string, string>();
 for (const [to, from] of GROUPS) for (const char of from) MAP.set(char, to);
+// Share only identical run tokens; alternatives retain their exact minima and
+// i/l ambiguity. Factoring concatenation over union preserves the same language.
 const pattern = (terms: readonly string[]): string => {
   interface Trie { terminal: boolean; children: Map<string, Trie>; }
   const node = (): Trie => ({terminal: false, children: new Map()});
@@ -42,104 +53,13 @@ const pattern = (terms: readonly string[]): string => {
 };
 const REVERSED = TERMS.map(term => [...term].reverse().join(''));
 const BAD = new RegExp(pattern(TERMS) + '|' + pattern(REVERSED));
-const SCAN = (() => {
-  interface State { skip: number[]; edges: Array<readonly [number, number]>; }
-  type Fragment = readonly [number, number];
-  const states: State[] = [], expression = BAD.source;
-  let cursor = 0;
-  const make = (): number => { states.push({skip: [], edges: []}); return states.length - 1; };
-  const bit = (character: string): number => 1 << (character === '#' ? 26 : character.charCodeAt(0) - 97);
-  const sequence = (): Fragment => {
-    const start = make();
-    let end = start;
-    while (cursor < expression.length && expression[cursor] !== ')' && expression[cursor] !== '|') {
-      let part: Fragment;
-      if (expression.startsWith('(?:', cursor)) {
-        cursor += 3; part = alternative();
-        if (expression[cursor++] !== ')') throw new Error('Invalid fixed matcher group');
-        if (expression[cursor] === '?') { cursor++; states[part[0]]!.skip.push(part[1]); }
-      } else {
-        let mask = 0;
-        if (expression[cursor] === '[') {
-          cursor++;
-          while (expression[cursor] !== ']') mask |= bit(expression[cursor++]!);
-          cursor++;
-        } else mask = bit(expression[cursor++]!);
-        let minimum = 1, repeat = false;
-        if (expression[cursor] === '+') { repeat = true; cursor++; }
-        else if (expression[cursor] === '{') {
-          const begin = ++cursor;
-          while (expression[cursor] !== ',') cursor++;
-          minimum = Number(expression.slice(begin, cursor));
-          if (expression.slice(cursor, cursor + 2) !== ',}') throw new Error('Invalid fixed matcher minimum');
-          cursor += 2; repeat = true;
-        }
-        const first = make();
-        let last = first;
-        for (let count = 0; count < minimum; count++) {
-          const next = make(); states[last]!.edges.push([mask, next]); last = next;
-        }
-        if (repeat) states[last]!.edges.push([mask, last]);
-        part = [first, last];
-      }
-      states[end]!.skip.push(part[0]); end = part[1];
-    }
-    return [start, end];
-  };
-  const alternative = (): Fragment => {
-    const parts = [sequence()];
-    while (expression[cursor] === '|') { cursor++; parts.push(sequence()); }
-    if (parts.length === 1) return parts[0]!;
-    const start = make(), end = make();
-    for (const part of parts) { states[start]!.skip.push(part[0]); states[part[1]]!.skip.push(end); }
-    return [start, end];
-  };
-  const [start, finish] = alternative();
-  if (cursor !== expression.length) throw new Error('Invalid fixed matcher tail');
-  const closure = (seed: number) => {
-    const visited = new Set<number>(), pending = [seed];
-    while (pending.length) {
-      const current = pending.pop()!;
-      if (visited.has(current)) continue;
-      visited.add(current); pending.push(...states[current]!.skip);
-    }
-    return {active: [...visited].filter(value => states[value]!.edges.length > 0).sort((a, b) => a - b), accepts: visited.has(finish)};
-  };
-  const expanded = states.map((_, index) => closure(index));
-  const initial = expanded[start]!, subsets = [initial.active];
-  const ids = new Map([[initial.active.join(','), 0]]), rows: number[][] = [];
-  for (let index = 0; index < subsets.length; index++) {
-    const row: number[] = [];
-    for (let letter = 0; letter < 27; letter++) {
-      const next = new Set(initial.active);
-      let accepts = initial.accepts;
-      for (const current of subsets[index]!) for (const [mask, target] of states[current]!.edges) {
-        if (!(mask & (1 << letter))) continue;
-        const group = expanded[target]!; accepts ||= group.accepts;
-        for (const active of group.active) next.add(active);
-      }
-      if (accepts) { row.push(-1); continue; }
-      const values = [...next].sort((a, b) => a - b), key = values.join(',');
-      let id = ids.get(key);
-      if (id === undefined) { id = subsets.length; ids.set(key, id); subsets.push(values); }
-      row.push(id * 27);
-    }
-    rows.push(row);
-    if (subsets.length > 4096) return undefined;
-  }
-  return {empty: initial.accepts, table: Int32Array.from(rows.flat())};
-})();
-function blocked(text: string): boolean {
-  if (SCAN === undefined || text.length > 16) return BAD.test(text);
-  if (SCAN.empty) return true;
-  let state = 0;
-  for (let index = 0; index < text.length; index++) {
-    const code = text.charCodeAt(index), column = code === 35 ? 26 : code - 97;
-    state = column < 0 || column > 26 ? 0 : SCAN.table[state + column]!;
-    if (state === -1) return true;
-  }
-  return false;
-}
+// A repeated-letter pattern cannot consume fewer letters than its original
+// term. Compile the eligible forward/reversed patterns once per short length;
+// longer normalization expansions use the complete matcher. No result cache.
+const BY_LENGTH = Array.from({length: Math.max(...TERMS.map(term => term.length))}, (_, length) => {
+  const eligible = [...TERMS, ...REVERSED].filter(term => term.length <= length);
+  return eligible.length ? new RegExp(pattern(eligible)) : /(?!)/;
+});
 const CONTROLS = /[\u0000-\u001f\u007f-\u009f\ud800-\udfff\u202a-\u202e\u2066-\u2069]/u;
 const ASCII = /^[\x20-\x7e]*$/;
 const SIMPLE_ASCII = /^[A-Za-z]+$/;
@@ -153,8 +73,14 @@ const lower = (value: string): string => value.toLowerCase();
 const normalize = (value: string): string => value.normalize('NFKD');
 const clean = (value: string): string => value.replace(MARKS, '').replace(FORMATS, '');
 interface KnownCharacter { readonly plain: string; readonly mapped: string; readonly meaningful: boolean; }
+// Compiled once from the declared glyph policy, case variants, printable
+// fullwidth ASCII, Latin-1 and common ignorable formats. No names or results
+// are cached. Other Unicode falls back.
 const KNOWN: ReadonlyMap<string, KnownCharacter> = (() => {
   const candidates = new Set<string>([...'\u00ad\u034f\u061c\u180e\u200b\u200c\u200d\u200e\u200f\u2060\u2061\u2062\u2063\u2064\ufeff']);
+  // These finite Unicode ranges are compiled through the same normalization
+  // policy rather than a second hand-maintained mapping. Real accented names
+  // and fullwidth text then avoid per-call normalization/replacement passes.
   for (let code = 0x00c0; code <= 0x00ff; code++) candidates.add(String.fromCharCode(code));
   for (let code = 0xff01; code <= 0xff5e; code++) candidates.add(String.fromCharCode(code));
   for (const [, group] of GROUPS) for (const character of group) {
@@ -163,6 +89,8 @@ const KNOWN: ReadonlyMap<string, KnownCharacter> = (() => {
   const table = new Map<string, KnownCharacter>();
   for (const character of candidates) {
     const decomposed = normalize(character);
+    // Removing Case_Ignorable characters preserves contextual lowercasing
+    // (notably Greek final sigma). Keep whole-string lowercasing below.
     if ([...decomposed].some(value => /[\p{M}\p{Cf}]/u.test(value) && !/\p{Case_Ignorable}/u.test(value))) continue;
     const plain = clean(decomposed), folded = lower(plain);
     let mapped = '';
@@ -200,10 +128,18 @@ const FAILURE = {
   control: Object.freeze({ ok: false, reason: 'control', suggestion: 'remove-characters' } as const),
   blocked: Object.freeze({ ok: false, reason: 'blocked', suggestion: 'choose-another' } as const),
 };
+
+/** Returns a value (never throws for ordinary inputs). 16 Unicode code points,
+ * counted BEFORE trimming or normalization; combining marks count individually.
+ * Caller must render the original name as text, never as HTML.
+ */
 export function nameFilter(input: unknown): NameResult {
   if (typeof input !== 'string') return FAILURE.type;
   if (input.length > 32 || (input.length > 16 && [...input].length > 16)) return FAILURE.length;
+  // ASCII letters contain no controls, separators or empty content. They need
+  // only case folding before the shared exception and blocked-term matchers.
   const simple = SIMPLE_ASCII.test(input);
+  // Reject unpaired surrogates, C0/C1 controls, and bidi formatting controls.
   if (!simple && CONTROLS.test(input))
     return FAILURE.control;
   const ascii = simple || ASCII.test(input);
@@ -222,11 +158,12 @@ export function nameFilter(input: unknown): NameResult {
     const mapped = MAP.get(c);
     if (mapped !== undefined) text += mapped;
     else if (c <= '\x7f' || KNOWN.get(c)?.mapped === '' || SEPARATOR.test(c)) continue;
-    else text += '~';
+    else text += '~'; // Unmapped letters are barriers, never silently deleted.
    }
   }
-  if (blocked(text))
+  if ((BY_LENGTH[text.length] ?? BAD).test(text))
     return FAILURE.blocked;
   return OK;
 }
+
 export function isAllowedName(input: unknown): boolean { return nameFilter(input).ok; }

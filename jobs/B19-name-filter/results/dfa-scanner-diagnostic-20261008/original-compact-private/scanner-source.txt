@@ -1,0 +1,101 @@
+// Determinize the exact compiled regex language once. Per-call matching uses
+// only integer transitions; normalization and policy exceptions stay unchanged.
+const SCAN = (() => {
+  interface State { skip: number[]; edges: Array<readonly [number, number]>; }
+  type Fragment = readonly [number, number];
+  const states: State[] = [], expression = BAD.source;
+  let cursor = 0;
+  const make = (): number => { states.push({skip: [], edges: []}); return states.length - 1; };
+  const bit = (character: string): number => 1 << (character === '#' ? 26 : character.charCodeAt(0) - 97);
+  const sequence = (): Fragment => {
+    const start = make();
+    let end = start;
+    while (cursor < expression.length && expression[cursor] !== ')' && expression[cursor] !== '|') {
+      let part: Fragment;
+      if (expression.startsWith('(?:', cursor)) {
+        cursor += 3; part = alternative();
+        if (expression[cursor++] !== ')') throw new Error('Invalid fixed matcher group');
+        if (expression[cursor] === '?') { cursor++; states[part[0]]!.skip.push(part[1]); }
+      } else {
+        let mask = 0;
+        if (expression[cursor] === '[') {
+          cursor++;
+          while (expression[cursor] !== ']') mask |= bit(expression[cursor++]!);
+          cursor++;
+        } else mask = bit(expression[cursor++]!);
+        let minimum = 1, repeat = false;
+        if (expression[cursor] === '+') { repeat = true; cursor++; }
+        else if (expression[cursor] === '{') {
+          const begin = ++cursor;
+          while (expression[cursor] !== ',') cursor++;
+          minimum = Number(expression.slice(begin, cursor));
+          if (expression.slice(cursor, cursor + 2) !== ',}') throw new Error('Invalid fixed matcher minimum');
+          cursor += 2; repeat = true;
+        }
+        const first = make();
+        let last = first;
+        for (let count = 0; count < minimum; count++) {
+          const next = make(); states[last]!.edges.push([mask, next]); last = next;
+        }
+        if (repeat) states[last]!.edges.push([mask, last]);
+        part = [first, last];
+      }
+      states[end]!.skip.push(part[0]); end = part[1];
+    }
+    return [start, end];
+  };
+  const alternative = (): Fragment => {
+    const parts = [sequence()];
+    while (expression[cursor] === '|') { cursor++; parts.push(sequence()); }
+    if (parts.length === 1) return parts[0]!;
+    const start = make(), end = make();
+    for (const part of parts) { states[start]!.skip.push(part[0]); states[part[1]]!.skip.push(end); }
+    return [start, end];
+  };
+  const [start, finish] = alternative();
+  if (cursor !== expression.length) throw new Error('Invalid fixed matcher tail');
+  const closure = (seed: number) => {
+    const visited = new Set<number>(), pending = [seed];
+    while (pending.length) {
+      const current = pending.pop()!;
+      if (visited.has(current)) continue;
+      visited.add(current); pending.push(...states[current]!.skip);
+    }
+    return {active: [...visited].filter(value => states[value]!.edges.length > 0).sort((a, b) => a - b), accepts: visited.has(finish)};
+  };
+  const expanded = states.map((_, index) => closure(index));
+  const initial = expanded[start]!, subsets = [initial.active];
+  const ids = new Map([[initial.active.join(','), 0]]), rows: number[][] = [];
+  for (let index = 0; index < subsets.length; index++) {
+    const row: number[] = [];
+    for (let letter = 0; letter < 27; letter++) {
+      const next = new Set(initial.active);
+      let accepts = initial.accepts;
+      for (const current of subsets[index]!) for (const [mask, target] of states[current]!.edges) {
+        if (!(mask & (1 << letter))) continue;
+        const group = expanded[target]!; accepts ||= group.accepts;
+        for (const active of group.active) next.add(active);
+      }
+      if (accepts) { row.push(-1); continue; }
+      const values = [...next].sort((a, b) => a - b), key = values.join(',');
+      let id = ids.get(key);
+      if (id === undefined) { id = subsets.length; ids.set(key, id); subsets.push(values); }
+      row.push(id * 27);
+    }
+    rows.push(row);
+    // A startup-only bound retains the original complete regex as fallback.
+    if (subsets.length > 4096) return undefined;
+  }
+  return {empty: initial.accepts, table: Int32Array.from(rows.flat())};
+})();
+function blocked(text: string): boolean {
+  if (SCAN === undefined || text.length > 16) return BAD.test(text);
+  if (SCAN.empty) return true;
+  let state = 0;
+  for (let index = 0; index < text.length; index++) {
+    const code = text.charCodeAt(index), column = code === 35 ? 26 : code - 97;
+    state = column < 0 || column > 26 ? 0 : SCAN.table[state + column]!;
+    if (state === -1) return true;
+  }
+  return false;
+}

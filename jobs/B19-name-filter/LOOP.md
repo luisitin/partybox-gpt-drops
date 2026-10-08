@@ -181,7 +181,7 @@ agreement and both references passed all214,308 cases, including all131,490
 original inputs. One naturally completed ABBA/BAAB experiment on the exact
 original seeded samples measured35.7596/37.9846/29.6573% gains across12million
 whole calls; all24 phases, raw GC observations, sources and commands remain
-byte-for-byte archived in results/prefix-trie-diagnostic-20261008/. Allsix
+byte-for-byte archived in results/prefix-trie-diagnostic-20261008/. All six
 blocks favor the candidate. Original private paths and real grant/closure/
 delayed release times are retained; archived paths were not executed.
 
@@ -240,3 +240,30 @@ a zero-allocation deterministic scan compiled from the existing regex
 language, preserving every original mutation anchor's actual effect. It is
 prospective until full semantic and whole-call evidence establishes benefit.
 No cosmetic stop or completion is claimed.
+
+## Exact-regex deterministic scanner: measured substantive improvement
+
+The existing regex language compiles at startup to a bounded 539-state DFA.
+Substring restart, repeated minima and i/l/# ambiguity are derived from the
+same pattern(), keeping all original mutant anchors effective. Original
+normalization, controls, exceptions and returned values stay unchanged.
+Long expansions and construction bounds retain the complete regex fallback.
+The uncompact 6,258-byte source fails size; a separate comment-only compact
+variant emits identical JS and fits. The initial supplementary lexical
+reader fails before mutation checks; its source and actual partial receipt
+remain. Only that helper changes to the actual TypeScript parser/transpiler.
+
+Candidate ae8dc388 / compiled 330968b3 passes strict compile, 214,308 complete
+semantic comparisons and all 25 original seed-1 actual mutants. One exact
+balanced 24-phase/12-million-call run naturally closes 22:20:51.845 UTC,
+all 480 guards unchanged, gains 53.300560/46.667906/35.853386%. All six blocks
+favor it. Adopt the exact candidate, a substantive matcher improvement.
+Existing warmup/samples are unchanged; startup construction is excluded from
+phase gains. Only table matching is allocation-free per call, not the full
+normalization function or constructor. No cause/bound is inferred.
+
+Production strict build reproduces exact compiled 330968b3 at 22:23:38.406719;
+actual M15/M19/M25 controls pass 22:24:20.187. Every source, phase, GC, command,
+baseline and failure scope is retained in the original-path evidence archive.
+The first changed-source original full gates and new-head CI are pending;
+KEEP remains open and PR23 draft. No unchanged extra test is run to hunt luck.

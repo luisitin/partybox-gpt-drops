@@ -1,68 +1,40 @@
 # B19 continuation point
 
-Owned isolated branch: `job/B19-name-filter-protocol-review-20261008`.
-Draft PR #23 targets `job/B19-name-filter`; original PR #2 and its concurrent
-history remain preserved. Never write original-repository main or CLAIMS,
-force push, merge, or edit the canonical branch.
+Owned isolated branch job/B19-name-filter-protocol-review-20261008 and draft
+PR23 target job/B19-name-filter. Preserve original PR2/canonical history.
+Never original-repository main/CLAIMS writes, force push, merge or canonical
+edits. Current production source is exactly ae8dc388665a4b4241b40b7ce1b86ba98e9eaadde7facefddf8ee47a00858e8a,
+compiled 330968b37089918bf450bb0a8a4546133e855c55df2aafe462d36be7aa4c6b8e.
 
-Production source is now the exact measured prefix-trie candidate SHA256
-41442670786856c1dfa98a5755bd21273287047750035f419249ab7402e8505d.
-It preserves the external suggestion keys and three exact benign additions,
-the 289-exception original workload fixture ac400db6, 459 fixed cases,
-43,830 complete comparison inputs per seed, all original corpora, sealed
-references, generator, timing sample, 100,000-call warmup and 0.05 ms gate.
+Exact-regex DFA adoption follows 214,308 complete private semantic cases,
+all 25 original seed-1 executed mutants, M15/M19/M25 real AssertionErrors
+and one balanced 24-phase / 12-million-call mixed run. All 480 guards remain
+unchanged; seed gains 53.300560/46.667906/35.853386%, all six blocks favorable.
+Original samples and 100k warmup remain. Startup construction is excluded
+from phase gains; only table matching avoids per-call allocation. Strict
+production build and 3 actual controls pass, exact measured JS reproduced.
+Archive: results/dfa-scanner-diagnostic-20261008/, original .work paths retained.
 
-Completed private diagnostics are archived byte-for-byte in
-results/prefix-trie-diagnostic-20261008/: strict compile; 214,308 complete-result
-comparisons including 131,490 original inputs; one balanced ABBA/BAAB attempt
-with all 24 phases / 12 million calls and measured gains 35.7596%, 37.9846%,
-29.6573%. The original `.work` command paths and separate coordinator timeline
-are retained. No relocated run or literal acceptance is claimed.
+Next exact step: finish current docs/checksum checkpoint, normally push the
+isolated branch, bind its actual head and source in a once-only first full
+controller, then send root READY. Obtain fresh all-owner quiet ACKs and an
+actual delegated grant before first current-source original npm test; let it
+close naturally and release owners directly. Read exact-head full hosted
+checks and independently validate the genuine artifact. Preserve every
+failure and remain draft unless all binding checks plus actual KEEP pass.
+Never change original runner bff0c17b, fixture ac400db6, corpora/reference,
+459 fixed cases, 43830 comparisons/seed, 48 positives, 100k warmup, original
+10k individual timers, seed or 0.05 ms gate. No unchanged favorable rerun.
 
-Strict production build and3 actual assertion mutation-readiness controls
-passed; their exact original commands and the failed/corrected M25 witness
-attempt are retained in results/trie-adoption-readiness-20261008/.
+After actual green, perform the one required original full KEEP rerun, retain
+its outcome, rank the weakest real issue and pursue only concrete meaningful
+improvements. A failed rerun is not a cosmetic stop or permission to hunt a
+pass. Root coordinates shared native timing; no STOP/pause/fake clocks.
 
-First original full checks now actually fail only literal timing: hosted
-run37846119304 observes1/0/0 outliers; local natural CLOSED21:33:35.191788
-UTC/EXIT1 observes9/5/13, all287 guards unchanged. Every original behavioral,
-corpus and75-mutant check passes. Genuine hosted artifact11578869086 and its
-1457-check independent audit plus both complete receipts are retained in
-results/first-trie-original-acceptance-20261008/. These do not erase older
-failures or establish an outlier cause.
-
-Latest verified green is exact 1255490 / run 37849845219, all 100 suites,
-75 mutants and 352 hashes, genuine artifact 11580638498 independently audited
-with 1,844 assertions. Its required post-green original full rerun naturally
-fails 21:58:31.844316 UTC / EXIT 1, 9/11/4 outliers, all 368 guards unchanged.
-The known-mapping candidate 0e9c0bdc passes 214,308 complete comparisons but
-is rejected after +0.775136 / -26.582097 / +0.685623% balanced mixed gains.
-All scopes are in results/post-green-125-and-mapping-review-20261008/.
-
-Next exact step: keep PR23 draft and privately investigate a zero-allocation
-deterministic scan compiled from the existing regex language in root .work.
-Preserve all 25 original mutation anchors' actual effects, repeat minima,
-i/l/# ambiguity, exact exceptions, complete returned values and all Unicode
-fallbacks. Compare the complete original and supplemental cases with both
-references, then obtain one coordinated quiet ABBA/BAAB window. Adoption
-requires genuine consistent whole-call gain. No unchanged retry, waiver,
-historical cause claim or cosmetic completion is authorized.
-
-After a real full green result, perform the required original KEEP full rerun,
-rank the remaining weakest parts, make any substantive measured improvement,
-and log the actual stop decision. Do not chase an unchanged favorable timing
-retry, alter any gate, infer an outlier cause, waive the rule or invent a
-cosmetic-only stop. A required post-green rerun is distinct from retrying a
-failed source unchanged to hunt a pass.
-
-Historical source 693d9501 at restored-protocol head 5155180 passed actual full
-CI37834148403 at 19:44:28 UTC, with 100 suites and original sinks
-94721/93467/94479. Its genuine 2,908,881-byte artifact11574696879, SHA256
-46731c77a8b90691068d8777fb790a7838e68f9dc4171d641269bf942b88ea01,
-passed the independent 1,221-check reader. That proof is historical after
-adoption and cannot transfer status to a new head.
-
-The earlier complete local corrected-protocol check failed 43/19/28 timings,
-maxima6.040182/1.243285/0.507256 ms. Historical mandatory post-green 2b54431
-failed 31/28/11 timings. All old reports and source snapshots remain. No
-universal 0.05 ms guarantee, timing cause or current completed KEEP is claimed.
+All older scopes remain: source 41442670 first hosted 1/0/0, first local 9/5/13,
+required post-green 9/11/4 failures; hosted125 full-green (1844 audit checks)
+and fdd full-green (2399 checks) are historical after adoption. Rejected
+0e9c mapping mixed gains +0.775/-26.582/+0.686% remain complete. Prior 693d9501
+local 43/19/28 and historical mandatory 31/28/11 failures remain. No source of
+outliers is established. Original PR2 and already complete B projects stay
+preserved; no new claim is made for this original repository.
