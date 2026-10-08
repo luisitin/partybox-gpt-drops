@@ -3,11 +3,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
-import { iconNames, getIcon } from '../src/icons.js';
+import { iconNames, getIcon, getSprite } from '../src/icons.js';
+import { buildGallery } from './gallery.js';
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-export interface Entry { readonly id:string; readonly title:string; readonly category:string; }
+export interface Entry { readonly id:string; readonly title:string; readonly titleEs:string; readonly category:string; }
 export const entries = JSON.parse(fs.readFileSync(path.join(root,'manifest.json'),'utf8')) as Entry[];
-export const backgrounds = Object.freeze({white:'#ffffff',black:'#000000','mid-grey':'#808080',blue:'#0057ff',yellow:'#ffde00'});
+export const backgrounds = Object.freeze({white:'#ffffff',black:'#000000','mid-grey':'#808080',blue:'#0057ff',yellow:'#ffde00',night:'#0f1020',daylight:'#f6f5ff'});
 export interface Raster { readonly id:string; readonly size:number; readonly rgba:Buffer; readonly png:Buffer; }
 export async function renderAll():Promise<Raster[]> {
   const result:Raster[]=[];
@@ -35,7 +36,7 @@ export function tile(index:number,size:number):{left:number;top:number}{
 export async function contacts(rasters:readonly Raster[]):Promise<void>{
   fs.mkdirSync(path.join(root,'preview'),{recursive:true});
   for(const [bg,color] of Object.entries(backgrounds)){
-    const foreground=['black','blue','mid-grey'].includes(bg)?'#ffffff':'#20243a';
+    const foreground=['black','blue','mid-grey','night'].includes(bg)?'#ffffff':'#20243a';
     let body='<rect width="1200" height="1600" fill="'+color+'"/>';
     body+='<g fill="'+foreground+'" font-family="DejaVu Sans, sans-serif"><text x="45" y="65" font-size="42" font-weight="bold">PARTY / 120</text><text x="45" y="101" font-size="17">Original SVG icons / actual 48 px rasters / 64-unit grid / 6-color palette</text>';
     for(let group=0;group<6;group++){
@@ -64,5 +65,7 @@ export async function contacts(rasters:readonly Raster[]):Promise<void>{
 if(process.argv.includes('--write')){
   fs.mkdirSync(path.join(root,'icons'),{recursive:true});
   for(const name of iconNames) fs.writeFileSync(path.join(root,'icons',name+'.svg'),getIcon(name)!);
+  fs.writeFileSync(path.join(root,'sprite.svg'),getSprite()!);
+  fs.writeFileSync(path.join(root,'gallery.html'),buildGallery(entries,getSprite()!));
   await contacts(await renderAll());
 }
