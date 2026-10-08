@@ -26,3 +26,11 @@
 The current user's CLAIMS.md-only main updates override the generic README ban solely for queue coordination. Existing job branches are resumed in lowest-ID claim order rather than skipped. A claim is shared only after a confirmed successful push. No queue ownership is inferred from a local-only main commit.
 
 BoardNode.next is an array of string IDs, as declared by the public type. Untyped/JSON calls with missing, null, string, Set, array-like or non-string entries are malformed and must be rejected, while genuine valid dead ends, self-loops and unreachable targets remain supported. No sealed oracle was altered.
+
+## Polish pass 2026-10-08
+
+- Die keys are strict: an object key must equal `String(Number(key))`. Keys such as `''`, `'01'`, `'1e0'` and `'-0'` are rejected, not repaired to a face. Values must be `Rational` objects with bigint fields. Earlier builds silently accepted these.
+- `dieFromFractions` is the only string parser. It accepts optional minus on the numerator and integer fractions, nothing else.
+- The B01 connection uses a byte-for-byte fixture (`fixtures/b01-odds.json`, SHA-256 `3874aeeb...`) because CI checks out only this branch. Changing the B01 table requires re-copying it deliberately.
+- The independent Python brute force is evidence and a regression gate. It uses its own generator and enumerates literal walks with `fractions.Fraction`; it is not a second copy of the TypeScript logic.
+- Unknown `target` IDs still fall back to uniform choice. That behaviour is pinned by the sealed reference and is not changed here; the port must validate targets (see INTEGRATION.md).

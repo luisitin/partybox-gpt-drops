@@ -1,9 +1,8 @@
 # Exact resume step
 
-B02 code and complete local tests are finished; the API and Git push operations have recovered. The latest documentation checkpoint must have its own exact-head full CI result observed and linked in existing PR #4 before completion is reported.
+The polish pass (2026-10-08) is the latest change on `job/B02-board-odds`. Its code and full local suite are recorded in `VERIFY.md` "Polish pass 2026-10-08".
 
-1. Query gh api repos/luisitin/partybox-gpt-drops/actions/runs with the current job/B02-board-odds full HEAD; wait for that B02 workflow to complete and verify conclusion success. Check the full logs contain all seeds and mutation counts.
-2. Update PR #4, title B02 Board movement odds engine, with the malformed-adjacency trigger/fix, new 20 rejection checks and shortest-hop fixture, actual local suite evidence and the exact new-head green run URL. No merge is requested.
-3. Run KEEP GOING after delivery: rerun every required check, independently review the weakest remaining boundary, improve only if a substantive defect/coverage gap is found, and retain the sealed blind reference. The current fix already passed complete local checks and a separate review; this final-head CI reruns the same full suite. Record actual results before moving to the next eligible queue job.
-
-B03 is separately claimed and has ongoing catalogue research. Continue its own NEXT.md when B02 delivery is complete. Past failed source/API/push attempts are historical; do not treat them as current blockers or request duplicate credentials.
+1. Read the hosted check runs for the current branch head (`git ls-remote origin job/B02-board-odds`, then `gh api repos/luisitin/partybox-gpt-drops/commits/<head>/check-runs`). The head is green only when that read shows `verify` completed with success. Record the run URL in `VERIFY.md`.
+2. Do not merge PR #4 from this job. The owner ports `boardOdds.ts` through `INTEGRATION.md`.
+3. Owner decisions before the port: whether "toward target" steers by edge hops or by expected steps; whether an unknown target ID must be an error in content loading (the module falls back to uniform by design).
+4. Keep the independent Python check (`tools/`) and the B01 fixture in sync with any B01 table change: re-copy `fixtures/b01-odds.json` deliberately and update the pinned SHA-256 in `connect-b01.mjs`.

@@ -200,3 +200,31 @@ Publishing the claim/checkpoint and hosted CI for this new source hash are block
 ## Access recovery
 
 Native Git checkpoint pushes and standard gh API reads now succeed with existing authentication. The prior delivery blocker is resolved and BLOCKED.md is removed. The source fix and full local run remain unchanged. GitHub reruns the complete suite for this documentation checkpoint; its exact-head result and green URL are recorded in PR #4 only after successful completion is observed. No publication or new-task restoration is inferred from saving the environment draft.
+
+## Polish pass 2026-10-08
+
+Environment: Node v22.22.0, TypeScript 5.8.3, `python3 -I` (Python 3), 4 CPUs shared with other jobs. Structured results: `evidence/polish-2026-10-08-*.json` (copied from the git-ignored `.verification/`). Full console log: `evidence/polish-2026-10-08-full-test.log`.
+
+| Check | Command | Result |
+| --- | --- | --- |
+| Full suite, seeds 1, 2, 3 | `npm test` (from `jobs/B02-board-odds`, tree before the docs-only edits) | EXIT 0 in 527 s; `PASS: full suite, seeds 1/2/3, all 75 isolated mutations caught.` |
+| Golden fixtures and arithmetic, per seed | `node test.mjs --seed S` | pass: 25 fixture graphs, 350 differential cases, 1,000 rational pairs, 60 malformed-input rejections (20 new: die keys, values, `dieFromFractions` strings, `__proto__`), 26 direct assertions |
+| Random DAGs, both policies, every start and face 0-10 | `node test.mjs --seed S` | pass: 2,000 graphs, 44,000 graph/policy/face cases per seed |
+| Cyclic graphs | `node test.mjs --seed S` | pass: 500 graphs, 11,000 graph/policy/face cases per seed |
+| B01 connection | `node test.mjs --seed S` | pass: `fixtures/b01-odds.json` (SHA-256 `3874aeeb...`) through `dieFromFractions`; normal, double and triple dice each give 36 exact landing checks and 35 shop-visit checks |
+| Seeded roll trajectories | `node test.mjs --seed S` | pass: 50 graphs x 1,000,000 rolls = 50,000,000 per seed; 706 / 608 / 691 landing and 235 / 177 / 245 pass-count four-sigma checks; zero failures; largest |z| 3.41 (landing, seed 1) and 2.92 (pass, seed 3) |
+| Isolated compiled mutants | `node mutate.mjs --seed S` | 25 of 25 killed per seed (75 total) |
+| Independent Python exact check | `node tools/independent-check.mjs --seed S --graphs 300` | pass for all seeds: 300 graphs each; 3,961 / 4,000 / 3,773 starts; 43,571 / 44,000 / 41,503 face comparisons; 1,558,733 / 1,570,992 / 1,449,483 landing values compared exactly |
+| Sensitivity of the Python comparator | a scratch copy with one injected bug in `boardOdds` | the comparator failed as intended: `graph=0 policy=uniform start=n7 face=1 landing n6`, actual `1/18`, expected `1/4`; exit 1 |
+| Die-key strictness | scratch `keys-probe.mjs` | `''`, `'01'`, `'1e0'`, `' 1'`, `'-0'`, `'1.0'`, `'0x1'` now throw; before `0c7236c` they were silently accepted or duplicated |
+| Runtime and size | scratch `perf.mjs`, `perf2.mjs` (not committed) | 4-30 ms per `boardOdds` call at 10-60 nodes on the loaded box; about 100 KB JSON at 40 nodes and 200 KB at 60 (all starts) |
+| Manifest | `node hashes.mjs` | checks every file's SHA-256 and the complete inventory; regenerated with `--write` after the last docs edit, then verified |
+| Hosted CI at the earlier head `4ee574b` (PR #4) | `gh api repos/luisitin/partybox-gpt-drops/commits/4ee574b/check-runs` | `verify`: completed, success (run 37644498365) |
+
+### UNVERIFIED for the polish pass
+
+- **Hosted CI for the polish head:** not run when this section was written. Its result is read back from GitHub after the push; until a green check run for the new head is read, the head is not claimed green.
+- **Independence of the Python check:** it was written in the same session as the polish changes and shares the author's reading of the semantic brief (hop distance, dead ends, unknown-target fallback). It catches arithmetic and enumeration errors, not semantic disagreements.
+- **Unknown target fallback:** still uniform. Pinned by the sealed reference, not changed here; the port must validate targets.
+- **Timings:** measured on a shared 4-CPU box with other jobs running; not a benchmark on the owner's machine.
+- **B01 numbers:** the connection test proves that B02 reproduces the vendored B01 tables exactly. It does not validate B01's research; B01's 12 evidence gates remain open (see the B01 job's VERIFY.md).

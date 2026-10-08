@@ -1,14 +1,20 @@
 # B02 — Exact board movement odds
 
-`boardOdds.ts` is the standalone production module. It has **zero runtime dependencies**, uses reduced BigInt fractions, and never samples randomness. The requested PR branch is `job/B02-board-odds`; the only file outside this directory is the repository-required `.github/workflows/B02.yml`.
+**What this is:** `boardOdds.ts`, a pure, zero-dependency TypeScript module. Given a directed board graph and an exact die, it returns exact BigInt-rational landing odds and expected pass-through visits for every start.
+**How to use it:** `npm ci --ignore-scripts --no-audit --no-fund && npm test`; then `import { boardOdds, dieFromFractions } from './build/boardOdds.js'` (examples below). Feed B01's dice with `dieFromFractions(movement)`.
+**Status:** Code verified: seeds 1-3, sealed blind reference, 25 mutants per seed, B01 connection, and an independent Python exact cross-check. Polish pass 2026-10-08 fixed silent die-key repair and added the B01 adapter; see `VERIFY.md` "Polish pass 2026-10-08" and PR #4 for the hosted run.
+
+`boardOdds.ts` has **zero runtime dependencies**, uses reduced BigInt fractions, and never samples randomness. The requested PR branch is `job/B02-board-odds`; the only file outside this directory is the repository-required `.github/workflows/B02.yml`.
 
 ## Run
 
-Requirements: Node.js 22 or newer; npm. Install the sole development dependency with `npm ci --ignore-scripts --no-audit --no-fund`, then:
+Requirements: Node.js 22 or newer; Python 3 (for the independent cross-check only); npm. Install the sole development dependency with `npm ci --ignore-scripts --no-audit --no-fund`, then:
 
 ```sh
 npm test
 ```
+
+Independent cross-check alone (one seed): `node tools/independent-check.mjs --seed 1 --graphs 300`. It runs `tools/python_bruteforce.py`, a separate Python implementation that enumerates literal walks with `fractions.Fraction`, and compares every start, face 0-10, the mixed die and `boardOddsByFace` exactly.
 
 That one test command verifies checksums, compiles the production module, sealed blind reference, and historical supplemental oracle with strict checks, runs every full test suite with seeds **1, 2, 3**, and checks 25 isolated, strictly type-checked mutants per seed. Nothing is skipped because of CI environment variables. Every failing comparison exits nonzero. Raw results are written to `.verification/`; no clocks or unseeded randomness influence the tests.
 
@@ -45,6 +51,22 @@ boardOdds(board: BoardGraph, die: DieDistribution,
 ```
 
 `DieDistribution` accepts a native `Map<number, Rational>` or an object such as `{ '0': rational(1n, 2n), '1': rational(1n, 2n) }`. A rational has fields `numerator: bigint` and `denominator: bigint`. Input die fractions need not already be reduced; the engine normalizes them. Negative denominators are normalized. Weights must be nonnegative and sum to **exactly one**. Zero-weight faces contribute nothing, including to infinite expectations.
+
+**Die keys are strict.** An object key must be a canonical integer string, exactly `String(Number(key)) === key`: `'0'`, `'7'`, `'10'`. The keys `''`, `'01'`, `'1e0'`, `' 1'`, `'-0'`, `'1.0'`, `'0x1'`, `'NaN'` and `'__proto__'` throw `RangeError` (earlier builds silently turned `''` into face 0 and `'01'` plus `'1'` into a duplicate face 1). A value must be a `Rational` with `bigint` fields; numbers and strings throw `TypeError`.
+
+**B01 adapter.** `dieFromFractions(table: Record<string, string>)` converts exact strings such as B01's `odds.json` movement tables (`"1/10"`, `"33/2"`, `"0/1"`, optional leading minus on the numerator) into a die record. It rejects decimals, spaces, slashes beyond one, zero denominators and non-string values.
+
+```ts
+import { getOdds } from '../B01-jamboree-dice/odds.js';        // B01 (sibling job folder)
+import { boardOdds, dieFromFractions } from './build/boardOdds.js';
+// getOdds('normal').movement is { "1": "1/10", ..., "10": "1/10" } in B01's odds.json.
+const normal = dieFromFractions(getOdds('normal').movement); // exact, every outcome survives
+const odds = boardOdds(board, normal, 'toward target', 'goal').get('start')!;
+```
+
+`connect-b01.mjs` runs this adapter on B01's normal, double and triple dice (`fixtures/b01-odds.json`, byte-for-byte from `job/B01-jamboree-dice`, pinned by SHA-256) on a 35-shop line board: landing on `O<m>` must equal B01's `P(movement = m)` and shop `P<k>` must equal `P(movement >= k)`, both exact.
+
+**Cost.** One `boardOdds` call on a 10–60-node board takes about 4–30 ms here (measured on a loaded 4-CPU box). The result is O(nodes²) data: about 100 KB of JSON for 40 nodes and 200 KB for 60, because it covers every start. Cache by (board, die, policy, target) and call once per turn rather than per bot decision.
 
 `BoardOdds` is a read-only map from **every** start ID to:
 
@@ -98,7 +120,7 @@ The 25 mutations are isolated, not stacked. Each must compile strictly and then 
 
 ## Files and integrity
 
-`boardOdds.ts` is the deliverable; `blind-reference.ts`, `reference.ts`, `support.mjs`, `test.mjs`, and `mutate.mjs` are verification code. `run.mjs` is the complete test orchestrator. `PROOF.md` derives the invariants. `VERIFY.md` and `evidence/` record completed runs. `SOURCES.md` records the repository and tooling references, not game-specific movement claims.
+`boardOdds.ts` is the deliverable; `blind-reference.ts`, `reference.ts`, `support.mjs`, `test.mjs`, and `mutate.mjs` are verification code. `connect-b01.mjs` with `fixtures/b01-odds.json` is the B01 connection test, and `tools/` holds the independent Python brute force (`python_bruteforce.py`) with its Node comparator (`independent-check.mjs`). Those are evidence and do not ship in a game port; only `boardOdds.ts` is copied. `run.mjs` is the complete test orchestrator. `PROOF.md` derives the invariants. `VERIFY.md` and `evidence/` record completed runs. `SOURCES.md` records the repository and tooling references, not game-specific movement claims.
 
 `SHA256SUMS.txt` covers all committed job files and `../../.github/workflows/B02.yml`; it excludes itself, `node_modules/`, `build/`, and `.verification/`. `node hashes.mjs` checks both file hashes and the complete manifest inventory. `node hashes.mjs --write` deliberately regenerates it after reviewed changes. No dependencies, build directories, or machine-specific symlinks are shipped.
 
