@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-08T14:19:53.361479+00:00",
-  "summary": "G02 and G07 remain ready for maintainer review and unmerged. G04 remains draft with current exact-head CI green, two consecutive no-player-gain rounds and a retained local phone performance failure. G05 is now draft after unchanged-runtime strict desktop frames passed and phone frames failed; its 37-second checkpoint miss is recorded. G09\u2019s new recovery-observability CI again failed the host-pause reload assertion; its current strict frame checks passed and downstream checks were skipped. G10 retains successful private full-six-piece functional tests, while full-six-piece FPS and the public artifact remain pending. Completed means merged; all older queues and failed evidence remain preserved.",
+  "updatedAt": "2026-10-08T14:20:40.806933+00:00",
+  "summary": "G02 and G07 remain ready for maintainer review and unmerged. G04 has completed three post-correction no-player-gain rounds but stays draft while its new exact-head full CI is pending; the local phone failure is retained. G05 is draft with passing current CI but a failed separate strict phone measurement and a recorded 37-second cadence miss. G09\u2019s current recovery-observability CI failed the host-pause reload assertion; current strict frames passed and downstream checks were skipped. G10\u2019s private full-six-piece functional checks passed, but desktop strict frames failed, phone FPS is unrun and the public artifact remains undelivered. Completed means merged; all older queues and failed evidence remain preserved.",
   "workers": [
     {
       "current": "G07",
@@ -20,12 +20,12 @@
     },
     {
       "current": "G04",
-      "summary": "Draft PR #4 at 5b99dae6, pushed at 13:52:31 UTC: exact-head CI run 37787851588 passed at 13:59:13 UTC. The preceding 5c450993 run 37783931074 passed; its actual native artifact 0328f642 was digest-verified and contains three clips, 1,800 raw intervals, 16 source guards and 66 functional checks. KEEP round 12 added independent source-proof validation with no player gain (streak 1). Round 13 passes eight exact deadline cases: a real compiled <= mutation escapes the old six cases, while the new eight cases catch two regressions and restore the original game. This is verification gain, with no player gain (streak 2). The separate local phone 54.057 FPS failure remains unresolved and retained. This checkpoint met the hard cadence deadline at 29m23s; earlier 74s and 97s misses remain audited.",
-      "next": "Read and retain the complete current-head evidence, then finish the third consecutive no-player-gain formal KEEP round. The PR stays draft until original acceptance is complete.",
+      "summary": "Draft PR #4 at b18952b, normal push completed by 14:19:30 UTC; new exact-head full CI run 37791478413 is in progress. Final KEEP round 14 retains a real compiled host mutation check: the old six cases miss the <= bug, while the new eight cases catch exactly two boundary failures, and all 13 original sources were restored. Strict types/build passed, clip 17 is source-bound at 157,527 bytes, and all 108 hashes passed. Runtime remains unchanged, with three consecutive no-player-gain rounds after the actual deadline correction. The preceding 5b99dae6 full CI run 37787851588 passed; source/current artifact proof and raw reports remain retained. The separate local phone 54.057 FPS failure remains unresolved. This checkpoint met cadence; prior 74s and 97s misses remain audited.",
+      "next": "Read the entire new exact-head full CI and matching evidence before marking the draft ready; preserve the retained local phone failure and documented limits.",
       "queue": [
-        "Exact-head CI",
-        "Next formal KEEP round",
-        "Final acceptance review"
+        "Final exact-head CI",
+        "Source-bound acceptance review",
+        "Maintainer review"
       ]
     },
     {
@@ -50,18 +50,18 @@
     },
     {
       "current": "G10",
-      "summary": "Active no-PR branch job/G10-checkers-complete-20261008 at 9d66f7d, pushed at 14:10:17 UTC. All 37 International six-piece material classes are public as about 975 MB of Node sources in 61 licensed chunks; 10,000 native, default and block-API probes passed. The tracked offline page still integrates International two-through-five-piece data and retains its accepted earlier proof. A new private full-six-piece game page is 1,390,845,425 bytes: actual functional tests passed 30/30 on both desktop and 4x CPU phone profiles, closing at 13:59:03. Startup measured 24.461s/99.217s; actual Strong six-piece use of the original database with 4 KiB reads passed, with zero HTTP requests or page errors. These are private engineering results: full-six-piece FPS and public single-file delivery are still pending. A 48-transaction plus three-game Node suite is authored and unrun. Earlier startup and frame failures remain retained. Full strict loading and source/frame barriers are now in progress; no successful full-six-piece FPS or public artifact is inferred from the functional pass.",
-      "next": "Run the full Node transaction/game suite, pass source-guarded full-six-piece frame and browser acceptance, then publish the verified single-file game and complete the remaining original CI/KEEP requirements.",
+      "summary": "Active no-PR branch job/G10-checkers-complete-20261008 at 9d66f7d, pushed at 14:10:17 UTC. All 37 International six-piece material classes are public as about 975 MB of Node sources in 61 licensed chunks; 10,000 native/independent full-corpus probes and private encoded/block-API checks passed. Installed public-helper/default and full transaction/game acceptance remain pending. The tracked offline page still integrates International two-through-five-piece data and retains its accepted earlier proof. A new private full-six-piece game page is 1,390,845,425 bytes: actual functional tests passed 30/30 on both desktop and 4x CPU phone profiles, closing at 13:59:03. Startup measured 24.461s/99.217s; actual Strong six-piece use of the original database with 4 KiB reads passed, with zero HTTP requests or page errors. These are private engineering results: full-six-piece FPS and public single-file delivery are still pending. A 48-transaction plus three-game Node suite is authored and unrun. Earlier startup and frame failures remain retained. Actual full-six-piece desktop strict measurement retained all 600 intervals and FAILED at 56.51764283 FPS, with p99 33.3 ms; the group closed at 14:17:04.647 UTC. The sampler and Chrome were verified absent afterward. Phone FPS has not run and is not inferred from the 99.217s phone functional load. The public full-six-piece single-file artifact remains undelivered.",
+      "next": "Inspect the retained full-six-piece desktop failure, meet the unchanged strict frame gates on both profiles, run the pending final Node/game gates and publish the verified single-file artifact before original acceptance and KEEP completion.",
       "queue": [
+        "Strict desktop and phone performance",
         "Full Node transactions and games",
-        "Strict full-six-piece frames",
         "Public single-file delivery",
         "Original acceptance and KEEP rounds"
       ]
     }
   ],
   "repository": "luisitin/partybox-game-cores",
-  "observedAt": "2026-10-08T14:16:35.029601+00:00",
+  "observedAt": "2026-10-08T14:20:49.835268+00:00",
   "rows": [
     {
       "id": "G01",
@@ -690,7 +690,7 @@
       "title": "Reality Check (core only)",
       "stage": "Review",
       "branch": "job/G04-reality-check-core",
-      "head": "5b99dae616213fb2603914747ef08e76cf891015",
+      "head": "b18952bfca09a6e3b3e2647adc0ea5c327a99d73",
       "otherBranches": [
         {
           "name": "job/G04-reality-check",
@@ -704,16 +704,16 @@
         "state": "open",
         "draft": true,
         "merged_at": null,
-        "updated_at": "2026-10-08T13:59:13Z",
+        "updated_at": "2026-10-08T14:19:08Z",
         "body": "Reality Check delivers a pure, deterministic 2\u20138-player quiz/bluff core and one offline hot-seat/bot HTML page, with eight fictional sample realms, first-visit demos, Quick/Mixed/Bluff modes, private handovers and final-round double scoring. Late inputs now close the expired phase first: a visibly expired correct answer/vote previously earned 1,000 points; eight actual-file controls verify zero late credit and excluded late human/bot fakes, while on-time and paused controls retain credit. Full pinned Zod MIT notice is included.\n\nCurrent head `5b99dae616213fb2603914747ef08e76cf891015`; [exact-head CI current](https://github.com/luisitin/partybox-game-cores/actions?query=branch%3Ajob%2FG04-reality-check-core) pending. Previous `7a7af73` [CI 37780890383](https://github.com/luisitin/partybox-game-cores/actions/runs/37780890383) passed 51 node tests, 21,000 bot games, 25 mutants, 24,000 leagues, six deadline controls and 66 browser scenarios. Nine actual complete stdout reports retain all 1,800 unfiltered intervals and 16 source guards; six profiles passed near 60 FPS. Native artifact retrieval succeeded: ZIP hashes match GitHub digests, all9 full/raw reports match actual stdout, and all3 current recording byte counts/SHA hashes match actual downloaded media. Current local source/raw/capture proof passed on1,800 intervals.\n\nThis checkpoint adds independent current-file, raw-statistics and actual-capture SHA/byte validation after all three full browser runs. An actual harmless HTML change still passed the old JSON/media checksum test; the new source proof rejected it and restored the exact page. Twenty-three meaningful corruption controls passed. The genuine short milestone-15 clip is 156,846 bytes, source-bound and hash-checked separately; its encoding is not an FPS measurement. Player behavior is unchanged in KEEP round 12, with no-player-gain streak 1, passed exact5c45099 CI37783931074. KEEP round13 adds two exact-deadline controls: all8 pass, while an actual compiled <= mutation escapes the old6 and is caught by both new controls. Canonical UI/HTML restored unchanged; current no-player-gain streak2, new exactCI pending.\n\nLocal frame failures remain public: initial full-run TV 55.903 FPS; subsequent frame-only TV 59.605 FPS passed but phone 54.057 FPS failed. Complete raw samples/runner/log are retained; cause unresolved. Hosted acceptance and failed local observations remain separate. Phone is Chromium 390\u00d7844 with 4\u00d7 CPU, not physical hardware. Held-timer/wallclock-jump deadline fixtures do not establish ordinary race frequency.\n\nPR stays draft pending exact current checks and three consecutive no-player-gain rounds. Cadence misses of 74 and 97 seconds remain audited. Latest normal push13:52:31UTC followed13:23:08 by29m23s (PASS). Earlytarget13:48:08 missed; hard13:53:08 met. Nexttarget14:17:31/hard14:22:31UTC. Freshmilestone16 source-bound clip157763bytes; encoding is not FPS acceptance.\n"
       },
       "check": {
-        "id": 37787851588,
-        "head_sha": "5b99dae616213fb2603914747ef08e76cf891015",
-        "status": "completed",
-        "conclusion": "success",
-        "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37787851588",
-        "updated_at": "2026-10-08T13:59:13Z",
+        "id": 37791478413,
+        "head_sha": "b18952bfca09a6e3b3e2647adc0ea5c327a99d73",
+        "status": "in_progress",
+        "conclusion": null,
+        "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37791478413",
+        "updated_at": "2026-10-08T14:19:18Z",
         "path": ".github/workflows/G04.yml"
       },
       "checkError": null,
@@ -779,6 +779,7 @@
         "jobs/G04-reality-check/capture-pinned-encoder-milestone-14-report.json",
         "jobs/G04-reality-check/capture-pinned-encoder-milestone-15-report.json",
         "jobs/G04-reality-check/capture-pinned-encoder-milestone-16-report.json",
+        "jobs/G04-reality-check/capture-pinned-encoder-milestone-17-report.json",
         "jobs/G04-reality-check/capture-pinned-encoder-report.json",
         "jobs/G04-reality-check/capture.ts",
         "jobs/G04-reality-check/catalog-before.json",
@@ -818,6 +819,11 @@
         "jobs/G04-reality-check/fixtures/write.json",
         "jobs/G04-reality-check/generate.ts",
         "jobs/G04-reality-check/held-out-league-report.json",
+        "jobs/G04-reality-check/host-deadline-automated-mutation-report.json",
+        "jobs/G04-reality-check/host-deadline-automated-new-eight-log.txt",
+        "jobs/G04-reality-check/host-deadline-automated-new-eight-report.json",
+        "jobs/G04-reality-check/host-deadline-automated-old-six-log.txt",
+        "jobs/G04-reality-check/host-deadline-automated-old-six-report.json",
         "jobs/G04-reality-check/host-deadline-equality-mutation-report.json",
         "jobs/G04-reality-check/host-deadline-equality-mutation-runner.txt",
         "jobs/G04-reality-check/host-deadline-equality-new-eight-report.json",
@@ -825,6 +831,7 @@
         "jobs/G04-reality-check/host-deadline-equality-old-six-report.json",
         "jobs/G04-reality-check/host-deadline-equality-old-six-runner.txt",
         "jobs/G04-reality-check/host-deadline-equality-old-six.log",
+        "jobs/G04-reality-check/host-deadline-mutation.ts",
         "jobs/G04-reality-check/late-input-before-bot-runner.txt",
         "jobs/G04-reality-check/late-input-before-bot.json",
         "jobs/G04-reality-check/late-input-before-human-runner.txt",
@@ -849,6 +856,7 @@
         "jobs/G04-reality-check/media/milestone-15-browser.webm",
         "jobs/G04-reality-check/media/milestone-15-pinned-encoder.webm",
         "jobs/G04-reality-check/media/milestone-16-pinned-encoder.webm",
+        "jobs/G04-reality-check/media/milestone-17-pinned-encoder.webm",
         "jobs/G04-reality-check/media/milestone-2.webm",
         "jobs/G04-reality-check/media/milestone-3-drafts.webm",
         "jobs/G04-reality-check/media/milestone-4-phone.webm",
@@ -888,12 +896,12 @@
       ],
       "operatorNote": {
         "current": "G04",
-        "summary": "Draft PR #4 at 5b99dae6, pushed at 13:52:31 UTC: exact-head CI run 37787851588 passed at 13:59:13 UTC. The preceding 5c450993 run 37783931074 passed; its actual native artifact 0328f642 was digest-verified and contains three clips, 1,800 raw intervals, 16 source guards and 66 functional checks. KEEP round 12 added independent source-proof validation with no player gain (streak 1). Round 13 passes eight exact deadline cases: a real compiled <= mutation escapes the old six cases, while the new eight cases catch two regressions and restore the original game. This is verification gain, with no player gain (streak 2). The separate local phone 54.057 FPS failure remains unresolved and retained. This checkpoint met the hard cadence deadline at 29m23s; earlier 74s and 97s misses remain audited.",
-        "next": "Read and retain the complete current-head evidence, then finish the third consecutive no-player-gain formal KEEP round. The PR stays draft until original acceptance is complete.",
+        "summary": "Draft PR #4 at b18952b, normal push completed by 14:19:30 UTC; new exact-head full CI run 37791478413 is in progress. Final KEEP round 14 retains a real compiled host mutation check: the old six cases miss the <= bug, while the new eight cases catch exactly two boundary failures, and all 13 original sources were restored. Strict types/build passed, clip 17 is source-bound at 157,527 bytes, and all 108 hashes passed. Runtime remains unchanged, with three consecutive no-player-gain rounds after the actual deadline correction. The preceding 5b99dae6 full CI run 37787851588 passed; source/current artifact proof and raw reports remain retained. The separate local phone 54.057 FPS failure remains unresolved. This checkpoint met cadence; prior 74s and 97s misses remain audited.",
+        "next": "Read the entire new exact-head full CI and matching evidence before marking the draft ready; preserve the retained local phone failure and documented limits.",
         "queue": [
-          "Exact-head CI",
-          "Next formal KEEP round",
-          "Final acceptance review"
+          "Final exact-head CI",
+          "Source-bound acceptance review",
+          "Maintainer review"
         ]
       }
     },
@@ -2803,11 +2811,11 @@
       ],
       "operatorNote": {
         "current": "G10",
-        "summary": "Active no-PR branch job/G10-checkers-complete-20261008 at 9d66f7d, pushed at 14:10:17 UTC. All 37 International six-piece material classes are public as about 975 MB of Node sources in 61 licensed chunks; 10,000 native, default and block-API probes passed. The tracked offline page still integrates International two-through-five-piece data and retains its accepted earlier proof. A new private full-six-piece game page is 1,390,845,425 bytes: actual functional tests passed 30/30 on both desktop and 4x CPU phone profiles, closing at 13:59:03. Startup measured 24.461s/99.217s; actual Strong six-piece use of the original database with 4 KiB reads passed, with zero HTTP requests or page errors. These are private engineering results: full-six-piece FPS and public single-file delivery are still pending. A 48-transaction plus three-game Node suite is authored and unrun. Earlier startup and frame failures remain retained. Full strict loading and source/frame barriers are now in progress; no successful full-six-piece FPS or public artifact is inferred from the functional pass.",
-        "next": "Run the full Node transaction/game suite, pass source-guarded full-six-piece frame and browser acceptance, then publish the verified single-file game and complete the remaining original CI/KEEP requirements.",
+        "summary": "Active no-PR branch job/G10-checkers-complete-20261008 at 9d66f7d, pushed at 14:10:17 UTC. All 37 International six-piece material classes are public as about 975 MB of Node sources in 61 licensed chunks; 10,000 native/independent full-corpus probes and private encoded/block-API checks passed. Installed public-helper/default and full transaction/game acceptance remain pending. The tracked offline page still integrates International two-through-five-piece data and retains its accepted earlier proof. A new private full-six-piece game page is 1,390,845,425 bytes: actual functional tests passed 30/30 on both desktop and 4x CPU phone profiles, closing at 13:59:03. Startup measured 24.461s/99.217s; actual Strong six-piece use of the original database with 4 KiB reads passed, with zero HTTP requests or page errors. These are private engineering results: full-six-piece FPS and public single-file delivery are still pending. A 48-transaction plus three-game Node suite is authored and unrun. Earlier startup and frame failures remain retained. Actual full-six-piece desktop strict measurement retained all 600 intervals and FAILED at 56.51764283 FPS, with p99 33.3 ms; the group closed at 14:17:04.647 UTC. The sampler and Chrome were verified absent afterward. Phone FPS has not run and is not inferred from the 99.217s phone functional load. The public full-six-piece single-file artifact remains undelivered.",
+        "next": "Inspect the retained full-six-piece desktop failure, meet the unchanged strict frame gates on both profiles, run the pending final Node/game gates and publish the verified single-file artifact before original acceptance and KEEP completion.",
         "queue": [
+          "Strict desktop and phone performance",
           "Full Node transactions and games",
-          "Strict full-six-piece frames",
           "Public single-file delivery",
           "Original acceptance and KEEP rounds"
         ]
