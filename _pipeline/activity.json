@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-08T20:18:34.934450+00:00",
-  "summary": "All 20 original projects remain unmerged: 13 canonical PRs are ready for review and 7 remain drafts. All 20 canonical exact-head workflows pass in this fresh GitHub observation. Green structural/code checks do not close the six documented research gaps or automatically accept newer external ports. B19 retains two separate draft reviews: canonical PR #2 at ccc610fb and protocol review PR #23 at 5155180b, with local literal-speed failures and unfinished KEEP review preserved. Foreground updates were interrupted after the actual 17:50:12 push; the earlier 17:18:34\u201317:50:12 interval also missed the 30-minute rule by 98 seconds. The existing hourly automation remains paused, with no next run or verified chat delivery.",
+  "updatedAt": "2026-10-08T20:46:14.319610+00:00",
+  "summary": "All 20 original projects remain unmerged: 13 canonical PRs are ready for review and 7 are drafts. All 20 canonical exact-head workflows pass in this fresh observation. Six documented research gaps remain open despite green structural checks. B19 canonical PR #2 at ccc610fb and protocol-review draft PR #23 at 5155180b retain separate workloads and evidence: the protocol review passed its full 100-suite hosted check and 1,221 independent genuine-artifact assertions, but actual local literal 0.05-ms speed failures and unfinished KEEP review remain binding. The second workspace restart interrupted private work at approximately 20:31\u201320:40 UTC; no candidate implementation or completed review is inferred from interrupted preparation. Actual reporting interruptions and earlier cadence misses remain recorded. The existing hourly automation remains paused, with no next run or verified chat-delivery receipt.",
   "workers": [
     {
       "current": "B13",
@@ -114,13 +114,14 @@
       "updatedAt": "2026-10-08T17:16:00+00:00"
     }
   ],
-  "observedAt": "2026-10-08T20:17:43.677Z",
+  "observedAt": "2026-10-08T20:43:22+00:00",
   "reporting": {
     "automationId": "Automation_677021765a8481918dcbf7433054333c",
-    "observedAt": "2026-10-08T19:56:18.993Z",
+    "observedAt": "2026-10-08 20:43:41 UTC",
     "isEnabled": false,
     "lastRunTime": "2026-10-08T16:26:48.692643+00:00",
     "updatedAt": "2026-10-08T16:31:45.381563+00:00",
+    "nextRunTime": null,
     "chatDeliveryVerified": false
   },
   "canonicalBranches": {
@@ -145,7 +146,8 @@
         "updated_at": "2026-10-08T19:44:28Z",
         "path": ".github/workflows/B19.yml",
         "run_number": 15,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "originalAcceptanceComplete": false,
       "keepComplete": false
@@ -167,11 +169,19 @@
     "interruptionGapSecondsAtRecovery": 5395,
     "status": "MISSED during the environment interruption; this recovery refresh does not establish uninterrupted 30-minute delivery.",
     "backgroundStatus": "Existing hourly automation remains paused. No next run or chat-delivery receipt is available.",
-    "latestForegroundObservationAt": "2026-10-08T20:17:43.677Z",
+    "latestForegroundObservationAt": "2026-10-08T20:43:22+00:00",
     "previousVerifiedForegroundPush": {
-      "commit": "15aec869002fa389c8ba427edc83e4d291f9e95c",
-      "pushedAt": "2026-10-08T19:57:41.714782+00:00"
-    }
+      "commit": "55aea088cf5160fa60a19e178765f2f17e4c6600",
+      "pushedAt": "2026-10-08T20:18:37.058999+00:00"
+    },
+    "workspaceInterruptions": [
+      {
+        "approximateStart": "2026-10-08T20:31:00Z",
+        "approximateRecovery": "2026-10-08T20:40:00Z",
+        "precision": "approximate observation only; actual process termination times are unproved",
+        "note": "Second workspace restart interrupted private work. The preceding actual tracker push remains 20:18:37 UTC; no backdated push, uninterrupted-work claim or causal explanation is inferred."
+      }
+    ]
   },
   "rows": [
     {
@@ -200,7 +210,8 @@
         "updated_at": "2026-10-07T15:37:28Z",
         "path": ".github/workflows/B01.yml",
         "run_number": 7,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -286,7 +297,21 @@
           "Resolve remaining original research gaps"
         ],
         "updatedAt": "2026-10-08T10:21:00+00:00"
-      }
+      },
+      "allExactHeadChecks": [
+        {
+          "id": 37645302761,
+          "head_sha": "e33a58898b3293de29c67338b0a79b1bba3a4751",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37645302761",
+          "updated_at": "2026-10-07T15:37:28Z",
+          "path": ".github/workflows/B01.yml",
+          "run_number": 7,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B02",
@@ -314,7 +339,8 @@
         "updated_at": "2026-10-08T17:18:10Z",
         "path": ".github/workflows/B02.yml",
         "run_number": 7,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -396,7 +422,21 @@
           "Current adapter and input review"
         ],
         "updatedAt": "2026-10-08T20:18:34.934450+00:00"
-      }
+      },
+      "allExactHeadChecks": [
+        {
+          "id": 37814358809,
+          "head_sha": "658c689b95fbee97b7b51e19fd6c5d3835da23d2",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37814358809",
+          "updated_at": "2026-10-08T17:18:10Z",
+          "path": ".github/workflows/B02.yml",
+          "run_number": 7,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B03",
@@ -424,7 +464,8 @@
         "updated_at": "2026-10-08T16:52:09Z",
         "path": ".github/workflows/B03.yml",
         "run_number": 4,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -518,7 +559,21 @@
           "Resolve source gaps"
         ],
         "updatedAt": "2026-10-08T17:16:00+00:00"
-      }
+      },
+      "allExactHeadChecks": [
+        {
+          "id": 37812080333,
+          "head_sha": "81fbd529eecdab39d2aaf7d4781a149634884420",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37812080333",
+          "updated_at": "2026-10-08T16:52:09Z",
+          "path": ".github/workflows/B03.yml",
+          "run_number": 4,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B04",
@@ -546,7 +601,8 @@
         "updated_at": "2026-10-08T17:01:25Z",
         "path": ".github/workflows/B04.yml",
         "run_number": 3,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -636,7 +692,21 @@
           "Resolve source and map gaps"
         ],
         "updatedAt": "2026-10-08T17:16:00+00:00"
-      }
+      },
+      "allExactHeadChecks": [
+        {
+          "id": 37813291474,
+          "head_sha": "697fa0e1538c99e541169bcf4b84ff8fa397ed16",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37813291474",
+          "updated_at": "2026-10-08T17:01:25Z",
+          "path": ".github/workflows/B04.yml",
+          "run_number": 3,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B05",
@@ -664,7 +734,8 @@
         "updated_at": "2026-10-08T17:01:08Z",
         "path": ".github/workflows/B05.yml",
         "run_number": 3,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -757,7 +828,21 @@
           "Resolve payout and bonus gaps"
         ],
         "updatedAt": "2026-10-08T17:16:00+00:00"
-      }
+      },
+      "allExactHeadChecks": [
+        {
+          "id": 37813265437,
+          "head_sha": "91345bb1adc69328f0c696cb9f638fd6c20620ba",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37813265437",
+          "updated_at": "2026-10-08T17:01:08Z",
+          "path": ".github/workflows/B05.yml",
+          "run_number": 3,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B06",
@@ -785,7 +870,8 @@
         "updated_at": "2026-10-08T17:10:41Z",
         "path": ".github/workflows/B06.yml",
         "run_number": 4,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -855,7 +941,21 @@
           "Resolve behavior evidence gaps"
         ],
         "updatedAt": "2026-10-08T17:16:00+00:00"
-      }
+      },
+      "allExactHeadChecks": [
+        {
+          "id": 37814340582,
+          "head_sha": "baf87d4400d832b6fe9356ae0d5f43cd109bbd48",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37814340582",
+          "updated_at": "2026-10-08T17:10:41Z",
+          "path": ".github/workflows/B06.yml",
+          "run_number": 4,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B07",
@@ -883,7 +983,8 @@
         "updated_at": "2026-10-08T17:05:39Z",
         "path": ".github/workflows/B07.yml",
         "run_number": 5,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -1050,7 +1151,21 @@
           "Current-source and port review"
         ],
         "updatedAt": "2026-10-08T17:16:00+00:00"
-      }
+      },
+      "allExactHeadChecks": [
+        {
+          "id": 37812451169,
+          "head_sha": "90378abaaa7cbc3f4a61b58087c1ea4a9f4a8b26",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37812451169",
+          "updated_at": "2026-10-08T17:05:39Z",
+          "path": ".github/workflows/B07.yml",
+          "run_number": 5,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B08",
@@ -1078,7 +1193,8 @@
         "updated_at": "2026-10-08T17:20:45Z",
         "path": ".github/workflows/B08.yml",
         "run_number": 4,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -1156,7 +1272,21 @@
         "head": "5f35ba66a2169b4126c8ae312efa8c1635b3f5e3",
         "observedAt": "2026-10-08T19:15:31.623Z"
       },
-      "operatorNote": null
+      "operatorNote": null,
+      "allExactHeadChecks": [
+        {
+          "id": 37815695050,
+          "head_sha": "5f35ba66a2169b4126c8ae312efa8c1635b3f5e3",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37815695050",
+          "updated_at": "2026-10-08T17:20:45Z",
+          "path": ".github/workflows/B08.yml",
+          "run_number": 4,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B09",
@@ -1184,7 +1314,8 @@
         "updated_at": "2026-10-07T14:29:44Z",
         "path": ".github/workflows/B09.yml",
         "run_number": 3,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -1219,7 +1350,21 @@
         "head": "2b39550d395bab5ea0ad5c18cae19c3f78fdd84c",
         "observedAt": "2026-10-08T19:15:31.623Z"
       },
-      "operatorNote": null
+      "operatorNote": null,
+      "allExactHeadChecks": [
+        {
+          "id": 37636605896,
+          "head_sha": "2b39550d395bab5ea0ad5c18cae19c3f78fdd84c",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37636605896",
+          "updated_at": "2026-10-07T14:29:44Z",
+          "path": ".github/workflows/B09.yml",
+          "run_number": 3,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B10",
@@ -1247,7 +1392,8 @@
         "updated_at": "2026-10-07T17:01:48Z",
         "path": ".github/workflows/B10.yml",
         "run_number": 9,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -1305,7 +1451,21 @@
         "head": "34d91e88f1856d10d1886e05af428123dee830ac",
         "observedAt": "2026-10-08T19:15:31.623Z"
       },
-      "operatorNote": null
+      "operatorNote": null,
+      "allExactHeadChecks": [
+        {
+          "id": 37653999825,
+          "head_sha": "34d91e88f1856d10d1886e05af428123dee830ac",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37653999825",
+          "updated_at": "2026-10-07T17:01:48Z",
+          "path": ".github/workflows/B10.yml",
+          "run_number": 9,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B11",
@@ -1333,7 +1493,8 @@
         "updated_at": "2026-10-08T16:02:21Z",
         "path": ".github/workflows/B11.yml",
         "run_number": 8,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -1446,7 +1607,21 @@
         "head": "72081bac5335266156c0f48ebed8e978ed1efde7",
         "observedAt": "2026-10-08T19:15:31.623Z"
       },
-      "operatorNote": null
+      "operatorNote": null,
+      "allExactHeadChecks": [
+        {
+          "id": 37804837890,
+          "head_sha": "72081bac5335266156c0f48ebed8e978ed1efde7",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37804837890",
+          "updated_at": "2026-10-08T16:02:21Z",
+          "path": ".github/workflows/B11.yml",
+          "run_number": 8,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B12",
@@ -1474,7 +1649,8 @@
         "updated_at": "2026-10-08T16:28:53Z",
         "path": ".github/workflows/B12.yml",
         "run_number": 3,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -1592,7 +1768,21 @@
         "head": "a8be0e08392850178f50713361054dc86436e5eb",
         "observedAt": "2026-10-08T19:15:31.623Z"
       },
-      "operatorNote": null
+      "operatorNote": null,
+      "allExactHeadChecks": [
+        {
+          "id": 37808415721,
+          "head_sha": "a8be0e08392850178f50713361054dc86436e5eb",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37808415721",
+          "updated_at": "2026-10-08T16:28:53Z",
+          "path": ".github/workflows/B12.yml",
+          "run_number": 3,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B13",
@@ -1620,7 +1810,8 @@
         "updated_at": "2026-10-08T16:35:26Z",
         "path": ".github/workflows/B13.yml",
         "run_number": 3,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -1899,7 +2090,21 @@
           "Maintainer review"
         ],
         "updatedAt": "2026-10-08T16:50:20+00:00"
-      }
+      },
+      "allExactHeadChecks": [
+        {
+          "id": 37809925089,
+          "head_sha": "87693947ed87314b3f835d555197123b74f8d2be",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37809925089",
+          "updated_at": "2026-10-08T16:35:26Z",
+          "path": ".github/workflows/B13.yml",
+          "run_number": 3,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B14",
@@ -1927,7 +2132,8 @@
         "updated_at": "2026-10-07T19:51:42Z",
         "path": ".github/workflows/B14.yml",
         "run_number": 1,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -2102,7 +2308,21 @@
         "head": "7985b82423a9419bbbfcdc6c1dfb12b816bc461e",
         "observedAt": "2026-10-08T19:15:31.623Z"
       },
-      "operatorNote": null
+      "operatorNote": null,
+      "allExactHeadChecks": [
+        {
+          "id": 37675775829,
+          "head_sha": "7985b82423a9419bbbfcdc6c1dfb12b816bc461e",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37675775829",
+          "updated_at": "2026-10-07T19:51:42Z",
+          "path": ".github/workflows/B14.yml",
+          "run_number": 1,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B15",
@@ -2130,7 +2350,8 @@
         "updated_at": "2026-10-08T17:14:39Z",
         "path": ".github/workflows/B15.yml",
         "run_number": 5,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -2297,7 +2518,21 @@
         "head": "e98b52bc47cac6205a991ff2d6e1a1bde25170e8",
         "observedAt": "2026-10-08T19:15:31.623Z"
       },
-      "operatorNote": null
+      "operatorNote": null,
+      "allExactHeadChecks": [
+        {
+          "id": 37814703895,
+          "head_sha": "e98b52bc47cac6205a991ff2d6e1a1bde25170e8",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37814703895",
+          "updated_at": "2026-10-08T17:14:39Z",
+          "path": ".github/workflows/B15.yml",
+          "run_number": 5,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B16",
@@ -2325,7 +2560,8 @@
         "updated_at": "2026-10-08T17:18:27Z",
         "path": ".github/workflows/B16.yml",
         "run_number": 4,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -2407,7 +2643,21 @@
         "head": "34604b161f77fd1f1474f594ceeaaad869c5bb69",
         "observedAt": "2026-10-08T19:15:31.624Z"
       },
-      "operatorNote": null
+      "operatorNote": null,
+      "allExactHeadChecks": [
+        {
+          "id": 37815447696,
+          "head_sha": "34604b161f77fd1f1474f594ceeaaad869c5bb69",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37815447696",
+          "updated_at": "2026-10-08T17:18:27Z",
+          "path": ".github/workflows/B16.yml",
+          "run_number": 4,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B17",
@@ -2435,7 +2685,8 @@
         "updated_at": "2026-10-08T16:36:36Z",
         "path": ".github/workflows/B17.yml",
         "run_number": 8,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -2572,7 +2823,21 @@
         "head": "48fbafb51fee6311d837ae9a7a8f090970275321",
         "observedAt": "2026-10-08T19:15:31.624Z"
       },
-      "operatorNote": null
+      "operatorNote": null,
+      "allExactHeadChecks": [
+        {
+          "id": 37809451809,
+          "head_sha": "48fbafb51fee6311d837ae9a7a8f090970275321",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37809451809",
+          "updated_at": "2026-10-08T16:36:36Z",
+          "path": ".github/workflows/B17.yml",
+          "run_number": 8,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B18",
@@ -2600,7 +2865,8 @@
         "updated_at": "2026-10-08T17:20:25Z",
         "path": ".github/workflows/B18.yml",
         "run_number": 6,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -2643,7 +2909,21 @@
         "head": "744b44b5423b6c7b3c66c751f6c4aa48da1933a5",
         "observedAt": "2026-10-08T19:15:31.624Z"
       },
-      "operatorNote": null
+      "operatorNote": null,
+      "allExactHeadChecks": [
+        {
+          "id": 37815364251,
+          "head_sha": "744b44b5423b6c7b3c66c751f6c4aa48da1933a5",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37815364251",
+          "updated_at": "2026-10-08T17:20:25Z",
+          "path": ".github/workflows/B18.yml",
+          "run_number": 6,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B19",
@@ -2676,7 +2956,8 @@
         "updated_at": "2026-10-08T16:44:17Z",
         "path": ".github/workflows/B19.yml",
         "run_number": 13,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -2885,7 +3166,21 @@
             "next": "Finish the original binding KEEP review and independently assess the retained local literal-speed failures before changing readiness. Preserve canonical PR #2 and isolated PR #23 as distinct source/protocol histories; neither is merged."
           }
         ]
-      }
+      },
+      "allExactHeadChecks": [
+        {
+          "id": 37811077768,
+          "head_sha": "ccc610fb02b523e3d4b9aa0c28b311a361930011",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37811077768",
+          "updated_at": "2026-10-08T16:44:17Z",
+          "path": ".github/workflows/B19.yml",
+          "run_number": 13,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     },
     {
       "id": "B20",
@@ -2913,7 +3208,8 @@
         "updated_at": "2026-10-08T17:03:29Z",
         "path": ".github/workflows/B20.yml",
         "run_number": 3,
-        "run_attempt": 1
+        "run_attempt": 1,
+        "event": "pull_request"
       },
       "checkError": null,
       "files": [
@@ -3051,7 +3347,21 @@
           "Resolve evidence gaps and validate prototypes"
         ],
         "updatedAt": "2026-10-08T17:16:00+00:00"
-      }
+      },
+      "allExactHeadChecks": [
+        {
+          "id": 37813555104,
+          "head_sha": "0c8d7024b9ff3c61ddd68ec213ef1d7c35ef00a7",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37813555104",
+          "updated_at": "2026-10-08T17:03:29Z",
+          "path": ".github/workflows/B20.yml",
+          "run_number": 3,
+          "run_attempt": 1,
+          "event": "pull_request"
+        }
+      ]
     }
   ]
 }
