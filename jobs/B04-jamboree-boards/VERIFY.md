@@ -772,3 +772,42 @@ The nine preserved disagreement rows are:
 Complete numbered adjacency and exact gate/Star/physical shop coordinates, full event exhaustiveness, unrecorded prices/update boundaries, detailed reward distributions, RNG weights, tide cadence, patch-specific Buddy availability and live gameplay behavior remain unresolved where stated. Regional topology and current source figures are provided without guessing. Party-Planner Trek’s complete NPC/task catalog is outside the retained party-layout evidence and remains unverified.
 
 CI checks closed schemas, references, all hashes and the documented strict exit 1. A green artifact check does not certify missing source corroboration or current Nintendo behavior. The observed exact latest-head run is linked in the PR description.
+
+## Polish pass 2026-10-08 (Claude, cloud)
+
+Commands, run from `jobs/B04-jamboree-boards` with `PYTHONDONTWRITEBYTECODE=1` (no bytecode left in the folder):
+
+```
+$ python3 verify.py --structural
+   25 PASS lines, as in validator-output.txt, plus the new suite:
+PASS BOARD_DOC_TABLES_MATCH_JSON: 51/51
+STRUCTURAL_RESULT=PASS; suites=25; cases=5391; seed=N/A (deterministic)
+EXIT_CODE=0
+
+$ python3 verify.py --strict
+   the same 25 PASS lines, then:
+FULL_FACTS_TWO_SOURCE=31/518; FAIL
+CURRENT_EVENT_TRIGGER_EFFECT=37/38; FAIL
+EXACT_NUMBERED_MAPS=0/7; descriptive UNVERIFIED provenance; cited regional maps supplied
+NINTENDO_GAMEPLAY_EXECUTED=NO
+STRICT_RESEARCH_RESULT=NOT_MET; exit=1
+EXIT_CODE=1 (by design)
+```
+
+Manifest: `SHA256SUMS.txt` is regenerated last, from every file in the folder except itself (sorted with `LC_ALL=C`), plus the workflow line `../../.github/workflows/B04.yml`. `verify.py --structural --checksums` and `sha256sum -c SHA256SUMS.txt` are run on the regenerated file before the commit.
+
+What was checked:
+- `BOARD_DOC_TABLES_MATCH_JSON` (new suite): the 16 count tables and the 35 shop tables in `boards/*.md` equal `boards.json` cell for cell. Before this suite nothing in the verifier compared the document tables with the JSON.
+- Board figures in `DESIGN-DIGEST.md` (space mix, shop price bands, event and phase counts, Star and Homestretch facts) were recomputed from `boards.json` with a scratch script; the scratch files are not committed.
+- The seven boards' events, phases, Homestretch and star rows were read in `boards.json`. The Mega Wiggler document was read in full. The prose of the other six documents was not re-read line by line.
+- PR #18 at the start of this pass: draft, open, head `484dbbf`, read through the REST API. Its CI run 37679637130 for `484dbbf` concluded success.
+
+Changed:
+- `verify.py`: `BOARD_DOC_TABLES_MATCH_JSON` and the markdown table parser (structural suites 24 to 25; cases 5,338 to 5,391).
+- `DESIGN-DIGEST.md` (new): design reading with [C], [S], [X], [?] tags, PartyBox mapping, limits.
+- `INTEGRATION.md` (new): status Reference only, port steps, presentation plan, gaps, polish-pass record.
+- `README.md`: top block (what, how, status) and the verification counts.
+- `ASSUMPTIONS.md`, `LOOP.md`: one appended line each.
+- `VERIFY.md`: this section. `SHA256SUMS.txt`: regenerated.
+
+Not changed: no factual row in `boards.json` or any `boards/*.md` table. No source was re-fetched in this pass (the offline verifier makes no freshness claim), no map image was retrieved, and no PR comment, review, merge or close was made. PR #18 stays a draft.

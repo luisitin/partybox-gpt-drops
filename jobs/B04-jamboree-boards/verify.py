@@ -97,6 +97,32 @@ def run(strict=False,hashes=False):
  for b in boards:
   t=(ROOT/'boards'/(b['id']+'.md')).read_text();need('## UNVERIFIED' in t and b['map']['description'] in t and all(f['id'] in t for f in b['events']),'board docs drift')
  need(len(list((ROOT/'boards').glob('*.md')))==len(boards),'extra board doc');passed('BOARD_DOCUMENT_REQUIRED_SECTIONS',len(boards))
+ md_tables=[]
+ for board in boards:
+     text=(ROOT/'boards'/f"{board['id']}.md").read_text(encoding='utf-8');heading=None;current=None
+     for line in text.splitlines():
+         if line.startswith('### '):heading=line[4:].strip();current=None
+         if line.startswith('|'):
+             cells=[c.strip() for c in line.strip().strip('|').split('|')]
+             if set(''.join(cells))<=set('-: '):continue
+             if current is None:current={'board':board,'heading':heading,'header':cells,'rows':[]};md_tables.append(current)
+             else:current['rows'].append(cells)
+         else:current=None
+ def count_table_matches_json(table):
+     board=table['board'];profile=table['heading'].split()[0]
+     match=[p for p in board['spaceCounts'] if p['profile']==profile];need(len(match)==1,'count table without JSON profile: '+board['id']+' '+profile)
+     want={f['value']['type']:f['value']['count'] for f in match[0]['counts']};want_total=match[0]['total']
+     got={r[0]:int(r[1]) for r in table['rows'] if not r[0].startswith('Total')};total_row=[r for r in table['rows'] if r[0].startswith('Total')]
+     need(got==want and len(total_row)==1 and int(total_row[0][1])==want_total,'count table differs from boards.json: '+board['id']+' '+profile)
+ def shop_table_matches_json(table):
+     board=table['board'];heading=table['heading'];name,_,ruleset=heading.partition(' — ')
+     match=[s for s in board['shops'] if s['name']==name and (not ruleset or s['ruleset']==ruleset)];need(len(match)==1,'shop table without one JSON shop: '+board['id']+' '+heading)
+     want=[(f['value']['name'],f['value']['coins']) for f in match[0]['inventory']];got=[(r[0],int(r[1])) for r in table['rows']]
+     need(got==want,'shop table differs from boards.json: '+board['id']+' '+heading)
+ count_tables=[t for t in md_tables if t['header'][:2]==['Type','Count']];shop_tables=[t for t in md_tables if t['header'][:2]==['Item','Coins']]
+ for t in count_tables:count_table_matches_json(t)
+ for t in shop_tables:shop_table_matches_json(t)
+ passed('BOARD_DOC_TABLES_MATCH_JSON',len(count_tables)+len(shop_tables))
  for f in fs.values():
   if f['status']=='conflict':need(f['id'] in conflict,'missing source conflict')
  passed('ALL_FACTUAL_CONFLICTS_PRESERVED',sum(f['status']=='conflict' for f in fs.values()))

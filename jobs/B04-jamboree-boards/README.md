@@ -1,5 +1,9 @@
 # B04 — All Jamboree boards, space by space
 
+**What this is:** a research file for the seven current Jamboree boards: space-type counts for 16 profiles (baseline, TV Tag Team and angry), 35 shop profiles with 215 item rows, and Star, event, phase, Homestretch and TV rules, each with its source quotes. Seven board documents are checked cell by cell against `boards.json`, and eleven regional map links are cited.
+**How to use it:** read `INTEGRATION.md` first (the port plan for the desktop agent), then `DESIGN-DIGEST.md` (the design reading). Query `boards.json` for numbers; every row carries its status. Do not ship names, prices written as text, artwork or map images.
+**Status:** reference only. Research PARTIAL; the strict original standard is **NOT_MET** (31 of 518 factual rows corroborated; one of 38 event rows has no source-backed trigger or effect). PR #18 stays a draft. The 2026-10-08 polish pass changed no factual row; it added a verifier suite (board tables equal the JSON) and the integration and design documents.
+
 **Research PARTIAL.** Seven current boards with 16 baseline, Tag Team and angry count profiles; 176 type-count rows; 35 inventory profiles and 215 item rows. Includes sourced Star, event, path, phase, Homestretch and TV rules, seven detailed board documents and eleven cited regional connections. Exact numbered adjacency, event completeness, gate positions and unsupported qualifiers remain explicit gaps.
 
 518 factual rows: **31 corroborated, 477 single-source, nine conflicting and one unknown**. This recovery independently corroborates the Boo Shop landing/Peepa/15-coin purchase and complete Pro Homestretch behavior. The original research standard remains NOT_MET; keep PR18 draft.
@@ -8,7 +12,7 @@ Both fresh passes reopened all 22 retained URLs and recovered all 364 quotations
 
 ## Verification
 
-The original full structural/schema/reference/negative-fixture command, strict command and complete manifest checks are recorded with actual output in VERIFY.md. CI checks the retained artifact and confirms the explicitly unmet strict verdict. Its green result does not certify complete research.
+The original full structural/schema/reference/negative-fixture command, strict command and complete manifest checks are recorded with actual output in VERIFY.md. The structural run now has 25 suites and 5,391 cases, all PASS (the 2026-10-08 polish pass added `BOARD_DOC_TABLES_MATCH_JSON`, 51/51). CI checks the retained artifact and confirms the explicitly unmet strict verdict. Its green result does not certify complete research.
 
 From this folder:
 
