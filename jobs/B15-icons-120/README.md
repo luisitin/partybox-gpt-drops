@@ -2,7 +2,7 @@
 
 **What this is:** 120 original, chunky, friendly icons on a 64-unit grid, with one 6-colour palette, a pure TypeScript lookup, a themeable SVG sprite and Spanish titles.\
 **How to use it:** take `icons/*.svg` or `sprite.svg` and render with `<use href="#pb-icon-dice"/>`; outline colour follows CSS `color`. In code, call `getIcon('dice', { ink: 'currentColor' })`.\
-**Status:** ready to port. `npm test` passes all three seeds (every pair of icons at every size in both renderers, 75 of 75 mutants killed). Port notes are in [INTEGRATION.md](INTEGRATION.md).
+**Status:** ready to port once the owner decides the `whisper` name (see [INTEGRATION.md](INTEGRATION.md) gaps). `npm test` passes all three seeds (every pair of icons at every size in both renderers, 75 of 75 mutants killed). Port notes are in [INTEGRATION.md](INTEGRATION.md).
 
 Open `gallery.html` from disk to browse the set on all five PartyBox themes at 24, 48 and 96 px, in English or Spanish.
 
@@ -49,7 +49,7 @@ Ordinary test runs never overwrite an edited SVG. A changed sealed input fails u
 import { getIcon, getSprite, iconNames, palette, defaultInk } from './dist/src/icons.js';
 
 getIcon('trophy');                          // canonical SVG string (ink #20243a), or undefined for an unknown name
-getIcon('trophy', { ink: 'currentColor' }); // ink follows CSS `color`; also accepts '#rgb' or '#rrggbb'
+getIcon('trophy', { ink: 'currentColor' }); // ink follows CSS `color`; also accepts lowercase '#rgb' or '#rrggbb' (uppercase is rejected by design)
 getIcon('trophy', { ink: 'red' });          // undefined: invalid ink is rejected, nothing throws
 getSprite();                                // one hidden <svg> holding <symbol id="pb-icon-NAME" viewBox="0 0 64 64"> x120, ink = currentColor
 iconNames;                                  // readonly list of 120 ids, in manifest order
@@ -74,7 +74,7 @@ The icons contain no text. Keep the accessible name on the surrounding button or
 - **Grid:** a 64 x 64 viewBox. Art stays inside the live area 3–61, and the tests require 2 clear units at the edge.
 - **Outline:** every shape has the same 4-unit ink outline (`#20243a`) with round caps and joins.
 - **Lines are ribbons:** an ink casing `w + 8` wide sits under a coloured core `w` wide. Lines therefore get the same 4-unit edge as filled shapes, and crossings join cleanly.
-- **Ink use:** ink is only for edges and small details, never for structure. At 48 px, at least a quarter of every icon's opaque pixels are lighter than the ink (tested), so nothing vanishes on the night theme.
+- **Ink use:** ink is only for edges and small details, never for structure. At 48 px, at least a quarter of every icon's opaque pixels are lighter than the ink (tested). This is a fill-based proxy: the default outline is about 1.2:1 on the night background, so outlines fade there and the fills carry each shape.
 - **Fills:** cream `#fff4d9`, coral `#ff7668`, gold `#ffc857`, mint `#52cbb5` and lavender `#9a8df2`.
 - **Shine:** one short cream highlight stroke on round, glossy objects.
 - **Distinct silhouettes:** no two icons overlap by IoU ≥ 0.8 at 24, 48 or 256 px. Tilts and asymmetric parts keep similar objects apart, for example the open chest's lid swung back and the dice cup's die rolling out.
