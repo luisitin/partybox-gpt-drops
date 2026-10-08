@@ -152,6 +152,12 @@ def run(args):
                 observed=json.loads(saved[k]) if isinstance(v,(dict,list,bool)) or v is None or isinstance(v,int) else saved[k]
                 require(observed==v,'CSV round-trip changed '+row['id']+' '+k)
     checked('Exact JSON/CSV field round trip',132*len(rows[0]),csv_check)
+    def quote_support_check():
+        spec=importlib.util.spec_from_file_location('quote_support_check',ROOT/'quote-support-check.py');qsc=importlib.util.module_from_spec(spec);spec.loader.exec_module(qsc)
+        report=qsc.build(data,sources);require(load('reports/quote-support-check.json')==report,'Quote-support report differs from its recomputation')
+        require(not [i for i in report['items'] if i['titleOnly'] and i['status']=='corroborated' and i['field'] in ('category','format')],'A corroborated category or format rests on title-only quotes')
+        require(report['flaggedFieldClaims']==len(report['items']) and report['checkedFieldClaims']>=700,'Quote-support totals are invalid')
+    checked('Quote-support report reproduces; no title-only corroborated category or format',load('reports/quote-support-check.json')['checkedFieldClaims'],quote_support_check,'Automated lexical flags need a human source re-read; they do not prove support')
     checked('Field citations and true publisher lineage boundaries',1320,lambda:validate_catalogue(data,sources,audit,index))
     checked('Short clips, quote budgets and complete A/B recovery',len(quotes)+len(sources['sources'])*3,lambda:validate_catalogue(data,sources,audit,index))
     checked('Literal controller labels and 25 base motion entries',sum(len(r['controls']['bindings']) for r in rows)+132,lambda:validate_catalogue(data,sources,audit,index))
