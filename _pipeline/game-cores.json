@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-08T13:28:28.399416+00:00",
-  "summary": "Seven game deliveries are ready for maintainer review and unmerged (G01, G02, G03, G05, G06, G07 and G08). G04 and G09 remain draft reviews with exact-head CI in progress; their prior hosted successes do not bind the new heads, and retained local phone/frame failures remain explicit. G10 remains an active no-PR pipeline: the complete six-piece source has been acquired and a private chunked payload now starts on desktop and phone, but the public game still integrates only International two-through-five-piece data. No game is marked Completed without a merge.",
+  "updatedAt": "2026-10-08T13:31:46+00:00",
+  "summary": "Seven game deliveries are ready for maintainer review and unmerged (G01, G02, G03, G05, G06, G07 and G08). G04 remains draft after its new exact-head CI passed, while G09 remains draft with exact-head CI in progress; retained local phone/frame failures remain explicit. G10 remains an active no-PR pipeline: the complete six-piece source has been acquired and a private chunked payload now starts on desktop and phone, but the public game still integrates only International two-through-five-piece data. No game is marked Completed without a merge.",
   "workers": [
     {
       "current": "G07",
@@ -20,8 +20,8 @@
     },
     {
       "current": "G04",
-      "summary": "Draft PR4 at 5c450993: exact-head CI run 37783931074 is in progress. The preceding 7a7af73 run 37780890383 passed, but does not certify this newer evidence-binding head. Current work independently validates raw frame data, source guards and actual capture hashes. Retained local failures remain: initial desktop 55.903 FPS, then desktop 59.605 FPS PASS and phone 54.0566 FPS FAIL; no cause is claimed. The deadline repair remains a player-visible gain, cadence misses of 74s and 97s remain audited, and round 12 records no player gain with streak 1 pending CI.",
-      "next": "Read exact-head run 37783931074; if it passes, continue formal KEEP rounds until three consecutive no-player-gain rounds, while retaining the failed local measurements and evidence limits.",
+      "summary": "Draft PR4 at 5c450993: exact-head CI run 37783931074 passed at 13:31:46 UTC. Current work independently validates raw frame data, source guards and actual capture hashes. Retained local failures remain: initial desktop 55.903 FPS, then desktop 59.605 FPS PASS and phone 54.0566 FPS FAIL; no cause is claimed. The deadline repair remains a player-visible gain, cadence misses of 74s and 97s remain audited, and round 12 records no player gain with streak 1. Green CI does not finish the required no-player-gain rounds.",
+      "next": "Continue formal KEEP rounds until three consecutive no-player-gain rounds, while retaining the failed local measurements and evidence limits; the PR remains draft and unmerged.",
       "queue": [
         "Original acceptance and final review"
       ]
@@ -44,7 +44,7 @@
     }
   ],
   "repository": "luisitin/partybox-game-cores",
-  "observedAt": "2026-10-08T13:28:28.399416+00:00",
+  "observedAt": "2026-10-08T13:31:46+00:00",
   "rows": [
     {
       "id": "G01",
@@ -693,10 +693,10 @@
       "check": {
         "id": 37783931074,
         "head_sha": "5c45099318e0b83ab63dcb7990db7fe617882cc5",
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37783931074",
-        "updated_at": "2026-10-08T13:23:18Z",
+        "updated_at": "2026-10-08T13:31:46Z",
         "path": ".github/workflows/G04.yml"
       },
       "checkError": null,
@@ -844,8 +844,8 @@
       ],
       "operatorNote": {
         "current": "G04",
-        "summary": "Draft PR4 at 5c450993: exact-head CI run 37783931074 is in progress. The preceding 7a7af73 run 37780890383 passed, but does not certify this newer evidence-binding head. Current work independently validates raw frame data, source guards and actual capture hashes. Retained local failures remain: initial desktop 55.903 FPS, then desktop 59.605 FPS PASS and phone 54.0566 FPS FAIL; no cause is claimed. The deadline repair remains a player-visible gain, cadence misses of 74s and 97s remain audited, and round 12 records no player gain with streak 1 pending CI.",
-        "next": "Read exact-head run 37783931074; if it passes, continue formal KEEP rounds until three consecutive no-player-gain rounds, while retaining the failed local measurements and evidence limits.",
+        "summary": "Draft PR4 at 5c450993: exact-head CI run 37783931074 passed at 13:31:46 UTC. Current work independently validates raw frame data, source guards and actual capture hashes. Retained local failures remain: initial desktop 55.903 FPS, then desktop 59.605 FPS PASS and phone 54.0566 FPS FAIL; no cause is claimed. The deadline repair remains a player-visible gain, cadence misses of 74s and 97s remain audited, and round 12 records no player gain with streak 1. Green CI does not finish the required no-player-gain rounds.",
+        "next": "Continue formal KEEP rounds until three consecutive no-player-gain rounds, while retaining the failed local measurements and evidence limits; the PR remains draft and unmerged.",
         "queue": [
           "Original acceptance and final review"
         ]
