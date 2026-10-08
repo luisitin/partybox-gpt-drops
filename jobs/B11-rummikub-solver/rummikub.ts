@@ -50,6 +50,19 @@ const SCALE = 128; // >106: a one-point improvement dominates every tile-count t
 const invalid = (code: string, message: string): Failure => ({ ok: false, error: { code, message } });
 const record = (x: unknown): x is Record<string, unknown> =>
   typeof x === 'object' && x !== null && !Array.isArray(x);
+/** Deterministic work cap for findBestPlay. It counts fresh search expansions; it never reads a clock. */
+export interface SolveOptions {
+  /** Omit for the unbounded exact search. Over the cap the call returns BUDGET_EXCEEDED, never a partial play. */
+  readonly maxStates?: number;
+}
+/** undefined means the options object itself is malformed (BUDGET_SHAPE). */
+function expansionLimit(options: unknown): number | undefined {
+  if (options === undefined) return Infinity;
+  if (!record(options)) return undefined;
+  const cap = options['maxStates'];
+  if (cap === undefined) return Infinity;
+  return typeof cap === 'number' && Number.isSafeInteger(cap) && cap >= 0 ? cap : undefined;
+}
 function validFace(x: unknown): x is Face {
   return record(x) && COLORS.includes(x['color'] as Color)
     && typeof x['value'] === 'number' && Number.isInteger(x['value'])
@@ -174,10 +187,14 @@ interface Candidate {
  * Exact count-resource weighted cover. No clock, randomness, cutoff, or heuristic
  * answer. It maximizes meld value, then the number of rack tiles played.
  * A finite search can still be expensive; measured latency is not a universal SLA.
+ * options.maxStates is an optional deterministic cap: with it, a call either returns the same
+ * exact answer as the unbounded search or BUDGET_EXCEEDED. Use the cap on a live turn, never as a pass.
  */
-export function findBestPlay(input: unknown): SolveResult {
+export function findBestPlay(input: unknown, options: SolveOptions = {}): SolveResult {
   const checked = validatePosition(input);
   if (!checked.ok) return checked;
+  const limit = expansionLimit(options);
+  if (limit === undefined) return invalid('BUDGET_SHAPE', 'maxStates must be a non-negative safe integer.');
   const position = input as Position;
   const old = position.initialMeldDone ? position.table.flatMap(m => m.tiles) : [];
   const tiles = [...old, ...position.hand];
@@ -327,14 +344,17 @@ export function findBestPlay(input: unknown): SolveResult {
     keysLo[i] = a; keysHi[i] = b; values[i] = value;
   };
   let states = 0, memoHits = 0, boundPrunes = 0;
+  let aborted = false;
+  const expansionCap: number = limit; // narrowed here: function declarations do not keep the guard
   const fits = (c: Candidate, a: number, b: number): boolean => (c.lo & a) === c.lo && (c.hi & b) === c.hi;
   function search(a: number, b: number, c: number, d: number, upper: number): number {
     if (a === 0 && b === 0) return 0;
+    if (aborted) return -Infinity;
     const pivot = first(a, b);
     const key = stateKey(a, b, c, d, pivot);
     const cached = getMemo(key);
     if (cached) { memoHits++; return cached === 1 ? -Infinity : Math.floor(cached / 4096) - 1; }
-    states++;
+    if (++states > expansionCap) { aborted = true; return -Infinity; }
     // Required residual copies are exactly remainingCount > originalHandCount.
     const reqLo = (a & ~handLo) | (c & ~twoHandLo); // M25
     const reqHi = (b & ~handHi) | (d & ~twoHandHi);
@@ -360,10 +380,11 @@ export function findBestPlay(input: unknown): SolveResult {
         if (s > best) { best = s; choice = -pivot - 2; }
       } else boundPrunes++;
     }
-    putMemo(key, best === -Infinity ? 1 : (best + 1) * 4096 + choice + 64);
+    if (!aborted) putMemo(key, best === -Infinity ? 1 : (best + 1) * 4096 + choice + 64);
     return best;
   }
   const score = search(lo, hi, twiceLo, twiceHi, initialUpper);
+  if (aborted) return invalid('BUDGET_EXCEEDED', `Exact search exceeded maxStates=${limit}; no play was returned.`);
   const stats: SearchStats = { states, memoHits, boundPrunes, candidates: candidates.length };
   const baseline = old.reduce((v, t) => v + (t.kind === 'number' ? t.value : 0), 0); // M21
   const value = Math.floor(score / SCALE) - baseline;

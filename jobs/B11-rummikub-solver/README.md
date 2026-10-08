@@ -1,6 +1,10 @@
 # B11 Rummikub validator + best play
 
-A pure, deterministic, exact TypeScript solver with zero runtime dependencies. The complete hosted and local suites passed all three seeds, including 150,000 literal small comparisons, 624 independent large optima and 75 compiling mutation kills. Read [VERIFY.md](VERIFY.md) for complete evidence and boundaries.
+**What this is:** an exact Rummikub end-turn validator and best-play solver in pure, deterministic TypeScript with zero runtime dependencies. It is verified against an independent reference and an independent integer-model oracle.
+**How to use it:** `npm ci --ignore-scripts --no-audit --no-fund && npm test` (Node 22, Python 3.12.14 with pinned NumPy/SciPy for the development oracle). Import `validateTable`, `validatePlay`, `findBestPlay(position, { maxStates })` from `rummikub.ts`; port guide: [INTEGRATION.md](INTEGRATION.md).
+**Status:** the complete suite passed hosted on 1738f8c and PR 7 is green on 575139d. The 2026-10-08 polish adds the optional deterministic expansion cap (`test/budget.mjs`), a fingerprint probe and a PartyBox comparison; its hosted run is linked from PR 7 when it completes, and [VERIFY.md](VERIFY.md) records the local results and the open timing gap.
+
+A pure, deterministic, exact TypeScript solver with zero runtime dependencies. At 1738f8c the complete suite passed hosted and locally for all three seeds, including 150,000 literal small comparisons, 624 independent large optima and 75 compiling mutation kills. Read [VERIFY.md](VERIFY.md) for complete evidence and boundaries.
 
 ## Run
 
@@ -12,7 +16,9 @@ python3 -m pip install --disable-pip-version-check -r requirements-dev.txt
 npm test
 ```
 
-The full command strictly compiles all three TypeScript sources and runs every suite for seeds 1, 2 and 3. Each seed includes 50,000 positions with at most 14 physical tiles, all 40 joker fixtures, 25 individually planted source bugs, contract/metamorphic checks, 1,000 fresh accelerator-versus-literal checks, 200 full 40-table/20-hand positions and eight distinct warm-up positions. The production timing bracket includes validation, search, reconstruction and its own output validation. Independent work is outside that bracket. Main p99 and the literal maximum over all 208 measured calls per seed must be at most 500 ms; the distinct cold-start warmups are also measured and never discarded.
+The full command strictly compiles all three TypeScript sources and runs every suite for seeds 1, 2 and 3. Each seed includes 50,000 positions with at most 14 physical tiles, all 40 joker fixtures, 25 individually planted source bugs, contract/metamorphic checks, 1,000 fresh accelerator-versus-literal checks, 200 full 40-table/20-hand positions, eight distinct warm-up positions and 128 expansion-cap boundary positions (`test/budget.mjs`). The production timing bracket includes validation, search, reconstruction and its own output validation. Independent work is outside that bracket. Main p99 and the literal maximum over all 208 measured calls per seed must be at most 500 ms; the distinct cold-start warmups are also measured and never discarded.
+
+A quick loop for the solver alone: `npm run build && node test/unit.mjs && node test/budget.mjs`.
 
 ## Independent reference
 
@@ -24,11 +30,19 @@ For the identical large corpus used by the full-state audit and timing benchmark
 
 ## API and rules
 
-`validateTable(unknown)`, `validatePosition(unknown)`, `validatePlay(before, afterTable)`, and `findBestPlay(unknown)` return explicit success/error values. Tiles have stable unique physical IDs; number tiles carry color/value, and placed jokers carry an explicit `as` face. Colors are red, blue, black and orange. Runs are ascending, groups unordered. Unknown extra JSON fields are ignored.
+`validateTable(unknown)`, `validatePosition(unknown)`, `validatePlay(before, afterTable)`, and `findBestPlay(unknown, options?)` return explicit success/error values. Tiles have stable unique physical IDs; number tiles carry color/value, and placed jokers carry an explicit `as` face. Colors are red, blue, black and orange. Runs are ascending, groups unordered. Unknown extra JSON fields are ignored.
+
+`findBestPlay(position, { maxStates })` is optional. `maxStates` caps fresh search expansions deterministically (no clock). A capped call returns either the identical exact answer the unbounded search gives, or `BUDGET_EXCEEDED`, which carries no partial play and must never be read as a pass. A malformed option returns `BUDGET_SHAPE`. Omit the option for the unbounded exact search, which is what every verified count above measured.
 
 The objective is the sum of represented values of newly played rack tiles, then the number of rack tiles. A rack joker scores its chosen face; `rackPenaltyShed` separately reports its 30-point retained-rack penalty. The rack-only opening must reach 30 and preserve every old meld and binding. After opening, the entire table may be rearranged while preserving every old physical tile. Draw rules, turn ownership and timers belong to the caller. End-of-turn validation does not certify an animated sequence of intermediate retrieval/reuse operations.
 
-The search is exact and unbounded. Finite measured corpora cannot establish a universal latency guarantee on every input and machine. `SOURCES.md` and `CONFLICTS.md` identify the official edition and disagreements.
+The search is exact and unbounded by default. Finite measured corpora cannot establish a universal latency guarantee on every input and machine. `SOURCES.md` and `CONFLICTS.md` identify the official edition and disagreements.
+
+## Product and evidence
+
+- Product: `rummikub.ts`, plus `INTEGRATION.md` (the port guide).
+- Evidence and tooling, not for porting: `blindReference.ts`, `reference.ts`, `evidence/`, `test/` (harness), `VERIFY.md`, `LOOP.md`, `NEXT.md`, `SOURCES.md`, `CONFLICTS.md`, `ALGORITHM.md`, `MUTATIONS.md`, `ASSUMPTIONS.md`.
+- The PartyBox comparison is `evidence/partybox-port/compare.mts` (run it with a PartyBox checkout's `tsx`; numbers in VERIFY.md).
 
 ## Delivery
 

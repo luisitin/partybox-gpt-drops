@@ -17,7 +17,7 @@ for(const seed of [1,2,3]){
  const compile={suite:'strict-TypeScript',seed,cases:3,passed:3,command:`SEED=${seed} node node_modules/typescript/bin/tsc -p tsconfig.json`};
  receipt(`compile-seed-${seed}`,compile);runs.push(compile);
  // Deliberately serial: no suite competes with the latency measurement.
- for(const suite of ['unit','contracts','small','milp-crosscheck','large-independent','audit','mutations','bench']){
+ for(const suite of ['unit','contracts','small','milp-crosscheck','large-independent','audit','budget','mutations','bench']){
   run([`test/${suite}.mjs`],seed);
   const data=JSON.parse(readFileSync(resolve(root,`.test-output/${suite}-seed-${seed}.json`),'utf8'));
   assert.equal(data.seed,seed);assert.equal(data.passed,data.cases);

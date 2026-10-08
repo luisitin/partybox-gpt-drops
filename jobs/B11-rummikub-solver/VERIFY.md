@@ -51,3 +51,41 @@ The model enumerates all legal run/group bindings, imposes mandatory old resourc
 The original full-size physical-cover reference and a later count-cover draft were too slow in exploration and were stopped without a result; neither replaces any required case. The separately sealed integer model completed every large integration case.
 
 The final improvement's complete publication-head hosted rerun must pass before PR readiness is marked. Universal all-input/all-machine latency, exact rational numerical certificates, intermediate animated joker retrieval/reuse sequences, other rule editions and hostile JavaScript objects remain outside the verified scope. The declared English 2019 end-of-turn profile and its official joker interpretation are documented in SOURCES.md and CONFLICTS.md.
+
+## Polish pass 2026-10-08
+
+Scope: a deterministic expansion cap on the solver (`findBestPlay(position, { maxStates })`), its boundary suite, the default-path fingerprint probe, a two-way comparison with PartyBox's real validator and bot, and the port guide `INTEGRATION.md`. The cap is an option: with no option the search is the verified one. The host was shared (load average 19–25 on 4 CPUs), so every wall-clock number below is inflated and none is a gate result.
+
+| Check (this pass) | Seeds | Result |
+|---|---|---|
+| Strict TypeScript build (`npm run build`) | — | Passed after one narrowing fix (`expansionCap`) |
+| `test/unit.mjs` (61 hand-written, 40 joker) | 1, 2, 3 | 61/61 each |
+| `test/budget.mjs` (new: 120 small + 8 large positions, exact boundary, 9 malformed options each) | 1, 2, 3 | 128/128 each |
+| `test/contracts.mjs` | 1 | 1005/1005 |
+| `test/small.mjs` (physical-subset brute force) | 1 | 50,000/50,000 |
+| `test/milp-crosscheck.mjs` (Python 3.12.14, NumPy 2.3.5, SciPy 1.17.0) | 1 | 1000/1000 |
+| `test/large-independent.mjs` (independent large optima) | 1 | 208/208 |
+| `test/audit.mjs` (derived full-state key audit) | 1 | 200/200 |
+| `test/mutations.mjs` (25 planted bugs, strictly compiled) | 1 | 25/25 killed |
+| `test/bench.mjs` (40-table/20-hand, 500 ms gate) | 1 | 196/200 main and 7/8 warmups under 500 ms; **gate failed under host contention** (main 534, 799, 546, 565 ms; warmup 516 ms) |
+| `evidence/probe/corpus-fingerprint.mjs` vs the hosted CI bench receipt | 1, 2, 3 | All 200 main calls per seed identical in value, played count, `states`, `memoHits`, `boundPrunes`, `candidates`; corpus hashes equal |
+| `test/checksums.mjs` (SHA256 manifest) | — | 100/100 |
+| `npm test` (full) | 1 (partial) | Two runs. Run 1 stopped at the audit marker (an edit had moved the splice anchor; restored). Run 2 passed every seed-1 suite through the mutations and stopped at the bench gate above. Seeds 2–3 of the full suite did not run locally. |
+
+Honest status: the local full run did **not** pass. The failing gate is the wall-clock 500 ms bench bracket, and it failed only on calls that measured 515–799 ms while other agents loaded the host. No gate or count was reduced. The hosted run on this pass's head is the authority; its link is recorded in PR 7.
+
+Timing probe on the same 200-call corpus (not a gate; host load about 19): seed 1 p50 27 ms, p99 360 ms, max 393 ms, 417,988 max expansions; seed 2 p50 22, p99 357, max 598 ms, 321,871 max expansions; seed 3 p50 30, p99 286, max 784 ms, 646,064 max expansions. The median cost is about 0.9–1.0 ms per thousand expansions. Under a 1,000,000-expansion cap no call of the 600 is refused.
+
+PartyBox comparison (`evidence/partybox-port/compare.mts`, run with PartyBox's `tsx` against the owner's local `games/rummikub/server`; output `evidence/partybox-port/compare-seed-1.json`):
+
+- **Meld validity and points.** Every legal joker binding in B11 against PartyBox's `analyzeMeld`: 148,876 exhaustive length-3 melds plus 2,500 sampled length-4 melds, 151,376 checked, **0 disagreements**; 15 named tricky cases all agree (13-1 wrap, J-1-2 without a 0, J-J-12 cannot reach 14, duplicate colour groups, five-tile groups, three jokers, 13-tile runs, joker ends).
+- **Plays, both directions.** On 440 generated positions per bot skill (400 small, 40 large): every PartyBox bot move is legal under B11's `validatePlay`, and every B11 optimum is accepted by PartyBox's `rules.validateCommit`. **0 rule rejections either way, 0 cases where PartyBox beats the optimum.**
+- **Bot versus optimum** (B11 plays in 287 positions):
+
+| Bot skill | Bot plays | Draws where B11 plays | Equal to optimum | Below optimum | Mean gap when below (points) | Max gap when below |
+|---|---:|---:|---:|---:|---:|---:|
+| easy | 251 | 36 | 141 | 110 | 32.3 | 104 |
+| normal | 260 | 27 | 167 | 93 | 25.6 | 70 |
+| sharp | 263 | 24 | 176 | 87 | 20.7 | 70 |
+
+Bot planning took p50 0.14–0.22 ms and p99 32–64 ms per call on this loaded host. These positions come from the job's generator, not from live games, so they describe the solver's gap, not a party's experience.
