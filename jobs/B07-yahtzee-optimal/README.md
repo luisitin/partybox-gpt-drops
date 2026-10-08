@@ -10,7 +10,7 @@
 cd jobs/B07-yahtzee-optimal
 npm ci              # dev-only TypeScript 5.8.3; needs Node >= 22 and g++ (C++20, OpenMP)
 npm test            # the whole proof (seals, both generators, seeds 1-3, 6M paired games, port kit): ~25 min local, ~8 min on GitHub
-npm run test:port   # the PartyBox port kit alone, ~2 min (builds build/ first if it is missing)
+node partybox/test-port.mjs   # the PartyBox port kit alone, ~2 min (builds build/ first if missing)
 npm run build       # build/yahtzeeOpt.js + .d.ts + build/tables/*.json
 ```
 

@@ -3,6 +3,6 @@
   "description":"Official and published Yahtzee full-state exact optimal strategy",
   "engines":{"node":">=22"},
   "exports":{".":{"types":"./build/yahtzeeOpt.d.ts","import":"./build/yahtzeeOpt.js"}},
-  "scripts":{"build":"tsc -p tsconfig.json && node copy-tables.mjs","test":"node run.mjs","test:port":"node partybox/test-port.mjs"},
+  "scripts":{"build":"tsc -p tsconfig.json && node copy-tables.mjs","test":"node run.mjs"},
   "dependencies":{},"devDependencies":{"typescript":"5.8.3"}
 }

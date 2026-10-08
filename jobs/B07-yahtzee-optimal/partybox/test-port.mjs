@@ -12,7 +12,7 @@ import {goldenOf} from './build-golden.mjs';
 
 const job=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 process.chdir(job);
-// Standalone runs (npm run test:port) build the two modules run.mjs would have built first.
+// Standalone runs (node partybox/test-port.mjs) build the two modules run.mjs would have built first.
 const tsc=args=>execFileSync(process.execPath,['node_modules/typescript/bin/tsc',...args],{stdio:'inherit'});
 if(!fs.existsSync('build/yahtzeeOpt.js')||!fs.existsSync('build/tables/official.json')){tsc(['-p','tsconfig.json']);execFileSync(process.execPath,['copy-tables.mjs']);}
 if(!fs.existsSync('build/independent/reference.js'))tsc(['--target','ES2022','--module','NodeNext','--moduleResolution','NodeNext','--strict','--noUncheckedIndexedAccess','--exactOptionalPropertyTypes','--noUnusedLocals','--noUnusedParameters','--noEmitOnError','--declaration','--outDir','build/independent','independent/reference.ts']);

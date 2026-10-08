@@ -8,7 +8,7 @@
 | Status | **Ready to port**: the 'sharp' Yahtzee bot. The phone hint is an owner decision (gap 1), not part of the port. |
 | Branch | `job/B07-yahtzee-optimal`, kit and tests at `9412e61` (later commits are docs only). PR #21 is open, not draft. CI was green at `7cdb272` before this pass ([run 37670569356](https://github.com/luisitin/partybox-gpt-drops/actions/runs/37670569356/job/112960964191)); the new head's CI status is in the polish section below. |
 | Repo | luisitin/partybox-gpt-drops |
-| Test | `cd jobs/B07-yahtzee-optimal && npm ci && npm test` takes about 25 min here (8 min on GitHub). `npm run test:port` (port kit only) takes about 2 min. |
+| Test | `cd jobs/B07-yahtzee-optimal && npm ci && npm test` takes about 25 min here (8 min on GitHub). `node partybox/test-port.mjs` (port kit only) takes about 2 min. `package.json` is sealed, so it has no script for this. |
 | Lands in PartyBox | `games/yahtzee/server/optimal/` (new), `games/yahtzee/server/optimal-bot.ts` (new), `games/yahtzee/server/bot.ts` + `index.ts` (edits), `games/yahtzee/__tests__/optimal*.{ts,json}` (new). Server only. |
 
 ## What it is
