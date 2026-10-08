@@ -5,10 +5,10 @@
 
 | | |
 | --- | --- |
-| Status | **Ready to port**. Nothing in this folder needs fixing first. The port is UI chrome work, and the [gaps](#known-gaps-and-risks) below list what the set does not cover. |
-| Branch | `job/B15-icons-120` @ `c878bc5` at the start of the 2026-10-08 continuation pass. The artwork last changed in `bac3314`, `src/` in `c0aa205`; later commits touch docs, seal and evidence only · PR #10 (its description still cites the older head `b37a00d`) · CI: hosted `verify` green on `c878bc5` (run 37797964572, completed 2026-10-08 15:07 UTC) |
+| Status | **Ready to port** once the owner decides the `whisper` name (see [gaps](#known-gaps-and-risks)). Nothing else in this folder needs fixing first. The port is UI chrome work, and the gaps below list what the set does not cover. |
+| Branch | `job/B15-icons-120` @ `9e56abe` as reviewed on 2026-10-08 (independent review in VERIFY.md; the review commits touch docs and seal only). The artwork last changed in `bac3314`, `src/` in `c0aa205` · PR #10 (its description still cites the older head `b37a00d`, 78 suite rows and a 716-byte largest file; those figures are stale) · CI: hosted `verify` green on `9e56abe` (run 37799893910, 15:21 UTC), `c878bc5` (run 37797964572) and `b37a00d` (run 37642435427) |
 | Repo | luisitin/partybox-gpt-drops |
-| Test | `cd jobs/B15-icons-120 && npm ci --ignore-scripts --no-audit --no-fund && python3 -m pip install -r requirements-dev.txt && npm test` (needs libcairo2 and fonts-dejavu-core). Runtime about 5 min (308 s wall on 4 shared CPUs in the continuation pass; 290 s in the first) |
+| Test | `cd jobs/B15-icons-120 && npm ci --ignore-scripts --no-audit --no-fund && python3 -m pip install -r requirements-dev.txt && npm test` (needs libcairo2 and fonts-dejavu-core). Runtime 2–5 min: 130 s wall in the independent review run, 290–308 s on 4 shared CPUs in the polish passes |
 | Lands in PartyBox | `packages/game-sdk/src/icons/` (pure geometry and lookup) · `packages/game-sdk/src/ui-icon.ts` + `ui/Icon.tsx` (new `@partybox/game-sdk/ui/icon` export) · `packages/client/public/icons.svg` (static sprite) · `packages/client/src/styles/tokens.css` (`--pb-icon-ink`) · `docs/sdk/icons.md` |
 
 ## What it is
@@ -21,7 +21,7 @@
   - every file's SVG profile and byte limit;
   - no two silhouettes overlap by IoU ≥ 0.8 at 24/48/256 px in two renderers;
   - everything stays in the live area;
-  - no icon vanishes on the night background.
+  - a fill-based night check: at 48 px at least a quarter of each icon's opaque pixels are lighter than the ink. This is a proxy, not an outline contrast test. The default outline is about 1.2:1 on the night background, so outlines fade there and the fills carry each shape (see gaps).
 - Not verified: a human recognition study.
 
 ## Take these files (the product)
@@ -71,24 +71,25 @@ These files prove the work; the port does not need them.
    - Vite serves `public/` in dev and copies it to `dist/`, so no server change is needed.
 4. **Token.**
    - In `packages/client/src/styles/tokens.css`, add `--pb-icon-ink: #20243a;` to `:root` and `--pb-icon-ink: #000000;` to `[data-theme='contrast']`.
+   - Night caveat: `:root` is the night theme (`--pb-bg` `#0f1020`). The default outline is about 1.2:1 there (about 1.1:1 on `--pb-surface` `#1c1e3a`), so outlines fade on night and the cream, coral, gold, mint and lavender fills carry each shape. Check it in situ (`pnpm e2e:themes`) before accepting this default, or choose a lighter night ink as a design call. The `ink` option can supply it.
    - Add one row to `docs/DESIGN_SYSTEM.md`: icon sizes are 24 px inside ≥ 44 px phone targets and ≥ 48 px on the TV; the ink token is `--pb-icon-ink`; never use an icon alone, always pair it with a label.
 5. **Replace emoji chrome with `<Icon>`.** Counts are non-test uses in `packages/client/src`:
 
+   Counts are plain substring counts in every non-test `.ts`/`.tsx` file under `packages/client/src`, taken on 2026-10-08 (re-counted in the independent review, same numbers). They include comments and i18n strings, so some uses are off screen. Paths are relative to `packages/client/src/`.
+
    | Glyph (uses) | B15 icon | Where (examples) |
    | --- | --- | --- |
-   Counts are plain substring counts in every non-test `.ts`/`.tsx` file under `packages/client/src`, taken on 2026-10-08. They include comments and i18n strings, so some uses are off screen. The earlier counts in this table were wrong.
-
-   | ✕ (21) | `close` | `controller/VipMenu.tsx:97`, `ThemePicker.tsx`, `controller/LobbyLine.tsx`, `PresencePrompt.tsx` |
-   | ✓ (27) | `check` | `controller/ChoiceRow.tsx`, `ShareSheet.tsx`, `StartStage.tsx`, `ThemePicker.tsx` |
-   | ★ (28), VIP menu and badges | `star` | `controller/ControllerShell.tsx:194`, `RoomSwitch.tsx`, `SavedGames.tsx`, `picker/ChosenGame.tsx` |
-   | 🤖 (14) | `bot` | `tv/HostBar.tsx:89`, `picker/AboutSheet.tsx`, `picker/ChosenGame.tsx` |
+   | ✕ (21) | `close` | `controller/VipMenu.tsx:97`, `ThemePicker.tsx`, `controller/LobbyLine.tsx`, `controller/PresencePrompt.tsx` |
+   | ✓ (27) | `check` | `controller/ChoiceRow.tsx`, `controller/ShareSheet.tsx`, `controller/StartStage.tsx`, `ThemePicker.tsx` |
+   | ★ (28), VIP menu and badges | `star` | `controller/ControllerShell.tsx:194`, `controller/RoomSwitch.tsx`, `controller/SavedGames.tsx`, `controller/picker/ChosenGame.tsx` |
+   | 🤖 (14) | `bot` | `tv/HostBar.tsx:89`, `controller/picker/AboutSheet.tsx`, `controller/picker/ChosenGame.tsx` |
    | 📺 (17) / 📱 (11) | `tv` / `phone` | `controller/ThisPhone.tsx`, `surface/SurfaceHint.tsx`, `preview/PreviewToolbar.tsx` |
-   | 🎧 (7) | `headphones` | `PresencePrompt.tsx`, `picker/GameRow.tsx`, `tv/TvRoomSwitches.tsx` |
+   | 🎧 (7) | `headphones` | `controller/PresencePrompt.tsx`, `controller/picker/GameRow.tsx`, `tv/TvRoomSwitches.tsx` |
    | 👑 (7) | `crown` | `tv/TvFrame.tsx`, `tv/TvResults.tsx`, `tv/Tonight.tsx` |
    | ▶ (5) ⏸ (5) ⏭ (1) ■ (1) ↻ (5) | `play` `pause` `skip` `stop` `refresh` | `tv/HostBar.tsx:164-213`, `tv/TvPlaying.tsx`, `controller/ShellCountdown.tsx`, `tv/TvStartStage.tsx` |
-   | 🔇 (4) / 🔊 (3) | `sound-off` / `sound-on` | `tv/AudioGate.tsx`, `tv/HostBar.tsx:245` |
-   | 🎵 (7) / 💬 (7) / 🔒 (5) / 🏆 (6) / 🎮 (2) | `music-note` / `chat` / `lock` / `trophy` / `gamepad` | `TvRoomSwitches.tsx`, `PhoneSettings.tsx`, `Join.tsx`, `TeamBoards.tsx`, `HostBar.tsx` |
-   | 👀 (2) 👍 (7) 🏠 (6) ⚙ (1) ⛶ 📷 (2) 👥 (8) 🌶 (1) | `eye` `thumbs-up` `home` `settings` `expand` `camera` `players` `flame` | single uses (`ThisPhone.tsx`, `TvFrame.tsx:101`, `PreviewToolbar.tsx:103`, `AudioGate.tsx:184`, `JoinPortrait.tsx`, `Join.tsx`, `keySetting.ts`) |
+   | 🔇 (4) / 🔊 (3) | `sound-off` / `sound-on` | `tv/AudioGate.tsx`, `tv/HostBar.tsx:245` (🔇) |
+   | 🎵 (7) / 💬 (7) / 🔒 (5) / 🏆 (6) / 🎮 (2) | `music-note` / `chat` / `lock` / `trophy` / `gamepad` | `tv/TvRoomSwitches.tsx`, `controller/PhoneSettings.tsx`, `controller/Join.tsx`, `TeamBoards.tsx`, `tv/HostBar.tsx` |
+   | 👀 (2) 👍 (7) 🏠 (6) ⚙ (1) ⛶ (1) 📷 (2) 👥 (8) 🌶 (1) | `eye` `thumbs-up` `home` `settings` `expand` `camera` `players` `flame` | single uses: `controller/ThisPhone.tsx`, `tv/TvFrame.tsx:101` (🏠), `preview/PreviewToolbar.tsx:103` (⚙), `tv/AudioGate.tsx:184` (⛶), `controller/JoinPortrait.tsx`, `controller/Join.tsx`, `keySetting.ts` |
 
    - **Trap:** many glyphs sit inside `L('📼 …')` / `L('🔇 …')` strings. The English text is the i18n key, so moving a glyph out of the string changes the key.
      - Update the Spanish entries in the same commit (`packages/client/src/i18n-es*.ts`, `tv/strings.ts`, `surface/strings.ts`).
@@ -106,7 +107,7 @@ These files prove the work; the port does not need them.
 | Beat | TV | Phone |
 | --- | --- | --- |
 | Host controls | `HostBar` shows `play` / `pause` / `skip` / `stop` at 48 px with labels. Press is a 0.95 scale over 150 ms on the shared ease. Pause/play cross-fade (opacity, 150 ms), never a glyph jump. | The VIP ★ menu button uses `star` at 24 px in a 44 px target. Its rows use `bot`, `headphones`, `sound-on`/`sound-off`, `lock`. |
-| Mute toggle | `sound-on` → `sound-off` cross-fade. The wave arcs are separate ribbons, so a later pass can animate them out one by one. | Same, plus a haptic tick (`ui/haptics.ts`). |
+| Mute toggle | `sound-on` → `sound-off` cross-fade. The wave arcs are separate ribbons, so a later pass can animate them out one by one. | Same, plus a haptic tick (`packages/client/src/controller/haptics.ts`, `BUZZ` patterns). |
 | Refresh / shuffle | `refresh` turns 360° once over 600 ms (`--pb-motion-slow`). | Same. Reduced motion: no turn. |
 | Lobby | `players`, `bot` (add bot), `crown` on the VIP chip. Player colour (B16) goes on the chip ring, never on the icon fill. | `phone` / `tv` in the "this phone" sheet. |
 | Results | `trophy`, `medal` and `podium` pop in on the B18 spring (overshoot ≤ 6 %), staggered 60 ms, synced to the B17 win cue. `confetti` and `sparkles` frame the winner line in the F03 win screen. | The winner card shows `trophy` at 96 px; everyone else gets `medal`. |
@@ -141,6 +142,7 @@ Do not tint icon fills with `--pb-accent*`. The five fills are the icons' own il
 - **Name that does not match the picture: `whisper`.** The artwork is an ear with sound waves, which reads as "listen". PartyBox has no whisper mechanic (the word appears only as blanks-game content). Before the port, either rename it to `listen` (manifest id and titles, the `src/art.ts` key, the sealed files and reports, then a full `npm test`) or redraw it. The id is public, so this is the owner's call.
 - **Trial redraws rejected (2026-10-08).** `handshake` as a cuffed horizontal clasp, and `clap` as two palms with motion marks, both read worse than the originals at 24 and 96 px. The originals stay. `handshake` is still a soft gold shape at 24 px, so a hallway test should check it first.
 - **Look-alikes at 24 px.** `link` / `unlink`, `sound-on` / `sound-off` and `expand` / `collapse` differ mainly by a break or a mirror. Always pair them with a visible label.
+- **Night outline.** The default ink `#20243a` is about 1.2:1 on the night background `#0f1020`, so every outline fades there and only the fills show the edge. The night contact sheet still reads well (checked in the review), but this is a design call, not a measured outline contrast. The 48 px night test is a fill proxy. Decide the night ink during the port (see port step 4).
 
 **Nit**
 - `expand` and `collapse` are mirror concepts and look alike at 24 px; always pair them with a label.
@@ -193,3 +195,18 @@ Then open `/preview/<game>/<fixture>?view=tv` and `?view=controller` for the hos
 - Artwork: no change. Two redraw trials were rejected (see gaps).
 
 **Verification:** `npm test` on Node 22.22.0 passed once: exit 0, seeds 1, 2 and 3, 84 rows, 282,990 cases, 75/75 mutants killed, highest silhouette pair 0.7935 (CairoSVG 24 px), bundle checksums 894 OK. Details in VERIFY.md under "Polish pass 2026-10-08 (continuation)".
+
+## Independent review 2026-10-08 (Claude, cloud, reviewer)
+
+**Checked**
+- Fresh `npm test` on `9e56abe`: exit 0, 84 rows, 94,330 cases per seed (282,990 in total), 75/75 mutants, and both checksum manifests verify. The run left the tree clean.
+- Hosted `verify` is green on `9e56abe`, `c878bc5` and `b37a00d`.
+- Chromium: the sprite resolves all 120 `<use>` references (night and daylight, no errors). The gallery has no console errors, no external requests and no horizontal scroll at 390 px.
+- Contact sheets (night, daylight) and the set's API behaviour, including unknown names, prototype keys and invalid inks.
+- PartyBox paths, line references, emoji counts, token names, SDK export naming and the ADR pointer, against local main `26b85ba6`.
+
+**Changed (this guide)**
+- Status now names the one open owner decision (`whisper`). The night outline is recorded as a gap, with a port caveat. The night check is described as a proxy.
+- The emoji table is one table again, and its paths are fixed (`controller/`, `controller/picker/`, `tv/`, `preview/`, root). The haptics path is fixed.
+
+Full review record, including what is still unverified, is in VERIFY.md under "Independent review 2026-10-08".
