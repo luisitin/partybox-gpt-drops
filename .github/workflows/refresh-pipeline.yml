@@ -12,10 +12,10 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out main
+      - name: Check out the tracker branch
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: job/B21-pipeline-tracker
       - name: Refresh tracker
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,4 +31,4 @@ jobs:
             exit 0
           fi
           git commit -m "Refresh project pipeline status"
-          git push origin HEAD:main
+          git push origin HEAD:job/B21-pipeline-tracker

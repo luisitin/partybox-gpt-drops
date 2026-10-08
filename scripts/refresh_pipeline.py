@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh PIPELINE.md from the repository's job prompts, branches, and pull requests."""
+"""Refresh the project pipeline from GitHub branches, commits, and pull requests."""
 from __future__ import annotations
 
 import json
@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 REPO = os.environ.get("GITHUB_REPOSITORY", "luisitin/partybox-gpt-drops")
-TOKEN = os.environ["GITHUB_TOKEN"]
+TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ["GH_TOKEN"]
 API = f"https://api.github.com/repos/{REPO}"
 HEADERS = {
     "Accept": "application/vnd.github+json",
@@ -26,6 +26,28 @@ def get_json(url: str):
         return json.load(response)
 
 
+def plain(text: str, limit: int = 360) -> str:
+    text = re.sub(r"^#{1,6}\s*", "", text, flags=re.MULTILINE)
+    text = re.sub(r"`([^`]+)`", r"\1", text)
+    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    text = re.sub(r"[*_>#]", "", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text if len(text) <= limit else text[:limit - 1].rstrip() + "…"
+
+
+def pr_notes(pull: dict) -> str:
+    body = pull.get("body") or ""
+    paragraphs = [plain(part, 320) for part in re.split(r"\n\s*\n", body) if plain(part, 320) and not part.strip().startswith("#")]
+    description = paragraphs[0] if paragraphs else pull.get("title", "No PR description")
+    sections = re.findall(r"^#{1,6}\s+([^\n]+)\n(.*?)(?=^#{1,6}\s|\Z)", body, flags=re.S | re.M)
+    relevant = [f"{heading}: {content}" for heading, content in sections if re.search(r"verif|check|valid|test|not.met|remaining|unverified|limitation|evidence|status", heading, flags=re.I)]
+    verification = plain("\n".join(relevant) or body, 1600)
+    note = f"PR says: {description}"
+    if verification:
+        note += f" Verification note: {verification}"
+    return note
+
+
 prompts = Path("PROMPTS.md").read_text(encoding="utf-8")
 jobs = re.findall(r"^## (B\d{2}) (.+)$", prompts, flags=re.MULTILINE)
 if not jobs:
@@ -33,7 +55,17 @@ if not jobs:
 
 branches = get_json(f"{API}/branches?per_page=100")
 pulls = get_json(f"{API}/pulls?state=all&per_page=100")
-branch_names = {item["name"] for item in branches}
+try:
+    workflow_runs = get_json(f"{API}/actions/runs?per_page=100")["workflow_runs"]
+    checks_available = True
+except Exception:
+    workflow_runs = []
+    checks_available = False
+activity_path = Path("_pipeline/activity.json")
+activity = json.loads(activity_path.read_text()) if activity_path.exists() else {}
+current_work = {worker["current"]: worker for worker in activity.get("workers", [])}
+branch_by_name = {item["name"]: item for item in branches}
+main_sha = branch_by_name["main"]["commit"]["sha"]
 latest_by_head = {}
 for pull in pulls:
     head = pull.get("head", {}).get("ref", "")
@@ -43,25 +75,113 @@ for pull in pulls:
 groups = {"Pre-pipeline": [], "Pipeline": [], "Review": [], "Completed": []}
 for job_id, title in jobs:
     prefix = f"job/{job_id}-"
-    matching_branch = next((name for name in branch_names if name.startswith(prefix)), None)
-    pull = latest_by_head.get(matching_branch) if matching_branch else None
+    branch_name = next((name for name in branch_by_name if name.startswith(prefix)), None)
+    if branch_name is None:
+        branch_name = next((name for name in latest_by_head if name.startswith(prefix)), None)
+    branch = branch_by_name.get(branch_name) if branch_name else None
+    pull = latest_by_head.get(branch_name) if branch_name else None
+    head_sha = branch["commit"]["sha"] if branch else (pull or {}).get("head", {}).get("sha")
 
     if pull and pull.get("merged_at"):
         stage = "Completed"
-        detail = f"[PR #{pull['number']}]({pull['html_url']}) merged"
     elif pull and pull["state"] == "open":
         stage = "Review"
-        detail = f"[PR #{pull['number']}]({pull['html_url']}) open for review"
-    elif matching_branch:
+    elif branch or pull:
         stage = "Pipeline"
-        detail = f"Branch [{matching_branch}](https://github.com/{REPO}/tree/{matching_branch}) exists; no open PR"
-        if pull:
-            detail += f"; [PR #{pull['number']}]({pull['html_url']}) closed without merge"
     else:
         stage = "Pre-pipeline"
-        detail = "No job branch found"
 
-    groups[stage].append((job_id, title, detail))
+    compare = {}
+    if pull and pull.get("merged_at"):
+        try:
+            compare = {"files": get_json(f"{API}/pulls/{pull['number']}/files?per_page=100")}
+        except Exception:
+            compare = {}
+    elif head_sha and head_sha != main_sha:
+        try:
+            compare = get_json(f"{API}/compare/{main_sha}...{head_sha}")
+        except Exception:
+            compare = {}
+
+    changed_files = compare.get("files", [])
+    job_files = [f["filename"] for f in changed_files if f["filename"].startswith(f"jobs/{job_id}-")]
+    workflow = f".github/workflows/{job_id}.yml" in [f["filename"] for f in changed_files]
+    if job_files:
+        work = "Project files changed: " + ", ".join(job_files[:5])
+        if len(job_files) > 5:
+            work += f", and {len(job_files) - 5} more"
+        if workflow:
+            work += "; job CI workflow also added"
+    elif workflow:
+        work = "Added the job's GitHub verification workflow; no job deliverables are committed yet."
+    elif changed_files:
+        names = [f["filename"] for f in changed_files]
+        work = "Changed files: " + ", ".join(names[:5])
+        if len(names) > 5:
+            work += f", and {len(names) - 5} more"
+    elif branch:
+        work = "Branch is reserved, but has no commits beyond main."
+    elif pull and pull.get("state") == "closed":
+        work = "Previous pull request closed without merge; branch is no longer available."
+    elif pull:
+        work = "Pull request exists, but its branch is no longer available."
+    else:
+        work = "No job branch or pull request found."
+
+    if pull:
+        work += " " + pr_notes(pull)
+    worker = current_work.get(job_id)
+    if worker:
+        work = f"**Project status:** {worker['summary']} **Next step:** {worker['next']} " + work
+    matching_runs = [run for run in workflow_runs if run.get("head_sha") == head_sha and f"/{job_id}.yml" in run.get("path", "")]
+    if not matching_runs and head_sha and workflow:
+        try:
+            exact_runs = get_json(f"{API}/actions/runs?head_sha={head_sha}&per_page=100")["workflow_runs"]
+            matching_runs = [run for run in exact_runs if run.get("head_sha") == head_sha and f"/{job_id}.yml" in run.get("path", "")]
+        except Exception:
+            pass
+    matching_runs.sort(key=lambda run: (run.get("run_number", 0), run.get("run_attempt", 0)), reverse=True)
+    latest_run = matching_runs[0] if matching_runs else None
+    if latest_run:
+        result = latest_run.get("conclusion") if latest_run["status"] == "completed" else latest_run["status"]
+        checks = f"Exact latest commit `{head_sha[:7]}`: **{result}**, [full GitHub check]({latest_run['html_url']})."
+    elif not checks_available:
+        checks = "GitHub check results could not be loaded."
+    elif head_sha:
+        checks = f"No exact-commit workflow result available for `{head_sha[:7]}`."
+    else:
+        checks = "No project commit to check yet."
+    if pull and pull.get("draft"):
+        checks += " Draft review; original acceptance requirements still need review."
+
+    commits = compare.get("commits", [])
+    if pull and pull.get("merged_at"):
+        date = datetime.fromisoformat(pull["merged_at"].replace("Z", "+00:00")).astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+        evidence = f"{date} — merged PR #{pull['number']}: {plain(pull['title'], 180)}"
+    elif commits:
+        commit = commits[-1]
+        message = plain(commit.get("commit", {}).get("message", "").splitlines()[0], 180)
+        date = commit.get("commit", {}).get("author", {}).get("date", "")
+        if date:
+            date = datetime.fromisoformat(date.replace("Z", "+00:00")).astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+        evidence = f"{date} — {message}" if date else message
+    else:
+        evidence = "No new commit beyond main" if branch and head_sha == main_sha else "No commit details available"
+
+    if changed_files:
+        evidence += "; files: " + ", ".join(f["filename"] for f in changed_files[:6])
+        if len(changed_files) > 6:
+            evidence += f", +{len(changed_files) - 6} more"
+    if pull:
+        evidence += f"; [PR #{pull['number']}]({pull['html_url']})"
+
+    work = work.replace("|", "\\|")
+    evidence = evidence.replace("|", "\\|")
+    link = pull["html_url"] if pull else (
+        f"https://github.com/{REPO}/tree/{branch_name}" if branch_name else
+        f"https://github.com/{REPO}/blob/main/PROMPTS.md"
+    )
+    groups[stage].append((job_id, title, stage, work, checks.replace("|", "\\|"), evidence, link))
 
 now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 lines = [
@@ -69,24 +189,36 @@ lines = [
     "",
     f"_Last refreshed: {now}_",
     "",
-    "This tracker follows the 20 jobs listed in [PROMPTS.md](PROMPTS.md). It checks the job branches and pull requests in this repository.",
+    "This tracker covers the 20 jobs in [PROMPTS.md](PROMPTS.md). It reads branch commits, changed files, pull-request notes and checks for the exact latest commit from GitHub.",
+    "",
+    "Live dashboard: https://partybox-project-tracker.artificiallysloppy.chatgpt.site",
+    "",
+    "Active game queue: [GAME-PIPELINE.md](GAME-PIPELINE.md), with all ten game stages, exact-head checks, current acceptance notes and delivered files.",
+    "",
+    "The notes below describe what the GitHub record suggests is being worked on. They are evidence from commits and pull requests, not a claim that a job has passed verification.",
     "",
     "## Stage meanings",
     "",
-    "- **Pre-pipeline:** no job branch has been created yet.",
-    "- **Pipeline:** a job branch exists, but its pull request is not open.",
-    "- **Review:** a pull request is open and waiting for review.",
+    "- **Pre-pipeline:** no job branch or pull request exists.",
+    "- **Pipeline:** a job branch exists, or a previous pull request was closed without merging.",
+    "- **Review:** a pull request is open.",
     "- **Completed:** a pull request has been merged.",
     "",
     f"**Current count:** {len(groups['Pre-pipeline'])} pre-pipeline, {len(groups['Pipeline'])} pipeline, {len(groups['Review'])} in review, {len(groups['Completed'])} completed.",
     "",
 ]
+if activity.get("workers"):
+    lines.extend(["## Project detail and next steps", "", f"_Work notes recorded: {activity['updatedAt']}; checks below are freshly queried._", "", activity.get("summary", ""), "", "| Project | Current detail | Next step | Queued after this |", "|---|---|---|---|"])
+    for worker in activity["workers"]:
+        values = [worker["current"], worker["summary"], worker["next"], ", ".join(worker["queue"]) or "Delivery review"]
+        lines.append("| " + " | ".join(value.replace("|", "\\|") for value in values) + " |")
+    lines.append("")
 for stage, items in groups.items():
     lines.extend([f"## {stage} ({len(items)})", ""])
     if items:
-        lines.extend(["| Job | Project | GitHub status |", "|---|---|---|"])
-        for job_id, title, detail in items:
-            lines.append(f"| {job_id} | {title} | {detail} |")
+        lines.extend(["| Job | What seems to be worked on | Checks / open items | Latest evidence |", "|---|---|---|---|"])
+        for job_id, title, status, work, checks, evidence, link in items:
+            lines.append(f"| [{job_id} {title}]({link}) | {work} | {checks} | {evidence} |")
     else:
         lines.append("_None._")
     lines.append("")
