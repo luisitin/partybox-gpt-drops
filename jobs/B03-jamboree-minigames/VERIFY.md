@@ -368,7 +368,7 @@ Environment: Python 3.13.16, jsonschema 4.26.0, beautifulsoup4 4.15.0 (`requirem
 
 | Command | Result on this pass |
 | --- | --- |
-| `verify.py --hashes` at the baseline head `93d7848` | exit 0; 69 suites PASS; 25,279 cases (before the pass) |
+| `verify.py --hashes` at the baseline head `93d7848` | exit 0; 69 content suites PASS, then the manifest check |
 | `verify.py --strict --hashes` at the baseline | exit 1; verdict NOT_MET; 481 corroborated of 1,320 (before the pass; this is the expected gate) |
 | `quote-support-check.py --write` | 869 claims checked; 325 flagged for re-read; 121 category and 100 format claims title-only; 7 fragment-only summaries; gameplay rule: 15 corroborated, 110 single_source, 7 unverified |
 | `verify.py --hashes` after the pass | exit 0 once `SHA256SUMS.txt` is regenerated for the 74 files in the folder (the manifest check is the last suite) |
