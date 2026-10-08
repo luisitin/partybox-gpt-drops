@@ -2,7 +2,7 @@
 
 **What this is:** one pure TypeScript function, `nameFilter(input)`, that rejects player names containing a finite English list of sexual terms and slurs (leetspeak, repeated letters, separators, confusables, reversals) and accepts a reviewed list of benign names and words. Zero runtime dependencies.
 **How to use it:** `import { nameFilter } from './nameFilter.js'`; it returns `{ ok: true }` or `{ ok: false, reason, suggestion }`. Test with `npm ci --ignore-scripts --no-audit --no-fund && npm test` (Node 22+).
-**Status:** Port with fixes; see `INTEGRATION.md`. Hosted CI is green on the branch head (run 37809073933, 91 suites). The literal 0.05 ms per-call gate passes on GitHub and fails on a loaded local box. English only. PR #2 stays a draft.
+**Status:** Port with fixes; see `INTEGRATION.md`. Hosted CI: `2b54431` green (run 37809073933); `303f4f0` red only on the literal 0.05 ms gate (run 37810714023, one seed, 3 calls). The same gate also fails on a loaded local box. English only. PR #2 stays a draft.
 
 ## Quick start
 

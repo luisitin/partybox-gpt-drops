@@ -6,7 +6,7 @@
 | | |
 | --- | --- |
 | Status | **Port with fixes** (listed below). The filter is ready; the join wiring, the Spanish lexicon and two policy calls are not. |
-| Branch | `job/B19-name-filter`; the head commit that adds this file (`git log --oneline -1 -- jobs/B19-name-filter/INTEGRATION.md`) · PR #2 (draft, do not mark ready from here) · CI: green on `2b54431` (run 37809073933, full mode, 91 suites, 0 failures, checked 2026-10-08) |
+| Branch | `job/B19-name-filter`; the head commit that adds this file (`git log --oneline -1 -- jobs/B19-name-filter/INTEGRATION.md`) · PR #2 (draft, do not mark ready from here) · CI: `303f4f0` red only on the literal latency gate (run 37810714023: seed 1, 3 calls above 0.05 ms, max 0.093 ms; all other rows passed); `2b54431` was green (run 37809073933, 0 failures) |
 | Repo | luisitin/partybox-gpt-drops |
 | Test | `cd jobs/B19-name-filter && npm ci --ignore-scripts --no-audit --no-fund && npm test` (Node 22+). Full run ≈ 1 min on an idle box; `npm run test:core` skips corpora. |
 | Lands in PartyBox | `packages/engine/src/name-filter.ts` (new, pure) · called from `packages/engine/src/players.ts` `join()` · tests `packages/engine/src/name-filter.test.ts` (new) |

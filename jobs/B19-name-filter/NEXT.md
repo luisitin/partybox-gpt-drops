@@ -7,8 +7,9 @@ checksum manifest was regenerated after the last edit. Remaining local failure: 
 on this loaded 4-CPU box.
 
 Next, in order, for a human or the desktop agent:
-1. Read the hosted run for the pushed head (`mcp__github__actions_list`, workflow `B19.yml`). Do not
-   change the gate, a seed, a count or a warm-up to make it pass.
+1. The hosted run on `303f4f0` (run 37810714023) failed only the literal latency gate: seed 1, 3 calls above
+   0.05 ms (max 0.093 ms). Do not rerun it to get a green, and do not change the gate, a seed, a count or a
+   warm-up. The owner decides whether the gate stays a hard check or becomes a recorded benchmark.
 2. Owner decision: a Spanish lexicon with native review (INTEGRATION.md gap 1). Until then, PartyBox must
    not rely on this filter for es rooms.
 3. Owner decision: accept or change the eleven blocked Census names (CONFLICTS.md 1; no allowlist exists).

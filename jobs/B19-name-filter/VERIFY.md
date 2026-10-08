@@ -406,3 +406,13 @@ Three names added to the handwritten `positive` list.
 **UNVERIFIED.** Spanish profanity and slurs (no lexicon; see INTEGRATION.md gap 1). Spanish given names beyond
 the three added. Confusables outside the finite table. The 0.05 ms gate on any machine other than the
 GitHub runner.
+
+**Hosted result for the pushed head `303f4f0` (recorded after the push).** Run `37810714023` (workflow
+`B19 Player-name filter`, pull_request): `failure`. The only failing row was
+`latency-every-observed-check-under-005ms` on seed 1 (9,997 / 10,000; 3 calls above 0.05 ms: `celebration`
+0.093244 ms, `simultaneously` 0.065843 ms, `кnAW` 0.052819 ms). Seeds 2 and 3 passed 10,000 / 10,000
+(maxima 0.025307 and 0.049913 ms). The runner's `delivery-file-size-and-checksums` rows passed on all seeds,
+and `FINAL_SUMMARY` reports `mode: full`, `suites: 94`. The same source family passed on `2b54431`
+(run 37809073933, 10,000 / 10,000 on every seed). So the literal gate is nondeterministic on the hosted runner
+too. The run was not repeated to hunt a pass. Local and hosted runs disagree on the same kind of input; no
+cause is proven. The gate remains literal and unchanged.
