@@ -361,3 +361,35 @@ PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --strict 
 ```
 
 Expected and observed exit code: **1**. Integrity CI succeeds while asserting this deliberate incomplete-research verdict.
+
+## Polish pass 2026-10-08 (Claude, cloud)
+
+Environment: Python 3.13.16, jsonschema 4.26.0, beautifulsoup4 4.15.0 (`requirements.txt`), from the repo root, with `PYTHONDONTWRITEBYTECODE=1`. Seed: n/a (deterministic; no RNG).
+
+| Command | Result on this pass |
+| --- | --- |
+| `verify.py --hashes` at the baseline head `93d7848` | exit 0; 69 suites PASS; 25,279 cases (before the pass) |
+| `verify.py --strict --hashes` at the baseline | exit 1; verdict NOT_MET; 481 corroborated of 1,320 (before the pass; this is the expected gate) |
+| `quote-support-check.py --write` | 869 claims checked; 325 flagged for re-read; 121 category and 100 format claims title-only; 7 fragment-only summaries; gameplay rule: 15 corroborated, 110 single_source, 7 unverified |
+| `verify.py --hashes` after the pass | exit 0 once `SHA256SUMS.txt` is regenerated for the 74 files in the folder (the manifest check is the last suite) |
+| `verify.py --strict --hashes` after the pass | exit 1; verdict NOT_MET; 189 corroborated of 1,320; 1,131 open; 0 of 132 rows complete (expected) |
+| `sha256sum -c SHA256SUMS.txt` | every line OK |
+
+New or changed checks: `Quote-support report reproduces; no title-only corroborated category or format` (869 cases) and `Narrow summary status follows the two-lineage substantive-quote rule` (132 cases). The former `Independent publisher families for all 132 narrow core-gameplay summaries` check required every summary to be corroborated; the evidence showed that was not true of the registered quotes, so it was replaced by the rule check.
+
+### What the sampling found (per row, in plain words)
+
+- **category / format (175 corroborated fields).** The registered quotes are the minigame title. The category was carried by a heading locator; the format's four-player wording appears in no retained excerpt. Both became `single_source` with a limitation. Rows: all 108 category and 67 format claims that were corroborated and title-only.
+- **summary (117 corroborated evidence sets).** 110 had one sentence-length registered quote from one lineage and no more; 7 had no sentence-length quote (headings such as "In-game description:" or one-word clips). The rule now gives 15 corroborated, 110 single_source, 7 unverified.
+- **phone rationales (31 rows).** Motion, camera and microphone reasons were rewritten to name the phone's own sensors and microphone. Ratings are unchanged; each rationale is still one sentence.
+- **Not changed, flagged only.** 325 claim-fields are flagged for a human re-read (`reports/quote-support-check.json`): numbers the claim states that its quotes do not contain (format 95, score 34, timer 22, win 14, summary 11, controls 6, tie 1), and the title-only categories and formats that stay single_source. Some timer flags are unit conversions ("1 minute" against 60 seconds); they need a reader, not a rule.
+
+### Limits of these checks
+
+They are lexical. They prove that a quote is or is not in the registry and that numbers are or are not present, not that a source supports a claim. A human re-read of each flagged source is still required before any exact value is used.
+
+### UNVERIFIED in this pass
+
+- No live source was reopened in this pass: the offline suite does not make network requests, and the previous pass's reopen records are unchanged.
+- The legacy list heading (for "Free-for-All Minigames" and similar) is recorded in `SOURCES.md` but not as a registry quote, so no category was re-corroborated from it.
+- Phone fit remains an editorial judgement, not a test.

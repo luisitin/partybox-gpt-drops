@@ -90,6 +90,8 @@ def build(minigames, sources):
         ids_gameplay = row['fieldEvidence']['gameplay']['quoteIds']
         rule_status = expected_gameplay_status(ids_gameplay, quotes)
         gameplay_rule[rule_status] = gameplay_rule.get(rule_status, 0) + 1
+        if not any(substantive(texts[qid]) for qid in ids_gameplay if qid in texts):
+            fragment += 1
         for claim_key, evidence_key in CLAIMS:
             evidence = row['fieldEvidence'].get(evidence_key)
             if not evidence or evidence['status'] not in CHECKED_STATUSES or not row.get(claim_key):
@@ -102,8 +104,6 @@ def build(minigames, sources):
             quoted_numbers = set().union(*[numbers(text) for text in quoted]) if quoted else set()
             missing_numbers = sorted(numbers(claim) - quoted_numbers)
             is_fragment = claim_key == 'summary' and not any(substantive(text) for text in quoted)
-            if is_fragment:
-                fragment += 1
             if not (is_title_only or missing_numbers or is_fragment):
                 continue
             if is_title_only:
@@ -121,7 +121,7 @@ def build(minigames, sources):
         'flaggedFieldClaims': len(items),
         'titleOnlyByField': dict(sorted(title_only.items())),
         'missingNumbersByField': dict(sorted(missing.items())),
-        'summaryFragmentOnly': fragment,
+        'summaryFragmentOnly': fragment,  # every summary, whatever its status: no sentence-length quote
         'gameplayRuleStatuses': dict(sorted(gameplay_rule.items())),
         'items': items,
     }
