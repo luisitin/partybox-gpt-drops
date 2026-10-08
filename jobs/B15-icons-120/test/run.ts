@@ -6,7 +6,8 @@ import { createHash } from 'node:crypto';
 import sharp from 'sharp';
 import ts from 'typescript';
 import { auditSvg,alphaMask,compareMasks,belowLimit,utf8Bytes } from '../src/check.js';
-import { iconNames,getIcon,palette } from '../src/icons.js';
+import { iconNames,getIcon,getSprite,palette } from '../src/icons.js';
+import { buildGallery } from './gallery.js';
 import { svgCases,maskCases,seeded } from './fixtures.js';
 import { root,entries,backgrounds,tile,renderAll,contacts } from './generate.js';
 import { pngFixtures } from './png-fixtures.js';
@@ -120,6 +121,26 @@ for(const seed of [1,2,3]){
   assert.equal(utf8Bytes('🎲'),4);assert.equal(utf8Bytes('café'),5);
   for(const name of ['__proto__','constructor','toString','hasOwnProperty','not-an-icon'])assert.equal(getIcon(name),undefined);
   record('Boundary, malformed input and prototype-safe lookup',limitCases.length+9,seed);
+  // Polish pass 2026-10-08: ink theming option, sprite, gallery page and bilingual manifest.
+  let themed=0;
+  for(const name of iconNames){
+    const base=getIcon(name)!,current=getIcon(name,{ink:'currentColor'})!,black=getIcon(name,{ink:'#000000'})!;
+    assert.equal(current,base.replaceAll('"#20243a"','"currentColor"'));assert.ok(!current.includes('#20243a'),name);
+    assert.equal(getIcon(name,{}),base);assert.equal(getIcon(name,{ink:'#20243a'}),base);
+    const audit=auditSvg(black);assert.ok(audit.valid,name+' ink #000000');assert.ok(!audit.colors.includes('#20243a'),name);
+    themed+=4;
+  }
+  const badInks=['red','#12345','#GGGGGG','#20243A','url(#x)','"/><script>','',' currentColor','currentcolor'];
+  for(const ink of badInks)assert.equal(getIcon('dice',{ink}),undefined,'ink '+ink);
+  const sprite=getSprite()!,symbols=[...sprite.matchAll(/<symbol id="pb-icon-([a-z0-9-]+)"( viewBox="0 0 64 64"[^]*?)<\/symbol>/g)];
+  assert.equal(fs.readFileSync(path.join(root,'sprite.svg'),'utf8'),sprite);assert.equal(getSprite({ink:'bad'}),undefined);
+  assert.deepEqual(symbols.map(m=>m[1]),[...iconNames]);
+  for(const m of symbols){const svg=getIcon(m[1]!,{ink:'currentColor'})!;assert.equal(m[2],svg.slice(svg.indexOf(' viewBox='),-'</svg>'.length));}
+  const gallery=fs.readFileSync(path.join(root,'gallery.html'),'utf8');
+  assert.equal(gallery,buildGallery(entries,sprite),'gallery.html is stale: run npm run generate');
+  assert.ok(!/(src|href|url)\(?=?"?(https?:)?\/\//.test(gallery),'gallery must not load anything over the network');
+  for(const e of entries){assert.ok(gallery.includes('value="'+e.id+'"'),e.id);assert.ok(e.titleEs.length>0&&e.titleEs.trim()===e.titleEs,'Spanish title '+e.id);}
+  record('Ink theming option, sprite symbols, gallery page and Spanish titles',themed+badInks.length+symbols.length+2*entries.length+2,seed);
   for(const [i,f] of fixtures.entries()){
     const value=oracle.pngFixtures[i]!;assert.equal(value.ok,f.valid,f.name);
     if(f.valid){assert.deepEqual(value.rgba,f.rgba);const raw=await sharp(f.path).ensureAlpha().raw().toBuffer();assert.deepEqual(Array.from(raw),f.rgba);}
@@ -137,10 +158,15 @@ for(const seed of [1,2,3]){
     assert.equal(sha(bitBytes(alphaMask(secondary)!)),d.maskSha256,'sealed Cairo mask bytes '+r.id);
     const own=compareMasks(mask,mask)!;assert.equal(own.union,b.pixels);assert.ok(b.pixels>0);
     if(r.size===256){for(let i=0;i<256;i++)for(const pos of [i,255*256+i,i*256,i*256+255])assert.equal(r.rgba[pos*4+3],0,'clipping '+r.id);}
+    // Live area: nothing opaque within 2 grid units (8 px at 256) of the edge, so every icon has the same optical frame.
+    if(r.size===256){for(let y=0;y<256;y++)for(let x=0;x<256;x++)if(x<8||y<8||x>=248||y>=248)assert.ok(r.rgba[(y*256+x)*4+3]!<128,'live area '+r.id);}
+    // Night visibility: at 48 px at least a quarter of the opaque pixels are lighter than the ink, so no icon vanishes on the night theme.
+    if(r.size===48){let opaque=0,lit=0;for(let i=0;i<48*48;i++){if(r.rgba[i*4+3]!<128)continue;opaque++;if(0.2126*r.rgba[i*4]!+0.7152*r.rgba[i*4+1]!+0.0722*r.rgba[i*4+2]!>=60)lit++;}assert.ok(4*lit>=opaque,'night visibility '+r.id+' '+lit+'/'+opaque);}
     hashes['librsvg/'+r.size+'/'+r.id]=sha(r.png);
     hashes['cairo/'+r.size+'/'+r.id]=sha(fs.readFileSync(path.join(root,'png-cairo',String(r.size),r.id+'.png')));
   }
   record('Independent PNG decoder / exact mask bytes / dimensions / clipping',360,seed);
+  record('Live area (2-unit margin at 256 px) and night-theme visibility (48 px)',240,seed);
   record('Independent CairoSVG native-size rasterization',360,seed);
   record('Sealed blind PNG decoder / exact RGBA and mask bytes, both renderers',720,seed);
   for(const renderer of ['librsvg','cairo'])for(const size of [24,48,256]){
@@ -176,7 +202,7 @@ for(const seed of [1,2,3]){
     }
     hashes['preview/'+name]=sha(fs.readFileSync(path.join(root,'preview','contact-'+name+'.png')));
   }
-  record('Five backgrounds / all 600 raster thumbnails',600,seed);
+  record('Seven backgrounds incl. PartyBox night and daylight / all 840 raster thumbnails',840,seed);
   if(firstHashes)assert.deepEqual(hashes,firstHashes);else firstHashes=hashes;
   record('Deterministic raster and contact-sheet hashes',Object.keys(hashes).length,seed);
   const mutations=await runMutations(root,seed,all,masks,oracle.maskCases);

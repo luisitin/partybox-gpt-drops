@@ -5,7 +5,7 @@ root=Path(__file__).resolve().parents[1];repo=root.parents[1]
 workflow=repo/'.github/workflows/B15.yml'
 
 def source_files():
-    names=['README.md','ASSUMPTIONS.md','LOOP.md','NEXT.md','package-lock.json','package.json','tsconfig.json','requirements-dev.txt','manifest.json','icons.zip','.gitignore']
+    names=['README.md','ASSUMPTIONS.md','LOOP.md','NEXT.md','package-lock.json','package.json','tsconfig.json','requirements-dev.txt','manifest.json','icons.zip','sprite.svg','gallery.html','.gitignore']
     paths=[root/name for name in names if (root/name).exists()]
     paths+=sorted((root/'icons').glob('*.svg'))
     paths+=sorted((root/'src').glob('*.ts'))+sorted((root/'test').glob('*.ts'))+sorted((root/'test').glob('*.py'))
@@ -74,7 +74,11 @@ else:
     lines.append('This local run does not itself establish a green GitHub Actions run. The pull-request description must link a run actually observed as successful. PNGs and complete generated reports are delivered in the full ZIP and CI artifact; the Git tree stores authored source and all 120 individual SVG files.')
 lines+=['','## Runtime and development dependencies','',
 'Runtime dependencies: zero. The UI lookup and checker are pure functions. The build/test harness necessarily performs file I/O and starts a Python oracle. Development tools are pinned in package.json and requirements-dev.txt. There are no calls to Math.random or Date.now in the TypeScript source AST. Randomized tests receive a seeded RNG function.','']
-verify=root/'VERIFY.md';verify.write_text('\n'.join(lines))
+verify=root/'VERIFY.md'
+# Dated, hand-written polish sections ("## Polish pass YYYY-MM-DD") survive regeneration, kept after the generated body.
+previous=verify.read_text() if verify.exists() else '';start=previous.find('\n## Polish pass ')
+polish='' if start<0 else previous[start:previous.find('\n## Complete-bundle checksums',start) if previous.find('\n## Complete-bundle checksums',start)>=0 else len(previous)].rstrip('\n')+'\n'
+verify.write_text('\n'.join(lines)+polish)
 # Remove only temporary/draft proof output owned by this job.
 for p in (root/'reports').glob('draft-pairs-*.json'):p.unlink()
 
