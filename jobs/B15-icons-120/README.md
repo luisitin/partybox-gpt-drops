@@ -1,217 +1,287 @@
-# B15 — 120 original SVG game icons
+# B15: 120 original SVG game icons
 
-A coordinated, chunky, friendly icon family drawn specifically for this job. Rounded outlines, warm paper, coral, gold, mint and lavender; no text, fonts, stock icon library, external artwork, embedded images or traced references in the SVGs.
+**What this is:** 120 original, chunky, friendly icons on a 64-unit grid, with one 6-colour palette, a pure TypeScript lookup, a themeable SVG sprite and Spanish titles.\
+**How to use it:** take `icons/*.svg` or `sprite.svg` and render with `<use href="#pb-icon-dice"/>`; outline colour follows CSS `color`. In code, call `getIcon('dice', { ink: 'currentColor' })`.\
+**Status:** ready to port. `npm test` passes all three seeds (every pair of icons at every size in both renderers, 75 of 75 mutants killed). Port notes are in [INTEGRATION.md](INTEGRATION.md).
 
-## What is here
+Open `gallery.html` from disk to browse the set on all five PartyBox themes at 24, 48 and 96 px, in English or Spanish.
 
-`icons/` contains all 120 individually minified SVG files, committed directly for review. `npm test` also builds the deterministic `icons.zip` bundle. The full downloadable/CI bundle includes 360 primary transparent PNGs in `png/24`, `png/48`, `png/256`, a second 360-image rasterizer proof in `png-cairo/`, five PNG contact sheets in `preview/`, and a nearest-neighbor 4x view of the actual 24 px pixels.
+## Quick start
 
-`src/art.ts` is the complete original geometry. `src/icons.ts` is the dependency-free, pure lookup API. `src/check.ts` is a pure SVG-profile and exact silhouette auditor. `test/blind/oracle.py` is a separately authored, sealed XML/PNG/mask reference. `test/blind-adapter.py` connects its public API to every required case; the older `test/oracle.py` remains supplemental. `test/` also contains the generator, adversarial fixtures, executable source mutation tests and deterministic packager. `manifest.json` describes every icon. `VERIFY.md` records exact test counts, seeds, commands and limitations. Complete pair ledgers and mutation evidence are in `reports/` after testing.
-
-Only this job folder and `.github/workflows/B15.yml` belong to this change. No changes to main or other job folders are required.
-
-## Rerun
-
-Use Node.js 22+, Python 3.11+, a C compiler-free prebuilt Sharp installation, libcairo2 and a DejaVu Sans font for contact-sheet labels. The font is used only by the test environment; no font files are distributed.
-
-On Ubuntu, first install development tools:
+Requires Node.js 22+, Python 3.11+, libcairo2 and a DejaVu Sans font (the font is used only for contact-sheet labels).
 
 ```sh
-sudo apt-get update
-sudo apt-get install -y --no-install-recommends libcairo2 fonts-dejavu-core
+sudo apt-get install -y --no-install-recommends libcairo2 fonts-dejavu-core   # once, Ubuntu
 cd jobs/B15-icons-120
 npm ci --ignore-scripts --no-audit --no-fund
 python3 -m pip install -r requirements-dev.txt
+npm test          # about 4 minutes; writes VERIFY.md, reports/ and artifact/B15-icons-120.zip
+```
+
+`npm test` is the only test command. It:
+
+- compiles strictly;
+- reruns every suite for seeds 1, 2 and 3;
+- rasterises every icon at 24, 48 and 256 px in librsvg (Sharp) and CairoSVG;
+- compares all 7,140 silhouette pairs per size;
+- checks the live area, night visibility, sprite, gallery and Spanish titles;
+- checks contact sheets on seven backgrounds;
+- runs 25 real source mutants per seed;
+- packages the evidence.
+
+Any failure exits non-zero.
+
+**To change artwork:**
+
+```sh
+# 1. edit src/art.ts
+npm run generate                        # icons/*.svg, sprite.svg, gallery.html, png/, preview/
+rm icons.zip && python3 test/unpack.py  # rebuild the deterministic bundle (fixed 1980 timestamps)
+python3 test/package.py --seal-sources  # reseal authored inputs (after every doc or source edit)
 npm test
 ```
 
-After one-time installation, **`npm test` is the only test command**. It strictly compiles all TypeScript, reruns every suite for seeds 1, 2 and 3, rebuilds the sealed SVG bundle when absent without overwriting edited icons, rasterizes all three sizes in both engines, compares every silhouette pair, checks five contact-sheet backgrounds, runs all 25 real source mutants per seed, writes evidence and produces `artifact/B15-icons-120.zip`. Any failed assertion, surviving mutant, checksum mismatch, oversized file, failed renderer, compiler failure or oracle disagreement stops the build with a nonzero exit code.
+Ordinary test runs never overwrite an edited SVG. A changed sealed input fails until you reseal it.
 
-The runtime package has zero dependencies; TypeScript, Node types, Sharp and CairoSVG are **development/test tools**, not UI runtime dependencies. A fresh installation needs package-registry access. No claim of an offline fresh install is made.
-
-The GitHub workflow uses pull_request, the required job path filter, ubuntu-latest, a 30-minute timeout, read-only contents permissions, no secrets, and major-pinned actions/* actions. It uploads the complete reproducible ZIP with all PNGs and evidence. The PR description links the observed run; a local pass alone is not described as a green Actions run.
-
-## Use
-
-```html
-<img src="./icons/dice.svg" width="24" height="24" alt="Roll dice">
-```
+## API and data shape
 
 ```ts
-import { getIcon, iconNames } from './dist/src/icons.js';
-const svg = getIcon('trophy'); // SVG string; unknown names return undefined.
+import { getIcon, getSprite, iconNames, palette, defaultInk } from './dist/src/icons.js';
+
+getIcon('trophy');                          // canonical SVG string (ink #20243a), or undefined for an unknown name
+getIcon('trophy', { ink: 'currentColor' }); // ink follows CSS `color`; also accepts '#rgb' or '#rrggbb'
+getIcon('trophy', { ink: 'red' });          // undefined: invalid ink is rejected, nothing throws
+getSprite();                                // one hidden <svg> holding <symbol id="pb-icon-NAME" viewBox="0 0 64 64"> x120, ink = currentColor
+iconNames;                                  // readonly list of 120 ids, in manifest order
+palette;                                    // ['#20243a', '#fff4d9', '#ff7668', '#ffc857', '#52cbb5', '#9a8df2']
+defaultInk;                                 // '#20243a', the only colour the ink option swaps
 ```
 
-Keep accessible names in the surrounding UI; the icon artwork itself contains no text. The supplied PNGs have transparent backgrounds. Contact-sheet backgrounds are not baked into the icons.
+- All functions are pure, with no I/O and zero runtime dependencies.
+- `manifest.json` is an array of `{ "id", "title", "titleEs", "category" }`: 120 entries in six categories of 20.
+- `sprite.svg` is byte-for-byte `getSprite()`. Put it inline once, or serve it as a static file and reference `icons.svg#pb-icon-dice`. Size: 54 KB, or 9 KB gzipped.
+
+```html
+<svg class="pb-icon" width="48" height="48" style="color: var(--pb-icon-ink, #20243a)" aria-hidden="true">
+  <use href="#pb-icon-dice"/>
+</svg>
+```
+
+The icons contain no text. Keep the accessible name on the surrounding button or label.
+
+## Style rules (what keeps the set coherent)
+
+- **Grid:** a 64 x 64 viewBox. Art stays inside the live area 3–61, and the tests require 2 clear units at the edge.
+- **Outline:** every shape has the same 4-unit ink outline (`#20243a`) with round caps and joins.
+- **Lines are ribbons:** an ink casing `w + 8` wide sits under a coloured core `w` wide. Lines therefore get the same 4-unit edge as filled shapes, and crossings join cleanly.
+- **Ink use:** ink is only for edges and small details, never for structure. At 48 px, at least a quarter of every icon's opaque pixels are lighter than the ink (tested), so nothing vanishes on the night theme.
+- **Fills:** cream `#fff4d9`, coral `#ff7668`, gold `#ffc857`, mint `#52cbb5` and lavender `#9a8df2`.
+- **Shine:** one short cream highlight stroke on round, glossy objects.
+- **Distinct silhouettes:** no two icons overlap by IoU ≥ 0.8 at 24, 48 or 256 px. Tilts and asymmetric parts keep similar objects apart, for example the open chest's lid swung back and the dice cup's die rolling out.
+- **Theming:** the canonical files keep a hex ink, because the sealed SVG profile accepts hex paints only. Only `getIcon({ ink })` and `sprite.svg` swap the ink, so CSS can theme it.
+
+## Product vs evidence
+
+| Kind | Files |
+| --- | --- |
+| **Product** (port these) | `icons/*.svg` (120 canonical SVGs) · `sprite.svg` · `src/icons.ts` + `src/art.ts` (pure API and geometry) · `manifest.json` (ids, English and Spanish titles, categories) |
+| Review page | `gallery.html`: self-contained, no network, five themes, sizes, EN/ES, search, per-icon detail with a usage snippet |
+| Checker | `src/check.ts`: pure SVG-profile and silhouette auditor. Useful as a lint if the set grows; the mutants target it, so keep it byte-stable |
+| Evidence and tooling | `test/**` (generator, gallery builder, fixtures, mutants, sealed blind oracle in `test/blind/`) · `reports/results.json`, `reports/mutations.json` · `VERIFY.md` · `SHA256SUMS.txt` · `icons.zip` · `LOOP.md`, `NEXT.md`, `ASSUMPTIONS.md` |
+| Generated, not committed | `png/`, `png-cairo/`, `preview/` (contact sheets), `dist/`, `artifact/B15-icons-120.zip` (also uploaded by CI) |
+
+Only this job folder and `.github/workflows/B15.yml` belong to this job.
+
+The workflow runs on pull requests that touch `jobs/B15-*/**`:
+
+- `ubuntu-latest`, with a 30-minute timeout;
+- read-only contents permission and no secrets;
+- uploads the complete ZIP.
 
 ## Constraints and exact silhouette definition
 
-Every source file uses `viewBox="0 0 64 64"`, at most 1,500 UTF-8 bytes, and no more than six distinct case-normalized hex fill/stroke paints. `none` is transparency, not a seventh color. Files are already compact one-line SVG; checking their actual bytes is stricter than only checking a later minifier's output. One shared palette is used across the family: `#20243a`, `#fff4d9`, `#ff7668`, `#ffc857`, `#52cbb5`, `#9a8df2`.
+**File limits.**
+- Every file uses `viewBox="0 0 64 64"`, stays at or under 1,500 UTF-8 bytes, and has at most six distinct hex fill/stroke paints, all from the palette.
+- `none` means transparent; it is not a seventh colour.
 
-For each native raster size, foreground is alpha >= 128. Internal transparent holes are retained. Every pair uses the same fixed canvas, without alignment, normalization, pairwise transforms, or silhouette dilation. The test checks **5 × intersection < 4 × union** in integers. An IoU of exactly 0.8 fails. There are exactly 120 × 119 / 2 = **7,140 unique unordered pairs per size**. Their exact counts are reported, not just a sampled maximum.
+**Silhouette test.**
+- For each native raster size, foreground is alpha >= 128, and internal holes are kept.
+- Every pair is compared on the same fixed canvas, with no alignment, normalisation or dilation.
+- The test checks `5 x intersection < 4 x union` in integers, so an IoU of exactly 0.8 fails. That is 7,140 unordered pairs per size, all counted exactly.
 
-Checker A uses a TypeScript scanner and 32-bit word population counts. The sealed independent reference uses Python's XML parser, a standard-library PNG decoder and integer bit operations. It decodes both renderers' PNGs and compares every pair; the historical checker remains an additional differential path. Identical input PNGs must produce identical mask bytes and exact pair counts in both. CairoSVG independently rerenders all artwork, and all of its pairs must also pass. Cross-renderer antialiasing need not be pixel-identical; per-icon binary-mask overlap must remain at least 0.90.
+**Two independent checkers.**
+- Checker A is a TypeScript scanner using 32-bit population counts.
+- The sealed reference (`test/blind/oracle.py`) is independently authored Python: an XML parser, a standard-library PNG decoder and integer bit arithmetic. It decodes both renderers' PNGs and compares every pair.
+- Identical PNGs must give identical mask bytes and pair counts in both checkers.
+- The two renderers do not need identical antialiasing, but each icon's mask overlap between them must be at least 0.90.
 
-The SVG auditor intentionally accepts a narrow, inert subset used by these assets: svg/g/path/rect/circle/ellipse, absolute M/L/H/V/C/Q/Z paths, finite numeric geometry, hex/none paints and three-argument rotate transforms. It rejects text, scripts, styles, handlers, declarations, external references and unsupported attributes. It is **not** a general-purpose SVG sanitizer or a replacement for a hardened untrusted-content security boundary.
+**SVG profile.** The auditor accepts only a narrow, inert subset:
+- elements: svg, g, path, rect, circle, ellipse;
+- path commands: absolute M/L/H/V/C/Q/Z;
+- finite numbers, hex or none paints, and three-argument `rotate` transforms.
 
-## Checksums and authoring changes
+It rejects text, scripts, styles, handlers and external references. It is an asset validator, **not** a general SVG sanitizer.
 
-`SHA256SUMS.txt` seals all 120 individual SVGs, the deterministic ZIP, authored source files and the one workflow. It is verified in every seed. `BUNDLE_SHA256SUMS.txt` covers the complete delivered bundle, including generated PNGs and reports, and is independently verified during packaging. No manifest tries to include its own hash. Run checksum commands from this job directory.
+## Checksums and verification boundary
 
-For an intentional artwork edit, modify `src/art.ts`, run `npm run generate`, rebuild `icons.zip` from the resulting 120 files using fixed ZIP timestamps, then run `python3 test/package.py --seal-sources` and `npm test`. Ordinary tests never silently overwrite a modified SVG with the source generator. Changing a sealed input requires explicitly resealing it.
+**Checksums.**
+- `SHA256SUMS.txt` seals the 120 SVGs, `icons.zip`, `sprite.svg`, `gallery.html`, the authored sources and docs, and the workflow. It is verified in every seed.
+- `BUNDLE_SHA256SUMS.txt` covers the complete delivered bundle and is checked while packaging.
 
-## Important verification boundary
-
-The reference was authored in `/workspace/blind-b15` without opening the production checker, artwork or fixtures, self-checked and SHA-256 sealed before source inspection. Its unchanged source and authoring record are in `test/blind/`. One serialization rule absent from the supplied public contract (`name="value"` without spaces around `=`) is applied explicitly by the post-seal adapter; raw decisions are retained, including that one documented difference. No independent human-panel recognition study is represented as having occurred. Native 24 px proofs are supplied for visual review. See VERIFY.md for these limitations rather than treating a green automated run as proof of every subjective or authorship requirement.
+**Verification boundary.**
+- The reference in `test/blind/` was authored without opening the production checker, artwork or fixtures, then sealed.
+- One serialization rule missing from the supplied contract (`name="value"` with no spaces around `=`) is applied by the post-seal adapter. The raw decisions are kept.
+- No human recognition study was run. The 24 px legibility claim is a visual design judgment backed by native-size proofs, not a measurement.
+- See `VERIFY.md` for the generated counts and the dated polish notes.
 
 ## Full icon inventory
 
 ### Party essentials
 
-| # | File / API id | Meaning |
-|---:|---|---|
-| 1 | `dice` | Dice |
-| 2 | `coin` | Coin |
-| 3 | `star` | Star |
-| 4 | `crown` | Crown |
-| 5 | `timer` | Timer |
-| 6 | `microphone` | Microphone |
-| 7 | `vote` | Vote |
-| 8 | `skip` | Skip |
-| 9 | `trophy` | Trophy |
-| 10 | `card-back` | Card back |
-| 11 | `heart` | Heart |
-| 12 | `bomb` | Bomb |
-| 13 | `shopping-bag` | Shopping bag |
-| 14 | `key` | Key |
-| 15 | `lock` | Lock |
-| 16 | `gift` | Gift |
-| 17 | `lightning` | Lightning |
-| 18 | `shield` | Shield |
-| 19 | `flag` | Flag |
-| 20 | `gem` | Gem |
+| # | id | English | Español |
+|---:|---|---|---|
+| 1 | `dice` | Dice | Dados |
+| 2 | `coin` | Coin | Moneda |
+| 3 | `star` | Star | Estrella |
+| 4 | `crown` | Crown | Corona |
+| 5 | `timer` | Timer | Temporizador |
+| 6 | `microphone` | Microphone | Micrófono |
+| 7 | `vote` | Vote | Votar |
+| 8 | `skip` | Skip | Saltar |
+| 9 | `trophy` | Trophy | Trofeo |
+| 10 | `card-back` | Card back | Reverso de carta |
+| 11 | `heart` | Heart | Corazón |
+| 12 | `bomb` | Bomb | Bomba |
+| 13 | `shopping-bag` | Shopping bag | Bolsa de compras |
+| 14 | `key` | Key | Llave |
+| 15 | `lock` | Lock | Candado |
+| 16 | `gift` | Gift | Regalo |
+| 17 | `lightning` | Lightning | Rayo |
+| 18 | `shield` | Shield | Escudo |
+| 19 | `flag` | Flag | Bandera |
+| 20 | `gem` | Gem | Gema |
 
 ### Navigation and actions
 
-| # | File / API id | Meaning |
-|---:|---|---|
-| 21 | `arrow-up` | Arrow up |
-| 22 | `arrow-down` | Arrow down |
-| 23 | `arrow-left` | Arrow left |
-| 24 | `arrow-right` | Arrow right |
-| 25 | `chevron-left` | Chevron left |
-| 26 | `chevron-right` | Chevron right |
-| 27 | `undo` | Undo |
-| 28 | `redo` | Redo |
-| 29 | `refresh` | Refresh |
-| 30 | `shuffle` | Shuffle |
-| 31 | `expand` | Expand |
-| 32 | `collapse` | Collapse |
-| 33 | `play` | Play |
-| 34 | `pause` | Pause |
-| 35 | `stop` | Stop |
-| 36 | `home` | Home |
-| 37 | `menu` | Menu |
-| 38 | `close` | Close |
-| 39 | `check` | Check |
-| 40 | `plus` | Plus |
+| # | id | English | Español |
+|---:|---|---|---|
+| 21 | `arrow-up` | Arrow up | Flecha arriba |
+| 22 | `arrow-down` | Arrow down | Flecha abajo |
+| 23 | `arrow-left` | Arrow left | Flecha izquierda |
+| 24 | `arrow-right` | Arrow right | Flecha derecha |
+| 25 | `chevron-left` | Chevron left | Anterior |
+| 26 | `chevron-right` | Chevron right | Siguiente |
+| 27 | `undo` | Undo | Deshacer |
+| 28 | `redo` | Redo | Rehacer |
+| 29 | `refresh` | Refresh | Actualizar |
+| 30 | `shuffle` | Shuffle | Mezclar |
+| 31 | `expand` | Expand | Expandir |
+| 32 | `collapse` | Collapse | Contraer |
+| 33 | `play` | Play | Reproducir |
+| 34 | `pause` | Pause | Pausa |
+| 35 | `stop` | Stop | Detener |
+| 36 | `home` | Home | Inicio |
+| 37 | `menu` | Menu | Menú |
+| 38 | `close` | Close | Cerrar |
+| 39 | `check` | Check | Confirmar |
+| 40 | `plus` | Plus | Agregar |
 
 ### Tabletop and competition
 
-| # | File / API id | Meaning |
-|---:|---|---|
-| 41 | `pawn` | Pawn |
-| 42 | `meeple` | Meeple |
-| 43 | `chess-knight` | Chess knight |
-| 44 | `chess-rook` | Chess rook |
-| 45 | `chess-bishop` | Chess bishop |
-| 46 | `domino` | Domino |
-| 47 | `poker-chip` | Poker chip |
-| 48 | `cards-hand` | Hand of cards |
-| 49 | `tile-stack` | Tile stack |
-| 50 | `puzzle-piece` | Puzzle piece |
-| 51 | `ticket` | Ticket |
-| 52 | `map` | Map |
-| 53 | `compass` | Compass |
-| 54 | `target` | Target |
-| 55 | `crosshair` | Crosshair |
-| 56 | `flag-finish` | Finish flag |
-| 57 | `podium` | Podium |
-| 58 | `medal` | Medal |
-| 59 | `laurel` | Laurel |
-| 60 | `scales` | Scales |
+| # | id | English | Español |
+|---:|---|---|---|
+| 41 | `pawn` | Pawn | Peón |
+| 42 | `meeple` | Meeple | Meeple |
+| 43 | `chess-knight` | Chess knight | Caballo de ajedrez |
+| 44 | `chess-rook` | Chess rook | Torre de ajedrez |
+| 45 | `chess-bishop` | Chess bishop | Alfil |
+| 46 | `domino` | Domino | Dominó |
+| 47 | `poker-chip` | Poker chip | Ficha de póker |
+| 48 | `cards-hand` | Hand of cards | Mano de cartas |
+| 49 | `tile-stack` | Tile stack | Pila de fichas |
+| 50 | `puzzle-piece` | Puzzle piece | Pieza de rompecabezas |
+| 51 | `ticket` | Ticket | Boleto |
+| 52 | `map` | Map | Mapa |
+| 53 | `compass` | Compass | Brújula |
+| 54 | `target` | Target | Diana |
+| 55 | `crosshair` | Crosshair | Mira |
+| 56 | `flag-finish` | Finish flag | Bandera de meta |
+| 57 | `podium` | Podium | Podio |
+| 58 | `medal` | Medal | Medalla |
+| 59 | `laurel` | Laurel | Laurel |
+| 60 | `scales` | Scales | Balanza |
 
 ### People and communication
 
-| # | File / API id | Meaning |
-|---:|---|---|
-| 61 | `player` | Player |
-| 62 | `players` | Players |
-| 63 | `host` | Host |
-| 64 | `bot` | Bot |
-| 65 | `chat` | Chat |
-| 66 | `whisper` | Whisper |
-| 67 | `laugh` | Laugh |
-| 68 | `clap` | Clap |
-| 69 | `thumbs-up` | Thumbs up |
-| 70 | `handshake` | Handshake |
-| 71 | `megaphone` | Megaphone |
-| 72 | `bell` | Bell |
-| 73 | `sound-on` | Sound on |
-| 74 | `sound-off` | Sound off |
-| 75 | `headphones` | Headphones |
-| 76 | `music-note` | Music note |
-| 77 | `camera` | Camera |
-| 78 | `eye` | Eye |
-| 79 | `eye-off` | Eye off |
-| 80 | `peace` | Peace |
+| # | id | English | Español |
+|---:|---|---|---|
+| 61 | `player` | Player | Jugador |
+| 62 | `players` | Players | Jugadores |
+| 63 | `host` | Host | Anfitrión |
+| 64 | `bot` | Bot | Bot |
+| 65 | `chat` | Chat | Chat |
+| 66 | `whisper` | Whisper | Susurro |
+| 67 | `laugh` | Laugh | Risa |
+| 68 | `clap` | Clap | Aplauso |
+| 69 | `thumbs-up` | Thumbs up | Pulgar arriba |
+| 70 | `handshake` | Handshake | Apretón de manos |
+| 71 | `megaphone` | Megaphone | Megáfono |
+| 72 | `bell` | Bell | Campana |
+| 73 | `sound-on` | Sound on | Sonido activado |
+| 74 | `sound-off` | Sound off | Sonido silenciado |
+| 75 | `headphones` | Headphones | Audífonos |
+| 76 | `music-note` | Music note | Nota musical |
+| 77 | `camera` | Camera | Cámara |
+| 78 | `eye` | Eye | Mostrar |
+| 79 | `eye-off` | Eye off | Ocultar |
+| 80 | `peace` | Peace | Paz |
 
 ### Game objects and effects
 
-| # | File / API id | Meaning |
-|---:|---|---|
-| 81 | `hourglass` | Hourglass |
-| 82 | `calendar` | Calendar |
-| 83 | `rocket` | Rocket |
-| 84 | `flame` | Flame |
-| 85 | `snowflake` | Snowflake |
-| 86 | `skull` | Skull |
-| 87 | `ghost` | Ghost |
-| 88 | `monster` | Monster |
-| 89 | `magic-wand` | Magic wand |
-| 90 | `potion` | Potion |
-| 91 | `clover` | Clover |
-| 92 | `magnet` | Magnet |
-| 93 | `anchor` | Anchor |
-| 94 | `sword` | Sword |
-| 95 | `axe` | Axe |
-| 96 | `treasure-chest` | Treasure chest |
-| 97 | `chest-open` | Open chest |
-| 98 | `backpack` | Backpack |
-| 99 | `coin-purse` | Coin purse |
-| 100 | `dice-cup` | Dice cup |
+| # | id | English | Español |
+|---:|---|---|---|
+| 81 | `hourglass` | Hourglass | Reloj de arena |
+| 82 | `calendar` | Calendar | Calendario |
+| 83 | `rocket` | Rocket | Cohete |
+| 84 | `flame` | Flame | Llama |
+| 85 | `snowflake` | Snowflake | Copo de nieve |
+| 86 | `skull` | Skull | Calavera |
+| 87 | `ghost` | Ghost | Fantasma |
+| 88 | `monster` | Monster | Monstruo |
+| 89 | `magic-wand` | Magic wand | Varita mágica |
+| 90 | `potion` | Potion | Poción |
+| 91 | `clover` | Clover | Trébol |
+| 92 | `magnet` | Magnet | Imán |
+| 93 | `anchor` | Anchor | Ancla |
+| 94 | `sword` | Sword | Espada |
+| 95 | `axe` | Axe | Hacha |
+| 96 | `treasure-chest` | Treasure chest | Cofre del tesoro |
+| 97 | `chest-open` | Open chest | Cofre abierto |
+| 98 | `backpack` | Backpack | Mochila |
+| 99 | `coin-purse` | Coin purse | Monedero |
+| 100 | `dice-cup` | Dice cup | Cubilete |
 
 ### System and celebration
 
-| # | File / API id | Meaning |
-|---:|---|---|
-| 101 | `settings` | Settings |
-| 102 | `search` | Search |
-| 103 | `filter` | Filter |
-| 104 | `sort` | Sort |
-| 105 | `link` | Link |
-| 106 | `unlink` | Unlink |
-| 107 | `download` | Download |
-| 108 | `upload` | Upload |
-| 109 | `share` | Share |
-| 110 | `wifi` | Wi-Fi |
-| 111 | `phone` | Phone |
-| 112 | `tv` | TV |
-| 113 | `gamepad` | Gamepad |
-| 114 | `battery` | Battery |
-| 115 | `plug` | Plug |
-| 116 | `cloud` | Cloud |
-| 117 | `sun` | Sun |
-| 118 | `moon` | Moon |
-| 119 | `sparkles` | Sparkles |
-| 120 | `confetti` | Confetti |
+| # | id | English | Español |
+|---:|---|---|---|
+| 101 | `settings` | Settings | Ajustes |
+| 102 | `search` | Search | Buscar |
+| 103 | `filter` | Filter | Filtrar |
+| 104 | `sort` | Sort | Ordenar |
+| 105 | `link` | Link | Enlazar |
+| 106 | `unlink` | Unlink | Desenlazar |
+| 107 | `download` | Download | Descargar |
+| 108 | `upload` | Upload | Subir |
+| 109 | `share` | Share | Compartir |
+| 110 | `wifi` | Wi-Fi | Wifi |
+| 111 | `phone` | Phone | Teléfono |
+| 112 | `tv` | TV | TV |
+| 113 | `gamepad` | Gamepad | Control |
+| 114 | `battery` | Battery | Batería |
+| 115 | `plug` | Plug | Enchufe |
+| 116 | `cloud` | Cloud | Nube |
+| 117 | `sun` | Sun | Sol |
+| 118 | `moon` | Moon | Luna |
+| 119 | `sparkles` | Sparkles | Destellos |
+| 120 | `confetti` | Confetti | Confeti |
