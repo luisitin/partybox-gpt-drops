@@ -1,0 +1,23 @@
+{
+  "kind": "prospective-distinct-indexed-UTF16-length-preflight",
+  "preparedUtc": "2026-10-08T23:48:35.259094+00:00",
+  "baseCheckpoint": "3640b628c9fdc36d4e3fcd51717743a7b5002e4f",
+  "baselineSourceSha256": "7817489fc1d0908a87914223a84b31c15ea7e13b3555cb4238594751616f163d",
+  "baselineCompiledSha256": "e4b39efbf033bef9c41788e9bf0f002cdb61ff9dbbdfa6cbfcbfda65122d2cf9",
+  "candidateSha256": "3ffd36c935fe2327989e6de25ee77193a1124f55f4a9cd77d96b8fa0cfb2870c",
+  "candidateSourceGzipLevel9Bytes": 5343,
+  "originalRunnerSha256": "bff0c17b62aa75d342527a8ced855678380411053476557acde61f2e1b6fbdd9",
+  "candidateChange": "All length work inside raw-unit>16 block; preserve >32 raw rejection. Count adjacent high+low pairs as one and lone units as one. Reject at18 codepoints, retain original consequential spread anchor for16/17, skip it for<=15. Type/length/control precedence and original M22/M23 effects remain. Raw<=16 common path uses one comparison; no gain claimed yet.",
+  "originalWorkloadsWarmupSamplesUnchanged": true,
+  "startupExcludedFromProspectivePhaseGains": true,
+  "historicalOutlierCauseClaimed": false,
+  "timingStarted": false,
+  "productionChanged": false,
+  "baselineCapturedFiles": {
+    "baseline-loaded/dist/nameFilter.d.ts": "9673a32967adaba04613fd1cf3757a9459e4ad82795b270338683a9fe5475d0d",
+    "baseline-loaded/dist/nameFilter.js": "e4b39efbf033bef9c41788e9bf0f002cdb61ff9dbbdfa6cbfcbfda65122d2cf9",
+    "baseline-loaded/dist/data/policy.json": "c0c0b41d20f8356d2c42540d8068ecb7fa42d67a24e19323ce334c4d5de73658",
+    "baseline-loaded/dist/tests/reference.js": "fb41af66df9ec5db3464ee870ed2db138903a1b7211614ab34e1344f6a1059f8",
+    "baseline-loaded/dist/tests/reference.d.ts": "f284287643ef3f4c6d52e79ef995ffbe3eae50baac425e4872280e0c707490d3"
+  }
+}

@@ -979,3 +979,13 @@ all individual call times; those times were not independently recomputed.
 
 **UNVERIFIED.** Original KEEP is unfinished; no only-cosmetic stopping point,
 universal0.05ms guarantee, timing cause, or new-checkpoint green status is claimed.
+
+## Rejected indexed UTF16 preflight and current artifact audit
+
+Production is unchanged at source7817489fc1d0908a87914223a84b31c15ea7e13b3555cb4238594751616f163d / compiled e4b39efbf033bef9c41788e9bf0f002cdb61ff9dbbdfa6cbfcbfda65122d2cf9. Private source3ffd36c935fe2327989e6de25ee77193a1124f55f4a9cd77d96b8fa0cfb2870c / compiled fe90e089b0783c5cbc4d59faa16e6e57d363ea8a6ba10ac3d17f685df020e1d2 is REJECTED and was never adopted.
+
+Strict compilation, all eight genuine assertion controls, all214308 complete equivalent comparisons and all25 original seed1 real mutants passed, with all850 equivalence /852 mutation guards unchanged. Original M22/M23 spread anchors remain consequential at16/17 code points. No original corpus, policy, driver, sealed reference, warmup or sample count was changed.
+
+One delegated fresh-owner whole-call ABBA/BAAB comparison: grant23:57:22.147265UTC, naturalCLOSED23:57:29.110Z, controllerCLOSED23:57:29.128565UTC EXIT0; all850+12 guards unchanged.24 phases/12 million calls and all seeded sinks pass. Seed gains28.23598749039163%,-1.3967508296478282%,-0.6802691614683712%; inconsistent gains reject this candidate. Complete raw phase times, GC events, workload hashes and stdout/stderr are retained. Startup was excluded; this diagnostic is not original0.05ms acceptance. No retry occurred. All owners were directly released only after natural closure and observed tool exit0. The coordinator delay before launch exceeded other owners' conservative checkpoints; that delay does not change or excuse the30-minute cadence requirement.
+
+Current baseline3640 hosted full37859732634/job113592343584 failed literal0/1/0, maxima0.026569999999992433/0.5130060000001322/0.010935999999674095ms. All100 suite rows' nonlatency checks,75 mutants and828 hashes passed. Official artifact11585970966 is11334866 bytes,SHA256e0fb3e62ea544898db82f180e94e6835772f5f9fad311325c7a99350e9805b60. Genuine ZIP retained privately at .work/B19-failed-hosted-3640/actual.zip (excluded from recursive public artifact packaging). Independent4226 byte assertions passed: reader naturallyCLOSED23:47:00.924373UTC EXIT0. The archived official metadata, complete native log and reader/report bind this actual failed result, not acceptance. No failure cause is asserted. Earlier first-hosted2/0/0 and first-local12/9/2 remain binding failures.

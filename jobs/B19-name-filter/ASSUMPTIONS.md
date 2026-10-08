@@ -171,3 +171,5 @@
 ## First current ASCII-DFA full failures
 
 Current hosted2/0/0 and first-local12/9/2 are distinct genuine failures; all non-latency checks/all75 mutants pass. The one current first-local attempt has760 unchanged guards and is not after-green KEEP. No unchanged retry or cause claim. Preserve actual failed artifact privately and actual fresh reports publicly without recursive ZIP nesting. Supplementary reader/doc preparation errors affect no product, corpus, reference or original workload. Prospective UTF16 optimization waits for G10 release and retains genuine M22/M23 boundaries.
+
+- Indexed UTF16 length preflight3ffd/fe90 was rejected after one exact source-bound mixed comparison because seed2/3 slowed, despite all complete equivalence and25 real mutation proofs passing. No isolated seed gain overrides inconsistent mixed gains. Actual current3640 failed artifact4226 assertions verify failure bytes and do not waive0.05ms. Coordinator delay before launch and conservative cadence misses remain explicit.

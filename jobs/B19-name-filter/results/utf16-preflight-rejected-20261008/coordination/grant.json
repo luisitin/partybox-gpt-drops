@@ -1,0 +1,87 @@
+{
+  "grantUtc": "2026-10-08T23:57:22.147265+00:00",
+  "kind": "delegated-once-only-indexed-UTF16-preflight-ABBA-BAAB",
+  "acknowledgments": {
+    "G01": {
+      "zeroWorkload": true,
+      "zeroWriter": true,
+      "ackUtc": "2026-10-08T23:51:23+00:00",
+      "evidence": "All finite official artifact reader and receipt writer naturally closed. Continuous HOLD reconfirmed after 23:55:44."
+    },
+    "B03": {
+      "zeroWorkload": true,
+      "zeroWriter": true,
+      "ackUtc": "2026-10-08T23:51:04+00:00",
+      "evidence": "Collector closed 23:46:08.790810; artifact reader PASS naturally closed 23:50:05.659053; no subsequent local work."
+    },
+    "G10": {
+      "zeroWorkload": true,
+      "zeroWriter": true,
+      "ackUtc": "2026-10-08T23:51:00.307426+00:00",
+      "evidence": "All finite reads/commands naturally closed; continuous HOLD, zero owned readers or writers."
+    },
+    "static": {
+      "zeroWorkload": true,
+      "zeroWriter": true,
+      "lastNativeReaderClosedUtc": "2026-10-08T23:52:58.641148+00:00",
+      "evidence": "G03 reader EXIT1 preserved; subsequent bounded diagnostic EXIT0 naturally closed before ACK, exact time not supplied. Continuous HOLD reconfirmed, no owned reader or writer."
+    },
+    "tracker": {
+      "zeroWorkload": true,
+      "zeroWriter": true,
+      "lastLocalWorkClosedUtc": "2026-10-08T23:48:45.489662+00:00",
+      "evidence": "Publication/HTTP/VM/receipts naturally closed; all local work held since then. Fresh direct ACK received."
+    }
+  },
+  "rootDelegation": {
+    "recordedUtc": "2026-10-08T23:57:21.413463+00:00",
+    "rootZeroWorkloadAndWriter": true,
+    "oneMixedComparisonDelegated": true,
+    "rootReaderClosedUtc": "2026-10-08T23:52:16.690932+00:00",
+    "scope": "Exactly existing f985 controller, once-only private 3ffd/fe90 UTF16 preflight versus production 7817/e4b at 3640, 24 phases and 12 million whole calls. Original npm acceptance not authorized. Launch only after all actual owner ACKs and controller fresh process and source revalidation.",
+    "rootInstructions": "Root latest message confirms all six owners continuously quiet and conditional delegation fully valid; no additional root roundtrip required.",
+    "rootAuxiliaryFailureRetained": "Initial reader EXIT1 at 23:52:03 omitted control/ path mapping; corrected reader only passed 1702 byte assertions. No source/protocol edit.",
+    "noElapsedRetry": true,
+    "directReleaseAfterNaturalControllerClosure": true
+  },
+  "runnableWorkloads": [],
+  "liveProcesses": [
+    "      1       0       0 S+   tail             0.0   876",
+    "      2       1       0 S+   caas-prefix-tra  0.0   252",
+    "    199       1     199 Ssl  dockerd          0.0 35536",
+    "    248     199     248 Ssl  containerd       0.4 21436",
+    "    464       0       0 Sl+  codex            0.1 41524",
+    " 215742     464  215742 Ss   python3         92.0 14364",
+    " 215747  215742  215742 R    ps               400  4040"
+  ],
+  "ignoredZombieEntries": 2485,
+  "STOPorCONTUsed": false,
+  "baselineHead": "3640b628c9fdc36d4e3fcd51717743a7b5002e4f",
+  "baselineSourceSha256": "7817489fc1d0908a87914223a84b31c15ea7e13b3555cb4238594751616f163d",
+  "baselineCompiledSha256": "e4b39efbf033bef9c41788e9bf0f002cdb61ff9dbbdfa6cbfcbfda65122d2cf9",
+  "candidateSourceSha256": "3ffd36c935fe2327989e6de25ee77193a1124f55f4a9cd77d96b8fa0cfb2870c",
+  "candidateJsSha256": "fe90e089b0783c5cbc4d59faa16e6e57d363ea8a6ba10ac3d17f685df020e1d2",
+  "externalSourceStart": {
+    "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/SHA256SUMS.txt": "0ff99a8e5ca37be5aed5a21c5c15724044052ae2870258ed139e90063ceb0c2c",
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node": "bc17c508ffeed0ec622934f9b7fa72f8e78da65350e63c3eceb56fa688aa5e12",
+    "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/node_modules/typescript/bin/tsc": "8d5fa5bd883fec0979fc2004f1fe1d99aef40570155d550eadc0b03b55513bf0",
+    "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/node_modules/typescript/lib/_tsc.js": "1f62c69e832fbbbd05a6dac950f152937f594a4d0b88087be5406ace348efcb5",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-UTF16-length-coordination/run-once.py": "f985a7f97776cdde7b23b27bb284ec20a2f1dd6cfe66a039546e0f38e38083b5",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-UTF16-length-candidate/TIMING_READY.json": "86b3161c0f361864bfbe2cb1e3a708afc2dfbe0a1027579b93596aad1a58cb21",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-UTF16-length-candidate/equivalence-latest.json": "d57101c9259422c3714e94cbf7ff81e00310f4f23be4805db1ecdaa79d9ce768",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-UTF16-length-candidate/structural-control.json": "22838ede1c0ef2be092522a8db0b224868cc0f8e3a88b6b79324a5ae023156a7",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-UTF16-length-candidate/run-functional.py": "d54317a7ce90fa62f747ec243bf97fd9b2d92eae4e73e6819f9ddb27900cbd86",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-UTF16-length-mutation/CLOSED.json": "92642ed42b7913f624624c563c0830cd005284481f9555767e8af31333cafc4b",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-UTF16-length-mutation/full-mutation.mjs": "b7a10ec0ad75055b3f98e03c3d2b3fbf7e74771176ab274b80fa0d8a0f379187",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-UTF16-length-mutation/original-declarations.mjs": "fd666625967d9476db38bccf19855867e29dd3bc6eb9de4f5bd5e1a180a1898c"
+  },
+  "argv": [
+    "node",
+    ".work/B19-UTF16-length-candidate/exact-harness.mjs",
+    "timing"
+  ],
+  "originalAcceptanceNotRun": true,
+  "allPriorFailuresRetained": true,
+  "originalWarmupAndSamplesUnchanged": true,
+  "startupExcludedFromPhaseGains": true
+}
