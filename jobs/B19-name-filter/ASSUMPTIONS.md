@@ -33,3 +33,12 @@
 - Repeated-letter patterns cannot consume fewer mapped characters than their
   source term. Length-specific matcher compilation is a general algorithm
   improvement, not a witness/input/result cache or benchmark-specific bypass.
+
+- The original daily GeoNames bytes no longer match the lock in fresh hosted
+  CI. A complete, exact original selected snapshot exists locally and matches
+  every committed output hash. Check it in with attribution and validate before
+  restoration rather than rewriting the lock or reducing required corpus rows.
+- Two private ASCII allocation candidates remain rejected: the double-regex
+  candidate slowed all mixed batches, and the single-scan balanced batches
+  showed0.06/1.8/6.8%slower total time despite fewer GC observations. Witness
+  improvements alone do not justify installing a mixed-workload regression.

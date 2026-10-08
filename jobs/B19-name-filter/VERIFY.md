@@ -289,3 +289,31 @@ impossible patterns. Whole-filter fixed-witness measurements show only a small
 gain; the full mixed attempt still fails. Timer-only controls also record long
 observations; GC/CPU sampling does not establish any historical outlier cause.
 Neither diagnostic is an acceptance pass. Exact-head hosted CI is pending.
+
+## Fresh hosted failure and exact offline corpus restoration
+
+Actual current-head run37804648793 at b7709fe completedFAILURE15:55:24UTC.
+Its complete28,579-byte decoded log was read. It executed61suite rows: corpus
+acquisition failed because pinned GeoNames bytes changed; therefore sealed
+comparisons were only11,830 perseed and prescribed corpora did not execute.
+Seed1 also failed literal latency: one0.050564ms observation; seed2/3 maxima
+0.026660/0.033302ms. No incomplete hosted run is called a full pass.
+Source-bound summary: results/resume-length-pruning/hosted-current.json.
+
+The exact retained original32,000-row cache is now delivered, matching every
+original snapshot-lock digest. Command `python3 tests/retained-snapshot.py`
+passed8/8 checks in each of3deterministic repetitions (24/24,0network calls):
+real clean restoration, exact hashes/counts, verified cache reuse, changed byte,
+missing corpus, missing manifest, changed manifest, valid-but-truncated JSON,
+and corrupt existing cache. The original lock/rows/counts remain unchanged.
+Fresh hosted npmtest will run these at each originalseed and then all corpora.
+
+The private lowercasing candidates were not installed. All37,005 mixed input
+comparisons matched the sealed reference; all timing/GC receipts and exact
+harnesses remain in results/rejected-ascii-allocation/,
+results/ascii-scan-allocation-diagnostic/ and
+results/ascii-scan-balanced-diagnostic/. Balanced single-scan mixed totals
+509.47/525.65/519.58ms baseline versus509.76/535.22/555.13ms candidate did not
+show a whole-call gain. Runtime source remains5371665d, and its prior complete
+local literal-latency failures still stand. No unchanged local full retry was
+performed for this packaging fix; exact new hosted checks are pending.

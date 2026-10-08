@@ -178,6 +178,9 @@ const approvedPath='data/kept-rejections.json';
 const reviewed=JSON.parse(readFileSync(approvedPath,'utf8'));
 const approved=reviewed.rows.map(([group,name,reason,explanation])=>({group,name,reason,explanation:reviewed.explanations[explanation]??explanation}));
 for(const seed of [1,2,3]) {
+ const snapshot=spawnSync('python3',['tests/retained-snapshot.py'],{encoding:'utf8'});
+ const snapshotResult=snapshot.status===0?JSON.parse(snapshot.stdout):null;
+ record('retained-original-snapshot-offline-and-corruption',8,snapshotResult?.passed===8?8:0,seed,{command:'python3 tests/retained-snapshot.py',output:snapshotResult??{stderr:snapshot.stderr,status:snapshot.status}});
  const checksums=integrity();
  record('delivery-file-size-and-checksums',2,Number(checksums.maxFileBytes<=30000000)+Number(checksums.failures.length===0),seed,checksums);
  const immutable=[nameFilter('Alex'),nameFilter('s.e.x'),nameFilter(null)];

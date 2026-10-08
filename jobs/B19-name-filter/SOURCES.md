@@ -71,3 +71,14 @@ Read before implementation. All changes are confined to jobs/B19-name-filter/
 plus the explicitly required read-only, pull-request-scoped B19 workflow.
 The blocklist and exception decisions are authored moderation policy, not sourced
 claims that every use of a listed string is abusive.
+
+## Exact retained snapshot added October8
+
+New exact-head hosted CI failed because the daily GeoNames source changed from
+the original lock. The preserved original selected32,000-row cache was available
+and matched every original output digest. It is now delivered unchanged under
+`data/retained-snapshot/`, with the same original provenance/attribution above.
+Clean runs verify every digest/count and manifest before copying any cache
+file; corrupt/missing files fail closed. No source lock, original selection,
+row, spelling or moderation expectation changed. This is reproduction of the
+original dataset, not a new source or a claim about current city populations.

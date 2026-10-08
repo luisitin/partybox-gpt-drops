@@ -1,29 +1,25 @@
 # B19 continuation point
 
-PR2 remains draft. October 8 resumed B19 from original head04f8ece after a fresh
-main/branch ownership check and claim. All prior failures/evidence stay intact.
+PR2 staysDRAFT: the unchanged literal0.05ms per-call gate remains unmet. Latest
+production source5371665d is the length-pruned matcher; its full local88-suite
+run passed all behavior/75mutants/131,490sealed comparisons and74,619extra
+boundaries but failed36/8/16timing calls. Every failure remains delivered.
 
-A bounded, explicitly nongating diagnostic of the actual hosted3-character
-ASCII witness measured the general full matcher versus only minimum-length
-eligible terms. The latter reduced matcher work and matched all17,576 lowercase
-three-letter inputs. Production now compiles eligible forward/reversed matchers
-by mapped text length. The exact pre-change source and before/after diagnostic
-reports, all individual observations and CPU samples are retained. Neither
-diagnostic establishes historical outlier cause or acceptance.
+Actual hosted b7709fe run37804648793 also failed: GeoNames daily bytes changed,
+so required corpora did not execute, plus one0.050564ms latency observation.
+The exact original32,000-row retained snapshot is now packaged and restored
+offline only after original hash/count/manifest verification. Eight real
+restoration/corruption checks pass3times (24/24), without changing any data
+lock, row, original count, timing/warmup, seed or threshold.
 
-Current result: length-pruned source5371665d completed the full unchanged command
-with88suites; all behavior/mutants and74,619 new blind boundaries pass, but
-36/8/16 individual timing observations exceed0.05ms. Maxima0.472961/0.246780/
-0.456415ms and all raw/log evidence remain in results/resume-length-pruning/.
-No unchanged retry is allowed. Exact-head hosted CI is pending.
+Current next step: inspect the newly pushed head's complete hosted log, require
+all prescribed corpora and original43,830sealed comparisons perseed, and
+record actual conclusion. Do not assert full acceptance if literal timing
+fails. The two private ASCII allocation candidates are rejected and archived;
+mixed-loop evidence did not establish a gain. No further unchanged local
+full latency rerun is warranted. A future production change needs a measured
+general algorithm/allocation benefit plus independent comparisons first.
 
-Next independent action: investigate the measured per-call lowercasing allocation
-for already-lowercaseASCII with a bounded private diagnostic candidate. Only
-make a general allocation improvement if a controlled stage/whole-call gain is
-measured; preserve Unicode contextual folding and every original acceptance
-count/seed/timer/warmup/threshold. Then a genuinely changed source may receive
-one complete fresh command, with all failures retained.
-
-Do not replace the maximum with a percentile, filter/retime failures, add result
-memoization, change seeds/counts/timer windows/warmup, or repeat unchanged source
-until it happens to pass. No hard realtime or universal-corpus claim is made.
+No percentile substitution, filtering/retiming, name/result memoization, seed/
+count/warmup/timer/threshold changes or unchanged luck retries are permitted.
+No hard realtime, universal-corpus allowance or unseen-language claim is made.

@@ -111,3 +111,19 @@ boundary comparisons. Gzip4477/3358bytes passes. No cause for all timing
 outliers is claimed, no diagnostic replaces acceptance, no failure disappears,
 and PR2 remains draft. A general already-lowercase allocation change is the
 next candidate, conditional on actual diagnostic evidence.
+
+## Real hosted regression: pinned corpus replay
+
+The first resumed head's actual hosted log exposed daily GeoNames drift, so
+only61suites and11,830sealed comparisons perseed executed; failure remained
+explicit. The available original selected snapshot matches every original
+locked byte hash. It is now checked in with attribution and fail-closed
+offline restoration. Real8-case tests passed3times, preserving all32,000rows
+and demonstrating corruption/missing-file rejection without network.
+
+Private double-regex and charCode lowercasing candidates did not demonstrate
+mixed whole-call gains; neither changed production. Balanced scan results and
+exact scripts remain delivered, including slower batches. Existing runtime
+5371665d and its actual failed latency receipts remain untouched. This source/
+packaging correction requires fresh hosted complete checks; it is not a
+completed acceptance or cosmetic KEEP round. PR2 stays draft.

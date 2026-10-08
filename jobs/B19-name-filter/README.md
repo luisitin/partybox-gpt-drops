@@ -16,9 +16,10 @@ npm test
 ```
 
 The single command compiles strict TypeScript and runs every behavioral suite at
-seeds 1, 2, 3. It also repeats the strict no-emit type check at each seed. First
-corpus acquisition requires network access; subsequent runs use a SHA-256-checked
-snapshot. The delivery archive includes that cache for offline data replay.
+seeds 1, 2, 3. It also repeats the strict no-emit type check at each seed. Clean runs restore the original SHA-256-checked
+`data/retained-snapshot/` without network; subsequent runs verify the cache.
+The original upstream acquisition remains a fallback if the retained directory
+is absent; changed upstream bytes still fail the immutable lock.
 `npm run test:core` explicitly skips corpora and is NOT full verification.
 
 Results, complete generated fixtures, every corpus rejection, source checksums,

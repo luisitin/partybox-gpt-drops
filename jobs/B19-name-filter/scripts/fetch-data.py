@@ -23,6 +23,22 @@ def fetch(url):
         return r.read(29_000_001)
 def main():
     manifest_path=OUT/'manifest.json'
+    retained=ROOT/'data'/'retained-snapshot'
+    if not manifest_path.exists() and retained.exists():
+        manifest=json.loads((retained/'manifest.json').read_text())
+        if manifest != LOCK: raise RuntimeError('Retained manifest differs from committed snapshot lock')
+        verified={}
+        for item in LOCK['outputs']:
+            b=(retained/item['file']).read_bytes()
+            rows=json.loads(b)
+            if digest(b)!=item['sha256'] or len(b)!=item['bytes'] or len(rows)!=item['count']:
+                raise RuntimeError('Retained corpus checksum/count mismatch: '+item['file'])
+            verified[item['file']]=b
+        # Validate every file before touching the cache. The exact original lock
+        # stays immutable; current upstream bytes are never substituted.
+        for name,b in verified.items(): (OUT/name).write_bytes(b)
+        manifest_path.write_bytes((retained/'manifest.json').read_bytes())
+        print('CORPORA_RETAINED_SNAPSHOT_RESTORED')
     if manifest_path.exists():
         m=json.loads(manifest_path.read_text())
         for item in m['outputs']:
