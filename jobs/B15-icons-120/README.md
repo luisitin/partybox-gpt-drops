@@ -15,7 +15,7 @@ sudo apt-get install -y --no-install-recommends libcairo2 fonts-dejavu-core   # 
 cd jobs/B15-icons-120
 npm ci --ignore-scripts --no-audit --no-fund
 python3 -m pip install -r requirements-dev.txt
-npm test          # about 4 minutes; writes VERIFY.md, reports/ and artifact/B15-icons-120.zip
+npm test          # about 5 minutes; writes VERIFY.md, reports/ and artifact/B15-icons-120.zip
 ```
 
 `npm test` is the only test command. It:

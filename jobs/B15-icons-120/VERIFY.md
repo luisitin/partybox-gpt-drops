@@ -5,7 +5,7 @@ Automated suites below passed with an independently authored reference sealed be
 ## Scope and definitions
 
 - Exactly 120 original SVG files, viewBox `0 0 64 64`, no text or external artwork.
-- Largest file: **skull.svg, 716 UTF-8 bytes**. Maximum distinct paints: **6**. Limits apply to the SVG, not antialiased PNG colors.
+- Largest file: **clover.svg, 1052 UTF-8 bytes**. Maximum distinct paints: **6**. Limits apply to the SVG, not antialiased PNG colors.
 - Silhouette = every pixel whose alpha is at least 128, in the original registered canvas. Internal transparent holes remain holes. No pairwise translation, rotation, scaling, silhouette normalization, or hole-filling is performed.
 - IoU = intersection / union. The gate uses the exact integer comparison `5 * intersection < 4 * union`; equality at 0.8 fails.
 - Every one of 7,140 unordered pairs is tested at 24, 48 and 256 px, in each of seeds 1, 2 and 3. librsvg masks are checked by both arithmetic implementations. CairoSVG provides a second independent rasterization.
@@ -17,12 +17,12 @@ Automated suites below passed with an independently authored reference sealed be
 
 | Renderer | Size | Maximum pair | Exact IoU | Decimal |
 |---|---:|---|---|---:|
-| cairo | 24 | camera / battery | 225/286 | 0.7867132867 |
-| cairo | 48 | camera / gamepad | 974/1237 | 0.7873888440 |
-| cairo | 256 | shopping-bag / lock | 24141/30710 | 0.7860957343 |
-| librsvg | 24 | camera / battery | 225/286 | 0.7867132867 |
-| librsvg | 48 | camera / gamepad | 974/1237 | 0.7873888440 |
-| librsvg | 256 | shopping-bag / lock | 24172/30724 | 0.7867465174 |
+| cairo | 24 | pawn / chess-bishop | 146/184 | 0.7934782609 |
+| cairo | 48 | timer / cards-hand | 959/1219 | 0.7867104184 |
+| cairo | 256 | timer / cards-hand | 27406/34841 | 0.7866019919 |
+| librsvg | 24 | camera / gamepad | 243/308 | 0.7889610390 |
+| librsvg | 48 | timer / cards-hand | 960/1220 | 0.7868852459 |
+| librsvg | 256 | timer / cards-hand | 27418/34866 | 0.7863821488 |
 
 ## Every suite and seed
 
@@ -32,8 +32,8 @@ Commands are run from `jobs/B15-icons-120/`. `npm test` reruns all three seeds, 
 |---|---:|---:|---:|---|
 | Sealed reference mathematical/profile self-checks | 69 | 69 | 1 | `npm test` |
 | TypeScript strict compilation | 1 | 1 | 1 | `node node_modules/typescript/bin/tsc -p tsconfig.json` |
-| Runtime dependency / ambient RNG / clock AST audit | 8 | 8 | 1 | `npm test` |
-| Authored-input SHA-256 seal | 149 | 149 | 1 | `sha256sum -c SHA256SUMS.txt` |
+| Runtime dependency / ambient RNG / clock AST audit | 9 | 9 | 1 | `npm test` |
+| Authored-input SHA-256 seal | 152 | 152 | 1 | `sha256sum -c SHA256SUMS.txt` |
 | Sealed SVG bundle / generator byte equality / palette | 120 | 120 | 1 | `npm test` |
 | Native-size librsvg rasterization | 360 | 360 | 1 | `npm test` |
 | Dual XML / SVG profile auditors, all assets and adversarial cases | 1196 | 1196 | 1 | `npm test` |
@@ -41,8 +41,10 @@ Commands are run from `jobs/B15-icons-120/`. `npm test` reruns all three seeds, 
 | Seeded mask arithmetic differential and input immutability | 517 | 517 | 1 | `npm test` |
 | Sealed blind exact alpha words and overlap arithmetic | 517 | 517 | 1 | `npm test` |
 | Boundary, malformed input and prototype-safe lookup | 23 | 23 | 1 | `npm test` |
+| Ink theming option, sprite symbols, gallery page and Spanish titles | 851 | 851 | 1 | `npm test` |
 | All five PNG row filters, CRC corruption and truncation | 7 | 7 | 1 | `npm test` |
 | Independent PNG decoder / exact mask bytes / dimensions / clipping | 360 | 360 | 1 | `npm test` |
+| Live area (2-unit margin at 256 px) and night-theme visibility (48 px) | 240 | 240 | 1 | `npm test` |
 | Independent CairoSVG native-size rasterization | 360 | 360 | 1 | `npm test` |
 | Sealed blind PNG decoder / exact RGBA and mask bytes, both renderers | 720 | 720 | 1 | `npm test` |
 | librsvg silhouette pairs at 24 px | 7140 | 7140 | 1 | `npm test` |
@@ -53,13 +55,13 @@ Commands are run from `jobs/B15-icons-120/`. `npm test` reruns all three seeds, 
 | cairo silhouette pairs at 256 px | 7140 | 7140 | 1 | `npm test` |
 | Sealed blind exact silhouette pair counts, both renderers and all sizes | 42840 | 42840 | 1 | `npm test` |
 | Cross-renderer alpha-mask agreement >= 0.90 | 360 | 360 | 1 | `npm test` |
-| Five backgrounds / all 600 raster thumbnails | 600 | 600 | 1 | `npm test` |
-| Deterministic raster and contact-sheet hashes | 725 | 725 | 1 | `npm test` |
+| Seven backgrounds incl. PartyBox night and daylight / all 840 raster thumbnails | 840 | 840 | 1 | `npm test` |
+| Deterministic raster and contact-sheet hashes | 727 | 727 | 1 | `npm test` |
 | Sequential executable source mutants killed | 25 | 25 | 1 | `npm test` |
 | Sealed reference mathematical/profile self-checks | 69 | 69 | 2 | `npm test` |
 | TypeScript strict compilation | 1 | 1 | 2 | `node node_modules/typescript/bin/tsc -p tsconfig.json` |
-| Runtime dependency / ambient RNG / clock AST audit | 8 | 8 | 2 | `npm test` |
-| Authored-input SHA-256 seal | 149 | 149 | 2 | `sha256sum -c SHA256SUMS.txt` |
+| Runtime dependency / ambient RNG / clock AST audit | 9 | 9 | 2 | `npm test` |
+| Authored-input SHA-256 seal | 152 | 152 | 2 | `sha256sum -c SHA256SUMS.txt` |
 | Sealed SVG bundle / generator byte equality / palette | 120 | 120 | 2 | `npm test` |
 | Native-size librsvg rasterization | 360 | 360 | 2 | `npm test` |
 | Dual XML / SVG profile auditors, all assets and adversarial cases | 1196 | 1196 | 2 | `npm test` |
@@ -67,8 +69,10 @@ Commands are run from `jobs/B15-icons-120/`. `npm test` reruns all three seeds, 
 | Seeded mask arithmetic differential and input immutability | 517 | 517 | 2 | `npm test` |
 | Sealed blind exact alpha words and overlap arithmetic | 517 | 517 | 2 | `npm test` |
 | Boundary, malformed input and prototype-safe lookup | 23 | 23 | 2 | `npm test` |
+| Ink theming option, sprite symbols, gallery page and Spanish titles | 851 | 851 | 2 | `npm test` |
 | All five PNG row filters, CRC corruption and truncation | 7 | 7 | 2 | `npm test` |
 | Independent PNG decoder / exact mask bytes / dimensions / clipping | 360 | 360 | 2 | `npm test` |
+| Live area (2-unit margin at 256 px) and night-theme visibility (48 px) | 240 | 240 | 2 | `npm test` |
 | Independent CairoSVG native-size rasterization | 360 | 360 | 2 | `npm test` |
 | Sealed blind PNG decoder / exact RGBA and mask bytes, both renderers | 720 | 720 | 2 | `npm test` |
 | librsvg silhouette pairs at 24 px | 7140 | 7140 | 2 | `npm test` |
@@ -79,13 +83,13 @@ Commands are run from `jobs/B15-icons-120/`. `npm test` reruns all three seeds, 
 | cairo silhouette pairs at 256 px | 7140 | 7140 | 2 | `npm test` |
 | Sealed blind exact silhouette pair counts, both renderers and all sizes | 42840 | 42840 | 2 | `npm test` |
 | Cross-renderer alpha-mask agreement >= 0.90 | 360 | 360 | 2 | `npm test` |
-| Five backgrounds / all 600 raster thumbnails | 600 | 600 | 2 | `npm test` |
-| Deterministic raster and contact-sheet hashes | 725 | 725 | 2 | `npm test` |
+| Seven backgrounds incl. PartyBox night and daylight / all 840 raster thumbnails | 840 | 840 | 2 | `npm test` |
+| Deterministic raster and contact-sheet hashes | 727 | 727 | 2 | `npm test` |
 | Sequential executable source mutants killed | 25 | 25 | 2 | `npm test` |
 | Sealed reference mathematical/profile self-checks | 69 | 69 | 3 | `npm test` |
 | TypeScript strict compilation | 1 | 1 | 3 | `node node_modules/typescript/bin/tsc -p tsconfig.json` |
-| Runtime dependency / ambient RNG / clock AST audit | 8 | 8 | 3 | `npm test` |
-| Authored-input SHA-256 seal | 149 | 149 | 3 | `sha256sum -c SHA256SUMS.txt` |
+| Runtime dependency / ambient RNG / clock AST audit | 9 | 9 | 3 | `npm test` |
+| Authored-input SHA-256 seal | 152 | 152 | 3 | `sha256sum -c SHA256SUMS.txt` |
 | Sealed SVG bundle / generator byte equality / palette | 120 | 120 | 3 | `npm test` |
 | Native-size librsvg rasterization | 360 | 360 | 3 | `npm test` |
 | Dual XML / SVG profile auditors, all assets and adversarial cases | 1196 | 1196 | 3 | `npm test` |
@@ -93,8 +97,10 @@ Commands are run from `jobs/B15-icons-120/`. `npm test` reruns all three seeds, 
 | Seeded mask arithmetic differential and input immutability | 517 | 517 | 3 | `npm test` |
 | Sealed blind exact alpha words and overlap arithmetic | 517 | 517 | 3 | `npm test` |
 | Boundary, malformed input and prototype-safe lookup | 23 | 23 | 3 | `npm test` |
+| Ink theming option, sprite symbols, gallery page and Spanish titles | 851 | 851 | 3 | `npm test` |
 | All five PNG row filters, CRC corruption and truncation | 7 | 7 | 3 | `npm test` |
 | Independent PNG decoder / exact mask bytes / dimensions / clipping | 360 | 360 | 3 | `npm test` |
+| Live area (2-unit margin at 256 px) and night-theme visibility (48 px) | 240 | 240 | 3 | `npm test` |
 | Independent CairoSVG native-size rasterization | 360 | 360 | 3 | `npm test` |
 | Sealed blind PNG decoder / exact RGBA and mask bytes, both renderers | 720 | 720 | 3 | `npm test` |
 | librsvg silhouette pairs at 24 px | 7140 | 7140 | 3 | `npm test` |
@@ -105,8 +111,8 @@ Commands are run from `jobs/B15-icons-120/`. `npm test` reruns all three seeds, 
 | cairo silhouette pairs at 256 px | 7140 | 7140 | 3 | `npm test` |
 | Sealed blind exact silhouette pair counts, both renderers and all sizes | 42840 | 42840 | 3 | `npm test` |
 | Cross-renderer alpha-mask agreement >= 0.90 | 360 | 360 | 3 | `npm test` |
-| Five backgrounds / all 600 raster thumbnails | 600 | 600 | 3 | `npm test` |
-| Deterministic raster and contact-sheet hashes | 725 | 725 | 3 | `npm test` |
+| Seven backgrounds incl. PartyBox night and daylight / all 840 raster thumbnails | 840 | 840 | 3 | `npm test` |
+| Deterministic raster and contact-sheet hashes | 727 | 727 | 3 | `npm test` |
 | Sequential executable source mutants killed | 25 | 25 | 3 | `npm test` |
 
 ## Source mutation tests
@@ -165,10 +171,28 @@ This local run does not itself establish a green GitHub Actions run. The pull-re
 
 Runtime dependencies: zero. The UI lookup and checker are pure functions. The build/test harness necessarily performs file I/O and starts a Python oracle. Development tools are pinned in package.json and requirements-dev.txt. There are no calls to Math.random or Date.now in the TypeScript source AST. Randomized tests receive a seeded RNG function.
 
+## Polish pass 2026-10-08
+
+Claude (cloud) polish pass. The port guide is `INTEGRATION.md`. Commands run from `jobs/B15-icons-120/`.
+
+| Check | Command | Result |
+|---|---|---|
+| Baseline before changes | `npm test` at `b37a00d` | PASS: 78 rows, 278,979 cases, seeds 1-3, 75/75 mutants. Maximum pair camera / gamepad 0.7874 (48 px) |
+| Visual review | night `#0f1020` and daylight `#f6f5ff` sheets at 24/48/96 px (Playwright Chromium) | 73 icons redrawn or re-weighted; `handshake` restored to the original drawing |
+| Iteration gate | all-pairs librsvg IoU plus a live-area scan after each art round | maximum below 0.79 before the full run |
+| Full suite after changes | `npm test` (290 s on 4 shared CPUs) | PASS: 84 rows, 282,990 cases, seeds 1-3, 75/75 mutants killed, exit 0 |
+| Highest silhouette pair | both renderers, 24/48/256 px | 0.7935: CairoSVG 24 px pawn / chess-bishop (146/184). librsvg highest is 0.7890, camera / gamepad at 24 px. Gate: below 0.8 |
+| Cross-renderer agreement | per-icon mask IoU | minimum 0.9865 (gate 0.90) |
+| Size and colour limits | auditor | largest `clover.svg` at 1,052 bytes; at most 6 colours, all from the palette |
+| New: ink option, sprite, gallery, Spanish titles | `npm test` row | 851 cases per seed |
+| New: live area and night visibility | `npm test` row | 240 cases per seed: nothing opaque within 8 px of the edge at 256 px, and at least 25% of opaque pixels lighter than ink at 48 px |
+| Contact sheets | `npm test` row | seven backgrounds (adds PartyBox night and daylight), 840 thumbnails per seed |
+| Gallery page | Chromium at 1440x900 and 390x844 | no console errors; no horizontal scroll on the phone |
+
 ## Complete-bundle checksums
 
 | Test | Cases | Passed | Seed | Exact command |
 |---|---:|---:|---:|---|
-| SHA-256 complete bundle | 888 | 888 | 1 | `sha256sum -c BUNDLE_SHA256SUMS.txt` |
-| SHA-256 complete bundle | 888 | 888 | 2 | `sha256sum -c BUNDLE_SHA256SUMS.txt` |
-| SHA-256 complete bundle | 888 | 888 | 3 | `sha256sum -c BUNDLE_SHA256SUMS.txt` |
+| SHA-256 complete bundle | 894 | 894 | 1 | `sha256sum -c BUNDLE_SHA256SUMS.txt` |
+| SHA-256 complete bundle | 894 | 894 | 2 | `sha256sum -c BUNDLE_SHA256SUMS.txt` |
+| SHA-256 complete bundle | 894 | 894 | 3 | `sha256sum -c BUNDLE_SHA256SUMS.txt` |
