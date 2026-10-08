@@ -19,7 +19,8 @@ function command(args) {
 rmSync('.verification',{recursive:true,force:true});mkdirSync('.verification',{recursive:true});
 const sources=['monopolyOdds.ts','reference.ts','roi-reference.ts','checks.mjs','test.mjs','simulate.mjs',
   'sampling-variance.mjs','mutate.mjs','run.mjs','export.mjs','hashes.mjs','tsconfig.json','package.json','package-lock.json',
-  'data/published-tables.json','data/us-properties.json','data/collins-table.json'];
+  'data/published-tables.json','data/us-properties.json','data/collins-table.json',
+  'boardOdds.ts','partybox-export.mjs','partybox-checks.mjs','partybox.mjs','preview/hottest-squares.html'];
 const sourceSHA256=Object.fromEntries(sources.map(file=>[file,digest(file)]));
 seal('PRODUCTION-SEALED-SHA256SUMS.txt');
 seal('blind-authoring/SEALED-SHA256SUMS.txt','blind-authoring');
@@ -28,27 +29,34 @@ assert.equal(digest('reference.ts'),digest('blind-authoring/reference.ts'),'Unch
 assert.equal(digest('roi-reference.ts'),digest('blind-authoring/roi-reference.ts'),'Unchanged blind ROI source');
 const pkg=JSON.parse(readFileSync('package.json'));
 assert.deepEqual(pkg.dependencies,{},'Zero runtime dependencies');
-for(const file of ['monopolyOdds.ts','reference.ts','roi-reference.ts'])
+for(const file of ['monopolyOdds.ts','reference.ts','roi-reference.ts','boardOdds.ts'])
   assert.ok(!/Math\.random|Date\.now/.test(readFileSync(file,'utf8')),`Pure deterministic core ${file}`);
 assert.ok(!/^import\b/m.test(readFileSync('monopolyOdds.ts','utf8')),'Production has no imports');
+assert.ok(!/^\s*import\b/m.test(readFileSync('boardOdds.ts','utf8')),'PartyBox port file has no imports');
 assert.ok(!/monopolyOdds/.test(readFileSync('reference.ts','utf8')+readFileSync('roi-reference.ts','utf8')),'Blind solvers do not import production');
 command(['hashes.mjs']);
 command(['node_modules/typescript/bin/tsc','-p','tsconfig.json']);
 command(['export.mjs']);
+command(['partybox-export.mjs']);
 const runs=[];
 for(const seed of [1,2,3]) {
   command(['test.mjs',String(seed)]);
   command(['simulate.mjs',String(seed)]);
   command(['mutate.mjs',String(seed)]);
+  command(['partybox.mjs',String(seed)]);
   runs.push({seed,exact:JSON.parse(readFileSync(`.verification/exact-seed-${seed}.json`)),
     simulation:JSON.parse(readFileSync(`.verification/simulation-seed-${seed}.json`)),
-    mutation:JSON.parse(readFileSync(`.verification/mutations-seed-${seed}.json`))});
+    mutation:JSON.parse(readFileSync(`.verification/mutations-seed-${seed}.json`)),
+    partybox:JSON.parse(readFileSync(`.verification/partybox-seed-${seed}.json`))});
 }
+assert.ok(runs.every(run=>run.partybox.passed&&run.partybox.simulation.length===2&&run.partybox.mutants.runtimeKilled===20),'PartyBox suite complete');
 for(const [file,before] of Object.entries(sourceSHA256))assert.equal(digest(file),before,`Source unchanged during full run: ${file}`);
 command(['hashes.mjs']);
 const report={passed:true,node:process.version,typescript:JSON.parse(readFileSync('node_modules/typescript/package.json')).version,
   command:'npm test',seeds:[1,2,3],sourceSHA256,totals:{exactTransitionCells:86400,stationaryStates:720,publishedSquares:720,
   matchedPublishedSquares:717,documentedPublishedGaps:3,requiredButlerComparisons:480,
-  roiScenarios:1044,simulationRolls:600000000,simulationSquares:240,strictCompiledMutants:75,runtimeKilledMutants:75},runs};
+  roiScenarios:1044,simulationRolls:600000000,simulationSquares:240,strictCompiledMutants:75,runtimeKilledMutants:75,
+  partyboxRoiRows:1044,partyboxSimulationRolls:120000000,partyboxSimulatedStatistics:300,
+  partyboxStrictCompiledMutants:60,partyboxRuntimeKilledMutants:60},runs};
 writeFileSync('.verification/summary.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({suite:'complete',passed:true,node:report.node,typescript:report.typescript,seeds:report.seeds,totals:report.totals}));
