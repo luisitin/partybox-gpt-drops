@@ -26,9 +26,18 @@ later ccc610f full 94-suite run 37811077768 passed at 16:44:17 UTC. Actual full
 logs were read. Those results use the added-name sample and cannot substitute
 for this restored original workload or prove an outlier cause.
 
-Next exact step: inspect the corrected-protocol full local result and its new
-exact-head hosted CI; keep every failure and keep this review draft until its
-requirements and original KEEP conditions are fulfilled. Any further runtime
+Corrected-protocol head d1e72a38524c9292319f5405bcc405fff09cebe1 has an actual
+complete hosted pass: run37813059491, completed16:59:51UTC. Its full job log
+and genuine artifact11566575269 were read and independently checked: all100
+suites,227 delivery hashes and989 byte/structural assertions pass. The original
+43,830 comparisons perseed and benchmark sinks94721/93467/94479 are preserved.
+Recorded maxima0.048922/0.024586/0.037194ms have zero observed outliers; the
+artifact does not contain every individual call's timing. See the retained
+hosted receipt in results/corrected-original-workload-hosted/.
+
+Next exact step: keep this isolated review draft and investigate the remaining
+literal timing weakness with a source-bound mixed-workload candidate. The
+mandatory KEEP conditions remain unfinished. Any further runtime
 candidate requires source-bound mixed-workload evidence before adoption and
 one genuinely changed-source full acceptance check. Do not rerun unchanged
 timing attempts to hunt a pass, alter the gate, or ask the user to waive it.
@@ -41,5 +50,8 @@ Corrected-protocol full local check closed16:54:44.534UTC,EXIT1. All100
 suites execute; only literal latency fails43/19/28calls, maxima
 6.040182/1.243285/0.507256ms. All original43830comparisons perseed and
 new90name/bypass plus18protocol guards pass. Exact reports/observed sources:
-results/corrected-original-workload-20261008/. Hosted proof is pending for
-the new isolated head; no status transfers fromccc610f.
+results/corrected-original-workload-20261008/. The genuine d1 hosted pass above
+does not erase this local failure or transfer any status fromccc610f. This
+continuation checkpoint changes documentation/evidence only; its fresh full CI
+must be read before claiming that new head green. Do not manufacture a cosmetic
+KEEP round, change the benchmark protocol, or retry unchanged timing for luck.

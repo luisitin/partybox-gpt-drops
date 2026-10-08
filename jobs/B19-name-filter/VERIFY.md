@@ -568,3 +568,25 @@ behavioral rows. Source is the same (`693d9501…`) for both. Caveat: the benchm
 comparison with the earlier green run on `2b54431` (source `5371665d…`, run 37809073933). Whether the source
 change causes the seed-1 outliers is not established. The gate was not changed and no run was repeated to get a
 pass.
+
+## Restored original-workload hosted acceptance, October8
+
+Actual head `d1e72a38524c9292319f5405bcc405fff09cebe1`, run `37813059491`,
+job `113434580260`: full `npm test` SUCCESS at16:59:51UTC. The actual61,239-character
+job log was read. All100 suites, three original43,830-input comparisons,15,000
+obfuscations,75 real mutants,24 retained-snapshot controls,90 separate new-name
+checks,18 original-protocol guards and227 delivery hashes pass. The original
+benchmark sinks are94721/93467/94479; each10,000-call observed sample has zero
+outliers, with maxima0.048922/0.024586/0.037194ms. Production source remains
+`693d9501633b9099676d38cf2d215bdf3dab570b3e8d300f485d685e2be2f15f`.
+
+The genuine artifact11566575269 is2,906,746bytes, ZIP SHA256
+`d33f7e9e0d0d547b028c348ab069ceb5d23134fa75730310ea6c5275b9ef690c`.
+Independent extraction/structural/byte validation passed989 assertions;
+its retained receipt specifies exact source/workload and verification scope.
+The original local43/19/28 timing failures and older post-green KEEP failure
+remain failures. The artifact includes recorded summaries/outliers rather than
+all individual call times; those times were not independently recomputed.
+
+**UNVERIFIED.** Original KEEP is unfinished; no only-cosmetic stopping point,
+universal0.05ms guarantee, timing cause, or new-checkpoint green status is claimed.
