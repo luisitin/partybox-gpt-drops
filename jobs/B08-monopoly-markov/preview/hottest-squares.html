@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hottest Squares</title>
+<style>
+:root {
+  --pb-bg: #0f1020; --pb-surface: #1c1e3a; --pb-surface-2: #272a52; --pb-text: #f5f6ff;
+  --pb-text-muted: #b3b7d9; --pb-accent: #ff5d8f; --pb-accent-2: #ffd166; --pb-accent-3: #06d6a0;
+  --pb-danger: #ef476f; --pb-info: #4cc9f0; --pb-on-accent: #1a0b12;
+  --pb-space-1: 4px; --pb-space-2: 8px; --pb-space-3: 12px; --pb-space-4: 16px; --pb-space-5: 24px;
+  --pb-space-6: 32px; --pb-space-7: 48px; --pb-space-8: 64px;
+  --pb-radius: 12px; --pb-radius-lg: 24px;
+  --pb-fast: 150ms; --pb-base: 300ms; --pb-slow: 600ms; --pb-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --pb-spring: cubic-bezier(0.3, 1.32, 0.52, 1);
+  --pb-font: 'Nunito Variable', 'Segoe UI Variable Display', 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+  --tilt: 40deg;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--pb-bg); color: var(--pb-text); font-family: var(--pb-font); overflow: hidden; }
+body { -webkit-font-smoothing: antialiased; }
+.viewport { position: fixed; inset: 0; }
+.stage { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; overflow: hidden;
+  background: radial-gradient(1200px 800px at 32% 58%, #20235099 0%, transparent 70%),
+    radial-gradient(900px 600px at 90% 10%, #ff5d8f14 0%, transparent 60%), var(--pb-bg); }
+header { position: absolute; left: 64px; right: 64px; top: 40px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 16px; font-size: 34px; font-weight: 800; letter-spacing: -0.01em; }
+.brand small { color: var(--pb-text-muted); font-weight: 700; }
+.mark { width: 52px; height: 52px; filter: drop-shadow(0 6px 14px #ff5d8f55); }
+.status { display: flex; gap: 12px; align-items: center; font-size: 32px; color: var(--pb-text-muted); font-weight: 700; }
+.status .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--pb-accent-3); box-shadow: 0 0 12px var(--pb-accent-3); }
+
+/* The table: one plane in perspective, pillars standing on it. */
+.scene { position: absolute; left: 40px; top: 110px; width: 1060px; height: 950px; perspective: 1500px; perspective-origin: 50% 30%; }
+.board { position: absolute; left: 150px; top: 120px; width: 760px; height: 760px; transform-style: preserve-3d;
+  transform: rotateX(var(--tilt)) rotateZ(0deg); transition: transform 900ms var(--pb-spring), opacity 600ms var(--pb-ease); }
+.stage.intro .board { transform: rotateX(62deg) translateY(60px) scale(0.9); opacity: 0; transition: none; }
+.surface { position: absolute; inset: 0; border-radius: 22px; transform: translateZ(-1px);
+  background: linear-gradient(160deg, #262a55 0%, #1b1d3a 55%, #161834 100%);
+  box-shadow: 0 0 0 2px #3a3f78, 0 0 0 10px #15172e, 0 40px 90px #000a, inset 0 2px 0 #ffffff14; }
+.slab { position: absolute; inset: 0; border-radius: 22px; transform: translateZ(-26px); background: #0c0d1c; box-shadow: 0 30px 80px #000c; }
+.cell { position: absolute; border: 1px solid #ffffff10; background: #ffffff05; display: grid; place-items: center; }
+.cell.corner { background: #ffffff08; }
+.strip { position: absolute; border-radius: 3px; box-shadow: inset 0 1px 0 #ffffff55, 0 0 10px var(--c, transparent); background: var(--c); }
+.glyph { width: 30px; height: 30px; opacity: 0.55; color: var(--pb-text-muted); }
+.corner .glyph { width: 44px; height: 44px; opacity: 0.7; }
+.centre { position: absolute; left: 130px; top: 130px; width: 500px; height: 500px; border-radius: 18px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  background: radial-gradient(circle at 50% 40%, #ffffff0a, transparent 70%); }
+.centre .big { font-size: 64px; font-weight: 900; letter-spacing: -0.02em; line-height: 1; color: #ffffffd9; text-shadow: 0 2px 0 #00000055; }
+.centre .big b { color: var(--pb-accent-2); }
+.centre .small { margin-top: 18px; font-size: 30px; color: var(--pb-text-muted); font-weight: 700; }
+.ramp { margin-top: 30px; width: 340px; height: 14px; border-radius: 7px; background: linear-gradient(90deg, #4cc9f0, #06d6a0, #ffd166, #ff5d8f); box-shadow: 0 0 18px #ff5d8f44; }
+.ramp-labels { width: 340px; display: flex; justify-content: space-between; font-size: 28px; color: var(--pb-text-muted); font-weight: 700; margin-top: 8px; }
+
+.pool { position: absolute; width: 150px; height: 150px; margin: -75px 0 0 -75px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, var(--heat) 0%, transparent 65%); opacity: 0; transform: translateZ(0.5px) scale(0.6);
+  transition: opacity 700ms var(--pb-ease), transform 700ms var(--pb-ease); }
+.pillar { position: absolute; width: 0; height: 0; transform-style: preserve-3d; }
+.grow { position: absolute; transform-style: preserve-3d; transform: scale3d(1, 1, 0.001); transition: transform 700ms var(--pb-spring); }
+.face { position: absolute; backface-visibility: visible; }
+.f-top { left: -16px; top: -16px; width: 32px; height: 32px; border-radius: 3px; transform: translateZ(100px);
+  background: radial-gradient(circle at 35% 30%, #fff 0%, var(--heat) 55%); box-shadow: 0 0 22px var(--heat); }
+.f-s { left: -16px; top: 16px; width: 32px; height: 100px; transform-origin: 50% 0; transform: rotateX(90deg);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--heat) 45%, #000) 0%, var(--heat) 92%, #fff 100%); }
+.f-e, .f-w { top: -16px; width: 100px; height: 32px; transform-origin: 0 50%; transform: rotateY(-90deg);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--heat) 30%, #000) 0%, color-mix(in srgb, var(--heat) 70%, #000) 100%); }
+.f-e { left: 16px; } .f-w { left: -16px; }
+.badge { position: absolute; left: 0; top: 0; transform-style: preserve-3d; transition: transform 700ms var(--pb-spring); }
+.badge > div { position: absolute; left: -30px; top: -78px; width: 60px; height: 60px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 34px; font-weight: 900; color: var(--pb-on-accent);
+  background: radial-gradient(circle at 35% 30%, #fff, var(--heat) 70%); box-shadow: 0 8px 18px #0008, 0 0 0 4px #0f1020cc;
+  transform: rotateX(calc(-1 * var(--tilt))) scale(0.4); opacity: 0; transform-origin: 50% 100%;
+  transition: transform 450ms var(--pb-spring), opacity 250ms var(--pb-ease); }
+.badge.on > div { transform: rotateX(calc(-1 * var(--tilt))) scale(1); opacity: 1; }
+
+/* The panel: title, plan toggle, ranked list, hottest set. */
+.panel { position: absolute; left: 1120px; top: 132px; width: 736px; }
+h1 { margin: 0; font-size: 72px; line-height: 1.05; font-weight: 900; letter-spacing: -0.025em; white-space: nowrap; }
+.sub { margin-top: 12px; font-size: 34px; color: var(--pb-text-muted); font-weight: 700; }
+.controls { margin-top: 26px; display: flex; gap: 16px; align-items: center; }
+.toggle { position: relative; display: inline-grid; grid-template-columns: 1fr 1fr; padding: 6px; border-radius: 999px;
+  background: var(--pb-surface); box-shadow: inset 0 0 0 2px #ffffff12; }
+.toggle button { position: relative; z-index: 1; border: 0; background: none; color: var(--pb-text-muted); font: inherit;
+  font-size: 30px; font-weight: 800; padding: 0 28px; min-height: 64px; border-radius: 999px; cursor: pointer; transition: color var(--pb-base) var(--pb-ease); }
+.toggle button[aria-pressed='true'] { color: var(--pb-on-accent); }
+.toggle .thumb { position: absolute; top: 6px; bottom: 6px; left: 6px; width: calc(50% - 6px); border-radius: 999px;
+  background: linear-gradient(180deg, #ffd9a0, var(--pb-accent-2)); box-shadow: 0 6px 16px #ffd16655, inset 0 1px 0 #fff8;
+  transition: transform 450ms var(--pb-spring); }
+.toggle[data-plan='stay max'] .thumb { transform: translateX(100%); }
+.replay { width: 64px; height: 64px; border-radius: 50%; border: 0; background: var(--pb-surface); color: var(--pb-text);
+  box-shadow: inset 0 0 0 2px #ffffff12; cursor: pointer; display: grid; place-items: center; transition: transform var(--pb-fast) var(--pb-ease); }
+.replay:active { transform: scale(0.94); }
+.replay svg { width: 30px; height: 30px; }
+button:focus-visible { outline: 4px solid var(--pb-info); outline-offset: 3px; }
+ol { list-style: none; margin: 28px 0 0; padding: 0; position: relative; height: 432px; }
+li { position: absolute; left: 0; right: 0; height: 80px; display: grid; grid-template-columns: 64px 1fr auto; align-items: center; gap: 20px;
+  padding: 0 24px 0 12px; border-radius: 20px; background: linear-gradient(90deg, #ffffff0d, #ffffff04);
+  box-shadow: inset 0 0 0 1px #ffffff0f; transform: translateY(var(--y, 0px)); transition: transform 600ms var(--pb-spring), opacity 400ms var(--pb-ease); }
+li.hidden { opacity: 0; transform: translate(60px, var(--y, 0px)); transition: none; }
+.rank { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; font-size: 30px; font-weight: 900;
+  color: var(--pb-on-accent); background: radial-gradient(circle at 35% 30%, #fff, var(--heat) 70%); box-shadow: 0 4px 12px #0007; }
+.name { display: flex; align-items: center; gap: 14px; font-size: 38px; font-weight: 800; min-width: 0; white-space: nowrap; }
+.chip { flex: none; width: 18px; height: 40px; border-radius: 5px; background: var(--c); box-shadow: inset 0 1px 0 #fff6; }
+.pct { font-size: 46px; font-weight: 900; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; text-align: right; min-width: 170px; }
+.bar { position: absolute; left: 88px; right: 24px; bottom: 10px; height: 6px; border-radius: 3px; background: #ffffff10; overflow: hidden; }
+.bar i { position: absolute; inset: 0; transform-origin: 0 50%; transform: scaleX(0); border-radius: 3px;
+  background: linear-gradient(90deg, var(--heat), #fff); transition: transform 700ms var(--pb-ease); }
+.sets { margin-top: 20px; padding: 22px 30px; border-radius: var(--pb-radius-lg); background: var(--pb-surface);
+  box-shadow: inset 0 0 0 1px #ffffff12, 0 20px 50px #0006; transition: opacity 500ms var(--pb-ease), transform 500ms var(--pb-ease); }
+.sets.hidden { opacity: 0; transform: translateY(24px); transition: none; }
+.sets .label { font-size: 32px; color: var(--pb-text-muted); font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; }
+.sets .lead { margin-top: 6px; display: flex; align-items: center; gap: 16px; font-size: 44px; font-weight: 900; }
+.sets .lead .swatches { display: flex; gap: 6px; }
+.sets .lead .swatches span { width: 22px; height: 44px; border-radius: 5px; background: var(--c); box-shadow: inset 0 1px 0 #fff6; }
+.sets .lead .val { margin-left: auto; font-variant-numeric: tabular-nums; }
+.sets .rest { margin-top: 6px; font-size: 32px; color: var(--pb-text-muted); font-weight: 700; }
+
+/* Phone: the same moment as a card list, for a phone that cannot see the TV. */
+body.phone .stage { width: 390px; height: 844px; }
+body.phone header { left: 16px; right: 16px; top: 16px; height: 44px; }
+body.phone .brand { font-size: 20px; gap: 10px; } body.phone .mark { width: 34px; height: 34px; }
+body.phone .status { display: none; }
+body.phone .scene { display: none; }
+body.phone .panel { left: 16px; top: 84px; width: 358px; }
+body.phone h1 { font-size: 40px; } body.phone .sub { font-size: 18px; margin-top: 8px; }
+body.phone .controls { margin-top: 18px; gap: 10px; }
+body.phone .toggle { display: grid; width: 100%; }
+body.phone .toggle button { font-size: 17px; padding: 0 10px; min-height: 52px; }
+body.phone .replay { display: none; }
+body.phone ol { margin-top: 20px; height: 380px; }
+body.phone li { height: 68px; grid-template-columns: 44px 1fr auto; gap: 12px; padding: 0 14px 0 10px; border-radius: 16px; }
+body.phone .rank { width: 40px; height: 40px; font-size: 20px; }
+body.phone .name { font-size: 20px; gap: 10px; } body.phone .chip { width: 10px; height: 26px; }
+body.phone .pct { font-size: 26px; min-width: 90px; }
+body.phone .bar { left: 64px; right: 14px; bottom: 7px; height: 4px; }
+body.phone .sets { margin-top: 12px; padding: 16px 18px; border-radius: 18px; }
+body.phone .sets .label { font-size: 14px; } body.phone .sets .lead { font-size: 26px; gap: 10px; }
+body.phone .sets .lead .swatches span { width: 12px; height: 26px; }
+body.phone .sets .rest { font-size: 16px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .board, .grow, .badge, .badge > div, li, .bar i, .pool, .sets, .toggle .thumb { transition: opacity 200ms linear !important; }
+  .stage.intro .board { transform: rotateX(var(--tilt)); }
+}
+</style>
+</head>
+<body>
+<div class="viewport">
+<div class="stage intro" id="stage">
+  <header>
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 52 52" aria-hidden="true"><defs><linearGradient id="mk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5d8f"/><stop offset="1" stop-color="#ffd166"/></linearGradient></defs><rect x="2" y="2" width="48" height="48" rx="14" fill="url(#mk)"/><path d="M15 21l11-6 11 6v12l-11 6-11-6z" fill="#1a0b12" opacity=".88"/><path d="M15 21l11 6 11-6M26 27v12" stroke="#ffd166" stroke-width="2.4" fill="none" stroke-linejoin="round"/></svg>
+      <span>PartyBox <small data-t="brand">/ Board odds</small></span>
+    </div>
+    <div class="status"><span class="dot"></span><span data-t="status">Long-run odds · two dice</span></div>
+  </header>
+  <div class="scene" aria-hidden="true"><div class="board" id="board"><div class="slab"></div><div class="surface" id="surface"></div></div></div>
+  <section class="panel">
+    <h1 data-t="title">Hottest squares</h1>
+    <div class="sub" data-t="sub">Where moves end, over a long game</div>
+    <div class="controls">
+      <div class="toggle" id="toggle" data-plan="leave ASAP" role="group" aria-label="Jail plan">
+        <span class="thumb"></span>
+        <button type="button" data-plan="leave ASAP" aria-pressed="true" data-t="pay">Pay &amp; leave jail</button>
+        <button type="button" data-plan="stay max" aria-pressed="false" data-t="wait">Wait for doubles</button>
+      </div>
+      <button type="button" class="replay" id="replay" aria-label="Replay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v5h-5"/></svg></button>
+    </div>
+    <ol id="list" aria-live="polite"></ol>
+    <div class="sets hidden" id="sets"></div>
+  </section>
+</div>
+</div>
+<script type="application/json" id="board-odds">{"source":"B08 boardOdds.ts (exact long-run odds, classic 40-square board)","plans":{"leave ASAP":{"rollsPerTurn":1.186623958525926,"perRoll":[0.030961230334104268,0.021313773374645625,0.018848800052371745,0.02162402189535374,0.023285230189612423,0.029631032008512328,0.02262139678893012,0.008650478139361513,0.02320960171215176,0.023003350088667763,0.062195146819755215,0.027016578177709857,0.026040375217150972,0.02372090292590736,0.0246488842550867,0.02919969335250791,0.027924168535581554,0.02594464843407427,0.029355854595096882,0.030851688778357925,0.02883601285165896,0.028358431390015208,0.01048032937331525,0.027356858038021868,0.0318576628665498,0.030659047386530067,0.027072038246359585,0.026788576944276343,0.028074183829090747,0.025860488874876554,0,0.026773704752817384,0.026251730101095373,0.0236605488084604,0.025006280074660565,0.024326379827060273,0.008668733545006057,0.021863976221719438,0.021798527663545588,0.026259633530000846],"perTurn":[0.03135795872241765,0.02052001343938027,0.019177431019301614,0.021038161859139395,0.02308565411074898,0.029179283428997973,0.0226857351758316,0.00852310264979409,0.023462684248905855,0.023154033066926438,0.06925388491250473,0.026903674343520662,0.024454996735733866,0.023936063847446256,0.023534917666226413,0.029773624901201255,0.027237460913883585,0.02680920054401775,0.02878736156944229,0.03177217046810351,0.02795429502542895,0.028494082102396696,0.0100205643124911,0.027128837340166145,0.03208656508967788,0.03022829192382529,0.027193861928389337,0.026216741342798392,0.027903863503548634,0.02519582036983199,0,0.026288120399723492,0.027088043922145987,0.02315710583489172,0.02568945104143521,0.02368019551194271,0.008615329044630497,0.02086135411187377,0.02215440580055457,0.02539565777072338]},"stay max":{"rollsPerTurn":1.165896364009171,"perRoll":[0.02918262494561797,0.020100287633106402,0.01777507663008745,0.0203976443525019,0.021965935085617925,0.0280496003556905,0.02134574265848863,0.008163625941513446,0.021903430392911448,0.021711771211689643,0.11527745312425577,0.025595521243550332,0.026154825106106103,0.02176000258759027,0.024252704185338977,0.02636572803883625,0.026789186650523482,0.022951308644971823,0.02819684076886212,0.02811562219246808,0.028247973397189527,0.026142143168788004,0.010449534808390299,0.02567279322009348,0.029954920405779073,0.028928474098033164,0.025400841080186986,0.02519201375861856,0.02654752202094439,0.02438722406332153,0,0.025249150999753965,0.024769213909871777,0.022291895161098536,0.02357635905289837,0.02292474618103958,0.008174454393005057,0.020616191594829796,0.020558414364580186,0.02486120257184875],"perTurn":[0.02910202689196477,0.01900886845897071,0.017769476241323745,0.019495064650000657,0.021398611230633607,0.027220461780091264,0.021036045691269756,0.007901184022890253,0.021758482682716258,0.02146759624068707,0.13018664547134,0.025121657818208208,0.025725936913871483,0.02145855398541293,0.024134399499446502,0.026232234102616474,0.026887614578683307,0.02311642351577694,0.028374431080744528,0.0284649717054312,0.028214956694136113,0.025834186633285468,0.01033746829358947,0.025143147527849522,0.029513693212871367,0.0283188494486676,0.024917837715058365,0.0243491244627789,0.02591071527784451,0.023449158175010726,0,0.02441242544476507,0.02505077205453139,0.021451174941961346,0.023770102594597206,0.02192561923653156,0.007979819052922553,0.01932585479996333,0.020525266101218888,0.023709141770337023]}}}</script>
+<script>
+'use strict';
+const DATA = JSON.parse(document.getElementById('board-odds').textContent);
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const params = new URLSearchParams(location.search);
+const phone = params.get('view') === 'phone';
+const lang = params.get('lang') === 'es' ? 'es' : 'en';
+const T = {
+  en: { brand: '/ Board odds', status: 'Long-run odds · two dice', title: 'Hottest squares', sub: 'Where moves end, over a long game',
+    pay: 'Pay & leave jail', wait: 'Wait for doubles', plan: 'Jail plan', replay: 'Replay', fewer: 'Fewer moves', more: 'More',
+    set: 'Hottest colour set', then: 'Then', fact: n => `1 move in <b>${n}</b>`, factSub: 'ends in Jail' },
+  es: { brand: '/ Probabilidades', status: 'A largo plazo · dos dados', title: 'Casillas más calientes', sub: 'Dónde acaban las jugadas, a la larga',
+    pay: 'Pagar y salir', wait: 'Esperar dobles', plan: 'Plan para la cárcel', replay: 'Repetir', fewer: 'Menos jugadas', more: 'Más',
+    set: 'Grupo más caliente', then: 'Después', fact: n => `1 de cada <b>${n}</b>`, factSub: 'jugadas acaba en la Cárcel' },
+}[lang];
+const NAMES = lang === 'es' ? { Brown: 'Marrón', 'Light blue': 'Celeste', Pink: 'Rosa', Orange: 'Naranja', Red: 'Rojo', Yellow: 'Amarillo',
+  Green: 'Verde', 'Dark blue': 'Azul oscuro', Railroad: 'Ferrocarril', 'Power plant': 'Central eléctrica', Waterworks: 'Agua',
+  GO: 'Salida', Jail: 'Cárcel', Parking: 'Estacionamiento', 'Go to jail': 'Ve a la cárcel', 'Income tax': 'Impuesto', 'Luxury tax': 'Impuesto de lujo',
+  'Chest card': 'Carta de arca', 'Chance card': 'Carta de suerte' } : {};
+const tr = word => NAMES[word] ?? word;
+document.documentElement.lang = lang;
+for (const el of document.querySelectorAll('[data-t]')) el.textContent = T[el.dataset.t];
+document.getElementById('toggle').setAttribute('aria-label', T.plan);
+document.getElementById('replay').setAttribute('aria-label', T.replay);
+// One line for the title in every language: shrink it (never below the floor) instead of wrapping.
+const h1 = document.querySelector('h1');
+function fitTitle() {
+  const base = phone ? 40 : 72, floor = phone ? 28 : 56;
+  h1.style.fontSize = `${base}px`;
+  const ratio = h1.clientWidth / h1.scrollWidth;
+  if (ratio < 1) h1.style.fontSize = `${Math.max(floor, Math.floor(base * ratio))}px`;
+}
+fitTitle();
+document.fonts.ready.then(fitTitle);
+if (phone) document.body.classList.add('phone');
+const W = phone ? 390 : 1920, H = phone ? 844 : 1080;
+const stage = document.getElementById('stage');
+function fit() {
+  const s = Math.min(innerWidth / W, innerHeight / H);
+  stage.style.transform = `translate(${(innerWidth - W * s) / 2}px, ${(innerHeight - H * s) / 2}px) scale(${s})`;
+}
+addEventListener('resize', fit); fit();
+
+// Neutral labels: in PartyBox the TV reads every name from the game's own edition data.
+const SETS = [
+  { name: 'Brown', color: '#b07a52', squares: [1, 3] }, { name: 'Light blue', color: '#8fd8ff', squares: [6, 8, 9] },
+  { name: 'Pink', color: '#f368e0', squares: [11, 13, 14] }, { name: 'Orange', color: '#ff9f43', squares: [16, 18, 19] },
+  { name: 'Red', color: '#ef476f', squares: [21, 23, 24] }, { name: 'Yellow', color: '#ffd166', squares: [26, 27, 29] },
+  { name: 'Green', color: '#06d6a0', squares: [31, 32, 34] }, { name: 'Dark blue', color: '#5b7cff', squares: [37, 39] },
+  { name: 'Railroads', color: '#c9cdf2', squares: [5, 15, 25, 35] }, { name: 'Utilities', color: '#9aa0d6', squares: [12, 28] },
+];
+const LABEL = [], COLOR = [], KIND = [];
+for (const set of SETS) set.squares.forEach((sq, i) => {
+  const street = set.name !== 'Railroads' && set.name !== 'Utilities';
+  LABEL[sq] = street ? `${tr(set.name)} ${i + 1}` : set.name === 'Railroads' ? `${tr('Railroad')} ${i + 1}` : tr(['Power plant', 'Waterworks'][i]);
+  COLOR[sq] = set.color; KIND[sq] = street ? 'street' : set.name === 'Railroads' ? 'rail' : i ? 'water' : 'power';
+});
+Object.assign(LABEL, { 0: 'GO', 10: 'Jail', 20: 'Parking', 30: 'Go to jail', 4: 'Income tax', 38: 'Luxury tax',
+  2: 'Chest card', 17: 'Chest card', 33: 'Chest card', 7: 'Chance card', 22: 'Chance card', 36: 'Chance card' });
+for (const sq of [0, 2, 4, 7, 10, 17, 20, 22, 30, 33, 36, 38]) LABEL[sq] = tr(LABEL[sq]);
+for (const sq of [2, 17, 33]) KIND[sq] = 'chest';
+for (const sq of [7, 22, 36]) KIND[sq] = 'chance';
+KIND[4] = KIND[38] = 'tax'; KIND[0] = 'go'; KIND[10] = 'jail'; KIND[20] = 'park'; KIND[30] = 'tojail';
+const GLYPH = {
+  rail: '<path d="M7 3l-3 18M17 3l3 18M5 8h14M4.5 13h15M4 18h16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>',
+  power: '<path d="M13 2L5 14h6l-1 8 8-12h-6z" fill="currentColor"/>',
+  water: '<path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z" fill="currentColor"/>',
+  chance: '<text x="12" y="19" text-anchor="middle" font-size="19" font-weight="900" fill="currentColor" font-family="sans-serif">?</text>',
+  chest: '<path d="M4 10h16v10H4zM4 10l2-5h12l2 5M12 10v4" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>',
+  tax: '<text x="12" y="18" text-anchor="middle" font-size="17" font-weight="900" fill="currentColor" font-family="sans-serif">$</text>',
+  go: '<path d="M20 12H5M11 5l-7 7 7 7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>',
+  jail: '<path d="M5 4v16M10 4v16M15 4v16M20 4v16M3 4h19M3 20h19" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>',
+  park: '<text x="12" y="19" text-anchor="middle" font-size="19" font-weight="900" fill="currentColor" font-family="sans-serif">P</text>',
+  tojail: '<path d="M4 20L18 6M10 6h8v8" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>',
+};
+
+// Board geometry: 800 px square, corners 108 px, nine cells a side; GO bottom right, moving clockwise.
+const B = 760, C = 104, CW = (B - 2 * C) / 9;
+function cellRect(sq) {
+  const side = Math.floor(sq / 10), i = sq % 10;
+  if (i === 0) return [[B - C, B - C], [0, B - C], [0, 0], [B - C, 0]][side].concat([C, C, side]);
+  const a = C + (9 - i) * CW, b = C + (i - 1) * CW;
+  return [[a, B - C, CW, C], [0, a, C, CW], [b, 0, CW, C], [B - C, b, C, CW]][side].concat([side]);
+}
+const surface = document.getElementById('surface'), board = document.getElementById('board');
+const pillars = [];
+for (let sq = 0; sq < 40; sq++) {
+  const [x, y, w, h, side] = cellRect(sq);
+  const cell = document.createElement('div');
+  cell.className = 'cell' + (sq % 10 === 0 ? ' corner' : '');
+  Object.assign(cell.style, { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px' });
+  let cx = x + w / 2, cy = y + h / 2;
+  if (KIND[sq] === 'street') {
+    const strip = document.createElement('div');
+    strip.className = 'strip';
+    strip.style.setProperty('--c', COLOR[sq]);
+    const t = 18, inset = 4;
+    const r = [[inset, inset, w - 2 * inset, t], [w - t - inset, inset, t, h - 2 * inset], [inset, h - t - inset, w - 2 * inset, t], [inset, inset, t, h - 2 * inset]][side];
+    Object.assign(strip.style, { left: r[0] + 'px', top: r[1] + 'px', width: r[2] + 'px', height: r[3] + 'px' });
+    cell.appendChild(strip);
+    const shift = [[0, 10], [-10, 0], [0, -10], [10, 0]][side];
+    cx += shift[0]; cy += shift[1];
+  } else {
+    cell.innerHTML = `<svg class="glyph" viewBox="0 0 24 24">${GLYPH[KIND[sq]]}</svg>`;
+  }
+  surface.appendChild(cell);
+  const pool = document.createElement('div');
+  pool.className = 'pool'; pool.style.left = cx + 'px'; pool.style.top = cy + 'px';
+  const pillar = document.createElement('div');
+  pillar.className = 'pillar'; pillar.style.left = cx + 'px'; pillar.style.top = cy + 'px';
+  pillar.innerHTML = '<div class="grow"><div class="face f-s"></div><div class="face f-e"></div><div class="face f-w"></div><div class="face f-top"></div></div><div class="badge"><div></div></div>';
+  board.append(pool, pillar);
+  pillars.push({ sq, pillar, pool, grow: pillar.firstChild, badge: pillar.lastChild });
+}
+const centre = document.createElement('div');
+centre.className = 'centre';
+centre.innerHTML = `<div class="big" id="fact"></div><div class="small" id="factSub"></div><div class="ramp"></div><div class="ramp-labels"><span>${T.fewer}</span><span>${T.more}</span></div>`;
+surface.appendChild(centre);
+
+const RAMP = ['#4cc9f0', '#06d6a0', '#ffd166', '#ff5d8f'].map(h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16)));
+function heat(t) {
+  t = Math.max(0, Math.min(1, t)) * (RAMP.length - 1);
+  const i = Math.min(RAMP.length - 2, Math.floor(t)), f = t - i;
+  return `rgb(${RAMP[i].map((c, k) => Math.round(c + (RAMP[i + 1][k] - c) * f)).join(',')})`;
+}
+const pct = p => lang === 'es' ? `${(100 * p).toFixed(2).replace('.', ',')} %` : `${(100 * p).toFixed(2)}%`;
+const list = document.getElementById('list'), sets = document.getElementById('sets');
+const rows = new Map();
+let plan = 'leave ASAP', shown = new Map(), timers = [];
+function countUp(el, from, to) {
+  if (reduced) { el.textContent = pct(to); return; }
+  const start = performance.now(), dur = 650;
+  const step = now => {
+    const k = Math.min(1, (now - start) / dur), e = 1 - Math.pow(1 - k, 3);
+    el.textContent = pct(from + (to - from) * e);
+    if (k < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+function later(ms, fn) { timers.push(setTimeout(fn, reduced ? 0 : ms)); }
+
+function render(intro) {
+  timers.forEach(clearTimeout); timers = [];
+  const odds = DATA.plans[plan], p = odds.perRoll;
+  const ranked = p.map((v, sq) => ({ sq, v })).sort((a, b) => b.v - a.v || a.sq - b.sq);
+  const max = ranked[0].v, second = ranked[1].v, min = Math.min(...p.filter(v => v > 0));
+  const rankOf = new Map(ranked.map((r, i) => [r.sq, i]));
+  // Height is honest (linear in the odds); colour spreads the field below the runaway leader.
+  for (const { sq, pillar, pool, grow, badge } of pillars) {
+    const v = p[sq], hpx = v > 0 ? 18 + 262 * (v / max) : 0;
+    const col = heat((v - min) / (second - min));
+    pillar.style.setProperty('--heat', col); pool.style.setProperty('--heat', col);
+    const go = () => {
+      grow.style.transform = `scale3d(1, 1, ${Math.max(0.001, hpx / 100)})`;
+      badge.style.transform = `translateZ(${hpx + 6}px)`;
+      pool.style.opacity = v > 0 ? String(0.25 + 0.6 * Math.min(1, (v - min) / (second - min))) : '0';
+      pool.style.transform = 'translateZ(0.5px) scale(1)';
+    };
+    if (intro) { grow.style.transform = 'scale3d(1, 1, 0.001)'; badge.style.transform = 'translateZ(6px)'; pool.style.opacity = '0'; later(450 + sq * 24, go); }
+    else go();
+    const rank = rankOf.get(sq);
+    badge.classList.toggle('on', false);
+    badge.firstChild.textContent = String(rank + 1);
+    if (rank < 5) later(intro ? 1500 + rank * 110 : 250 + rank * 60, () => badge.classList.add('on'));
+  }
+  // Ranked list with FLIP-style moves: rows keep their element and slide to their new slot.
+  const top = ranked.slice(0, 5);
+  const rowH = phone ? 76 : 88;
+  for (const [sq, li] of rows) if (!top.some(r => r.sq === sq)) { li.remove(); rows.delete(sq); }
+  top.forEach((r, i) => {
+    let li = rows.get(r.sq);
+    const fresh = !li;
+    if (fresh) {
+      li = document.createElement('li');
+      li.innerHTML = `<span class="rank"></span><span class="name">${COLOR[r.sq] ? `<span class="chip" style="--c:${COLOR[r.sq]}"></span>` : ''}<span>${LABEL[r.sq]}</span></span><span class="pct"></span><span class="bar"><i></i></span>`;
+      list.appendChild(li); rows.set(r.sq, li);
+      li.style.setProperty('--y', `${i * rowH}px`);
+      li.classList.add('hidden');
+    }
+    li.style.setProperty('--heat', heat((r.v - min) / (second - min)));
+    li.querySelector('.rank').textContent = String(i + 1);
+    const from = shown.get(r.sq) ?? 0;
+    shown.set(r.sq, r.v);
+    const reveal = () => {
+      li.classList.remove('hidden');
+      li.style.setProperty('--y', `${i * rowH}px`);
+      li.querySelector('.bar i').style.transform = `scaleX(${r.v / max})`;
+      countUp(li.querySelector('.pct'), from, r.v);
+    };
+    if (intro || fresh) { li.classList.add('hidden'); li.querySelector('.bar i').style.transform = 'scaleX(0)'; later((intro ? 1100 : 200) + i * 70, reveal); }
+    else reveal();
+  });
+  // The hottest colour set, and the field behind it.
+  const share = SETS.filter(s => s.squares.length < 4 && s.name !== 'Utilities')
+    .map(s => ({ ...s, v: s.squares.reduce((t, sq) => t + p[sq], 0) })).sort((a, b) => b.v - a.v);
+  const lead = share[0];
+  sets.innerHTML = `<div class="label">${T.set}</div><div class="lead"><span class="swatches">${lead.squares.map(() => `<span style="--c:${lead.color}"></span>`).join('')}</span><span>${tr(lead.name)}</span><span class="val">${pct(lead.v)}</span></div><div class="rest">${T.then} ${share.slice(1, 3).map(s => `${tr(s.name)} ${pct(s.v)}`).join(' · ')}</div>`;
+  if (intro) { sets.classList.add('hidden'); later(1650, () => sets.classList.remove('hidden')); } else sets.classList.remove('hidden');
+  const jail = p[10];
+  document.getElementById('fact').innerHTML = T.fact(Math.round(1 / jail));
+  document.getElementById('factSub').textContent = T.factSub;
+  if (intro) later(60, () => stage.classList.remove('intro'));
+}
+const toggle = document.getElementById('toggle');
+function setPlan(next) {
+  if (next === plan) return;
+  plan = next; toggle.dataset.plan = plan;
+  for (const b of toggle.querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.plan === plan));
+  render(false);
+}
+toggle.addEventListener('click', e => { const b = e.target.closest('button'); if (b) setPlan(b.dataset.plan); });
+document.getElementById('replay').addEventListener('click', () => { stage.classList.add('intro'); shown = new Map(); render(true); });
+addEventListener('keydown', e => {
+  if (e.key === '1') setPlan('leave ASAP'); else if (e.key === '2') setPlan('stay max');
+  else if (e.key === 'r' || e.key === 'R') document.getElementById('replay').click();
+});
+if (params.get('plan') === 'stay') { plan = 'stay max'; toggle.dataset.plan = plan; for (const b of toggle.querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.plan === plan)); }
+render(true);
+</script>
+</body>
+</html>

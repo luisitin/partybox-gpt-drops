@@ -2,7 +2,10 @@
   "name": "b08-monopoly-markov", "version": "1.0.0", "private": true,
   "type": "module", "description": "US Monopoly exact transition model and independently verified long-run rent returns",
   "engines": { "node": ">=22" },
-  "exports": { ".": { "types": "./build/monopolyOdds.d.ts", "import": "./build/monopolyOdds.js" } },
+  "exports": {
+    ".": { "types": "./build/monopolyOdds.d.ts", "import": "./build/monopolyOdds.js" },
+    "./board-odds": { "types": "./build/boardOdds.d.ts", "import": "./build/boardOdds.js" }
+  },
   "scripts": { "build": "tsc -p tsconfig.json", "test": "node run.mjs" },
   "devDependencies": { "typescript": "5.8.3" }, "dependencies": {}
 }
