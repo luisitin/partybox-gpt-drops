@@ -208,6 +208,46 @@ Claude (cloud), second session on the same branch. Commands run from `jobs/B15-i
 | Bundle checksums | `sha256sum -c BUNDLE_SHA256SUMS.txt` | 894 OK, 0 failing |
 | Not verified here | none run in this pass | no human recognition study; no PartyBox port; the hosted run of the new head is recorded in the PR, not here |
 
+## Independent review 2026-10-08
+
+Claude (cloud), independent reviewer of `job/B15-icons-120` at `9e56abe`. The reviewer did not write the artwork. Commands run from `jobs/B15-icons-120/` unless stated.
+
+| Check | Command | Result |
+|---|---|---|
+| Remote and PR | `git ls-remote origin job/B15-icons-120`; GitHub PR #10 `get`, `get_check_runs`; Actions run list | Remote and PR head `9e56abe`. Hosted `verify` success on `9e56abe` (run 37799893910, 15:20:12 to 15:21:48 UTC), `c878bc5` (run 37797964572) and `b37a00d` (run 37642435427) |
+| Full suite | `npm test` (Node v22.22.0, 130 s wall) | PASS, exit 0. 84 rows (28 per seed), 94,330 cases per seed, 282,990 in total. 75/75 mutants (25 per seed) killed. The run left the tree clean, so it regenerated identical bytes |
+| Seals | `sha256sum -c SHA256SUMS.txt`; `sha256sum -c BUNDLE_SHA256SUMS.txt` | All lines OK in both (bundle: 894) |
+| Data | `manifest.json` against `icons/*.svg`, `sprite.svg` and `getSprite()` | 120 unique ids, one file each, no orphans, 20 per category, every row has `titleEs`. Sprite is byte-equal to `getSprite()` |
+| Limits | script over `icons/*.svg` | viewBox `0 0 64 64` on all 120. Largest `clover.svg` 1,052 bytes. At most 6 distinct paints. Elements limited to svg, g, path, rect, circle, ellipse; no text, style, script, use or external references |
+| API | `node` on `dist/src/icons.js` | Unknown names, `__proto__`, `constructor` and `toString` return `undefined`. `ink` `'red'`, `'#20243A'` and `'#FFF'` return `undefined` (uppercase rejection is asserted in `test/run.ts`). `#abc` and `currentColor` are accepted |
+| Chromium: sprite | 120 `<use href="#pb-icon-…">` inside the `display:none` sprite, night and daylight | All 120 render with a non-empty box at 48 px, no console errors |
+| Chromium: gallery | `gallery.html` at 390x844 and 1440x900 | No errors, no external requests, no horizontal scroll (scrollWidth 390). Nit: the theme pills clip the last label at 390 px ("Contrast" shows as "Co") |
+| Visual | `preview/contact-night.png`, `preview/contact-daylight.png` and Chromium strips at 24 and 48 px | Set is coherent on both themes. `whisper` reads as listening, `clap` as a wave, `handshake` is soft at 24 px (all already listed as gaps) |
+| PartyBox paths | `/home/user/partybox` (main at `26b85ba6`): paths, line numbers, emoji counts, `--pb-motion-slow`, `[data-theme='contrast']`, `:root`, game-sdk `./ui/<name>` export naming, `herd-mind`, root scripts `e2e:themes` and `polish-check`, ADR-081 as latest | Emoji counts match. Fixed: picker and controller files cited without their folders; the haptics path; one table split by a paragraph |
+
+**Fixed in this review** (commits after `9e56abe`)
+- INTEGRATION.md: status names the one open owner decision (`whisper`); night-outline gap and port caveat added; emoji table is one table again; PartyBox paths corrected; `⛶` count added; review note added at the end.
+- README.md: status matches; ink wording says lowercase hex; the night check is described as a fill proxy. Resealed with `python3 test/package.py --seal-sources`.
+- LOOP.md: one line added; resealed.
+- VERIFY.md: this section and UNVERIFIED below. Both sit before the generated bundle checksums, so regeneration keeps them.
+
+**Found, not changed (owner decision, or outside this branch)**
+- PR #10 description is stale. It cites head `b37a00d`, 78 rows and 278,979 cases, and says the largest file is `skull` at 716 bytes (now `clover` at 1,052). The reviewer cannot edit PR text (read-only).
+- Commit trailers: `bac3314`, `c0aa205`, `6cfc78d`, `ae117e2` and `c878bc5` carry `Co-Authored-By: Claude Opus 5.5`. `9e56abe` and this review carry Haiku 5.5. History is not rewritten.
+- Night outline: the default `#20243a` is about 1.2:1 on `--pb-bg` `#0f1020`. This was not measured on the real PartyBox theme.
+- Uppercase hex inks are rejected on purpose, and the test asserts it.
+
+## UNVERIFIED
+
+- Human recognition at 24 px: no study was run. Visual judgement only (polish agent and reviewer).
+- Renderer universality: pixel identity in other browsers, GPUs and future renderer versions is not tested. Chromium was checked for the sprite and gallery only. The recorded renderers are Sharp/librsvg and CairoSVG.
+- PartyBox port: not run. Paths and commands were checked by reading `/home/user/partybox`. `pnpm verify` and the e2e checks were not run there.
+- `whisper`: the name does not match the picture. Owner decision, unresolved.
+- `clap` and `handshake`: legibility at 24 px is unresolved. Trial redraws were rejected.
+- Night ink: the contrast of the default outline on the real PartyBox night theme is not measured.
+- `BUNDLE_SHA256SUMS.txt` is generated and gitignored, so it is not in the PR tree. A fresh clone has it only after `npm test`.
+- PR #10 body and its hosted-run link cite the old head. The current head's hosted run is 37799893910.
+
 ## Complete-bundle checksums
 
 | Test | Cases | Passed | Seed | Exact command |
