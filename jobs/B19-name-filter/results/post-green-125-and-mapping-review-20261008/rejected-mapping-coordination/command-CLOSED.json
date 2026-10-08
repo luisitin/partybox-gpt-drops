@@ -1,0 +1,87 @@
+{
+  "grantUtc": "2026-10-08T22:03:34.822731+00:00",
+  "kind": "root-delegated-single-precompiled-mapping-private-ABBA-BAAB-comparison",
+  "rootG05ZeroWorkloadAndWriter": true,
+  "acknowledgments": {
+    "G04": {
+      "actualUtc": "2026-10-08T22:03:12Z",
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "G08": {
+      "actualUtc": "2026-10-08T22:02:54Z",
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "G09": {
+      "actualUtc": "2026-10-08T22:03:01.675945152Z",
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "G10": {
+      "actualUtc": "2026-10-08T22:03:08Z",
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "tracker": {
+      "exactAckUtcCaptured": false,
+      "receivedBeforeGrant": true,
+      "freshReaffirmedZeroWorkload": true,
+      "zeroWriter": true
+    }
+  },
+  "globalRunnableWorkloads": [],
+  "liveProcesses": [
+    "      1       0       0 S+   tail             0.0   876",
+    "      2       1       0 S+   caas-prefix-tra  0.0   252",
+    "    199       1     199 Ssl  dockerd          0.0 35536",
+    "    248     199     248 Ssl  containerd       0.4 21436",
+    "    464       0       0 Sl+  codex            0.1 42188",
+    " 203965     464  203965 Ss   bash            25.0  1880",
+    " 203968  203965  203965 S    python3         60.0  9628",
+    " 203969  203968  203965 R    ps               0.0  3944"
+  ],
+  "STOPorCONTUsed": false,
+  "originalAcceptanceNotRun": true,
+  "argv": [
+    "node",
+    ".work/B19-known-map-candidate/exact-harness.mjs",
+    "timing"
+  ],
+  "commandStartedUtc": "2026-10-08T22:03:34.822974+00:00",
+  "commandClosedUtc": "2026-10-08T22:03:46.669691+00:00",
+  "exitCode": 0,
+  "naturalClosedUtc": "2026-10-08T22:03:46.645Z",
+  "sourcesUnchanged": true,
+  "summaries": [
+    {
+      "seed": 1,
+      "baselineMs": 1607.737984,
+      "candidateMs": 1595.2758300000003,
+      "candidateToBaseline": 0.9922486411815722,
+      "improvementPercent": 0.7751358818427858,
+      "sinksAgree": true
+    },
+    {
+      "seed": 2,
+      "baselineMs": 1780.9651299999996,
+      "candidateMs": 2254.383014,
+      "candidateToBaseline": 1.265820973148419,
+      "improvementPercent": -26.5820973148419,
+      "sinksAgree": true
+    },
+    {
+      "seed": 3,
+      "baselineMs": 1558.292013999997,
+      "candidateMs": 1547.6080110000003,
+      "candidateToBaseline": 0.9931437735007241,
+      "improvementPercent": 0.6856226499275819,
+      "sinksAgree": true
+    }
+  ],
+  "phaseCount": 24,
+  "allCalls": 12000000,
+  "allOwnersDirectlyReleased": true,
+  "releaseRecordedUtc": "2026-10-08T22:05:23.535063+00:00",
+  "releaseTimeScope": "Recorded after all direct release messages; exact first message timestamp was not captured."
+}

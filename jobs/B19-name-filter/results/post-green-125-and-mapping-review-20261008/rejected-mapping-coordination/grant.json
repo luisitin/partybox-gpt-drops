@@ -1,0 +1,51 @@
+{
+  "grantUtc": "2026-10-08T22:03:34.822731+00:00",
+  "kind": "root-delegated-single-precompiled-mapping-private-ABBA-BAAB-comparison",
+  "rootG05ZeroWorkloadAndWriter": true,
+  "acknowledgments": {
+    "G04": {
+      "actualUtc": "2026-10-08T22:03:12Z",
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "G08": {
+      "actualUtc": "2026-10-08T22:02:54Z",
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "G09": {
+      "actualUtc": "2026-10-08T22:03:01.675945152Z",
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "G10": {
+      "actualUtc": "2026-10-08T22:03:08Z",
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "tracker": {
+      "exactAckUtcCaptured": false,
+      "receivedBeforeGrant": true,
+      "freshReaffirmedZeroWorkload": true,
+      "zeroWriter": true
+    }
+  },
+  "globalRunnableWorkloads": [],
+  "liveProcesses": [
+    "      1       0       0 S+   tail             0.0   876",
+    "      2       1       0 S+   caas-prefix-tra  0.0   252",
+    "    199       1     199 Ssl  dockerd          0.0 35536",
+    "    248     199     248 Ssl  containerd       0.4 21436",
+    "    464       0       0 Sl+  codex            0.1 42188",
+    " 203965     464  203965 Ss   bash            25.0  1880",
+    " 203968  203965  203965 S    python3         60.0  9628",
+    " 203969  203968  203965 R    ps               0.0  3944"
+  ],
+  "STOPorCONTUsed": false,
+  "originalAcceptanceNotRun": true,
+  "argv": [
+    "node",
+    ".work/B19-known-map-candidate/exact-harness.mjs",
+    "timing"
+  ]
+}

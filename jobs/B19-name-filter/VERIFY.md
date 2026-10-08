@@ -12,9 +12,66 @@ sample, 100,000-call warmup, seed and individually timed 0.05 ms gate remains.
 The first unchanged full `npm test` on this genuinely changed source executed
 in both hosted and local environments. All100 suites execute; only literal
 latency fails: hosted1/0/0 outliers, local9/5/13. Every failed record remains
-retained. Current acceptance and the mandatory post-green KEEP remain
+retained. Exact-head 1255490 later passes full hosted CI, while its required
+post-green full rerun fails 9/11/4 calls. Overall acceptance and KEEP remain
 incomplete; PR #23 stays draft. Earlier local 43/19/28 timing failures
 and historical post-green 31/28/11 failures remain preserved below.
+
+### Verified hosted green and mandatory post-green failure
+
+Evidence checkpoint 1255490 triggers automatic full CI 37849845219 / job
+113559766032, completed SUCCESS at 21:53:27 UTC. All 100 suite rows pass,
+including every original workload, 75 real mutants and 352 delivery hashes.
+Genuine artifact 11580638498, 6,923,580 bytes, SHA256
+123f931cb51a27faf94c7cc87d4a76d1fa4c5ecde161492321510571b243bcfc,
+passes 1,844 independent byte/structure assertions at 21:55:18.870769 UTC.
+Its complete fresh summary equals every corresponding native log row.
+
+The single required post-green full rerun is `npm test` from the job folder,
+controlled by `python3 .work/B19-post-green-125-preparation/run-required-post-green-full.py`
+from repository root. Quiet grant 21:58:15.694665 UTC; START 21:58:16.539431;
+natural CLOSED 21:58:31.844316 / EXIT 1, all 368 guards unchanged. Every
+non-latency suite passes, but the literal per-call gate fails.
+
+| Scope | Seed | Timed cases | Passed | Outliers | Maximum, ms | Exact command |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| Hosted green | 1 | 10000 | 10000 | 0 | 0.040441 | `npm test` |
+| Hosted green | 2 | 10000 | 10000 | 0 | 0.012088 | `npm test` |
+| Hosted green | 3 | 10000 | 10000 | 0 | 0.013951 | `npm test` |
+| Required KEEP | 1 | 10000 | 9991 | 9 | 0.140660 | `npm test` |
+| Required KEEP | 2 | 10000 | 9989 | 11 | 0.255844 | `npm test` |
+| Required KEEP | 3 | 10000 | 9996 | 4 | 0.636235 | `npm test` |
+
+Both complete 100-row name/case/pass/seed/command ledgers are retained in
+results/post-green-125-and-mapping-review-20261008/hosted-green/fresh-reports/summary.json
+and required-local-KEEP/reports/summary.json under the same directory.
+All original sinks, raw outliers and coordinator records remain. The
+original genuine ZIP stays privately at .work/B19-green-hosted-125/actual.zip
+and is linked by artifact metadata without recursive ZIP nesting. It omits
+dist/nameFilter.js, so no hosted compiled-byte equality is claimed; the
+optional lookup failure is documented. Individual call times are not
+reconstructed from summary/outlier receipts. PR23 stays draft and KEEP open.
+
+### Rejected precompiled-mapping diagnostic
+
+Private strict compile passes one setup case with exact command
+`node jobs/B19-name-filter/node_modules/typescript/bin/tsc -p .work/B19-known-map-candidate/tsconfig.json`,
+CLOSED 22:00:41.439227 UTC / EXIT 0. Candidate 0e9c0bdc has default-gzip
+sizes 5,247 / 3,857 bytes. The exact command
+`node .work/B19-known-map-candidate/exact-harness.mjs equivalence`
+passes all 214,308 complete results, suggestions, frozen outputs, wrappers,
+both references and original 131,490 inputs. All 15 case/pass/seed/command
+rows are retained in the full archived equivalence report/stdout, natural
+CLOSED 22:01:02.352 UTC, all 367 guards unchanged.
+
+One exact command `node .work/B19-known-map-candidate/exact-harness.mjs timing`
+measures 24 balanced ABBA/BAAB phases / 12 million whole calls, all three
+original samples and 100,000-call warmups per variant and seed. Natural
+CLOSED 22:03:46.645 UTC / EXIT 0, all 367 guards unchanged. Seed gains
++0.775136%, -26.582097%, +0.685623% are mixed: REJECT the candidate.
+Every phase, GC event, stdout, baseline/compiled source and original command
+path remains in the same evidence archive. No relocated execution,
+production adoption, literal acceptance or outlier/regression cause is claimed.
 
 ### First complete original acceptance checks
 

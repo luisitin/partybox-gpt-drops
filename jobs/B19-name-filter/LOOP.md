@@ -219,3 +219,24 @@ The prospective next mechanism is to avoid duplicate mapping work using the
 existing precompiled character data while preserving whole-string contextual
 casing, exact exceptions and fallback. It is not an asserted diagnosis or
 measured gain yet. Current literal acceptance and KEEP remain incomplete.
+
+## Mandatory post-green failure and rejected mapping
+
+Checkpoint 1255490 is normally pushed at 21:53:04.366710 UTC, late against
+the prior 30-minute deadline. Its automatic full CI passes all 100 suites,
+75 mutants and 352 hashes; genuine artifact audit passes 1,844 assertions.
+The required post-green original full rerun naturally fails 21:58:31.844316,
+all 368 guards unchanged: 9/11/4 literal outliers. Non-latency checks pass,
+but KEEP remains open, all prior failures retained and no unchanged retry.
+
+Existing-mapping reuse passes strict compile and 214,308 complete behavior
+comparisons. One coordinated balanced 24-phase / 12-million-call experiment
+measures +0.775136 / -26.582097 / +0.685623% gain: reject the candidate.
+Every phase, GC event, source map and original .work command path remains
+in results/post-green-125-and-mapping-review-20261008/. No cause is inferred.
+
+The weakest remaining part is literal per-call acceptance. Next investigate
+a zero-allocation deterministic scan compiled from the existing regex
+language, preserving every original mutation anchor's actual effect. It is
+prospective until full semantic and whole-call evidence establishes benefit.
+No cosmetic stop or completion is claimed.

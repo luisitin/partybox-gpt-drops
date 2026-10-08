@@ -6,7 +6,7 @@
     {
       "rank": 1,
       "part": "Literal 0.05 ms per-check acceptance",
-      "status": "Both first complete original checks fail literal latency; all failures preserved. Prospective mapping improvement has not been measured."
+      "status": "Verified 1255490 hosted green; required post-green full rerun fails 9/11/4 literal calls. All failures retained; private mapping candidate rejected after mixed gains."
     },
     {
       "rank": 2,
@@ -26,7 +26,7 @@
     {
       "rank": 5,
       "part": "Source-bound delivery and mandatory KEEP",
-      "status": "Both full failed artifacts/receipts retained; independent genuine hosted audit passes 1457 structural checks, literal acceptance and KEEP remain incomplete."
+      "status": "Genuine green artifact passes 1844 byte/structure checks; earlier failed artifact passes 1457 with failure required. Mandatory KEEP rerun fails, completion remains open."
     }
   ],
   "keepCompleted": false,
@@ -66,5 +66,38 @@
       "guards": 287,
       "sourcesUnchanged": true
     }
+  },
+  "currentHostedGreen": {
+    "head": "12554906b884a4c4afd8443edf470f0cc5ec371e",
+    "run": 37849845219,
+    "artifact": 11580638498,
+    "artifactStructuralChecks": 1844,
+    "suiteRows": 100,
+    "outliers": [
+      0,
+      0,
+      0
+    ]
+  },
+  "requiredPostGreenKEEP": {
+    "closedUtc": "2026-10-08T21:58:31.844316+00:00",
+    "exitCode": 1,
+    "outliers": [
+      9,
+      11,
+      4
+    ],
+    "guards": 368,
+    "sourcesUnchanged": true
+  },
+  "rejectedMappingCandidate": {
+    "sha256": "0e9c0bdcbf52ac2b7802f2485151ca33016b502454dca24fa2306f70038de1cb",
+    "behaviorCases": 214308,
+    "gainsPercent": [
+      0.7751358818427858,
+      -26.5820973148419,
+      0.6856226499275819
+    ],
+    "adopted": false
   }
 }

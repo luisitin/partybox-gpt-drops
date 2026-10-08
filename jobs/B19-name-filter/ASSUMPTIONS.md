@@ -98,3 +98,16 @@
 - The sole B19 workflow checks out the exact PR head to bind hosted evidence
   to this isolated review, preserving the full original `npm test` command,
   readonly permissions, Ubuntu runner, 30-minute limit and actions major pins.
+
+## Post-green review and rejected mapping
+
+- An automatic check after a meaningful evidence checkpoint is distinct from
+  an unchanged rerun request. The genuine pass does not erase prior failures;
+  its required post-green full rerun failed and remains binding.
+- Existing-mapping reuse is rejected after one balanced mixed comparison.
+  Behavioral agreement and small gains in two seeds do not justify the third
+  seed's regression; no outlier or regression cause is inferred.
+- Further concrete matcher work stays private and preserves exact language,
+  full Unicode/frozen suggestions, original workloads and the actual effects
+  of all 25 mutation anchors. A deterministic scan is prospective only until
+  full semantics and consistent whole-call benefit are measured.

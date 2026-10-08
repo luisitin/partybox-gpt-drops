@@ -31,16 +31,22 @@ corpus and75-mutant check passes. Genuine hosted artifact11578869086 and its
 results/first-trie-original-acceptance-20261008/. These do not erase older
 failures or establish an outlier cause.
 
-Next exact step: keep PR23 draft and investigate a source-bound whole-call
-improvement using the existing precompiled character mapping directly for
-known inputs. Preserve whole-string casing/context, normalization, exact
-benign exceptions, all returned suggestion/frozen values and unknown Unicode
-fallback. Work privately in repository-root .work, compare complete original
-and supplemental truth with both references, then measure a single balanced
-mixed experiment only after the root resource coordinator grants a quiet
-native window. Adoption requires genuine consistent whole-call gain. Do not
-repeat unchanged hosted/local timing to hunt a pass, change a gate or claim
-the prospective mechanism explains any historical outlier.
+Latest verified green is exact 1255490 / run 37849845219, all 100 suites,
+75 mutants and 352 hashes, genuine artifact 11580638498 independently audited
+with 1,844 assertions. Its required post-green original full rerun naturally
+fails 21:58:31.844316 UTC / EXIT 1, 9/11/4 outliers, all 368 guards unchanged.
+The known-mapping candidate 0e9c0bdc passes 214,308 complete comparisons but
+is rejected after +0.775136 / -26.582097 / +0.685623% balanced mixed gains.
+All scopes are in results/post-green-125-and-mapping-review-20261008/.
+
+Next exact step: keep PR23 draft and privately investigate a zero-allocation
+deterministic scan compiled from the existing regex language in root .work.
+Preserve all 25 original mutation anchors' actual effects, repeat minima,
+i/l/# ambiguity, exact exceptions, complete returned values and all Unicode
+fallbacks. Compare the complete original and supplemental cases with both
+references, then obtain one coordinated quiet ABBA/BAAB window. Adoption
+requires genuine consistent whole-call gain. No unchanged retry, waiver,
+historical cause claim or cosmetic completion is authorized.
 
 After a real full green result, perform the required original KEEP full rerun,
 rank the remaining weakest parts, make any substantive measured improvement,
