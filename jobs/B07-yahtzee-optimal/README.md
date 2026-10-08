@@ -2,15 +2,15 @@
 
 **What this is:** an exact solver for solitaire Yahtzee (every hold and every box choice maximizes the expected final score), plus a PartyBox port kit (`partybox/`) that makes it Yahtzee's 'sharp' bot.
 **How to use it:** run `npm ci && npm test` to prove it; `npm run build` builds the library; PartyBox copies `partybox/server/` and `partybox/__tests__/` (steps in INTEGRATION.md).
-**Status:** complete. The empty-card EV is 254.5877 under Hasbro's forced Joker rule and 254.5896 under the free-choice Joker (the published figure). CI on PR #21 was green before this pass. On 2026-10-08 the port kit passed inside a scratch PartyBox copy: tsc, eslint, depcruise, prettier, vitest and sim.
+**Status:** complete. The empty-card EV is 254.5877 under Hasbro's forced Joker rule and 254.5896 under the free-choice Joker (the published figure). CI `verify` was green on PR #21 at `4258453` and `7cdb272`. The port's solved tables now decode once at import, with no mutable cache (`e3591e6`). On 2026-10-08 the port kit passed inside a scratch PartyBox copy: tsc, eslint, prettier, vitest and sim (2p, 4p, 6p). depcruise and check-bundle passed there in an earlier pass, before that change.
 
 ## Quick start
 
 ```sh
 cd jobs/B07-yahtzee-optimal
 npm ci              # dev-only TypeScript 5.8.3; needs Node >= 22 and g++ (C++20, OpenMP)
-npm test            # the whole proof (seals, both generators, seeds 1-3, 6M paired games, port kit): ~25 min local, ~8 min on GitHub
-node partybox/test-port.mjs   # the PartyBox port kit alone, ~2 min (builds build/ first if missing)
+npm test            # the whole proof (seals, both generators, seeds 1-3, 6M paired games, port kit): ~23 to 31 min local (23m20s earlier; 31m14s on a busy machine in the polish pass)
+node partybox/test-port.mjs   # the PartyBox port kit alone, ~3 min (builds build/ first if missing)
 npm run build       # build/yahtzeeOpt.js + .d.ts + build/tables/*.json
 ```
 

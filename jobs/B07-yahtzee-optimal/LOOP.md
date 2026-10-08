@@ -33,3 +33,4 @@ still matched at exit. Preserved full raw output, receipt and the earlier full
 run separately. Publication-only document changes are recorded with hashes;
 next gate is the unchanged full Node 22.16.0 Ubuntu workflow for this exact
 published commit. Continue B19 production timing work while hosted proof runs.
+2026-10-08 B07 polish pass (cloud): eager solved tables (no mutable cache, e3591e6), P07 mutant fixed, docs corrected against the real PartyBox repo, full npm test exit 0 (31 min, shared machine), scratch gates tsc/eslint/prettier/vitest green, sims 2p/4p/6p fast 0 failed, default mixed stuck x152 pre-existing on a clean 26b85ba6 export; docs and manifest pushed to job/B07-yahtzee-optimal; pnpm verify on the port not run.

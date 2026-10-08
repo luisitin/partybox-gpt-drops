@@ -112,3 +112,38 @@ The final-head hosted result is recorded in the PR description only after the
 workflow actually finishes. The historical local pass alone does not prove the
 latest integration edits or hosted runtime; the fresh final reports and exact
 commit/run link distinguish that evidence.
+
+## Polish pass 2026-10-08
+
+Scope: `jobs/B07-yahtzee-optimal/**` only. The kit change is commit `e3591e6`; the commit that carries this section adds docs and the manifest.
+
+Full `npm test` (Node v22.22.0, TypeScript 5.8.3, g++ 13.3.0), run from `jobs/B07-yahtzee-optimal`:
+- Exit 0, 16:22 to 16:53 UTC (31 min 14 s on a busy shared machine).
+- Seeds 1 to 3 all PASS: 150,000 midgame states; 606,528 scoring cases; 75 of 75 strict compiled mutants and 75 of 75 runtime mutants killed; 6,000,000 full paired games; 234,000,000 native decision comparisons; 78,000,000 native scoring transitions; 985,883 visited component vectors.
+- Port kit PASS (`partybox/test-port.mjs`): 1,072,896 valid and 1,024,256 invalid table slots checked; 3 x 5,548 = 16,644 bitwise root-versus-port states; six adapter cells of 300 games, all within 4 standard errors; 16 of 16 port mutants killed.
+- The run's log is kept in scratch, not in the repo. The run rewrote tracked files under `reports/`; they were restored with `git checkout` after the run, and `SHA256SUMS.txt` matches the restored files.
+- An earlier full run in this pass was stopped at 45 minutes by the background limit of the command that ran it, before it printed its exit line (a harness timeout, not a test failure). It is not counted; the run above is the result.
+
+Gates in a scratch PartyBox copy of `26b85ba6`, with the final kit files copied in (`cmp`-identical):
+- `tsc -p tsconfig.json`: exit 0.
+- `eslint games/yahtzee --max-warnings 0`: exit 0.
+- `prettier --check games/yahtzee`: exit 0.
+- `vitest run games/yahtzee`: 13 files, 105 tests passed (117 s on the busy machine).
+
+Simulations in the same scratch copy (`pnpm sim --game yahtzee --seed 1`):
+- 2 players, `--skills normal,sharp --strategy fast`, 200 runs: 0 failed; wins per seat sharp 73.5%, normal 26.5%.
+- 4 players, same flags, 200 runs: 0 failed; 40.1% of games per sharp seat, 9.9% per normal seat.
+- 6 players, `--strategy fast`, 200 runs: 0 failed (104 s).
+- 6 players, default `mixed`, 200 runs: 152 runs fail with `stuck×152` on the port, the same count on a clean export of `26b85ba6` with no port, and with `--skills normal,sharp`. Pre-existing; see INTEGRATION.md gap 5.
+
+Other measurements:
+- Cold start (Node v22.22.0; CommonJS transpile of the kit's `tables.ts` and both generated files; three runs): import with both tables decoded, 148 to 164 ms; first `solvedValue` lookup under 0.2 ms; heap used about 19.9 MB.
+- The earlier lazy version, from a stale build in `.verification/`: import 55 to 66 ms, then 34 to 57 ms on the first lookup per mode.
+- Gzip of the two generated tables at `gzip -9`: 2,773,413 and 2,772,152 bytes (5.5 MB together); raw 7,672,630 bytes.
+- Bundle (an earlier pass, before the `tables.ts` change, which is server-only): the yahtzee phone entry is 8.4 KB gzip, the TV 17.8 KB, and no game module is in the entry.
+
+Failure found and fixed in this pass: the first `test-port.mjs` run after the eager-table change exited 1. Mutant P07 replaced only the `official` entry, which left `SOLVED_OFFICIAL` unused; strict TypeScript then rejected it (TS6133), so the mutant check crashed. P07 now swaps both entries. Re-run: 16 of 16 killed.
+
+Corrections to the record (INTEGRATION.md, "This pass (continued)" lists each one): the roll-log files, the `bot.ts` header and signature, the ADR number, the Joker default, and removal of two unsupported figures (solo averages; `stuck×76`).
+
+Still not run here: `pnpm verify` (the whole gate, including fuzz replay, build, drift and i18n) on the port. CI on the pushed head is recorded in the PR, not in this file.
