@@ -4,6 +4,7 @@ import * as engine from './build/boardOdds.js';
 import { referenceByFace } from './build/blind-reference.js';
 import { q, one, zero, plus, times, number, delta, same, invariant, mixture, rng, pick,
   randomDag, randomCyclic, randomDie, pathChoices, brute, golden, stringify } from './support.mjs';
+import { connectB01 } from './connect-b01.mjs';
 
 const argument = name => { const at = process.argv.indexOf(name); return at < 0 ? undefined : process.argv[at + 1]; };
 const seed = Number(argument('--seed') ?? 1), smoke = process.argv.includes('--smoke');
@@ -132,6 +133,8 @@ try {
   if (mode === 'all' || mode === 'golden') {
     const results = golden(engine, referenceByFace, seed);
     record({ name: 'golden-regression-arithmetic-validation', ...results, passed: true });
+    const connection = connectB01(engine);
+    record({ name: 'b01-dice-connection', ...connection, passed: true });
     const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
     assert.deepEqual(pkg.dependencies, {});
     for (const file of ['boardOdds.ts', 'blind-reference.ts']) {

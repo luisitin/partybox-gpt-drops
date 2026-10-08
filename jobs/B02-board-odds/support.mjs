@@ -275,8 +275,33 @@ export function golden(engine, reference, seed = 1) {
     () => engine.boardOdds(list.get('line'), delta(1), 'bad'),
     () => engine.boardOdds(list.get('line'), delta(1), 'toward target'),
     () => engine.boardOddsByFace(list.get('line'), -1),
+    // Die keys: Number() silently repaired '' to face 0 and '01' or '1e0' to face 1 before this check.
+    ...['', '01', '1e0', ' 1', '-0', '1.0', '0x1', 'NaN', '1 ', 'Infinity'].map(key =>
+      () => engine.boardOdds(list.get('line'), { [key]: q(1) })),
+    () => engine.boardOdds(list.get('line'), { 0: q(1, 2), 1: q(1, 2), '01': zero }),
+    () => engine.boardOdds(list.get('line'), JSON.parse('{"__proto__": {"numerator": "1", "denominator": "1"}}')),
+    () => engine.boardOdds(list.get('line'), { 1: 1 }),
+    () => engine.boardOdds(list.get('line'), { 1: '1/1' }),
+    () => engine.boardOdds(list.get('line'), { 1: null }),
+    () => engine.boardOdds(list.get('line'), { 1: { numerator: 1, denominator: 1 } }),
+    // Fraction-string adapter: exact strings only.
+    () => engine.dieFromFractions({ 1: '1.5' }),
+    () => engine.dieFromFractions({ 1: ' 1/2' }),
+    () => engine.dieFromFractions({ 1: '1/0' }),
+    () => engine.dieFromFractions({ 1: '1/2/3' }),
+    () => engine.dieFromFractions({ 1: 0.5 }),
+    () => engine.dieFromFractions({ '': '1/2' }),
+    () => engine.dieFromFractions({ '01': '1/2' }),
+    () => engine.dieFromFractions(JSON.parse('{"__proto__": "1/1"}')),
   ];
   invalid.forEach(fn => assert.throws(fn));
+  // Accepted forms round-trip exactly: canonical keys, reduced fractions, and a zero weight.
+  assert.deepEqual(engine.dieFromFractions({ 1: '2/4', 2: '1/4', 3: '0/1', 4: '-0/5' }),
+    { 1: q(1, 2), 2: q(1, 4), 3: zero, 4: zero });
+  assert.deepEqual(engine.dieFromFractions({ 10: '33/2', 0: '1' }), { 10: q(33, 2), 0: one });
+  same(engine.boardOdds(list.get('line'), engine.dieFromFractions({ 0: '1/2', 1: '1/2' })),
+    engine.boardOdds(list.get('line'), new Map([[0, q(1, 2)], [1, q(1, 2)]])), 'fraction-adapter/mixture');
+  check(engine.boardOdds(list.get('line'), { 0: zero, 1: one }).get('S').landing.get('A'), one);
   // JSON/untyped callers must not turn missing adjacency into a dead end or
   // a string into character-by-character branch IDs.
   const malformedNext = [undefined, null, '', 'AB', new Set(['A']), {0: 'A', length: 1}, [1], [null], [undefined], Array(1)];

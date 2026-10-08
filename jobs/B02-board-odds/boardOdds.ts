@@ -79,13 +79,27 @@ function inverse(a: Matrix): Matrix {
 function validFace(face: number): void {
   if (!Number.isSafeInteger(face) || face < 0) throw new RangeError('Faces must be nonnegative safe integers');
 }
+/** Object keys must be canonical integer strings: '', '01', '1e0', ' 1', '-0' and '1.0' are not faces. */
+function canonicalFace(key: string): number {
+  const face = Number(key);
+  if (String(face) !== key) throw new RangeError('Die keys must be canonical integer strings');
+  return face;
+}
+function asRational(value: unknown): Rational {
+  if (typeof value !== 'object' || value === null) throw new TypeError('Die probabilities must be Rational values');
+  const { numerator, denominator } = value as { numerator?: unknown; denominator?: unknown };
+  if (typeof numerator !== 'bigint' || typeof denominator !== 'bigint')
+    throw new TypeError('Die probabilities must have bigint numerator and denominator');
+  return rational(numerator, denominator);
+}
 function dieEntries(die: DieDistribution): [number, Rational][] {
-  const raw = die instanceof Map ? [...die] : Object.entries(die).map(([k, v]) => [Number(k), v] as const);
+  const raw: [number, unknown][] = die instanceof Map ? [...die] :
+    Object.entries(die).map(([k, v]): [number, unknown] => [canonicalFace(k), v]);
   const entries: [number, Rational][] = [];
   let sum = ZERO;
   for (const [face, value] of raw) {
     validFace(face);
-    const p = rational(value.numerator, value.denominator);
+    const p = asRational(value);
     if (p.numerator < 0n) throw new RangeError('Negative probability');
     sum = add(sum, p);
     if (p.numerator !== 0n) entries.push([face, p]);
@@ -232,4 +246,16 @@ export function boardOdds(board: BoardGraph, die: DieDistribution,
     }
   }
   return render(prepared, total);
+}
+/** Strict adapter for exact fraction strings, such as B01's odds.json movement tables ("1/10", "33/2", "0/1").
+ * Accepts only an optional minus sign and integers; keys must be canonical faces, values must be strings. */
+export function dieFromFractions(table: Readonly<Record<string, string>>): Record<string, Rational> {
+  const die: Record<string, Rational> = {};
+  for (const [face, text] of Object.entries(table)) {
+    canonicalFace(face);
+    const match = typeof text === 'string' ? /^(-?\d+)(?:\/(\d+))?$/.exec(text) : null;
+    if (match === null) throw new TypeError(`Not an exact fraction: ${JSON.stringify(text)}`);
+    die[face] = rational(BigInt(match[1]!), BigInt(match[2] ?? '1'));
+  }
+  return die;
 }
