@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-08T13:10:37.738989+00:00",
+  "updatedAt": "2026-10-08T13:12:33.110342+00:00",
   "summary": "The strict game queue is active. G07 is ready for maintainer review and unmerged. G02 is now ready for maintainer review after its final exact-head CI passed; it is unmerged. G04 exact-head CI passed, while its separate strict phone confirmation failed. G09 retains failed hosted and strict phone checks; original acceptance remains pending. G10 has acquired and verified the complete six-piece corpus, with full offline integration and browser acceptance still pending. No game is marked Completed without a merge.",
   "workers": [
     {
       "current": "G07",
-      "summary": "Ready for maintainer review, unmerged: PR6 at ad83cdc; exact-head CI37765397301 passed. Required KEEP GOING finished with three consecutive rounds without player-visible gain.",
+      "summary": "Ready for maintainer review, unmerged: PR6 at ad83cdc; exact-head CI run 37765397301 passed. Required KEEP GOING finished with three consecutive rounds without player-visible gain.",
       "next": "Maintainer review; no merge has been performed.",
       "queue": [
         "Original acceptance and final review"
@@ -12,7 +12,7 @@
     },
     {
       "current": "G02",
-      "summary": "Ready for maintainer review, unmerged: PR2 at 4fa969bf: final exact-head CI37780918144 passed at13:04:58 UTC. Opening Pass history now records the actual actor, and expired human/manual-bot clicks consume the overdue timer before input. Source-matched local 600-frame profiles passed at 59.703869/60.003000 FPS; historical 58.730 FPS failure remains retained. Rounds10\u201312 have three consecutive no-player-gain results after the actual repair; earlier fa7 CI37779189588 passed.",
+      "summary": "Ready for maintainer review, unmerged: PR2 at 4fa969bf: final exact-head CI run 37780918144 passed at 13:04:58 UTC. Opening Pass history now records the actual actor, and expired human/manual-bot clicks consume the overdue timer before input. Source-matched local 600-frame profiles passed at 59.703869/60.003000 FPS; historical 58.730 FPS failure remains retained. Rounds10\u201312 have three consecutive no-player-gain results after the actual repair; earlier fa7 CI run 37779189588 passed.",
       "next": "Maintainer review; final exact-head CI and three no-player-gain rounds passed, and no merge has been performed.",
       "queue": [
         "Original acceptance and final review"
@@ -20,7 +20,7 @@
     },
     {
       "current": "G04",
-      "summary": "Draft PR4 at 7a7af73: exact-head CI37780890383 passed at13:06:22 UTC. Prior25a6023 CI37777044855 passed51 node tests,21,000 games,25 mutants,24,000 leagues,6 expiry cases,66 legacy browser cases and six300-frame profiles. The newer actual local desktop55.903 FPS failure is retained; phone had not yet run at that attempt, and no cause is claimed. The late deadline fix changes overdue remainder1000\u21920; round11 has a player-visible gain, streak0. Root checkpoint cadence misses74s and97s are retained in the public audit. Fresh source-guarded strict confirmation measured desktop59.605 FPS PASS and phone54.0566 FPS FAIL; raw results remain retained.",
+      "summary": "Draft PR4 at 7a7af73: exact-head CI run 37780890383 passed at 13:06:22 UTC. Prior 25a6023 CI run 37777044855 passed 51 node tests, 21,000 games, 25 mutants, 24,000 leagues, 6 expiry cases, 66 legacy browser cases and six 300-frame profiles. The newer actual local desktop 55.903 FPS failure is retained; phone had not yet run at that attempt, and no cause is claimed. The late deadline fix changes overdue remainder 1000\u21920; round 11 has a player-visible gain, streak 0. Root checkpoint cadence misses of 74s and 97s are retained in the public audit. Fresh source-guarded strict confirmation measured desktop 59.605 FPS PASS and phone 54.0566 FPS FAIL; raw results remain retained. KEEP round12 evidence-freshness guard is in progress; final acceptance remains pending.",
       "next": "Complete source-guarded strict browser profiles and exact current-head CI; preserve actual failures and re-establish three no-gain rounds after the timer repair.",
       "queue": [
         "Original acceptance and final review"
@@ -28,15 +28,15 @@
     },
     {
       "current": "G09",
-      "summary": "Draft PR8 at c783694: original acceptance remains pending. exact CI37779311319 failed on the retained phone58.444 FPS report. Core,7,000-game oracle, lexical/property/privacy and codec checks passed, while strict current browser confirmation remains pending. The300+ original category bank still has eight cramped strong-bot answers and98.423% duplicate rate in the documented stress case; those limits are retained. Fresh unchanged strict confirmation at13:04:56 measured desktop59.213 FPS PASS and phone54.965 FPS FAIL, with600 raw intervals retained per profile and no causal claim.",
-      "next": "Complete the unchanged strict browser gate and retain the category/bot diversity limits before readiness.",
+      "summary": "Draft PR8 at 8c70a857, pushed 13:11:20 UTC: fresh exact-head CI is pending. The current unchanged strict 600-frame/capture gates now run on the GitHub host before evidence binding. Both local strict failures remain retained: original phone 58.444 FPS, then source-guarded confirmation desktop 59.213 PASS/phone 54.965 FAIL. All 600 raw intervals per confirmation profile are retained; no cause is claimed. Core,7,000-game oracle, lexical/property/privacy and codec checks passed. The 320 original category bank retains eight cramped strong-bot answers and 98.423% duplicate rate in the documented stress case.",
+      "next": "Read the new exact-head hosted browser result and raw artifacts; complete unchanged visual acceptance while retaining category/bot diversity limits.",
       "queue": [
         "Original acceptance and final review"
       ]
     },
     {
       "current": "G10",
-      "summary": "Active pipeline branch job/G10-checkers-complete-20261008 at1abfdfa, with no PR: current public offline American2\u20136-piece plus International2\u20135-piece page is about80 MB. Its28 functional checks and600 frames per desktop/phone profile passed at59.115/60.003 FPS, with guarded recordings. The complete International six-piece corpus has now been acquired and verified:82 files,1.010 GB,37 material classes and native10,000 checks. Full six-piece offline packaging/browser/integration remains pending. A private1.38 GB candidate took80.8s to open on desktop and failed the unchanged300s phone startup timeout; this is a retained engineering result.",
+      "summary": "Active pipeline branch job/G10-checkers-complete-20261008 at 1abfdfa, with no PR: current public offline American2\u20136-piece plus International2\u20135-piece page is about 80 MB. Its 28 functional checks and 600 frames per desktop/phone profile passed at 59.115/60.003 FPS, with guarded recordings. The complete International six-piece corpus has now been acquired and verified: 82 files, 1.010 GB, 37 material classes and native 10,000 checks. Full six-piece offline packaging/browser/integration remains pending. A private 1.38 GB candidate took 80.8s to open on desktop and failed the unchanged 300s phone startup timeout; this is a retained engineering result.",
       "next": "Reduce full six-piece offline startup/storage cost, integrate it in the actual public page and pass the complete unchanged functional/browser gates.",
       "queue": [
         "Original acceptance and final review"
@@ -44,7 +44,7 @@
     }
   ],
   "repository": "luisitin/partybox-game-cores",
-  "observedAt": "2026-10-08T13:10:47.261823+00:00",
+  "observedAt": "2026-10-08T13:12:43.020480+00:00",
   "rows": [
     {
       "id": "G01",
@@ -549,7 +549,7 @@
       ],
       "operatorNote": {
         "current": "G02",
-        "summary": "Ready for maintainer review, unmerged: PR2 at 4fa969bf: final exact-head CI37780918144 passed at13:04:58 UTC. Opening Pass history now records the actual actor, and expired human/manual-bot clicks consume the overdue timer before input. Source-matched local 600-frame profiles passed at 59.703869/60.003000 FPS; historical 58.730 FPS failure remains retained. Rounds10\u201312 have three consecutive no-player-gain results after the actual repair; earlier fa7 CI37779189588 passed.",
+        "summary": "Ready for maintainer review, unmerged: PR2 at 4fa969bf: final exact-head CI run 37780918144 passed at 13:04:58 UTC. Opening Pass history now records the actual actor, and expired human/manual-bot clicks consume the overdue timer before input. Source-matched local 600-frame profiles passed at 59.703869/60.003000 FPS; historical 58.730 FPS failure remains retained. Rounds10\u201312 have three consecutive no-player-gain results after the actual repair; earlier fa7 CI run 37779189588 passed.",
         "next": "Maintainer review; final exact-head CI and three no-player-gain rounds passed, and no merge has been performed.",
         "queue": [
           "Original acceptance and final review"
@@ -827,7 +827,7 @@
       ],
       "operatorNote": {
         "current": "G04",
-        "summary": "Draft PR4 at 7a7af73: exact-head CI37780890383 passed at13:06:22 UTC. Prior25a6023 CI37777044855 passed51 node tests,21,000 games,25 mutants,24,000 leagues,6 expiry cases,66 legacy browser cases and six300-frame profiles. The newer actual local desktop55.903 FPS failure is retained; phone had not yet run at that attempt, and no cause is claimed. The late deadline fix changes overdue remainder1000\u21920; round11 has a player-visible gain, streak0. Root checkpoint cadence misses74s and97s are retained in the public audit. Fresh source-guarded strict confirmation measured desktop59.605 FPS PASS and phone54.0566 FPS FAIL; raw results remain retained.",
+        "summary": "Draft PR4 at 7a7af73: exact-head CI run 37780890383 passed at 13:06:22 UTC. Prior 25a6023 CI run 37777044855 passed 51 node tests, 21,000 games, 25 mutants, 24,000 leagues, 6 expiry cases, 66 legacy browser cases and six 300-frame profiles. The newer actual local desktop 55.903 FPS failure is retained; phone had not yet run at that attempt, and no cause is claimed. The late deadline fix changes overdue remainder 1000\u21920; round 11 has a player-visible gain, streak 0. Root checkpoint cadence misses of 74s and 97s are retained in the public audit. Fresh source-guarded strict confirmation measured desktop 59.605 FPS PASS and phone 54.0566 FPS FAIL; raw results remain retained. KEEP round12 evidence-freshness guard is in progress; final acceptance remains pending.",
         "next": "Complete source-guarded strict browser profiles and exact current-head CI; preserve actual failures and re-establish three no-gain rounds after the timer repair.",
         "queue": [
           "Original acceptance and final review"
@@ -1476,7 +1476,7 @@
       ],
       "operatorNote": {
         "current": "G07",
-        "summary": "Ready for maintainer review, unmerged: PR6 at ad83cdc; exact-head CI37765397301 passed. Required KEEP GOING finished with three consecutive rounds without player-visible gain.",
+        "summary": "Ready for maintainer review, unmerged: PR6 at ad83cdc; exact-head CI run 37765397301 passed. Required KEEP GOING finished with three consecutive rounds without player-visible gain.",
         "next": "Maintainer review; no merge has been performed.",
         "queue": [
           "Original acceptance and final review"
@@ -1644,7 +1644,7 @@
       "title": "Category Rush",
       "stage": "Review",
       "branch": "job/G09-category-rush-parallel-20261008",
-      "head": "c78369467891aba9cea33ac2ce168a8df3496f38",
+      "head": "8c70a857fe7e4d0e35c57203562621bad10f8b00",
       "otherBranches": [
         {
           "name": "job/G09-category-rush",
@@ -1658,16 +1658,16 @@
         "state": "open",
         "draft": true,
         "merged_at": null,
-        "updated_at": "2026-10-08T13:09:14Z",
+        "updated_at": "2026-10-08T13:11:21Z",
         "body": "Category Rush adds a deterministic 2\u20138-player core and a self-contained offline hot-seat page using the exact workshop contract. Twelve original prompts share a seeded letter; private sheets are reviewed anonymously, equivalent duplicates and own repeats score zero, and group ballots decide whether unique answers fit. Empty reviews advance without unnecessary handovers, all completed receipts remain accessible, and validated local Resume/Discard preserves writing, ballots, history and bot RNG across reload. The absent full SDK and the small standalone adapters are explicitly documented.\n\nThe current fourth review corrects common singular/plural scoring with 38 bounded, independently sourced noun aliases and news protection. A different noun-family oracle verifies 47 spelling facts. Actual two/eight-seat nine-pair reducer protocols reduce improper duplicate points from 18 to zero per roster; the real mouse/mice browser case changes two groups/two points into one shared group/zero points while preserving secrecy. The 320 original prompts and 4,155 examples remain unchanged. Historical bank/strategy experiments retain their original matching semantics and reproduce byte-identically.\n\nChanged-source validation passes 10,000 independent comparisons, 7,000 restored games across rosters 2\u20138, all nine invariants, 1,003 properties, 2,000 fuzz cases, 28 actual source mutants and 4,000 adjacent-skill duels. Fresh offline UI checks pass 28 gameplay, eight pacing, a clock probe, four receipts, 17 recovery cases and the plural regression. Schema failures and interrupted/failed attempts are preserved; the affected schema checks now pass.\n\n**Current proof is pending:** desktop strict frames pass at 59.804 fps/p99 16.8 ms, but the phone4\u00d7 sample fails at 58.444 fps. All 600 raw intervals, exact source/runner and partial clip are retained. A nongating empty-page/app control establishes no cause; no speculative runtime change or relaxed gate was made. An unchanged coordinated confirmation and final artifact binding/CI remain required. The latest completed review's exact-head CI is green at 87eb68c (run37773541708); current checkpoint c783694 deliberately retains the failed acceptance. Three completed KEEP rounds gained something players notice; the fourth is not logged complete and the no-gain streak remains zero.\n"
       },
       "check": {
-        "id": 37779311319,
-        "head_sha": "c78369467891aba9cea33ac2ce168a8df3496f38",
-        "status": "completed",
-        "conclusion": "failure",
-        "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37779311319",
-        "updated_at": "2026-10-08T12:51:20Z",
+        "id": 37782409140,
+        "head_sha": "8c70a857fe7e4d0e35c57203562621bad10f8b00",
+        "status": "in_progress",
+        "conclusion": null,
+        "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37782409140",
+        "updated_at": "2026-10-08T13:11:31Z",
         "path": ".github/workflows/G09.yml"
       },
       "checkError": null,
@@ -1873,6 +1873,12 @@
         "jobs/G09-category-rush/evidence/browser/round-3-timer-first/play.html",
         "jobs/G09-category-rush/evidence/browser/round-3-timer-first/report.json",
         "jobs/G09-category-rush/evidence/browser/round-3-timer-first/runner.mjs",
+        "jobs/G09-category-rush/evidence/browser/round-4-frame-confirmation/NOTES.md",
+        "jobs/G09-category-rush/evidence/browser/round-4-frame-confirmation/desktop-frames.json",
+        "jobs/G09-category-rush/evidence/browser/round-4-frame-confirmation/performance-report.json",
+        "jobs/G09-category-rush/evidence/browser/round-4-frame-confirmation/phone4x-frames.json",
+        "jobs/G09-category-rush/evidence/browser/round-4-frame-confirmation/play.html",
+        "jobs/G09-category-rush/evidence/browser/round-4-frame-confirmation/runner.mjs",
         "jobs/G09-category-rush/evidence/browser/round-4-frame-first/NOTES.md",
         "jobs/G09-category-rush/evidence/browser/round-4-frame-first/desktop-frames.json",
         "jobs/G09-category-rush/evidence/browser/round-4-frame-first/performance-report.json",
@@ -1929,6 +1935,7 @@
         "jobs/G09-category-rush/media/round-2-accepted-phone4x.webm",
         "jobs/G09-category-rush/media/round-3-delivery-final-desktop.webm",
         "jobs/G09-category-rush/media/round-3-delivery-final-phone4x.webm",
+        "jobs/G09-category-rush/media/round-4-frame-confirmation-desktop.webm",
         "jobs/G09-category-rush/media/round-4-frame-first-desktop.webm",
         "jobs/G09-category-rush/package-lock.json",
         "jobs/G09-category-rush/package.json",
@@ -1973,8 +1980,8 @@
       ],
       "operatorNote": {
         "current": "G09",
-        "summary": "Draft PR8 at c783694: original acceptance remains pending. exact CI37779311319 failed on the retained phone58.444 FPS report. Core,7,000-game oracle, lexical/property/privacy and codec checks passed, while strict current browser confirmation remains pending. The300+ original category bank still has eight cramped strong-bot answers and98.423% duplicate rate in the documented stress case; those limits are retained. Fresh unchanged strict confirmation at13:04:56 measured desktop59.213 FPS PASS and phone54.965 FPS FAIL, with600 raw intervals retained per profile and no causal claim.",
-        "next": "Complete the unchanged strict browser gate and retain the category/bot diversity limits before readiness.",
+        "summary": "Draft PR8 at 8c70a857, pushed 13:11:20 UTC: fresh exact-head CI is pending. The current unchanged strict 600-frame/capture gates now run on the GitHub host before evidence binding. Both local strict failures remain retained: original phone 58.444 FPS, then source-guarded confirmation desktop 59.213 PASS/phone 54.965 FAIL. All 600 raw intervals per confirmation profile are retained; no cause is claimed. Core,7,000-game oracle, lexical/property/privacy and codec checks passed. The 320 original category bank retains eight cramped strong-bot answers and 98.423% duplicate rate in the documented stress case.",
+        "next": "Read the new exact-head hosted browser result and raw artifacts; complete unchanged visual acceptance while retaining category/bot diversity limits.",
         "queue": [
           "Original acceptance and final review"
         ]
@@ -2523,7 +2530,7 @@
       ],
       "operatorNote": {
         "current": "G10",
-        "summary": "Active pipeline branch job/G10-checkers-complete-20261008 at1abfdfa, with no PR: current public offline American2\u20136-piece plus International2\u20135-piece page is about80 MB. Its28 functional checks and600 frames per desktop/phone profile passed at59.115/60.003 FPS, with guarded recordings. The complete International six-piece corpus has now been acquired and verified:82 files,1.010 GB,37 material classes and native10,000 checks. Full six-piece offline packaging/browser/integration remains pending. A private1.38 GB candidate took80.8s to open on desktop and failed the unchanged300s phone startup timeout; this is a retained engineering result.",
+        "summary": "Active pipeline branch job/G10-checkers-complete-20261008 at 1abfdfa, with no PR: current public offline American2\u20136-piece plus International2\u20135-piece page is about 80 MB. Its 28 functional checks and 600 frames per desktop/phone profile passed at 59.115/60.003 FPS, with guarded recordings. The complete International six-piece corpus has now been acquired and verified: 82 files, 1.010 GB, 37 material classes and native 10,000 checks. Full six-piece offline packaging/browser/integration remains pending. A private 1.38 GB candidate took 80.8s to open on desktop and failed the unchanged 300s phone startup timeout; this is a retained engineering result.",
         "next": "Reduce full six-piece offline startup/storage cost, integrate it in the actual public page and pass the complete unchanged functional/browser gates.",
         "queue": [
           "Original acceptance and final review"
