@@ -416,3 +416,12 @@ and `FINAL_SUMMARY` reports `mode: full`, `suites: 94`. The same source family p
 (run 37809073933, 10,000 / 10,000 on every seed). So the literal gate is nondeterministic on the hosted runner
 too. The run was not repeated to hunt a pass. Local and hosted runs disagree on the same kind of input; no
 cause is proven. The gate remains literal and unchanged.
+
+**Hosted results for the two later heads (recorded at the final push).** `303f4f0` run 37810714023 and
+`0974951` run 37810885025 are both `failure`. In each run the only failing row is the literal latency gate on
+seed 1 (9,997 and 9,999 of 10,000; max 0.093 and 0.054 ms). Seeds 2 and 3 pass, and so do the checksum and all
+behavioral rows. Source is the same (`693d9501…`) for both. Caveat: the benchmark samples its inputs from the
+`positive` list, and this pass added three names to it, so the seed-1 sample changed. The runs are not a clean
+comparison with the earlier green run on `2b54431` (source `5371665d…`, run 37809073933). Whether the source
+change causes the seed-1 outliers is not established. The gate was not changed and no run was repeated to get a
+pass.
