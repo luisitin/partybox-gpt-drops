@@ -1,5 +1,9 @@
 # B18 - Tiny spring + easing library
 
+**What:** a zero-dependency closed-form spring, a settle-time bound and CSS cubic-Bezier easing in `motion.ts` (1.2 KB gzip gate).
+**How:** `npm ci --ignore-scripts && npm test` (seeds 1-3, sealed references, 25 mutations); `npm run demo` builds the side-by-side page.
+**Status:** ready for port; see `INTEGRATION.md` for the PartyBox steps, gaps and the rejected readable rewrite.
+
 `motion.ts` is the complete runtime: zero imports, zero runtime dependencies,
 no clock, no randomness, no timers, and no shared simulation state. The public
 functions are pure. The gzip gate is **1,200 bytes**, including the gzip wrapper,

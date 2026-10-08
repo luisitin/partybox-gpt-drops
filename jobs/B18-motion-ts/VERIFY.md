@@ -45,12 +45,12 @@ A spring trajectory counts as one RK4 case; its individual states and both
 components are additionally counted above and in JSON. Mutation cases each
 contain one bug, compile with strict TypeScript, and must trigger a numeric or
 contract assertion. Compiler errors are not kills. Integrity cases count the
-26 hashed delivered files, including the workflow and excluding the manifest
+32 hashed delivered files, including the workflow and excluding the manifest
 itself; the manifest is separately size-checked.
 
 | Test | Cases | Passed | Failed | Seed | Exact command from job directory |
 | --- | ---: | ---: | ---: | ---: | --- |
-| SHA256 integrity and per-file 30 MB limit | 26 | 26 | 0 | 1 | `node tests/run.mjs --seed 1` |
+| SHA256 integrity and per-file 30 MB limit | 32 | 32 | 0 | 1 | `node tests/run.mjs --seed 1` |
 | TypeScript strict compile | 2 | 2 | 0 | 1 | `node tests/run.mjs --seed 1` |
 | zero runtime deps / no ambient RNG or clock | 3 | 3 | 0 | 1 | `node tests/run.mjs --seed 1` |
 | gzip size (level 9) | 2 | 2 | 0 | 1 | `node tests/run.mjs --seed 1` |
@@ -70,7 +70,7 @@ itself; the manifest is separately size-checked.
 | finite-output boundaries and random IEEE-754 inputs | 466,524 | 466,524 | 0 | 1 | `node tests/run.mjs --seed 1` |
 | repeat-call determinism on boundary/fuzz corpus | 3,673 | 3,673 | 0 | 1 | `node tests/run.mjs --seed 1` |
 | isolated deliberate mutation kills | 25 | 25 | 0 | 1 | `node tests/run.mjs --seed 1` |
-| SHA256 integrity and per-file 30 MB limit | 26 | 26 | 0 | 2 | `node tests/run.mjs --seed 2` |
+| SHA256 integrity and per-file 30 MB limit | 32 | 32 | 0 | 2 | `node tests/run.mjs --seed 2` |
 | TypeScript strict compile | 2 | 2 | 0 | 2 | `node tests/run.mjs --seed 2` |
 | zero runtime deps / no ambient RNG or clock | 3 | 3 | 0 | 2 | `node tests/run.mjs --seed 2` |
 | gzip size (level 9) | 2 | 2 | 0 | 2 | `node tests/run.mjs --seed 2` |
@@ -90,7 +90,7 @@ itself; the manifest is separately size-checked.
 | finite-output boundaries and random IEEE-754 inputs | 466,524 | 466,524 | 0 | 2 | `node tests/run.mjs --seed 2` |
 | repeat-call determinism on boundary/fuzz corpus | 3,673 | 3,673 | 0 | 2 | `node tests/run.mjs --seed 2` |
 | isolated deliberate mutation kills | 25 | 25 | 0 | 2 | `node tests/run.mjs --seed 2` |
-| SHA256 integrity and per-file 30 MB limit | 26 | 26 | 0 | 3 | `node tests/run.mjs --seed 3` |
+| SHA256 integrity and per-file 30 MB limit | 32 | 32 | 0 | 3 | `node tests/run.mjs --seed 3` |
 | TypeScript strict compile | 2 | 2 | 0 | 3 | `node tests/run.mjs --seed 3` |
 | zero runtime deps / no ambient RNG or clock | 3 | 3 | 0 | 3 | `node tests/run.mjs --seed 3` |
 | gzip size (level 9) | 2 | 2 | 0 | 3 | `node tests/run.mjs --seed 3` |
@@ -208,10 +208,41 @@ coefficients, elapsed times and y controls are outside those accuracy claims.
 Ordinary JavaScript built-ins are assumed; exhaustive binary64 enumeration was
 not performed.
 
-**Browser-engine differential sampling was not run.** CSS numerical semantics
+**Browser-engine differential sampling is supplemental.** CSS numerical semantics
 and named controls were checked against W3C and numeric references. This API is
-not a CSS parser; invalid x controls use the documented identity fallback.
+not a CSS parser; invalid x controls use the documented identity fallback. One
+Chromium differential ran in the polish pass (below). It is not part of `npm test`,
+and its precision is limited by six-digit CSS serialization.
 
 `settleTime` supplies a conservative bound, not the first crossing or exact
 minimum. `Number.MAX_VALUE` means no representable finite bound was supplied;
 it does not prove that every such trajectory can never rest within epsilon.
+
+## Polish pass 2026-10-08
+
+Environment: Linux x86-64, Node v22.22.0 (the package requires >=22), TypeScript
+5.8.3, Chromium 1194 and Playwright from the cloud image, using the existing
+`node_modules` (no fresh registry install in this pass). `motion.ts` and the
+sealed references are unchanged. Hosted CI on the delivered commit is the
+authoritative run; the PR description records its link and result.
+
+| Check | Cases | Result | Exact command from job directory |
+| --- | ---: | --- | --- |
+| settle-bound grid (probe, not in `npm test`) | 2,352 | 0 violations; 7 z x 4 w x 3 x0 x 7 v-rate x 4 v0 forms | `npm run probes` |
+| Chromium CSS easing vs `cubicBezier` (WAAPI, registered `<number>` property) | 64 curves x 41 points = 2,624 | raw maximum 4.99e-6 (serialization); against values rounded to six significant digits, maximum 1.0e-6 and 2,582 exact; the four named curves 6.1e-7 raw | `CHROME=/opt/pw-browsers/chromium-1194/chrome-linux/chrome PLAYWRIGHT=/opt/node22/lib/node_modules/playwright/index.mjs npm run browser-check` |
+| demo build | 1 page, 2,145 bytes of motion code inlined | built | `npm run demo` |
+| demo in headless Chromium (1100 px, 390 px, reduced motion) | 3 viewports | no console errors, no network requests, no horizontal overflow (`scrollWidth` = `clientWidth`) | scratch harness outside the job folder |
+
+Defect found and fixed in the demo: a finished WAAPI animation rewinds to zero
+when `play()` is called on it, so a resize (or the full-page screenshot that
+resizes the viewport) restarted the browser lanes. Browser lanes now resume only
+while time remains. Re-checked: after 3.0 s and after a full-page capture, every
+browser lane sits at its end position.
+
+Reduced motion sets every lane to its final state without starting a loop.
+
+Full seeded suite: `npm test` (seeds 1, 2 and 3, 25 mutations each, the same
+commands and counts as the table above, with 32 integrity cases now that the
+delivered set includes the demo, tools and INTEGRATION.md). The baseline run
+before this pass, on the unchanged runtime at 15:41 UTC, passed every suite for
+all three seeds with 26 integrity cases.
