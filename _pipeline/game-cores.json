@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-08T16:24:04+00:00",
-  "summary": "G02, G04, G05 and G07 remain ready for maintainer review and unmerged. G06 completed its third post-correction no-player-gain review round and moved to 48430c9, but the exact-head CI is still running and the PR remains draft; the earlier local TV failure and unrun local phone profile remain retained. G09 moved to 539f6eb with archived hosted round-5 evidence, but its new exact-head CI is running, the PR remains draft, and the actual local phone strict run still fails at 58.255 FPS. G10 now has a complete-source 7,000-game matrix and private full-page desktop/phone functional and strict-frame passes, while the 4,000-strength gate, CI-duration fit, public full-six artifact, CI, PR and KEEP loop remain unfinished; all earlier frame failures remain retained. Completed still means merged; no game PR is merged.",
+  "updatedAt": "2026-10-08T16:50:20+00:00",
+  "summary": "G02, G04, G05, G06 and G07 have finished original acceptance and the required KEEP reviews and remain ready for maintainer review, unmerged. G06's final 48430c9 exact-head CI is green and PR #7 is ready. G09's R5 completion539f6eb passed its full exact-head CI, but the new R6 baseline checkpoint2b59941 has CI running and the visible private warning candidate is not accepted. G10's current8586b59 checkpoint corrects the private full-page frame scope: all 30 functionals passed, but its paired 1,200 strict intervals measured American boards only; The newly measured International desktop profile FAILED at 17.510457 FPS/p99 799.9 ms; its phone profile was not run. Full strength, CI fit, public full-six HTML download, PR and KEEP remain unfinished. All local failures and cadence misses remain preserved. Completed still means merged; no game PR is merged.",
   "workers": [
     {
       "current": "G07",
@@ -36,41 +36,41 @@
     },
     {
       "current": "G09",
-      "summary": "Original PR #8 remains draft at authoritative head 539f6eb618a19ab0072687f76e640376a4c17a06, pushed at 16:16:56 UTC. Exact-head CI run 37807570831 is in progress. This head commits round-5 hosted evidence, fresh desktop/phone raw frames and clips, a source-head record, and a LOOP update for the crowded-table selector. The registered eight-seat held-out result improves mean points 1.3175 to 2.42375 and reduces zero-score tables 355 to 244 while coverage falls 7.45%, under the unchanged 10% limit; 17 individual games worsen. The actual local current-source strict run still PASSES desktop at 60.002532 FPS but FAILS phone4x at 58.255040 FPS with all 600 intervals retained. The rejected first candidate, prior saved-pause/recovery failures and older 58.444/54.965 FPS local phone failures remain retained. Current acceptance and further KEEP rounds are not inferred from the running workflow.",
-      "next": "Finish and inspect run 37807570831 and its actual raw/source/capture artifacts, reconcile the local phone failure with unchanged gates without inventing a cause, and continue the original KEEP loop before changing PR readiness.",
+      "summary": "Original PR #8 remains draft at new R6 baseline head 2b599410af2284e9eecd13a159ce6115a3d3b997; exact-head CI run 37810872591 is running. Its production sources remain unchanged: HTML abde3497, selector a62e5fff, helper 1fe2cfaf and sampler 9caabfd9. Prior R5 completion head 539f6eb618a19ab0072687f76e640376a4c17a06 passed full CI 37807570831 at 16:30:19 UTC: 56 tests, 43 real mutants, all 4,000 required duels and current proof checks. Its genuine hosted artifact was downloaded, actual bytes/source guards independently matched, and all 1,200 raw desktop/CPU4-phone intervals passed near 60 FPS. The eight-seat held-out selector mean improved 1.3175 to 2.42375 and zero-score tables fell 355 to 244, with 7.45% coverage loss inside the unchanged 10% limit. The rejected first candidate and actual local phone 58.255040 FPS failure remain retained. Formal no-gain streak is zero after the R5 player gain. R6's real two/eight-human writing baseline closed at 16:41:04 with no warning for three mechanically ineligible own rows. The private candidate now warns correctly on all three wrong-initial/equivalent-own rows; its focused aftercheck closed at 16:44:02 with private ballots, scoring, enabled lock, handover/review cleanup and prior-sheet isolation preserved. Private HTML 68f43a97 has not completed full functional, strict-frame and exact-head CI acceptance; R6 is not yet a completed gain. The new baseline checkpoint pushed at 16:42:11 UTC after a main claim refresh at 16:41:54; its 25-minute-13-second interval met the hard checkpoint rule.",
+      "next": "Inspect the new baseline-head CI, then finish full current-source functional, strict-frame and exact-head CI proof for the private own-draft warnings before completing R6 and continuing the binding KEEP loop.",
       "queue": [
+        "R6 current-source warning acceptance",
         "Current exact-head CI",
-        "Current artifact/source review",
-        "Local phone failure",
         "Remaining KEEP rounds"
-      ]
+      ],
+      "updatedAt": "2026-10-08T16:50:20+00:00"
     },
     {
       "current": "G10",
-      "summary": "Active no-PR branch job/G10-checkers-complete-20261008 now binds to 3143decfc67c70b638192018c577ed4f0ae5d803, pushed at 16:17:03 UTC; no exact-head workflow exists. Complete licensed American/International two-through-six-piece source remains acquired. The current full-source 7,000-game matrix passed all seven 1,000-game configurations. The private rebuilt 1.39 GB full page passed 30 functionals and all 1,200 strict raw frames: desktop 59.8038 FPS and phone4x 59.5070 FPS, both p99 16.8 ms, with zero HTTP/page errors and Strong six-piece reads. These private checks do not publish the required artifact or prove CI fit. Earlier desktop strict failures at 56.5176 and 57.2363 FPS remain retained. The full 4,000-game strength gate, broader final properties/mutations as applicable to the adopted source, same-source clips, 30-minute CI fit, public full-six single-file delivery, PR and three no-gain KEEP rounds remain pending. The earlier 30m30s cadence miss remains audited.",
-      "next": "Complete the 4,000-game strength gate and current final-source acceptance/CI-duration proof, publish the verified full-six single-file artifact within repository limits, open a PR with exact-head CI, then complete the required KEEP loop.",
+      "summary": "Active no-PR branch job/G10-checkers-complete-20261008 now binds to 8586b591aa105c9e2a288d922e01a9ca5df58446, pushed at 16:43:38 UTC; main claim row was refreshed at 16:43:23 UTC. No exact-head CI run exists. Complete licensed American/International two-through-six-piece source remains acquired; this is not a source-unavailable block. The current full-source 7,000-game matrix and all 25 real mutants passed. Private full HTML 5ed2173b is 1,390,845,993 bytes; 30 functionals passed, including actual International Strong six-piece lookup. Its accepted unrecorded 1,200 strict raw intervals measured American boards ONLY: desktop 59.803784 FPS and CPU4-phone 59.507008 FPS, p99 16.8 ms. Those results do not prove International-board frame performance. The runner now requires both variants and independent raw recomputation; the missing International-only run started at 16:44:12 and actually CLOSED at 16:48:30.901 UTC with exit 1. All 15 desktop functionals passed, but all 600 unfiltered International desktop intervals recompute to 17.510456661 FPS, p99 799.9 ms and maximum 1683.3 ms, failing the unchanged >=59 FPS/p99 <=17 ms gate. The International phone profile was NOT RUN. Its exact 5ed2173b source, raw intervals, error/HTTP records and failing report remain retained; no cause or unchanged-source retry is claimed. Same-source recorded functional clips closed at 16:25:35 with all 30 functionals, zero HTTP/page errors; their phone recording measured 50.994 FPS/p99 83.3 ms as a separate diagnostic failure. Actual ten-second American excerpts are delivered at 1,083,604/476,747 bytes with hashes and exact extraction commands, preserving the longer originals/raws. A four-International private pool exceeded its prior seven-GiB working budget at 8,421,232 KiB RSS; the official public Ubuntu runner has 16 GB, so actual workflow resource/duration fit remains unproved rather than ruled out and an uncontrolled 2.3% memo timing result was rejected; public bots are unchanged. All 91 current unit cases still need an uninterrupted complete pass (90 original passes plus the corrected focused case exist), and actual 4,000-game strength, 30-minute CI fit, verified public full-six single-file download, PR and three no-gain KEEP rounds remain unfinished. A read-only Actions artifact and SHA receipt are prepared for a temporary seven-day download, not yet delivered. The tracked play.html remains the two-through-five-piece baseline. Earlier frame failures and cadence misses remain retained. This checkpoint interval was 26 minutes 33 seconds, meeting the hard 30-minute rule; the early target was missed by 93 seconds.",
+      "next": "Diagnose the measured International desktop failure with source-bound controlled evidence, then complete both International strict profiles and every current-source unit/4,000-game strength/30-minute-CI gate. Publish and verify the full-six single HTML download, open its PR, then complete the binding KEEP loop. Preserve the passed American samples and all failed measurements.",
       "queue": [
-        "4,000-game strength gate",
-        "Current-source final acceptance and CI fit",
-        "Public full-six artifact",
-        "PR and exact-head CI",
-        "KEEP completion"
-      ]
+        "International strict-frame proof",
+        "Uninterrupted current unit checks",
+        "4,000-game strength",
+        "30-minute CI fit",
+        "Verified full-six download",
+        "PR and KEEP completion"
+      ],
+      "updatedAt": "2026-10-08T16:50:20+00:00"
     },
     {
       "current": "G06",
-      "summary": "Original PR #7 remains draft on its authoritative branch at 48430c9861534edfef8c59528de4279ebd6cec78, pushed at 16:15:34 UTC. Exact-head CI run 37807419404 is in progress. The new head preserves milestone 13, adds 12 real capture-preflight rejection controls, and records review rounds 10\u201312 as three consecutive rounds without player-facing gain after the visible setting-label correction. The preceding exact head 416afd1 passed full CI: 31 core tests, 25 real mutants, 16,000 skill games, hosted TV/CPU4-phone strict evidence near 60 FPS, source guards and capture controls passed. Readiness is not transferred until the current exact-head run completes. The actual local TV sample still FAILED at 58.381168 FPS; the separate local phone profile was not run. Hosted passes do not erase that failure or establish its cause. Cadence misses remain retained.",
-      "next": "Finish and inspect exact-head run 37807419404, including current source/raw/capture evidence, then change readiness only if the full current-head acceptance remains intact. Preserve the local TV failure, unrun local phone profile and cadence history.",
+      "summary": "Original acceptance and KEEP completion are finished. Original PR #7 is ready for maintainer review, unmerged, at exact head 48430c9861534edfef8c59528de4279ebd6cec78; readiness was read back at 16:31:08 UTC. Final full CI run 37807419404 succeeded at 16:28:19 UTC, and the actual complete 100,164-character log was independently read: 31 core tests, 25 real mutant kills, 16,000 skill games, 13 functional groups, three complete games and 21 focused groups all passed, including 58 current-source negative controls, 12 actual capture-preflight CLI rejections and nine nonce groups. The genuine hosted artifact was downloaded and its actual ZIP digest/bytes checked; independent validation recomputed all 1,800 raw intervals against all 18 source guards, with TV/CPU4-phone near 60.0028 FPS and p95 16.7/16.8 ms. Actual milestone 13 is 95,085 bytes with ten matching guards. Post-correction rounds 10\u201312 completed three consecutive rounds without player-visible gain. The actual local TV attempt remains FAILED at 58.381168 FPS and its local phone profile was not run. Hosted success neither erases that failure nor establishes its cause. Current final push at 16:15:48 met the 30-minute cadence; earlier misses remain audited.",
+      "next": "Maintainer review. Preserve the exact accepted head, source-bound full hosted proof, unresolved local TV failure, unrun local phone profile and cadence history; no merge has been performed.",
       "queue": [
-        "Current exact-head CI",
-        "Current source/raw/capture evidence review",
-        "Readiness decision",
         "Maintainer review"
-      ]
+      ],
+      "updatedAt": "2026-10-08T16:44:06+00:00"
     }
   ],
   "repository": "luisitin/partybox-game-cores",
-  "observedAt": "2026-10-08T16:24:04.338250+00:00",
+  "observedAt": "2026-10-08T16:45:26+00:00",
   "rows": [
     {
       "id": "G01",
@@ -1095,18 +1095,18 @@
         "html_url": "https://github.com/luisitin/partybox-game-cores/pull/7",
         "title": "G06: partnership and Cutthroat Spades core with offline hot-seat play",
         "state": "open",
-        "draft": true,
+        "draft": false,
         "merged_at": null,
-        "updated_at": "2026-10-08T16:17:10Z",
-        "body": "Complete offline Spades: four-player partnerships and three-player cutthroat, nil/blind nil, optional sequential exchange, bags and 500-point matches, private handovers and three bot strengths. The zero-deficit blind-nil setting now correctly describes tied or trailing teams; eligibility and strategy are unchanged.\n\nCurrent head 48430c9861534edfef8c59528de4279ebd6cec78 preserves recorded milestones: capture now requires one explicit valid unused number and refuses existing video/report files before browser launch. Its actual current milestone13 is 95,085 bytes, with ten matching source guards and zero application/network errors. Twenty-one focused groups passed, including twelve real CLI rejection controls that preserved the existing clip and report bytes. Runtime HTML, game logic, strategy and strict frame gates are unchanged.\n\nThree consecutive review rounds 10\u201312 produced no player-facing gain after the visible setting-label correction. Previous exact 416afd1 CI 37803971795 succeeded at 16:04:51 UTC: 31 core tests, 25 real mutation kills, 1,003 presence cases, 16,000 skill games, 13 browser groups, three exact UI/core matches, eighteen focused groups and 58 current-source evidence corruption controls. Its executed independent CLI verified all 1,800 unfiltered intervals and eighteen current source guards: TV 60.0024 FPS and CPU4 phone 60.0028 FPS. The new exact-head full CI is pending; draft status remains until it passes.\n\nThe actual local TV sample failed at 58.381 FPS; phone was not run after that failure. All raw evidence and unresolved cause remain recorded. Hosted successes are labeled separately. CPU4 is an approximation, and encoded 12 FPS captures are functional video evidence rather than frame-rate measurements."
+        "updated_at": "2026-10-08T16:31:08Z",
+        "body": "Complete offline Spades with four-player partnerships and three-player cutthroat, nil/blind nil, bags and 500-point matches, private handovers, optional exchange and three bot strengths. The zero-deficit blind-nil setting now correctly describes tied or trailing teams; eligibility and strategy are unchanged.\n\nFinal head 48430c9861534edfef8c59528de4279ebd6cec78 passed the complete G06 workflow 37807419404 at 16:28:19 UTC: strict types and byte-identical data/page checks, two 10,000-case differentials, 31 core tests, 25 real mutation kills, 1,003 presence cases, 16,000 skill games, 13 browser groups and three exact UI/core matches. Twenty-one focused groups also passed, including 58 current-source evidence corruption controls, nine nonce protocol groups and twelve real capture CLI rejection controls. Capture requires one explicit valid unused milestone and refuses existing video/report files before browser launch.\n\nI downloaded the actual final five-file artifact 11565005070 and verified its 104,184-byte ZIP against GitHub's SHA-256 13aaf20b75d803750dbfbb999304ab1480bb2c3fb9cbdc8b5908f0bc6d2cd294. Independent validation recomputed all 1,800 unfiltered intervals and checked eighteen current source guards: TV and CPU4 phone both 60.0028 FPS, p95 16.7/16.8 ms. The actual source-bound milestone13 clip is 95,085 bytes, SHA-256 1df6c6c07b08a336fa171b5b83772e8de30c424b4b308e1957d27ffb5c73bd7b, with ten matching guards and zero application/network errors.\n\nReview rounds 10\u201312 produced three consecutive rounds without a player-facing gain after the visible setting-label correction; the final independent audit found no substantive gap. The local TV failure at 58.381 FPS, phone-not-run status and unresolved cause remain recorded separately from hosted success. CPU4 approximates a phone; encoded 12 FPS clips document functionality and do not measure frame-rate acceptance."
       },
       "check": {
         "id": 37807419404,
         "head_sha": "48430c9861534edfef8c59528de4279ebd6cec78",
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37807419404",
-        "updated_at": "2026-10-08T16:15:58Z",
+        "updated_at": "2026-10-08T16:28:19Z",
         "path": ".github/workflows/G06.yml"
       },
       "checkError": null,
@@ -1235,14 +1235,12 @@
       ],
       "operatorNote": {
         "current": "G06",
-        "summary": "Original PR #7 remains draft on its authoritative branch at 48430c9861534edfef8c59528de4279ebd6cec78, pushed at 16:15:34 UTC. Exact-head CI run 37807419404 is in progress. The new head preserves milestone 13, adds 12 real capture-preflight rejection controls, and records review rounds 10\u201312 as three consecutive rounds without player-facing gain after the visible setting-label correction. The preceding exact head 416afd1 passed full CI: 31 core tests, 25 real mutants, 16,000 skill games, hosted TV/CPU4-phone strict evidence near 60 FPS, source guards and capture controls passed. Readiness is not transferred until the current exact-head run completes. The actual local TV sample still FAILED at 58.381168 FPS; the separate local phone profile was not run. Hosted passes do not erase that failure or establish its cause. Cadence misses remain retained.",
-        "next": "Finish and inspect exact-head run 37807419404, including current source/raw/capture evidence, then change readiness only if the full current-head acceptance remains intact. Preserve the local TV failure, unrun local phone profile and cadence history.",
+        "summary": "Original acceptance and KEEP completion are finished. Original PR #7 is ready for maintainer review, unmerged, at exact head 48430c9861534edfef8c59528de4279ebd6cec78; readiness was read back at 16:31:08 UTC. Final full CI run 37807419404 succeeded at 16:28:19 UTC, and the actual complete 100,164-character log was independently read: 31 core tests, 25 real mutant kills, 16,000 skill games, 13 functional groups, three complete games and 21 focused groups all passed, including 58 current-source negative controls, 12 actual capture-preflight CLI rejections and nine nonce groups. The genuine hosted artifact was downloaded and its actual ZIP digest/bytes checked; independent validation recomputed all 1,800 raw intervals against all 18 source guards, with TV/CPU4-phone near 60.0028 FPS and p95 16.7/16.8 ms. Actual milestone 13 is 95,085 bytes with ten matching guards. Post-correction rounds 10\u201312 completed three consecutive rounds without player-visible gain. The actual local TV attempt remains FAILED at 58.381168 FPS and its local phone profile was not run. Hosted success neither erases that failure nor establishes its cause. Current final push at 16:15:48 met the 30-minute cadence; earlier misses remain audited.",
+        "next": "Maintainer review. Preserve the exact accepted head, source-bound full hosted proof, unresolved local TV failure, unrun local phone profile and cadence history; no merge has been performed.",
         "queue": [
-          "Current exact-head CI",
-          "Current source/raw/capture evidence review",
-          "Readiness decision",
           "Maintainer review"
-        ]
+        ],
+        "updatedAt": "2026-10-08T16:44:06+00:00"
       }
     },
     {
@@ -1800,7 +1798,7 @@
       "title": "Category Rush",
       "stage": "Review",
       "branch": "job/G09-category-rush-parallel-20261008",
-      "head": "539f6eb618a19ab0072687f76e640376a4c17a06",
+      "head": "2b599410af2284e9eecd13a159ce6115a3d3b997",
       "otherBranches": [
         {
           "name": "job/G09-category-rush",
@@ -1814,16 +1812,16 @@
         "state": "open",
         "draft": true,
         "merged_at": null,
-        "updated_at": "2026-10-08T16:16:59Z",
+        "updated_at": "2026-10-08T16:42:11Z",
         "body": "Category Rush is a complete offline category game for 2\u20138 players, with 320 original prompts, 4,155 curated examples, seeded rounds, private hot-seat writing and ballots, majority adjudication, duplicate cancellation, bot skills, saved-game recovery and scored receipts. The core uses the repository's actual shared contract; the documented standalone matcher implements its requirements because the full SDK package is unavailable.\n\nCrowded bot tables repeatedly received narrow answer banks. The current revision keeps the original letter draw, shuffle, theme order, RNG, scoring and private state rules, while choosing among the first three candidates in each theme at four or more present seats and retaining exploration positions 0/3/6/9. Two-seat games remain identical. On 800 freshly registered balanced heldout eight-Sharp-bot games, mean points improve 1.3175\u21922.42375 and zero-score tables fall 355\u2192244. Bank coverage falls 7.45%, within the unchanged preregistered 10% limit; all 320 prompts remain represented. Seventeen individual eight-seat games worsen. The preceding policy missed the coverage guard and is preserved as a rejected trial.\n\nValidation includes the independent 10,000-case matcher and selector oracles, 7,000 restored games/all nine invariants, 1,003 property seeds, privacy and codec checks, 43 actual planted bugs caught, 4,000 two-player bot duels, independently reconstructed study schemas/statistics, deterministic regeneration and all 28+8+clock+4+17+3 actual-file gameplay checks. Four earlier KEEP rounds have exact-head green CI; the current fifth round is incomplete and has no LOOP entry.\n\nAcceptance is pending: the first new-source local strict run retained every 600-frame interval and passed desktop at 60.002532 FPS but failed phone at 58.255040 FPS. Its complete evidence, unchanged source guards and partial desktop clip remain archived; no runtime cause, relaxed threshold or local pass is claimed. CI runs the same unrecorded strict sampler and separate captures freshly on the actual GitHub host before the artifact binder, then requires every original suite. This PR remains a draft until current acceptance, full exact-head CI and the remaining KEEP GOING rounds finish."
       },
       "check": {
-        "id": 37807570831,
-        "head_sha": "539f6eb618a19ab0072687f76e640376a4c17a06",
+        "id": 37810872591,
+        "head_sha": "2b599410af2284e9eecd13a159ce6115a3d3b997",
         "status": "in_progress",
         "conclusion": null,
-        "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37807570831",
-        "updated_at": "2026-10-08T16:17:08Z",
+        "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37810872591",
+        "updated_at": "2026-10-08T16:42:22Z",
         "path": ".github/workflows/G09.yml"
       },
       "checkError": null,
@@ -1831,6 +1829,7 @@
         ".github/workflows/G09.yml",
         "jobs/G09-category-rush/.gitignore",
         "jobs/G09-category-rush/ASSUMPTIONS.md",
+        "jobs/G09-category-rush/AUDIT-ROUND-6.md",
         "jobs/G09-category-rush/BOTS.md",
         "jobs/G09-category-rush/CHANGES.md",
         "jobs/G09-category-rush/CONFLICTS.md",
@@ -2120,6 +2119,16 @@
         "jobs/G09-category-rush/evidence/browser/round-5-hosted-37804388036/play.html",
         "jobs/G09-category-rush/evidence/browser/round-5-hosted-37804388036/retrieval.json",
         "jobs/G09-category-rush/evidence/browser/round-5-hosted-37804388036/scripts/browser-performance.mjs",
+        "jobs/G09-category-rush/evidence/browser/round-5-hosted-recovery-37804388036/evidence/browser/round-3-resume-after/report.json",
+        "jobs/G09-category-rush/evidence/browser/round-5-hosted-recovery-37804388036/retrieval-receipt.json",
+        "jobs/G09-category-rush/evidence/browser/round-5-hosted-recovery-37804388036/scripts/browser-resume.mjs",
+        "jobs/G09-category-rush/evidence/browser/round-6-before/client.ts",
+        "jobs/G09-category-rush/evidence/browser/round-6-before/match.ts",
+        "jobs/G09-category-rush/evidence/browser/round-6-before/play.html",
+        "jobs/G09-category-rush/evidence/browser/round-6-draft-baseline/private-draft-2.png",
+        "jobs/G09-category-rush/evidence/browser/round-6-draft-baseline/private-draft-8.png",
+        "jobs/G09-category-rush/evidence/browser/round-6-draft-baseline/report.json",
+        "jobs/G09-category-rush/evidence/browser/round-6-draft-baseline/runner.mjs",
         "jobs/G09-category-rush/evidence/client-save-tests-first.txt",
         "jobs/G09-category-rush/evidence/client-save-tests-round-3.txt",
         "jobs/G09-category-rush/evidence/core-round4-first.txt",
@@ -2197,6 +2206,7 @@
         "jobs/G09-category-rush/scripts/breadth.ts",
         "jobs/G09-category-rush/scripts/browser-check.mjs",
         "jobs/G09-category-rush/scripts/browser-clock.mjs",
+        "jobs/G09-category-rush/scripts/browser-draft-hints.mjs",
         "jobs/G09-category-rush/scripts/browser-empty-review.mjs",
         "jobs/G09-category-rush/scripts/browser-performance.mjs",
         "jobs/G09-category-rush/scripts/browser-performance.py",
@@ -2240,14 +2250,14 @@
       ],
       "operatorNote": {
         "current": "G09",
-        "summary": "Original PR #8 remains draft at authoritative head 539f6eb618a19ab0072687f76e640376a4c17a06, pushed at 16:16:56 UTC. Exact-head CI run 37807570831 is in progress. This head commits round-5 hosted evidence, fresh desktop/phone raw frames and clips, a source-head record, and a LOOP update for the crowded-table selector. The registered eight-seat held-out result improves mean points 1.3175 to 2.42375 and reduces zero-score tables 355 to 244 while coverage falls 7.45%, under the unchanged 10% limit; 17 individual games worsen. The actual local current-source strict run still PASSES desktop at 60.002532 FPS but FAILS phone4x at 58.255040 FPS with all 600 intervals retained. The rejected first candidate, prior saved-pause/recovery failures and older 58.444/54.965 FPS local phone failures remain retained. Current acceptance and further KEEP rounds are not inferred from the running workflow.",
-        "next": "Finish and inspect run 37807570831 and its actual raw/source/capture artifacts, reconcile the local phone failure with unchanged gates without inventing a cause, and continue the original KEEP loop before changing PR readiness.",
+        "summary": "Original PR #8 remains draft at new R6 baseline head 2b599410af2284e9eecd13a159ce6115a3d3b997; exact-head CI run 37810872591 is running. Its production sources remain unchanged: HTML abde3497, selector a62e5fff, helper 1fe2cfaf and sampler 9caabfd9. Prior R5 completion head 539f6eb618a19ab0072687f76e640376a4c17a06 passed full CI 37807570831 at 16:30:19 UTC: 56 tests, 43 real mutants, all 4,000 required duels and current proof checks. Its genuine hosted artifact was downloaded, actual bytes/source guards independently matched, and all 1,200 raw desktop/CPU4-phone intervals passed near 60 FPS. The eight-seat held-out selector mean improved 1.3175 to 2.42375 and zero-score tables fell 355 to 244, with 7.45% coverage loss inside the unchanged 10% limit. The rejected first candidate and actual local phone 58.255040 FPS failure remain retained. Formal no-gain streak is zero after the R5 player gain. R6's real two/eight-human writing baseline closed at 16:41:04 with no warning for three mechanically ineligible own rows. The private candidate now warns correctly on all three wrong-initial/equivalent-own rows; its focused aftercheck closed at 16:44:02 with private ballots, scoring, enabled lock, handover/review cleanup and prior-sheet isolation preserved. Private HTML 68f43a97 has not completed full functional, strict-frame and exact-head CI acceptance; R6 is not yet a completed gain. The new baseline checkpoint pushed at 16:42:11 UTC after a main claim refresh at 16:41:54; its 25-minute-13-second interval met the hard checkpoint rule.",
+        "next": "Inspect the new baseline-head CI, then finish full current-source functional, strict-frame and exact-head CI proof for the private own-draft warnings before completing R6 and continuing the binding KEEP loop.",
         "queue": [
+          "R6 current-source warning acceptance",
           "Current exact-head CI",
-          "Current artifact/source review",
-          "Local phone failure",
           "Remaining KEEP rounds"
-        ]
+        ],
+        "updatedAt": "2026-10-08T16:50:20+00:00"
       }
     },
     {
@@ -2255,7 +2265,7 @@
       "title": "Checkers",
       "stage": "Pipeline",
       "branch": "job/G10-checkers-complete-20261008",
-      "head": "3143decfc67c70b638192018c577ed4f0ae5d803",
+      "head": "8586b591aa105c9e2a288d922e01a9ca5df58446",
       "otherBranches": [
         {
           "name": "job/G10-checkers",
@@ -2435,6 +2445,16 @@
         "jobs/G10-checkers/evidence/checks/bots-minimax.json",
         "jobs/G10-checkers/evidence/checks/browser-capture-first.stdout",
         "jobs/G10-checkers/evidence/checks/browser-first.stdout",
+        "jobs/G10-checkers/evidence/checks/browser-full-six-guarded-capture/browser-check-recorded.mjs",
+        "jobs/G10-checkers/evidence/checks/browser-full-six-guarded-capture/capture.json",
+        "jobs/G10-checkers/evidence/checks/browser-full-six-guarded-capture/desktop-capture-frames.json",
+        "jobs/G10-checkers/evidence/checks/browser-full-six-guarded-capture/desktop-original.webm",
+        "jobs/G10-checkers/evidence/checks/browser-full-six-guarded-capture/excerpts.json",
+        "jobs/G10-checkers/evidence/checks/browser-full-six-guarded-capture/phone-capture-frames.json",
+        "jobs/G10-checkers/evidence/checks/browser-full-six-guarded-capture/phone-original.webm",
+        "jobs/G10-checkers/evidence/checks/browser-full-six-guarded-capture/resources.json",
+        "jobs/G10-checkers/evidence/checks/browser-full-six-guarded-capture/stderr.log",
+        "jobs/G10-checkers/evidence/checks/browser-full-six-guarded-capture/stdout.jsonl",
         "jobs/G10-checkers/evidence/checks/browser-full-six-guarded/README.md",
         "jobs/G10-checkers/evidence/checks/browser-full-six-guarded/artifact-manifest.json",
         "jobs/G10-checkers/evidence/checks/browser-full-six-guarded/barrier/desktop-closed.json",
@@ -2649,6 +2669,13 @@
         "jobs/G10-checkers/evidence/checks/international-default-full/test-source-attempt-01.mjs",
         "jobs/G10-checkers/evidence/checks/international-default-full/transactions-48.json",
         "jobs/G10-checkers/evidence/checks/international-dictionary-regeneration.json",
+        "jobs/G10-checkers/evidence/checks/international-four-pool-private/README.md",
+        "jobs/G10-checkers/evidence/checks/international-four-pool-private/probe.mjs",
+        "jobs/G10-checkers/evidence/checks/international-four-pool-private/report.json",
+        "jobs/G10-checkers/evidence/checks/international-four-pool-private/resources.json",
+        "jobs/G10-checkers/evidence/checks/international-four-pool-private/rss-cgroup-samples.json",
+        "jobs/G10-checkers/evidence/checks/international-four-pool-private/stderr.log",
+        "jobs/G10-checkers/evidence/checks/international-four-pool-private/stdout.jsonl",
         "jobs/G10-checkers/evidence/checks/international-full-browser-build/block-search-build.stdout",
         "jobs/G10-checkers/evidence/checks/international-full-browser-build/corpus-pack.json",
         "jobs/G10-checkers/evidence/checks/international-full-browser-build/full-browser-build-final.stdout",
@@ -3068,6 +3095,53 @@
         "jobs/G10-checkers/evidence/checks/properties.json",
         "jobs/G10-checkers/evidence/checks/purity-data.tap",
         "jobs/G10-checkers/evidence/checks/runtime-holds.json",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/README.md",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/american-candidate-games.jsonl",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/american-original-games.jsonl",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/artifact-manifest.json",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/bots.memo.ts",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/bots.original.ts",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/candidate/bots-american.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/candidate/bots-international.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/candidate/bots.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/candidate/core-american.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/candidate/core-international.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/candidate/core.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/candidate/international-search.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/equivalence-resources.json",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/equivalence.stderr.log",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/equivalence.stdout.jsonl",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/frequency-resources.json",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/frequency.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/frequency.stderr.log",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/frequency.stdout.jsonl",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/frequency/bots-american.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/frequency/bots-international.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/frequency/bots.counted.ts",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/frequency/report.json",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/full-equivalence-report.json",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/full-equivalence.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/holds.json",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/international-candidate-games.jsonl",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/international-original-games.jsonl",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/original-full-equivalence.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/pause-aware-timings.json",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/pilot-report.json",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/pilot-resources.json",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/pilot-worker.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/pilot.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/pilot.stderr.log",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/pilot.stdout.jsonl",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/preparation.json",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/prepare-resources.json",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/prepare.mjs",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/prepare.stderr.log",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/prepare.stdout.jsonl",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/resource-wrapper.py",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/run-report.json",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/run.py",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/run.stderr.log",
+        "jobs/G10-checkers/evidence/checks/search-memo-private/run.stdout.jsonl",
         "jobs/G10-checkers/evidence/checks/strong-cost-profile-private/README.md",
         "jobs/G10-checkers/evidence/checks/strong-cost-profile-private/actual-games.jsonl",
         "jobs/G10-checkers/evidence/checks/strong-cost-profile-private/artifact-manifest.json",
@@ -3165,6 +3239,8 @@
         "jobs/G10-checkers/manifest.json",
         "jobs/G10-checkers/media/desktop.png",
         "jobs/G10-checkers/media/desktop.webm",
+        "jobs/G10-checkers/media/milestone-19/desktop.webm",
+        "jobs/G10-checkers/media/milestone-19/phone.webm",
         "jobs/G10-checkers/media/phone.png",
         "jobs/G10-checkers/media/phone.webm",
         "jobs/G10-checkers/media/round7/desktop.png",
@@ -3196,6 +3272,7 @@
         "jobs/G10-checkers/scripts/mutations.mjs",
         "jobs/G10-checkers/scripts/pack-international-dictionary.py",
         "jobs/G10-checkers/scripts/purity.mjs",
+        "jobs/G10-checkers/scripts/standalone-receipt.mjs",
         "jobs/G10-checkers/scripts/validate-chinook-original.py",
         "jobs/G10-checkers/scripts/validate-international-original.py",
         "jobs/G10-checkers/scripts/validate-international-production.mjs",
@@ -3249,15 +3326,17 @@
       ],
       "operatorNote": {
         "current": "G10",
-        "summary": "Active no-PR branch job/G10-checkers-complete-20261008 now binds to 3143decfc67c70b638192018c577ed4f0ae5d803, pushed at 16:17:03 UTC; no exact-head workflow exists. Complete licensed American/International two-through-six-piece source remains acquired. The current full-source 7,000-game matrix passed all seven 1,000-game configurations. The private rebuilt 1.39 GB full page passed 30 functionals and all 1,200 strict raw frames: desktop 59.8038 FPS and phone4x 59.5070 FPS, both p99 16.8 ms, with zero HTTP/page errors and Strong six-piece reads. These private checks do not publish the required artifact or prove CI fit. Earlier desktop strict failures at 56.5176 and 57.2363 FPS remain retained. The full 4,000-game strength gate, broader final properties/mutations as applicable to the adopted source, same-source clips, 30-minute CI fit, public full-six single-file delivery, PR and three no-gain KEEP rounds remain pending. The earlier 30m30s cadence miss remains audited.",
-        "next": "Complete the 4,000-game strength gate and current final-source acceptance/CI-duration proof, publish the verified full-six single-file artifact within repository limits, open a PR with exact-head CI, then complete the required KEEP loop.",
+        "summary": "Active no-PR branch job/G10-checkers-complete-20261008 now binds to 8586b591aa105c9e2a288d922e01a9ca5df58446, pushed at 16:43:38 UTC; main claim row was refreshed at 16:43:23 UTC. No exact-head CI run exists. Complete licensed American/International two-through-six-piece source remains acquired; this is not a source-unavailable block. The current full-source 7,000-game matrix and all 25 real mutants passed. Private full HTML 5ed2173b is 1,390,845,993 bytes; 30 functionals passed, including actual International Strong six-piece lookup. Its accepted unrecorded 1,200 strict raw intervals measured American boards ONLY: desktop 59.803784 FPS and CPU4-phone 59.507008 FPS, p99 16.8 ms. Those results do not prove International-board frame performance. The runner now requires both variants and independent raw recomputation; the missing International-only run started at 16:44:12 and actually CLOSED at 16:48:30.901 UTC with exit 1. All 15 desktop functionals passed, but all 600 unfiltered International desktop intervals recompute to 17.510456661 FPS, p99 799.9 ms and maximum 1683.3 ms, failing the unchanged >=59 FPS/p99 <=17 ms gate. The International phone profile was NOT RUN. Its exact 5ed2173b source, raw intervals, error/HTTP records and failing report remain retained; no cause or unchanged-source retry is claimed. Same-source recorded functional clips closed at 16:25:35 with all 30 functionals, zero HTTP/page errors; their phone recording measured 50.994 FPS/p99 83.3 ms as a separate diagnostic failure. Actual ten-second American excerpts are delivered at 1,083,604/476,747 bytes with hashes and exact extraction commands, preserving the longer originals/raws. A four-International private pool exceeded its prior seven-GiB working budget at 8,421,232 KiB RSS; the official public Ubuntu runner has 16 GB, so actual workflow resource/duration fit remains unproved rather than ruled out and an uncontrolled 2.3% memo timing result was rejected; public bots are unchanged. All 91 current unit cases still need an uninterrupted complete pass (90 original passes plus the corrected focused case exist), and actual 4,000-game strength, 30-minute CI fit, verified public full-six single-file download, PR and three no-gain KEEP rounds remain unfinished. A read-only Actions artifact and SHA receipt are prepared for a temporary seven-day download, not yet delivered. The tracked play.html remains the two-through-five-piece baseline. Earlier frame failures and cadence misses remain retained. This checkpoint interval was 26 minutes 33 seconds, meeting the hard 30-minute rule; the early target was missed by 93 seconds.",
+        "next": "Diagnose the measured International desktop failure with source-bound controlled evidence, then complete both International strict profiles and every current-source unit/4,000-game strength/30-minute-CI gate. Publish and verify the full-six single HTML download, open its PR, then complete the binding KEEP loop. Preserve the passed American samples and all failed measurements.",
         "queue": [
-          "4,000-game strength gate",
-          "Current-source final acceptance and CI fit",
-          "Public full-six artifact",
-          "PR and exact-head CI",
-          "KEEP completion"
-        ]
+          "International strict-frame proof",
+          "Uninterrupted current unit checks",
+          "4,000-game strength",
+          "30-minute CI fit",
+          "Verified full-six download",
+          "PR and KEEP completion"
+        ],
+        "updatedAt": "2026-10-08T16:50:20+00:00"
       }
     }
   ],

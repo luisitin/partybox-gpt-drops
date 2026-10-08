@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-10-08T16:24:04+00:00",
-  "summary": "The original 20 projects remain unmerged: thirteen deliveries are ready for maintainer review, six research drafts retain unsupported details, and B19 remains draft with its unchanged 0.05 ms maximum-latency gate unmet. Fresh exact-head results are green for B11, B16 and B18. B19 now runs the exact frozen original corpora successfully, but exact-head run 37807137561 fails on a seed-3 0.063416 ms call; historical 0.089284 ms and larger local failures remain retained. Passing code or structural checks do not complete research or acceptance.",
+  "updatedAt": "2026-10-08T16:50:20+00:00",
+  "summary": "All 20 original projects remain unmerged. Thirteen PRs are marked ready for maintainer review and seven remain drafts. Fresh exact-head workflows report success for all 20 at this dated observation, including B19's newest ccc610fb checkpoint; that green result does not establish full original acceptance. B19's external concurrent changes altered the runtime/policy after the historical 2b544313 pass, and the intervening 303f4f0 and 0974951 checks failed the unchanged 0.05 ms per-call gate. Six research drafts retain unsupported details. The latest observed hourly report run started at 16:26:48 UTC; its existing schedule is currently paused, last updated at 16:31:45 UTC. Actual delivery of that run's chat response is not exposed by the task API. The B13 and B17 branches also have newer external port/audio changes with green CI; earlier independent delivery notes apply to their recorded historical source, not automatically to those additions.",
   "workers": [
     {
       "current": "B13",
-      "summary": "Ready for review, unmerged: PR22, final commit 60293314, passing GitHub run 37690274119. All 1,000 final questions have current independent source and answer reviews. Both local source passes matched 3,507 quotes; all 2,210 flagged pairs have individual resolutions. Every category has 100 questions, balanced difficulty and 25 correct answers in each position. The separate immutable-copy audit passed; final delivery verifies 253 hashes and three negative checker fixtures. GitHub checks receipt metadata; the retained source bodies were checked locally. Human playtesting and difficulty calibration are still unverified.",
-      "next": "Maintainer review of the delivered pack. All original delivery checks have passed; no merge has been performed.",
+      "summary": "Current PR #22 remains ready and unmerged at external polish head 87693947ed87314b3f835d555197123b74f8d2be, with exact-head workflow 37809925089 successful at 16:35:26 UTC. The new inventory declares 258 files and 259 SHA lines, adding port files and updated documents; independent acceptance of these new additions has not been established by this status refresh. Earlier independently accepted delivery at 60293314: Ready for review, unmerged: PR22, final commit 60293314, passing GitHub run 37690274119. All 1,000 final questions have current independent source and answer reviews. Both local source passes matched 3,507 quotes; all 2,210 flagged pairs have individual resolutions. Every category has 100 questions, balanced difficulty and 25 correct answers in each position. The separate immutable-copy audit passed; final delivery verifies 253 hashes and three negative checker fixtures. GitHub checks receipt metadata; the retained source bodies were checked locally. Human playtesting and difficulty calibration are still unverified.",
+      "next": "Review the new port additions and current evidence separately from the independently accepted historical question pack; no merge has been performed.",
       "queue": [
         "Maintainer review"
       ],
-      "updatedAt": "2026-10-08T10:21:00+00:00"
+      "updatedAt": "2026-10-08T16:50:20+00:00"
     },
     {
       "current": "B03",
@@ -67,15 +67,24 @@
     },
     {
       "current": "B19",
-      "summary": "Original PR #2 remains draft at b3f5231eeaab97ab14760c29664f06820a0a4503. Exact-head run 37807137561 FAILED at 16:14:08 UTC; all 91 suites and the exact frozen original corpora executed, and the sole hosted failure was seed-3 literal latency of 0.063416 ms against the unchanged 0.05 ms maximum. The exact 32,000-row corpus snapshot is now restored offline with locked hashes; 24 restoration/corruption controls and 156 delivery checksums pass. Full local behavior evidence remains 131,490 sealed comparisons, 74,619 added boundary cases and 75 real mutants. Earlier local maxima of 0.472961/0.246780/0.456415 ms and historical hosted 0.089284 ms remain retained. Corpus recovery is complete; speed acceptance is not.",
-      "next": "Complete the bounded allocation optimization and rerun every original behavioral, corpus, mutation, checksum and unchanged 0.05 ms worst-case latency gate before making PR #2 ready.",
+      "summary": "Original PR #2 remains draft at the 16:44:06 UTC binding head ccc610fb02b523e3d4b9aa0c28b311a361930011. Fresh exact-head run 37811077768 reports SUCCESS at 16:44:17 UTC; the latest full log/artifact and unchanged original timed-input protocol still require independent review. An external concurrent writer changed production runtime/policy from 5371665d to 693d9501 and added three exact positive-list exceptions; the lead is preserving that normal history while independently reviewing the changes. The prior same-runtime head 2b544313 passed all 91 suites, the exact original 32,000-row corpora, 131,490 sealed comparisons, 15,000 obfuscations, 75 real mutants, 24 snapshot controls, 169 hashes and all 30,000 individually timed calls at unchanged 0.05 ms, with maxima 0.046337/0.037950/0.022141 ms. This remains historical evidence. Later 303f4f0 run 37810714023 FAILED across its 94-suite execution: seed 1 had three outliers and a maximum 0.093244 ms; seeds 2/3 had maxima 0.025307/0.049913 ms with no outliers. Run 37810885025 on 0974951 also failed seed-1 literal latency. The new positive-list entries change the benchmark sample, so these are not a controlled timing comparison with the prior pass. Earlier hosted 0.063416/0.089284 ms and larger local failures remain retained; no cause, universal hard-realtime guarantee or completed KEEP streak is claimed.",
+      "next": "Independently read the complete latest-head log and artifact, review the external policy/runtime changes against the original instructions, and finish the binding acceptance and KEEP review before changing PR #2 readiness. The root is preparing an isolated correction of the original timed inputs while preserving the concurrent canonical history.",
       "queue": [
-        "Measured allocation optimization",
-        "Full unchanged behavioral and latency acceptance"
+        "External current-source review",
+        "Current exact-head acceptance/artifact review",
+        "Original KEEP completion"
       ],
-      "updatedAt": "2026-10-08T16:03:58.918477+00:00",
+      "updatedAt": "2026-10-08T16:50:20+00:00",
       "owner": "codex-name-resume"
     }
   ],
-  "observedAt": "2026-10-08T16:24:04+00:00"
+  "observedAt": "2026-10-08T16:45:26+00:00",
+  "reporting": {
+    "automationId": "Automation_677021765a8481918dcbf7433054333c",
+    "observedAt": "2026-10-08T16:48:34+00:00",
+    "isEnabled": false,
+    "lastRunTime": "2026-10-08T16:26:48.692643+00:00",
+    "updatedAt": "2026-10-08T16:31:45.381563+00:00",
+    "chatDeliveryVerified": false
+  }
 }
