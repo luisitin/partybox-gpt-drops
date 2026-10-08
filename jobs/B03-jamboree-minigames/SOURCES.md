@@ -3549,3 +3549,28 @@ The following eighteen clips were each compared to both original full Wiki captu
 | W072_format_ADVANTAGE | is given a more lenient timing window | https://www.mariowiki.com/DK%27s_Konga_Line / Overview → Mario Party mode board-encounter advantage paragraph |
 | W073_format_FOUR | four players complete a series of rounds, most of which involve avoiding enemies, to earn points. | https://www.mariowiki.com/Jr.%27s_Jauntlet / Lead/Overview → explicit four-player Showdown context |
 | W073_format_ADVANTAGE | is awarded three points at the beginning as an advantage. | https://www.mariowiki.com/Jr.%27s_Jauntlet / Overview → Mario Party mode board-encounter advantage paragraph |
+
+## Category heading recovery 2026-10-08
+
+The six fresh HTTPS responses closed at 22:58:22.153956 UTC. Both complete source parses have identical membership hashes. 76 base and 6 Bowser Live categories now have real registered heading quotations from Mario Wiki and Mario Party Legacy. Exact-spelling membership is recorded in `reports/category-heading-repair.json`; category equivalences normalize only 1-vs-3/2-vs-2 wording. Koopathlon subtypes, Kaboom-Squad versus Teamwork, and unmatched spellings are not promoted. This is still one wiki family plus an independent guide; the original two-wiki roster gate remains unmet. All full source HTML remains private.
+
+| Source | New literal quotation | Quote ID |
+| --- | --- | --- |
+| [W_LIST](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames) | “Free-for-All Minigames” | `W_LIST_heading_free_for_all_minigames` |
+| [W_LIST](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames) | “1 vs. 3 Minigames” | `W_LIST_heading_1_vs_3_minigames` |
+| [W_LIST](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames) | “2 vs. 2 Minigames” | `W_LIST_heading_2_vs_2_minigames` |
+| [W_LIST](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames) | “Duel Minigames” | `W_LIST_heading_duel_minigames` |
+| [W_LIST](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames) | “Item Minigames” | `W_LIST_heading_item_minigames` |
+| [W_LIST](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames) | “Showdown Minigames” | `W_LIST_heading_showdown_minigames` |
+| [W_LIST](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames) | “Boss Minigames” | `W_LIST_heading_boss_minigames` |
+| [W_LIST](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames) | “Rhythm Minigames” | `W_LIST_heading_rhythm_minigames` |
+| [W_LIST](https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames) | “Bowser Live minigames” | `W_LIST_heading_bowser_live_minigames` |
+| [MPL_BASE](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables) | “Free-for-All Minigames” | `MPL_BASE_heading_free_for_all_minigames` |
+| [MPL_BASE](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables) | “1-vs-3 Minigames” | `MPL_BASE_heading_1_vs_3_minigames` |
+| [MPL_BASE](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables) | “2 vs 2 Minigames” | `MPL_BASE_heading_2_vs_2_minigames` |
+| [MPL_BASE](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables) | “Duel Minigames” | `MPL_BASE_heading_duel_minigames` |
+| [MPL_BASE](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables) | “Item Minigames” | `MPL_BASE_heading_item_minigames` |
+| [MPL_BASE](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables) | “Showdown Minigames” | `MPL_BASE_heading_showdown_minigames` |
+| [MPL_BASE](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables) | “Boss Minigames” | `MPL_BASE_heading_boss_minigames` |
+| [MPL_BASE](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables) | “Rhythm Minigames” | `MPL_BASE_heading_rhythm_minigames` |
+| [MPL_TV](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/) | “Bowser Live” | `MPL_TV_heading_bowser_live` |

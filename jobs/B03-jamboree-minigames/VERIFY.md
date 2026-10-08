@@ -333,14 +333,16 @@ All **132 narrow core-gameplay fields** now have at least two publisher families
 
 ## UNVERIFIED
 
-**Strict research gate: NOT_MET; 481 narrowly corroborated fields out of 1,320; zero of 132 whole rows complete.** The exact remaining fields, limitations and retained citations are listed for every row in `reports/research-gaps.json`.
+**Current strict research gate: NOT_MET; 271/1,320 narrowly corroborated fields, 1,049 remaining fields, zero of 132 complete rows.** Detailed timers, controls, scoring, ties and coin/star awards still require independent corroboration. The full two-wiki roster condition is unmet. No Nintendo gameplay or phone adaptation was executed; phone fit is editorial. Null payouts and all 15 material conflicts remain preserved. Current per-row coverage is reproduced in `reports/research-gaps.json`; all registered clips are bound to actual response records, and those records retain their individual dates.
+
+The 2026-10-08 category recovery newly reopened only Mario Wiki, Legacy base and Legacy TV twice. All other source reopens retain their historical actual dates. Source access and quote presence do not prove a complete gameplay rule.
 
 | Fact field | Corroborated | Single source | Conflict | Unknown |
 | --- | ---: | ---: | ---: | ---: |
 | name | 132 | 0 | 0 | 0 |
-| category | 118 | 14 | 0 | 0 |
-| format | 90 | 41 | 1 | 0 |
-| gameplay | 132 | 0 | 0 | 0 |
+| category | 92 | 40 | 0 | 0 |
+| format | 23 | 108 | 1 | 0 |
+| gameplay | 15 | 110 | 0 | 7 |
 | controls | 0 | 121 | 11 | 0 |
 | timeLimit | 0 | 100 | 3 | 29 |
 | winRules | 0 | 132 | 0 | 0 |
@@ -348,19 +350,7 @@ All **132 narrow core-gameplay fields** now have at least two publisher families
 | tieRules | 0 | 31 | 0 | 101 |
 | reward | 9 | 10 | 0 | 113 |
 
-No Nintendo gameplay or phone adaptation was executed. Unknown coin and star awards are null. Available timers include scoped modes/stages; component durations and record caps are not universal time limits. Win, score and tie mechanics require independent corroboration. All 132 narrow core-gameplay summaries now have independent accounts; detailed rule fields remain qualified. Source categories, player availability, camera actions, rhythm controls, stage counts, score tokens and release/preview differences retain explicit conflicts.
-
-The count is supported by the Wiki, Nintendo Life’s 112-row base table and 20-name TV page, and Family Game Squad’s 112 base-game headings. The original request specifically says two wiki list pages; a second complete wiki list page has not been located. Independent publishers agree on total counts but raw spellings differ, as listed in CONFLICTS.md.
-
-Some source clips are short name/column/context locators to keep total quotations per source bounded. Their presence alone is not proof of a complete gameplay rule; all source lineages and scope limitations remain explicit. No confidence is raised by raw retrieval success.
-
-Strict command:
-
-```bash
-PYTHONDONTWRITEBYTECODE=1 python jobs/B03-jamboree-minigames/verify.py --strict --hashes
-```
-
-Expected and observed exit code: **1**. Integrity CI succeeds while asserting this deliberate incomplete-research verdict.
+Strict command remains `PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minigames/verify.py --strict --hashes`; expected exit code 1 for the deliberate incomplete-research verdict.
 
 ## Polish pass 2026-10-08 (Claude, cloud)
 
@@ -393,3 +383,17 @@ They are lexical. They prove that a quote is or is not in the registry and that 
 - No live source was reopened in this pass: the offline suite does not make network requests, and the previous pass's reopen records are unchanged.
 - The legacy list heading (for "Free-for-All Minigames" and similar) is recorded in `SOURCES.md` but not as a registry quote, so no category was re-corroborated from it.
 - Phone fit remains an editorial judgement, not a test.
+
+## Category capture repair 2026-10-08
+
+Seed: n/a, deterministic. Environment actually reported by the recovered execution: Python 3.12.14, jsonschema 4.26.0, BeautifulSoup 4.15.0. The six finite native HTTPS requests naturally CLOSED at 22:58:22.153956 UTC. Actual source-body SHA/bytes, request start/completion, verified TLS and source-spelled rows are in `reports/category-heading-repair.json`; full source bodies remain private. The material writer naturally CLOSED at 23:20:41.000484 UTC.
+
+`PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minigames/check-category-heading-repair.py`: PASS, 420 actual receipt/membership comparisons plus 5 malformed proof rejection cases (wrong category, unmatched spelling, same source family, changed response hash, omitted second-pass row). 82 category repairs; no mechanics/format inference.
+
+`PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minigames/verify.py --report .work/registry-repair-2255/validation-before-manifest.json`: PASS, 71 suites / 25,925 cases, seed n/a, exit 0. This first full run preceded the final documentation and delivery manifest; its original result remains private. Complete final commands are rerun after those writes. All 132 JSON/CSV rows and published-row fingerprints are compared; new category evidence is scoped separately from unchanged historical article contexts.
+
+Final content command `PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minigames/verify.py --report jobs/B03-jamboree-minigames/reports/final-validation.json`: PASS, 71 suites / 25925 cases, exit 0, observed after B19's direct release at 23:24:33.285692 UTC. Exact test names, case counts, seed and validator output are in `reports/final-validation.json`. The complete hash and strict commands are required before this checkpoint is committed; current CI acceptance is observed after push and linked in the draft PR.
+
+Full hash verification and full strict verification both completed naturally before 23:25:37 UTC: **72 suites / 26,001 cases**, all 76 delivery hashes matched. Integrity exit 0; strict exit 1 with NOT_MET (271/1,320, zero complete rows). A subsequent `git diff --check` found the CSV writer's default CRLF record endings; record serialization was corrected to LF with every parsed value unchanged, the complete manifest regenerated, and the same complete commands rerun before commit. Every row's non-category field evidence and product values were independently compared against source commit `81fbd529eecdab39d2aaf7d4781a149634884420` and remain byte-value identical.
+
+Final LF serialization full hash and strict checks naturally CLOSED: 72 suites / 26,001 cases, all 76 manifest files; integrity exit 0 and strict exit 1 with the deliberate NOT_MET verdict. No source field changed during serialization. This paragraph corrects the recovery environment from the prior worker’s Python version to the actual version above. Only documentation metadata changed afterward; all delivery hashes were regenerated and checked directly before commit.

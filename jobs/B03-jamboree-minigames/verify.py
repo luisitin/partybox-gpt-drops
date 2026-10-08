@@ -219,6 +219,9 @@ def run(args):
     recovered=validate_reopens(sources,reopen_docs[:2],reopen_docs[2])
     checked('All '+str(len(reopen_docs[0]))+' source URLs reopened twice with ordered HTTPS/TLS records',len(reopen_docs[0])*2,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
     checked('Every recovered reopen quotation bound to the original registry',recovered,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
+    category_checker=module('b03_category_heading_repair','check-category-heading-repair.py')
+    for result in category_checker.run():
+        checks.append(result);print(f"PASS {result['name']}: {result['caseCount']} cases; seed=n/a")
     def negative_reopens():
         mutations=[
             lambda p,s:p[0].pop(),

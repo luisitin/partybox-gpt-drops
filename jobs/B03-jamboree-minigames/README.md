@@ -2,13 +2,13 @@
 
 **What this is:** a research catalogue of 132 minigames (112 base games, 20 Jamboree TV additions) with name, category, format, time limit, controls, win, score, tie and reward rules, a two-sentence summary, and a 1-5 phone-touch fit. Data is JSON and CSV, checked by a JSON Schema and an offline verifier.
 **How to use it:** read `DESIGN-DIGEST.md` for the design reading, `INTEGRATION.md` for what PartyBox does with it. Query `minigames.json` (or `minigames.csv`, see below). Do not ship names, art or strings.
-**Status:** reference only. Draft research, strict gate **NOT_MET**: 189 of 1,320 narrow fact fields corroborated, 0 of 132 rows complete. Nothing here is Nintendo-verified gameplay.
+**Status:** reference only. Draft research, strict gate **NOT_MET**: 271 of 1,320 narrow fact fields corroborated, 1,049 still open, 0 of 132 rows complete. Nothing here is Nintendo-verified gameplay.
 
 ## Quick start (from the repo root)
 
 ```bash
 python3 -m pip install -r jobs/B03-jamboree-minigames/requirements.txt
-PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minigames/verify.py --hashes            # 70 suites, exit 0
+PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minigames/verify.py --hashes            # 72 suites, exit 0
 PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minigames/verify.py --strict --hashes   # exit 1 by design (NOT_MET)
 PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minigames/quote-support-check.py        # prints the quote-support report
 ```
@@ -51,3 +51,9 @@ The verifier enforces them (`Narrow summary status follows...`, `Quote-support r
 - The exact coin and star awards are unknown; the in-game scoring tokens are not board rewards and are not substituted.
 - Any mechanic here is a claim about a Nintendo game; no gameplay was run, and PhoneFit is not Nintendo's support statement.
 - Full history and every remaining open field: `reports/research-gaps.json`, and `VERIFY.md`.
+
+## Category evidence recovery 2026-10-08
+
+Fresh ordered A/B HTTPS captures of Mario Wiki and Mario Party Legacy now support 82 additional category fields (76 base, 6 Bowser Live). Real headings are registered as short quotations and exact source-spelled table membership is retained in `reports/category-heading-repair.json`; the checker accepts only case/punctuation normalization, never spelling correction. Current strict coverage is **271/1,320 fields; 1,049 open; 0/132 complete rows**. Categories now have 92 corroborated and 40 single-source entries. The earlier polish table above remains historical.
+
+The current registry has 145 URLs and 1,884 clips, with 3,774 recorded A/B quote recoveries across all 148 current/historical URLs. Only the three category sources were newly reopened in this recovery; every other source retains its actual earlier timestamp. Koopathlon subcategories, Kaboom-Squad versus Teamwork, two spelling disagreements, 7 fragment-only summaries and all unresolved detailed mechanics remain qualified. A second full independent wiki roster is still missing.
