@@ -23,15 +23,24 @@ Strict production build and3 actual assertion mutation-readiness controls
 passed; their exact original commands and the failed/corrected M25 witness
 attempt are retained in results/trie-adoption-readiness-20261008/.
 
-Next exact step: obtain the root
-resource coordinator's exclusive quiet window for ONE changed-source complete
-`npm test` from jobs/B19-name-filter. Let it complete naturally, preserving
-all stdout/stderr, exit status, exact guarded inputs, summary, every outlier,
-all three seeds, every original executable mutant and all original corpora.
-Refresh checksums after every final source/document/evidence edit. Push the
-changed-source checkpoint normally with full pending/failure status explicit.
-Read the actual complete new-head CI log and validate the genuine downloaded
-artifact against the exact commit before claiming hosted green.
+First original full checks now actually fail only literal timing: hosted
+run37846119304 observes1/0/0 outliers; local natural CLOSED21:33:35.191788
+UTC/EXIT1 observes9/5/13, all287 guards unchanged. Every original behavioral,
+corpus and75-mutant check passes. Genuine hosted artifact11578869086 and its
+1457-check independent audit plus both complete receipts are retained in
+results/first-trie-original-acceptance-20261008/. These do not erase older
+failures or establish an outlier cause.
+
+Next exact step: keep PR23 draft and investigate a source-bound whole-call
+improvement using the existing precompiled character mapping directly for
+known inputs. Preserve whole-string casing/context, normalization, exact
+benign exceptions, all returned suggestion/frozen values and unknown Unicode
+fallback. Work privately in repository-root .work, compare complete original
+and supplemental truth with both references, then measure a single balanced
+mixed experiment only after the root resource coordinator grants a quiet
+native window. Adoption requires genuine consistent whole-call gain. Do not
+repeat unchanged hosted/local timing to hunt a pass, change a gate or claim
+the prospective mechanism explains any historical outlier.
 
 After a real full green result, perform the required original KEEP full rerun,
 rank the remaining weakest parts, make any substantive measured improvement,

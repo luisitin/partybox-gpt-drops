@@ -199,3 +199,23 @@ minimum-length pruning, so its helper attempt failed and remains retained.
 Only that supplemental witness changed to the original benign case Bobby;
 corrected controls pass at21:17:00.409 UTC. These are readiness controls, not
 full75-mutant or literal acceptance proof.
+
+## First full checks on exact measured trie: still incomplete
+
+Hosted83db439/run37846119304 executes all100 original suites,275 delivery
+hashes and75 actual mutants; only one0.051227 ms seed1 observation fails.
+The genuine downloaded failed ZIP passed1457 independent byte/structural
+checks at21:42:24.494174 UTC, explicitly preserving its literal failure.
+
+One first local full command naturally CLOSED21:33:35.191788 UTC/EXIT1,
+all287 guarded inputs identical. All100 suites execute; only latency fails
+9/5/13 calls, maxima0.190573/0.137325/0.609950 ms. Both complete original
+reports, all outliers, source maps, commands, raw logs and coordinator actual
+grant/closure/release records are preserved in
+results/first-trie-original-acceptance-20261008/. No native attempt was
+stopped and no unchanged favorable retry was run.
+
+The prospective next mechanism is to avoid duplicate mapping work using the
+existing precompiled character data while preserving whole-string contextual
+casing, exact exceptions and fallback. It is not an asserted diagnosis or
+measured gain yet. Current literal acceptance and KEEP remain incomplete.

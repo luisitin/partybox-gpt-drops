@@ -2,7 +2,7 @@
 
 **What this is:** one pure TypeScript function, `nameFilter(input)`, that rejects player names containing a finite English list of sexual terms and slurs (leetspeak, repeated letters, separators, confusables, reversals) and accepts a reviewed list of benign names and words. Zero runtime dependencies.
 **How to use it:** `import { nameFilter } from './nameFilter.js'`; it returns `{ ok: true }` or `{ ok: false, reason, suggestion }`. Test with `npm ci --ignore-scripts --no-audit --no-fund && npm test` (Node 22+).
-**Status:** PR #23 is an isolated draft review targeting `job/B19-name-filter`; the original PR #2 and its history remain preserved. The current source adopts a measured regex-prefix trie improvement. Its 214,308 private behavior checks passed and its mixed whole-call measurements improved 29.66–37.98% across the original three seeded samples. The full unchanged literal acceptance check and the required post-green KEEP rerun remain pending. VERIFY.md separates current evidence from earlier hosted passes and local failures.
+**Status:** PR #23 is an isolated draft review targeting `job/B19-name-filter`; the original PR #2 and its history remain preserved. The current source adopts a measured regex-prefix trie improvement. Its 214,308 private behavior checks passed and its mixed whole-call measurements improved 29.66–37.98% across the original three seeded samples. The full unchanged acceptance checks execute every original suite but fail literal latency: hosted 1/0/0 outliers, local 9/5/13. The required KEEP remains incomplete. VERIFY.md separates current evidence from earlier hosted passes and local failures.
 
 ## Quick start
 

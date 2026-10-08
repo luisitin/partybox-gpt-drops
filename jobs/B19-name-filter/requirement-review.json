@@ -6,17 +6,17 @@
     {
       "rank": 1,
       "part": "Literal 0.05 ms per-check acceptance",
-      "status": "Measured candidate adopted; full changed-source literal check pending. Mixed means do not satisfy this gate."
+      "status": "Both first complete original checks fail literal latency; all failures preserved. Prospective mapping improvement has not been measured."
     },
     {
       "rank": 2,
       "part": "Original immutable verification workload",
-      "status": "Original fixture, seed, full counts and timing sample remain fixed; current full execution pending."
+      "status": "All original complete workloads and guards execute at all three seeds in hosted and local runs, unchanged."
     },
     {
       "rank": 3,
       "part": "Real mutant execution",
-      "status": "Supplemental M15/M19/M25 parse, execute and fail actual fixed assertions; full original 75-mutant execution remains pending. Initial witness error is retained."
+      "status": "All 75 original mutations parse, execute and fail actual truth; all controls retained."
     },
     {
       "rank": 4,
@@ -26,7 +26,7 @@
     {
       "rank": 5,
       "part": "Source-bound delivery and mandatory KEEP",
-      "status": "Byte-for-byte private archive retained; exact-head hosted proof and required post-green full rerun pending."
+      "status": "Both full failed artifacts/receipts retained; independent genuine hosted audit passes 1457 structural checks, literal acceptance and KEEP remain incomplete."
     }
   ],
   "keepCompleted": false,
@@ -43,5 +43,28 @@
     "cases": 3,
     "passed": 3,
     "closedUtc": "2026-10-08T21:17:00.409Z"
+  },
+  "firstOriginalAcceptance": {
+    "hosted": {
+      "run": 37846119304,
+      "outliers": [
+        1,
+        0,
+        0
+      ],
+      "passed": false,
+      "artifactStructuralChecks": 1457
+    },
+    "local": {
+      "closedUtc": "2026-10-08T21:33:35.191788+00:00",
+      "outliers": [
+        9,
+        5,
+        13
+      ],
+      "passed": false,
+      "guards": 287,
+      "sourcesUnchanged": true
+    }
   }
 }

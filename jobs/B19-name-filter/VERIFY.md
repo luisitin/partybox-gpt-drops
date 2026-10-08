@@ -9,10 +9,47 @@ suggestion keys and three exact benign spellings. Every original policy byte,
 reference, 459 fixed case, 43,830-input per-seed workload, original timing
 sample, 100,000-call warmup, seed and individually timed 0.05 ms gate remains.
 
-The unchanged full `npm test` on this genuinely changed source has not run yet.
-Fresh exact-head hosted acceptance and the mandatory post-green full KEEP
-rerun are pending. PR #23 remains draft. Earlier local 43/19/28 timing failures
+The first unchanged full `npm test` on this genuinely changed source executed
+in both hosted and local environments. All100 suites execute; only literal
+latency fails: hosted1/0/0 outliers, local9/5/13. Every failed record remains
+retained. Current acceptance and the mandatory post-green KEEP remain
+incomplete; PR #23 stays draft. Earlier local 43/19/28 timing failures
 and historical post-green 31/28/11 failures remain preserved below.
+
+### First complete original acceptance checks
+
+Exact command: `npm test` from jobs/B19-name-filter, expanding to
+`npm run build && node tests/run.mjs`. Hosted run37846119304 on exact83db439
+completed FAILURE21:21:17 UTC. Actual complete native log was read.
+The first local attempt STARTED21:33:16.193965 UTC and naturally CLOSED
+21:33:35.191788 UTC, EXIT1; all287 loaded/delivered start/end guards agree.
+
+All100 original suites execute in each environment. Non-latency checks pass
+with all original43830 comparisons/5000 obfuscations/25 actual mutants per
+seed,32,000 locked corpus rows, supplemental coverage, original sinks, and
+275-file current delivery integrity. All30,000 timed observations remain
+subject to the original literal gate; every outlier is retained.
+
+| Environment | Seed | Timed cases | Passed | Outliers | Maximum, ms | Exact command |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| Hosted | 1 | 10000 | 9999 | 1 | 0.051227 | `npm test` |
+| Hosted | 2 | 10000 | 10000 | 0 | 0.024325 | `npm test` |
+| Hosted | 3 | 10000 | 10000 | 0 | 0.029525 | `npm test` |
+| Local | 1 | 10000 | 9991 | 9 | 0.190573 | `npm test` |
+| Local | 2 | 10000 | 9995 | 5 | 0.137325 | `npm test` |
+| Local | 3 | 10000 | 9987 | 13 | 0.609950 | `npm test` |
+
+The complete100-row per-test case/pass/seed/command ledgers are in
+results/first-trie-original-acceptance-20261008/local-original-attempt/reports/summary.json
+and hosted-original-attempt/fresh-reports/summary.json under that same folder.
+The genuine failed hosted ZIP11578869086 is retained with official byte/hash
+metadata; an independent1457-check reader passed all safeZIP/CRC/source,
+locked corpus, actual mutant, fresh report and original sink checks, while
+requiring the real failed timing gate to remain failed. It does not contain
+every individual call time, so those times were not recomputed.
+Actual grant21:32:50.814796 and release21:33:58.837616 UTC are separate
+from the native local closure. See retained source/controller/coordinator
+and original-command provenance; no relocated run occurred.
 
 ### Current strict build and mutation readiness
 
@@ -78,10 +115,9 @@ These totals establish private mixed-workload gain; they are not the literal
 
 ### UNVERIFIED
 
-Current full original acceptance, exact new-head hosted CI/artifact, and the
-required post-green full KEEP rerun remain pending. Supplemental M15/M19/M25 actual assertion controls pass; the newly changed
-source must still execute every original mutant and demonstrate actual
-behavioral disagreements across all three original seeds.
+Literal acceptance failed in both first environments, and original KEEP
+remains incomplete. All75 original mutants execute and are actually caught;
+this does not satisfy the failed latency gate.
 All original finite-policy/corpus conflicts, unseen-input/language limits,
 historical failures and unknown timing causes remain disclosed.
 
