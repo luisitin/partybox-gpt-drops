@@ -1,33 +1,65 @@
-# B08 US Monopoly exact transition model and rent returns
+# B08 Monopoly exact landing odds + ROI
 
-`monopolyOdds.ts` builds the 120-state US classic model with exact integer transition counts over 9,216. Its power solver computes 40 long-run final-square probabilities for both jail strategies, 120 state probabilities, end-turn odds, and rent ROI/break-even rolls and opponent turns for every property and building or ownership level. Runtime dependencies: zero. The pure module imports no published answer tables, clocks, randomness or other runtime modules.
+**What this is:** exact long-run odds for the classic 40-square board (where moves and turns end, card arrivals) and the expected rent per opponent turn for every deed and building level, from an exact 120-state Markov chain.
+**How to use it:** PartyBox copies one file, `boardOdds.ts` (pure, no imports, no names), into `games/monopoly/server/` to value bot buys, builds and trades and to drive a TV "hottest squares" moment. See `INTEGRATION.md`.
+**Status:** done and verified. `npm test` runs exact checks, independent re-derivations, 720M simulated rolls and 135 killed mutants. Port with fixes: PartyBox's utility-rent rule, the Speed Die and the one-attempt jail each need a decision (`INTEGRATION.md`).
 
-## Use and outputs
-
-```ts
-import { monopolyOdds, allMonopolyOdds } from './build/monopolyOdds.js';
-const asap = monopolyOdds('leave ASAP');
-const maximumStay = monopolyOdds('stay max');
-const both = allMonopolyOdds();
-```
-
-`odds.json` contains both computed results and square names. `roi.csv` contains all 348 property/scenario rows across both strategies: 22 streets × 7 scenarios, four railroads × 4 and two utilities × 2 per strategy. Street scenarios are standalone base rent and complete-set levels 0–4 houses/5 hotel. Railroads and utilities use ownership counts. Investment is attributed to this property, assuming other prerequisite holdings; all rent is collected. Utility rent uses the cited 2021 US fresh rent roll. Chance railroad/utility premiums are included. Income/break-even turns mean opponent turns, derived from stationary rolls per turn. See `ASSUMPTIONS.md`.
-
-Landing means final occupancy after a movement roll, including failed jail attempts and card relocations. Physical square 10 aggregates visiting and jailed states; square 30 is zero. `endTurnLanding` supplies the separate turn-boundary convention. Both 16-card decks use independent uniform draws with GOJF retained as a nonmovement card. Maximum stay attempts doubles through its third jail turn, and jail doubles release ends that turn. ASAP pays before rolling and then permits normal repeated doubles.
-
-## Full reproduction
+## Quick start
 
 ```sh
-npm ci --ignore-scripts --no-audit --no-fund
-npm test
+cd jobs/B08-monopoly-markov
+npm ci --ignore-scripts --no-audit --no-fund   # TypeScript 5.8.3 only; zero runtime dependencies
+npm test                                       # the full suite, about a minute; writes .verification/
+start preview/hottest-squares.html             # Windows (macOS: open). TV stats moment; ?view=phone ?lang=es ?plan=stay, keys 1/2/R
 ```
 
-The single full command verifies all authoring/deliverable seals, strictly builds with pinned TypeScript 5.8.3, checks computed delivered outputs and runs every suite with seeds 1/2/3. Each seed compares both exact matrices and all stationary/ROI values to independently authored implementations, checks published tables and normalization, directly simulates 100,000,000 movement rolls for each strategy, and strictly compiles/runtime-kills 25 isolated mutants. Total: 600M rolls and 75 runtime kills. The workflow runs the same full command after fresh locked installation on Node 22.16.0.
+```ts
+import { buildGain, hottestSquares, rentPerOpponentTurn } from './build/boardOdds.js';
+hottestSquares(3); // [{ square: 10, chance: 0.0622 }, { square: 24, chance: 0.0319 }, { square: 0, chance: 0.0310 }]
+const deed = edition.spaces[24]; // PartyBox's own data: { kind: 'street', price: 240, buildingCost: 150, rents: [...] }
+rentPerOpponentTurn(24, deed, { level: 3, fullGroup: true, sameKind: 0 }, edition.rules); // 28.35
+buildGain(24, deed, { level: 2, fullGroup: true, sameKind: 0 }, edition.rules); // 0.113 per unit of cost
+```
 
-To regenerate delivered outputs after a deliberate implementation change: `npm run build && node export.mjs --write`. Run the full tests and update the manifest with `node hashes.mjs --write` after updating reviewed artifacts. Normal `npm test` checks rather than rewrites the outputs.
+## The product API: `boardOdds.ts`
 
-## Evidence and sources
+Everything is indexed by board position 0–39 and takes PartyBox's `Edition['spaces'][number]` and `Edition['rules']` as they are. Every function is total: bad input returns 0 or `[]`, never a throw, NaN or a negative number.
 
-`VERIFY.md` records exact commands, counts and observed results. `reports/` preserves full local raw evidence; each run also creates `.verification/`, which CI uploads. `SOURCES.md` cites the official US rulebook, complete rents and published tables. Two Butler tables match both strategies within 1e-4; an additional independent Collins ASAP table matches. The Collins maximum-stay Jail gap and edition/counting differences are recorded in `CONFLICTS.md` without changing thresholds or replacing seeds.
+| Export | What it gives |
+| --- | --- |
+| `BOARD_ODDS[plan]` | `rollsPerTurn` and 40-entry `perRoll`, `perTurn`, `railroadCard`, `utilityCard`, `utilityDice`, `utilityCardDice` (generated, bit-exact) |
+| `rentPerOpponentTurn(position, deed, holding, rules, options?)` | expected rent one opponent pays per turn they take |
+| `rentReturn(...)` / `investmentOf(deed, holding)` | rent per turn per unit invested / price plus buildings (a hotel counts five) |
+| `buildGain(position, deed, holding, rules, target?, options?)` | extra rent per unit of building cost from `level` to `target` (default: the next building) |
+| `hottestSquares(count, plan?, per?)` | squares by landing chance, hottest first (ties by position) |
+| `shareOf(squares, plan?, per?)` | combined chance of a set of squares (duplicates count once) |
 
-Production and its blind transition/linear reference were each authored and sealed before source exchange. The separate blind ROI helper was also sealed before its exchange. Sources and pre-exchange records remain unchanged; see `INTEGRATION-AUTHORING.md`, `PRODUCTION-AUTHORING.md` and `blind-authoring/`. `PROOF.md` explains the exact transition model, turn conversion, rent formulas, correlated simulation variance and mutations. `SHA256SUMS.txt` inventories every delivered job file and the required workflow.
+`holding` is `{ level: 0-5, fullGroup, sameKind }`, where `sameKind` counts the railroads or utilities the owner holds. `options` is `{ plan?: 'leave ASAP' | 'stay max', utilityDice?: 'movement' | 'fresh' }`. The defaults are `'leave ASAP'` and `'movement'`, because PartyBox's engine today charges utility rent on the dice that moved the piece; `'fresh'` is the rulebook's new throw and reproduces `roi.csv`.
+
+Headline numbers ('leave ASAP' / 'stay max'): Jail ends 6.22% / 11.53% of all moves, then Illinois Avenue at 24 (3.19% / 3.00%) and GO (3.10% / 2.92%); Go To Jail is 0%. Orange is the hottest colour set (8.81% / 8.31%), red next (8.76% / 8.18%). A turn has 1.187 / 1.166 movement rolls. Per unit of cost, the step to three houses is the best build on 20 of the 22 streets; the two browns peak later.
+
+## The engine and data behind it
+
+`monopolyOdds.ts` (sealed) builds the chain: 117 free states (square × doubles streak 0–2) plus 3 jail-attempt states, with every transition an exact integer count over 9,216 (36 dice outcomes × up to two 16-card draws). `monopolyOdds(plan)` returns the state probabilities, `landing` (per roll), `endTurnLanding` (per turn), `rollsPerTurn` and per-deed `properties[].levels[]` returns; `allMonopolyOdds()` gives both plans. `odds.json` and `roi.csv` are its exported results (348 rows: 22 streets × 7 scenarios, 4 railroads × 4 and 2 utilities × 2, for each plan).
+
+Model conventions: "landing" is where a movement roll ends after cards and Go To Jail, and includes failed jail attempts; square 10 adds jail and Just Visiting together. Decks are independent uniform draws from 16 cards (10 Chance and 2 Community Chest movers). 'Stay max' tries for doubles three times and a doubles release ends the turn; 'leave ASAP' pays first and keeps normal doubles. Railroad cards pay double; the utility card pays ten times the dice. Details: `ASSUMPTIONS.md`, `PROOF.md`, `CONFLICTS.md`.
+
+## Product vs evidence
+
+| Kind | Files |
+| --- | --- |
+| **Product (port this)** | `boardOdds.ts` |
+| Design reference (rebuild in React, do not ship) | `preview/hottest-squares.html` |
+| Engine and data (stay here) | `monopolyOdds.ts`, `odds.json`, `roi.csv`, `data/*.json` |
+| Generators and tests | `partybox-export.mjs`, `partybox-checks.mjs`, `partybox.mjs`, `export.mjs`, `checks.mjs`, `test.mjs`, `simulate.mjs`, `sampling-variance.mjs`, `mutate.mjs`, `run.mjs`, `hashes.mjs`, `core-selfcheck.mjs` |
+| Evidence and records | `VERIFY.md`, `LOOP.md`, `NEXT.md`, `reports/`, `blind-authoring/`, `reference.ts`, `roi-reference.ts`, `*-AUTHORING.md`, `CORE-SELFCHECK.json`, `PRODUCTION-SEALED-SHA256SUMS.txt`, `SHA256SUMS.txt`, `SOURCES.md` |
+
+## Changing things
+
+- After a deliberate solver change, run `npm run build && node export.mjs --write && node partybox-export.mjs --write`, then `npm test`, then `node hashes.mjs --write` (the inventory of every file here plus the workflow). `npm test` only checks; it never rewrites.
+- `npm test` checks the authoring seals and builds strictly. Then, for seeds 1, 2 and 3, it runs:
+  - the exact suites against independently authored solvers and published tables (Butler, Collins);
+  - 100M simulated rolls per plan and 25 solver mutants;
+  - the PartyBox suite: exact checks and a fuzz, 20M simulated rolls per plan of turn ends, card arrivals and utility dice, and 20 `boardOdds.ts` mutants.
+- CI (`.github/workflows/B08.yml`) runs the same command on Node 22.16.0 and uploads `.verification/`.
+- Production and the blind references were authored and sealed before any exchange (`PRODUCTION-AUTHORING.md`, `INTEGRATION-AUTHORING.md`, `blind-authoring/`); the seals must stay unchanged.
