@@ -1,1 +1,18 @@
-{"name":"b16-player-colors","version":"1.0.0","private":true,"type":"module","scripts":{"build":"tsc -p tsconfig.json","test":"npm run build && node tests/run.mjs","search":"npm run build && node tools/search.mjs","generate":"npm run build && node tools/generate.mjs"},"devDependencies":{"typescript":"5.9.3"},"dependencies":{}}
+{
+  "name": "b16-player-colors",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node tests/run.mjs && node tests/partybox.mjs",
+    "search": "npm run build && node tools/search.mjs",
+    "generate": "npm run build && node tools/generate.mjs",
+    "partybox": "npm run build && node tools/build-partybox-sheet.mjs",
+    "canonical": "npm run build && node tools/canonical-8bit.mjs"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "dependencies": {}
+}

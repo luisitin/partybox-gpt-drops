@@ -75,3 +75,39 @@ Each mutation begins from the unmodified source in its own directory, compiles u
 - The stronger optional first-eight/all-simulations ≥20 interpretation: measured and does not pass.
 - Global optimality, uniqueness, or an impossibility proof for alternative palettes. The adopted palette is an independently checked feasible result.
 - GitHub CI status is recorded externally in the PR body with the exact head SHA after the hosted run completes.
+
+## Polish pass 2026-10-08
+
+Scope: PartyBox integration (INTEGRATION.md), an 8-bit PartyBox palette, sheet, tokens, gate test.
+
+Commands and results (Node 22.22.0, TypeScript 5.9.3, 4 CPUs shared with other jobs):
+
+| Command | Result |
+| --- | --- |
+| `npm ci --ignore-scripts --no-audit --no-fund` | ok |
+| `npm test` (build, `tests/run.mjs` seeds 1-3, `tests/partybox.mjs`) | see the run table below |
+| `npm run canonical` (`tools/canonical-8bit.mjs`) | exact first-8 20.10, all-12 12.10: PASS; 8-bit rounded first-8 19.54, all-12 11.77: FAIL |
+| `node tools/search-partybox.mjs 1 30000 out.json ring` with `HUE_MIN=20` | reproduced `partybox/palette-12.json` byte for byte; score 1.0562 |
+| `node tests/partybox.mjs` | 264 production-vs-reference pair rows, max disagreement 2.84e-14; first-8 21.39 (>= 20); all-12 four-view 12.67 (>= 12); min OKLCH chroma 0.106; min hue spread 21.4 deg; ring >= 3:1 on all five themes |
+| `npm run partybox` (`tools/build-partybox-sheet.mjs`) + Chromium screenshot | `partybox/sheet.html`, looked at on all five themes |
+
+UNVERIFIED in this pass: perception on real TVs and phones; colour-vision viewing by a person; the Spanish names; the search is a heuristic (no optimality claim). The mutation harness shares `.mutations/` between runs, so two concurrent `npm test` runs in one folder collide; this pass ran them one at a time.
+
+### Full `npm test` run of this pass
+
+Started 15:48:35 UTC and finished 15:52:32 UTC on 2026-10-08 (about four minutes),
+Node 22.22.0, `EXIT=0`. It ran the delivered code and tests as they stood at
+the start of the run. Afterwards only documents, this table and `SHA256SUMS.txt`
+changed; no test reads them.
+
+| Suite | Seeds | Result |
+| --- | --- | --- |
+| `tsc -p tsconfig.json` (strict build) | all | pass |
+| independent math views, delivered pairs and four 16-bit PNGs (`tests/run.mjs`) | 1, 2, 3 | 40,040 views and 264 exact pair rows per seed; pass |
+| contrast checks | 1 (per seed JSON) | 36 checks; pass |
+| 25 deliberate mutations, each caught under all three seeds | 1, 2, 3 | 25 of 25 caught; `failures: []` |
+| `tests/partybox.mjs` (PartyBox gates on the 8-bit set) | - | 264 production-vs-reference pair rows, max disagreement 2.84e-14; first-8 normal dE00 21.39 (>= 20); all-12 four-view dE00 12.67 (>= 12); min OKLCH chroma 0.106; min hue spread 21.4 deg; 5 themes ring-checked; `PARTYBOX PALETTE GATES PASSED` |
+
+The log is kept outside the repository. The final rerun on the committed state
+is recorded in the PR body, with its head SHA.
+
