@@ -15,8 +15,9 @@
 - Runtime optimization uses a stateless ASCII fast path, a combined regex
   scan and a private finite policy-character table compiled only at startup.
   Whole-string lowercasing and original Unicode fallback remain. It adds no result cache, ambient randomness, clocks or dependencies.
-- Only this job folder and the required B19 workflow may change. Delivery uses
-  `job/B19-name-filter` and PR #2; main is never pushed.
+- Only this job folder and the required B19 workflow may change. This isolated
+  delivery uses `job/B19-name-filter-protocol-review-20261008` and PR #23,
+  targeting `job/B19-name-filter`; original PR #2 and main remain preserved.
 
 ## Resumed unfinished delivery, October 8
 
@@ -74,3 +75,26 @@
 - One complete original B19 KEEP rerun on 2b54431 failed its literal timing gate.
   It is historical after the external product change, and is not current-source
   proof, a completed cosmetic round, or justification for a threshold waiver.
+
+## Measured regex-prefix adoption, October 8
+
+- Adopt exactly the private candidate source SHA256
+  `41442670786856c1dfa98a5755bd21273287047750035f419249ab7402e8505d`.
+  Prefix factoring shares identical repeated-letter tokens only. Required
+  repeat minima, i/l/# ambiguity, exact exceptions, normalization, substring
+  matching and reversals keep their original languages and order.
+- The 214,308-case private comparison includes every original 43,830-input
+  workload at seeds 1–3 and full result/suggestion/frozen/wrapper agreement,
+  with both references. It is behavioral diagnostic evidence, not a full
+  literal acceptance result.
+- One naturally completed ABBA/BAAB run measured all 24 phases and 12 million
+  whole calls on the exact original seeded samples. Aggregate gains are
+  35.7596%, 37.9846% and 29.6573%; every phase and GC event remains archived.
+  No mean substitutes for the unchanged individually timed 0.05 ms gate.
+- Archive the original `.work/B19-trie-candidate` command paths and baseline
+  5155180 bytes faithfully. Copied archives were not executed at their new
+  paths. Their historical source maps do not describe newly edited delivery
+  documents. Old failures remain actual failures with unknown causes.
+- The sole B19 workflow checks out the exact PR head to bind hosted evidence
+  to this isolated review, preserving the full original `npm test` command,
+  readonly permissions, Ubuntu runner, 30-minute limit and actions major pins.

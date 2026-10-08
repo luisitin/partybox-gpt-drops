@@ -25,32 +25,11 @@ const GROUPS: ReadonlyArray<readonly [string, string]> = [
 ];
 const MAP = new Map<string, string>();
 for (const [to, from] of GROUPS) for (const char of from) MAP.set(char, to);
-// Share only identical run tokens; alternatives retain their exact minima and
-// i/l ambiguity. Factoring concatenation over union preserves the same language.
-const pattern = (terms: readonly string[]): string => {
-  interface Trie { terminal: boolean; children: Map<string, Trie>; }
-  const node = (): Trie => ({terminal: false, children: new Map()});
-  const root = node();
-  for (const term of terms) {
-    let current = root;
-    for (const run of term.match(/(.)\1*/g) ?? []) {
-      const c = run[0]!;
-      const token = (c === 'i' || c === 'l' ? `[${c}#]` : c)
-        + (run.length === 1 ? '+' : `{${run.length},}`);
-      let next = current.children.get(token);
-      if (next === undefined) { next = node(); current.children.set(token, next); }
-      current = next;
-    }
-    current.terminal = true;
-  }
-  const emit = (current: Trie): string => {
-    const alternatives = [...current.children].map(([token, next]) => token + emit(next));
-    if (alternatives.length === 0) return '';
-    const body = alternatives.length === 1 ? alternatives[0]! : `(?:${alternatives.join('|')})`;
-    return current.terminal ? `(?:${body})?` : body;
-  };
-  return emit(root);
-};
+const pattern = (terms: readonly string[]): string => terms.map(term => term.replace(/(.)\1*/g, run => {
+  const c = run[0]!;
+  // Preserve required repeats: 'boob' needs two o's; never turn 'Bob' into it.
+  return (c === 'i' || c === 'l' ? `[${c}#]` : c) + (run.length === 1 ? '+' : `{${run.length},}`);
+})).join('|');
 const REVERSED = TERMS.map(term => [...term].reverse().join(''));
 const BAD = new RegExp(pattern(TERMS) + '|' + pattern(REVERSED));
 // A repeated-letter pattern cannot consume fewer letters than its original

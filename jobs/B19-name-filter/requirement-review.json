@@ -1,0 +1,47 @@
+{
+  "kind": "current-prefix-trie-requirement-review",
+  "productionSourceSha256": "41442670786856c1dfa98a5755bd21273287047750035f419249ab7402e8505d",
+  "originalWorkloadRunnerSha256": "bff0c17b62aa75d342527a8ced855678380411053476557acde61f2e1b6fbdd9",
+  "weakestFive": [
+    {
+      "rank": 1,
+      "part": "Literal 0.05 ms per-check acceptance",
+      "status": "Measured candidate adopted; full changed-source literal check pending. Mixed means do not satisfy this gate."
+    },
+    {
+      "rank": 2,
+      "part": "Original immutable verification workload",
+      "status": "Original fixture, seed, full counts and timing sample remain fixed; current full execution pending."
+    },
+    {
+      "rank": 3,
+      "part": "Real mutant execution",
+      "status": "Supplemental M15/M19/M25 parse, execute and fail actual fixed assertions; full original 75-mutant execution remains pending. Initial witness error is retained."
+    },
+    {
+      "rank": 4,
+      "part": "Finite policy and collision coverage",
+      "status": "All 32,000 original selected corpus rows and explained kept conflicts remain. Universal allowance/confusable coverage is not claimed."
+    },
+    {
+      "rank": 5,
+      "part": "Source-bound delivery and mandatory KEEP",
+      "status": "Byte-for-byte private archive retained; exact-head hosted proof and required post-green full rerun pending."
+    }
+  ],
+  "keepCompleted": false,
+  "literalAcceptanceCompleted": false,
+  "diagnosticGainsPercent": [
+    35.75963522110504,
+    37.984631587882056,
+    29.657297572282335
+  ],
+  "priorFailuresPreserved": true,
+  "timingCause": "unknown",
+  "strictBuildCompleted": true,
+  "supplementalAssertionControls": {
+    "cases": 3,
+    "passed": 3,
+    "closedUtc": "2026-10-08T21:17:00.409Z"
+  }
+}

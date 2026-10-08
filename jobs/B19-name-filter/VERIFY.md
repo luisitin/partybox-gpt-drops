@@ -1,8 +1,94 @@
 # B19 verification ledger
 
-## Current isolated protocol review, October 8
+## Current exact measured trie adoption, October 8
 
-Production is the external693d9501 module, with its three added exact exceptions
+Current production source SHA256 is
+`41442670786856c1dfa98a5755bd21273287047750035f419249ab7402e8505d`.
+This is exactly the measured prefix-trie candidate. It retains the external
+suggestion keys and three exact benign spellings. Every original policy byte,
+reference, 459 fixed case, 43,830-input per-seed workload, original timing
+sample, 100,000-call warmup, seed and individually timed 0.05 ms gate remains.
+
+The unchanged full `npm test` on this genuinely changed source has not run yet.
+Fresh exact-head hosted acceptance and the mandatory post-green full KEEP
+rerun are pending. PR #23 remains draft. Earlier local 43/19/28 timing failures
+and historical post-green 31/28/11 failures remain preserved below.
+
+### Current strict build and mutation readiness
+
+One `npm run build` from jobs/B19-name-filter passed strict TypeScript
+(case1, shared setup), command exit0 at21:14:38.142896 UTC. Actual production
+compiled SHA25634b70d1cd10ded50d5edd85e6061e6eb2b6054b244284ed1bbe41f38c405170c
+matches the original measured candidate.
+
+The supplemental command
+`node .work/B19-production-acceptance/mutation-anchor-check.mjs`
+passed3 actual assertion controls, shared setup, at21:17:00.409 UTC; command
+exit0 at21:17:00.424769 UTC. M15/M19/M25 each parse and execute, fail fixed
+behavioral truth via actual AssertionError, and have one unique anchor.
+The first helper selected Bob for M25; original minimum-length pruning kept
+that3-character input safe even in the mutant, so the control attempt failed.
+Its source/tool output remains preserved; only the supplemental witness was
+corrected to the existing benign case Bobby. The original full mutation suite
+and production did not change. These controls do not substitute for all75
+original mutant checks. See results/trie-adoption-readiness-20261008/.
+
+### Complete measured candidate evidence
+
+Evidence directory: `results/prefix-trie-diagnostic-20261008/`.
+The original command paths are `.work/B19-trie-candidate/`; archived copies
+were not executed at their new paths. Strict compile passed one case, shared
+setup, with exact command
+`node jobs/B19-name-filter/node_modules/typescript/bin/tsc -p .work/B19-trie-candidate/tsconfig.json`.
+Its command naturally exited 0 at 20:51:19.715634 UTC.
+
+Behavioral comparison naturally CLOSED at 20:51:36.306 UTC: all 214,308 cases
+pass full current result/suggestion/frozen/wrapper agreement, both references,
+and recorded expected truth. Original cases total 131,490. All 243 actual
+start/end source guards match. The default-gzip diagnostic sizes are
+5,010/3,686 bytes; the full required command independently checks level-9 gzip.
+
+| Test | Cases | Passed | Seed | Exact observed command from repository root |
+| --- | ---: | ---: | ---: | --- |
+| original | 43830 | 43830 | 1 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+| Unicode-policy | 1296 | 1296 | 1 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+| Unicode-ranges | 1422 | 1422 | 1 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+| length-boundaries | 24873 | 24873 | 1 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+| added-name-bypasses | 15 | 15 | 1 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+| original | 43830 | 43830 | 2 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+| Unicode-policy | 1296 | 1296 | 2 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+| Unicode-ranges | 1422 | 1422 | 2 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+| length-boundaries | 24873 | 24873 | 2 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+| added-name-bypasses | 15 | 15 | 2 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+| original | 43830 | 43830 | 3 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+| Unicode-policy | 1296 | 1296 | 3 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+| Unicode-ranges | 1422 | 1422 | 3 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+| length-boundaries | 24873 | 24873 | 3 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+| added-name-bypasses | 15 | 15 | 3 | `node .work/B19-trie-candidate/exact-harness.mjs equivalence` |
+
+One balanced ABBA/BAAB diagnostic naturally CLOSED at 21:00:57.928 UTC,
+command exit 0 at 21:00:57.976145 UTC. Exact command:
+`node .work/B19-trie-candidate/exact-harness.mjs timing`.
+All 24 measured 500,000-call phases, 12 million calls, original seeded sample
+hashes, output sinks, GC events, and unchanged 243 start/end guards are retained.
+The three aggregate improvements are 35.7596%, 37.9846% and 29.6573%; all six
+individual ABBA/BAAB blocks favor the candidate. No phase was filtered.
+These totals establish private mixed-workload gain; they are not the literal
+10,000 individually timed-call acceptance result at any seed.
+
+### UNVERIFIED
+
+Current full original acceptance, exact new-head hosted CI/artifact, and the
+required post-green full KEEP rerun remain pending. Supplemental M15/M19/M25 actual assertion controls pass; the newly changed
+source must still execute every original mutant and demonstrate actual
+behavioral disagreements across all three original seeds.
+All original finite-policy/corpus conflicts, unseen-input/language limits,
+historical failures and unknown timing causes remain disclosed.
+
+
+## Historical restored-protocol review before trie adoption, October 8
+
+At restored-protocol heads d1e72a3 and 5155180, production was the external693d9501 module, with its three added exact exceptions
 and stable suggestion keys retained. The corrected original workload preserves
 48 timed positive names,289 original fixed exceptions,459 handwritten inputs
 and43,830 complete differential/mutation inputs perseed. New feature checks
@@ -136,7 +222,8 @@ threshold waiver, source/toolBLOCKED state or finished cosmetic round is claimed
 
 ### UNVERIFIED
 
-Exact corrected-protocol hosted CI is pending publication. A finite pass does
+The restored-protocol d1e72a3 and 5155180 hosted passes are historical after
+trie adoption. New-source complete acceptance remains pending. A finite pass does
 not establish a hardware-independent maximum or explain an observed outlier.
 All existing finite-policy,corpus-selection,unseen-name and language limits
 remain. Other-session PartyBox integration paths have not been rechecked here.

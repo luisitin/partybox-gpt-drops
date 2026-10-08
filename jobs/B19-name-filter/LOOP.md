@@ -168,3 +168,34 @@ differentials,mutants,obfuscations,strict types,integrity and sizes pass.
 Every actual log and raw report is retained. The weak points and exact next
 step are logged in requirement-review.json. No causal timing explanation,
 unchanged luck retry, user waiver or only-cosmetic stopping claim is made.
+
+## October 8 measured regex-prefix improvement
+
+The remaining literal timing weakness motivated one source-bound candidate.
+A trie factors only identical repeated-letter regex tokens, preserving minima,
+i/l/# ambiguity, exact exceptions, normalized substring/reversed languages and
+all per-call operations. The exact candidate SHA256 is 41442670786856c1dfa98a5755bd21273287047750035f419249ab7402e8505d.
+
+Strict TypeScript passed. Complete private result/suggestion/frozen/wrapper
+agreement and both references passed all214,308 cases, including all131,490
+original inputs. One naturally completed ABBA/BAAB experiment on the exact
+original seeded samples measured35.7596/37.9846/29.6573% gains across12million
+whole calls; all24 phases, raw GC observations, sources and commands remain
+byte-for-byte archived in results/prefix-trie-diagnostic-20261008/. Allsix
+blocks favor the candidate. Original private paths and real grant/closure/
+delayed release times are retained; archived paths were not executed.
+
+The measured candidate is adopted exactly. This is a substantive runtime
+improvement, not a completed acceptance or cosmetic KEEP round. Original
+policy/workloads, every timer/warmup/threshold, both reference sources, and
+all previous failed receipts remain unchanged. The full changed-source
+command, exact-head hosted evidence, and required post-green full rerun are
+pending. PR23 stays draft; originalPR2/canonical/main are preserved.
+
+Production strict build passed21:14:38.142896 UTC and exact compiled34b70d1c
+matches the measured candidate. Three supplemental assertion controls actually
+kill M15/M19/M25. The initial M25 witness Bob was shielded by existing correct
+minimum-length pruning, so its helper attempt failed and remains retained.
+Only that supplemental witness changed to the original benign case Bobby;
+corrected controls pass at21:17:00.409 UTC. These are readiness controls, not
+full75-mutant or literal acceptance proof.
