@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-08T13:12:33.110342+00:00",
-  "summary": "The strict game queue is active. G07 is ready for maintainer review and unmerged. G02 is now ready for maintainer review after its final exact-head CI passed; it is unmerged. G04 exact-head CI passed, while its separate strict phone confirmation failed. G09 retains failed hosted and strict phone checks; original acceptance remains pending. G10 has acquired and verified the complete six-piece corpus, with full offline integration and browser acceptance still pending. No game is marked Completed without a merge.",
+  "updatedAt": "2026-10-08T13:28:28.399416+00:00",
+  "summary": "Seven game deliveries are ready for maintainer review and unmerged (G01, G02, G03, G05, G06, G07 and G08). G04 and G09 remain draft reviews with exact-head CI in progress; their prior hosted successes do not bind the new heads, and retained local phone/frame failures remain explicit. G10 remains an active no-PR pipeline: the complete six-piece source has been acquired and a private chunked payload now starts on desktop and phone, but the public game still integrates only International two-through-five-piece data. No game is marked Completed without a merge.",
   "workers": [
     {
       "current": "G07",
@@ -20,31 +20,31 @@
     },
     {
       "current": "G04",
-      "summary": "Draft PR4 at 7a7af73: exact-head CI run 37780890383 passed at 13:06:22 UTC. Prior 25a6023 CI run 37777044855 passed 51 node tests, 21,000 games, 25 mutants, 24,000 leagues, 6 expiry cases, 66 legacy browser cases and six 300-frame profiles. The newer actual local desktop 55.903 FPS failure is retained; phone had not yet run at that attempt, and no cause is claimed. The late deadline fix changes overdue remainder 1000\u21920; round 11 has a player-visible gain, streak 0. Root checkpoint cadence misses of 74s and 97s are retained in the public audit. Fresh source-guarded strict confirmation measured desktop 59.605 FPS PASS and phone 54.0566 FPS FAIL; raw results remain retained. KEEP round12 evidence-freshness guard is in progress; final acceptance remains pending.",
-      "next": "Complete source-guarded strict browser profiles and exact current-head CI; preserve actual failures and re-establish three no-gain rounds after the timer repair.",
+      "summary": "Draft PR4 at 5c450993: exact-head CI run 37783931074 is in progress. The preceding 7a7af73 run 37780890383 passed, but does not certify this newer evidence-binding head. Current work independently validates raw frame data, source guards and actual capture hashes. Retained local failures remain: initial desktop 55.903 FPS, then desktop 59.605 FPS PASS and phone 54.0566 FPS FAIL; no cause is claimed. The deadline repair remains a player-visible gain, cadence misses of 74s and 97s remain audited, and round 12 records no player gain with streak 1 pending CI.",
+      "next": "Read exact-head run 37783931074; if it passes, continue formal KEEP rounds until three consecutive no-player-gain rounds, while retaining the failed local measurements and evidence limits.",
       "queue": [
         "Original acceptance and final review"
       ]
     },
     {
       "current": "G09",
-      "summary": "Draft PR8 at 8c70a857, pushed 13:11:20 UTC: fresh exact-head CI is pending. The current unchanged strict 600-frame/capture gates now run on the GitHub host before evidence binding. Both local strict failures remain retained: original phone 58.444 FPS, then source-guarded confirmation desktop 59.213 PASS/phone 54.965 FAIL. All 600 raw intervals per confirmation profile are retained; no cause is claimed. Core,7,000-game oracle, lexical/property/privacy and codec checks passed. The 320 original category bank retains eight cramped strong-bot answers and 98.423% duplicate rate in the documented stress case.",
-      "next": "Read the new exact-head hosted browser result and raw artifacts; complete unchanged visual acceptance while retaining category/bot diversity limits.",
+      "summary": "Draft PR8 at 47e1adff: exact-head CI run 37784359281 is in progress. The unchanged strict runner already passed on the GitHub host at preceding head 8c70a857/run 37782409140 (desktop 60.002376 FPS, phone 4x 60.002940 FPS, all 600 raw intervals and clips source-bound). Both local phone failures remain retained and unresolved: 58.444 FPS, then 54.965 FPS with desktop 59.213 FPS PASS. Round 4 delivered a player-visible singular/plural scoring correction, so the no-gain streak remains 0; crowded-bot vocabulary limits remain documented.",
+      "next": "Read exact-head run 37784359281, then continue formal KEEP rounds and measure the highest-ranked remaining player issue; do not replace the retained local failures with the hosted pass.",
       "queue": [
         "Original acceptance and final review"
       ]
     },
     {
       "current": "G10",
-      "summary": "Active pipeline branch job/G10-checkers-complete-20261008 at 1abfdfa, with no PR: current public offline American2\u20136-piece plus International2\u20135-piece page is about 80 MB. Its 28 functional checks and 600 frames per desktop/phone profile passed at 59.115/60.003 FPS, with guarded recordings. The complete International six-piece corpus has now been acquired and verified: 82 files, 1.010 GB, 37 material classes and native 10,000 checks. Full six-piece offline packaging/browser/integration remains pending. A private 1.38 GB candidate took 80.8s to open on desktop and failed the unchanged 300s phone startup timeout; this is a retained engineering result.",
-      "next": "Reduce full six-piece offline startup/storage cost, integrate it in the actual public page and pass the complete unchanged functional/browser gates.",
+      "summary": "Active no-PR branch job/G10-checkers-complete-20261008 at 0fba173. The public offline game still contains American two-through-six-piece plus International two-through-five-piece data; its retained 28 checks and desktop/phone profiles passed at 59.115/60.003 FPS. The complete licensed International six-piece corpus is acquired and independently checked. A private 1.38 GB baseline took 80.8s on desktop and failed the unchanged 300s phone timeout; a chunked private prototype then started in 27.1s desktop and 89.5s phone with exact byte-window checks and no runtime network/page errors. This proves payload access only, not integration into the delivered game or original acceptance.",
+      "next": "Integrate bounded six-piece reads into the actual public game and bot worker, then pass final core/property/mutation, 7,000-game matrix, 4,000-game league, regeneration, browser, CI and three-no-gain-round requirements before opening a PR.",
       "queue": [
         "Original acceptance and final review"
       ]
     }
   ],
   "repository": "luisitin/partybox-game-cores",
-  "observedAt": "2026-10-08T13:12:43.020480+00:00",
+  "observedAt": "2026-10-08T13:28:28.399416+00:00",
   "rows": [
     {
       "id": "G01",
@@ -673,7 +673,7 @@
       "title": "Reality Check (core only)",
       "stage": "Review",
       "branch": "job/G04-reality-check-core",
-      "head": "7a7af73fcf8b9049b3ffd3ed0035d303b19859ef",
+      "head": "5c45099318e0b83ab63dcb7990db7fe617882cc5",
       "otherBranches": [
         {
           "name": "job/G04-reality-check",
@@ -683,20 +683,20 @@
       "pr": {
         "number": 4,
         "html_url": "https://github.com/luisitin/partybox-game-cores/pull/4",
-        "title": "G04: add Reality Check pure core and offline hot-seat game",
+        "title": "G04 Reality Check: offline core, fair deadlines and verified bot play",
         "state": "open",
         "draft": true,
         "merged_at": null,
-        "updated_at": "2026-10-08T13:01:14Z",
-        "body": "Reality Check now closes an expired phase before accepting a human input or sampling a bot. At a visibly expired timer, late correct answers/votes previously earned 1,000 points; six actual-file regressions now verify zero credit and exclude late human/bot fakes, with on-time and paused controls preserved. The pure reducer and scoring remain unchanged. Full pinned Zod MIT notice is restored.\n\nCurrent head: `7a7af73fcf8b9049b3ffd3ed0035d303b19859ef`; exact-head CI pending. Previous `25a6023` CI [37777044855](https://github.com/luisitin/partybox-game-cores/actions/runs/37777044855) passed 51 node tests, 21,000 bot games, 25 mutants, 24,000 leagues, six deadline regressions and 66 browser scenarios, with six 300-frame profiles near 60 FPS. Its full logs were read and aggregate evidence is committed.\n\nCurrent local browser passed 22 functional scenarios, then FAILED desktop frame gate at 55.903 FPS (p95 16.8 ms, p99 83.2 ms, maximum 166.6 ms); phone was not run. Complete failed raw intervals, exact runner and log remain public. Cause is unresolved. This checkpoint logs complete CI raw reports and always uploads evidence, preserving the same gates. Fresh source-guarded milestone-14 clip is 156,189 bytes; encoding is not an FPS measurement.\n\nKEEP round 11 produced the deadline fairness gain and resets the no-player-gain streak to zero. This PR stays draft pending current acceptance and three fresh consecutive no-player-gain rounds. Controlled held-timer/wallclock-jump fixtures do not measure ordinary race frequency; phone evidence is Chromium 4\u00d7 CPU approximation.\n\nCadence audit: original first checkpoint missed 30 minutes by 74 seconds. This successful push at 12:59:30 UTC followed 12:27:53 by 31m37s, missing the second hard deadline by 97 seconds. Both misses are retained; next target 13:24:30, hard deadline 13:29:30 UTC.\n"
+        "updated_at": "2026-10-08T13:24:54Z",
+        "body": "Reality Check delivers a pure, deterministic 2\u20138-player quiz/bluff core and one offline hot-seat/bot HTML page, with eight fictional sample realms, first-visit demos, Quick/Mixed/Bluff modes, private handovers and final-round double scoring. Late inputs now close the expired phase first: a visibly expired correct answer/vote previously earned 1,000 points; six actual-file controls verify zero late credit and excluded late human/bot fakes, while on-time and paused controls retain credit. Full pinned Zod MIT notice is included.\n\nCurrent head `5c45099318e0b83ab63dcb7990db7fe617882cc5`; [exact-head CI 37783931074](https://github.com/luisitin/partybox-game-cores/actions/runs/37783931074) pending. Previous `7a7af73` [CI 37780890383](https://github.com/luisitin/partybox-game-cores/actions/runs/37780890383) passed 51 node tests, 21,000 bot games, 25 mutants, 24,000 leagues, six deadline controls and 66 browser scenarios. Nine actual complete stdout reports retain all 1,800 unfiltered intervals and 16 source guards; six profiles passed near 60 FPS. The uploaded artifact exists, but its video contents have not been read after a download restriction.\n\nThis checkpoint adds independent current-file, raw-statistics and actual-capture SHA/byte validation after all three full browser runs. An actual harmless HTML change still passed the old JSON/media checksum test; the new source proof rejected it and restored the exact page. Twenty-three meaningful corruption controls passed. The genuine short milestone-15 clip is 156,846 bytes, source-bound and hash-checked separately; its encoding is not an FPS measurement. Player behavior is unchanged in KEEP round 12, with no-player-gain streak 1 pending current CI.\n\nLocal frame failures remain public: initial full-run TV 55.903 FPS; subsequent frame-only TV 59.605 FPS passed but phone 54.057 FPS failed. Complete raw samples/runner/log are retained; cause unresolved. Hosted acceptance and failed local observations remain separate. Phone is Chromium 390\u00d7844 with 4\u00d7 CPU, not physical hardware. Held-timer/wallclock-jump deadline fixtures do not establish ordinary race frequency.\n\nPR stays draft pending exact current checks and three consecutive no-player-gain rounds. Cadence misses of 74 and 97 seconds remain audited. Latest normal push at 13:23:08 UTC followed 12:59:30 by 23m38s (PASS); next target 13:48:08 and hard deadline 13:53:08 UTC.\n"
       },
       "check": {
-        "id": 37780890383,
-        "head_sha": "7a7af73fcf8b9049b3ffd3ed0035d303b19859ef",
-        "status": "completed",
-        "conclusion": "success",
-        "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37780890383",
-        "updated_at": "2026-10-08T13:06:22Z",
+        "id": 37783931074,
+        "head_sha": "5c45099318e0b83ab63dcb7990db7fe617882cc5",
+        "status": "in_progress",
+        "conclusion": null,
+        "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37783931074",
+        "updated_at": "2026-10-08T13:23:18Z",
         "path": ".github/workflows/G04.yml"
       },
       "checkError": null,
@@ -727,16 +727,22 @@
         "jobs/G04-reality-check/browser-frame-only-first-failed-runner.txt",
         "jobs/G04-reality-check/browser-frame-only-first-failure.json",
         "jobs/G04-reality-check/browser-frame-only-first-failure.log",
+        "jobs/G04-reality-check/browser-frames-only-1-phone.json",
         "jobs/G04-reality-check/browser-frames-only-1-tv.json",
         "jobs/G04-reality-check/browser-notice-first-failed-runner.txt",
         "jobs/G04-reality-check/browser-notice-first-frame-failure.log",
         "jobs/G04-reality-check/browser-original-repeat-2.json",
         "jobs/G04-reality-check/browser-original-repeat-3.json",
         "jobs/G04-reality-check/browser-original-report.json",
+        "jobs/G04-reality-check/browser-proof-round-12-self-test.json",
+        "jobs/G04-reality-check/browser-proof.ts",
         "jobs/G04-reality-check/browser-raw-1-tv.json",
         "jobs/G04-reality-check/browser-repeat-2.json",
         "jobs/G04-reality-check/browser-repeat-3.json",
         "jobs/G04-reality-check/browser-report.json",
+        "jobs/G04-reality-check/browser-round-11-confirmation-failed-runner.txt",
+        "jobs/G04-reality-check/browser-round-11-confirmation-frame-failure.json",
+        "jobs/G04-reality-check/browser-round-11-confirmation-frame-failure.log",
         "jobs/G04-reality-check/browser-round-11-first-failed-runner.txt",
         "jobs/G04-reality-check/browser-round-11-first-frame-failure.json",
         "jobs/G04-reality-check/browser-round-11-first-frame-failure.log",
@@ -746,6 +752,7 @@
         "jobs/G04-reality-check/capture-encoder-first-failure.log",
         "jobs/G04-reality-check/capture-encoder.ts",
         "jobs/G04-reality-check/capture-pinned-encoder-milestone-14-report.json",
+        "jobs/G04-reality-check/capture-pinned-encoder-milestone-15-report.json",
         "jobs/G04-reality-check/capture-pinned-encoder-report.json",
         "jobs/G04-reality-check/capture.ts",
         "jobs/G04-reality-check/catalog-before.json",
@@ -756,6 +763,15 @@
         "jobs/G04-reality-check/churn-report.json",
         "jobs/G04-reality-check/ci-25a6023-success.json",
         "jobs/G04-reality-check/ci-499ae3e-success.json",
+        "jobs/G04-reality-check/ci-7a7af73-g04_complete_report-1.json",
+        "jobs/G04-reality-check/ci-7a7af73-g04_complete_report-2.json",
+        "jobs/G04-reality-check/ci-7a7af73-g04_complete_report-3.json",
+        "jobs/G04-reality-check/ci-7a7af73-g04_raw_profile-1.json",
+        "jobs/G04-reality-check/ci-7a7af73-g04_raw_profile-2.json",
+        "jobs/G04-reality-check/ci-7a7af73-g04_raw_profile-3.json",
+        "jobs/G04-reality-check/ci-7a7af73-g04_raw_profile-4.json",
+        "jobs/G04-reality-check/ci-7a7af73-g04_raw_profile-5.json",
+        "jobs/G04-reality-check/ci-7a7af73-g04_raw_profile-6.json",
         "jobs/G04-reality-check/ci-cd20cb7-encoder-failure.json",
         "jobs/G04-reality-check/core.ts",
         "jobs/G04-reality-check/corrective-checkpoint.json",
@@ -788,6 +804,7 @@
         "jobs/G04-reality-check/media/milestone-12-pinned-encoder.webm",
         "jobs/G04-reality-check/media/milestone-13-deadline.webm",
         "jobs/G04-reality-check/media/milestone-14-pinned-encoder.webm",
+        "jobs/G04-reality-check/media/milestone-15-pinned-encoder.webm",
         "jobs/G04-reality-check/media/milestone-2.webm",
         "jobs/G04-reality-check/media/milestone-3-drafts.webm",
         "jobs/G04-reality-check/media/milestone-4-phone.webm",
@@ -827,8 +844,8 @@
       ],
       "operatorNote": {
         "current": "G04",
-        "summary": "Draft PR4 at 7a7af73: exact-head CI run 37780890383 passed at 13:06:22 UTC. Prior 25a6023 CI run 37777044855 passed 51 node tests, 21,000 games, 25 mutants, 24,000 leagues, 6 expiry cases, 66 legacy browser cases and six 300-frame profiles. The newer actual local desktop 55.903 FPS failure is retained; phone had not yet run at that attempt, and no cause is claimed. The late deadline fix changes overdue remainder 1000\u21920; round 11 has a player-visible gain, streak 0. Root checkpoint cadence misses of 74s and 97s are retained in the public audit. Fresh source-guarded strict confirmation measured desktop 59.605 FPS PASS and phone 54.0566 FPS FAIL; raw results remain retained. KEEP round12 evidence-freshness guard is in progress; final acceptance remains pending.",
-        "next": "Complete source-guarded strict browser profiles and exact current-head CI; preserve actual failures and re-establish three no-gain rounds after the timer repair.",
+        "summary": "Draft PR4 at 5c450993: exact-head CI run 37783931074 is in progress. The preceding 7a7af73 run 37780890383 passed, but does not certify this newer evidence-binding head. Current work independently validates raw frame data, source guards and actual capture hashes. Retained local failures remain: initial desktop 55.903 FPS, then desktop 59.605 FPS PASS and phone 54.0566 FPS FAIL; no cause is claimed. The deadline repair remains a player-visible gain, cadence misses of 74s and 97s remain audited, and round 12 records no player gain with streak 1 pending CI.",
+        "next": "Read exact-head run 37783931074; if it passes, continue formal KEEP rounds until three consecutive no-player-gain rounds, while retaining the failed local measurements and evidence limits.",
         "queue": [
           "Original acceptance and final review"
         ]
@@ -1644,7 +1661,7 @@
       "title": "Category Rush",
       "stage": "Review",
       "branch": "job/G09-category-rush-parallel-20261008",
-      "head": "8c70a857fe7e4d0e35c57203562621bad10f8b00",
+      "head": "47e1adffbe388320af763babec6159d1e31b7a3b",
       "otherBranches": [
         {
           "name": "job/G09-category-rush",
@@ -1658,16 +1675,16 @@
         "state": "open",
         "draft": true,
         "merged_at": null,
-        "updated_at": "2026-10-08T13:11:21Z",
-        "body": "Category Rush adds a deterministic 2\u20138-player core and a self-contained offline hot-seat page using the exact workshop contract. Twelve original prompts share a seeded letter; private sheets are reviewed anonymously, equivalent duplicates and own repeats score zero, and group ballots decide whether unique answers fit. Empty reviews advance without unnecessary handovers, all completed receipts remain accessible, and validated local Resume/Discard preserves writing, ballots, history and bot RNG across reload. The absent full SDK and the small standalone adapters are explicitly documented.\n\nThe current fourth review corrects common singular/plural scoring with 38 bounded, independently sourced noun aliases and news protection. A different noun-family oracle verifies 47 spelling facts. Actual two/eight-seat nine-pair reducer protocols reduce improper duplicate points from 18 to zero per roster; the real mouse/mice browser case changes two groups/two points into one shared group/zero points while preserving secrecy. The 320 original prompts and 4,155 examples remain unchanged. Historical bank/strategy experiments retain their original matching semantics and reproduce byte-identically.\n\nChanged-source validation passes 10,000 independent comparisons, 7,000 restored games across rosters 2\u20138, all nine invariants, 1,003 properties, 2,000 fuzz cases, 28 actual source mutants and 4,000 adjacent-skill duels. Fresh offline UI checks pass 28 gameplay, eight pacing, a clock probe, four receipts, 17 recovery cases and the plural regression. Schema failures and interrupted/failed attempts are preserved; the affected schema checks now pass.\n\n**Current proof is pending:** desktop strict frames pass at 59.804 fps/p99 16.8 ms, but the phone4\u00d7 sample fails at 58.444 fps. All 600 raw intervals, exact source/runner and partial clip are retained. A nongating empty-page/app control establishes no cause; no speculative runtime change or relaxed gate was made. An unchanged coordinated confirmation and final artifact binding/CI remain required. The latest completed review's exact-head CI is green at 87eb68c (run37773541708); current checkpoint c783694 deliberately retains the failed acceptance. Three completed KEEP rounds gained something players notice; the fourth is not logged complete and the no-gain streak remains zero.\n"
+        "updated_at": "2026-10-08T13:26:50Z",
+        "body": "Category Rush adds a deterministic 2\u20138-player core and a self-contained offline hot-seat page using the exact workshop contract. Twelve original prompts share a seeded letter; private sheets are reviewed anonymously, equivalent duplicates and own repeats score zero, and group ballots decide whether unique answers fit. Empty reviews advance without unnecessary handovers, all completed receipts remain accessible, and validated local Resume/Discard preserves writing, ballots, history and bot RNG across reload. The absent full SDK and the small standalone adapters are explicitly documented.\n\nThe current fourth review corrects common singular/plural scoring with 38 bounded, independently sourced noun aliases and news protection. A different noun-family oracle verifies 47 spelling facts. Actual two/eight-seat nine-pair reducer protocols reduce improper duplicate points from 18 to zero per roster; the real mouse/mice browser case changes two groups/two points into one shared group/zero points while preserving secrecy. The 320 original prompts and 4,155 examples remain unchanged. Historical bank/strategy experiments retain their original matching semantics and reproduce byte-identically.\n\nChanged-source validation passes 10,000 independent comparisons, 7,000 restored games across rosters 2\u20138, all nine invariants, 1,003 properties, 2,000 fuzz cases, 28 actual source mutants and 4,000 adjacent-skill duels. Fresh offline UI checks pass 28 gameplay, eight pacing, a clock probe, four receipts, 17 recovery cases and the plural regression. Schema failures and interrupted/failed attempts are preserved; the affected schema checks now pass.\n\nCurrent exact-head CI is green on `8c70a857fe7e4d0e35c57203562621bad10f8b00`, run [37782409140](https://github.com/luisitin/partybox-game-cores/actions/runs/37782409140). The same unchanged strict600 runner executes on the actual GitHub host before the existing artifact binder: desktop 60.002376 fps and phone4\u00d7 60.002940 fps, both p99/max 16.8 ms. All 600 raw intervals per profile, separate 326,051/218,982-byte clips with independent clean streams, exact head/source/runner metadata and the verified original upload manifest are retained. Both coordinated local phone failures remain archived and unresolved; hosted acceptance does not turn them into local passes or establish a variance cause. No gate was relaxed. This evidence-only completion commit preserves the runtime and sampler and requires its own exact-head CI green before another formal review.\n\nFour completed KEEP rounds have concrete measured player gains; the consecutive no-gain streak remains zero. PR8 remains draft while the required review loop continues. No game code is merged to main.\n"
       },
       "check": {
-        "id": 37782409140,
-        "head_sha": "8c70a857fe7e4d0e35c57203562621bad10f8b00",
+        "id": 37784359281,
+        "head_sha": "47e1adffbe388320af763babec6159d1e31b7a3b",
         "status": "in_progress",
         "conclusion": null,
-        "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37782409140",
-        "updated_at": "2026-10-08T13:11:31Z",
+        "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37784359281",
+        "updated_at": "2026-10-08T13:26:34Z",
         "path": ".github/workflows/G09.yml"
       },
       "checkError": null,
@@ -1740,6 +1757,7 @@
         "jobs/G09-category-rush/evidence/browser/failed-reproducible-first/phone4x-frames.json",
         "jobs/G09-category-rush/evidence/browser/failed-reproducible-first/play.html",
         "jobs/G09-category-rush/evidence/browser/functional-report.json",
+        "jobs/G09-category-rush/evidence/browser/hosted-run.json",
         "jobs/G09-category-rush/evidence/browser/licensed-pre-regeneration/browser-performance.mjs",
         "jobs/G09-category-rush/evidence/browser/licensed-pre-regeneration/desktop-active.png",
         "jobs/G09-category-rush/evidence/browser/licensed-pre-regeneration/desktop-frames.json",
@@ -1885,6 +1903,17 @@
         "jobs/G09-category-rush/evidence/browser/round-4-frame-first/phone4x-frames.json",
         "jobs/G09-category-rush/evidence/browser/round-4-frame-first/play.html",
         "jobs/G09-category-rush/evidence/browser/round-4-frame-first/runner.mjs",
+        "jobs/G09-category-rush/evidence/browser/round-4-hosted-37782409140/NOTES.md",
+        "jobs/G09-category-rush/evidence/browser/round-4-hosted-37782409140/SHA256SUMS.txt",
+        "jobs/G09-category-rush/evidence/browser/round-4-hosted-37782409140/evidence/browser/desktop-frames.json",
+        "jobs/G09-category-rush/evidence/browser/round-4-hosted-37782409140/evidence/browser/hosted-run.json",
+        "jobs/G09-category-rush/evidence/browser/round-4-hosted-37782409140/evidence/browser/performance-report.json",
+        "jobs/G09-category-rush/evidence/browser/round-4-hosted-37782409140/evidence/browser/phone4x-frames.json",
+        "jobs/G09-category-rush/evidence/browser/round-4-hosted-37782409140/media/delivery-final-desktop.webm",
+        "jobs/G09-category-rush/evidence/browser/round-4-hosted-37782409140/media/delivery-final-phone4x.webm",
+        "jobs/G09-category-rush/evidence/browser/round-4-hosted-37782409140/play.html",
+        "jobs/G09-category-rush/evidence/browser/round-4-hosted-37782409140/retrieval.json",
+        "jobs/G09-category-rush/evidence/browser/round-4-hosted-37782409140/runner.mjs",
         "jobs/G09-category-rush/evidence/browser/round-4-plurals-after/plural-receipt-2.png",
         "jobs/G09-category-rush/evidence/browser/round-4-plurals-after/plural-receipt-8.png",
         "jobs/G09-category-rush/evidence/browser/round-4-plurals-after/report.json",
@@ -1980,8 +2009,8 @@
       ],
       "operatorNote": {
         "current": "G09",
-        "summary": "Draft PR8 at 8c70a857, pushed 13:11:20 UTC: fresh exact-head CI is pending. The current unchanged strict 600-frame/capture gates now run on the GitHub host before evidence binding. Both local strict failures remain retained: original phone 58.444 FPS, then source-guarded confirmation desktop 59.213 PASS/phone 54.965 FAIL. All 600 raw intervals per confirmation profile are retained; no cause is claimed. Core,7,000-game oracle, lexical/property/privacy and codec checks passed. The 320 original category bank retains eight cramped strong-bot answers and 98.423% duplicate rate in the documented stress case.",
-        "next": "Read the new exact-head hosted browser result and raw artifacts; complete unchanged visual acceptance while retaining category/bot diversity limits.",
+        "summary": "Draft PR8 at 47e1adff: exact-head CI run 37784359281 is in progress. The unchanged strict runner already passed on the GitHub host at preceding head 8c70a857/run 37782409140 (desktop 60.002376 FPS, phone 4x 60.002940 FPS, all 600 raw intervals and clips source-bound). Both local phone failures remain retained and unresolved: 58.444 FPS, then 54.965 FPS with desktop 59.213 FPS PASS. Round 4 delivered a player-visible singular/plural scoring correction, so the no-gain streak remains 0; crowded-bot vocabulary limits remain documented.",
+        "next": "Read exact-head run 37784359281, then continue formal KEEP rounds and measure the highest-ranked remaining player issue; do not replace the retained local failures with the hosted pass.",
         "queue": [
           "Original acceptance and final review"
         ]
@@ -1992,7 +2021,7 @@
       "title": "Checkers",
       "stage": "Pipeline",
       "branch": "job/G10-checkers-complete-20261008",
-      "head": "1abfdfaf351cd1d492a47ce374d12d8aa334d332",
+      "head": "0fba17353e04490d1a120d7e88e858354dd353b1",
       "otherBranches": [
         {
           "name": "job/G10-checkers",
@@ -2091,6 +2120,11 @@
         "jobs/G10-checkers/evidence/checks/endgames.stdout",
         "jobs/G10-checkers/evidence/checks/experimental-transport/README.md",
         "jobs/G10-checkers/evidence/checks/experimental-transport/build.stdout",
+        "jobs/G10-checkers/evidence/checks/experimental-transport/full-adapter.mjs.txt",
+        "jobs/G10-checkers/evidence/checks/experimental-transport/full-blocks.stdout",
+        "jobs/G10-checkers/evidence/checks/experimental-transport/full-blocks/report.json",
+        "jobs/G10-checkers/evidence/checks/experimental-transport/full-encoded.stdout",
+        "jobs/G10-checkers/evidence/checks/experimental-transport/full-encoded/report.json",
         "jobs/G10-checkers/evidence/checks/experimental-transport/source.ts.txt",
         "jobs/G10-checkers/evidence/checks/experimental-transport/strict.stdout",
         "jobs/G10-checkers/evidence/checks/experimental-transport/test.mjs.txt",
@@ -2101,6 +2135,7 @@
         "jobs/G10-checkers/evidence/checks/guarded-host-build.stdout",
         "jobs/G10-checkers/evidence/checks/inline-data-host-build.stdout",
         "jobs/G10-checkers/evidence/checks/integrity-milestone10.stdout",
+        "jobs/G10-checkers/evidence/checks/integrity-milestone11.stdout",
         "jobs/G10-checkers/evidence/checks/integrity-milestone5.stdout",
         "jobs/G10-checkers/evidence/checks/integrity-milestone6.stdout",
         "jobs/G10-checkers/evidence/checks/integrity-milestone7.stdout",
@@ -2191,6 +2226,24 @@
         "jobs/G10-checkers/evidence/checks/international-reference-tracked-default.tap",
         "jobs/G10-checkers/evidence/checks/international-small-acquisition-manifest.json",
         "jobs/G10-checkers/evidence/checks/international-small-acquisition.stdout",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/baseline/bounded-source-specs.json",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/baseline/browser-prototype.stderr",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/baseline/browser-prototype.stdout",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/baseline/desktop.json",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/baseline/phone.json",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/baseline/report.json",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/baseline/runner.mjs.txt",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/baseline/startup.json",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/chunked/bounded-source-specs.json",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/chunked/browser-chunked.stderr",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/chunked/browser-chunked.stdout",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/chunked/desktop.json",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/chunked/phone.json",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/chunked/report.json",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/chunked/runner.mjs.txt",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/chunked/startup.json",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/chunked/stream-report.json",
+        "jobs/G10-checkers/evidence/checks/international-stream-prototype/chunked/writer.py.txt",
         "jobs/G10-checkers/evidence/checks/international-stream-prototype/stream-report.json",
         "jobs/G10-checkers/evidence/checks/international-stream-prototype/writer.py.txt",
         "jobs/G10-checkers/evidence/checks/international-two-piece.json",
@@ -2373,6 +2426,7 @@
         "jobs/G10-checkers/evidence/checks/matrix.json",
         "jobs/G10-checkers/evidence/checks/matrix.stdout",
         "jobs/G10-checkers/evidence/checks/milestone10.json",
+        "jobs/G10-checkers/evidence/checks/milestone11.json",
         "jobs/G10-checkers/evidence/checks/milestone2.json",
         "jobs/G10-checkers/evidence/checks/milestone4.json",
         "jobs/G10-checkers/evidence/checks/milestone5.json",
@@ -2438,6 +2492,11 @@
         "jobs/G10-checkers/evidence/checks/mutations/25.tap",
         "jobs/G10-checkers/evidence/checks/mutations/baseline.tap",
         "jobs/G10-checkers/evidence/checks/optimization-core.tap",
+        "jobs/G10-checkers/evidence/checks/private-scratch-relocation/relocation-after.json",
+        "jobs/G10-checkers/evidence/checks/private-scratch-relocation/relocation-before.json",
+        "jobs/G10-checkers/evidence/checks/private-scratch-relocation/relocation-report.json",
+        "jobs/G10-checkers/evidence/checks/private-scratch-relocation/relocation.stderr",
+        "jobs/G10-checkers/evidence/checks/private-scratch-relocation/relocation.stdout",
         "jobs/G10-checkers/evidence/checks/properties.json",
         "jobs/G10-checkers/evidence/checks/purity-data.tap",
         "jobs/G10-checkers/evidence/checks/runtime-holds.json",
@@ -2530,8 +2589,8 @@
       ],
       "operatorNote": {
         "current": "G10",
-        "summary": "Active pipeline branch job/G10-checkers-complete-20261008 at 1abfdfa, with no PR: current public offline American2\u20136-piece plus International2\u20135-piece page is about 80 MB. Its 28 functional checks and 600 frames per desktop/phone profile passed at 59.115/60.003 FPS, with guarded recordings. The complete International six-piece corpus has now been acquired and verified: 82 files, 1.010 GB, 37 material classes and native 10,000 checks. Full six-piece offline packaging/browser/integration remains pending. A private 1.38 GB candidate took 80.8s to open on desktop and failed the unchanged 300s phone startup timeout; this is a retained engineering result.",
-        "next": "Reduce full six-piece offline startup/storage cost, integrate it in the actual public page and pass the complete unchanged functional/browser gates.",
+        "summary": "Active no-PR branch job/G10-checkers-complete-20261008 at 0fba173. The public offline game still contains American two-through-six-piece plus International two-through-five-piece data; its retained 28 checks and desktop/phone profiles passed at 59.115/60.003 FPS. The complete licensed International six-piece corpus is acquired and independently checked. A private 1.38 GB baseline took 80.8s on desktop and failed the unchanged 300s phone timeout; a chunked private prototype then started in 27.1s desktop and 89.5s phone with exact byte-window checks and no runtime network/page errors. This proves payload access only, not integration into the delivered game or original acceptance.",
+        "next": "Integrate bounded six-piece reads into the actual public game and bot worker, then pass final core/property/mutation, 7,000-game matrix, 4,000-game league, regeneration, browser, CI and three-no-gain-round requirements before opening a PR.",
         "queue": [
           "Original acceptance and final review"
         ]
