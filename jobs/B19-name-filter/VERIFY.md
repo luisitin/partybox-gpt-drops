@@ -1,5 +1,148 @@
 # B19 verification ledger
 
+## Current isolated protocol review, October 8
+
+Production is the external693d9501 module, with its three added exact exceptions
+and stable suggestion keys retained. The corrected original workload preserves
+48 timed positive names,289 original fixed exceptions,459 handwritten inputs
+and43,830 complete differential/mutation inputs perseed. New feature checks
+are separate. The timer window,100,000-call warmup,10,000timed calls,
+seeds1–3,0.05ms limit and every original corpus byte remain unchanged.
+
+Command: npm test. Actual local run 2026-10-08T16:54:26.156921+00:00 to 2026-10-08T16:54:44.534384+00:00
+completedEXIT1. All100 suites execute. Only latency fails:43/19/28 outliers,
+maxima6.040182/1.243285/0.507256ms. All fresh receipts and observed source
+bytes are in results/corrected-original-workload-20261008/. Actual observed
+196-file integrity passed before the archive expanded the current manifest.
+
+The mandatory post-green old2b54431 KEEP rerun also failed31/28/11timings;
+its complete91-suite receipts remain separatelyhistorical in
+results/postgreen-keep-20261008/. That old source is not current-source proof.
+
+Actual native complete logs were read:2b54431 run37809073933SUCCESS(91suites),
+303f4f0 run37810714023FAILURE(94),0974951 run37810885025FAILURE(94), and
+ccc610f run37811077768SUCCESS(94). The external94-suite variants include
+three added positive names and six additional baseline inputs; their timing
+samples differ. No green status transfers to a new head or restored protocol.
+
+Weakest-five review and stop status are in requirement-review.json. KEEP is
+incomplete; remaining latency work is substantive. No unchanged timing retry,
+threshold waiver, source/toolBLOCKED state or finished cosmetic round is claimed.
+
+### Every corrected-protocol suite, seed and exact command
+
+| Test | Cases | Passed | Failed | Seed | Exact command |
+| --- | ---: | ---: | ---: | --- | --- |
+| public-corpus-acquisition | 1 | 1 | 0 | shared setup | `node tests/run.mjs` |
+| retained-original-snapshot-offline-and-corruption | 8 | 8 | 0 | 1 | `python3 tests/retained-snapshot.py` |
+| delivery-file-size-and-checksums | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
+| immutable-return-values | 3 | 3 | 0 | 1 | `node tests/run.mjs` |
+| failure-suggestions-map-and-frozen | 5 | 5 | 0 | 1 | `node tests/run.mjs` |
+| additional-given-names-and-exception-bypass | 30 | 30 | 0 | 1 | `node tests/run.mjs` |
+| policy-copy-consistency-and-no-duplicate-terms | 3 | 3 | 0 | 1 | `node tests/run.mjs` |
+| strict-TypeScript | 1 | 1 | 0 | 1 | `tsc -p tsconfig.json --noEmit` |
+| length-pruned-matcher-blind-boundaries | 24873 | 24873 | 0 | 1 | `node tests/run.mjs` |
+| generator-byte-identical-replay-and-coverage | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
+| handwritten-format-and-Scunthorpe | 459 | 459 | 0 | 1 | `node tests/run.mjs` |
+| exhaustive-declared-single-glyph-substitution | 1371 | 1371 | 0 | 1 | `node tests/run.mjs` |
+| precompiled-Unicode-policy-context-differential | 1296 | 1296 | 0 | 1 | `node tests/run.mjs` |
+| precompiled-printable-width-and-latin1-context-differential | 1422 | 1422 | 0 | 1 | `node tests/run.mjs` |
+| generated-obfuscations | 5000 | 5000 | 0 | 1 | `node tests/run.mjs` |
+| names-count-and-uniqueness | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
+| names-reviewed-corpus-policy | 20000 | 20000 | 0 | 1 | `node tests/run.mjs` |
+| names-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 1 | `node tests/run.mjs` |
+| words-count-and-uniqueness | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
+| words-reviewed-corpus-policy | 10000 | 10000 | 0 | 1 | `node tests/run.mjs` |
+| words-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 1 | `node tests/run.mjs` |
+| places-count-and-uniqueness | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
+| places-reviewed-corpus-policy | 2000 | 2000 | 0 | 1 | `node tests/run.mjs` |
+| places-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 1 | `node tests/run.mjs` |
+| original-workload-policy-and-counts | 6 | 6 | 0 | 1 | `node tests/run.mjs` |
+| regex-vs-bitset-NFA-differential | 43830 | 43830 | 0 | 1 | `node tests/run.mjs` |
+| sealed-blind-reference-differential | 43830 | 43830 | 0 | 1 | `node tests/run.mjs` |
+| repeat-call-purity | 43830 | 43830 | 0 | 1 | `node tests/run.mjs` |
+| boolean-wrapper | 43830 | 43830 | 0 | 1 | `node tests/run.mjs` |
+| mutation-baseline-truth | 43830 | 43830 | 0 | 1 | `node tests/run.mjs` |
+| 25-real-executed-mutations | 25 | 25 | 0 | 1 | `node tests/run.mjs` |
+| runtime-gzip-size | 2 | 2 | 0 | 1 | `node tests/run.mjs` |
+| zero-runtime-dependencies-and-forbidden-APIs | 5 | 5 | 0 | 1 | `node tests/run.mjs` |
+| latency-every-observed-check-under-005ms | 10000 | 9957 | 43 | 1 | `node tests/run.mjs` |
+| retained-original-snapshot-offline-and-corruption | 8 | 8 | 0 | 2 | `python3 tests/retained-snapshot.py` |
+| delivery-file-size-and-checksums | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
+| immutable-return-values | 3 | 3 | 0 | 2 | `node tests/run.mjs` |
+| failure-suggestions-map-and-frozen | 5 | 5 | 0 | 2 | `node tests/run.mjs` |
+| additional-given-names-and-exception-bypass | 30 | 30 | 0 | 2 | `node tests/run.mjs` |
+| policy-copy-consistency-and-no-duplicate-terms | 3 | 3 | 0 | 2 | `node tests/run.mjs` |
+| strict-TypeScript | 1 | 1 | 0 | 2 | `tsc -p tsconfig.json --noEmit` |
+| length-pruned-matcher-blind-boundaries | 24873 | 24873 | 0 | 2 | `node tests/run.mjs` |
+| generator-byte-identical-replay-and-coverage | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
+| handwritten-format-and-Scunthorpe | 459 | 459 | 0 | 2 | `node tests/run.mjs` |
+| exhaustive-declared-single-glyph-substitution | 1371 | 1371 | 0 | 2 | `node tests/run.mjs` |
+| precompiled-Unicode-policy-context-differential | 1296 | 1296 | 0 | 2 | `node tests/run.mjs` |
+| precompiled-printable-width-and-latin1-context-differential | 1422 | 1422 | 0 | 2 | `node tests/run.mjs` |
+| generated-obfuscations | 5000 | 5000 | 0 | 2 | `node tests/run.mjs` |
+| names-count-and-uniqueness | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
+| names-reviewed-corpus-policy | 20000 | 20000 | 0 | 2 | `node tests/run.mjs` |
+| names-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 2 | `node tests/run.mjs` |
+| words-count-and-uniqueness | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
+| words-reviewed-corpus-policy | 10000 | 10000 | 0 | 2 | `node tests/run.mjs` |
+| words-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 2 | `node tests/run.mjs` |
+| places-count-and-uniqueness | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
+| places-reviewed-corpus-policy | 2000 | 2000 | 0 | 2 | `node tests/run.mjs` |
+| places-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 2 | `node tests/run.mjs` |
+| original-workload-policy-and-counts | 6 | 6 | 0 | 2 | `node tests/run.mjs` |
+| regex-vs-bitset-NFA-differential | 43830 | 43830 | 0 | 2 | `node tests/run.mjs` |
+| sealed-blind-reference-differential | 43830 | 43830 | 0 | 2 | `node tests/run.mjs` |
+| repeat-call-purity | 43830 | 43830 | 0 | 2 | `node tests/run.mjs` |
+| boolean-wrapper | 43830 | 43830 | 0 | 2 | `node tests/run.mjs` |
+| mutation-baseline-truth | 43830 | 43830 | 0 | 2 | `node tests/run.mjs` |
+| 25-real-executed-mutations | 25 | 25 | 0 | 2 | `node tests/run.mjs` |
+| runtime-gzip-size | 2 | 2 | 0 | 2 | `node tests/run.mjs` |
+| zero-runtime-dependencies-and-forbidden-APIs | 5 | 5 | 0 | 2 | `node tests/run.mjs` |
+| latency-every-observed-check-under-005ms | 10000 | 9981 | 19 | 2 | `node tests/run.mjs` |
+| retained-original-snapshot-offline-and-corruption | 8 | 8 | 0 | 3 | `python3 tests/retained-snapshot.py` |
+| delivery-file-size-and-checksums | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
+| immutable-return-values | 3 | 3 | 0 | 3 | `node tests/run.mjs` |
+| failure-suggestions-map-and-frozen | 5 | 5 | 0 | 3 | `node tests/run.mjs` |
+| additional-given-names-and-exception-bypass | 30 | 30 | 0 | 3 | `node tests/run.mjs` |
+| policy-copy-consistency-and-no-duplicate-terms | 3 | 3 | 0 | 3 | `node tests/run.mjs` |
+| strict-TypeScript | 1 | 1 | 0 | 3 | `tsc -p tsconfig.json --noEmit` |
+| length-pruned-matcher-blind-boundaries | 24873 | 24873 | 0 | 3 | `node tests/run.mjs` |
+| generator-byte-identical-replay-and-coverage | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
+| handwritten-format-and-Scunthorpe | 459 | 459 | 0 | 3 | `node tests/run.mjs` |
+| exhaustive-declared-single-glyph-substitution | 1371 | 1371 | 0 | 3 | `node tests/run.mjs` |
+| precompiled-Unicode-policy-context-differential | 1296 | 1296 | 0 | 3 | `node tests/run.mjs` |
+| precompiled-printable-width-and-latin1-context-differential | 1422 | 1422 | 0 | 3 | `node tests/run.mjs` |
+| generated-obfuscations | 5000 | 5000 | 0 | 3 | `node tests/run.mjs` |
+| names-count-and-uniqueness | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
+| names-reviewed-corpus-policy | 20000 | 20000 | 0 | 3 | `node tests/run.mjs` |
+| names-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 3 | `node tests/run.mjs` |
+| words-count-and-uniqueness | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
+| words-reviewed-corpus-policy | 10000 | 10000 | 0 | 3 | `node tests/run.mjs` |
+| words-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 3 | `node tests/run.mjs` |
+| places-count-and-uniqueness | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
+| places-reviewed-corpus-policy | 2000 | 2000 | 0 | 3 | `node tests/run.mjs` |
+| places-reviewed-baseline-no-stale-entries | 1 | 1 | 0 | 3 | `node tests/run.mjs` |
+| original-workload-policy-and-counts | 6 | 6 | 0 | 3 | `node tests/run.mjs` |
+| regex-vs-bitset-NFA-differential | 43830 | 43830 | 0 | 3 | `node tests/run.mjs` |
+| sealed-blind-reference-differential | 43830 | 43830 | 0 | 3 | `node tests/run.mjs` |
+| repeat-call-purity | 43830 | 43830 | 0 | 3 | `node tests/run.mjs` |
+| boolean-wrapper | 43830 | 43830 | 0 | 3 | `node tests/run.mjs` |
+| mutation-baseline-truth | 43830 | 43830 | 0 | 3 | `node tests/run.mjs` |
+| 25-real-executed-mutations | 25 | 25 | 0 | 3 | `node tests/run.mjs` |
+| runtime-gzip-size | 2 | 2 | 0 | 3 | `node tests/run.mjs` |
+| zero-runtime-dependencies-and-forbidden-APIs | 5 | 5 | 0 | 3 | `node tests/run.mjs` |
+| latency-every-observed-check-under-005ms | 10000 | 9972 | 28 | 3 | `node tests/run.mjs` |
+
+### UNVERIFIED
+
+Exact corrected-protocol hosted CI is pending publication. A finite pass does
+not establish a hardware-independent maximum or explain an observed outlier.
+All existing finite-policy,corpus-selection,unseen-name and language limits
+remain. Other-session PartyBox integration paths have not been rechecked here.
+
+## Historical ledgers retained below
+
 The complete functional, corpus-policy, independent differential and mutation
 suites passed for seeds 1, 2 and 3. **The unchanged literal 0.05 ms per-observation
 latency gate failed locally. This is an incomplete acceptance result.**

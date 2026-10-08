@@ -25,7 +25,9 @@
   are not restarted. Fresh original-repository ownership was checked before
   claiming B19; game-core queue claims and original worktrees remain untouched.
 - Continuation preserves PR2 and all existing branch history in a separate
-  checkout. The only permitted main change is the RUN-ALL claim-row refresh.
+  checkout. The original README forbids writes to main. The later user rule for
+  main claim refreshes applies to partybox-game-cores, not this repository.
+  Earlier inherited claim-row writes are historical; none is repeated here.
 - A bounded diagnostic uses the actual hosted seed-1 witness and private stage
   exports in a separate module. Its instrumentation/timings never substitute
   for the unchanged complete acceptance workload. Historical cause remains
@@ -53,5 +55,22 @@
   removed, whitespace collapsed, 1–16 code points). The filter counts raw input on its own; the port must
   never reverse that order (INTEGRATION.md, step 2).
 - `suggestion` keys are a stable API; the host owns the copy and its translations.
-- The literal 0.05 ms gate is kept as written. It passes on the GitHub runner and fails on a loaded local
-  box; neither result is hidden, and the threshold is not changed.
+- The literal 0.05 ms gate is kept as written. Actual hosted results include both
+  passes and failures; local failures also remain valid. No cause or universal
+  wall-clock guarantee follows from a finite pass.
+
+## Isolated original-workload review, October 8
+
+- Another active session pushed product changes to the original B19 branch.
+  This review preserves those commits and uses its own
+  `job/B19-name-filter-protocol-review-20261008` branch from ccc610f.
+- The new suggestion keys and three exact benign spellings remain in production.
+  The original 289-exception fixture, 459 fixed cases, 43,830 full comparison
+  inputs and original timed positive list stay fixed. New name/bypass checks
+  are supplemental; no original case, seed, timer or threshold is changed.
+- The sealed reference code remains unchanged. It receives the current policy,
+  including the three documented additions; original policy bytes are separately
+  frozen only to preserve the original workload, not to undo the new product.
+- One complete original B19 KEEP rerun on 2b54431 failed its literal timing gate.
+  It is historical after the external product change, and is not current-source
+  proof, a completed cosmetic round, or justification for a threshold waiver.

@@ -1,5 +1,10 @@
 # B19 Player-name filter → PartyBox integration guide
 
+> Verification note: these integration notes came from another active session.
+> The PartyBox paths and integration behavior below have not been rechecked by
+> this isolated protocol review. No other repository is modified. This drop
+> retains its literal 0.05 ms check; the integration notes do not waive it.
+
 > For the owner's desktop Claude agent, who ports this into the main repo (luisitin/partybox, local
 > C:/dev/partybox). Read this file first; everything else in this folder is the job's own record.
 
@@ -112,8 +117,9 @@ needed: the room lobby never shows a rejected name, so nothing reaches the TV.
 5. **The literal 0.05 ms per-call gate is environment-sensitive.** On the GitHub runner (run 37809073933,
    `2b54431`) all 30,000 timed calls pass; maxima 0.046, 0.038 and 0.022 ms. On this shared 4-CPU box the
    same source has 6–14 calls per seed above 0.05 ms (across this box's runs) (maxima of several ms), and the gate fails. Median
-   calls take 0.0007–0.0009 ms on the runner. PartyBox should not gate on this number. Use the benchmark as a regression
-   signal only.
+   calls take 0.0007–0.0009 ms on the runner. This drop keeps the literal maximum as
+   an acceptance gate. Later external heads changed the timed input sample; their
+   results cannot replace the original sample or erase any measured failure.
 6. **Confusables are a finite table, not UTS #39.** The `GROUPS` table covers declared Cyrillic, Greek and
    Latin look-alikes. Other scripts and multi-character spellings (`vv` for `w`) are not claimed.
 7. **Spanish given names.** This pass added exact exceptions `analia`, `analise` and `sexto` (`Analía` was

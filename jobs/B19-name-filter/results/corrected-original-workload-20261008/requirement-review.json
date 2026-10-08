@@ -1,0 +1,52 @@
+{
+  "reviewedAt": "2026-10-08T16:58:03.500438+00:00",
+  "baseCanonical": "ccc610fb02b523e3d4b9aa0c28b311a361930011",
+  "isolatedBranch": "job/B19-name-filter-protocol-review-20261008",
+  "runtimeUnchangedFromCanonical": true,
+  "sourceSha256": "693d9501633b9099676d38cf2d215bdf3dab570b3e8d300f485d685e2be2f15f",
+  "runnerSha256": "bff0c17b62aa75d342527a8ced855678380411053476557acde61f2e1b6fbdd9",
+  "completeSuites": 100,
+  "unchangedOriginalInputsPerSeed": 43830,
+  "originalPositiveInputs": 48,
+  "supplementalNameAndBypassChecks": 90,
+  "supplementalOriginalProtocolGuards": 18,
+  "sourceAndTimerChanges": {
+    "runtime": false,
+    "policy": false,
+    "seeds": false,
+    "warmup": false,
+    "timedWindow": false,
+    "threshold": false,
+    "originalCorpora": false
+  },
+  "weakestFive": [
+    {
+      "rank": 1,
+      "item": "Literal maximum wall-clock latency",
+      "status": "still fails:43/19/28 outliers; no cause or hardware-independent bound established"
+    },
+    {
+      "rank": 2,
+      "item": "Original workload provenance after external policy expansion",
+      "status": "fixed:original48 positive inputs and289-exception fixture preserve459 fixed and43830 comparison cases;newname tests separate"
+    },
+    {
+      "rank": 3,
+      "item": "Exact exception bypasses for three new given names",
+      "status": "90 additional production/reference checks pass;suffix and disguised spelling remainblocked"
+    },
+    {
+      "rank": 4,
+      "item": "Finite lexicon and unseen Unicode/language coverage",
+      "status": "explicit limits retained;no Spanish or universal-confusable coverage claim"
+    },
+    {
+      "rank": 5,
+      "item": "External PartyBox integration assertions",
+      "status": "labellednotrecheckedinthisreview;nootherrepositoryportorCIclaim"
+    }
+  ],
+  "keepGoingComplete": false,
+  "onlyCosmeticGainsRemain": false,
+  "nextExactStep": "Inspect restored-protocol exact-head hosted checks; source-bound mixed-workload profiling before any genuinely measured general optimization. Preserve failures and do not perform unchanged timing luck retries."
+}

@@ -2,7 +2,7 @@
 
 **What this is:** one pure TypeScript function, `nameFilter(input)`, that rejects player names containing a finite English list of sexual terms and slurs (leetspeak, repeated letters, separators, confusables, reversals) and accepts a reviewed list of benign names and words. Zero runtime dependencies.
 **How to use it:** `import { nameFilter } from './nameFilter.js'`; it returns `{ ok: true }` or `{ ok: false, reason, suggestion }`. Test with `npm ci --ignore-scripts --no-audit --no-fund && npm test` (Node 22+).
-**Status:** Port with fixes; see `INTEGRATION.md`. Hosted CI: `2b54431` green (run 37809073933); `303f4f0` red only on the literal 0.05 ms gate (run 37810714023, one seed, 3 calls). The same gate also fails on a loaded local box. English only. PR #2 stays a draft.
+**Status:** Verification is incomplete; PR #2 remains a draft. This isolated review restores the original timed and differential workloads while retaining the new product changes. The external canonical ccc610f run 37811077768 passed its different sample; earlier 303f4f0 and 0974951 runs failed. Exact corrected-protocol checks and retained limits are in VERIFY.md.
 
 ## Quick start
 
@@ -13,8 +13,8 @@ npm test          # strict tsc, then every suite at seeds 1, 2 and 3
 npm run test:core # same, without public corpora (NOT full verification)
 ```
 
-First corpus acquisition needs network access; later runs use the SHA-256-checked snapshot, and
-`tests/retained-snapshot.py` restores the 32,000 original rows offline. Results, fixtures, rejections and
+Clean corpus acquisition restores the fully validated retained snapshot without network;
+`tests/retained-snapshot.py` checks restoration and corruption rejection for all 32,000 original rows. Results, fixtures, rejections and
 mutation witnesses land in `reports/latest/` (git-ignored).
 
 ## API
@@ -47,8 +47,9 @@ The filter is not an HTML sanitizer.
   that baseline, not an all-pass corpus claim.
 - Not claimed: Spanish or other languages, every confusable (the table is finite, not UTS #39), intent,
   unseen names, or a hard real-time bound. See `CONFLICTS.md` and `INTEGRATION.md`.
-- The 0.05 ms gate is literal: every observed call is timed and outliers are never discarded. It passes on
-  the GitHub runner and fails on this shared 4-CPU box (see `VERIFY.md`, polish pass 2026-10-08).
+- The 0.05 ms gate is literal: every observed call is timed and outliers are never discarded.
+  Hosted measurements include passes and failures; the cause of a specific slow call is unproved.
+  Finite passing measurements do not establish a hardware-independent bound.
 
 ## Product files and evidence
 

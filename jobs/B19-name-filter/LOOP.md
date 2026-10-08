@@ -146,3 +146,25 @@ installed. Production is frozen; literal acceptance still fails and PR2
 remains draft. These are unfinished verification investigations, not cosmetic
 KEEP rounds or proof of a hard realtime bound.
 - 2026-10-08 polish: analia, analise and sexto added as exact exceptions and failures gained a suggestion key; INTEGRATION.md written; see VERIFY.md 'Polish pass 2026-10-08'. Literal 0.05 ms gate unchanged; hosted run 37809073933 green on 2b54431.
+
+## Isolated post-green review: original workload restored
+
+The original B19 KEEP command requires a complete rerun after green. One
+rerun of2b54431 closed16:40:40.528UTC and failed only its unchanged maximum:
+31/28/11outliers. All91suites execute, every original behavioral count passes,
+and every fresh receipt is retained. This round did not complete KEEP.
+
+Another active session then pushed product693d9501:five suggestion keys and
+three new exact spellings. Its positive list and expanded policy changed the
+timed sample and original baseline count. History and product changes are
+preserved on this isolated review branch fromccc610f; original branch/main
+are untouched. Originalpositive48, fixed459 and full43830 are restored using
+a hash-locked original289-exception fixture. New feature checks are separate:
+90prod/blind name+bypass checks and18frozen protocol guards pass.
+
+One full genuinely corrected-protocol check closed16:54:44.534UTC,EXIT1:
+all100suites execute, only latency fails43/19/28times. All original corpora,
+differentials,mutants,obfuscations,strict types,integrity and sizes pass.
+Every actual log and raw report is retained. The weak points and exact next
+step are logged in requirement-review.json. No causal timing explanation,
+unchanged luck retry, user waiver or only-cosmetic stopping claim is made.
