@@ -77,9 +77,13 @@ function decode(text: string): Float64Array {
   return Float64Array.from({ length: SOLVED_ENTRIES }, (_, i) => view.getFloat64(i * 8, true));
 }
 
-// Unpacked tables (~2.9 MB each): a cache of constant data, never game state, so it cannot change
-// a result. The first lookup of a rule mode pays the decode (tens of ms); later lookups are O(1).
-const unpacked = new Map<SolvedRuleMode, Float64Array>();
+// Both solved tables, decoded once when the module loads (about 80 ms each on Node 22; ~2.9 MB of
+// Float64 apiece). This is constant derived data that nothing writes, so the module keeps no
+// mutable state and solvedValue is a pure lookup. A game server imports it once, at boot.
+const TABLES: Readonly<Record<SolvedRuleMode, Float64Array>> = {
+  official: decode(SOLVED_OFFICIAL),
+  published: decode(SOLVED_PUBLISHED),
+};
 
 /** Expected remaining points before the next turn's first roll; NaN for an unreachable state. */
 export function solvedValue(
@@ -94,10 +98,5 @@ export function solvedValue(
   const layout = LAYOUTS[usedMask & 63]!;
   if (!layout.reach[upper] || (yahtzeeBonus && !(usedMask & 2048))) return NaN;
   const slot = layout.slots[upper + layout.left < UPPER_GOAL ? 0 : upper]!;
-  let table = unpacked.get(mode);
-  if (!table) {
-    table = decode(mode === 'official' ? SOLVED_OFFICIAL : SOLVED_PUBLISHED);
-    unpacked.set(mode, table);
-  }
-  return table[OFFSETS[usedMask]! + (yahtzeeBonus ? layout.width : 0) + slot]!;
+  return TABLES[mode][OFFSETS[usedMask]! + (yahtzeeBonus ? layout.width : 0) + slot]!;
 }

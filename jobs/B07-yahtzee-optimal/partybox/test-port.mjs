@@ -219,7 +219,7 @@ const mutants=[
   ['P04 big-endian decode','optimal/tables.ts','view.getFloat64(i * 8, true)','view.getFloat64(i * 8, false)'],
   ['P05 base64 alphabet','optimal/tables.ts',"0123456789+/'","0123456789-_'"],
   ['P06 unreachable subtotal accepted','optimal/tables.ts','if (!layout.reach[upper] ||','if (!layout.reach[0] ||'],
-  ['P07 mode table swap','optimal/tables.ts',"mode === 'official' ? SOLVED_OFFICIAL : SOLVED_PUBLISHED","mode === 'official' ? SOLVED_PUBLISHED : SOLVED_OFFICIAL"],
+  ['P07 mode table swap','optimal/tables.ts',"official: decode(SOLVED_OFFICIAL),\n  published: decode(SOLVED_PUBLISHED),","official: decode(SOLVED_PUBLISHED),\n  published: decode(SOLVED_OFFICIAL),"],
   ['P08 uncapped upper','optimal-bot.ts','upper: Math.min(63, upper)','upper: Math.min(64, upper)'],
   ['P09 scratched Yahtzee eligible','optimal-bot.ts','card.boxes[ids[11]!] === 50','card.boxes[ids[11]!] !== null'],
   ['P10 Joker rules swapped',"optimal-bot.ts","joker === 'forced' ? 'official' : joker === 'free' ? 'published'","joker === 'forced' ? 'published' : joker === 'free' ? 'official'"],
