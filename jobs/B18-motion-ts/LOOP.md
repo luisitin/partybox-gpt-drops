@@ -42,3 +42,4 @@ listed in `VERIFY.md`; none removes a requested numerical or mutation suite.
   the earlier "not run" limit; precision is limited by CSS serialization.
 - Added `npm run probes` (settle-bound grid, 2,352 cases, 0 violations).
 - Wrote `INTEGRATION.md`, the README status block and the PartyBox port steps.
+- Independent review 2026-10-08 (Haiku 5.5): full suite EXIT=0 locally; spring checked against an independent RK4 (max 7.3e-12); demo rebuild byte-identical; browser differential matches; INTEGRATION now states the 1.43 s bound's inputs. See VERIFY.md.

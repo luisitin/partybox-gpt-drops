@@ -246,3 +246,32 @@ commands and counts as the table above, with 32 integrity cases now that the
 delivered set includes the demo, tools and INTEGRATION.md). The baseline run
 before this pass, on the unchanged runtime at 15:41 UTC, passed every suite for
 all three seeds with 26 integrity cases.
+
+## Independent review 2026-10-08
+
+Reviewer: Claude (Haiku 5.5), on 8c49aaa. The reviewer did not write the polish pass.
+
+| Check | Result |
+| --- | --- |
+| Scope, `git diff --stat c0570a8..8c49aaa` | only `jobs/B18-motion-ts/**`; `.github/workflows/B18.yml` unchanged (sha `3b9a6c0b…`, matches the manifest) |
+| `motion.ts` | unchanged: 1,614 bytes, sha `aafcd382…`; gzip 842 (TS) and 946 (JS) against the 1,200 gate |
+| `sha256sum -c SHA256SUMS.txt` | all 32 OK before the review's document edits; every tracked file except the manifest is listed |
+| Hosted CI on 8c49aaa | run 37806545473, job `verify`, success; Node 22.23.3; seeds 1, 2, 3 all pass; 32/32 integrity; 25/25 mutations per seed |
+| `npm ci --ignore-scripts && npm test` (local, Node 22.22.0) | EXIT=0; seeds 1, 2 and 3 each `PASS` (about 57 to 61 s per seed on the loaded box) |
+| Independent RK4 (Python, dt 1e-4, integrated to exactly T) against `spring()`, 12 random springs | max difference 7.3e-12 |
+| `spring(0, …)` | returns `[x0, v0]` |
+| `cubicBezier` endpoints; named easings at t = 0.5 | 0 and 1 at the ends; ease 0.80240, ease-in 0.31536, ease-out 0.68464, ease-in-out 0.5 |
+| Settle bounds for the demo presets (m 1, x0 1, v0 0, e 0.001) | bounds 3.51, 1.43, 1.81, 7.66 s; first moment both position and speed are inside e (0.5 ms grid): 1.16, 0.64, 1.17, 2.97 s; largest excursion after the bound 0.26 % of e |
+| `npm run build && node tools/make-demo.mjs` | the rebuilt `demo/curves.html` is byte-identical to the committed file (sha `e10ef385…`) |
+| `npm run browser-check` (Chromium 1194) | 2,624 samples; raw max 4.99e-6; after six-digit rounding max 1.0e-6; 2,582 exact; named curves 6.1e-7; matches the table above |
+| Demo in headless Chromium at 1100 px and 390 px | no console errors, no network requests, no horizontal overflow; the 1100 px render was looked at |
+
+Not re-checked by the reviewer: reduced motion in the demo (the polish pass reports it, from a harness outside the job).
+
+Left open, not changed in this review:
+- The demo checks in the polish table ran from a scratch harness outside the job folder, so they cannot be re-run from this job. A committed `tools/demo-check.mjs` would change the integrity count (32 to 33) and need another full run.
+- No person has judged the feel on a TV or a phone.
+- `spring` returns `[0, 0]` and `settleTime` returns 0 for a non-positive mass, with no error (documented gap).
+- PR #5's body still describes c0570a8 and run 37635529608. It was not edited.
+
+Fixed in this review: `INTEGRATION.md`, the feel-target paragraph, now states the inputs behind the 1.43 s bound and the 0.64 s first crossing with the same inputs.

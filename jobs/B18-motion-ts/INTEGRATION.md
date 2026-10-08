@@ -59,7 +59,7 @@ Gzip: 842 bytes for the TypeScript source, 946 bytes for the emitted JavaScript,
 
 - **Disc drop.** A player's disc drops onto the TV lobby with a `spring` on `translateY` and settles inside the bound. The 2.5 px ring from the B16 colour set fades in with `opacity`, not after the settle. Only `transform` and `opacity` move, so the work stays on the compositor.
 - **Easing choices.** Use `easings['ease-out']` for UI reveals (a fast start that reads as responsive) and `easings['ease-in-out']` for scene changes on the TV. Use springs where something should feel physical (dropping discs, the VIP crown bouncing once), never on text that a player must read while it moves.
-- **Feel target.** The B16 integration asked for ≤ 450 ms and overshoot ≤ 6 %. The bound is not that target: for the snappy preset (k 400, c 28, ζ 0.70) the bound is 1.43 s, and the visible settle is expected to be shorter. This job did not measure it. Choose k and c against the feel target, then measure the first time the spring stays inside 0.5 px in PartyBox.
+- **Feel target.** The B16 integration asked for ≤ 450 ms and overshoot ≤ 6 %. The bound is not that target: for the snappy preset (k 400, c 28, ζ 0.70) the bound is 1.43 s (`settleTime(1, 400, 28, 1, 0, 0.001)`: mass 1, displaced 1, at rest, e 0.001, the demo's inputs; re-checked 2026-10-08), while the first time both position and speed are inside 0.001 is 0.64 s with those inputs. This job did not measure it. Choose k and c against the feel target, then measure the first time the spring stays inside 0.5 px in PartyBox.
 - **Look at it.** `npm run demo` builds `demo/curves.html`. Check the two lanes stay together on the 1.2 s easing rows, and that the settle tick sits where the dot stops.
 
 ## Licence / IP notes
