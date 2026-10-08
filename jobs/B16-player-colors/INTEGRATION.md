@@ -32,11 +32,11 @@ Twelve player colours with a proof: every pair is checked with CIEDE2000 (Sharma
 ## Port steps
 
 1. **Tokens.** Replace `tokens.css` lines 31–38 with the block from `partybox/tokens-player.css` (12 colours, 12 face inks, `--pb-player-count`, `--pb-player-ring`). Add the ring overrides inside each existing `[data-theme]` block (`daylight` `#171633`, `arcade` `#f0f6ff`, `cabin` `#fbf3e8`, `contrast` `#ffffff`; `night` is the `:root` default `#f5f6ff`).
-2. **Slot count.** Add `export const PLAYER_SLOTS = 12` in `packages/shared/src/ids.ts` (the colour rule and its comment live there). Replace every `% 8` with `% PLAYER_SLOTS` in `packages/game-sdk/src/ui/Avatar.tsx` (lines 85, 88, 91, 93), `games/monopoly/client/Board.tsx:104`, `games/monopoly/client/Tv.tsx:166`. Check the `TINTS` list in `packages/client/src/controller/JoinTints.tsx` and extend it to 12 (it currently assumes the eight tokens).
+2. **Slot count.** Add `export const PLAYER_SLOTS = 12` in `packages/shared/src/ids.ts` (the colour rule and its comment live there). Replace every `% 8` with `% PLAYER_SLOTS` in `packages/game-sdk/src/ui/Avatar.tsx` (lines 85, 88, 91, 93), `games/monopoly/client/Board.tsx:104`, `games/monopoly/client/Tv.tsx:166`. Check the `TINTS` list in `packages/client/src/controller/JoinTints.tsx` and extend it to 12 (it currently assumes the eight tokens). Also change the `avatarTint` check in `packages/shared/src/ids.ts:108` from `n < 8` to `n < PLAYER_SLOTS`: without it a phone that picks slot 9–12 (`fox#9`) parses as no colour. Update the comments that say eight: `ids.ts:60`, `ids.ts:99`, and `packages/game-sdk/src/ui/Avatar.tsx:2` (`index % 8`).
 3. **Face ink per slot.** `Avatar.tsx` draws every face in the one `INK` (`#1a0b12`, `avatarArt.tsx`). Use `var(--pb-player-N-face)` for the face of a player's disc so each face has ≥ 3:1 on its colour (the minimum in the set is 4.87:1).
 4. **Ring.** Give each disc a 2.5 px stroke in `var(--pb-player-ring)`: in `Avatar.module.css` (or the svg circle). Slots 13–16 get a dashed stroke (`stroke-dasharray: 4 3`) so a repeated colour is never the only cue. The ring is what makes the light colours (Butter, Aqua, Lime) visible on Daylight (fill-to-ground 1.0:1 without it).
 5. **Repeats.** For 13–16 reuse slots 1–4 (same colour, dashed ring, same face family) and keep the name label. Sixteen-player rooms exist (DESIGN_SYSTEM "sixteen players"), so this path must be tested.
-6. **Design doc.** Update the player row in `docs/DESIGN_SYSTEM.md` (currently `--pb-player-1…8`, "avatar id % 8") and the theme rule "player colours untouched": the ring is now a theme token. Add a row to `docs/DECISIONS.md` as a new ADR (next free number after the owner's main, ≥ ADR-088).
+6. **Design doc.** Update the player row in `docs/DESIGN_SYSTEM.md` (currently `--pb-player-1…8`, "avatar id % 8") and the theme rule "player colours untouched": the ring is now a theme token. Add a row to `docs/DECISIONS.md` as a new ADR (the local main's `docs/DECISIONS.md` ends at ADR-081 on 2026-10-08, so take the next free number at port time).
 7. **Test.** Port `tests/partybox.mjs`'s checks into the PartyBox test tree: parse `tokens.css`, compute the gates from the hex values (the math is pure; `packages/game-sdk` can host a small `playerColors` module if preferred). Keep the reference-vs-production diff if you want the two-implementation discipline.
 8. **Verify in the app.** `pnpm e2e:themes` (five themes), `pnpm e2e:a11y` (no colour-only meaning; the ring must not fail axe contrast), `pnpm e2e:snap --game <id>` for a 16-player room, `pnpm e2e:fold` unaffected. Look at the screenshots: the sheet is the reference, not the bar.
 
@@ -56,7 +56,7 @@ Twelve player colours with a proof: every pair is checked with CIEDE2000 (Sharma
 
 **Must**
 1. The canonical 16-bit palette (`palette.json`) fails after 8-bit rounding: first eight normal ΔE00 19.54 (gate 20), all twelve four-view 11.77 (gate 12). `npm run canonical` prints it. Do not port the canonical hex; use `partybox/palette-12.json`.
-2. The `palette-12` set needs the **ring** on every disc. It is not the literal B16 spec: the spec asked for ≥ 3:1 fill-on-light, which forces every colour into relative luminance 0.10–0.27 and removes yellow. The ring is the owner's decision to take; without it Daylight fails.
+2. The `palette-12` set needs the **ring** on every disc. It is not the literal B16 spec: the spec asked for ≥ 3:1 fill-on-light, which forces every colour into relative luminance 0.10–0.27 and removes yellow. The ring is the owner's decision to take; without it Daylight fails. Measured on 2026-10-08 (independent recomputation): six of the twelve slots are under 3:1 on `#F7F5F0` (Butter 1.01, Aqua 1.14, Lime 1.38, Peach 1.81, Turquoise 2.01, Periwinkle 2.22); all twelve pass 3:1 on `#121218` (lowest 3.15).
 
 **Should**
 3. The set is found by a seeded hill-climb (not an optimum). Margins: first eight 21.39 (gate 20), four-view minimum 12.67 (gate 12). Re-run the search if a colour changes.
@@ -83,3 +83,12 @@ cd /path/to/partybox && pnpm verify && pnpm e2e:themes && pnpm e2e:a11y
 - Measured the current PartyBox eight: minimum normal ΔE00 5.17, minimum CVD ΔE 3.90 (sky vs cyan under deutan), and two fills under 1.6:1 on Daylight.
 - Built the PartyBox set with a seeded search (`tools/search-partybox.mjs`, reproduced byte-for-byte), named it EN/ES, gate-tested it (`tests/partybox.mjs`, production vs reference agree to 2.8e-14), rendered the sheet on five themes and looked at it, and wrote the token block.
 - Wired `tests/partybox.mjs` into `npm test` (package.json) and added `npm run partybox` and `npm run canonical`.
+
+## Independent review 2026-10-08 (Claude, Haiku 5.5)
+
+- Checked the claims with a separate CIEDE2000 and Machado 2009 (severity 1.0) implementation written from the formulas: current eight 5.17 normal and 3.90 CVD, palette-12 21.39 first-8 and 12.67 all-12 four-view, all match. The Daylight pair (1.33 and 1.52) also matches.
+- Fixed: the palette's `boundary` text said a 2 px ring; the sheet and tokens use 2.5 px. Fixed in `tools/build-partybox-palette.mjs` and `partybox/palette-12.json`.
+- Fixed: step 2 now covers `packages/shared/src/ids.ts:108` (`n < 8`), which would have dropped slots 9–12.
+- Fixed: the ADR number (local main ends at ADR-081, not ≥ ADR-088) and the fill-on-light count above.
+- Not fixed, owner decision: the literal fill-on-light rule from the original B16 brief is not met; the ring rule is the proposal.
+- PR #15's body still describes an earlier head; this review did not edit it.

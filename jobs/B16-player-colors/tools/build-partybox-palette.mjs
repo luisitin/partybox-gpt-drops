@@ -31,7 +31,7 @@ const out = {
   name: 'PartyBox 12 (ring boundary)',
   method: 'tools/search-partybox.mjs, seed 1, 30000 steps x 3 restarts, ring mode, HUE_MIN=20, CHROMA_MIN=0.10 (search score ' + search.score.toFixed(4) + ')',
   rule: 'Values are 8-bit sRGB hex: they are the values a browser paints. Slots 13-16 reuse slots 1-4 with a dashed outer ring; the avatar face id still tells players apart.',
-  boundary: 'Every disc has a 2px ring in the theme text colour (tokens.css), so its edge is >= 3:1 on every theme; this replaces the literal fill-on-light rule that the search could not satisfy with vivid colours.',
+  boundary: 'Every disc has a 2.5px ring in the theme text colour (tokens.css), so its edge is >= 3:1 on every theme; this replaces the literal fill-on-light rule that the search could not satisfy with vivid colours.',
   colors,
 };
 writeFileSync('partybox/palette-12.json', JSON.stringify(out, null, 2) + '\n');

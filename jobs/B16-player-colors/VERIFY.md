@@ -111,3 +111,31 @@ changed; no test reads them.
 The log is kept outside the repository. The final rerun on the committed state
 is recorded in the PR body, with its head SHA.
 
+
+## Independent review 2026-10-08
+
+Reviewer: Claude (Haiku 5.5), on df5a6ab. The reviewer did not write the polish pass.
+
+| Check | Result |
+| --- | --- |
+| Scope, `git diff --stat 7bc5e08..df5a6ab` | only `jobs/B16-player-colors/**`; `.github/workflows/B16.yml` unchanged |
+| `sha256sum -c SHA256SUMS.txt` | all 70 OK before the review's edits; every tracked file except the manifest is listed |
+| Hosted CI on df5a6ab | run 37807344393, job `verify`, success (merge ref 1a41168); Node 22.16.0; `npm test` passed: seeds 1, 2, 3, 25/25 mutations, PartyBox palette gates |
+| Local `npm ci --ignore-scripts && npm test` (Node 22.22.0), after the fixes below | EXIT=0; seeds 1, 2, 3 each pass; 25/25 mutations caught under all three seeds; `PARTYBOX PALETTE GATES PASSED` |
+| Independent CIEDE2000 and Machado 2009 (severity 1.0, linear RGB) recomputation, Python, written from the formulas | current eight: min normal dE00 5.17, min CVD dE00 3.90; palette-12: first eight normal 21.39, all twelve four-view 12.67; all match the claims |
+| Current eight, fill on Daylight `#f6f5ff` | 1.33 (`#ffd166`) and 1.52 (`#48dbfb`): the "two under 1.6:1" claim holds |
+| palette-12, fill on `#121218` | min 3.15:1 (every slot passes 3:1) |
+| palette-12, fill on `#F7F5F0` | min 1.01:1; six of twelve slots under 3:1 (Butter 1.01, Aqua 1.14, Lime 1.38, Peach 1.81, Turquoise 2.01, Periwinkle 2.22); the ring rule is the proposal and the literal rule is not met |
+| `partybox/sheet.html` in Chromium 1194, 1400 px | no console errors, no external requests, no horizontal overflow; all five themes viewed |
+| INTEGRATION port lines | `tokens.css` 31–38 and 85/106/124/142; `Avatar.tsx` 85/88/91/93; `Board.tsx:104`; `Tv.tsx:166`; `JoinTints.tsx` `TINTS` all match |
+
+Fixed in this review (document and generator text only; no colour value changed):
+- The palette `boundary` text said a 2 px ring. The ring is 2.5 px (`tokens-player.css`, the sheet and INTEGRATION). Fixed in `tools/build-partybox-palette.mjs` and `partybox/palette-12.json`. The JSON still re-serialises byte for byte in the generator's format.
+- INTEGRATION step 2 did not name `packages/shared/src/ids.ts:108` (`avatarTint` accepts only `n < 8`), which would have dropped slots 9–12. Added, with the comments that say eight.
+- INTEGRATION named ADR-088 as the next number. The local main's `docs/DECISIONS.md` ends at ADR-081 (checked 2026-10-08). Corrected.
+- INTEGRATION "Must" 2 now states the fill-on-light count above.
+
+Left open, not changed in this review:
+- Owner decision: the literal fill-on-light rule of the original B16 brief is not met; the ring rule is the proposal.
+- No human has checked the colours for CVD perception on a TV or a phone. The Spanish names are unread by a native speaker.
+- PR #15's body still describes 7bc5e08 and run 37643434658. It was not edited.
