@@ -1,10 +1,12 @@
 # ChatGPT project pipeline
 
-_Last refreshed: 2026-10-08 10:21 UTC_
+_Last refreshed: 2026-10-08 13:08 UTC_
 
 This tracker covers the 20 jobs in [PROMPTS.md](PROMPTS.md). It reads branch commits, changed files, pull-request notes and checks for the exact latest commit from GitHub.
 
 Live dashboard: https://partybox-project-tracker.artificiallysloppy.chatgpt.site
+
+Active game queue: [GAME-PIPELINE.md](GAME-PIPELINE.md), with all ten game stages, exact-head checks, current acceptance notes and delivered files.
 
 The notes below describe what the GitHub record suggests is being worked on. They are evidence from commits and pull requests, not a claim that a job has passed verification.
 
@@ -19,7 +21,7 @@ The notes below describe what the GitHub record suggests is being worked on. The
 
 ## Project detail and next steps
 
-_Work notes recorded: 2026-10-07T21:39:24.264461+00:00; checks below are freshly queried._
+_Work notes recorded: 2026-10-08T10:21:00+00:00; checks below are freshly queried._
 
 Thirteen deliveries are ready for maintainer review with passing checks for their exact final GitHub commits; none is merged. The 1,000-question trivia pack is now ready on PR22 at 60293314: every final question and ordered answer set has an independent acceptance, 3,507 quotes matched in each local source pass, and all 2,210 similarity flags are resolved. Its predictable answer cycle was removed, all ten categories have balanced answer positions, and the independent held-copy audit and final GitHub check passed. Twelve other deliveries remain ready: board odds, Yahtzee, Monopoly, Clue, Battleship, Rummikub, Ticket to Ride, comedy, icons, player colors, sound effects and motion. Seven drafts remain: six Jamboree research projects with specific unsupported details and the name filter, which still exceeds the original 0.05 ms maximum. New research and repairs are pushed on their project branches, with actual remaining gaps retained. Hourly background reports are enabled; the open dashboard refreshes every 30 minutes.
 

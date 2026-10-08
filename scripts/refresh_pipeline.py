@@ -193,6 +193,8 @@ lines = [
     "",
     "Live dashboard: https://partybox-project-tracker.artificiallysloppy.chatgpt.site",
     "",
+    "Active game queue: [GAME-PIPELINE.md](GAME-PIPELINE.md), with all ten game stages, exact-head checks, current acceptance notes and delivered files.",
+    "",
     "The notes below describe what the GitHub record suggests is being worked on. They are evidence from commits and pull requests, not a claim that a job has passed verification.",
     "",
     "## Stage meanings",
