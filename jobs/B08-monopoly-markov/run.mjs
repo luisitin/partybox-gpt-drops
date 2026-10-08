@@ -50,13 +50,15 @@ for(const seed of [1,2,3]) {
     partybox:JSON.parse(readFileSync(`.verification/partybox-seed-${seed}.json`))});
 }
 assert.ok(runs.every(run=>run.partybox.passed&&run.partybox.simulation.length===2&&run.partybox.mutants.runtimeKilled===20),'PartyBox suite complete');
+const partyboxStatistics=runs.reduce((n,run)=>n+run.partybox.simulation.reduce((m,plan)=>m+plan.statistics.length,0),0);
+assert.equal(partyboxStatistics,288,'PartyBox simulated statistics: 48 per plan and seed');
 for(const [file,before] of Object.entries(sourceSHA256))assert.equal(digest(file),before,`Source unchanged during full run: ${file}`);
 command(['hashes.mjs']);
 const report={passed:true,node:process.version,typescript:JSON.parse(readFileSync('node_modules/typescript/package.json')).version,
   command:'npm test',seeds:[1,2,3],sourceSHA256,totals:{exactTransitionCells:86400,stationaryStates:720,publishedSquares:720,
   matchedPublishedSquares:717,documentedPublishedGaps:3,requiredButlerComparisons:480,
   roiScenarios:1044,simulationRolls:600000000,simulationSquares:240,strictCompiledMutants:75,runtimeKilledMutants:75,
-  partyboxRoiRows:1044,partyboxSimulationRolls:120000000,partyboxSimulatedStatistics:300,
+  partyboxRoiRows:1044,partyboxSimulationRolls:120000000,partyboxSimulatedStatistics:partyboxStatistics,
   partyboxStrictCompiledMutants:60,partyboxRuntimeKilledMutants:60},runs};
 writeFileSync('.verification/summary.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({suite:'complete',passed:true,node:report.node,typescript:report.typescript,seeds:report.seeds,totals:report.totals}));
