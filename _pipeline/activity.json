@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-08T16:03:58.918477+00:00",
-  "summary": "The original 20 projects remain unmerged: thirteen deliveries are ready for maintainer review, while six research drafts retain their unsupported details and B19 remains draft with unmet original speed/corpus gates. Fresh exact-head metadata shows nineteen successful workflows and B19\u2019s current red run. B19 was lawfully resumed and pushed to b7709fe; run 37804648793 fails literal maximum latency and upstream GeoNames corpus drift. Its smaller hosted execution is distinguished from retained full local/sealed behavioral proof; frozen exact-corpus acquisition and measured optimization remain pending. All other per-project operator notes keep their original recorded dates and are preserved. Passing structural checks do not complete research or acceptance. Hourly background reports remain enabled; the open dashboard refreshes every 30 minutes.",
+  "updatedAt": "2026-10-08T16:24:04+00:00",
+  "summary": "The original 20 projects remain unmerged: thirteen deliveries are ready for maintainer review, six research drafts retain unsupported details, and B19 remains draft with its unchanged 0.05 ms maximum-latency gate unmet. Fresh exact-head results are green for B11, B16 and B18. B19 now runs the exact frozen original corpora successfully, but exact-head run 37807137561 fails on a seed-3 0.063416 ms call; historical 0.089284 ms and larger local failures remain retained. Passing code or structural checks do not complete research or acceptance.",
   "workers": [
     {
       "current": "B13",
@@ -67,16 +67,15 @@
     },
     {
       "current": "B19",
-      "summary": "Lawfully resumed at 15:42:00 UTC on fresh main 9b6332a after finding only the old B19 branch and no existing claim row; owner codex-name-resume. Original PR #2 remains draft at b7709fedd5752d159374793bf1a9a4122adfffd3, pushed at 15:55:04 UTC; fresh main 64ff3a1 claim row records 15:54:54 UTC. Current exact-head CI run 37804648793 FAILED at 15:55:24 UTC. Its complete actual 28,579-character log was read by the job lead: literal latency seed 1 had one call at 0.050564 ms, exceeding the unchanged 0.05 ms maximum, and the pinned upstream GeoNames places data changed. Hosted execution covers 61 suites and 11,830 sealed cases per seed, distinct from the retained local full 88-suite/43,830-per-seed proof totaling 131,490 comparisons. The first measured length-pruning 5371665d also retained literal-speed failures with 36/8/16 calls above the threshold and maxima 0.473/0.247/0.456 ms. Local behavior proof retains 131,490 sealed comparisons, 74,619 new boundary cases and 75 actual caught mutants. The bounded three-character witness matcher reduces measured work about twofold, while cause and speed acceptance remain unproved. The available exact selected 32k frozen corpus, original verified hashes/licence and offline acquisition are being prepared to resolve upstream drift. Further allocation diagnosis remains private and unfinished. Historical 04f8ece hosted 0.089284 ms and other failed measurements remain retained.",
-      "next": "Deliver the exact licensed/hash-verified frozen corpus, finish the measured allocation optimization and prove all full original behavioral/corpus and unchanged 0.05 ms worst-case speed gates on the current source before making original PR #2 ready.",
+      "summary": "Original PR #2 remains draft at b3f5231eeaab97ab14760c29664f06820a0a4503. Exact-head run 37807137561 FAILED at 16:14:08 UTC; all 91 suites and the exact frozen original corpora executed, and the sole hosted failure was seed-3 literal latency of 0.063416 ms against the unchanged 0.05 ms maximum. The exact 32,000-row corpus snapshot is now restored offline with locked hashes; 24 restoration/corruption controls and 156 delivery checksums pass. Full local behavior evidence remains 131,490 sealed comparisons, 74,619 added boundary cases and 75 real mutants. Earlier local maxima of 0.472961/0.246780/0.456415 ms and historical hosted 0.089284 ms remain retained. Corpus recovery is complete; speed acceptance is not.",
+      "next": "Complete the bounded allocation optimization and rerun every original behavioral, corpus, mutation, checksum and unchanged 0.05 ms worst-case latency gate before making PR #2 ready.",
       "queue": [
-        "Frozen exact corpus acquisition",
         "Measured allocation optimization",
-        "Full unchanged behavioral and speed acceptance"
+        "Full unchanged behavioral and latency acceptance"
       ],
       "updatedAt": "2026-10-08T16:03:58.918477+00:00",
       "owner": "codex-name-resume"
     }
   ],
-  "observedAt": "2026-10-08T16:08:28.598500+00:00"
+  "observedAt": "2026-10-08T16:24:04+00:00"
 }
