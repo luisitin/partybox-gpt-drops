@@ -1,0 +1,11 @@
+const ASCII_FOLD = Uint8Array.from({length: 128}, (_, code) => lower(String.fromCharCode(code)).charCodeAt(0) - 97);
+  let simpleMatch = false;
+  if (simple && input.length <= 16 && SCAN !== undefined) {
+    simpleMatch = SCAN.empty;
+    let state = 0;
+    for (let index = 0; !simpleMatch && index < input.length; index++) {
+      state = SCAN.table[state + ASCII_FOLD[input.charCodeAt(index)]!]!;
+      simpleMatch = state === -1;
+    }
+    if (!simpleMatch) return OK;
+  }

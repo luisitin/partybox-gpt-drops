@@ -1,12 +1,12 @@
 {
-  "kind": "current-exact-regex-DFA-requirement-review",
-  "productionSourceSha256": "ae8dc388665a4b4241b40b7ce1b86ba98e9eaadde7facefddf8ee47a00858e8a",
+  "kind": "current-raw-ASCII-letter-DFA-fold-shortcut-requirement-review",
+  "productionSourceSha256": "7817489fc1d0908a87914223a84b31c15ea7e13b3555cb4238594751616f163d",
   "originalWorkloadRunnerSha256": "bff0c17b62aa75d342527a8ced855678380411053476557acde61f2e1b6fbdd9",
   "weakestFive": [
     {
       "rank": 1,
       "part": "Literal 0.05 ms per-check acceptance",
-      "status": "Exact 559 hosted full passes with 0/0/0 outliers; the single first-local and required after-green full run fails 6/3/5. Literal acceptance remains incomplete; no cause or unchanged retry."
+      "status": "Current measured 7817/e4b shortcut awaits first original full literal gate; predecessor 6/3/5 after-green failure remains retained. No cause, unchanged retry or completed KEEP."
     },
     {
       "rank": 2,
@@ -16,7 +16,7 @@
     {
       "rank": 3,
       "part": "Real mutant execution",
-      "status": "All 75 original mutants execute and are killed in genuine hosted and local full runs. Supplemental seed-1 and three assertion controls remain distinct."
+      "status": "All 25 current original seed-1 mutants execute and are killed, plus six real production assertion failures. Required current full 75-mutant check remains pending."
     },
     {
       "rank": 4,
@@ -26,7 +26,7 @@
     {
       "rank": 5,
       "part": "Source-bound delivery and mandatory KEEP",
-      "status": "Exact 559 full green artifact passes 2,909 assertions; its single genuinely after-green local full rerun fails. KEEP remains open and PR23 draft."
+      "status": "Original-path current diagnostic sources and all actual phases/guards preserved; new source checkpoint/full CI and genuine after-green full KEEP remain pending."
     }
   ],
   "keepCompleted": false,
@@ -44,25 +44,7 @@
     ],
     "adopted": false
   },
-  "compiledSourceSha256": "330968b37089918bf450bb0a8a4546133e855c55df2aafe462d36be7aa4c6b8e",
-  "dfaDiagnostic": {
-    "cases": 214308,
-    "guards": 480,
-    "seedGainsPercent": [
-      53.300560144283345,
-      46.667905928723705,
-      35.85338583174498
-    ],
-    "allSixBlocksFavorCandidate": true,
-    "privateOriginalMutants": 25,
-    "privateMutantSeed": 1,
-    "states": 539,
-    "matchingAllocationFreeOnly": true,
-    "startupInPhaseGains": false,
-    "originalWarmupUnchanged": true,
-    "fullLiteralAcceptanceRun": true,
-    "adoptedExactly": true
-  },
+  "compiledSourceSha256": "e4b39efbf033bef9c41788e9bf0f002cdb61ff9dbbdfa6cbfcbfda65122d2cf9",
   "historicalCurrentHostedGreen": {
     "head": "12554906b884a4c4afd8443edf470f0cc5ec371e",
     "run": 37849845219,
@@ -92,20 +74,10 @@
     37.984631587882056,
     29.657297572282335
   ],
-  "diagnosticGainsPercent": [
-    53.300560144283345,
-    46.667905928723705,
-    35.85338583174498
-  ],
   "historicalPrefixSupplementalAssertionControls": {
     "cases": 3,
     "passed": 3,
     "closedUtc": "2026-10-08T21:17:00.409Z"
-  },
-  "supplementalAssertionControls": {
-    "cases": 3,
-    "passed": 3,
-    "closedUtc": "2026-10-08T22:24:20.187Z"
   },
   "historicalPrefixFirstOriginalAcceptance": {
     "hosted": {
@@ -141,28 +113,45 @@
     "guards": 368,
     "sourcesUnchanged": true
   },
-  "currentHostedFull": {
-    "head": "559969f514d8c943a837e4759576c81d27b8a7c0",
-    "run": 37853546762,
-    "job": 113572188397,
-    "completedUtc": "2026-10-08T22:27:30Z",
-    "artifact": 11582468572,
-    "artifactBytes": 8686127,
-    "artifactSha256": "5183b8e4acd8ba461012ce56573bb47121381623b33cdcfc0f48c7d59ed3efc0",
-    "artifactStructuralChecks": 2909,
-    "artifactValidatedUtc": "2026-10-08T22:31:05.337579+00:00",
-    "suiteRows": 100,
-    "deliveredHashes": 565,
-    "outliers": [
-      0,
-      0,
-      0
+  "historicalDfaDiagnostic": {
+    "cases": 214308,
+    "guards": 480,
+    "seedGainsPercent": [
+      53.300560144283345,
+      46.667905928723705,
+      35.85338583174498
     ],
-    "originalMutantsExecutedAndKilled": 75,
-    "passed": true,
-    "artifactCompiledRuntimeAbsent": true
+    "allSixBlocksFavorCandidate": true,
+    "privateOriginalMutants": 25,
+    "privateMutantSeed": 1,
+    "states": 539,
+    "matchingAllocationFreeOnly": true,
+    "startupInPhaseGains": false,
+    "originalWarmupUnchanged": true,
+    "fullLiteralAcceptanceRun": true,
+    "adoptedExactly": true
   },
-  "firstLocalAndRequiredAfterGreenKEEP": {
+  "historicalAe8DiagnosticGainsPercent": [
+    53.300560144283345,
+    46.667905928723705,
+    35.85338583174498
+  ],
+  "diagnosticGainsPercent": [
+    13.840703921371434,
+    10.52057151197015,
+    8.367044882502604
+  ],
+  "historicalAe8SupplementalAssertionControls": {
+    "cases": 3,
+    "passed": 3,
+    "closedUtc": "2026-10-08T22:24:20.187Z"
+  },
+  "supplementalAssertionControls": {
+    "cases": 6,
+    "passed": 6,
+    "closedUtc": "2026-10-08T22:55:00.854989+00:00"
+  },
+  "historicalAe8FirstLocalAndRequiredAfterGreenKEEP": {
     "oneActualRunServesBoth": true,
     "head": "559969f514d8c943a837e4759576c81d27b8a7c0",
     "grantUtc": "2026-10-08T22:32:02.890081+00:00",
@@ -188,7 +177,48 @@
     "allOwnersDirectlyReleased": true,
     "unchangedRetryRun": false
   },
-  "prospectiveNextImprovement": {
+  "historicalAe8HostedFull559": {
+    "head": "559969f514d8c943a837e4759576c81d27b8a7c0",
+    "run": 37853546762,
+    "job": 113572188397,
+    "completedUtc": "2026-10-08T22:27:30Z",
+    "artifact": 11582468572,
+    "artifactBytes": 8686127,
+    "artifactSha256": "5183b8e4acd8ba461012ce56573bb47121381623b33cdcfc0f48c7d59ed3efc0",
+    "artifactStructuralChecks": 2909,
+    "artifactValidatedUtc": "2026-10-08T22:31:05.337579+00:00",
+    "suiteRows": 100,
+    "deliveredHashes": 565,
+    "outliers": [
+      0,
+      0,
+      0
+    ],
+    "originalMutantsExecutedAndKilled": 75,
+    "passed": true,
+    "artifactCompiledRuntimeAbsent": true
+  },
+  "historicalAe8HostedFull39": {
+    "head": "39c6a17340905caa57700e42e4008501cafdf9a3",
+    "run": 37855098543,
+    "job": 113577259513,
+    "artifact": 11583995901,
+    "artifactBytes": 9633217,
+    "artifactSha256": "877b00ad2b5fddf3fa8c4ccd5a5f585dc088b063d5e1114f2b5bd7308e825e56",
+    "artifactStructuralChecks": 3319,
+    "artifactValidatedUtc": "2026-10-08T22:44:14.860516+00:00",
+    "suiteRows": 100,
+    "deliveredHashes": 647,
+    "outliers": [
+      0,
+      0,
+      0
+    ],
+    "originalMutantsExecutedAndKilled": 75,
+    "passed": true,
+    "artifactCompiledRuntimeAbsent": true
+  },
+  "historicalProspectiveNextImprovement": {
     "scope": "raw ASCII letter DFA folding and proven-no-match return before plain allocation",
     "authored": false,
     "compiled": false,
@@ -196,5 +226,40 @@
     "measured": false,
     "adopted": false,
     "boundedStaticReviewFoundDistinctFromRejectedCandidates": true
+  },
+  "currentRawAsciiDfaDiagnostic": {
+    "sourceSha256": "7817489fc1d0908a87914223a84b31c15ea7e13b3555cb4238594751616f163d",
+    "compiledSha256": "e4b39efbf033bef9c41788e9bf0f002cdb61ff9dbbdfa6cbfcbfda65122d2cf9",
+    "cases": 214308,
+    "originalCases": 131490,
+    "guards": 669,
+    "mutationGuards": 671,
+    "privateOriginalMutants": 25,
+    "privateMutantSeed": 1,
+    "sixRealAssertionFailures": true,
+    "seedGainsPercent": [
+      13.840703921371434,
+      10.52057151197015,
+      8.367044882502604
+    ],
+    "allSixBlocksFavorCandidate": true,
+    "blockGainsPercent": [
+      14.269282276046942,
+      13.399731331586061,
+      9.24631419044995,
+      11.770451685981072,
+      15.09499148070825,
+      2.0498843469245083
+    ],
+    "externalTimingGuards": 12,
+    "originalWarmupAndSamplesUnchanged": true,
+    "startupInPhaseGains": false,
+    "wholeFunctionAllocationFreeClaimed": false,
+    "allOriginalMutationAnchorsConsequential": true,
+    "actualByteStaticReviewClosedUtc": "2026-10-08T22:53:43Z",
+    "adoptedExactly": true,
+    "adoptedUtc": "2026-10-08T22:54:58.870981+00:00",
+    "firstCurrentOriginalFullRun": false,
+    "timingReportSha256": "907a33c9ed5b0536e2baf89e0b42734ffa279c06ac5ef38e56d531973047431a"
   }
 }

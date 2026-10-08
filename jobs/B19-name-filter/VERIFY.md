@@ -1,8 +1,77 @@
 # B19 verification ledger
 
-## Current exact deterministic scanner adoption, October 8
+## Current raw ASCII-letter DFA shortcut adoption, October 8
 
-Production is exactly candidate source SHA256
+Production adopts exactly source SHA256
+`7817489fc1d0908a87914223a84b31c15ea7e13b3555cb4238594751616f163d`,
+compiled `e4b39efbf033bef9c41788e9bf0f002cdb61ff9dbbdfa6cbfcbfda65122d2cf9`.
+Original type and full raw-length guards run first. Nonempty ASCII letters
+of raw length <=16 scan the unchanged 539-state DFA through a startup table
+derived via the unique original lower(). Proven misses return frozen OK
+before plain-string/lowercase and SAFE work; hits retain the single original
+exception anchor and avoid a second scan. SCAN.empty, undefined fallback,
+Unicode/controls/separators, results, suggestions and wrapper stay exact.
+There is no input/result cache. Startup and normalization still allocate;
+no allocation-free whole-function or first-call-bound claim is made.
+
+| Test | Cases | Passed | Seed | Exact command from repository root |
+| --- | ---: | ---: | --- | --- |
+| Private strict build | 1 | 1 | shared setup | `node jobs/B19-name-filter/node_modules/typescript/bin/tsc -p .work/B19-ascii-DFA-fold-candidate/tsconfig.json` |
+| Original complete comparisons | 43830 | 43830 | 1, 2, 3 separately | `node .work/B19-ascii-DFA-fold-candidate/exact-harness.mjs equivalence` |
+| Unicode-policy comparisons | 1296 | 1296 | 1, 2, 3 separately | same equivalence command |
+| Unicode-range comparisons | 1422 | 1422 | 1, 2, 3 separately | same equivalence command |
+| Length-boundary comparisons | 24873 | 24873 | 1, 2, 3 separately | same equivalence command |
+| Added-name bypass comparisons | 15 | 15 | 1, 2, 3 separately | same equivalence command |
+| Actual M01/M15/M18/M19/M21/M25 AssertionError controls | 6 | 6 | shared setup | `node .work/B19-ascii-DFA-fold-candidate/structural-control.mjs` |
+| Original actual mutants, 43830 truth rows each | 25 | 25 | 1 (supplemental) | `node .work/B19-ascii-DFA-fold-mutation/full-mutation.mjs` |
+| Mixed 24 phases / 12 million whole calls, guards/sinks | 24 | 24 | 1, 2, 3 | `node .work/B19-ascii-DFA-fold-candidate/exact-harness.mjs timing` |
+| Production strict compile | 1 | 1 | shared setup | `npm run build` from jobs/B19-name-filter |
+| Actual production AssertionError controls | 6 | 6 | shared setup | `node .work/B19-ascii-DFA-production-acceptance/mutation-anchor-check.mjs` |
+
+All 214,308 full result/suggestion/frozen/wrapper/both-reference comparisons
+pass, including 131,490 original inputs. Equivalence naturally closes
+22:46:55.502 UTC with all 669 guards unchanged. Strict private build closes
+22:46:21.152079; six assertion controls close 22:46:45.599. All 25 original
+mutants execute and are killed on 43,830 rows with zero excluded baseline
+failures, natural CLOSED 22:47:01.464; all 671 guards remain unchanged.
+Default diagnostic gzip is 5,271 source / 5,064 compiled bytes; original
+level-9 size and complete acceptance checks remain unchanged.
+
+One fresh-owner coordinated ABBA/BAAB run has actual grant
+22:51:59.355368 UTC; natural CLOSED 22:52:05.726 / command CLOSED
+22:52:05.758797 / EXIT 0. Every 24 phase / 12 million whole call, raw GC
+observation, complete stdout/stderr and all 669 + 12 external guards remain.
+Seed gains are 13.840704%, 10.520572%, 8.367045%; all six balanced blocks
+favor the shortcut: 14.269282/13.399731%, 9.246314/11.770452%,
+15.094991/2.049884%. All seeded sinks agree; the smaller final block is
+retained. Original 10k sampled rows and 100k warmup per variant/seed stay
+fixed. Startup construction is excluded; these warmed diagnostic gains do
+not establish the original literal gate, startup gain or an outlier cause.
+Timing report SHA256
+907a33c9ed5b0536e2baf89e0b42734ffa279c06ac5ef38e56d531973047431a.
+
+Independent actual-byte static acceptance naturally closes 22:53:43 UTC,
+without executing new tests or timing. Exact source adoption is
+22:54:58.870981; strict production build closes 22:54:59.829508 and emits
+the exact measured e4b bytes. Six actual production assertion controls close
+22:55:00.854989. Complete evidence is in
+results/ascii-DFA-fold-diagnostic-20261008/, preserving original .work paths;
+copied archives were not executed. Every owner is directly released after
+natural closure; uncaptured first-message times and later receipt times
+remain accurately labeled. No STOP/pause, fake clock, filter, settling or
+extra phase is used. All historical greens, failures and rejections remain.
+
+### UNVERIFIED: current original full acceptance and KEEP
+
+Original current-source full `npm test`, all 75 three-seed mutants and
+literal 0.05 ms per-call acceptance have not yet run on 7817/e4b. The prior
+ae8 full hosted greens and failed 6/3/5 required after-green local run remain
+actual historical scopes and cannot transfer acceptance. PR23 stays draft;
+KEEP remains open. No unchanged local retry or cosmetic stop is claimed.
+
+## Historical exact deterministic scanner ae8 adoption, October 8
+
+The predecessor scanner has exact source SHA256
 `ae8dc388665a4b4241b40b7ce1b86ba98e9eaadde7facefddf8ee47a00858e8a`,
 compiled `330968b37089918bf450bb0a8a4546133e855c55df2aafe462d36be7aa4c6b8e`.
 The existing pattern() language is compiled into a bounded 539-state table;
@@ -49,7 +118,7 @@ emitted JS. Initial supplementary lexical-reader failure is preserved with
 original source/actual receipt; complete initial stderr and closure time were
 not captured. Its reader alone changed to the actual TypeScript parser.
 
-### Actual current full hosted pass and failed after-green local KEEP
+### Actual ae8 full hosted pass and failed after-green local KEEP
 
 Exact head 559969f514d8c943a837e4759576c81d27b8a7c0 passes full hosted
 run [37853546762](https://github.com/luisitin/partybox-gpt-drops/actions/runs/37853546762),

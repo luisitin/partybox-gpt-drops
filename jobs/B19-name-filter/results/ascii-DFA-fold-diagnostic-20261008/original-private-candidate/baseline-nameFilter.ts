@@ -150,7 +150,6 @@ const MARKS = /\p{M}/gu;
 const FORMATS = /\p{Cf}/gu;
 const SEPARATOR = /^[\p{P}\p{S}\p{Z}]$/u;
 const lower = (value: string): string => value.toLowerCase();
-const ASCII_FOLD = Uint8Array.from({length: 128}, (_, code) => lower(String.fromCharCode(code)).charCodeAt(0) - 97);
 const normalize = (value: string): string => value.normalize('NFKD');
 const clean = (value: string): string => value.replace(MARKS, '').replace(FORMATS, '');
 interface KnownCharacter { readonly plain: string; readonly mapped: string; readonly meaningful: boolean; }
@@ -205,16 +204,6 @@ export function nameFilter(input: unknown): NameResult {
   if (typeof input !== 'string') return FAILURE.type;
   if (input.length > 32 || (input.length > 16 && [...input].length > 16)) return FAILURE.length;
   const simple = SIMPLE_ASCII.test(input);
-  let simpleMatch = false;
-  if (simple && input.length <= 16 && SCAN !== undefined) {
-    simpleMatch = SCAN.empty;
-    let state = 0;
-    for (let index = 0; !simpleMatch && index < input.length; index++) {
-      state = SCAN.table[state + ASCII_FOLD[input.charCodeAt(index)]!]!;
-      simpleMatch = state === -1;
-    }
-    if (!simpleMatch) return OK;
-  }
   if (!simple && CONTROLS.test(input))
     return FAILURE.control;
   const ascii = simple || ASCII.test(input);
@@ -236,7 +225,7 @@ export function nameFilter(input: unknown): NameResult {
     else text += '~';
    }
   }
-  if (simpleMatch || blocked(text))
+  if (blocked(text))
     return FAILURE.blocked;
   return OK;
 }

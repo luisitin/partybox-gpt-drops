@@ -148,3 +148,22 @@
   rejected classifiers. It is private and unwritten at this checkpoint; scoped
   static acceptance is not behavioral verification or measured benefit.
   Any allocation reduction is prospective, not a diagnosis of observed outliers.
+
+## Measured raw ASCII-letter DFA shortcut adoption
+
+- The subsequent exact 7817/e4b shortcut is adopted only after all 214,308
+  complete comparisons, six actual assertion failures and all 25 original
+  seed-1 mutants pass, plus one balanced original-sample experiment with all
+  six blocks favorable. The smaller 2.049884% final block remains included.
+  Whole-call gains are 13.840704/10.520572/8.367045% against ae8/330.
+- Complete original type/length decisions remain first. ASCII unit=point and
+  nonempty-letter proof permits a no-match return; matched exceptions retain
+  the sole lower()/SAFE anchor. Folding derives via the original lower(), so
+  M01 remains consequential; SCAN.empty and undefined fallback stay exact.
+- The measured gains exclude startup and preserve existing warmup/samples.
+  No first-call/startup gain, universal latency bound, whole-function allocation
+  guarantee or historical outlier cause is inferred. Current full gates remain
+  pending; all prior hosted greens and failed follow-ups stay retained.
+- One genuine first local original full run may also fulfill the original
+  required after-green rerun only when it actually starts after accepted full
+  green evidence. Do not duplicate an unchanged run solely from labels.

@@ -296,3 +296,30 @@ the original single exception anchor. No candidate is authored or measured at
 this checkpoint; original guards, actual mutants, full Unicode semantics and
 consistent balanced whole-call benefit are required before any adoption.
 This is substantive unfinished work, not a cosmetic KEEP stop.
+
+## Measured raw ASCII-letter DFA shortcut
+
+The distinct shortcut proves an ASCII-letter miss through the unchanged DFA
+before plain/lowercase/SAFE work, while hits retain the original single
+exception anchor. Type/full raw-length decisions, all Unicode/fallback paths,
+SCAN.empty and every original mutation effect remain exact. Strict compile,
+214,308 complete cases, six real AssertionErrors and all original 25 executed
+seed-1 mutants pass. All 669 semantic and 671 mutation guards stay unchanged.
+
+One delegated balanced run naturally closes 22:52:05.726 UTC / EXIT 0,
+all 24 phases / 12 million whole calls retained. All six blocks favor it:
+14.269282/13.399731%, 9.246314/11.770452%, 15.094991/2.049884%; seed gains
+13.840704/10.520572/8.367045%. All 669 harness + 12 external guards and
+seeded sinks remain unchanged. The smaller final block remains visible.
+Startup construction is excluded, original warmup/samples stay fixed;
+no literal acceptance, first-call bound or outlier cause is inferred.
+
+Independent actual-byte static acceptance closes 22:53:43 UTC. Adopt exact
+7817/e4b at 22:54:58.870981; production strict build reproduces the measured
+compiled bytes at 22:54:59.829508, six actual controls pass 22:55:00.854989.
+All original source/compiled baselines, commands, phases, GC and guarded raw
+outputs are retained in results/ascii-DFA-fold-diagnostic-20261008/.
+Predecessor 39c6 full hosted green and its 3,319 byte/structure assertions are
+historical after adoption; the single after-green 6/3/5 failure stays binding.
+The genuine current-source full gates are pending, KEEP open and PR23 draft.
+No unchanged extra acceptance test is launched to chase luck.
