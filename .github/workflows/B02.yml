@@ -19,6 +19,8 @@ jobs:
       - name: Install the pinned development compiler
         working-directory: jobs/B02-board-odds
         run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Python for the independent exact check (preinstalled on ubuntu-latest)
+        run: python3 --version
       - name: Full verification, seeds 1, 2, 3
         working-directory: jobs/B02-board-odds
         run: npm test

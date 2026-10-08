@@ -28,6 +28,7 @@ try {
       ['node_modules/typescript/bin/tsc', '-p', 'tsconfig.json'],
       ['test.mjs', '--seed', String(seed)],
       ['mutate.mjs', '--seed', String(seed)],
+      ['tools/independent-check.mjs', '--seed', String(seed), '--graphs', '300'],
     ]) {
       const command = `node ${args.join(' ')}`;
       console.log(`\n=== seed ${seed}: ${command} ===`);
