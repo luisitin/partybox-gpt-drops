@@ -1,0 +1,920 @@
+{
+  "passed": true,
+  "seed": 3,
+  "boardOddsSHA256": "deabab5b4fc33a6d4e39282e0f3bc053b6349563d3e40f20c0c07d8aa4511af3",
+  "purityRules": 12,
+  "exact": {
+    "assertions": 24023,
+    "fuzzCases": 20000,
+    "roiRows": 348,
+    "observations": {
+      "leave ASAP": {
+        "rollsPerTurn": 1.186623958525926,
+        "hottest": [
+          {
+            "square": 10,
+            "chance": 0.062195146819755215
+          },
+          {
+            "square": 24,
+            "chance": 0.0318576628665498
+          },
+          {
+            "square": 0,
+            "chance": 0.030961230334104268
+          },
+          {
+            "square": 19,
+            "chance": 0.030851688778357925
+          },
+          {
+            "square": 25,
+            "chance": 0.030659047386530067
+          }
+        ],
+        "orange": 0.08813171190903636,
+        "red": 0.08757295229458688,
+        "utilityDice": {
+          "12": {
+            "meanMovementDice": 6.877769283797748,
+            "oneUtilityMovementOverFresh": 0.9866875495645816
+          },
+          "28": {
+            "meanMovementDice": 7.06759415878242,
+            "oneUtilityMovementOverFresh": 1.00828252721678
+          }
+        },
+        "thirdHouseBest": 20
+      },
+      "stay max": {
+        "rollsPerTurn": 1.165896364009171,
+        "hottest": [
+          {
+            "square": 10,
+            "chance": 0.11527745312425577
+          },
+          {
+            "square": 24,
+            "chance": 0.029954920405779073
+          },
+          {
+            "square": 0,
+            "chance": 0.02918262494561797
+          },
+          {
+            "square": 25,
+            "chance": 0.028928474098033164
+          },
+          {
+            "square": 20,
+            "chance": 0.028247973397189527
+          }
+        ],
+        "orange": 0.08310164961185368,
+        "red": 0.08176985679466056,
+        "utilityDice": {
+          "12": {
+            "meanMovementDice": 6.549991079823758,
+            "oneUtilityMovementOverFresh": 0.9501854090027991
+          },
+          "28": {
+            "meanMovementDice": 7.057965819866014,
+            "oneUtilityMovementOverFresh": 1.0070443899968462
+          }
+        },
+        "thirdHouseBest": 20
+      }
+    }
+  },
+  "simulation": [
+    {
+      "plan": "leave ASAP",
+      "rolls": 20000000,
+      "batches": 200,
+      "burnIn": 10000,
+      "limit": 4.5,
+      "passed": true,
+      "maxZ": 2.541858636158746,
+      "rollsPerTurn": {
+        "exact": 1.186623958525926,
+        "simulated": 1.1865675803632558
+      },
+      "statistics": [
+        {
+          "statistic": "turn ends",
+          "expected": 0.8427269589619967,
+          "simulated": 0.8427669999999999,
+          "standardError": 0.00007241324734664058,
+          "z": 0.5529518350638568
+        },
+        {
+          "statistic": "turn ends on 0",
+          "expected": 0.026426197193398844,
+          "simulated": 0.026472299999999994,
+          "standardError": 0.000034140613018630556,
+          "z": 1.350380163823988
+        },
+        {
+          "statistic": "turn ends on 1",
+          "expected": 0.017292768523628235,
+          "simulated": 0.017270000000000004,
+          "standardError": 0.000029757563119528824,
+          "z": 0.7651340110335946
+        },
+        {
+          "statistic": "turn ends on 2",
+          "expected": 0.016161338123599513,
+          "simulated": 0.016111350000000003,
+          "standardError": 0.00002567047435807848,
+          "z": 1.947300346001541
+        },
+        {
+          "statistic": "turn ends on 3",
+          "expected": 0.01772942616570281,
+          "simulated": 0.017753999999999992,
+          "standardError": 0.00002821365006964115,
+          "z": 0.8709909648885049
+        },
+        {
+          "statistic": "turn ends on 4",
+          "expected": 0.019454903084400003,
+          "simulated": 0.019463300000000003,
+          "standardError": 0.00002958236181667632,
+          "z": 0.28384872215530255
+        },
+        {
+          "statistic": "turn ends on 5",
+          "expected": 0.02459016878880964,
+          "simulated": 0.024616499999999993,
+          "standardError": 0.00003297202636499997,
+          "z": 0.7985924461804281
+        },
+        {
+          "statistic": "turn ends on 6",
+          "expected": 0.019117880616545763,
+          "simulated": 0.019160049999999998,
+          "standardError": 0.00002886535172401054,
+          "z": 1.460899692386505
+        },
+        {
+          "statistic": "turn ends on 7",
+          "expected": 0.007182648376981908,
+          "simulated": 0.007183099999999999,
+          "standardError": 0.000018416645027543528,
+          "z": 0.024522545632772744
+        },
+        {
+          "statistic": "turn ends on 8",
+          "expected": 0.01977263654616597,
+          "simulated": 0.01976524999999999,
+          "standardError": 0.00002791389645998384,
+          "z": 0.26461895696172866
+        },
+        {
+          "statistic": "turn ends on 9",
+          "expected": 0.01951252787419643,
+          "simulated": 0.019522499999999988,
+          "standardError": 0.000028411084078120005,
+          "z": 0.350994202690025
+        },
+        {
+          "statistic": "turn ends on 10",
+          "expected": 0.05836211582861921,
+          "simulated": 0.05828404999999998,
+          "standardError": 0.000051047327409968055,
+          "z": 1.529283364675817
+        },
+        {
+          "statistic": "turn ends on 11",
+          "expected": 0.022672451664419058,
+          "simulated": 0.02263425,
+          "standardError": 0.00003197709902115836,
+          "z": 1.1946569760371042
+        },
+        {
+          "statistic": "turn ends on 12",
+          "expected": 0.020608885030530554,
+          "simulated": 0.02066179999999998,
+          "standardError": 0.00002920812167636404,
+          "z": 1.8116525963477532
+        },
+        {
+          "statistic": "turn ends on 13",
+          "expected": 0.020171566295678574,
+          "simulated": 0.02017419999999999,
+          "standardError": 0.0000309664561588031,
+          "z": 0.0850502333205109
+        },
+        {
+          "statistic": "turn ends on 14",
+          "expected": 0.019833509594279958,
+          "simulated": 0.019848650000000002,
+          "standardError": 0.00003122190616572395,
+          "z": 0.4849289354621822
+        },
+        {
+          "statistic": "turn ends on 15",
+          "expected": 0.02509103637026451,
+          "simulated": 0.02516870000000001,
+          "standardError": 0.0000305538744880257,
+          "z": 2.541858636158746
+        },
+        {
+          "statistic": "turn ends on 16",
+          "expected": 0.022953742605803358,
+          "simulated": 0.02294425,
+          "standardError": 0.000028445967249555627,
+          "z": 0.33370655742096417
+        },
+        {
+          "statistic": "turn ends on 17",
+          "expected": 0.022592836046662384,
+          "simulated": 0.02256564999999999,
+          "standardError": 0.000032864850211133026,
+          "z": 0.8272073807652814
+        },
+        {
+          "statistic": "turn ends on 18",
+          "expected": 0.024259885671955552,
+          "simulated": 0.024191849999999997,
+          "standardError": 0.0000313968821468405,
+          "z": 2.1669563123292868
+        },
+        {
+          "statistic": "turn ends on 19",
+          "expected": 0.02677526459820703,
+          "simulated": 0.026790899999999982,
+          "standardError": 0.000033585501029476904,
+          "z": 0.46554022758899277
+        },
+        {
+          "statistic": "turn ends on 20",
+          "expected": 0.023557838036706212,
+          "simulated": 0.023569349999999992,
+          "standardError": 0.00003196543968371653,
+          "z": 0.3601378053199316
+        },
+        {
+          "statistic": "turn ends on 21",
+          "expected": 0.02401273115856622,
+          "simulated": 0.024052049999999988,
+          "standardError": 0.00003262912481870145,
+          "z": 1.2050228638443508
+        },
+        {
+          "statistic": "turn ends on 22",
+          "expected": 0.008444599690148736,
+          "simulated": 0.008420800000000003,
+          "standardError": 0.000020134891838458834,
+          "z": 1.182012316712533
+        },
+        {
+          "statistic": "turn ends on 23",
+          "expected": 0.022862202591852877,
+          "simulated": 0.02288290000000002,
+          "standardError": 0.0000345786983836209,
+          "z": 0.5985594922492811
+        },
+        {
+          "statistic": "turn ends on 24",
+          "expected": 0.027040213421560405,
+          "simulated": 0.027001249999999997,
+          "standardError": 0.00003423550843335326,
+          "z": 1.1380996907423835
+        },
+        {
+          "statistic": "turn ends on 25",
+          "expected": 0.025474196527580772,
+          "simulated": 0.025473199999999994,
+          "standardError": 0.000035072986355044176,
+          "z": 0.028412966340802974
+        },
+        {
+          "statistic": "turn ends on 26",
+          "expected": 0.022917000565343962,
+          "simulated": 0.022928949999999997,
+          "standardError": 0.00002718052412963562,
+          "z": 0.4396322381070384
+        },
+        {
+          "statistic": "turn ends on 27",
+          "expected": 0.022093554705709742,
+          "simulated": 0.022116999999999994,
+          "standardError": 0.00003129130436149787,
+          "z": 0.7492590918996772
+        },
+        {
+          "statistic": "turn ends on 28",
+          "expected": 0.023515338033636184,
+          "simulated": 0.0234972,
+          "standardError": 0.00003097390375084893,
+          "z": 0.5855908180668983
+        },
+        {
+          "statistic": "turn ends on 29",
+          "expected": 0.02123319707882124,
+          "simulated": 0.021249300000000023,
+          "standardError": 0.00003095283411406958,
+          "z": 0.5202406060601562
+        },
+        {
+          "statistic": "turn ends on 30",
+          "expected": 0,
+          "simulated": 0,
+          "standardError": 0,
+          "z": 0
+        },
+        {
+          "statistic": "turn ends on 31",
+          "expected": 0.022153707761285807,
+          "simulated": 0.022185950000000006,
+          "standardError": 0.000033043073571530584,
+          "z": 0.9757639114413047
+        },
+        {
+          "statistic": "turn ends on 32",
+          "expected": 0.022827824878739085,
+          "simulated": 0.02275945000000001,
+          "standardError": 0.00003046937646239803,
+          "z": 2.2440524447047636
+        },
+        {
+          "statistic": "turn ends on 33",
+          "expected": 0.019515117378599407,
+          "simulated": 0.01952365,
+          "standardError": 0.000031345631763497553,
+          "z": 0.2722108606701982
+        },
+        {
+          "statistic": "turn ends on 34",
+          "expected": 0.021649192953551794,
+          "simulated": 0.021605000000000003,
+          "standardError": 0.000032712390657253855,
+          "z": 1.3509545668742466
+        },
+        {
+          "statistic": "turn ends on 35",
+          "expected": 0.019955939151405002,
+          "simulated": 0.01996634999999999,
+          "standardError": 0.000030359750654428704,
+          "z": 0.3429161429384017
+        },
+        {
+          "statistic": "turn ends on 36",
+          "expected": 0.007260370046238422,
+          "simulated": 0.007250199999999999,
+          "standardError": 0.000020712674244818537,
+          "z": 0.4910059472869497
+        },
+        {
+          "statistic": "turn ends on 37",
+          "expected": 0.017580425510528727,
+          "simulated": 0.017551649999999988,
+          "standardError": 0.000027745141047769235,
+          "z": 1.037136934326476
+        },
+        {
+          "statistic": "turn ends on 38",
+          "expected": 0.018670115027911372,
+          "simulated": 0.0186913,
+          "standardError": 0.000030694417838279575,
+          "z": 0.6901897341805471
+        },
+        {
+          "statistic": "turn ends on 39",
+          "expected": 0.021401605443961313,
+          "simulated": 0.02145880000000001,
+          "standardError": 0.000029513267606658614,
+          "z": 1.9379269283552258
+        },
+        {
+          "statistic": "railroad card 5",
+          "expected": 0.0028895778483353507,
+          "simulated": 0.0029007999999999977,
+          "standardError": 0.00001277213518508094,
+          "z": 0.8786433514856223
+        },
+        {
+          "statistic": "railroad card 15",
+          "expected": 0.002883492713120509,
+          "simulated": 0.0028906999999999987,
+          "standardError": 0.000010962822051676672,
+          "z": 0.6574298885374544
+        },
+        {
+          "statistic": "railroad card 25",
+          "expected": 0.0034934431244384146,
+          "simulated": 0.0034733500000000005,
+          "standardError": 0.000012450359220666255,
+          "z": 1.6138590126027597
+        },
+        {
+          "statistic": "utility card 12",
+          "expected": 0.0028865352807279296,
+          "simulated": 0.0029074999999999986,
+          "standardError": 0.00001184929444711838,
+          "z": 1.7692799656242346
+        },
+        {
+          "statistic": "utility card 28",
+          "expected": 0.0017467215622192073,
+          "simulated": 0.0017398999999999997,
+          "standardError": 0.000009194161901192363,
+          "z": 0.7419449747043164
+        },
+        {
+          "statistic": "dice at 12",
+          "expected": 0.1592467691167,
+          "simulated": 0.15970900000000005,
+          "standardError": 0.00023244491431488183,
+          "z": 1.9885609657774246
+        },
+        {
+          "statistic": "dice at 28",
+          "expected": 0.18607181853290586,
+          "simulated": 0.1858400999999999,
+          "standardError": 0.00025160512843227525,
+          "z": 0.9209610883123676
+        }
+      ]
+    },
+    {
+      "plan": "stay max",
+      "rolls": 20000000,
+      "batches": 200,
+      "burnIn": 10000,
+      "limit": 4.5,
+      "passed": true,
+      "maxZ": 3.6393343978616346,
+      "rollsPerTurn": {
+        "exact": 1.165896364009171,
+        "simulated": 1.165896659933419
+      },
+      "statistics": [
+        {
+          "statistic": "turn ends",
+          "expected": 0.8577091677010615,
+          "simulated": 0.8577089500000002,
+          "standardError": 0.00008039195433331497,
+          "z": 0.0027079956333259363
+        },
+        {
+          "statistic": "turn ends on 0",
+          "expected": 0.024961075263921013,
+          "simulated": 0.024984849999999996,
+          "standardError": 0.000031600917350428024,
+          "z": 0.7523432252089726
+        },
+        {
+          "statistic": "turn ends on 1",
+          "expected": 0.016304080744882727,
+          "simulated": 0.016327849999999998,
+          "standardError": 0.000025089976526736508,
+          "z": 0.94736059605085
+        },
+        {
+          "statistic": "turn ends on 2",
+          "expected": 0.015241042677429577,
+          "simulated": 0.01523924999999999,
+          "standardError": 0.000026998039897238828,
+          "z": 0.06640028077631618
+        },
+        {
+          "statistic": "turn ends on 3",
+          "expected": 0.01672109567523045,
+          "simulated": 0.01671505,
+          "standardError": 0.000025656603320970815,
+          "z": 0.23563817683962673
+        },
+        {
+          "statistic": "turn ends on 4",
+          "expected": 0.01835378502858534,
+          "simulated": 0.0183781,
+          "standardError": 0.000027605475205206054,
+          "z": 0.880802494212307
+        },
+        {
+          "statistic": "turn ends on 5",
+          "expected": 0.023347239617840635,
+          "simulated": 0.023365300000000012,
+          "standardError": 0.000032423463028656335,
+          "z": 0.5570158296606172
+        },
+        {
+          "statistic": "turn ends on 6",
+          "expected": 0.018042809241580485,
+          "simulated": 0.018058849999999984,
+          "standardError": 0.000027385777174649447,
+          "z": 0.5857331824910884
+        },
+        {
+          "statistic": "turn ends on 7",
+          "expected": 0.006776917972126124,
+          "simulated": 0.006794950000000003,
+          "standardError": 0.00001825998694181673,
+          "z": 0.9875159238249046
+        },
+        {
+          "statistic": "turn ends on 8",
+          "expected": 0.01866245007223052,
+          "simulated": 0.018622100000000006,
+          "standardError": 0.000029558441387948185,
+          "z": 1.3650947186601863
+        },
+        {
+          "statistic": "turn ends on 9",
+          "expected": 0.018412954104142145,
+          "simulated": 0.018414299999999998,
+          "standardError": 0.00002943799462664569,
+          "z": 0.04571968556019655
+        },
+        {
+          "statistic": "turn ends on 10",
+          "expected": 0.11166227933301621,
+          "simulated": 0.11186705000000005,
+          "standardError": 0.00010055493754558162,
+          "z": 2.0364058889799765
+        },
+        {
+          "statistic": "turn ends on 11",
+          "expected": 0.021547076218526227,
+          "simulated": 0.021526049999999994,
+          "standardError": 0.000033633697619765796,
+          "z": 0.625153343647698
+        },
+        {
+          "statistic": "turn ends on 12",
+          "expected": 0.022065371938726725,
+          "simulated": 0.022038899999999993,
+          "standardError": 0.000028251276486505014,
+          "z": 0.9370174384643092
+        },
+        {
+          "statistic": "turn ends on 13",
+          "expected": 0.018405198478896823,
+          "simulated": 0.01835845,
+          "standardError": 0.00002722898410477287,
+          "z": 1.7168645997567658
+        },
+        {
+          "statistic": "turn ends on 14",
+          "expected": 0.020700295707635177,
+          "simulated": 0.020755199999999984,
+          "standardError": 0.00003117078583306627,
+          "z": 1.7614022520588628
+        },
+        {
+          "statistic": "turn ends on 15",
+          "expected": 0.02249962767909458,
+          "simulated": 0.022470400000000015,
+          "standardError": 0.0000297338140588934,
+          "z": 0.9829777988344894
+        },
+        {
+          "statistic": "turn ends on 16",
+          "expected": 0.023061753521749388,
+          "simulated": 0.0230672,
+          "standardError": 0.000031243745906878065,
+          "z": 0.1743221912905441
+        },
+        {
+          "statistic": "turn ends on 17",
+          "expected": 0.019827168373942286,
+          "simulated": 0.019855800000000007,
+          "standardError": 0.00003175521640366404,
+          "z": 0.9016353626365812
+        },
+        {
+          "statistic": "turn ends on 18",
+          "expected": 0.024337009666256522,
+          "simulated": 0.0243419,
+          "standardError": 0.00003256446177742536,
+          "z": 0.15017394658332325
+        },
+        {
+          "statistic": "turn ends on 19",
+          "expected": 0.024414667190099663,
+          "simulated": 0.02439709999999999,
+          "standardError": 0.000030211198795570082,
+          "z": 0.5814794116096976
+        },
+        {
+          "statistic": "turn ends on 20",
+          "expected": 0.02420022702284898,
+          "simulated": 0.0241831,
+          "standardError": 0.00003259916375288347,
+          "z": 0.5253822760243941
+        },
+        {
+          "statistic": "turn ends on 21",
+          "expected": 0.022158218715469167,
+          "simulated": 0.0221743,
+          "standardError": 0.00003178915383439381,
+          "z": 0.5058733118411958
+        },
+        {
+          "statistic": "turn ends on 22",
+          "expected": 0.008866541326230737,
+          "simulated": 0.008866549999999994,
+          "standardError": 0.00002086094153939202,
+          "z": 0.0004157899220550653
+        },
+        {
+          "statistic": "turn ends on 23",
+          "expected": 0.021565508139496817,
+          "simulated": 0.021560749999999997,
+          "standardError": 0.000029279534545773306,
+          "z": 0.16250734755985913
+        },
+        {
+          "statistic": "turn ends on 24",
+          "expected": 0.025314165241396368,
+          "simulated": 0.025336899999999996,
+          "standardError": 0.000035490418411105846,
+          "z": 0.6405886326917324
+        },
+        {
+          "statistic": "turn ends on 25",
+          "expected": 0.02428933679086835,
+          "simulated": 0.02423990000000001,
+          "standardError": 0.00003054035883194864,
+          "z": 1.618736411722397
+        },
+        {
+          "statistic": "turn ends on 26",
+          "expected": 0.02137225784749283,
+          "simulated": 0.0213211,
+          "standardError": 0.00003137836770449108,
+          "z": 1.6303540061298472
+        },
+        {
+          "statistic": "turn ends on 27",
+          "expected": 0.020884467277219647,
+          "simulated": 0.02091605,
+          "standardError": 0.00002693924837509515,
+          "z": 1.1723683727400998
+        },
+        {
+          "statistic": "turn ends on 28",
+          "expected": 0.022223858035499193,
+          "simulated": 0.022228650000000006,
+          "standardError": 0.000032455123829864345,
+          "z": 0.14764893598722395
+        },
+        {
+          "statistic": "turn ends on 29",
+          "expected": 0.02011255794157899,
+          "simulated": 0.020097900000000002,
+          "standardError": 0.00002709573479752694,
+          "z": 0.5409685948183804
+        },
+        {
+          "statistic": "turn ends on 30",
+          "expected": 0,
+          "simulated": 0,
+          "standardError": 0,
+          "z": 0
+        },
+        {
+          "statistic": "turn ends on 31",
+          "expected": 0.020938761109793664,
+          "simulated": 0.020939900000000008,
+          "standardError": 0.00003056017952931287,
+          "z": 0.03726713075266732
+        },
+        {
+          "statistic": "turn ends on 32",
+          "expected": 0.02148627684916113,
+          "simulated": 0.02145585000000001,
+          "standardError": 0.0000307852243403751,
+          "z": 0.9883588576359624
+        },
+        {
+          "statistic": "turn ends on 33",
+          "expected": 0.018398869405679533,
+          "simulated": 0.018435549999999995,
+          "standardError": 0.000031720013933182226,
+          "z": 1.156386450451403
+        },
+        {
+          "statistic": "turn ends on 34",
+          "expected": 0.020387834912580814,
+          "simulated": 0.020287250000000014,
+          "standardError": 0.00002763827161359523,
+          "z": 3.6393343978616346
+        },
+        {
+          "statistic": "turn ends on 35",
+          "expected": 0.018805804626695868,
+          "simulated": 0.01880955,
+          "standardError": 0.000030860384054925455,
+          "z": 0.1213650905143482
+        },
+        {
+          "statistic": "turn ends on 36",
+          "expected": 0.006844363958287276,
+          "simulated": 0.006850249999999999,
+          "standardError": 0.000017070712746352316,
+          "z": 0.3448035123185179
+        },
+        {
+          "statistic": "turn ends on 37",
+          "expected": 0.016575962835588116,
+          "simulated": 0.016564000000000002,
+          "standardError": 0.00002754402597359646,
+          "z": 0.43431688597668594
+        },
+        {
+          "statistic": "turn ends on 38",
+          "expected": 0.017604708904519265,
+          "simulated": 0.017555050000000003,
+          "standardError": 0.000026661661773843682,
+          "z": 1.8625584909332351
+        },
+        {
+          "statistic": "turn ends on 39",
+          "expected": 0.02033554825474224,
+          "simulated": 0.020307699999999995,
+          "standardError": 0.00003080581994871924,
+          "z": 0.9039932970004557
+        },
+        {
+          "statistic": "railroad card 5",
+          "expected": 0.0027248181310016825,
+          "simulated": 0.0027226499999999996,
+          "standardError": 0.000011766035246722869,
+          "z": 0.18427031333998242
+        },
+        {
+          "statistic": "railroad card 15",
+          "expected": 0.002721208647171151,
+          "simulated": 0.0027191000000000003,
+          "standardError": 0.000011793488962539012,
+          "z": 0.17879757023969767
+        },
+        {
+          "statistic": "railroad card 25",
+          "expected": 0.0034831782694634333,
+          "simulated": 0.0034912499999999996,
+          "standardError": 0.000013222095391150047,
+          "z": 0.6104728711887007
+        },
+        {
+          "statistic": "utility card 12",
+          "expected": 0.0027230133890864157,
+          "simulated": 0.0027094499999999995,
+          "standardError": 0.00001132906554534131,
+          "z": 1.197220462017155
+        },
+        {
+          "statistic": "utility card 28",
+          "expected": 0.0017415891347317167,
+          "simulated": 0.0017421000000000001,
+          "standardError": 0.000008337597234107336,
+          "z": 0.06127248102050568
+        },
+        {
+          "statistic": "dice at 12",
+          "expected": 0.15347815773058876,
+          "simulated": 0.15335340000000006,
+          "standardError": 0.00022907093808087532,
+          "z": 0.5446248731240497
+        },
+        {
+          "statistic": "dice at 28",
+          "expected": 0.17507942644077934,
+          "simulated": 0.17512334999999996,
+          "standardError": 0.0002515913999929443,
+          "z": 0.17458291190337719
+        }
+      ]
+    }
+  ],
+  "mutants": {
+    "planted": 20,
+    "strictCompiled": 20,
+    "runtimeKilled": 20,
+    "results": [
+      {
+        "name": "P01 per-turn conversion dropped",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP ROI rent 1/unimproved without color set/1: 0.04262754674929125 != 0.05058286826589295"
+      },
+      {
+        "name": "P02 railroad card premium dropped",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP ROI rent 5/1 railroad owned/1: 0.879022312428733 != 0.964743370050246"
+      },
+      {
+        "name": "P03 full-group doubling dropped",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP ROI rent 1/complete color set/2: 0.05058286826589295 != 0.1011657365317859"
+      },
+      {
+        "name": "P04 houses without the group earn",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP houses without the group 1: 2.2762290719651825 !== 0"
+      },
+      {
+        "name": "P05 card pays the owned multiplier",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP ROI rent 12/1 utility owned/1: 0.865203727406931 != 1.0090634680991"
+      },
+      {
+        "name": "P06 fresh dice mean 6",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP ROI rent 12/1 utility owned/1: 0.8649115440849428 != 1.0090634680991"
+      },
+      {
+        "name": "P07 card rent dropped on movement dice",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP movement utility 12/1: 0.7558641262068909 != 0.9956303606938393"
+      },
+      {
+        "name": "P08 railroad rent off by one",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP ROI rent 5/1 railroad owned/1: 1.929486740100492 != 0.964743370050246"
+      },
+      {
+        "name": "P09 hotel invested as four houses",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP ROI 1/hotel with color set/2: 0.024318686666294685 != 0.020396317849150383"
+      },
+      {
+        "name": "P10 coldest first",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP hottest order"
+      },
+      {
+        "name": "P11 hottest per roll and turn swapped",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP jail, Illinois-position 24, GO lead"
+      },
+      {
+        "name": "P12 share per roll and turn swapped",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP share per roll 0: 0.03135795872241765 !== 0.030961230334104268"
+      },
+      {
+        "name": "P13 share counts duplicates",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP duplicates count once: 0.14690756922297585 != 0.08813171190903636"
+      },
+      {
+        "name": "P14 multi-step build priced as one",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP build gain 1/0->2: 0.013151545749132167 != 0.006575772874566083"
+      },
+      {
+        "name": "P15 default plan differs per site",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "default options rent 1: 0.24849650880814814 !== 0.2529143413294648"
+      },
+      {
+        "name": "P16 default utility dice fresh",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP movement utility 12/1: 1.0090634680991 != 0.9956303606938393"
+      },
+      {
+        "name": "P17 one generated digit",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP per-roll 24: 0.0318576628665499 !== 0.0318576628665498"
+      },
+      {
+        "name": "P18 negative rent allowed",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "Totality case 842: [-0.7312239152004588,0,0,0,0]"
+      },
+      {
+        "name": "P19 hottest count rounds up",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "leave ASAP hottest count 2.7: 3 !== 2"
+      },
+      {
+        "name": "P20 hottest default plan",
+        "strictCompilation": true,
+        "runtimeKilled": true,
+        "failure": "default hottest plan and per"
+      }
+    ]
+  }
+}

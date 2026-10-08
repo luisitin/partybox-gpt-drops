@@ -44,3 +44,28 @@ Pre-exchange self-checks are additional archived evidence: production 30,494, bl
 ## UNVERIFIED
 
 Physical rotating decks, held/used GOJF, other US editions, competitive ownership/payment/bankruptcy policies and net-profit forecasting are outside the specified IID/gross-rent model and have not been verified by these results.
+
+## Polish pass 2026-10-08
+
+Claude (cloud). Added the PartyBox-facing `boardOdds.ts` and its suite; no sealed file changed (the authoring seals and `PRODUCTION-SEALED-SHA256SUMS.txt` still verify in every run).
+
+- **Full run:** `rm -rf node_modules build && npm ci --ignore-scripts --no-audit --no-fund && npm test` at `9689ac0` (Node v22.22.0, TypeScript 5.8.3). It took 1 min 32 s locally and passed. Every earlier suite reproduces its recorded numbers exactly: 37,981 exact assertions per seed, the same simulation maxima (seed 1: 1.9794 / 2.3897 sigma) and 75/75 solver mutants killed. Raw evidence: `reports/polish-2026-10-08/` (`summary.json`, `partybox-seed-*.json`, `full-run.log`).
+- **PartyBox suite** (`node partybox.mjs <seed>`, run inside `npm test`):
+
+| Seed | Exact assertions | Fuzz cases | Max \|z\| leave ASAP | Max \|z\| stay max | Mutants killed |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 1 | 24,023 | 20,000 | 2.0857 | 2.8009 | 20/20 |
+| 2 | 24,023 | 20,000 | 2.6056 | 3.0767 | 20/20 |
+| 3 | 24,023 | 20,000 | 2.5419 | 3.6393 | 20/20 |
+
+  - **Exact:** the tables match the sealed solver bit for bit, and all 348 `roi.csv` rows per seed are reproduced through the PartyBox-shaped API within 1e-12. The movement-dice weights match the sealed transition counts cell by cell (120 states × 2 utilities × 2 plans).
+  - **Simulation:** 20M rolls per plan per seed of what `simulate.mjs` never measured: turn ends overall and per square, the nearest-railroad and nearest-utility card arrivals, and the movement dice summed at each utility. 48 statistics per plan from 200 batch means, against a predeclared |z| ≤ 4.5; exact zeros (turn ends on 30) must be zero. Simulated rolls per turn at seed 1: 1.186754 vs exact 1.186624 ('leave ASAP'), 1.165897 vs 1.165896 ('stay max').
+  - **Mutants:** P01–P20, each strictly compiled through the TypeScript API, each failing `verifyBoardOdds()`. Equivalent mutants (guards made redundant by the final clamp) were not planted.
+  - Totals: 1,044 ROI rows, 120M simulated rolls, 288 statistics and 60 killed mutants. With the original suite that makes 720M simulated rolls and 135 killed mutants.
+- **PartyBox fit (one-off, not in `npm test`):**
+  - Edition data: against luisitin/partybox `main` @ `26b85ba6`, the classic-us, classic-1999 and classic-us-legacy editions have the same 28 deeds (kind, price, building cost, rents), the same rent rules and the same movement cards (10 Chance, 2 Community Chest; 16 per deck) as B08's data. `rentPerOpponentTurn` differs by 0 on edition data.
+  - Lint and types: a temporary copy at `games/monopoly/server/board-odds.ts` passed PartyBox's prettier and ESLint, and `tsc` under `tsconfig.base.json`. The copy was then removed.
+- **Rule reading:**
+  - PartyBox charges ordinary utility arrivals on the movement dice (`flow.ts:125`). A nearest-utility card arrival throws fresh dice (`flow.ts:126-131`, `cards.ts:47-55`), so `boardOdds.ts` models that by default.
+  - Exact effect of the movement dice on one-utility rent, compared with a fresh throw: −1.33% / −4.98% at position 12, +0.83% / +0.70% at position 28 ('leave ASAP' / 'stay max'). The mean movement dice on an ordinary arrival at 12 are 6.878 / 6.550.
+- **Preview:** `preview/hottest-squares.html` rendered in Chromium (Playwright) with no console errors at 1920×1080 (en, es, plan toggle, intro frames), 390×844 (en, es) and 1280×720 with reduced motion.
