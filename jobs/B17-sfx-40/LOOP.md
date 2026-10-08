@@ -46,3 +46,4 @@ suite passed again (120 audio, 30 rebuilt EBU, 75 mutation cases). Hosted code
 revision df5ae5d also passed; its full 891-line log contains all three successful
 seeds and all 25 detected mutations. Final evidence publication changes reports
 and documentation; exact-head CI will be inspected before the B16 handoff.
+2026-10-08 polish pass: layered v2 engine (dsp.ts, recipes.ts), cue map (cues.ts) and a second implementation as a cross-check; the suite passed on Node 22.22.0 with FFmpeg 6.1.1 (120 audio cases, 30 rebuilt EBU cases, 75/75 mutation kills); PR #11's verify was green on 14a6658, and the pushed head is checked on PR #11.

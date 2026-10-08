@@ -1,13 +1,17 @@
 {
   "seed": 2,
   "command": "npm test",
+  "node": "v22.22.0",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
   "counts": {
-    "sha256Files": 111,
-    "independentRaw": 40,
-    "independentMaster": 40,
-    "independentFullPcm": 40,
-    "independentWav": 40,
-    "independentMeter": 40,
+    "sha256Files": 125,
+    "legacyRawComparisons": 40,
+    "legacyMasterComparisons": 40,
+    "legacyFullPcmComparisons": 40,
+    "legacyMeterComparisons": 40,
+    "stereoTwinComparisons": 40,
+    "productMasterComparisons": 40,
+    "productFullPcmComparisons": 40,
     "audioRequirements": 40,
     "fadeOperation": 40,
     "byteRegeneration": 40,
@@ -16,6 +20,7 @@
     "externalFfmpeg": 40,
     "ebu3341MonoAdaptations": 10,
     "fftVsDft": 6,
+    "productCueApi": 4,
     "canonicalDeliverables": 120,
     "catalogAndDistinctness": 6,
     "meterInvalidAndSilence": 6,
@@ -24,16 +29,17 @@
     "pcmExtrema": 1,
     "rngInvalid": 4,
     "masterInvalid": 3,
-    "pureSource": 5,
+    "pureSource": 10,
     "probe": 1,
-    "rawSampleComparisons": 1649280,
-    "masteredSampleComparisons": 1649280,
+    "productProbe": 1,
+    "legacyRawSampleComparisons": 1649280,
+    "stereoSampleComparisons": 4305600,
+    "masteredSampleComparisons": 2152800,
     "pcmFadeSampleComparisons": 19200
   },
-  "sounds": [
+  "legacy": [
     {
       "id": "coin",
-      "seconds": 0.72,
       "samples": 34560,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 8.326672684688674e-17,
@@ -48,20 +54,10 @@
         "truePeakDb": -9.633827499239498,
         "dc": -7.240860550491898e-8,
         "samplePeak": 0.329071044921875
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -9.6,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -9.6 dBFS\n[out#0/null @ 0x55e807ba0580] video:0KiB audio:68KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.72 bitrate=N/A speed=87.4x    \n"
-      },
-      "sha256": "b5d394b29edcfb61df2cd5fe04470851424aa7ffebd32596171a298732242b95",
-      "spectrogramSha256": "8b3445a810a5861e98931f91c5e93571bc5d26f045ace6875ca4e3f5c92e147f",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "star-get",
-      "seconds": 1.1,
       "samples": 52800,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 2.7755575615628914e-15,
@@ -76,20 +72,10 @@
         "truePeakDb": -9.557436064387918,
         "dc": -8.49637118252841e-8,
         "samplePeak": 0.332244873046875
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -9.6,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -9.6 dBFS\n[out#0/null @ 0x55bcf09e3880] video:0KiB audio:103KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:01.10 bitrate=N/A speed= 142x    \n"
-      },
-      "sha256": "fb6b738691a691e7440ab60eb2468512c0effefaef48c6187f0cca6ad359363a",
-      "spectrogramSha256": "131c944c7df37c5e15f31640f396cb953ffaafec165f9ab923165fd5acfaf9e1",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "dice-roll",
-      "seconds": 0.9,
       "samples": 43200,
       "rawMaxError": 2.220446049250313e-16,
       "masterMaxError": 3.0531133177191805e-15,
@@ -104,20 +90,10 @@
         "truePeakDb": -8.261825367901714,
         "dc": 1.8367060908564816e-8,
         "samplePeak": 0.37884521484375
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -8.3,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -8.3 dBFS\n[out#0/null @ 0x560fed990c00] video:0KiB audio:84KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.90 bitrate=N/A speed= 113x    \n"
-      },
-      "sha256": "bb136e7386786794889cf16dddd935f5ef38b69fbe7c8ea0224230e247edddfa",
-      "spectrogramSha256": "3ca0cb1d0fdbc7697db54b47e85ed54bcd57e6d6467d1545f9e9ec98ca67a780",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "dice-stop",
-      "seconds": 0.52,
       "samples": 24960,
       "rawMaxError": 0,
       "masterMaxError": 1.4988010832439613e-15,
@@ -132,20 +108,10 @@
         "truePeakDb": -7.102086874352285,
         "dc": -5.991030962039263e-8,
         "samplePeak": 0.44000244140625
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -7.1,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -7.1 dBFS\n[out#0/null @ 0x5555e830d680] video:0KiB audio:49KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.52 bitrate=N/A speed=93.7x    \n"
-      },
-      "sha256": "3e27249d3d6ab141fe6c99b6b628bef78629a664c525290449d3b46fc42da7d0",
-      "spectrogramSha256": "b3bd5ea9f21d11a17f81e5277df898895f00565bf20be84197f320f38a6e2bb3",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "step",
-      "seconds": 0.46,
       "samples": 22080,
       "rawMaxError": 2.220446049250313e-16,
       "masterMaxError": 3.3306690738754696e-15,
@@ -160,20 +126,10 @@
         "truePeakDb": -5.348058796507226,
         "dc": 0,
         "samplePeak": 0.537017822265625
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -5.3,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -5.3 dBFS\n[out#0/null @ 0x55cfc7b2bf00] video:0KiB audio:43KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.46 bitrate=N/A speed=91.6x    \n"
-      },
-      "sha256": "c807385200f62e9e1f36694ae73ec9fe1ec2b7297040c42b7556022617ec678b",
-      "spectrogramSha256": "15d9287e5a84a661361ac7a360d44b974d3c00164ec971a6c0b48434366b68d5",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "buzzer",
-      "seconds": 0.68,
       "samples": 32640,
       "rawMaxError": 0,
       "masterMaxError": 7.771561172376096e-16,
@@ -188,20 +144,10 @@
         "truePeakDb": -10.22779351050318,
         "dc": -1.4398612228094362e-7,
         "samplePeak": 0.30755615234375
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -10.2,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -10.2 dBFS\n[out#0/null @ 0x557ef3889380] video:0KiB audio:64KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.68 bitrate=N/A speed= 128x    \n"
-      },
-      "sha256": "1d7a3c26c6c3a3e41d109bca77a20e2a608b14e352bec5a7458314943f47a49a",
-      "spectrogramSha256": "6ea9284f037267e3fe03379f753319f967cb48802f9189f69581e8893382b3f8",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "ding",
-      "seconds": 0.85,
       "samples": 40800,
       "rawMaxError": 0,
       "masterMaxError": 1.3877787807814457e-15,
@@ -216,20 +162,10 @@
         "truePeakDb": -7.619881387034589,
         "dc": 1.3688031364889705e-7,
         "samplePeak": 0.415313720703125
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -7.6,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -7.6 dBFS\n[out#0/null @ 0x5561247fe800] video:0KiB audio:80KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.85 bitrate=N/A speed=80.5x    \n"
-      },
-      "sha256": "1756ffe1f09a790e8f71cf57320836534f915d3c0c5e5a9f5737e2d6b90d3349",
-      "spectrogramSha256": "8cfa2d5ab314f5c2ee1633d5a1770fb71b1c650975e73b535774cad4368da321",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "whoosh",
-      "seconds": 0.8,
       "samples": 38400,
       "rawMaxError": 0,
       "masterMaxError": 6.661338147750939e-16,
@@ -244,20 +180,10 @@
         "truePeakDb": -11.36160543906878,
         "dc": 1.430511474609375e-8,
         "samplePeak": 0.26934814453125
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -11.4,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -11.4 dBFS\n[out#0/null @ 0x5560afacd480] video:0KiB audio:75KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.80 bitrate=N/A speed= 120x    \n"
-      },
-      "sha256": "c7956f89c11bfb29209601d1d7830b77dc72754e05be4dd7e8ae07300bb14dac",
-      "spectrogramSha256": "f1f0c460320dd8128fcf527d0a41a01ea86543573296c8ecec689142a0655a02",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "pop",
-      "seconds": 0.48,
       "samples": 23040,
       "rawMaxError": 0,
       "masterMaxError": 5.551115123125783e-16,
@@ -272,20 +198,10 @@
         "truePeakDb": -7.9321768840544316,
         "dc": -1.4570024278428819e-8,
         "samplePeak": 0.40069580078125
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -7.9,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -7.9 dBFS\n[out#0/null @ 0x563c65a684c0] video:0KiB audio:45KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.48 bitrate=N/A speed=73.8x    \n"
-      },
-      "sha256": "1712e8b5b5807f7778c471ce573de9bf2601cd29651ff49ba597a1e7d982dcf1",
-      "spectrogramSha256": "cb382223938f6aaccf1572401841005fe3a2495e1f0b4ec05004f40c03603a11",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "countdown-tick",
-      "seconds": 0.45,
       "samples": 21600,
       "rawMaxError": 0,
       "masterMaxError": 6.661338147750939e-16,
@@ -300,20 +216,10 @@
         "truePeakDb": -8.642434409739117,
         "dc": 5.2275481047453705e-8,
         "samplePeak": 0.369140625
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -8.7,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -8.7 dBFS\n[out#0/null @ 0x560378a58b40] video:0KiB audio:42KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.45 bitrate=N/A speed=83.1x    \n"
-      },
-      "sha256": "7d4829135b01c84da2f9068386ae572ab836f2b34bddb9c64c22fc53bc19bfc5",
-      "spectrogramSha256": "013a63784321abb3a13420066dff8cf2d212511ee899af6335294430dab97eda",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "final-tick",
-      "seconds": 0.56,
       "samples": 26880,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 3.885780586188048e-16,
@@ -328,20 +234,10 @@
         "truePeakDb": -10.99723111251459,
         "dc": 4.9954368954613096e-8,
         "samplePeak": 0.28131103515625
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -11,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -11.0 dBFS\n[out#0/null @ 0x563a5bbc5440] video:0KiB audio:52KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.56 bitrate=N/A speed=93.9x    \n"
-      },
-      "sha256": "bd80078c3b3b3165e7f627d9bc9cd4d638c637a1fc878fde876171de6049b02e",
-      "spectrogramSha256": "56bf5963b84e625b9efdd70a9d729c9666b9b8ea3e67bf586aeae7ec969930cd",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "win-fanfare",
-      "seconds": 1.65,
       "samples": 79200,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 1.887379141862766e-15,
@@ -356,20 +252,10 @@
         "truePeakDb": -10.761338664828727,
         "dc": 3.121115944602273e-8,
         "samplePeak": 0.28924560546875
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -10.8,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -10.8 dBFS\n[out#0/null @ 0x5592d3db2640] video:0KiB audio:155KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:01.65 bitrate=N/A speed= 162x    \n"
-      },
-      "sha256": "c2a2f0f6dbc65a4d5f76475d72e0033980a95c9a14f8659aebbeadf3d50f477e",
-      "spectrogramSha256": "a581d6a7ec0d34b8e04012df02bd386fb7d0a4b0816ad5b75130ecd53bafec27",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "lose",
-      "seconds": 1.2,
       "samples": 57600,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 9.992007221626409e-16,
@@ -384,20 +270,10 @@
         "truePeakDb": -8.840887414219926,
         "dc": -3.496805826822917e-8,
         "samplePeak": 0.36053466796875
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -8.8,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -8.8 dBFS\n[out#0/null @ 0x5630620d9fc0] video:0KiB audio:112KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:01.20 bitrate=N/A speed= 137x    \n"
-      },
-      "sha256": "7ca55aca61b592b7887aa9ed7d027d8612b404883c735251c3bfae76e33ad015",
-      "spectrogramSha256": "86ca88df6d468be2ea187d5476ffa04c16dba4542dc49f254b37defe33a5872f",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "item-use",
-      "seconds": 0.85,
       "samples": 40800,
       "rawMaxError": 0,
       "masterMaxError": 1.5543122344752192e-15,
@@ -412,20 +288,10 @@
         "truePeakDb": -10.904157599006448,
         "dc": -3.6651012944240194e-8,
         "samplePeak": 0.284515380859375
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -10.9,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -10.9 dBFS\n[out#0/null @ 0x558b97c8d800] video:0KiB audio:80KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.85 bitrate=N/A speed= 130x    \n"
-      },
-      "sha256": "13866c22534984bb0ccbd65cc11badc29a1c98f27c0cb76ea11e8e8f31538e75",
-      "spectrogramSha256": "f2d899535e071b34f63a0be1d87f2fc91864b8ab0c9c11de5f7c4327e23cecff",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "shop-open",
-      "seconds": 1.05,
       "samples": 50400,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 1.1102230246251565e-16,
@@ -440,20 +306,10 @@
         "truePeakDb": -8.9726422765443,
         "dc": 1.0596381293402777e-7,
         "samplePeak": 0.355133056640625
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -9,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -9.0 dBFS\n[out#0/null @ 0x55d198f06580] video:0KiB audio:98KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:01.05 bitrate=N/A speed= 137x    \n"
-      },
-      "sha256": "1cd6976205ba83ad44734e06a2ed3e7383f4a58ca8f9d660ef943e8b4b6c7846",
-      "spectrogramSha256": "dfffd9f1d7e8fa21e404909875fd2c1526b5f24880a05221435bf7b86074f59e",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "vote",
-      "seconds": 0.6,
       "samples": 28800,
       "rawMaxError": 0,
       "masterMaxError": 1.7208456881689926e-15,
@@ -468,20 +324,10 @@
         "truePeakDb": -8.1078409371754,
         "dc": -3.390842013888889e-8,
         "samplePeak": 0.392730712890625
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -8.1,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -8.1 dBFS\n[out#0/null @ 0x5585c05e95c0] video:0KiB audio:56KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.60 bitrate=N/A speed= 109x    \n"
-      },
-      "sha256": "2aa386c72b04e57f549ccb9128639abef2c2bbdb1543257512d5a21162df92e7",
-      "spectrogramSha256": "aa8d6d24062495c2a1fcd2684894a81c4a08d415700aa6b8d5f5497efbfb777e",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "reveal",
-      "seconds": 1.2,
       "samples": 57600,
       "rawMaxError": 0,
       "masterMaxError": 3.885780586188048e-16,
@@ -496,20 +342,10 @@
         "truePeakDb": -11.58263135438564,
         "dc": -5.7220458984375e-8,
         "samplePeak": 0.262908935546875
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -11.6,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -11.6 dBFS\n[out#0/null @ 0x561d2bbe7fc0] video:0KiB audio:112KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:01.20 bitrate=N/A speed= 141x    \n"
-      },
-      "sha256": "54e0b1a5c4672bbf36978fbe20db34b79f76e239d57b774c3215970c92fbc9a2",
-      "spectrogramSha256": "8d53f12350c6fc7645b763411967e5333d8b6580590ec21219c12a726f41d06d",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "timer-warning",
-      "seconds": 0.9,
       "samples": 43200,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 8.881784197001252e-16,
@@ -524,20 +360,10 @@
         "truePeakDb": -10.399593468640273,
         "dc": 3.4614845558449076e-8,
         "samplePeak": 0.301544189453125
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -10.4,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -10.4 dBFS\n[out#0/null @ 0x55ff56ab3c00] video:0KiB audio:84KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.90 bitrate=N/A speed= 107x    \n"
-      },
-      "sha256": "f9e02ab9feda6ef8e439f9f51cf541edfecbcef6bddc41ba811191ce98c6cd4b",
-      "spectrogramSha256": "03f07444c3beff819bfd6381b89318ff00fa7f8e2716e5820134f1feba18b9f9",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "menu-move",
-      "seconds": 0.46,
       "samples": 22080,
       "rawMaxError": 0,
       "masterMaxError": 4.440892098500626e-16,
@@ -552,20 +378,10 @@
         "truePeakDb": -8.649606736825001,
         "dc": 8.707461149796196e-8,
         "samplePeak": 0.36883544921875
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -8.7,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -8.7 dBFS\n[out#0/null @ 0x560cbd7d5f00] video:0KiB audio:43KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.46 bitrate=N/A speed=83.4x    \n"
-      },
-      "sha256": "6c53823231491742906034ee9d37513bfef71b71e9142609b0b41701bdecee7a",
-      "spectrogramSha256": "43dc2f06b855d5fc3b0805a819a916c2a1280cd3b9422e23b905ba1b1584fe51",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "menu-back",
-      "seconds": 0.55,
       "samples": 26400,
       "rawMaxError": 0,
       "masterMaxError": 7.216449660063518e-16,
@@ -580,20 +396,10 @@
         "truePeakDb": -9.37067348378925,
         "dc": 1.4911998401988637e-7,
         "samplePeak": 0.33941650390625
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -9.4,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -9.4 dBFS\n[out#0/null @ 0x55ab6c3fc240] video:0KiB audio:52KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.55 bitrate=N/A speed=  94x    \n"
-      },
-      "sha256": "4bc7caaae44a2bb7a7a5cfa3568ca995738016c49e35cef1bb9335a9dbd61f11",
-      "spectrogramSha256": "fe14282ac6ac7410b552689af6a4389c0b59daf4a48beb2996db70ee3ceb9056",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "confirm",
-      "seconds": 0.64,
       "samples": 30720,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 1.0547118733938987e-15,
@@ -608,20 +414,10 @@
         "truePeakDb": -9.966273564744322,
         "dc": -2.284844716389974e-8,
         "samplePeak": 0.3170166015625
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -10,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -10.0 dBFS\n[out#0/null @ 0x556e7b09d500] video:0KiB audio:60KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.64 bitrate=N/A speed= 114x    \n"
-      },
-      "sha256": "f6383f7981320f871bd49ffb2d03c4763fb7efbb6e0f5302f9c774b021e04947",
-      "spectrogramSha256": "da88aca6cd6df4677eaa6c810218d454dd133ad572ae69500f3691eaf8455b24",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "cancel",
-      "seconds": 0.64,
       "samples": 30720,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 1.27675647831893e-15,
@@ -636,20 +432,10 @@
         "truePeakDb": -9.533196700123128,
         "dc": -5.662441253662109e-8,
         "samplePeak": 0.332733154296875
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -9.5,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -9.5 dBFS\n[out#0/null @ 0x5612d43af500] video:0KiB audio:60KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.64 bitrate=N/A speed=90.7x    \n"
-      },
-      "sha256": "f1c0b6d43f9e0b99da8ed93b4933418ebc7667f3e3a8d80e99d4bd12510a0480",
-      "spectrogramSha256": "b8a4170dafce0dd900ca32ed8157447c94f7809f752b22ea2e5649ed911cf72a",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "join",
-      "seconds": 0.9,
       "samples": 43200,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 5.551115123125783e-17,
@@ -664,20 +450,10 @@
         "truePeakDb": -9.156758517663903,
         "dc": -8.689032660590278e-8,
         "samplePeak": 0.347869873046875
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -9.2,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -9.2 dBFS\n[out#0/null @ 0x5615571a4c00] video:0KiB audio:84KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.90 bitrate=N/A speed=90.6x    \n"
-      },
-      "sha256": "a335b25660f9e02096049320b8bc981e1f6d1b33aaa414316b56abcf62570c3c",
-      "spectrogramSha256": "4e8be285bfe5217bb1efa6e0a5c7f474d43e51ae03aebba4b176ab3875753e84",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "leave",
-      "seconds": 0.9,
       "samples": 43200,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 1.27675647831893e-15,
@@ -692,20 +468,10 @@
         "truePeakDb": -9.221837188727184,
         "dc": 7.346824363425926e-8,
         "samplePeak": 0.345306396484375
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -9.2,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -9.2 dBFS\n[out#0/null @ 0x557ac30ebc00] video:0KiB audio:84KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.90 bitrate=N/A speed=99.7x    \n"
-      },
-      "sha256": "96547f589e325b838b58dc3c32afb2d287afa24d5b8dc10974bcaf4665f0359a",
-      "spectrogramSha256": "de6869126178a726db2082edbec80b4b12cd8d17c0be1d9348a5e8fa5bd2fc3e",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "ready",
-      "seconds": 0.62,
       "samples": 29760,
       "rawMaxError": 0,
       "masterMaxError": 2.4980018054066022e-15,
@@ -720,20 +486,10 @@
         "truePeakDb": -9.42517673470276,
         "dc": 1.0254562542002689e-8,
         "samplePeak": 0.33734130859375
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -9.4,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -9.4 dBFS\n[out#0/null @ 0x5619732c1d40] video:0KiB audio:58KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.62 bitrate=N/A speed= 114x    \n"
-      },
-      "sha256": "2e505cf6f22addf840a130d0bf9be97269835de7ff6748f187525038466df604",
-      "spectrogramSha256": "d43377c60fd1bf9b05529d12daab1e156451cad88bd559b7b81b8700af8ec1a1",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "start",
-      "seconds": 1.15,
       "samples": 55200,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 8.881784197001252e-16,
@@ -748,20 +504,10 @@
         "truePeakDb": -9.870370853823449,
         "dc": -2.4325605751811593e-8,
         "samplePeak": 0.32037353515625
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -9.9,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -9.9 dBFS\n[out#0/null @ 0x557e8629ecc0] video:0KiB audio:108KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:01.15 bitrate=N/A speed= 127x    \n"
-      },
-      "sha256": "2d11ec0de8e3e7f9a79429619fd324b57c83a375a0579c62aba38aa987cc412e",
-      "spectrogramSha256": "0a28421269c72b2be4cc5c5139745484625d7fc84fa3c928135d22f6021d22a4",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "round-end",
-      "seconds": 1.1,
       "samples": 52800,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 9.992007221626409e-16,
@@ -776,20 +522,10 @@
         "truePeakDb": -10.332082154260256,
         "dc": 7.340402314157197e-8,
         "samplePeak": 0.3038330078125
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -10.3,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -10.3 dBFS\n[out#0/null @ 0x565420e0f880] video:0KiB audio:103KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:01.10 bitrate=N/A speed= 113x    \n"
-      },
-      "sha256": "a7ec09bddea893af50ce67e6c5f1318a3e5f0e8d8091f1a3ae3f87ad0458de0f",
-      "spectrogramSha256": "0039983793a287e727d2fba73da0f9ecee49b634464e5d1747061694e1a761d9",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "bonus",
-      "seconds": 1.05,
       "samples": 50400,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 7.771561172376096e-16,
@@ -804,20 +540,10 @@
         "truePeakDb": -10.56099207395927,
         "dc": 3.6330450148809524e-9,
         "samplePeak": 0.29571533203125
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -10.6,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -10.6 dBFS\n[out#0/null @ 0x55b0b135f580] video:0KiB audio:98KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:01.05 bitrate=N/A speed=94.7x    \n"
-      },
-      "sha256": "6808d2d598000d8aa271f4c9dca040fadfcff01fe1503b8cc8298df6d6c0964c",
-      "spectrogramSha256": "8a2a6cc9e84a4be793c53f1c8493c7b269dd135c1f92e579b701e95e2597ea45",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "penalty",
-      "seconds": 0.7,
       "samples": 33600,
       "rawMaxError": 0,
       "masterMaxError": 1.7763568394002505e-15,
@@ -832,20 +558,10 @@
         "truePeakDb": -9.334041378036762,
         "dc": 4.9046107700892856e-8,
         "samplePeak": 0.34075927734375
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -9.3,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -9.3 dBFS\n[out#0/null @ 0x5575fbf6dd80] video:0KiB audio:66KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.70 bitrate=N/A speed=96.6x    \n"
-      },
-      "sha256": "3fd676dd8af05e7773ce6cbb4c344cf6e56a482320b08c4f6ab85b27641718c2",
-      "spectrogramSha256": "5e4ad6c8ec0784b378bd9c83ad3bf6a43850cb6901285c8e682934afecd78507",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "teleport",
-      "seconds": 1,
       "samples": 48000,
       "rawMaxError": 0,
       "masterMaxError": 1.887379141862766e-15,
@@ -860,20 +576,10 @@
         "truePeakDb": -10.278838921008639,
         "dc": -5.340576171875e-8,
         "samplePeak": 0.305389404296875
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -10.3,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -10.3 dBFS\n[out#0/null @ 0x55c48a775400] video:0KiB audio:94KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:01.00 bitrate=N/A speed= 138x    \n"
-      },
-      "sha256": "1b90e98d5bbfe1f20118c3c7326d772c7ca41f3bbdfaeee3ff31d11caebdbb28",
-      "spectrogramSha256": "7c6087911627b5e37f73bd2ed8598b54911fd367f74c5bd7c97543f8026eb1ac",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "shield",
-      "seconds": 1.1,
       "samples": 52800,
       "rawMaxError": 0,
       "masterMaxError": 8.881784197001252e-16,
@@ -888,20 +594,10 @@
         "truePeakDb": -10.906082690515237,
         "dc": -2.7165268406723484e-8,
         "samplePeak": 0.28448486328125
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -10.9,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -10.9 dBFS\n[out#0/null @ 0x5638bfa8f880] video:0KiB audio:103KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:01.10 bitrate=N/A speed=82.6x    \n"
-      },
-      "sha256": "f73efa5120d4c6f64cfcedacaec9e1fc8bffce5f42ee1251ce872429b753ab5a",
-      "spectrogramSha256": "c11a3360a252d5cbd9bbfb3b8f02eb32c26a33e639a378269f829a618420a325",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "power-up",
-      "seconds": 1.25,
       "samples": 60000,
       "rawMaxError": 0,
       "masterMaxError": 8.326672684688674e-16,
@@ -916,20 +612,10 @@
         "truePeakDb": -11.802976107550869,
         "dc": 1.4241536458333333e-8,
         "samplePeak": 0.25640869140625
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -11.8,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -11.8 dBFS\n[out#0/null @ 0x55c2df6f8440] video:0KiB audio:117KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:01.25 bitrate=N/A speed= 117x    \n"
-      },
-      "sha256": "641c686f3bb8740d524665d0942bacd9ab5494df0002c545e603acbeaee94bf3",
-      "spectrogramSha256": "1f24b0d0a11345b1162e51bebe5b6091ff26e5dc2e5c5f765524eef739643744",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "power-down",
-      "seconds": 1.25,
       "samples": 60000,
       "rawMaxError": 0,
       "masterMaxError": 9.992007221626409e-16,
@@ -944,20 +630,10 @@
         "truePeakDb": -10.974215298848453,
         "dc": 6.612141927083333e-9,
         "samplePeak": 0.281341552734375
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -11,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -11.0 dBFS\n[out#0/null @ 0x556a3c994440] video:0KiB audio:117KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:01.25 bitrate=N/A speed= 149x    \n"
-      },
-      "sha256": "8124818140e430aef93de9ba16111987b0701f03553b0352f8e2abcfff2d7db0",
-      "spectrogramSha256": "840e7820adb3881faf4329dc81eb051fd7f2e941886deb88003f464a94ff56c8",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "notification",
-      "seconds": 0.84,
       "samples": 40320,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 4.996003610813204e-16,
@@ -972,20 +648,10 @@
         "truePeakDb": -9.723531503362295,
         "dc": 2.7247837611607142e-8,
         "samplePeak": 0.325958251953125
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -9.7,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -9.7 dBFS\n[out#0/null @ 0x5621922043c0] video:0KiB audio:79KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.84 bitrate=N/A speed=87.2x    \n"
-      },
-      "sha256": "8daee8c544c888c2cbe2608bf39c582a4d6e6e9fd17b598a69364d8a83d4cadd",
-      "spectrogramSha256": "1f7d3a643ca0419f5430c4ed0d5bfcdd25f7290e499d50814a4994222a94f351",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "achievement",
-      "seconds": 1.5,
       "samples": 72000,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 1.1102230246251565e-15,
@@ -1000,20 +666,10 @@
         "truePeakDb": -10.26970380377156,
         "dc": 4.3657090928819445e-8,
         "samplePeak": 0.305816650390625
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -10.3,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -10.3 dBFS\n[out#0/null @ 0x55666fb6d7c0] video:0KiB audio:141KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:01.50 bitrate=N/A speed= 141x    \n"
-      },
-      "sha256": "5d6e5445380e54facfe28594f21290b9376f6a775773cd409760cc0c323abc8b",
-      "spectrogramSha256": "15a669ef650a876ec9baad5dce231161449b3db3ec71c811f0d66ad03c6bb398",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "error",
-      "seconds": 0.76,
       "samples": 36480,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 1.6653345369377348e-16,
@@ -1028,20 +684,10 @@
         "truePeakDb": -9.442794395642114,
         "dc": 7.529007761101974e-9,
         "samplePeak": 0.3359375
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -9.4,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -9.4 dBFS\n[out#0/null @ 0x558295634500] video:0KiB audio:71KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.76 bitrate=N/A speed=45.9x    \n"
-      },
-      "sha256": "15da962645f1b5609a0291a3e054d29559b179c3e507bcdfac82a5fd4ecc384d",
-      "spectrogramSha256": "cacf9a8b0ea5d8b03462ccc551158b859a37cfff628731d9d9e9e96a4a03a06b",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "splash",
-      "seconds": 0.85,
       "samples": 40800,
       "rawMaxError": 3.3306690738754696e-16,
       "masterMaxError": 1.0547118733938987e-15,
@@ -1056,20 +702,10 @@
         "truePeakDb": -7.004517531180399,
         "dc": -1.5707576976102942e-8,
         "samplePeak": 0.437774658203125
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -6.7,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -6.7 dBFS\n[out#0/null @ 0x5654c5afb800] video:0KiB audio:80KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.85 bitrate=N/A speed=69.9x    \n"
-      },
-      "sha256": "7972ad81bade60166ea97f59d124603bcc8a4bc51cbcf298e7beb8607352abf5",
-      "spectrogramSha256": "a8492e71437fd3d7ef5988715cbc18caf4f305936573840347821f6f6d48546d",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "bounce",
-      "seconds": 0.58,
       "samples": 27840,
       "rawMaxError": 0,
       "masterMaxError": 8.326672684688674e-16,
@@ -1084,20 +720,10 @@
         "truePeakDb": -9.38651937068395,
         "dc": 1.863501537805316e-8,
         "samplePeak": 0.33868408203125
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -9.4,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -9.4 dBFS\n[out#0/null @ 0x55f571f7f6c0] video:0KiB audio:54KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.58 bitrate=N/A speed=60.5x    \n"
-      },
-      "sha256": "0d5a88a75143ab46f7d589f28e4dc3d25f8d725e7ba897533ae719f6268f9c50",
-      "spectrogramSha256": "539d037f1879b479b50fc37689ac88a6fb5662566f747b4d75b3c0656dcf088f",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "swipe",
-      "seconds": 0.6,
       "samples": 28800,
       "rawMaxError": 0,
       "masterMaxError": 2.7755575615628914e-16,
@@ -1112,20 +738,10 @@
         "truePeakDb": -12.175447492078904,
         "dc": 3.6027696397569445e-8,
         "samplePeak": 0.2425537109375
-      },
-      "external": {
-        "lufs": -16,
-        "truePeakDb": -12.2,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:      -12.2 dBFS\n[out#0/null @ 0x560f6f9245c0] video:0KiB audio:56KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.60 bitrate=N/A speed=79.2x    \n"
-      },
-      "sha256": "21e3911454c4309ced3e6b0440a2fc358acffd32c00bf33ed90e252c2a3887a4",
-      "spectrogramSha256": "45db43fffa4d81a12054b40e2520a8399a0c82d84d00856599aeaf5735f65dd1",
-      "fadeSamples": 240,
-      "passed": true
+      }
     },
     {
       "id": "connect",
-      "seconds": 0.95,
       "samples": 45600,
       "rawMaxError": 1.1102230246251565e-16,
       "masterMaxError": 1.0547118733938987e-15,
@@ -1140,14 +756,1167 @@
         "truePeakDb": -9.501809630937966,
         "dc": 3.3462256716008773e-9,
         "samplePeak": 0.33428955078125
+      }
+    }
+  ],
+  "sounds": [
+    {
+      "id": "coin",
+      "group": "reward",
+      "seconds": 0.95,
+      "samples": 45600,
+      "stereoMaxError": 1.4555023852835802e-13,
+      "masterMaxError": 9.658940314238862e-14,
+      "production": {
+        "lufs": -16.00000056482892,
+        "truePeakDb": -2.479363152516059,
+        "dc": -1.6731128358004385e-8,
+        "samplePeak": 0.748138427734375
+      },
+      "reference": {
+        "lufs": -16.000000564828955,
+        "truePeakDb": -2.479363152516059,
+        "dc": -1.6731128358004385e-8,
+        "samplePeak": 0.748138427734375
       },
       "external": {
         "lufs": -16,
-        "truePeakDb": -9.5,
-        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -9.5 dBFS\n[out#0/null @ 0x561e6b278f40] video:0KiB audio:89KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:00.95 bitrate=N/A speed=60.1x    \n"
+        "truePeakDb": -2.5,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.5 dBFS\n"
       },
-      "sha256": "022e6a532384614eedf906169392b48ba7a716948aa20ec988ffc942f382ce05",
-      "spectrogramSha256": "27522c9fd8c0b9e1f1090d4e1091893b79eaaf2884f294c32bc8b88144d3f42b",
+      "sha256": "95096af3834243b1d1990342b3638a920fbaa4d903c96643f4b645909657f277",
+      "spectrogramSha256": "9ee94c905e2ebddc12af32cd8793ff36b92aa67d31b9da9d7adb26917bacc77f",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "star-get",
+      "group": "reward",
+      "seconds": 1.7,
+      "samples": 81600,
+      "stereoMaxError": 7.571721027943568e-13,
+      "masterMaxError": 7.58948459633757e-13,
+      "production": {
+        "lufs": -16.000000310121614,
+        "truePeakDb": -2.3278232462541104,
+        "dc": -1.1967677696078431e-8,
+        "samplePeak": 0.7637939453125
+      },
+      "reference": {
+        "lufs": -16.000000310121564,
+        "truePeakDb": -2.3278232462541104,
+        "dc": -1.1967677696078431e-8,
+        "samplePeak": 0.7637939453125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.3,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.3 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.3 dBFS\n"
+      },
+      "sha256": "c8a0f871361b7002b4e02d2d053e52098e025cda9a31ed18a9d3d35b6e107505",
+      "spectrogramSha256": "33fd8fd9321dba793fca0869136d7d69a5cbf10ac004100bb801a030dd712fe3",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "dice-roll",
+      "group": "board",
+      "seconds": 1.25,
+      "samples": 60000,
+      "stereoMaxError": 3.7160274857228615e-12,
+      "masterMaxError": 3.250399949195071e-12,
+      "production": {
+        "lufs": -16.000000018304423,
+        "truePeakDb": -2.132208801955249,
+        "dc": 2.1870930989583333e-8,
+        "samplePeak": 0.78045654296875
+      },
+      "reference": {
+        "lufs": -16.00000001830446,
+        "truePeakDb": -2.132208801955249,
+        "dc": 2.1870930989583333e-8,
+        "samplePeak": 0.78045654296875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "91f993a2c0314d7f1e90151a8fbae2bc137836b979036c6c6b7b7cc031af3a7b",
+      "spectrogramSha256": "2466c59e6d8b2b56a8e77c92e861e13f3a29392d11b6566befb4076a4068f2be",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "dice-stop",
+      "group": "board",
+      "seconds": 0.8,
+      "samples": 38400,
+      "stereoMaxError": 1.897926260596705e-13,
+      "masterMaxError": 1.3722356584366935e-13,
+      "production": {
+        "lufs": -15.999998777065864,
+        "truePeakDb": -1.9287464232735227,
+        "dc": 2.845128377278646e-7,
+        "samplePeak": 0.79974365234375
+      },
+      "reference": {
+        "lufs": -15.999998777065837,
+        "truePeakDb": -1.9287464232735227,
+        "dc": 2.845128377278646e-7,
+        "samplePeak": 0.79974365234375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -1.9,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -30.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -1.9 dBFS\n"
+      },
+      "sha256": "624cac3140ec1f2df8bd3493a151b14e4075e299ec2ede0d6640d98fcb495f4f",
+      "spectrogramSha256": "3c1e30d3ef263970fa36e7e5f4cdcbfe4a3aa75f220328178e10bf8b594d14c5",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "step",
+      "group": "board",
+      "seconds": 0.55,
+      "samples": 26400,
+      "stereoMaxError": 2.0328183580886616e-13,
+      "masterMaxError": 1.9950707752514063e-13,
+      "production": {
+        "lufs": -15.999997768232364,
+        "truePeakDb": -1.921844121402028,
+        "dc": -8.438572739109849e-8,
+        "samplePeak": 0.800262451171875
+      },
+      "reference": {
+        "lufs": -15.999997768232376,
+        "truePeakDb": -1.921844121402028,
+        "dc": -8.438572739109849e-8,
+        "samplePeak": 0.800262451171875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -1.9,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -1.9 dBFS\n"
+      },
+      "sha256": "40169455ba613d90fb6392a973600d5d8fbe653ad09e841abe73ecb1e467d003",
+      "spectrogramSha256": "e2f902e19006f4d4a028815876a85ec004808b602868d6190bdccf1a531bd47c",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "buzzer",
+      "group": "verdict",
+      "seconds": 0.85,
+      "samples": 40800,
+      "stereoMaxError": 1.3988810110276972e-13,
+      "masterMaxError": 1.1085576900882188e-13,
+      "production": {
+        "lufs": -16.00000393287785,
+        "truePeakDb": -2.0864138883712617,
+        "dc": -1.3089647480085785e-7,
+        "samplePeak": 0.785308837890625
+      },
+      "reference": {
+        "lufs": -16.00000393287784,
+        "truePeakDb": -2.0864138883712617,
+        "dc": -1.3089647480085785e-7,
+        "samplePeak": 0.785308837890625
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.9 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "e560930074676ee65884891635161b58b1c238670751ecc0f7c82f59d53a67f9",
+      "spectrogramSha256": "61c3a50ed9d447db0fd7ed704d1b5d79254a561d13becb6c2978a2bd0a88fcf6",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "ding",
+      "group": "verdict",
+      "seconds": 1.3,
+      "samples": 62400,
+      "stereoMaxError": 1.653122083666858e-13,
+      "masterMaxError": 1.1834977442504169e-13,
+      "production": {
+        "lufs": -16.00000053872336,
+        "truePeakDb": -2.056989119890031,
+        "dc": -1.7117231320112178e-8,
+        "samplePeak": 0.787933349609375
+      },
+      "reference": {
+        "lufs": -16.000000538723388,
+        "truePeakDb": -2.056989119890031,
+        "dc": -1.7117231320112178e-8,
+        "samplePeak": 0.787933349609375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -30.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "605f4fadb558ae8e9e8e9bf1d1cbc749aa05f4eb16d691b6fa9c92c81e549c35",
+      "spectrogramSha256": "6c012783d850cef1877bf3f50c995cfd9dc0f0e37b1ca8cfad46748fe0f5be3b",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "whoosh",
+      "group": "menu",
+      "seconds": 0.85,
+      "samples": 40800,
+      "stereoMaxError": 8.846257060213247e-13,
+      "masterMaxError": 7.653877531765829e-13,
+      "production": {
+        "lufs": -16.000000037453717,
+        "truePeakDb": -2.0788341858862944,
+        "dc": -4.487879136029411e-9,
+        "samplePeak": 0.782958984375
+      },
+      "reference": {
+        "lufs": -16.000000037453713,
+        "truePeakDb": -2.0788341858862944,
+        "dc": -4.487879136029411e-9,
+        "samplePeak": 0.782958984375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "f4e0f279a903862ab22152dd4562e2a5e3aeaec111a2544b91fda8046b5c0781",
+      "spectrogramSha256": "aedb3c17eae36aa06db542e2410774525bd3caca572b52ea143e3ceec5dcb11e",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "pop",
+      "group": "board",
+      "seconds": 0.5,
+      "samples": 24000,
+      "stereoMaxError": 6.193864865444709e-13,
+      "masterMaxError": 5.665433400192654e-13,
+      "production": {
+        "lufs": -15.999998684252935,
+        "truePeakDb": -1.8630407846897392,
+        "dc": 8.138020833333333e-8,
+        "samplePeak": 0.805633544921875
+      },
+      "reference": {
+        "lufs": -15.999998684252935,
+        "truePeakDb": -1.8630407846897392,
+        "dc": 8.138020833333333e-8,
+        "samplePeak": 0.805633544921875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -1.9,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -1.9 dBFS\n"
+      },
+      "sha256": "09e0a7074827aae0e83a7ae61575537373e5aff5e4bab18a5e1383d892d7080e",
+      "spectrogramSha256": "1cebced2a68c18ede9a690fe894d0795b039245b77f76f42254703a9a4f58ae6",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "countdown-tick",
+      "group": "timer",
+      "seconds": 0.5,
+      "samples": 24000,
+      "stereoMaxError": 1.7996715229173788e-13,
+      "masterMaxError": 8.981704269217516e-14,
+      "production": {
+        "lufs": -16.000004944849834,
+        "truePeakDb": -1.8861758341402322,
+        "dc": 3.814697265625e-8,
+        "samplePeak": 0.80352783203125
+      },
+      "reference": {
+        "lufs": -16.000004944849834,
+        "truePeakDb": -1.8861758341402322,
+        "dc": 3.814697265625e-8,
+        "samplePeak": 0.80352783203125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -1.9,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.9 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -1.9 dBFS\n"
+      },
+      "sha256": "b3d7f39c9af27e62141ef16836212d86343a1f380efabd69e251f0f8d226e197",
+      "spectrogramSha256": "35b8b4fe62c0d0ecf9b66c141870cf6f90bdeecae8026ce0694f5d0696049792",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "final-tick",
+      "group": "timer",
+      "seconds": 0.75,
+      "samples": 36000,
+      "stereoMaxError": 8.667511153248597e-13,
+      "masterMaxError": 8.277822871605167e-13,
+      "production": {
+        "lufs": -16.00000145051292,
+        "truePeakDb": -1.9792981939904029,
+        "dc": -8.392333984375e-8,
+        "samplePeak": 0.7950439453125
+      },
+      "reference": {
+        "lufs": -16.000001450512897,
+        "truePeakDb": -1.9792981939904029,
+        "dc": -8.392333984375e-8,
+        "samplePeak": 0.7950439453125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.2 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "277af565b51ece98ee61887fc8878d6c47ba348c213a1f9f93c6b4916f28a547",
+      "spectrogramSha256": "47ab3039c1a9274e77732e394b6ee547a9b144cc62baca189bfc9b0a506c15cb",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "win-fanfare",
+      "group": "reward",
+      "seconds": 2.6,
+      "samples": 124800,
+      "stereoMaxError": 5.334621633323877e-13,
+      "masterMaxError": 4.793943020331426e-13,
+      "production": {
+        "lufs": -15.999994885222305,
+        "truePeakDb": -2.3582435264815897,
+        "dc": -3.1789143880208335e-9,
+        "samplePeak": 0.761077880859375
+      },
+      "reference": {
+        "lufs": -15.999994885222316,
+        "truePeakDb": -2.3582435264815897,
+        "dc": -3.1789143880208335e-9,
+        "samplePeak": 0.761077880859375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.4,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.2 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.4 dBFS\n"
+      },
+      "sha256": "bba431a8a7c3d2ff31e8b3a4dd38a5e581fa61d2f63810d1f151ab40f495dd76",
+      "spectrogramSha256": "580d4d5a8f74c84eca21966b80932ae0eb47db8cf489c1154ffd1c28890ce1b1",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "lose",
+      "group": "reward",
+      "seconds": 1.9,
+      "samples": 91200,
+      "stereoMaxError": 1.156630347054488e-12,
+      "masterMaxError": 1.1178835634950701e-12,
+      "production": {
+        "lufs": -15.99999571176657,
+        "truePeakDb": -2.361607348007379,
+        "dc": -9.369431880482456e-9,
+        "samplePeak": 0.760772705078125
+      },
+      "reference": {
+        "lufs": -15.999995711766545,
+        "truePeakDb": -2.361607348007379,
+        "dc": -9.369431880482456e-9,
+        "samplePeak": 0.760772705078125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.4,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.4 dBFS\n"
+      },
+      "sha256": "3885fed497c3213cba5cb9b04462a87a90d227576ec560d5dca33c65868ece08",
+      "spectrogramSha256": "cf35508845e52b250784fe7e2c23c479887d96a164b7b9294574a6bf498df207",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "item-use",
+      "group": "power",
+      "seconds": 1,
+      "samples": 48000,
+      "stereoMaxError": 2.4094087835990763e-11,
+      "masterMaxError": 2.359551443120722e-11,
+      "production": {
+        "lufs": -15.999997724401338,
+        "truePeakDb": -1.9987275896228862,
+        "dc": 2.9246012369791665e-8,
+        "samplePeak": 0.793365478515625
+      },
+      "reference": {
+        "lufs": -15.999997724401329,
+        "truePeakDb": -1.9987275896228862,
+        "dc": 2.9246012369791665e-8,
+        "samplePeak": 0.793365478515625
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.4 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "c10c4a509e2a6748463902038071a2e9843fd1877162aa08d0d789def1254ed2",
+      "spectrogramSha256": "1da2b6b2b46fc35e1679ab8d9cac42194c6add069a1a0813d647c64aab8e079b",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "shop-open",
+      "group": "menu",
+      "seconds": 1.4,
+      "samples": 67200,
+      "stereoMaxError": 3.043121310497554e-13,
+      "masterMaxError": 2.575717417130363e-13,
+      "production": {
+        "lufs": -15.999996317935276,
+        "truePeakDb": -2.6332036633724183,
+        "dc": 6.90278552827381e-8,
+        "samplePeak": 0.73779296875
+      },
+      "reference": {
+        "lufs": -15.999996317935258,
+        "truePeakDb": -2.6332036633724183,
+        "dc": 6.90278552827381e-8,
+        "samplePeak": 0.73779296875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.6,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.4 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.6 dBFS\n"
+      },
+      "sha256": "0776b9a61fb7f281e37742ec143d86d7b3febc2fcb0473682400b9d4fb92c1e8",
+      "spectrogramSha256": "c8a9be2f3456e61da66f82634f182f1da0d2b904bbc385b227b4dd3a16fc81ca",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "vote",
+      "group": "verdict",
+      "seconds": 0.5,
+      "samples": 24000,
+      "stereoMaxError": 2.935429677108914e-13,
+      "masterMaxError": 2.0972112935169207e-13,
+      "production": {
+        "lufs": -15.999998197153145,
+        "truePeakDb": -1.9299690988576,
+        "dc": 1.52587890625e-8,
+        "samplePeak": 0.79962158203125
+      },
+      "reference": {
+        "lufs": -15.999998197153117,
+        "truePeakDb": -1.9299690988576,
+        "dc": 1.52587890625e-8,
+        "samplePeak": 0.79962158203125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -1.9,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -1.9 dBFS\n"
+      },
+      "sha256": "11241c027b69d63bcd1bc9cd557e7f1febc975600e7f45175459fbb461d511d1",
+      "spectrogramSha256": "ee092daaeb2241eb39d0cc52ff7d5e072fd7acd2cf204b71172365fd38b80d90",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "reveal",
+      "group": "flow",
+      "seconds": 2,
+      "samples": 96000,
+      "stereoMaxError": 4.993894187066417e-12,
+      "masterMaxError": 4.9675819013828004e-12,
+      "production": {
+        "lufs": -15.999998377652597,
+        "truePeakDb": -2.0693997800154103,
+        "dc": 1.1126200358072917e-8,
+        "samplePeak": 0.78717041015625
+      },
+      "reference": {
+        "lufs": -15.999998377652568,
+        "truePeakDb": -2.0693997800154103,
+        "dc": 1.1126200358072917e-8,
+        "samplePeak": 0.78717041015625
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.5 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "cad1eff16468906b9452fcfe59a7887097fa2afd814f0f9240c89f36caa907db",
+      "spectrogramSha256": "bf5f4ad0832d92f9567e2f2c166297ccb418c7cd3b6b6834c6f301d2a9d849a0",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "timer-warning",
+      "group": "timer",
+      "seconds": 1,
+      "samples": 48000,
+      "stereoMaxError": 8.443246102274315e-13,
+      "masterMaxError": 7.726042028366464e-13,
+      "production": {
+        "lufs": -16.000002631286097,
+        "truePeakDb": -1.9896753754686447,
+        "dc": 2.1616617838541668e-8,
+        "samplePeak": 0.794525146484375
+      },
+      "reference": {
+        "lufs": -16.00000263128613,
+        "truePeakDb": -1.9896753754686447,
+        "dc": 2.1616617838541668e-8,
+        "samplePeak": 0.794525146484375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.5 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "55eb130b4ac884d09485835cf0c9528c9723c30853a24b708fae076767c3dee5",
+      "spectrogramSha256": "6d543c9ba7c363d1b0afdba81e0e792ab0204f975ab05f897192b0a341e6c36e",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "menu-move",
+      "group": "menu",
+      "seconds": 0.45,
+      "samples": 21600,
+      "stereoMaxError": 2.823297151621773e-13,
+      "masterMaxError": 1.4666046155298318e-13,
+      "production": {
+        "lufs": -16.000001473320456,
+        "truePeakDb": -1.8940059255436805,
+        "dc": 1.0878951461226852e-7,
+        "samplePeak": 0.803314208984375
+      },
+      "reference": {
+        "lufs": -16.000001473320456,
+        "truePeakDb": -1.8940059255436805,
+        "dc": 1.0878951461226852e-7,
+        "samplePeak": 0.803314208984375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -1.9,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -1.9 dBFS\n"
+      },
+      "sha256": "a9e049555d4ed43f8614389bc6e9a27639ebfb6969fc480ab545b662d4645e79",
+      "spectrogramSha256": "134b163160608678772aabdcf094f3870bc0f123827b64623a50d61548a7e731",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "menu-back",
+      "group": "menu",
+      "seconds": 0.55,
+      "samples": 26400,
+      "stereoMaxError": 1.7785772854495008e-13,
+      "masterMaxError": 1.2156942119645464e-13,
+      "production": {
+        "lufs": -16.00000572422346,
+        "truePeakDb": -1.9461773990064335,
+        "dc": -1.2715657552083334e-8,
+        "samplePeak": 0.797271728515625
+      },
+      "reference": {
+        "lufs": -16.00000572422343,
+        "truePeakDb": -1.9461773990064335,
+        "dc": -1.2715657552083334e-8,
+        "samplePeak": 0.797271728515625
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "8afc256919c6a44979b6a31cec0e29a2b75283a3dd7e5cede9ded150df0a0602",
+      "spectrogramSha256": "4b48112749d723583e219ba5de0840539648967cbe1977019834bdeeac369646",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "confirm",
+      "group": "verdict",
+      "seconds": 0.7,
+      "samples": 33600,
+      "stereoMaxError": 2.030320356283255e-13,
+      "masterMaxError": 1.6009416015094757e-13,
+      "production": {
+        "lufs": -16.00000021873701,
+        "truePeakDb": -2.0210598780373488,
+        "dc": -3.3605666387648807e-8,
+        "samplePeak": 0.791961669921875
+      },
+      "reference": {
+        "lufs": -16.00000021873701,
+        "truePeakDb": -2.0210598780373488,
+        "dc": -3.3605666387648807e-8,
+        "samplePeak": 0.791961669921875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "5cd23945a39dcd6bed4ab7d4661c2517a9190c1ed5916ecbbc597a8b0515f3f9",
+      "spectrogramSha256": "893b281733ad1a37d8b8d8d314e997c6ac41bf84028773a19be183c01a4653d1",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "cancel",
+      "group": "verdict",
+      "seconds": 0.7,
+      "samples": 33600,
+      "stereoMaxError": 2.952083022478291e-13,
+      "masterMaxError": 2.6501023597802487e-13,
+      "production": {
+        "lufs": -16.000004373300712,
+        "truePeakDb": -2.006050121469663,
+        "dc": 9.082612537202381e-10,
+        "samplePeak": 0.7930908203125
+      },
+      "reference": {
+        "lufs": -16.00000437330071,
+        "truePeakDb": -2.006050121469663,
+        "dc": 9.082612537202381e-10,
+        "samplePeak": 0.7930908203125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.9 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "4eb4a5c25f91c4add454dc4159540798cad94e72c3ed1c5bbe96975cd6e38ae9",
+      "spectrogramSha256": "420776a4d96bae9ee2426243bdeed5813603d34cd06188b96e531fb9994c525f",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "join",
+      "group": "flow",
+      "seconds": 1.1,
+      "samples": 52800,
+      "stereoMaxError": 4.1966430330830917e-13,
+      "masterMaxError": 4.04343225568482e-13,
+      "production": {
+        "lufs": -15.999999632849205,
+        "truePeakDb": -1.9814458467095655,
+        "dc": 4.508278586647727e-8,
+        "samplePeak": 0.794464111328125
+      },
+      "reference": {
+        "lufs": -15.999999632849228,
+        "truePeakDb": -1.9814458467095655,
+        "dc": 4.508278586647727e-8,
+        "samplePeak": 0.794464111328125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "fb2bf33ae7c60f5f9174f5dc30ff353cce9d711685919674ffccfd17b9eea8d7",
+      "spectrogramSha256": "cab4b0e3c9b734cb7bc1a16fb741f8d02d5107ab0a4ae254c032588fc5dca5d6",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "leave",
+      "group": "flow",
+      "seconds": 1,
+      "samples": 48000,
+      "stereoMaxError": 1.5876189252139739e-13,
+      "masterMaxError": 1.3156142841808105e-13,
+      "production": {
+        "lufs": -15.999998555421202,
+        "truePeakDb": -2.158916243291163,
+        "dc": -1.0808308919270834e-8,
+        "samplePeak": 0.778839111328125
+      },
+      "reference": {
+        "lufs": -15.999998555421149,
+        "truePeakDb": -2.158916243291163,
+        "dc": -1.0808308919270834e-8,
+        "samplePeak": 0.778839111328125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.4 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.2 dBFS\n"
+      },
+      "sha256": "4babfd537e65614e2e8aecdaeafec30190b121632b21eafdb5f6fd213fc01a97",
+      "spectrogramSha256": "545e7b8dd57246515a6e1b25ec3efa20d4af01b4177685a198723d46daa5eb08",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "ready",
+      "group": "flow",
+      "seconds": 0.9,
+      "samples": 43200,
+      "stereoMaxError": 5.372369216161132e-13,
+      "masterMaxError": 5.218048215738236e-13,
+      "production": {
+        "lufs": -15.999998739150342,
+        "truePeakDb": -1.9998800304039612,
+        "dc": 3.885339807581019e-8,
+        "samplePeak": 0.793212890625
+      },
+      "reference": {
+        "lufs": -15.999998739150362,
+        "truePeakDb": -1.9998800304039612,
+        "dc": 3.885339807581019e-8,
+        "samplePeak": 0.793212890625
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "f718a3bd1221a7c64a9cffadad959a6f505461046b7a313b848ed853427f2a43",
+      "spectrogramSha256": "30679769ccff3626b083f261cd98c8d0cb7d77464a7b28a4947431fa4693a8f9",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "start",
+      "group": "flow",
+      "seconds": 1.7,
+      "samples": 81600,
+      "stereoMaxError": 3.129954628811049e-12,
+      "masterMaxError": 2.9532765122297633e-12,
+      "production": {
+        "lufs": -15.999997344244735,
+        "truePeakDb": -2.054773968197086,
+        "dc": -2.9919194240196077e-9,
+        "samplePeak": 0.7879638671875
+      },
+      "reference": {
+        "lufs": -15.999997344244706,
+        "truePeakDb": -2.054773968197086,
+        "dc": -2.9919194240196077e-9,
+        "samplePeak": 0.7879638671875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.4 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "4c326f48909ea7877638db473eb4e345b39d77664944fa3b38167c6737183fd3",
+      "spectrogramSha256": "4dec28c4376f99ed72aae7a76c7acc167be9a5c99c0f8e2cd547f744c9d42c8d",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "round-end",
+      "group": "flow",
+      "seconds": 1.6,
+      "samples": 76800,
+      "stereoMaxError": 1.4549472737712676e-13,
+      "masterMaxError": 1.0380585280245214e-13,
+      "production": {
+        "lufs": -15.999996979455162,
+        "truePeakDb": -2.3076749601787068,
+        "dc": 6.477038065592448e-8,
+        "samplePeak": 0.7655029296875
+      },
+      "reference": {
+        "lufs": -15.999996979455217,
+        "truePeakDb": -2.3076749601787068,
+        "dc": 6.477038065592448e-8,
+        "samplePeak": 0.7655029296875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.3,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.3 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.3 dBFS\n"
+      },
+      "sha256": "725739e6842cbba0347642bbe037e3124207ec8acdb2398b2bb995ab484c3f4a",
+      "spectrogramSha256": "7cc90e204bd0201bf17541f8f8f7e16de140b3ce165258f7b99372221e278e71",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "bonus",
+      "group": "reward",
+      "seconds": 1.4,
+      "samples": 67200,
+      "stereoMaxError": 1.5787371410169726e-13,
+      "masterMaxError": 1.4183099139586375e-13,
+      "production": {
+        "lufs": -15.99999974244451,
+        "truePeakDb": -2.2841661350587286,
+        "dc": 2.1344139462425594e-8,
+        "samplePeak": 0.7677001953125
+      },
+      "reference": {
+        "lufs": -15.999999742444468,
+        "truePeakDb": -2.2841661350587286,
+        "dc": 2.1344139462425594e-8,
+        "samplePeak": 0.7677001953125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.3,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.4 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.3 dBFS\n"
+      },
+      "sha256": "0e0875b6d0c5de6aa8af633e9fc382cfac831f7c9f11ca42d5848057bfd28dfe",
+      "spectrogramSha256": "66b192059af3f8f8a2f7cba93c184d27f5f35798d525caf2bf810b50b77dc944",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "penalty",
+      "group": "power",
+      "seconds": 0.95,
+      "samples": 45600,
+      "stereoMaxError": 9.618333907113197e-12,
+      "masterMaxError": 9.596379246801234e-12,
+      "production": {
+        "lufs": -15.999999518553679,
+        "truePeakDb": -1.988269704496687,
+        "dc": 5.688583641721491e-8,
+        "samplePeak": 0.794189453125
+      },
+      "reference": {
+        "lufs": -15.999999518553656,
+        "truePeakDb": -1.988269704496687,
+        "dc": 5.688583641721491e-8,
+        "samplePeak": 0.794189453125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "d6bad8fe6bcbf75ba3b156114541d76384d1a9708ba89b2ef356243f33cc519f",
+      "spectrogramSha256": "f79cfe77fa5346ae50003e8ff5b358297924776b7f590d173eda69d0d0fc8d0b",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "teleport",
+      "group": "power",
+      "seconds": 1.4,
+      "samples": 67200,
+      "stereoMaxError": 3.0089197800009515e-10,
+      "masterMaxError": 2.9166950105130596e-10,
+      "production": {
+        "lufs": -16.000003412202165,
+        "truePeakDb": -4.542853243141089,
+        "dc": 4.405067080543155e-8,
+        "samplePeak": 0.590972900390625
+      },
+      "reference": {
+        "lufs": -16.00000341220218,
+        "truePeakDb": -4.542853243141089,
+        "dc": 4.405067080543155e-8,
+        "samplePeak": 0.590972900390625
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -4.6,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -30.4 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -4.6 dBFS\n"
+      },
+      "sha256": "4fc0fe517577b30b70789d7ca7aa44bea93999d0c02e9842d233ebc979e42eee",
+      "spectrogramSha256": "0a01c5f032eb088289229cc9e0cc09a387f1e6fd846b57fc0732c5069b662b0b",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "shield",
+      "group": "power",
+      "seconds": 1.4,
+      "samples": 67200,
+      "stereoMaxError": 4.3143266736933583e-13,
+      "masterMaxError": 3.4428015993626104e-13,
+      "production": {
+        "lufs": -15.999999910718662,
+        "truePeakDb": -2.027250186915629,
+        "dc": 3.587631952194941e-8,
+        "samplePeak": 0.790557861328125
+      },
+      "reference": {
+        "lufs": -15.999999910718701,
+        "truePeakDb": -2.027250186915629,
+        "dc": 3.587631952194941e-8,
+        "samplePeak": 0.790557861328125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.6 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "6b1899b155b1cd0a5245a745aade3ebf28e0718cdb83c22d8abb33adc8964499",
+      "spectrogramSha256": "b33b14742b7e8b6babbdb838bc44113ddc9ec75663467ccb3e63934b5246b10a",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "power-up",
+      "group": "power",
+      "seconds": 1.5,
+      "samples": 72000,
+      "stereoMaxError": 1.8337331653128786e-11,
+      "masterMaxError": 1.8350904129604828e-11,
+      "production": {
+        "lufs": -16.000001304420124,
+        "truePeakDb": -2.146949580819953,
+        "dc": -4.280938042534722e-8,
+        "samplePeak": 0.77972412109375
+      },
+      "reference": {
+        "lufs": -16.00000130442016,
+        "truePeakDb": -2.146949580819953,
+        "dc": -4.280938042534722e-8,
+        "samplePeak": 0.77972412109375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.8 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.2 dBFS\n"
+      },
+      "sha256": "b31d3e662fc3cf9161dbd342a164b0e0595d9d0a10503623d36f33f8fa1464ba",
+      "spectrogramSha256": "84b473e798f9fb1f3849ce9dfb0e7706e559af9662cca46f9c1fdcfe5c85b6cf",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "power-down",
+      "group": "power",
+      "seconds": 1.5,
+      "samples": 72000,
+      "stereoMaxError": 5.025441868200531e-11,
+      "masterMaxError": 4.8604092972581725e-11,
+      "production": {
+        "lufs": -16.000001031061768,
+        "truePeakDb": -2.2025958606137155,
+        "dc": 8.900960286458334e-9,
+        "samplePeak": 0.774688720703125
+      },
+      "reference": {
+        "lufs": -16.000001031061718,
+        "truePeakDb": -2.2025958606137155,
+        "dc": 8.900960286458334e-9,
+        "samplePeak": 0.774688720703125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.2 dBFS\n"
+      },
+      "sha256": "6dbc00168ae03b8fd36db8f283b71e49d0b1d48365a18a6e269f1174ad7f4ab2",
+      "spectrogramSha256": "45fb1dad8fbc17545bdd04256eaf54c6dc331928977d658f5cb8aaae69f7743a",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "notification",
+      "group": "flow",
+      "seconds": 1,
+      "samples": 48000,
+      "stereoMaxError": 2.9387603461827894e-13,
+      "masterMaxError": 2.936539900133539e-13,
+      "production": {
+        "lufs": -16.00000188420277,
+        "truePeakDb": -2.1214831441717372,
+        "dc": 4.9591064453125e-8,
+        "samplePeak": 0.782562255859375
+      },
+      "reference": {
+        "lufs": -16.000001884202774,
+        "truePeakDb": -2.1214831441717372,
+        "dc": 4.9591064453125e-8,
+        "samplePeak": 0.782562255859375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.6 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "6539782b30ecdc9668926ac795babb2999ec2276df85532c42eb5912ae6b359f",
+      "spectrogramSha256": "bcff18995680ed2c24b0156871e732c58b92d304b0a86695fe6e80d45faae15c",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "achievement",
+      "group": "reward",
+      "seconds": 2.4,
+      "samples": 115200,
+      "stereoMaxError": 1.0621503676588873e-12,
+      "masterMaxError": 9.715561688494745e-13,
+      "production": {
+        "lufs": -16.000000343792575,
+        "truePeakDb": -2.113063460618421,
+        "dc": -9.80165269639757e-9,
+        "samplePeak": 0.782928466796875
+      },
+      "reference": {
+        "lufs": -16.00000034379247,
+        "truePeakDb": -2.113063460618421,
+        "dc": -9.80165269639757e-9,
+        "samplePeak": 0.782928466796875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.7 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "6f3bb8a95526a08d21e456e546b5215aa6b9aad17020b35bb2e4251aae21a673",
+      "spectrogramSha256": "c2adcc2ed33b7a936f805aab86cabc076c9fc94df4c07f285efa362f4f65e485",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "error",
+      "group": "verdict",
+      "seconds": 0.8,
+      "samples": 38400,
+      "stereoMaxError": 1.2789769243681803e-13,
+      "masterMaxError": 7.321920847402907e-14,
+      "production": {
+        "lufs": -15.999998285522748,
+        "truePeakDb": -3.3479713379853515,
+        "dc": -2.2252400716145834e-8,
+        "samplePeak": 0.678985595703125
+      },
+      "reference": {
+        "lufs": -15.999998285522748,
+        "truePeakDb": -3.3479713379853515,
+        "dc": -2.2252400716145834e-8,
+        "samplePeak": 0.678985595703125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -3.4,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.2 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -3.4 dBFS\n"
+      },
+      "sha256": "1600f8d780977b90e4b79e669d5c9f88a1f570966db0261188d72a587df11de9",
+      "spectrogramSha256": "7fa13c2dbaa48feaf1ca9586f03fc95d61492c9721e6b6b485228f992c7e3d88",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "splash",
+      "group": "board",
+      "seconds": 1.1,
+      "samples": 52800,
+      "stereoMaxError": 1.2332357357536239e-12,
+      "masterMaxError": 9.973133430207781e-13,
+      "production": {
+        "lufs": -16.000001285218072,
+        "truePeakDb": -1.9890988157712548,
+        "dc": 4.161487926136364e-8,
+        "samplePeak": 0.795318603515625
+      },
+      "reference": {
+        "lufs": -16.000001285218183,
+        "truePeakDb": -1.9890988157712548,
+        "dc": 4.161487926136364e-8,
+        "samplePeak": 0.795318603515625
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.2 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "cc063462451c623cf709363264aaff66c67cdc0a6a6a97fd55ebb8d6d01936d1",
+      "spectrogramSha256": "6270093deca85d8c76548e2ea537764fe21667510018021eec098e459c19b480",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "bounce",
+      "group": "board",
+      "seconds": 0.7,
+      "samples": 33600,
+      "stereoMaxError": 2.628092188317055e-12,
+      "masterMaxError": 2.5672380887797885e-12,
+      "production": {
+        "lufs": -16.000002394852864,
+        "truePeakDb": -1.9793867054344578,
+        "dc": -2.8156098865327382e-8,
+        "samplePeak": 0.794952392578125
+      },
+      "reference": {
+        "lufs": -16.00000239485283,
+        "truePeakDb": -1.9793867054344578,
+        "dc": -2.8156098865327382e-8,
+        "samplePeak": 0.794952392578125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.2 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "607c7c39a8e227213385a90ab2a4af1e38d6b227f2fc266be05c8f181e71d72e",
+      "spectrogramSha256": "65b75640d7f57cbc12a0aba7b0ac722709514447688caaa8d91b9e6386f1dd9d",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "swipe",
+      "group": "menu",
+      "seconds": 0.5,
+      "samples": 24000,
+      "stereoMaxError": 3.049782648645305e-13,
+      "masterMaxError": 2.823297151621773e-13,
+      "production": {
+        "lufs": -15.999998609587514,
+        "truePeakDb": -2.0268301598241107,
+        "dc": 5.0862630208333337e-8,
+        "samplePeak": 0.790679931640625
+      },
+      "reference": {
+        "lufs": -15.999998609587514,
+        "truePeakDb": -2.0268301598241107,
+        "dc": 5.0862630208333337e-8,
+        "samplePeak": 0.790679931640625
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "29f7cf36495b66a0fef526a301daf9977950f205a6076f6e6b68f6b8079ef376",
+      "spectrogramSha256": "c950225b412a97bbff0d6ae4651939811842d8bc0b56074a29c65f44cc24d529",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "connect",
+      "group": "flow",
+      "seconds": 1.1,
+      "samples": 52800,
+      "stereoMaxError": 3.361755318564974e-13,
+      "masterMaxError": 3.290701044988964e-13,
+      "production": {
+        "lufs": -16.000001984117404,
+        "truePeakDb": -2.0408533024621316,
+        "dc": -3.988092595880682e-8,
+        "samplePeak": 0.788848876953125
+      },
+      "reference": {
+        "lufs": -16.00000198411744,
+        "truePeakDb": -2.0408533024621316,
+        "dc": -3.988092595880682e-8,
+        "samplePeak": 0.788848876953125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "b4687a02953f6b9460e928f46aec0113a69807b3d42810dfdd4fb6ffd73b4a35",
+      "spectrogramSha256": "c8a2fa06dea00638086185da9a79e86e888bd5784824dc45e5ebe17a8bf0f382",
       "fadeSamples": 240,
       "passed": true
     }

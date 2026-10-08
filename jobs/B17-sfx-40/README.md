@@ -1,102 +1,59 @@
-# B17 40 original synthesized sound effects
+# B17 · 40 original synthesized sound effects
 
-Forty original UI/game effects synthesized from oscillators, filtered seeded noise,
-and envelopes. No recorded audio or sample library is used. The `audio/` folder
-contains mono 48 kHz, signed 16-bit PCM WAVs; `spectrograms/` contains a PNG for
-each effect. Open `gallery.html` to listen, inspect, and download. `manifest.json`
-contains the complete sound recipes, measured properties, paths, and WAV hashes.
+**What this is:** forty original UI and game sound effects (mono WAV, 48 kHz, 16-bit, 0.45–2.6 s), made from code with a seeded random generator. No samples, no third-party audio, no network at runtime.
+**How to use it:** `npm ci --ignore-scripts --no-audit --no-fund && npm test` checks the sounds; `renderCue('coin', {seed: 1})` returns a mastered stereo pair and a mono master for a port; open `gallery.html` to hear and see the set.
+**Status:** polished 2026-10-08 (v2 engine: layered tones and noise, a seeded room, a true-peak limiter, a second implementation as a cross-check). Suite green locally on Node 22.22.0 (CI pins 22.16.0); CI for the pushed head is on PR #11. Measured, not auditioned by ear. Port guide: `INTEGRATION.md`.
 
-## Reproduce
+## Quick start
 
-Use Node 22.16.0 (the CI version), npm, and FFmpeg with the `ebur128` filter.
-
-```sh
-npm ci --ignore-scripts --no-audit --no-fund
-npm test
+```bash
+cd jobs/B17-sfx-40
+npm ci --ignore-scripts --no-audit --no-fund   # development compiler only
+npm test                                        # build + every check (needs ffmpeg on PATH)
+npm run generate                                # rebuild audio/, spectrograms/, manifest.json, gallery.html
+node tools/record.mjs                           # after a passing run: refresh reports/, VERIFY.md, SHA256SUMS.txt
 ```
 
-One command performs strict TypeScript compilation, complete suites for seeds
-1/2/3, comparison with the blind independent implementation, all audio limits,
-regeneration, PNG validation, FFT versus direct DFT, rebuilt EBU calibration,
-external FFmpeg measurement, invalid inputs, and 25 isolated compilable source
-mutations under all three seeds. Rerun reports appear in `reports-run/`; checked-in
-evidence appears in `reports/`. `npm run generate` reproduces the canonical seed-1
-WAVs, spectrograms, manifest, and listening gallery.
+`npm test` builds `dist/` and runs `tests/run.mjs` for seeds 1, 2 and 3. It writes only to `dist/`, `reports-run/` and `.mutations/` (all git-ignored) and fails on any stale checksum. A full run takes about 11 minutes on the development machine.
 
-The production TypeScript modules are pure and have **zero runtime dependencies**.
-TypeScript is the only development package. Tests and the output-writing CLI use
-Node standard-library I/O; FFmpeg is an independent test tool, not a synthesizer
-or production dependency. RNG functions are supplied explicitly. The manifest
-records seed 1; seeds 2 and 3 verify other noise realizations without replacing
-canonical media.
+## The API (what a port calls)
 
-## Sound list
+```ts
+import {renderCue, SOUNDS, CUES, SOUND_IDS} from './sfx.js';
+renderCue('coin');                           // {id, sampleRate: 48000, left, right, mono}   (Float64Array, −16 LUFS, ≤ −1.5 dBTP)
+renderCue('countdown-tick', {semitones: 2}); // transposed by a fixed step, same limits
+renderCue('dice-roll', {seed: 2});           // another variation of the same sound
+CUES.filter(c => c.sound === 'win-fanfare'); // where the sound lands in PartyBox
+```
 
-| ID | Effect | Duration | Recipe |
-| --- | --- | ---: | --- |
-| `coin` | Coin | 0.72 s | Three metallic ascending partials |
-| `star-get` | Star get | 1.10 s | Bright four-note reward arpeggio |
-| `dice-roll` | Dice roll | 0.90 s | Rhythmic rattling filtered noise |
-| `dice-stop` | Dice stop | 0.52 s | Low wooden landing with a tonal body |
-| `step` | Step | 0.46 s | Soft low impact with rustling attack |
-| `buzzer` | Buzzer | 0.68 s | Rough detuned error buzz |
-| `ding` | Ding | 0.85 s | Clear harmonic confirmation bell |
-| `whoosh` | Whoosh | 0.80 s | Ascending airy sweep |
-| `pop` | Pop | 0.48 s | Round falling bubble tone |
-| `countdown-tick` | Countdown tick | 0.45 s | Compact dry countdown cue |
-| `final-tick` | Final tick | 0.56 s | Higher double countdown accent |
-| `win-fanfare` | Win fanfare | 1.65 s | Five-note major victory figure |
-| `lose` | Lose | 1.20 s | Descending minor disappointment |
-| `item-use` | Item use | 0.85 s | Glowing upward activation chirp |
-| `shop-open` | Shop open | 1.05 s | Friendly rising shop chord |
-| `vote` | Vote | 0.60 s | Small affirmative pluck |
-| `reveal` | Reveal | 1.20 s | Swelling suspense into a bright reveal |
-| `timer-warning` | Timer warning | 0.90 s | Three urgent rising notes |
-| `menu-move` | Menu move | 0.46 s | Muted navigation tap |
-| `menu-back` | Menu back | 0.55 s | Falling navigation chirp |
-| `confirm` | Confirm | 0.64 s | Two-note upward approval |
-| `cancel` | Cancel | 0.64 s | Two-note downward cancellation |
-| `join` | Player join | 0.90 s | Warm arrival triad |
-| `leave` | Player leave | 0.90 s | Soft descending departure |
-| `ready` | Ready | 0.62 s | Bright sustained readiness blip |
-| `start` | Game start | 1.15 s | Rising start flourish |
-| `round-end` | Round end | 1.10 s | Relaxed closing cadence |
-| `bonus` | Bonus | 1.05 s | Sparkling high reward cascade |
-| `penalty` | Penalty | 0.70 s | Grainy low penalty fall |
-| `teleport` | Teleport | 1.00 s | Modulated rising transport beam |
-| `shield` | Shield | 1.10 s | Warm humming protective field |
-| `power-up` | Power up | 1.25 s | Octave-spanning energized rise |
-| `power-down` | Power down | 1.25 s | Long falling energy discharge |
-| `notification` | Notification | 0.84 s | Gentle three-note attention cue |
-| `achievement` | Achievement | 1.50 s | Extended major accomplishment motif |
-| `error` | Error | 0.76 s | Three dark rejection pulses |
-| `splash` | Splash | 0.85 s | Falling textured synthetic water burst |
-| `bounce` | Bounce | 0.58 s | Elastic descending spring chirp |
-| `swipe` | Swipe | 0.60 s | Short downward airy gesture |
-| `connect` | Connect | 0.95 s | Rising connected-state chord |
+- Pure and deterministic: the same id, seed and semitones give identical samples. An unknown id, or a transposition outside ±24, throws `RangeError`.
+- `renderSound(sound, rng)` and `synthesize(sound, rng)` are the lower-level stages; `LEGACY_SOUNDS` and `synthesizeLegacyRaw` keep the first delivery's recipe for the blind oracle.
+- Recipes and the engine are described in `RECIPES.md`.
 
-## Meter and fades
+## Files: the product
 
-`meter.ts` uses the exact 48 kHz BS.1770-4 two-stage K filter, 400 ms blocks
-with 75% overlap, −70 LUFS absolute gate and −10 LU relative gate. True peak uses
-the recommendation's four-phase, twelve-tap FIR, including its tail. All delivered
-sounds are longer than 400 ms. Mono uses channel weight 1. A declared zero-padding
-convention exists for shorter inputs to the general meter; it is unused by these
-assets. The PCM readback target is −16 ±0.5 LUFS, ≤−1.5 dBTP, and |DC|<0.001.
+| File | What it is |
+| --- | --- |
+| `sfx.ts` | The public entry point: `renderCue`, `renderSound`, `synthesize`, `finishStereo`, the catalogue re-exports. |
+| `dsp.ts` | The v2 engine: layers → drive → EQ → room → true-peak leveller. Zero dependencies. |
+| `recipes.ts` | The 40 sounds as data (`SOUNDS`, `SOUND_IDS`, `note()`). |
+| `cues.ts` | Where each sound lands in PartyBox (`CUES`); trims are proposals (see INTEGRATION.md). |
+| `meter.ts` | BS.1770-4 loudness and true-peak meter, the shared master (`finishAudio`), DC and fades. |
+| `wav.ts` | PCM16 mono WAV encoder and strict decoder. |
+| `spectrogram.ts` | FFT and the 256×128 spectrogram PNG encoder used by `tools/generate.mjs`. |
+| `legacy.ts` | The first delivery's recipe, kept as the blind oracle's anchor. Not used by the product. |
+| `audio/*.wav`, `spectrograms/*.png`, `manifest.json`, `gallery.html` | The delivered media (seed 1) and a preview page. |
 
-Mastering removes DC through a raised-cosine correction basis, applies exact
-5 ms tapers at both ends, and normalizes using gated integrated loudness.
-Tests independently reconstruct the entire mastering operation and compare both
-PCM edges within one quantization step. This proves the prescribed taper; an
-extra global-peak envelope diagnostic is documented separately in ORACLE.md.
+## Files: evidence (the port does not need them)
 
-The standards calibration is a reproducible **mono adaptation** of EBU Tech 3341
-cases 1–5 and 15–19. It checks the published tolerances with the stereo loudness
-target reduced by 3.0103 LU; case 19 remains floating point to avoid quantizing
-the constructed calibration signal. Its sampled values fit PCM16 even though
-its interpolated true peak exceeds 0 dBTP. It is not full EBU Mode certification. ORACLE.md,
-ORACLE_AMENDMENTS.md and SOURCES.md state isolation, sources and scope.
+`tests/` (the suite and the 25 planted-bug harness), `reference.ts` and `reference.snapshot.ts.txt` (the sealed blind oracle), `twin.ts` (the second implementation of the v2 engine), `ORACLE*.md`, `SOURCES.md`, `ASSUMPTIONS.md`, `reports/` (this pass's evidence, with the detailed tables in `reports/polish-2026-10-08-tables.md`) and `reports/v1-2026-10-07/` (the first delivery's), `VERIFY.md`, `SHA256SUMS.txt`, `tools/` (generate, record, checksums), `LOOP.md`, `NEXT.md`.
 
-Spectrograms use a 1024-sample Hann FFT, 256 time columns, logarithmic frequency
-bins from 47 Hz to 24 kHz, and a 70 dB magnitude window. Each PNG is independently
-parsed, CRC-checked and inflated during testing.
+## What changed in this pass
+
+Layered v2 recipes replace the first delivery's single-oscillator recipes. Each sound is built from layers (tones, filtered noise, and bursts of either) on one bus with a short seeded room. A look-ahead true-peak leveller brings every sound to −16 LUFS with its 4× true peak between −4.55 and −1.86 dBTP, so no sound clips. The v2 engine is checked against a second implementation (`twin.ts`), the planted-bug harness is re-anchored to the new engine (75 of 75 probes killed), and the gallery uses PartyBox's tokens.
+
+The suite does not gate spectral balance. The spectrograms in `gallery.html` are there to inspect, not to pass. The numbers are in `VERIFY.md` (the 2026-10-08 section) and `reports/polish-2026-10-08-tables.md`.
+
+## Licence and provenance
+
+Every sample is generated by the code in this folder. No trademarked names, logos or recorded material are used; cue names are PartyBox's own vocabulary. The mathematics follows ITU-R BS.1770-4 and EBU Tech 3341, cited in `SOURCES.md`.
