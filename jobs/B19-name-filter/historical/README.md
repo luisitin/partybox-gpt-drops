@@ -13,3 +13,7 @@ Latin-1. Its own raw full receipts are in results/optimization-width-latin1/.
 No historical failure or original sealed independent-reference source has been
 rewritten. These are preserved algorithm versions, not alternative timing runs
 used to select favorable results.
+
+The October 7 source before mapped-length pruning is retained exactly as
+`nameFilter-pre-length-pruning.ts` (SHA256
+`124dce60c560faf5c101be03e0d24856f7bcbd293b5bcecbd0ad4d0b2e93502b`).

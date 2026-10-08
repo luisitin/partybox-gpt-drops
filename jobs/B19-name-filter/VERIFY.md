@@ -260,3 +260,32 @@ reports successful, and cannot erase separately recorded local failures.
   current combined U.S. top-20,000 ranking; selection and sources are disclosed.
 - Future availability of identical upstream snapshots is not guaranteed.
   Changed hashes fail closed; the retained cache reproduces the measured data.
+
+## October 8 length-pruning continuation: incomplete acceptance
+
+The source-bound command `npm ci --ignore-scripts --no-audit --no-fund &&
+npm test` completed EXIT1 at approximately15:52UTC. Complete receipts are in
+`results/resume-length-pruning/`; no original receipt was overwritten.
+Runtime source SHA256:
+`5371665d9df3721f5b4d6d4c923120d2944fa3ae396008c74ca80006a03e25e9`.
+All88 suites executed; the only3 failed suite rows are the unchanged literal
+latency gate. Original131,490 sealed comparisons,15,000 obfuscations and75
+real mutants pass. Added24,873 short/term-boundary comparisons pass at each of
+seeds1,2,3 (74,619 total), without changing the original43,830-input workloads.
+Source/runtime gzip4477/3358bytes, each below6000. Corpora, guards, purity and
+strict types pass with all original counts.
+
+| Seed | Calls | Above0.05ms | Maximum ms | Passed |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 10000 | 36 | 0.472961 | 9964 |
+| 2 | 10000 | 8 | 0.246780 | 9992 |
+| 3 | 10000 | 16 | 0.456415 | 9984 |
+
+The bounded instrumentation report is separate in
+`results/resume-witness-diagnostic/` and
+`results/resume-length-pruning-diagnostic/`. Original fixed-witness full
+matcher23–29ms/500,000 calls versus eligible matcher11–15ms supports skipping
+impossible patterns. Whole-filter fixed-witness measurements show only a small
+gain; the full mixed attempt still fails. Timer-only controls also record long
+observations; GC/CPU sampling does not establish any historical outlier cause.
+Neither diagnostic is an acceptance pass. Exact-head hosted CI is pending.

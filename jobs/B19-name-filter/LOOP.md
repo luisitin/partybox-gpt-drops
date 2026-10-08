@@ -88,3 +88,26 @@ failed the literal maximum: 5/11/9 outliers, maxima
 Raw source-bound full reports are in results/optimization-width-latin1/.
 These measurements do not prove scheduler/GC causation, erase prior failures
 or establish complete acceptance. The PR remains a draft.
+
+## October 8 resumed incomplete delivery: minimum-length pruning
+
+Fresh original-repository ownership check found no B19 row and a20-hour-old
+sole branch; claimed15:42:00UTC in a separate main clone. OriginalPR2/history
+and worktree remain intact. This resumes a failed acceptance task, not a
+completed/cosmetic KEEP streak.
+
+A bounded instrumented diagnostic uses the actual hosted seed-1 three-character
+ASCII witness. Of63 forward terms, only3 can consume3 mapped characters.
+Eligible matcher11–15ms versus complete matcher23–29ms per500,000 calls, and
+zero disagreements on all17,576 lowercase3-letter strings. Production now
+compiles minimum-length-eligible forward/reversed regexes once. The normalized
+expansion fallback retains the complete matcher, with no result/witness cache.
+Exact pre-change source and both complete diagnostic receipts are preserved.
+
+The genuinely changed source's unchanged complete command failed literal
+latency36/8/16 times; maxima0.472961/0.246780/0.456415ms. All88suites execute,
+all original behavior/differential/mutation counts pass, plus74,619 new sealed
+boundary comparisons. Gzip4477/3358bytes passes. No cause for all timing
+outliers is claimed, no diagnostic replaces acceptance, no failure disappears,
+and PR2 remains draft. A general already-lowercase allocation change is the
+next candidate, conditional on actual diagnostic evidence.

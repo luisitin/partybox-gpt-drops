@@ -26,8 +26,9 @@ and all mutation witnesses are written to `reports/latest/`. CI uploads these
 alongside the source files and cached public corpora, including on failure.
 Upstream data changes fail the snapshot lock rather than silently changing tests.
 GeoNames is a daily source: a future fresh download may need the retained cache.
-The final measured local summary, benchmarks, mutation witnesses and all corpus
-rejections are also committed in `results/optimization-width-latin1/`, with earlier measured failures retained in `results/` and `results/optimization-ascii-word/`. Its timing failures remain visible.
+The latest length-pruned attempt is in `results/resume-length-pruning/` and still
+fails literal latency. The October7 summary, benchmarks, mutations and corpus
+rejections are retained in `results/optimization-width-latin1/`, with earlier measured failures retained in `results/` and `results/optimization-ascii-word/`. Its timing failures remain visible.
 
 ## API
 

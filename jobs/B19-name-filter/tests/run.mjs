@@ -93,6 +93,27 @@ const knownCases=[...knownCharacters].flatMap(c=>[c,'a'+c,c+'a','s'+c+'ex','se'+
 // positions; expected outcomes come from the original sealed reference.
 const rangeCharacters=[...Array.from({length:64},(_,i)=>String.fromCharCode(0x00c0+i)),...Array.from({length:94},(_,i)=>String.fromCharCode(0xff01+i))];
 const rangeCases=rangeCharacters.flatMap(c=>[c,'a'+c,c+'a','s'+c+'ex','se'+c+'x','Σ'+c+'A','A'+c+'Σ','AΣ'+c,'ſ'+c+'ex'].map(input=>({input,expected:label(blind.nameFilter(input)),kind:'precompiled-Unicode-ranges'})));
+// Exhaust short mapped ASCII inputs and term-length/repetition boundaries.
+// These supplement rather than alter the original 43,830-case workload, and
+// expectations are supplied only by the unchanged sealed independent oracle.
+const lengthCases=[];
+for(let a=97;a<=122;a++) {
+ const first=String.fromCharCode(a);
+ lengthCases.push(first);
+ for(let b=97;b<=122;b++) {
+  const second=first+String.fromCharCode(b);lengthCases.push(second);
+  for(let c=97;c<=122;c++)lengthCases.push(second+String.fromCharCode(c));
+ }
+}
+for(const term of policy.terms)for(const spelling of [term,[...term].reverse().join('')]) {
+ for(let count=0;count<=16;count++) {
+  const repeated=spelling[0].repeat(count)+spelling.slice(1);
+  lengthCases.push(repeated,'a'+repeated,repeated+'a');
+ }
+ lengthCases.push(spelling+'中', '中'+spelling, spelling.slice(0,1)+'中'+spelling.slice(1));
+}
+lengthCases.push('ｓｅｘ','s e x','s.e.x','s中ex','c1it','Bob','boob','boooob','s'.repeat(16),'ﬃ'.repeat(16));
+const lengthBoundaryCases=[...new Set(lengthCases)].map(input=>({input,expected:label(blind.nameFilter(input)),kind:'length-pruned-blind-boundary'}));
 const mutations = [
  ['M01','Remove lowercasing', '.toLowerCase()', ''],
  ['M02','Lose compatibility normalization', "normalize('NFKD')", "normalize('NFD')"],
@@ -168,6 +189,7 @@ for(const seed of [1,2,3]) {
  const typecheck=spawnSync(process.execPath,['node_modules/typescript/bin/tsc','-p','tsconfig.json','--noEmit'],{encoding:'utf8'});
  record('strict-TypeScript',1,Number(typecheck.status===0),seed,{command:'tsc -p tsconfig.json --noEmit',output:(typecheck.stdout??'')+(typecheck.stderr??'')});
 
+ const lengthChecks=evalCases(nameFilter,lengthBoundaryCases);record('length-pruned-matcher-blind-boundaries',lengthBoundaryCases.length,lengthChecks.passed,seed,{errors:lengthChecks.errors});
  const generated=makeObfuscations(seed);
  const regenerated=makeObfuscations(seed);
  record('generator-byte-identical-replay-and-coverage',2,Number(JSON.stringify(generated)===JSON.stringify(regenerated))+Number(Object.keys(generated.coverage).length===policy.terms.length),seed);

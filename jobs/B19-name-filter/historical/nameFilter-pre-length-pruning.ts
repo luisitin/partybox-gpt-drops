@@ -26,15 +26,7 @@ const pattern = (terms: readonly string[]): string => terms.map(term => term.rep
   // Preserve required repeats: 'boob' needs two o's; never turn 'Bob' into it.
   return (c === 'i' || c === 'l' ? `[${c}#]` : c) + (run.length === 1 ? '+' : `{${run.length},}`);
 })).join('|');
-const REVERSED = TERMS.map(term => [...term].reverse().join(''));
-const BAD = new RegExp(pattern(TERMS) + '|' + pattern(REVERSED));
-// A repeated-letter pattern cannot consume fewer letters than its original
-// term. Compile the eligible forward/reversed patterns once per short length;
-// longer normalization expansions use the complete matcher. No result cache.
-const BY_LENGTH = Array.from({length: Math.max(...TERMS.map(term => term.length))}, (_, length) => {
-  const eligible = [...TERMS, ...REVERSED].filter(term => term.length <= length);
-  return eligible.length ? new RegExp(pattern(eligible)) : /(?!)/;
-});
+const BAD = new RegExp(pattern(TERMS) + '|' + pattern(TERMS.map(term => [...term].reverse().join(''))));
 const CONTROLS = /[\u0000-\u001f\u007f-\u009f\ud800-\udfff\u202a-\u202e\u2066-\u2069]/u;
 const ASCII = /^[\x20-\x7e]*$/;
 const SIMPLE_ASCII = /^[A-Za-z]+$/;
@@ -136,7 +128,7 @@ export function nameFilter(input: unknown): NameResult {
     else text += '~'; // Unmapped letters are barriers, never silently deleted.
    }
   }
-  if ((BY_LENGTH[text.length] ?? BAD).test(text))
+  if (BAD.test(text))
     return FAILURE.blocked;
   return OK;
 }

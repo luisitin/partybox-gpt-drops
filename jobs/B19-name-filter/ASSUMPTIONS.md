@@ -17,3 +17,19 @@
   Whole-string lowercasing and original Unicode fallback remain. It adds no result cache, ambient randomness, clocks or dependencies.
 - Only this job folder and the required B19 workflow may change. Delivery uses
   `job/B19-name-filter` and PR #2; main is never pushed.
+
+## Resumed unfinished delivery, October 8
+
+- The user's active request is to finish stalled original projects. B19 is the
+  original dashboard's remaining failed code delivery; already complete B jobs
+  are not restarted. Fresh original-repository ownership was checked before
+  claiming B19; game-core queue claims and original worktrees remain untouched.
+- Continuation preserves PR2 and all existing branch history in a separate
+  checkout. The only permitted main change is the RUN-ALL claim-row refresh.
+- A bounded diagnostic uses the actual hosted seed-1 witness and private stage
+  exports in a separate module. Its instrumentation/timings never substitute
+  for the unchanged complete acceptance workload. Historical cause remains
+  unproved even when a timer-only diagnostic also records long observations.
+- Repeated-letter patterns cannot consume fewer mapped characters than their
+  source term. Length-specific matcher compilation is a general algorithm
+  improvement, not a witness/input/result cache or benchmark-specific bypass.
