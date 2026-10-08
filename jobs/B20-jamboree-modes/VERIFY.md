@@ -146,3 +146,21 @@ EXIT_CODE=1
 ## GitHub delivery
 
 The final-head hosted structural/checksum/strict-result conclusion is recorded in PR16 after observation. A green artifact CI result does not certify unresolved Nintendo behavior or execute the original phone/TV prototypes.
+
+## Polish pass 2026-10-08
+
+Scope: correctness, product review and documentation only. No rule row, field value or evidence capture was changed.
+
+| Check | Command | Result |
+| --- | --- | --- |
+| Structural suites | `python3 verify.py --structural --checksums` | PASS, 19 suites, 2,947 cases, about 2 s before this pass; 2,951 cases after the two new files joined the manifest suites |
+| Manifest | `sha256sum -c SHA256SUMS.txt` | 117 of 117 OK before this pass; regenerated for the files this pass changed |
+| Strict gate | `python3 verify.py --strict` | exit 1, as documented: MODE_LIST_TWO_SOURCE 28/28, RULES_TWO_SOURCE 60/85, FIELDS_WITH_RECORDED_RULES 84/168, PROPOSED_PHASE_EXIT_GRAPHS 196/196 |
+| Hosted CI | GitHub run 37679418437 on head `de8cc66` | success (`B20 research and prototype specification checks`) |
+| Evidence quotes against captures | inline python: every `rules.json` evidence quote checked against the quotations in `reports/source-captures/` (passes A and B) | 178 of 178 exact matches; no missing capture |
+| Cross-job check | Pro, Frenzy and Tag-Team against B05 `claims.json` (COUNT04, TV01, TV02, TV03, PRO02, PRO03, PRO04) | no conflict; both drops agree on Pro's 12 turns and announced category and on Frenzy's 5 turns, 50 coins, one Star and double-dice start |
+| Port constraint | `packages/shared/src/constants.ts` `roomCapacity` in the main repo | 16 players; the 20-racer race is capped and the INTEGRATION says so |
+
+Seed: not applicable (deterministic). Case counts are as `verify.py` reports them.
+
+UNVERIFIED in this pass: no live re-fetch of any source (most hosts are blocked from this box). Evidence was checked against stored captures, not live pages. No gameplay, installed game or primary-frame capture was observed. The phase specs are proposals and were not executed.

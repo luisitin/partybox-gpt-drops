@@ -1,5 +1,9 @@
 # B20 — Every other Jamboree mode, buildable specs
 
+**What this is:** a sourced roster of 28 party-game modes, mechanics and variants, with 85 rules and one original phone/TV phase spec per record, plus a shared phone/TV protocol proposal.
+**How to use it:** read `INTEGRATION.md` first (IP warning, port map ranked by fit and evidence), then `DESIGN-DIGEST.md`. Use each `modes/<id>.md` "Buildable" section as a phase checklist; re-word and rename everything.
+**Status:** reference only. Structural checks PASS (2,951 cases after this pass's manifest); strict research acceptance is NOT MET by design (60 of 85 rules corroborated; 84 of 168 fields recorded). CI green on head `de8cc66` (run 37679418437).
+
 **Research PARTIAL; original phone/TV prototype specs provided.** The roster contains 28 normalized records: 13 top-level modes/mechanics/rules and 15 child activities, difficulties or variants. Standard base Mario Party is excluded; Pro Rules and Jamboree Buddies are identified as a variant and a mechanic. Menu hubs are not counted as extra playable modes.
 
 `modes.json` links 85 sourced rule records in `rules.json`, per-field coverage, observed/reported lengths and one original adaptation spec per record. One `modes/<id>.md` per record explains the facts and concrete phone/TV controls, state, scoring and seven phases. The common protocol specifies server authority, input envelopes, rate limits, disconnect handling, derived events and global exits. Proposal physics, timings and score thresholds are explicitly labeled; they do not fill gaps in Nintendo research.
