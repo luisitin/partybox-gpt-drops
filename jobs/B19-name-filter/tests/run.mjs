@@ -61,7 +61,7 @@ const positive = [
   'Cummings','Cumberland','Titus','Virginia','Bangkok','Canal','Analysis','Sexton',
   'Cocktail','Classical','Assistant','Passage','Massachusetts','Cassandra','Richard',
   'Dickson','Nigel','Nigeria','Niger','Niggardly','Hitchcock','Peacock','Cucumber',
-  'Anne-Marie',"O’Neil",'José','Zoë','李雷','محمد','🙂Alex','𠮷野','Bob','Bobby','Bobbi',
+  'Anne-Marie',"O’Neil",'José','Zoë','李雷','محمد','🙂Alex','𠮷野','Bob','Bobby','Bobbi','Analía','Analise','Sexto',
   'abcdefghijklmnop','𐐨'.repeat(16),'s中ex','Alex','Banana','niger',
 ];
 const witnessBlocked=['SEX','ｓｅｘ','s\u0301ex','s\u200bex','s e x','s.e.x','p0rn','d1ck','s3x','4nal','5ex','7wat','@nal','$ex','c1it','sеx','sεx','xes','seeex','fuck','Hancocksex','p|ssy','diсk','cоck','s℮x','cl!t','cυnt','cυпt','cυпτ','boooob'];
@@ -185,6 +185,9 @@ for(const seed of [1,2,3]) {
  record('delivery-file-size-and-checksums',2,Number(checksums.maxFileBytes<=30000000)+Number(checksums.failures.length===0),seed,checksums);
  const immutable=[nameFilter('Alex'),nameFilter('s.e.x'),nameFilter(null)];
  record('immutable-return-values',immutable.length,immutable.filter(Object.isFrozen).length,seed);
+ const failureExamples=[nameFilter(1),nameFilter('x'.repeat(17)),nameFilter('  '),nameFilter('Alex\n'),nameFilter('s.e.x')];
+ const suggestionFor={type:'use-text',length:'shorten',empty:'add-letters',control:'remove-characters',blocked:'choose-another'};
+ record('failure-suggestions-map-and-frozen',failureExamples.length,failureExamples.filter(x=>!x.ok&&x.suggestion===suggestionFor[x.reason]&&Object.isFrozen(x)).length,seed);
  const termsSource=source.match(/const TERMS = '([^']*)'/)[1].split(' ');
  const safeSource=source.match(/const SAFE = new Set\('([^']*)'/)[1].split(' ');
  const sourceChecks=[new Set(termsSource).size===termsSource.length,JSON.stringify(termsSource)===JSON.stringify(policy.terms),JSON.stringify([...new Set(safeSource)].sort())===JSON.stringify(policy.safe)];
