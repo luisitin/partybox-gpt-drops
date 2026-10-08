@@ -189,6 +189,25 @@ Claude (cloud) polish pass. The port guide is `INTEGRATION.md`. Commands run fro
 | Contact sheets | `npm test` row | seven backgrounds (adds PartyBox night and daylight), 840 thumbnails per seed |
 | Gallery page | Chromium at 1440x900 and 390x844 | no console errors; no horizontal scroll on the phone |
 
+## Polish pass 2026-10-08 (continuation)
+
+Claude (cloud), second session on the same branch. Commands run from `jobs/B15-icons-120/` in the worktree `/home/user/wt/B15`.
+
+| Check | Command | Result |
+|---|---|---|
+| Branch state | `git fetch origin job/B15-icons-120`; compare HEAD with origin | HEAD and origin both `c878bc5` before this pass; no merge needed |
+| PR and hosted CI | GitHub MCP: PR #10 `get`, `get_check_runs` | PR open, mergeable clean. Check `verify` completed success on `c878bc5` (run 37797964572, job 113382268983, 15:06:19 to 15:07:50 UTC). PR body still cites `b37a00d`; it is stale and was not edited (read-only) |
+| Visual review | Playwright Chromium, all 120 icons at 24/48/96 px on night `#0f1020` and daylight `#f6f5ff`, 7 columns | every strip reviewed; set coherent. Weakest: `handshake` (soft at 24 px), `clap` (reads as a wave), `whisper` (an ear with waves, named for a whisper) |
+| Redraw trials | two candidates each for `handshake` and `clap`, rendered beside the originals on both backgrounds | both candidates worse at 24 and 96 px. Originals kept; no artwork changed |
+| Count audit | plain substring count over non-test `.ts`/`.tsx` under `packages/client/src`, 2026-10-08 | INTEGRATION emoji table corrected (for example `★` 28 uses, not 12; `✕` 21, not 14) |
+| PartyBox references | file and line checks in `/home/user/partybox` | `controller/VipMenu.tsx:97`, `controller/ControllerShell.tsx:194` and `tv/HostBar.tsx:89` are correct; the paths and scripts in the port steps exist. Latest ADR on the owner's local main is ADR-081, so INTEGRATION now says "next free number" |
+| Seal | `python3 test/package.py --seal-sources` | 152 authored files resealed. In `SHA256SUMS.txt` only the `LOOP.md` line changed |
+| Full suite, run once | `npm test` on Node v22.22.0 | PASS, exit 0, 5 min 8.6 s wall (`user` 2 min 50 s). Seeds 1, 2 and 3: 84 rows, 282,990 cases, all passed; 75/75 mutants killed |
+| Silhouette pairs | `reports/results.json` | unchanged by the run (git shows no diff). Highest pair 0.7935: CairoSVG 24 px. librsvg highest 0.7890 at 24 px. Gate below 0.8 |
+| Size and colours | `reports/results.json` | largest `clover.svg` at 1,052 bytes; at most 6 colours |
+| Bundle checksums | `sha256sum -c BUNDLE_SHA256SUMS.txt` | 894 OK, 0 failing |
+| Not verified here | none run in this pass | no human recognition study; no PartyBox port; the hosted run of the new head is recorded in the PR, not here |
+
 ## Complete-bundle checksums
 
 | Test | Cases | Passed | Seed | Exact command |

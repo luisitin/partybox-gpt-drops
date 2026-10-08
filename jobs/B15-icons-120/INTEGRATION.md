@@ -6,9 +6,9 @@
 | | |
 | --- | --- |
 | Status | **Ready to port**. Nothing in this folder needs fixing first. The port is UI chrome work, and the [gaps](#known-gaps-and-risks) below list what the set does not cover. |
-| Branch | `job/B15-icons-120` @ `6cfc78d` (last product commit of this pass; later commits touch docs, seal and evidence only) · PR #10 · CI: green on `b37a00d` (checked 2026-10-08 before this pass); this pass: see the line below once checked |
+| Branch | `job/B15-icons-120` @ `c878bc5` at the start of the 2026-10-08 continuation pass. The artwork last changed in `bac3314`, `src/` in `c0aa205`; later commits touch docs, seal and evidence only · PR #10 (its description still cites the older head `b37a00d`) · CI: hosted `verify` green on `c878bc5` (run 37797964572, completed 2026-10-08 15:07 UTC) |
 | Repo | luisitin/partybox-gpt-drops |
-| Test | `cd jobs/B15-icons-120 && npm ci --ignore-scripts --no-audit --no-fund && python3 -m pip install -r requirements-dev.txt && npm test` (needs libcairo2 and fonts-dejavu-core). Runtime about 5 (290 s on 4 shared CPUs) min |
+| Test | `cd jobs/B15-icons-120 && npm ci --ignore-scripts --no-audit --no-fund && python3 -m pip install -r requirements-dev.txt && npm test` (needs libcairo2 and fonts-dejavu-core). Runtime about 5 min (308 s wall on 4 shared CPUs in the continuation pass; 290 s in the first) |
 | Lands in PartyBox | `packages/game-sdk/src/icons/` (pure geometry and lookup) · `packages/game-sdk/src/ui-icon.ts` + `ui/Icon.tsx` (new `@partybox/game-sdk/ui/icon` export) · `packages/client/public/icons.svg` (static sprite) · `packages/client/src/styles/tokens.css` (`--pb-icon-ink`) · `docs/sdk/icons.md` |
 
 ## What it is
@@ -76,17 +76,19 @@ These files prove the work; the port does not need them.
 
    | Glyph (uses) | B15 icon | Where (examples) |
    | --- | --- | --- |
-   | ✕ (14) | `close` | `controller/VipMenu.tsx:97`, `ThemePicker.tsx`, `controller/LobbyLine.tsx`, `PresencePrompt.tsx` |
-   | ✓ (13) | `check` | `controller/ChoiceRow.tsx`, `ShareSheet.tsx`, `StartStage.tsx`, `ThemePicker.tsx` |
-   | ★ (12) VIP menu | `star` | `controller/ControllerShell.tsx:194`, `RoomSwitch.tsx`, `SavedGames.tsx`, `picker/ChosenGame.tsx` |
-   | 🤖 (10) | `bot` | `tv/HostBar.tsx:89`, `picker/AboutSheet.tsx`, `picker/ChosenGame.tsx` |
-   | 📺 (9) / 📱 (6) | `tv` / `phone` | `controller/ThisPhone.tsx`, `surface/SurfaceHint.tsx`, `preview/PreviewToolbar.tsx` |
-   | 🎧 (6) | `headphones` | `PresencePrompt.tsx`, `picker/GameRow.tsx`, `tv/TvRoomSwitches.tsx` |
-   | 👑 (5) | `crown` | `tv/TvFrame.tsx`, `tv/TvResults.tsx`, `tv/Tonight.tsx` |
-   | ▶ ⏸ ⏭ ■ ↻ | `play` `pause` `skip` `stop` `refresh` | `tv/HostBar.tsx:164-213`, `tv/TvPlaying.tsx`, `controller/ShellCountdown.tsx`, `tv/TvStartStage.tsx` |
-   | 🔇 / 🔊 | `sound-off` / `sound-on` | `tv/AudioGate.tsx`, `tv/HostBar.tsx:245` |
-   | 🎵 ♪ / 💬 / 🔒 / 🏆 / 🎮 | `music-note` / `chat` / `lock` / `trophy` / `gamepad` | `TvRoomSwitches.tsx`, `PhoneSettings.tsx`, `Join.tsx`, `TeamBoards.tsx`, `HostBar.tsx` |
-   | 👀 👍 🏠 ⚙ ⛶ 📷 👥 🌶 | `eye` `thumbs-up` `home` `settings` `expand` `camera` `players` `flame` | single uses (`ThisPhone.tsx`, `TvFrame.tsx:101`, `PreviewToolbar.tsx:103`, `AudioGate.tsx:184`, `JoinPortrait.tsx`, `Join.tsx`, `keySetting.ts`) |
+   Counts are plain substring counts in every non-test `.ts`/`.tsx` file under `packages/client/src`, taken on 2026-10-08. They include comments and i18n strings, so some uses are off screen. The earlier counts in this table were wrong.
+
+   | ✕ (21) | `close` | `controller/VipMenu.tsx:97`, `ThemePicker.tsx`, `controller/LobbyLine.tsx`, `PresencePrompt.tsx` |
+   | ✓ (27) | `check` | `controller/ChoiceRow.tsx`, `ShareSheet.tsx`, `StartStage.tsx`, `ThemePicker.tsx` |
+   | ★ (28), VIP menu and badges | `star` | `controller/ControllerShell.tsx:194`, `RoomSwitch.tsx`, `SavedGames.tsx`, `picker/ChosenGame.tsx` |
+   | 🤖 (14) | `bot` | `tv/HostBar.tsx:89`, `picker/AboutSheet.tsx`, `picker/ChosenGame.tsx` |
+   | 📺 (17) / 📱 (11) | `tv` / `phone` | `controller/ThisPhone.tsx`, `surface/SurfaceHint.tsx`, `preview/PreviewToolbar.tsx` |
+   | 🎧 (7) | `headphones` | `PresencePrompt.tsx`, `picker/GameRow.tsx`, `tv/TvRoomSwitches.tsx` |
+   | 👑 (7) | `crown` | `tv/TvFrame.tsx`, `tv/TvResults.tsx`, `tv/Tonight.tsx` |
+   | ▶ (5) ⏸ (5) ⏭ (1) ■ (1) ↻ (5) | `play` `pause` `skip` `stop` `refresh` | `tv/HostBar.tsx:164-213`, `tv/TvPlaying.tsx`, `controller/ShellCountdown.tsx`, `tv/TvStartStage.tsx` |
+   | 🔇 (4) / 🔊 (3) | `sound-off` / `sound-on` | `tv/AudioGate.tsx`, `tv/HostBar.tsx:245` |
+   | 🎵 (7) / 💬 (7) / 🔒 (5) / 🏆 (6) / 🎮 (2) | `music-note` / `chat` / `lock` / `trophy` / `gamepad` | `TvRoomSwitches.tsx`, `PhoneSettings.tsx`, `Join.tsx`, `TeamBoards.tsx`, `HostBar.tsx` |
+   | 👀 (2) 👍 (7) 🏠 (6) ⚙ (1) ⛶ 📷 (2) 👥 (8) 🌶 (1) | `eye` `thumbs-up` `home` `settings` `expand` `camera` `players` `flame` | single uses (`ThisPhone.tsx`, `TvFrame.tsx:101`, `PreviewToolbar.tsx:103`, `AudioGate.tsx:184`, `JoinPortrait.tsx`, `Join.tsx`, `keySetting.ts`) |
 
    - **Trap:** many glyphs sit inside `L('📼 …')` / `L('🔇 …')` strings. The English text is the i18n key, so moving a glyph out of the string changes the key.
      - Update the Spanish entries in the same commit (`packages/client/src/i18n-es*.ts`, `tv/strings.ts`, `surface/strings.ts`).
@@ -95,7 +97,7 @@ These files prove the work; the port does not need them.
 6. **Docs and records.**
    - `docs/sdk/icons.md`: API, sizes, the inventory from `manifest.json`, and "how to add an icon": draw in `art.ts` and keep the silhouette rule.
    - Add a line to `packages/game-sdk/README.md`.
-   - Add an ADR, numbered after the owner's local main (≥ ADR-088): "UI chrome icons: B15 static sprite, emoji stay for game identity".
+   - Add an ADR with the next free number after the owner's local main (its latest is ADR-081 as checked on 2026-10-08, so ADR-082 unless main has moved): "UI chrome icons: B15 static sprite, emoji stay for game identity".
    - Add to `CHANGELOG.md` Unreleased: `feat(ui): B15 icon set replaces emoji chrome`.
    - `docs/DEPENDENCIES.md` is unchanged (no new dependency).
 
@@ -136,6 +138,9 @@ Do not tint icon fills with `--pb-accent*`. The five fills are the icons' own il
 - **`clap`** is one hand with motion lines, the original drawing kept on purpose. It reads close to a wave (👋). That suits greetings too, but redraw it if a true two-hand clap is needed.
 - **Silhouette check.** If the set grows inside PartyBox, port `src/check.ts` plus a rasteriser-based IoU test, or the near-duplicate guard is lost. PartyBox has no rasteriser dependency today, so that would need an ADR and a DEPENDENCIES line.
 - **Recognition.** No human recognition study at 24 px. Run a quick hallway test with the owner's household before replacing ✕ / ✓ everywhere.
+- **Name that does not match the picture: `whisper`.** The artwork is an ear with sound waves, which reads as "listen". PartyBox has no whisper mechanic (the word appears only as blanks-game content). Before the port, either rename it to `listen` (manifest id and titles, the `src/art.ts` key, the sealed files and reports, then a full `npm test`) or redraw it. The id is public, so this is the owner's call.
+- **Trial redraws rejected (2026-10-08).** `handshake` as a cuffed horizontal clasp, and `clap` as two palms with motion marks, both read worse than the originals at 24 and 96 px. The originals stay. `handshake` is still a soft gold shape at 24 px, so a hallway test should check it first.
+- **Look-alikes at 24 px.** `link` / `unlink`, `sound-on` / `sound-off` and `expand` / `collapse` differ mainly by a break or a mirror. Always pair them with a visible label.
 
 **Nit**
 - `expand` and `collapse` are mirror concepts and look alike at 24 px; always pair them with a label.
@@ -173,3 +178,18 @@ Then open `/preview/<game>/<fixture>?view=tv` and `?view=controller` for the hos
 - `c0aa205`: `getIcon(name, { ink })` and `getSprite()`, plus `sprite.svg` and the self-contained `gallery.html` (five themes, sizes, EN/ES, search).
 - `6cfc78d`: Spanish titles in `manifest.json` and new tests (ink option, sprite, gallery freshness, Spanish titles, 2-unit live area at 256 px, night visibility at 48 px). Contact sheets now include the night and daylight backgrounds. `package.py` keeps dated polish sections in VERIFY.md.
 - `ae117e2` and the commit adding this file: README rewritten (what / how / status, quick start, API, product vs evidence, style rules), one LOOP line, sources resealed, this guide, and a VERIFY polish section.
+
+### Continuation pass 2026-10-08 (Claude, cloud, second session)
+
+**Checked**
+- PR #10 head `c878bc5`: hosted `verify` check green. The PR description still cites `b37a00d`, so it is stale.
+- Re-rendered all 120 icons at 24, 48 and 96 px on night `#0f1020` and daylight `#f6f5ff`, and reviewed every strip. The set is coherent: one grid, one ribbon outline, one five-colour palette, and the cream fills keep their edge on daylight.
+- Weakest icons: `handshake` (soft at 24 px), `clap` (reads as a wave), `whisper` (name), and the look-alike pairs in the gaps list.
+- Recounted the emoji uses in `packages/client/src` and fixed the table counts. Checked the PartyBox paths, scripts and line references the port steps cite; they exist. The ADR pointer was wrong (the owner's local main ends at ADR-081, not ADR-088).
+
+**Changed**
+- INTEGRATION.md only: branch and CI facts, runtime, emoji counts, ADR pointer, three new gaps, and this section.
+- LOOP.md: one line.
+- Artwork: no change. Two redraw trials were rejected (see gaps).
+
+**Verification:** `npm test` on Node 22.22.0 passed once: exit 0, seeds 1, 2 and 3, 84 rows, 282,990 cases, 75/75 mutants killed, highest silhouette pair 0.7935 (CairoSVG 24 px), bundle checksums 894 OK. Details in VERIFY.md under "Polish pass 2026-10-08 (continuation)".
