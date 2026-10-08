@@ -498,3 +498,33 @@ The exact-head GitHub Actions run is linked in the PR description after every st
 - Expansion variant scoring policies (1910 Globetrotter/Big Cities) and the newer 33-ticket base edition; catalogs and differences are explicit, while scoreGame implements classic USA scoring.
 - Worst-case search performance on arbitrary large dense cyclic graphs. Exactness has no cap; exponential time is possible.
 - Future changes to live source URLs. The two actually opened authoring passes and immutable local factual snapshots are the verified evidence.
+
+## Polish pass 2026-10-08
+
+Environment: Node v22.22.0 (CI pins 22.16.0; the pinned version was not installed here), TypeScript 5.9.3 from `npm ci`, Python with jsonschema 4.26.0. The four CPUs were shared with other agents, load average 13 to 17 during the runs, so the timings below are noisy. Each run is recorded below with its exact command.
+
+| Check | Exact command | Cases | Result |
+| --- | --- | --- | --- |
+| Build | `npm run build` | strict tsc | exit 0 |
+| Full suite | `npm test` (log kept in the session, exit 0) | graphs 60,000 (20,000 per seed), exhaustive subset comparisons 60,000, assertions 186,053; full games 6,000 (2,000 per seed), conservation checks 13,880,102; data schema cases 125 per seed; oracle replay 22,292 original and 22,292 amended checks; probes 175 per seed; mutations 25 isolated per seed, 75 kills; fingerprints 45 | all passed |
+| Replay digests | compare `test-output/summary.json` with `reports/pre-loop-full-games.json` | 3 seeds | replay SHA-256 and turn counts equal for every seed |
+| Standards schema audit | `for s in 1 2 3; do python3 validate_schema.py; done` | 3 repetitions | all passed (Draft 2020-12) |
+| Source cross-check | `node tools/polish-check.mjs spot` | 6 checks | all passed: 100 tracks (endpoints, length, colour) equal Rob217; 36 cities; 30 base tickets equal Rob217 and Agnias; 110 cards; 309 spaces; points table |
+| Budget limit and timing | `node tools/polish-check.mjs budget` | 400 uniform budget-feasible sets; 1,000 targeted sets (6,322 tried) | at most 27 routes under 45 trains; uniform median 0.08 ms, p99 6.9 ms, worst 19.8 ms; targeted worst 40.6 ms (24 routes, 45 trains) |
+| Solver comparison | `node --experimental-strip-types tools/polish-check.mjs compare --owner <lane-t3 longest-trail.ts>` | 300 small random sets; 1,000 budget-feasible sets | 0 mismatches; `ttr.ts` 435 ms total against 1,520 ms for the owner's solver; worst 27 ms against 55 ms |
+| Owner map diff | `gh api` (read only) on `games/ticket-to-ride/content/preparation/usa/map.json` at `37cd37ae`, diffed with `usa.json` | 100 routes, 36 cities, 22 doubles | equal except colour label: owner `purple`, `usa.json` `pink` |
+| Map check | `node tools/polish-check.mjs map`, then Chromium screenshot | 100 routes at Rob217 positions | `reports/polish-2026-10-08/map-check.svg` and `.png`; topology looks right, no misplaced edge seen |
+| Owner PR check | GitHub check runs on PR #19 before the push | exact head `9a5d8c6` | `verify` success (run 37654164782, 5 min) |
+
+Exploratory runs not committed: a 4,000-set targeted timing run found a worst of 635 ms (24 routes, 44 trains). Its script was a scratch file and is not in the repo, so the committed `budget` run (40.6 ms worst) is the reproducible record. The two runs disagree by an order of magnitude; the true worst case is not established.
+
+A bug in the scratch comparison script returned 0 for `ttr.ts` and reported 1,000 false mismatches. It was fixed before any number above was taken. The committed `compare` tool has no such expression.
+
+Changed in this pass: `README.md` (status block, API, limits, rerun), `INTEGRATION.md` (new), `tools/polish-check.mjs` (new), `reports/polish-2026-10-08/` (new), `LOOP.md` (one line), this section, and `SHA256SUMS.txt` (regenerated for the changed and new files). Unchanged: `ttr.ts`, `reference.ts`, `usa.json`, `usa.schema.json`, `citations.json`, `sources/`, `reports/oracle-archive/` and all other checked files.
+
+Added UNVERIFIED items from this pass:
+
+- The longest-trail worst case under the 45-train budget is sampled only. The true worst case is not established, and sampled worst values varied from 41 ms to 635 ms between runs on a loaded machine.
+- The owner's `longest-trail.ts` was measured here only, on one machine, not in its own CI. Its branch was read through `gh api`, not cloned.
+- The suite ran on Node 22.22.0, not the pinned 22.16.0.
+- This pass did not reopen the web sources; it checked the local copies in `sources/` and the owner's files on GitHub.

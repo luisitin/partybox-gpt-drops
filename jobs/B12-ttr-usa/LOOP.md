@@ -50,3 +50,4 @@ run. Final source hash7d489f2084a990b5043d0121a62195cc86cab721443bf275a788da7aa3
 Research remains264 rows/528 citations across14 actually reopened source URLs.
 No further semantic weakness was found in this completed review; external CI
 is the final publication check, and the next independent job handoff is root's.
+Polish pass 2026-10-08: added tools/polish-check.mjs (spot, budget, compare, map) and checked the 45-train budget (at most 27 routes; sampled worst 41 to 635 ms, not proven). The owner's lane-t3 longest-trail agrees on 1,300 sets with 0 mismatches but runs slower. usa.json matches the owner's map.json except the colour label (purple versus pink). INTEGRATION.md gives the verdict port with fixes.
