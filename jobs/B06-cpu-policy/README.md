@@ -1,5 +1,9 @@
 # B06 Jamboree CPU behavior and transparent policy
 
+**What this is:** a pure, seeded CPU decision policy (branch, item, shop, Star) with four difficulty levels and two independent implementations that agree on every test case.
+**How to use it:** read `INTEGRATION.md` first (port to `games/party-world/server/`, difficulty mapping, rng adapter, the fallback for a bad rng), then `DESIGN-DIGEST.md` for what to copy. Run `npm test` here to re-verify.
+**Status:** port with fixes. `npm test` PASS on all three seeds (5 min, measured 2026-10-08). The three sealed files (`cpuPolicy.ts`, `types.ts`, `CONTRACT.md`) are unchanged. CI green on head `4f030d4` (run 37676078976). The per-difficulty behaviour rows remain unverified (24 gaps).
+
 `cpuPolicy.ts` implements four pure functions over `types.ts`: branch choice, item use, shop purchase and star purchase. See `CONTRACT.md` for exact legal state and decision semantics. This is an original policy with explicit design parameters; it is not a recovered Nintendo implementation.
 
 ## Reproduce

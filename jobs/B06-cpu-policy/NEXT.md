@@ -15,3 +15,9 @@ a draft: all 24 four-difficulty branch/item/shop/star/buddy/minigame rules or
 probabilities still need controlled original-version gameplay logs or primary
 technical evidence. Public anecdotes do not establish exact frequencies.
 Do not infer Nintendo probabilities from the original policy or toy win rate.
+
+## Polish pass 2026-10-08: next step
+
+1. Port, do not edit: copy `cpuPolicy.ts` and `types.ts` into PartyBox's `games/party-world/server/` (INTEGRATION.md step 1). The three sealed files stay as they are in this folder.
+2. Decide the difficulty mapping (easy, normal, hard as sharp; master dropped) and the bad-rng fallback (INTEGRATION.md steps 2 and 4). These are the two decisions the port cannot skip.
+3. The research gap is unchanged: the 24 per-difficulty rows still need controlled gameplay logs or primary technical evidence (see the PR17 note above). Do not infer them from the toy board or from the policy.

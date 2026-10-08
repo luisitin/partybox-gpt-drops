@@ -77,3 +77,19 @@ Exact source commands: `python /workspace/recheck-b06-sources.py` for two actual
 `reports/labels-buddy-recovery.json` records the two separate full-source Exa fetch calls and exact quote recovery, with extraction hashes and origin status explicitly unobserved. The video transcript was read in full: its four-label passage concerns Koopathlon, its board-mode passage says Easy through Master, and its three-level Bowser setting is stage difficulty. Both fresh direct Speedrun reopens returned HTTP 200 with all labels. ResetEra post #200 was read in full on both passes, including the author's Master-AI context and Monty Mole Buddy/Boo account. No probabilities were inferred from anecdotes.
 
 Both original audit files and original changed-row claims remain in `reports/historical-before-labels-buddy/`. Updated audit files retain all unchanged original source timestamps and reviews, add the two new source captures, refresh the Speedrun capture, and recheck each changed row in both passes. All 22 registered excerpts across 11 sources have two recorded recoveries (44 source/quote checks), while the 24 exact Nintendo behavior gaps remain UNVERIFIED. Full code validation and exact final-head CI are recorded in PR17 after actually finishing.
+
+## Polish pass 2026-10-08
+
+Scope: correctness review, product review and documentation. No production file was changed: `cpuPolicy.ts`, `types.ts` and `CONTRACT.md` are sealed (`PRODUCTION-SEALED-SHA256SUMS.txt`, checked by `tests/artifact-check.mjs`), and the seal is part of the job's independence record.
+
+| Check | Command | Result |
+| --- | --- | --- |
+| Full suite | `npm test` (Node 22) | exit 0, seeds 1, 2 and 3: 5 min 01 s on the first run of this pass; 137 s and 117 s on the last two runs, after all code-free edits (the shared box was less loaded) |
+| Per seed | from the suite output | 80 scenarios passed; 400,000 random legal states passed; 25 of 25 mutants killed; Hard 9,971, 9,934 and 9,952 of 10,000 toy games (seeds 1, 2, 3) |
+| Seal | `sha256sum cpuPolicy.ts types.ts CONTRACT.md` against `PRODUCTION-SEALED-SHA256SUMS.txt` | all three match |
+| Review | `cpuPolicy.ts` read against `CONTRACT.md` line by line | branch, item, shop and Star rules match, including zero turns, full inventory, empty lists and a bad rng; no defect found |
+| Hosted CI | GitHub run 37676078976 on head `4f030d4` | success (`B06 CPU policy full verification`) |
+
+Toy-board reading: the Hard rate (99.3 to 99.7 percent) is far above the 65 percent floor. The floor is a smoke test, not a balance target, and the INTEGRATION says so.
+
+UNVERIFIED in this pass: the 24 per-difficulty behaviour rows (branch, item, shop, Star, Buddy and minigame at four levels) are still unverified. No live source was re-fetched; most hosts are blocked from this box.
