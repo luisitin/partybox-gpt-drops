@@ -25,3 +25,9 @@ The final mutation harness counts only baseline-passing cases as mutant kills;
 preexisting failures cannot make a mutant appear caught.
 9. Snapshot hashes intentionally reject changed upstream corpora. The retained
 cache reproduces the selected data; a later fresh GeoNames download may not.
+10. Spanish is not covered. The lexicon is English-only, so Spanish profanity and slurs (`Puta`,
+`Pendejo`, `Joder`, `Maricón`, `Coño`, `Polla`, `Zorra`) pass. PartyBox ships es; a Spanish lexicon
+needs a native review and an owner decision. This is a known scope gap, not a passed claim.
+11. Substring policy versus given names. Analía (and Analia) and Sexto were blocked by the substrings
+`anal` and `sex`. They are now exact exceptions (`analia`, `analise`, `sexto`). Other given names with a
+blocked substring remain blocked until someone adds them with the same exact-spelling review.

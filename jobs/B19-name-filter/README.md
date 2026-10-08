@@ -1,88 +1,61 @@
 # B19 Player-name filter
 
-Pure TypeScript name moderation, a sealed independently authored reference,
-and a supplemental bitset-NFA reference,
-seeded generation, public-corpus regression tests, 25 actual executable mutations,
-and a literal per-observation latency gate. There are no runtime dependencies.
+**What this is:** one pure TypeScript function, `nameFilter(input)`, that rejects player names containing a finite English list of sexual terms and slurs (leetspeak, repeated letters, separators, confusables, reversals) and accepts a reviewed list of benign names and words. Zero runtime dependencies.
+**How to use it:** `import { nameFilter } from './nameFilter.js'`; it returns `{ ok: true }` or `{ ok: false, reason, suggestion }`. Test with `npm ci --ignore-scripts --no-audit --no-fund && npm test` (Node 22+).
+**Status:** Port with fixes; see `INTEGRATION.md`. Hosted CI is green on the branch head (run 37809073933, 91 suites). The literal 0.05 ms per-call gate passes on GitHub and fails on a loaded local box. English only. PR #2 stays a draft.
 
-## Rerun
-
-Node 22+, Python 3, and TypeScript 5.8.3 (development dependency):
+## Quick start
 
 ```sh
 cd jobs/B19-name-filter
 npm ci --ignore-scripts --no-audit --no-fund
-npm test
+npm test          # strict tsc, then every suite at seeds 1, 2 and 3
+npm run test:core # same, without public corpora (NOT full verification)
 ```
 
-The single command compiles strict TypeScript and runs every behavioral suite at
-seeds 1, 2, 3. It also repeats the strict no-emit type check at each seed. Clean runs restore the original SHA-256-checked
-`data/retained-snapshot/` without network; subsequent runs verify the cache.
-The original upstream acquisition remains a fallback if the retained directory
-is absent; changed upstream bytes still fail the immutable lock.
-`npm run test:core` explicitly skips corpora and is NOT full verification.
-
-Results, complete generated fixtures, every corpus rejection, source checksums,
-and all mutation witnesses are written to `reports/latest/`. CI uploads these
-alongside the source files and cached public corpora, including on failure.
-Upstream data changes fail the snapshot lock rather than silently changing tests.
-GeoNames is a daily source: a future fresh download may need the retained cache.
-The latest length-pruned attempt is in `results/resume-length-pruning/` and still
-fails literal latency. The October7 summary, benchmarks, mutations and corpus
-rejections are retained in `results/optimization-width-latin1/`, with earlier measured failures retained in `results/` and `results/optimization-ascii-word/`. Its timing failures remain visible.
+First corpus acquisition needs network access; later runs use the SHA-256-checked snapshot, and
+`tests/retained-snapshot.py` restores the 32,000 original rows offline. Results, fixtures, rejections and
+mutation witnesses land in `reports/latest/` (git-ignored).
 
 ## API
 
 ```ts
 import { nameFilter, isAllowedName } from './nameFilter.js';
-nameFilter('Scunthorpe'); // { ok: true }
-nameFilter('s.e.x');     // { ok: false, reason: 'blocked' }
-isAllowedName('Bob');   // true
+nameFilter('Scunthorpe');  // { ok: true }
+nameFilter('s.e.x');       // { ok: false, reason: 'blocked', suggestion: 'choose-another' }
+nameFilter('a'.repeat(17)); // { ok: false, reason: 'length', suggestion: 'shorten' }
+isAllowedName('Bob');      // true
 ```
 
-Results are frozen and safe to reuse. The 16-character limit means Unicode code
-points BEFORE trimming or normalization, not UTF-16 units or grapheme clusters.
-Combining marks count separately. No input is silently truncated. Render original
-text with textContent, never innerHTML; moderation is not an HTML sanitizer.
+| `reason` | when | `suggestion` (stable key; the host writes the copy) |
+| --- | --- | --- |
+| `type` | input is not a string | `use-text` |
+| `length` | more than 16 Unicode code points, counted before trimming | `shorten` |
+| `empty` | no letter or number after cleaning | `add-letters` |
+| `control` | C0/C1 controls, lone surrogates, bidi formatting | `remove-characters` |
+| `blocked` | a blocked term after mapping, outside the exact exceptions | `choose-another` |
 
-## Acceptance status and policy
+Results are frozen and safe to reuse. Render the original text with `textContent`, never `innerHTML`.
+The filter is not an HTML sanitizer.
 
-See VERIFY.md for measured results and UNVERIFIED items. This delivery does not
-claim universal vocabulary coverage or zero real-name false
-positives. A finite English-policy lexicon, selected lookalikes, NFKD, letter-run
-matching, reversed matching, and exact benign-word exceptions are documented in
-POLICY.md and data/policy.json.
+## Policy and acceptance
 
-Eleven Census names remain rejected; some have exactly the same spelling as a
-blocked term and others are supported whole-word obfuscations. Common-word data
-contains genuine blocked words, and 57 place names exceed the API length limit.
-Every kept rejection is listed with a reason in data/kept-rejections.json.
-Reviewed-corpus tests enforce that explicit policy baseline, NOT an all-pass
-corpus claim. Exact exceptions were refined using these corpora, so the measured
-false positives are regression results, not held-out generalization estimates.
+- `POLICY.md` is the contract: domain and order, 292 exact benign spellings (`data/policy.json`), 63
+  English terms, the declared confusable groups and the Scunthorpe cases.
+- Eleven Census names remain blocked; 48 sexual/profanity words and 57 over-long place names remain
+  rejected. Every kept rejection has a reason in `data/kept-rejections.json`. Reviewed-corpus tests enforce
+  that baseline, not an all-pass corpus claim.
+- Not claimed: Spanish or other languages, every confusable (the table is finite, not UTS #39), intent,
+  unseen names, or a hard real-time bound. See `CONFLICTS.md` and `INTEGRATION.md`.
+- The 0.05 ms gate is literal: every observed call is timed and outliers are never discarded. It passes on
+  the GitHub runner and fails on this shared 4-CPU box (see `VERIFY.md`, polish pass 2026-10-08).
 
-The 0.05 ms gate measures individual calls without discarding outliers. Failures
-stay failures; an average or p99 does not substitute for the requested maximum.
-The final local run still fails that maximum, so the PR remains a draft with
-unmet acceptance requirements. It passes every complete behavioral and mutation
-suite, including all comparisons with the sealed independent reference.
-The sealed reference was authored from the original instructions, public API
-contract and policy JSON before its author read production or existing tests.
-All 43,830 inputs per seed are compared with it, in addition to the historical
-NFA comparison. Its authoring record and source hashes are in tests/blind/.
-A finite private table compiles declared glyphs/case variants/known ignorable
-formats, printable fullwidth ASCII and Latin-1 once, preserving whole-string contextual lowercasing and the full
-normalization fallback for other Unicode. Another 1,296 context checks per seed
-agree with the sealed reference; a further 1,422 new character/context checks per seed cover the additional ranges. No input or result cache is used.
+## Product files and evidence
 
-## Contents
-
-nameFilter.ts is the only runtime file. tests/blind/reference.mjs is the sealed
-independent oracle; tests/reference.ts is the historical supplemental NFA oracle;
-tests/run.mjs generates and executes suites and mutants. scripts/fetch-data.py
-retrieves aggregate corpora and verifies the committed snapshot manifest.
-scripts/integrity.mjs verifies delivery checksums and size. data/ records policy,
-review choices, and corpus hashes. SOURCES.md and CONFLICTS.md explain provenance
-and requirement conflicts. The authorized repository-level workflow is
-../../.github/workflows/B19.yml. SHA256SUMS.txt excludes itself, generated
-reports/latest, data/cache (separately snapshot-locked), dist, and node_modules.
+- **Product:** `nameFilter.ts` (the only runtime file; no imports), `POLICY.md`, `INTEGRATION.md`,
+  `data/policy.json` (the lists the source copies; checked for consistency).
+- **Evidence:** `tests/` (`run.mjs` harness, `reference.ts` historical NFA oracle, `blind/` sealed
+  independent reference, `retained-snapshot.py`), `scripts/` (fetch, integrity, profilers), `results/`,
+  `historical/`, `data/kept-rejections.json`, `data/exception-review.json`, `data/snapshot-manifest.json`.
+- **Job record:** `VERIFY.md`, `LOOP.md`, `NEXT.md`, `ASSUMPTIONS.md`, `CONFLICTS.md`, `SOURCES.md`,
+  `SHA256SUMS.txt`. The workflow `../../.github/workflows/B19.yml` runs `npm test` on pull requests.

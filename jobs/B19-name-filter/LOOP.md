@@ -145,3 +145,4 @@ Only the earlier measured length pruning and exact snapshot replay were
 installed. Production is frozen; literal acceptance still fails and PR2
 remains draft. These are unfinished verification investigations, not cosmetic
 KEEP rounds or proof of a hard realtime bound.
+- 2026-10-08 polish: analia, analise and sexto added as exact exceptions and failures gained a suggestion key; INTEGRATION.md written; see VERIFY.md 'Polish pass 2026-10-08'. Literal 0.05 ms gate unchanged; hosted run 37809073933 green on 2b54431.

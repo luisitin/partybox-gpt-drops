@@ -9,7 +9,7 @@ code points and bidi formatting controls fail with control. After NFKD, lowercas
 mark removal, format-character removal and trim, at least one Unicode letter or
 number is required (empty otherwise).
 
-The 289 exact exception spellings in data/policy.json are tested at this stage.
+The 292 exact exception spellings in data/policy.json are tested at this stage (289 original; `analia`, `analise` and `sexto` were added by the 2026-10-08 polish pass, see the section at the end).
 Exceptions do not operate on arbitrary substrings and do not apply after leet
 or homoglyph substitutions. Diacritics, case and compatibility-equivalent forms
 can normalize to an exception; arbitrary extra letters cannot.
@@ -57,3 +57,14 @@ is an exposed regression set, not a claim of performance on unseen real names.
 All remaining original-input rejections and reasons are data/kept-rejections.json.
 A maintainer can change this policy, but must review matching tests and collisions;
 there is no user-supplied allowlist that can bypass filtering at runtime.
+
+## Polish pass 2026-10-08: names and scope
+
+- Added exact exceptions `analia` (Analía, Analia), `analise` and `sexto`. Each is a whole given-name
+  spelling, not a substring. Before this pass `Analía` and `Analia` were blocked by the substring `anal`,
+  and `Sexto` by `sex`. None is a current corpus rejection, so the reviewed baselines are unchanged.
+- Failures now carry `suggestion` (`use-text`, `shorten`, `add-letters`, `remove-characters`,
+  `choose-another`). Mapping to copy is the host's job; see INTEGRATION.md.
+- Scope is still English. Spanish profanity and slurs pass (`Puta`, `Pendejo`, `Joder`, `Maricón`,
+  `Coño`, and others). A Spanish lexicon needs native review and an owner decision before an es room
+  relies on this filter. None was added here.

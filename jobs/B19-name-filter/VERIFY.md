@@ -343,3 +343,66 @@ only the diagnostic. No production defect or acceptance attempt occurred.
 Production is frozen at source5371665d absent a justified general improvement.
 No failed receipt is deleted, no timing gate/count/warmup/seed is changed, and
 no unchanged local full rerun is used to hunt a passing observation.
+
+## Polish pass 2026-10-08 (Claude, cloud)
+
+Scope: fetch and reconcile the branch, check hosted CI, probe real names, add two product changes
+(stable `suggestion` keys on failures; exact given-name exceptions `analia`, `analise`, `sexto`), and
+write INTEGRATION.md. The matching, timer windows, counts, seeds and mutation anchors are unchanged. Source
+SHA256 moved from `5371665d…` to `693d9501633b9099676d38cf2d215bdf3dab570b3e8d300f485d685e2be2f15f`.
+
+**Branch reconciliation.** `git fetch origin` did not refresh `job/B19-name-filter`. An explicit
+`git fetch origin +refs/heads/job/B19-name-filter:refs/remotes/origin/job/B19-name-filter` found three
+commits from another session (`b7709fe`, `b3f5231`, `2b54431`), scoped to this job. Fast-forwarded with
+`git merge --ff-only`; nothing rewritten.
+
+**Hosted CI (read-only, GitHub MCP).**
+- Run `37809073933` on head `2b5443136b94e2fca3bff07285cd53a531c5a0b9`: `success`, full mode, 91 suites,
+  `failures: []`, latency 10,000/10,000 on each seed; maxima 0.046337 / 0.037950 / 0.022141 ms.
+- Run `37807137561` on `b3f5231`: `failure` (seed 3 latency, 0.063416 ms). Superseded by `2b54431`.
+- The PR body still describes `b3f5231` as the head and cites the older failure. It was not edited.
+
+**Local, before the source change (`2b54431`, shared 4-CPU box).** `npm run test:core`: every behavioral suite
+passed; latency failed (9 / 9 / 11 calls above 0.05 ms; maxima 8.9 and 4.4 ms). The hosted pass and this local
+failure are the same source on different hardware. The gate was not changed.
+
+**Real-name probes** (built `dist/nameFilter.js`, `scratchpad/B19/probe.mjs`):
+- Blocked before, now `ok`: `Analia`, `Analía` (through `anal`), `Analise`, `Sexto` (through `sex`).
+- Still `ok`: `Dickens`, `Cumming`, `Cummings`, `Scunthorpe`, `Penistone`, `Analisa`, `Sexton`, `Titus`,
+  `Titania`, `Essex`, `Hancock`, `Dickinson`, `Chinook`, `Matthias`, `Mohammed`, `Iñigo`, `Ólafur`.
+- Still blocked by design: `Dick` (a documented collision), `Clitheroe`, `Gookin`, `Cumbia`, `Cumbre`,
+  `Cumulus`, `Cocksure`, `Testicles`, `Sexy`, `Boob`, `Anal`.
+- Spanish profanity passes (gap, not changed): `Puta`, `Pendejo`, `Joder`, `Mierda`, `Culo`, `Verga`,
+  `Maricón`, `Cabrón`, `Coño`, `Polla`, `Zorra`, `Pajero`.
+
+**Product change 1: suggestion keys.** `NameReason` and `NameSuggestion` types; failures carry
+`suggestion`. New suite `failure-suggestions-map-and-frozen` (5 cases per seed).
+
+**Product change 2: exact exceptions.** `analia`, `analise`, `sexto` added to `SAFE` and to `data/policy.json`
+(now 292, sorted; source set equals policy set). A first edit dropped two trailing spaces and merged tokens
+(`analoganalogies`, `sextonsextuple`), which the policy-copy check caught; repaired and rechecked: 292/292.
+Three names added to the handwritten `positive` list.
+
+**Commands and results (final source).**
+
+| Command | Result |
+| --- | --- |
+| `npm ci --ignore-scripts --no-audit --no-fund` | added 1 package (TypeScript 5.8.3 only) |
+| `npm run test:core` (after the repair) | every behavioral row passes: handwritten 465/465, exceptions, glyph and Unicode differentials, 5,000 obfuscations (0 misses), `failure-suggestions-map-and-frozen` 5/5, 25/25 mutations; failing rows: delivery checksum (stale manifest until regeneration) and latency only |
+| `npm test` (full, final source `693d9501…`, 52 s) | 94 suite rows; `public-corpus-acquisition` passed; failing rows exactly 6: `delivery-file-size-and-checksums` ×3 (stale manifest before regeneration, see below) and `latency-every-observed-check-under-005ms` ×3 (passed 9,994 / 9,993 / 9,992 of 10,000; 6 / 7 / 8 calls above 0.05 ms on this box) |
+| `(cd tests/blind && sha256sum -c SEALED-SHA256SUMS.txt)` | `reference.mjs`, `selfcheck.mjs`, `AUTHORING.md`, `SELFCHECK.json`: all OK |
+| `git diff --quiet HEAD -- tests/blind` | unchanged (the sealed reference file itself) |
+| runtime gzip (final) | source 4,691 B, compiled 3,419 B (limit 6,000) |
+| `npm test` then `reports/latest/SHA256SUMS.txt` copied to `SHA256SUMS.txt` | manifest regenerated after the last content edit; delivery checksums checked in the core rerun below |
+
+**Honest notes.**
+- The sealed reference reads `data/policy.json`, which gained three exact exceptions. Its code is unchanged;
+  the policy input changed. This is recorded in POLICY.md, CONFLICTS.md (item 11) and INTEGRATION.md (gap 8).
+- The latency gate remains literal and unchanged. It fails on this loaded box (6–14 calls per seed across
+  runs) and passes on the idle GitHub runner. Not a hard real-time guarantee.
+- The hosted run for the new head (the commit that adds this section) has not been read yet at the time of
+  writing. The result is in the final record, not here.
+
+**UNVERIFIED.** Spanish profanity and slurs (no lexicon; see INTEGRATION.md gap 1). Spanish given names beyond
+the three added. Confusables outside the finite table. The 0.05 ms gate on any machine other than the
+GitHub runner.

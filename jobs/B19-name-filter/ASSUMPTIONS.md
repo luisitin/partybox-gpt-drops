@@ -49,3 +49,9 @@
 - Production remains frozen after bounded measured investigations. An unmet
   literal latency check is recorded as incomplete acceptance, not a fabricated
   source/toolBLOCKED state or an excuse to change the user threshold.
+- PartyBox calls `nameFilter` on the output of its own `normalizeName` (invisible and bidi characters
+  removed, whitespace collapsed, 1–16 code points). The filter counts raw input on its own; the port must
+  never reverse that order (INTEGRATION.md, step 2).
+- `suggestion` keys are a stable API; the host owns the copy and its translations.
+- The literal 0.05 ms gate is kept as written. It passes on the GitHub runner and fails on a loaded local
+  box; neither result is hidden, and the threshold is not changed.
