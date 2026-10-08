@@ -57,6 +57,10 @@ for(const mode of ['official','published']){
  let finite=0;for(let i=0;i<json.length;i++){const value=bytes.readDoubleLE(i*8);if(Number.isFinite(value)){assert.equal(json[i],value);finite++;}else assert.equal(json[i],null);}
  assert.equal(finite,536448);tableFacts.push({mode,entries:json.length,finiteStates:finite,binarySHA256:sha(`tables/${mode}.bin`),jsonSHA256:sha(`tables/${mode}.json`)});
 }
+// PartyBox port kit (partybox/, INTEGRATION.md): compact tables, split solver, adapter, 16 planted port bugs.
+node(['partybox/test-port.mjs']);
+const partyboxPort=JSON.parse(fs.readFileSync('reports/partybox-port.json','utf8'));
+assert.equal(partyboxPort.passed,true);assert.equal(partyboxPort.tables.valid,1072896);assert.equal(partyboxPort.suites.seeds.length,3);assert.equal(partyboxPort.adapter.games.length,6);assert.equal(partyboxPort.mutants.filter(m=>m.killed).length,16);
 const suites=[];
 for(const seed of [1,2,3]){
  console.log(`B07 full seed ${seed}: begin`);
@@ -83,5 +87,5 @@ for(const seed of [1,2,3]){
 }
 const totals={midgameStates:suites.reduce((n,s)=>n+s.verification.random.states,0),scoringCases:suites.reduce((n,s)=>n+s.verification.scoring.scoringCases,0),strictCompiledMutants:suites.reduce((n,s)=>n+s.mutations.strictCompiled,0),runtimeKilledMutants:suites.reduce((n,s)=>n+s.mutations.runtimeKilled,0),fullPairedGames:suites.reduce((n,s)=>n+s.paired.reduce((a,p)=>a+p.simulation.games,0),0),nativeDecisionComparisons:suites.reduce((n,s)=>n+s.paired.reduce((a,p)=>a+p.simulation.decisionComparisons,0),0),nativeScoringTransitionComparisons:suites.reduce((n,s)=>n+s.paired.reduce((a,p)=>a+p.simulation.scoreTransitionComparisons,0),0),visitedComponentVectors:suites.reduce((n,s)=>n+s.paired.reduce((a,p)=>a+p.actualTypeScriptBridge.records,0),0),directActualTypeScriptComponents:suites.reduce((n,s)=>n+s.paired.reduce((a,p)=>a+p.actualTypeScriptBridge.directRecords,0),0),reusedVerifiedComponentVectors:suites.reduce((n,s)=>n+s.paired.reduce((a,p)=>a+p.actualTypeScriptBridge.reusedRecords,0),0)};
 assert.equal(totals.midgameStates,150000);assert.equal(totals.scoringCases,606528);assert.equal(totals.strictCompiledMutants,75);assert.equal(totals.runtimeKilledMutants,75);assert.equal(totals.fullPairedGames,6000000);assert.equal(totals.nativeDecisionComparisons,234000000);assert.equal(totals.nativeScoringTransitionComparisons,78000000);
-const summary={passed:true,runtime:{node:process.version,typescript:'5.8.3',cpp:execFileSync('g++',['--version'],{encoding:'utf8'}).split('\n')[0]},sourceIsolation:{historicalPrimaryFiles,independentFiles,adapterOriginalFiles,adapterFiles,immutableFiles:initialHashes.size,sourceHashes:Object.fromEntries(initialHashes)},tables:tableFacts,seeds:[1,2,3],totals,suites};
+const summary={passed:true,runtime:{node:process.version,typescript:'5.8.3',cpp:execFileSync('g++',['--version'],{encoding:'utf8'}).split('\n')[0]},sourceIsolation:{historicalPrimaryFiles,independentFiles,adapterOriginalFiles,adapterFiles,immutableFiles:initialHashes.size,sourceHashes:Object.fromEntries(initialHashes)},tables:tableFacts,seeds:[1,2,3],totals,partyboxPort:{tableStates:partyboxPort.tables.valid,suiteSeeds:3,differentialStates:partyboxPort.differential.reduce((n,d)=>n+d.states,0),adapterGames:partyboxPort.adapter.games,mutantsKilled:partyboxPort.mutants.length},suites};
 fs.writeFileSync('reports/summary.json',JSON.stringify(summary,null,2)+'\n');console.log(JSON.stringify({passed:true,totals,runtime:summary.runtime}));
