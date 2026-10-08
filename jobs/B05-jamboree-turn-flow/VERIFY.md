@@ -345,3 +345,20 @@ Pass A challenges factual scope/composite qualifiers. Pass B challenges same-gam
 - **EFFECT06 — single_source; medium:** Double each player's coins. Coin-cap and overflow behavior are unverified.
 - **EFFECT07 — single_source; medium:** Replace two or three spaces with Bowser Spaces. Exact candidate-space selection is unverified.
 - **EFFECT08 — single_source; medium:** Replace two to four spaces with Chance Time Spaces. Exact candidate-space selection is unverified.
+
+## Polish pass 2026-10-08
+
+Scope: correctness, product review and documentation only. No research row, data value or evidence capture was changed.
+
+| Check | Command | Result |
+| --- | --- | --- |
+| Structural suites | `python3 verify.py --structural --checksums` | PASS, 19 suites, about 2 s |
+| Manifest | `sha256sum -c SHA256SUMS.txt` | 72 of 72 OK before this pass; regenerated for the files this pass changed |
+| Strict gate | `python3 verify.py --strict` | exit 1, as documented: FACTS_DUAL_SOURCE 33/95, BONUS_CRITERIA_DUAL_SOURCE 3/9, BONUS_TIE_PROCEDURES_EVIDENCED 0/9, STRING_PRIMARY_CAPTURES 0/22 |
+| Hosted CI | GitHub run 37675945275 on head `a84fd4e` | success (`verify`) |
+| Strings against capture | inline python: each `strings.json` `text` checked against the recovered quotations in `reports/source-captures/A-QUOTE.json` | 22 of 22 exact matches; all 22 single-source; none visually captured |
+| Evidence spot-check | COUNT01, COUNT02, TURN04, TIE02, HOME04 excerpts read in the captures | support their claims; COUNT01's excerpt is partial, scope noted in INTEGRATION.md |
+
+Seed: not applicable (deterministic). Case counts are as `verify.py` reports them.
+
+UNVERIFIED in this pass: no live re-fetch of any source (most hosts are blocked from this box). Evidence was checked against the captures this job stored, not against live pages. No gameplay, installed game or primary-frame capture was observed.

@@ -18,3 +18,5 @@ Strict research acceptance remains NOT MET; six bonus criteria, tie procedures, 
 - Bound every row review to its canonical data hash; the validator rejects stale reviews. Added actual UTC source-retrieval timestamps and a malformed-fingerprint rejection case.
 - Investigated a real Misfortune-caption lead. The direct video request failed with HTTP tunnel 403; no guessed timestamp or observed tie rule was added.
 - Regenerated docs and manifests, ran structural and strict commands, and pushed an evidence milestone. Hosted exact-head results are linked in PR9 once observed.
+
+- 2026-10-08 polish pass (Claude, cloud): added INTEGRATION.md (reference only, IP box first), DESIGN-DIGEST.md and a status block in README; checked all 22 strings against their QUOTE capture (22 of 22 exact) and five evidence excerpts; structural and checksum PASS, strict exit 1 as documented; no research row or data value changed.

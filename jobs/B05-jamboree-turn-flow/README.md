@@ -1,5 +1,9 @@
 # B05 — Turn flow, exact strings, bonus stars
 
+**What this is:** a research draft of one party-board game's turn flow, its nine bonus-star counters, Homestretch, Pro and Frenzy deltas, and 22 short quoted host lines, each with a source.
+**How to use it:** read `INTEGRATION.md` first (IP warning, port map), then `DESIGN-DIGEST.md` for the ranked takeaways, then `turnflow.md` for the timeline. Re-word and rename everything; ship no quoted text.
+**Status:** reference only. Structural checks PASS; strict research acceptance is NOT MET by design (33 of 95 facts dual-sourced, 3 of 9 bonus criteria, 0 of 9 tie procedures). CI green on head `a84fd4e` (run 37675945275).
+
 **Research draft; strict acceptance NOT MET.** The drop contains a phased party timeline, nine Bonus Star records, eight Homestretch effects, seven award policies, and 22 exact source-transcribed strings (11 voice lines and 11 host-text lines).
 
 There are 95 claim/gap rows: 33 corroborated core claims, 39 single-source reports, three conflicts and 20 explicit unknowns. Three of nine bonus criteria have independent corroboration. Tie procedures and precise counter edge cases remain open. Each fact now links registered short quotations; a quotation can support only part of a composite claim, so source scope and lineage still matter.
