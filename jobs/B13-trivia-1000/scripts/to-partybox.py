@@ -7,6 +7,7 @@ mapping decisions live in partybox/exclusions.json and in the rule tables below.
 
   python3 scripts/to-partybox.py --out <dir>
       Writes <dir>/questions.json (PartyBox pack shape {"items": [...]}),
+      <dir>/content-pack-origins.added.json (origin rows to append to content-pack-origins.json),
       <dir>/funfacts.json (id -> one-line fact; PartyBox has no funFact field),
       <dir>/sources.json (id -> publisher, URL and brief quotes, for attribution),
       <dir>/es-dropped.json (English ids to list under "dropped" in questions.es.json),
@@ -238,7 +239,7 @@ def build(out_dir, job=JOB):
     rows = load_rows(job)
     excluded, flagged = load_exclusions(job)
     os.makedirs(out_dir, exist_ok=True)
-    items, funfacts, sources, report_rows = [], {}, {}, []
+    items, funfacts, sources, origins, report_rows = [], {}, {}, [], []
     rule_hits = Counter()
     problems = []
     for row in rows:
@@ -257,6 +258,11 @@ def build(out_dir, job=JOB):
         })
         if status == 'kept':
             items.append(item)
+            origins.append({
+                'id': item['id'], 'answer': row['correctAnswer'], 'url': row['sources'][0]['url'],
+                'evidence': f"B13 held row {row['id']}: {source_attribution(row)}",
+                'pack': 'questions', 'spanishTwin': False,
+            })
             funfacts[item['id']] = row['funFact']
             sources[item['id']] = {
                 'b13': row['id'],
@@ -273,6 +279,7 @@ def build(out_dir, job=JOB):
     assert len(ids) == len(set(ids)), 'duplicate PartyBox ids'
     dropped = sorted(i['id'] for i in items)
     write_json(os.path.join(out_dir, 'questions.json'), {'items': items})
+    write_json(os.path.join(out_dir, 'content-pack-origins.added.json'), origins)
     write_json(os.path.join(out_dir, 'funfacts.json'), {'note': FUNFACT_SOURCES_NOTE, 'items': funfacts})
     write_json(os.path.join(out_dir, 'sources.json'), {'items': sources})
     write_json(os.path.join(out_dir, 'es-dropped.json'), {

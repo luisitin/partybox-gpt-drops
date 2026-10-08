@@ -52,3 +52,7 @@ The original full local checker now passes all 1,000 rows, 3,507 author quote ma
 ## Separate immutable-copy acceptance — 2026-10-07T21:31:22.419498+00:00
 
 The independent auditor copied 244 delivered files and 1,051 referenced plaintext bodies; all before/after hashes and sizes remain unchanged. Its one original full-local run passed all gates and produced the exact same report hash as the lead. Separate source-document, current-review, body/receipt/quote and schema audits had zero issues. The next documentary delta adds only immutable audit results, guard reproduction and docs/inventory/checksums; factual data, reviews, sources and checker stay unchanged. Final pushed-head hosted CI is checked before PR22 becomes ready.
+
+## Polish pass 2026-10-08 (Claude, cloud)
+
+Added the PartyBox lightning-round adapter, 51 port-time exclusions, an overlap review queue and a validator that runs PartyBox's own schema and speech reader; held rows unchanged; hosted acceptance exit 0; the local full acceptance cannot run in this clone because .work/ is absent.

@@ -61,3 +61,38 @@ The marathon original author raw HTML was unavailable after a recorded capture-I
 Actual command: `python scripts/verify-guard-fixtures.py . > reports/checker-guard-fixtures.json`; exit 0, three cases / three passed, deterministic seed n/a. It executes the actual production guards on explicitly synthetic negative fixtures: required absent local body, incomplete reopen receipt and rejected duplicate decision. It does not open sources or grade facts. Actual run time and unchanged checker SHA are in the report. The original independent three-case artifact remains preserved. Hosted CI repeats the portable command after the full acceptance.
 
 Final checksum command: `sha256sum --check --quiet SHA256SUMS.txt`; 253/253 declared files pass, deterministic seed n/a. Final size command: `python -c "from pathlib import Path; f=[p for p in Path('.').rglob('*') if p.is_file() and not {'.work','__pycache__','node_modules'}.intersection(p.parts)]; assert all(p.stat().st_size < 30000000 for p in f); print(len(f),max(p.stat().st_size for p in f))"`; 254/254 delivered files pass, largest 9,525,424 bytes. Per-file sizes excluding the checksum list and inventory itself are in `reports/delivery-inventory.json`. The inventory is itself checksummed.
+
+## Polish pass 2026-10-08 — commands and results
+
+Environment: Python 3.13 in the clone at 60293314 plus this pass's commits, PartyBox checkout 26b85ba6 (`/home/user/partybox`, read only), Chromium from the sandbox. Outputs went to `.work/` (gitignored), so `reports/checks.json` and the other committed reports were not overwritten.
+
+| Check | Exact command | Cases | Result |
+| --- | --- | ---: | --- |
+| Hosted acceptance | `python3 scripts/check-data.py --output .work/checks.json` | 1000 rows, 528 sources, 3,507 quote fields | exit 0; 1000/1000 adversarial accepts; 1000/1000 reopen supports; 2,210/2,210 similarity flags resolved; `researchComplete` true. Seed n/a. |
+| Local full acceptance | `python3 scripts/check-data.py --require-local-captures --output .work/local.json` | 1000 rows | exit 1 in this clone: 1,040 "required local body missing" messages and 277 reopen gates not current, because `.work/` is absent. The author's proof is unchanged and was not reproduced. |
+| Draft progress | `python3 scripts/check-data.py --draft --require-local-captures --output .work/draft.json` | 1000 rows | exit 1, same cause. |
+| Guard fixtures | `python3 scripts/verify-guard-fixtures.py .` | 3 | 3/3 pass (missing body, incomplete reopen receipt, rejected duplicate). |
+| Adapter self-test | `python3 scripts/to-partybox.py --self-test` | 6 mapping cases, id mapping, distinct-choice check, normalisation | ok |
+| Adapter build | `python3 scripts/to-partybox.py --out .work/partybox` | 1000 rows in | 949 kept, 51 excluded; 0 errors against the mirrored PartyBox limits (question ≤160, choices ≤60 and distinct, source ≤200, id pattern, subcategory-in-category). Longest: question 113, choice 52, source 107. |
+| PartyBox schema | `PB_REPO=/home/user/partybox /home/user/partybox/node_modules/.bin/tsx partybox/validate-with-partybox.ts .work/partybox/questions.json` | 949 items | `questionsPackSchema` accepts all 949 (exit 0). |
+| Exclusion refresh | `python3 scripts/to-partybox.py --refresh --bank /home/user/partybox/games/lightning-round/content/questions.json` | 5,567 bank items | 5 answer-in-question leaks; 32 same-fact duplicates (same answer, normalized similarity ≥ 0.8); 14 state-capital duplicates; 481 review-queue pairs. Bank text is not written to the repo. |
+| Speech reader | validator (informational, Zira voice, `toSpeakable`) | 949 items, 4,745 strings | 434 strings with digits read as words (years); 153 with a phonetic override for "US"; 39 roman-numeral strings (27 kept rows) spelled letter by letter, e.g. "Louis XVI" → "X V I", "World War II" → "I I", "Title VII" → "Title V I I". |
+| Phone width | headless Chromium, 390 px viewport, six longest rows | 6 cards | no horizontal overflow (scrollWidth 390); tallest card 420 px in an 844 px screen. A plain HTML mock, not the PartyBox client. |
+| Option similarity | ad hoc scan, all 1000 rows | 4 options per row | 24 pairs with an equal or substring option; 1 is a real distractor problem (B13-0110); the rest are plausible distractors. |
+| Answer position and difficulty | `python3 scripts/check-data.py` (categories) | 10 categories | 34/33/33 difficulty and 25/25/25/25 positions in every category (re-counted with a script in this pass). |
+| Time-sensitive stems | ad hoc keyword scan | 41 flagged | 20 lack an "as of 2025" cutoff. All 20 were read: definitional or historical facts (largest living bird, Kodokan 1882, the 1896 Olympics), so no cutoff added. |
+| US-specific share | ad hoc keyword count | 1000 rows | 198 rows. us-geography 90/100, us-history-civics 52/100, world-geography 5/100, world-history 1/100. |
+| Spot check | seeded random sample, seed 20261008, 40 rows | 40 rows | No factual errors found against the reviewer's own knowledge. Two difficulty doubts (B13-0074, B13-0427). This is not a source re-open. |
+| Checksums | `sha256sum --check SHA256SUMS.txt` | the delivered file set | run on the final committed tree; the pushed head's B13 workflow repeats it. |
+
+Changes made in this pass: `scripts/to-partybox.py`, `partybox/`, `README.md`, `INTEGRATION.md`, these notes, `NEXT.md`, the regenerated `reports/delivery-inventory.json` and `SHA256SUMS.txt`. The held rows (`categories/`), `evidence/`, `reviews/`, `research/`, `reports/checks.json` and `CONFLICTS.md` are unchanged.
+
+UNVERIFIED in this pass:
+- No cited source was re-opened. Each fact stays as strong as the job's earlier review records.
+- The local full acceptance was not reproduced (`.work/` absent). The author's run stays as recorded above.
+- Subcategory assignment: 490 rows use a default. No human has reviewed the keyword rules.
+- Spanish: no twins exist. The port must list them as `dropped` or translate them.
+- Difficulty labels are judgment only; no audience playtest.
+- Speech was measured with the Zira voice only, not the production voices.
+- The phone-width render is an HTML mock, not the PartyBox client.
+- Overlap with the content packs C01–C08 and with other PartyBox question banks was not checked.
