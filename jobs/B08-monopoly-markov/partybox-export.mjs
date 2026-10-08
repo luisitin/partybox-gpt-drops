@@ -12,12 +12,13 @@ const CHANCE = [7, 22, 36];
 const nearestUtility = chance => (chance === 22 ? 28 : 12);
 
 /**
- * Movement-dice weights for utility rent, by enumerating every state and all 36 ordered rolls with the
- * same jail/doubles rules as the sealed model. Also returns the integer arrival counts per state (units
- * of 1/9216) so the checks can compare them cell by cell with the sealed transition counts.
+ * Movement-dice weights for utility rent on ordinary arrivals, by enumerating every state and all 36
+ * ordered rolls with the same jail/doubles rules as the sealed model. Also returns the integer arrival
+ * counts per state (units of 1/9216, ordinary and by the nearest-utility card) so the checks can compare
+ * them cell by cell with the sealed transition counts.
  */
 export function utilityWeights(plan, stateProbabilities) {
-  const dice = new Array(40).fill(0), cardDice = new Array(40).fill(0);
+  const dice = new Array(40).fill(0);
   const directCounts = [], cardCounts = [];
   for (let state = 0; state < solver.STATE_COUNT; state++) {
     const current = solver.decodeState(state), mass = stateProbabilities[state];
@@ -38,15 +39,13 @@ export function utilityWeights(plan, stateProbabilities) {
         direct[to] += 256;
         dice[to] += mass * total / 36;
       } else if (CHANCE.includes(to)) {
-        const utility = nearestUtility(to);
-        card[utility] += 16; // one card of sixteen
-        cardDice[utility] += mass * total / 576;
+        card[nearestUtility(to)] += 16; // one card of sixteen
       }
     }
     directCounts.push(direct);
     cardCounts.push(card);
   }
-  return { dice, cardDice, directCounts, cardCounts };
+  return { dice, directCounts, cardCounts };
 }
 
 /** Same expression as the sealed eventFrequency(): Σ π(state)·counts[state][square] / 9216. */
@@ -68,7 +67,6 @@ export function boardOdds() {
       railroadCard: squares.map(square => eventFrequency(result.stateProbabilities, model.railroadBonusCounts, square)),
       utilityCard: squares.map(square => eventFrequency(result.stateProbabilities, model.utilityChanceCounts, square)),
       utilityDice: weights.dice,
-      utilityCardDice: weights.cardDice,
     }];
   }));
 }
@@ -95,7 +93,7 @@ export function boardOddsBlock(odds = boardOdds()) {
   const lines = [BEGIN, 'export const BOARD_ODDS: Readonly<Record<JailPlan, PlanOdds>> = {'];
   for (const plan of plans) {
     lines.push(`  '${plan}': {`, `    rollsPerTurn: ${String(odds[plan].rollsPerTurn)},`);
-    for (const key of ['perRoll', 'perTurn', 'railroadCard', 'utilityCard', 'utilityDice', 'utilityCardDice']) {
+    for (const key of ['perRoll', 'perTurn', 'railroadCard', 'utilityCard', 'utilityDice']) {
       const [first, ...rest] = fill(odds[plan][key], '    ');
       lines.push(`    ${key}: ${first}`, ...rest);
     }

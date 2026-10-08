@@ -25,7 +25,7 @@ const exact = verifyBoardOdds(boardOdds, { fuzzSeed: seed });
 console.log(JSON.stringify({ suite: 'partybox-exact', seed, passed: true, assertions: exact.assertions, fuzzCases: exact.fuzzCases }));
 
 // Simulation. Same movement and card rules as simulate.mjs, different stream constants. Predeclared:
-// 200 batch means per statistic, |z| <= 4.5 (about 300 statistics over three seeds, so a family-wise
+// 200 batch means per statistic, |z| <= 4.5 (288 statistics over three seeds, so a family-wise
 // false-alarm rate near 0.4% for a t distribution with 199 degrees of freedom); exact zeros must be zero.
 const ROLLS = 20_000_000, BATCHES = 200, BATCH = ROLLS / BATCHES, BURN_IN = 10_000, LIMIT = 4.5;
 function simulate(plan) {
@@ -38,8 +38,8 @@ function simulate(plan) {
     return (t ^ (t >>> 14)) >>> 0;
   };
   // Statistic layout: 0 turn ends, 1..40 turn ends on square, 41..43 railroad card at 5/15/25,
-  // 44..45 utility card at 12/28, 46..47 dice at utility by dice, 48..49 dice at utility by card.
-  const STATS = 50, totals = new Float64Array(STATS), batch = new Float64Array(STATS);
+  // 44..45 utility card at 12/28, 46..47 movement dice summed over ordinary arrivals at 12/28.
+  const STATS = 48, totals = new Float64Array(STATS), batch = new Float64Array(STATS);
   const sums = new Float64Array(STATS), squares = new Float64Array(STATS);
   const railroadIndex = { 5: 41, 15: 42, 25: 43 }, utilityIndex = { 12: 0, 28: 1 };
   let position = 0, streak = 0, jailed = -1;
@@ -85,7 +85,7 @@ function simulate(plan) {
     if (roll < 0) continue;
     if (jailed >= 0 || streak === 0) { batch[0]++; batch[1 + position]++; }
     if (railroadCard >= 0) batch[railroadIndex[railroadCard]]++;
-    if (utilityCard >= 0) { batch[44 + utilityIndex[utilityCard]]++; batch[48 + utilityIndex[utilityCard]] += total; }
+    if (utilityCard >= 0) batch[44 + utilityIndex[utilityCard]]++;
     if (utilityDirect >= 0) batch[46 + utilityIndex[utilityDirect]] += total;
     if ((roll + 1) % BATCH === 0) {
       for (let k = 0; k < STATS; k++) {
@@ -97,10 +97,9 @@ function simulate(plan) {
   const odds = boardOdds.BOARD_ODDS[plan];
   const expected = [1 / odds.rollsPerTurn, ...odds.perTurn.map(p => p / odds.rollsPerTurn),
     ...[5, 15, 25].map(s => odds.railroadCard[s]), ...[12, 28].map(s => odds.utilityCard[s]),
-    ...[12, 28].map(s => odds.utilityDice[s]), ...[12, 28].map(s => odds.utilityCardDice[s])];
+    ...[12, 28].map(s => odds.utilityDice[s])];
   const names = ['turn ends', ...Array.from({ length: 40 }, (_, s) => `turn ends on ${s}`), 'railroad card 5',
-    'railroad card 15', 'railroad card 25', 'utility card 12', 'utility card 28', 'dice at 12', 'dice at 28',
-    'card dice at 12', 'card dice at 28'];
+    'railroad card 15', 'railroad card 25', 'utility card 12', 'utility card 28', 'dice at 12', 'dice at 28'];
   let maxZ = 0;
   const statistics = expected.map((value, k) => {
     const mean = sums[k] / BATCHES, variance = (squares[k] - BATCHES * mean * mean) / (BATCHES - 1);
@@ -129,9 +128,9 @@ const mutations = [
   ['P02 railroad card premium dropped', '(at(odds.perRoll, position) + at(odds.railroadCard, position))', '(at(odds.perRoll, position))'],
   ['P03 full-group doubling dropped', 'base * rules.monopolyRentMultiplier', 'base + 0 * rules.monopolyRentMultiplier'],
   ['P04 houses without the group earn', '  if (level > 0 && !holding.fullGroup) return 0;\n', ''],
-  ['P05 card pays the owned multiplier', 'const cardMultiplier = at(rules.utilityMultipliers, 1);', 'const cardMultiplier = multiplier;'],
+  ['P05 card pays the owned multiplier', 'MEAN_DICE * at(rules.utilityMultipliers, 1) * card', 'MEAN_DICE * multiplier * card'],
   ['P06 fresh dice mean 6', 'const MEAN_DICE = 7;', 'const MEAN_DICE = 6;'],
-  ['P07 card movement dice dropped', 'cardMultiplier * at(odds.utilityCardDice, position)', 'cardMultiplier * 0'],
+  ['P07 card rent dropped on movement dice', 'multiplier * at(odds.utilityDice, position) + cardRent', 'multiplier * at(odds.utilityDice, position)'],
   ['P08 railroad rent off by one', 'at(rules.railroadRents, owned - 1)', 'at(rules.railroadRents, owned)'],
   ['P09 hotel invested as four houses', 'Math.min(level, 5) * deed.buildingCost', 'Math.min(level, 4) * deed.buildingCost'],
   ['P10 coldest first', 'b.chance - a.chance || a.square - b.square', 'a.chance - b.chance || a.square - b.square'],

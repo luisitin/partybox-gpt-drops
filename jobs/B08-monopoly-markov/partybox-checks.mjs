@@ -46,7 +46,7 @@ export function verifyBoardOdds(mod, { fuzzSeed = 1, fuzzCases = 20000 } = {}) {
     const odds = mod.BOARD_ODDS[plan], result = solver.monopolyOdds(plan), model = solver.buildTransitions(plan);
     // 1. The tables are the sealed solver's numbers, bit for bit.
     same(odds.rollsPerTurn, result.rollsPerTurn, `${plan} rolls per turn`);
-    for (const key of ['perRoll', 'perTurn', 'railroadCard', 'utilityCard', 'utilityDice', 'utilityCardDice'])
+    for (const key of ['perRoll', 'perTurn', 'railroadCard', 'utilityCard', 'utilityDice'])
       check(Array.isArray(odds[key]) && odds[key].length === 40 && odds[key].every(v => Number.isFinite(v) && v >= 0), `${plan} ${key} shape`);
     for (let square = 0; square < 40; square++) {
       same(odds.perRoll[square], result.landing[square], `${plan} per-roll ${square}`);
@@ -79,11 +79,12 @@ export function verifyBoardOdds(mod, { fuzzSeed = 1, fuzzCases = 20000 } = {}) {
     const dice = {};
     for (const u of [12, 28]) {
       same(odds.utilityDice[u], weights.dice[u], `${plan} utility dice ${u}`);
-      same(odds.utilityCardDice[u], weights.cardDice[u], `${plan} utility card dice ${u}`);
       const direct = odds.perRoll[u] - odds.utilityCard[u];
       check(odds.utilityDice[u] >= 2 * direct && odds.utilityDice[u] <= 12 * direct, `${plan} dice bounds ${u}`);
-      check(odds.utilityCardDice[u] >= 2 * odds.utilityCard[u] && odds.utilityCardDice[u] <= 12 * odds.utilityCard[u], `${plan} card dice bounds ${u}`);
-      dice[u] = { meanDirect: odds.utilityDice[u] / direct, meanCard: odds.utilityCardDice[u] / odds.utilityCard[u] };
+      const oneUtility = { level: 0, fullGroup: false, sameKind: 1 };
+      dice[u] = { meanMovementDice: odds.utilityDice[u] / direct,
+        oneUtilityMovementOverFresh: mod.rentPerOpponentTurn(u, deeds.get(u), oneUtility, rules, { plan })
+          / mod.rentPerOpponentTurn(u, deeds.get(u), oneUtility, rules, { plan, utilityDice: 'fresh' }) };
     }
     // 4. Every one of B08's 174 ROI rows for this plan, through the PartyBox-shaped API (fresh utility dice).
     let rows = 0;
@@ -99,9 +100,10 @@ export function verifyBoardOdds(mod, { fuzzSeed = 1, fuzzCases = 20000 } = {}) {
       rows++;
     }
     check(rows === 174, `${plan} all ROI rows`);
-    // 5. Utility rent in PartyBox's movement-dice mode, from the definitions.
+    // 5. Utility rent in PartyBox's mode, from the definitions: an ordinary arrival pays on the movement
+    //    dice; a nearest-utility card arrival throws fresh dice (mean 7) at the top multiplier.
     for (const u of [12, 28]) for (const owned of [1, 2]) {
-      const expected = (rules.utilityMultipliers[owned - 1] * odds.utilityDice[u] + rules.utilityMultipliers[1] * odds.utilityCardDice[u]) * odds.rollsPerTurn;
+      const expected = (rules.utilityMultipliers[owned - 1] * odds.utilityDice[u] + rules.utilityMultipliers[1] * 7 * odds.utilityCard[u]) * odds.rollsPerTurn;
       close(mod.rentPerOpponentTurn(u, deeds.get(u), { level: 0, fullGroup: false, sameKind: owned }, rules, { plan }), expected, 1e-12, `${plan} movement utility ${u}/${owned}`);
     }
     // 6. Build gains: definition, refusals, and the classic-board fact the integration guide relies on.

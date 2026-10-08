@@ -30,8 +30,6 @@ export interface PlanOdds {
   readonly utilityCard: readonly number[];
   /** Per roll: the movement-dice total summed over ordinary (dice) arrivals at each utility. */
   readonly utilityDice: readonly number[];
-  /** Per roll: the movement-dice total summed over "nearest utility" card arrivals. */
-  readonly utilityCardDice: readonly number[];
 }
 
 /** The deed facts the odds need. PartyBox's `Edition['spaces'][number]` satisfies it. */
@@ -65,8 +63,9 @@ export interface OddsOptions {
   /** Default 'leave ASAP'. */
   readonly plan?: JailPlan;
   /**
-   * Utility rent dice. 'movement' (default, PartyBox's engine today): the dice that moved the piece.
-   * 'fresh': a new throw, mean 7 (the 2021 US rulebook and the card's own text; B08's roi.csv).
+   * Utility rent dice for an ordinary arrival. 'movement' (default, PartyBox's engine today): the dice
+   * that moved the piece. 'fresh': a new throw, mean 7 (the 2021 US rulebook; B08's roi.csv). A
+   * "nearest utility" card arrival always throws fresh dice, as the card says and PartyBox does.
    */
   readonly utilityDice?: 'movement' | 'fresh';
 }
@@ -120,18 +119,13 @@ function rentPerRoll(
   if (deed.kind !== 'utility') return 0;
   const multiplier = at(rules.utilityMultipliers, owned - 1);
   if (multiplier === 0) return 0;
-  // The nearest-utility card always charges the top multiplier (PartyBox's rent(): `utility || n === 2`).
-  const cardMultiplier = at(rules.utilityMultipliers, 1);
+  // The nearest-utility card throws fresh dice and charges the top multiplier (PartyBox's flow.ts and
+  // rent(): `utility || n === 2`).
   const card = at(odds.utilityCard, position);
+  const cardRent = MEAN_DICE * at(rules.utilityMultipliers, 1) * card;
   if (options.utilityDice === 'fresh')
-    return (
-      MEAN_DICE * multiplier * (at(odds.perRoll, position) - card) +
-      MEAN_DICE * cardMultiplier * card
-    );
-  return (
-    multiplier * at(odds.utilityDice, position) +
-    cardMultiplier * at(odds.utilityCardDice, position)
-  );
+    return MEAN_DICE * multiplier * (at(odds.perRoll, position) - card) + cardRent;
+  return multiplier * at(odds.utilityDice, position) + cardRent;
 }
 
 /**
@@ -268,10 +262,6 @@ export const BOARD_ODDS: Readonly<Record<JailPlan, PlanOdds>> = {
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1592467691167, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
       0, 0.18607181853290586, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     ],
-    utilityCardDice: [
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.020453304575140895, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0.012353935119755084, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    ],
   },
   'stay max': {
     rollsPerTurn: 1.165896364009171,
@@ -310,10 +300,6 @@ export const BOARD_ODDS: Readonly<Record<JailPlan, PlanOdds>> = {
     utilityDice: [
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.15347815773058876, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
       0, 0, 0, 0.17507942644077934, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    ],
-    utilityCardDice: [
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.019293384675544915, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0.012841359306279266, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     ],
   },
 };
