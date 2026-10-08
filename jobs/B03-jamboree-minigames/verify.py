@@ -162,7 +162,12 @@ def run(args):
     checked('Short clips, quote budgets and complete A/B recovery',len(quotes)+len(sources['sources'])*3,lambda:validate_catalogue(data,sources,audit,index))
     checked('Literal controller labels and 25 base motion entries',sum(len(r['controls']['bindings']) for r in rows)+132,lambda:validate_catalogue(data,sources,audit,index))
     checked('Original two-sentence summaries and phone assessments',396,lambda:validate_catalogue(data,sources,audit,index))
-    checked('Independent publisher families for all 132 narrow core-gameplay summaries',132,lambda:require(all(r['fieldEvidence']['gameplay']['status']=='corroborated' for r in rows),'Core gameplay summary remains single-source'))
+    def gameplay_rule_check():
+        spec=importlib.util.spec_from_file_location('quote_support_check',ROOT/'quote-support-check.py');qsc=importlib.util.module_from_spec(spec);spec.loader.exec_module(qsc)
+        quotes=qsc.quote_index(sources)
+        for r in rows:require(r['fieldEvidence']['gameplay']['status']==qsc.expected_gameplay_status(r['fieldEvidence']['gameplay']['quoteIds'],quotes),'Gameplay status breaks the two-lineage substantive-quote rule: '+r['id'])
+        require(sum(r['fieldEvidence']['gameplay']['status']=='corroborated' for r in rows)==15,'Corroborated summaries differ from the rule')
+    checked('Narrow summary status follows the two-lineage substantive-quote rule',132,gameplay_rule_check,'Only summaries with sentence-length quotes from two publisher lineages are corroborated')
     def same_publisher_rejects():
         altered=copy.deepcopy(data)
         altered['minigames'][121]['fieldEvidence']['gameplay']['quoteIds']=['SR_MOUSEQ002','TG_TVQ001']

@@ -1,9 +1,9 @@
 {
   "job": "B03",
   "generatedBy": "jobs/B03-jamboree-minigames/quote-support-check.py",
-  "scope": "Automated lexical check of registered quotes against retained claims. It proves neither support nor contradiction; a flagged field needs a human re-read of its source before it is used.",
-  "checkedFieldClaims": 744,
-  "flaggedFieldClaims": 314,
+  "scope": "Automated checks of registered quotes against retained claims. They prove neither support nor contradiction; a flagged claim needs a human re-read of its source before it is used.",
+  "checkedFieldClaims": 869,
+  "flaggedFieldClaims": 325,
   "titleOnlyByField": {
     "category": 121,
     "controls": 2,
@@ -13,9 +13,16 @@
     "controls": 6,
     "format": 95,
     "scoreRules": 34,
+    "summary": 11,
     "tieRules": 1,
     "timeLimit": 22,
     "winRules": 14
+  },
+  "summaryFragmentOnly": 0,
+  "gameplayRuleStatuses": {
+    "corroborated": 15,
+    "single_source": 110,
+    "unverified": 7
   },
   "items": [
     {
@@ -24,6 +31,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -32,6 +40,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -42,6 +51,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -50,6 +60,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -60,6 +71,7 @@
       "field": "winRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         3
       ]
@@ -70,6 +82,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -78,8 +91,20 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
+      ]
+    },
+    {
+      "id": "MG003",
+      "name": "Camera-Ready",
+      "field": "summary",
+      "status": "single_source",
+      "titleOnly": false,
+      "fragmentOnly": false,
+      "missingNumbers": [
+        3
       ]
     },
     {
@@ -88,6 +113,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -96,6 +122,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -106,6 +133,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -114,6 +142,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -124,6 +153,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -132,6 +162,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -142,6 +173,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -150,6 +182,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -160,6 +193,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         300
       ]
@@ -170,6 +204,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -178,6 +213,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -188,6 +224,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -196,6 +233,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -206,6 +244,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         2,
@@ -218,6 +257,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -226,6 +266,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -236,6 +277,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -244,6 +286,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -254,6 +297,7 @@
       "field": "winRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         5,
         40
@@ -265,6 +309,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -273,6 +318,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -283,6 +329,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -291,6 +338,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -301,6 +349,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]
@@ -311,6 +360,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -319,6 +369,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -329,6 +380,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -337,6 +389,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -347,6 +400,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         2
@@ -358,6 +412,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -366,6 +421,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -376,6 +432,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -386,6 +443,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -394,6 +452,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -404,6 +463,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -414,6 +474,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -422,6 +483,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -432,6 +494,7 @@
       "field": "winRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         5,
         40
@@ -443,6 +506,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -451,6 +515,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -461,6 +526,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -469,6 +535,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -479,6 +546,7 @@
       "field": "winRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         3
       ]
@@ -489,6 +557,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -497,6 +566,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -507,6 +577,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -517,6 +588,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -525,6 +597,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -535,6 +608,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -545,6 +619,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -553,6 +628,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -563,6 +639,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -571,6 +648,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -581,6 +659,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         3
       ]
@@ -591,6 +670,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -599,6 +679,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -609,6 +690,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -617,6 +699,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -627,6 +710,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -635,6 +719,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -645,6 +730,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -653,6 +739,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -663,6 +750,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -671,6 +759,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -681,6 +770,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -689,6 +779,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         3
@@ -700,8 +791,21 @@
       "field": "winRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         3
+      ]
+    },
+    {
+      "id": "MG030",
+      "name": "Sunset Standoff",
+      "field": "summary",
+      "status": "single_source",
+      "titleOnly": false,
+      "fragmentOnly": false,
+      "missingNumbers": [
+        3,
+        5
       ]
     },
     {
@@ -710,6 +814,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -718,17 +823,30 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         3
       ]
     },
     {
+      "id": "MG031",
+      "name": "Cookie Cutters",
+      "field": "summary",
+      "status": "single_source",
+      "titleOnly": false,
+      "fragmentOnly": false,
+      "missingNumbers": [
+        1
+      ]
+    },
+    {
       "id": "MG032",
       "name": "Unfriendly Flying Object",
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -737,6 +855,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         3
@@ -748,6 +867,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -756,6 +876,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         3
@@ -767,6 +888,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -775,6 +897,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         3
@@ -786,16 +909,29 @@
       "field": "winRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]
     },
     {
+      "id": "MG034",
+      "name": "Arch Rivals",
+      "field": "summary",
+      "status": "single_source",
+      "titleOnly": false,
+      "fragmentOnly": false,
+      "missingNumbers": [
+        3
+      ]
+    },
+    {
       "id": "MG035",
       "name": "On-Again, Off-Again",
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -804,6 +940,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         3
@@ -815,6 +952,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -823,8 +961,20 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
+        3
+      ]
+    },
+    {
+      "id": "MG036",
+      "name": "Broozer Bash",
+      "field": "summary",
+      "status": "single_source",
+      "titleOnly": false,
+      "fragmentOnly": false,
+      "missingNumbers": [
         3
       ]
     },
@@ -834,6 +984,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -842,6 +993,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         3
@@ -853,6 +1005,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -861,6 +1014,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         3
@@ -872,16 +1026,29 @@
       "field": "winRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
     },
     {
+      "id": "MG038",
+      "name": "Income Stream",
+      "field": "summary",
+      "status": "single_source",
+      "titleOnly": false,
+      "fragmentOnly": false,
+      "missingNumbers": [
+        3
+      ]
+    },
+    {
       "id": "MG039",
       "name": "Blame It on the Crane",
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -890,6 +1057,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         3
@@ -901,6 +1069,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -909,6 +1078,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         3
@@ -920,6 +1090,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -928,6 +1099,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         3
@@ -939,8 +1111,20 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
+      ]
+    },
+    {
+      "id": "MG041",
+      "name": "Squeaky Shakedown",
+      "field": "summary",
+      "status": "single_source",
+      "titleOnly": false,
+      "fragmentOnly": false,
+      "missingNumbers": [
+        3
       ]
     },
     {
@@ -949,6 +1133,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -957,6 +1142,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -967,8 +1153,20 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
+      ]
+    },
+    {
+      "id": "MG042",
+      "name": "Rocky Rope Race",
+      "field": "summary",
+      "status": "single_source",
+      "titleOnly": false,
+      "fragmentOnly": false,
+      "missingNumbers": [
+        1
       ]
     },
     {
@@ -977,6 +1175,7 @@
       "field": "format",
       "status": "corroborated",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -987,6 +1186,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -995,6 +1195,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1005,8 +1206,20 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         50
+      ]
+    },
+    {
+      "id": "MG044",
+      "name": "Prime Cut",
+      "field": "summary",
+      "status": "single_source",
+      "titleOnly": false,
+      "fragmentOnly": false,
+      "missingNumbers": [
+        2
       ]
     },
     {
@@ -1015,6 +1228,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1023,6 +1237,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1033,6 +1248,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -1043,6 +1259,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1051,6 +1268,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1061,6 +1279,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1069,6 +1288,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1079,6 +1299,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1087,6 +1308,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1097,6 +1319,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -1107,6 +1330,18 @@
       "field": "winRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
+      "missingNumbers": [
+        4
+      ]
+    },
+    {
+      "id": "MG048",
+      "name": "Match Makers",
+      "field": "summary",
+      "status": "single_source",
+      "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -1117,6 +1352,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1125,6 +1361,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1135,6 +1372,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -1145,6 +1383,7 @@
       "field": "winRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         3
       ]
@@ -1155,6 +1394,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1163,6 +1403,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1173,6 +1414,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -1183,6 +1425,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1191,6 +1434,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1199,6 +1443,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -1209,6 +1454,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1217,6 +1463,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1227,6 +1474,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         90
@@ -1238,6 +1486,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1246,6 +1495,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1256,6 +1506,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1264,6 +1515,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1274,6 +1526,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1282,6 +1535,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1292,6 +1546,7 @@
       "field": "winRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         5
       ]
@@ -1302,6 +1557,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         5
       ]
@@ -1312,6 +1568,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1320,6 +1577,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1330,6 +1588,7 @@
       "field": "winRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]
@@ -1340,6 +1599,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]
@@ -1350,6 +1610,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1358,6 +1619,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1368,6 +1630,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1376,6 +1639,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1386,6 +1650,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -1396,6 +1661,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1404,6 +1670,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]
@@ -1414,6 +1681,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1422,6 +1690,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]
@@ -1432,6 +1701,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1440,6 +1710,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]
@@ -1450,6 +1721,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1458,6 +1730,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]
@@ -1468,6 +1741,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1476,6 +1750,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]
@@ -1486,6 +1761,7 @@
       "field": "controls",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1494,6 +1770,7 @@
       "field": "winRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         3
       ]
@@ -1504,9 +1781,22 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         2,
+        3
+      ]
+    },
+    {
+      "id": "MG064",
+      "name": "Mario's Three-peat",
+      "field": "summary",
+      "status": "single_source",
+      "titleOnly": false,
+      "fragmentOnly": false,
+      "missingNumbers": [
+        1,
         3
       ]
     },
@@ -1516,6 +1806,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1524,6 +1815,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         300
       ]
@@ -1534,6 +1826,7 @@
       "field": "tieRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         5
       ]
@@ -1544,6 +1837,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2,
         10
@@ -1555,6 +1849,7 @@
       "field": "winRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -1565,6 +1860,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]
@@ -1575,6 +1871,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         2,
@@ -1589,6 +1886,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -1599,6 +1897,7 @@
       "field": "winRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         3
       ]
@@ -1609,6 +1908,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         300
       ]
@@ -1619,6 +1919,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         0,
         1,
@@ -1631,6 +1932,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1,
         3
@@ -1642,6 +1944,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1650,6 +1953,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1658,6 +1962,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -1668,6 +1973,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]
@@ -1678,6 +1984,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1686,6 +1993,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1694,6 +2002,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -1704,6 +2013,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1712,6 +2022,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1720,6 +2031,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -1730,6 +2042,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]
@@ -1740,6 +2053,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1748,6 +2062,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1756,6 +2071,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -1766,6 +2082,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -1776,6 +2093,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1784,6 +2102,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1792,6 +2111,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         300
       ]
@@ -1802,6 +2122,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         10
       ]
@@ -1812,6 +2133,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1820,6 +2142,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1828,6 +2151,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1836,6 +2160,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1844,6 +2169,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1852,6 +2178,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1860,6 +2187,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1868,6 +2196,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1876,6 +2205,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1884,6 +2214,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1892,6 +2223,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1900,6 +2232,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1908,6 +2241,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1916,6 +2250,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1924,6 +2259,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1932,6 +2268,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1940,6 +2277,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1948,6 +2286,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1956,6 +2295,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1964,6 +2304,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1972,6 +2313,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1980,6 +2322,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1988,6 +2331,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -1996,6 +2340,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2004,6 +2349,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2012,6 +2358,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2020,6 +2367,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2028,6 +2376,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         8
       ]
@@ -2038,6 +2387,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2046,6 +2396,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         8
       ]
@@ -2056,6 +2407,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2064,6 +2416,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         8
       ]
@@ -2074,6 +2427,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2082,6 +2436,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         8
       ]
@@ -2092,6 +2447,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         7
       ]
@@ -2102,6 +2458,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2110,6 +2467,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         8
       ]
@@ -2120,6 +2478,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2128,6 +2487,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         8
       ]
@@ -2138,6 +2498,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2146,6 +2507,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         8
       ]
@@ -2156,6 +2518,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2164,6 +2527,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         8
       ]
@@ -2174,6 +2538,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2182,6 +2547,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         8
       ]
@@ -2192,6 +2558,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2,
         8,
@@ -2204,6 +2571,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2212,6 +2580,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         8
       ]
@@ -2222,6 +2591,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2230,6 +2600,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2240,6 +2611,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2250,6 +2622,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2258,6 +2631,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2268,6 +2642,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2278,6 +2653,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2286,6 +2662,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2296,6 +2673,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2306,6 +2684,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2314,6 +2693,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2324,6 +2704,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2334,6 +2715,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2342,6 +2724,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2352,6 +2735,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2362,6 +2746,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2370,6 +2755,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2380,6 +2766,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2390,6 +2777,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2398,6 +2786,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2408,6 +2797,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2418,6 +2808,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2426,6 +2817,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2436,6 +2828,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2446,6 +2839,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2454,6 +2848,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2464,6 +2859,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2474,6 +2870,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2482,6 +2879,7 @@
       "field": "format",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2492,6 +2890,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2502,6 +2901,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2510,6 +2910,7 @@
       "field": "controls",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2520,6 +2921,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2528,6 +2930,7 @@
       "field": "format",
       "status": "corroborated",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2538,6 +2941,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -2548,6 +2952,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2556,6 +2961,7 @@
       "field": "format",
       "status": "corroborated",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2566,6 +2972,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2574,6 +2981,7 @@
       "field": "controls",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2584,6 +2992,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2592,6 +3001,7 @@
       "field": "format",
       "status": "corroborated",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2602,6 +3012,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         180
       ]
@@ -2612,6 +3023,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2620,6 +3032,7 @@
       "field": "format",
       "status": "corroborated",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2630,6 +3043,7 @@
       "field": "controls",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2640,6 +3054,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]
@@ -2650,6 +3065,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2658,6 +3074,7 @@
       "field": "format",
       "status": "corroborated",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2668,6 +3085,7 @@
       "field": "timeLimit",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         90,
         120,
@@ -2680,6 +3098,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2688,6 +3107,7 @@
       "field": "format",
       "status": "corroborated",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2698,6 +3118,7 @@
       "field": "controls",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2708,6 +3129,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2716,6 +3138,7 @@
       "field": "format",
       "status": "corroborated",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2726,6 +3149,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2734,6 +3158,7 @@
       "field": "format",
       "status": "corroborated",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2744,6 +3169,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2752,6 +3178,7 @@
       "field": "format",
       "status": "corroborated",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2762,6 +3189,7 @@
       "field": "controls",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2772,6 +3200,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2780,6 +3209,7 @@
       "field": "format",
       "status": "corroborated",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2790,6 +3220,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2798,6 +3229,7 @@
       "field": "format",
       "status": "corroborated",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2808,6 +3240,7 @@
       "field": "controls",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2816,6 +3249,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2824,6 +3258,7 @@
       "field": "format",
       "status": "corroborated",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         4
       ]
@@ -2834,6 +3269,7 @@
       "field": "controls",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         2
       ]
@@ -2844,6 +3280,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2852,6 +3289,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2860,6 +3298,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2868,6 +3307,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]
@@ -2878,6 +3318,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2886,6 +3327,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2894,6 +3336,7 @@
       "field": "category",
       "status": "single_source",
       "titleOnly": true,
+      "fragmentOnly": false,
       "missingNumbers": []
     },
     {
@@ -2902,6 +3345,7 @@
       "field": "scoreRules",
       "status": "single_source",
       "titleOnly": false,
+      "fragmentOnly": false,
       "missingNumbers": [
         1
       ]

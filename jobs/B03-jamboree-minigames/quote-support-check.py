@@ -1,11 +1,20 @@
 #!/usr/bin/env python3
 """Quote-support check for minigames.json (B03 polish pass, 2026-10-08). Stdlib only, offline.
 
-For every fact field that carries a claim and a status of corroborated or single_source, it flags:
-- title_only: every registered quote, reduced to words, is inside the minigame title (plus a, an, of, the, and),
-  so the quote cannot show a category, a format or a rule. Heading locators are not text, so they do not count.
-- missing_numbers: numbers stated by the retained claim that appear in none of the field's registered quotes.
-The output is deterministic. `--write` regenerates reports/quote-support-check.json; the verifier recomputes it.
+Two rules, both automated and both proxies for a human re-read (they prove neither support nor contradiction):
+
+1. Claim flags for every claim with status corroborated or single_source:
+   - title_only: every registered quote, reduced to words, is inside the minigame title (plus a, an, of, the, and).
+     Heading locators are not text, so they do not count as quoted support.
+   - missing_numbers: numbers the retained claim states that appear in none of the field's registered quotes.
+   - fragment_only: for the two-sentence summary (evidence key gameplay), no registered quote is substantive
+     (at least six words and not a heading ending in a colon).
+
+2. Gameplay status rule (the summary's evidence): corroborated needs substantive quotes from two publisher
+   lineages; single_source needs one; otherwise unverified. `expected_gameplay_status` implements it and the
+   verifier checks every row against it.
+
+`--write` regenerates reports/quote-support-check.json; the verifier recomputes it and fails on any drift.
 """
 import argparse
 import json
@@ -13,7 +22,9 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-FIELDS = ['category', 'format', 'controls', 'timeLimit', 'winRules', 'scoreRules', 'tieRules', 'reward']
+CLAIMS = [('category', 'category'), ('format', 'format'), ('controls', 'controls'), ('timeLimit', 'timeLimit'),
+          ('winRules', 'winRules'), ('scoreRules', 'scoreRules'), ('tieRules', 'tieRules'), ('reward', 'reward'),
+          ('summary', 'gameplay')]
 CHECKED_STATUSES = ('corroborated', 'single_source')
 TITLE_WORDS = {'a', 'an', 'of', 'the', 'and'}
 SKIP_KEYS = {'unresolved', 'scope', 'limitation', 'reportedLabel', 'fieldStatusMeaning'}
@@ -24,6 +35,10 @@ NUMBER_WORDS = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 
 
 def words(text):
     return re.findall(r"[a-z0-9']+", text.lower())
+
+
+def substantive(text):
+    return len(re.findall(r"[A-Za-z0-9']+", text)) >= 6 and not text.strip().endswith(':')
 
 
 def numbers(text):
@@ -50,40 +65,64 @@ def claim_text(value, out):
     return out
 
 
+def quote_index(sources):
+    """quote id -> (publisher lineage, text) for every registered quote."""
+    return {quote['id']: (source['publisherLineage'], quote['text'])
+            for source in sources['sources'] for quote in source.get('quotes', [])}
+
+
+def expected_gameplay_status(evidence_quote_ids, quotes):
+    lineages = {quotes[q][0] for q in evidence_quote_ids if q in quotes and substantive(quotes[q][1])}
+    if len(lineages) >= 2:
+        return 'corroborated'
+    if lineages:
+        return 'single_source'
+    return 'unverified'
+
+
 def build(minigames, sources):
-    quotes = {quote['id']: quote['text'] for source in sources['sources'] for quote in source.get('quotes', [])}
-    items, title_only, missing = [], {}, {}
-    checked = 0
+    quotes = quote_index(sources)
+    texts = {qid: text for qid, (_, text) in quotes.items()}
+    items, title_only, missing, fragment = [], {}, {}, 0
+    checked, gameplay_rule = 0, {}
     for row in minigames['minigames']:
         title = set(words(row['name'])) | TITLE_WORDS
-        for field in FIELDS:
-            evidence = row['fieldEvidence'].get(field)
-            if not evidence or evidence['status'] not in CHECKED_STATUSES or not row.get(field):
+        ids_gameplay = row['fieldEvidence']['gameplay']['quoteIds']
+        rule_status = expected_gameplay_status(ids_gameplay, quotes)
+        gameplay_rule[rule_status] = gameplay_rule.get(rule_status, 0) + 1
+        for claim_key, evidence_key in CLAIMS:
+            evidence = row['fieldEvidence'].get(evidence_key)
+            if not evidence or evidence['status'] not in CHECKED_STATUSES or not row.get(claim_key):
                 continue
             checked += 1
             ids = evidence.get('quoteIds') or []
-            texts = [quotes[qid] for qid in ids]
-            claim = ' '.join(claim_text(row[field], []))
-            is_title_only = bool(texts) and all(set(words(text)) <= title for text in texts)
-            quoted_numbers = set().union(*[numbers(text) for text in texts]) if texts else set()
+            quoted = [texts[qid] for qid in ids]
+            claim = ' '.join(claim_text(row[claim_key], []))
+            is_title_only = bool(quoted) and all(set(words(text)) <= title for text in quoted)
+            quoted_numbers = set().union(*[numbers(text) for text in quoted]) if quoted else set()
             missing_numbers = sorted(numbers(claim) - quoted_numbers)
-            if not is_title_only and not missing_numbers:
+            is_fragment = claim_key == 'summary' and not any(substantive(text) for text in quoted)
+            if is_fragment:
+                fragment += 1
+            if not (is_title_only or missing_numbers or is_fragment):
                 continue
             if is_title_only:
-                title_only[field] = title_only.get(field, 0) + 1
+                title_only[claim_key] = title_only.get(claim_key, 0) + 1
             if missing_numbers:
-                missing[field] = missing.get(field, 0) + 1
-            items.append({'id': row['id'], 'name': row['name'], 'field': field, 'status': evidence['status'],
-                          'titleOnly': is_title_only, 'missingNumbers': missing_numbers})
+                missing[claim_key] = missing.get(claim_key, 0) + 1
+            items.append({'id': row['id'], 'name': row['name'], 'field': claim_key, 'status': evidence['status'],
+                          'titleOnly': is_title_only, 'fragmentOnly': is_fragment, 'missingNumbers': missing_numbers})
     return {
         'job': 'B03',
         'generatedBy': 'jobs/B03-jamboree-minigames/quote-support-check.py',
-        'scope': 'Automated lexical check of registered quotes against retained claims. It proves neither support nor '
-                 'contradiction; a flagged field needs a human re-read of its source before it is used.',
+        'scope': 'Automated checks of registered quotes against retained claims. They prove neither support nor '
+                 'contradiction; a flagged claim needs a human re-read of its source before it is used.',
         'checkedFieldClaims': checked,
         'flaggedFieldClaims': len(items),
         'titleOnlyByField': dict(sorted(title_only.items())),
         'missingNumbersByField': dict(sorted(missing.items())),
+        'summaryFragmentOnly': fragment,
+        'gameplayRuleStatuses': dict(sorted(gameplay_rule.items())),
         'items': items,
     }
 
