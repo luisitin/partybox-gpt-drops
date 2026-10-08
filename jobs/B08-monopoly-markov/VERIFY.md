@@ -69,3 +69,21 @@ Claude (cloud). Added the PartyBox-facing `boardOdds.ts` and its suite; no seale
   - PartyBox charges ordinary utility arrivals on the movement dice (`flow.ts:125`). A nearest-utility card arrival throws fresh dice (`flow.ts:126-131`, `cards.ts:47-55`), so `boardOdds.ts` models that by default.
   - Exact effect of the movement dice on one-utility rent, compared with a fresh throw: −1.33% / −4.98% at position 12, +0.83% / +0.70% at position 28 ('leave ASAP' / 'stay max'). The mean movement dice on an ordinary arrival at 12 are 6.878 / 6.550.
 - **Preview:** `preview/hottest-squares.html` rendered in Chromium (Playwright) with no console errors at 1920×1080 (en, es, plan toggle, intro frames), 390×844 (en, es) and 1280×720 with reduced motion.
+
+## Independent review 2026-10-08
+
+Reviewer: Claude (cloud), who did not write the polish pass. Branch `job/B08-monopoly-markov` at `9e54f29` (fetched; no other commits). Scope: the six Claude commits since `e090828` touch only `jobs/B08-monopoly-markov/**`. No file was deleted, and `.github/workflows/B08.yml` is unchanged in that range.
+
+- **Tests:** `rm -rf node_modules build .verification && npm ci --ignore-scripts --no-audit --no-fund && npm test` on Node v22.22.0 exited 0. Every suite passed: 24,023 PartyBox exact assertions per seed, 600M + 120M simulated rolls, 75 + 60 killed mutants, 67 files hash-verified. PR #14's `verify` check on `9e54f29` is green (run 37795796856).
+- **PartyBox lint and types** (stdin against `/home/user/partybox`, nothing written there): `boardOdds.ts` passes PartyBox's ESLint (`games/**/server` purity rules, `max-lines` 300 after skipping comments and blanks), prettier (no diff) and `tsc` under `tsconfig.base.json` (strict, `noUncheckedIndexedAccess`).
+- **Numbers, recomputed from PartyBox's own data:** all 348 `roi.csv` rows match `rentPerOpponentTurn` on the `classic-us` edition (utility rows with `utilityDice: 'fresh'`) to 2e-16 relative. The three editions have identical street, railroad and utility facts and rent rules, and each has 10 Chance and 2 Community Chest movement cards. B08's `us-properties.json` agrees with the classic-us streets (22 of 22). Illinois at level 3 gives 28.3523. `hottestSquares(3)` is [10, 24, 0]. Orange is 8.81%, red 8.76%, yellow 7.97%. Go To Jail is 0. Per-roll and per-turn sums are 1 within 4e-16. `cards.ts:47-55` is the nearest railroad and utility branch.
+- **Preview:** rendered in Chromium at 1920×1080 (en; es with `plan=stay`) and 390×844 (en; es). No console errors and no overflow. Labels, percentages and the "1 move in 16" and "1 de cada 9" figures are right. Not re-rendered: 1280×720 with reduced motion.
+- **Fixed in this review:**
+  - README listed `utilityCardDice`, which the 688d59e model fix removed. Its headline sentence now names the step it means.
+  - INTEGRATION said `boardOdds.ts` is 320 lines; it is 306.
+  - Two paths were incomplete: `choreo.ts` is `server/choreo.ts`, and `jail.ts` is `server/phases/jail.ts`.
+  - The CI row now states the exact green run.
+  - The 20-of-22 claim is the single 2→3 step (`partybox-checks.mjs:126-129`). The bot ranks by the average to three houses, so "takes groups to three houses first" is marked unverified.
+  - "The phone chunk is near its budget" was never measured. It now says so and gives the command.
+- **Left open (not fixable inside this job):** the bot wiring; `InitContext.botSkill`, which `packages/shared/src/contract.ts` does not have; the Speed Die; the one-attempt jail; and the utility-rent variant decision. PR #14's body still cites `e090828`, 56 files and a Node 24 run. It is stale and was not edited.
+- **Verdict:** approve-with-fixes. The model, its tests and the port file hold up against PartyBox. The fixes above were the only problems found in the claims.

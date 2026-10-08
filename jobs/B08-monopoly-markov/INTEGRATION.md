@@ -7,7 +7,7 @@
 | | |
 | --- | --- |
 | Status | **Port with fixes**: `boardOdds.ts` copies unchanged, but the bot wiring below is a recipe to write and tune with `pnpm sim`, and two settings fall outside the model (Speed Die, one-attempt jail). |
-| Branch | `job/B08-monopoly-markov` @ `688d59e` (last product change; later commits are docs and evidence) · PR #14 · CI: see the PR's B08 check on the head commit |
+| Branch | `job/B08-monopoly-markov` @ `688d59e` (last product change; later commits are docs and evidence) · PR #14 · CI: green, the `verify` check on `9e54f29` (run 37795796856, checked 2026-10-08) |
 | Repo | luisitin/partybox-gpt-drops |
 | Test | `cd jobs/B08-monopoly-markov && npm ci --ignore-scripts --no-audit --no-fund && npm test`: about 1 min |
 | Lands in PartyBox | `games/monopoly/server/board-odds.ts` (new, copied) · `games/monopoly/server/bot.ts`, `bot-policy.ts`, `index.ts` (upgrade: `sharp` bots) · a TV "hottest squares" beat in `games/monopoly/client/` fed through `tvView` |
@@ -18,7 +18,7 @@ Exact long-run odds for the classic 40-square board: where a move ends (Jail 6.2
 ## Take these files (the product)
 | File | What | Goes to (PartyBox path) |
 | --- | --- | --- |
-| `boardOdds.ts` | Pure, import-free, name-free. Generated odds tables (bit-exact) plus `rentPerOpponentTurn`, `rentReturn`, `investmentOf`, `buildGain`, `hottestSquares`, `shareOf`, typed on PartyBox's `Edition['spaces'][number]` and `Edition['rules']`. 320 lines; ESLint counts it under the 300-line limit, which skips comments and blank lines. | `games/monopoly/server/board-odds.ts` |
+| `boardOdds.ts` | Pure, import-free, name-free. Generated odds tables (bit-exact) plus `rentPerOpponentTurn`, `rentReturn`, `investmentOf`, `buildGain`, `hottestSquares`, `shareOf`, typed on PartyBox's `Edition['spaces'][number]` and `Edition['rules']`. 306 lines; PartyBox's ESLint `max-lines` (300, skipping comments and blank lines) passes on it (checked 2026-10-08). | `games/monopoly/server/board-odds.ts` |
 | `preview/hottest-squares.html` | Design reference for the TV beat (open it; `?view=phone`, `?lang=es`, `?plan=stay`). Not code to ship. | Rebuild as `games/monopoly/client/HotSquares.tsx` + `hot-squares.module.css` |
 
 ## Leave these (evidence, tooling, reports)
@@ -26,10 +26,10 @@ Exact long-run odds for the classic 40-square board: where a move ends (Jail 6.2
 - `*.mjs`, `reference.ts`, `roi-reference.ts`, `blind-authoring/`, `reports/`, `*.md` except this file, `SHA256SUMS.txt`, `PRODUCTION-SEALED-SHA256SUMS.txt`, `CORE-SELFCHECK.json`: generators, independent re-derivations, seals and raw evidence. They prove the numbers; the port does not run them.
 
 ## Port steps
-1. **Copy** `boardOdds.ts` to `games/monopoly/server/board-odds.ts` with no edits. A dry run on 2026-10-08 passed PartyBox's prettier, ESLint (the `games/**/server` purity bans and max-lines) and `tsc` under `tsconfig.base.json`. Server only: the phone chunk is near its 41,472 B budget, so never import it from `client/`; the TV gets numbers through `tvView`.
+1. **Copy** `boardOdds.ts` to `games/monopoly/server/board-odds.ts` with no edits. A dry run on 2026-10-08 passed PartyBox's prettier, ESLint (the `games/**/server` purity bans and max-lines) and `tsc` under `tsconfig.base.json`. Server only: the phone budget is 41,472 B gzip per game (`scripts/bundle-budget.json`), and this review did not measure monopoly's phone chunk. Never import it from `client/`; the TV gets numbers through `tvView`. Measure with `pnpm check-bundle --list monopoly` before and after.
 2. **Adapter.** Add `games/monopoly/server/bot-value.ts`, since `bot.ts` is 210 lines. It needs `holdingOf(s, owner, i, owners = s.deeds.map((d) => d.owner))`, which returns `{ level: s.deeds[i]?.level ?? 0, fullGroup: group(s, i).every((j) => owners[j] === owner) && kind === 'street', sameKind: <count of same-kind spaces with owners[j] === owner> }`. It also needs `incomeOf(s, owner, owners)`, which sums `rentPerOpponentTurn(i, e.spaces[i], holdingOf(...), e.rules)` over the owner's unmortgaged deeds and multiplies by the opponents still in. Passing `owners` lets one function value hypothetical trades and auctions. The edition data (`editionOf(s.edition)`) is used as is: on all three editions the 28 deeds, rents and rules and the 10 + 2 movement cards match B08's data exactly.
 3. **Skill plumbing (ADR-059).** `index.ts:312` drops the skill: make it `sampleInput: (s, id, _rng, skill) => sampleInput(s, id, false, skill ?? 'normal')`, and add `skill: BotSkill = 'normal'` as a 4th parameter of `sampleInput` in `bot.ts` (`BotSkill` comes from `@partybox/game-sdk`). Keep `normal` and `easy` byte-identical to today's bot, so no golden runs need re-recording. B08 drives `sharp` only, until `pnpm sim` shows it should become the default.
-4. **Sharp building** (`bot.ts:173`). Rank `buildOptions` by `buildGain(i, x, holdingOf(s, id, i), e.rules, Math.max(3, level + 1))`, highest first, with ties going to the lower level and then the lower index. The cash-reserve filter stays. Per unit of cost, the step to three houses is the best build on 20 of the 22 streets; this ordering takes the best group to three houses first instead of spreading single houses.
+4. **Sharp building** (`bot.ts:173`). Rank `buildOptions` by `buildGain(i, x, holdingOf(s, id, i), e.rules, Math.max(3, level + 1))`, highest first, with ties going to the lower level and then the lower index. The cash-reserve filter stays. The 20-of-22 result (`partybox-checks.mjs:126-129`) is about the single 2→3 step: the third house has the highest single-step gain per unit of cost on 20 of the 22 streets (the two browns peak later). This ranking uses a different number, `buildGain` to three houses from the current level, averaged over the buildings added. Whether that takes the best group to three houses first is **unverified**; check it with `pnpm sim` before relying on it. The `buildGain` docstring in `boardOdds.ts` repeats the single-step wording; the port keeps that file byte-identical, so the caveat lives here.
 5. **Sharp trades and auctions** (`bot.ts:56`, `:75`, `:138`, `:196`). Value a bundle as its cash, plus the face price of its deeds, plus `policy.incomeTurns × (incomeOf(after) − incomeOf(before))` for this bot. Compare bots against the other party's gain the same way. The auction maximum becomes `min(available − cashReserve, price + incomeTurns × Δincome)`. Add `incomeTurns` to `BOT_POLICY`; start around 15 and tune it with step 8. **Unverified**: no PartyBox game has been played with these numbers.
 6. **Jail stays as it is** (`bot.ts:31`). The jail, purchase and tax answers come from `promptAnswer`, which the reducer calls when the reading clock fires (`index.ts:217`, `:290`). No skill exists there, because InitContext does not carry `botSkill`. An odds-based jail plan needs that engine/SDK change and an ADR first (see gaps). If it is added: as a sharp bot, roll (stay) when no unowned deed is left and the opponents' summed `rentPerOpponentTurn(..., { plan: 'stay max' })` exceeds `rules.jailFine`; otherwise keep today's rule.
 7. **Plan choice.** Pass `{ plan: 'leave ASAP' }`, the default, for the bots' valuations. When `settings.shortRules === 'newer'` (one jail attempt, `economy.ts:254`), 'leave ASAP' is still the closer model. When `settings.speedDie` is on, the odds are an approximation; say so in a comment.
@@ -44,7 +44,7 @@ Exact long-run odds for the classic 40-square board: where a move ends (Jail 6.2
 ## Make it feel AAA in PartyBox (not a 2D bootleg)
 - **Where:** a 6–8 s beat in `client/Finale.tsx` before "Final standings", while the board is already on screen. It could also be a VIP-menu "Board odds" card mid-game, never on an auto timer.
 - **TV:**
-  - The real `board3d/BoardScene.tsx` from the overview shot (`choreo.ts`/`camera3d.ts`; fx-lab F05 for a slow push-in).
+  - The real `client/board3d/BoardScene.tsx` from the overview shot (`server/choreo.ts` for the shot plan, `client/board3d/camera3d.ts`; fx-lab F05 for a slow push-in).
   - Each top-5 square lights through the existing `lit` prop (`LitSquare3d`, `{ key, square, color, pulse }`). The colour is a heat ramp from the design tokens, never a player colour (B16: a colour always travels with its face).
   - Heat pillars rise per square in rank order, using table3d `Solid3d`/`Pulse3d`; the preview shows their proportions.
   - The right panel lists the top 5 with bars and `Juice` `NumberPop` count-ups, then the "1 move in 16 ends in Jail" fact and the hottest colour set.
@@ -59,7 +59,7 @@ Exact long-run odds for the classic 40-square board: where a move ends (Jail 6.2
   - Jail, purchase and tax answers are made inside the reducer, which has no skill (step 6). An odds-based jail plan needs `InitContext.botSkill` (engine + SDK + ADR) or must apply to every level, with golden runs re-recorded.
 - **Should:**
   - The Speed Die (`speedDie`) changes movement, and the odds do not model it.
-  - The `newer` preset's one jail attempt (`jail.ts:64-70`) is close to 'leave ASAP': the movement is the same, except that a doubles release ends the turn.
+  - The `newer` preset's one jail attempt (`server/phases/jail.ts:64-70`) is close to 'leave ASAP': the movement is the same, except that a doubles release ends the turn.
 - **Should:** utility rent is a rule variant, not a bug.
   - PartyBox charges ordinary arrivals on the dice that moved the piece (`flow.ts:125`, `economy.ts:79`). A nearest-utility card arrival throws fresh dice (`flow.ts:126-131`).
   - `boardOdds.ts` models exactly that by default. The 2021 US rulebook asks for a fresh throw every time (`SOURCES.md`); that is `utilityDice: 'fresh'`, which is also what `roi.csv` uses.
@@ -89,3 +89,4 @@ Exact long-run odds for the classic 40-square board: where a move ends (Jail 6.2
   - Made nearest-utility card arrivals pay on fresh dice, as PartyBox does (`688d59e`).
   - Added the TV preview (`18703be`).
   - Rewrote the README, fixed about 60 missing spaces and a "Pay b50" extraction artifact in the docs, refreshed NEXT.md, and wrote this guide (docs commit).
+- **Independent review 2026-10-08** (see `VERIFY.md`): fixed this guide's line count, paths, CI status and build-ranking wording, and the README's removed `utilityCardDice` field.

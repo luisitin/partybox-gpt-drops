@@ -27,7 +27,7 @@ Everything is indexed by board position 0–39 and takes PartyBox's `Edition['sp
 
 | Export | What it gives |
 | --- | --- |
-| `BOARD_ODDS[plan]` | `rollsPerTurn` and 40-entry `perRoll`, `perTurn`, `railroadCard`, `utilityCard`, `utilityDice`, `utilityCardDice` (generated, bit-exact) |
+| `BOARD_ODDS[plan]` | `rollsPerTurn` and 40-entry `perRoll`, `perTurn`, `railroadCard`, `utilityCard`, `utilityDice` (generated, bit-exact) |
 | `rentPerOpponentTurn(position, deed, holding, rules, options?)` | expected rent one opponent pays per turn they take |
 | `rentReturn(...)` / `investmentOf(deed, holding)` | rent per turn per unit invested / price plus buildings (a hotel counts five) |
 | `buildGain(position, deed, holding, rules, target?, options?)` | extra rent per unit of building cost from `level` to `target` (default: the next building) |
@@ -36,7 +36,7 @@ Everything is indexed by board position 0–39 and takes PartyBox's `Edition['sp
 
 `holding` is `{ level: 0-5, fullGroup, sameKind }`, where `sameKind` counts the railroads or utilities the owner holds. `options` is `{ plan?: 'leave ASAP' | 'stay max', utilityDice?: 'movement' | 'fresh' }`. The defaults are `'leave ASAP'` and `'movement'`, because PartyBox's engine today charges utility rent on the dice that moved the piece; `'fresh'` is the rulebook's new throw and reproduces `roi.csv`.
 
-Headline numbers ('leave ASAP' / 'stay max'): Jail ends 6.22% / 11.53% of all moves, then Illinois Avenue at 24 (3.19% / 3.00%) and GO (3.10% / 2.92%); Go To Jail is 0%. Orange is the hottest colour set (8.81% / 8.31%), red next (8.76% / 8.18%). A turn has 1.187 / 1.166 movement rolls. Per unit of cost, the step to three houses is the best build on 20 of the 22 streets; the two browns peak later.
+Headline numbers ('leave ASAP' / 'stay max'): Jail ends 6.22% / 11.53% of all moves, then Illinois Avenue at 24 (3.19% / 3.00%) and GO (3.10% / 2.92%); Go To Jail is 0%. Orange is the hottest colour set (8.81% / 8.31%), red next (8.76% / 8.18%). A turn has 1.187 / 1.166 movement rolls. The third-house step (2 to 3 houses) has the highest single-step gain per unit of cost on 20 of the 22 streets; the two browns peak later (`partybox-checks.mjs`).
 
 ## The engine and data behind it
 
