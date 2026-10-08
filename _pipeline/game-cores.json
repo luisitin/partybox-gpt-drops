@@ -1,30 +1,36 @@
 {
-  "updatedAt": "2026-10-08T19:20:06.912331+00:00",
-  "summary": "All ten games are tracked, with none merged. Gin Rummy, Pack the Hold, Reality Check, Hearts and Spades have completed their recorded acceptance and KEEP review and are ready for maintainer review. Liar\u2019s Dice and the existing Shake Up have green current hosted checks but ongoing checker review. Category Rush has a new checkpoint under full checks; its local timer/workload coverage issue is preserved. Checkers passed its full 4,000-game strength matrix but remains unfinished because International rendering, a complete downloadable offline page and the 30-minute full-CI requirement are not satisfied. Dominoes remains under its external owner; fresh green checks are separate from new independent acceptance. The environment interruption caused a reporting gap, recorded below; the background schedule remains paused.",
+  "updatedAt": "2026-10-08T19:37:42.820996+00:00",
+  "summary": "All ten games are tracked, with none merged. Pack the Hold, Reality Check, Hearts and Spades have completed their recorded acceptance and KEEP review and are ready for maintainer review. Gin Rummy retains its accepted unchanged-game delivery while its reclaimed worker repairs independent verification. Liar\u2019s Dice and the existing Shake Up have new checker repairs under current hosted checks. Category Rush\u2019s new current full workflow reports success, while its final artifact and KEEP review are unfinished; local measured failures and zero-sample coordination timeout remain preserved. Checkers passed its full 4,000-game strength matrix but remains unfinished because International rendering, a complete downloadable offline page and the 30-minute full-CI requirement are not satisfied. Dominoes remains under its external owner; fresh green checks are separate from new independent acceptance. The environment interruption caused a reporting gap, recorded below; the background schedule remains paused.",
   "workers": [
     {
       "current": "G07",
-      "summary": "Current verification head 32ea5f047 has a green full exact-head run 37821793551, completed at 18:14:34 UTC; original PR #6 remains draft. Prior hosted a490 evidence passed all 94 browser, 116 evidence and 68 fixture checks; actual artifact 11569180344 bound 30 guards and 1,200 raw intervals in 1,306 independent assertions. The actual local full run passed 91 of 94 groups and failed two phone clock checks and 58.825 FPS; raw failures are retained. Four genuine clicks met the original 200/250-ms gates at 0/40/0/58 ms, while the old delayed observer incorrectly reported 457\u2013638 ms. This establishes a checker weakness, not the cause of historical failure. A slow-save fixture, wrong 600-ms deadline controls and the private 32-guard repair still require closure. Game bytes remain unchanged; the earlier player KEEP rounds 6\u20138 remain a separate completed stop.",
-      "next": "Finish source-bound deadline/save-fixture checker review, inspect the complete current hosted evidence and final exact-head gates, then update original PR #6 readiness.",
+      "summary": "Current public head 41f62262 was pushed at 19:22:49 UTC; original PR #6 is draft and exact-head run 37831510960 now reports SUCCESS in the fresh GitHub observation; complete-log and current-artifact review still require closure. The preceding 191c hosted check failed a player-map-count assertion in the new checker before collecting any FPS samples; its other 92 browser groups passed. The repaired current local desktop measured all 600 native intervals and passed at 60.002400096 FPS, closing at 19:27:32.260 UTC; the phone actually closed at 19:31:11.213 UTC with all 600 untouched intervals passing at 59.310808406 FPS/p99 16.8 ms/maximum 66.7 ms. Both current strict profiles pass, but the complete local browser report is 93/94: a separate redundant calza pre-click pacing assertion failed. No actual elapsed value was logged for that assertion and no cause is claimed. The browser exited 1 at 19:31:11.671; all 32 current source guards were unchanged. Full local acceptance remains failed; no unmodified timing retry was performed. Earlier local 58.825-FPS and phone clock failures remain retained. Four genuine clicks met the original 200/250-ms gates at 0/40/0/58 ms, while the previous delayed observer reported 457\u2013638 ms; that proves an observer weakness, not the cause of old failures. The slow-save fixture and deadline-negative controls remain part of the checker repair. Prior current-then-hosted artifact 11569180344 independently bound 30 guards and 1,200 intervals in 1,306 assertions. Game bytes remain unchanged, so earlier player KEEP rounds 6\u20138 retain their separate completed stop.",
+      "next": "Inspect the complete current green hosted run and its real source-bound artifact, and resolve the separately failed local calza pacing gate without inventing elapsed timing or a cause before changing original PR #6 readiness.",
       "queue": [
         "Phone clock failure",
         "Strict phone proof",
         "Current full CI/artifact"
       ],
-      "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+      "updatedAt": "2026-10-08T19:37:42.820996+00:00",
       "previousOperatorRecord": {
-        "updatedAt": "2026-10-08T17:50:10.465446+00:00",
-        "summary": "Current verification repair a490f6f pushed17:37:07; original PR6 is draft and exact run37817956480 is pending. Fixed real holes that accepted empty/missing profile coverage. All70 targeted corruption/nonce controls and370 hashes pass; fresh desktop/CPU4 five-round clips are under1.3MB each. First current local desktop600 strict sample PASS60.002400 FPS/p99max16.8, CLOSED17:44:44.619. The phone functional sequence failed its unchanged250ms reload-clock assertion; phone sampling and full acceptance remain pending. Game/core/session/HTML and prior KEEP6\u20138 three-round stop unchanged; old ad83 positives are historical.",
-        "next": "Preserve and diagnose the actual phone clock failure, finish strict phone proof, inspect full exact-head CI/artifacts and only then make original PR6 ready."
+        "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+        "summary": "Current verification head 32ea5f047 has a green full exact-head run 37821793551, completed at 18:14:34 UTC; original PR #6 remains draft. Prior hosted a490 evidence passed all 94 browser, 116 evidence and 68 fixture checks; actual artifact 11569180344 bound 30 guards and 1,200 raw intervals in 1,306 independent assertions. The actual local full run passed 91 of 94 groups and failed two phone clock checks and 58.825 FPS; raw failures are retained. Four genuine clicks met the original 200/250-ms gates at 0/40/0/58 ms, while the old delayed observer incorrectly reported 457\u2013638 ms. This establishes a checker weakness, not the cause of historical failure. A slow-save fixture, wrong 600-ms deadline controls and the private 32-guard repair still require closure. Game bytes remain unchanged; the earlier player KEEP rounds 6\u20138 remain a separate completed stop.",
+        "next": "Finish source-bound deadline/save-fixture checker review, inspect the complete current hosted evidence and final exact-head gates, then update original PR #6 readiness."
       }
     },
     {
       "current": "G02",
-      "summary": "Ready for maintainer review, unmerged: PR #2 at 4fa969bf. Exact-head CI run 37780918144 passed, and KEEP rounds 10\u201312 ended with three consecutive rounds without player-visible gain. The opening Pass actor and overdue host-input repairs remain verified. Source-matched desktop/phone 600-frame proof passed at 59.703869/60.003000 FPS; the earlier 58.730 FPS failure remains retained.",
-      "next": "Maintainer review; preserve the accepted source and retained failures. No merge has been performed.",
+      "summary": "Original accepted game head 4fa969bf0a4e4a6ef193a4e71718c06cda75095d remains ready on PR #2, with exact-head run 37780918144 successful and completed player KEEP rounds 10\u201312. It was lawfully reclaimed at 19:16:20 UTC after a fresh check of all matching branch activity and the six-hour claim rule, recorded in main claim commit c972504. The new worker is repairing independent verification privately: 35 source guards and 175 corruption controls are under review. Game and player behavior remain unchanged. No new-source frame proof or new hosted acceptance is claimed from that private verifier work. The actual first new strict local desktop failed at 40.725456 FPS/p99 150 ms/maximum 2083.3 ms. All 600 raw intervals and 601 per-frame phase witnesses were retained with all 35 source guards unchanged; the phone profile was NOT RUN. This is private current-verifier evidence, separate from the public accepted 4fa head; no cause or unchanged-source retry is claimed.",
+      "next": "Push the first failed raw measurement and current resumption notes. Diagnose the source-bound workload and first strict failure before retrying, then finish current verifier/corruption/browser checks and the exact new-head workflow.",
       "queue": [
         "Maintainer review"
-      ]
+      ],
+      "previousOperatorRecord": {
+        "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+        "summary": "Ready for maintainer review, unmerged: PR #2 at 4fa969bf. Exact-head CI run 37780918144 passed, and KEEP rounds 10\u201312 ended with three consecutive rounds without player-visible gain. The opening Pass actor and overdue host-input repairs remain verified. Source-matched desktop/phone 600-frame proof passed at 59.703869/60.003000 FPS; the earlier 58.730 FPS failure remains retained.",
+        "next": "Maintainer review; preserve the accepted source and retained failures. No merge has been performed."
+      },
+      "updatedAt": "2026-10-08T19:37:42.820996+00:00"
     },
     {
       "current": "G04",
@@ -44,24 +50,24 @@
     },
     {
       "current": "G09",
-      "summary": "Latest public checkpoint 17c0d3009e09d671db0b3d45719b3d927ed44038 has its exact-head full workflow in progress. Original PR #8 remains draft; R7 acceptance and the post-gain KEEP stop remain unfinished. The native answer-cleaning correction passed 14 new cases, including six TAB/VT/DEL article cases that improved from zero to one for both rosters; original 28+8+clock+4+17+3+3 and focused controls passed, with two identical 457,688-byte builds. The actual first native paired local measurement collected all 1,200 intervals: desktop 59.704296 FPS, phone 58.444306 FPS/p99 33.3 ms FAIL, retaining all 18 guards and the 346,200-byte clip. Both final screenshots showed Pass To Sam because the real 60-second timer began before minutes of grant waiting, so those samples fail active-answer-workload scope. The assertion failed before the cancellation signal was written; the run was measured, not NOT RUN. A handover barrier before starting the real timer, per-frame active-form checks and a native Date witness are under repair. Earlier coordinated R6 local claims share that scope gap; independent hosted no-wait evidence retains its separate scope. The checkpoint pushed at 19:13:38 UTC after the 19:13:19 claim refresh; the actual 66-minute-03-second interruption gap is logged. Game source 91a0 is unchanged. Its new harness waits at the handover barrier before starting the native timer. Prior 3f6d full run 37821893898 passed at 18:23:12, with all 66 tests, 43 mutants and the complete 132,351-character log. Its genuine hosted artifact binds all 18 guards and 1,200 raw native intervals (60.00258/60.00294 FPS), plus actual 342,608/266,964-byte clips showing three hints and TAB handling. That hosted proof uses the older runner without per-frame phase callbacks; the new phase fix remains under current checks.",
-      "next": "Inspect the new checkpoint\u2019s full current checks and finish the timer/workload evidence repair. Complete the actual R7 review and three consecutive rounds without player gain after the most recent gain; preserve all failures.",
+      "summary": "Current public head 17c0d300 was pushed at 19:13:38 UTC after its 19:13:19 claim refresh; the 66-minute-03-second environment-interruption gap is recorded. Original PR #8 remains draft. Exact-head full run 37830364323 now reports SUCCESS at 19:29:06 UTC; the current hosted strict frame check passed, and the genuine current artifact was independently validated: all 1,200 raw intervals, 1,202 active-form/timer witnesses and actual clips passed. KEEP acceptance remains open. Game source 91a0 is unchanged; the new harness waits at handover before starting the real timer. The corrected local setup timed out at 19:26:24.653 UTC because the root grant included an extra key; it collected zero frames and is not a local FPS pass. The preceding actual local run did collect all 1,200 intervals: desktop 59.704296 FPS and phone 58.444306 FPS/p99 33.3 ms FAIL. Both final screenshots showed Pass To Sam because the 60-second timer had begun before minutes of quiet-grant waiting, so that measured run failed active-answer-workload scope. All raw intervals, 18 guards and the actual 346,200-byte clip remain retained. The new per-frame active-form and native Date witnesses repair that coverage gap; older coordinated R6 local claims also retain their scope limitation. Prior no-wait hosted head 3f6d run 37821893898 passed at 18:23:12, with all 66 tests, 43 mutants, source-bound 1,200 raw intervals near 60 FPS and real 342,608/266,964-byte clips. That earlier hosted proof uses the older runner without per-frame phase callbacks. R7 acceptance and the three-round stop after the latest real gain remain unfinished.",
+      "next": "Read the complete current green workflow and independently check its genuine artifact. Preserve the zero-sample local coordination timeout, close the R7 acceptance review and complete three consecutive rounds without player gain after the most recent gain.",
       "queue": [
         "R7 measured clipboard fix",
         "Changed-source acceptance",
         "Remaining KEEP rounds"
       ],
-      "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+      "updatedAt": "2026-10-08T19:37:42.820996+00:00",
       "previousOperatorRecord": {
-        "updatedAt": "2026-10-08T17:50:10.465446+00:00",
-        "summary": "Latest checkpoint a49dcc0 pushed17:37:20/29m39 since79; target missed but hard30min met. Original PR8 draft; latest CI37818002160 pending. Actual previous79 full run37814161304 succeeded17:21:43 with125257-character full log and independently source-bound official artifact11565694396. R6 private hints passed original checks/240 draft controls and both current local600 profiles60.00295/59.90318FPS. R7 real14-case pre-edit native clipboard matrix proved authored The<TAB>stapler loses1\u21920 at2/8 players with no warning; vertical-tab/DEL also failed, while real newline/CRLF became spaces. Offline adapter fix now converts controls to visible spaces before hints/save/submission; focused6 checks,strict TS,two identical457688-byte builds and initial two-person after controls pass. Eight-person and full changed-source proof pending; core/data/bots/RNG/save codec unchanged. Last player gain R6 resets no-gain streak0.",
-        "next": "Finish the native after matrix and full changed-source UI/frame checks, measure R7 gain, obtain exact-head CI, then continue KEEP until three consecutive no-player-gain rounds."
+        "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+        "summary": "Latest public checkpoint 17c0d3009e09d671db0b3d45719b3d927ed44038 has its exact-head full workflow in progress. Original PR #8 remains draft; R7 acceptance and the post-gain KEEP stop remain unfinished. The native answer-cleaning correction passed 14 new cases, including six TAB/VT/DEL article cases that improved from zero to one for both rosters; original 28+8+clock+4+17+3+3 and focused controls passed, with two identical 457,688-byte builds. The actual first native paired local measurement collected all 1,200 intervals: desktop 59.704296 FPS, phone 58.444306 FPS/p99 33.3 ms FAIL, retaining all 18 guards and the 346,200-byte clip. Both final screenshots showed Pass To Sam because the real 60-second timer began before minutes of grant waiting, so those samples fail active-answer-workload scope. The assertion failed before the cancellation signal was written; the run was measured, not NOT RUN. A handover barrier before starting the real timer, per-frame active-form checks and a native Date witness are under repair. Earlier coordinated R6 local claims share that scope gap; independent hosted no-wait evidence retains its separate scope. The checkpoint pushed at 19:13:38 UTC after the 19:13:19 claim refresh; the actual 66-minute-03-second interruption gap is logged. Game source 91a0 is unchanged. Its new harness waits at the handover barrier before starting the native timer. Prior 3f6d full run 37821893898 passed at 18:23:12, with all 66 tests, 43 mutants and the complete 132,351-character log. Its genuine hosted artifact binds all 18 guards and 1,200 raw native intervals (60.00258/60.00294 FPS), plus actual 342,608/266,964-byte clips showing three hints and TAB handling. That hosted proof uses the older runner without per-frame phase callbacks; the new phase fix remains under current checks.",
+        "next": "Inspect the new checkpoint\u2019s full current checks and finish the timer/workload evidence repair. Complete the actual R7 review and three consecutive rounds without player gain after the most recent gain; preserve all failures."
       }
     },
     {
       "current": "G10",
-      "summary": "Current public checkpoint 2f821d157ee597494e38401d505cf2e337e23b94 has no exact-head workflow or PR. The actual private 4,000-game strength matrix closed at 18:17:33.426973 UTC with exit 0: each of four 1,000-game comparisons passed (.924/.9625 Sharp versus Normal; .999/1 Normal versus Easy). Peak RSS was 12,215,940 KiB. Actual wall time 2,827.687 seconds includes 737.289 seconds of recorded holds; excluding them, 2,090.398 seconds still exceeds 30 minutes for the league alone, so full-CI fit is NOT established. All 91 current units, the full 7,000-game matrix and 25 actual mutation kills have passed. Full licensed American and International two-to-six-piece corpus is available; the 1.39-GB full offline HTML remains private, while tracked play.html is the older two-to-five baseline. Genuine International desktop 600-frame sample failed at 17.510 FPS/p99 799.9 ms; its phone profile was NOT RUN. No cause or unchanged-source retry is claimed. The current host validator passed 14 positives and 127 negatives at 18:17:11; later active-board controls were interrupted and require actual closure. The preserved full 4,000-game result, all 80 batch reports, 127 game-input hashes and the 14-positive/127-negative host controls are now public in this checkpoint, normally pushed at 19:16:00.586934 UTC after its main claim refresh at 19:15:44. The actual 18:01:17\u201319:16:00 interruption interval missed the 30-minute rule and is recorded; no full-CI or download acceptance is inferred.",
-      "next": "Diagnose International rendering with controlled source-bound evidence. Complete all four strict profiles, actual 30-minute full-CI fit and the full-six HTML download receipt, then open the original PR and finish binding KEEP review.",
+      "summary": "Current public checkpoint 2f821d157ee597494e38401d505cf2e337e23b94 was normally pushed at 19:16:00.586934 UTC after the 19:15:44 claim refresh; the 18:01:17\u201319:16:00 interruption gap is recorded. It contains the actual full 4,000-game strength result, all 80 batch reports, 127 game-input hashes and host-validator controls. Four 1,000-game comparisons passed: .924/.9625 Sharp versus Normal, and .999/1 Normal versus Easy. Peak RSS was 12,215,940 KiB. Actual wall time 2,827.687 seconds includes 737.289 seconds of recorded holds; excluding them, 2,090.398 seconds is still 34 minutes 50 seconds for the league alone. The owner is designing a CI partition that preserves all 4,000 games and unchanged budgets; no actual 30-minute full-CI fit or green run is claimed. All 91 current units, the 7,000-game matrix and 25 real mutant kills have passed. Full licensed two-to-six-piece corpora are available; the 1.39-GB complete offline HTML remains private, while tracked play.html is the earlier two-to-five baseline. Genuine International desktop 600-frame proof failed at 17.510 FPS/p99 799.9 ms, and its phone profile was NOT RUN. No cause or unchanged-source retry is claimed. Host evidence validation passed 14 positives and 127 negatives; interrupted later active-board controls require actual closure. There is no PR or verified full-six download yet.",
+      "next": "Complete the source-equivalent full-workload CI partition and prove its actual resource/time gates. Diagnose International rendering with controlled evidence, finish all strict profiles and the complete offline HTML download receipt, then open the PR and complete binding KEEP review.",
       "queue": [
         "Verifier correction",
         "Current4000 strength",
@@ -69,11 +75,11 @@
         "Full CI and download",
         "PR and KEEP"
       ],
-      "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+      "updatedAt": "2026-10-08T19:37:42.820996+00:00",
       "previousOperatorRecord": {
-        "updatedAt": "2026-10-08T17:50:10.465446+00:00",
-        "summary": "Latest e895726 checkpoint pushed17:43:32; actual32m28 interval MISSED30min by2m28 during recovery, preserved. Full current91 units passed uninterrupted17:08:03, all127 inputs and213 module guards unchanged; earlier89-pass memory-cap termination retained. Actual7000-game matrix and25 real mutants pass. Full offline1.39GB six-piece page5ed2173 remains private; tracked page is older2\u20135. American paired local600 proof passes, but actual International desktop600 FAILED17.510457FPS/p99799.9/max1683.3; phone NOTRUN. Matched nongating200-frame traces60.0024/58.5394 do not explain that failure or prove worker race. Independent audit found empty functional-coverage and arbitrary-video validation holes; host-only exact coverage/raw/source/video binding repair implemented but controls pending. Actual16 sequential-phase pilot complete records match original/public golden bytes; root independently rehashed all127 game inputs. Peak8,640,876KiB/117.439s is a pilot fact. Actual private4000 league is running with four International workers before four American; actual SIGSTOP/resume holds are recorded, so elapsed time is not a30min CI inference. Public runner docs specify16GB; observed full pilot/run resource facts do not establish fit. Full CI, verified temporary full-six download, PR and KEEP remain pending.",
-        "next": "Finish meaningful verifier controls, actual unchanged4000 strength, International source-bound proof, complete30-minute CI and downloaded full-six artifact before PR/KEEP."
+        "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+        "summary": "Current public checkpoint 2f821d157ee597494e38401d505cf2e337e23b94 has no exact-head workflow or PR. The actual private 4,000-game strength matrix closed at 18:17:33.426973 UTC with exit 0: each of four 1,000-game comparisons passed (.924/.9625 Sharp versus Normal; .999/1 Normal versus Easy). Peak RSS was 12,215,940 KiB. Actual wall time 2,827.687 seconds includes 737.289 seconds of recorded holds; excluding them, 2,090.398 seconds still exceeds 30 minutes for the league alone, so full-CI fit is NOT established. All 91 current units, the full 7,000-game matrix and 25 actual mutation kills have passed. Full licensed American and International two-to-six-piece corpus is available; the 1.39-GB full offline HTML remains private, while tracked play.html is the older two-to-five baseline. Genuine International desktop 600-frame sample failed at 17.510 FPS/p99 799.9 ms; its phone profile was NOT RUN. No cause or unchanged-source retry is claimed. The current host validator passed 14 positives and 127 negatives at 18:17:11; later active-board controls were interrupted and require actual closure. The preserved full 4,000-game result, all 80 batch reports, 127 game-input hashes and the 14-positive/127-negative host controls are now public in this checkpoint, normally pushed at 19:16:00.586934 UTC after its main claim refresh at 19:15:44. The actual 18:01:17\u201319:16:00 interruption interval missed the 30-minute rule and is recorded; no full-CI or download acceptance is inferred.",
+        "next": "Diagnose International rendering with controlled source-bound evidence. Complete all four strict profiles, actual 30-minute full-CI fit and the full-six HTML download receipt, then open the original PR and finish binding KEEP review."
       }
     },
     {
@@ -88,7 +94,7 @@
     {
       "current": "G03",
       "owner": "codex-pack-resume",
-      "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+      "updatedAt": "2026-10-08T19:37:42.820996+00:00",
       "summary": "Final verification-only head 41c5dbdc8358b34ac692207c6257bc6b2c6400f8: original PR #3 was marked ready at 17:59:38 UTC. Full exact-head run 37819318398 succeeded at 17:56:34; its complete 97,833-character log was read. Genuine artifact 11569291582 is 193,572 bytes, ZIP SHA256 b63c4c0906a4b917f32ee74e8a2035a3952bf7f8aa6bd13b4fc235928e65bfb9. Independent checks bind all 28 current guards, both sets of 900 unfiltered native frame intervals and the decoded 107,410-byte VP9 clip; all 108 corruption controls pass. The game, offline HTML and assets remain unchanged, so prior player KEEP rounds 10\u201312 still establish the three-round stop. The earlier actual local review-14 57.633-FPS failure and unrun phone profile remain preserved; later hosted evidence does not erase them.",
       "next": "Maintainer review of original PR #3; acceptance and the unchanged-game KEEP stop are complete. No merge has been performed.",
       "queue": [
@@ -96,9 +102,9 @@
         "Original PR readiness"
       ],
       "previousOperatorRecord": {
-        "updatedAt": "2026-10-08T17:50:10.465446+00:00",
-        "summary": "Verification-only repair pushed9362a28 at17:25:54. Full exact-head run37816512878 passed17:28:58; actual193620-byte ZIP9ddc51b1 independently binds all28 current guards, both900 unfiltered native frames,73 genuine corruption controls and actual offline Chrome154. Hosted desktop60.002400/phone60.002000 FPS. First local offline Chromium141 run FAILED57.633197 FPS; phone NOTRUN. All900 raw intervals and the0-frame setup timeout are retained; no cause or unchanged retry is claimed. Final offline clip13 is103087 bytes, VP9/3.6s,28 guards/25 actual capture-corruption controls PASS. Final publication is pending new exact-head fullCI; game/HTML/assets/data and prior three-round player stop remain unchanged.",
-        "next": "Publish and inspect the final exact-head CI and genuine artifacts before making original PR3 ready; retain both browser-scoped results."
+        "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+        "summary": "Final verification-only head 41c5dbdc8358b34ac692207c6257bc6b2c6400f8: original PR #3 was marked ready at 17:59:38 UTC. Full exact-head run 37819318398 succeeded at 17:56:34; its complete 97,833-character log was read. Genuine artifact 11569291582 is 193,572 bytes, ZIP SHA256 b63c4c0906a4b917f32ee74e8a2035a3952bf7f8aa6bd13b4fc235928e65bfb9. Independent checks bind all 28 current guards, both sets of 900 unfiltered native frame intervals and the decoded 107,410-byte VP9 clip; all 108 corruption controls pass. The game, offline HTML and assets remain unchanged, so prior player KEEP rounds 10\u201312 still establish the three-round stop. The earlier actual local review-14 57.633-FPS failure and unrun phone profile remain preserved; later hosted evidence does not erase them.",
+        "next": "Maintainer review of original PR #3; acceptance and the unchanged-game KEEP stop are complete. No merge has been performed."
       }
     },
     {
@@ -112,23 +118,23 @@
     },
     {
       "current": "G08",
-      "summary": "Current public head 1d2c47063 remains on original draft PR #9. Both hosted runs 37820082838 and 37820089198 passed at 18:01/18:02 UTC: all 168 game groups, seven coordination groups and 2,400 genuine intervals across four profiles, bound to 180 guards. Actual artifact 11568629085 is a 1,779,137-byte ZIP; its raw samples and clip hashes were independently validated. A later ffprobe extra empty stream_groups field caused a receipt-schema equality issue, not evidence of a bad clip. The new real 600-second Pause/Resume checks, endpoint/schema controls, 17 coordination and 14 capture negatives remain private and unfinished. The 18:18:25 paused READY attempt was never root-granted before the environment restart and must be closed or marked expired without an FPS claim. Original owner HTML/art/assets remain unchanged; source SHA256 863a1910 applies to the 14,208,697-byte owner page.",
-      "next": "Close or record the interrupted ungranted attempt, finish the meaningful Pause/Resume and strict capture validation controls, push the repair and inspect every current-source exact-head check before readiness.",
+      "summary": "New public head ce1dd59b follows the failed 4047 endpoint check; original owner Shake Up remains on draft PR #9. Current exact-head run 37832292544 now reports FAILURE; the actual full 121,098-character log fails browser.ts:129 because the Shake Up heading was not document.activeElement after New game (false versus expected true), at 19:34:47 UTC. The immutable ce1 checker source confirms that exact assertion. This hosted focus assertion is separate from the local elapsed-clock failure; no cause is inferred. Failed-run artifact 11573904198 was actually uploaded: 1,247,112 bytes, ZIP SHA256 497e9e54263a023bef0176063a5551887fe6166f31a3a41d9401cdc81256dbae. The failed hosted attempt expected the wrong TV grid size: the actual correct board is 16 cells on TV and 25 on phone; that failure occurred before any FPS samples. The owner is correcting only the verification harness and preserving the original game, art and assets. Prior head 1d2c47063 has two full green hosted runs, all 168 game groups, seven coordination groups and 2,400 genuine intervals across four profiles bound to 180 guards; that proof is scoped to its earlier harness. The new real 600-second Pause/Resume, endpoint/schema and capture-negative controls require current-source closure. The paused READY attempt before the environment interruption was never root-granted and has no FPS proof. The genuine earlier artifact\u2019s extra empty ffprobe stream_groups field caused a receipt-schema equality issue, not evidence of a bad clip. Original owner HTML remains 14,208,697 bytes, with source hash beginning 863a1910. The current local English TV profile collected all 600 unfiltered intervals and numerically passed at 59.902359 FPS/p95 16.8 ms. Its full attempt still FAILED: after genuine Resume, the clock reported 170 elapsed seconds during 10.0177 native seconds. All raw intervals and 183 guards were retained. The other three profiles were NOT RUN. No current paired/four-profile pass or product cause is claimed.",
+      "next": "Read the actual current hosted failure and diagnose the native elapsed-clock/Resume assertion with source-bound controls. Preserve all 600 raw TV intervals and the three unrun profiles; finish every corrected current-source check before PR readiness.",
       "queue": [
         "Four-profile offline proof repair",
         "Meaningful negative controls",
         "Current full CI"
       ],
-      "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+      "updatedAt": "2026-10-08T19:37:42.820996+00:00",
       "previousOperatorRecord": {
-        "updatedAt": "2026-10-08T17:50:10.465446+00:00",
-        "summary": "Lawfully reclaimed17:24:54, main af374171, after all matching branches and claims exceeded six hours. Original PR9 remains draft. Read owner START-HERE and nested AGENTS; preserve original Shake Up assets/game and14,208,697-byte HTML863a1910. Actual audit found filtered/aggregate-only frames, no failure sidecars/source guards, English4\u00d74-only FPS and no genuine retained hosted artifact. Preparing host-only four-profile English4\u00d74/Spanish5\u00d75 desktop/CPU4 actual-file runner, independent raw/source verifier and real corruption controls. No new acceptance is claimed; existing player stop remains applicable while game bytes stay unchanged.",
-        "next": "Publish the verification repair and obtain all four fresh source-bound frame profiles, actual captures and complete exact-head CI."
+        "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+        "summary": "Current public head 1d2c47063 remains on original draft PR #9. Both hosted runs 37820082838 and 37820089198 passed at 18:01/18:02 UTC: all 168 game groups, seven coordination groups and 2,400 genuine intervals across four profiles, bound to 180 guards. Actual artifact 11568629085 is a 1,779,137-byte ZIP; its raw samples and clip hashes were independently validated. A later ffprobe extra empty stream_groups field caused a receipt-schema equality issue, not evidence of a bad clip. The new real 600-second Pause/Resume checks, endpoint/schema controls, 17 coordination and 14 capture negatives remain private and unfinished. The 18:18:25 paused READY attempt was never root-granted before the environment restart and must be closed or marked expired without an FPS claim. Original owner HTML/art/assets remain unchanged; source SHA256 863a1910 applies to the 14,208,697-byte owner page.",
+        "next": "Close or record the interrupted ungranted attempt, finish the meaningful Pause/Resume and strict capture validation controls, push the repair and inspect every current-source exact-head check before readiness."
       }
     }
   ],
   "repository": "luisitin/partybox-game-cores",
-  "observedAt": "2026-10-08T19:18:37.697Z",
+  "observedAt": "2026-10-08T19:35:13.617Z",
   "rows": [
     {
       "id": "G01",
@@ -339,7 +345,6 @@
       "checkError": null,
       "files": [
         ".github/workflows/G02.yml",
-        "CLAIMS.md",
         "jobs/G02-gin-rummy/.gitignore",
         "jobs/G02-gin-rummy/ALGORITHMS.md",
         "jobs/G02-gin-rummy/ASSUMPTIONS.md",
@@ -651,17 +656,23 @@
         "jobs/G02-gin-rummy/tsconfig.json"
       ],
       "fileInventorySource": {
-        "type": "Immutable exact-head GitHub tree; unchanged-head paths retained from previous verified snapshot.",
+        "type": "immutable Git tree",
         "head": "4fa969bf0a4e4a6ef193a4e71718c06cda75095d",
-        "observedAt": "2026-10-08T17:47:18.090Z"
+        "observedAt": "2026-10-08T19:35:13.617Z"
       },
       "operatorNote": {
         "current": "G02",
-        "summary": "Ready for maintainer review, unmerged: PR #2 at 4fa969bf. Exact-head CI run 37780918144 passed, and KEEP rounds 10\u201312 ended with three consecutive rounds without player-visible gain. The opening Pass actor and overdue host-input repairs remain verified. Source-matched desktop/phone 600-frame proof passed at 59.703869/60.003000 FPS; the earlier 58.730 FPS failure remains retained.",
-        "next": "Maintainer review; preserve the accepted source and retained failures. No merge has been performed.",
+        "summary": "Original accepted game head 4fa969bf0a4e4a6ef193a4e71718c06cda75095d remains ready on PR #2, with exact-head run 37780918144 successful and completed player KEEP rounds 10\u201312. It was lawfully reclaimed at 19:16:20 UTC after a fresh check of all matching branch activity and the six-hour claim rule, recorded in main claim commit c972504. The new worker is repairing independent verification privately: 35 source guards and 175 corruption controls are under review. Game and player behavior remain unchanged. No new-source frame proof or new hosted acceptance is claimed from that private verifier work. The actual first new strict local desktop failed at 40.725456 FPS/p99 150 ms/maximum 2083.3 ms. All 600 raw intervals and 601 per-frame phase witnesses were retained with all 35 source guards unchanged; the phone profile was NOT RUN. This is private current-verifier evidence, separate from the public accepted 4fa head; no cause or unchanged-source retry is claimed.",
+        "next": "Push the first failed raw measurement and current resumption notes. Diagnose the source-bound workload and first strict failure before retrying, then finish current verifier/corruption/browser checks and the exact new-head workflow.",
         "queue": [
           "Maintainer review"
-        ]
+        ],
+        "previousOperatorRecord": {
+          "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+          "summary": "Ready for maintainer review, unmerged: PR #2 at 4fa969bf. Exact-head CI run 37780918144 passed, and KEEP rounds 10\u201312 ended with three consecutive rounds without player-visible gain. The opening Pass actor and overdue host-input repairs remain verified. Source-matched desktop/phone 600-frame proof passed at 59.703869/60.003000 FPS; the earlier 58.730 FPS failure remains retained.",
+          "next": "Maintainer review; preserve the accepted source and retained failures. No merge has been performed."
+        },
+        "updatedAt": "2026-10-08T19:37:42.820996+00:00"
       }
     },
     {
@@ -810,7 +821,7 @@
       "operatorNote": {
         "current": "G03",
         "owner": "codex-pack-resume",
-        "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+        "updatedAt": "2026-10-08T19:37:42.820996+00:00",
         "summary": "Final verification-only head 41c5dbdc8358b34ac692207c6257bc6b2c6400f8: original PR #3 was marked ready at 17:59:38 UTC. Full exact-head run 37819318398 succeeded at 17:56:34; its complete 97,833-character log was read. Genuine artifact 11569291582 is 193,572 bytes, ZIP SHA256 b63c4c0906a4b917f32ee74e8a2035a3952bf7f8aa6bd13b4fc235928e65bfb9. Independent checks bind all 28 current guards, both sets of 900 unfiltered native frame intervals and the decoded 107,410-byte VP9 clip; all 108 corruption controls pass. The game, offline HTML and assets remain unchanged, so prior player KEEP rounds 10\u201312 still establish the three-round stop. The earlier actual local review-14 57.633-FPS failure and unrun phone profile remain preserved; later hosted evidence does not erase them.",
         "next": "Maintainer review of original PR #3; acceptance and the unchanged-game KEEP stop are complete. No merge has been performed.",
         "queue": [
@@ -818,9 +829,9 @@
           "Original PR readiness"
         ],
         "previousOperatorRecord": {
-          "updatedAt": "2026-10-08T17:50:10.465446+00:00",
-          "summary": "Verification-only repair pushed9362a28 at17:25:54. Full exact-head run37816512878 passed17:28:58; actual193620-byte ZIP9ddc51b1 independently binds all28 current guards, both900 unfiltered native frames,73 genuine corruption controls and actual offline Chrome154. Hosted desktop60.002400/phone60.002000 FPS. First local offline Chromium141 run FAILED57.633197 FPS; phone NOTRUN. All900 raw intervals and the0-frame setup timeout are retained; no cause or unchanged retry is claimed. Final offline clip13 is103087 bytes, VP9/3.6s,28 guards/25 actual capture-corruption controls PASS. Final publication is pending new exact-head fullCI; game/HTML/assets/data and prior three-round player stop remain unchanged.",
-          "next": "Publish and inspect the final exact-head CI and genuine artifacts before making original PR3 ready; retain both browser-scoped results."
+          "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+          "summary": "Final verification-only head 41c5dbdc8358b34ac692207c6257bc6b2c6400f8: original PR #3 was marked ready at 17:59:38 UTC. Full exact-head run 37819318398 succeeded at 17:56:34; its complete 97,833-character log was read. Genuine artifact 11569291582 is 193,572 bytes, ZIP SHA256 b63c4c0906a4b917f32ee74e8a2035a3952bf7f8aa6bd13b4fc235928e65bfb9. Independent checks bind all 28 current guards, both sets of 900 unfiltered native frame intervals and the decoded 107,410-byte VP9 clip; all 108 corruption controls pass. The game, offline HTML and assets remain unchanged, so prior player KEEP rounds 10\u201312 still establish the three-round stop. The earlier actual local review-14 57.633-FPS failure and unrun phone profile remain preserved; later hosted evidence does not erase them.",
+          "next": "Maintainer review of original PR #3; acceptance and the unchanged-game KEEP stop are complete. No merge has been performed."
         }
       }
     },
@@ -1399,7 +1410,7 @@
       "title": "Liar's Dice",
       "stage": "Review",
       "branch": "job/G07-liars-dice",
-      "head": "32ea5f047011fc1d1d7b57b9ce49f1df8ce480cc",
+      "head": "41f6226274e0eb693adfe00c29bd0ae8ae981ff9",
       "otherBranches": [],
       "pr": {
         "number": 6,
@@ -1408,18 +1419,18 @@
         "state": "open",
         "draft": true,
         "merged_at": null,
-        "updated_at": "2026-10-08T18:06:55Z",
-        "body": "Perudo-style Liar\u2019s Dice for 2\u20138 players, with private cups, wild-one and palifico policies, optional calza, exact probability, and separate learned bluffing. The offline page includes adjustable bot pacing, validated same-tab recovery, complete standings, and supported custom player IDs.\n\nCurrent verification-only audit head: a490f6f5df34f9245a3084a88cbdceb54ef59115. PR is draft while fresh current-head acceptance is pending. The game/core/session/page bytes are unchanged (page SHA256 33f5e801d975192c26fd6eaf297086a81d828f7a1074b8b4328e20baf6c7d37a); prior KEEP GOING rounds 6\u20138 remain three consecutive rounds with no player-visible gain.\n\nThe original integrity frame-validation block accepted 12 malformed reports with genuine unchanged raw samples. The archived exact runner/checker and scoped counterexamples are delivered. The new current-only checker requires all 94 original checks, both exact desktop/CPU4 profiles, all 1,200 consecutive native intervals, independent metric recomputation, no recording/filtering, and 30 actual source guards. The >=59 mean FPS and <=17ms p99 gates are unchanged. Fresh CI uploads raw evidence and the actual guarded sources; historical positive evidence cannot substitute for it.\n\nValidation completed for this checkpoint: 70 focused corruption/nonce-coordination tests; 370 delivered file hashes, two identical manifests, two byte-identical fixture regenerations, license/purity/integrity checks, and diff check. Fresh resume-audit-9 recordings show two actual five-round games with matching unchanged page hashes and zero errors/network; desktop 1,251,873 bytes and CPU4 phone 1,165,745 bytes. Recording is separate from performance measurement.\n\nHistorical gameplay results: 46 node tests, 7,000 completed games (1,000 each for 2\u20138 players), 20,000 independent probability differentials, 25/25 actual source-mutation kills, and default-duel Strong64.70%/Medium58.90% with a separate fresh holdout66.8%/57.0%. Historical original-runner full94 acceptance retains all600 intervals per profile: desktop60.002400FPS/phone59.803247FPS,p9916.8ms. Original ad83cdc hosted run37765397301 SUCCESS is historical only. Fresh full local browser and exact new-head hosted CI are pending; all earlier failures remain retained.\n\nPhysical phones, full SDK integration, and multiplayer/variant strategy advantage remain unproved. NEXT.md, EVIDENCE.md, VERIFY.md, SOURCES.md and CONFLICTS.md record delivery, edition choices, research and limitations."
+        "updated_at": "2026-10-08T19:24:16Z",
+        "body": "Perudo-style Liar\u2019s Dice for 2\u20138 players, with private cups, wild-one and palifico policies, optional calza, exact probability, and a learned bluffing model. The standalone offline page includes adjustable bot pacing, validated same-tab recovery, complete standings, and supported custom player IDs.\n\nCurrent verification head: 41f6226274e0eb693adfe00c29bd0ae8ae981ff9. This PR remains draft until its complete current-source checks and actual hosted evidence pass. The gameplay/core/session/page and native 600-interval callback are unchanged (page SHA256 33f5e801d975192c26fd6eaf297086a81d828f7a1074b8b4328e20baf6c7d37a). Prior KEEP GOING rounds 6\u20138 still establish three consecutive rounds with no player-visible gain.\n\nTwo clock assertions previously compared a click\u2019s deadline change with a later RPC\u2019s host clock. The corrected checker observes host time before the ordinary trusted click handler and the resulting state afterward in the same click task. It retains the original 200/250 ms criteria and consumes actual time before saving, so a reset-to-full clock is detectable. Four actual desktop/CPU4 click diagnostics pass; deliberately delayed real RPCs fail the old formulas and 12 copied wrong deadlines reject. This demonstrates observer vulnerability, not the cause of the historical failures.\n\nThe current-only checker requires all 94 original checks, both exact desktop/CPU4 profiles, all 1,200 consecutive native intervals, independently recomputed metrics, no recording/filtering, and 32 actual source guards. It verifies the active eight-seat/forty-die/existing-bid/open-cup/exact-odds fixture before READY, after grant, and after the sample; the original fixture\u2019s turn timer is disabled. The >=59 mean FPS and <=17 ms p99 gates are unchanged. Actual raw samples are retained before subsequent endpoint verification; incomplete sidecars and historical positives cannot substitute for complete current acceptance.\n\nThe first observer run at 191c372 completed 94 checks: all 92 functional/source/offline checks passed, including four actual clock errors 0/17/0/60 ms. Its two strict setup checks failed before READY because a new player-map guard used array length; zero frames were sampled. The complete failed report and log are preserved. The current head corrects that count and strengthens synchronized raw/report workload corruption controls. Syntax, 70 focused historical corruption/nonce tests, 404 delivered hashes, two identical manifests, two byte-identical fixture regenerations, and license/purity/integrity checks pass. A fresh full local browser run and exact-head GitHub run 37831510960 are pending.\n\nHistorical source-specific proof remains explicit: a490 run37817956480 passed its full checks, and its actual artifact11569180344 was independently downloaded and validated with 1,306 assertions, all30 actual sources and all1,200 raw intervals. Separate prior32ea5f0 run37821793551 is green; its full130,717-character job log was read, while only that run\u2019s artifact metadata has been observed so far. The retained local a490 run failed two phone clock assertions and strict phone58.825836307FPS; no cause, threshold waiver or unchanged local timing retry is claimed. The reset also caused a recorded push-cadence gap.\n\nHistorical gameplay results: 46 node tests, 7,000 complete games (1,000 for each roster2\u20138), 20,000 independent probability differentials, 25/25 actual source-mutation kills, default-duel Strong64.70%/Medium58.90% and a separate fresh holdout66.8%/57.0%. Existing source-matched recordings show actual five-round games with zero errors/network; recordings are separate from FPS acceptance.\n\nPhysical phones, full SDK integration, and multiplayer/variant strategy advantage remain unproved. NEXT.md, EVIDENCE.md, VERIFY.md, SOURCES.md and CONFLICTS.md document delivery, edition choices, research, retained failures and limits."
       },
       "check": {
-        "id": 37821793551,
-        "head_sha": "32ea5f047011fc1d1d7b57b9ce49f1df8ce480cc",
+        "id": 37831510960,
+        "head_sha": "41f6226274e0eb693adfe00c29bd0ae8ae981ff9",
         "status": "completed",
         "conclusion": "success",
-        "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37821793551",
-        "updated_at": "2026-10-08T18:14:34Z",
+        "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37831510960",
+        "updated_at": "2026-10-08T19:33:31Z",
         "path": ".github/workflows/G07.yml",
-        "run_number": 15,
+        "run_number": 17,
         "run_attempt": 1
       },
       "checkError": null,
@@ -1565,6 +1576,10 @@
         "jobs/G07-liars-dice/evidence/browser/runs/33f5e801d975192c26fd6eaf297086a81d828f7a1074b8b4328e20baf6c7d37a/20261008173740283/phone4x.grant.json",
         "jobs/G07-liars-dice/evidence/browser/runs/33f5e801d975192c26fd6eaf297086a81d828f7a1074b8b4328e20baf6c7d37a/20261008173740283/phone4x.ready.json",
         "jobs/G07-liars-dice/evidence/browser/runs/33f5e801d975192c26fd6eaf297086a81d828f7a1074b8b4328e20baf6c7d37a/20261008173740283/report.json",
+        "jobs/G07-liars-dice/evidence/browser/runs/33f5e801d975192c26fd6eaf297086a81d828f7a1074b8b4328e20baf6c7d37a/20261008191711475/report.json",
+        "jobs/G07-liars-dice/evidence/browser/runs/33f5e801d975192c26fd6eaf297086a81d828f7a1074b8b4328e20baf6c7d37a/20261008191711475/round-1-pacing.json",
+        "jobs/G07-liars-dice/evidence/browser/runs/33f5e801d975192c26fd6eaf297086a81d828f7a1074b8b4328e20baf6c7d37a/20261008191711475/round-4-standings.json",
+        "jobs/G07-liars-dice/evidence/browser/runs/33f5e801d975192c26fd6eaf297086a81d828f7a1074b8b4328e20baf6c7d37a/20261008191711475/round-5-host.json",
         "jobs/G07-liars-dice/evidence/browser/runs/3d8b71f757a0da42be82ca9653ac84a56ef797e5b24ca88d22b79c773ec04562/20261008055237993/desktop-frames.json",
         "jobs/G07-liars-dice/evidence/browser/runs/3d8b71f757a0da42be82ca9653ac84a56ef797e5b24ca88d22b79c773ec04562/20261008055237993/phone4x-frames.json",
         "jobs/G07-liars-dice/evidence/browser/runs/3d8b71f757a0da42be82ca9653ac84a56ef797e5b24ca88d22b79c773ec04562/20261008055237993/report.json",
@@ -1677,6 +1692,12 @@
         "jobs/G07-liars-dice/evidence/checks/probability-reference-selfcheck.json",
         "jobs/G07-liars-dice/evidence/checks/probability.json",
         "jobs/G07-liars-dice/evidence/checks/properties.json",
+        "jobs/G07-liars-dice/evidence/checks/resume-audit-11-clock-observation-diagnostic-final.log",
+        "jobs/G07-liars-dice/evidence/checks/resume-audit-11-clock-observation-functional.log",
+        "jobs/G07-liars-dice/evidence/checks/resume-audit-11-clock-observation-unit.log",
+        "jobs/G07-liars-dice/evidence/checks/resume-audit-11-clock-observer-diagnostic.json",
+        "jobs/G07-liars-dice/evidence/checks/resume-audit-12-unsampled-guard-failure.json",
+        "jobs/G07-liars-dice/evidence/checks/resume-audit-12-unsampled-guard-failure.log",
         "jobs/G07-liars-dice/evidence/checks/resume-audit-9-hosted-independent.json",
         "jobs/G07-liars-dice/evidence/checks/resume-audit-9-independent-reader.py",
         "jobs/G07-liars-dice/evidence/checks/resume-legacy-validator-counterexamples.json",
@@ -1789,6 +1810,8 @@
         "jobs/G07-liars-dice/scripts/browser-evidence.mjs",
         "jobs/G07-liars-dice/scripts/build.mjs",
         "jobs/G07-liars-dice/scripts/capture.mjs",
+        "jobs/G07-liars-dice/scripts/clock-observation-diagnostic.mjs",
+        "jobs/G07-liars-dice/scripts/clock-observation.mjs",
         "jobs/G07-liars-dice/scripts/fixtures.mjs",
         "jobs/G07-liars-dice/scripts/frame-coordination.mjs",
         "jobs/G07-liars-dice/scripts/hashes.mjs",
@@ -1821,23 +1844,23 @@
       ],
       "fileInventorySource": {
         "type": "immutable Git tree",
-        "head": "32ea5f047011fc1d1d7b57b9ce49f1df8ce480cc",
-        "observedAt": "2026-10-08T19:14:49.056Z"
+        "head": "41f6226274e0eb693adfe00c29bd0ae8ae981ff9",
+        "observedAt": "2026-10-08T19:30:31.304Z"
       },
       "operatorNote": {
         "current": "G07",
-        "summary": "Current verification head 32ea5f047 has a green full exact-head run 37821793551, completed at 18:14:34 UTC; original PR #6 remains draft. Prior hosted a490 evidence passed all 94 browser, 116 evidence and 68 fixture checks; actual artifact 11569180344 bound 30 guards and 1,200 raw intervals in 1,306 independent assertions. The actual local full run passed 91 of 94 groups and failed two phone clock checks and 58.825 FPS; raw failures are retained. Four genuine clicks met the original 200/250-ms gates at 0/40/0/58 ms, while the old delayed observer incorrectly reported 457\u2013638 ms. This establishes a checker weakness, not the cause of historical failure. A slow-save fixture, wrong 600-ms deadline controls and the private 32-guard repair still require closure. Game bytes remain unchanged; the earlier player KEEP rounds 6\u20138 remain a separate completed stop.",
-        "next": "Finish source-bound deadline/save-fixture checker review, inspect the complete current hosted evidence and final exact-head gates, then update original PR #6 readiness.",
+        "summary": "Current public head 41f62262 was pushed at 19:22:49 UTC; original PR #6 is draft and exact-head run 37831510960 now reports SUCCESS in the fresh GitHub observation; complete-log and current-artifact review still require closure. The preceding 191c hosted check failed a player-map-count assertion in the new checker before collecting any FPS samples; its other 92 browser groups passed. The repaired current local desktop measured all 600 native intervals and passed at 60.002400096 FPS, closing at 19:27:32.260 UTC; the phone actually closed at 19:31:11.213 UTC with all 600 untouched intervals passing at 59.310808406 FPS/p99 16.8 ms/maximum 66.7 ms. Both current strict profiles pass, but the complete local browser report is 93/94: a separate redundant calza pre-click pacing assertion failed. No actual elapsed value was logged for that assertion and no cause is claimed. The browser exited 1 at 19:31:11.671; all 32 current source guards were unchanged. Full local acceptance remains failed; no unmodified timing retry was performed. Earlier local 58.825-FPS and phone clock failures remain retained. Four genuine clicks met the original 200/250-ms gates at 0/40/0/58 ms, while the previous delayed observer reported 457\u2013638 ms; that proves an observer weakness, not the cause of old failures. The slow-save fixture and deadline-negative controls remain part of the checker repair. Prior current-then-hosted artifact 11569180344 independently bound 30 guards and 1,200 intervals in 1,306 assertions. Game bytes remain unchanged, so earlier player KEEP rounds 6\u20138 retain their separate completed stop.",
+        "next": "Inspect the complete current green hosted run and its real source-bound artifact, and resolve the separately failed local calza pacing gate without inventing elapsed timing or a cause before changing original PR #6 readiness.",
         "queue": [
           "Phone clock failure",
           "Strict phone proof",
           "Current full CI/artifact"
         ],
-        "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+        "updatedAt": "2026-10-08T19:37:42.820996+00:00",
         "previousOperatorRecord": {
-          "updatedAt": "2026-10-08T17:50:10.465446+00:00",
-          "summary": "Current verification repair a490f6f pushed17:37:07; original PR6 is draft and exact run37817956480 is pending. Fixed real holes that accepted empty/missing profile coverage. All70 targeted corruption/nonce controls and370 hashes pass; fresh desktop/CPU4 five-round clips are under1.3MB each. First current local desktop600 strict sample PASS60.002400 FPS/p99max16.8, CLOSED17:44:44.619. The phone functional sequence failed its unchanged250ms reload-clock assertion; phone sampling and full acceptance remain pending. Game/core/session/HTML and prior KEEP6\u20138 three-round stop unchanged; old ad83 positives are historical.",
-          "next": "Preserve and diagnose the actual phone clock failure, finish strict phone proof, inspect full exact-head CI/artifacts and only then make original PR6 ready."
+          "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+          "summary": "Current verification head 32ea5f047 has a green full exact-head run 37821793551, completed at 18:14:34 UTC; original PR #6 remains draft. Prior hosted a490 evidence passed all 94 browser, 116 evidence and 68 fixture checks; actual artifact 11569180344 bound 30 guards and 1,200 raw intervals in 1,306 independent assertions. The actual local full run passed 91 of 94 groups and failed two phone clock checks and 58.825 FPS; raw failures are retained. Four genuine clicks met the original 200/250-ms gates at 0/40/0/58 ms, while the old delayed observer incorrectly reported 457\u2013638 ms. This establishes a checker weakness, not the cause of historical failure. A slow-save fixture, wrong 600-ms deadline controls and the private 32-guard repair still require closure. Game bytes remain unchanged; the earlier player KEEP rounds 6\u20138 remain a separate completed stop.",
+          "next": "Finish source-bound deadline/save-fixture checker review, inspect the complete current hosted evidence and final exact-head gates, then update original PR #6 readiness."
         }
       }
     },
@@ -1846,7 +1869,7 @@
       "title": "Word Grid (= the owner's Shake Up)",
       "stage": "Review",
       "branch": "job/G08-word-grid-the-owner-s-shake-up",
-      "head": "1d2c47063e738c59f531e64a41f15b71afa6fbde",
+      "head": "ce1dd59b943d338d43ccdb18f03f0d38cb2538e1",
       "otherBranches": [
         {
           "name": "job/G08-word-grid",
@@ -1860,18 +1883,18 @@
         "state": "open",
         "draft": true,
         "merged_at": null,
-        "updated_at": "2026-10-08T17:53:45Z",
-        "body": "The owner\u2019s Shake Up now runs from its existing reducer and phone/TV components as a self-contained offline page. It binds the available root contract and preserves the original name, models, film source and CSS. English offers full or optional SCOWL\u226470 dictionaries; Spanish retains its original faces and language-specific lists.\n\nEscaped player IDs exposed a five-round state-size failure (374 KB). Serialized-byte limits now keep the accepted 16-seat identity stresses below 83 KB. Hot-seat hands over a masked private clock, keeps keyboard focus with the next player, protects cancelled restarts and chooses fresh seeds. Long names and all 16 tied winners fit the phone. Spanish includes host controls/help; bots-only observers see public counts and full final awards.\n\nValidation through `npm test` and the readonly G08 workflow:\n\n- 168 regressions, including all 151 supplied assertions and 200 chaos simulations; all nine actual contract invariants.\n- 50,000 measured boards, 10,000 sealed independent solver comparisons and 2,383,756 independently checked paths; 30 second-source cube spot-checks. Original BIG5\u00d75 retained on measured mean/lower-tail results.\n- 2,000 calibration boards, two 2,000-game default strength leagues, 1,003 adversarial replays and 1,000 complete games at each supported 1\u201316 roster.\n- 24/25 behavioral mutations caught by the selected subset; its exact-minimum survivor is covered by the mandatory independent differential gate. Two dictionary and fixture rebuilds are byte-identical.\n- 38 JSON schemas, 87 file checksums, 29 protected original visual hashes; actual disk browser/FPS, native keyboard/touch/cancel, privacy, pause, Spanish, full 16-seat positive tie, restart, focus and observer-awards checks. Seven milestone clips stay below 10 MB each.\n\nComplete baseline disk CI37762679661 measured 60.028 desktop / 60.029 CPU4 phone FPS, p95\u226416.8 ms and zero outgoing requests/errors. Exact-source provenance is retained. Final commit cd4cd0a passed complete push37768041190 and PR37768048402 gates; its actual disk report measured60.021fps on desktop and CPU4phone, p9516.7ms, zero requests/errors. KEEP GOING records five functional rounds followed by three documentation-only rounds; the playable page\u2019s SHA is unchanged across the final three.\n\nManufacturer primary edition labels and production SDK audio/3D integration remain explicit re-verification items. Pinned live fallback facts and explicitly permitted test/offline bindings are documented. The offline host gives each person equal private time on the same board; production play remains simultaneous. See RULES.md, SOURCES.md, BOTS.md, VERIFY.md, LOOP.md and NEXT.md for evidence and reproducible commands.\n"
+        "updated_at": "2026-10-08T19:29:00Z",
+        "body": "The owner\u2019s Shake Up now runs from its existing reducer and phone/TV components as a self-contained offline page. It binds the available root contract and preserves the original name, models, film source and CSS. English offers full or optional SCOWL\u226470 dictionaries; Spanish retains its original faces and language-specific lists.\n\nEscaped player IDs exposed a five-round state-size failure (374 KB). Serialized-byte limits now keep the accepted 16-seat identity stresses below 83 KB. Hot-seat hands over a masked private clock, keeps keyboard focus with the next player, protects cancelled restarts and chooses fresh seeds. Long names and all 16 tied winners fit the phone. Spanish includes host controls/help; bots-only observers see public counts and full final awards.\n\nValidation through `npm test` and the readonly G08 workflow:\n\n- 168 regressions, including all 151 supplied assertions and 200 chaos simulations; all nine actual contract invariants.\n- 50,000 measured boards, 10,000 sealed independent solver comparisons and 2,383,756 independently checked paths; 30 second-source cube spot-checks. Original BIG5\u00d75 retained on measured mean/lower-tail results.\n- 2,000 calibration boards, two 2,000-game default strength leagues, 1,003 adversarial replays and 1,000 complete games at each supported 1\u201316 roster.\n- 24/25 behavioral mutations caught by the selected subset; its exact-minimum survivor is covered by the mandatory independent differential gate. Two dictionary and fixture rebuilds are byte-identical.\n- 38 JSON schemas, 87 file checksums, 29 protected original visual hashes; actual disk browser/FPS, native keyboard/touch/cancel, privacy, pause, Spanish, full 16-seat positive tie, restart, focus and observer-awards checks. Seven milestone clips stay below 10 MB each.\n\nComplete baseline disk CI37762679661 measured 60.028 desktop / 60.029 CPU4 phone FPS, p95\u226416.8 ms and zero outgoing requests/errors. Exact-source provenance is retained. Final commit cd4cd0a passed complete push37768041190 and PR37768048402 gates; its actual disk report measured60.021fps on desktop and CPU4phone, p9516.7ms, zero requests/errors. KEEP GOING records five functional rounds followed by three documentation-only rounds; the playable page\u2019s SHA is unchanged across the final three.\n\nManufacturer primary edition labels and production SDK audio/3D integration remain explicit re-verification items. Pinned live fallback facts and explicitly permitted test/offline bindings are documented. The offline host gives each person equal private time on the same board; production play remains simultaneous. See RULES.md, SOURCES.md, BOTS.md, VERIFY.md, LOOP.md and NEXT.md for evidence and reproducible commands.\n\n\nCurrent verification repair: head `4047cd7c10ecf35c890baca492c61738eb966ee7` is a progress checkpoint and this PR remains draft. Shake Up game, owner assets, dictionaries and the 14,208,697-byte page (SHA256 `863a1910a63a16ed3dc1735a2c1e73e2c1b5317df6f50b01673e0fb3296073f9`) are unchanged; prior KEEP GOING rounds 6\u20138 still provide the three consecutive rounds with no player-visible gain.\n\nThe newer host verifier pauses with the real game control before coordination and resumes before four native, unfiltered 600-interval samples (English4\u00d74/Spanish5\u00d75, TV1920\u00d71080/phone390\u00d7844 CPU4). It requires a live advancing hunt at both endpoints, a 600-second minimum grant window, current contract/workflow/checker source guards, independent raw statistics and real captured-byte corruption controls/full ffmpeg decode. Strict typecheck and all17 actual coordination controls pass locally; all40 static JSON files validate. Current full CI and actual new frame/capture artifact acceptance remain pending.\n\nHistorical published head `1d2c47063e738c59f531e64a41f15b71afa6fbde` passed full push37820082838 and PR37820089198; its actual downloaded artifact11568629085 was independently checked for all2,400 raw intervals,180 source guards and real clip hashes. That proof is separate from this newer harness. The earlier120-second coordination attempt received no grant and recorded zero samples. The18:18 paused attempt has only an actual READY file after the environment interruption; no grant/CLOSED/raw/report survives, precise termination time/result is unknown, and no FPS result is claimed. The interrupted publication interval exceeded30minutes and is recorded in review/repair09/RECOVERY.md. No failed frame sample is silently retried or threshold relaxed."
       },
       "check": {
-        "id": 37820089198,
-        "head_sha": "1d2c47063e738c59f531e64a41f15b71afa6fbde",
+        "id": 37832292544,
+        "head_sha": "ce1dd59b943d338d43ccdb18f03f0d38cb2538e1",
         "status": "completed",
-        "conclusion": "success",
-        "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37820089198",
-        "updated_at": "2026-10-08T18:02:12Z",
+        "conclusion": "failure",
+        "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37832292544",
+        "updated_at": "2026-10-08T19:34:51Z",
         "path": ".github/workflows/G08.yml",
-        "run_number": 23,
+        "run_number": 27,
         "run_attempt": 1
       },
       "checkError": null,
@@ -1909,6 +1932,9 @@
         "jobs/G08-word-grid/package.json",
         "jobs/G08-word-grid/play.html",
         "jobs/G08-word-grid/review/repair09/README.md",
+        "jobs/G08-word-grid/review/repair09/RECOVERY.md",
+        "jobs/G08-word-grid/review/repair09/cancelled-recovery10-ready.json",
+        "jobs/G08-word-grid/review/repair09/failed-4047-pr-report.json",
         "jobs/G08-word-grid/review/repair09/frame-preflight-ready.json",
         "jobs/G08-word-grid/review/repair09/frame-preflight-timeout.json",
         "jobs/G08-word-grid/start/HANDOFF.md",
@@ -2079,28 +2105,30 @@
         "jobs/G08-word-grid/start/verification/seeded.ts",
         "jobs/G08-word-grid/start/verification/verify-browser-negatives.mjs",
         "jobs/G08-word-grid/start/verification/verify-browser.mjs",
+        "jobs/G08-word-grid/start/verification/verify-capture-negatives.mjs",
+        "jobs/G08-word-grid/start/verification/verify-capture.mjs",
         "jobs/G08-word-grid/tsconfig.json",
         "jobs/G08-word-grid/vitest.config.ts"
       ],
       "fileInventorySource": {
         "type": "immutable Git tree",
-        "head": "1d2c47063e738c59f531e64a41f15b71afa6fbde",
-        "observedAt": "2026-10-08T19:14:49.056Z"
+        "head": "ce1dd59b943d338d43ccdb18f03f0d38cb2538e1",
+        "observedAt": "2026-10-08T19:30:31.304Z"
       },
       "operatorNote": {
         "current": "G08",
-        "summary": "Current public head 1d2c47063 remains on original draft PR #9. Both hosted runs 37820082838 and 37820089198 passed at 18:01/18:02 UTC: all 168 game groups, seven coordination groups and 2,400 genuine intervals across four profiles, bound to 180 guards. Actual artifact 11568629085 is a 1,779,137-byte ZIP; its raw samples and clip hashes were independently validated. A later ffprobe extra empty stream_groups field caused a receipt-schema equality issue, not evidence of a bad clip. The new real 600-second Pause/Resume checks, endpoint/schema controls, 17 coordination and 14 capture negatives remain private and unfinished. The 18:18:25 paused READY attempt was never root-granted before the environment restart and must be closed or marked expired without an FPS claim. Original owner HTML/art/assets remain unchanged; source SHA256 863a1910 applies to the 14,208,697-byte owner page.",
-        "next": "Close or record the interrupted ungranted attempt, finish the meaningful Pause/Resume and strict capture validation controls, push the repair and inspect every current-source exact-head check before readiness.",
+        "summary": "New public head ce1dd59b follows the failed 4047 endpoint check; original owner Shake Up remains on draft PR #9. Current exact-head run 37832292544 now reports FAILURE; the actual full 121,098-character log fails browser.ts:129 because the Shake Up heading was not document.activeElement after New game (false versus expected true), at 19:34:47 UTC. The immutable ce1 checker source confirms that exact assertion. This hosted focus assertion is separate from the local elapsed-clock failure; no cause is inferred. Failed-run artifact 11573904198 was actually uploaded: 1,247,112 bytes, ZIP SHA256 497e9e54263a023bef0176063a5551887fe6166f31a3a41d9401cdc81256dbae. The failed hosted attempt expected the wrong TV grid size: the actual correct board is 16 cells on TV and 25 on phone; that failure occurred before any FPS samples. The owner is correcting only the verification harness and preserving the original game, art and assets. Prior head 1d2c47063 has two full green hosted runs, all 168 game groups, seven coordination groups and 2,400 genuine intervals across four profiles bound to 180 guards; that proof is scoped to its earlier harness. The new real 600-second Pause/Resume, endpoint/schema and capture-negative controls require current-source closure. The paused READY attempt before the environment interruption was never root-granted and has no FPS proof. The genuine earlier artifact\u2019s extra empty ffprobe stream_groups field caused a receipt-schema equality issue, not evidence of a bad clip. Original owner HTML remains 14,208,697 bytes, with source hash beginning 863a1910. The current local English TV profile collected all 600 unfiltered intervals and numerically passed at 59.902359 FPS/p95 16.8 ms. Its full attempt still FAILED: after genuine Resume, the clock reported 170 elapsed seconds during 10.0177 native seconds. All raw intervals and 183 guards were retained. The other three profiles were NOT RUN. No current paired/four-profile pass or product cause is claimed.",
+        "next": "Read the actual current hosted failure and diagnose the native elapsed-clock/Resume assertion with source-bound controls. Preserve all 600 raw TV intervals and the three unrun profiles; finish every corrected current-source check before PR readiness.",
         "queue": [
           "Four-profile offline proof repair",
           "Meaningful negative controls",
           "Current full CI"
         ],
-        "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+        "updatedAt": "2026-10-08T19:37:42.820996+00:00",
         "previousOperatorRecord": {
-          "updatedAt": "2026-10-08T17:50:10.465446+00:00",
-          "summary": "Lawfully reclaimed17:24:54, main af374171, after all matching branches and claims exceeded six hours. Original PR9 remains draft. Read owner START-HERE and nested AGENTS; preserve original Shake Up assets/game and14,208,697-byte HTML863a1910. Actual audit found filtered/aggregate-only frames, no failure sidecars/source guards, English4\u00d74-only FPS and no genuine retained hosted artifact. Preparing host-only four-profile English4\u00d74/Spanish5\u00d75 desktop/CPU4 actual-file runner, independent raw/source verifier and real corruption controls. No new acceptance is claimed; existing player stop remains applicable while game bytes stay unchanged.",
-          "next": "Publish the verification repair and obtain all four fresh source-bound frame profiles, actual captures and complete exact-head CI."
+          "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+          "summary": "Current public head 1d2c47063 remains on original draft PR #9. Both hosted runs 37820082838 and 37820089198 passed at 18:01/18:02 UTC: all 168 game groups, seven coordination groups and 2,400 genuine intervals across four profiles, bound to 180 guards. Actual artifact 11568629085 is a 1,779,137-byte ZIP; its raw samples and clip hashes were independently validated. A later ffprobe extra empty stream_groups field caused a receipt-schema equality issue, not evidence of a bad clip. The new real 600-second Pause/Resume checks, endpoint/schema controls, 17 coordination and 14 capture negatives remain private and unfinished. The 18:18:25 paused READY attempt was never root-granted before the environment restart and must be closed or marked expired without an FPS claim. Original owner HTML/art/assets remain unchanged; source SHA256 863a1910 applies to the 14,208,697-byte owner page.",
+          "next": "Close or record the interrupted ungranted attempt, finish the meaningful Pause/Resume and strict capture validation controls, push the repair and inspect every current-source exact-head check before readiness."
         }
       }
     },
@@ -2123,16 +2151,16 @@
         "state": "open",
         "draft": true,
         "merged_at": null,
-        "updated_at": "2026-10-08T19:13:40Z",
-        "body": "Category Rush is a complete offline category game for 2\u20138 players with 320 original prompts, 4,155 curated examples, seeded rounds, private hot-seat writing and anonymous ballots, duplicate cancellation, three bot skills, local saved-game recovery and scored receipts. The pure deterministic core uses the repository\u2019s actual shared contract; the documented standalone English matcher supplies the missing SDK helper.\n\nThe current writing form warns privately when an answer starts with the wrong initial or is equivalent to another answer on that same person\u2019s sheet. On actual two/eight-human before/after runs, three mechanically ineligible own rows improve from 0\u21923 immediate warnings. Advice clears as the person edits, restores behind a private handover after reload, never reads another player\u2019s sheet or the answer bank, and never blocks submission. Identical bad sheets keep the same zero scores and 6/24 anonymous ballots. Core, scoring, matcher, bots, category selection, data and save format are byte-identical to the preceding exact-green baseline.\n\nThe earlier crowded-table selection improvement remains: on 800 newly frozen balanced eight-Strong-bot heldout games, mean points rose 1.3175\u21922.42375 and zero-score tables fell 355\u2192244. Bank coverage fell 7.45% within the unchanged 10% guard; all 320 prompts remain represented. Seventeen individual eight-seat games worsen, and the rejected earlier policy stays archived.\n\nValidation on current HTML68f43a97 includes strict TypeScript, two byte-identical offline builds, authoritative category/schema checks, all 28 gameplay + 8 pacing + clock + 4 receipt + 17 recovery + 3 plural cases, seven focused checks (independent full-draft negatives and real grant-file controls), two source/artifact binders and 387 data/media hashes. Actual unrecorded 600-frame profiles pass desktop60.002952 and Chrome phone4\u00d759.903184 FPS, both p9916.8ms, with all 1,200 raw intervals independently recomputed and 18 unchanged source fingerprints. Separate 318,781/270,463-byte VP8 clips show all three real warnings. The prior round-five local58.255040 FPS failure remains archived and unresolved; no frame optimization or cause is claimed.\n\nPublic current head79e9c90b76603137fe5412a81ac33ecbc02419c6 requires its new full exact-head CI. The previous baseline2b59941 is fully green on run37810872591 (16:52:27UTC):56 tests, both independent10k oracles,7k restored games/all nine invariants,1,003 properties,43 real mutants caught,4k duels, every regeneration and UI/recovery gate. Five KEEP rounds are fully complete; round six has measured current-source gain but awaits this new full CI. No-gain streak0. This PR stays draft until exact-head full CI and three consecutive measured reviews without a player-visible gain finish."
+        "updated_at": "2026-10-08T19:15:58Z",
+        "body": "Category Rush is a complete offline category game for 2\u20138 players with 320 original prompts, 4,155 curated examples, seeded rounds, private hot-seat writing and anonymous ballots, duplicate cancellation, three bot skills, saved-game recovery and scored receipts. The deterministic core uses the repository\u2019s shared contract and the documented standalone English matcher.\n\nThe current input adapter preserves pasted word boundaries before private advice, saving and submission. On fourteen native Chromium clipboard cases at two/eight humans, six authored article-tab/vertical-tab/DEL answers improve from zero to one point; eight ordinary, spaced-article, newline and CRLF controls retain one point. Caret, backward selection, the 80-character bound, own-repeat/wrong-initial advice, handover privacy and recovery pass. Core, scorer, matcher, selector, bots, category data, RNG and save codec remain byte-identical. Earlier private own-draft warnings and the measured crowded-table selection improvement remain intact.\n\nExact prior head3f6d467c029cbb718b27c39ed26b3f6f2a64793a passed full CI37821893898/job113464750151 at18:23:12UTC:66 tests, both independent10,000-case oracles,7,000 restored games/all nine invariants,1,003 property seeds,43 actual mutation kills,4,000 adjacent-skill duels, every deterministic regeneration and all original/new UI suites. The actual1,153,457-byte artifact11568969406 matches its official digest. All eight uploaded files,18 exact-head source guards and1,200 raw intervals independently verify; original hosted desktop60.002580/phone4\u00d760.002940FPS,p99/max16.8ms, with342,608/266,964-byte separately recorded VP8 clips decoded.\n\nA real local verification gap is preserved: the original coordinated harness started the60-second timer before waiting for grants. Round-seven local desktop59.704297FPS and phone58.444306FPS/p9933.3ms were sampled, but both post-sample screenshots show private handover. The phone speed gate failed; these results cannot prove active-answer workload performance. Full raw data, receipts, source copies and desktop clip remain archived. Earlier coordinated local phase claims share this unverified scope; the no-wait hosted original run is separate and lacks a per-callback phase witness.\n\nCurrent public head17c0d3009e09d671db0b3d45719b3d927ed44038 repairs only the harness: wait at handover, start the real timer after the fresh grant, retain the original single250ms settle and all600 consecutive native deltas/59FPS/p99\u226417ms gates, and record visible answer form, modal absence, native wall clock and an advancing positive timer on every601 callbacks. Nine focused controls and strict TypeScript pass. Full current CI37830364323, corrected-runner acceptance and separate clips remain pending. The normal source push19:13:38UTC follows a66m03s interruption gap, explicitly exceeding the30-minute cadence rule.\n\nThis PR remains draft. Six review rounds are complete; round seven has measured product gain but its corrected workload proof and completion log are pending. Consecutive no-player-gain streak is zero. Completion still requires every current-head check and three actual consecutive review rounds with no player-visible gain."
       },
       "check": {
         "id": 37830364323,
         "head_sha": "17c0d3009e09d671db0b3d45719b3d927ed44038",
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "html_url": "https://github.com/luisitin/partybox-game-cores/actions/runs/37830364323",
-        "updated_at": "2026-10-08T19:13:50Z",
+        "updated_at": "2026-10-08T19:29:06Z",
         "path": ".github/workflows/G09.yml",
         "run_number": 24,
         "run_attempt": 1
@@ -2668,22 +2696,22 @@
       "fileInventorySource": {
         "type": "immutable Git tree",
         "head": "17c0d3009e09d671db0b3d45719b3d927ed44038",
-        "observedAt": "2026-10-08T19:14:49.057Z"
+        "observedAt": "2026-10-08T19:30:31.306Z"
       },
       "operatorNote": {
         "current": "G09",
-        "summary": "Latest public checkpoint 17c0d3009e09d671db0b3d45719b3d927ed44038 has its exact-head full workflow in progress. Original PR #8 remains draft; R7 acceptance and the post-gain KEEP stop remain unfinished. The native answer-cleaning correction passed 14 new cases, including six TAB/VT/DEL article cases that improved from zero to one for both rosters; original 28+8+clock+4+17+3+3 and focused controls passed, with two identical 457,688-byte builds. The actual first native paired local measurement collected all 1,200 intervals: desktop 59.704296 FPS, phone 58.444306 FPS/p99 33.3 ms FAIL, retaining all 18 guards and the 346,200-byte clip. Both final screenshots showed Pass To Sam because the real 60-second timer began before minutes of grant waiting, so those samples fail active-answer-workload scope. The assertion failed before the cancellation signal was written; the run was measured, not NOT RUN. A handover barrier before starting the real timer, per-frame active-form checks and a native Date witness are under repair. Earlier coordinated R6 local claims share that scope gap; independent hosted no-wait evidence retains its separate scope. The checkpoint pushed at 19:13:38 UTC after the 19:13:19 claim refresh; the actual 66-minute-03-second interruption gap is logged. Game source 91a0 is unchanged. Its new harness waits at the handover barrier before starting the native timer. Prior 3f6d full run 37821893898 passed at 18:23:12, with all 66 tests, 43 mutants and the complete 132,351-character log. Its genuine hosted artifact binds all 18 guards and 1,200 raw native intervals (60.00258/60.00294 FPS), plus actual 342,608/266,964-byte clips showing three hints and TAB handling. That hosted proof uses the older runner without per-frame phase callbacks; the new phase fix remains under current checks.",
-        "next": "Inspect the new checkpoint\u2019s full current checks and finish the timer/workload evidence repair. Complete the actual R7 review and three consecutive rounds without player gain after the most recent gain; preserve all failures.",
+        "summary": "Current public head 17c0d300 was pushed at 19:13:38 UTC after its 19:13:19 claim refresh; the 66-minute-03-second environment-interruption gap is recorded. Original PR #8 remains draft. Exact-head full run 37830364323 now reports SUCCESS at 19:29:06 UTC; the current hosted strict frame check passed, and the genuine current artifact was independently validated: all 1,200 raw intervals, 1,202 active-form/timer witnesses and actual clips passed. KEEP acceptance remains open. Game source 91a0 is unchanged; the new harness waits at handover before starting the real timer. The corrected local setup timed out at 19:26:24.653 UTC because the root grant included an extra key; it collected zero frames and is not a local FPS pass. The preceding actual local run did collect all 1,200 intervals: desktop 59.704296 FPS and phone 58.444306 FPS/p99 33.3 ms FAIL. Both final screenshots showed Pass To Sam because the 60-second timer had begun before minutes of quiet-grant waiting, so that measured run failed active-answer-workload scope. All raw intervals, 18 guards and the actual 346,200-byte clip remain retained. The new per-frame active-form and native Date witnesses repair that coverage gap; older coordinated R6 local claims also retain their scope limitation. Prior no-wait hosted head 3f6d run 37821893898 passed at 18:23:12, with all 66 tests, 43 mutants, source-bound 1,200 raw intervals near 60 FPS and real 342,608/266,964-byte clips. That earlier hosted proof uses the older runner without per-frame phase callbacks. R7 acceptance and the three-round stop after the latest real gain remain unfinished.",
+        "next": "Read the complete current green workflow and independently check its genuine artifact. Preserve the zero-sample local coordination timeout, close the R7 acceptance review and complete three consecutive rounds without player gain after the most recent gain.",
         "queue": [
           "R7 measured clipboard fix",
           "Changed-source acceptance",
           "Remaining KEEP rounds"
         ],
-        "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+        "updatedAt": "2026-10-08T19:37:42.820996+00:00",
         "previousOperatorRecord": {
-          "updatedAt": "2026-10-08T17:50:10.465446+00:00",
-          "summary": "Latest checkpoint a49dcc0 pushed17:37:20/29m39 since79; target missed but hard30min met. Original PR8 draft; latest CI37818002160 pending. Actual previous79 full run37814161304 succeeded17:21:43 with125257-character full log and independently source-bound official artifact11565694396. R6 private hints passed original checks/240 draft controls and both current local600 profiles60.00295/59.90318FPS. R7 real14-case pre-edit native clipboard matrix proved authored The<TAB>stapler loses1\u21920 at2/8 players with no warning; vertical-tab/DEL also failed, while real newline/CRLF became spaces. Offline adapter fix now converts controls to visible spaces before hints/save/submission; focused6 checks,strict TS,two identical457688-byte builds and initial two-person after controls pass. Eight-person and full changed-source proof pending; core/data/bots/RNG/save codec unchanged. Last player gain R6 resets no-gain streak0.",
-          "next": "Finish the native after matrix and full changed-source UI/frame checks, measure R7 gain, obtain exact-head CI, then continue KEEP until three consecutive no-player-gain rounds."
+          "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+          "summary": "Latest public checkpoint 17c0d3009e09d671db0b3d45719b3d927ed44038 has its exact-head full workflow in progress. Original PR #8 remains draft; R7 acceptance and the post-gain KEEP stop remain unfinished. The native answer-cleaning correction passed 14 new cases, including six TAB/VT/DEL article cases that improved from zero to one for both rosters; original 28+8+clock+4+17+3+3 and focused controls passed, with two identical 457,688-byte builds. The actual first native paired local measurement collected all 1,200 intervals: desktop 59.704296 FPS, phone 58.444306 FPS/p99 33.3 ms FAIL, retaining all 18 guards and the 346,200-byte clip. Both final screenshots showed Pass To Sam because the real 60-second timer began before minutes of grant waiting, so those samples fail active-answer-workload scope. The assertion failed before the cancellation signal was written; the run was measured, not NOT RUN. A handover barrier before starting the real timer, per-frame active-form checks and a native Date witness are under repair. Earlier coordinated R6 local claims share that scope gap; independent hosted no-wait evidence retains its separate scope. The checkpoint pushed at 19:13:38 UTC after the 19:13:19 claim refresh; the actual 66-minute-03-second interruption gap is logged. Game source 91a0 is unchanged. Its new harness waits at the handover barrier before starting the native timer. Prior 3f6d full run 37821893898 passed at 18:23:12, with all 66 tests, 43 mutants and the complete 132,351-character log. Its genuine hosted artifact binds all 18 guards and 1,200 raw native intervals (60.00258/60.00294 FPS), plus actual 342,608/266,964-byte clips showing three hints and TAB handling. That hosted proof uses the older runner without per-frame phase callbacks; the new phase fix remains under current checks.",
+          "next": "Inspect the new checkpoint\u2019s full current checks and finish the timer/workload evidence repair. Complete the actual R7 review and three consecutive rounds without player gain after the most recent gain; preserve all failures."
         }
       }
     },
@@ -3994,8 +4022,8 @@
       },
       "operatorNote": {
         "current": "G10",
-        "summary": "Current public checkpoint 2f821d157ee597494e38401d505cf2e337e23b94 has no exact-head workflow or PR. The actual private 4,000-game strength matrix closed at 18:17:33.426973 UTC with exit 0: each of four 1,000-game comparisons passed (.924/.9625 Sharp versus Normal; .999/1 Normal versus Easy). Peak RSS was 12,215,940 KiB. Actual wall time 2,827.687 seconds includes 737.289 seconds of recorded holds; excluding them, 2,090.398 seconds still exceeds 30 minutes for the league alone, so full-CI fit is NOT established. All 91 current units, the full 7,000-game matrix and 25 actual mutation kills have passed. Full licensed American and International two-to-six-piece corpus is available; the 1.39-GB full offline HTML remains private, while tracked play.html is the older two-to-five baseline. Genuine International desktop 600-frame sample failed at 17.510 FPS/p99 799.9 ms; its phone profile was NOT RUN. No cause or unchanged-source retry is claimed. The current host validator passed 14 positives and 127 negatives at 18:17:11; later active-board controls were interrupted and require actual closure. The preserved full 4,000-game result, all 80 batch reports, 127 game-input hashes and the 14-positive/127-negative host controls are now public in this checkpoint, normally pushed at 19:16:00.586934 UTC after its main claim refresh at 19:15:44. The actual 18:01:17\u201319:16:00 interruption interval missed the 30-minute rule and is recorded; no full-CI or download acceptance is inferred.",
-        "next": "Diagnose International rendering with controlled source-bound evidence. Complete all four strict profiles, actual 30-minute full-CI fit and the full-six HTML download receipt, then open the original PR and finish binding KEEP review.",
+        "summary": "Current public checkpoint 2f821d157ee597494e38401d505cf2e337e23b94 was normally pushed at 19:16:00.586934 UTC after the 19:15:44 claim refresh; the 18:01:17\u201319:16:00 interruption gap is recorded. It contains the actual full 4,000-game strength result, all 80 batch reports, 127 game-input hashes and host-validator controls. Four 1,000-game comparisons passed: .924/.9625 Sharp versus Normal, and .999/1 Normal versus Easy. Peak RSS was 12,215,940 KiB. Actual wall time 2,827.687 seconds includes 737.289 seconds of recorded holds; excluding them, 2,090.398 seconds is still 34 minutes 50 seconds for the league alone. The owner is designing a CI partition that preserves all 4,000 games and unchanged budgets; no actual 30-minute full-CI fit or green run is claimed. All 91 current units, the 7,000-game matrix and 25 real mutant kills have passed. Full licensed two-to-six-piece corpora are available; the 1.39-GB complete offline HTML remains private, while tracked play.html is the earlier two-to-five baseline. Genuine International desktop 600-frame proof failed at 17.510 FPS/p99 799.9 ms, and its phone profile was NOT RUN. No cause or unchanged-source retry is claimed. Host evidence validation passed 14 positives and 127 negatives; interrupted later active-board controls require actual closure. There is no PR or verified full-six download yet.",
+        "next": "Complete the source-equivalent full-workload CI partition and prove its actual resource/time gates. Diagnose International rendering with controlled evidence, finish all strict profiles and the complete offline HTML download receipt, then open the PR and complete binding KEEP review.",
         "queue": [
           "Verifier correction",
           "Current4000 strength",
@@ -4003,11 +4031,11 @@
           "Full CI and download",
           "PR and KEEP"
         ],
-        "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+        "updatedAt": "2026-10-08T19:37:42.820996+00:00",
         "previousOperatorRecord": {
-          "updatedAt": "2026-10-08T17:50:10.465446+00:00",
-          "summary": "Latest e895726 checkpoint pushed17:43:32; actual32m28 interval MISSED30min by2m28 during recovery, preserved. Full current91 units passed uninterrupted17:08:03, all127 inputs and213 module guards unchanged; earlier89-pass memory-cap termination retained. Actual7000-game matrix and25 real mutants pass. Full offline1.39GB six-piece page5ed2173 remains private; tracked page is older2\u20135. American paired local600 proof passes, but actual International desktop600 FAILED17.510457FPS/p99799.9/max1683.3; phone NOTRUN. Matched nongating200-frame traces60.0024/58.5394 do not explain that failure or prove worker race. Independent audit found empty functional-coverage and arbitrary-video validation holes; host-only exact coverage/raw/source/video binding repair implemented but controls pending. Actual16 sequential-phase pilot complete records match original/public golden bytes; root independently rehashed all127 game inputs. Peak8,640,876KiB/117.439s is a pilot fact. Actual private4000 league is running with four International workers before four American; actual SIGSTOP/resume holds are recorded, so elapsed time is not a30min CI inference. Public runner docs specify16GB; observed full pilot/run resource facts do not establish fit. Full CI, verified temporary full-six download, PR and KEEP remain pending.",
-          "next": "Finish meaningful verifier controls, actual unchanged4000 strength, International source-bound proof, complete30-minute CI and downloaded full-six artifact before PR/KEEP."
+          "updatedAt": "2026-10-08T19:20:06.912331+00:00",
+          "summary": "Current public checkpoint 2f821d157ee597494e38401d505cf2e337e23b94 has no exact-head workflow or PR. The actual private 4,000-game strength matrix closed at 18:17:33.426973 UTC with exit 0: each of four 1,000-game comparisons passed (.924/.9625 Sharp versus Normal; .999/1 Normal versus Easy). Peak RSS was 12,215,940 KiB. Actual wall time 2,827.687 seconds includes 737.289 seconds of recorded holds; excluding them, 2,090.398 seconds still exceeds 30 minutes for the league alone, so full-CI fit is NOT established. All 91 current units, the full 7,000-game matrix and 25 actual mutation kills have passed. Full licensed American and International two-to-six-piece corpus is available; the 1.39-GB full offline HTML remains private, while tracked play.html is the older two-to-five baseline. Genuine International desktop 600-frame sample failed at 17.510 FPS/p99 799.9 ms; its phone profile was NOT RUN. No cause or unchanged-source retry is claimed. The current host validator passed 14 positives and 127 negatives at 18:17:11; later active-board controls were interrupted and require actual closure. The preserved full 4,000-game result, all 80 batch reports, 127 game-input hashes and the 14-positive/127-negative host controls are now public in this checkpoint, normally pushed at 19:16:00.586934 UTC after its main claim refresh at 19:15:44. The actual 18:01:17\u201319:16:00 interruption interval missed the 30-minute rule and is recorded; no full-CI or download acceptance is inferred.",
+          "next": "Diagnose International rendering with controlled source-bound evidence. Complete all four strict profiles, actual 30-minute full-CI fit and the full-six HTML download receipt, then open the original PR and finish binding KEEP review."
         }
       }
     }
@@ -4017,7 +4045,7 @@
   },
   "reporting": {
     "automationId": "Automation_677021765a8481918dcbf7433054333c",
-    "observedAt": "2026-10-08T19:15:03.988Z",
+    "observedAt": "2026-10-08T19:30:31.920Z",
     "isEnabled": false,
     "lastRunTime": "2026-10-08T16:26:48.692643+00:00",
     "updatedAt": "2026-10-08T16:31:45.381563+00:00",
@@ -4038,6 +4066,11 @@
     "recoveryObservedAt": "2026-10-08T19:20:06.912331+00:00",
     "interruptionGapSecondsAtRecovery": 5395,
     "status": "MISSED during the environment interruption; this recovery refresh does not establish uninterrupted 30-minute delivery.",
-    "backgroundStatus": "Existing hourly automation remains paused. No next run or chat-delivery receipt is available."
+    "backgroundStatus": "Existing hourly automation remains paused. No next run or chat-delivery receipt is available.",
+    "latestForegroundObservationAt": "2026-10-08T19:35:13.617Z",
+    "previousVerifiedForegroundPush": {
+      "commit": "0e9d6c65210ea0f972aff240c0333e50163cc133",
+      "pushedAt": "2026-10-08T19:20:08.955736+00:00"
+    }
   }
 }
