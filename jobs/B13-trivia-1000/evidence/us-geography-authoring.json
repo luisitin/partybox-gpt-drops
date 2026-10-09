@@ -3041,43 +3041,53 @@
   },
   {
     "id": "B13-0077",
-    "rowSha256": "f1173f47811e5ac5732631a2a14712b99908025a5f4ca266579b2f70c892b5ba",
+    "author": "/root",
+    "authoredAt": "2026-10-09T14:14:20.440565+00:00",
+    "rowSha256": "27e91f482232e60cf569636096982237943f9e692658046ae1cefc26b00f7d39",
+    "sourceIds": [
+      "us-geography-s5006",
+      "us-geography-s5007"
+    ],
     "evidenceReads": [
       {
-        "sourceId": "us-geography-s0006",
-        "contentSha256": "fce0cf4858751c0604b290a2b9c04ba8cf5a5dc74b05c8f4e12298fddb39ff6c",
-        "quote": "other. The park has over 2,000 natural stone arches, hundreds of soaring pinnacles, massive rock fins, and giant balanced rocks. This red-rock wonderland will",
-        "funFactQuote": "Arches National Park • Utah",
-        "exactQuoteMatched": true,
-        "claimsSupported": [
-          "answer",
-          "funFact"
+        "sourceId": "us-geography-s5006",
+        "contentSha256": "5d207806d7c8005fd65221a4369a6558a32a71359e24dbcab5b122b5f4e0e7c3",
+        "quoteFound": true,
+        "contextRead": true,
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "The park has over 2,000 natural stone arches",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Arches National Park • Utah",
+            "exactMatch": true
+          }
         ]
       },
       {
-        "sourceId": "us-geography-s0007",
-        "contentSha256": "c481e6346ef21b265e5ad31791e8e37d40fdf1f76f7243a6ab0018152170fac5",
-        "quote": "of unusual shapes, including pinnacles , windows, and arches. Notable features are Balanced Rock, Courthouse Towers (with spires that resemble skyscrapers), The Windows Section,",
-        "funFactQuote": "Arches National Park , desert area of sandstone formations in eastern Utah , U.S., on the Colorado River just north of Moab and",
-        "exactQuoteMatched": true,
-        "claimsSupported": [
-          "answer",
-          "funFact"
+        "sourceId": "us-geography-s5007",
+        "contentSha256": "aa2ec4a72e4e86b69cdcaf49c9f24a07b161757311aef5187a4cf741c5deb39d",
+        "quoteFound": true,
+        "contextRead": true,
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "More than 2,000 arches have been cataloged in the park.",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "sandstone formations in eastern Utah",
+            "exactMatch": true
+          }
         ]
       }
     ],
-    "confidenceReason": "The actual NPS park description and independently edited Britannica topic text agree on Arches’s location and the stated feature. The source body, header and nearby context were read; no current visitor count, area estimate or disputed date is used.",
-    "unresolvedProblems": [
-      "Fresh independent adversarial review and second source reopening are pending.",
-      "Full-set similarity flags must be adjudicated for this exact changed row version."
-    ],
-    "author": "/root",
-    "authorIdentityProvenance": {
-      "file": "evidence/root-categories-difficulty-author-repairs.json",
-      "sha256": "9a7d6519645eb0b1e826ab0e0eba17244df23f4ba7e37e8082d4afed1610d82c",
-      "explicitOriginalAuthorStatement": "/root (original author of these categories)",
-      "scope": "Original chat identity only; no new authorship, historical row version, factual review or retrieval time claimed."
-    }
+    "confidenceReason": "The full NPS introductory description explicitly identifies Utah and over2000 natural stone arches. Independently edited Britannica geological context separately states more than2000 cataloged arches and its introduction identifies Utah. This question removes the literal park-name answer clue, retains the original formations/index2/difficulty2 and location funfact, and asks no exact changing inventory, visitor total, north-of-Moab detail or unsupported geology mechanism.",
+    "originalAuthorPacketSHA256": "c81b689a9db1592973efca56a9f2860c663c893fcf7cd63b4e711f89871e9c99"
   },
   {
     "id": "B13-0078",

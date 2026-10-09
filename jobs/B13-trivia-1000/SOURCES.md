@@ -688,16 +688,16 @@ Answer: Maine. Fun fact: The park includes land on Mount Desert Island.
   quote: “Acadia National Park , national park on the Atlantic coast of Maine , U.S., astride Frenchman Bay. It has an area of 65” (23 words).
   funFactQuote: “comprises a rugged forested area on Mount Desert Island , dominated by Cadillac Mountain (1,530 feet [466 metres]) and including Anemone Cave and Sieur” (24 words).
 
-## B13-0077 — What kind of natural rock formation gives Arches National Park its name?
+## B13-0077 — A Utah national park has more than 2,000 of which natural formations?
 
 Answer: Stone arches. Fun fact: Arches National Park is in Utah.
 
-- us-geography-s0006: [National Park Service](https://www.nps.gov/arch/index.htm)
-  quote: “other. The park has over 2,000 natural stone arches, hundreds of soaring pinnacles, massive rock fins, and giant balanced rocks. This red-rock wonderland will” (24 words).
+- us-geography-s5006: [National Park Service](https://www.nps.gov/arch/index.htm)
+  quote: “The park has over 2,000 natural stone arches” (8 words).
   funFactQuote: “Arches National Park • Utah” (5 words).
-- us-geography-s0007: [Encyclopaedia Britannica](https://www.britannica.com/place/Arches-National-Park)
-  quote: “of unusual shapes, including pinnacles , windows, and arches. Notable features are Balanced Rock, Courthouse Towers (with spires that resemble skyscrapers), The Windows Section,” (24 words).
-  funFactQuote: “Arches National Park , desert area of sandstone formations in eastern Utah , U.S., on the Colorado River just north of Moab and” (23 words).
+- us-geography-s5007: [Encyclopaedia Britannica](https://www.britannica.com/place/Arches-National-Park)
+  quote: “More than 2,000 arches have been cataloged in the park.” (10 words).
+  funFactQuote: “sandstone formations in eastern Utah” (5 words).
 
 ## B13-0078 — In which US state is Badlands National Park?
 
