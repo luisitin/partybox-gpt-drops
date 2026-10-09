@@ -78,6 +78,13 @@ def validate(p, d, s, rs):
 def run():
     p, d, s = read('reports/remaining-category-research.json'), read('minigames.json'), read('catalogue-sources.json')
     rs = [read('reports/source-reopens-pass' + x + '.json') for x in 'AB']
+    if (ROOT / 'reports/mouse-category-recovery.json').exists():
+        import importlib.util
+        spec = importlib.util.spec_from_file_location('validated_mouse_adoption_history', ROOT / 'check-mouse-category-recovery.py')
+        reader = importlib.util.module_from_spec(spec); spec.loader.exec_module(reader)
+        p_original = copy.deepcopy(p)
+        d, s, rs = reader.historical_view(d, s, rs)
+        assert p == p_original
     count = validate(p, d, s, rs)
     for n in range(10):
         a, b, c, e = copy.deepcopy([p, d, s, rs])

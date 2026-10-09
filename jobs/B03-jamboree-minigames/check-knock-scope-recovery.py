@@ -73,13 +73,17 @@ def validate(p,d,s,rs):
  module('check-tv-action-recovery.py').validate(read('reports/tv-action-recovery.json'),restored,historical,h_rs)
  return restored,historical,h_rs,count
 def historical_view(d,s,rs):
+ if (ROOT/'reports/mouse-category-recovery.json').exists():
+  d,s,rs=module('check-mouse-category-recovery.py').historical_view(d,s,rs)
  if not (ROOT/'reports/knock-scope-recovery.json').exists():return d,s,rs
  p=read('reports/knock-scope-recovery.json')
  if digest(d)==BASE_DATA and digest(s)==BASE_SOURCES and [digest(x) for x in rs]==BASE_REOPENS:
   validate(p,read('minigames.json'),read('catalogue-sources.json'),[read('reports/source-reopens-pass'+x+'.json') for x in 'AB']);return d,s,rs
  return validate(p,d,s,rs)[:3]
 def run():
- p=read('reports/knock-scope-recovery.json');d=read('minigames.json');s=read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+x+'.json') for x in 'AB'];count=validate(p,d,s,rs)[3]
+ p=read('reports/knock-scope-recovery.json');d=read('minigames.json');s=read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+x+'.json') for x in 'AB']
+ if (ROOT/'reports/mouse-category-recovery.json').exists():d,s,rs=module('check-mouse-category-recovery.py').historical_view(d,s,rs)
+ count=validate(p,d,s,rs)[3]
  for n in range(8):
   a,b,c,e=copy.deepcopy([p,d,s,rs])
   if n==0:b['minigames'][124]['summary']='Every mode uses pairs. Each group is exactlytwocharacters.'

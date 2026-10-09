@@ -73,6 +73,11 @@ def run():
     load = lambda name: json.loads((ROOT / name).read_text())
     proof = load('reports/category-heading-repair.json'); data = load('minigames.json'); sources = load('catalogue-sources.json')
     reopens = [load('reports/source-reopens-pass' + letter + '.json') for letter in 'AB']
+    if (ROOT / 'reports/mouse-category-recovery.json').exists():
+        import importlib.util
+        spec = importlib.util.spec_from_file_location('validated_mouse_category_history', ROOT / 'check-mouse-category-recovery.py')
+        reader = importlib.util.module_from_spec(spec); spec.loader.exec_module(reader)
+        data, sources, reopens = reader.historical_view(data, sources, reopens)
     later_repairs = set()
     if (ROOT / 'reports/category-summary-recovery.json').exists():
         import importlib.util

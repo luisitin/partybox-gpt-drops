@@ -877,6 +877,12 @@
           "text": "Kaboom-Squad Minigames",
           "locator": "Category heading / Juiceworks",
           "scope": "Literal short quote recovered from both complete HTTPS captures; support is limited to the explicitly recorded category or Wiki-only gameplay context."
+        },
+        {
+          "id": "W_LIST_mouse_category_heading",
+          "text": "Mouse minigames",
+          "locator": "Literal category heading and exact complete named membership in reports/mouse-category-recovery.json; actual retained full native A+B captures.",
+          "scope": "Category only; no format, timer, controls, game rules, scoring, ties or payout inference. Case/punctuation-insensitive name identity only."
         }
       ],
       "passes": [
@@ -1028,7 +1034,8 @@
             "W_LIST_heading_boss_minigames",
             "W_LIST_heading_rhythm_minigames",
             "W_LIST_heading_bowser_live_minigames",
-            "W_LIST_recovery_kaboom_squad_minigames"
+            "W_LIST_recovery_kaboom_squad_minigames",
+            "W_LIST_mouse_category_heading"
           ],
           "httpStatus": 200,
           "tlsVerified": true,
@@ -1185,7 +1192,8 @@
             "W_LIST_heading_boss_minigames",
             "W_LIST_heading_rhythm_minigames",
             "W_LIST_heading_bowser_live_minigames",
-            "W_LIST_recovery_kaboom_squad_minigames"
+            "W_LIST_recovery_kaboom_squad_minigames",
+            "W_LIST_mouse_category_heading"
           ],
           "httpStatus": 200,
           "tlsVerified": true,
@@ -1195,7 +1203,7 @@
           "fullArticleScopeSha256": "678b0ce991b009dba6548dd04fc1bec662d24a5a38f33cff10d0e30fd7665e41"
         }
       ],
-      "uniqueQuotedWords": 156
+      "uniqueQuotedWords": 158
     },
     {
       "id": "NL_BASE",
@@ -2279,16 +2287,22 @@
           "text": "20 new minigames",
           "locator": "FAQ / additions count",
           "scope": "Fact context must be read at the locator; short clip is not an exhaustive rule."
+        },
+        {
+          "id": "NL_TV_mouse_category_heading",
+          "text": "Mouse Minigames",
+          "locator": "Literal category heading and exact complete named membership in reports/mouse-category-recovery.json; actual retained full native A+B captures.",
+          "scope": "Category only; no format, timer, controls, game rules, scoring, ties or payout inference. Case/punctuation-insensitive name identity only."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "Exa web-fetch fresh request; timestamp is completion observation",
+          "retrieval": "Actual full native04:01 HTTPS/TLS response reused and reread; no new HTTP request. All old and new quotes recovered from complete received body.",
           "retrievalTimestampUTC": null,
           "requestOrder": 1,
-          "textSha256": "5938ae9e2cef0da5406268268a79931d935490ad94a4b9ab4414479e973b76ff",
-          "textCharacters": 8097,
+          "textSha256": "d51b4450822dd50db7e477315f5e583222995a09baafe11741c079e88424d254",
+          "textCharacters": 12330,
           "recoveredQuoteIds": [
             "NL_TVQ001",
             "NL_TVQ002",
@@ -2311,16 +2325,23 @@
             "NL_TVQ019",
             "NL_TVQ020",
             "NL_TVQ021",
-            "NL_TVQ022"
-          ]
+            "NL_TVQ022",
+            "NL_TV_mouse_category_heading"
+          ],
+          "observedAtUTC": "2026-10-09T04:01:48.676149+00:00",
+          "bodySha256": "cbdcea48e2eb89f3fe5c18f64342a1268178ec0c450031cdaf68feb205cc8893",
+          "bodyBytes": 172147,
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "fullArticleScopeSha256": "f8d7495b31d5608751c24deb15ab2bd913d8c2f5c48dc51cb6c0318b7c1bdbf7"
         },
         {
           "pass": "B",
-          "retrieval": "Exa web-fetch fresh reopening",
+          "retrieval": "Actual full native04:01 HTTPS/TLS response reused and reread; no new HTTP request. All old and new quotes recovered from complete received body.",
           "retrievalTimestampUTC": null,
           "requestOrder": 2,
-          "textSha256": "5938ae9e2cef0da5406268268a79931d935490ad94a4b9ab4414479e973b76ff",
-          "textCharacters": 8097,
+          "textSha256": "d51b4450822dd50db7e477315f5e583222995a09baafe11741c079e88424d254",
+          "textCharacters": 12330,
           "recoveredQuoteIds": [
             "NL_TVQ001",
             "NL_TVQ002",
@@ -2343,11 +2364,18 @@
             "NL_TVQ019",
             "NL_TVQ020",
             "NL_TVQ021",
-            "NL_TVQ022"
-          ]
+            "NL_TVQ022",
+            "NL_TV_mouse_category_heading"
+          ],
+          "observedAtUTC": "2026-10-09T04:01:50.358537+00:00",
+          "bodySha256": "cbdcea48e2eb89f3fe5c18f64342a1268178ec0c450031cdaf68feb205cc8893",
+          "bodyBytes": 172147,
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "fullArticleScopeSha256": "f8d7495b31d5608751c24deb15ab2bd913d8c2f5c48dc51cb6c0318b7c1bdbf7"
         }
       ],
-      "uniqueQuotedWords": 23
+      "uniqueQuotedWords": 25
     },
     {
       "id": "MPL_TV",
