@@ -15,13 +15,15 @@ export function solveClue(input: GameLog): SolverResult {
 }
 
 function countDeals(input: GameLog): SolverResult {
-  if (input === null || typeof input !== "object") return fail("INVALID_INPUT", "Expected a game log");
-  const deck = input.deck ?? CLASSIC_DECK;
+  if (input === null || typeof input !== "object" || Array.isArray(input)) return fail("INVALID_INPUT", "Expected a game log");
+  const deck = input.deck === undefined ? CLASSIC_DECK : input.deck;
+  if (deck === null || typeof deck !== "object" || Array.isArray(deck)) return fail("INVALID_INPUT", "Expected a deck object");
   const groups = [deck.suspects, deck.weapons, deck.rooms];
   if (groups.some(g => !Array.isArray(g) || g.length === 0)) return fail("INVALID_INPUT", "Three nonempty card categories required");
-  const names = groups.flat();
+  const names = groups.flatMap(group => [...group]);
   if (names.length > 21 || names.some(c => typeof c !== "string" || c.length === 0) || new Set(names).size !== names.length)
     return fail("INVALID_INPUT", "Unique nonempty card names required; maximum deck size is 21");
+  if (!Array.isArray(input.handSizes)) return fail("INVALID_INPUT", "Expected an array of hand sizes");
   const sizes = [...input.handSizes], n = sizes.length;
   if (n < 3 || n > 6 || sizes.some(s => !Number.isInteger(s) || s < 0) || sizes.reduce((a, b) => a + b, 0) !== names.length - 3)
     return fail("INVALID_INPUT", "Three to six exact hand sizes must sum to deck size minus three");
@@ -37,13 +39,16 @@ function countDeals(input: GameLog): SolverResult {
     if (card === undefined) return fail("INVALID_INPUT", "Unknown card in own hand");
     domains[card] = 1 << input.me;
   }
-  const known: { player: number; card: string }[] = [...(input.shown ?? [])];
+  const shown = input.shown === undefined ? [] : input.shown;
+  if (!Array.isArray(shown)) return fail("INVALID_INPUT", "Expected an array of shown-card observations");
+  const known: { player: number; card: string }[] = [...shown];
   let clauses: Clause[] = [];
   for (const suggestion of input.suggestions) {
     if (!suggestion || !isPlayer(suggestion.player) || !Array.isArray(suggestion.cards) || suggestion.cards.length !== 3)
       return fail("INVALID_INPUT", "Invalid suggestion");
-    const cards = suggestion.cards.map((name: string, k: number) => {
-      const card = index.get(name);
+    const cards = [0, 1, 2].map(k => {
+      const name = suggestion.cards[k];
+      const card = typeof name === "string" ? index.get(name) : undefined;
       return card !== undefined && category[card] === k ? card : -1;
     });
     if (cards.includes(-1)) return fail("INVALID_INPUT", "A suggestion needs one known card of each category in order");

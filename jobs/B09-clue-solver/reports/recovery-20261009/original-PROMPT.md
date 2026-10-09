@@ -1,0 +1,15 @@
+## B09 Clue exact deduction engine (C)
+
+```
+Job B09: Clue exact deduction engine. Be extremely aggressive about verification: belt and suspenders, small but impossible to get wrong.
+
+Write clueSolver.ts: from a game log (who suggested what, who showed/couldn't show, my own hand, cards shown to me) compute the exact probability that each card is in the envelope and in each hand, by counting consistent deals (no heuristics). Classic Clue: 6 suspects, 6 weapons, 9 rooms, 3-6 players.
+
+Tests: brute force on a reduced deck (3/3/4 cards, 3 players) across 20,000 random logs, identical exact fractions; 5,000 full simulated games: the envelope is never assigned probability 0; at most 200 ms per update for 6 players (report p50/p99); contradictory logs return an error value, never throw.
+
+CODE CHECKS: two independent implementations written without looking at each other, diffed on every test case; every suite runs 3 times (seeds 1, 2, 3); plant 25 deliberate bugs one at a time and show the tests catch all 25 (list them); TypeScript strict, zero runtime dependencies, pure functions, no Math.random or Date.now (randomness comes in as a seeded rng function); include package.json with one `npm test` command that runs everything. Add .github/workflows/B09.yml (rules in the repo README) so GitHub Actions reruns the full suite on your pull request, and link the green run.
+
+DELIVERY (GitHub): read https://github.com/luisitin/partybox-gpt-drops README first. Create branch job/B09-clue-solver, put every file in jobs/B09-clue-solver/, open a pull request to main titled "B09 Clue exact deduction engine". Never push to main or touch other folders. Each file at most 30 MB (split into -part1, -part2... + JOIN.md if bigger). Include README.md (what is here, how to rerun), VERIFY.md (every test: name, case count, passed, seed, exact command) and SHA256SUMS.txt. Anything not verified goes under UNVERIFIED in VERIFY.md, never guessed. If you cannot push to GitHub, give me the same folder as .zip downloads of at most 30 MB each instead.
+
+KEEP GOING (one message must carry you as far as possible): never stop to ask me anything or to confirm; make the most reasonable assumption, write it in ASSUMPTIONS.md and continue. Never end your turn with a plan, a question or "want me to...". Push to GitHub early and after every milestone, so nothing is lost if you are cut off. When the job passes every check, do not stop: loop (1) rerun every check, (2) find the weakest part (lowest confidence row, slowest test, least covered case, ugliest asset), (3) improve it, add tests for it, push, log it in LOOP.md, and repeat. When improvements are only cosmetic, take the next job in https://github.com/luisitin/partybox-gpt-drops/blob/main/PROMPTS.md that has no job/<ID>-* branch yet (create its branch first to claim it) and do it the same way, and keep chaining jobs until you are out of time. Before you are cut off, keep NEXT.md in the job folder current: the exact next step, so that when I say "continue" you resume there without asking.
+```

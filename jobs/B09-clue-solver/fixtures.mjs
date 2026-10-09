@@ -85,6 +85,21 @@ export function adversarialCases() {
   invalid.push(['shown with no refuter', { ...clone(), suggestions: [{ player: 0, cards: ['s1','w1','r1'], refutedBy: null, shownCard: 's1' }] }]);
   invalid.push(['null suggestion', { ...clone(), suggestions: [null] }]);
   invalid.push(['null shown observation', { ...clone(), shown: [null] }]);
+  // Runtime validation regressions against the unchanged independently authored reference.
+  for (let hole = 0; hole < 3; hole++) {
+    const cards = ['s1','w1','r1']; delete cards[hole];
+    invalid.push([`sparse suggestion slot ${hole}`, { ...clone(), suggestions: [{ player: 0, cards, refutedBy: 1 }] }]);
+  }
+  invalid.push(['null optional deck', { handSizes: [3,3,3,3,3,3], me: 0, ownHand: ['Green','Candlestick','Ballroom'], suggestions: [], deck: null }]);
+  invalid.push(['array-shaped game log', Object.assign([], clone())]);
+  invalid.push(['array-shaped deck', { ...clone(), deck: Object.assign([], structuredClone(reduced)) }]);
+  invalid.push(['typed-array hand sizes', { ...clone(), handSizes: new Uint8Array([3,2,2]) }]);
+  invalid.push(['null shown list', { ...clone(), shown: null }]);
+  invalid.push(['set-shaped shown list', { ...clone(), shown: new Set() }]);
+  for (const category of ['suspects','weapons','rooms']) {
+    const deck = structuredClone(reduced); delete deck[category][2];
+    invalid.push([`sparse deck ${category}`, { ...clone(), deck, handSizes: [3,2,1] }]);
+  }
   const contradiction = [
     ['own card shown elsewhere', { ...clone(), shown: [{ player: 1, card: 's0' }] }],
     ['same card in two hands', { ...clone(), shown: [{ player: 1, card: 's1' }, { player: 2, card: 's1' }] }],

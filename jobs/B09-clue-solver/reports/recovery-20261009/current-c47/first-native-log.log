@@ -1,0 +1,323 @@
+﻿2026-10-09T09:54:06.5059995Z Current runner version: '2.337.0'
+2026-10-09T09:54:06.5087610Z ##[group]Runner Image Provisioner
+2026-10-09T09:54:06.5088912Z Hosted Compute Agent
+2026-10-09T09:54:06.5089571Z Version: 20261002.596
+2026-10-09T09:54:06.5090240Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-09T09:54:06.5091008Z Build Date: 2026-10-02T22:28:27Z
+2026-10-09T09:54:06.5091728Z Worker ID: {c919d119-00e9-41b8-b7f1-92dd87c2f1f4}
+2026-10-09T09:54:06.5092425Z Region: eastus
+2026-10-09T09:54:06.5093032Z Cloud: Azure
+2026-10-09T09:54:06.5093613Z ##[endgroup]
+2026-10-09T09:54:06.5095442Z ##[group]Operating System
+2026-10-09T09:54:06.5096090Z Ubuntu
+2026-10-09T09:54:06.5096677Z 24.04.5
+2026-10-09T09:54:06.5097244Z LTS
+2026-10-09T09:54:06.5097759Z ##[endgroup]
+2026-10-09T09:54:06.5098591Z ##[group]Runner Image
+2026-10-09T09:54:06.5099235Z Image: ubuntu-24.04
+2026-10-09T09:54:06.5099793Z Version: 20261004.327.1
+2026-10-09T09:54:06.5101158Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-09T09:54:06.5102759Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-09T09:54:06.5103744Z ##[endgroup]
+2026-10-09T09:54:06.5104942Z ##[group]GITHUB_TOKEN Permissions
+2026-10-09T09:54:06.5107754Z Contents: read
+2026-10-09T09:54:06.5108876Z Metadata: read
+2026-10-09T09:54:06.5109614Z ##[endgroup]
+2026-10-09T09:54:06.5111789Z Secret source: Actions
+2026-10-09T09:54:06.5112858Z Cache mode: write
+2026-10-09T09:54:06.5113863Z Prepare workflow directory
+2026-10-09T09:54:06.5458584Z Prepare all required actions
+2026-10-09T09:54:06.5508073Z Getting action download info
+2026-10-09T09:54:06.8015613Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-09T09:54:06.8982654Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-09T09:54:06.9855082Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-09T09:54:07.2051643Z Complete job name: verify
+2026-10-09T09:54:07.2874419Z ##[group]Run actions/checkout@v4
+2026-10-09T09:54:07.2875324Z with:
+2026-10-09T09:54:07.2875805Z   repository: luisitin/partybox-gpt-drops
+2026-10-09T09:54:07.2880482Z   token: ***
+2026-10-09T09:54:07.2880941Z   ssh-strict: true
+2026-10-09T09:54:07.2881387Z   ssh-user: git
+2026-10-09T09:54:07.2881826Z   persist-credentials: true
+2026-10-09T09:54:07.2882313Z   clean: true
+2026-10-09T09:54:07.2882748Z   sparse-checkout-cone-mode: true
+2026-10-09T09:54:07.2883272Z   fetch-depth: 1
+2026-10-09T09:54:07.2883701Z   fetch-tags: false
+2026-10-09T09:54:07.2884161Z   show-progress: true
+2026-10-09T09:54:07.2884617Z   lfs: false
+2026-10-09T09:54:07.2885028Z   submodules: false
+2026-10-09T09:54:07.2885473Z   set-safe-directory: true
+2026-10-09T09:54:07.2885971Z   allow-unsafe-pr-checkout: false
+2026-10-09T09:54:07.2886816Z ##[endgroup]
+2026-10-09T09:54:07.3954584Z Syncing repository: luisitin/partybox-gpt-drops
+2026-10-09T09:54:07.3957438Z ##[group]Getting Git version info
+2026-10-09T09:54:07.3959119Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-09T09:54:07.3960975Z [command]/usr/bin/git version
+2026-10-09T09:54:07.4029233Z git version 2.55.0
+2026-10-09T09:54:07.4053031Z ##[endgroup]
+2026-10-09T09:54:07.4071891Z Temporarily overriding HOME='/home/runner/work/_temp/2dfb2fb2-be29-405a-a74d-bd4bf0c340f1' before making global git config changes
+2026-10-09T09:54:07.4074390Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-09T09:54:07.4078089Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-09T09:54:07.4139932Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-09T09:54:07.4142566Z ##[group]Initializing the repository
+2026-10-09T09:54:07.4144171Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-09T09:54:07.4269418Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-09T09:54:07.4271381Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-09T09:54:07.4273483Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-09T09:54:07.4275022Z hint: call:
+2026-10-09T09:54:07.4276222Z hint:
+2026-10-09T09:54:07.4279089Z hint: 	git config --global init.defaultBranch <name>
+2026-10-09T09:54:07.4280325Z hint:
+2026-10-09T09:54:07.4281413Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-09T09:54:07.4283131Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-09T09:54:07.4285359Z hint:
+2026-10-09T09:54:07.4286219Z hint: 	git branch -m <name>
+2026-10-09T09:54:07.4287142Z hint:
+2026-10-09T09:54:07.4288255Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-09T09:54:07.4291116Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+2026-10-09T09:54:07.4294552Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+2026-10-09T09:54:07.4355439Z ##[endgroup]
+2026-10-09T09:54:07.4358727Z ##[group]Disabling automatic garbage collection
+2026-10-09T09:54:07.4359897Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-09T09:54:07.4399600Z ##[endgroup]
+2026-10-09T09:54:07.4400947Z ##[group]Setting up auth
+2026-10-09T09:54:07.4409255Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-09T09:54:07.4450523Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-09T09:54:07.4892229Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-09T09:54:07.4938029Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-09T09:54:07.5202023Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-09T09:54:07.5250982Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-09T09:54:07.5514077Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-09T09:54:07.5564352Z ##[endgroup]
+2026-10-09T09:54:07.5581262Z ##[group]Fetching the repository
+2026-10-09T09:54:07.5583214Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e0eb7b67ba71b3707697882f8771480595e85d5e:refs/remotes/pull/26/merge
+2026-10-09T09:54:07.7822653Z From https://github.com/luisitin/partybox-gpt-drops
+2026-10-09T09:54:07.7830480Z  * [new ref]         e0eb7b67ba71b3707697882f8771480595e85d5e -> pull/26/merge
+2026-10-09T09:54:07.7833679Z ##[endgroup]
+2026-10-09T09:54:07.7834774Z ##[group]Determining the checkout info
+2026-10-09T09:54:07.7835722Z ##[endgroup]
+2026-10-09T09:54:07.7836790Z [command]/usr/bin/git sparse-checkout disable
+2026-10-09T09:54:07.7895264Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-09T09:54:07.7933860Z ##[group]Checking out the ref
+2026-10-09T09:54:07.7937560Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/26/merge
+2026-10-09T09:54:07.8038159Z Note: switching to 'refs/remotes/pull/26/merge'.
+2026-10-09T09:54:07.8039364Z 
+2026-10-09T09:54:07.8040084Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-09T09:54:07.8041599Z changes and commit them, and you can discard any commits you make in this
+2026-10-09T09:54:07.8042533Z state without impacting any branches by switching back to a branch.
+2026-10-09T09:54:07.8043050Z 
+2026-10-09T09:54:07.8043456Z If you want to create a new branch to retain commits you create, you may
+2026-10-09T09:54:07.8044660Z do so (now or later) by using -c with the switch command. Example:
+2026-10-09T09:54:07.8045167Z 
+2026-10-09T09:54:07.8045406Z   git switch -c <new-branch-name>
+2026-10-09T09:54:07.8045741Z 
+2026-10-09T09:54:07.8045970Z Or undo this operation with:
+2026-10-09T09:54:07.8046278Z 
+2026-10-09T09:54:07.8046487Z   git switch -
+2026-10-09T09:54:07.8046733Z 
+2026-10-09T09:54:07.8047154Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-09T09:54:07.8048019Z 
+2026-10-09T09:54:07.8049319Z HEAD is now at e0eb7b6 Merge c47cdf5570896c0ca80869c2cfca8116d945db16 into 2b39550d395bab5ea0ad5c18cae19c3f78fdd84c
+2026-10-09T09:54:07.8051407Z ##[endgroup]
+2026-10-09T09:54:07.8095522Z [command]/usr/bin/git log -1 --format=%H
+2026-10-09T09:54:07.8124189Z e0eb7b67ba71b3707697882f8771480595e85d5e
+2026-10-09T09:54:07.8542090Z ##[group]Run actions/setup-node@v4
+2026-10-09T09:54:07.8542721Z with:
+2026-10-09T09:54:07.8543147Z   node-version: 24
+2026-10-09T09:54:07.8543623Z   always-auth: false
+2026-10-09T09:54:07.8544112Z   check-latest: false
+2026-10-09T09:54:07.8548102Z   token: ***
+2026-10-09T09:54:07.8548893Z ##[endgroup]
+2026-10-09T09:54:08.0036186Z (node:2308) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-09T09:54:08.0037474Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-09T09:54:08.0039593Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+2026-10-09T09:54:08.0040879Z ##[group]Environment details
+2026-10-09T09:54:08.4300908Z node: v24.21.0
+2026-10-09T09:54:08.4301910Z npm: 11.19.0
+2026-10-09T09:54:08.4302577Z yarn: 1.22.22
+2026-10-09T09:54:08.4304217Z ##[endgroup]
+2026-10-09T09:54:08.4479267Z ##[group]Run npm ci
+2026-10-09T09:54:08.4480386Z [36;1mnpm ci[0m
+2026-10-09T09:54:08.4783891Z shell: /usr/bin/bash -e {0}
+2026-10-09T09:54:08.4785115Z ##[endgroup]
+2026-10-09T09:54:09.4659484Z 
+2026-10-09T09:54:09.4666233Z added 1 package, and audited 2 packages in 919ms
+2026-10-09T09:54:09.4667679Z 
+2026-10-09T09:54:09.4668026Z found 0 vulnerabilities
+2026-10-09T09:54:09.5124188Z ##[group]Run sha256sum -c SHA256SUMS.txt
+2026-10-09T09:54:09.5124677Z [36;1msha256sum -c SHA256SUMS.txt[0m
+2026-10-09T09:54:09.5192174Z shell: /usr/bin/bash -e {0}
+2026-10-09T09:54:09.5192536Z ##[endgroup]
+2026-10-09T09:54:09.5310925Z .gitignore: OK
+2026-10-09T09:54:09.5311598Z ASSUMPTIONS.md: OK
+2026-10-09T09:54:09.5312284Z INDEPENDENCE.md: OK
+2026-10-09T09:54:09.5312802Z LOOP.md: OK
+2026-10-09T09:54:09.5313300Z NEXT.md: OK
+2026-10-09T09:54:09.5313805Z README.md: OK
+2026-10-09T09:54:09.5314287Z VERIFY.md: OK
+2026-10-09T09:54:09.5314845Z benchmark-worst.json: OK
+2026-10-09T09:54:09.5315431Z benchmark.mjs: OK
+2026-10-09T09:54:09.5315977Z clueSolver.ts: OK
+2026-10-09T09:54:09.5316486Z fixtures.mjs: OK
+2026-10-09T09:54:09.5317022Z hosted-results.json: OK
+2026-10-09T09:54:09.5317616Z mutation-results.json: OK
+2026-10-09T09:54:09.5318589Z mutations.mjs: OK
+2026-10-09T09:54:09.5319280Z package-lock.json: OK
+2026-10-09T09:54:09.5319821Z package.json: OK
+2026-10-09T09:54:09.5320460Z preloop-results.json: OK
+2026-10-09T09:54:09.5321025Z reference.ts: OK
+2026-10-09T09:54:09.5321873Z reports/recovery-20261009/BASELINE-OBSERVER-CORRECTION.json: OK
+2026-10-09T09:54:09.5322950Z reports/recovery-20261009/CURRENT-VALIDATION-CONTROLS.json: OK
+2026-10-09T09:54:09.5324027Z reports/recovery-20261009/ORIGINAL-2B395-FULL-ACCEPTANCE.json: OK
+2026-10-09T09:54:09.5325060Z reports/recovery-20261009/ORIGINAL-ADDITIONAL-VALIDATION-DEFECTS.json: OK
+2026-10-09T09:54:09.5325776Z reports/recovery-20261009/ORIGINAL-VALIDATION-DEFECTS.json: OK
+2026-10-09T09:54:09.5326280Z reports/recovery-20261009/README.md: OK
+2026-10-09T09:54:09.5327155Z reports/recovery-20261009/VALIDATION-REPAIR-SCOPE.json: OK
+2026-10-09T09:54:09.5328170Z reports/recovery-20261009/accept-original-attempt1.py: OK
+2026-10-09T09:54:09.5329396Z reports/recovery-20261009/accept-original-attempt1.stderr: OK
+2026-10-09T09:54:09.5330035Z reports/recovery-20261009/accept-original-attempt1.stdout: OK
+2026-10-09T09:54:09.5330907Z reports/recovery-20261009/accept-original.py: OK
+2026-10-09T09:54:09.5331420Z reports/recovery-20261009/accept-original.stderr: OK
+2026-10-09T09:54:09.5331913Z reports/recovery-20261009/accept-original.stdout: OK
+2026-10-09T09:54:09.5332584Z reports/recovery-20261009/before-output-retention-CURRENT-VALIDATION-CONTROLS.json: OK
+2026-10-09T09:54:09.5333365Z reports/recovery-20261009/before-output-retention-current-controls.stderr: OK
+2026-10-09T09:54:09.5334100Z reports/recovery-20261009/before-output-retention-current-controls.stdout: OK
+2026-10-09T09:54:09.5334725Z reports/recovery-20261009/current-build.stderr: OK
+2026-10-09T09:54:09.5335206Z reports/recovery-20261009/current-build.stdout: OK
+2026-10-09T09:54:09.5335694Z reports/recovery-20261009/current-controls.mjs: OK
+2026-10-09T09:54:09.5336196Z reports/recovery-20261009/current-controls.stderr: OK
+2026-10-09T09:54:09.5336699Z reports/recovery-20261009/current-controls.stdout: OK
+2026-10-09T09:54:09.5337267Z reports/recovery-20261009/frozen-original-source-files.json: OK
+2026-10-09T09:54:09.5337810Z reports/recovery-20261009/original-PROMPT.md: OK
+2026-10-09T09:54:09.5338300Z reports/recovery-20261009/original-artifacts.json: OK
+2026-10-09T09:54:09.5339232Z reports/recovery-20261009/original-branchInitialization.json: OK
+2026-10-09T09:54:09.5339810Z reports/recovery-20261009/original-build.stderr: OK
+2026-10-09T09:54:09.5340303Z reports/recovery-20261009/original-build.stdout: OK
+2026-10-09T09:54:09.5340783Z reports/recovery-20261009/original-claim.json: OK
+2026-10-09T09:54:09.5341343Z reports/recovery-20261009/original-fullNativeLog.log: OK
+2026-10-09T09:54:09.5341845Z reports/recovery-20261009/original-jobs.json: OK
+2026-10-09T09:54:09.5342311Z reports/recovery-20261009/original-run.json: OK
+2026-10-09T09:54:09.5342862Z reports/recovery-20261009/original-strict-compiled/clueSolver.js: OK
+2026-10-09T09:54:09.5343497Z reports/recovery-20261009/original-strict-compiled/package.json: OK
+2026-10-09T09:54:09.5344133Z reports/recovery-20261009/original-strict-compiled/reference.js: OK
+2026-10-09T09:54:09.5345052Z reports/recovery-20261009/original-strict-compiled/types.js: OK
+2026-10-09T09:54:09.5345627Z reports/recovery-20261009/original-tree.json: OK
+2026-10-09T09:54:09.5346178Z reports/recovery-20261009/partial-patched-source-files.json: OK
+2026-10-09T09:54:09.5346781Z reports/recovery-20261009/reproduce-original-additional.mjs: OK
+2026-10-09T09:54:09.5347396Z reports/recovery-20261009/reproduce-original-additional.stderr: OK
+2026-10-09T09:54:09.5348020Z reports/recovery-20261009/reproduce-original-additional.stdout: OK
+2026-10-09T09:54:09.5348907Z reports/recovery-20261009/reproduce-original.mjs: OK
+2026-10-09T09:54:09.5349458Z reports/recovery-20261009/reproduce-original.stderr: OK
+2026-10-09T09:54:09.5349998Z reports/recovery-20261009/reproduce-original.stdout: OK
+2026-10-09T09:54:09.5350413Z results.json: OK
+2026-10-09T09:54:09.5350704Z test.mjs: OK
+2026-10-09T09:54:09.5351007Z tsconfig.json: OK
+2026-10-09T09:54:09.5351283Z types.ts: OK
+2026-10-09T09:54:09.5351600Z verification-output.log: OK
+2026-10-09T09:54:09.5351981Z ../../.github/workflows/B09.yml: OK
+2026-10-09T09:54:09.5395525Z ##[group]Run npm test
+2026-10-09T09:54:09.5395896Z [36;1mnpm test[0m
+2026-10-09T09:54:09.5462904Z shell: /usr/bin/bash -e {0}
+2026-10-09T09:54:09.5463257Z ##[endgroup]
+2026-10-09T09:54:09.6691271Z 
+2026-10-09T09:54:09.6692035Z > b09-clue-exact-solver@1.0.0 test
+2026-10-09T09:54:09.6692736Z > npm run build && node test.mjs && node mutations.mjs
+2026-10-09T09:54:09.6693080Z 
+2026-10-09T09:54:09.7731435Z 
+2026-10-09T09:54:09.7732269Z > b09-clue-exact-solver@1.0.0 build
+2026-10-09T09:54:09.7733141Z > tsc -p tsconfig.json
+2026-10-09T09:54:09.7733521Z 
+2026-10-09T09:54:12.3458570Z seed 1: 20,000 reduced random logs agree exactly
+2026-10-09T09:54:23.8825147Z seed 1: 1000/5000 full games
+2026-10-09T09:54:35.2882710Z seed 1: 2000/5000 full games
+2026-10-09T09:54:46.2947338Z seed 1: 3000/5000 full games
+2026-10-09T09:54:57.3289517Z seed 1: 4000/5000 full games
+2026-10-09T09:55:08.6946099Z seed 1: 5000/5000 full games
+2026-10-09T09:55:26.8751108Z {"seed":1,"fixedCases":206,"reducedCases":20000,"reducedSuggestions":180714,"fullGames":5000,"playerCounts":[1250,1250,1250,1250],"fullSuggestions":40266,"fullUpdates":45266,"sparseSixPlayerStressUpdates":420,"sparseSixPlayerStressMaximum":15.252885000008973,"denseSixPlayerSuggestions":690,"denseSixPlayerMilliseconds":5.391031000006478,"sixPlayerUpdates":11795,"sixPlayerMilliseconds":{"p50":1.227177999999185,"p99":3.4861809999997604,"maximum":15.252885000008973}}
+2026-10-09T09:55:28.1304681Z seed 2: 20,000 reduced random logs agree exactly
+2026-10-09T09:55:39.7952155Z seed 2: 1000/5000 full games
+2026-10-09T09:55:51.5162715Z seed 2: 2000/5000 full games
+2026-10-09T09:56:02.8505978Z seed 2: 3000/5000 full games
+2026-10-09T09:56:14.1772496Z seed 2: 4000/5000 full games
+2026-10-09T09:56:25.3496856Z seed 2: 5000/5000 full games
+2026-10-09T09:56:37.4626656Z {"seed":2,"fixedCases":206,"reducedCases":20000,"reducedSuggestions":180702,"fullGames":5000,"playerCounts":[1250,1250,1250,1250],"fullSuggestions":39878,"fullUpdates":44878,"sparseSixPlayerStressUpdates":420,"sparseSixPlayerStressMaximum":9.986858000018401,"denseSixPlayerSuggestions":690,"denseSixPlayerMilliseconds":4.956876999989618,"sixPlayerUpdates":11714,"sixPlayerMilliseconds":{"p50":1.2750769999984186,"p99":3.4925809999986086,"maximum":9.986858000018401}}
+2026-10-09T09:56:38.6330177Z seed 3: 20,000 reduced random logs agree exactly
+2026-10-09T09:56:49.8357829Z seed 3: 1000/5000 full games
+2026-10-09T09:57:01.1030183Z seed 3: 2000/5000 full games
+2026-10-09T09:57:12.2150380Z seed 3: 3000/5000 full games
+2026-10-09T09:57:23.3190475Z seed 3: 4000/5000 full games
+2026-10-09T09:57:34.4077505Z seed 3: 5000/5000 full games
+2026-10-09T09:57:44.8786052Z {"seed":3,"fixedCases":206,"reducedCases":20000,"reducedSuggestions":181296,"fullGames":5000,"playerCounts":[1250,1250,1250,1250],"fullSuggestions":40247,"fullUpdates":45247,"sparseSixPlayerStressUpdates":420,"sparseSixPlayerStressMaximum":19.564508999988902,"denseSixPlayerSuggestions":690,"denseSixPlayerMilliseconds":3.8907730000209995,"sixPlayerUpdates":11796,"sixPlayerMilliseconds":{"p50":1.2438980000151787,"p99":3.3473489999887533,"maximum":19.564508999988902}}
+2026-10-09T09:57:45.5362708Z mutation 1/25 exclude-envelope: killed for seeds 1,2,3
+2026-10-09T09:57:46.1127138Z mutation 2/25 exclude-wrong-player: killed for seeds 1,2,3
+2026-10-09T09:57:46.6851494Z mutation 3/25 own-card-wrong-owner: killed for seeds 1,2,3
+2026-10-09T09:57:47.2590278Z mutation 4/25 known-owner-union: killed for seeds 1,2,3
+2026-10-09T09:57:47.8473386Z mutation 5/25 forbid-refuter: killed for seeds 1,2,3
+2026-10-09T09:57:48.4521045Z mutation 6/25 ignore-no-refuter-denials: killed for seeds 1,2,3
+2026-10-09T09:57:49.0425727Z mutation 7/25 ignore-refuter-disjunction: killed for seeds 1,2,3
+2026-10-09T09:57:49.6183217Z mutation 8/25 require-all-refuter-cards: killed for seeds 1,2,3
+2026-10-09T09:57:50.1900057Z mutation 9/25 reject-exact-full-hand: killed for seeds 1,2,3
+2026-10-09T09:57:50.7843883Z mutation 10/25 reject-exact-capacity-domains: killed for seeds 1,2,3
+2026-10-09T09:57:51.3656586Z mutation 11/25 wrong-clause-singleton-owner: killed for seeds 1,2,3
+2026-10-09T09:57:51.9435342Z mutation 12/25 missing-room-envelope: killed for seeds 1,2,3
+2026-10-09T09:57:52.5201983Z mutation 13/25 require-unsatisfied-refuter-constraints: killed for seeds 1,2,3
+2026-10-09T09:57:53.0934423Z mutation 14/25 merge-envelope-categories: killed for seeds 1,2,3
+2026-10-09T09:57:53.6672690Z mutation 15/25 memo-omits-envelope-state: killed for seeds 1,2,3
+2026-10-09T09:57:54.2447870Z mutation 16/25 drop-initial-refuter-constraints: killed for seeds 1,2,3
+2026-10-09T09:57:54.8249843Z mutation 17/25 never-satisfy-refuter-constraints: killed for seeds 1,2,3
+2026-10-09T09:57:55.4013548Z mutation 18/25 wrong-total-deal-count: killed for seeds 1,2,3
+2026-10-09T09:57:55.9800015Z mutation 19/25 increment-probability-numerator: killed for seeds 1,2,3
+2026-10-09T09:57:56.5637056Z mutation 20/25 reverse-player-probabilities: killed for seeds 1,2,3
+2026-10-09T09:57:57.1506386Z mutation 21/25 wrong-envelope-marginal: killed for seeds 1,2,3
+2026-10-09T09:57:57.7253368Z mutation 22/25 omit-prefix-multiplicity: killed for seeds 1,2,3
+2026-10-09T09:57:58.3167710Z mutation 23/25 collapse-prefix-multiplicity: killed for seeds 1,2,3
+2026-10-09T09:57:58.9095985Z mutation 24/25 shift-fixed-owner: killed for seeds 1,2,3
+2026-10-09T09:57:59.4882428Z mutation 25/25 wrong-clockwise-start: killed for seeds 1,2,3
+2026-10-09T09:57:59.4890017Z 25/25 independently planted, compiling production mutations caught for all three seeds
+2026-10-09T09:57:59.5145961Z ##[group]Run actions/upload-artifact@v4
+2026-10-09T09:57:59.5146291Z with:
+2026-10-09T09:57:59.5146495Z   name: B09-verification
+2026-10-09T09:57:59.5147036Z   path: jobs/B09-clue-solver/results.json
+jobs/B09-clue-solver/mutation-results.json
+jobs/B09-clue-solver/.verification/
+
+2026-10-09T09:57:59.5147640Z   include-hidden-files: true
+2026-10-09T09:57:59.5147903Z   if-no-files-found: warn
+2026-10-09T09:57:59.5148139Z   compression-level: 6
+2026-10-09T09:57:59.5148699Z   overwrite: false
+2026-10-09T09:57:59.5148943Z ##[endgroup]
+2026-10-09T09:57:59.6814173Z (node:2652) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-09T09:57:59.6815692Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-09T09:57:59.6936737Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-09T09:57:59.6941230Z The least common ancestor is /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/jobs/B09-clue-solver. This will be the root directory of the artifact
+2026-10-09T09:57:59.6943099Z With the provided path, there will be 29 files uploaded
+2026-10-09T09:57:59.6946169Z Artifact name is valid!
+2026-10-09T09:57:59.6947261Z Root directory input is valid!
+2026-10-09T09:57:59.9099348Z Beginning upload of artifact content to blob storage
+2026-10-09T09:58:00.0022840Z (node:2652) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-09T09:58:00.0833569Z Uploaded bytes 347957
+2026-10-09T09:58:00.1074899Z Finished uploading artifact content to blob storage!
+2026-10-09T09:58:00.1076372Z SHA256 digest of uploaded artifact zip is c62d564f1ca61d4a1271fead2e3b9e7eed9263e05e35d3fef3c8f18afe91c398
+2026-10-09T09:58:00.1078886Z Finalizing artifact upload
+2026-10-09T09:58:00.3484978Z Artifact B09-verification.zip successfully finalized. Artifact ID 11609910617
+2026-10-09T09:58:00.3486386Z Artifact B09-verification has been successfully uploaded! Final size is 347957 bytes. Artifact ID is 11609910617
+2026-10-09T09:58:00.3495148Z Artifact download URL: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37914222209/artifacts/11609910617
+2026-10-09T09:58:00.3739780Z Post job cleanup.
+2026-10-09T09:58:00.4947590Z (node:2665) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-09T09:58:00.4948836Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-09T09:58:00.5144504Z Post job cleanup.
+2026-10-09T09:58:00.6052452Z [command]/usr/bin/git version
+2026-10-09T09:58:00.6097173Z git version 2.55.0
+2026-10-09T09:58:00.6137236Z Temporarily overriding HOME='/home/runner/work/_temp/02506b35-f4d0-4058-b923-e1e499ec2919' before making global git config changes
+2026-10-09T09:58:00.6139106Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-09T09:58:00.6144126Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-09T09:58:00.6183414Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-09T09:58:00.6219449Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-09T09:58:00.6468564Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-09T09:58:00.6498372Z http.https://github.com/.extraheader
+2026-10-09T09:58:00.6512247Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-09T09:58:00.6551848Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-09T09:58:00.6884150Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-09T09:58:00.6941480Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-09T09:58:00.7441089Z Cleaning up orphan processes
+2026-10-09T09:58:00.7769030Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

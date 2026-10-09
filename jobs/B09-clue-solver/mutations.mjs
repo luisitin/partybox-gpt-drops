@@ -39,6 +39,10 @@ assert.ok(!/Math\.random|Date\.now/.test(original), 'production has no unseeded 
 const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
 assert.ok(!pkg.dependencies || Object.keys(pkg.dependencies).length === 0, 'zero runtime dependencies');
 const results = [];
+// Preserve actual compiled outputs for independent inspection after temporary mutants are removed.
+mkdirSync('.verification', { recursive: true });
+writeFileSync('.verification/types.js', readFileSync('dist/types.js'));
+writeFileSync('.verification/package.json', '{"type":"module"}\n');
 for (const [id, before, after] of mutations) {
   assert.equal(original.split(before).length - 1, 1, `unambiguous mutation ${id}`);
   const directory = resolve(`.mutation-${id}`);
@@ -49,6 +53,7 @@ for (const [id, before, after] of mutations) {
     writeFileSync(`${directory}/tsconfig.json`, JSON.stringify({ compilerOptions: { target: 'ES2022', module: 'NodeNext', moduleResolution: 'NodeNext', strict: true, noUncheckedIndexedAccess: true, exactOptionalPropertyTypes: true, outDir: '.', lib: ['ES2022'] }, files: ['clueSolver.ts','types.ts'] }));
     // A compilation failure aborts the suite; it never counts as a mutation kill.
     execFileSync(process.execPath, ['node_modules/typescript/bin/tsc', '-p', `${directory}/tsconfig.json`], { stdio: 'pipe' });
+    writeFileSync(`.verification/mutant-${id}.mjs`, readFileSync(`${directory}/clueSolver.js`));
     const { solveClue } = await import(pathToFileURL(`${directory}/clueSolver.js`).href);
     for (const seed of [1,2,3]) {
       let caught;

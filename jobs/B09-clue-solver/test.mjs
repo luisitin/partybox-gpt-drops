@@ -125,7 +125,7 @@ if (!process.env.B09_IMPORT_ONLY) {
     const p50 = timings[Math.floor((timings.length - 1) * .5)], p99 = timings[Math.floor((timings.length - 1) * .99)], maximum = timings.at(-1);
     assert.ok(maximum <= 200, `every observed six-player update <=200ms; max=${maximum}`);
     const report = { seed, fixedCases, reducedCases, reducedSuggestions, fullGames: 5000, playerCounts: playerCounts.slice(3), fullSuggestions, fullUpdates: updates.length, sparseSixPlayerStressUpdates: stressTimings.length, sparseSixPlayerStressMaximum: Math.max(...stressTimings), denseSixPlayerSuggestions: dense.log.suggestions.length, denseSixPlayerMilliseconds: denseMilliseconds, sixPlayerUpdates: timings.length, sixPlayerMilliseconds: { p50, p99, maximum } };
-    reports.push(report); console.log(JSON.stringify(report));
+    reports.push({ ...report, rawSixPlayerMilliseconds: timings }); console.log(JSON.stringify(report));
   }
   writeFileSync(process.env.B09_REPORT ?? 'results.json', JSON.stringify(reports, null, 2) + '\n');
 }

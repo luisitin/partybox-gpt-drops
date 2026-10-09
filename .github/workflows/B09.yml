@@ -1,7 +1,7 @@
 name: B09 exact Clue solver
 on:
   pull_request:
-    paths: ['jobs/B09-*/**']
+    paths: ['jobs/B09-*/**', '.github/workflows/B09.yml']
 permissions:
   contents: read
 jobs:
@@ -19,3 +19,12 @@ jobs:
         working-directory: jobs/B09-clue-solver
       - run: npm test
         working-directory: jobs/B09-clue-solver
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: B09-verification
+          path: |
+            jobs/B09-clue-solver/results.json
+            jobs/B09-clue-solver/mutation-results.json
+            jobs/B09-clue-solver/.verification/
+          include-hidden-files: true
