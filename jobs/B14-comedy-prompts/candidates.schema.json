@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "B14 original candidates and first author grading",
+  "type": "array",
+  "maxItems": 3000,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "kind", "text", "namedReferences", "firstPass"],
+    "properties": {
+      "id": {"type": "string", "pattern": "^[QM][0-9]{4}$"},
+      "kind": {"enum": ["fill", "most-likely"]},
+      "text": {"type": "string", "minLength": 1, "maxLength": 90},
+      "namedReferences": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+      "firstPass": {
+        "type": "object", "additionalProperties": false,
+        "required": ["grade", "reason", "reviewer"],
+        "properties": {
+          "grade": {"type": "integer", "minimum": 1, "maximum": 5},
+          "reason": {"type": "string", "minLength": 10},
+          "reviewer": {"const": "original-author"}
+        }
+      }
+    }
+  }
+}

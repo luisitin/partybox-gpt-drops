@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/reproduce-p2-and-size.py", line 31, in <module>
+    case('unchanged complete positive',lambda p:None,True)
+  File "/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/reproduce-p2-and-size.py", line 29, in case
+    result=invoke(p/'scripts/checksums.py',p,['--check']);assert (result['returncode']==0)==expected,(name,result)
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('unchanged complete positive', {'returncode': 1, 'stdout': '', 'stderr': 'Traceback (most recent call last):\n  File "/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-78xv6q4h/fixture/scripts/checksums.py", line 71, in <module>\n    main()\n  File "/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-78xv6q4h/fixture/scripts/checksums.py", line 68, in main\n    print(json.dumps(run(ROOT, args.check)))\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File "/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-78xv6q4h/fixture/scripts/checksums.py", line 54, in run\n    raise ValueError("delivery manifest mismatch: unlisted=" + repr(missing) + ", absent=" + repr(stale) + ", hashes=" + repr(wrong))\nValueError: delivery manifest mismatch: unlisted=[], absent=[\'payload.txt\', \'scripts/checksums.py\'], hashes=[]\n', 'allFixtureBytesPreserved': True})
