@@ -67,3 +67,12 @@ The filter is not an HTML sanitizer.
 Immutable8d hosted run37866126547 genuine11588287156 independently passes5591 assertions,1101 actualGit hashes,100 original rows,75 actual mutants and literal0/0/0; reader naturalCLOSED00:44:58.120405. Required originalaftergreen literal13/5/10 remains failed and is not rerun.
 
 Actual distinct fold-column paired trial naturalCLOSED01:09:38.922650/EXIT0 with24 original phases/12M calls and all1131+1154 guards equal. Aggregate+7.7875/+2.7706/+0.6678%, but only5of6 balanced blocks improve; seed3block0 regresses. No adoption/no unchanged comparison retry/no cause claim; all61GC events and allphases retained. Original faulty761a controller/READY preserved; targetedca78 reaping repair independently passed1406 assertions before root actualgrant. Historical6a semantic/mutant proofs and original timing loop remain immutable.
+
+
+## Original currenta7 fullproof and rejected distinctASCII table (2026-10-09T01:39:05.094377+00:00)
+
+Actualfulla7 hosted37868586332/job113621118296 official11588977738/14744550B independentlyPASS5851assertions/1153immutableGit files/all100rows/all75actualmutants/literal0/0/0; readernaturalCLOSED01:15:21.319446/EXIT0. Originalrequiredaftergreen13/5/10 remainsFAIL and wasnotrerun.
+
+DistinctASCII mapping2a1/68f2 passesstrictcompile/8executedassertioncontrols/128mapping/65536classification/214308three-seed semanticcases/25realoriginalseed1mutants43830each/noexclusions. Actualonceonly24phase12M comparisonnaturallyCLOSED01:34:33.427399/EXIT0 with1175+1206guards unchanged/reapedempty; seedgains-10.5052/-1.2451/+4.7080% fail predeclared5%allthree+positiveallsixblocks. REJECTED/NOADOPTION; everyphase/GC event retained/no causeattribution. ENOENT scaffoldfailureandwrongba70-DFA paths werecaughtbefore anyelapsedlaunch; exactfailedhelper/READY bytes preserved, targetonly1e19/9494 repair independentlyPASS1241. Current1175a7 proofmap needsno documentbridge.
+
+This is a bounded substantive optimization round without an acceptable gain. Bindingacceptance/KEEP remainunfinished; no unchangedretry, relaxedgate/clock, exclusions or claimedcompletion. Production7817/e4b/originalrunnerbff0 and alloriginalsourceworkloads stay unchanged.

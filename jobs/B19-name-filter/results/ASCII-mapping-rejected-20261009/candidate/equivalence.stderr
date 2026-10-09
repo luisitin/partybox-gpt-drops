@@ -1,0 +1,22 @@
+node:fs:622
+  return binding.open(
+                 ^
+
+Error: ENOENT: no such file or directory, open '/workspace/partybox-gpt-drops-B19-finish/.work/B19-ASCII-mapping-candidate/build-candidate.py'
+    at Object.openSync (node:fs:622:18)
+    at readFileSync (node:fs:488:35)
+    at hashFile (file:///workspace/partybox-gpt-drops-B19-finish/.work/B19-ASCII-mapping-candidate/exact-harness.mjs:24:33)
+    at file:///workspace/partybox-gpt-drops-B19-finish/.work/B19-ASCII-mapping-candidate/exact-harness.mjs:38:116
+    at Array.map (<anonymous>)
+    at guards (file:///workspace/partybox-gpt-drops-B19-finish/.work/B19-ASCII-mapping-candidate/exact-harness.mjs:38:84)
+    at file:///workspace/partybox-gpt-drops-B19-finish/.work/B19-ASCII-mapping-candidate/exact-harness.mjs:41:21
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspace/partybox-gpt-drops-B19-finish/.work/B19-ASCII-mapping-candidate/build-candidate.py'
+}
+
+Node.js v24.19.0
