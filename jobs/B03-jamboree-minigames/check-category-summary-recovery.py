@@ -15,7 +15,12 @@ def digest(value): return hashlib.sha256(json.dumps(value, ensure_ascii=False, s
 def key(value): return ''.join(c for c in unicodedata.normalize('NFKC', value).casefold() if c.isalnum())
 def unchanged(row):
     result = copy.deepcopy(row); result['fieldEvidence'].pop('category'); result['fieldEvidence'].pop('gameplay'); return result
-def validate(proof, data, sources, reopens, wiki_rows):
+def validate(proof, data, sources, reopens, wiki_rows, later=None):
+    if later is None and (ROOT / 'reports/common-gameplay-recovery.json').exists():
+        import importlib.util
+        spec = importlib.util.spec_from_file_location('later_common_gameplay', ROOT / 'check-common-gameplay-recovery.py')
+        checker = importlib.util.module_from_spec(spec); spec.loader.exec_module(checker)
+        later = checker.load_and_validate(data, sources, reopens)
     rows = {r['id']: r for r in data['minigames']}; sb = {s['id']: s for s in sources['sources']}
     quotes = {q['id']: (s, q) for s in sources['sources'] for q in s['quotes']}
     require(proof['baselineSourceCommit'] == 'a327dc1cd579e85f7301edfd6b5b074f7fe6d602' and proof['copyrightBodiesPublished'] is False, 'Wrong baseline or copyright scope')
@@ -52,12 +57,16 @@ def validate(proof, data, sources, reopens, wiki_rows):
     for repair in proof['summaryRepairs']:
         row = rows[repair['id']]; source, quote = quotes[repair['quoteId']]
         require(source['id'] == repair['sourceId'] == 'W' + row['id'][2:] and quote['text'] == repair['quote'] and 6 <= len(quote['text'].split()) <= 25, 'Summary lacks a substantive actual Wiki quote')
-        require(repair['quoteId'] in row['fieldEvidence']['gameplay']['quoteIds'] and row['fieldEvidence']['gameplay']['status'] == repair['status'] == 'single_source', 'Independent gameplay support overstated')
+        expected_status = 'corroborated' if later and repair['id'] in later['ids'] else 'single_source'
+        require(repair['quoteId'] in row['fieldEvidence']['gameplay']['quoteIds'] and row['fieldEvidence']['gameplay']['status'] == expected_status and repair['status'] == 'single_source', 'Independent gameplay support overstated')
         require(repair['scopeHashes'] == proof['sourceScopeHashes'][source['id']], 'Summary quote scope differs from its full captures')
-    require(proof['unchangedNonCategoryGameplayRows'] == [{'id': r['id'], 'sha256': digest(unchanged(r))} for r in data['minigames']], 'Unrelated product value or evidence changed')
+    baseline_rows = later['restoredRows'] if later else data['minigames']
+    require(proof['unchangedNonCategoryGameplayRows'] == [{'id': r['id'], 'sha256': digest(unchanged(r))} for r in baseline_rows], 'Unrelated product value or evidence changed')
     new = set(proof['newQuoteIds']); require(len(new) == len(proof['newQuoteIds']) and new <= set(quotes), 'New quote IDs omitted or duplicated')
-    require(proof['baselineSourceQuoteHashes'] == {s['id']: digest([q for q in s['quotes'] if q['id'] not in new]) for s in sources['sources']}, 'Original source quotations deleted or altered')
-    require(sb['FGS_BASE']['uniqueQuotedWords'] == proof['guideWordBudget'] == 151, 'Independent guide quotation budget differs')
+    excluded = new | (later['newQuoteIds'] if later else set())
+    require(proof['baselineSourceQuoteHashes'] == {s['id']: digest([q for q in s['quotes'] if q['id'] not in excluded]) for s in sources['sources']}, 'Original source quotations deleted or altered')
+    historical_budget = sum(len(t.split()) for t in {q['text'] for q in sb['FGS_BASE']['quotes'] if not later or q['id'] not in later['newQuoteIds']})
+    require(historical_budget == proof['guideWordBudget'] == 151, 'Independent guide quotation budget differs')
     return wanted
 
 def run():

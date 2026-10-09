@@ -333,7 +333,7 @@ All **132 narrow core-gameplay fields** now have at least two publisher families
 
 ## UNVERIFIED
 
-**Current strict research gate: NOT_MET; 283/1,320 narrowly corroborated fields, 1,037 remaining fields, zero of 132 complete rows.** Detailed timers, controls, scoring, ties and coin/star awards still require independent corroboration. The full two-wiki roster condition is unmet. No Nintendo gameplay or phone adaptation was executed; phone fit is editorial. Null payouts and all 15 material conflicts remain preserved. Current per-row coverage is reproduced in `reports/research-gaps.json`; all registered clips are bound to actual response records, and those records retain their individual dates.
+**Current strict research gate: NOT_MET; 286/1,320 narrowly corroborated fields, 1,034 remaining fields, zero of 132 complete rows.** Detailed timers, controls, scoring, ties and coin/star awards still require independent corroboration. The full two-wiki roster condition is unmet. No Nintendo gameplay or phone adaptation was executed; phone fit is editorial. Null payouts and all 15 material conflicts remain preserved. Current per-row coverage is reproduced in `reports/research-gaps.json`; all registered clips are bound to actual response records, and those records retain their individual dates.
 
 The first 2026-10-08 category recovery reopened only Mario Wiki's list, Legacy base and Legacy TV twice. The second recovery freshly reopened Family Game Squad and seven individual Wiki articles, sixteen verified HTTPS requests. Its Wiki-list comparison reuses two explicitly historical captures. Every other source retains its actual historical dates. Source access and quote presence do not prove a complete gameplay rule.
 
@@ -342,7 +342,7 @@ The first 2026-10-08 category recovery reopened only Mario Wiki's list, Legacy b
 | name | 132 | 0 | 0 | 0 |
 | category | 104 | 28 | 0 | 0 |
 | format | 23 | 108 | 1 | 0 |
-| gameplay | 15 | 117 | 0 | 0 |
+| gameplay | 18 | 114 | 0 | 0 |
 | controls | 0 | 121 | 11 | 0 |
 | timeLimit | 0 | 100 | 3 | 29 |
 | winRules | 0 | 132 | 0 | 0 |
@@ -398,7 +398,7 @@ Full hash verification and full strict verification both completed naturally bef
 
 Final LF serialization full hash and strict checks naturally CLOSED: 72 suites / 26,001 cases, all 76 manifest files; integrity exit 0 and strict exit 1 with the deliberate NOT_MET verdict. No source field changed during serialization. This paragraph corrects the recovery environment from the prior worker’s Python version to the actual version above. Only documentation metadata changed afterward; all delivery hashes were regenerated and checked directly before commit.
 
-## Second material recovery 2026-10-08/09
+## Second material recovery 2026-10-08/09 (historical checkpoint 4a60fc7)
 
 The sixteen finite verified HTTPS responses naturally CLOSED at 2026-10-08 23:46:08.790810 UTC, before any adopted change. Complete source bodies remain private. Both guide captures independently parse all 112 source-spelled base-game names; the complete 29-game four-player, 12-game one-versus-three and ten-game Kaboom-Squad memberships agree with the Wiki category sets after case/punctuation normalization. Twelve category facts are newly corroborated. The Legacy misspellings and broad Koopathlon/Mouse labels are retained.
 
@@ -411,3 +411,23 @@ The successful material writer naturally CLOSED at 2026-10-08 23:59:31.999256 UT
 Historical hosted acceptance for a327dc1 is recorded in `reports/hosted-ci-a327dc1-artifact.json`: run 37859517729 / job 113591645239 succeeded; the complete 103,932-character native log contains two full 72-suite / 26,001-case / 76-hash reports. The actual 2,673-byte artifact 11585436884's complete SHA-256 is recorded in that receipt. The ZIP was read in full, safe paths/CRC checked, its complete report compared to both native reports and all immutable source manifest files checked. Reader naturally CLOSED PASS 23:50:05.659053. This older workflow proves no newer source commit and does not close the research gate.
 
 The 23:57:17.332286 checkpoint bound was missed during the mandatory 23:51:04–23:57:29.128565 B19 HOLD. B03 owned no reader, writer or process during that hold. Actual source requests, writer, checks, push and workflow observations are never backdated.
+
+## Current common-action recovery 2026-10-09
+
+The finite material writer naturally CLOSED exit 0 at **00:18:34.856351 UTC**. A preceding quote-count assertion exited 1 before any tracked write and remains private: an exact Wiki sentence already existed, so the adopted repair reuses it. Four genuinely new clips are added, not five. Three full guide paragraphs and the appropriate Wiki instructions/shared released-game overview were read in both actual retained bodies from 2026-10-08 23:46. No new HTTP request or source date is claimed for those rereads.
+
+The only product changes are three narrower two-sentence summaries and their independent gameplay evidence. Domination keeps the shared button-mashing/Whomp objective, omitting exact switch, mallet, timing and scoring limits. Snow Brawl keeps the fight and computer-controlled assistance, omitting helper count/species and older-edition details. Jump the Gun keeps the two path-making/crossing roles and goal, omitting its cannon/projectile/bindings/timer/tie details. Every unrelated value and evidence field across all 132 rows is compared to baseline 4a60fc7; all prior quotations and gameplay citations are preserved.
+
+`check-common-gameplay-recovery.py`: PASS **297** actual source/row/budget/preservation comparisons plus **eight** malformed proofs rejected (extra timer claim, same-lineage guide, missing second-pass clip, changed actual capture, invented original summary, changed prior quotation fingerprint, 201-word budget and changed unrelated timer). The earlier category and seven Wiki-quote recovery proofs still run; they allow only the three later changes after this independent proof actually passes. Their historical source records and original assertions remain intact.
+
+First complete content verification naturally exited 0, observed by 00:22:43 UTC: **75 suites / 26,761 cases**, seed n/a, actual Python 3.12.14 / jsonschema 4.26.0. Strict research remains NOT_MET: **286 corroborated / 1,034 open / zero complete rows**; gameplay 18 corroborated / 114 single-source. Current guide quote budget is exactly 200 unique quoted words, with the original 151 words retained. Registry: 145 URLs / 1,898 clips / 3,802 A/B recoveries. Complete final report, manifest and strict commands must be rerun after documentation and before push.
+
+Historical accepted checkpoint 4a60fc7 is preserved in `reports/hosted-ci-4a60fc7-artifact.json`: exact-head run 37863086499 / job 113603249892 SUCCESS 00:07:19 UTC; the entire 106,493-character native log has two complete 74-suite / 26,513-case / 79-hash reports and 148 PASS lines. Actual artifact 11587211660 (2,813 bytes, SHA-256 `07d6e5cf950d4cbe824cd3ece609a315b81b65110b59ca33d8ae8253272ce37f`) was fully read, safe ZIP/CRC checked, its complete JSON compared to both native reports and all 79 immutable source hashes validated. Independent reader CLOSED PASS 00:08:35.142392. This is historical acceptance only; the next source commit requires its own exact-head workflow.
+
+### UNVERIFIED NamuWiki roster candidate
+
+`reports/namu-roster-candidate.json` retains six new verified HTTPS receipts, naturally CLOSED 00:10:29.983007, for original Namu base, its exact linked TV article and the Wiki list in ordered A/B passes. The complete Namu base has 112 numbered English names in both passes, including the raw `Thwormp the Difference` disagreement. The complete TV article enumerates fourteen Korean Mouse names, three microphone names and three camera names. Numerical 112 + 20 = 132 agrees, but literal bilingual witnesses for the twenty TV identities are missing; no automatic translation or guessed alias is adopted. Three known-URL Exa extracts show no Korean name witness in the sampled Wiki articles. These fetches are not new native pass records or search results. The second full exact-wiki-roster gate remains unclosed; this candidate promotes no fact field.
+
+Actual holds: B19 ACK 00:17:11 through direct release 00:17:50.697578; G01 coordination ACK 00:19:36 through the root's direct finite-work release before candidate writer 00:22:36.714252 (release clock not separately sampled). No owned reader/writer/process ran during either HOLD; none was paused or stopped. The hard next checkpoint bound remains 00:36:54.057127 until the next actual normal push.
+
+Final content report was regenerated after documentation. Complete full hash and strict commands naturally closed before actual observation 2026-10-09T00:26:21.840141+00:00: **76 suites / 26,844 cases / all 83 hashes**, integrity exit 0 and strict deliberate exit 1 (NOT_MET 286/1,320, zero complete rows). Only documentation metadata changed afterward; the manifest is regenerated and every file directly checked before commit.

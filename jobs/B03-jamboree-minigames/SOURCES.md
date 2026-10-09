@@ -3591,3 +3591,14 @@ Sixteen verified HTTPS responses naturally CLOSED at 2026-10-08 23:46:08.790810 
 | W040_recovery_snowball_fight_it_s_one_against_three_but_the_ukikis_will_help_the_solo_player | Snowball fight! It's one against three, but the Ukikis will help the solo player. | Super Mario Party Jamboree / in-game description |
 | W049_recovery_ground_pound_the_sparks_to_extinguish_them_and_delay_the_explosion | Ground Pound the sparks to extinguish them and delay the explosion. | Super Mario Party Jamboree / in-game description |
 | W050_recovery_work_together_to_reach_the_goal_one_player_fires_bullet_bills_to_create_a_path_while_the_other_player_jumps_across | Work together to reach the goal. One player fires Bullet Bills to create a path while the other player jumps across. | Super Mario Party Jamboree / in-game description |
+
+## Common-action recovery 2026-10-09
+
+Three genuinely common-action summaries now use both complete retained source contexts from 2026-10-08 23:46. No new HTTP date is claimed. Only the explicitly narrower summaries are corroborated; detailed controls, timers, scoring/ties and payouts stay qualified. The guide budget reaches 200 words with all original 151 retained. Registry: 145 URLs / 1,898 clips / 3,802 A/B recoveries. One existing exact Wiki quote is reused; only these four new clips are added:
+
+| Quote ID | Exact short quotation | Captured locator |
+| --- | --- | --- |
+| FGS_BASE_common_mash_the_a_button_to_hit_the_most_whomp | Mash the A button to hit the most Whomp | ### Domination / actual full explanatory paragraph |
+| FGS_BASE_common_both_sides_fight_in_a_snowball_fight_the_one_player_side_has_the_help_of_ai_monkeys | Both sides fight in a snowball fight. The one player side has the help of AI monkeys. | ### Snow Brawl / actual full explanatory paragraph |
+| FGS_BASE_common_one_player_has_to_try_to_make_a_path_for_their_teammate_while_the_other_player_must_cross_that_path_to_the_goal | One player has to try to make a path for their teammate while the other player must cross that path to the goal. | ### Jump the Gun / actual full explanatory paragraph |
+| W040_common_the_lone_player_is_given_four_computer_controlled_teammates | The lone player is given four computer-controlled teammates | Overview / shared returning-game core action, with explicit Jamboree scope retained |

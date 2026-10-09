@@ -101,3 +101,7 @@ Waluigi's Pinball Arcade format remains single-source: the credited guide gives 
 ## Second recovery source wording notes
 
 The newly read complete guide calls Prize Drop's dropped object a ball, while the appropriate Wiki section and in-game instruction call it a medal. Defuse or Lose's guide uses a different boss-name spelling from the Wiki. These wording differences do not independently corroborate the more specific Wiki mechanics, so the affected gameplay fields remain single-source and original claims stay preserved. No new mechanical interpretation or silent conflict resolution is adopted. The fifteen existing material catalogue conflicts remain intact.
+
+## NamuWiki candidate roster disagreement (not adopted as catalogue evidence)
+
+Both fresh original Namu base captures list `Thwormp the Difference`; the accepted English catalogue and Wiki list have `Thwomp the Difference`. These are source-only/canonical-only raw names after case/punctuation normalization. The spelling is not silently corrected or aliased. Namu's TV article lists 20 Korean titles (14 Mouse / 3 microphone / 3 camera); their literal English localization witnesses remain unverified, so presence/absence of the same twenty English identities is not guessed. The actual lists and receipts are in `reports/namu-roster-candidate.json`. This research candidate does not replace any of the fifteen registered material catalogue conflicts or promote a fact field.

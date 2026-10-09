@@ -2,7 +2,7 @@
 
 **What this is:** a research catalogue of 132 minigames (112 base games, 20 Jamboree TV additions) with name, category, format, time limit, controls, win, score, tie and reward rules, a two-sentence summary, and a 1-5 phone-touch fit. Data is JSON and CSV, checked by a JSON Schema and an offline verifier.
 **How to use it:** read `DESIGN-DIGEST.md` for the design reading, `INTEGRATION.md` for what PartyBox does with it. Query `minigames.json` (or `minigames.csv`, see below). Do not ship names, art or strings.
-**Status:** reference only. Draft research, strict gate **NOT_MET**: 283 of 1,320 narrow fact fields corroborated, 1,037 still open, 0 of 132 rows complete. Nothing here is Nintendo-verified gameplay.
+**Status:** reference only. Draft research, strict gate **NOT_MET**: 286 of 1,320 narrow fact fields corroborated, 1,034 still open, 0 of 132 rows complete. Nothing here is Nintendo-verified gameplay.
 
 ## Quick start (from the repo root)
 
@@ -42,7 +42,7 @@ The verifier enforces them (`Narrow summary status follows...`, `Quote-support r
 
 - **Product** (what a reader uses): `minigames.json`, `minigames.csv`, `minigames.schema.json`, `DESIGN-DIGEST.md`, `INTEGRATION.md`.
 - **Checks** (run by the verifier): `verify.py`, `quote-support-check.py`, `reports/quote-support-check.json`, `reports/research-gaps.json` (the exact open ledger), `catalogue-second-pass.json` (per-row fingerprints).
-- **Evidence** (proves the rows, not needed by a port): `catalogue-sources.json` and `SOURCES.md` (145 URLs, 1,894 clips), `catalogue-conflicts.json` and `CONFLICTS.md`, the `reports/source-reopens-*` captures, the earlier gameplay leads and the legacy helpers. `HISTORICAL-INDEX-NOTES.md` explains the preserved history.
+- **Evidence** (proves the rows, not needed by a port): `catalogue-sources.json` and `SOURCES.md` (145 URLs, 1,898 clips), `catalogue-conflicts.json` and `CONFLICTS.md`, the `reports/source-reopens-*` captures, the earlier gameplay leads and the legacy helpers. `HISTORICAL-INDEX-NOTES.md` explains the preserved history.
 - **Process**: `LOOP.md`, `NEXT.md`, `VERIFY.md`, `ASSUMPTIONS.md`, `SHA256SUMS.txt` (every file except itself).
 
 ## Known limits
@@ -58,10 +58,18 @@ Fresh ordered A/B HTTPS captures of Mario Wiki and Mario Party Legacy now suppor
 
 That checkpoint's registry had 145 URLs and 1,884 clips, with 3,774 recorded A/B quote recoveries across all 148 current/historical URLs. Only the three category sources were newly reopened in that recovery; every other source retained its actual earlier timestamp.
 
-## Current category and gameplay-source recovery 2026-10-08/09
+## Second recovery (historical checkpoint 4a60fc7)
 
 Sixteen verified HTTPS requests reopened Family Game Squad and seven individual Wiki articles in ordered A/B passes. Exact independently captured category headings and complete group membership support 12 more category facts: ten Kaboom-Squad games and the canonical Sandwiched/Squeaky Shakedown names. The historical Legacy spellings remain preserved. Categories now have **104 corroborated and 28 single-source entries**; the broad Koopathlon labels and fourteen Mouse entries remain qualified.
 
 Seven gameplay evidence sets now quote actual Wiki instruction sentences instead of headings or fragments. They remain single-source: **15 gameplay fields corroborated, 117 single-source, none fragment-only**. Product summaries and all unrelated product values are unchanged. The full guide's sections were read, but detailed independent summary support is still missing. `reports/category-summary-recovery.json` and its checker preserve the actual receipts, complete guide membership, original quotations and every unrelated row value.
 
 Current registry: **145 URLs / 1,894 clips / 3,794 recorded A/B quote recoveries** across 148 current/historical URLs. Eight sources were freshly reopened for this second recovery; the Wiki list records reused for the category comparison are explicitly historical. The independent two-wiki roster requirement remains unmet. The earlier checkpoint's successful hosted workflow and artifact receipt are historical evidence, not acceptance of a newer commit.
+
+## Current common-action recovery 2026-10-09
+
+Domination, Snow Brawl and Jump the Gun now have narrowly rewritten two-sentence summaries supported by real Wiki and independent guide action descriptions. Both full retained source captures were reread; exact timers, bindings, win/score/tie parameters and payouts keep their separate qualifiers. Gameplay evidence is now **18 corroborated / 114 single-source**, and strict overall coverage is **286/1,320 corroborated / 1,034 open / zero complete rows**. All 129 other summaries and every unrelated product value/evidence field are preserved.
+
+`reports/common-gameplay-recovery.json` binds eight retained actual HTTPS records and the three row repairs. Its checker verifies source independence, both complete scopes, original row/quote preservation and the exact 200-word guide budget. Registry: **145 URLs / 1,898 short clips / 3,802 recorded A/B quote recoveries**. No new source timestamp or HTTP request is invented for rereading these retained bodies.
+
+The separate NamuWiki candidate packet records six fresh roster captures, an actual 112-name English base list and twenty Korean TV names. Its raw base spelling disagreement and missing literal bilingual TV witnesses remain explicit in CONFLICTS and VERIFY. The required exact second-wiki roster acceptance remains unclosed.
