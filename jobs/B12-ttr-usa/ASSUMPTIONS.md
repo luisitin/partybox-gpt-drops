@@ -47,3 +47,7 @@
 - Recovery research claims are limited to rechecking the historical full archive
   and controlled transport tests. The complete14-source second network pass has
   not been rerun in this recovery, and no new factual rows or quotes are promoted.
+
+- Accepted record prototypes may provide core fields. applyClaim retains explicit
+  playerCount/id even when inherited; metadata spread cannot remove those required
+  fields. Twelve inherited-game/player combinations are checked across all seeds.

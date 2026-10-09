@@ -61,3 +61,14 @@ and three600-assertion focused seeds now pass. Original raw reference/seals/data
 facts/schema/counts/timing thresholds are unchanged. Current full suite and hosted
 archive are pending. This is a material repair checkpoint, not a credited
 post-green KEEP review. Preserve the original historical LOOP records above.
+
+## Recovery second material gain — inherited core fields,2026-10-09
+
+Actual witness11:21:06UTC: initial metadata spread accepted valid game/player
+prototypes but omitted inherited playerCount/id, so the applied game then failed
+scoring. Original primary and unchanged raw oracle preserve both. Source884 whole
+hosted packet independently passed11:23:25UTC but its receipt explicitly retains
+this unresolved functional defect and says not Ready. Keep explicit required
+fields beside the spread;12 inherited-record combinations and3×624 focused
+assertions now pass. No formal no-gain credit is awarded to this gain, and the
+corrected normal child must receive its own complete hosted packet.

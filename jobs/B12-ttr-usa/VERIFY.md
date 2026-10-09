@@ -548,3 +548,8 @@ Full original baseline receipt and its complete genuine archive/native log,
 original failure controls, patched focused output and uncredited ENOENT failure
 are in reports/recovery-20261009. Current hosted evidence is pending at this
 first milestone; historical baseline green does not qualify modified source.
+
+The second material correction preserves inherited playerCount/id on valid
+prototypes while retaining caller own metadata. Focused seeds now have624
+assertions each. Whole source884 proof is preserved separately with its known
+regression and non-Ready status; it does not qualify the corrected source.

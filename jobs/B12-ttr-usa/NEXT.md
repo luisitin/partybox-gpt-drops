@@ -26,13 +26,29 @@ Completed in this milestone:
   uses the existing firstSha256 and rejects changed download bytes, an invalid
   recorded hash, and a disagreeing present local snapshot. These are transport
   controls; no fresh14-source public-network reopening or new research facts.
-- Strict compilation and three focused seed runs passed600 assertions each,
+- Strict compilation and three focused seed runs initially passed600 assertions each,
   including120 frozen extension-preserving moves. Three real comparison CLI
   controls pass: bad-small/bad-budget fail naturally; unchanged raw-reference
   adapter passes300 small and1000 budget sets. Five synthetic HTTP controls pass.
 - The first standalone focused run lacked its output folder and failed ENOENT.
   Its raw log and explicit uncredited failure are retained; standalone runners now
   initialize their output directory, as the original full runner already does.
+
+Additional substantive correction after the first material checkpoint:
+- Source884fb43a9be49628f7fcf90b9f40fc760ca2c044 received genuine whole hosted
+  acceptance11:23:25UTC, run37922532383/artifact11613325267,200844 bytes, SHA256
+  dbf36ce6aaf31220f136be69a10e4653362a390af1ee513da0be0a61276d7b13.
+  Its complete51-entry archive,42844-byte native log,148 native source inputs,
+  142 manifest hashes,48 fingerprints and all original gates are preserved in
+  reports/recovery-20261009/current-884. This acceptance explicitly says not Ready.
+- Actual extra checking11:21:06UTC found that my metadata spread lost inherited
+  playerCount/player id on otherwise valid records, although original primary
+  and unchanged raw oracle preserve both. Required fields now remain explicit
+  alongside spread. Twelve inherited-record combinations and the three focused
+  seeds now pass624 assertions each (1872 total). The original failure is retained.
+- The corrected current source must receive its own full hosted acceptance;
+  source884's green packet does not qualify this normal-child correction.
+  No successful post-green no-gain round has been credited yet.
 
 Pending before this supplemental delivery can become Ready:
 1. Finish and retain the entire current local full command and every original

@@ -1,0 +1,11 @@
+import * as current from '../../jobs/B12-ttr-usa/dist/ttr.js';import * as old from './original-dist/ttr.js';import * as raw from './original-dist/reference.js';import assert from 'node:assert/strict';import {writeFileSync} from 'node:fs';
+const routes=[{id:'r',a:'A',b:'B',length:1,color:'red'}],cards=Object.fromEntries(current.CARDS.map(c=>[c,2])),claim={routeId:'r',playerId:'p',cards:['red']};
+const player=Object.create({id:'p',cards,trainsRemaining:45,ticketIds:[]});player.displayName='Alice';
+const game=Object.create({playerCount:2,players:[player,{id:'q',cards,trainsRemaining:45,ticketIds:[]}],claims:{}});game.title='Table';
+for(const impl of [current,old,raw])assert.equal(impl.canClaim(routes,game,claim),true);
+const got=current.applyClaim(routes,game,claim),previous=old.applyClaim(routes,game,claim),oracle=raw.applyClaim(routes,game,claim);
+assert.equal(got.playerCount,undefined);assert.equal(got.players[0].id,undefined);
+assert.equal(previous.playerCount,2);assert.equal(previous.players[0].id,'p');assert.equal(oracle.playerCount,2);assert.equal(oracle.players[0].id,'p');
+assert.throws(()=>current.scoreGame(routes,[],got),RangeError);
+const report={demonstrated:true,source:'884fb43a9be49628f7fcf90b9f40fc760ca2c044',validInheritedRecordAcceptedByAllThree:true,currentLosesInheritedCorePlayerIdAndPlayerCount:true,oldAndRawOraclePreserveBothCoreFields:true,currentAppliedGameFailsScoring:true,meaning:'Metadata spread must explicitly retain required core fields whose values are inherited; record prototypes remain supported.',completedUTC:new Date().toISOString()};
+writeFileSync('CURRENT-884-INHERITED-CORE-REGRESSION.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

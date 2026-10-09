@@ -33,7 +33,7 @@ export function canClaim(routes:readonly Route[],game:Game,claim:Claim):boolean 
 }
 export function applyClaim(routes:readonly Route[],game:Game,claim:Claim):Game {
  if(!canClaim(routes,game,claim))throw new RangeError('Illegal claim');const r=routes.find(r=>r.id===claim.routeId)!;
- const players=game.players.map(p=>{const cards={...p.cards};if(p.id===claim.playerId)for(const c of claim.cards)cards[c]--;return{...p,cards,trainsRemaining:p.trainsRemaining-(p.id===claim.playerId?r.length:0),ticketIds:p.ticketIds.slice()};});return{...game,players,claims:{...game.claims,[r.id]:claim.playerId}};
+ const players=game.players.map(p=>{const cards={...p.cards};if(p.id===claim.playerId)for(const c of claim.cards)cards[c]--;return{...p,id:p.id,cards,trainsRemaining:p.trainsRemaining-(p.id===claim.playerId?r.length:0),ticketIds:p.ticketIds.slice()};});return{...game,playerCount:game.playerCount,players,claims:{...game.claims,[r.id]:claim.playerId}};
 }
 export function ticketComplete(routes:readonly Route[],ownedIds:readonly string[],ticket:Ticket):boolean {
  validateTicket(ticket);const selected=owned(routes,ownedIds);if(ticket.a===ticket.b)return true;const adjacency=new Map<string,string[]>();for(const r of selected){adjacency.set(r.a,[...(adjacency.get(r.a)??[]),r.b]);adjacency.set(r.b,[...(adjacency.get(r.b)??[]),r.a]);}

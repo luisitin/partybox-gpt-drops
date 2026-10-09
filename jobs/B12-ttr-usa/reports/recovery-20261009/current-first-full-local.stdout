@@ -1,0 +1,118 @@
+
+> b12-ttr-usa@1.0.0 test
+> npm run build && node tests/run.mjs
+
+
+> b12-ttr-usa@1.0.0 build
+> tsc -p tsconfig.json
+
+B12 review: starting all seeds
+{"passed":true,"seeds":[{"seed":1,"passed":true,"assertions":600,"validExtensionPreservationControls":40,"originalOracleLimitation":"Raw reference still accepts non-enumerable card counts and drops extension fields; untouched and explicitly excluded as a correctness oracle for those two controls."},{"seed":2,"passed":true,"assertions":600,"validExtensionPreservationControls":40,"originalOracleLimitation":"Raw reference still accepts non-enumerable card counts and drops extension fields; untouched and explicitly excluded as a correctness oracle for those two controls."},{"seed":3,"passed":true,"assertions":600,"validExtensionPreservationControls":40,"originalOracleLimitation":"Raw reference still accepts non-enumerable card counts and drops extension fields; untouched and explicitly excluded as a correctness oracle for those two controls."}],"toolControls":{"passed":true,"actualCLIControls":3,"actualHTTPControls":5,"temporaryOwnedControllersClosed":true,"scope":"Correctness checks only; no new performance claim or live fourteen-source research pass.","rows":[{"mode":"bad-small","actualCLIStatus":1,"naturallyClosed":true,"output":[{"check":"compare-small-random","cases":300,"valueMismatches":300}]},{"mode":"bad-budget","actualCLIStatus":1,"naturallyClosed":true,"output":[{"check":"compare-small-random","cases":300,"valueMismatches":0},{"check":"compare-budget-feasible","setsCompared":1000,"valueMismatches":1000}]},{"mode":"correct","actualCLIStatus":0,"naturallyClosed":true,"output":[{"check":"compare-small-random","cases":300,"valueMismatches":0},{"check":"compare-budget-feasible","setsCompared":1000,"valueMismatches":0}]},{"mode":"reopen-HTTP-component","passed":true,"actualComponentExecuted":true,"controls":5,"bytes":94,"transportOnly":true,"freshResearchClaim":false,"completedUTC":"2026-10-09T11:10:53.811983+00:00"}]},"timingClaim":false}
+
+B12 data: starting all seeds
+[{"seed":1,"checks":2903,"schemaCases":125,"passed":true},{"seed":2,"checks":2903,"schemaCases":125,"passed":true},{"seed":3,"checks":2903,"schemaCases":125,"passed":true}]
+
+B12 oracle-self: starting all seeds
+{"suite":"sealed-oracle-replay","originalChecks":22292,"amendedChecks":22292,"passed":true}
+
+B12 probe: starting all seeds
+{"seed":1,"checks":175,"passed":true}
+{"seed":2,"checks":175,"passed":true}
+{"seed":3,"checks":175,"passed":true}
+
+B12 graphs: starting all seeds
+{"seed":1,"assertions":60000,"discrepancies":0}
+{"seed":2,"assertions":120000,"discrepancies":0}
+{"seed":3,"assertions":180000,"discrepancies":0}
+{"passed":true,"assertions":186053,"seeds":[{"seed":1,"graphs":20000,"exhaustiveSubsetComparisons":20000,"checks":60000},{"seed":2,"graphs":20000,"exhaustiveSubsetComparisons":20000,"checks":60000},{"seed":3,"graphs":20000,"exhaustiveSubsetComparisons":20000,"checks":60000}],"sourceHashes":{"original":"317cce5eaa7e896a936e74d57a1d959b3d411b97afd5fd199f0490043961cf52","amended":"ee875cffa3ed8960479c6dd74bcbdc24257a2ee2665cb1cf6da9f61de6c6da83","primary":"85e8e53b6ef998f215ee0d1d39fb5bff6830b5c872afe033129ffda58970bfbc"},"discrepancies":[]}
+
+B12 games: starting all seeds
+{"suite":"games","seed":1,"completed":100,"turns":14270}
+{"suite":"games","seed":1,"completed":200,"turns":29399}
+{"suite":"games","seed":1,"completed":300,"turns":44331}
+{"suite":"games","seed":1,"completed":400,"turns":58732}
+{"suite":"games","seed":1,"completed":500,"turns":73083}
+{"suite":"games","seed":1,"completed":600,"turns":87402}
+{"suite":"games","seed":1,"completed":700,"turns":102158}
+{"suite":"games","seed":1,"completed":800,"turns":116894}
+{"suite":"games","seed":1,"completed":900,"turns":131446}
+{"suite":"games","seed":1,"completed":1000,"turns":145399}
+{"suite":"games","seed":1,"completed":1100,"turns":160581}
+{"suite":"games","seed":1,"completed":1200,"turns":175540}
+{"suite":"games","seed":1,"completed":1300,"turns":190737}
+{"suite":"games","seed":1,"completed":1400,"turns":205295}
+{"suite":"games","seed":1,"completed":1500,"turns":220529}
+{"suite":"games","seed":1,"completed":1600,"turns":235432}
+{"suite":"games","seed":1,"completed":1700,"turns":250074}
+{"suite":"games","seed":1,"completed":1800,"turns":264318}
+{"suite":"games","seed":1,"completed":1900,"turns":279899}
+{"suite":"games","seed":1,"completed":2000,"turns":295271}
+{"suite":"games","seed":2,"completed":100,"turns":15520}
+{"suite":"games","seed":2,"completed":200,"turns":30053}
+{"suite":"games","seed":2,"completed":300,"turns":44730}
+{"suite":"games","seed":2,"completed":400,"turns":59295}
+{"suite":"games","seed":2,"completed":500,"turns":74773}
+{"suite":"games","seed":2,"completed":600,"turns":88968}
+{"suite":"games","seed":2,"completed":700,"turns":103576}
+{"suite":"games","seed":2,"completed":800,"turns":119061}
+{"suite":"games","seed":2,"completed":900,"turns":133989}
+{"suite":"games","seed":2,"completed":1000,"turns":148839}
+{"suite":"games","seed":2,"completed":1100,"turns":164206}
+{"suite":"games","seed":2,"completed":1200,"turns":178326}
+{"suite":"games","seed":2,"completed":1300,"turns":193393}
+{"suite":"games","seed":2,"completed":1400,"turns":207952}
+{"suite":"games","seed":2,"completed":1500,"turns":221738}
+{"suite":"games","seed":2,"completed":1600,"turns":236742}
+{"suite":"games","seed":2,"completed":1700,"turns":251297}
+{"suite":"games","seed":2,"completed":1800,"turns":266292}
+{"suite":"games","seed":2,"completed":1900,"turns":280081}
+{"suite":"games","seed":2,"completed":2000,"turns":295199}
+{"suite":"games","seed":3,"completed":100,"turns":14670}
+{"suite":"games","seed":3,"completed":200,"turns":29476}
+{"suite":"games","seed":3,"completed":300,"turns":44309}
+{"suite":"games","seed":3,"completed":400,"turns":58965}
+{"suite":"games","seed":3,"completed":500,"turns":73914}
+{"suite":"games","seed":3,"completed":600,"turns":88853}
+{"suite":"games","seed":3,"completed":700,"turns":103358}
+{"suite":"games","seed":3,"completed":800,"turns":118126}
+{"suite":"games","seed":3,"completed":900,"turns":132790}
+{"suite":"games","seed":3,"completed":1000,"turns":147794}
+{"suite":"games","seed":3,"completed":1100,"turns":162811}
+{"suite":"games","seed":3,"completed":1200,"turns":177441}
+{"suite":"games","seed":3,"completed":1300,"turns":192017}
+{"suite":"games","seed":3,"completed":1400,"turns":206481}
+{"suite":"games","seed":3,"completed":1500,"turns":221607}
+{"suite":"games","seed":3,"completed":1600,"turns":236405}
+{"suite":"games","seed":3,"completed":1700,"turns":251108}
+{"suite":"games","seed":3,"completed":1800,"turns":266059}
+{"suite":"games","seed":3,"completed":1900,"turns":280689}
+{"suite":"games","seed":3,"completed":2000,"turns":295133}
+
+B12 mutations: starting all seeds
+{"mutant":1,"name":"six-point-table","seedsKilled":3}
+{"mutant":2,"name":"minimum-route-length","seedsKilled":3}
+{"mutant":3,"name":"maximum-route-length","seedsKilled":3}
+{"mutant":4,"name":"minimum-players","seedsKilled":3}
+{"mutant":5,"name":"existing-three-player-parallel","seedsKilled":3}
+{"mutant":6,"name":"candidate-three-player-parallel","seedsKilled":3}
+{"mutant":7,"name":"same-player-parallel","seedsKilled":3}
+{"mutant":8,"name":"exact-train-balance","seedsKilled":3}
+{"mutant":9,"name":"payment-length","seedsKilled":3}
+{"mutant":10,"name":"double-spend","seedsKilled":3}
+{"mutant":11,"name":"exact-card-balance","seedsKilled":3}
+{"mutant":12,"name":"mixed-gray-payment","seedsKilled":3}
+{"mutant":13,"name":"all-locomotive-payment","seedsKilled":3}
+{"mutant":14,"name":"card-deduction","seedsKilled":3}
+{"mutant":15,"name":"train-deduction","seedsKilled":3}
+{"mutant":16,"name":"claim-owner","seedsKilled":3}
+{"mutant":17,"name":"zero-edge-ticket","seedsKilled":3}
+{"mutant":18,"name":"reverse-ticket-adjacency","seedsKilled":3}
+{"mutant":19,"name":"breadth-first-frontier","seedsKilled":3}
+{"mutant":20,"name":"four-odd-euler-shortcut","seedsKilled":3}
+{"mutant":21,"name":"weighted-edge","seedsKilled":3}
+{"mutant":22,"name":"edge-reuse-guard","seedsKilled":3}
+{"mutant":23,"name":"disconnected-component-sum","seedsKilled":3}
+{"mutant":24,"name":"incomplete-ticket-sign","seedsKilled":3}
+{"mutant":25,"name":"longest-tie-bonus","seedsKilled":3}
+
+{"passed":true,"graphs":60000,"fullGames":6000,"mutations":25,"kills":75,"fingerprints":48}

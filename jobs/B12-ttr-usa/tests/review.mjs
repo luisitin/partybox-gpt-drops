@@ -22,6 +22,15 @@ for(const seed of [1,2,3]) {
  const ga=game();ga.players[0].cards=Object.assign([],cards());invalid(ga);
  const hidden={};for(const c of p.CARDS)Object.defineProperty(hidden,c,{value:2,enumerable:false});for(let i=0;i<9;i++)hidden['unrelated'+i]=0;
  const gh=game();gh.players[0].cards=hidden;invalid(gh,claim,true);
+ for(const inheritedGame of [false,true])for(const inheritedPlayer of [false,true]){
+ const original=game();if(inheritedPlayer)original.players[0]=Object.assign(Object.create(original.players[0]),{displayName:'Alice'});
+ const g=inheritedGame?Object.assign(Object.create(original),{title:'Table'}):original;
+ eq(p.canClaim(routes,g,claim),true);eq(r.canClaim(routes,g,claim),true);
+ const next=p.applyClaim(routes,g,claim),raw=r.applyClaim(routes,g,claim);
+ eq(next.playerCount,raw.playerCount);eq(next.players[0].id,raw.players[0].id);
+ eq(p.scoreGame(routes,[ticket],next),r.scoreGame(routes,[ticket],raw));
+ if(inheritedGame)eq(next.title,'Table');if(inheritedPlayer)eq(next.players[0].displayName,'Alice');
+}
  const random=p.seeded(seed);
  for(let i=0;i<40;i++){
   const g=game();g.metadata={id:i,seed,colour:'blue'};g.displayName='Table '+i;const extra=Symbol('player extra');
