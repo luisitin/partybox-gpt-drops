@@ -1,0 +1,44 @@
+{
+  "kind": "actual-green-hosted-artifact-independent-structural-and-byte-validation",
+  "head": "12554906b884a4c4afd8443edf470f0cc5ec371e",
+  "runId": 37849845219,
+  "jobId": 113559766032,
+  "artifactId": 11580638498,
+  "actualZipBytes": 6923580,
+  "actualZipSha256": "123f931cb51a27faf94c7cc87d4a76d1fa4c5ecde161492321510571b243bcfc",
+  "validatedAt": "2026-10-08T21:55:18.870769+00:00",
+  "actualFreshSummaryPath": "jobs/B19-name-filter/reports/latest/summary.json",
+  "sourceSha256": "41442670786856c1dfa98a5755bd21273287047750035f419249ab7402e8505d",
+  "freshSuiteRowsExecuted": 100,
+  "freshSuiteRowsPassed": 100,
+  "literalAcceptancePassed": true,
+  "previousFailedLiteralGatesPreserved": true,
+  "KEEPCompleted": false,
+  "actualDeliveredHashesChecked": 352,
+  "originalFullCasesPerSeed": 43830,
+  "recordedBenchmarks": [
+    {
+      "seed": 1,
+      "calls": 10000,
+      "recordedMaximumMs": 0.04044099999964601,
+      "recordedOutliers": 0,
+      "originalSink": 94721
+    },
+    {
+      "seed": 2,
+      "calls": 10000,
+      "recordedMaximumMs": 0.012087999999494059,
+      "recordedOutliers": 0,
+      "originalSink": 93467
+    },
+    {
+      "seed": 3,
+      "calls": 10000,
+      "recordedMaximumMs": 0.013950999999906344,
+      "recordedOutliers": 0,
+      "originalSink": 94479
+    }
+  ],
+  "checksPassed": 1844,
+  "scope": "Actual green artifact bytes and fresh full receipts are independently bound to exact1255490 source and compared with the complete native job log. Recorded summaries and zero outliers are validated as recorded; every individual call time is not reconstructed. The earlier hosted 1/0/0 and local 9/5/13 failures remain valid. KEEP still requires its actual post-green full rerun, and no cause or universal hardware bound is established."
+}

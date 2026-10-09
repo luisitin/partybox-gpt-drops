@@ -1,0 +1,377 @@
+[
+  {
+    "id": "M01",
+    "description": "Remove lowercasing",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 3261,
+    "witness": {
+      "input": "Lana",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "d9f8daebd11b2820d200842221a3ab2a29efb7f9bc398f29e3b6da21ce9ca8ac"
+  },
+  {
+    "id": "M02",
+    "description": "Lose compatibility normalization",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 725,
+    "witness": {
+      "input": "ｓｅｘ",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "f1b6f1589223c2ccf4efab137be0cf6ac0878a16ed19dfd13f55e1ab313642a9"
+  },
+  {
+    "id": "M03",
+    "description": "Keep combining marks",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 983,
+    "witness": {
+      "input": "śex",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "5f3ccd1468b7c1274304e5822ab689baf848d0866efbe55a2559784be02cc3d7"
+  },
+  {
+    "id": "M04",
+    "description": "Keep zero-width format characters",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 919,
+    "witness": {
+      "input": "s​ex",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "c6c4ed35a5252a074f12d3ccd1a76238d326de03140c95df23062e2d897295cc"
+  },
+  {
+    "id": "M05",
+    "description": "Treat spaces as letter barriers",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 831,
+    "witness": {
+      "input": "s e x",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "ecefda1d3788325de02ee2d558b412d6065f46d8fef0ae279b39c696f493297a"
+  },
+  {
+    "id": "M06",
+    "description": "Treat dots as letter barriers",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 884,
+    "witness": {
+      "input": "s.e.x",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "905de132aea91673f5853d0bfe779d785112f3605a7c191864123b91cd42e5c8"
+  },
+  {
+    "id": "M07",
+    "description": "Drop zero-to-o mapping",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 234,
+    "witness": {
+      "input": "p0rn",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "1ec734d6e67ffefdab7136c2670144de43bb7c387eaa5bab17f939c91df14c9b"
+  },
+  {
+    "id": "M08",
+    "description": "Drop one ambiguity mapping",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 338,
+    "witness": {
+      "input": "d1ck",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "8fe496b823cfec22d74ae01382e66e95707de28a2b8ee87287094a48e78c344b"
+  },
+  {
+    "id": "M09",
+    "description": "Drop three-to-e mapping",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 247,
+    "witness": {
+      "input": "s3x",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "b2341960c9ab53a45fec2998f73713460e0f801ec90ee733888f7078ad61b5e7"
+  },
+  {
+    "id": "M10",
+    "description": "Drop four-to-a mapping",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 264,
+    "witness": {
+      "input": "4nal",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "cc30fd553be793cd961feca3183e4e83dae64c2a8271f9cbbf32ef2b8c7b26b4"
+  },
+  {
+    "id": "M11",
+    "description": "Drop five-to-s mapping",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 206,
+    "witness": {
+      "input": "5ex",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "cf6b58d15036fb974fb0ef60c2564b96d50494d1833e9573bc2b3cd281628aa4"
+  },
+  {
+    "id": "M12",
+    "description": "Drop seven-to-t mapping",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 269,
+    "witness": {
+      "input": "7wat",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "fca362dd52a33e4f19a38d8a0066bdb97c115e2f6fdc4c53f11fe0e2f4dd5fc3"
+  },
+  {
+    "id": "M13",
+    "description": "Drop at-sign mapping",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 255,
+    "witness": {
+      "input": "@nal",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "190d779f82007b5d49d4b5e89fcb4bf8eee003589329dcb2e4c84f4677f62352"
+  },
+  {
+    "id": "M14",
+    "description": "Drop dollar-sign mapping",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 224,
+    "witness": {
+      "input": "$ex",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "d57b578125c8d9a3e344bd9583bf27090e9499e0bf4bbe9574625f681432b0f1"
+  },
+  {
+    "id": "M15",
+    "description": "Resolve ambiguous one only as i",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 321,
+    "witness": {
+      "input": "c1it",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "5efada0efc852b433bec5b664a4ffb371b06090e67dc2aa897e885f23bef857c"
+  },
+  {
+    "id": "M16",
+    "description": "Drop Cyrillic e mapping",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 254,
+    "witness": {
+      "input": "sеx",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "8ab427eea4b67cf269df2c17d5c91834fa411ab4e7c8429f7c0786371d0c5ea3"
+  },
+  {
+    "id": "M17",
+    "description": "Drop Greek epsilon mapping",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 502,
+    "witness": {
+      "input": "sεx",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "2f8a311d0bc74f3a74f488543a688fc8a07508935fd9d6d590af4acaa9467c37"
+  },
+  {
+    "id": "M18",
+    "description": "Disable reversed scan",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 34545,
+    "witness": {
+      "input": "Titus",
+      "expected": "ok",
+      "actual": "blocked"
+    },
+    "mutantSha256": "e7e28864bf5dc01d2a403a6d928518bb309929f93dafd64ee2d354e2e6285876"
+  },
+  {
+    "id": "M19",
+    "description": "Disable repetition at single letters",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 1963,
+    "witness": {
+      "input": "Bonner",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "44afba3125f1eacaeb0cc768b7a19136dc7cd0c94f51e764daf16bfc3458ef28"
+  },
+  {
+    "id": "M20",
+    "description": "Delete a blocked lexicon entry",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 100,
+    "witness": {
+      "input": "fuck",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "29e50cde85cb151c40276ac8d51f6613a744fcfd61733727a069f815e7e08607"
+  },
+  {
+    "id": "M21",
+    "description": "Use substring rather than whole-word exceptions",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 1,
+    "witness": {
+      "input": "Hancocksex",
+      "expected": "blocked",
+      "actual": "ok"
+    },
+    "mutantSha256": "b451a0a741aed72b66c1598e6f21d3b15d6b047c2c1fca8307938c24f4791b27"
+  },
+  {
+    "id": "M22",
+    "description": "Admit 17 code points",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 261,
+    "witness": {
+      "input": "abcdefghijklmnopq",
+      "expected": "length",
+      "actual": "ok"
+    },
+    "mutantSha256": "196432cf36c4499ec0b454bd36951f1902a1ca70177348523135dd3b0dd999e8"
+  },
+  {
+    "id": "M23",
+    "description": "Reject exactly 16 code points",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 71,
+    "witness": {
+      "input": "𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨",
+      "expected": "ok",
+      "actual": "length"
+    },
+    "mutantSha256": "675d757597d4c4fe6080faf0e72f76963a4476b034476a8be662279296a87dec"
+  },
+  {
+    "id": "M24",
+    "description": "Silently delete unmapped letters",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 3,
+    "witness": {
+      "input": "s中ex",
+      "expected": "ok",
+      "actual": "blocked"
+    },
+    "mutantSha256": "2ac173cba2596dd8a67e28d3d1ca1953cd460b784bcec99076633331f9575ea8"
+  },
+  {
+    "id": "M25",
+    "description": "Forget required original double letters",
+    "seed": 3,
+    "killed": true,
+    "cases": 43830,
+    "excludedBaselineFailures": 0,
+    "disagreements": 344,
+    "witness": {
+      "input": "Bob",
+      "expected": "ok",
+      "actual": "blocked"
+    },
+    "mutantSha256": "477bbdc75d74e3869a3e4bd6f817352a908db17a97e56b31dc238da1a484b116"
+  }
+]

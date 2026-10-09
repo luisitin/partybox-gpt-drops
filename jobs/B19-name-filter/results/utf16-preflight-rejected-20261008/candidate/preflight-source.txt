@@ -1,0 +1,13 @@
+  if (input.length > 16) {
+    if (input.length > 32) return FAILURE.length;
+    let points = 0;
+    for (let index = 0; index < input.length; index++) {
+      const first = input.charCodeAt(index);
+      if (first >= 0xd800 && first <= 0xdbff) {
+        const second = input.charCodeAt(index + 1);
+        if (second >= 0xdc00 && second <= 0xdfff) index++;
+      }
+      if (++points === 18) return FAILURE.length;
+    }
+    if (points >= 16 && [...input].length > 16) return FAILURE.length;
+  }

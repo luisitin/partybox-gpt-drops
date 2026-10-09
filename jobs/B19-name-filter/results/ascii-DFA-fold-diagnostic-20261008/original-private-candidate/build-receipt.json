@@ -1,0 +1,25 @@
+{
+  "kind": "prospective-raw-ASCII-letter-DFA-fold-shortcut",
+  "preparedUtc": "2026-10-08T22:45:55.328883+00:00",
+  "baseCheckpoint": "39c6a17340905caa57700e42e4008501cafdf9a3",
+  "baselineSourceSha256": "ae8dc388665a4b4241b40b7ce1b86ba98e9eaadde7facefddf8ee47a00858e8a",
+  "baselineCompiledSha256": "330968b37089918bf450bb0a8a4546133e855c55df2aafe462d36be7aa4c6b8e",
+  "candidateSha256": "7817489fc1d0908a87914223a84b31c15ea7e13b3555cb4238594751616f163d",
+  "candidateSourceGzipLevel9Bytes": 5251,
+  "originalRunnerSha256": "bff0c17b62aa75d342527a8ced855678380411053476557acde61f2e1b6fbdd9",
+  "originalExtractedDeclarationsSha256": "c65328a0bd4b49e7ba2680e3ecf2216172461f440d2c66945cdb5d038afb7217",
+  "originalWorkloadsWarmupSamplesUnchanged": true,
+  "candidateChange": "After original type and raw-length decisions, scan proven ASCII letters of raw length <=16 through the existing DFA and a startup fold table derived through the original lower(). Return frozen OK on a proven no-match; matches retain the one original lower()/SAFE anchor and avoid a second scan. Honor SCAN.empty and preserve undefined-SCAN/full Unicode fallback.",
+  "startupExcludedFromProspectivePhaseGains": true,
+  "historicalOutlierCauseClaimed": false,
+  "heavyCheckStarted": false,
+  "timingStarted": false,
+  "productionChanged": false,
+  "baselineCapturedFiles": {
+    "baseline-loaded/dist/data/policy.json": "c0c0b41d20f8356d2c42540d8068ecb7fa42d67a24e19323ce334c4d5de73658",
+    "baseline-loaded/dist/nameFilter.d.ts": "9673a32967adaba04613fd1cf3757a9459e4ad82795b270338683a9fe5475d0d",
+    "baseline-loaded/dist/nameFilter.js": "330968b37089918bf450bb0a8a4546133e855c55df2aafe462d36be7aa4c6b8e",
+    "baseline-loaded/dist/tests/reference.d.ts": "f284287643ef3f4c6d52e79ef995ffbe3eae50baac425e4872280e0c707490d3",
+    "baseline-loaded/dist/tests/reference.js": "fb41af66df9ec5db3464ee870ed2db138903a1b7211614ab34e1344f6a1059f8"
+  }
+}

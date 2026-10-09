@@ -2,7 +2,7 @@
 
 **What this is:** one pure TypeScript function, `nameFilter(input)`, that rejects player names containing a finite English list of sexual terms and slurs (leetspeak, repeated letters, separators, confusables, reversals) and accepts a reviewed list of benign names and words. Zero runtime dependencies.
 **How to use it:** `import { nameFilter } from './nameFilter.js'`; it returns `{ ok: true }` or `{ ok: false, reason, suggestion }`. Test with `npm ci --ignore-scripts --no-audit --no-fund && npm test` (Node 22+).
-**Status:** Port with fixes; see `INTEGRATION.md`. Hosted CI: `2b54431` green (run 37809073933); `303f4f0` red only on the literal 0.05 ms gate (run 37810714023, one seed, 3 calls). The same gate also fails on a loaded local box. English only. PR #2 stays a draft.
+**Status:** The corrected filter passes all109 full rows and its single required after-green run, with genuine6497-assertion whole-artifact proofs, all75 original+12 extra mutants and literal0/0/0 speed observations. The narrow repair rejects missing bidi controls U+061C/U+200E/U+200F and uses the new independently sealed reference. A new1942968-case untimed Unicode audit passes. Runtime KEEP review found no further supported noncosmetic fix; the final proof/docs checkpoint requires its own current full delivery acceptance before supplementalPR23 is Ready. OriginalPR2 stays untouched/unmerged. All old failures and finite English-policy limitations remain disclosed; no universal latency bound is claimed.
 
 ## Quick start
 
@@ -13,9 +13,8 @@ npm test          # strict tsc, then every suite at seeds 1, 2 and 3
 npm run test:core # same, without public corpora (NOT full verification)
 ```
 
-First corpus acquisition needs network access; later runs use the SHA-256-checked snapshot, and
-`tests/retained-snapshot.py` restores the 32,000 original rows offline. Results, fixtures, rejections and
-mutation witnesses land in `reports/latest/` (git-ignored).
+Clean corpus acquisition restores the validated retained snapshot without network.
+`tests/retained-snapshot.py` checks all32,000 rows and corruption rejection. Raw reports stay in `reports/latest/` (git-ignored).
 
 ## API
 
@@ -35,8 +34,7 @@ isAllowedName('Bob');      // true
 | `control` | C0/C1 controls, lone surrogates, bidi formatting | `remove-characters` |
 | `blocked` | a blocked term after mapping, outside the exact exceptions | `choose-another` |
 
-Results are frozen and safe to reuse. Render the original text with `textContent`, never `innerHTML`.
-The filter is not an HTML sanitizer.
+Results are frozen. Render original text with `textContent`; the filter is not an HTML sanitizer.
 
 ## Policy and acceptance
 
@@ -47,14 +45,15 @@ The filter is not an HTML sanitizer.
   that baseline, not an all-pass corpus claim.
 - Not claimed: Spanish or other languages, every confusable (the table is finite, not UTS #39), intent,
   unseen names, or a hard real-time bound. See `CONFLICTS.md` and `INTEGRATION.md`.
-- The 0.05 ms gate is literal: every observed call is timed and outliers are never discarded. It passes on
-  the GitHub runner and fails on this shared 4-CPU box (see `VERIFY.md`, polish pass 2026-10-08).
+- The 0.05 ms gate is literal: every observed call is timed and outliers are never discarded.
+  Hosted measurements include passes and failures; the cause of a specific slow call is unproved.
+  Finite passing measurements do not establish a hardware-independent bound.
 
 ## Product files and evidence
 
 - **Product:** `nameFilter.ts` (the only runtime file; no imports), `POLICY.md`, `INTEGRATION.md`,
   `data/policy.json` (the lists the source copies; checked for consistency).
-- **Evidence:** `tests/` (`run.mjs` harness, `reference.ts` historical NFA oracle, `blind/` sealed
+- **Evidence:** `tests/` (`run.mjs` harness, `reference.ts` historical NFA oracle, `independent-unicode-20261009/` current sealed and `blind/` historical sealed
   independent reference, `retained-snapshot.py`), `scripts/` (fetch, integrity, profilers), `results/`,
   `historical/`, `data/kept-rejections.json`, `data/exception-review.json`, `data/snapshot-manifest.json`.
 - **Job record:** `VERIFY.md`, `LOOP.md`, `NEXT.md`, `ASSUMPTIONS.md`, `CONFLICTS.md`, `SOURCES.md`,

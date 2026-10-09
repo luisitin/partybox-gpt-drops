@@ -1,0 +1,43 @@
+{
+  "kind": "actual-failed-hosted-artifact-independent-structural-and-byte-validation",
+  "head": "3640b628c9fdc36d4e3fcd51717743a7b5002e4f",
+  "runId": 37859732634,
+  "jobId": 113592343584,
+  "artifactId": 11585970966,
+  "actualZipBytes": 11334866,
+  "actualZipSha256": "e0fb3e62ea544898db82f180e94e6835772f5f9fad311325c7a99350e9805b60",
+  "validatedAt": "2026-10-08T23:47:00.912856+00:00",
+  "actualFreshSummaryPath": "jobs/B19-name-filter/reports/latest/summary.json",
+  "sourceSha256": "7817489fc1d0908a87914223a84b31c15ea7e13b3555cb4238594751616f163d",
+  "freshSuiteRowsExecuted": 100,
+  "freshSuiteRowsPassed": 99,
+  "literalAcceptancePassed": false,
+  "failedLiteralGatePreserved": true,
+  "actualDeliveredHashesChecked": 828,
+  "originalFullCasesPerSeed": 43830,
+  "recordedBenchmarks": [
+    {
+      "seed": 1,
+      "calls": 10000,
+      "recordedMaximumMs": 0.026569999999992433,
+      "recordedOutliers": 0,
+      "originalSink": 94721
+    },
+    {
+      "seed": 2,
+      "calls": 10000,
+      "recordedMaximumMs": 0.5130060000001322,
+      "recordedOutliers": 1,
+      "originalSink": 93467
+    },
+    {
+      "seed": 3,
+      "calls": 10000,
+      "recordedMaximumMs": 0.010935999999674095,
+      "recordedOutliers": 0,
+      "originalSink": 94479
+    }
+  ],
+  "checksPassed": 4226,
+  "scope": "Actual failed artifact bytes and all fresh receipts are independently bound to exact3640b62 source. The actual seed-2 hosted literal failure, maximum0.513006ms is required and preserved; recorded summaries/outliers are verified as recorded, not claimed to contain or recompute every individual timed call. This does not erase the unchanged runtime source first local12/9/2 failure or any prior source failure, finish KEEP, establish a cause or prove a hardware-independent bound."
+}

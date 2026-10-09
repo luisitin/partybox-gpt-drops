@@ -1,0 +1,32 @@
+{
+  "G01": {
+    "zeroWorkload": true,
+    "zeroWriter": true,
+    "ackUtc": "2026-10-09T00:14:39.900428+00:00",
+    "evidence": "Owner actual finite reader/build closure and continuous local HOLD; private native candidate unrun."
+  },
+  "B03": {
+    "zeroWorkload": true,
+    "zeroWriter": true,
+    "ackUtc": "2026-10-09T00:17:11+00:00",
+    "evidence": "Owner finite writer naturally EXIT1, failure retained; zero local owners and continuous HOLD."
+  },
+  "static": {
+    "zeroWorkload": true,
+    "zeroWriter": true,
+    "ackUtc": "2026-10-09T00:15:25+00:00",
+    "evidence": "Independent fused candidate review PASS naturally closed00:09:51, no subsequent local work."
+  },
+  "G10": {
+    "zeroWorkload": true,
+    "zeroWriter": true,
+    "ackUtc": "2026-10-09T00:13:16.081971+00:00",
+    "evidence": "Owner actual reader/process check EXIT0, continuous local HOLD; receiver and compiler unrun."
+  },
+  "tracker": {
+    "zeroWorkload": true,
+    "zeroWriter": true,
+    "ackUtc": "2026-10-09T00:16:31.030038+00:00",
+    "evidence": "Owner final combined writer naturally EXIT0; source publish/readbacks finished; continuous local HOLD."
+  }
+}

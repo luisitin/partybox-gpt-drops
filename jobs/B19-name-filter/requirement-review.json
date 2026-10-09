@@ -1,0 +1,151 @@
+{
+  "kind": "corrected-runtime-original-full-and-single-required-follow-up-supported-weakness-review",
+  "reviewedAt": "2026-10-09T04:24:42.933216+00:00",
+  "productionSourceSha256": "446bdd89b9bb6fe65dcdaa2f6c7a578111034d957aeb4a9f16cc64efba5c05a0",
+  "originalWorkloadRunnerSha256": "46d85ddb04f6502de84bef5f85965399874d596478147a32380b8a03917d647d",
+  "compiledSourceSha256": "c50ea16d2077921bb4e0879a4804b709c1ea12aac763fc1fcfa16b35920c95b7",
+  "firstActualFullGreen": {
+    "kind": "actual-full-green-hosted-artifact-independent-structural-and-byte-validation",
+    "head": "89ea55cbb48400e6c4d112008c2e64d55ca5d3ce",
+    "runId": 37880030043,
+    "jobId": 113657351539,
+    "artifactId": 11593873496,
+    "actualZipBytes": 19236931,
+    "actualZipSha256": "785aaa7226b4066ba0cffe2213318cfe07216bbd4b60f243f6338017744c7aa4",
+    "validatedAt": "2026-10-09T03:40:34.691343+00:00",
+    "actualFreshSummaryPath": "jobs/B19-name-filter/reports/latest/summary.json",
+    "sourceSha256": "446bdd89b9bb6fe65dcdaa2f6c7a578111034d957aeb4a9f16cc64efba5c05a0",
+    "freshSuiteRowsExecuted": 109,
+    "freshSuiteRowsPassed": 109,
+    "literalAcceptancePassed": true,
+    "actualHostedLiteralGatePassVerified": true,
+    "actualDeliveredHashesChecked": 1278,
+    "originalFullCasesPerSeed": 43830,
+    "recordedBenchmarks": [
+      {
+        "seed": 1,
+        "calls": 10000,
+        "recordedMaximumMs": 0.02774200000021665,
+        "recordedOutliers": 0,
+        "originalSink": 94721
+      },
+      {
+        "seed": 2,
+        "calls": 10000,
+        "recordedMaximumMs": 0.02168100000017148,
+        "recordedOutliers": 0,
+        "originalSink": 93467
+      },
+      {
+        "seed": 3,
+        "calls": 10000,
+        "recordedMaximumMs": 0.013014000000111992,
+        "recordedOutliers": 0,
+        "originalSink": 94479
+      }
+    ],
+    "checksPassed": 6497,
+    "scope": "Actual green artifact bytes and all fresh receipts are independently bound to exact89ea55 source. The actual full hosted source-bound literal gates pass0/0/0; all109 rows pass. Historical 8d failure1/0/0 remains retained. This verifies one genuine passing hosted observation, preserves the old-source required after-green13/5/10 as historical. This three-control-corrected source restarts KEEP at zero and needs its actual once-after-green original full run. Recorded summaries are verified as recorded, not claimed to contain or recompute every individual timed call. This does not erase the unchanged runtime source first local12/9/2 or the single binding6a after-green13/5/10 failure, authorize unchanged lottery retries, finish KEEP, establish a cause or prove a hardware-independent bound."
+  },
+  "singleRequiredOriginalFullFollowUp": {
+    "kind": "actual-required-after-green-hosted-artifact-independent-structural-and-byte-validation",
+    "head": "89ea55cbb48400e6c4d112008c2e64d55ca5d3ce",
+    "runId": 37880030043,
+    "jobId": 113662768128,
+    "runAttempt": 2,
+    "artifactId": 11594272489,
+    "actualZipBytes": 19236951,
+    "actualZipSha256": "0e233d22683855b82aaf03ba28a94cc03c4c60e38fe861780eef5d7d5aef734c",
+    "validatedAt": "2026-10-09T04:14:55.069359+00:00",
+    "actualFreshSummaryPath": "jobs/B19-name-filter/reports/latest/summary.json",
+    "sourceSha256": "446bdd89b9bb6fe65dcdaa2f6c7a578111034d957aeb4a9f16cc64efba5c05a0",
+    "freshSuiteRowsExecuted": 109,
+    "freshSuiteRowsPassed": 109,
+    "literalAcceptancePassed": true,
+    "actualHostedLiteralGatePassVerified": true,
+    "actualDeliveredHashesChecked": 1278,
+    "originalFullCasesPerSeed": 43830,
+    "recordedBenchmarks": [
+      {
+        "seed": 1,
+        "calls": 10000,
+        "recordedMaximumMs": 0.03611799999998766,
+        "recordedOutliers": 0,
+        "originalSink": 94721
+      },
+      {
+        "seed": 2,
+        "calls": 10000,
+        "recordedMaximumMs": 0.026189000000158558,
+        "recordedOutliers": 0,
+        "originalSink": 93467
+      },
+      {
+        "seed": 3,
+        "calls": 10000,
+        "recordedMaximumMs": 0.015258000003086636,
+        "recordedOutliers": 0,
+        "originalSink": 94479
+      }
+    ],
+    "checksPassed": 6497,
+    "scope": "Actual official attempt2 is the single predeclared required original full follow-up after the independently accepted first corrected-source green. It is bound to exact89ea55, all1278 immutable delivered Git files, all109 fresh native rows, the75 original and12 additional executed mutants, unchanged original seeded inputs, sinks, warmup, samples and literal0.05ms threshold. This verifies the recorded follow-up observations, not every individual timed call, a hardware-independent bound, or a historical performance cause. The first green and all old-source failures remain unchanged; no local original trial was executed and no unchanged luck rerun is authorized. Remaining supported-weakness audit/KEEP must be assessed separately before Ready."
+  },
+  "newUntimedAssignedUnicodeAudit": {
+    "cases": 1942968,
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "contexts": 4,
+    "pointsPerSeed": 161914,
+    "disagreements": 0,
+    "closedAt": "2026-10-09T04:20:53.768609+00:00",
+    "natural": true,
+    "actualRemainingGroup": [],
+    "frozenFiles": 1287
+  },
+  "weakestFive": [
+    {
+      "rank": 1,
+      "part": "Literal0.05ms and unchanged original workload",
+      "finding": "Both original full observations pass all109 rows with0/0/0 recorded outliers, exact original seeded10000-call sinks, original warmup/samples/clock/threshold and every43830 original input per seed. The actual single required after-green passes. All historical failing calls/results remain immutable; no hardware-independent bound or timing cause is inferred. Rejected alternatives show no supported further bounded correctness-preserving performance change."
+    },
+    {
+      "rank": 2,
+      "part": "Unicode controls and fallback normalization",
+      "finding": "All12 Unicode Bidi_Control points are now rejected. New independent seal remains byte-exact. The three missing marks have actual pre-fix102 failures and current tests/12 extra executed mutants. New finite audit passes1942968 comparisons over all161914 non-Cn/Co points in four declared contexts at three seeds; earlier952198-point Cn/Co barrier-context passes remain. This is finite context coverage, not all possible strings."
+    },
+    {
+      "rank": 3,
+      "part": "Independent authorship and executable tests",
+      "finding": "The new run-boundary implementation was authored/sealed from public requirements before exposure;4784 author selfchecks and every original43830 case perseed plus92568 supplementary comparisons pass. Original75 and added12 mutants are actually executed/killed with full receipts. The older blind oracle and its952198 disagreements are retained and never promoted to a valid current all-Unicode claim."
+    },
+    {
+      "rank": 4,
+      "part": "Real-name collisions and original corpus",
+      "finding": "Every original32000 selected corpus row and retained snapshot hash is preserved. Eleven real-name false positives,48 lexical word rejections,one overlength word and57 overlength places are individually recorded/explained. The finite English policy and exact benign exceptions are intentional; unknown languages and universal name allowance are outside the established contract, not an invented passing claim."
+    },
+    {
+      "rank": 5,
+      "part": "Purity, API and delivery",
+      "finding": "Actual full checks pass strictTypeScript, pure frozen shared result/suggestion contract, original corpus corruption/byte checks and source5272B/compiled5050B gzip under6000. Current function has no imports/I/O/clocks/randomness. The original one read-only30-minute workflow is unchanged. All first/current sources and historical failures are retained. Final newly delivered proof/docs need their own exact-head full workflow and actual archive validation before Ready."
+    }
+  ],
+  "keepCompleted": true,
+  "keepScope": "Original B19 loop: current corrected runtime full checks then its single required full after-green plus supported-weakness review and new finite semantic diagnostic. No further evidenced noncosmetic runtime fix found; remaining public prose/status corrections are cosmetic. This does not assert three no-gain rounds from the separate game-cores rules.",
+  "literalAcceptanceCompleted": true,
+  "currentDeliveryAcceptancePending": true,
+  "priorFailuresPreserved": true,
+  "timingCause": "unknown",
+  "unverified": [
+    "All contexts/all languages/full UTS39/unseen-name false-positive rate",
+    "PartyBox host port paths, join/restore wiring, Spanish moderation and UI integration",
+    "Hardware-independent maximum latency"
+  ],
+  "previousReview": {
+    "head": "b9baf363f60cffa126114c45c641035bab1288d4",
+    "fullActualBytesRetained": "results/corrected-source-full-keep-review-20261009/proof.zip!historical/requirement-review-b9.json"
+  }
+}

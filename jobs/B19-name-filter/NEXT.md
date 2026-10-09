@@ -1,23 +1,7 @@
-# B19 continuation point
+# B19 resumable checkpoint
 
-Branch `job/B19-name-filter` (PR #2, draft). Polish pass 2026-10-08 made two product changes: failures
-carry a stable `suggestion` key, and `analia`, `analise` and `sexto` are exact exceptions (292 total).
-Local core and full runs pass every behavioral, corpus-policy, mutation and sealed-reference suite. The
-checksum manifest was regenerated after the last edit. Remaining local failure: the literal 0.05 ms gate
-on this loaded 4-CPU box.
+Current corrected runtime446bdd89/default original workload runner46d85ddb has actual full acceptance and its single required original after-green109-row recheck, both genuine6497-assertion/all1278-Git proofs/literal0/0/0. New untimed1942968 assigned-Unicode diagnostic naturally passes, all1287 input/finalization guards unchanged. Supported five-weakness/runtime KEEP review complete; no further evidenced noncosmetic runtime fix remains. All old source failures and four unexecuted local controller coverage failures are retained; no universal0.05ms/all-language/host-integration claim.
 
-Next, in order, for a human or the desktop agent:
-1. The hosted runs on `303f4f0` (37810714023) and `0974951` (37810885025) failed only the literal latency
-   gate on seed 1 (3 and 1 calls above 0.05 ms). The benchmark sample changed when three names were added to the
-   positive list, so this is not a clean comparison with the green `2b54431` run. Decide whether to keep this
-   source or revert the product change to `5371665d`. Do not rerun it to get a green, and do not change the gate, a seed, a count or a
-   warm-up. The owner decides whether the gate stays a hard check or becomes a recorded benchmark.
-2. Owner decision: a Spanish lexicon with native review (INTEGRATION.md gap 1). Until then, PartyBox must
-   not rely on this filter for es rooms.
-3. Owner decision: accept or change the eleven blocked Census names (CONFLICTS.md 1; no allowlist exists).
-4. Port per INTEGRATION.md. Normalize with `normalizeName` first; wire `name_blocked`; close the saves
-   and reconnect bypasses.
+Exact next step: verify this final proof/docs checkpoint's actual exact-head original workflow (one unchanged read-only B19.yml), receive the genuine entire official archive, verify full size/SHA/CRC/every current canonical manifest Git file/all109 native rows/all75+12 executed mutants/original literal gates; retain any failure. Only after that genuine current-delivery acceptance, mark supplementalPR23 Ready with its exact current head/basecanonicaljob/B19-name-filter and link the full run plus already accepted once-after-green. Preserve originalPR2 unchanged/unmerged. Then continue the user-authorized game-cores queue: freshREADME/RULES/JOBS/CLAIMS/allbranchcommitter reads, claim actual lowest eligible with serialized main lease. No further unchanged discretionary original timing rerun or local grant is needed or authorized.
 
-Do not replace the maximum with a percentile, retime or filter failures, add a result cache, or repeat an
-unchanged source until it happens to pass. Any further source change must rerun `npm ci --ignore-scripts
---no-audit --no-fund && npm test` and regenerate `SHA256SUMS.txt` from `reports/latest/SHA256SUMS.txt`.
+Detailed actual receipts, commands, limitations and cadence misses are in results/corrected-source-full-keep-review-20261009/, VERIFY.md/LOOP.md and requirement-review.json. The previous30m46.416377 publication gap is explicitly retained; finish meaningful checkpoints early enough for canonical source verification and actual normal push closure. If current final delivery fails, preservefullproof and fixonlythe supported failure; do not declareReady from green metadata.

@@ -1,0 +1,62 @@
+{
+  "grantUtc": "2026-10-08T21:58:15.694665+00:00",
+  "kind": "root-delegated-single-required-post-green-original-KEEP-full-rerun",
+  "head": "12554906b884a4c4afd8443edf470f0cc5ec371e",
+  "rootAuthorization": "Root delegated coordination at 21:57 UTC; root G05 explicitly paused with zero workload/writer.",
+  "acknowledgments": {
+    "G04": {
+      "actualUtc": "2026-10-08T21:57:52Z",
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "G08": {
+      "actualUtc": "2026-10-08T21:57:47Z",
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "G09": {
+      "actualUtc": "2026-10-08T21:57:52.482289498Z",
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "G10": {
+      "actualUtc": "2026-10-08T21:57:58Z",
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "tracker": {
+      "exactAckUtcCaptured": false,
+      "receivedBeforeGrant": true,
+      "zeroWorkload": true,
+      "zeroWriter": true
+    }
+  },
+  "globalRunnableWorkloads": [],
+  "liveProcesses": [
+    "      1       0       0 S+   tail             0.0   876",
+    "      2       1       0 S+   caas-prefix-tra  0.0   252",
+    "    199       1     199 Ssl  dockerd          0.0 35536",
+    "    248     199     248 Ssl  containerd       0.4 21436",
+    "    464       0       0 Sl+  codex            0.1 42104",
+    " 203664     464  203664 Ss   bash            25.0  1872",
+    " 203667  203664  203664 S    python3         60.0  9544",
+    " 203668  203667  203664 R    ps               400  3940"
+  ],
+  "STOPorCONTUsed": false,
+  "command": [
+    "python3",
+    ".work/B19-post-green-125-preparation/run-required-post-green-full.py"
+  ],
+  "originalFullCommand": [
+    "npm",
+    "test"
+  ],
+  "thresholdChanged": false,
+  "priorFailuresRetained": true,
+  "naturalClosedUtc": "2026-10-08T21:58:31.844316+00:00",
+  "exitCode": 1,
+  "allOwnersDirectlyReleased": true,
+  "releaseRecordedUtc": "2026-10-08T21:59:36.212911+00:00",
+  "releaseTimeScope": "Recorded after all direct release messages; exact first-message timestamp was not captured.",
+  "sourcesUnchanged": true
+}

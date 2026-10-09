@@ -1,0 +1,312 @@
+﻿2026-10-08T23:29:41.3821338Z Current runner version: '2.337.0'
+2026-10-08T23:29:41.3838603Z ##[group]Runner Image Provisioner
+2026-10-08T23:29:41.3839207Z Hosted Compute Agent
+2026-10-08T23:29:41.3839557Z Version: 20261002.596
+2026-10-08T23:29:41.3840030Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T23:29:41.3840459Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T23:29:41.3840855Z Worker ID: {d7467fd2-bd5c-484a-ab2d-72a04c04da9a}
+2026-10-08T23:29:41.3841315Z Region: centralus
+2026-10-08T23:29:41.3841645Z Cloud: Azure
+2026-10-08T23:29:41.3842022Z ##[endgroup]
+2026-10-08T23:29:41.3842738Z ##[group]Operating System
+2026-10-08T23:29:41.3843093Z Ubuntu
+2026-10-08T23:29:41.3843447Z 24.04.5
+2026-10-08T23:29:41.3843755Z LTS
+2026-10-08T23:29:41.3844144Z ##[endgroup]
+2026-10-08T23:29:41.3844677Z ##[group]Runner Image
+2026-10-08T23:29:41.3845036Z Image: ubuntu-24.04
+2026-10-08T23:29:41.3845409Z Version: 20261004.327.1
+2026-10-08T23:29:41.3846175Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T23:29:41.3847077Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T23:29:41.3847629Z ##[endgroup]
+2026-10-08T23:29:41.3848299Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T23:29:41.3849487Z Contents: read
+2026-10-08T23:29:41.3849876Z Metadata: read
+2026-10-08T23:29:41.3850206Z ##[endgroup]
+2026-10-08T23:29:41.3851422Z Secret source: Actions
+2026-10-08T23:29:41.3852057Z Cache mode: write
+2026-10-08T23:29:41.3852446Z Prepare workflow directory
+2026-10-08T23:29:41.4229006Z Prepare all required actions
+2026-10-08T23:29:41.4261837Z Getting action download info
+2026-10-08T23:29:41.7283725Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-08T23:29:42.0309339Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-08T23:29:42.4775811Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-08T23:29:42.8869109Z Complete job name: verify
+2026-10-08T23:29:42.9546825Z ##[group]Run actions/checkout@v4
+2026-10-08T23:29:42.9547281Z with:
+2026-10-08T23:29:42.9547563Z   ref: 3640b628c9fdc36d4e3fcd51717743a7b5002e4f
+2026-10-08T23:29:42.9547935Z   repository: luisitin/partybox-gpt-drops
+2026-10-08T23:29:42.9550194Z   token: ***
+2026-10-08T23:29:42.9550453Z   ssh-strict: true
+2026-10-08T23:29:42.9550709Z   ssh-user: git
+2026-10-08T23:29:42.9550971Z   persist-credentials: true
+2026-10-08T23:29:42.9551254Z   clean: true
+2026-10-08T23:29:42.9551521Z   sparse-checkout-cone-mode: true
+2026-10-08T23:29:42.9551828Z   fetch-depth: 1
+2026-10-08T23:29:42.9552082Z   fetch-tags: false
+2026-10-08T23:29:42.9552354Z   show-progress: true
+2026-10-08T23:29:42.9552624Z   lfs: false
+2026-10-08T23:29:42.9552870Z   submodules: false
+2026-10-08T23:29:42.9553134Z   set-safe-directory: true
+2026-10-08T23:29:42.9553433Z   allow-unsafe-pr-checkout: false
+2026-10-08T23:29:42.9553804Z ##[endgroup]
+2026-10-08T23:29:43.0269640Z Syncing repository: luisitin/partybox-gpt-drops
+2026-10-08T23:29:43.0270979Z ##[group]Getting Git version info
+2026-10-08T23:29:43.0271449Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-08T23:29:43.0272185Z [command]/usr/bin/git version
+2026-10-08T23:29:43.0392623Z git version 2.55.0
+2026-10-08T23:29:43.0406727Z ##[endgroup]
+2026-10-08T23:29:43.0425605Z Temporarily overriding HOME='/home/runner/work/_temp/dfb39ba8-db68-4fc1-99ac-a01f4362a699' before making global git config changes
+2026-10-08T23:29:43.0427360Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T23:29:43.0429517Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-08T23:29:43.1299619Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-08T23:29:43.1303517Z ##[group]Initializing the repository
+2026-10-08T23:29:43.1307294Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-08T23:29:43.1878994Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T23:29:43.1879590Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T23:29:43.1880164Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T23:29:43.1880575Z hint: call:
+2026-10-08T23:29:43.1880809Z hint:
+2026-10-08T23:29:43.1881136Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T23:29:43.1881488Z hint:
+2026-10-08T23:29:43.1881949Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T23:29:43.1882656Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T23:29:43.1883067Z hint:
+2026-10-08T23:29:43.1883311Z hint: 	git branch -m <name>
+2026-10-08T23:29:43.1883581Z hint:
+2026-10-08T23:29:43.1884139Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T23:29:43.1885213Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+2026-10-08T23:29:43.1889779Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+2026-10-08T23:29:43.1967135Z ##[endgroup]
+2026-10-08T23:29:43.1967586Z ##[group]Disabling automatic garbage collection
+2026-10-08T23:29:43.1980373Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T23:29:43.2162271Z ##[endgroup]
+2026-10-08T23:29:43.2163058Z ##[group]Setting up auth
+2026-10-08T23:29:43.2167072Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T23:29:43.2196048Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T23:29:43.2633431Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T23:29:43.2664135Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T23:29:43.2840239Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T23:29:43.2871584Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T23:29:43.3042803Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T23:29:43.3470063Z ##[endgroup]
+2026-10-08T23:29:43.3471090Z ##[group]Fetching the repository
+2026-10-08T23:29:43.3477988Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin 3640b628c9fdc36d4e3fcd51717743a7b5002e4f
+2026-10-08T23:29:44.6953545Z From https://github.com/luisitin/partybox-gpt-drops
+2026-10-08T23:29:44.6954618Z  * branch            3640b628c9fdc36d4e3fcd51717743a7b5002e4f -> FETCH_HEAD
+2026-10-08T23:29:44.6956820Z ##[endgroup]
+2026-10-08T23:29:44.6957191Z ##[group]Determining the checkout info
+2026-10-08T23:29:44.6958641Z ##[endgroup]
+2026-10-08T23:29:44.6962750Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T23:29:44.7007421Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T23:29:44.7031914Z ##[group]Checking out the ref
+2026-10-08T23:29:44.7034168Z [command]/usr/bin/git checkout --progress --force 3640b628c9fdc36d4e3fcd51717743a7b5002e4f
+2026-10-08T23:29:44.7990712Z Note: switching to '3640b628c9fdc36d4e3fcd51717743a7b5002e4f'.
+2026-10-08T23:29:44.7991015Z 
+2026-10-08T23:29:44.7991217Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-08T23:29:44.7991520Z changes and commit them, and you can discard any commits you make in this
+2026-10-08T23:29:44.7991814Z state without impacting any branches by switching back to a branch.
+2026-10-08T23:29:44.7992454Z 
+2026-10-08T23:29:44.7992706Z If you want to create a new branch to retain commits you create, you may
+2026-10-08T23:29:44.7992999Z do so (now or later) by using -c with the switch command. Example:
+2026-10-08T23:29:44.7993153Z 
+2026-10-08T23:29:44.7993242Z   git switch -c <new-branch-name>
+2026-10-08T23:29:44.7993353Z 
+2026-10-08T23:29:44.7993438Z Or undo this operation with:
+2026-10-08T23:29:44.7993548Z 
+2026-10-08T23:29:44.7993615Z   git switch -
+2026-10-08T23:29:44.7993717Z 
+2026-10-08T23:29:44.7993862Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-08T23:29:44.7994041Z 
+2026-10-08T23:29:44.7994205Z HEAD is now at 3640b62 B19 preserve current hosted and first-local literal failures
+2026-10-08T23:29:44.8004478Z ##[endgroup]
+2026-10-08T23:29:44.8045832Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T23:29:44.8069074Z 3640b628c9fdc36d4e3fcd51717743a7b5002e4f
+2026-10-08T23:29:44.8310433Z ##[group]Run actions/setup-node@v4
+2026-10-08T23:29:44.8310630Z with:
+2026-10-08T23:29:44.8310786Z   node-version: 22
+2026-10-08T23:29:44.8310935Z   always-auth: false
+2026-10-08T23:29:44.8311085Z   check-latest: false
+2026-10-08T23:29:44.8312558Z   token: ***
+2026-10-08T23:29:44.8312709Z ##[endgroup]
+2026-10-08T23:29:44.9159522Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+2026-10-08T23:29:44.9162364Z (node:2064) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T23:29:44.9162845Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T23:29:44.9164487Z ##[group]Environment details
+2026-10-08T23:29:45.1878239Z node: v22.23.3
+2026-10-08T23:29:45.1878548Z npm: 10.9.9
+2026-10-08T23:29:45.1878707Z yarn: 1.22.22
+2026-10-08T23:29:45.1879323Z ##[endgroup]
+2026-10-08T23:29:45.2002677Z ##[group]Run npm ci --ignore-scripts --no-audit --no-fund
+2026-10-08T23:29:45.2002960Z [36;1mnpm ci --ignore-scripts --no-audit --no-fund[0m
+2026-10-08T23:29:45.2222460Z shell: /usr/bin/bash -e {0}
+2026-10-08T23:29:45.2222686Z ##[endgroup]
+2026-10-08T23:29:45.9445506Z 
+2026-10-08T23:29:45.9452085Z added 1 package in 682ms
+2026-10-08T23:29:45.9785039Z ##[group]Run npm test
+2026-10-08T23:29:45.9785208Z [36;1mnpm test[0m
+2026-10-08T23:29:45.9836698Z shell: /usr/bin/bash -e {0}
+2026-10-08T23:29:45.9836844Z ##[endgroup]
+2026-10-08T23:29:46.0493232Z 
+2026-10-08T23:29:46.0493732Z > b19-name-filter@1.0.0 test
+2026-10-08T23:29:46.0494087Z > npm run build && node tests/run.mjs
+2026-10-08T23:29:46.0494255Z 
+2026-10-08T23:29:46.1094944Z 
+2026-10-08T23:29:46.1095502Z > b19-name-filter@1.0.0 build
+2026-10-08T23:29:46.1095835Z > tsc -p tsconfig.json
+2026-10-08T23:29:46.1095955Z 
+2026-10-08T23:29:46.7245315Z CORPORA_RETAINED_SNAPSHOT_RESTORED
+2026-10-08T23:29:46.7249275Z CORPORA_CACHE_VERIFIED {"sources": [{"id": "male", "url": "https://www2.census.gov/topics/genealogy/1990surnames/dist.male.first", "bytes": 42665, "sha256": "0a5078ef6effe3b483d15b0f7f95047662126c9bfb624ecd5e5b978fc0f2470b"}, {"id": "female", "url": "https://www2.census.gov/topics/genealogy/1990surnames/dist.female.first", "bytes": 149625, "sha256": "bd2f310fc4e5d5e5ea122c9d4342c9821145823118eb20db1647f305ec77b358"}, {"id": "last", "url": "https://www2.census.gov/topics/genealogy/1990surnames/dist.all.last", "bytes": 3107965, "sha256": "b0e2b3743ccbad641ca48b344c24cdebcd1d9a1f76dc6dbf05986f2919f0b4e1"}, {"id": "words", "url": "https://raw.githubusercontent.com/first20hours/google-10000-english/master/google-10000-english.txt", "bytes": 75888, "sha256": "9c965d384526facc59260e94f8ccff1582633fa385004abe1455ed457062acbc"}, {"id": "places", "url": "https://download.geonames.org/export/dump/cities15000.zip", "bytes": 3360467, "sha256": "865724f89e3274c5172df2f6068596dfb25bb604737ac2711b5ca6d31aebbf32"}], "outputs": [{"file": "names.json", "count": 20000, "bytes": 1178061, "sha256": "98ea30b5406ed5abdf5587dc3d4117ad0c4f60208657eb3317fe0b6007eeedab"}, {"file": "words.json", "count": 10000, "bytes": 534784, "sha256": "458a956fc9c3c415eb44b23394d88ddf18e26fb9fd3ca116e26f6c7dae6449a3"}, {"file": "places.json", "count": 2000, "bytes": 187002, "sha256": "3e865402f14e284327d6c69b807008faef092dfcb7841322d40eaf0da9324cac"}], "selection": "5000 unique 1990 given names by max sex-specific frequency; append highest-ranked distinct surnames to 20000; all 10000 English entries unfiltered; 2000 unique GeoNames city names by descending population. No moderation-based exclusions."}
+2026-10-08T23:29:46.7252417Z 
+2026-10-08T23:29:46.7358604Z {"name":"public-corpus-acquisition","cases":1,"passed":1,"seed":null,"command":"node tests/run.mjs"}
+2026-10-08T23:29:46.8690336Z {"name":"retained-original-snapshot-offline-and-corruption","cases":8,"passed":8,"seed":1,"command":"python3 tests/retained-snapshot.py","output":{"cases":8,"passed":8,"checks":["clean offline restoration: all32000 original rows and exact byte hashes","verified cache reuse without live network","changed byte rejected before cache writes","missing corpus rejected","missing manifest rejected","unsupported snapshot manifest rejected","truncated valid JSON corpus rejected","corrupt existing cache rejected without replacement"],"networkCalls":0}}
+2026-10-08T23:29:46.9826326Z {"name":"delivery-file-size-and-checksums","cases":2,"passed":2,"seed":1,"command":"node tests/run.mjs","files":828,"checked":828,"failures":[],"rootManifestPresent":true,"maxFileBytes":3071339}
+2026-10-08T23:29:46.9830143Z {"name":"immutable-return-values","cases":3,"passed":3,"seed":1,"command":"node tests/run.mjs"}
+2026-10-08T23:29:46.9831601Z {"name":"failure-suggestions-map-and-frozen","cases":5,"passed":5,"seed":1,"command":"node tests/run.mjs"}
+2026-10-08T23:29:46.9837715Z {"name":"additional-given-names-and-exception-bypass","cases":30,"passed":30,"seed":1,"command":"node tests/run.mjs","productionErrors":[],"blindErrors":[]}
+2026-10-08T23:29:46.9839884Z {"name":"policy-copy-consistency-and-no-duplicate-terms","cases":3,"passed":3,"seed":1,"command":"node tests/run.mjs"}
+2026-10-08T23:29:47.3417609Z {"name":"strict-TypeScript","cases":1,"passed":1,"seed":1,"command":"tsc -p tsconfig.json --noEmit","output":""}
+2026-10-08T23:29:47.3497379Z {"name":"length-pruned-matcher-blind-boundaries","cases":24873,"passed":24873,"seed":1,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:47.3821960Z {"name":"generator-byte-identical-replay-and-coverage","cases":2,"passed":2,"seed":1,"command":"node tests/run.mjs"}
+2026-10-08T23:29:47.3860920Z {"name":"handwritten-format-and-Scunthorpe","cases":459,"passed":459,"seed":1,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:47.3886488Z {"name":"exhaustive-declared-single-glyph-substitution","cases":1371,"passed":1371,"seed":1,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:47.3898259Z {"name":"precompiled-Unicode-policy-context-differential","cases":1296,"passed":1296,"seed":1,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:47.3908056Z {"name":"precompiled-printable-width-and-latin1-context-differential","cases":1422,"passed":1422,"seed":1,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:47.3974579Z {"name":"generated-obfuscations","cases":5000,"passed":5000,"seed":1,"command":"node tests/run.mjs","misses":0,"errors":[],"coverage":{"anal":88,"anus":88,"arsehole":72,"bastard":80,"bitch":88,"blowjob":80,"boner":88,"boob":88,"boobs":88,"bukkake":80,"chink":88,"clit":88,"cock":88,"coon":87,"cunt":87,"cum":86,"cumshot":79,"dick":87,"dildo":87,"douche":85,"dyke":87,"fag":87,"faggot":83,"fuck":87,"gook":87,"handjob":83,"hentai":82,"jizz":85,"kike":87,"nigga":87,"nigger":84,"orgasm":86,"paedophile":49,"pedophile":51,"penis":87,"porn":87,"pussy":86,"rape":87,"retard":86,"rimjob":84,"semen":87,"sex":84,"shemale":80,"slut":87,"spic":87,"spunk":87,"testicle":67,"tits":87,"titties":77,"titty":87,"tranny":83,"twat":87,"vagina":86,"wank":87,"wetback":79,"whore":87,"asshole":80,"bollocks":71,"fellatio":70,"masturbate":39,"ejaculation":23,"motherfucker":18,"masturbation":16},"attempts":5496}
+2026-10-08T23:29:47.3993744Z {"name":"names-count-and-uniqueness","cases":2,"passed":2,"seed":1,"command":"node tests/run.mjs","rows":20000,"unique":20000}
+2026-10-08T23:29:47.4204795Z {"name":"names-reviewed-corpus-policy","cases":20000,"passed":20000,"seed":1,"command":"node tests/run.mjs","accepted":19989,"rejected":11,"reviewed":11,"unexpected":0,"stale":0,"zeroRejections":false}
+2026-10-08T23:29:47.4205436Z {"name":"names-reviewed-baseline-no-stale-entries","cases":1,"passed":1,"seed":1,"command":"node tests/run.mjs"}
+2026-10-08T23:29:47.4213350Z CORPUS_REJECTIONS names [{"name":"lana","source":"female","sourceRank":470,"sourceFrequency":0.029,"reason":"blocked","review":"Full-word reversal of anal. Allowing the same case-insensitive string would admit a supported blocked-term reversal."},{"name":"dick","source":"male","sourceRank":721,"sourceFrequency":0.009,"reason":"blocked","review":"The Census name is identical to a blocked sexual term. Intent cannot be recovered from these characters."},{"name":"bonner","source":"last","sourceRank":855,"reason":"blocked","review":"Full-word repeated-letter spelling of boner (extra n). Allowing it conflicts with the declared repetition rule."},{"name":"coon","source":"last","sourceRank":1779,"reason":"blocked","review":"The Census surname is identical to a blocked racial slur. The filter has no name-intent context."},{"name":"dykes","source":"last","sourceRank":2116,"reason":"blocked","review":"The Census surname also spells a plural of the blocked slur dyke; kept under the explicit plural policy."},{"name":"coons","source":"last","sourceRank":4271,"reason":"blocked","review":"The Census surname also spells a plural of the blocked slur coon; kept under the explicit plural policy."},{"name":"stitt","source":"last","sourceRank":4377,"reason":"blocked","review":"The whole reversed string is ttits: a repeated-letter obfuscation of tits."},{"name":"raper","source":"last","sourceRank":5858,"reason":"blocked","review":"The Census surname overlaps an agent-noun form of rape; kept under the explicit sexual-violence policy."},{"name":"dicks","source":"last","sourceRank":6404,"reason":"blocked","review":"The Census surname also spells a plural of the blocked sexual term dick; kept under the explicit plural policy."},{"name":"dyke","source":"last","sourceRank":6707,"reason":"blocked","review":"The Census surname is identical to a blocked slur. Non-abusive meanings do not change its characters."},{"name":"boner","source":"last","sourceRank":10257,"reason":"blocked","review":"The Census surname is identical to a blocked sexual term."}]
+2026-10-08T23:29:47.4218028Z {"name":"words-count-and-uniqueness","cases":2,"passed":2,"seed":1,"command":"node tests/run.mjs","rows":10000,"unique":10000}
+2026-10-08T23:29:47.4349546Z {"name":"words-reviewed-corpus-policy","cases":10000,"passed":10000,"seed":1,"command":"node tests/run.mjs","accepted":9951,"rejected":49,"reviewed":49,"unexpected":0,"stale":0,"zeroRejections":false}
+2026-10-08T23:29:47.4350522Z {"name":"words-reviewed-baseline-no-stale-entries","cases":1,"passed":1,"seed":1,"command":"node tests/run.mjs"}
+2026-10-08T23:29:47.4370318Z CORPUS_REJECTIONS words [{"name":"sex","source":"words","sourceRank":182,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"porn","source":"words","sourceRank":659,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"anal","source":"words","sourceRank":1366,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"pussy","source":"words","sourceRank":1381,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"sexy","source":"words","sourceRank":1447,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"rape","source":"words","sourceRank":1605,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"fucking","source":"words","sourceRank":1718,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"cum","source":"words","sourceRank":1945,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"fuck","source":"words","sourceRank":2066,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"cock","source":"words","sourceRank":2152,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"porno","source":"words","sourceRank":2184,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"tits","source":"words","sourceRank":2214,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"hentai","source":"words","sourceRank":2359,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"sexual","source":"words","sourceRank":2387,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"shemale","source":"words","sourceRank":2648,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"sexo","source":"words","sourceRank":2996,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"dick","source":"words","sourceRank":3045,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"blowjob","source":"words","sourceRank":3379,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"boobs","source":"words","sourceRank":3506,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"dildo","source":"words","sourceRank":3585,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"sexcam","source":"words","sourceRank":3822,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"penis","source":"words","sourceRank":3899,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"blowjobs","source":"words","sourceRank":3959,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"telecommunications","source":"words","sourceRank":4138,"reason":"length","review":"18 code points exceed 16; format rejection, not a lexical false positive."},{"name":"cumshot","source":"words","sourceRank":4231,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"cocks","source":"words","sourceRank":4550,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"tranny","source":"words","sourceRank":4903,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"cumshots","source":"words","sourceRank":4934,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"bukkake","source":"words","sourceRank":4941,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"fucked","source":"words","sourceRank":5645,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"dildos","source":"words","sourceRank":5913,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"boob","source":"words","sourceRank":6376,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"slut","source":"words","sourceRank":6438,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"ejaculation","source":"words","sourceRank":6439,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"dicks","source":"words","sourceRank":6537,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"sluts","source":"words","sourceRank":7030,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"bitch","source":"words","sourceRank":7110,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"handjob","source":"words","sourceRank":7149,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"livesex","source":"words","sourceRank":7307,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"worldsex","source":"words","sourceRank":7333,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"shemales","source":"words","sourceRank":8129,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"handjobs","source":"words","sourceRank":8782,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"vagina","source":"words","sourceRank":9083,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"sexuality","source":"words","sourceRank":9164,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"cunt","source":"words","sourceRank":9201,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"masturbation","source":"words","sourceRank":9485,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"orgasm","source":"words","sourceRank":9506,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"sexually","source":"words","sourceRank":9675,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."},{"name":"whore","source":"words","sourceRank":9802,"reason":"blocked","review":"Sexual/profanity token or inflected adult-content form; deliberate lexical-policy rejection."}]
+2026-10-08T23:29:47.4387342Z {"name":"places-count-and-uniqueness","cases":2,"passed":2,"seed":1,"command":"node tests/run.mjs","rows":2000,"unique":2000}
+2026-10-08T23:29:47.4388001Z {"name":"places-reviewed-corpus-policy","cases":2000,"passed":2000,"seed":1,"command":"node tests/run.mjs","accepted":1943,"rejected":57,"reviewed":57,"unexpected":0,"stale":0,"zeroRejections":false}
+2026-10-08T23:29:47.4388580Z {"name":"places-reviewed-baseline-no-stale-entries","cases":1,"passed":1,"seed":1,"command":"node tests/run.mjs"}
+2026-10-08T23:29:47.4426476Z CORPUS_REJECTIONS places [{"name":"Al Mawşil al Jadīdah","population":2065597,"geonameid":99071,"country":"IQ","source":"places","reason":"length","review":"20 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Santa Cruz de la Sierra","population":1831434,"geonameid":3904906,"country":"BO","source":"places","reason":"length","review":"23 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Ecatepec de Morelos","population":1645352,"geonameid":3529612,"country":"MX","source":"places","reason":"length","review":"19 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Santiago de Querétaro","population":1594212,"geonameid":3991164,"country":"MX","source":"places","reason":"length","review":"21 code points exceed 16; format rejection, not a lexical false positive."},{"name":"León de los Aldama","population":1579803,"geonameid":3998655,"country":"MX","source":"places","reason":"length","review":"18 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Shubrā al Khaymah","population":1240289,"geonameid":349076,"country":"EG","source":"places","reason":"length","review":"17 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Santiago de los Caballeros","population":1200000,"geonameid":3492914,"country":"DO","source":"places","reason":"length","review":"26 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Gustavo Adolfo Madero","population":1185772,"geonameid":3514674,"country":"MX","source":"places","reason":"length","review":"21 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Ciudad Nezahualcoyotl","population":1077208,"geonameid":3530589,"country":"MX","source":"places","reason":"length","review":"21 code points exceed 16; format rejection, not a lexical false positive."},{"name":"São Bernardo do Campo","population":840499,"geonameid":3449344,"country":"BR","source":"places","reason":"length","review":"21 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Naucalpan de Juárez","population":834434,"geonameid":3522790,"country":"MX","source":"places","reason":"length","review":"19 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Kampung Baru Subang","population":833571,"geonameid":1771023,"country":"MY","source":"places","reason":"length","review":"19 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Thiruvananthapuram","population":788271,"geonameid":1254163,"country":"IN","source":"places","reason":"length","review":"18 code points exceed 16; format rejection, not a lexical false positive."},{"name":"São José dos Campos","population":727078,"geonameid":3448636,"country":"BR","source":"places","reason":"length","review":"19 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Santo Domingo Oeste","population":701269,"geonameid":7874116,"country":"DO","source":"places","reason":"length","review":"19 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Santo Domingo Este","population":700000,"geonameid":8601412,"country":"DO","source":"places","reason":"length","review":"18 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Acapulco de Juárez","population":658609,"geonameid":3533462,"country":"MX","source":"places","reason":"length","review":"18 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Frankfurt am Main","population":650000,"geonameid":2925533,"country":"DE","source":"places","reason":"length","review":"17 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Jaboatão dos Guararapes","population":644037,"geonameid":6317344,"country":"BR","source":"places","reason":"length","review":"23 code points exceed 16; format rejection, not a lexical false positive."},{"name":"New South Memphis","population":641608,"geonameid":4645421,"country":"US","source":"places","reason":"length","review":"17 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Bukit Rahman Putra","population":607000,"geonameid":13118225,"country":"MY","source":"places","reason":"length","review":"18 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Al Maḩallah al Kubrá","population":592573,"geonameid":360829,"country":"EG","source":"places","reason":"length","review":"20 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Cuautitlán Izcalli","population":555163,"geonameid":3515807,"country":"MX","source":"places","reason":"length","review":"18 code points exceed 16; format rejection, not a lexical false positive."},{"name":"San Miguel de Tucumán","population":548866,"geonameid":3836873,"country":"AR","source":"places","reason":"length","review":"21 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Mirpur Model Thana","population":546503,"geonameid":11395976,"country":"BD","source":"places","reason":"length","review":"18 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Selayang Baru Utara","population":542409,"geonameid":7795834,"country":"MY","source":"places","reason":"length","review":"19 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Aparecida de Goiânia","population":527796,"geonameid":6316406,"country":"BR","source":"places","reason":"length","review":"20 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Victoria de Durango","population":518709,"geonameid":4011743,"country":"MX","source":"places","reason":"length","review":"19 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Heroica Matamoros","population":510739,"geonameid":3523466,"country":"MX","source":"places","reason":"length","review":"17 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Mianzhu, Deyang, Sichuan","population":510000,"geonameid":12492662,"country":"CN","source":"places","reason":"length","review":"24 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Naberezhnyye Chelny","population":509870,"geonameid":523750,"country":"RU","source":"places","reason":"length","review":"19 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Kampung Larkin Lama","population":500000,"geonameid":1732724,"country":"MY","source":"places","reason":"length","review":"19 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Ciudad López Mateos","population":489160,"geonameid":3532624,"country":"MX","source":"places","reason":"length","review":"19 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Campos dos Goytacazes","population":483540,"geonameid":3467693,"country":"BR","source":"places","reason":"length","review":"21 code points exceed 16; format rejection, not a lexical false positive."},{"name":"São José do Rio Preto","population":480393,"geonameid":3448639,"country":"BR","source":"places","reason":"length","review":"21 code points exceed 16; format rejection, not a lexical false positive."},{"name":"São João de Meriti","population":466536,"geonameid":3448877,"country":"BR","source":"places","reason":"length","review":"18 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Santo Domingo de los Colorados","population":458580,"geonameid":3651297,"country":"EC","source":"places","reason":"length","review":"30 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Ciudad General Escobedo","population":454967,"geonameid":4005867,"country":"MX","source":"places","reason":"length","review":"23 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Venustiano Carranza","population":430978,"geonameid":3827407,"country":"MX","source":"places","reason":"length","review":"19 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Xalapa de Enríquez","population":424755,"geonameid":3526617,"country":"MX","source":"places","reason":"length","review":"18 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Kampung Kangkar Teberau","population":412373,"geonameid":1762110,"country":"MY","source":"places","reason":"length","review":"23 code points exceed 16; format rejection, not a lexical false positive."},{"name":"San Nicolás de los Garza","population":412199,"geonameid":3985241,"country":"MX","source":"places","reason":"length","review":"24 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Vitória da Conquista","population":396613,"geonameid":3444914,"country":"BR","source":"places","reason":"length","review":"20 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Las Palmas de Gran Canaria","population":383516,"geonameid":2515270,"country":"ES","source":"places","reason":"length","review":"26 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Rajamahendravaram","population":376333,"geonameid":1258932,"country":"IN","source":"places","reason":"length","review":"17 code points exceed 16; format rejection, not a lexical false positive."},{"name":"6th of October City","population":368650,"geonameid":353219,"country":"EG","source":"places","reason":"length","review":"19 code points exceed 16; format rejection, not a lexical false positive."},{"name":"San Jose del Monte","population":357828,"geonameid":1689395,"country":"PH","source":"places","reason":"length","review":"18 code points exceed 16; format rejection, not a lexical false positive."},{"name":"São José dos Pinhais","population":349880,"geonameid":3448632,"country":"BR","source":"places","reason":"length","review":"20 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Ribeirão das Neves","population":346971,"geonameid":3451353,"country":"BR","source":"places","reason":"length","review":"18 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Ḩadā’iq al Qubbah","population":339612,"geonameid":356436,"country":"EG","source":"places","reason":"length","review":"17 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Soledad de Graciano Sánchez","population":332072,"geonameid":3982912,"country":"MX","source":"places","reason":"length","review":"27 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Lexington-Fayette","population":314488,"geonameid":4297999,"country":"US","source":"places","reason":"length","review":"17 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Kingston upon Hull","population":314018,"geonameid":2645425,"country":"GB","source":"places","reason":"length","review":"18 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Al Qāhirah al Jadīdah","population":313139,"geonameid":8134081,"country":"EG","source":"places","reason":"length","review":"21 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Ciudad Benito Juárez","population":308285,"geonameid":4003757,"country":"MX","source":"places","reason":"length","review":"20 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Juazeiro do Norte","population":305531,"geonameid":3397147,"country":"BR","source":"places","reason":"length","review":"17 code points exceed 16; format rejection, not a lexical false positive."},{"name":"Newcastle upon Tyne","population":300125,"geonameid":2641673,"country":"GB","source":"places","reason":"length","review":"19 code points exceed 16; format rejection, not a lexical false positive."}]
+2026-10-08T23:29:47.5095768Z {"name":"original-workload-policy-and-counts","cases":6,"passed":6,"seed":1,"command":"node tests/run.mjs","originalPolicySha256":"ac400db6c9733f6becc82df93f91cdde13563767d2b9b3883684779b28c48dc9","fixedCases":459,"fullCases":43830,"benchmarkPositiveInputs":48}
+2026-10-08T23:29:48.2227445Z {"name":"regex-vs-bitset-NFA-differential","cases":43830,"passed":43830,"seed":1,"command":"node tests/run.mjs"}
+2026-10-08T23:29:48.2228979Z {"name":"sealed-blind-reference-differential","cases":43830,"passed":43830,"seed":1,"command":"node tests/run.mjs"}
+2026-10-08T23:29:48.2229531Z {"name":"repeat-call-purity","cases":43830,"passed":43830,"seed":1,"command":"node tests/run.mjs"}
+2026-10-08T23:29:48.2229911Z {"name":"boolean-wrapper","cases":43830,"passed":43830,"seed":1,"command":"node tests/run.mjs"}
+2026-10-08T23:29:48.2367892Z {"name":"mutation-baseline-truth","cases":43830,"passed":43830,"seed":1,"command":"node tests/run.mjs"}
+2026-10-08T23:29:50.0471972Z {"name":"25-real-executed-mutations","cases":25,"passed":25,"seed":1,"command":"node tests/run.mjs","survivors":[]}
+2026-10-08T23:29:50.0483303Z {"name":"runtime-gzip-size","cases":2,"passed":2,"seed":1,"command":"node tests/run.mjs","sourceBytes":14430,"sourceGzipBytes":5270,"compiledBytes":15203,"compiledGzipBytes":5050,"limitBytes":6000}
+2026-10-08T23:29:50.0484757Z {"name":"zero-runtime-dependencies-and-forbidden-APIs","cases":5,"passed":5,"seed":1,"command":"node tests/run.mjs"}
+2026-10-08T23:29:50.0834243Z {"name":"latency-every-observed-check-under-005ms","cases":10000,"passed":10000,"seed":1,"command":"node tests/run.mjs","calls":10000,"meanMs":0.00044361949999997705,"p50Ms":0.00014999999984866008,"p99Ms":0.0026739999998426356,"maxMs":0.026569999999992433,"over005Ms":0,"outliers":[],"measurementStartMs":3501.839284,"measurementEndMs":3506.275479,"sink":94721}
+2026-10-08T23:29:50.2234600Z {"name":"retained-original-snapshot-offline-and-corruption","cases":8,"passed":8,"seed":2,"command":"python3 tests/retained-snapshot.py","output":{"cases":8,"passed":8,"checks":["clean offline restoration: all32000 original rows and exact byte hashes","verified cache reuse without live network","changed byte rejected before cache writes","missing corpus rejected","missing manifest rejected","unsupported snapshot manifest rejected","truncated valid JSON corpus rejected","corrupt existing cache rejected without replacement"],"networkCalls":0}}
+2026-10-08T23:29:50.3260334Z {"name":"delivery-file-size-and-checksums","cases":2,"passed":2,"seed":2,"command":"node tests/run.mjs","files":828,"checked":828,"failures":[],"rootManifestPresent":true,"maxFileBytes":3071339}
+2026-10-08T23:29:50.3263423Z {"name":"immutable-return-values","cases":3,"passed":3,"seed":2,"command":"node tests/run.mjs"}
+2026-10-08T23:29:50.3264089Z {"name":"failure-suggestions-map-and-frozen","cases":5,"passed":5,"seed":2,"command":"node tests/run.mjs"}
+2026-10-08T23:29:50.3265160Z {"name":"additional-given-names-and-exception-bypass","cases":30,"passed":30,"seed":2,"command":"node tests/run.mjs","productionErrors":[],"blindErrors":[]}
+2026-10-08T23:29:50.3266057Z {"name":"policy-copy-consistency-and-no-duplicate-terms","cases":3,"passed":3,"seed":2,"command":"node tests/run.mjs"}
+2026-10-08T23:29:50.6943918Z {"name":"strict-TypeScript","cases":1,"passed":1,"seed":2,"command":"tsc -p tsconfig.json --noEmit","output":""}
+2026-10-08T23:29:50.6964168Z {"name":"length-pruned-matcher-blind-boundaries","cases":24873,"passed":24873,"seed":2,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:50.7218647Z {"name":"generator-byte-identical-replay-and-coverage","cases":2,"passed":2,"seed":2,"command":"node tests/run.mjs"}
+2026-10-08T23:29:50.7254282Z {"name":"handwritten-format-and-Scunthorpe","cases":459,"passed":459,"seed":2,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:50.7262445Z {"name":"exhaustive-declared-single-glyph-substitution","cases":1371,"passed":1371,"seed":2,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:50.7270225Z {"name":"precompiled-Unicode-policy-context-differential","cases":1296,"passed":1296,"seed":2,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:50.7275615Z {"name":"precompiled-printable-width-and-latin1-context-differential","cases":1422,"passed":1422,"seed":2,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:50.7336318Z {"name":"generated-obfuscations","cases":5000,"passed":5000,"seed":2,"command":"node tests/run.mjs","misses":0,"errors":[],"coverage":{"anal":87,"anus":86,"arsehole":74,"asshole":78,"bastard":84,"bitch":87,"blowjob":76,"bollocks":68,"boner":87,"boob":87,"boobs":86,"bukkake":81,"chink":86,"clit":87,"cock":87,"coon":86,"cunt":87,"cum":84,"cumshot":79,"dick":86,"dildo":87,"douche":87,"dyke":87,"fag":86,"faggot":86,"fellatio":68,"fuck":87,"gook":87,"handjob":79,"hentai":87,"jizz":87,"kike":87,"masturbate":42,"motherfucker":18,"nigga":87,"nigger":86,"orgasm":86,"paedophile":45,"pedophile":49,"penis":87,"porn":86,"pussy":87,"rape":87,"retard":85,"rimjob":85,"semen":87,"sex":86,"shemale":83,"slut":86,"spic":86,"spunk":87,"tits":87,"titties":82,"titty":87,"tranny":85,"twat":86,"vagina":84,"wank":85,"wetback":77,"whore":86,"testicle":67,"ejaculation":29,"masturbation":22},"attempts":5475}
+2026-10-08T23:29:50.7351014Z {"name":"names-count-and-uniqueness","cases":2,"passed":2,"seed":2,"command":"node tests/run.mjs","rows":20000,"unique":20000}
+2026-10-08T23:29:50.7547360Z {"name":"names-reviewed-corpus-policy","cases":20000,"passed":20000,"seed":2,"command":"node tests/run.mjs","accepted":19989,"rejected":11,"reviewed":11,"unexpected":0,"stale":0,"zeroRejections":false}
+2026-10-08T23:29:50.7548744Z {"name":"names-reviewed-baseline-no-stale-entries","cases":1,"passed":1,"seed":2,"command":"node tests/run.mjs"}
+2026-10-08T23:29:50.7554186Z {"name":"words-count-and-uniqueness","cases":2,"passed":2,"seed":2,"command":"node tests/run.mjs","rows":10000,"unique":10000}
+2026-10-08T23:29:50.7739780Z {"name":"words-reviewed-corpus-policy","cases":10000,"passed":10000,"seed":2,"command":"node tests/run.mjs","accepted":9951,"rejected":49,"reviewed":49,"unexpected":0,"stale":0,"zeroRejections":false}
+2026-10-08T23:29:50.7741032Z {"name":"words-reviewed-baseline-no-stale-entries","cases":1,"passed":1,"seed":2,"command":"node tests/run.mjs"}
+2026-10-08T23:29:50.7742244Z {"name":"places-count-and-uniqueness","cases":2,"passed":2,"seed":2,"command":"node tests/run.mjs","rows":2000,"unique":2000}
+2026-10-08T23:29:50.7775065Z {"name":"places-reviewed-corpus-policy","cases":2000,"passed":2000,"seed":2,"command":"node tests/run.mjs","accepted":1943,"rejected":57,"reviewed":57,"unexpected":0,"stale":0,"zeroRejections":false}
+2026-10-08T23:29:50.7776288Z {"name":"places-reviewed-baseline-no-stale-entries","cases":1,"passed":1,"seed":2,"command":"node tests/run.mjs"}
+2026-10-08T23:29:50.8393416Z {"name":"original-workload-policy-and-counts","cases":6,"passed":6,"seed":2,"command":"node tests/run.mjs","originalPolicySha256":"ac400db6c9733f6becc82df93f91cdde13563767d2b9b3883684779b28c48dc9","fixedCases":459,"fullCases":43830,"benchmarkPositiveInputs":48}
+2026-10-08T23:29:51.6358156Z {"name":"regex-vs-bitset-NFA-differential","cases":43830,"passed":43830,"seed":2,"command":"node tests/run.mjs"}
+2026-10-08T23:29:51.6359023Z {"name":"sealed-blind-reference-differential","cases":43830,"passed":43830,"seed":2,"command":"node tests/run.mjs"}
+2026-10-08T23:29:51.6359754Z {"name":"repeat-call-purity","cases":43830,"passed":43830,"seed":2,"command":"node tests/run.mjs"}
+2026-10-08T23:29:51.6360436Z {"name":"boolean-wrapper","cases":43830,"passed":43830,"seed":2,"command":"node tests/run.mjs"}
+2026-10-08T23:29:51.6487002Z {"name":"mutation-baseline-truth","cases":43830,"passed":43830,"seed":2,"command":"node tests/run.mjs"}
+2026-10-08T23:29:51.9917572Z {"name":"25-real-executed-mutations","cases":25,"passed":25,"seed":2,"command":"node tests/run.mjs","survivors":[]}
+2026-10-08T23:29:51.9925133Z {"name":"runtime-gzip-size","cases":2,"passed":2,"seed":2,"command":"node tests/run.mjs","sourceBytes":14430,"sourceGzipBytes":5270,"compiledBytes":15203,"compiledGzipBytes":5050,"limitBytes":6000}
+2026-10-08T23:29:51.9926200Z {"name":"zero-runtime-dependencies-and-forbidden-APIs","cases":5,"passed":5,"seed":2,"command":"node tests/run.mjs"}
+2026-10-08T23:29:52.0239814Z {"name":"latency-every-observed-check-under-005ms","cases":10000,"passed":9999,"seed":2,"command":"node tests/run.mjs","calls":10000,"meanMs":0.000367217299999993,"p50Ms":0.00010000000020227162,"p99Ms":0.0020530000001599547,"maxMs":0.5130060000001322,"over005Ms":1,"outliers":[{"index":3717,"input":"ṃ5AAցᴦοοο","timeMs":0.5130060000001322}],"measurementStartMs":5443.335214,"measurementEndMs":5447.007387,"sink":93467}
+2026-10-08T23:29:52.1647110Z {"name":"retained-original-snapshot-offline-and-corruption","cases":8,"passed":8,"seed":3,"command":"python3 tests/retained-snapshot.py","output":{"cases":8,"passed":8,"checks":["clean offline restoration: all32000 original rows and exact byte hashes","verified cache reuse without live network","changed byte rejected before cache writes","missing corpus rejected","missing manifest rejected","unsupported snapshot manifest rejected","truncated valid JSON corpus rejected","corrupt existing cache rejected without replacement"],"networkCalls":0}}
+2026-10-08T23:29:52.2620011Z {"name":"delivery-file-size-and-checksums","cases":2,"passed":2,"seed":3,"command":"node tests/run.mjs","files":828,"checked":828,"failures":[],"rootManifestPresent":true,"maxFileBytes":3071339}
+2026-10-08T23:29:52.2621053Z {"name":"immutable-return-values","cases":3,"passed":3,"seed":3,"command":"node tests/run.mjs"}
+2026-10-08T23:29:52.2621777Z {"name":"failure-suggestions-map-and-frozen","cases":5,"passed":5,"seed":3,"command":"node tests/run.mjs"}
+2026-10-08T23:29:52.2622727Z {"name":"additional-given-names-and-exception-bypass","cases":30,"passed":30,"seed":3,"command":"node tests/run.mjs","productionErrors":[],"blindErrors":[]}
+2026-10-08T23:29:52.2623683Z {"name":"policy-copy-consistency-and-no-duplicate-terms","cases":3,"passed":3,"seed":3,"command":"node tests/run.mjs"}
+2026-10-08T23:29:52.6814185Z {"name":"strict-TypeScript","cases":1,"passed":1,"seed":3,"command":"tsc -p tsconfig.json --noEmit","output":""}
+2026-10-08T23:29:52.6832547Z {"name":"length-pruned-matcher-blind-boundaries","cases":24873,"passed":24873,"seed":3,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:52.7000887Z {"name":"generator-byte-identical-replay-and-coverage","cases":2,"passed":2,"seed":3,"command":"node tests/run.mjs"}
+2026-10-08T23:29:52.7047535Z {"name":"handwritten-format-and-Scunthorpe","cases":459,"passed":459,"seed":3,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:52.7054508Z {"name":"exhaustive-declared-single-glyph-substitution","cases":1371,"passed":1371,"seed":3,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:52.7060837Z {"name":"precompiled-Unicode-policy-context-differential","cases":1296,"passed":1296,"seed":3,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:52.7066149Z {"name":"precompiled-printable-width-and-latin1-context-differential","cases":1422,"passed":1422,"seed":3,"command":"node tests/run.mjs","errors":[]}
+2026-10-08T23:29:52.7132209Z {"name":"generated-obfuscations","cases":5000,"passed":5000,"seed":3,"command":"node tests/run.mjs","misses":0,"errors":[],"coverage":{"anal":87,"anus":87,"arsehole":65,"asshole":78,"bastard":76,"bitch":87,"blowjob":77,"bollocks":76,"boner":87,"boob":87,"boobs":87,"bukkake":79,"chink":87,"clit":87,"cock":87,"coon":87,"cunt":87,"cum":87,"cumshot":79,"dick":87,"dildo":87,"douche":85,"dyke":87,"fag":86,"faggot":87,"fellatio":66,"fuck":86,"gook":87,"handjob":83,"hentai":86,"jizz":87,"kike":86,"masturbate":37,"nigga":87,"nigger":85,"orgasm":86,"pedophile":55,"penis":87,"porn":87,"pussy":87,"rape":86,"retard":85,"rimjob":86,"semen":87,"sex":87,"shemale":78,"slut":87,"spic":87,"spunk":87,"testicle":69,"tits":87,"titties":84,"titty":85,"tranny":85,"twat":86,"vagina":85,"wank":86,"wetback":77,"whore":86,"masturbation":22,"motherfucker":22,"paedophile":37,"ejaculation":34},"attempts":5474}
+2026-10-08T23:29:52.7143931Z {"name":"names-count-and-uniqueness","cases":2,"passed":2,"seed":3,"command":"node tests/run.mjs","rows":20000,"unique":20000}
+2026-10-08T23:29:52.7333004Z {"name":"names-reviewed-corpus-policy","cases":20000,"passed":20000,"seed":3,"command":"node tests/run.mjs","accepted":19989,"rejected":11,"reviewed":11,"unexpected":0,"stale":0,"zeroRejections":false}
+2026-10-08T23:29:52.7334074Z {"name":"names-reviewed-baseline-no-stale-entries","cases":1,"passed":1,"seed":3,"command":"node tests/run.mjs"}
+2026-10-08T23:29:52.7340582Z {"name":"words-count-and-uniqueness","cases":2,"passed":2,"seed":3,"command":"node tests/run.mjs","rows":10000,"unique":10000}
+2026-10-08T23:29:52.7450259Z {"name":"words-reviewed-corpus-policy","cases":10000,"passed":10000,"seed":3,"command":"node tests/run.mjs","accepted":9951,"rejected":49,"reviewed":49,"unexpected":0,"stale":0,"zeroRejections":false}
+2026-10-08T23:29:52.7451307Z {"name":"words-reviewed-baseline-no-stale-entries","cases":1,"passed":1,"seed":3,"command":"node tests/run.mjs"}
+2026-10-08T23:29:52.7452156Z {"name":"places-count-and-uniqueness","cases":2,"passed":2,"seed":3,"command":"node tests/run.mjs","rows":2000,"unique":2000}
+2026-10-08T23:29:52.7487074Z {"name":"places-reviewed-corpus-policy","cases":2000,"passed":2000,"seed":3,"command":"node tests/run.mjs","accepted":1943,"rejected":57,"reviewed":57,"unexpected":0,"stale":0,"zeroRejections":false}
+2026-10-08T23:29:52.7488183Z {"name":"places-reviewed-baseline-no-stale-entries","cases":1,"passed":1,"seed":3,"command":"node tests/run.mjs"}
+2026-10-08T23:29:52.8158950Z {"name":"original-workload-policy-and-counts","cases":6,"passed":6,"seed":3,"command":"node tests/run.mjs","originalPolicySha256":"ac400db6c9733f6becc82df93f91cdde13563767d2b9b3883684779b28c48dc9","fixedCases":459,"fullCases":43830,"benchmarkPositiveInputs":48}
+2026-10-08T23:29:53.5555279Z {"name":"regex-vs-bitset-NFA-differential","cases":43830,"passed":43830,"seed":3,"command":"node tests/run.mjs"}
+2026-10-08T23:29:53.5555836Z {"name":"sealed-blind-reference-differential","cases":43830,"passed":43830,"seed":3,"command":"node tests/run.mjs"}
+2026-10-08T23:29:53.5556278Z {"name":"repeat-call-purity","cases":43830,"passed":43830,"seed":3,"command":"node tests/run.mjs"}
+2026-10-08T23:29:53.5556670Z {"name":"boolean-wrapper","cases":43830,"passed":43830,"seed":3,"command":"node tests/run.mjs"}
+2026-10-08T23:29:53.5682344Z {"name":"mutation-baseline-truth","cases":43830,"passed":43830,"seed":3,"command":"node tests/run.mjs"}
+2026-10-08T23:29:53.8801450Z {"name":"25-real-executed-mutations","cases":25,"passed":25,"seed":3,"command":"node tests/run.mjs","survivors":[]}
+2026-10-08T23:29:53.8808507Z {"name":"runtime-gzip-size","cases":2,"passed":2,"seed":3,"command":"node tests/run.mjs","sourceBytes":14430,"sourceGzipBytes":5270,"compiledBytes":15203,"compiledGzipBytes":5050,"limitBytes":6000}
+2026-10-08T23:29:53.8809527Z {"name":"zero-runtime-dependencies-and-forbidden-APIs","cases":5,"passed":5,"seed":3,"command":"node tests/run.mjs"}
+2026-10-08T23:29:53.9086509Z {"name":"latency-every-observed-check-under-005ms","cases":10000,"passed":10000,"seed":3,"command":"node tests/run.mjs","calls":10000,"meanMs":0.0002821453000000474,"p50Ms":0.00009099999988393392,"p99Ms":0.001772999999957392,"maxMs":0.010935999999674095,"over005Ms":0,"outliers":[],"measurementStartMs":7329.450706,"measurementEndMs":7332.272159,"sink":94479}
+2026-10-08T23:29:53.9089524Z FINAL_SUMMARY {"mode":"full","suites":100,"failures":[{"name":"latency-every-observed-check-under-005ms","seed":2,"cases":10000,"passed":9999}],"sourceSha256":"7817489fc1d0908a87914223a84b31c15ea7e13b3555cb4238594751616f163d","referenceSha256":"962bab309ddf9cc2d8ccc7237f782d69db6aa2b603417f1a8935c3d5b167b5f6"}
+2026-10-08T23:29:53.9307089Z ##[error]Process completed with exit code 1.
+2026-10-08T23:29:53.9359906Z ##[group]Run actions/upload-artifact@v4
+2026-10-08T23:29:53.9360056Z with:
+2026-10-08T23:29:53.9360168Z   name: B19-verification
+2026-10-08T23:29:53.9360469Z   path: jobs/B19-name-filter/
+.github/workflows/B19.yml
+!jobs/B19-name-filter/node_modules/**
+!jobs/B19-name-filter/dist/**
+
+2026-10-08T23:29:53.9360762Z   include-hidden-files: true
+2026-10-08T23:29:53.9360893Z   retention-days: 30
+2026-10-08T23:29:53.9361010Z   if-no-files-found: warn
+2026-10-08T23:29:53.9361134Z   compression-level: 6
+2026-10-08T23:29:53.9361248Z   overwrite: false
+2026-10-08T23:29:53.9361360Z ##[endgroup]
+2026-10-08T23:29:54.0431925Z (node:2175) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T23:29:54.0432730Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T23:29:54.1387737Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-08T23:29:54.1389680Z The least common ancestor is /home/runner/work/partybox-gpt-drops/partybox-gpt-drops. This will be the root directory of the artifact
+2026-10-08T23:29:54.1390367Z With the provided path, there will be 854 files uploaded
+2026-10-08T23:29:54.1394834Z Artifact name is valid!
+2026-10-08T23:29:54.1395092Z Root directory input is valid!
+2026-10-08T23:29:54.4229948Z Beginning upload of artifact content to blob storage
+2026-10-08T23:29:54.9710578Z (node:2175) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-08T23:29:55.5051257Z Uploaded bytes 8388608
+2026-10-08T23:29:55.6016394Z Uploaded bytes 11334866
+2026-10-08T23:29:55.6468919Z Finished uploading artifact content to blob storage!
+2026-10-08T23:29:55.6469553Z SHA256 digest of uploaded artifact zip is e0fb3e62ea544898db82f180e94e6835772f5f9fad311325c7a99350e9805b60
+2026-10-08T23:29:55.6470736Z Finalizing artifact upload
+2026-10-08T23:29:55.8950059Z Artifact B19-verification.zip successfully finalized. Artifact ID 11585970966
+2026-10-08T23:29:55.8950551Z Artifact B19-verification has been successfully uploaded! Final size is 11334866 bytes. Artifact ID is 11585970966
+2026-10-08T23:29:55.8954825Z Artifact download URL: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37859732634/artifacts/11585970966
+2026-10-08T23:29:55.9157543Z Post job cleanup.
+2026-10-08T23:29:55.9680148Z [command]/usr/bin/git version
+2026-10-08T23:29:55.9710732Z git version 2.55.0
+2026-10-08T23:29:55.9734533Z Temporarily overriding HOME='/home/runner/work/_temp/5a684c3a-9dd0-4f33-a013-efe6dee4fb77' before making global git config changes
+2026-10-08T23:29:55.9735103Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T23:29:55.9738247Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-08T23:29:55.9766692Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T23:29:55.9792783Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T23:29:55.9984735Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T23:29:56.0006881Z http.https://github.com/.extraheader
+2026-10-08T23:29:56.0014978Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-08T23:29:56.0042454Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T23:29:56.0230942Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T23:29:56.0260870Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T23:29:56.0539492Z Cleaning up orphan processes
+2026-10-08T23:29:56.0750121Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

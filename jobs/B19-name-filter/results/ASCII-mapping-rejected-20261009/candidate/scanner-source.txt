@@ -1,0 +1,19 @@
+const ASCII_MAPPED: readonly string[] = Array.from({length: 128}, (_, code) => {
+  const letter = lower(String.fromCharCode(code));
+  return letter >= 'a' && letter <= 'z' ? letter : MAP.get(letter) ?? '';
+});
+
+  if (!simple && !WORD.test(plain)) {
+   text = '';
+   if (ascii) {
+    for (let index = 0; index < plain.length; index++) text += ASCII_MAPPED[plain.charCodeAt(index)]!;
+   } else {
+    for (const c of plain) {
+     if (c >= 'a' && c <= 'z') { text += c; continue; }
+     const mapped = MAP.get(c);
+     if (mapped !== undefined) text += mapped;
+     else if (c <= '\x7f' || KNOWN.get(c)?.mapped === '' || SEPARATOR.test(c)) continue;
+     else text += '~';
+    }
+   }
+  }

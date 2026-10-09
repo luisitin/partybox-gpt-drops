@@ -1,0 +1,93 @@
+{
+  "reviewedUtc": "2026-10-09T01:39:05.069539+00:00",
+  "trialNaturalClosedUtc": "2026-10-09T01:34:33.427399+00:00",
+  "predeclaredCriteria": {
+    "allThreeAggregateGainMinimumPercent": 5,
+    "allSixBalancedBlockGainsPositive": true,
+    "literalOriginalFullChecksStillRequired": true,
+    "sameCandidateComparisonRetryAllowed": false,
+    "excludedPhasesAllowed": false,
+    "causeAttributionAllowed": false
+  },
+  "summaries": [
+    {
+      "seed": 1,
+      "baselineMs": 726.6829740000001,
+      "candidateMs": 803.0225270000001,
+      "candidateToBaseline": 1.1050520732304925,
+      "improvementPercent": -10.505207323049241,
+      "sinksAgree": true
+    },
+    {
+      "seed": 2,
+      "baselineMs": 730.1530190000008,
+      "candidateMs": 739.2437909999999,
+      "candidateToBaseline": 1.0124505025158284,
+      "improvementPercent": -1.2450502515828257,
+      "sinksAgree": true
+    },
+    {
+      "seed": 3,
+      "baselineMs": 758.6517539999995,
+      "candidateMs": 722.9342910000005,
+      "candidateToBaseline": 0.9529198175425307,
+      "improvementPercent": 4.708018245746923,
+      "sinksAgree": true
+    }
+  ],
+  "allSixBalancedBlocks": [
+    {
+      "seed": 1,
+      "block": 0,
+      "baselineMs": 379.73309399999994,
+      "candidateMs": 448.8881050000002,
+      "improvementPercent": -18.211478560254296
+    },
+    {
+      "seed": 1,
+      "block": 1,
+      "baselineMs": 346.9498800000001,
+      "candidateMs": 354.13442199999986,
+      "improvementPercent": -2.0707722971397873
+    },
+    {
+      "seed": 2,
+      "block": 0,
+      "baselineMs": 362.4091320000002,
+      "candidateMs": 371.50671699999975,
+      "improvementPercent": -2.510307880431534
+    },
+    {
+      "seed": 2,
+      "block": 1,
+      "baselineMs": 367.74388700000054,
+      "candidateMs": 367.7370740000001,
+      "improvementPercent": 0.0018526480633028928
+    },
+    {
+      "seed": 3,
+      "block": 0,
+      "baselineMs": 418.03012599999965,
+      "candidateMs": 369.41576199999963,
+      "improvementPercent": 11.629392471106272
+    },
+    {
+      "seed": 3,
+      "block": 1,
+      "baselineMs": 340.6216279999999,
+      "candidateMs": 353.51852900000085,
+      "improvementPercent": -3.786283647261819
+    }
+  ],
+  "all24PhasesRetained": true,
+  "allGcEventsRetained": 62,
+  "decision": "REJECT_NO_ADOPTION",
+  "productionChanged": false,
+  "literalAcceptanceNotRun": true,
+  "originalRequiredAfterGreenOutliers": [
+    13,
+    5,
+    10
+  ],
+  "causeAttribution": null
+}

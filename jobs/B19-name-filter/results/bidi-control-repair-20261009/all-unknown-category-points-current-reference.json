@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "startedAt": "2026-10-09T03:31:45.042Z",
+  "timed": false,
+  "unicode": "17.0",
+  "before": [
+    {
+      "path": "/tmp/B19-new-reference-unknown-category-exhaustive-20261009.mjs",
+      "bytes": 2622,
+      "sha256": "9c157ae9968bf16b3bedffeaef098d1522c91e7cee6f31fe3f05fbf201575326"
+    },
+    {
+      "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "bytes": 125989464,
+      "sha256": "bc17c508ffeed0ec622934f9b7fa72f8e78da65350e63c3eceb56fa688aa5e12"
+    },
+    {
+      "path": "/tmp/B19-root-checkpoint-20261009/jobs/B19-name-filter/nameFilter.ts",
+      "bytes": 14448,
+      "sha256": "446bdd89b9bb6fe65dcdaa2f6c7a578111034d957aeb4a9f16cc64efba5c05a0"
+    },
+    {
+      "path": "/tmp/B19-root-checkpoint-20261009/jobs/B19-name-filter/dist/nameFilter.js",
+      "bytes": 15221,
+      "sha256": "c50ea16d2077921bb4e0879a4804b709c1ea12aac763fc1fcfa16b35920c95b7"
+    },
+    {
+      "path": "/tmp/B19-root-checkpoint-20261009/jobs/B19-name-filter/tests/independent-unicode-20261009/reference.mjs",
+      "bytes": 4784,
+      "sha256": "a93b35e3170122b2fd0a77619eff36716c3b9fc2f4c47f3bfce1971778a76e71"
+    },
+    {
+      "path": "/tmp/B19-root-checkpoint-20261009/jobs/B19-name-filter/tests/independent-unicode-20261009/seal.json",
+      "bytes": 2101,
+      "sha256": "a8cded0ef5e4bf8da574184baabdfa57e9103c43981e8bc9019085ff0b9b1511"
+    },
+    {
+      "path": "/tmp/B19-root-checkpoint-20261009/jobs/B19-name-filter/data/policy.json",
+      "bytes": 4260,
+      "sha256": "3e3a3eab49e39e2971f02736a0bf6a189486436030ea4e58963fa2514efcd9e2"
+    }
+  ],
+  "categories": [
+    {
+      "category": "Cn",
+      "cases": 814730,
+      "productionPassed": 814730,
+      "independentPassed": 814730
+    },
+    {
+      "category": "Co",
+      "cases": 137468,
+      "productionPassed": 137468,
+      "independentPassed": 137468
+    }
+  ],
+  "disagreements": [],
+  "scope": "Every Unicode Cn/Co code point in the exact an+point+al context that exposed the old independent-oracle discrepancy. Explicit unknown-category barrier expectation is ok. This is not a performance test or all-context Unicode proof.",
+  "after": [
+    {
+      "path": "/tmp/B19-new-reference-unknown-category-exhaustive-20261009.mjs",
+      "bytes": 2622,
+      "sha256": "9c157ae9968bf16b3bedffeaef098d1522c91e7cee6f31fe3f05fbf201575326"
+    },
+    {
+      "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "bytes": 125989464,
+      "sha256": "bc17c508ffeed0ec622934f9b7fa72f8e78da65350e63c3eceb56fa688aa5e12"
+    },
+    {
+      "path": "/tmp/B19-root-checkpoint-20261009/jobs/B19-name-filter/nameFilter.ts",
+      "bytes": 14448,
+      "sha256": "446bdd89b9bb6fe65dcdaa2f6c7a578111034d957aeb4a9f16cc64efba5c05a0"
+    },
+    {
+      "path": "/tmp/B19-root-checkpoint-20261009/jobs/B19-name-filter/dist/nameFilter.js",
+      "bytes": 15221,
+      "sha256": "c50ea16d2077921bb4e0879a4804b709c1ea12aac763fc1fcfa16b35920c95b7"
+    },
+    {
+      "path": "/tmp/B19-root-checkpoint-20261009/jobs/B19-name-filter/tests/independent-unicode-20261009/reference.mjs",
+      "bytes": 4784,
+      "sha256": "a93b35e3170122b2fd0a77619eff36716c3b9fc2f4c47f3bfce1971778a76e71"
+    },
+    {
+      "path": "/tmp/B19-root-checkpoint-20261009/jobs/B19-name-filter/tests/independent-unicode-20261009/seal.json",
+      "bytes": 2101,
+      "sha256": "a8cded0ef5e4bf8da574184baabdfa57e9103c43981e8bc9019085ff0b9b1511"
+    },
+    {
+      "path": "/tmp/B19-root-checkpoint-20261009/jobs/B19-name-filter/data/policy.json",
+      "bytes": 4260,
+      "sha256": "3e3a3eab49e39e2971f02736a0bf6a189486436030ea4e58963fa2514efcd9e2"
+    }
+  ],
+  "guardsUnchanged": true,
+  "finishedAt": "2026-10-09T03:32:25.558Z"
+}

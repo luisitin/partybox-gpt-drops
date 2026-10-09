@@ -1,0 +1,62 @@
+{
+  "identity": "B19-independent-reference-20261009",
+  "entrypoint": "reference.mjs#createReference(policy)",
+  "sealed_artifacts": [
+    {
+      "path": "reference.mjs",
+      "bytes": 4784,
+      "sha256": "a93b35e3170122b2fd0a77619eff36716c3b9fc2f4c47f3bfce1971778a76e71"
+    },
+    {
+      "path": "selfcheck.mjs",
+      "bytes": 8003,
+      "sha256": "33c26b008e5b60f0c6ece00af6856ec7681e22fa8012cfc2f4581feee01bf5ef"
+    },
+    {
+      "path": "AUTHORING.md",
+      "bytes": 4014,
+      "sha256": "68d4c7c3a3e652b53aee8e5d028a162249c6018f986a6264997c750f4e7bcf2f"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 1739,
+      "sha256": "debb23a7b183d76a786f9d0c9987465676fbc2f22f799147bab13580fffd9f2f"
+    },
+    {
+      "path": "policy.json",
+      "bytes": 4260,
+      "sha256": "3e3a3eab49e39e2971f02736a0bf6a189486436030ea4e58963fa2514efcd9e2"
+    },
+    {
+      "path": "POLICY.md",
+      "bytes": 4407,
+      "sha256": "2f96b60f4b5cbcaef0c9695298d626eed68b82bdaff3d937aee33c2a00cd264f"
+    },
+    {
+      "path": "PROMPTS.lines298-313.txt",
+      "bytes": 2991,
+      "sha256": "c1e0f0fad3036c13cfa0ec7de1f2d393c4707d84740574a96d95d8e1b895222f"
+    },
+    {
+      "path": "package.json",
+      "bytes": 150,
+      "sha256": "df1eb08e1bb8d5f04747de2e81c428b9f74b6f966ba592286c6dd43041ca2e64"
+    },
+    {
+      "path": "selfcheck-report.json",
+      "bytes": 2046,
+      "sha256": "74e18bed4347327103e1a87832f7165f93500d5cd4b36ccddfd839735031f5b5"
+    }
+  ],
+  "selfcheck_closure": {
+    "command": "node selfcheck.mjs",
+    "exit_code": 0,
+    "cases": 4784,
+    "failures": 0,
+    "run_count": 1,
+    "timed": false
+  },
+  "independence": "Only the authorized requirements and public policy selections in provenance.json were adopted. No other author implementation or cases were accessed.",
+  "additional_assumption": "All unspecified unmapped categories are matching barriers, including private-use and unassigned characters.",
+  "limitations": "No performance claim, production agreement claim, complete B19 acceptance claim, corpus claim, mutation claim, or CI claim."
+}

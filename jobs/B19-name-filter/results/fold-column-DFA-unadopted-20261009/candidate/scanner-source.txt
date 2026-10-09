@@ -1,0 +1,22 @@
+  let simple = false;
+  let simpleMatch = false;
+  if (input.length > 0 && input.length <= 16 && SCAN !== undefined) {
+    simple = true;
+    simpleMatch = SCAN.empty;
+    let state = 0;
+    for (let index = 0; index < input.length; index++) {
+      const column = ASCII_FOLD[input.charCodeAt(index)]!;
+      if (!(column < 26)) {
+        simple = false;
+        simpleMatch = false;
+        break;
+      }
+      if (!simpleMatch) {
+        state = SCAN.table[state + column]!;
+        simpleMatch = state === -1;
+      }
+    }
+    if (simple && !simpleMatch) return OK;
+  } else {
+    simple = SIMPLE_ASCII.test(input);
+  }

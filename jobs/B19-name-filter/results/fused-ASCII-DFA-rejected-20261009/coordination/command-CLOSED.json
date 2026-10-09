@@ -1,0 +1,138 @@
+{
+  "grantUtc": "2026-10-09T00:17:44.585387+00:00",
+  "kind": "delegated-once-only-fused-ASCII-DFA-ABBA-BAAB",
+  "acknowledgments": {
+    "G01": {
+      "zeroWorkload": true,
+      "zeroWriter": true,
+      "ackUtc": "2026-10-09T00:14:39.900428+00:00",
+      "evidence": "Owner actual finite reader/build closure and continuous local HOLD; private native candidate unrun."
+    },
+    "B03": {
+      "zeroWorkload": true,
+      "zeroWriter": true,
+      "ackUtc": "2026-10-09T00:17:11+00:00",
+      "evidence": "Owner finite writer naturally EXIT1, failure retained; zero local owners and continuous HOLD."
+    },
+    "static": {
+      "zeroWorkload": true,
+      "zeroWriter": true,
+      "ackUtc": "2026-10-09T00:15:25+00:00",
+      "evidence": "Independent fused candidate review PASS naturally closed00:09:51, no subsequent local work."
+    },
+    "G10": {
+      "zeroWorkload": true,
+      "zeroWriter": true,
+      "ackUtc": "2026-10-09T00:13:16.081971+00:00",
+      "evidence": "Owner actual reader/process check EXIT0, continuous local HOLD; receiver and compiler unrun."
+    },
+    "tracker": {
+      "zeroWorkload": true,
+      "zeroWriter": true,
+      "ackUtc": "2026-10-09T00:16:31.030038+00:00",
+      "evidence": "Owner final combined writer naturally EXIT0; source publish/readbacks finished; continuous local HOLD."
+    }
+  },
+  "rootDelegation": {
+    "rootZeroWorkloadAndWriter": true,
+    "oneMixedComparisonDelegated": true,
+    "actualAuthorizedUtc": "2026-10-09T00:17:43.547589+00:00",
+    "executor": "root direct os.execv replacement, no separate owner writer remains",
+    "scope": "Exactly one unchanged 24-phase/12M whole-call ABBA/BAAB diagnostic, source40cc83/compiled90f3 vs11a1 source7817/compilede4b. Original acceptance not run; no retry, new settling, sample exclusions or adoption.",
+    "rootClosure": "Original B01 870M suite00:10:09.159089 EXIT0; canonical push00:12:05.096605 EXIT0; root finite source/PR/process reads all returned EXIT0 before this command.",
+    "priorAuxiliaryFailuresRetained": "Initial root controller lookup used incorrect nested job path; existence false before any mutation. Initial unfiltered ps output was truncated; subsequent complete active-only scan showed no external workload. Both original tool outputs retained.",
+    "prelaunchFailure": "First wrapper used absent /usr/local/bin/python and naturally exited1 before controller/GRANT/timing child. Fixed wrapper uses actual sys.executable; unchanged controller and trial UNRUN before this call.",
+    "actualPython": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python"
+  },
+  "runnableWorkloads": [],
+  "liveProcesses": [
+    "      1       0       0 S+   tail             0.0   876",
+    "      2       1       0 S+   caas-prefix-tra  0.0   252",
+    "    199       1     199 Ssl  dockerd          0.0 35536",
+    "    248     199     248 Ssl  containerd       0.4 21436",
+    "    464       0       0 Sl+  codex            0.1 42968",
+    " 221546     464  221546 Ss   bash             3.7  1856",
+    " 221549  221546  221546 S    python          97.0 14408",
+    " 221551  221549  221546 R    ps               600  4052"
+  ],
+  "ignoredZombieEntries": 2509,
+  "STOPorCONTUsed": false,
+  "baselineHead": "11a1ff53bad077132fb353aaaec5482f6401066b",
+  "baselineSourceSha256": "7817489fc1d0908a87914223a84b31c15ea7e13b3555cb4238594751616f163d",
+  "baselineCompiledSha256": "e4b39efbf033bef9c41788e9bf0f002cdb61ff9dbbdfa6cbfcbfda65122d2cf9",
+  "candidateSourceSha256": "40cc83aaac089ec1842f37ee28481ff87ddabdc157c513a2b334a9c0f77383d0",
+  "candidateJsSha256": "90f3e5a9afa9ebc304184183f6219c9f2ecc24b4cb0904d2b1abeeb4ee936185",
+  "externalSourceStart": {
+    "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/SHA256SUMS.txt": "cce04d81e81ccd326b257a2ada73023acc2bbb0cdd227c97cc1663ae492b6517",
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node": "bc17c508ffeed0ec622934f9b7fa72f8e78da65350e63c3eceb56fa688aa5e12",
+    "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/node_modules/typescript/bin/tsc": "8d5fa5bd883fec0979fc2004f1fe1d99aef40570155d550eadc0b03b55513bf0",
+    "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/node_modules/typescript/lib/_tsc.js": "1f62c69e832fbbbd05a6dac950f152937f594a4d0b88087be5406ace348efcb5",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-coordination/run-once.py": "21f6e5d8d9e4ff474a338f0b069903e62c045ec51f559e6916a9bbbf8f91cf42",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-candidate/TIMING_READY.json": "d2679ff44713f6f551cd9a2c3d96e0b9edef0439e4ae099a3e26b06d7af800e8",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-candidate/equivalence-latest.json": "d6a7377bae70c657283bd927278c6723ce06818eca225444847a33c5b9873a9d",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-candidate/structural-control.json": "bf347c08b309f929b534862d373190049150131d1904b28fb08fcf97da41ec1d",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-candidate/run-functional.py": "922472bdea556929396c580e4d3777ca500c27107c2efd31dfcccc97194e3261",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-mutation/CLOSED.json": "3abd9d4cdd9f473298d86c75122cc27a6536041c4a34cb39cf25783616b63827",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-mutation/full-mutation.mjs": "1ccd0327adabc89ce2764ff6d234a57e3c8b109940d4e3dab8b4ac68a8f6f05a",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-mutation/original-declarations.mjs": "fd666625967d9476db38bccf19855867e29dd3bc6eb9de4f5bd5e1a180a1898c"
+  },
+  "argv": [
+    "node",
+    ".work/B19-fused-ASCII-DFA-candidate/exact-harness.mjs",
+    "timing"
+  ],
+  "originalAcceptanceNotRun": true,
+  "allPriorFailuresRetained": true,
+  "originalWarmupAndSamplesUnchanged": true,
+  "startupExcludedFromPhaseGains": true,
+  "commandStartedUtc": "2026-10-09T00:17:44.585681+00:00",
+  "commandClosedUtc": "2026-10-09T00:17:50.697578+00:00",
+  "exitCode": 0,
+  "externalSourceEnd": {
+    "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/SHA256SUMS.txt": "cce04d81e81ccd326b257a2ada73023acc2bbb0cdd227c97cc1663ae492b6517",
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node": "bc17c508ffeed0ec622934f9b7fa72f8e78da65350e63c3eceb56fa688aa5e12",
+    "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/node_modules/typescript/bin/tsc": "8d5fa5bd883fec0979fc2004f1fe1d99aef40570155d550eadc0b03b55513bf0",
+    "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/node_modules/typescript/lib/_tsc.js": "1f62c69e832fbbbd05a6dac950f152937f594a4d0b88087be5406ace348efcb5",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-coordination/run-once.py": "21f6e5d8d9e4ff474a338f0b069903e62c045ec51f559e6916a9bbbf8f91cf42",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-candidate/TIMING_READY.json": "d2679ff44713f6f551cd9a2c3d96e0b9edef0439e4ae099a3e26b06d7af800e8",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-candidate/equivalence-latest.json": "d6a7377bae70c657283bd927278c6723ce06818eca225444847a33c5b9873a9d",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-candidate/structural-control.json": "bf347c08b309f929b534862d373190049150131d1904b28fb08fcf97da41ec1d",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-candidate/run-functional.py": "922472bdea556929396c580e4d3777ca500c27107c2efd31dfcccc97194e3261",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-mutation/CLOSED.json": "3abd9d4cdd9f473298d86c75122cc27a6536041c4a34cb39cf25783616b63827",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-mutation/full-mutation.mjs": "1ccd0327adabc89ce2764ff6d234a57e3c8b109940d4e3dab8b4ac68a8f6f05a",
+    "/workspace/partybox-gpt-drops-B19-finish/.work/B19-fused-ASCII-DFA-mutation/original-declarations.mjs": "fd666625967d9476db38bccf19855867e29dd3bc6eb9de4f5bd5e1a180a1898c"
+  },
+  "externalSourcesUnchanged": true,
+  "naturalClosedUtc": "2026-10-09T00:17:50.670Z",
+  "harnessStartedUtc": "2026-10-09T00:17:44.924Z",
+  "sourcesUnchanged": true,
+  "summaries": [
+    {
+      "seed": 1,
+      "baselineMs": 895.0163350000003,
+      "candidateMs": 746.4302950000003,
+      "candidateToBaseline": 0.8339851082159301,
+      "improvementPercent": 16.601489178406993,
+      "sinksAgree": true
+    },
+    {
+      "seed": 2,
+      "baselineMs": 759.3746730000003,
+      "candidateMs": 775.2001329999998,
+      "candidateToBaseline": 1.020840120908272,
+      "improvementPercent": -2.084012090827206,
+      "sinksAgree": true
+    },
+    {
+      "seed": 3,
+      "baselineMs": 726.0164030000005,
+      "candidateMs": 843.6649429999998,
+      "candidateToBaseline": 1.1620466693505258,
+      "improvementPercent": -16.204666935052586,
+      "sinksAgree": true
+    }
+  ],
+  "phaseCount": 24,
+  "allCalls": 12000000,
+  "timingReportSha256": "d11d16cf5aa2e6bccba5999c9b57ea9582dc9e35a7a3506e138b03d95d6986c5"
+}

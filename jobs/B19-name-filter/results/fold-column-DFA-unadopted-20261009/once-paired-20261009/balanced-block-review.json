@@ -1,0 +1,88 @@
+{
+  "kind": "complete-balanced-block-fold-column-review",
+  "reviewedUtc": "2026-10-09T01:11:15.215185+00:00",
+  "trialNaturalClosedUtc": "2026-10-09T01:09:38.424Z",
+  "summaries": [
+    {
+      "seed": 1,
+      "baselineMs": 767.7959110000004,
+      "candidateMs": 708.003976,
+      "candidateToBaseline": 0.9221252234566792,
+      "improvementPercent": 7.787477654332076,
+      "sinksAgree": true
+    },
+    {
+      "seed": 2,
+      "baselineMs": 820.112622000001,
+      "candidateMs": 797.3907179999992,
+      "candidateToBaseline": 0.9722941662029416,
+      "improvementPercent": 2.770583379705841,
+      "sinksAgree": true
+    },
+    {
+      "seed": 3,
+      "baselineMs": 818.4319209999994,
+      "candidateMs": 812.9666329999991,
+      "candidateToBaseline": 0.9933222448199203,
+      "improvementPercent": 0.6677755180079702,
+      "sinksAgree": true
+    }
+  ],
+  "allSixBlocks": [
+    {
+      "seed": 1,
+      "block": 0,
+      "baselineMs": 392.0411240000001,
+      "candidateMs": 361.54978299999993,
+      "improvementPercent": 7.777587383919484
+    },
+    {
+      "seed": 1,
+      "block": 1,
+      "baselineMs": 375.7547870000003,
+      "candidateMs": 346.45419300000003,
+      "improvementPercent": 7.7977965986632265
+    },
+    {
+      "seed": 2,
+      "block": 0,
+      "baselineMs": 400.21278500000017,
+      "candidateMs": 390.56650999999965,
+      "improvementPercent": 2.4102865679317342
+    },
+    {
+      "seed": 2,
+      "block": 1,
+      "baselineMs": 419.89983700000084,
+      "candidateMs": 406.82420799999954,
+      "improvementPercent": 3.1139876341512545
+    },
+    {
+      "seed": 3,
+      "block": 0,
+      "baselineMs": 374.93404799999917,
+      "candidateMs": 425.86888699999963,
+      "improvementPercent": -13.585012956732214
+    },
+    {
+      "seed": 3,
+      "block": 1,
+      "baselineMs": 443.49787300000025,
+      "candidateMs": 387.09774599999946,
+      "improvementPercent": 12.71711330169125
+    }
+  ],
+  "all24PhasesRetained": true,
+  "allGcEventsRetained": 61,
+  "positiveBlocks": 5,
+  "decision": "REJECT_ADOPTION_INSUFFICIENTLY_CONSISTENT",
+  "reason": "Only5of6 balanced blocks improve; seed3 block0 regresses despite small positive seed3 aggregate. No unchanged luck comparison.",
+  "productionChanged": false,
+  "literalAcceptanceNotRun": true,
+  "existingRequiredAfterGreenLiteralOutliers": [
+    13,
+    5,
+    10
+  ],
+  "causeAttribution": null
+}

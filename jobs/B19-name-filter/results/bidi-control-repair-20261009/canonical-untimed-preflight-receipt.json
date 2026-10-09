@@ -1,0 +1,71 @@
+{
+  "bytes": 307467,
+  "sha256": "bc0e1834792ed7f18f1d2276f8ea0586f58d8b60452972bfcc02d909c40e8e3f",
+  "members": 24,
+  "completeCRCAndFullByteReadback": "PASS",
+  "preflight": {
+    "status": "PASS",
+    "naturalClosureObservedBy": "2026-10-09T03:32:33.806582+00:00",
+    "actualCommand": "node /tmp/B19-current-untimed-functional-preflight-20261009.mjs > /tmp/B19-current-untimed-functional-preflight-canonical-20261009.log 2>&1",
+    "exitCode": 0,
+    "mode": "PRIVATE-UNTIMED-FUNCTIONAL-PREFLIGHT",
+    "suites": 106,
+    "failures": 0,
+    "sourceSha256": "446bdd89b9bb6fe65dcdaa2f6c7a578111034d957aeb4a9f16cc64efba5c05a0",
+    "referenceSha256": "602eaac014d77682462ed75826ad42d7c82041431fbc1d662e9cdafd7bfd68a5",
+    "blindReferenceSha256": "a93b35e3170122b2fd0a77619eff36716c3b9fc2f4c47f3bfce1971778a76e71",
+    "mutants": [
+      {
+        "file": "mutations-seed1.json",
+        "actualExecuted": 25,
+        "killed": 25,
+        "caseCounts": [
+          43830
+        ]
+      },
+      {
+        "file": "unicode-mutations-seed1.json",
+        "actualExecuted": 4,
+        "killed": 4,
+        "caseCounts": [
+          30856
+        ]
+      },
+      {
+        "file": "mutations-seed2.json",
+        "actualExecuted": 25,
+        "killed": 25,
+        "caseCounts": [
+          43830
+        ]
+      },
+      {
+        "file": "unicode-mutations-seed2.json",
+        "actualExecuted": 4,
+        "killed": 4,
+        "caseCounts": [
+          30856
+        ]
+      },
+      {
+        "file": "mutations-seed3.json",
+        "actualExecuted": 25,
+        "killed": 25,
+        "caseCounts": [
+          43830
+        ]
+      },
+      {
+        "file": "unicode-mutations-seed3.json",
+        "actualExecuted": 4,
+        "killed": 4,
+        "caseCounts": [
+          30856
+        ]
+      }
+    ],
+    "timingExecuted": false,
+    "inheritedCommandFields": "Per-suite node tests/run.mjs strings name the canonical source checks. This invocation executes the separately retained private verifier with the unchanged original benchmark call explicitly omitted, so it is not npm test/full acceptance. Committed npm test retains the exact unchanged original benchmark.",
+    "scope": "All original functional suites, every original case at three seeds,75 actual original mutants; every added Unicode suite and12 additional actual mutants; strict TypeScript/gzip/purity/frozen values/retained corpus/original canonical manifest. No original local latency or current hosted full proof is claimed."
+  }
+}

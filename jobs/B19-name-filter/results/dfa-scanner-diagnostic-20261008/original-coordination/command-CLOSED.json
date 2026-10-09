@@ -1,0 +1,101 @@
+{
+  "grantUtc": "2026-10-08T22:20:42.114254+00:00",
+  "kind": "root-delegated-single-exact-regex-DFA-private-ABBA-BAAB",
+  "acknowledgments": {
+    "G04": {
+      "actualUtc": "2026-10-08T22:17:55Z",
+      "priorTwoFiniteReadersNaturallyClosedExit": 0,
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "G08": {
+      "decoderClosedObservedBeforeUtc": "2026-10-08T22:18:07Z",
+      "exactAckUtcCaptured": false,
+      "ackReceivedBeforeGrant": true,
+      "decoderExitCode": 0,
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "G09": {
+      "actualUtc": "2026-10-08T22:18:16.251963409Z",
+      "zeroWorkload": true,
+      "zeroWriter": true,
+      "G06ClaimOrBranchWriterStarted": false
+    },
+    "G10": {
+      "actualUtc": "2026-10-08T22:17:37Z",
+      "zeroWorkload": true,
+      "zeroWriter": true
+    },
+    "tracker": {
+      "reaffirmedActualMinuteUtc": "2026-10-08T22:20Z",
+      "exactAckUtcCaptured": false,
+      "ackReceivedBeforeGrant": true,
+      "zeroWorkload": true,
+      "zeroWriter": true
+    }
+  },
+  "rootZeroWorkloadAndWriter": true,
+  "runnableWorkloads": [],
+  "liveProcesses": [
+    "      1       0       0 S+   tail             0.0   876",
+    "      2       1       0 S+   caas-prefix-tra  0.0   252",
+    "    199       1     199 Ssl  dockerd          0.0 35536",
+    "    248     199     248 Ssl  containerd       0.4 21436",
+    "    464       0       0 Sl+  codex            0.1 45836",
+    " 206022     464  206022 Ss   python3         78.5 13416",
+    " 206026  206022  206022 R    ps               0.0  3944"
+  ],
+  "ignoredZombieEntries": 2409,
+  "STOPorCONTUsed": false,
+  "sourceSha256": "41442670786856c1dfa98a5755bd21273287047750035f419249ab7402e8505d",
+  "candidateSourceSha256": "ae8dc388665a4b4241b40b7ce1b86ba98e9eaadde7facefddf8ee47a00858e8a",
+  "candidateJsSha256": "330968b37089918bf450bb0a8a4546133e855c55df2aafe462d36be7aa4c6b8e",
+  "readyReceiptSha256": "1dc25712df26a6a070e079ad9a386fb360ffcf119b612cb52c5e3d1bebdf0e48",
+  "controllerSha256": "361d7ad02323f5a71c3dd6310f315b3e87bf18dcb53daa90d232d12cbd4725e1",
+  "argv": [
+    "node",
+    ".work/B19-dfa-compact-candidate/exact-harness.mjs",
+    "timing"
+  ],
+  "originalAcceptanceNotRun": true,
+  "allPriorFailuresRetained": true,
+  "commandStartedUtc": "2026-10-08T22:20:42.115057+00:00",
+  "commandClosedUtc": "2026-10-08T22:20:51.873280+00:00",
+  "exitCode": 0,
+  "naturalClosedUtc": "2026-10-08T22:20:51.845Z",
+  "harnessStartedUtc": "2026-10-08T22:20:42.407Z",
+  "sourcesUnchanged": true,
+  "summaries": [
+    {
+      "seed": 1,
+      "baselineMs": 1939.783967,
+      "candidateMs": 905.8682469999997,
+      "candidateToBaseline": 0.46699439855716657,
+      "improvementPercent": 53.300560144283345,
+      "sinksAgree": true
+    },
+    {
+      "seed": 2,
+      "baselineMs": 1706.5101940000004,
+      "candidateMs": 910.1176219999998,
+      "candidateToBaseline": 0.5333209407127629,
+      "improvementPercent": 46.667905928723705,
+      "sinksAgree": true
+    },
+    {
+      "seed": 3,
+      "baselineMs": 1591.325605000001,
+      "candidateMs": 1020.7814960000005,
+      "candidateToBaseline": 0.6414661416825502,
+      "improvementPercent": 35.85338583174498,
+      "sinksAgree": true
+    }
+  ],
+  "phaseCount": 24,
+  "allCalls": 12000000,
+  "timingReportSha256": "afde17dcf0dfecf2a66f66dbb24476909b9a5cf21601fa33d46b78280bbd0feb",
+  "allOwnersDirectlyReleased": true,
+  "releaseRecordedUtc": "2026-10-08T22:21:57.484220+00:00",
+  "releaseTimeScope": "Recorded after direct release messages; exact first message timestamp was not captured."
+}

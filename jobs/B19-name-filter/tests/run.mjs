@@ -7,7 +7,8 @@ import os from 'node:os';
 import { integrity } from '../scripts/integrity.mjs';
 import { nameFilter, isAllowedName } from '../dist/nameFilter.js';
 import { reference } from '../dist/tests/reference.js';
-import { createReference } from './blind/reference.mjs';
+import { createReference } from './independent-unicode-20261009/reference.mjs';
+import { makeUnicodeCases, verifyIndependentSeal, unicodeMutations } from './unicode-contract.mjs';
 
 const root = new URL('../', import.meta.url);
 process.chdir(root.pathname);
@@ -15,6 +16,10 @@ const coreOnly = process.argv.includes('--core');
 const out = 'reports/latest';
 mkdirSync(out, {recursive:true});
 const policy = JSON.parse(readFileSync('data/policy.json', 'utf8'));
+// Preserve the original regression and timed workloads when policy exceptions
+// are added. New product cases run separately and never enter the old sample.
+const originalPolicyBytes = readFileSync('data/original-workload-policy.json');
+const originalPolicy = JSON.parse(originalPolicyBytes);
 const blind = createReference(policy);
 const source = readFileSync('nameFilter.ts', 'utf8');
 const compiled = readFileSync('dist/nameFilter.js', 'utf8');
@@ -22,7 +27,7 @@ const refSource = readFileSync('tests/reference.ts', 'utf8');
 const sha = x => createHash('sha256').update(x).digest('hex');
 const label = x => x.ok ? 'ok' : x.reason;
 const json = (path, data) => writeFileSync(`${out}/${path}`, JSON.stringify(data,null,2)+'\n');
-const result = {mode:coreOnly?'core-only':'full', environment:{node:process.version,platform:process.platform,arch:process.arch,cpu:os.cpus()[0]?.model,unicode:process.versions.unicode},sourceSha256:sha(source),referenceSha256:sha(refSource),blindReferenceSha256:sha(readFileSync('tests/blind/reference.mjs')),suites:[],failures:[],unverified:[]};
+const result = {mode:coreOnly?'core-only':'full', environment:{node:process.version,platform:process.platform,arch:process.arch,cpu:os.cpus()[0]?.model,unicode:process.versions.unicode},sourceSha256:sha(source),referenceSha256:sha(refSource),blindReferenceSha256:sha(readFileSync('tests/independent-unicode-20261009/reference.mjs')),historicalBlindReferenceSha256:sha(readFileSync('tests/blind/reference.mjs')),suites:[],failures:[],unverified:[]};
 function record(name, cases, passed, seed, details={}) {
   const row={name,cases,passed,seed,command:`node tests/run.mjs${coreOnly?' --core':''}`, ...details};
   result.suites.push(row);
@@ -61,7 +66,7 @@ const positive = [
   'Cummings','Cumberland','Titus','Virginia','Bangkok','Canal','Analysis','Sexton',
   'Cocktail','Classical','Assistant','Passage','Massachusetts','Cassandra','Richard',
   'Dickson','Nigel','Nigeria','Niger','Niggardly','Hitchcock','Peacock','Cucumber',
-  'Anne-Marie',"O’Neil",'José','Zoë','李雷','محمد','🙂Alex','𠮷野','Bob','Bobby','Bobbi','Analía','Analise','Sexto',
+  'Anne-Marie',"O’Neil",'José','Zoë','李雷','محمد','🙂Alex','𠮷野','Bob','Bobby','Bobbi',
   'abcdefghijklmnop','𐐨'.repeat(16),'s中ex','Alex','Banana','niger',
 ];
 const witnessBlocked=['SEX','ｓｅｘ','s\u0301ex','s\u200bex','s e x','s.e.x','p0rn','d1ck','s3x','4nal','5ex','7wat','@nal','$ex','c1it','sеx','sεx','xes','seeex','fuck','Hancocksex','p|ssy','diсk','cоck','s℮x','cl!t','cυnt','cυпt','cυпτ','boooob'];
@@ -69,7 +74,7 @@ const witnessBlocked=['SEX','ｓｅｘ','s\u0301ex','s\u200bex','s e x','s.e.x',
 witnessBlocked.splice(witnessBlocked.indexOf('p|ssy'),1);
 const fixed = [
  ...['Lana','Bonner','Stitt','Dick','Coons','Dykes','Raper'].map(input=>({input,expected:'blocked',kind:'documented-collision'})),
- ...policy.safe.filter(input=>[...input].length<=16).map(input=>({input,expected:'ok',kind:'exact-exception'})),
+ ...originalPolicy.safe.filter(input=>[...input].length<=16).map(input=>({input,expected:'ok',kind:'exact-exception'})),
  ...positive.map(input=>({input,expected:'ok',kind:'benign'})),
  ...policy.terms.map(input=>({input,expected:'blocked',kind:'base-lexicon'})),
  ...witnessBlocked.map(input=>({input,expected:'blocked',kind:'adversarial'})),
@@ -77,6 +82,12 @@ const fixed = [
  ...['Alex\n','\ud800','\udfff','A\u202eB','A\u2067B','\u007f'].map(input=>({input,expected:'control',kind:'format'})),
  ...['abcdefghijklmnopq','𐐨'.repeat(17),'x'.repeat(100000)].map(input=>({input,expected:'length',kind:'format'})),
  ...[null,undefined,0,NaN,Infinity,{},[],false,Symbol('name')].map(input=>({input,expected:'type',kind:'format'})),
+];
+// Additive checks for the new exact spellings and for attempted exception
+// bypasses. These do not change fixed, positive, mutation or benchmark inputs.
+const addedNameCases = [
+ ...['Analia','Analía','ANALIA','Analise','ANALISE','Sexto','SEXTO'].map(input=>({input,expected:'ok'})),
+ ...['Analiasex','Analisesex','Sextosex','sexAnalia','4nalia','analiа','ѕexto','se xto'].map(input=>({input,expected:'blocked'})),
 ];
 const mappingCases=[];
 for(const term of policy.terms)for(let i=0;i<term.length;i++)for(const v of variants[term[i]]??[]){
@@ -90,12 +101,12 @@ for(const character of [...knownCharacters]){knownCharacters.add(character.toUpp
 const knownCases=[...knownCharacters].flatMap(c=>[c,'a'+c,c+'a','s'+c+'ex','se'+c+'x','Σ'+c+'A','A'+c+'Σ','AΣ'+c,'ſ'+c+'ex'].map(input=>({input,expected:label(blind.nameFilter(input)),kind:'precompiled-Unicode-policy'})));
 // The original suites and their counts are unchanged. Independently challenge
 // every extra compiled code point in ordinary, contextual-case and fallback
-// positions; expected outcomes come from the original sealed reference.
+// positions; expected outcomes come from the new separately sealed reference.
 const rangeCharacters=[...Array.from({length:64},(_,i)=>String.fromCharCode(0x00c0+i)),...Array.from({length:94},(_,i)=>String.fromCharCode(0xff01+i))];
 const rangeCases=rangeCharacters.flatMap(c=>[c,'a'+c,c+'a','s'+c+'ex','se'+c+'x','Σ'+c+'A','A'+c+'Σ','AΣ'+c,'ſ'+c+'ex'].map(input=>({input,expected:label(blind.nameFilter(input)),kind:'precompiled-Unicode-ranges'})));
 // Exhaust short mapped ASCII inputs and term-length/repetition boundaries.
 // These supplement rather than alter the original 43,830-case workload, and
-// expectations are supplied only by the unchanged sealed independent oracle.
+// expectations are supplied only by the new sealed independent oracle.
 const lengthCases=[];
 for(let a=97;a<=122;a++) {
  const first=String.fromCharCode(a);
@@ -178,6 +189,23 @@ const approvedPath='data/kept-rejections.json';
 const reviewed=JSON.parse(readFileSync(approvedPath,'utf8'));
 const approved=reviewed.rows.map(([group,name,reason,explanation])=>({group,name,reason,explanation:reviewed.explanations[explanation]??explanation}));
 for(const seed of [1,2,3]) {
+ const independentSeal=verifyIndependentSeal();
+ record('new-independent-reference-seal-and-input-identities',independentSeal.cases,independentSeal.passed,seed,{errors:independentSeal.errors});
+ const unicodeCases=makeUnicodeCases(seed,rng);
+ const unicodeProduction=evalCases(nameFilter,unicodeCases);
+ const unicodeIndependent=evalCases(blind.nameFilter,unicodeCases);
+ const unicodeHistoricalNFA=evalCases(reference,unicodeCases);
+ record('expanded-bidi-surrogate-and-unknown-category-contract',unicodeCases.length*3,unicodeProduction.passed+unicodeIndependent.passed+unicodeHistoricalNFA.passed,seed,{perImplementationCases:unicodeCases.length,productionErrors:unicodeProduction.errors,independentErrors:unicodeIndependent.errors,historicalNFAErrors:unicodeHistoricalNFA.errors});
+ const unicodeMutationRows=[];
+ for(const [id,description,from,to] of unicodeMutations){
+  if(compiled.split(from).length!==2)throw new Error(`Unicode mutation anchor must be unique: ${id}`);
+  const code=compiled.replace(from,to);
+  const module=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+  const checks=evalCases(module.nameFilter,unicodeCases);
+  unicodeMutationRows.push({id,description,seed,cases:unicodeCases.length,killed:checks.passed<unicodeCases.length,disagreements:unicodeCases.length-checks.passed,witness:checks.errors[0]??null,mutantSha256:sha(code)});
+ }
+ json(`unicode-mutations-seed${seed}.json`,unicodeMutationRows);
+ record('four-additional-real-Unicode-contract-mutations',unicodeMutationRows.length,unicodeMutationRows.filter(row=>row.killed).length,seed,{survivors:unicodeMutationRows.filter(row=>!row.killed).map(row=>row.id)});
  const snapshot=spawnSync('python3',['tests/retained-snapshot.py'],{encoding:'utf8'});
  const snapshotResult=snapshot.status===0?JSON.parse(snapshot.stdout):null;
  record('retained-original-snapshot-offline-and-corruption',8,snapshotResult?.passed===8?8:0,seed,{command:'python3 tests/retained-snapshot.py',output:snapshotResult??{stderr:snapshot.stderr,status:snapshot.status}});
@@ -188,6 +216,9 @@ for(const seed of [1,2,3]) {
  const failureExamples=[nameFilter(1),nameFilter('x'.repeat(17)),nameFilter('  '),nameFilter('Alex\n'),nameFilter('s.e.x')];
  const suggestionFor={type:'use-text',length:'shorten',empty:'add-letters',control:'remove-characters',blocked:'choose-another'};
  record('failure-suggestions-map-and-frozen',failureExamples.length,failureExamples.filter(x=>!x.ok&&x.suggestion===suggestionFor[x.reason]&&Object.isFrozen(x)).length,seed);
+ const addedNameChecks = evalCases(nameFilter, addedNameCases);
+ const addedBlindChecks = evalCases(blind.nameFilter, addedNameCases);
+ record('additional-given-names-and-exception-bypass',addedNameCases.length*2,addedNameChecks.passed+addedBlindChecks.passed,seed,{productionErrors:addedNameChecks.errors,blindErrors:addedBlindChecks.errors});
  const termsSource=source.match(/const TERMS = '([^']*)'/)[1].split(' ');
  const safeSource=source.match(/const SAFE = new Set\('([^']*)'/)[1].split(' ');
  const sourceChecks=[new Set(termsSource).size===termsSource.length,JSON.stringify(termsSource)===JSON.stringify(policy.terms),JSON.stringify([...new Set(safeSource)].sort())===JSON.stringify(policy.safe)];
@@ -228,6 +259,15 @@ for(const seed of [1,2,3]) {
  }
  const fuzz=makeFuzz(seed);
  const all=[...fixed,...mappingCases,...generated.rows,...fuzz,...corpusCases];
+ const originalWorkloadChecks = [
+  sha(originalPolicyBytes)==='ac400db6c9733f6becc82df93f91cdde13563767d2b9b3883684779b28c48dc9',
+  originalPolicy.safe.length===289 && originalPolicy.safe.every(input=>policy.safe.includes(input)),
+  JSON.stringify(originalPolicy.terms)===JSON.stringify(policy.terms),
+  JSON.stringify(originalPolicy.groups)===JSON.stringify(policy.groups),
+  fixed.length===459,
+  all.length===(corpora?43830:11830),
+ ];
+ record('original-workload-policy-and-counts',originalWorkloadChecks.length,originalWorkloadChecks.filter(Boolean).length,seed,{originalPolicySha256:sha(originalPolicyBytes),fixedCases:fixed.length,fullCases:all.length,benchmarkPositiveInputs:positive.length});
  let agreements=0,blindAgreements=0,deterministic=0,wrapper=0;
  for(const row of all){
   try{const a=label(nameFilter(row.input)),b=label(reference(row.input));if(a===b)agreements++;if(a===label(blind.nameFilter(row.input)))blindAgreements++;if(a===label(nameFilter(row.input)))deterministic++;if(isAllowedName(row.input)===(a==='ok'))wrapper++;}
