@@ -97,3 +97,7 @@ The earlier preliminary text above is retained as historical provenance; current
 The same credited guide displays `Mario Three-Peat` and `Dk's Konga Line`. These punctuation/case variants remain exact in their clips. Their character-table associations support only the scoped Party-mode Buddy awards; they do not replace the independently supported catalogue names.
 
 Waluigi's Pinball Arcade format remains single-source: the credited guide gives a generic four-player encounter, but the independently opened Wiki article does not explicitly state that count. Its Party Buddy award alone is corroborated; the unchanged format value retains its prior qualifier.
+
+## Second recovery source wording notes
+
+The newly read complete guide calls Prize Drop's dropped object a ball, while the appropriate Wiki section and in-game instruction call it a medal. Defuse or Lose's guide uses a different boss-name spelling from the Wiki. These wording differences do not independently corroborate the more specific Wiki mechanics, so the affected gameplay fields remain single-source and original claims stay preserved. No new mechanical interpretation or silent conflict resolution is adopted. The fifteen existing material catalogue conflicts remain intact.

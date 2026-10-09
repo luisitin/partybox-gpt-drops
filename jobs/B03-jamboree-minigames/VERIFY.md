@@ -325,7 +325,7 @@ Nineteen reward reports previously cited introductory article clips. Each now ci
 Ice and Easy’s summary was narrowed to the sliding action and shared balloon objective explicitly described by both Wiki and ScreenRant. Only that narrow gameplay field becomes corroborated; its timings, scoring, tie and reward fields retain their prior qualifiers. Whole-row confidence remains low. A new complete reopen of all 147 URLs recovered every updated short clip twice, with **3,676 recoveries**, no missing clips and successful verified HTTPS throughout.
 
 
-## Every core-gameplay summary independently described
+## Earlier gameplay milestone (historical; superseded by the polish audit)
 
 Actual two-pass HTTPS captures of TheGamer's original hands-on review corroborate Net Gains' mouse-controlled net fishing and Goomba Scoopas' Goomba-corralling action. Actual two-pass captures of GameNChick's released-game review corroborate Knock-Knock Match's partner matching of characters behind doors. Complete corresponding contexts match across both captures; updated source reopens recover every quote again. These three summaries were narrowed to the common actions, retaining all separate rule uncertainties.
 
@@ -333,16 +333,16 @@ All **132 narrow core-gameplay fields** now have at least two publisher families
 
 ## UNVERIFIED
 
-**Current strict research gate: NOT_MET; 271/1,320 narrowly corroborated fields, 1,049 remaining fields, zero of 132 complete rows.** Detailed timers, controls, scoring, ties and coin/star awards still require independent corroboration. The full two-wiki roster condition is unmet. No Nintendo gameplay or phone adaptation was executed; phone fit is editorial. Null payouts and all 15 material conflicts remain preserved. Current per-row coverage is reproduced in `reports/research-gaps.json`; all registered clips are bound to actual response records, and those records retain their individual dates.
+**Current strict research gate: NOT_MET; 283/1,320 narrowly corroborated fields, 1,037 remaining fields, zero of 132 complete rows.** Detailed timers, controls, scoring, ties and coin/star awards still require independent corroboration. The full two-wiki roster condition is unmet. No Nintendo gameplay or phone adaptation was executed; phone fit is editorial. Null payouts and all 15 material conflicts remain preserved. Current per-row coverage is reproduced in `reports/research-gaps.json`; all registered clips are bound to actual response records, and those records retain their individual dates.
 
-The 2026-10-08 category recovery newly reopened only Mario Wiki, Legacy base and Legacy TV twice. All other source reopens retain their historical actual dates. Source access and quote presence do not prove a complete gameplay rule.
+The first 2026-10-08 category recovery reopened only Mario Wiki's list, Legacy base and Legacy TV twice. The second recovery freshly reopened Family Game Squad and seven individual Wiki articles, sixteen verified HTTPS requests. Its Wiki-list comparison reuses two explicitly historical captures. Every other source retains its actual historical dates. Source access and quote presence do not prove a complete gameplay rule.
 
 | Fact field | Corroborated | Single source | Conflict | Unknown |
 | --- | ---: | ---: | ---: | ---: |
 | name | 132 | 0 | 0 | 0 |
-| category | 92 | 40 | 0 | 0 |
+| category | 104 | 28 | 0 | 0 |
 | format | 23 | 108 | 1 | 0 |
-| gameplay | 15 | 110 | 0 | 7 |
+| gameplay | 15 | 117 | 0 | 0 |
 | controls | 0 | 121 | 11 | 0 |
 | timeLimit | 0 | 100 | 3 | 29 |
 | winRules | 0 | 132 | 0 | 0 |
@@ -397,3 +397,17 @@ Final content command `PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minig
 Full hash verification and full strict verification both completed naturally before 23:25:37 UTC: **72 suites / 26,001 cases**, all 76 delivery hashes matched. Integrity exit 0; strict exit 1 with NOT_MET (271/1,320, zero complete rows). A subsequent `git diff --check` found the CSV writer's default CRLF record endings; record serialization was corrected to LF with every parsed value unchanged, the complete manifest regenerated, and the same complete commands rerun before commit. Every row's non-category field evidence and product values were independently compared against source commit `81fbd529eecdab39d2aaf7d4781a149634884420` and remain byte-value identical.
 
 Final LF serialization full hash and strict checks naturally CLOSED: 72 suites / 26,001 cases, all 76 manifest files; integrity exit 0 and strict exit 1 with the deliberate NOT_MET verdict. No source field changed during serialization. This paragraph corrects the recovery environment from the prior worker’s Python version to the actual version above. Only documentation metadata changed afterward; all delivery hashes were regenerated and checked directly before commit.
+
+## Second material recovery 2026-10-08/09
+
+The sixteen finite verified HTTPS responses naturally CLOSED at 2026-10-08 23:46:08.790810 UTC, before any adopted change. Complete source bodies remain private. Both guide captures independently parse all 112 source-spelled base-game names; the complete 29-game four-player, 12-game one-versus-three and ten-game Kaboom-Squad memberships agree with the Wiki category sets after case/punctuation normalization. Twelve category facts are newly corroborated. The Legacy misspellings and broad Koopathlon/Mouse labels are retained.
+
+Seven former fragment-only gameplay evidence sets now quote full in-game instruction sentences from the appropriate Jamboree Wiki sections. Every quote is at most 25 words and actually appears in both source responses. These fields remain single-source; a second publisher's title or action fragment is insufficient. All 132 product summaries and every unrelated product value/evidence field are unchanged. All 145 prior source quote arrays are retained without alteration; exact reuse avoids duplicating one already-registered quote. Registry: 145 URLs / 1,894 clips, with 3,794 recovered clips across ordered current/historical A/B records. Guide budget: 151 unique quoted words of 200.
+
+`check-category-summary-recovery.py` passed 438 receipt, full-group membership, independent-lineage, substantive-quote and preservation comparisons plus five malformed-proof rejections (missing guide-pass row, unmatched spelling, changed receipt hash, false independent-summary promotion, changed original-quote fingerprint). The first category proof remains historical; its 82 repaired memberships and five malformed fixtures still run. Only the twelve newly evidenced rows may supersede its original non-promoted list.
+
+The successful material writer naturally CLOSED at 2026-10-08 23:59:31.999256 UTC. Both preceding local quote-count assertions failed before any tracked write and remain in private logs. Full final content verification naturally exited 0 on 2026-10-09: **73 suites / 26,434 cases**, seed n/a, Python 3.12.14, jsonschema 4.26.0, BeautifulSoup 4.15.0. `reports/final-validation.json` contains every actual test name, count, qualifier and NOT_MET verdict. Complete `verify.py --hashes` and `verify.py --strict --hashes` then naturally closed before actual observation 00:06:08.901956 UTC: **74 suites / 26,513 cases / all 79 delivery hashes**. Integrity exited 0; strict exited 1 with deliberate NOT_MET (283/1,320 and zero complete rows). Only documentation metadata changed afterward; the manifest is regenerated and all 79 files checked directly before commit.
+
+Historical hosted acceptance for a327dc1 is recorded in `reports/hosted-ci-a327dc1-artifact.json`: run 37859517729 / job 113591645239 succeeded; the complete 103,932-character native log contains two full 72-suite / 26,001-case / 76-hash reports. The actual 2,673-byte artifact 11585436884's complete SHA-256 is recorded in that receipt. The ZIP was read in full, safe paths/CRC checked, its complete report compared to both native reports and all immutable source manifest files checked. Reader naturally CLOSED PASS 23:50:05.659053. This older workflow proves no newer source commit and does not close the research gate.
+
+The 23:57:17.332286 checkpoint bound was missed during the mandatory 23:51:04–23:57:29.128565 B19 HOLD. B03 owned no reader, writer or process during that hold. Actual source requests, writer, checks, push and workflow observations are never backdated.

@@ -3574,3 +3574,20 @@ The six fresh HTTPS responses closed at 22:58:22.153956 UTC. Both complete sourc
 | [MPL_BASE](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables) | “Boss Minigames” | `MPL_BASE_heading_boss_minigames` |
 | [MPL_BASE](https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables) | “Rhythm Minigames” | `MPL_BASE_heading_rhythm_minigames` |
 | [MPL_TV](https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/) | “Bowser Live” | `MPL_TV_heading_bowser_live` |
+
+## Second category and gameplay-source recovery 2026-10-08/09
+
+Sixteen verified HTTPS responses naturally CLOSED at 2026-10-08 23:46:08.790810 UTC. Both complete Family Game Squad captures parse 112 canonical base names; whole category groups, not isolated titles, support twelve newly corroborated categories. Seven appropriately scoped Wiki instruction sentences replace fragment-only evidence and remain single-source. Product summary strings and every unrelated product value/evidence field are unchanged. The original 1,884 quotes are retained, including reuse of one already registered Wiki instruction. Current registry has 145 URLs / 1,894 clips / 3,794 recorded A/B quote recoveries. Guide budget is 151 unique quoted words. Actual fresh source-body hashes/times and the two explicitly historical Wiki-list records are in `reports/category-summary-recovery.json`; complete HTML is private.
+
+| Quote ID | Exact short quotation | Captured locator |
+| --- | --- | --- |
+| W_LIST_recovery_kaboom_squad_minigames | Kaboom-Squad Minigames | Category heading / Juiceworks |
+| FGS_BASE_recovery_4_player_minigames | 4-Player minigames | Category heading / Sandwiched |
+| FGS_BASE_recovery_1_vs_3_minigames | 1-vs.-3 minigames | Category heading / Squeaky Shakedown |
+| FGS_BASE_recovery_kaboom_squad_minigames | Kaboom-Squad minigames | Category heading / Juiceworks |
+| W012_recovery_mash_the_button_for_10_seconds_to_set_up_a_line_of_whomps_then_watch_them_fall_like_dominoes | Mash the button for 10 seconds to set up a line of Whomps, then watch them fall like dominoes! | Super Mario Party Jamboree / in-game description |
+| W014_recovery_get_away_from_the_giant_boulder_jump_over_or_go_around_the_rubble_to_safely_reach_the_goal | Get away from the giant boulder. Jump over or go around the rubble to safely reach the goal. | Super Mario Party Jamboree / in-game description |
+| W028_recovery_stamp_your_color_onto_the_paper_to_cover_as_much_as_you_can | Stamp your color onto the paper to cover as much as you can. | Super Mario Party Jamboree / in-game description |
+| W040_recovery_snowball_fight_it_s_one_against_three_but_the_ukikis_will_help_the_solo_player | Snowball fight! It's one against three, but the Ukikis will help the solo player. | Super Mario Party Jamboree / in-game description |
+| W049_recovery_ground_pound_the_sparks_to_extinguish_them_and_delay_the_explosion | Ground Pound the sparks to extinguish them and delay the explosion. | Super Mario Party Jamboree / in-game description |
+| W050_recovery_work_together_to_reach_the_goal_one_player_fires_bullet_bills_to_create_a_path_while_the_other_player_jumps_across | Work together to reach the goal. One player fires Bullet Bills to create a path while the other player jumps across. | Super Mario Party Jamboree / in-game description |

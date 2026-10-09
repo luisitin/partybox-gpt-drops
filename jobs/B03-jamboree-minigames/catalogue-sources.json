@@ -871,12 +871,18 @@
           "text": "Bowser Live minigames",
           "locator": "Category heading / exact table membership in reports/category-heading-repair.json",
           "scope": "Category only; exact source-spelled names and their heading membership were compared across both complete HTML captures. No format, timer or scoring inference."
+        },
+        {
+          "id": "W_LIST_recovery_kaboom_squad_minigames",
+          "text": "Kaboom-Squad Minigames",
+          "locator": "Category heading / Juiceworks",
+          "scope": "Literal short quote recovered from both complete HTTPS captures; support is limited to the explicitly recorded category or Wiki-only gameplay context."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "Finite native curl, TLS verified; full body retained privately; exact registry quotations and category membership checked after natural collector closure.",
+          "retrieval": "Previously captured full Wiki roster reused; no new HTTP request.",
           "recoveredQuoteIds": [
             "W_LISTQ001",
             "W_LISTQ002",
@@ -1021,7 +1027,8 @@
             "W_LIST_heading_showdown_minigames",
             "W_LIST_heading_boss_minigames",
             "W_LIST_heading_rhythm_minigames",
-            "W_LIST_heading_bowser_live_minigames"
+            "W_LIST_heading_bowser_live_minigames",
+            "W_LIST_recovery_kaboom_squad_minigames"
           ],
           "httpStatus": 200,
           "tlsVerified": true,
@@ -1032,7 +1039,7 @@
         },
         {
           "pass": "B",
-          "retrieval": "Finite native curl, TLS verified; full body retained privately; exact registry quotations and category membership checked after natural collector closure.",
+          "retrieval": "Previously captured full Wiki roster reused; no new HTTP request.",
           "recoveredQuoteIds": [
             "W_LISTQ001",
             "W_LISTQ002",
@@ -1177,7 +1184,8 @@
             "W_LIST_heading_showdown_minigames",
             "W_LIST_heading_boss_minigames",
             "W_LIST_heading_rhythm_minigames",
-            "W_LIST_heading_bowser_live_minigames"
+            "W_LIST_heading_bowser_live_minigames",
+            "W_LIST_recovery_kaboom_squad_minigames"
           ],
           "httpStatus": 200,
           "tlsVerified": true,
@@ -1187,7 +1195,7 @@
           "fullArticleScopeSha256": "678b0ce991b009dba6548dd04fc1bec662d24a5a38f33cff10d0e30fd7665e41"
         }
       ],
-      "uniqueQuotedWords": 154
+      "uniqueQuotedWords": 156
     },
     {
       "id": "NL_BASE",
@@ -3921,16 +3929,30 @@
           "text": "112 minigames total",
           "locator": "Introduction / base count",
           "scope": "Fact context must be read at the locator; short clip is not an exhaustive rule."
+        },
+        {
+          "id": "FGS_BASE_recovery_4_player_minigames",
+          "text": "4-Player minigames",
+          "locator": "Category heading / Sandwiched",
+          "scope": "Literal short quote recovered from both complete HTTPS captures; support is limited to the explicitly recorded category or Wiki-only gameplay context."
+        },
+        {
+          "id": "FGS_BASE_recovery_1_vs_3_minigames",
+          "text": "1-vs.-3 minigames",
+          "locator": "Category heading / Squeaky Shakedown",
+          "scope": "Literal short quote recovered from both complete HTTPS captures; support is limited to the explicitly recorded category or Wiki-only gameplay context."
+        },
+        {
+          "id": "FGS_BASE_recovery_kaboom_squad_minigames",
+          "text": "Kaboom-Squad minigames",
+          "locator": "Category heading / Juiceworks",
+          "scope": "Literal short quote recovered from both complete HTTPS captures; support is limited to the explicitly recorded category or Wiki-only gameplay context."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "Exa web-fetch fresh request; timestamp is completion observation",
-          "retrievalTimestampUTC": null,
-          "requestOrder": 1,
-          "textSha256": "4deebe90b6cb64f6d1f8dd01bcf7b4299b1a2b1bc082b0be6ee9aa0ba9a067d2",
-          "textCharacters": 17753,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "FGS_BASEQ001",
             "FGS_BASEQ002",
@@ -4156,16 +4178,21 @@
             "FGS_BASEQ222",
             "FGS_BASEQ223",
             "FGS_BASEQ224",
-            "FGS_BASEQ225"
-          ]
+            "FGS_BASEQ225",
+            "FGS_BASE_recovery_4_player_minigames",
+            "FGS_BASE_recovery_1_vs_3_minigames",
+            "FGS_BASE_recovery_kaboom_squad_minigames"
+          ],
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "e062d663ae4103751007648ef0fe8064e3b45ffc95d9b38ae987e66d70e8aa92",
+          "bodyBytes": 227231,
+          "observedAtUTC": "2026-10-08T23:46:07.196630+00:00",
+          "fullArticleScopeSha256": "d61a8b6727a28b70ece44464d9f53259c5e4616595440ad3baf6750fb0fad2f9"
         },
         {
           "pass": "B",
-          "retrieval": "Exa web-fetch fresh reopening",
-          "retrievalTimestampUTC": null,
-          "requestOrder": 2,
-          "textSha256": "8bb23cf904165b47709eb9fc671a8161839f4cd870df33d9a3a773f921f16ab9",
-          "textCharacters": 17755,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "FGS_BASEQ001",
             "FGS_BASEQ002",
@@ -4391,11 +4418,20 @@
             "FGS_BASEQ222",
             "FGS_BASEQ223",
             "FGS_BASEQ224",
-            "FGS_BASEQ225"
-          ]
+            "FGS_BASEQ225",
+            "FGS_BASE_recovery_4_player_minigames",
+            "FGS_BASE_recovery_1_vs_3_minigames",
+            "FGS_BASE_recovery_kaboom_squad_minigames"
+          ],
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "e062d663ae4103751007648ef0fe8064e3b45ffc95d9b38ae987e66d70e8aa92",
+          "bodyBytes": 227231,
+          "observedAtUTC": "2026-10-08T23:46:08.789367+00:00",
+          "fullArticleScopeSha256": "d61a8b6727a28b70ece44464d9f53259c5e4616595440ad3baf6750fb0fad2f9"
         }
       ],
-      "uniqueQuotedWords": 145
+      "uniqueQuotedWords": 151
     },
     {
       "id": "SR_MOUSE",
@@ -6300,45 +6336,53 @@
           "text": "As proven through the use of a TAS, however, the maximum number of points one can get is 300.",
           "locator": "Overview/gameplay rule context for scoreRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W012_recovery_mash_the_button_for_10_seconds_to_set_up_a_line_of_whomps_then_watch_them_fall_like_dominoes",
+          "text": "Mash the button for 10 seconds to set up a line of Whomps, then watch them fall like dominoes!",
+          "locator": "Super Mario Party Jamboree / in-game description",
+          "scope": "Literal short quote recovered from both complete HTTPS captures; support is limited to the explicitly recorded category or Wiki-only gameplay context."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:14.863484+00:00",
-          "bodySha256": "0e6b586cbf2dca4d6687f0e02a8742cba1cc04b33d7bb9ce734ac27e13553c9b",
-          "bodyBytes": 78487,
-          "httpStatus": 200,
-          "tlsVerified": true,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "W012_q1",
             "W012_q2",
             "W012Q003",
             "W012Q004",
-            "W012Q005"
+            "W012Q005",
+            "W012_recovery_mash_the_button_for_10_seconds_to_set_up_a_line_of_whomps_then_watch_them_fall_like_dominoes"
           ],
-          "fullArticleScopeSha256": "c5d8cbcba348d2e79d8e9cdf7758a8ca25a76ffbe3f00b2964c02ecb0eeccb95"
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "0e6b586cbf2dca4d6687f0e02a8742cba1cc04b33d7bb9ce734ac27e13553c9b",
+          "bodyBytes": 78487,
+          "observedAtUTC": "2026-10-08T23:46:07.187650+00:00",
+          "fullArticleScopeSha256": "05b14bef2c07002a3118649367f71f96bcf8ba8a4be82c5f46aad07a02681fc5"
         },
         {
           "pass": "B",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:21.807757+00:00",
-          "bodySha256": "0e6b586cbf2dca4d6687f0e02a8742cba1cc04b33d7bb9ce734ac27e13553c9b",
-          "bodyBytes": 78487,
-          "httpStatus": 200,
-          "tlsVerified": true,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "W012_q1",
             "W012_q2",
             "W012Q003",
             "W012Q004",
-            "W012Q005"
+            "W012Q005",
+            "W012_recovery_mash_the_button_for_10_seconds_to_set_up_a_line_of_whomps_then_watch_them_fall_like_dominoes"
           ],
-          "fullArticleScopeSha256": "c5d8cbcba348d2e79d8e9cdf7758a8ca25a76ffbe3f00b2964c02ecb0eeccb95"
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "0e6b586cbf2dca4d6687f0e02a8742cba1cc04b33d7bb9ce734ac27e13553c9b",
+          "bodyBytes": 78487,
+          "observedAtUTC": "2026-10-08T23:46:08.092075+00:00",
+          "fullArticleScopeSha256": "05b14bef2c07002a3118649367f71f96bcf8ba8a4be82c5f46aad07a02681fc5"
         }
       ],
-      "uniqueQuotedWords": 35
+      "uniqueQuotedWords": 54
     },
     {
       "id": "W013",
@@ -6516,43 +6560,51 @@
           "text": "After a while, a spot with a wooden floor is reached (the boulder falls through it in Mario Party 6,",
           "locator": "Overview/gameplay rule context for winRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W014_recovery_get_away_from_the_giant_boulder_jump_over_or_go_around_the_rubble_to_safely_reach_the_goal",
+          "text": "Get away from the giant boulder. Jump over or go around the rubble to safely reach the goal.",
+          "locator": "Super Mario Party Jamboree / in-game description",
+          "scope": "Literal short quote recovered from both complete HTTPS captures; support is limited to the explicitly recorded category or Wiki-only gameplay context."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:15.090581+00:00",
-          "bodySha256": "643915e2406c151f64cd0412c130b52da0bbfa0416263752b4b4850686cc9d10",
-          "bodyBytes": 76092,
-          "httpStatus": 200,
-          "tlsVerified": true,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "W014_q1",
             "W014_q2",
             "W014_q3",
-            "W014Q004"
+            "W014Q004",
+            "W014_recovery_get_away_from_the_giant_boulder_jump_over_or_go_around_the_rubble_to_safely_reach_the_goal"
           ],
-          "fullArticleScopeSha256": "260817da2b3052f9e4dfabed6b1cef9a7cb7b474241d42397db360132b5ceaaa"
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "4846e416c94559724c4f68a4b605569f6474dffd4fe781a9557bdebc441f34f1",
+          "bodyBytes": 75647,
+          "observedAtUTC": "2026-10-08T23:46:07.453114+00:00",
+          "fullArticleScopeSha256": "02c8ef78f5422b1668184b1008a679685324d9b1b05072a01d2459706e6f767d"
         },
         {
           "pass": "B",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:21.911559+00:00",
-          "bodySha256": "643915e2406c151f64cd0412c130b52da0bbfa0416263752b4b4850686cc9d10",
-          "bodyBytes": 76092,
-          "httpStatus": 200,
-          "tlsVerified": true,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "W014_q1",
             "W014_q2",
             "W014_q3",
-            "W014Q004"
+            "W014Q004",
+            "W014_recovery_get_away_from_the_giant_boulder_jump_over_or_go_around_the_rubble_to_safely_reach_the_goal"
           ],
-          "fullArticleScopeSha256": "260817da2b3052f9e4dfabed6b1cef9a7cb7b474241d42397db360132b5ceaaa"
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "4846e416c94559724c4f68a4b605569f6474dffd4fe781a9557bdebc441f34f1",
+          "bodyBytes": 75647,
+          "observedAtUTC": "2026-10-08T23:46:08.184772+00:00",
+          "fullArticleScopeSha256": "02c8ef78f5422b1668184b1008a679685324d9b1b05072a01d2459706e6f767d"
         }
       ],
-      "uniqueQuotedWords": 26
+      "uniqueQuotedWords": 44
     },
     {
       "id": "W015",
@@ -8371,45 +8423,53 @@
           "text": "The player who covers the most wins, but if everyone has under 5 percent, it is a draw.",
           "locator": "Overview/gameplay rule context for winRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W028_recovery_stamp_your_color_onto_the_paper_to_cover_as_much_as_you_can",
+          "text": "Stamp your color onto the paper to cover as much as you can.",
+          "locator": "Super Mario Party Jamboree / in-game description",
+          "scope": "Literal short quote recovered from both complete HTTPS captures; support is limited to the explicitly recorded category or Wiki-only gameplay context."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:15.739168+00:00",
-          "bodySha256": "cdbada9e74bdac7b9483b0401a9ed2520591e7a306c96a3d7a570b2a97fa28d9",
-          "bodyBytes": 77636,
-          "httpStatus": 200,
-          "tlsVerified": true,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "W028_q1",
             "W028_q2",
             "W028_q3",
             "W028Q004",
-            "W028Q005"
+            "W028Q005",
+            "W028_recovery_stamp_your_color_onto_the_paper_to_cover_as_much_as_you_can"
           ],
-          "fullArticleScopeSha256": "1df3c81bd4a1fd017e4aaa3331fdd0486894e441311dcb2d7e7a045e47e5a6b8"
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "cdbada9e74bdac7b9483b0401a9ed2520591e7a306c96a3d7a570b2a97fa28d9",
+          "bodyBytes": 77636,
+          "observedAtUTC": "2026-10-08T23:46:07.177228+00:00",
+          "fullArticleScopeSha256": "2fea3db59006a4dbe496f8a277b3e4529bc0c45245176299b911cab4162321d4"
         },
         {
           "pass": "B",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:22.627512+00:00",
-          "bodySha256": "cdbada9e74bdac7b9483b0401a9ed2520591e7a306c96a3d7a570b2a97fa28d9",
-          "bodyBytes": 77636,
-          "httpStatus": 200,
-          "tlsVerified": true,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "W028_q1",
             "W028_q2",
             "W028_q3",
             "W028Q004",
-            "W028Q005"
+            "W028Q005",
+            "W028_recovery_stamp_your_color_onto_the_paper_to_cover_as_much_as_you_can"
           ],
-          "fullArticleScopeSha256": "1df3c81bd4a1fd017e4aaa3331fdd0486894e441311dcb2d7e7a045e47e5a6b8"
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "cdbada9e74bdac7b9483b0401a9ed2520591e7a306c96a3d7a570b2a97fa28d9",
+          "bodyBytes": 77636,
+          "observedAtUTC": "2026-10-08T23:46:08.370989+00:00",
+          "fullArticleScopeSha256": "2fea3db59006a4dbe496f8a277b3e4529bc0c45245176299b911cab4162321d4"
         }
       ],
-      "uniqueQuotedWords": 26
+      "uniqueQuotedWords": 39
     },
     {
       "id": "W029",
@@ -9913,47 +9973,55 @@
           "text": "In order to win, the solo player must hit all team players, and the three opposing players must hit the",
           "locator": "Overview/gameplay rule context for winRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W040_recovery_snowball_fight_it_s_one_against_three_but_the_ukikis_will_help_the_solo_player",
+          "text": "Snowball fight! It's one against three, but the Ukikis will help the solo player.",
+          "locator": "Super Mario Party Jamboree / in-game description",
+          "scope": "Literal short quote recovered from both complete HTTPS captures; support is limited to the explicitly recorded category or Wiki-only gameplay context."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:16.331481+00:00",
-          "bodySha256": "c73b3cd50eab42f5f1045f0f9ad8ce0bcc67360941098630fcada31ee9546031",
-          "bodyBytes": 77938,
-          "httpStatus": 200,
-          "tlsVerified": true,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "W040_q1",
             "W040_q2",
             "W040_q3",
             "W040_q4",
             "W040Q005",
-            "W040Q006"
+            "W040Q006",
+            "W040_recovery_snowball_fight_it_s_one_against_three_but_the_ukikis_will_help_the_solo_player"
           ],
-          "fullArticleScopeSha256": "997c47cd8ac63b8b558e823621dd7a6bb9e95dc0baf6d102a736c6871c7faf68"
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "c73b3cd50eab42f5f1045f0f9ad8ce0bcc67360941098630fcada31ee9546031",
+          "bodyBytes": 77938,
+          "observedAtUTC": "2026-10-08T23:46:07.610807+00:00",
+          "fullArticleScopeSha256": "53221706172c939e19082bd24cc69b99b478cf7fab5ead28b7f649045299b271"
         },
         {
           "pass": "B",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:23.235313+00:00",
-          "bodySha256": "c73b3cd50eab42f5f1045f0f9ad8ce0bcc67360941098630fcada31ee9546031",
-          "bodyBytes": 77938,
-          "httpStatus": 200,
-          "tlsVerified": true,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "W040_q1",
             "W040_q2",
             "W040_q3",
             "W040_q4",
             "W040Q005",
-            "W040Q006"
+            "W040Q006",
+            "W040_recovery_snowball_fight_it_s_one_against_three_but_the_ukikis_will_help_the_solo_player"
           ],
-          "fullArticleScopeSha256": "997c47cd8ac63b8b558e823621dd7a6bb9e95dc0baf6d102a736c6871c7faf68"
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "c73b3cd50eab42f5f1045f0f9ad8ce0bcc67360941098630fcada31ee9546031",
+          "bodyBytes": 77938,
+          "observedAtUTC": "2026-10-08T23:46:08.328629+00:00",
+          "fullArticleScopeSha256": "53221706172c939e19082bd24cc69b99b478cf7fab5ead28b7f649045299b271"
         }
       ],
-      "uniqueQuotedWords": 32
+      "uniqueQuotedWords": 46
     },
     {
       "id": "W041",
@@ -11113,45 +11181,53 @@
           "text": "Once that timer elapses, both teams will win.",
           "locator": "Overview/gameplay rule context for winRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W049_recovery_ground_pound_the_sparks_to_extinguish_them_and_delay_the_explosion",
+          "text": "Ground Pound the sparks to extinguish them and delay the explosion.",
+          "locator": "Super Mario Party Jamboree / in-game description",
+          "scope": "Literal short quote recovered from both complete HTTPS captures; support is limited to the explicitly recorded category or Wiki-only gameplay context."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:16.797281+00:00",
-          "bodySha256": "fe20952a4cbd74f585c7881f1b2b909d94c825c55aa72283abebc68f664e4bc8",
-          "bodyBytes": 90279,
-          "httpStatus": 200,
-          "tlsVerified": true,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "W049_q1",
             "W049_q2",
             "W049_q3",
             "W049_q4",
-            "W049Q005"
+            "W049Q005",
+            "W049_recovery_ground_pound_the_sparks_to_extinguish_them_and_delay_the_explosion"
           ],
-          "fullArticleScopeSha256": "4951a8bdcc0b0e563e4cd153069aaf7fa6f97d7de34babd00a43419b7c28ec83"
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "27281151d8982091e086116a9e2116a8e8fc4b24d3e7515ecb8b887f5035b6cc",
+          "bodyBytes": 89836,
+          "observedAtUTC": "2026-10-08T23:46:07.833477+00:00",
+          "fullArticleScopeSha256": "5ac7e20f020a3cff74635a8c57b40f934900243b502bc690dfcabd530d78a0a4"
         },
         {
           "pass": "B",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:23.675477+00:00",
-          "bodySha256": "fe20952a4cbd74f585c7881f1b2b909d94c825c55aa72283abebc68f664e4bc8",
-          "bodyBytes": 90279,
-          "httpStatus": 200,
-          "tlsVerified": true,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "W049_q1",
             "W049_q2",
             "W049_q3",
             "W049_q4",
-            "W049Q005"
+            "W049Q005",
+            "W049_recovery_ground_pound_the_sparks_to_extinguish_them_and_delay_the_explosion"
           ],
-          "fullArticleScopeSha256": "4951a8bdcc0b0e563e4cd153069aaf7fa6f97d7de34babd00a43419b7c28ec83"
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "27281151d8982091e086116a9e2116a8e8fc4b24d3e7515ecb8b887f5035b6cc",
+          "bodyBytes": 89836,
+          "observedAtUTC": "2026-10-08T23:46:08.547811+00:00",
+          "fullArticleScopeSha256": "5ac7e20f020a3cff74635a8c57b40f934900243b502bc690dfcabd530d78a0a4"
         }
       ],
-      "uniqueQuotedWords": 18
+      "uniqueQuotedWords": 29
     },
     {
       "id": "W050",
@@ -11244,17 +11320,18 @@
           "text": "If no player makes it to the goal within five minutes in Mario Party 6 or three minutes in Super",
           "locator": "Overview/gameplay rule context for tieRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W050_recovery_work_together_to_reach_the_goal_one_player_fires_bullet_bills_to_create_a_path_while_the_other_player_jumps_across",
+          "text": "Work together to reach the goal. One player fires Bullet Bills to create a path while the other player jumps across.",
+          "locator": "Super Mario Party Jamboree / in-game description",
+          "scope": "Literal short quote recovered from both complete HTTPS captures; support is limited to the explicitly recorded category or Wiki-only gameplay context."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:16.863734+00:00",
-          "bodySha256": "00f23dbb7e58e2f3e04aa55bbdec382b9a7cb627f87a3f99b5adb0c4b4fbaff2",
-          "bodyBytes": 78048,
-          "httpStatus": 200,
-          "tlsVerified": true,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "W050_q1",
             "W050_q2",
@@ -11264,18 +11341,19 @@
             "W050_q6",
             "W050_q7",
             "W050Q008",
-            "W050Q009"
+            "W050Q009",
+            "W050_recovery_work_together_to_reach_the_goal_one_player_fires_bullet_bills_to_create_a_path_while_the_other_player_jumps_across"
           ],
-          "fullArticleScopeSha256": "3fe641827e313a0ea4eedbebc3a4ad564acaa35d6664afbd2f337169b5a732f3"
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "00f23dbb7e58e2f3e04aa55bbdec382b9a7cb627f87a3f99b5adb0c4b4fbaff2",
+          "bodyBytes": 78048,
+          "observedAtUTC": "2026-10-08T23:46:07.541040+00:00",
+          "fullArticleScopeSha256": "49b1581db0b8d263b057221fa67b5d425e73220424df2c173ecddab26d0103d6"
         },
         {
           "pass": "B",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:23.746724+00:00",
-          "bodySha256": "00f23dbb7e58e2f3e04aa55bbdec382b9a7cb627f87a3f99b5adb0c4b4fbaff2",
-          "bodyBytes": 78048,
-          "httpStatus": 200,
-          "tlsVerified": true,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "W050_q1",
             "W050_q2",
@@ -11285,12 +11363,18 @@
             "W050_q6",
             "W050_q7",
             "W050Q008",
-            "W050Q009"
+            "W050Q009",
+            "W050_recovery_work_together_to_reach_the_goal_one_player_fires_bullet_bills_to_create_a_path_while_the_other_player_jumps_across"
           ],
-          "fullArticleScopeSha256": "3fe641827e313a0ea4eedbebc3a4ad564acaa35d6664afbd2f337169b5a732f3"
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "00f23dbb7e58e2f3e04aa55bbdec382b9a7cb627f87a3f99b5adb0c4b4fbaff2",
+          "bodyBytes": 78048,
+          "observedAtUTC": "2026-10-08T23:46:08.502756+00:00",
+          "fullArticleScopeSha256": "49b1581db0b8d263b057221fa67b5d425e73220424df2c173ecddab26d0103d6"
         }
       ],
-      "uniqueQuotedWords": 50
+      "uniqueQuotedWords": 71
     },
     {
       "id": "W051",
@@ -13129,12 +13213,7 @@
       "passes": [
         {
           "pass": "A",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:17.653510+00:00",
-          "bodySha256": "8029cb3b5a15c2698568fb7106ecf3d6f0414285f3c74c871efef081950184f7",
-          "bodyBytes": 55940,
-          "httpStatus": 200,
-          "tlsVerified": true,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "W063_q1",
             "W063_q2",
@@ -13146,16 +13225,16 @@
             "W063Q008",
             "W063_reward_1"
           ],
-          "fullArticleScopeSha256": "57b38aefee1a63355a0a2f456869d9502b8fdf7df18f99d23d63de9579eab203"
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "8029cb3b5a15c2698568fb7106ecf3d6f0414285f3c74c871efef081950184f7",
+          "bodyBytes": 55940,
+          "observedAtUTC": "2026-10-08T23:46:07.700526+00:00",
+          "fullArticleScopeSha256": "a20220233366f93fab5d99dfc7f44b61ad2caf64fb6c083757ba8d28626714d5"
         },
         {
           "pass": "B",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:24.384324+00:00",
-          "bodySha256": "8029cb3b5a15c2698568fb7106ecf3d6f0414285f3c74c871efef081950184f7",
-          "bodyBytes": 55940,
-          "httpStatus": 200,
-          "tlsVerified": true,
+          "retrieval": "Fresh finite native HTTPS capture; collector naturally closed 23:46:08.790810 UTC; full source bodies private.",
           "recoveredQuoteIds": [
             "W063_q1",
             "W063_q2",
@@ -13167,7 +13246,12 @@
             "W063Q008",
             "W063_reward_1"
           ],
-          "fullArticleScopeSha256": "57b38aefee1a63355a0a2f456869d9502b8fdf7df18f99d23d63de9579eab203"
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "bodySha256": "8029cb3b5a15c2698568fb7106ecf3d6f0414285f3c74c871efef081950184f7",
+          "bodyBytes": 55940,
+          "observedAtUTC": "2026-10-08T23:46:08.590087+00:00",
+          "fullArticleScopeSha256": "a20220233366f93fab5d99dfc7f44b61ad2caf64fb6c083757ba8d28626714d5"
         }
       ],
       "uniqueQuotedWords": 31

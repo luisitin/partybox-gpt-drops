@@ -18,3 +18,7 @@
 ## 2026-10-08 material category repair
 
 Weakest verified support was title-only category citations. The repair registers actual headings and two-pass complete source membership, restoring 82 category fields without promoting broad/discordant categories or mechanics. Full initial offline verification passes; strict coverage remains incomplete at 271/1,320 fields. This is substantive research repair, not a completed strict KEEP GOING round. The restart gap and true source timestamps remain recorded in NEXT.md.
+
+## Second material recovery 2026-10-08/09
+
+Sixteen actual A/B HTTPS requests support twelve additional categories and seven substantive Wiki gameplay re-quotes. Complete guide category groups, source independence and original row/quote preservation are checked; full content verification passes 73 suites / 26,434 cases. Actual coverage is 283/1,320 corroborated, 1,037 open and zero complete rows. The seven repaired gameplay evidence sets remain single-source and all product summaries remain unchanged. This is substantive evidence recovery; strict completion and the second full independent wiki roster are still unmet, so no completed KEEP GOING or Ready claim is made. Coordinated holds and both checkpoint misses remain explicit in NEXT.md.

@@ -2,13 +2,13 @@
 
 **What this is:** a research catalogue of 132 minigames (112 base games, 20 Jamboree TV additions) with name, category, format, time limit, controls, win, score, tie and reward rules, a two-sentence summary, and a 1-5 phone-touch fit. Data is JSON and CSV, checked by a JSON Schema and an offline verifier.
 **How to use it:** read `DESIGN-DIGEST.md` for the design reading, `INTEGRATION.md` for what PartyBox does with it. Query `minigames.json` (or `minigames.csv`, see below). Do not ship names, art or strings.
-**Status:** reference only. Draft research, strict gate **NOT_MET**: 271 of 1,320 narrow fact fields corroborated, 1,049 still open, 0 of 132 rows complete. Nothing here is Nintendo-verified gameplay.
+**Status:** reference only. Draft research, strict gate **NOT_MET**: 283 of 1,320 narrow fact fields corroborated, 1,037 still open, 0 of 132 rows complete. Nothing here is Nintendo-verified gameplay.
 
 ## Quick start (from the repo root)
 
 ```bash
 python3 -m pip install -r jobs/B03-jamboree-minigames/requirements.txt
-PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minigames/verify.py --hashes            # 72 suites, exit 0
+PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minigames/verify.py --hashes            # integrity checks
 PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minigames/verify.py --strict --hashes   # exit 1 by design (NOT_MET)
 PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minigames/quote-support-check.py        # prints the quote-support report
 ```
@@ -42,7 +42,7 @@ The verifier enforces them (`Narrow summary status follows...`, `Quote-support r
 
 - **Product** (what a reader uses): `minigames.json`, `minigames.csv`, `minigames.schema.json`, `DESIGN-DIGEST.md`, `INTEGRATION.md`.
 - **Checks** (run by the verifier): `verify.py`, `quote-support-check.py`, `reports/quote-support-check.json`, `reports/research-gaps.json` (the exact open ledger), `catalogue-second-pass.json` (per-row fingerprints).
-- **Evidence** (proves the rows, not needed by a port): `catalogue-sources.json` and `SOURCES.md` (145 URLs, 1,866 clips), `catalogue-conflicts.json` and `CONFLICTS.md`, the `reports/source-reopens-*` captures, the earlier gameplay leads and the legacy helpers. `HISTORICAL-INDEX-NOTES.md` explains the preserved history.
+- **Evidence** (proves the rows, not needed by a port): `catalogue-sources.json` and `SOURCES.md` (145 URLs, 1,894 clips), `catalogue-conflicts.json` and `CONFLICTS.md`, the `reports/source-reopens-*` captures, the earlier gameplay leads and the legacy helpers. `HISTORICAL-INDEX-NOTES.md` explains the preserved history.
 - **Process**: `LOOP.md`, `NEXT.md`, `VERIFY.md`, `ASSUMPTIONS.md`, `SHA256SUMS.txt` (every file except itself).
 
 ## Known limits
@@ -52,8 +52,16 @@ The verifier enforces them (`Narrow summary status follows...`, `Quote-support r
 - Any mechanic here is a claim about a Nintendo game; no gameplay was run, and PhoneFit is not Nintendo's support statement.
 - Full history and every remaining open field: `reports/research-gaps.json`, and `VERIFY.md`.
 
-## Category evidence recovery 2026-10-08
+## First category recovery 2026-10-08 (historical checkpoint a327dc1)
 
 Fresh ordered A/B HTTPS captures of Mario Wiki and Mario Party Legacy now support 82 additional category fields (76 base, 6 Bowser Live). Real headings are registered as short quotations and exact source-spelled table membership is retained in `reports/category-heading-repair.json`; the checker accepts only case/punctuation normalization, never spelling correction. Current strict coverage is **271/1,320 fields; 1,049 open; 0/132 complete rows**. Categories now have 92 corroborated and 40 single-source entries. The earlier polish table above remains historical.
 
-The current registry has 145 URLs and 1,884 clips, with 3,774 recorded A/B quote recoveries across all 148 current/historical URLs. Only the three category sources were newly reopened in this recovery; every other source retains its actual earlier timestamp. Koopathlon subcategories, Kaboom-Squad versus Teamwork, two spelling disagreements, 7 fragment-only summaries and all unresolved detailed mechanics remain qualified. A second full independent wiki roster is still missing.
+That checkpoint's registry had 145 URLs and 1,884 clips, with 3,774 recorded A/B quote recoveries across all 148 current/historical URLs. Only the three category sources were newly reopened in that recovery; every other source retained its actual earlier timestamp.
+
+## Current category and gameplay-source recovery 2026-10-08/09
+
+Sixteen verified HTTPS requests reopened Family Game Squad and seven individual Wiki articles in ordered A/B passes. Exact independently captured category headings and complete group membership support 12 more category facts: ten Kaboom-Squad games and the canonical Sandwiched/Squeaky Shakedown names. The historical Legacy spellings remain preserved. Categories now have **104 corroborated and 28 single-source entries**; the broad Koopathlon labels and fourteen Mouse entries remain qualified.
+
+Seven gameplay evidence sets now quote actual Wiki instruction sentences instead of headings or fragments. They remain single-source: **15 gameplay fields corroborated, 117 single-source, none fragment-only**. Product summaries and all unrelated product values are unchanged. The full guide's sections were read, but detailed independent summary support is still missing. `reports/category-summary-recovery.json` and its checker preserve the actual receipts, complete guide membership, original quotations and every unrelated row value.
+
+Current registry: **145 URLs / 1,894 clips / 3,794 recorded A/B quote recoveries** across 148 current/historical URLs. Eight sources were freshly reopened for this second recovery; the Wiki list records reused for the category comparison are explicitly historical. The independent two-wiki roster requirement remains unmet. The earlier checkpoint's successful hosted workflow and artifact receipt are historical evidence, not acceptance of a newer commit.

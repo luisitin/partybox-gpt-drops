@@ -222,6 +222,9 @@ def run(args):
     category_checker=module('b03_category_heading_repair','check-category-heading-repair.py')
     for result in category_checker.run():
         checks.append(result);print(f"PASS {result['name']}: {result['caseCount']} cases; seed=n/a")
+    recovery_checker=module('b03_category_summary_recovery','check-category-summary-recovery.py')
+    for result in recovery_checker.run():
+        checks.append(result);print(f"PASS {result['name']}: {result['caseCount']} cases; seed=n/a")
     def negative_reopens():
         mutations=[
             lambda p,s:p[0].pop(),
