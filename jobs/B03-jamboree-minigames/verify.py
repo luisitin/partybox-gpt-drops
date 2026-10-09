@@ -225,6 +225,9 @@ def run(args):
     preview_arrangement_recovery=module('b03_preview_arrangement_recovery','check-preview-arrangement-recovery.py')
     for result in preview_arrangement_recovery.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Preview arrangement recovery failed'),result.get('detail',''))
+    native_japanese_gameplay=module('b03_native_japanese_gameplay','check-native-japanese-gameplay-candidates.py')
+    for result in native_japanese_gameplay.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Native Japanese gameplay candidates failed'),result.get('detail',''))
     eleven_field_recovery=module('b03_eleven_field_recovery','check-eleven-field-recovery.py')
     for result in eleven_field_recovery.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Eleven-field literal recovery failed'),result.get('detail',''))
