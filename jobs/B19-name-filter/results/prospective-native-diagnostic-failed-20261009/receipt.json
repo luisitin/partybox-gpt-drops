@@ -1,0 +1,91 @@
+{
+  "schema": "b19-actual-diagnostic-publication/1",
+  "capturedAt": "2026-10-09T02:37:57.073005+00:00",
+  "status": "DIAGNOSTIC_FAILED",
+  "childExitCode": 0,
+  "wholeControllerExitCode": 1,
+  "afterCheckFailure": {
+    "type": "KeyError",
+    "message": "'jobs/B19-name-filter/dist/nameFilter.js'"
+  },
+  "originalAcceptancePassed": false,
+  "historicalCauseEstablished": false,
+  "clockAlignmentEstablished": false,
+  "productionChanged": false,
+  "completedRawCallsRetained": 30000,
+  "observedGCEntriesRetained": 9,
+  "offlineRecoveryStatus": "SAVED_TELEMETRY_VERIFIED_WITH_REPAIRED_OFFLINE_READER",
+  "members": {
+    "diagnostic-retained.mjs": {
+      "bytes": 8960,
+      "sha256": "33025e91af50245999a95db5f5c07ab89decbf1b8f17cde76b7631ff9409b3b2"
+    },
+    "run-retained-once.py": {
+      "bytes": 8932,
+      "sha256": "04cc12482213cf8a6020bacf31d96e1e8f8aed0f23bbadebf4cce88e652df3e7"
+    },
+    "READY-retained.json": {
+      "bytes": 501442,
+      "sha256": "e0ea9cdc491376f683d10e7bf16702ae1073828873b38698016c6773ec21794a"
+    },
+    "root-retained-grant.json": {
+      "bytes": 1374,
+      "sha256": "404375f39acce5e353cb939c661aafc4fd6e44d2a389b76d0154760801e9ae34"
+    },
+    "diagnostic-retained-report.json": {
+      "bytes": 6480275,
+      "sha256": "15ef4faead0d2aa89681ef9ba03c8f256629207f10419bd929c7cc4fb5a15fd0"
+    },
+    "diagnostic-retained.cpuprofile": {
+      "bytes": 31065,
+      "sha256": "89de0fa7092d28390e59934b598ee69b760c2e8c8fb0a8e7c951a3074f137b45"
+    },
+    "retained-controller.json": {
+      "bytes": 2118,
+      "sha256": "759d8c42a206ab0bb5d29f2cee25c046923fdd38e849d9b375e1063cf16ff819"
+    },
+    "retained-native.log": {
+      "bytes": 175,
+      "sha256": "da792d499c508055ec2a1941d679d2bb487a226a614b6369ec0751b127c50d08"
+    },
+    "PROPOSAL.json": {
+      "bytes": 1300,
+      "sha256": "2f17b4a424a3be8a3ac01e1af6a8df78070e2208214f2d0d578e3686efd6b389"
+    },
+    "diagnostic.mjs": {
+      "bytes": 5726,
+      "sha256": "7ace73d5b21e8bd4cadaf6a3479ed4e8e53b733a679a19ae32204b980fea2b97"
+    },
+    "original-benchmark-source.txt": {
+      "bytes": 832,
+      "sha256": "f0ecf7bc72db9d047c8207b1300d6b8e9b265a7af29ced7b2aa24f5470e6f58e"
+    },
+    "cadence-375d344.json": {
+      "bytes": 469,
+      "sha256": "96d0f25cabc9166e05bc8ce46e26aabc875c7ab3136da3fe74bb7b5c11c0e1a0"
+    },
+    "offline-reader-proposal.py": {
+      "bytes": 5867,
+      "sha256": "1df0c0e24e1d48b3094172d37e4298125f5ddb0c9dce30b187de3887fd6bd1ab"
+    },
+    "old-frozen-generated-dependency-map.json": {
+      "bytes": 272205,
+      "sha256": "9494a73a1dbbb8d83eecb35eb8aa2c3a391db503b16746c9d18cacfdc7ae964d"
+    },
+    "actual-offline-reader.json": {
+      "bytes": 7768,
+      "sha256": "ed39728fd9f0d472babf15264ecb04716816c93c8ad8815d64a344ad7b6889d6"
+    },
+    "independent-offline-reader-static.json": {
+      "bytes": 4426,
+      "sha256": "d29193b3516d8daf0ee5952f9eacbc3e58f2b0d491d8064edc4526931f680434"
+    }
+  },
+  "archive": {
+    "bytes": 879345,
+    "sha256": "dd3f5363d3415781cb722f5d85edd4cb81ffafca2b1be0a53ef85efb37ca263e"
+  },
+  "offlineReaderClosedAt": "2026-10-09T02:38:03.541394+00:00",
+  "offlineReaderCodeSha256": "1df0c0e24e1d48b3094172d37e4298125f5ddb0c9dce30b187de3887fd6bd1ab",
+  "originalControllerStatusUnchanged": "DIAGNOSTIC_FAILED"
+}
