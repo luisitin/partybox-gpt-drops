@@ -594,16 +594,16 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | mega-wiggler-tree-party:space:tv_tag_team:unlucky | single_source/medium | W_WIGGLER-Q006 |
 | mega-wiggler-tree-party:space:tv_tag_team:bowser | single_source/medium | W_WIGGLER-Q010 |
 | mega-wiggler-tree-party:space:baseline_party_angry:start | single_source/medium | W_WIGGLER-Q002 |
-| mega-wiggler-tree-party:space:baseline_party_angry:blue | single_source/medium | W_WIGGLER-Q003 |
-| mega-wiggler-tree-party:space:baseline_party_angry:red | single_source/medium | W_WIGGLER-Q004 |
+| mega-wiggler-tree-party:space:baseline_party_angry:blue | conflict/low | W_WIGGLER-Q003, NAMU_KR_COUNTS-Q016 |
+| mega-wiggler-tree-party:space:baseline_party_angry:red | corroborated/medium | W_WIGGLER-Q004, NAMU_KR_COUNTS-Q006 |
 | mega-wiggler-tree-party:space:baseline_party_angry:event | single_source/medium | W_WIGGLER-Q005 |
 | mega-wiggler-tree-party:space:baseline_party_angry:chance_time | single_source/medium | W_WIGGLER-Q002 |
 | mega-wiggler-tree-party:space:baseline_party_angry:item | single_source/medium | W_WIGGLER-Q006 |
 | mega-wiggler-tree-party:space:baseline_party_angry:vs | single_source/medium | W_WIGGLER-Q007 |
 | mega-wiggler-tree-party:space:baseline_party_angry:rally | single_source/medium | W_WIGGLER-Q008 |
-| mega-wiggler-tree-party:space:baseline_party_angry:lucky | single_source/medium | W_WIGGLER-Q009 |
+| mega-wiggler-tree-party:space:baseline_party_angry:lucky | corroborated/medium | W_WIGGLER-Q009, NAMU_KR_COUNTS-Q011 |
 | mega-wiggler-tree-party:space:baseline_party_angry:unlucky | single_source/medium | W_WIGGLER-Q002 |
-| mega-wiggler-tree-party:space:baseline_party_angry:bowser | single_source/medium | W_WIGGLER-Q010 |
+| mega-wiggler-tree-party:space:baseline_party_angry:bowser | corroborated/medium | W_WIGGLER-Q010, NAMU_KR_COUNTS-Q004 |
 | mega-wiggler-tree-party:space:tv_tag_team_angry:start | single_source/medium | W_WIGGLER-Q002 |
 | mega-wiggler-tree-party:space:tv_tag_team_angry:blue | single_source/medium | W_WIGGLER-Q011 |
 | mega-wiggler-tree-party:space:tv_tag_team_angry:red | single_source/medium | W_WIGGLER-Q012 |
@@ -1187,3 +1187,5 @@ Namu authored shared249→250/250, local21numeric+9authored=30/unchanged200; no 
 Canonical source is the H1g editorial current Jamboree item table. Only exact registered numeral `3`, H1G_ITEMS-Q001, is quoted. Both actual full native passes recover it from the named item’s Price column. Entire authored table and linked editorial/company context were read, rather than treating a generic numeral as complete proof. Local original gate1/200; zero new expressive source prose. Existing MPL/Wiki clips and their original historical captures remain unchanged. No shared Namu/Cel words; no inventory, stock, mode or gate endpoint promotion.
 
 2026-10-09T11:25:34.542209+00:00: Four ordinary moving-Star values use unchanged MPL clips and existing NAMU_KR_COUNTS-Q015 numeral20 in complete ordinary Star Exchange context. Full native A/B reads explicitly support normal20-price and generally relocating Star. Zero new quotes, registry or historical capture changes; sharedNamu250/250/Cel131 remain. Keep/Raceway/Castle/special-mode/location/selection qualifiers excluded.
+
+2026-10-09T12:05:23.144038+00:00: Four explicitly angry ordinary Wiggler typed counts compared in both complete original publishers and both passes. Three matches11/6/4 medium,blue21v24 newLOWdisagreement retaining24. Existing Namu numeric fragmentsQ011/Q006/Q004/Q016 reused in full named typed context; zero new quotes/registry/capture edits. No entire-profile,total,Start/Rally,TV or other-mode promotion.

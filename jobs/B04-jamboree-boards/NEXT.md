@@ -1,5 +1,19 @@
 # B04 — Current continuation
 
+2026-10-09T12:05:23.144038+00:00:100/518corroborated,398single-source,19disagreements,1unknown;37/38events/0of7exactmaps. OriginalNOT_MET/PR18Draft.
+
+Only4ordinary angry-Wiggler typed facts gain new source comparison: lucky11/red6/Bowser4match atmedium;blueWiki24vsNamu21isLOWconflict,retaining24. Both complete source contexts explicitly define parentheses as angry, normalWikicolumnseparatefromTagTeam. All518values/514otherfacts/18previousconflicts/allprofilemetadataandtotals unchanged,6updatedfingerprints. Existing numeric fragments21/11/6/4reused,zero newquotes,capturedates orregistrychanges. Read reports/wiggler-angry-count-recovery-20261009.json; priorreports/wiggler-angry-counts-UNADOPTED-20261009.json stays genuinehistorical67fcheckpoint. Do notcorroborate fullangry/TVprofiles, Start/Rally,totalorothernontypedstates.
+
+Private pairedNamu original896-character chapter/allassociatedfootnotes64/65 and pairedWiki entireSpacessection/explicitangerlegendread under /tmp/b04-boards-resume-20261009-0605/private/current-wiggler-entire-spaces-A-B-private.json and wiggler-four-explicit-angry-type-count-candidate-private.json. No furtherNamuauthoredwords:250/250; local30/200,sharedCel131/reserve200unchanged.
+
+Continue independent complete trainavailability, currentSteamerEventexacttrigger/effect, exacttideEvent andshopqualifiers. FreshAtwiki730-character currentJamboreetrainchapter remains insufficient; olderMP2Happeningwordingmustnottransfer. FourordinarymovingStars andtwogatefactsremaincorroborated; KeepnamedMPLchapterstillomitsmovingStar. RacewaylapformulahasStartcrossingprogressionbutretainedarchtriggernotindependentlyclosed.
+
+Actualsource67f normalpub/read11:55:06,28m20PASS; fulloriginalrun37926702050/job113807248182naturallyclosed11:55:25/26,21447B SHAa42470fc34ae5588cedc1f675152ef493d42484b5dd5a8d3e165453cd58c48f1 personallyread11:57:19 is historicalparent proof.26/5735/105PASS strict25/5630/97FAIL37FAILactual1. New exactfulloriginalhostedsourceCI requiredafterpublication, noinheritance/Readyclaim. GPmain7eb145ownrow11:56:12/publish31/fullread32foreignbytespreserved/released; refreshonlyafterfreshparentlease andactualsourcepublication. Claimsdonotresetcadence.
+
+Prior details follow:
+
+# B04 — Current continuation
+
 2026-10-09T11:54:02.981185+00:00: Genuine97/518 supported facts remains unchanged;402single-source,18conflicts,1unknown;37/38events/0of7exactmaps. OriginalresearchNOT_MET/PR18Draft.
 
 Material new research checkpoint: reports/wiggler-angry-counts-UNADOPTED-20261009.json compares four explicitly labeled ordinary angry-Wiggler rows from entire paired Namu chapter and Wiki normal/TagTeam table. Proposed next adoption is three matching typed counts11/6/4 and one new low blue21-v24 disagreement, preserving canonical24/all518values. No candidate fact or fingerprint is changed yet. Complete original source/type and all preservation checks are required before adoption. No Start/Rally/total/profile/TV promotion.

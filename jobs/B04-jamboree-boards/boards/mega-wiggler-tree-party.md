@@ -192,3 +192,12 @@ The shared records below apply subject to local exceptions, such as Castle’s f
 - No image is republished; map-assets.json supplies cited URLs and retrieval fingerprints.
 - Every single_source/conflict/unverified record above lacks full independent agreement; schema and sum checks do not certify Nintendo gameplay.
 - Exact event probabilities, passcode weights, complete reward distributions, RNG, fixed tide cadence, all event exhaustiveness and full numbered adjacency remain unverified.
+
+### Scoped ordinary angry type review, 2026-10-09T12:05:23.144038+00:00
+
+The complete profile remains single_source with original total63/all11integers. Only lucky11/red6/Bowser4 receive medium independent typed support; blue retains24 versus Namu21 as a new low disagreement. Separate TagTeam/quiet/Pro layouts and all other types stay unchanged.
+
+- `mega-wiggler-tree-party:space:baseline_party_angry:blue` (conflict, low): {"type": "blue", "count": 24} — W_WIGGLER-Q003, NAMU_KR_COUNTS-Q016.
+- `mega-wiggler-tree-party:space:baseline_party_angry:bowser` (corroborated, medium): {"type": "bowser", "count": 4} — W_WIGGLER-Q010, NAMU_KR_COUNTS-Q004.
+- `mega-wiggler-tree-party:space:baseline_party_angry:lucky` (corroborated, medium): {"type": "lucky", "count": 11} — W_WIGGLER-Q009, NAMU_KR_COUNTS-Q011.
+- `mega-wiggler-tree-party:space:baseline_party_angry:red` (corroborated, medium): {"type": "red", "count": 6} — W_WIGGLER-Q004, NAMU_KR_COUNTS-Q006.

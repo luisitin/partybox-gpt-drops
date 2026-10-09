@@ -67,3 +67,7 @@ The original nine disagreements above are retained exactly. These nine additiona
 | king-bowser-keep:space:baseline_party:blue | 27 | 26 | W_KEEP-Q003, NAMU_KR_COUNTS-Q018 |
 | king-bowser-keep:space:baseline_party:lucky | 26 | 23 | W_KEEP-Q010, NAMU_KR_COUNTS-Q017 |
 | western-land:space:baseline_party:vs | 4 | 3 | W_WESTERN-Q006, NAMU_KR_COUNTS-Q003 |
+
+## Additional ordinary angry-Wiggler blue-space disagreement, 2026-10-09T12:05:23.144038+00:00
+
+All previous18 complete conflict objects and this document's previous content remain unchanged. For `mega-wiggler-tree-party:space:baseline_party_angry:blue`, retained Wiki ordinary angry integer24 differs from independent Namu explicitly angry integer21. Canonical24 and total63 remain unchanged; the new whole typed fact is conflict/low with both values and source clips disclosed. Neither source is selected as correct; no silent sum normalization or TagTeam/quiet transfer. Evidence: W_WIGGLER-Q003, NAMU_KR_COUNTS-Q016. This does not corroborate the full angry profile.
