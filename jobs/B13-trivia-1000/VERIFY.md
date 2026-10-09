@@ -1,9 +1,9 @@
 # B13 verification
 
-## Current acceptance report documentation rendered — 2026-10-09T14:59:09.916744+00:00
+## Current acceptance report documentation rendered — 2026-10-09T16:04:40.626320+00:00
 
 Command actually executed: `python scripts/check-data.py --require-local-captures`.
-Deterministic research validation; random seed n/a. Full raw validator output: [reports/checks.json](reports/checks.json). This table records that exact checked row set, whose canonical version-list SHA is `553f8398c1dbd8d65cc3052c65bb4e2db1de36a3a94cd00b69fcf9be6725b995`.
+Deterministic research validation; random seed n/a. Full raw validator output: [reports/checks.json](reports/checks.json). This table records that exact checked row set, whose canonical version-list SHA is `d8a627a3ee6e0d8ed16dc8e267186d83d9452671758e7603930e8f8f91d864b2`.
 
 | Check | Cases | Passed |
 |---|---:|---:|

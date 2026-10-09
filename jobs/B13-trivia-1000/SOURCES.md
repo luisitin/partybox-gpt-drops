@@ -2635,9 +2635,9 @@ Answer: weber. Fun fact: The symbol for the weber is Wb.
 
 Answer: degree Celsius. Fun fact: The symbol for the degree Celsius is °C.
 
-- science-space-s5003: [Wikipedia contributors](https://en.wikipedia.org/wiki/SI_derived_unit)
+- science-space-s6003: [Wikipedia contributors](https://en.wikipedia.org/wiki/SI_derived_unit)
   quote: “degree Celsius °C temperature relative to 273.15 K” (8 words).
-- science-space-s5005: [National Institute of Standards and Technology](https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes)
+- science-space-s6005: [National Institute of Standards and Technology](https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes)
   quote: “Celsius temperature degree Celsius (f) °C” (6 words).
   extraQuote: “where T 0 = 273.15 K by definition.” (8 words).
 
