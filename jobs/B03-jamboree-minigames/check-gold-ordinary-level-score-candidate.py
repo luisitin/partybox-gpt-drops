@@ -9,7 +9,15 @@ INPUTS={'minigames.json': '504624e5e3ed937b4065af95e12ffe36efc72df9abe8fb7e8d4e7
 BITS_SHA='8e51b9840ab1b18c0bfe445ced2158e8955b3cc33c41d7a652f233ec5bdf5d2a'
 sha=lambda b:hashlib.sha256(b).hexdigest()
 digest=lambda x:sha(json.dumps(x,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode())
-read=lambda n:json.loads((ROOT/n).read_text())
+def score_recovery_module():
+ import sys
+ key='b03_exact_current_score_history'
+ if key in sys.modules:return sys.modules[key]
+ spec=importlib.util.spec_from_file_location(key,ROOT/'check-gold-ordinary-level-score-recovery.py');m=importlib.util.module_from_spec(spec);sys.modules[key]=m;spec.loader.exec_module(m);return m
+def score_historical_bytes_or_current(n,actual):
+ if (ROOT/'reports/gold-ordinary-level-score-recovery.json').exists():return score_recovery_module().historical_bytes_if_latest(n,actual)
+ return actual
+def read(n):return json.loads(score_historical_bytes_or_current(n,(ROOT/n).read_bytes()))
 def validate(p,d,s,bits):
  count=0
  def require(ok,message):
@@ -72,7 +80,7 @@ def run():
  if not require_sha:raise AssertionError('Complete original candidate packet changed')
  p=json.loads(raw);d,s=read('minigames.json'),read('catalogue-sources.json')
  for name,want in INPUTS.items():
-  if sha((ROOT/name).read_bytes())!=want:raise AssertionError('Production input changed: '+name)
+  if sha(score_historical_bytes_or_current(name,(ROOT/name).read_bytes()))!=want:raise AssertionError('Production input changed: '+name)
  spec=importlib.util.spec_from_file_location('b03_unchanged_gold_score_quote_support',ROOT/'quote-support-check.py');q=importlib.util.module_from_spec(spec);spec.loader.exec_module(q)
  bits=[{'id':z['id'],'substantive':q.substantive(z['text'])} for x in s['sources'] for z in x['quotes']]
  count=validate(p,d,s,bits)

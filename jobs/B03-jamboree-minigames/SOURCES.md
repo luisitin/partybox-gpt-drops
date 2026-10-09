@@ -1,3 +1,22 @@
+## Ordinary Koopathlon Gold scoring, full current gates pending
+
+MG081 scoreRules: In Koopathlon, ordinary baked pastries give 1, 3 or 5 score coins in level 1; 2, 4 or 6 in level 2; and 4, 5 or 6 in level 3. Exact item bonuses, score caps and early or burned pastry consequences remain independently unverified.
+
+The clips below were already reserved on these same canonical URLs; registration does not spend an additional budget. They give no gameplay credit. Original full source/table/native level/mode/item/award qualifications remain binding.
+
+- W081_SCORE_header | https://www.mariowiki.com/Gold_%27n_Brown | "Level 1 Level 2 Level 3" | Original complete ordinary pastry table, explicit Level1/2/3 column position
+- W081_SCORE_coin_1 | https://www.mariowiki.com/Gold_%27n_Brown | "+1 coin" | Original complete ordinary pastry table, explicit Level1/2/3 column position
+- W081_SCORE_coin_2 | https://www.mariowiki.com/Gold_%27n_Brown | "+2 coins" | Original complete ordinary pastry table, explicit Level1/2/3 column position
+- W081_SCORE_coin_3 | https://www.mariowiki.com/Gold_%27n_Brown | "+3 coins" | Original complete ordinary pastry table, explicit Level1/2/3 column position
+- W081_SCORE_coin_4 | https://www.mariowiki.com/Gold_%27n_Brown | "+4 coins" | Original complete ordinary pastry table, explicit Level1/2/3 column position
+- W081_SCORE_coin_5 | https://www.mariowiki.com/Gold_%27n_Brown | "+5 coins" | Original complete ordinary pastry table, explicit Level1/2/3 column position
+- W081_SCORE_coin_6 | https://www.mariowiki.com/Gold_%27n_Brown | "+6 coins" | Original complete ordinary pastry table, explicit Level1/2/3 column position
+- KUMA_SCORE_level_1 | https://kumanote1.com/2024/12/24/bowserathlon/ | "クロワッサン１コイン　クリボー３コイン　フラワー５コイン" | Original complete できたて！パン屋さん！ section, exact native レベル１/２/３ paragraph
+- KUMA_SCORE_level_2 | https://kumanote1.com/2024/12/24/bowserathlon/ | "フランスパン２コイン　パタテンテン４コイン　スター６コイン" | Original complete できたて！パン屋さん！ section, exact native レベル１/２/３ paragraph
+- KUMA_SCORE_level_3 | https://kumanote1.com/2024/12/24/bowserathlon/ | "パタテンテン４コイン　フラワー５コイン　スター６コイン" | Original complete できたて！パン屋さん！ section, exact native レベル１/２/３ paragraph
+
+Only ordinary Koopathlon baked-pastry coin sets by exact level are independently corroborated from complete primary table columns and original native authored level rows. Koopathlon initial-position and Minigame Harbor continuation caveats remain binding. Food-name aliases, exact early/burn zero penalties, Star/double-item effects, score caps, FreePlay totals, controls, timers, ties and board awards remain separately unverified.
+
 ## Four shared native-author action summaries (source checks still pending)
 
 Exact excerpts below are registered unique canonical fragments already included in the unchanged cumulative budgets. Only the narrowly stated gameplay actions qualify; every precise rule keeps its own evidence status.

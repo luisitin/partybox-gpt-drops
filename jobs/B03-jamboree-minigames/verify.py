@@ -225,6 +225,9 @@ def run(args):
     preview_arrangement_recovery=module('b03_preview_arrangement_recovery','check-preview-arrangement-recovery.py')
     for result in preview_arrangement_recovery.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Preview arrangement recovery failed'),result.get('detail',''))
+    gold_score_recovery=module('b03_gold_score_recovery','check-gold-ordinary-level-score-recovery.py')
+    for result in gold_score_recovery.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Ordinary Koopathlon Gold scoring recovery failed'),result.get('detail',''))
     native_gameplay_recovery=module('b03_native_gameplay_recovery','check-native-gameplay-recovery.py')
     for result in native_gameplay_recovery.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Native gameplay recovery failed'),result.get('detail',''))
