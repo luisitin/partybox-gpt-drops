@@ -694,21 +694,21 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | rainbow-galleria:shop:3:item:0 | single_source/medium | W_GALLERIA-Q019 |
 | rainbow-galleria:shop:3:item:1 | single_source/medium | W_GALLERIA-Q019 |
 | rainbow-galleria:shop:3:item:2 | single_source/medium | W_GALLERIA-Q019 |
-| rainbow-galleria:shop:4:location | single_source/medium | GR_GALLERIA-Q004 |
+| rainbow-galleria:shop:4:location | corroborated/medium | GR_GALLERIA-Q004, NAMU_KR_COUNTS-Q003 |
 | rainbow-galleria:shop:4:item:0 | single_source/medium | W_GALLERIA-Q012 |
 | rainbow-galleria:shop:4:item:1 | single_source/medium | W_GALLERIA-Q017 |
 | rainbow-galleria:shop:4:item:2 | single_source/medium | W_GALLERIA-Q014 |
 | rainbow-galleria:shop:4:item:3 | single_source/medium | W_GALLERIA-Q016 |
 | rainbow-galleria:shop:4:item:4 | single_source/medium | W_GALLERIA-Q017 |
-| rainbow-galleria:shop:5:location | single_source/medium | GR_GALLERIA-Q004 |
+| rainbow-galleria:shop:5:location | corroborated/medium | GR_GALLERIA-Q004, NAMU_KR_COUNTS-Q003 |
 | rainbow-galleria:shop:5:item:0 | single_source/medium | W_GALLERIA-Q020 |
 | rainbow-galleria:shop:5:item:1 | single_source/medium | W_GALLERIA-Q021 |
 | rainbow-galleria:shop:5:item:2 | single_source/medium | W_GALLERIA-Q012 |
-| rainbow-galleria:shop:6:location | single_source/medium | GR_GALLERIA-Q005 |
+| rainbow-galleria:shop:6:location | corroborated/medium | GR_GALLERIA-Q005, NAMU_KR_COUNTS-Q003 |
 | rainbow-galleria:shop:6:item:0 | single_source/medium | W_GALLERIA-Q017 |
 | rainbow-galleria:shop:6:item:1 | single_source/medium | W_GALLERIA-Q020 |
 | rainbow-galleria:shop:6:item:2 | single_source/medium | W_GALLERIA-Q022 |
-| rainbow-galleria:shop:7:location | single_source/medium | GR_GALLERIA-Q006 |
+| rainbow-galleria:shop:7:location | corroborated/medium | GR_GALLERIA-Q006, NAMU_KR_COUNTS-Q002 |
 | rainbow-galleria:shop:7:item:0 | single_source/medium | W_GALLERIA-Q020 |
 | rainbow-galleria:gatesPaths:elevator | corroborated/high | W_GALLERIA-Q023, GR_GALLERIA-Q007 |
 | rainbow-galleria:gatesPaths:escalators | corroborated/high | W_GALLERIA-Q024, GR_GALLERIA-Q008 |
@@ -1199,3 +1199,7 @@ Canonical original https://ngamer.hatenablog.com/entry/2024/11/02/200100, author
 | SASKE_GALLERIA-Q003 | このマスに止まらないといけない | One must stop on this square. |
 
 One new tiny original clause:15 Japanese characters/one whitespace word. Same canonical source now3 original whitespace words under unchanged200 gate; no source-ID budget reset. Entire1640-character A/B source account and both native raffle images reviewed privately. Old full-page retrieval dates remain unchanged; image requests genuinely closed15:10:19.358463. Complete Korean2377-character chapter supplies exact ordinary draw count using existing NAMU_KR_COUNTS-Q023 as a context locator; no new Korean expressive words. Shared Namu250/250 full/local30/200 and Cel131 unchanged. Full bodies/images stay private.
+
+### Four coarse named shop locations, 2026-10-09T15:37:09.506559+00:00
+
+Last-Place and Super shops:floor3 left; Gold:floor3 right; Boo:floor2 right. Existing NAMU_KR_COUNTS-Q003/Q002 numeral locators plus complete specifically named original Korean paragraphs agree with whole native GameRant section metadata. No new quote/capture date or budget; numeral alone is not named regional proof. Only existing broad values; exact space IDs remainnull. All related shop inventories/profiles remain single_source. Full paired paragraphs and all six Korean footnotes privately reviewed; no copyrighted body/image published.

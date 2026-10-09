@@ -129,7 +129,7 @@ The following are 35 inventory profiles across the job, not 35 physical shops. P
 
 ### Last-Place Shop — all_reported_rules
 
-- `rainbow-galleria:shop:4:location` (single_source, medium): {"region": "floor 3 left", "exactSpaceIds": null} — GR_GALLERIA-Q004. Full floor+side qualifier relies on GameRant; diagram independently inspected but no separate publisher-level confirmation.
+- `rainbow-galleria:shop:4:location` (corroborated, medium): {"region": "floor 3 left", "exactSpaceIds": null} — GR_GALLERIA-Q004, NAMU_KR_COUNTS-Q003. 2026-10-09: medium independent support for only the complete existing coarse floor/side location. GameRant Jessica Bell native named Last-Place Shop section metadata and independent complete Korean Galleria named shop paragraph agree on floor 3 left. Both complete authored A/B scopes and all six attached Korean footnotes were reviewed. Existing numeral quote identifies floor only; complete named paragraph establishes shop and side. ExactSpaceIds stays null. No numbered position, front/rear, host, price, inventory, access, mode-specific location or complete shop-profile verdict is added.
 
 | Item | Coins | Availability qualifier | Status | Evidence |
 |---|---:|---|---|---|
@@ -141,7 +141,7 @@ The following are 35 inventory profiles across the job, not 35 physical shops. P
 
 ### Super Shop — all_reported_rules
 
-- `rainbow-galleria:shop:5:location` (single_source, medium): {"region": "floor 3 left", "exactSpaceIds": null} — GR_GALLERIA-Q004. Full floor+side qualifier relies on GameRant; diagram independently inspected but no separate publisher-level confirmation.
+- `rainbow-galleria:shop:5:location` (corroborated, medium): {"region": "floor 3 left", "exactSpaceIds": null} — GR_GALLERIA-Q004, NAMU_KR_COUNTS-Q003. 2026-10-09: medium independent support for only the complete existing coarse floor/side location. GameRant Jessica Bell native named Super Shop section metadata and independent complete Korean Galleria named shop paragraph agree on floor 3 left. Both complete authored A/B scopes and all six attached Korean footnotes were reviewed. Existing numeral quote identifies floor only; complete named paragraph establishes shop and side. ExactSpaceIds stays null. No numbered position, front/rear, host, price, inventory, access, mode-specific location or complete shop-profile verdict is added.
 
 | Item | Coins | Availability qualifier | Status | Evidence |
 |---|---:|---|---|---|
@@ -151,7 +151,7 @@ The following are 35 inventory profiles across the job, not 35 physical shops. P
 
 ### Gold Shop — all_reported_rules
 
-- `rainbow-galleria:shop:6:location` (single_source, medium): {"region": "floor 3 right", "exactSpaceIds": null} — GR_GALLERIA-Q005. Full floor+side qualifier relies on GameRant; diagram independently inspected but no separate publisher-level confirmation.
+- `rainbow-galleria:shop:6:location` (corroborated, medium): {"region": "floor 3 right", "exactSpaceIds": null} — GR_GALLERIA-Q005, NAMU_KR_COUNTS-Q003. 2026-10-09: medium independent support for only the complete existing coarse floor/side location. GameRant Jessica Bell native named Gold Shop section metadata and independent complete Korean Galleria named shop paragraph agree on floor 3 right. Both complete authored A/B scopes and all six attached Korean footnotes were reviewed. Existing numeral quote identifies floor only; complete named paragraph establishes shop and side. ExactSpaceIds stays null. No numbered position, front/rear, host, price, inventory, access, mode-specific location or complete shop-profile verdict is added.
 
 | Item | Coins | Availability qualifier | Status | Evidence |
 |---|---:|---|---|---|
@@ -161,7 +161,7 @@ The following are 35 inventory profiles across the job, not 35 physical shops. P
 
 ### Boo Shop — all_reported_rules
 
-- `rainbow-galleria:shop:7:location` (single_source, medium): {"region": "floor 2 right", "exactSpaceIds": null} — GR_GALLERIA-Q006. Full floor+side qualifier relies on GameRant; diagram independently inspected but no separate publisher-level confirmation.
+- `rainbow-galleria:shop:7:location` (corroborated, medium): {"region": "floor 2 right", "exactSpaceIds": null} — GR_GALLERIA-Q006, NAMU_KR_COUNTS-Q002. 2026-10-09: medium independent support for only the complete existing coarse floor/side location. GameRant Jessica Bell native named Boo Shop section metadata and independent complete Korean Galleria named shop paragraph agree on floor 2 right. Both complete authored A/B scopes and all six attached Korean footnotes were reviewed. Existing numeral quote identifies floor only; complete named paragraph establishes shop and side. ExactSpaceIds stays null. No numbered position, front/rear, host, price, inventory, access, mode-specific location or complete shop-profile verdict is added.
 
 | Item | Coins | Availability qualifier | Status | Evidence |
 |---|---:|---|---|---|

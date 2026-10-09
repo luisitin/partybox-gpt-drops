@@ -128,3 +128,9 @@ Nothing here is a copy target. The existing pieces in `/home/user/partybox` that
 2026-10-09T15:23:01.424576+00:00: One complete ordinary raffle fact gains medium two-publisher-per-clause support:102/518 corroborated,396 single-source,19 conflicts,1 unknown;37/38 known events,0/7 exact numbered maps. All518 values,517 other complete fact objects and591 other audit rows unchanged. Original strict NOT_MET; PR18 Draft. Only SASKE15-character one-word stopping excerpt added; Namu250/full and Cel131 unchanged. Parent98d entire original hosted proof accepted15:03:08, now historical for the child; child whole CI pending after publication.
 
 See reports/galleria-raffle-event-recovery-20261009.json for full clause mapping, native image integrity and original capture-date limits. Dated earlier101-candidate reports remain historical.
+
+### Current four regional-location recovery, 2026-10-09T15:37:09.506559+00:00
+
+2026-10-09T15:37:09.506559+00:00:106/518 corroborated,392 single-source,19 disagreements,1 unknown;37/38 current events and0/7 exact numbered maps. Four complete existing coarse shop locations gain medium independent support; all518 values/514 other complete facts/584 other audit rows/19conflicts unchanged. Only9fingerprints:4facts+4partialshopprofiles+partialboard. No new quotations, registry/capture dates, gates, schema or workflow. Namu250/full/local30 and Cel131 unchanged. PR18Draft; original strict NOT_MET.
+
+Exact scope and source lineage:reports/galleria-four-regional-locations-recovery-20261009.json. Earlier102 raffle milestone, all previous101 records and actual source gaps remain dated history. Parent9e422 whole original acceptance is retained separately; currentchild hostedCI pending after publication.
