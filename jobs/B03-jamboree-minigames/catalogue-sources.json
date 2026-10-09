@@ -14939,17 +14939,26 @@
           "text": "receives a boosting item at the start as an advantage.",
           "locator": "Overview → Mario Party mode board-encounter advantage paragraph",
           "scope": "Exact character-specific starting advantage context; used only for the narrow encounter-format claim."
+        },
+        {
+          "id": "W071_ranked_ramp_boost",
+          "text": "on ramps, shaking the controller as the player ascends the ramps makes them perform a trick, granting a greater speed boost.",
+          "locator": "Complete paired Overview / literal ramp-trick speed-boost clause; full original control-footnote context retained",
+          "scope": "Only snowboard racing and ramp-trick speed boosts have paired primary and independently authored guide support. Exact motion/button bindings, start advantage, timer, win/score/tie/payout and alternate-mode rules retain separate qualifications."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:18.100092+00:00",
-          "bodySha256": "309e2d2573f873d9ca03075d266cfd1b6edbac5ea357a021d76ee0eee06b8096",
-          "bodyBytes": 66228,
+          "retrieval": "Actual complete paired07:22 guide/07:23 primary responses retained and fully reread; only exact linked annotation omitted in copied primary DOM, complete original method footnote retained; zero newHTTP at adoption.",
+          "observedAtUTC": "2026-10-09T07:23:31.892761+00:00",
+          "bodySha256": "7eedc8e372c3519f410de25282a7cee6fb60ea0afb80831ef2b64c645d61f8ce",
+          "bodyBytes": 65787,
           "httpStatus": 200,
           "tlsVerified": true,
+          "textSha256": "9a482c90f5305f2cbe1145cdf0a3a3883a5a9b66e46d5eeadd358c25c723e20c",
+          "textCharacters": 9187,
+          "fullArticleScopeSha256": "9a482c90f5305f2cbe1145cdf0a3a3883a5a9b66e46d5eeadd358c25c723e20c",
           "recoveredQuoteIds": [
             "W071_q1",
             "W071_q2",
@@ -14961,18 +14970,21 @@
             "W071Q008",
             "W071_reward_1",
             "W071_format_FOUR",
-            "W071_format_ADVANTAGE"
-          ],
-          "fullArticleScopeSha256": "a2445f3165d58919c1c9836955261c99e896d8d31e8762ee4f6c37ef6104ad62"
+            "W071_format_ADVANTAGE",
+            "W071_ranked_ramp_boost"
+          ]
         },
         {
           "pass": "B",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:24.979729+00:00",
-          "bodySha256": "309e2d2573f873d9ca03075d266cfd1b6edbac5ea357a021d76ee0eee06b8096",
-          "bodyBytes": 66228,
+          "retrieval": "Actual complete paired07:22 guide/07:23 primary responses retained and fully reread; only exact linked annotation omitted in copied primary DOM, complete original method footnote retained; zero newHTTP at adoption.",
+          "observedAtUTC": "2026-10-09T07:23:32.579362+00:00",
+          "bodySha256": "7eedc8e372c3519f410de25282a7cee6fb60ea0afb80831ef2b64c645d61f8ce",
+          "bodyBytes": 65787,
           "httpStatus": 200,
           "tlsVerified": true,
+          "textSha256": "9a482c90f5305f2cbe1145cdf0a3a3883a5a9b66e46d5eeadd358c25c723e20c",
+          "textCharacters": 9187,
+          "fullArticleScopeSha256": "9a482c90f5305f2cbe1145cdf0a3a3883a5a9b66e46d5eeadd358c25c723e20c",
           "recoveredQuoteIds": [
             "W071_q1",
             "W071_q2",
@@ -14984,12 +14996,12 @@
             "W071Q008",
             "W071_reward_1",
             "W071_format_FOUR",
-            "W071_format_ADVANTAGE"
-          ],
-          "fullArticleScopeSha256": "a2445f3165d58919c1c9836955261c99e896d8d31e8762ee4f6c37ef6104ad62"
+            "W071_format_ADVANTAGE",
+            "W071_ranked_ramp_boost"
+          ]
         }
       ],
-      "uniqueQuotedWords": 111
+      "uniqueQuotedWords": 132
     },
     {
       "id": "W072",
@@ -24474,51 +24486,67 @@
           "text": "It lets you operate an arcade machine to push blocks and fuzzy Mario toys down the prize chute",
           "locator": "Original named 3 Best Koopathon: Down The Hatch paragraph / complete paired .article-body by Stacey Henley",
           "scope": "Only independently authored common actions; no precise bindings, timers, point values, ties or payouts."
+        },
+        {
+          "id": "RANK_MG071_snowboard",
+          "text": "Rosalina has a snowboard race",
+          "locator": "Original named 7 Best Showdown: Rosalina's Radical Race paragraph / complete paired bylined .article-body",
+          "scope": "Only snowboard racing and ramp-trick speed boosts have paired primary and independently authored guide support. Exact motion/button bindings, start advantage, timer, win/score/tie/payout and alternate-mode rules retain separate qualifications."
+        },
+        {
+          "id": "RANK_MG071_ramp_boost",
+          "text": "You can get speed boosts and trick off ramps",
+          "locator": "Original named 7 Best Showdown: Rosalina's Radical Race paragraph / complete paired bylined .article-body",
+          "scope": "Only snowboard racing and ramp-trick speed boosts have paired primary and independently authored guide support. Exact motion/button bindings, start advantage, timer, win/score/tie/payout and alternate-mode rules retain separate qualifications."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "Actual complete native07:22 ranked-guide or07:23 literal primary HTTPS/TLS response retained and fully reread; zero new HTTP at adoption.",
+          "retrieval": "Actual complete paired07:22 guide/07:23 primary responses retained and fully reread; only exact linked annotation omitted in copied primary DOM, complete original method footnote retained; zero newHTTP at adoption.",
           "observedAtUTC": "2026-10-09T07:22:00.965970+00:00",
           "bodySha256": "9423a39b79caaa6299cfc9f8123cf64bbb91dbcb62b17dd618492bbade60643d",
           "bodyBytes": 280702,
           "httpStatus": 200,
           "tlsVerified": true,
-          "textSha256": "f566390a1694c2a9da15157446515a62e1f41066a55b877f4caf0a1941ef4a76",
-          "textCharacters": 6527,
-          "fullArticleScopeSha256": "f566390a1694c2a9da15157446515a62e1f41066a55b877f4caf0a1941ef4a76",
+          "textSha256": "434457d824220fb471c57c370fd133ef4a6a5e55a0dd75b83b54ae8a86c04bff",
+          "textCharacters": 6526,
+          "fullArticleScopeSha256": "434457d824220fb471c57c370fd133ef4a6a5e55a0dd75b83b54ae8a86c04bff",
           "recoveredQuoteIds": [
             "RANK_MG038_action",
             "RANK_MG044_action",
             "RANK_MG058_action",
             "RANK_MG059_action",
             "RANK_MG076_action",
-            "RANK_MG083_action"
+            "RANK_MG083_action",
+            "RANK_MG071_snowboard",
+            "RANK_MG071_ramp_boost"
           ]
         },
         {
           "pass": "B",
-          "retrieval": "Actual complete native07:22 ranked-guide or07:23 literal primary HTTPS/TLS response retained and fully reread; zero new HTTP at adoption.",
+          "retrieval": "Actual complete paired07:22 guide/07:23 primary responses retained and fully reread; only exact linked annotation omitted in copied primary DOM, complete original method footnote retained; zero newHTTP at adoption.",
           "observedAtUTC": "2026-10-09T07:22:02.839334+00:00",
           "bodySha256": "bf413a842080289bda1b82d4964b83f391fd7bf04ac68ca1cbd238cf06514706",
           "bodyBytes": 280696,
           "httpStatus": 200,
           "tlsVerified": true,
-          "textSha256": "f566390a1694c2a9da15157446515a62e1f41066a55b877f4caf0a1941ef4a76",
-          "textCharacters": 6527,
-          "fullArticleScopeSha256": "f566390a1694c2a9da15157446515a62e1f41066a55b877f4caf0a1941ef4a76",
+          "textSha256": "434457d824220fb471c57c370fd133ef4a6a5e55a0dd75b83b54ae8a86c04bff",
+          "textCharacters": 6526,
+          "fullArticleScopeSha256": "434457d824220fb471c57c370fd133ef4a6a5e55a0dd75b83b54ae8a86c04bff",
           "recoveredQuoteIds": [
             "RANK_MG038_action",
             "RANK_MG044_action",
             "RANK_MG058_action",
             "RANK_MG059_action",
             "RANK_MG076_action",
-            "RANK_MG083_action"
+            "RANK_MG083_action",
+            "RANK_MG071_snowboard",
+            "RANK_MG071_ramp_boost"
           ]
         }
       ],
-      "uniqueQuotedWords": 108
+      "uniqueQuotedWords": 122
     }
   ],
   "independence": "Pages in one publisher lineage, mirrors and reprints of one Nintendo instruction are not independent factual observations.",

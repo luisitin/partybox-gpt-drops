@@ -9302,16 +9302,17 @@
   {
     "sourceId": "W071",
     "url": "https://www.mariowiki.com/Rosalina%27s_Radical_Race",
-    "requestBeganUTC": "2026-10-07T20:38:28.918150+00:00",
-    "requestCompletedUTC": "2026-10-07T20:38:29.154518+00:00",
+    "pass": 2,
+    "requestBeganUTC": "2026-10-09T07:23:32.383875+00:00",
+    "requestCompletedUTC": "2026-10-09T07:23:32.579362+00:00",
     "curlExit": 0,
     "httpEffectiveTls": [
       "200",
       "https://www.mariowiki.com/Rosalina%27s_Radical_Race",
       "0"
     ],
-    "bodySha256": "309e2d2573f873d9ca03075d266cfd1b6edbac5ea357a021d76ee0eee06b8096",
-    "bodyBytes": 66228,
+    "bodySha256": "7eedc8e372c3519f410de25282a7cee6fb60ea0afb80831ef2b64c645d61f8ce",
+    "bodyBytes": 65787,
     "recoveredQuoteIds": [
       "W071_q1",
       "W071_q2",
@@ -9323,7 +9324,8 @@
       "W071Q008",
       "W071_reward_1",
       "W071_format_FOUR",
-      "W071_format_ADVANTAGE"
+      "W071_format_ADVANTAGE",
+      "W071_ranked_ramp_boost"
     ],
     "missingQuoteIds": [],
     "quotes": [
@@ -9381,10 +9383,14 @@
         "id": "W071_format_ADVANTAGE",
         "text": "receives a boosting item at the start as an advantage.",
         "locator": "Overview → Mario Party mode board-encounter advantage paragraph"
+      },
+      {
+        "id": "W071_ranked_ramp_boost",
+        "text": "on ramps, shaking the controller as the player ascends the ramps makes them perform a trick, granting a greater speed boost.",
+        "locator": "Complete paired Overview / literal ramp-trick speed-boost clause; full original control-footnote context retained"
       }
     ],
-    "rawBodyPublished": false,
-    "pass": 2
+    "rawBodyPublished": false
   },
   {
     "sourceId": "W072",
@@ -15166,7 +15172,9 @@
       "RANK_MG058_action",
       "RANK_MG059_action",
       "RANK_MG076_action",
-      "RANK_MG083_action"
+      "RANK_MG083_action",
+      "RANK_MG071_snowboard",
+      "RANK_MG071_ramp_boost"
     ],
     "missingQuoteIds": [],
     "quotes": [
@@ -15199,6 +15207,16 @@
         "id": "RANK_MG083_action",
         "text": "It lets you operate an arcade machine to push blocks and fuzzy Mario toys down the prize chute",
         "locator": "Original named 3 Best Koopathon: Down The Hatch paragraph / complete paired .article-body by Stacey Henley"
+      },
+      {
+        "id": "RANK_MG071_snowboard",
+        "text": "Rosalina has a snowboard race",
+        "locator": "Original named 7 Best Showdown: Rosalina's Radical Race paragraph / complete paired bylined .article-body"
+      },
+      {
+        "id": "RANK_MG071_ramp_boost",
+        "text": "You can get speed boosts and trick off ramps",
+        "locator": "Original named 7 Best Showdown: Rosalina's Radical Race paragraph / complete paired bylined .article-body"
       }
     ],
     "rawBodyPublished": false

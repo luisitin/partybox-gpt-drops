@@ -13,7 +13,9 @@ def read(n):return json.loads((ROOT/n).read_text())
 def digest(v):return hashlib.sha256(json.dumps(v,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()
 def module(n):
  spec=importlib.util.spec_from_file_location(n.replace('-','_'),ROOT/n);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
-def validate(p,d,s,rs):
+def validate(p,d,s,rs,reward_audit=None):
+ if reward_audit is None and (ROOT/'reports/rosalina-gameplay-recovery.json').exists():
+  d,s,rs,reward_audit=module('check-rosalina-gameplay-recovery.py').historical_view_with_reward(d,s,rs)
  count=0
  def require(ok,msg):
   nonlocal count
@@ -24,7 +26,7 @@ def validate(p,d,s,rs):
  require(p['retainedCandidatePacketSha256']==digest(candidate)==CANDIDATE and p['newHttpRequestsForAdoption']==0 and p['fullCopyrightBodiesPublished'] is False,'Candidate receipt changed, request invented or full body published')
  require(p['gameplayLimitation']==LIMITATION,'Precise mechanics disclaimer was broadened or removed')
 
- historical_reward=read('reports/reward-quote-capture-audit-before-ranked.json');current_reward=read('reports/reward-quote-capture-audit.json')
+ historical_reward=read('reports/reward-quote-capture-audit-before-ranked.json');current_reward=reward_audit if reward_audit is not None else read('reports/reward-quote-capture-audit.json')
  require(digest(historical_reward)==p['baselineRewardAuditSha256']=='24489db18ab20c3b9df976a3d7ea6f07a6be191d4f147ebba749eb1f80409540','Original complete84-witness reward audit was lost or altered')
  require(len(current_reward['checks'])==len(historical_reward['checks'])==84,'Current reward audit omitted or added a witness')
  actual_rebindings=[];restored_reward=copy.deepcopy(current_reward)

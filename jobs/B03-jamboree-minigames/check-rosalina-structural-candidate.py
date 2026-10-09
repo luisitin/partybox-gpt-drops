@@ -84,6 +84,8 @@ def validate(p,d,s,rs):
  return count
 def run():
  p=read('reports/rosalina-structural-candidate.json');d=read('minigames.json');s=read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+x+'.json') for x in ['A','B']]
+ if (ROOT/'reports/rosalina-gameplay-recovery.json').exists():
+  spec=importlib.util.spec_from_file_location('b03_rosalina_recovery',ROOT/'check-rosalina-gameplay-recovery.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);d,s,rs=m.historical_view(d,s,rs)
  count=validate(p,d,s,rs)
  for n in range(16):
   a,b,c,e=copy.deepcopy([p,d,s,rs]);z=a['pairedPrimaryScopes'][0]
