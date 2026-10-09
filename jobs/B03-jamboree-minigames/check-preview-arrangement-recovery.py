@@ -11,6 +11,10 @@ def digest(x):return hashlib.sha256(json.dumps(x,ensure_ascii=False,sort_keys=Tr
 def module(n):
  s=importlib.util.spec_from_file_location(n.replace('-','_'),ROOT/n);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
 def validate(p,d,s,rs):
+ if (ROOT/'reports/eleven-field-recovery.json').exists():
+  latest=module('check-eleven-field-recovery.py')
+  if latest.hashes(d,s,rs)==latest.CURRENT_DIGESTS:d,s,rs=latest.historical_view(d,s,rs)
+
  count=0
  def require(ok,msg):
   nonlocal count
@@ -75,6 +79,10 @@ def validate(p,d,s,rs):
  count+=restored[3]
  return od,os,ors,count
 def historical_view(d,s,rs):
+ if (ROOT/'reports/eleven-field-recovery.json').exists():
+  latest=module('check-eleven-field-recovery.py')
+  if latest.hashes(d,s,rs)==latest.CURRENT_DIGESTS:d,s,rs=latest.historical_view(d,s,rs)
+
  p=read('reports/preview-player-arrangement-recovery.json')
  if {'data':digest(d),'sources':digest(s),'reopens':[digest(z) for z in rs]}==BASE_DIGESTS:
   validate(p,read('minigames.json'),read('catalogue-sources.json'),[read('reports/source-reopens-pass'+n+'.json') for n in 'AB']);return d,s,rs

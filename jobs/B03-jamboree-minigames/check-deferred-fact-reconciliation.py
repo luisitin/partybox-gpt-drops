@@ -62,7 +62,9 @@ def validate(p,d,s,rs):
  require(p['allAcceptedProductionSourceHistoryAndClassificationsUnchanged'] is True and p['fullCopyrightBodiesPublished'] is False and p['newNamuAuthoredWords']==0 and p['sharedNamuAuthoredWords']==250,'History stripped, full body published or exhausted quota changed')
  return count
 def run():
- p,d,s=read('reports/deferred-format-and-coin-reconciliation.json'),read('minigames.json'),read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+n+'.json') for n in 'AB'];count=validate(p,d,s,rs)
+ p,d,s=read('reports/deferred-format-and-coin-reconciliation.json'),read('minigames.json'),read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+n+'.json') for n in 'AB']
+ if (ROOT/'reports/eleven-field-recovery.json').exists():d,s,rs=module('check-eleven-field-recovery.py').historical_view(d,s,rs)
+ count=validate(p,d,s,rs)
  for n in range(20):
   a,b,c,z=copy.deepcopy([p,d,s,rs])
   if n==0:b['minigames'][26]['fieldEvidence']['format']['status']='corroborated'

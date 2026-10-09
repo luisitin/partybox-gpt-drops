@@ -49,7 +49,9 @@ def validate(p,d,s,rs):
  require(p['allAcceptedProductionRegistryHistoryClassificationsAndRewardAuditUnchanged'] is True and p['newRegistryQuotes']==[] and p['newNamuAuthoredWords']==0 and p['sharedNamuAuthoredWords']==250 and p['fullCopyrightBodiesPublished'] is False,'History stripped, exhausted quota changed or full copyright body published')
  return count
 def run():
- p,d,s=read('reports/japanese-coin-category-candidates.json'),read('minigames.json'),read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+n+'.json') for n in 'AB'];count=validate(p,d,s,rs)
+ p,d,s=read('reports/japanese-coin-category-candidates.json'),read('minigames.json'),read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+n+'.json') for n in 'AB']
+ if (ROOT/'reports/eleven-field-recovery.json').exists():d,s,rs=module('check-eleven-field-recovery.py').historical_view(d,s,rs)
+ count=validate(p,d,s,rs)
  for n in range(18):
   a,b,c,z=copy.deepcopy([p,d,s,rs])
   if n==0:b['minigames'][78]['fieldEvidence']['category']['status']='corroborated'

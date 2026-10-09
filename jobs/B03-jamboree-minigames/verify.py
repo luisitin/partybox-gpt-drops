@@ -20,6 +20,9 @@ ROOT=Path(__file__).resolve().parent
 FACTS=['name','category','format','gameplay','controls','timeLimit','winRules','scoreRules','tieRules','reward']
 OWN=['minigames','catalogue-sources','catalogue-conflicts','catalogue-second-pass','historical-supplement-reopens','catalogue-list-comparison']
 LINEAGES={'www.mariowiki.com':'mariowiki','www.nintendolife.com':'hookshot','mariopartylegacy.com':'mariopartylegacy','familygamesquad.com':'familygamesquad','screenrant.com':'valnet','blog.bestbuy.ca':'bestbuy','gamingtrend.com':'gamingtrend','www.nintendo.com':'nintendo','www.thegamer.com':'valnet','www.gamenchickgaming.com':'gamenchick','namu.wiki':'namuwiki','www.consolecreatures.com':'consolecreatures','simplestreviews.blogspot.com':'celstudios','cogconnected.com':'cogconnected'}
+# Exact canonical native author host verified by the full eleven-field recovery; old publisher mapping remains byte-exact.
+LINEAGES.update({'kumanote1.com':'kumanote1'})
+
 def require(ok,message):
     if not ok:raise AssertionError(message)
 def pairs(items):
@@ -222,6 +225,9 @@ def run(args):
     preview_arrangement_recovery=module('b03_preview_arrangement_recovery','check-preview-arrangement-recovery.py')
     for result in preview_arrangement_recovery.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Preview arrangement recovery failed'),result.get('detail',''))
+    eleven_field_recovery=module('b03_eleven_field_recovery','check-eleven-field-recovery.py')
+    for result in eleven_field_recovery.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Eleven-field literal recovery failed'),result.get('detail',''))
     eleven_source_preflight=module('b03_eleven_source_preflight','check-eleven-source-preflight.py')
     for result in eleven_source_preflight.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Eleven-source preflight failed'),result.get('detail',''))

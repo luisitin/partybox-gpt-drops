@@ -81,7 +81,9 @@ def negative(p,d,s,rs):
   else:raise AssertionError('Premature adoption lost citations raw identity controls quota author lineage or unrelated history fixture accepted')
  return 24
 def run():
- p,d,s=read('reports/eleven-source-evidence-preflight.json'),read('minigames.json'),read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+n+'.json') for n in 'AB'];count=validate(p,d,s,rs)
+ p,d,s=read('reports/eleven-source-evidence-preflight.json'),read('minigames.json'),read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+n+'.json') for n in 'AB']
+ if (ROOT/'reports/eleven-field-recovery.json').exists():d,s,rs=module('check-eleven-field-recovery.py').historical_view(d,s,rs)
+ count=validate(p,d,s,rs)
  negative(p,d,s,rs)
  return [{'name':'Eleven complete original primary A+B scopes reconcile every old citation control image note and32 prospective literal independently authored clips while retaining all132 accepted364 rows152 sources2036 classifications155-record histories','caseCount':count,'passed':True,'seed':None},{'name':'Twenty-four real premature field promotion lost history duplicated or unclosed raw alias quota author lineage reward control mode and unrelated-fact fixtures reject','caseCount':24,'passed':True,'seed':None}]
 if __name__=='__main__':print(json.dumps(run(),indent=2))
