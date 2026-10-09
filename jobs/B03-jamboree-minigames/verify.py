@@ -222,6 +222,9 @@ def run(args):
     preview_arrangement_recovery=module('b03_preview_arrangement_recovery','check-preview-arrangement-recovery.py')
     for result in preview_arrangement_recovery.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Preview arrangement recovery failed'),result.get('detail',''))
+    deferred_facts=module('b03_deferred_fact_reconciliation','check-deferred-fact-reconciliation.py')
+    for result in deferred_facts.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Deferred fact reconciliation failed'),result.get('detail',''))
     preview_arrangements=module('b03_preview_player_arrangements','check-preview-player-arrangements.py')
     for result in preview_arrangements.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Preview arrangement candidate failed'),result.get('detail',''))
