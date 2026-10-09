@@ -13,7 +13,7 @@
 
 ## What it is
 
-A research file for the seven current Jamboree boards: space-type counts for 16 profiles (baseline, TV Tag Team and angry), 35 shop profiles with 215 item rows, and the Star, event, phase, Homestretch and TV rules. Each row has a status and a quote. It is strong on the shape of a board: Blue and Red spaces make up 38 to 48 percent of every board, a Star at 20 coins, and a small set of event families. It is weak on exact numbers and layout: 93 of 518 factual rows are corroborated by a second publisher, there is no numbered adjacency, item effects are not recorded, and the current Steamer event is unknown. Use it to choose a board's shape and rule families, not to copy numbers.
+A research file for the seven current Jamboree boards: space-type counts for 16 profiles (baseline, TV Tag Team and angry), 35 shop profiles with 215 item rows, and the Star, event, phase, Homestretch and TV rules. Each row has a status and a quote. It is strong on the shape of a board: Blue and Red spaces make up 38 to 48 percent of every board, a Star at 20 coins, and a small set of event families. It is weak on exact numbers and layout: 97 of 518 factual rows are corroborated by a second publisher, there is no numbered adjacency, item effects are not recorded, and the current Steamer event is unknown. Use it to choose a board's shape and rule families, not to copy numbers.
 
 ## Take these files (the product)
 
@@ -62,7 +62,7 @@ A research file for the seven current Jamboree boards: space-type counts for 16 
 ## Known gaps and risks
 
 **Must**
-- The research is partial. 93 of 518 factual rows are corroborated; eighteen conflicts are kept, not resolved; one event (the current Steamer Event Space) has no source-backed trigger or effect. Ship no single-source number as a fact; mark it as a tunable.
+- The research is partial. 97 of 518 factual rows are corroborated; eighteen conflicts are kept, not resolved; one event (the current Steamer Event Space) has no source-backed trigger or effect. Ship no single-source number as a fact; mark it as a tunable.
 - There is no numbered adjacency, no gate endpoint (the Skeleton Key gates and Galleria escalators are unknown) and no shop position. The port authors its own graph.
 - Item effects are not in the research. The rows record item names, prices and availability only. Every effect is a PartyBox design decision.
 - Licence: names, prices, maps and artwork belong to Nintendo or its licensors. The port ships none of them. No map image is republished here.
@@ -105,3 +105,5 @@ Changed (one line each, with the commit):
 Not done in this pass: no source re-fetch (the offline verifier makes no freshness claim), no map image retrieved, no factual row changed, no PR comment, review, merge or close (GitHub is read-only for this job).
 
 2026-10-09T10:50:43.256606+00:00: Current two Skeleton Key gate facts gain independent medium support for the missing3-coin price via complete original H1g editorial table versus Wiki price cell; existing complete MPL item row confirms gate use and both board names but its price is blank. All518values/516otherfacts/18conflicts unchanged; only4review fingerprints. 93/518 corroborated,406single-source,18conflicts,1unknown;37/38 events, originalNOT_MET/PR18Draft. See reports/skeleton-key-price-recovery-20261009.json. Original Namu250/Cel131 ledgers/gates/captures remain unchanged. Parent75900 whole original26/5697/94 structuralPASS/strict91FAIL37FAIL actual1 is historical; exact next whole hosted acceptance remains pending publication.
+
+2026-10-09T11:25:34.542209+00:00: Current four ordinary moving-Star purchase facts gain complete medium independent support via whole named MPL chapters and whole Namu ordinary Star/type contexts. All518values/514otherfacts/18conflicts unchanged,8fingerprints, zero new quotes/registry/capture changes. 97/518corroborated,402single-source,18conflicts,1unknown;37/38events,originalNOT_MET/PR18Draft. Read reports/ordinary-moving-star-recovery-20261009.json. Parent8ae2 whole26/5719/99PASS/strict93FAIL37FAILactual1 is historical; new actual entire hosted acceptance pending publication.

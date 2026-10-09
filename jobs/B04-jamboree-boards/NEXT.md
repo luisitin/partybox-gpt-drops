@@ -1,5 +1,17 @@
 # B04 — Current continuation
 
+2026-10-09T11:25:34.542209+00:00:97/518corroborated,402single-source,18conflicts,1unknown;37/38events. PR18Draft/originalNOT_MET.
+
+Four existing ordinary moving-Star purchase facts alone gain independent medium support: Wiggler/Galleria/Lagoon/Western. Full fresh native MPL5992A/B and complete Namu452ordinaryStar/5881ordinary-types A/B were personally read; existing NamuQ015 numeral20 reused, no new quotes/registry/capture times. All518values/514otherfacts/18conflicts unchanged,8fingerprints. Read reports/ordinary-moving-star-recovery-20261009.json. Private originals remain under /tmp/b04-boards-resume-20261009-0605/private/mpl-boards-original-1103/ and current-Namu-entire-ordinary-Star-paragraph-A-B-private.json.
+
+Resume exact remaining scopes: Raceway lap formula is explicit Start-crossings×10, paired footnote28 excludes pit-stop route and29 gives five-Buddy laps100+, but retained arch trigger still needs a distinct complete authored witness; do not extrapolate from SASKE first-two observations alone. Current Keep moving-Star is not in fresh named MPL chapter; do not promote it from a shared quotation used on another board. Train ordinary availability and Goomba exact tide-Event remain held after full negative peers. No further Namu authored words:250/250 fully spent; Cel131 with150+50reserve200 unchanged.
+
+Actual source8ae2 pub/read11:21:47,26/5719/99structuralPASS/strict93FAIL37FAILactual1 fullnative21437B SHA2b6449c0efc597e087e420a454d122f06ef76928e5519d18d5f6ec2caf8dca99 is now historical. Main1a9 ownrow10:54:30/publish46/read47 preserves all others/released. Read the exact next entire source-bound original workflow after publication; mainrefresh only after fresh root serialized lease. No inherited green/Ready/fullresearch claim or backdating.
+
+Previous detailed context follows:
+
+# B04 — Current continuation
+
 2026-10-09T11:20:46.113893+00:00: UNADOPTED substantive native source-scope checkpoint. Product93/518,406single-source,18conflicts,1unknown;37/38events/NOT_MET/PR18Draft unchanged.
 
 Four Wiggler/Galleria/Lagoon/Western ordinary moving-Star purchase candidates need complete peer result before promotion. Entire MPL5992A/B plus Namu ordinaryStar452/type5881A/B personally read; existing numeral20 can be reused without new quotes only through complete ordinary context, never as bare-number proof. Private guarded adoption writer /tmp/b04-boards-resume-20261009-0605/private/adopt-four-ordinary-stars.py requires full-clause peer. Read reports/ordinary-moving-star-scope-UNADOPTED-20261009.json. Keep movement absent in fresh named chapter; Raceway lap Start×10 formula does not independently close arch trigger. No new Namu/Cel clips, shared250/131 unchanged.

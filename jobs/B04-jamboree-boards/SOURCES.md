@@ -615,7 +615,7 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | mega-wiggler-tree-party:space:tv_tag_team_angry:lucky | single_source/medium | W_WIGGLER-Q013 |
 | mega-wiggler-tree-party:space:tv_tag_team_angry:unlucky | single_source/medium | W_WIGGLER-Q006 |
 | mega-wiggler-tree-party:space:tv_tag_team_angry:bowser | single_source/medium | W_WIGGLER-Q010 |
-| mega-wiggler-tree-party:stars:purchase | single_source/medium | MPL_BOARDS-Q001, MPL_BOARDS-Q002 |
+| mega-wiggler-tree-party:stars:purchase | corroborated/medium | MPL_BOARDS-Q001, MPL_BOARDS-Q002, NAMU_KR_COUNTS-Q015 |
 | mega-wiggler-tree-party:shop:0:item:0 | single_source/medium | W_WIGGLER-Q014 |
 | mega-wiggler-tree-party:shop:0:item:1 | single_source/medium | W_WIGGLER-Q014 |
 | mega-wiggler-tree-party:shop:0:item:2 | single_source/medium | W_WIGGLER-Q015 |
@@ -668,7 +668,7 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | rainbow-galleria:space:tv_tag_team:lucky | single_source/medium | W_GALLERIA-Q005 |
 | rainbow-galleria:space:tv_tag_team:unlucky | single_source/medium | W_GALLERIA-Q011 |
 | rainbow-galleria:space:tv_tag_team:bowser | single_source/medium | W_GALLERIA-Q009 |
-| rainbow-galleria:stars:purchase | single_source/medium | MPL_BOARDS-Q001, MPL_BOARDS-Q002 |
+| rainbow-galleria:stars:purchase | corroborated/medium | MPL_BOARDS-Q001, MPL_BOARDS-Q002, NAMU_KR_COUNTS-Q015 |
 | rainbow-galleria:shop:0:location | single_source/medium | GR_GALLERIA-Q001 |
 | rainbow-galleria:shop:0:item:0 | single_source/medium | W_GALLERIA-Q012 |
 | rainbow-galleria:shop:0:item:1 | single_source/medium | W_GALLERIA-Q012 |
@@ -753,7 +753,7 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | goomba-lagoon:space:tv_tag_team:lucky | single_source/medium | W_LAGOON-Q011 |
 | goomba-lagoon:space:tv_tag_team:unlucky | single_source/medium | W_LAGOON-Q013 |
 | goomba-lagoon:space:tv_tag_team:bowser | single_source/medium | W_LAGOON-Q006 |
-| goomba-lagoon:stars:purchase | single_source/medium | MPL_BOARDS-Q001, MPL_BOARDS-Q002 |
+| goomba-lagoon:stars:purchase | corroborated/medium | MPL_BOARDS-Q001, MPL_BOARDS-Q002, NAMU_KR_COUNTS-Q015 |
 | goomba-lagoon:shop:0:item:0 | single_source/medium | W_LAGOON-Q014 |
 | goomba-lagoon:shop:0:item:1 | single_source/medium | W_LAGOON-Q015 |
 | goomba-lagoon:shop:0:item:2 | single_source/medium | W_LAGOON-Q016 |
@@ -1030,7 +1030,7 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | western-land:space:tv_tag_team:lucky | single_source/medium | W_WESTERN-Q014 |
 | western-land:space:tv_tag_team:unlucky | single_source/medium | W_WESTERN-Q015 |
 | western-land:space:tv_tag_team:bowser | single_source/medium | W_WESTERN-Q010 |
-| western-land:stars:purchase | single_source/medium | MPL_BOARDS-Q001, MPL_BOARDS-Q002 |
+| western-land:stars:purchase | corroborated/medium | MPL_BOARDS-Q001, MPL_BOARDS-Q002, NAMU_KR_COUNTS-Q015 |
 | western-land:shop:0:item:0 | single_source/medium | W_WESTERN-Q016 |
 | western-land:shop:0:item:1 | single_source/medium | W_WESTERN-Q017 |
 | western-land:shop:0:item:2 | single_source/medium | W_WESTERN-Q018 |
@@ -1185,3 +1185,5 @@ Namu authored shared249→250/250, local21numeric+9authored=30/unchanged200; no 
 ## H1G_ITEMS — Skeleton Key price, 2026-10-09T10:50:43.256606+00:00
 
 Canonical source is the H1g editorial current Jamboree item table. Only exact registered numeral `3`, H1G_ITEMS-Q001, is quoted. Both actual full native passes recover it from the named item’s Price column. Entire authored table and linked editorial/company context were read, rather than treating a generic numeral as complete proof. Local original gate1/200; zero new expressive source prose. Existing MPL/Wiki clips and their original historical captures remain unchanged. No shared Namu/Cel words; no inventory, stock, mode or gate endpoint promotion.
+
+2026-10-09T11:25:34.542209+00:00: Four ordinary moving-Star values use unchanged MPL clips and existing NAMU_KR_COUNTS-Q015 numeral20 in complete ordinary Star Exchange context. Full native A/B reads explicitly support normal20-price and generally relocating Star. Zero new quotes, registry or historical capture changes; sharedNamu250/250/Cel131 remain. Keep/Raceway/Castle/special-mode/location/selection qualifiers excluded.

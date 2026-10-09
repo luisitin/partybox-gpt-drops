@@ -42,7 +42,7 @@ Whole count profiles remain single-source and include Start. The scoped original
 
 ## Star movement and cost
 
-- `rainbow-galleria:stars:purchase` (single_source, medium): {"movement": "relocating Star; exact eligible locations/selection law unverified", "normalCostCoins": 20, "selectionProbabilities": null} — MPL_BOARDS-Q001, MPL_BOARDS-Q002. MPL reports core movement and standard cost. Complete locations, Pro cycle, discounts and post-Homestretch additions are separate qualifiers; no RNG weights inferred.
+- `rainbow-galleria:stars:purchase` (corroborated, medium): {"movement": "relocating Star; exact eligible locations/selection law unverified", "normalCostCoins": 20, "selectionProbabilities": null} — MPL_BOARDS-Q001, MPL_BOARDS-Q002, NAMU_KR_COUNTS-Q015. 2026-10-09: full fresh MPL board guide explicitly names this board as having a rotating Star and gives the shared20-coin objective; independent Namu complete ordinary Star Exchange paragraph gives the normal20-coin price and generally relocates the Star after a purchase. Medium confidence preserves the general ordinary scope and unobserved installed build. Exact eligible locations, selection law/probabilities, Pro cycles, price discounts/Markup/Buddy effects, Homestretch additions and mode variants remain separate unverified qualifiers; no deterministic location or special-mode claim. Existing registered numeral20 is reused, with zero new quotes, source-registry/capture edits or expressive words.
 
 ## Gates, keys and paid paths
 
