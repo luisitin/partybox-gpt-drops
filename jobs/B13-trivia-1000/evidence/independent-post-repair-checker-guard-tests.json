@@ -1,0 +1,17 @@
+{
+  "requiredMissingBodyRejected": true,
+  "MissingReopenReceiptRejected": true,
+  "missingReceiptErrors": [
+    "isolated naked-receipt fixture: receipt pass mismatch",
+    "isolated naked-receipt fixture: receipt lacks actual HTTP200",
+    "isolated naked-receipt fixture: invalid actual UTC retrieval time",
+    "isolated naked-receipt fixture: missing retrieval method",
+    "isolated naked-receipt fixture: receipt target differs from selected source URL",
+    "isolated naked-receipt fixture: invalid capture SHA256",
+    "isolated naked-receipt fixture: no capture path"
+  ],
+  "RejectedDuplicateNotCountedResolved": true,
+  "checkerSha256": "3762e6084a4c7cce7367bf36438a221b2f8009348597ca1dd89853d39a6c0cfa",
+  "runAt": "2026-10-07T21:21:41.758404+00:00",
+  "scope": "Three isolated tests execute current production guard functions/AST against explicit synthetic missing/rejected fixtures. No real source opens, factual grading or shared file mutation. Original demonstrated failure report is retained."
+}
