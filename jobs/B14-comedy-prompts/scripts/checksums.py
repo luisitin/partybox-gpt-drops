@@ -19,7 +19,7 @@ def delivered_files(root):
         if path.is_file():
             if path.stat().st_size > MAX_FILE_BYTES:
                 raise ValueError("delivered file exceeds 30 MB: " + str(path.relative_to(root)))
-            if path.name != MANIFEST:
+            if path != root / MANIFEST:
                 paths.append(path)
     return sorted(paths)
 

@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-09T12:28:48.704269+00:00",
+  "reason": "Selection-adoption assertion failed before any final prompt write. This dependent unchanged local scan was prematurely started and receives zero acceptance credit. Cancel only freshly reidentified owned controller/scanner worker process group.",
+  "freshControllerPID": 375665,
+  "controllerCommand": "python3 /tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/material-full-controller.py ",
+  "controllerCwd": "/workspace",
+  "actualOwnedGroupBefore": [
+    " 375665     464  375665 Fri Oct  9 12:26:49 2026 python3 /tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/material-full-controller.py",
+    " 375668  375665  375665 Fri Oct  9 12:26:49 2026 python3 scripts/scan_pool.py",
+    " 375669  375668  375665 Fri Oct  9 12:26:49 2026 python3 scripts/scan_pool.py",
+    " 375670  375668  375665 Fri Oct  9 12:26:49 2026 python3 scripts/scan_pool.py"
+  ],
+  "signal": "SIGTERM",
+  "allQualificationCredits": 0,
+  "actualOwnedGroupAfter": [
+    " 375668       1  375665 [python3] <defunct>",
+    " 375669       1  375665 [python3] <defunct>",
+    " 375670       1  375665 [python3] <defunct>"
+  ],
+  "closedUTC": "2026-10-09T12:28:48.999302+00:00"
+}

@@ -15,13 +15,15 @@ def setup(base):
  (p/'scripts/checksums.py').write_bytes((job/'scripts/checksums.py').read_bytes())
  return p
 def manifest(p):
- (p/'SHA256SUMS.txt').write_text('\n'.join(hashlib.sha256(f.read_bytes()).hexdigest()+'  '+str(f.relative_to(p)) for f in sorted(p.rglob('*')) if f.is_file() and f.name!='SHA256SUMS.txt')+'\n')
+ (p/'SHA256SUMS.txt').write_text('\n'.join(hashlib.sha256(f.read_bytes()).hexdigest()+'  '+str(f.relative_to(p)) for f in sorted(p.rglob('*')) if f.is_file() and f != p/'SHA256SUMS.txt')+'\n')
 def case(name,mutation,expected):
  with tempfile.TemporaryDirectory(prefix='b14-size-control-',dir=w) as temporary:
   p=setup(Path(temporary));manifest(p);mutation(p)
   result=invoke(p/'scripts/checksums.py',p,['--check']);assert (result['returncode']==0)==expected,(name,result)
   result['name']=name;results.append(result)
 case('unchanged complete positive',lambda p:None,True)
+case('unlisted nested manifest filename',lambda p:((p/'nested').mkdir(),(p/'nested/SHA256SUMS.txt').write_text('unlisted payload')),False)
+case('listed nested manifest filename',lambda p:((p/'nested').mkdir(),(p/'nested/SHA256SUMS.txt').write_text('listed payload'),manifest(p)),True)
 case('unlisted ordinary file',lambda p:(p/'unlisted.txt').write_text('extra'),False)
 case('changed listed payload',lambda p:(p/'payload.txt').write_text('changed'),False)
 case('missing listed payload',lambda p:(p/'payload.txt').unlink(),False)
