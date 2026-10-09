@@ -1,119 +1,52 @@
 # B20 — Verification
 
-**Original research standard NOT_MET.** The 28-record roster still has two independent publisher lineages. Four narrowly scoped factual rows gained corroboration; current counts are **60/85 corroborated, 23 single-source, two conflicts**, with **84/168 empty category fields**. Keep PR16 draft.
+**Original research standard NOT_MET.** Current coverage is 61/85 corroborated rules, 22 single-source and two conflicts, with 84/168 empty category fields. PR16 stays draft. Structural delivery success does not certify the missing research or execute the phone/TV prototypes.
 
-## Actual complete checks
+The 2026-10-09 repair changes only BUDDY_TV_TAG from single_source to corroborated at medium confidence. All original factual values, the other 84 complete rule objects, all 28 mode objects and all 196 original proposed phase records are unchanged. The named NicheGamer author and actual Tag Team paragraph were inspected in both complete passes. Its exact contiguous quotation is nine words; no terminal period was added to the phrase.
 
-Executed environment: Python 3.12.14 and jsonschema 4.26.0. Seed N/A for deterministic research/schema/graph checks. Exact commands from this folder:
+Both separate complete Exa passes actually reopened every one of the 26 retained URLs and recovered every one of the 230 registered short quotations: 52 capture records and 460 recoveries. Every one of the 309 retained roster/rule/proposal-phase rows has both review decisions. Previous source dates, rule decisions, output, manifests and changed documents remain under reports/historical-before-buddy-tag/. Exa can return cached extraction; no origin HTTP/TLS freshness, installed patch or primary hardware gameplay observation is asserted.
+
+## Actual complete commands
+
+Python 3.12.14; jsonschema 4.26.0. Seed N/A: deterministic schema, reference, provenance, phase-graph and hash checks. Execute from this folder:
 
 ```sh
-python3 -m pip install -r requirements.txt
 python3 verify.py --structural --checksums
-python3 verify.py --strict  # completed expected exit 1
+python3 verify.py --strict  # expected exit 1, original research acceptance is NOT_MET
 sha256sum -c SHA256SUMS.txt
 ```
 
-| Test | Cases / passed | Seed | Exact command |
+The complete structural/checksum run passes 20 suites and 3,752 cases, including all 192 delivery hashes. The unchanged strict gate completes with its documented NOT_MET/exit1. All 12 original rejection fixtures remain; ten additional malformed research-scope fixtures reject expanded TV scope, upgraded confidence, dependent editorial lineage, unrelated rule changes, missing recovery/capture, altered original quotations, altered proposal phases, a mirror URL and an incomplete row review. All 194 delivered files, including the original workflow and manifest, remain below 30,000,000 bytes.
+
+| Suite | Cases / passed | Seed | Command |
 | --- | ---: | --- | --- |
-| CLOSED_JSON_SCHEMAS | 56/56 | N/A | `python3 verify.py --structural --checksums` |
-| UNIQUE_ID_COLLECTIONS | 28/28 | N/A | `python3 verify.py --structural --checksums` |
-| MODE_LIST_TWO_PUBLISHER_LINEAGES | 28/28 | N/A | `python3 verify.py --structural --checksums` |
-| EVERY_RECORDED_RULE_HAS_SOURCE | 85/85 | N/A | `python3 verify.py --structural --checksums` |
-| SOURCE_QUOTATION_REFERENCES | 234/234 | N/A | `python3 verify.py --structural --checksums` |
-| QUOTE_BUDGETS_AND_LINEAGE_GUARDS | 28/28 | N/A | `python3 verify.py --structural --checksums` |
-| SOURCE_REOPEN_PASSES | 50/50 | N/A | `python3 verify.py --structural --checksums` |
-| QUOTATIONS_RECOVERED_IN_BOTH_PASSES | 458/458 | N/A | `python3 verify.py --structural --checksums` |
-| SOURCE_REPORT_COUNTS_AND_LINKS | 50/50 | N/A | `python3 verify.py --structural --checksums` |
-| RULE_LINKS_AND_EXPLICIT_FIELD_GAPS | 168/168 | N/A | `python3 verify.py --structural --checksums` |
-| ORIGINAL_PROPOSAL_PHASE_EXIT_GRAPHS | 196/196 | N/A | `python3 verify.py --structural --checksums` |
-| PHASE_TRANSITION_TARGETS_AND_GUARDS | 672/672 | N/A | `python3 verify.py --structural --checksums` |
-| PHONE_TV_PROTOCOL_BOUNDARY | 1/1 | N/A | `python3 verify.py --structural --checksums` |
-| FULL_RETAINED_ROW_PASS_A | 309/309 | N/A | `python3 verify.py --structural --checksums` |
-| FULL_RETAINED_ROW_PASS_B | 309/309 | N/A | `python3 verify.py --structural --checksums` |
-| MODE_DOCUMENT_COVERAGE | 28/28 | N/A | `python3 verify.py --structural --checksums` |
-| DELIBERATE_REJECTION_FIXTURES | 12/12 | N/A | `python3 verify.py --structural --checksums` |
-| FILE_SIZE_LIMIT | 118/118 | N/A | `python3 verify.py --structural --checksums` |
-| SHA256_MANIFEST | 117/117 | N/A | `python3 verify.py --structural --checksums` |
-| Independent manifest process | 117/117 | N/A | `sha256sum -c SHA256SUMS.txt` |
+| CLOSED_JSON_SCHEMAS | 58/58 | N/A | structural command above |
+| UNIQUE_ID_COLLECTIONS | 29/29 | N/A | structural command above |
+| MODE_LIST_TWO_PUBLISHER_LINEAGES | 28/28 | N/A | structural command above |
+| EVERY_RECORDED_RULE_HAS_SOURCE | 85/85 | N/A | structural command above |
+| SOURCE_QUOTATION_REFERENCES | 235/235 | N/A | structural command above |
+| QUOTE_BUDGETS_AND_LINEAGE_GUARDS | 29/29 | N/A | structural command above |
+| SOURCE_REOPEN_PASSES | 52/52 | N/A | structural command above |
+| QUOTATIONS_RECOVERED_IN_BOTH_PASSES | 460/460 | N/A | structural command above |
+| SOURCE_REPORT_COUNTS_AND_LINKS | 52/52 | N/A | structural command above |
+| RULE_LINKS_AND_EXPLICIT_FIELD_GAPS | 168/168 | N/A | structural command above |
+| ORIGINAL_PROPOSAL_PHASE_EXIT_GRAPHS | 196/196 | N/A | structural command above |
+| PHASE_TRANSITION_TARGETS_AND_GUARDS | 672/672 | N/A | structural command above |
+| PHONE_TV_PROTOCOL_BOUNDARY | 1/1 | N/A | structural command above |
+| FULL_RETAINED_ROW_PASS_A | 309/309 | N/A | structural command above |
+| FULL_RETAINED_ROW_PASS_B | 309/309 | N/A | structural command above |
+| BUDDY_TAG_RECOVERY_SCOPE | 643/643 | N/A | structural command above |
+| MODE_DOCUMENT_COVERAGE | 28/28 | N/A | structural command above |
+| DELIBERATE_REJECTION_FIXTURES | 12/12 | N/A | structural command above |
+| FILE_SIZE_LIMIT | 194/194 | N/A | structural command above |
+| SHA256_MANIFEST | 192/192 | N/A | structural command above |
+| Independent manifest process | 192/192 | N/A | sha256sum command above |
 
-The substantive structural run passes 18/18 suites and 2,830/2,830 cases. Final full checksum validation adds 117 hashes: 19/19 suites and 2,947/2,947 cases. All 12 original deliberate invalid fixtures remain rejected. All 118 delivered files, including the manifest and original read-only B20 workflow, are below 30,000,000 bytes. The full unchanged strict command returns 1 because research still lacks full independent rule/field coverage; schema success does not substitute for those gates.
-
-## Incremental factual recovery
-
-All original audits, source registries, rule/mode values, both changed mode documents, eight refreshed original source captures and previous verification output are preserved under `reports/historical-before-pro-coaster/`. Seven relevant full authored sources were reopened/read in each of two separate incremental Exa calls. All 106 registered source/quote combinations in these fresh captures were recovered. Across the retained original and incremental audits, all 25 sources have two captures and all 229 registered excerpts have two recovery records: 458 checks. Unchanged sources/rows retain their original complete-pass evidence; they are not falsely described as newly fetched or newly re-reviewed.
-
-Exa may return cached extraction. Retrieval fingerprints describe extracted text, not origin HTML HTTP status, personally watched game frames, primary gameplay execution or an installed Nintendo build. Each quote is contiguous and at most 25 words; full third-party captures remain outside the repository. Authored paragraph context was checked for each of the four changed rows in both passes.
-
-| Changed row | Pass A | Pass B | Confidence | Scope retained |
-| --- | --- | --- | --- | --- |
-| PRO_LENGTH | corroborated | corroborated | medium | 12 turns; exact game/build not inspected |
-| PRO_UNLOCK | corroborated | corroborated | medium | Complete one Mario Party game; board/length/win qualifiers explicitly supported |
-| COASTER_FAIL | corroborated | corroborated | medium | Reach the end before countdown expiry; exact initial clocks and animations unknown |
-| COASTER_PLAYERS | corroborated | corroborated | medium | Up to four humans and two/four participant groups; solo CPU fill, each course/variant and patch scope unknown |
-
-Nintendo Life describes a two-player option without asserting a maximum of two. Nintendo World Report independently names two/four participants, and ScreenRant independently names four-player support. This clarifies the narrow published counts while retaining all unresolved fill/version qualifiers and the original assessment. Candidate Boss Rush/rank descriptions were not counted as corroboration because counter/rank scope is ambiguous or inconsistent. See CONFLICTS.md C03/C10.
-
-Every one of the original 28 phone/TV spec objects and 196 phase graphs was compared against the preserved snapshot and is unchanged as JSON. Their equations, sensors and gameplay have **not** been executed; only data/reference/schema/phase-exit checks are claimed.
-
-## Actual validator output
-
-```text
-$ python3 verify.py --structural
-PASS CLOSED_JSON_SCHEMAS: 56/56
-PASS UNIQUE_ID_COLLECTIONS: 28/28
-PASS MODE_LIST_TWO_PUBLISHER_LINEAGES: 28/28
-PASS EVERY_RECORDED_RULE_HAS_SOURCE: 85/85
-PASS SOURCE_QUOTATION_REFERENCES: 234/234
-PASS QUOTE_BUDGETS_AND_LINEAGE_GUARDS: 28/28
-PASS SOURCE_REOPEN_PASSES: 50/50
-PASS QUOTATIONS_RECOVERED_IN_BOTH_PASSES: 458/458
-PASS SOURCE_REPORT_COUNTS_AND_LINKS: 50/50
-PASS RULE_LINKS_AND_EXPLICIT_FIELD_GAPS: 168/168
-PASS ORIGINAL_PROPOSAL_PHASE_EXIT_GRAPHS: 196/196
-PASS PHASE_TRANSITION_TARGETS_AND_GUARDS: 672/672
-PASS PHONE_TV_PROTOCOL_BOUNDARY: 1/1
-PASS FULL_RETAINED_ROW_PASS_A: 309/309
-PASS FULL_RETAINED_ROW_PASS_B: 309/309
-PASS MODE_DOCUMENT_COVERAGE: 28/28
-PASS DELIBERATE_REJECTION_FIXTURES: 12/12
-PASS FILE_SIZE_LIMIT: 118/118
-STRUCTURAL_RESULT=PASS; suites=18; cases=2830; seed=N/A (deterministic)
-EXIT_CODE=0
-
-$ python3 verify.py --strict
-PASS CLOSED_JSON_SCHEMAS: 56/56
-PASS UNIQUE_ID_COLLECTIONS: 28/28
-PASS MODE_LIST_TWO_PUBLISHER_LINEAGES: 28/28
-PASS EVERY_RECORDED_RULE_HAS_SOURCE: 85/85
-PASS SOURCE_QUOTATION_REFERENCES: 234/234
-PASS QUOTE_BUDGETS_AND_LINEAGE_GUARDS: 28/28
-PASS SOURCE_REOPEN_PASSES: 50/50
-PASS QUOTATIONS_RECOVERED_IN_BOTH_PASSES: 458/458
-PASS SOURCE_REPORT_COUNTS_AND_LINKS: 50/50
-PASS RULE_LINKS_AND_EXPLICIT_FIELD_GAPS: 168/168
-PASS ORIGINAL_PROPOSAL_PHASE_EXIT_GRAPHS: 196/196
-PASS PHASE_TRANSITION_TARGETS_AND_GUARDS: 672/672
-PASS PHONE_TV_PROTOCOL_BOUNDARY: 1/1
-PASS FULL_RETAINED_ROW_PASS_A: 309/309
-PASS FULL_RETAINED_ROW_PASS_B: 309/309
-PASS MODE_DOCUMENT_COVERAGE: 28/28
-PASS DELIBERATE_REJECTION_FIXTURES: 12/12
-PASS FILE_SIZE_LIMIT: 118/118
-STRUCTURAL_RESULT=PASS; suites=18; cases=2830; seed=N/A (deterministic)
-MODE_LIST_TWO_SOURCE=28/28; PASS
-RULES_TWO_SOURCE=60/85; FAIL
-FIELDS_WITH_RECORDED_RULES=84/168; FAIL
-PROPOSED_PHASE_EXIT_GRAPHS=196/196; PASS
-PROPOSAL_GAMEPLAY_EXECUTED=NO; only schema/reference/phase-graph checks claimed
-STRICT_RESEARCH_RESULT=NOT_MET; exit=1
-EXIT_CODE=1
-```
+The actual complete outputs appear in validator-output.txt. The current workflow keeps the original full commands, 30-minute timeout and read-only permissions. It records their complete output outside the job folder before uploading an exact checked-delivery artifact; strict exit1 is explicitly preserved. Native exact-head hosted output/artifact verification is reported in PR16 only after it actually completes.
 
 ## UNVERIFIED
 
-- All 84 empty field slots remain explicit in modes.json and the individual mode documents. No unsupported reward, unlock, clock, RNG or reaction behavior was supplied.
-- Original phone/TV gameplay equations remain design proposals, with no physical gameplay execution or Nintendo-faithful reconstruction claim.
-- Exact source qualifier gaps remain in the following 25 rows; the two unresolved conflicts preserve their competing reports.
+All 84 empty field slots, all remaining rule qualifiers and both conflicts remain explicit. Installed-version/patch behavior and physical gameplay have not been observed. All phone/TV gameplay equations remain proposals with no executed gameplay proof. KEEP GOING after all checks pass is not complete because original strict research acceptance has not passed.
 
 | Rule | Status | Confidence | Remaining qualifier / scope |
 | --- | --- | --- | --- |
@@ -141,26 +74,8 @@ EXIT_CODE=1
 | COASTER_RANK_TIME | single_source | medium | Rank thresholds and exact base countdowns remain unverified. |
 | BUDDY_WALUIGI | conflict | low | Two same-publisher articles disagree; DualShockers also reports 3–8. No verified RNG weights or same-opponent-repeat rule is inferred. |
 | BUDDY_GALLERIA | single_source | medium | Older published Galleria combo advice conflicts with this rule; patch/version scope must be established before treating it as universal. |
-| BUDDY_TV_TAG | single_source | medium | Together Dice supplies similar doubled interactions without a literal Buddy. |
 
-## GitHub delivery
 
-The final-head hosted structural/checksum/strict-result conclusion is recorded in PR16 after observation. A green artifact CI result does not certify unresolved Nintendo behavior or execute the original phone/TV prototypes.
+The previous full verification history and unchanged failures remain in the historical folder. The repair writer briefly placed a historical annotation over the copied README; that annotation is retained privately, and the README was restored from immutable Git 0c8d702 bytes before any acceptance check. Snapshot hashes now verify the original preserved bytes.
 
-## Polish pass 2026-10-08
-
-Scope: correctness, product review and documentation only. No rule row, field value or evidence capture was changed.
-
-| Check | Command | Result |
-| --- | --- | --- |
-| Structural suites | `python3 verify.py --structural --checksums` | PASS, 19 suites, 2,947 cases, about 2 s before this pass; 2,951 cases after the two new files joined the manifest suites |
-| Manifest | `sha256sum -c SHA256SUMS.txt` | 117 of 117 OK before this pass; regenerated for the files this pass changed |
-| Strict gate | `python3 verify.py --strict` | exit 1, as documented: MODE_LIST_TWO_SOURCE 28/28, RULES_TWO_SOURCE 60/85, FIELDS_WITH_RECORDED_RULES 84/168, PROPOSED_PHASE_EXIT_GRAPHS 196/196 |
-| Hosted CI | GitHub run 37679418437 on head `de8cc66` | success (`B20 research and prototype specification checks`) |
-| Evidence quotes against captures | inline python: every `rules.json` evidence quote checked against the quotations in `reports/source-captures/` (passes A and B) | 178 of 178 exact matches; no missing capture |
-| Cross-job check | Pro, Frenzy and Tag-Team against B05 `claims.json` (COUNT04, TV01, TV02, TV03, PRO02, PRO03, PRO04) | no conflict; both drops agree on Pro's 12 turns and announced category and on Frenzy's 5 turns, 50 coins, one Star and double-dice start |
-| Port constraint | `packages/shared/src/constants.ts` `roomCapacity` in the main repo | 16 players; the 20-racer race is capped and the INTEGRATION says so |
-
-Seed: not applicable (deterministic). Case counts are as `verify.py` reports them.
-
-UNVERIFIED in this pass: no live re-fetch of any source (most hosts are blocked from this box). Evidence was checked against stored captures, not live pages. No gameplay, installed game or primary-frame capture was observed. The phase specs are proposals and were not executed.
+The first full-check helper generated an extra entry for the preserved historical SHA256SUMS.txt; the unchanged original verifier rejected that manifest with exit2. Its full output and natural CLOSED receipt are preserved privately. The generator was corrected to the original basename exclusion, and the preserved historical manifest is still verified by its snapshot hash. No source, acceptance gate or original validator behavior was relaxed.

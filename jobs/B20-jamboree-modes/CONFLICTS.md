@@ -30,7 +30,7 @@ Wiki, TheGamer's complete Buddy table and DualShockers report 3–8 stolen coins
 
 ## C08 — Buddy exceptions, Galleria and TV
 
-The current wiki bars Peach/Daisy Buddy appearances on Rainbow Galleria and bars literal Buddies in TV Tag Team. Older Galleria combo advice conflicts with the first statement; patch/version scope is unresolved. These restrictions remain one-source. Together Dice's doubled interactions are distinct from a literal recruited Buddy.
+The current wiki bars Peach/Daisy Buddy appearances on Rainbow Galleria and bars literal Buddies in TV Tag Team. Older Galleria combo advice conflicts with the first statement; patch/version scope is unresolved. The Galleria restriction remains one-source with unresolved patch scope. The narrow literal-Buddy absence under TV Tag Team Rules is now independently reported by the authored NicheGamer review at medium confidence. This does not establish any installed patch or restriction in another TV mode. Together Dice's doubled interactions are distinct from a literal recruited Buddy.
 
 ## C09 — Prototype design versus sourced behavior
 

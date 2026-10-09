@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Offline B20 data/spec checks. Research truth and gameplay execution are separate."""
-import argparse,copy,hashlib,json,sys
+import argparse,copy,hashlib,json,sys,runpy
 from collections import Counter
 from pathlib import Path
 from jsonschema import Draft202012Validator,FormatChecker
@@ -113,6 +113,7 @@ def run(strict=False,checksums=False):
  passed('PHONE_TV_PROTOCOL_BOUNDARY',1)
  row_count=audit_ok(docs['rowAudit'],modes,facts)
  passed('FULL_RETAINED_ROW_PASS_A',row_count);passed('FULL_RETAINED_ROW_PASS_B',row_count)
+ passed('BUDDY_TAG_RECOVERY_SCOPE',runpy.run_path(str(ROOT/'_buddy_tag_scope.py'))['run_checks']()['assertions'])
  for mid,m in modes.items():
   f=ROOT/'modes'/(mid+'.md');require(f.is_file(),'missing mode document');t=f.read_text();require('Original adaptation proposal' in t and '## UNVERIFIED' in t and all(p['id'] in t for p in m['phoneTvSpec']['phases']),'mode document coverage')
  require(len(list((ROOT/'modes').glob('*.md')))==len(modes),'extra mode doc')

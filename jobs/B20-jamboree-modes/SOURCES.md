@@ -1131,9 +1131,10 @@ The current wiki says Peach and Daisy do not appear as Buddies on Rainbow Galler
 
 Jamboree Buddies do not appear under Jamboree TV Tag Team Rules.
 
-**single_source; medium**. Together Dice supplies similar doubled interactions without a literal Buddy.
+**corroborated; medium**. Mario Wiki and the separately authored NicheGamer review independently report absence only under Jamboree TV Tag Team Rules. Together Dice is distinct. No current patch, installed build, primary frames, other TV mode or hardware execution is certified.
 
 - https://www.mariowiki.com/Jamboree_Buddy — “Jamboree Buddies will not appear in Tag Team Rules.” (W_BUDDY-Q014; Buddy table / BUDDY_TV_TAG).
+- https://nichegamer.com/reviews/super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv-review/ — “Jamboree Buddies do not appear in this game mode” (NG_TV-Q001; Matt Kowalski review, authored Tag Team rules paragraph).
 
 ## BUDDY_DOUBLE
 
@@ -1181,3 +1182,15 @@ Super Mario Party Jamboree — Nintendo Switch 2 Edition + Jamboree TV Review �
 https://www.nintendoworldreport.com/review/72291/super-mario-party-jamboree-nintendo-switch-2-edition--jamboree-tv-switch-2-review
 
 Lineage: `nintendo-world-report`; kind: `hands_on_review`. Both short-quote capture records are in reports/source-captures/.
+
+## Complete two-pass refresh and independent Tag Team review — 2026-10-09
+
+All 26 retained URLs were actually reopened in both complete passes: 52 capture records and all 230 quotation clips twice (460 recoveries). All 309 retained mode/rule/proposal-phase rows were rechecked in each pass. Previous captures and decisions are preserved under reports/historical-before-buddy-tag/. Extracted text may be cached; no origin HTTP/TLS freshness or installed game version is certified.
+
+### NG_TV
+
+Matt Kowalski, NicheGamer, independently authored Switch 2 review. The review discloses Nintendo-provided review code; it remains a distinct editorial lineage from Mario Wiki. The quoted authored paragraph explicitly concerns Tag Team Rules. No physical gameplay observation by this assistant is claimed.
+
+https://nichegamer.com/reviews/super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv-review/
+
+Lineage: `niche-gamer`; kind: `hands_on_review`; registered quotation NG_TV-Q001 is nine words. The exact phrase is retained without adding a terminal period, because the article continues with a comma.

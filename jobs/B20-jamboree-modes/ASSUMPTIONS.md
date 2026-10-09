@@ -8,3 +8,5 @@
 - Original inputs work with touch controls. Sensor-like camera/microphone/motion interactions are adapted explicitly to touch actions; TV/server remains authoritative.
 - Same-publisher pages count as one lineage. TheGamer articles by different authors do not count as independent corroboration; wiki redirects remain one lineage.
 - Both research passes were conducted by the same assistant. Retrieval can be cached; hashes are of retrieved markdown. No origin-HTML, emulator, game-build or live gameplay observation is claimed.
+
+- 2026-10-09: NicheGamer and Mario Wiki count as distinct editorial lineages. Nintendo-provided review code is disclosed provenance, not a claim of this assistant observing hardware. Buddy absence is corroborated only for Jamboree TV Tag Team Rules, at medium confidence; installed-version and other-mode behavior remain unknown. All 26 URLs and all 309 retained rows were rechecked in each of two actual complete passes.

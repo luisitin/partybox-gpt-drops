@@ -1,7 +1,7 @@
 {
   "job": "B20",
-  "reviewDate": "2026-10-07",
-  "method": "Same assistant reopened all retained URLs in two passes, checked quotations, audited every retained mode and rule and reviewed every proposed phase for finite exits. Proposal review is not Nintendo-source verification. Incremental Pro/Coaster recovery preserves original audits and rechecks all four changed factual rows in both passes; unchanged row decisions remain from the recorded original complete reviews.",
+  "reviewDate": "2026-10-09",
+  "method": "Two separate complete Exa passes reopened all 26 URLs and recovered all 230 registered short quotations per pass. Same assistant reviewed all 28 roster records, all 85 rule records and all 196 proposed phase records against those retained references, explicit scope/gap notes and finite exit graphs. All existing factual values, other rule statuses, field gaps and original adaptation JSON remain unchanged. Only BUDDY_TV_TAG gains a separately authored Tag Team review at medium confidence. Source extraction may be cached; no primary hardware, installed patch or prototype gameplay is certified.",
   "rows": [
     {
       "rowId": "phase:pro-rules:lobby",
@@ -2790,11 +2790,12 @@
     },
     {
       "rowId": "rule:BUDDY_TV_TAG",
-      "passA": "single_source",
-      "passB": "single_source",
+      "passA": "corroborated",
+      "passB": "corroborated",
       "confidence": "medium",
       "sourceIds": [
-        "W_BUDDY"
+        "W_BUDDY",
+        "NG_TV"
       ],
       "basis": "reported Nintendo behavior"
     },
@@ -2822,8 +2823,8 @@
     }
   ],
   "ruleStatuses": {
-    "corroborated": 60,
-    "single_source": 23,
+    "corroborated": 61,
+    "single_source": 22,
     "conflict": 2
   }
 }

@@ -32,7 +32,7 @@ Mode presence has two publisher lineages; individual rule status is separate. Th
 - `BUDDY_DK`: Donkey Kong offers optional transport to a random board space before the die is hit. — **corroborated; high**. Destination weights and movement-counter interaction are unknown.
 - `BUDDY_JUNIOR`: Bowser Jr. sets a Half-Coins Steal Trap on the landing space. — **corroborated; high**. 
 - `BUDDY_GALLERIA`: The current wiki says Peach and Daisy do not appear as Buddies on Rainbow Galleria. — **single_source; medium**. Older published Galleria combo advice conflicts with this rule; patch/version scope must be established before treating it as universal.
-- `BUDDY_TV_TAG`: Jamboree Buddies do not appear under Jamboree TV Tag Team Rules. — **single_source; medium**. Together Dice supplies similar doubled interactions without a literal Buddy.
+- `BUDDY_TV_TAG`: Jamboree Buddies do not appear under Jamboree TV Tag Team Rules. — **corroborated; medium**. Mario Wiki and the separately authored NicheGamer review independently report absence only under Jamboree TV Tag Team Rules. Together Dice is distinct. No current patch, installed build, primary frames, other TV mode or hardware execution is certified.
 
 ### Scoring
 
@@ -76,4 +76,3 @@ The terminal done phase accepts no inputs. Host cancellation, disconnection expi
 - Exact hidden random weights, all tie/counter exceptions and content-specific timers are not inferred from prose.
 - BUDDY_WALUIGI: Two same-publisher articles disagree; DualShockers also reports 3–8. No verified RNG weights or same-opponent-repeat rule is inferred.
 - BUDDY_GALLERIA: Older published Galleria combo advice conflicts with this rule; patch/version scope must be established before treating it as universal.
-- BUDDY_TV_TAG: Together Dice supplies similar doubled interactions without a literal Buddy.

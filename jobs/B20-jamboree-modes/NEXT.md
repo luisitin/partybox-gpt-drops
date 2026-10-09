@@ -1,16 +1,5 @@
 # B20 — Exact next step
 
-The bounded Pro/Coaster recovery adds four narrowly corroborated rules, with
-actual two-pass short-quote/context checks and preserved prior versions. Current
-counts: 60/85 corroborated, 23 single-source, two conflicts, 84/168 empty fields.
-The unchanged complete Python structural/checksum and strict checks are recorded
-in VERIFY.md and validator-output.txt. Inspect the exact-head CI linked in draft
-PR16, then pursue substantive factual gaps on job/B20-jamboree-modes.
+The 2026-10-09 complete refresh reopened all 26 URLs twice, recovered all 230 registered short clips in both passes, and rechecked all 309 retained rows per pass. Only BUDDY_TV_TAG gained independent authored NicheGamer corroboration at medium confidence. Current status: 61/85 corroborated rules, 22 single-source, two conflicts, 84/168 empty field slots. All 28 mode objects, all factual values, all 196 original proposal phases and all other rules are unchanged. Previous bytes and dates are preserved under reports/historical-before-buddy-tag/.
 
-Next factual work needs independent full-qualifier evidence for the remaining
-23 single-source rows and two conflicts. Exact Flight School clocks, Coaster
-rank-to-second tables and solo CPU fill, Remix sequence, Waluigi range, Buddy
-patch/TV restrictions, rewards and unlocks remain priorities. Rank/achievement
-candidates contain unresolved counter/version ambiguity; do not silently choose
-a number. Original phone/TV equations remain proposals with 196 explicit phase
-exits, never asserted as executed physical gameplay or Nintendo reconstruction.
+Inspect the exact current-head original full hosted check and its native logs/delivered artifact before treating the delivery as checked. PR16 stays draft because strict research acceptance remains NOT_MET. Further material work requires independent full-qualifier evidence for the remaining 24 partial/conflict rows, including exact clocks, rank/counter scope, rewards, unlocks and the unresolved Galleria patch restriction. Prototype gameplay remains unexecuted. Never transfer old source captures into a new current-pass claim or expand Tag Team evidence to other TV modes.
