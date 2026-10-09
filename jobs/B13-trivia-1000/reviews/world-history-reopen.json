@@ -1041,33 +1041,36 @@
   },
   {
     "id": "B13-0514",
-    "rowSha256": "f8602ef9b7e90350324ebed0ce453eb478ef270d060bc92500a149aea949bc1c",
-    "reviewer": "/root/r2048_nature",
-    "reviewedAt": "2026-10-07T21:19:08.104530+00:00",
+    "reviewer": "codex-board-audit-20261009 / root-independent B13 peer",
+    "reviewedAt": "2026-10-09T11:52:32.515627+00:00",
+    "rowSha256": "0fd386dea51a090784bf4755a01d9acf061b4e631950bd2be848d970f960413b",
     "result": "supported",
+    "assessment": "Both complete leads explicitly associate the first unified Chinese empire with Qin. The changed stem removes the literal Qin name; it asks the dynasty, not the ruler or its final year. Both whole surrounding paragraphs explicitly connect the government with Legalism; World History Encyclopedia also discusses Shang Yang, Li Si, criticism and subsequent book-burning, so this is not a quotation about an unrelated school. Stable historical question. Britannica lead gives dynasty ending207BCE while WHE gives206BCE; retain both as an unused source discrepancy. Neither date is asked or silently reconciled.",
     "sources": [
       {
-        "sourceId": "world-history-s0009",
+        "sourceId": "world-history-s5009",
         "receipt": {
           "pass": "reopen",
-          "retrievedAt": "2026-10-07T20:07:48.536403+00:00",
-          "method": "urllib-http-get",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T11:41:13.344893+00:00",
+          "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://www.britannica.com/biography/Qin-Shi-Huang",
           "resolvedUrl": "https://www.britannica.com/biography/Qin-Shi-Huang",
           "status": 200,
-          "contentType": "text/html",
-          "rawSha256": "478cd1a1302c0e28509f797a27432cf64a822e80685dda98bd97d1000d992881",
-          "rawPath": ".work/world-history/reopen/world-history-s0009.raw",
-          "title": "Qin Shi Huang | Biography, Accomplishments, Family, United China, Tomb, & Facts | Britannica",
           "contentSha256": "78eaa950b72a7942c32372cf2e7cb32e6240b6949eaa861837e345b70d9382e8",
-          "capturePath": ".work/world-history/reopen/world-history-s0009.txt",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/world-history-s5009.txt",
+          "sourceId": "world-history-s5009",
+          "rawSha256": "38850bf80a87f7f26c7e3d817f9a06a55d389598c9afec3be8c32eb172c77e5b",
           "captureComplete": true,
-          "characters": 13167
+          "originalPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590",
+          "captureRelocatedWithoutByteChanges": true
         },
+        "contextRead": true,
+        "claimAssessment": "Both complete leads explicitly associate the first unified Chinese empire with Qin. The changed stem removes the literal Qin name; it asks the dynasty, not the ruler or its final year. Both whole surrounding paragraphs explicitly connect the government with Legalism; World History Encyclopedia also discusses Shang Yang, Li Si, criticism and subsequent book-burning, so this is not a quotation about an unrelated school.",
         "quotations": [
           {
             "field": "quote",
-            "quote": "was the emperor (reigned 221–210 bce ) of the Qin dynasty",
+            "quote": "of the Qin dynasty (221–207 bce ) and creator of the first unified Chinese empire",
             "exactMatch": true
           },
           {
@@ -1076,27 +1079,43 @@
             "exactMatch": true
           }
         ],
-        "contextRead": true,
-        "claimAssessment": "Tested Han/Tang/Song imperial lines; the first emperor’s imperial dynasty is Qin, even though the Qin state predates him. Fun fact: Both identify Legalism as his governing philosophy; no claim that he invented it is made."
+        "actualWholeScopeRead": [
+          {
+            "field": "quote",
+            "wholeParagraphSHA256": "fef9356e0a3233117bd1edb96c2c87efe9adbb091a9591049d92d100e3a87bc3",
+            "wholeParagraphChars": 271,
+            "literalClipWords": 15,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          },
+          {
+            "field": "funFactQuote",
+            "wholeParagraphSHA256": "42c357b9d354adb8e5240a56561d7e7b54137d36d3170d00f1fd0ab33dbafff7",
+            "wholeParagraphChars": 506,
+            "literalClipWords": 8,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          }
+        ]
       },
       {
-        "sourceId": "world-history-s0010",
+        "sourceId": "world-history-s5010",
         "receipt": {
           "pass": "reopen",
-          "retrievedAt": "2026-10-07T20:07:48.540115+00:00",
-          "method": "urllib-http-get",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T11:41:13.913185+00:00",
+          "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://www.worldhistory.org/Shi_Huangdi/",
           "resolvedUrl": "https://www.worldhistory.org/Shi_Huangdi/",
           "status": 200,
-          "contentType": "text/html",
-          "rawSha256": "0abc615ac69fee52c19ffb7424efb7480f9a3e299cf3b5c88e83cae52a536b4f",
-          "rawPath": ".work/world-history/reopen/world-history-s0010.raw",
-          "title": "Shi Huangdi - World History Encyclopedia",
           "contentSha256": "92b656302841c9cf5f45ab24c76a44957aecccb031fd7d1705d9fc55de14be11",
-          "capturePath": ".work/world-history/reopen/world-history-s0010.txt",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/world-history-s5010.txt",
+          "sourceId": "world-history-s5010",
+          "rawSha256": "64cb30fc349fe2a952a5d9c375ca382820e2268a9af7d3b13736930daa9a085d",
           "captureComplete": true,
-          "characters": 19529
+          "originalPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590",
+          "captureRelocatedWithoutByteChanges": true
         },
+        "contextRead": true,
+        "claimAssessment": "Both complete leads explicitly associate the first unified Chinese empire with Qin. The changed stem removes the literal Qin name; it asks the dynasty, not the ruler or its final year. Both whole surrounding paragraphs explicitly connect the government with Legalism; World History Encyclopedia also discusses Shang Yang, Li Si, criticism and subsequent book-burning, so this is not a quotation about an unrelated school.",
         "quotations": [
           {
             "field": "quote",
@@ -1107,17 +1126,38 @@
             "field": "funFactQuote",
             "quote": "Maintaining Shang Yang's strict philosophy of Legalism as the official policy of the government",
             "exactMatch": true
+          },
+          {
+            "field": "extraQuote",
+            "quote": "was the first emperor of a unified China",
+            "exactMatch": true
           }
         ],
-        "contextRead": true,
-        "claimAssessment": "Tested Han/Tang/Song imperial lines; the first emperor’s imperial dynasty is Qin, even though the Qin state predates him. Fun fact: Both identify Legalism as his governing philosophy; no claim that he invented it is made."
+        "actualWholeScopeRead": [
+          {
+            "field": "quote",
+            "wholeParagraphSHA256": "18b9893d6cd4f68ffbab1915dd787967b8e826dfd221dac3bac44c430ba6e99d",
+            "wholeParagraphChars": 313,
+            "literalClipWords": 7,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          },
+          {
+            "field": "funFactQuote",
+            "wholeParagraphSHA256": "3db473a4e382e213f61e863f666558dd5c3a1951173aa346cf826438a1350291",
+            "wholeParagraphChars": 392,
+            "literalClipWords": 14,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          },
+          {
+            "field": "extraQuote",
+            "wholeParagraphSHA256": "18b9893d6cd4f68ffbab1915dd787967b8e826dfd221dac3bac44c430ba6e99d",
+            "wholeParagraphChars": 313,
+            "literalClipWords": 8,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          }
+        ]
       }
-    ],
-    "assessment": "Tested Han/Tang/Song imperial lines; the first emperor’s imperial dynasty is Qin, even though the Qin state predates him. Fun fact: Both identify Legalism as his governing philosophy; no claim that he invented it is made.",
-    "factPayloadUnchangedByPermutation": true,
-    "priorSourceFactVersionSha256": "f12085611548c74f6fea7614cfd3886548e486c05f10805ac5c12ff5269c0b17",
-    "actualSourceReceiptsReused": true,
-    "sourceTimingDisclosure": "Every citation/quote/claim is exactly unchanged. These original actual source GET receipts and manual fact-context assessments are reused; the new review time describes reading the final ordered options, not a newly invented source reopen."
+    ]
   },
   {
     "id": "B13-0515",

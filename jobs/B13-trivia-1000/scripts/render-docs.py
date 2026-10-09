@@ -4,6 +4,13 @@ import hashlib,json
 from pathlib import Path
 from datetime import datetime,timezone
 R=Path(__file__).resolve().parents[1];report=json.loads((R/'reports/checks.json').read_text())
+def write_verification_preserving_history(text):
+    path=R/'VERIFY.md';previous=path.read_text() if path.exists() else ''
+    old_marker='\n## Actual independent option integrity audits'
+    retained=old_marker+previous.split(old_marker,1)[1] if old_marker in previous else ''
+    if retained:
+        text+='\n## Retained historical verification\n\nThese completed audits retain their original version hashes and actual dates. They do not certify later row or checker amendments.\n'+retained
+    path.write_text(text)
 def h(x):return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()
 rows=[]
 for p in sorted((R/'categories').glob('*.json')):rows.extend(json.loads(p.read_text()))
@@ -29,7 +36,7 @@ Local acceptance checks retained author and actual second-pass bodies against th
 ''')
 totals=[('Authored rows against JSON Schema, IDs, four unique options, answer/index and author hashes',N,N if not errors else 'see actual errors'),('Category difficulty 34/33/33 and exact answer positions 25/25/25/25',10,10 if not errors else 'see actual errors'),('Author quotation fields in actual hash-checked retained bodies',report['quoteFields'],report['quoteMatchesActualLocalCaptures']),('Current independent adversarial acceptances',N,report['adversarialAcceptedCurrent']),('Current actual second-pass source support reviews',N,report['reopenSupportedCurrent']),('Second-pass quotation associations/body matches',report['reopenQuoteAssociationsChecked'],report['reopenQuoteMatchesActualLocalCaptures']),('Retained similarity flags with current accepted concrete resolutions',len(report['similarityFlags']),report['similarityFlagsResolved'])]
 table='\n'.join(f'| {name} | {cases} | {passed} |' for name,cases,passed in totals)
-(R/'VERIFY.md').write_text(f'''# B13 verification
+write_verification_preserving_history(f'''# B13 verification
 
 ## Actual current acceptance check — {now}
 
@@ -62,7 +69,7 @@ Initial music quote-path recovery failure, original per-category rejects, real T
 ## UNVERIFIED
 
 - Current original-gate pending values: `{json.dumps(report['pending'],sort_keys=True)}`.
-- Independent immutable delivery audit and exact final-head hosted CI remain pending until their actual integration records below are written.
+- Exact final-head hosted CI must be checked after the current source push. Completed historical immutable audits are retained below with their original version scope.
 - Factual correctness and independence are reasoned source judgments, not mathematical guarantees; no human party playtest or empirical US-audience difficulty calibration is claimed.
 ''')
 source=['# B13 source quotations','',f'{N} current actual questions. Source ledgers record actual authorship, licensing/credit, retrieval timestamps/method/HTTP status and content hashes. Every selected fact is associated with two source accounts; final current acceptance coverage remains in the version-bound report. Full copyrighted captures are excluded.']
@@ -73,13 +80,14 @@ for r in rows:
   for f in ['quote','funFactQuote','extraQuote']:
    if f in l:source.append(f"  {f}: “{l[f]}” ({len(l[f].split())} words).")
 (R/'SOURCES.md').write_text('\n'.join(source)+'\n')
-(R/'NEXT.md').write_text('''# B13 delivery continuation
+(R/'reports').mkdir(exist_ok=True)
+(R/'reports/generated-continuation.md').write_text('''# B13 generated continuation reference
 
-All 1,000 current question versions, source support reviews, final ordered-option reads, similarity decisions and the full-pack option-length assessment are closed in the actual full local report. The original rejects and two declared post-shuffle amendments remain preserved.
+The executed report records current gates and exact version hashes. This generated reference does not overwrite the authored NEXT.md or claim unfinished gates are closed. Historical rejects and amendments remain preserved.
 
 1. Hold all delivered files and referenced local bodies for the separate immutable-copy auditor. It must run the original full local checker once on its verified snapshot and preserve its actual output, exit status and before/after hashes.
 2. Record the actual auditor result, final checksum and file-size results, then push only job/B13-trivia-1000 and its one read-only CI workflow. Inspect the hosted CI result for the exact pushed head.
-3. Once the exact-head CI and separate audit actually pass, mark PR22 ready for review while leaving it unmerged. Retain factual judgment and human-playtest limits in the PR. Never merge or push main.
+3. Only after current source, independent editorial and exact-head evidence gates pass, update the current branch's PR status while preserving existing original deliveries. Retain factual judgment and human-playtest limits. No product is merged or pushed to main.
 
 Further editorial changes must preserve these final held versions, invalidate affected row-bound acceptance, receive a separate actual rereview and repeat the affected checks. A future party playtest or empirical difficulty study can use this delivered pack without pretending one has already happened.
 ''')

@@ -685,25 +685,32 @@
   },
   {
     "id": "B13-0312",
-    "rowSha256": "3843b181c604802d9203d9ab9f37ea2150d2b7ef81a50c0f0862eb1ea13f8ff3",
-    "reviewer": "/root",
-    "reviewedAt": "2026-10-07T21:18:06.618725+00:00",
+    "reviewer": "codex-board-audit-20261009 / root-independent B13 peer",
+    "reviewedAt": "2026-10-09T11:52:32.535367+00:00",
+    "rowSha256": "5049c515c23dfe163dae2bfeaa4346d6eed4c0a751459fe36b0de44b9e326c3d",
     "result": "supported",
+    "assessment": "Smithsonian whole hunting paragraph says primarily at night; Animal Diversity Web entire behaviour paragraph says most active at night while explicitly allowing other times. Whole feeding paragraph says prefer hunting at night and reports a Schaller study before0800/after1600. Revised stem asks most active, not exclusively nocturnal. Smithsonian explicitly says sight/sound and ADW whole feeding paragraph says hearing/sight more than olfaction; it is not a claim that smell is never used. Stable general behaviour with acknowledged daytime activity; not a current conservation/population assertion.",
     "sources": [
       {
-        "sourceId": "animals-nature-s0007",
+        "sourceId": "animals-nature-s5007",
         "receipt": {
-          "sourceName": "animals-nature-s0007",
           "pass": "reopen",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T11:41:21.799825+00:00",
+          "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://nationalzoo.si.edu/animals/tiger",
-          "retrievedAt": "2026-10-07T18:49:56.022578+00:00",
-          "method": "Python urllib actual HTTP GET",
-          "status": 200,
           "resolvedUrl": "https://nationalzoo.si.edu/animals/tiger",
-          "contentSha256": "d55ba216e8cbcaf8c735b6639f38e5d41ec85df9a94df10e98792d32367fb60c",
-          "localCapturePath": ".work/animals-nature-review/animals-nature-s0007-reopen.txt",
-          "characters": 17960
+          "status": 200,
+          "contentSha256": "a7e193df4c4785fb7665c7f806ed2dac4612e6dd275e292ed5a039415d7c50b1",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/animals-nature-s5007.txt",
+          "sourceId": "animals-nature-s5007",
+          "rawSha256": "7e9df79032ff2eaf9bc20053df0a5a29e46a6983238877395ed894fd492b620e",
+          "captureComplete": true,
+          "originalPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590",
+          "captureRelocatedWithoutByteChanges": true
         },
+        "contextRead": true,
+        "claimAssessment": "Smithsonian whole hunting paragraph says primarily at night; Animal Diversity Web entire behaviour paragraph says most active at night while explicitly allowing other times. Whole feeding paragraph says prefer hunting at night and reports a Schaller study before0800/after1600. Revised stem asks most active, not exclusively nocturnal. Smithsonian explicitly says sight/sound and ADW whole feeding paragraph says hearing/sight more than olfaction; it is not a claim that smell is never used.",
         "quotations": [
           {
             "field": "quote",
@@ -711,23 +718,36 @@
             "exactMatch": true
           }
         ],
-        "contextRead": true,
-        "claimAssessment": "Read Michigan's explicit daytime-activity exception. Most active avoids claiming exclusive nocturnality; both sources support night activity and sight/hearing prey detection."
+        "actualWholeScopeRead": [
+          {
+            "field": "quote",
+            "wholeParagraphSHA256": "c261be135c10b052afa6deb6753c0d97929be2204df099f3ed9f00f4a486dca1",
+            "wholeParagraphChars": 417,
+            "literalClipWords": 14,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          }
+        ]
       },
       {
-        "sourceId": "animals-nature-s0008",
+        "sourceId": "animals-nature-s5008",
         "receipt": {
-          "sourceName": "animals-nature-s0008",
           "pass": "reopen",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T11:41:22.168538+00:00",
+          "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://animaldiversity.org/accounts/Panthera_tigris/",
-          "retrievedAt": "2026-10-07T18:49:56.027863+00:00",
-          "method": "Python urllib actual HTTP GET",
-          "status": 200,
           "resolvedUrl": "https://animaldiversity.org/accounts/Panthera_tigris/",
-          "contentSha256": "28d19c3768181e814ab72d8f9efa4a6addb1156c18628b1cd80fd0c223dc1245",
-          "localCapturePath": ".work/animals-nature-review/animals-nature-s0008-reopen.txt",
-          "characters": 29553
+          "status": 200,
+          "contentSha256": "e34b8e6f21a9d49d1a47b926fe569b96fd6e03f4924acffdc33ea79581ce749f",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/animals-nature-s5008.txt",
+          "sourceId": "animals-nature-s5008",
+          "rawSha256": "af8adf5cfc9be99b9857bf9621ea557f3fbb39f3c49e6ca5e9691572cddaa93a",
+          "captureComplete": true,
+          "originalPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590",
+          "captureRelocatedWithoutByteChanges": true
         },
+        "contextRead": true,
+        "claimAssessment": "Smithsonian whole hunting paragraph says primarily at night; Animal Diversity Web entire behaviour paragraph says most active at night while explicitly allowing other times. Whole feeding paragraph says prefer hunting at night and reports a Schaller study before0800/after1600. Revised stem asks most active, not exclusively nocturnal. Smithsonian explicitly says sight/sound and ADW whole feeding paragraph says hearing/sight more than olfaction; it is not a claim that smell is never used.",
         "quotations": [
           {
             "field": "quote",
@@ -740,12 +760,24 @@
             "exactMatch": true
           }
         ],
-        "contextRead": true,
-        "claimAssessment": "Read Michigan's explicit daytime-activity exception. Most active avoids claiming exclusive nocturnality; both sources support night activity and sight/hearing prey detection."
+        "actualWholeScopeRead": [
+          {
+            "field": "quote",
+            "wholeParagraphSHA256": "affbcb5658d18087670378ecbf371f9697291754ec789fb6846bd36cd2b90896",
+            "wholeParagraphChars": 851,
+            "literalClipWords": 6,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          },
+          {
+            "field": "funFactQuote",
+            "wholeParagraphSHA256": "eb6770ff962d394291afdb37d46734331e2439bea33aa03d5cd4e0f3782f9679",
+            "wholeParagraphChars": 710,
+            "literalClipWords": 14,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          }
+        ]
       }
-    ],
-    "assessment": "Read Michigan's explicit daytime-activity exception. Most active avoids claiming exclusive nocturnality; both sources support night activity and sight/hearing prey detection.",
-    "evidenceReuseScope": "Actual source openings, contexts and quotation assessments retained from the completed independent fact passes; final change is only option order/correctIndex, verified field-by-field and actually reread. This is not a newly timestamped physical source opening."
+    ]
   },
   {
     "id": "B13-0313",

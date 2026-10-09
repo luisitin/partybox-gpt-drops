@@ -33,6 +33,13 @@ def timestamp(value):
         parsed=datetime.fromisoformat(value.replace('Z','+00:00'))
         return parsed.tzinfo is not None and parsed.utcoffset().total_seconds()==0 and parsed<=datetime.now(timezone.utc)
     except (ValueError,TypeError,AttributeError):return False
+def reviewer_identity(value):
+    """Use the stable chat/task identity, excluding its explanatory suffix."""
+    return value.strip().split()[0].casefold() if isinstance(value,str) and value.strip() else None
+def independent_review(author_record,review_record):
+    author=reviewer_identity(author_record.get('author')) if author_record else None
+    reviewer=reviewer_identity(review_record.get('reviewer')) if review_record else None
+    return bool(author and reviewer and author!=reviewer)
 def proof(receipt,url,pass_name,label):
     """Validate retained provenance; never perform or claim a new remote retrieval."""
     global receipt_checks
@@ -112,10 +119,10 @@ for row in rows:
         if set(claim['sourceIds'])!=set(sids):errors.append(rid+': claim lacks both selected sources')
     r=review_by_id.get(rid)
     if r and r.get('rowSha256')==row_sha and r.get('result')=='accept':
-        valid=(bool(r.get('reviewer')) and timestamp(r.get('reviewedAt')) and r.get('distractorsChecked')==row['options']
+        valid=(independent_review(a,r) and timestamp(r.get('reviewedAt')) and r.get('distractorsChecked')==row['options']
           and all(bool(r.get(k)) for k in ['attemptedCounterexample','scopeDateCheck','funFactCheck','sourceIndependenceCheck']))
         if valid:review_current.append(rid)
-        else:errors.append(rid+': current acceptance lacks actual option/context challenge metadata')
+        else:errors.append(rid+': current acceptance lacks independent author/reviewer identity or actual option/context challenge metadata')
     rr=reopen_by_id.get(rid)
     if rr and rr.get('rowSha256')==row_sha and rr.get('result')=='supported':
         before=len(errors);entries=rr.get('sources',[])
@@ -180,7 +187,7 @@ length_assessment=read(ROOT/'evidence/option-length-assessment.json',{})
 length_assessment_current=(length_assessment.get('rowVersionsSha256')==canonical_sha(row_versions)
  and length_assessment.get('metricsSha256')==canonical_sha(lengths)
  and length_assessment.get('result')=='accept'
- and bool(length_assessment.get('reviewer')) and bool(length_assessment.get('reviewedAt'))
+ and bool(length_assessment.get('reviewer')) and timestamp(length_assessment.get('reviewedAt'))
  and bool(length_assessment.get('rationale')))
 lengths['rowVersionsSha256']=canonical_sha(row_versions)
 lengths['metricsSha256']=canonical_sha({k:v for k,v in lengths.items() if k not in ['rowVersionsSha256','metricsSha256']})

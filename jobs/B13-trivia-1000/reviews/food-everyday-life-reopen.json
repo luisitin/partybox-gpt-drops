@@ -1765,87 +1765,111 @@
   },
   {
     "id": "B13-0922",
-    "rowSha256": "653d4ac62381eb0fd41b86ff5905b9d2456e59110c3792d1c401d668baa7fa85",
-    "reviewer": "/root/continue_b13_lead (did not author food category)",
-    "reviewedAt": "2026-10-07T21:17:52.580474+00:00",
+    "reviewer": "codex-board-audit-20261009 / root-independent B13 peer",
+    "reviewedAt": "2026-10-09T11:52:32.530573+00:00",
+    "rowSha256": "926f6b6ab82f3184e3def01828ad65ea091ffcc9f9eb00a67199e5e8d92e3c7e",
     "result": "supported",
+    "assessment": "Britannica whole colour paragraph identifies carotene and other pigments; Wikipedia whole white-butter paragraph identifiesβ-carotene in pasture-fed cow milk. Carotene is the supported group-level answer; can contribute avoids a universal colour or specific-isomer overclaim. Britannica whole nutritional paragraph says at least80percent milk fat; Wikipedia whole lead says approximately81percent butterfat. Both support high proportion without forcing a single exact percentage. Stable biological/food chemistry. Present page retrieval2026 and footnote retrieval2026 do not change the stable question scope.",
     "sources": [
       {
-        "sourceId": "food-everyday-life-s0021",
+        "sourceId": "food-everyday-life-s5021",
         "receipt": {
           "pass": "reopen",
-          "retrievedAt": "2026-10-07T19:51:55.318270+00:00",
-          "method": "urllib-http-get",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T11:41:20.283670+00:00",
+          "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://www.britannica.com/topic/butter",
           "resolvedUrl": "https://www.britannica.com/topic/butter",
           "status": 200,
-          "contentType": "text/html",
-          "rawSha256": "aaff92619141553e7aded898e29341f47fd9217e853d652bb4f22ad516518bf7",
-          "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0021.raw",
-          "title": "Butter | Definition, Butter Making, & Nutritional Content | Britannica",
-          "contentSha256": "ebf87423d2bc7ac61f5fef57586b1d7abe6f8e4191e5fa32d7a5fe2c9457bdcf",
-          "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0021.txt",
+          "contentSha256": "976b2002327f62f749e9e969d0e586ae53b6b739a458adf19e20f1ea575e40be",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/food-everyday-life-s5021.txt",
+          "sourceId": "food-everyday-life-s5021",
+          "rawSha256": "80a10cec4a375da96e79f68b03a52848da3c31ef60f486bc6712a658552436bb",
           "captureComplete": true,
-          "characters": 6147
+          "originalPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590",
+          "captureRelocatedWithoutByteChanges": true
         },
+        "contextRead": true,
+        "claimAssessment": "Britannica whole colour paragraph identifies carotene and other pigments; Wikipedia whole white-butter paragraph identifiesβ-carotene in pasture-fed cow milk. Carotene is the supported group-level answer; can contribute avoids a universal colour or specific-isomer overclaim. Britannica whole nutritional paragraph says at least80percent milk fat; Wikipedia whole lead says approximately81percent butterfat. Both support high proportion without forcing a single exact percentage.",
         "quotations": [
           {
             "field": "quote",
             "quote": "The colour of butter is caused by carotene and other fat-soluble pigments",
-            "exactMatch": true,
-            "wordCount": 12
+            "exactMatch": true
           },
           {
             "field": "funFactQuote",
             "quote": "It has a high content of butterfat , or milk fat",
-            "exactMatch": true,
-            "wordCount": 11
+            "exactMatch": true
           }
         ],
-        "contextRead": true,
-        "claimAssessment": "Compared chlorophyll green, anthocyanin red/blue and melanin with beta-carotene; both source contexts identify carotene contribution to ordinary butter yellow. High butterfat content agrees despite 80 versus approximately81 percent; the fact avoids an exact universal percentage.",
-        "sourceIndependenceAssessment": "Wiki buttermilk-processing paragraph cites Guelph Dairy Science and Wisconsin Center for Dairy Research; yellow-pigment context cites Ullah et al. PLoS2017. These differ from Britannica butter composition/history."
+        "actualWholeScopeRead": [
+          {
+            "field": "quote",
+            "wholeParagraphSHA256": "dcbd086caf69ece5588ee9ebb98cbc57cb6ba3b6b0e0af9431e954f47348cad5",
+            "wholeParagraphChars": 545,
+            "literalClipWords": 12,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          },
+          {
+            "field": "funFactQuote",
+            "wholeParagraphSHA256": "545e6e13fbf5c178daf1e769abb28b204aebba3c25dc2c076d9099fc5a5cbc7d",
+            "wholeParagraphChars": 498,
+            "literalClipWords": 11,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          }
+        ]
       },
       {
-        "sourceId": "food-everyday-life-s0022",
+        "sourceId": "food-everyday-life-s5022",
         "receipt": {
           "pass": "reopen",
-          "retrievedAt": "2026-10-07T19:51:55.472675+00:00",
-          "method": "urllib-http-get",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T11:41:20.652521+00:00",
+          "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://en.wikipedia.org/wiki/Butter",
           "resolvedUrl": "https://en.wikipedia.org/wiki/Butter",
           "status": 200,
-          "contentType": "text/html",
-          "rawSha256": "6472aeab34f442f118ea8274a4a385b19eed90fa0dea68a98cd80a234574b12e",
-          "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0022.raw",
-          "title": "Butter - Wikipedia",
           "contentSha256": "4cf378ea190eff2ff163cae1ab9a060d25a64c2a211c9ae92871c6060cca5c2d",
-          "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0022.txt",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/food-everyday-life-s5022.txt",
+          "sourceId": "food-everyday-life-s5022",
+          "rawSha256": "e8455157233e5fc14b65f129ff5bc62b36c6c3c16fc039d4b11d90493057af19",
           "captureComplete": true,
-          "characters": 50276
+          "originalPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590",
+          "captureRelocatedWithoutByteChanges": true
         },
+        "contextRead": true,
+        "claimAssessment": "Britannica whole colour paragraph identifies carotene and other pigments; Wikipedia whole white-butter paragraph identifiesβ-carotene in pasture-fed cow milk. Carotene is the supported group-level answer; can contribute avoids a universal colour or specific-isomer overclaim. Britannica whole nutritional paragraph says at least80percent milk fat; Wikipedia whole lead says approximately81percent butterfat. Both support high proportion without forcing a single exact percentage.",
         "quotations": [
           {
             "field": "quote",
             "quote": "β-carotene and other pigments typically present in pasture-fed cow milk will turn the butter yellow",
-            "exactMatch": true,
-            "wordCount": 15
+            "exactMatch": true
           },
           {
             "field": "funFactQuote",
             "quote": "consisting of approximately 81% butterfat",
-            "exactMatch": true,
-            "wordCount": 5
+            "exactMatch": true
           }
         ],
-        "contextRead": true,
-        "claimAssessment": "Compared chlorophyll green, anthocyanin red/blue and melanin with beta-carotene; both source contexts identify carotene contribution to ordinary butter yellow. High butterfat content agrees despite 80 versus approximately81 percent; the fact avoids an exact universal percentage.",
-        "sourceIndependenceAssessment": "Wiki buttermilk-processing paragraph cites Guelph Dairy Science and Wisconsin Center for Dairy Research; yellow-pigment context cites Ullah et al. PLoS2017. These differ from Britannica butter composition/history."
+        "actualWholeScopeRead": [
+          {
+            "field": "quote",
+            "wholeParagraphSHA256": "3426362ea9ef8577f5a9f705cae54509ad90c0cf82c58d395bde583f08702294",
+            "wholeParagraphChars": 590,
+            "literalClipWords": 15,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          },
+          {
+            "field": "funFactQuote",
+            "wholeParagraphSHA256": "2c5e1e7fea9878bdf2d086d48bddc4e2d3d86371b69fe61ff2cc76789e0c64f4",
+            "wholeParagraphChars": 334,
+            "literalClipWords": 5,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          }
+        ]
       }
-    ],
-    "assessment": "Compared chlorophyll green, anthocyanin red/blue and melanin with beta-carotene; both source contexts identify carotene contribution to ordinary butter yellow. High butterfat content agrees despite 80 versus approximately81 percent; the fact avoids an exact universal percentage.",
-    "finalOptionOrderAssessment": "Beta-carotene is the yellow pigment; chlorophyll, anthocyanin and melanin are other pigment classes.",
-    "sourceReceiptReuse": "Only choice order changed. The final ordered question/options/correct answer/fun fact were actually read now; retained physical second-pass GET receipts keep their actual original times."
+    ]
   },
   {
     "id": "B13-0923",
@@ -3109,87 +3133,111 @@
   },
   {
     "id": "B13-0938",
-    "rowSha256": "9a6394da6443ddf6e48567c30392e49f83ae33574934ae122faae5fd0a675763",
-    "reviewer": "/root/continue_b13_lead (did not author food category)",
-    "reviewedAt": "2026-10-07T21:17:52.580474+00:00",
+    "reviewer": "codex-board-audit-20261009 / root-independent B13 peer",
+    "reviewedAt": "2026-10-09T11:52:32.534419+00:00",
+    "rowSha256": "9b8652203afca628516dd2c9dd3240e687aed529e2f544938a43dddd94715bce",
     "result": "supported",
+    "assessment": "Britannica whole commercial-plant paragraph contrastsCoffea arabica/Arabica withC.canephora/Robusta; Wikipedia whole botanical paragraph names the same two distinct species. Correcting the retained claim now matches the asked scientific species rather than an unrelated production-ranking claim. Both whole paragraphs explicitly connect robusta withC.canephora. Stable species identity, no changing consumption share/ranking asked.",
     "sources": [
       {
-        "sourceId": "food-everyday-life-s0029",
+        "sourceId": "food-everyday-life-s5029",
         "receipt": {
           "pass": "reopen",
-          "retrievedAt": "2026-10-07T19:51:56.376399+00:00",
-          "method": "urllib-http-get",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T11:41:20.950905+00:00",
+          "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://www.britannica.com/topic/coffee",
           "resolvedUrl": "https://www.britannica.com/topic/coffee",
           "status": 200,
-          "contentType": "text/html",
-          "rawSha256": "ada2112619d02ffb0708aeccd623d6f1cf2aca9e28ce766e8e7d8324de89540b",
-          "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0029.raw",
-          "title": "Coffee | Origin, Types, Uses, History, & Facts | Britannica",
           "contentSha256": "034836ce227b201da517d192e1a4a4f071e3c0e7a7f75a611750cd8f1d485043",
-          "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0029.txt",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/food-everyday-life-s5029.txt",
+          "sourceId": "food-everyday-life-s5029",
+          "rawSha256": "696dab97bc242f9c8e918d0365446cd88c75dc98c908f2a2e87ca9226bd6a20d",
           "captureComplete": true,
-          "characters": 11072
+          "originalPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590",
+          "captureRelocatedWithoutByteChanges": true
         },
+        "contextRead": true,
+        "claimAssessment": "Britannica whole commercial-plant paragraph contrastsCoffea arabica/Arabica withC.canephora/Robusta; Wikipedia whole botanical paragraph names the same two distinct species. Correcting the retained claim now matches the asked scientific species rather than an unrelated production-ranking claim. Both whole paragraphs explicitly connect robusta withC.canephora.",
         "quotations": [
           {
             "field": "quote",
             "quote": "Coffea arabica and C. canephora",
-            "exactMatch": true,
-            "wordCount": 5
+            "exactMatch": true
           },
           {
             "field": "funFactQuote",
             "quote": "Robusta, the main variety of C. canephora",
-            "exactMatch": true,
-            "wordCount": 7
+            "exactMatch": true
           }
         ],
-        "contextRead": true,
-        "claimAssessment": "Compared four real Coffea species; both commercial-species accounts identify arabica by Coffea arabica, not liberica, canephora or stenophylla. Robusta is explicitly linked to canephora by both.",
-        "sourceIndependenceAssessment": "Wiki commercial coffee-species paragraph cites International Coffee Organization and botany literature. Its Britannica-dependent Yemen trade and Kaldi-origin passages are excluded from selected seed/stimulant/species facts."
+        "actualWholeScopeRead": [
+          {
+            "field": "quote",
+            "wholeParagraphSHA256": "8e2d62c1c45b11ab61097c43b8ac7625993ff2e80edcc7a6c09da8a05f5b74d9",
+            "wholeParagraphChars": 1021,
+            "literalClipWords": 5,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          },
+          {
+            "field": "funFactQuote",
+            "wholeParagraphSHA256": "8e2d62c1c45b11ab61097c43b8ac7625993ff2e80edcc7a6c09da8a05f5b74d9",
+            "wholeParagraphChars": 1021,
+            "literalClipWords": 7,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          }
+        ]
       },
       {
-        "sourceId": "food-everyday-life-s0030",
+        "sourceId": "food-everyday-life-s5030",
         "receipt": {
           "pass": "reopen",
-          "retrievedAt": "2026-10-07T19:51:56.670738+00:00",
-          "method": "urllib-http-get",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T11:41:21.339710+00:00",
+          "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://en.wikipedia.org/wiki/Coffee",
           "resolvedUrl": "https://en.wikipedia.org/wiki/Coffee",
           "status": 200,
-          "contentType": "text/html",
-          "rawSha256": "4d9b163594f6ff67e32a7adc6d76b604ab1cd8dcdf469abec0e91e07916d46a8",
-          "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0030.raw",
-          "title": "Coffee - Wikipedia",
           "contentSha256": "541d0b390682e3424aa3bd6b3d54e1a0d1aa8074a5fb1b823319807d26840705",
-          "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0030.txt",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/food-everyday-life-s5030.txt",
+          "sourceId": "food-everyday-life-s5030",
+          "rawSha256": "4d9b163594f6ff67e32a7adc6d76b604ab1cd8dcdf469abec0e91e07916d46a8",
           "captureComplete": true,
-          "characters": 111813
+          "originalPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590",
+          "captureRelocatedWithoutByteChanges": true
         },
+        "contextRead": true,
+        "claimAssessment": "Britannica whole commercial-plant paragraph contrastsCoffea arabica/Arabica withC.canephora/Robusta; Wikipedia whole botanical paragraph names the same two distinct species. Correcting the retained claim now matches the asked scientific species rather than an unrelated production-ranking claim. Both whole paragraphs explicitly connect robusta withC.canephora.",
         "quotations": [
           {
             "field": "quote",
             "quote": "C. canephora (predominantly a form known as 'robusta') and C. arabica",
-            "exactMatch": true,
-            "wordCount": 11
+            "exactMatch": true
           },
           {
             "field": "funFactQuote",
             "quote": "C. canephora (predominantly a form known as 'robusta')",
-            "exactMatch": true,
-            "wordCount": 8
+            "exactMatch": true
           }
         ],
-        "contextRead": true,
-        "claimAssessment": "Compared four real Coffea species; both commercial-species accounts identify arabica by Coffea arabica, not liberica, canephora or stenophylla. Robusta is explicitly linked to canephora by both.",
-        "sourceIndependenceAssessment": "Wiki commercial coffee-species paragraph cites International Coffee Organization and botany literature. Its Britannica-dependent Yemen trade and Kaldi-origin passages are excluded from selected seed/stimulant/species facts."
+        "actualWholeScopeRead": [
+          {
+            "field": "quote",
+            "wholeParagraphSHA256": "a7784db4c075a6512afbe9759aee08db2efcc87fc4627c75903fe3cfc8da268f",
+            "wholeParagraphChars": 613,
+            "literalClipWords": 11,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          },
+          {
+            "field": "funFactQuote",
+            "wholeParagraphSHA256": "a7784db4c075a6512afbe9759aee08db2efcc87fc4627c75903fe3cfc8da268f",
+            "wholeParagraphChars": 613,
+            "literalClipWords": 8,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          }
+        ]
       }
-    ],
-    "assessment": "Compared four real Coffea species; both commercial-species accounts identify arabica by Coffea arabica, not liberica, canephora or stenophylla. Robusta is explicitly linked to canephora by both.",
-    "finalOptionOrderAssessment": "The arabica name maps to Coffea arabica; the other options are different coffee species.",
-    "sourceReceiptReuse": "Only choice order changed. The final ordered question/options/correct answer/fun fact were actually read now; retained physical second-pass GET receipts keep their actual original times."
+    ]
   },
   {
     "id": "B13-0939",

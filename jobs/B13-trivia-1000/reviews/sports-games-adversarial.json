@@ -1688,36 +1688,26 @@
   },
   {
     "id": "B13-0852",
-    "rowSha256": "218192574e152c55ea808fd92fef30ed80c824636669deb81c955e3274709de8",
-    "reviewer": "/root/r2048_sports (independent actual final ordered-choice rereviewer)",
-    "reviewedAt": "2026-10-07T21:16:10.163300+00:00",
+    "reviewer": "codex-board-audit-20261009 / root-independent B13 peer",
+    "reviewerTask": "/root/restart_g01_0458",
+    "reviewedAt": "2026-10-09T11:52:32.528401+00:00",
+    "rowSha256": "c483354f9c4bfc3a040a305a6ab730d76e36101589952f8bbf3b6897f8954890",
     "result": "accept",
-    "attemptedCounterexample": "Athens 1896 is the first modern Games; Paris 1900, London 1908 and Stockholm 1912 are later meetings, not first men’s participation.",
+    "attemptedCounterexample": "Britannica entire competitive-history paragraph explicitly states Olympic inception1896 and men-only original events; Wikipedia whole history paragraph explicitly dates men1896. Narrowing the answer to year removes the unsupported host-city clause from the first source. 1900,1908 and1912 are plausible later Games/history dates;1912 is specifically the women debut and therefore incorrect for the men question. Only1896 fits first modern inclusion.",
+    "scopeDateCheck": "Stable historical debut; later FINA2022 rename in surrounding text is excluded.",
     "distractorsChecked": [
-      "Athens 1896",
-      "London 1908",
-      "Stockholm 1912",
-      "Paris 1900"
+      "1896",
+      "1908",
+      "1912",
+      "1900"
     ],
-    "scopeDateCheck": "Historical or fixed-definition scope checked against the actual full source contexts; no changing player statistic or current ranking is claimed.",
-    "funFactCheck": "Women’s 1912 addition is separate from the male-only 1896 inclusion.",
-    "sourceIndependenceCheck": "Read actual Britannica authored topic paragraphs and, for backstroke, the article’s descriptive video caption (not AI text). Wiki medley cites FINA rules and Olympic participation history cites Lisa Porter; the Backstroke and Butterfly articles have independently written descriptions. No paired Britannica citation supplies these selected clauses.",
-    "finalOrderedChoiceAssessment": {
-      "actualFullQuestionRead": "At which first modern Olympic Games was men’s swimming included?",
-      "actualOrderedChoicesRead": [
-        "Athens 1896",
-        "London 1908",
-        "Stockholm 1912",
-        "Paris 1900"
-      ],
-      "actualCorrectAnswerRead": "Athens 1896",
-      "actualCorrectIndexRead": 0,
-      "actualFunFactRead": "Women’s Olympic swimming was added in 1912.",
-      "actualDifficultyRead": 3,
-      "assessment": "Athens 1896 is the first modern Games; Paris 1900, London 1908 and Stockholm 1912 are later meetings, not first men’s participation. All four final ordered choices were actually read in the held question context; the unchanged correct answer remains uniquely correct, and its prior scoped distractor challenges remain applicable after the permutation.",
-      "previousAcceptedRowSha256": "24ec44da9b4707678ed27c71049c992fe9067a834fe2519c2028199cb87d9026"
-    },
-    "reviewScope": "Actual manual reading of all 300 final question/ordered-choice/answer/fun-fact sets, followed by exact-version recording. Unchanged historical source evidence is reused honestly; balance or hash matching alone did not grant this manual acceptance."
+    "funFactCheck": "Both same complete paragraphs explicitly say women entered Olympic swimming1912.",
+    "sourceIndependenceCheck": "Britannica Editors native author link and Wikipedia authored history paragraph; full Livestrong/Lisa Porter and World Aquatics footnotes were read and show no cited Britannica copy at this selected history scope.",
+    "difficultyCheck": "3 remains a defensible precise sport-history/date-recall label, although players familiar with the first modern Games may find it easier. Difficulty is a judgement, not a factual failure.",
+    "cautions": [
+      "Britannica quote fragment alone omits men, but the next sentence in its retained full paragraph explicitly supplies men-only scope."
+    ],
+    "originalIndependentPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590"
   },
   {
     "id": "B13-0853",

@@ -4342,32 +4342,32 @@
   },
   {
     "id": "B13-0852",
-    "rowSha256": "218192574e152c55ea808fd92fef30ed80c824636669deb81c955e3274709de8",
-    "reviewer": "/root/r2048_sports (independent actual final ordered-choice rereviewer)",
-    "reviewedAt": "2026-10-07T21:16:10.163300+00:00",
+    "reviewer": "codex-board-audit-20261009 / root-independent B13 peer",
+    "reviewedAt": "2026-10-09T11:52:32.528401+00:00",
+    "rowSha256": "c483354f9c4bfc3a040a305a6ab730d76e36101589952f8bbf3b6897f8954890",
     "result": "supported",
+    "assessment": "Britannica entire competitive-history paragraph explicitly states Olympic inception1896 and men-only original events; Wikipedia whole history paragraph explicitly dates men1896. Narrowing the answer to year removes the unsupported host-city clause from the first source. Both same complete paragraphs explicitly say women entered Olympic swimming1912. Stable historical debut; later FINA2022 rename in surrounding text is excluded.",
     "sources": [
       {
-        "sourceId": "sports-games-s0025",
+        "sourceId": "sports-games-s5025",
         "receipt": {
-          "sourceId": "sports-games-s0025",
-          "category": "sports-games",
           "pass": "reopen",
-          "reviewer": "/root/continue_b13_review",
-          "retrievedAt": "2026-10-07T20:25:59.432951+00:00",
-          "method": "urllib-http-get",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T11:41:19.574586+00:00",
+          "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://www.britannica.com/sports/swimming-sport",
           "resolvedUrl": "https://www.britannica.com/sports/swimming-sport",
           "status": 200,
-          "contentType": "text/html",
-          "rawPath": ".work/sports-games/fresh-review-root-20261007/sports-games-s0025.raw",
-          "rawSha256": "afb1dc1639ea8882fc0d794d0e6550811a531f7f3bea7c7e53ebda2716f84aee",
-          "title": "Swimming | Sport, Olympics, Definition, History, Strokes, & Facts | Britannica",
-          "contentSha256": "fba7351c3dc3f429de69be2ace247011012be163bce2d29dbfc30046e304ef12",
-          "capturePath": ".work/sports-games/fresh-review-root-20261007/sports-games-s0025.txt",
+          "contentSha256": "da7f1f2b98611038b93e4ec86ef6546bd81ceda40e8ab129da67fc20e01e8e4b",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/sports-games-s5025.txt",
+          "sourceId": "sports-games-s5025",
+          "rawSha256": "32e01804c30befa2035f82dbd38c42e0cc460c81a677805a1b0de41a73a8cbb1",
           "captureComplete": true,
-          "characters": 16398
+          "originalPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590",
+          "captureRelocatedWithoutByteChanges": true
         },
+        "contextRead": true,
+        "claimAssessment": "Britannica entire competitive-history paragraph explicitly states Olympic inception1896 and men-only original events; Wikipedia whole history paragraph explicitly dates men1896. Narrowing the answer to year removes the unsupported host-city clause from the first source. Both same complete paragraphs explicitly say women entered Olympic swimming1912.",
         "quotations": [
           {
             "field": "quote",
@@ -4380,30 +4380,43 @@
             "exactMatch": true
           }
         ],
-        "contextRead": true,
-        "claimAssessment": "Athens 1896 is the first modern Games; Paris 1900, London 1908 and Stockholm 1912 are later meetings, not first men’s participation. Fun-fact challenge: Women’s 1912 addition is separate from the male-only 1896 inclusion."
+        "actualWholeScopeRead": [
+          {
+            "field": "quote",
+            "wholeParagraphSHA256": "7978e8ffa9ac2f2eec77b96bc13001b3f7233558db8959ae14f1f834a37d88dd",
+            "wholeParagraphChars": 1087,
+            "literalClipWords": 8,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          },
+          {
+            "field": "funFactQuote",
+            "wholeParagraphSHA256": "7978e8ffa9ac2f2eec77b96bc13001b3f7233558db8959ae14f1f834a37d88dd",
+            "wholeParagraphChars": 1087,
+            "literalClipWords": 6,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          }
+        ]
       },
       {
-        "sourceId": "sports-games-s0026",
+        "sourceId": "sports-games-s5026",
         "receipt": {
-          "sourceId": "sports-games-s0026",
-          "category": "sports-games",
           "pass": "reopen",
-          "reviewer": "/root/continue_b13_review",
-          "retrievedAt": "2026-10-07T20:25:59.410723+00:00",
-          "method": "urllib-http-get",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T11:41:20.057014+00:00",
+          "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://en.wikipedia.org/wiki/Swimming_(sport)",
           "resolvedUrl": "https://en.wikipedia.org/wiki/Swimming_(sport)",
           "status": 200,
-          "contentType": "text/html",
-          "rawPath": ".work/sports-games/fresh-review-root-20261007/sports-games-s0026.raw",
-          "rawSha256": "a99e65b7046c169a40be42e64f21adb2def4d3b89616c67901d8503897984e7f",
-          "title": "Competitive swimming - Wikipedia",
           "contentSha256": "3e4e5878251a5c537e950d3668de8c8d529ba55d3eed007cd6dc10502386b489",
-          "capturePath": ".work/sports-games/fresh-review-root-20261007/sports-games-s0026.txt",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/sports-games-s5026.txt",
+          "sourceId": "sports-games-s5026",
+          "rawSha256": "a99e65b7046c169a40be42e64f21adb2def4d3b89616c67901d8503897984e7f",
           "captureComplete": true,
-          "characters": 53524
+          "originalPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590",
+          "captureRelocatedWithoutByteChanges": true
         },
+        "contextRead": true,
+        "claimAssessment": "Britannica entire competitive-history paragraph explicitly states Olympic inception1896 and men-only original events; Wikipedia whole history paragraph explicitly dates men1896. Narrowing the answer to year removes the unsupported host-city clause from the first source. Both same complete paragraphs explicitly say women entered Olympic swimming1912.",
         "quotations": [
           {
             "field": "quote",
@@ -4416,14 +4429,24 @@
             "exactMatch": true
           }
         ],
-        "contextRead": true,
-        "claimAssessment": "Athens 1896 is the first modern Games; Paris 1900, London 1908 and Stockholm 1912 are later meetings, not first men’s participation. Fun-fact challenge: Women’s 1912 addition is separate from the male-only 1896 inclusion."
+        "actualWholeScopeRead": [
+          {
+            "field": "quote",
+            "wholeParagraphSHA256": "8bde870fda6819b3fc42fb6d7a668c61909c713ef7b4f2628dbc5671b2a2cb0d",
+            "wholeParagraphChars": 907,
+            "literalClipWords": 6,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          },
+          {
+            "field": "funFactQuote",
+            "wholeParagraphSHA256": "8bde870fda6819b3fc42fb6d7a668c61909c713ef7b4f2628dbc5671b2a2cb0d",
+            "wholeParagraphChars": 907,
+            "literalClipWords": 9,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          }
+        ]
       }
-    ],
-    "assessment": "Athens 1896 is the first modern Games; Paris 1900, London 1908 and Stockholm 1912 are later meetings, not first men’s participation. Women’s 1912 addition is separate from the male-only 1896 inclusion.",
-    "sourceIndependenceCheck": "Read actual Britannica authored topic paragraphs and, for backstroke, the article’s descriptive video caption (not AI text). Wiki medley cites FINA rules and Olympic participation history cites Lisa Porter; the Backstroke and Butterfly articles have independently written descriptions. No paired Britannica citation supplies these selected clauses.",
-    "priorSupportedRowSha256": "24ec44da9b4707678ed27c71049c992fe9067a834fe2519c2028199cb87d9026",
-    "finalPermutationSourceEvidenceBasis": "Final full question/ordered choices/answer/fun fact actually reread. Only option order and correct index changed; factual wording, difficulty, confidence, claims and exact selected quotations are unchanged. Original actual source GET timestamps are retained without claiming a new reopening; immutable local capture hashes and short quotations are rechecked."
+    ]
   },
   {
     "id": "B13-0853",
