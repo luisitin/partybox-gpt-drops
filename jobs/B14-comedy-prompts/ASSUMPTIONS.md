@@ -38,3 +38,7 @@ alias in the prompt; generic coffee or social media does not establish a brand.
 ## 2026-10-09 follow-up assumptions
 
 Preserve original Ready13 and every sealed grade/source batch; repair on a separate audit branch. Fictional surrounding scenes still require sources for real cultural associations. Conservative potential-cue inventory marks every row UNVERIFIED until actual per-fact review; it does not assert every string is nonfiction. Root currently owns B13, so the stale original next-job instruction cannot create a second owner. Shared source quotation budgets are global and are not reset by this new branch. Runtime source receipt captures are private; published evidence stores only transport hashes/status and original project-owned artifacts.
+
+
+## Scoped adult-fiction cue classification
+Only13 specifically read rows have a complete classification: actual advertising/product associations cite9 facts; ghosts,corpses,cults,licencecertifications,invoices,mascothiring and imaginedlastwords are creative situations, not reportedreal events orpromisedservices. Enterprise deposit association uses documentedU.S.rental context without an amount,refundtime orworldwide rule. Other1187rows remainUNVERIFIED; no blanketfiction/named-brand exemption. Independentcourt institutional author used; absentnamedjudge notguessed. Originalhumorgrades/words/sealsunchanged.

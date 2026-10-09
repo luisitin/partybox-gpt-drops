@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "build": "python3 scripts/build.py",
-    "test": "python3 scripts/test_research.py && python3 scripts/check_research.py --partial && python3 scripts/test_selection.py && python3 scripts/check_selection.py && python3 scripts/test_delivery.py && python3 scripts/scan_pool.py --check && python3 scripts/verify.py && python3 scripts/checksums.py --check && sha256sum -c SHA256SUMS.txt",
+    "test": "python3 scripts/test_semantic_pairs.py && python3 scripts/check_semantic_pairs.py && python3 scripts/test_research.py && python3 scripts/check_research.py --partial && python3 scripts/test_selection.py && python3 scripts/check_selection.py && python3 scripts/test_delivery.py && python3 scripts/scan_pool.py --check && python3 scripts/verify.py && python3 scripts/checksums.py --check && sha256sum -c SHA256SUMS.txt",
     "check:draft": "python3 scripts/verify.py --draft",
     "checksums": "python3 scripts/checksums.py",
     "test:delivery": "python3 scripts/test_delivery.py && python3 scripts/checksums.py --check",
     "test:selection": "python3 scripts/test_selection.py && python3 scripts/check_selection.py",
     "test:research": "python3 scripts/check_research.py",
-    "test:research:partial": "python3 scripts/test_research.py && python3 scripts/check_research.py --partial"
+    "test:research:partial": "python3 scripts/test_research.py && python3 scripts/check_research.py --partial",
+    "test:semantic": "python3 scripts/test_semantic_pairs.py && python3 scripts/check_semantic_pairs.py"
   }
 }

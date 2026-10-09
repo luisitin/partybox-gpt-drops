@@ -98,3 +98,7 @@ Enterprise U.S. car rental is associated with a security deposit. The cult leade
 
 - Enterprise Rent-A-Car corporate authorship — https://www.enterprise.com/en/car-rental-faqs/us-deposits-and-payments/car-rental-deposit.html — “a deposit is required to rent a car from Enterprise in the United States.” (14 words; full opening1+2).
 - Kristin, AutoSlash (actual visible byline) — https://blog.autoslash.com/how-much-does-enterprise-hold-on-your-card/ — “The hold is equal to the rental rate plus a security deposit.” (12 words; full opening1+2).
+
+
+## Exact13-row cultural-cue qualification
+research-second-pass.json contains13 literal-text human cue/creative classifications, bound to9facts and every actual full capture/secondopening/hash/quote. Onlythese13 rows nowqualify; remaining1187 are UNVERIFIED. Creative details for these specific rows are explicitly described and do not exempt any real cultural association elsewhere. GEICOcar-insurance/Energizerdrumming/endurance/EnterpriseU.S.deposit cues are separately sourced. No policyamount,globalrule,debutyear,battery efficacy,realghost/mascotdeath orservice promise is asserted.

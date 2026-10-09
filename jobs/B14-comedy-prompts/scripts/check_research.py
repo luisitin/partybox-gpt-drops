@@ -35,6 +35,14 @@ def check(root, partial=False):
                 assert datetime.fromisoformat(record["closedUTC"]) >= datetime.fromisoformat(record["openedUTC"]), "impossible opening chronology"
     rows = review["rows"]
     assert len(rows) == len(by_id) == 1200 and {row["promptId"] for row in rows} == by_id.keys(), "research does not cover every selected row"
+    proof_path = root / "research-second-pass.json"
+    proof = json.loads(proof_path.read_text()) if proof_path.exists() else {"rows": []}
+    verified_ids = {row["promptId"] for row in rows if row["status"] == "VERIFIED"}
+    proof_rows = {row["promptId"]: row for row in proof["rows"]}
+    assert len(proof_rows) == len(proof["rows"]) and set(proof_rows) == verified_ids, "verified rows lack exact second-pass coverage"
+    if verified_ids:
+        assert proof["selectedSha256"] == review["selectedSha256"], "second pass belongs to another selected pack"
+        assert proof["qualifiedFactsSha256"] == hashlib.sha256((root / "reports/audit-20261009/verified-initial-cues.json").read_bytes()).hexdigest(), "second pass belongs to different facts"
     for row in rows:
         prompt = by_id[row["promptId"]]
         assert row["textSha256"] == hashlib.sha256(prompt["text"].encode()).hexdigest(), "review belongs to different text"
@@ -43,6 +51,17 @@ def check(root, partial=False):
             assert row["promptId"] in next(f for f in facts if f["id"] == fact_id)["promptIds"], "fact not associated with this prompt"
         if row["status"] == "VERIFIED":
             assert row["allActualCuesReviewed"] and row["verifiedFactIds"] and row["coverageReason"], "limited facts cannot qualify an entire row"
+            observed = proof_rows[row["promptId"]]
+            assert observed["actualFullText"] == prompt["text"] and observed["textSha256"] == row["textSha256"] and observed["allActualCuesReviewed"], "second pass did not cover this exact text"
+            assert observed["factIds"] == row["verifiedFactIds"] and observed["cueAndCreativeClassification"] == row["coverageReason"], "second-pass cue classification differs"
+            expected_sources = {(fact_id, source["sourceId"]): source for fact_id in row["verifiedFactIds"] for source in next(f for f in facts if f["id"] == fact_id)["sources"]}
+            checks = observed["sourceReopeningChecks"]
+            assert len(checks) == len(expected_sources) and {(check["factId"], check["sourceId"]) for check in checks} == expected_sources.keys(), "second pass omitted a fact source"
+            for check in checks:
+                source = expected_sources[check["factId"], check["sourceId"]]
+                assert check["actualBothCapturedBodiesAndExactQuoteOffsetsRechecked"] and check["url"] == source["url"] and check["independentAuthorGroup"] == source["independentAuthorGroup"], "second-pass source identity differs"
+                second = source["fullPasses"][1]
+                assert check["secondRawSha256"] == second["rawSha256"] and check["secondVisibleSha256"] == second["visibleSha256"] and check["secondOpenedUTC"] == second["openedUTC"] and check["secondClosedUTC"] == second["closedUTC"], "second full-opening receipt differs"
     incomplete = [row["promptId"] for row in rows if row["status"] != "VERIFIED"]
     report = {"mode": "partial-metadata" if partial else "strict-readiness", "schemaValidatedFacts": len(facts), "reviewRows": len(rows), "fullyQualifiedRows": len(rows) - len(incomplete), "unverifiedRows": len(incomplete), "ready": not incomplete, "scope": "Metadata integrity only; original full-source acceptance receipts qualify individual facts. Partial mode never grants readiness."}
     if not partial:

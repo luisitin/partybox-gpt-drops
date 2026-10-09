@@ -104,3 +104,7 @@ Actual exact both-genre reranking repairs four rows; Folgers premise duplicate r
 
 ## Research-coverage repair checkpoint
 Actual9 narrowly scoped associations; strict research rejects all1200 unfinished rows. Exact70f51 original+600selector+14delivery whole packet accepted13:11:31. Separate local26-pair/22-row semantic repair fullscan is pending and not shipped in this checkpoint. Substantivegain, zero formalKEEP credit. Previous51s hard cadence miss retained.
+
+
+## Actual semantic and13-row research repair
+Local22 additional unchanged candidate substitutions repair26 actual concrete-premise collisions; a27th original Folgers exclusion is preserved. All27 known pair ratios are genuinely<=.75 across both text forms/directions.28 actual same-size600-per-genre CLI controls(27negative1positive) pass with immutable fixtures/natural children. Frozen230-input full4,498,500+719,400controller truly closed13:20:17.927240UTC; current644canonical buckets cap3, original3000words/grades/30seals unchanged. New13 exact-row full-cue classifications recheck every cited captured fullbody/hash/literalquote and actualsecondopening;9facts retained,1187whole rows still UNVERIFIED.12research CLI controls(11negative1positive) bind perrow source identity/digest and preserve honest strict failure. This is substantivegain; no formalKEEP begins until all1200research passes. First failed LongHorn adoption and canceled unchangedscan remain uncredited.

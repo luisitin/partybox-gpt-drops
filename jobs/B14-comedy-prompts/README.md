@@ -38,3 +38,10 @@ product features, or misconduct. Read `SOURCES.md` and `ASSUMPTIONS.md` for
 that scope. Humor was independently reviewed, but has not been audience-tested.
 
 The2026-10-09 follow-up is an active Draft audit. It adds a read-only delivery gate and preserves genuine original full evidence. Both-genre ranking, semantic Folgers repetition and strict cultural-cue research remain unresolved. See NEXT.md and reports/audit-20261009/CURRENT-SCOPE.md; the original zero-facts fiction exemption does not certify real cultural references.
+
+
+## Supplemental repair status
+
+Draft PR29 preserves the original Ready PR13. It restores exact ranking across both genres, removes reviewed repeated premises, and checks delivery size/coverage before release. The current pack keeps600 per format and all original candidate wordings and grades. Nine sourced cultural facts support13 fully reviewed rows; the remaining1,187 rows are still UNVERIFIED.
+
+Run `npm test` for original structural/editorial checks and the new selector, delivery, semantic and partial research controls. Run `npm run test:research` for strict research readiness: it currently fails because research is unfinished. A successful partial metadata check never means the pack is ready. NEXT.md records the exact work still required.
