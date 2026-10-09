@@ -1,4 +1,4 @@
-"""Execute three actual verifier guards on isolated synthetic negative fixtures."""
+"""Execute fifteen current production guard controls on isolated fixtures."""
 import ast, datetime, hashlib, json, pathlib, re, sys
 from types import SimpleNamespace
 from urllib.parse import urlparse

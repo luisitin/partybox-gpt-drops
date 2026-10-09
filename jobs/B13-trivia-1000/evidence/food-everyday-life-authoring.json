@@ -429,36 +429,58 @@
   },
   {
     "id": "B13-0911",
-    "rowSha256": "4a035613c5e7e634146d3abeba6a0b7879e20c46467df1a95319656c9db97d8c",
-    "author": "/root/continue_b14_author",
+    "author": "/root",
+    "authoredAt": "2026-10-09T12:03:19.488532+00:00",
+    "rowSha256": "6c58690e7f22021f9b51c4e4fefdd83ffb4a71c62922e4050953b275bc9e32da",
+    "sourceIds": [
+      "food-everyday-life-s5015",
+      "food-everyday-life-s5016"
+    ],
     "evidenceReads": [
       {
-        "sourceId": "food-everyday-life-s0015",
-        "captureSha256": "f156c2b4fc33279cd70e56a1cf92eee97ca2e0417220cfb902135a724489278a",
-        "capturePath": ".work/food-everyday-life/author/food-everyday-life-s0015.txt",
-        "retrievedAt": "2026-10-07T19:01:00.201268+00:00",
-        "answerQuoteExactMatch": true,
-        "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Adding milk to sweet chocolate produces milk chocolate.",
-        "funFactSupport": "Chocolate is made from cocoa beans, the seeds of the cacao tree."
+        "sourceId": "food-everyday-life-s5015",
+        "contentSha256": "cb5ed03e007d43f37c8a102086c2651c2e2a711681dc012a10b0302fde665c2e",
+        "quoteFound": true,
+        "contextRead": true,
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "food product made from cocoa beans",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Chocolate is made from the kernels of fermented and roasted cocoa beans. The kernels are ground to form a pasty fluid chocolate liquor",
+            "exactMatch": true
+          }
+        ]
       },
       {
-        "sourceId": "food-everyday-life-s0016",
-        "captureSha256": "093c2e58eee211ce03a9c5ce1224e3df4e03c1f013e177837093d8f84ed2b1c9",
-        "capturePath": ".work/food-everyday-life/author/food-everyday-life-s0016.txt",
-        "retrievedAt": "2026-10-07T19:00:59.803801+00:00",
-        "answerQuoteExactMatch": true,
-        "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Adding milk to sweet chocolate produces milk chocolate.",
-        "funFactSupport": "Chocolate is made from cocoa beans, the seeds of the cacao tree."
+        "sourceId": "food-everyday-life-s5016",
+        "contentSha256": "093c2e58eee211ce03a9c5ce1224e3df4e03c1f013e177837093d8f84ed2b1c9",
+        "quoteFound": true,
+        "contextRead": true,
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "Cocoa beans are the processed seeds of the cacao tree",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "They are usually fermented to develop the flavor, then dried, cleaned, and roasted.",
+            "exactMatch": true
+          },
+          {
+            "field": "extraQuote",
+            "quote": "which are ground to chocolate liquor",
+            "exactMatch": true
+          }
+        ]
       }
     ],
-    "confidenceReason": "Both accounts name milk; no precise cocoa-percentage regulation is implied.",
-    "unresolvedProblems": [
-      "Fresh adversarial review and second source reopening are pending."
-    ]
+    "confidenceReason": "Both independent food accounts identify cocoa beans and describe fermentation, roasting and grinding; the usual-processing scope does not assert that every producer or chocolate variety follows an identical recipe.",
+    "originalAuthorPacketSHA256": "23004ee932566f8ea950a2570bff9cedd54111b1823c9fac20ac4f755e6611dc"
   },
   {
     "id": "B13-0912",

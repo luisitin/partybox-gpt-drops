@@ -148,3 +148,7 @@ Changed (commit messages start `B13:`):
 - `scripts/to-partybox.py`, `partybox/exclusions.json`, `partybox/overlap-candidates.json`, `partybox/fit-summary.json`, `partybox/validate-with-partybox.ts`: the port adapter, decisions and validator.
 - `README.md` rewritten with the What / How / Status block; this file added; VERIFY.md, LOOP.md, NEXT.md and SHA256SUMS.txt updated.
 - `categories/`, `evidence/`, `reviews/`, `research/`, `reports/` and `trivia.schema.json` unchanged. `reports/checks.json` was overwritten by a test run and restored from git, so it matches the committed acceptance report.
+
+## Version scope after the 2026-10-09 research amendments
+
+The port review,51 static exclusions,949-row fit summary and private-bank checks above describe the original Ready22 row version. Nine new research amendments have their own exact independent source/option reviews; no new PartyBox private-bank refresh, exported-pack installation, schema/speech/client run or game merge is claimed here. Existing adapter artifacts remain historical. Their old missing-body limitation is closed for the original pack by the genuine1,051 retained-body proof; current full research acceptance is recorded separately in VERIFY and reports/checks.json.

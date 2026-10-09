@@ -56,3 +56,9 @@ The independent auditor copied 244 delivered files and 1,051 referenced plaintex
 ## Polish pass 2026-10-08 (Claude, cloud)
 
 Added the PartyBox lightning-round adapter, 51 port-time exclusions, an overlap review queue and a validator that runs PartyBox's own schema and speech reader; held rows unchanged; hosted acceptance exit 0; the local full acceptance cannot run in this clone because .work/ is absent.
+
+## 2026-10-09 supplemental pre-green recovery and material repairs
+
+The genuine original full local body proof was recovered before editing. Original live checks accepted six actual invalid identity/date counterexamples, and the original renderer actually erased completed audits and authored NEXT. Nine supported question amendments were authored, independently reopened/reviewed at their exact hashes, and adopted with original row/review/source versions retained. A separate current1,000-row length assessment and full captured-evidence acceptance now pass. The eight-row intermediate hosted run really failed its stale length gate; its whole native failure and the actual1,917.707822-second source interval are retained. These are pre-green repairs and mandatory evidence work, with zero formal current KEEP credit. Current source still needs the separate immutable auditor, current hosted whole proof and the subsequently pushed original KEEP loop.
+
+The independent current frozen auditor naturally closed PASS12:37:05.364307 with the exact full report and every original gate. Its first actual output-path invocation failure remains preserved. This completes mandatory independent pre-green delivery work; the current source still needs hosted whole acceptance before the subsequently pushed original KEEP loop.

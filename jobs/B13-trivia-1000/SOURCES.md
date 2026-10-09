@@ -1042,9 +1042,9 @@ Answer: Inca. Fun fact: The site includes walls and terraces.
 
 Answer: 2,430 meters. Fun fact: The citadel occupies a mountain setting.
 
-- world-geography-s0005: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/274/)
+- world-geography-s5005: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/274/)
   quote: “Machu Picchu stands 2,430 m above sea-level, in the middle of a tropical mountain forest” (15 words).
-- world-geography-s0006: [Wikipedia contributors](https://en.wikipedia.org/wiki/Machu_Picchu)
+- world-geography-s5006: [Wikipedia contributors](https://en.wikipedia.org/wiki/Machu_Picchu)
   quote: “on a mountain ridge at 2,430 meters (7,970 ft)” (9 words).
 
 ## B13-0111 — Which stepped agricultural structures are prominent among Machu Picchu’s ruins?
@@ -1318,14 +1318,14 @@ Answer: Sarsen and bluestone. Fun fact: The monument includes a prehistoric ston
   quote: “shaped sarsen stones (blocks of Cenozoic silcrete), arranged in post-and-lintel formation , and because of the remote origin of its smaller bluestones” (22 words).
   funFactQuote: “As a prehistoric stone circle” (5 words).
 
-## B13-0137 — The Sydney Opera House overlooks which Australian city’s harbor?
+## B13-0137 — Which Australian city is home to the landmark Opera House on its harbor?
 
 Answer: Sydney. Fun fact: It is a centre for performing arts.
 
-- world-geography-s0019: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/166/)
+- world-geography-s5019: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/166/)
   quote: “a peninsula projecting into Sydney Harbour” (6 words).
   funFactQuote: “two main performance halls” (4 words).
-- world-geography-s0020: [Wikipedia contributors](https://en.wikipedia.org/wiki/Sydney_Opera_House)
+- world-geography-s5020: [Wikipedia contributors](https://en.wikipedia.org/wiki/Sydney_Opera_House)
   quote: “a multi-venue performing arts centre in Sydney” (7 words).
   funFactQuote: “Located on the foreshore of Sydney Harbour” (7 words).
 
@@ -1534,14 +1534,14 @@ Answer: Argentina and Brazil. Fun fact: They form a large system of waterfalls.
 - world-geography-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Iguazu_Falls)
   quote: “Waterfalls on the Iguazú River on the border of Argentina and Brazil” (12 words).
 
-## B13-0158 — Which river forms Iguazú Falls?
+## B13-0158 — Which river forms a major waterfall system before flowing into the Paraná?
 
 Answer: Iguazu. Fun fact: Downstream, it joins the Paraná River.
 
-- world-geography-s0029: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/303/)
+- world-geography-s5029: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/303/)
   quote: “the Iguazú or Iguaçu River, drops vertically” (7 words).
   funFactQuote: “before it flows into the mighty Parana River” (8 words).
-- world-geography-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Iguazu_Falls)
+- world-geography-s5030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Iguazu_Falls)
   quote: “waterfalls of the Iguazu River” (5 words).
   funFactQuote: “drains into the Paraná River” (5 words).
 
@@ -3026,9 +3026,9 @@ Answer: Solitary. Fun fact: A mother and her offspring are a major exception to 
 
 Answer: Night. Fun fact: They locate prey using sight and hearing.
 
-- animals-nature-s0007: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/tiger)
+- animals-nature-s5007: [Smithsonian's National Zoo and Conservation Biology Institute](https://nationalzoo.si.edu/animals/tiger)
   quote: “These powerful cats hunt primarily at night, using sight and sound to identify prey.” (14 words).
-- animals-nature-s0008: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Panthera_tigris/)
+- animals-nature-s5008: [Animal Diversity Web, University of Michigan](https://animaldiversity.org/accounts/Panthera_tigris/)
   quote: “Tigers are most active at night” (6 words).
   funFactQuote: “Tigers are thought to locate their prey using hearing and sight more than olfaction” (14 words).
 
@@ -5151,16 +5151,17 @@ Answer: Qin Shi Huang. Fun fact: Qin Shi Huang ruled the Qin dynasty.
   quote: “was the first emperor of a unified China .” (9 words).
   funFactQuote: “The Qin Dynasty (221-206 BCE) he founded” (7 words).
 
-## B13-0514 — What dynasty did China’s first emperor Qin Shi Huang establish?
+## B13-0514 — China's first unified empire was ruled by which dynasty?
 
 Answer: Qin. Fun fact: Qin Shi Huang’s government followed Legalism.
 
-- world-history-s0009: [Encyclopaedia Britannica](https://www.britannica.com/biography/Qin-Shi-Huang)
-  quote: “was the emperor (reigned 221–210 bce ) of the Qin dynasty” (11 words).
+- world-history-s5009: [Encyclopaedia Britannica](https://www.britannica.com/biography/Qin-Shi-Huang)
+  quote: “of the Qin dynasty (221–207 bce ) and creator of the first unified Chinese empire” (15 words).
   funFactQuote: “the totalitarian state philosophy known as legalism .” (8 words).
-- world-history-s0010: [World History Encyclopedia](https://www.worldhistory.org/Shi_Huangdi/)
+- world-history-s5010: [World History Encyclopedia](https://www.worldhistory.org/Shi_Huangdi/)
   quote: “The Qin Dynasty (221-206 BCE) he founded” (7 words).
   funFactQuote: “Maintaining Shang Yang's strict philosophy of Legalism as the official policy of the government” (14 words).
+  extraQuote: “was the first emperor of a unified China” (8 words).
 
 ## B13-0515 — Which philosophy underpinned the strict government of Qin Shi Huang?
 
@@ -8869,14 +8870,14 @@ Answer: Butterfly. Fun fact: In butterfly, both arms recover above the water.
   quote: “the legs moving up and down together in a dolphin kick” (11 words).
   funFactQuote: “arms moving symmetrically down the front of the body and then over the water” (14 words).
 
-## B13-0852 — At which first modern Olympic Games was men’s swimming included?
+## B13-0852 — In which year was men’s swimming first included in the modern Olympic Games?
 
-Answer: Athens 1896. Fun fact: Women’s Olympic swimming was added in 1912.
+Answer: 1896. Fun fact: Women’s Olympic swimming was added in 1912.
 
-- sports-games-s0025: [Encyclopaedia Britannica](https://www.britannica.com/sports/swimming-sport)
+- sports-games-s5025: [Encyclopaedia Britannica](https://www.britannica.com/sports/swimming-sport)
   quote: “modern Olympic Games from their inception in 1896” (8 words).
   funFactQuote: “women’s events were added in 1912” (6 words).
-- sports-games-s0026: [Wikipedia contributors](https://en.wikipedia.org/wiki/Swimming_(sport))
+- sports-games-s5026: [Wikipedia contributors](https://en.wikipedia.org/wiki/Swimming_(sport))
   quote: “Olympic Games in 1896 in Athens” (6 words).
   funFactQuote: “Women's swimming was introduced into the Olympics in 1912” (9 words).
 
@@ -9518,16 +9519,17 @@ Answer: Cocoa butter. Fun fact: Adding milk to sweet chocolate produces milk cho
   quote: “Making chocolate with only cocoa butter and milk produces white chocolate .” (12 words).
   funFactQuote: “with the addition of milk , can be made into milk chocolate” (12 words).
 
-## B13-0911 — Which ingredient distinguishes milk chocolate from otherwise similar dark chocolate?
+## B13-0911 — Which of these plant ingredients is used as the basis for chocolate?
 
-Answer: Milk. Fun fact: Chocolate is made from cocoa beans, the seeds of the cacao tree.
+Answer: Cocoa beans. Fun fact: The beans are usually fermented and roasted before being ground.
 
-- food-everyday-life-s0015: [Encyclopaedia Britannica](https://www.britannica.com/topic/chocolate)
-  quote: “The addition of dried or concentrated milk to sweet chocolate produces milk chocolate” (13 words).
-  funFactQuote: “food product made from cocoa beans” (6 words).
-- food-everyday-life-s0016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Chocolate)
-  quote: “with the addition of milk , can be made into milk chocolate” (12 words).
-  funFactQuote: “Cocoa beans are the processed seeds of the cacao tree” (10 words).
+- food-everyday-life-s5015: [Encyclopaedia Britannica](https://www.britannica.com/topic/chocolate)
+  quote: “food product made from cocoa beans” (6 words).
+  funFactQuote: “Chocolate is made from the kernels of fermented and roasted cocoa beans. The kernels are ground to form a pasty fluid chocolate liquor” (23 words).
+- food-everyday-life-s5016: [Wikipedia contributors](https://en.wikipedia.org/wiki/Chocolate)
+  quote: “Cocoa beans are the processed seeds of the cacao tree” (10 words).
+  funFactQuote: “They are usually fermented to develop the flavor, then dried, cleaned, and roasted.” (13 words).
+  extraQuote: “which are ground to chocolate liquor” (6 words).
 
 ## B13-0912 — Flower nectar is the main raw material bees turn into which sweetener?
 
@@ -9641,12 +9643,12 @@ Answer: Buttermilk. Fun fact: Carotene and related pigments contribute to butter
 
 ## B13-0922 — Which yellow pigment can contribute to butter's natural color?
 
-Answer: Beta-carotene. Fun fact: Butter contains a high proportion of butterfat.
+Answer: Carotene. Fun fact: Butter contains a high proportion of butterfat.
 
-- food-everyday-life-s0021: [Encyclopaedia Britannica](https://www.britannica.com/topic/butter)
+- food-everyday-life-s5021: [Encyclopaedia Britannica](https://www.britannica.com/topic/butter)
   quote: “The colour of butter is caused by carotene and other fat-soluble pigments” (12 words).
   funFactQuote: “It has a high content of butterfat , or milk fat” (11 words).
-- food-everyday-life-s0022: [Wikipedia contributors](https://en.wikipedia.org/wiki/Butter)
+- food-everyday-life-s5022: [Wikipedia contributors](https://en.wikipedia.org/wiki/Butter)
   quote: “β-carotene and other pigments typically present in pasture-fed cow milk will turn the butter yellow” (15 words).
   funFactQuote: “consisting of approximately 81% butterfat” (5 words).
 
@@ -9819,10 +9821,10 @@ Answer: Caffeine. Fun fact: Arabica and robusta are major commercial coffee type
 
 Answer: Coffea arabica. Fun fact: Robusta belongs to Coffea canephora.
 
-- food-everyday-life-s0029: [Encyclopaedia Britannica](https://www.britannica.com/topic/coffee)
+- food-everyday-life-s5029: [Encyclopaedia Britannica](https://www.britannica.com/topic/coffee)
   quote: “Coffea arabica and C. canephora” (5 words).
   funFactQuote: “Robusta, the main variety of C. canephora” (7 words).
-- food-everyday-life-s0030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Coffee)
+- food-everyday-life-s5030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Coffee)
   quote: “C. canephora (predominantly a form known as 'robusta') and C. arabica” (11 words).
   funFactQuote: “C. canephora (predominantly a form known as 'robusta')” (8 words).
 

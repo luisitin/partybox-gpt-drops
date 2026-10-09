@@ -11,14 +11,60 @@
     "isolated naked-receipt fixture: no capture path"
   ],
   "RejectedDuplicateNotCountedResolved": true,
-  "checkerSha256": "3762e6084a4c7cce7367bf36438a221b2f8009348597ca1dd89853d39a6c0cfa",
-  "runAt": "2026-10-07T21:32:28.094807+00:00",
+  "independentReviewIdentityCases": [
+    {
+      "case": "self-review",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "self-review-with-role-and-case",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "missing-author",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "blank-author",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "missing-reviewer",
+      "rejectedByActualProductionGate": true
+    }
+  ],
+  "validCurrentIndependentReviewAccepted": true,
+  "actualUtcLengthAssessmentCases": [
+    {
+      "case": "malformed",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "future",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "non-UTC",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "naive",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "missing",
+      "rejectedByActualProductionGate": true
+    }
+  ],
+  "validCurrentUtcLengthAssessmentAccepted": true,
+  "checkerSha256": "df225dff957727d3d6171af3e26a75c8c7e47134d674dd50b6d9e0c8a4bf38df",
+  "runAt": "2026-10-09T12:26:10.903089+00:00",
   "rerunCommand": "python scripts/verify-guard-fixtures.py .",
   "actualInvocation": [
     "python",
     "scripts/verify-guard-fixtures.py",
     "."
   ],
-  "fixtureCount": 3,
-  "scope": "Three isolated tests execute current production guards on explicitly synthetic missing/rejected fixtures. No remote retrieval, factual grading, shared data mutation or invented real source receipt."
+  "fixtureCount": 15,
+  "scope": "Three original evidence/duplicate controls, five author-identity counterexamples, five timestamp counterexamples and two valid current controls execute unchanged current production guards. No remote retrieval, factual grading, shared data mutation or invented real source receipt."
 }

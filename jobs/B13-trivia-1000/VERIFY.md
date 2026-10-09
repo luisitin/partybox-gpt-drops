@@ -1,25 +1,25 @@
 # B13 verification
 
-## Actual full acceptance report rendered — 2026-10-07T21:27:08.732885+00:00
+## Current acceptance report documentation rendered — 2026-10-09T12:29:39.007098+00:00
 
 Command actually executed: `python scripts/check-data.py --require-local-captures`.
-Deterministic research validation; random seed n/a. Full raw validator output: [reports/checks.json](reports/checks.json). This table records that exact checked row set, whose canonical version-list SHA is `3af3f51c5633404d428331225d8e46dd3824f628fad5eddd503689eb168e4942`.
+Deterministic research validation; random seed n/a. Full raw validator output: [reports/checks.json](reports/checks.json). This table records that exact checked row set, whose canonical version-list SHA is `12d9a52258758158c1ce59f291d4248a7b7fd2026426f3e2eb9230d59064b863`.
 
 | Check | Cases | Passed |
 |---|---:|---:|
 | Authored rows against JSON Schema, IDs, four unique options, answer/index and author hashes | 1000 | 1000 |
 | Category difficulty 34/33/33 and exact answer positions 25/25/25/25 | 10 | 10 |
-| Author quotation fields in actual hash-checked retained bodies | 3507 | 3507 |
+| Author quotation fields in actual hash-checked retained bodies | 3509 | 3509 |
 | Current independent adversarial acceptances | 1000 | 1000 |
 | Current actual second-pass source support reviews | 1000 | 1000 |
-| Second-pass quotation associations/body matches | 3507 | 3507 |
+| Second-pass quotation associations/body matches | 3509 | 3509 |
 | Retained similarity flags with current accepted concrete resolutions | 2210 | 2210 |
 
 Schema/data errors: 0. Ten category files each have 100 real rows. Quote matching proves retained text presence, not factual entailment or independent editorial origin: the independent per-row reviewers read actual surrounding paragraphs/footnotes, tried concrete counterexamples, checked scope/fun facts/options and preserved original rejects. Source GET timestamps are actual original opens, not refreshed when a later choice order is reviewed.
 
 The near-duplicate scan compares all 499,500 unordered normalized question pairs, takes the maximum of both SequenceMatcher directions and flags every ratio>0.8. Only current accepted keep/distinct decisions resolve a flag; rejection metadata cannot be counted as a pass. All historical flag payloads and substantive duplicate repairs remain retained.
 
-The original answer-position draft cycled A/B/C/D by numeric ID, allowing 100% prediction. That actual challenge is preserved in `evidence/fullset-position-pattern-challenge.json`. The seeded final shuffle (root seed 20261007, separately derived category seeds) preserves all original facts and choice multisets in `evidence/final-option-permutation-manifest.json`; every reviewer then actually read every final ordered option set. Two late independent rejections produced explicitly declared author amendments to 0515 and 0979, each reread by its separate reviewer. `evidence/final-option-post-shuffle-amendments.json` preserves both changes; these two amendments do change options and are not claimed to preserve their original multisets. Independent audits prove the other 998 rows match the original shuffle exactly, and all 1,000 final indices remain unchanged with exactly 25 answers per position per category.
+Historical original shuffle scope: the original answer-position draft cycled A/B/C/D by numeric ID, allowing 100% prediction. That actual challenge is preserved in `evidence/fullset-position-pattern-challenge.json`. The original seeded final shuffle (root seed 20261007, separately derived category seeds) and original ordered-option reviews are retained in `evidence/final-option-permutation-manifest.json`. Two original late rejections produced the declared 0515 and 0979 amendments in `evidence/final-option-post-shuffle-amendments.json`. The historical independent audit's 998 unchanged-row statement concerns that original delivery, before later editorial amendments; it does not certify later row or option versions. Current row hashes, option counts, answer positions and independent assessments are bound to the actually executed report above. Later amendments preserve their own original versions and actual independent rereviews under `evidence/resume-audit-20261009/` when present.
 
 The final original-cycle heuristic scores 278/1000. Full-pack length strategy metrics and the actual editorial assessment bind the exact current row hashes in `evidence/option-length-assessment.json`. The independent position audit reports all category pairs, preserved selected answers and actual descriptive metrics; it does not certify randomness or promise that no possible fitted heuristic exists.
 
@@ -37,8 +37,12 @@ Initial music quote-path recovery failure, original per-category rejects, real T
 ## UNVERIFIED
 
 - Current original-gate pending values: `{"adversarialNotCurrent": 0, "knownExactAnswerCycle": false, "optionLengthEditorialAssessment": null, "reopenNotCurrent": 0, "similarityFlagsUnresolved": 0, "targetRowsMissing": 0}`.
-- Exact final-head hosted CI is performed after the branch push; its actual run and conclusion are linked in PR22. This local file does not invent a future CI outcome.
+- Exact final-head hosted CI must be checked after the current source push. Completed historical immutable audits are retained below with their original version scope.
 - Factual correctness and independence are reasoned source judgments, not mathematical guarantees; no human party playtest or empirical US-audience difficulty calibration is claimed.
+
+## Retained historical verification
+
+These completed audits retain their original version hashes and actual dates. They do not certify later row or checker amendments.
 
 ## Actual independent option integrity audits
 
@@ -106,3 +110,9 @@ Exact receipts and body hashes are in evidence/resume-audit-20261009/. This clos
 ## Current eight-amendment checkpoint — 2026-10-09
 
 Eight exact question variants now have actual independent current reviews and sixteen fresh second opens. The full captured-evidence draft report passes1,000 rows,3,508 author and3,508 reopen literal matches,4,000 associations and all2,210 similarity resolutions. It is explicitly incomplete only at the exact-current independent option-length editorial gate. Historical reports/checks.json and its old guard report have not been relabelled current. Self/missing-author and malformed/future/non-UTC date acceptance failures, plus actual renderer history/NEXT loss, were reproduced before repairing their production gates. Private full source bodies and HTTP response headers are excluded. Draft28 remains Draft; original Ready22 is unchanged. No pre-green repair is counted as a formal KEEP round.
+
+## Actual current nine-row independent immutable audit — 2026-10-09
+
+Separate reviewer /root/restart_g01_0458 actually ran the unchanged current original full local checker on a normal-copy286-file snapshot with1,087 byte-identical retained plaintext hardlinks, without changing original permissions. Its corrected invocation naturally closed12:37:04.450165 UTC, exit0; the complete800,173-byte report SHA8cfddb7f0488ccc2346ee72d4e757e20eaa326044eeaf7de985a3f82f7c71b31 is byte-identical to the actual lead report. All current1,000 rows/546records/3,509 author+3,509 reopen matches/4,000 associations/1,000 current independent reviews and all2,210 pair resolutions pass. All15 current actual guard fixtures and the entire285-entry manifest exited0. Every source+copy file/body hash and full size remained unchanged before/after. The first invocation really exited1 because its output was placed outside the copy root; only the auditor output argument was corrected, with no production/gate/source change, and both actual invocations are preserved. No fresh GET,991-row factual rereview, human playtest or formal KEEP credit is claimed by this audit.
+
+The auditor recorded a30MiB ceiling; the lead separately verifies the stricter30,000,000-byte delivery ceiling for every frozen file. The maximum is9,525,424 bytes under both. The final additions are audit receipts plus documentary continuation/inventory/checksums; the actual checked questions, sources, reviews, report, checker, renderer, schema and original workflow remain byte-identical to the frozen audit. Final current hosted whole-log acceptance is pending after this source publication.

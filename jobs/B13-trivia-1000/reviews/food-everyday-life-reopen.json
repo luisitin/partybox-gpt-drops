@@ -841,87 +841,134 @@
   },
   {
     "id": "B13-0911",
-    "rowSha256": "4a035613c5e7e634146d3abeba6a0b7879e20c46467df1a95319656c9db97d8c",
-    "reviewer": "/root/continue_b13_lead (did not author food category)",
-    "reviewedAt": "2026-10-07T21:17:52.580474+00:00",
+    "reviewer": "codex-board-audit-20261009 / independent root B13 peer",
+    "reviewedAt": "2026-10-09T12:14:05.614020+00:00",
+    "rowSha256": "6c58690e7f22021f9b51c4e4fefdd83ffb4a71c62922e4050953b275bc9e32da",
     "result": "supported",
+    "assessment": "Both full leads identify cocoa beans as the food basis; full Britannica kernel-processing paragraph and complete Wikipedia seed/nib/chocolate-liquor paragraph explicitly support the causal ingredient relationship. Basis avoids the earlier main-by-weight ambiguity: a sugar-heavy chocolate still has a cacao basis. Among these four plant ingredients cocoa beans alone qualify. Britannica explicitly says fermented/roasted kernels are ground; Wikipedia entire paragraph says usually fermented, dried, cleaned, roasted, shell removed and nibs ground. Usually correctly leaves raw/non-roasted specialty exceptions. Stable ingredient identity and usual process, no changing rank/regulation/population requiring as-of2025.",
     "sources": [
       {
-        "sourceId": "food-everyday-life-s0015",
+        "sourceId": "food-everyday-life-s5015",
         "receipt": {
           "pass": "reopen",
-          "retrievedAt": "2026-10-07T19:51:54.409422+00:00",
-          "method": "urllib-http-get",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T12:12:33.718333+00:00",
+          "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://www.britannica.com/topic/chocolate",
           "resolvedUrl": "https://www.britannica.com/topic/chocolate",
           "status": 200,
-          "contentType": "text/html",
-          "rawSha256": "3f20e675a8abb5428366e60ce1101fccce3334adc07293c856c34705b2e8fa8b",
-          "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0015.raw",
-          "title": "Chocolate | Definition, History, Types, Production, & Facts | Britannica",
-          "contentSha256": "45f0b19b326c2ce6a6ec6a1032bf3e6d07da449b5d35996ed99d41d3cd86aec9",
-          "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0015.txt",
+          "contentSha256": "67cfac858023cbaf1da67b231a2cb04afec465b391e5449a96461c9fd85ff7e7",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/food-everyday-life-s5015.txt",
+          "sourceId": "food-everyday-life-s5015",
+          "rawSha256": "495eca63b38411725c498a3e53354cb25033310928cc2b321a021a0a23307974",
           "captureComplete": true,
-          "characters": 11749
+          "originalPeerPacketSHA256": "13fc7725b89a72d43243ec5c6567fc6fcfa49106a909aeec9f3e7b455a093793",
+          "captureRelocatedWithoutByteChanges": true
         },
+        "contextRead": true,
+        "claimAssessment": "Both full leads identify cocoa beans as the food basis; full Britannica kernel-processing paragraph and complete Wikipedia seed/nib/chocolate-liquor paragraph explicitly support the causal ingredient relationship. Basis avoids the earlier main-by-weight ambiguity: a sugar-heavy chocolate still has a cacao basis. Among these four plant ingredients cocoa beans alone qualify. Britannica explicitly says fermented/roasted kernels are ground; Wikipedia entire paragraph says usually fermented, dried, cleaned, roasted, shell removed and nibs ground. Usually correctly leaves raw/non-roasted specialty exceptions.",
         "quotations": [
           {
             "field": "quote",
-            "quote": "The addition of dried or concentrated milk to sweet chocolate produces milk chocolate",
-            "exactMatch": true,
-            "wordCount": 13
+            "quote": "food product made from cocoa beans",
+            "exactMatch": true
           },
           {
             "field": "funFactQuote",
-            "quote": "food product made from cocoa beans",
-            "exactMatch": true,
-            "wordCount": 6
+            "quote": "Chocolate is made from the kernels of fermented and roasted cocoa beans. The kernels are ground to form a pasty fluid chocolate liquor",
+            "exactMatch": true
           }
         ],
-        "contextRead": true,
-        "claimAssessment": "Compared milk with coffee, honey and flour; otherwise-similar dark chocolate narrows the defining added ingredient to milk, without denying variant sweeteners. Both actual bodies identify cocoa/cacao beans as the input; Wiki explicitly calls them seeds.",
-        "sourceIndependenceAssessment": "Wiki selected chocolate-making introductory narration differs from Britannica kernels/liquor narrative. Its only Britannica citations are Charlie and the Chocolate Factory cultural material, excluded from our selected production/type claims."
+        "actualWholeScopeRead": {
+          "allRelevantAndAdjacentParagraphsAndNativeReferencesPersonallyRead": true,
+          "scopeHashes": [
+            {
+              "sourceId": "food-everyday-life-s5015",
+              "field": "quote",
+              "words": 6,
+              "literalRecovered": true,
+              "wholeParagraphChars": 376,
+              "wholeParagraphSHA256": "6842e4ac90c2280611453d0112a4bcea4bc8aa67791fd69e4f4929de79578a03"
+            },
+            {
+              "sourceId": "food-everyday-life-s5015",
+              "field": "funFactQuote",
+              "words": 23,
+              "literalRecovered": true,
+              "wholeParagraphChars": 457,
+              "wholeParagraphSHA256": "89707ffe79ea70931a7bb9d7e22555729f505cabb41944f2c342a0771292287d"
+            }
+          ]
+        }
       },
       {
-        "sourceId": "food-everyday-life-s0016",
+        "sourceId": "food-everyday-life-s5016",
         "receipt": {
           "pass": "reopen",
-          "retrievedAt": "2026-10-07T19:51:54.231283+00:00",
-          "method": "urllib-http-get",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T12:12:34.203030+00:00",
+          "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://en.wikipedia.org/wiki/Chocolate",
           "resolvedUrl": "https://en.wikipedia.org/wiki/Chocolate",
           "status": 200,
-          "contentType": "text/html",
-          "rawSha256": "1b0cb73084ba1c8298b882421cc6649890f5a5b55d37d610f58bbaae17afde37",
-          "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0016.raw",
-          "title": "Chocolate - Wikipedia",
           "contentSha256": "093c2e58eee211ce03a9c5ce1224e3df4e03c1f013e177837093d8f84ed2b1c9",
-          "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0016.txt",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/food-everyday-life-s5016.txt",
+          "sourceId": "food-everyday-life-s5016",
+          "rawSha256": "d4d082a3ef7941bb258f2f32f5a19ba3daec5a4835ad8e84dd79334b9792c036",
           "captureComplete": true,
-          "characters": 74788
+          "originalPeerPacketSHA256": "13fc7725b89a72d43243ec5c6567fc6fcfa49106a909aeec9f3e7b455a093793",
+          "captureRelocatedWithoutByteChanges": true
         },
+        "contextRead": true,
+        "claimAssessment": "Both full leads identify cocoa beans as the food basis; full Britannica kernel-processing paragraph and complete Wikipedia seed/nib/chocolate-liquor paragraph explicitly support the causal ingredient relationship. Basis avoids the earlier main-by-weight ambiguity: a sugar-heavy chocolate still has a cacao basis. Among these four plant ingredients cocoa beans alone qualify. Britannica explicitly says fermented/roasted kernels are ground; Wikipedia entire paragraph says usually fermented, dried, cleaned, roasted, shell removed and nibs ground. Usually correctly leaves raw/non-roasted specialty exceptions.",
         "quotations": [
           {
             "field": "quote",
-            "quote": "with the addition of milk , can be made into milk chocolate",
-            "exactMatch": true,
-            "wordCount": 12
+            "quote": "Cocoa beans are the processed seeds of the cacao tree",
+            "exactMatch": true
           },
           {
             "field": "funFactQuote",
-            "quote": "Cocoa beans are the processed seeds of the cacao tree",
-            "exactMatch": true,
-            "wordCount": 10
+            "quote": "They are usually fermented to develop the flavor, then dried, cleaned, and roasted.",
+            "exactMatch": true
+          },
+          {
+            "field": "extraQuote",
+            "quote": "which are ground to chocolate liquor",
+            "exactMatch": true
           }
         ],
-        "contextRead": true,
-        "claimAssessment": "Compared milk with coffee, honey and flour; otherwise-similar dark chocolate narrows the defining added ingredient to milk, without denying variant sweeteners. Both actual bodies identify cocoa/cacao beans as the input; Wiki explicitly calls them seeds.",
-        "sourceIndependenceAssessment": "Wiki selected chocolate-making introductory narration differs from Britannica kernels/liquor narrative. Its only Britannica citations are Charlie and the Chocolate Factory cultural material, excluded from our selected production/type claims."
+        "actualWholeScopeRead": {
+          "allRelevantAndAdjacentParagraphsAndNativeReferencesPersonallyRead": true,
+          "scopeHashes": [
+            {
+              "sourceId": "food-everyday-life-s5016",
+              "field": "quote",
+              "words": 10,
+              "literalRecovered": true,
+              "wholeParagraphChars": 638,
+              "wholeParagraphSHA256": "099db04836aa7c91957fa26a520953e744ca89eac327ba57bdac666dd6e57843"
+            },
+            {
+              "sourceId": "food-everyday-life-s5016",
+              "field": "funFactQuote",
+              "words": 13,
+              "literalRecovered": true,
+              "wholeParagraphChars": 638,
+              "wholeParagraphSHA256": "099db04836aa7c91957fa26a520953e744ca89eac327ba57bdac666dd6e57843"
+            },
+            {
+              "sourceId": "food-everyday-life-s5016",
+              "field": "extraQuote",
+              "words": 6,
+              "literalRecovered": true,
+              "wholeParagraphChars": 638,
+              "wholeParagraphSHA256": "099db04836aa7c91957fa26a520953e744ca89eac327ba57bdac666dd6e57843"
+            }
+          ]
+        }
       }
-    ],
-    "assessment": "Compared milk with coffee, honey and flour; otherwise-similar dark chocolate narrows the defining added ingredient to milk, without denying variant sweeteners. Both actual bodies identify cocoa/cacao beans as the input; Wiki explicitly calls them seeds.",
-    "finalOptionOrderAssessment": "Milk supplies the named milk-chocolate distinction; flour, coffee and honey are not that dairy ingredient.",
-    "sourceReceiptReuse": "Only choice order changed. The final ordered question/options/correct answer/fun fact were actually read now; retained physical second-pass GET receipts keep their actual original times."
+    ]
   },
   {
     "id": "B13-0912",

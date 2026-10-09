@@ -1,28 +1,28 @@
 {
-  "reviewer": "/root/restart_g01_0458 (independent editorial option-length reviewer; did not author or edit B13 rows)",
-  "reviewedAt": "2026-10-09T12:23:00.311215+00:00",
+  "reviewer": "/root/r2048_history (editorial length assessment; factual acceptance remains with each independent category reviewer)",
+  "reviewedAt": "2026-10-07T21:20:25.282486+00:00",
   "result": "accept",
-  "rowVersionsSha256": "12d9a52258758158c1ce59f291d4248a7b7fd2026426f3e2eb9230d59064b863",
-  "metricsSha256": "2eeb43b7bda9cea552d22838f22d3f9e56940bd406e2b96c4562f53b3b2b8c10",
-  "rationale": "I independently read the frozen current packet and recomputed all4,000 option lengths from its actual1,000 rows, their canonical row hashes and the exact original-checker metrics. Correct answers average9.823 Unicode code points versus9.975 for wrong answers, and162/1,000 are uniquely longest. An always-longest rule with uniform random tie breaking has23.825% expected accuracy; always-shortest has25.125%, compared with25% for each fixed position. I inspected all ten category means, unique extrema, tie-size distributions, and uniform/first/last-position tie policies. Category uniform longest results range16.5–28.75%; shortest results range19.66667–29.41667%, with different directions across categories. These descriptive differences do not reveal a consistent rule that makes the correct answer longest. I personally inspected all nine current changed option sets: none has a uniquely longest correct answer, the two numerical sets are equal-length throughout, and the named cities/rivers/dynasties/species and everyday ingredients use natural peer alternatives. I also inspected the twelve largest correct-minus-wrong-mean length gaps as a challenge: recognizable official names/titles, animal descriptions, real songs and materials explain individual long answers; those isolated examples do not create the pack-level systematic longest-answer pattern prohibited by the original contract. I accept the exact version bound above for the editorial option-length gate, with the actual computed category and tie-policy evidence retained. This is a reasoned assessment of this fixed dataset, not a claim that no possible length, lexical, position or knowledge-based heuristic can beat chance.",
+  "rowVersionsSha256": "3af3f51c5633404d428331225d8e46dd3824f628fad5eddd503689eb168e4942",
+  "metricsSha256": "6411ac6aa032e0c988d6b34fb67a8c865ee8e9a85f0ced1a6564f54f1147aa28",
+  "rationale": "I reviewed the actual final option-length distributions and the retained explicit editorial challenges and repairs. The original music category longest-option strategy scored 37.58% expected accuracy with uniform tie breaking and received 14 actual repairs using plausible alternatives of the same type; the independently reviewed music now scores 23.58%. Nature, world geography and food shortest-option clues also received concrete author repairs and independent reviews of changed options. Across these final 1,000 rows, correct versus wrong mean length is 9.828 versus 9.9837 Unicode code points, and uniquely longest correct options occur in 163/1,000 rows. Choosing the longest option with uniform tie breaking scores 23.91%, and shortest scores 25.07%; fixed positions each score 25%. Every category's longest and shortest strategies and tie rules are retained below, alongside overall means. Given the repaired option types, close final full-pack correct and wrong length means and descriptive strategy results, I accept this exact version's requirement that correct answers are not systematically longest. This is an editorial conclusion for these rows, not a statistical guarantee that no imaginable heuristic works. The separately identified deterministic A/B/C/D row-ID pattern now scores 27.80%, replacing its original 100% success; separate final ordered-option review evidence remains required. After two declared late amendments, I actually reread 0515’s Legalism/Confucianism/Daoism/Mohism ordering and 0979’s formal botanical-family target with four real Latin-family alternatives, then recomputed and examined every global and category metric. These are the only two rows differing from the preserved initial final-shuffle manifest; the previous accepted rowset is retained as historical evidence. This length acceptance does not substitute for the independent factual/option rereviews of those two amended rows.",
   "metricsInspected": {
     "unit": "Unicode code points",
-    "meanCorrect": 9.823,
-    "meanIncorrect": 9.975,
+    "meanCorrect": 9.828,
+    "meanIncorrect": 9.9837,
     "meanOptionByPosition": {
-      "0": 9.851,
-      "1": 9.999,
-      "2": 9.819,
-      "3": 10.079
+      "0": 9.855,
+      "1": 10.011,
+      "2": 9.832,
+      "3": 10.081
     },
     "meanCorrectByPosition": {
-      "0": 9.788,
+      "0": 9.816,
       "1": 10.288,
       "2": 9.26,
-      "3": 9.956
+      "3": 9.948
     },
-    "uniquelyLongestCorrect": 162,
-    "uniquelyLongestCorrectFraction": 0.162,
+    "uniquelyLongestCorrect": 163,
+    "uniquelyLongestCorrectFraction": 0.163,
     "uniquelyLongestCorrectIds": [
       "B13-0013",
       "B13-0014",
@@ -167,6 +167,7 @@
       "B13-0901",
       "B13-0904",
       "B13-0916",
+      "B13-0922",
       "B13-0930",
       "B13-0940",
       "B13-0941",
@@ -189,433 +190,160 @@
     ]
   },
   "additionalWholePackStrategies": {
-    "rows": 1000,
-    "meanCorrect": 9.823,
-    "meanIncorrect": 9.975,
-    "fixedPositions": {
-      "0": 0.25,
-      "1": 0.25,
-      "2": 0.25,
-      "3": 0.25
-    },
     "longest": {
-      "uniformTieExpectedAccuracy": 0.23825,
-      "exactUniformTieExpectedScore": "953/4",
+      "uniformTieExpectedAccuracy": 0.23908333,
       "firstPositionTieAccuracy": 0.249,
-      "lastPositionTieAccuracy": 0.23,
-      "uniqueCorrect": 162,
-      "uniqueOpportunities": 675,
-      "tieSizeCounts": {
-        "1": 675,
-        "2": 156,
-        "3": 22,
-        "4": 147
-      }
+      "lastPositionTieAccuracy": 0.232
     },
     "shortest": {
-      "uniformTieExpectedAccuracy": 0.25125,
-      "exactUniformTieExpectedScore": "1005/4",
-      "firstPositionTieAccuracy": 0.253,
-      "lastPositionTieAccuracy": 0.25,
-      "uniqueCorrect": 147,
-      "uniqueOpportunities": 619,
-      "tieSizeCounts": {
-        "1": 619,
-        "2": 198,
-        "3": 36,
-        "4": 147
-      }
+      "uniformTieExpectedAccuracy": 0.25075,
+      "firstPositionTieAccuracy": 0.252,
+      "lastPositionTieAccuracy": 0.25
     }
   },
   "categoryStrategies": {
-    "animals-nature": {
-      "rows": 100,
-      "meanCorrect": 11.28,
-      "meanIncorrect": 12.5567,
-      "fixedPositions": {
-        "0": 0.25,
-        "1": 0.25,
-        "2": 0.25,
-        "3": 0.25
-      },
-      "longest": {
-        "uniformTieExpectedAccuracy": 0.165,
-        "exactUniformTieExpectedScore": "33/2",
-        "firstPositionTieAccuracy": 0.2,
-        "lastPositionTieAccuracy": 0.14,
-        "uniqueCorrect": 13,
-        "uniqueOpportunities": 83,
-        "tieSizeCounts": {
-          "1": 83,
-          "2": 15,
-          "4": 2
-        }
-      },
-      "shortest": {
-        "uniformTieExpectedAccuracy": 0.25833333,
-        "exactUniformTieExpectedScore": "155/6",
-        "firstPositionTieAccuracy": 0.24,
-        "lastPositionTieAccuracy": 0.29,
-        "uniqueCorrect": 16,
-        "uniqueOpportunities": 72,
-        "tieSizeCounts": {
-          "1": 72,
-          "2": 20,
-          "3": 6,
-          "4": 2
-        }
-      }
-    },
-    "food-everyday-life": {
-      "rows": 100,
-      "meanCorrect": 10.0,
-      "meanIncorrect": 10.15,
-      "fixedPositions": {
-        "0": 0.25,
-        "1": 0.25,
-        "2": 0.25,
-        "3": 0.25
-      },
-      "longest": {
-        "uniformTieExpectedAccuracy": 0.25583333,
-        "exactUniformTieExpectedScore": "307/12",
-        "firstPositionTieAccuracy": 0.25,
-        "lastPositionTieAccuracy": 0.25,
-        "uniqueCorrect": 22,
-        "uniqueOpportunities": 80,
-        "tieSizeCounts": {
-          "1": 80,
-          "2": 16,
-          "3": 3,
-          "4": 1
-        }
-      },
-      "shortest": {
-        "uniformTieExpectedAccuracy": 0.29416667,
-        "exactUniformTieExpectedScore": "353/12",
-        "firstPositionTieAccuracy": 0.29,
-        "lastPositionTieAccuracy": 0.31,
-        "uniqueCorrect": 20,
-        "uniqueOpportunities": 71,
-        "tieSizeCounts": {
-          "1": 71,
-          "2": 22,
-          "3": 6,
-          "4": 1
-        }
-      }
-    },
-    "movies-tv": {
-      "rows": 100,
-      "meanCorrect": 13.16,
-      "meanIncorrect": 12.9567,
-      "fixedPositions": {
-        "0": 0.25,
-        "1": 0.25,
-        "2": 0.25,
-        "3": 0.25
-      },
-      "longest": {
-        "uniformTieExpectedAccuracy": 0.265,
-        "exactUniformTieExpectedScore": "53/2",
-        "firstPositionTieAccuracy": 0.26,
-        "lastPositionTieAccuracy": 0.28,
-        "uniqueCorrect": 22,
-        "uniqueOpportunities": 79,
-        "tieSizeCounts": {
-          "1": 79,
-          "2": 17,
-          "3": 4
-        }
-      },
-      "shortest": {
-        "uniformTieExpectedAccuracy": 0.19666667,
-        "exactUniformTieExpectedScore": "59/3",
-        "firstPositionTieAccuracy": 0.2,
-        "lastPositionTieAccuracy": 0.18,
-        "uniqueCorrect": 14,
-        "uniqueOpportunities": 75,
-        "tieSizeCounts": {
-          "1": 75,
-          "2": 23,
-          "3": 2
-        }
-      }
-    },
-    "music": {
-      "rows": 100,
-      "meanCorrect": 11.73,
-      "meanIncorrect": 11.4367,
-      "fixedPositions": {
-        "0": 0.25,
-        "1": 0.25,
-        "2": 0.25,
-        "3": 0.25
-      },
-      "longest": {
-        "uniformTieExpectedAccuracy": 0.23583333,
-        "exactUniformTieExpectedScore": "283/12",
-        "firstPositionTieAccuracy": 0.21,
-        "lastPositionTieAccuracy": 0.25,
-        "uniqueCorrect": 21,
-        "uniqueOpportunities": 85,
-        "tieSizeCounts": {
-          "1": 85,
-          "2": 11,
-          "3": 3,
-          "4": 1
-        }
-      },
-      "shortest": {
-        "uniformTieExpectedAccuracy": 0.21583333,
-        "exactUniformTieExpectedScore": "259/12",
-        "firstPositionTieAccuracy": 0.19,
-        "lastPositionTieAccuracy": 0.23,
-        "uniqueCorrect": 16,
-        "uniqueOpportunities": 77,
-        "tieSizeCounts": {
-          "1": 77,
-          "2": 20,
-          "3": 2,
-          "4": 1
-        }
-      }
-    },
-    "science-space": {
-      "rows": 100,
-      "meanCorrect": 6.37,
-      "meanIncorrect": 6.1767,
-      "fixedPositions": {
-        "0": 0.25,
-        "1": 0.25,
-        "2": 0.25,
-        "3": 0.25
-      },
-      "longest": {
-        "uniformTieExpectedAccuracy": 0.26666667,
-        "exactUniformTieExpectedScore": "80/3",
-        "firstPositionTieAccuracy": 0.31,
-        "lastPositionTieAccuracy": 0.23,
-        "uniqueCorrect": 3,
-        "uniqueOpportunities": 11,
-        "tieSizeCounts": {
-          "1": 11,
-          "2": 15,
-          "3": 2,
-          "4": 72
-        }
-      },
-      "shortest": {
-        "uniformTieExpectedAccuracy": 0.235,
-        "exactUniformTieExpectedScore": "47/2",
-        "firstPositionTieAccuracy": 0.28,
-        "lastPositionTieAccuracy": 0.19,
-        "uniqueCorrect": 2,
-        "uniqueOpportunities": 17,
-        "tieSizeCounts": {
-          "1": 17,
-          "2": 11,
-          "4": 72
-        }
-      }
-    },
-    "sports-games": {
-      "rows": 100,
-      "meanCorrect": 6.9,
-      "meanIncorrect": 6.7067,
-      "fixedPositions": {
-        "0": 0.25,
-        "1": 0.25,
-        "2": 0.25,
-        "3": 0.25
-      },
-      "longest": {
-        "uniformTieExpectedAccuracy": 0.26416667,
-        "exactUniformTieExpectedScore": "317/12",
-        "firstPositionTieAccuracy": 0.31,
-        "lastPositionTieAccuracy": 0.23,
-        "uniqueCorrect": 15,
-        "uniqueOpportunities": 56,
-        "tieSizeCounts": {
-          "1": 56,
-          "2": 16,
-          "3": 3,
-          "4": 25
-        }
-      },
-      "shortest": {
-        "uniformTieExpectedAccuracy": 0.22583333,
-        "exactUniformTieExpectedScore": "271/12",
-        "firstPositionTieAccuracy": 0.27,
-        "lastPositionTieAccuracy": 0.18,
-        "uniqueCorrect": 9,
-        "uniqueOpportunities": 53,
-        "tieSizeCounts": {
-          "1": 53,
-          "2": 18,
-          "3": 4,
-          "4": 25
-        }
-      }
-    },
     "us-geography": {
-      "rows": 100,
-      "meanCorrect": 7.4,
-      "meanIncorrect": 7.8967,
-      "fixedPositions": {
-        "0": 0.25,
-        "1": 0.25,
-        "2": 0.25,
-        "3": 0.25
-      },
       "longest": {
         "uniformTieExpectedAccuracy": 0.195,
-        "exactUniformTieExpectedScore": "39/2",
         "firstPositionTieAccuracy": 0.2,
-        "lastPositionTieAccuracy": 0.2,
-        "uniqueCorrect": 11,
-        "uniqueOpportunities": 60,
-        "tieSizeCounts": {
-          "1": 60,
-          "2": 11,
-          "3": 3,
-          "4": 26
-        }
+        "lastPositionTieAccuracy": 0.2
       },
       "shortest": {
         "uniformTieExpectedAccuracy": 0.28666667,
-        "exactUniformTieExpectedScore": "86/3",
         "firstPositionTieAccuracy": 0.28,
-        "lastPositionTieAccuracy": 0.31,
-        "uniqueCorrect": 18,
-        "uniqueOpportunities": 57,
-        "tieSizeCounts": {
-          "1": 57,
-          "2": 13,
-          "3": 4,
-          "4": 26
-        }
-      }
+        "lastPositionTieAccuracy": 0.31
+      },
+      "meanCorrect": 7.4,
+      "meanIncorrect": 7.8967
+    },
+    "world-geography": {
+      "longest": {
+        "uniformTieExpectedAccuracy": 0.2075,
+        "firstPositionTieAccuracy": 0.21,
+        "lastPositionTieAccuracy": 0.21
+      },
+      "shortest": {
+        "uniformTieExpectedAccuracy": 0.26083333,
+        "firstPositionTieAccuracy": 0.25,
+        "lastPositionTieAccuracy": 0.27
+      },
+      "meanCorrect": 9.61,
+      "meanIncorrect": 10.0533
+    },
+    "science-space": {
+      "longest": {
+        "uniformTieExpectedAccuracy": 0.26666667,
+        "firstPositionTieAccuracy": 0.31,
+        "lastPositionTieAccuracy": 0.23
+      },
+      "shortest": {
+        "uniformTieExpectedAccuracy": 0.235,
+        "firstPositionTieAccuracy": 0.28,
+        "lastPositionTieAccuracy": 0.19
+      },
+      "meanCorrect": 6.37,
+      "meanIncorrect": 6.1767
+    },
+    "animals-nature": {
+      "longest": {
+        "uniformTieExpectedAccuracy": 0.165,
+        "firstPositionTieAccuracy": 0.2,
+        "lastPositionTieAccuracy": 0.14
+      },
+      "shortest": {
+        "uniformTieExpectedAccuracy": 0.25833333,
+        "firstPositionTieAccuracy": 0.24,
+        "lastPositionTieAccuracy": 0.29
+      },
+      "meanCorrect": 11.28,
+      "meanIncorrect": 12.6533
     },
     "us-history-civics": {
-      "rows": 100,
-      "meanCorrect": 11.7,
-      "meanIncorrect": 11.9033,
-      "fixedPositions": {
-        "0": 0.25,
-        "1": 0.25,
-        "2": 0.25,
-        "3": 0.25
-      },
       "longest": {
         "uniformTieExpectedAccuracy": 0.24083333,
-        "exactUniformTieExpectedScore": "289/12",
         "firstPositionTieAccuracy": 0.24,
-        "lastPositionTieAccuracy": 0.24,
-        "uniqueCorrect": 18,
-        "uniqueOpportunities": 77,
-        "tieSizeCounts": {
-          "1": 77,
-          "2": 9,
-          "3": 1,
-          "4": 13
-        }
+        "lastPositionTieAccuracy": 0.24
       },
       "shortest": {
         "uniformTieExpectedAccuracy": 0.2675,
-        "exactUniformTieExpectedScore": "107/4",
         "firstPositionTieAccuracy": 0.24,
-        "lastPositionTieAccuracy": 0.28,
-        "uniqueCorrect": 16,
-        "uniqueOpportunities": 59,
-        "tieSizeCounts": {
-          "1": 59,
-          "2": 25,
-          "3": 3,
-          "4": 13
-        }
-      }
-    },
-    "world-geography": {
-      "rows": 100,
-      "meanCorrect": 9.61,
-      "meanIncorrect": 10.06,
-      "fixedPositions": {
-        "0": 0.25,
-        "1": 0.25,
-        "2": 0.25,
-        "3": 0.25
+        "lastPositionTieAccuracy": 0.28
       },
-      "longest": {
-        "uniformTieExpectedAccuracy": 0.20666667,
-        "exactUniformTieExpectedScore": "62/3",
-        "firstPositionTieAccuracy": 0.21,
-        "lastPositionTieAccuracy": 0.2,
-        "uniqueCorrect": 16,
-        "uniqueOpportunities": 74,
-        "tieSizeCounts": {
-          "1": 74,
-          "2": 22,
-          "3": 2,
-          "4": 2
-        }
-      },
-      "shortest": {
-        "uniformTieExpectedAccuracy": 0.26333333,
-        "exactUniformTieExpectedScore": "79/3",
-        "firstPositionTieAccuracy": 0.25,
-        "lastPositionTieAccuracy": 0.27,
-        "uniqueCorrect": 16,
-        "uniqueOpportunities": 68,
-        "tieSizeCounts": {
-          "1": 68,
-          "2": 26,
-          "3": 4,
-          "4": 2
-        }
-      }
+      "meanCorrect": 11.7,
+      "meanIncorrect": 11.9033
     },
     "world-history": {
-      "rows": 100,
-      "meanCorrect": 10.08,
-      "meanIncorrect": 9.9067,
-      "fixedPositions": {
-        "0": 0.25,
-        "1": 0.25,
-        "2": 0.25,
-        "3": 0.25
-      },
       "longest": {
         "uniformTieExpectedAccuracy": 0.2875,
-        "exactUniformTieExpectedScore": "115/4",
         "firstPositionTieAccuracy": 0.3,
-        "lastPositionTieAccuracy": 0.28,
-        "uniqueCorrect": 21,
-        "uniqueOpportunities": 70,
-        "tieSizeCounts": {
-          "1": 70,
-          "2": 24,
-          "3": 1,
-          "4": 5
-        }
+        "lastPositionTieAccuracy": 0.28
       },
       "shortest": {
         "uniformTieExpectedAccuracy": 0.26916667,
-        "exactUniformTieExpectedScore": "323/12",
         "firstPositionTieAccuracy": 0.29,
-        "lastPositionTieAccuracy": 0.26,
-        "uniqueCorrect": 20,
-        "uniqueOpportunities": 70,
-        "tieSizeCounts": {
-          "1": 70,
-          "2": 20,
-          "3": 5,
-          "4": 5
-        }
-      }
+        "lastPositionTieAccuracy": 0.26
+      },
+      "meanCorrect": 10.08,
+      "meanIncorrect": 9.9067
+    },
+    "movies-tv": {
+      "longest": {
+        "uniformTieExpectedAccuracy": 0.265,
+        "firstPositionTieAccuracy": 0.26,
+        "lastPositionTieAccuracy": 0.28
+      },
+      "shortest": {
+        "uniformTieExpectedAccuracy": 0.19666667,
+        "firstPositionTieAccuracy": 0.2,
+        "lastPositionTieAccuracy": 0.18
+      },
+      "meanCorrect": 13.16,
+      "meanIncorrect": 12.9567
+    },
+    "music": {
+      "longest": {
+        "uniformTieExpectedAccuracy": 0.23583333,
+        "firstPositionTieAccuracy": 0.21,
+        "lastPositionTieAccuracy": 0.25
+      },
+      "shortest": {
+        "uniformTieExpectedAccuracy": 0.21583333,
+        "firstPositionTieAccuracy": 0.19,
+        "lastPositionTieAccuracy": 0.23
+      },
+      "meanCorrect": 11.73,
+      "meanIncorrect": 11.4367
+    },
+    "sports-games": {
+      "longest": {
+        "uniformTieExpectedAccuracy": 0.26166667,
+        "firstPositionTieAccuracy": 0.3,
+        "lastPositionTieAccuracy": 0.23
+      },
+      "shortest": {
+        "uniformTieExpectedAccuracy": 0.22333333,
+        "firstPositionTieAccuracy": 0.26,
+        "lastPositionTieAccuracy": 0.18
+      },
+      "meanCorrect": 6.97,
+      "meanIncorrect": 6.7833
+    },
+    "food-everyday-life": {
+      "longest": {
+        "uniformTieExpectedAccuracy": 0.26583333,
+        "firstPositionTieAccuracy": 0.26,
+        "lastPositionTieAccuracy": 0.26
+      },
+      "shortest": {
+        "uniformTieExpectedAccuracy": 0.29416667,
+        "firstPositionTieAccuracy": 0.29,
+        "lastPositionTieAccuracy": 0.31
+      },
+      "meanCorrect": 9.98,
+      "meanIncorrect": 10.07
     }
   },
-  "categoryTieRule": "For each row, choose every option attaining the minimum or maximum Unicode code-point length; uniform expected score is1 divided by tied-option count when correct is among them, otherwise0. First and last tie policies choose minimum/maximum option index. Exact rational sums are retained; no tied answer is automatically called uniquely longest.",
+  "removedPositionClueFinalAccuracy": 0.278,
   "rowVersionsInspected": [
     {
       "id": "B13-0001",
@@ -1055,7 +783,7 @@
     },
     {
       "id": "B13-0110",
-      "rowSha256": "891c08d5486a0cbe625c71844939a7103daafeaeb080ee70b8c489a95bb52b7d"
+      "rowSha256": "a410827dff6c435518a58583e1134f5d6df1e805fbdce074f208ce52cd2e2f7e"
     },
     {
       "id": "B13-0111",
@@ -1163,7 +891,7 @@
     },
     {
       "id": "B13-0137",
-      "rowSha256": "55edd82ec31a31130b0b8ee89e3dc6e7af59648eec70df30b452978d1a251045"
+      "rowSha256": "820ff3f15eec16e4298736c2ea5c89095c28b8cf9a19c4e67694427585b7dd40"
     },
     {
       "id": "B13-0138",
@@ -1247,7 +975,7 @@
     },
     {
       "id": "B13-0158",
-      "rowSha256": "80bdad24757433fc44e483f71599ad72f430f1ae141f10d262279f49efe89047"
+      "rowSha256": "5c4e54740687497d3bdee8d0a004dfdfd3d9593f3768104f48e52b47a4bb137b"
     },
     {
       "id": "B13-0159",
@@ -1863,7 +1591,7 @@
     },
     {
       "id": "B13-0312",
-      "rowSha256": "5049c515c23dfe163dae2bfeaa4346d6eed4c0a751459fe36b0de44b9e326c3d"
+      "rowSha256": "3843b181c604802d9203d9ab9f37ea2150d2b7ef81a50c0f0862eb1ea13f8ff3"
     },
     {
       "id": "B13-0313",
@@ -2671,7 +2399,7 @@
     },
     {
       "id": "B13-0514",
-      "rowSha256": "0fd386dea51a090784bf4755a01d9acf061b4e631950bd2be848d970f960413b"
+      "rowSha256": "f8602ef9b7e90350324ebed0ce453eb478ef270d060bc92500a149aea949bc1c"
     },
     {
       "id": "B13-0515",
@@ -4023,7 +3751,7 @@
     },
     {
       "id": "B13-0852",
-      "rowSha256": "c483354f9c4bfc3a040a305a6ab730d76e36101589952f8bbf3b6897f8954890"
+      "rowSha256": "218192574e152c55ea808fd92fef30ed80c824636669deb81c955e3274709de8"
     },
     {
       "id": "B13-0853",
@@ -4259,7 +3987,7 @@
     },
     {
       "id": "B13-0911",
-      "rowSha256": "6c58690e7f22021f9b51c4e4fefdd83ffb4a71c62922e4050953b275bc9e32da"
+      "rowSha256": "4a035613c5e7e634146d3abeba6a0b7879e20c46467df1a95319656c9db97d8c"
     },
     {
       "id": "B13-0912",
@@ -4303,7 +4031,7 @@
     },
     {
       "id": "B13-0922",
-      "rowSha256": "926f6b6ab82f3184e3def01828ad65ea091ffcc9f9eb00a67199e5e8d92e3c7e"
+      "rowSha256": "653d4ac62381eb0fd41b86ff5905b9d2456e59110c3792d1c401d668baa7fa85"
     },
     {
       "id": "B13-0923",
@@ -4367,7 +4095,7 @@
     },
     {
       "id": "B13-0938",
-      "rowSha256": "9b8652203afca628516dd2c9dd3240e687aed529e2f544938a43dddd94715bce"
+      "rowSha256": "9a6394da6443ddf6e48567c30392e49f83ae33574934ae122faae5fd0a675763"
     },
     {
       "id": "B13-0939",
@@ -4618,453 +4346,18 @@
       "rowSha256": "79540e23233ced13972cb929b11f3c5bbf26c514cb200b9299d3cacc398be97f"
     }
   ],
-  "changedNineOptionReviews": [
+  "limitations": "Descriptive expected accuracy for this fixed dataset is not a confidence interval or a proof against all knowledge-independent heuristics. The length decision does not replace the separate actual per-row factual and ordered-option reviews.",
+  "postFinalShuffleAmendmentsInspected": [
     {
-      "id": "B13-0110",
-      "rowSha256": "891c08d5486a0cbe625c71844939a7103daafeaeb080ee70b8c489a95bb52b7d",
-      "question": "Approximately how high above sea level is Machu Picchu’s citadel?",
-      "options": [
-        "1,830 meters",
-        "3,230 meters",
-        "2,430 meters",
-        "4,130 meters"
-      ],
-      "codePointLengths": [
-        12,
-        12,
-        12,
-        12
-      ],
-      "correctIndex": 2,
-      "correctAnswer": "2,430 meters",
-      "reviewedAt": "2026-10-09T12:23:00.311215+00:00",
-      "result": "accept-length",
-      "rationale": "All four approximate heights now have the same 12-code-point form; the changed distractors avoid the old 430-meter site-scope problem. No answer-length signal."
+      "id": "B13-0515",
+      "initialFinalShuffleRowSha256": "0e0630183fdc3c32468e782fceac75fa2ac0dfe87d4050651502f01823326b86",
+      "currentAmendedRowSha256": "fd4092ad96b12c68f0d75d3c7e6ae8657b4ea919f5bd52541ecbc5629d886389"
     },
     {
-      "id": "B13-0137",
-      "rowSha256": "55edd82ec31a31130b0b8ee89e3dc6e7af59648eec70df30b452978d1a251045",
-      "question": "Which Australian city is home to the landmark Opera House on its harbor?",
-      "options": [
-        "Brisbane",
-        "Sydney",
-        "Melbourne",
-        "Adelaide"
-      ],
-      "codePointLengths": [
-        8,
-        6,
-        9,
-        8
-      ],
-      "correctIndex": 1,
-      "correctAnswer": "Sydney",
-      "reviewedAt": "2026-10-09T12:23:00.311215+00:00",
-      "result": "accept-length",
-      "rationale": "Sydney is shortest at6, versus three real Australian city names of8/9/8. The stem no longer names Sydney. Natural name length is retained, and neither the full category nor pack shows a systematic shortest-option advantage."
-    },
-    {
-      "id": "B13-0158",
-      "rowSha256": "80bdad24757433fc44e483f71599ad72f430f1ae141f10d262279f49efe89047",
-      "question": "Which river forms a major waterfall system before flowing into the Paraná?",
-      "options": [
-        "Paraná",
-        "Iguazu",
-        "São Francisco",
-        "Uruguay"
-      ],
-      "codePointLengths": [
-        6,
-        6,
-        13,
-        7
-      ],
-      "correctIndex": 1,
-      "correctAnswer": "Iguazu",
-      "reviewedAt": "2026-10-09T12:23:00.311215+00:00",
-      "result": "accept-length",
-      "rationale": "Iguazu ties Paraná for shortest at6; São Francisco and Uruguay are real river names, not padded or conspicuously detailed alternatives. No uniquely longest correct answer."
-    },
-    {
-      "id": "B13-0312",
-      "rowSha256": "5049c515c23dfe163dae2bfeaa4346d6eed4c0a751459fe36b0de44b9e326c3d",
-      "question": "Wild tigers are most active for hunting during which part of the day?",
-      "options": [
-        "Morning",
-        "Afternoon",
-        "Evening",
-        "Night"
-      ],
-      "codePointLengths": [
-        7,
-        9,
-        7,
-        5
-      ],
-      "correctIndex": 3,
-      "correctAnswer": "Night",
-      "reviewedAt": "2026-10-09T12:23:00.311215+00:00",
-      "result": "accept-length",
-      "rationale": "Night is shortest at5 among ordinary broad day parts7/9/7; the new alternatives remove the prior exclusively-worded wrong choices. This individual length difference is natural vocabulary, not a pack-wide reliable rule. The prior factual peer separately retained evening/night scope caution."
-    },
-    {
-      "id": "B13-0514",
-      "rowSha256": "0fd386dea51a090784bf4755a01d9acf061b4e631950bd2be848d970f960413b",
-      "question": "China's first unified empire was ruled by which dynasty?",
-      "options": [
-        "Tang",
-        "Han",
-        "Song",
-        "Qin"
-      ],
-      "codePointLengths": [
-        4,
-        3,
-        4,
-        3
-      ],
-      "correctIndex": 3,
-      "correctAnswer": "Qin",
-      "reviewedAt": "2026-10-09T12:23:00.311215+00:00",
-      "result": "accept-length",
-      "rationale": "Qin ties Han at3; Tang and Song are4. All four are genuine dynasty names, and the revised stem does not repeat Qin. No uniquely longest answer."
-    },
-    {
-      "id": "B13-0852",
-      "rowSha256": "c483354f9c4bfc3a040a305a6ab730d76e36101589952f8bbf3b6897f8954890",
-      "question": "In which year was men’s swimming first included in the modern Olympic Games?",
-      "options": [
-        "1896",
-        "1908",
-        "1912",
-        "1900"
-      ],
-      "codePointLengths": [
-        4,
-        4,
-        4,
-        4
-      ],
-      "correctIndex": 0,
-      "correctAnswer": "1896",
-      "reviewedAt": "2026-10-09T12:23:00.311215+00:00",
-      "result": "accept-length",
-      "rationale": "All four years are exactly4 code points. The year-only target removes the unsupported city-in-answer clause without providing a length clue."
-    },
-    {
-      "id": "B13-0911",
-      "rowSha256": "6c58690e7f22021f9b51c4e4fefdd83ffb4a71c62922e4050953b275bc9e32da",
-      "question": "Which of these plant ingredients is used as the basis for chocolate?",
-      "options": [
-        "Coffee beans",
-        "Sunflower seeds",
-        "Vanilla seeds",
-        "Cocoa beans"
-      ],
-      "codePointLengths": [
-        12,
-        15,
-        13,
-        11
-      ],
-      "correctIndex": 3,
-      "correctAnswer": "Cocoa beans",
-      "reviewedAt": "2026-10-09T12:23:00.311215+00:00",
-      "result": "accept-length",
-      "rationale": "Cocoa beans is11 versus Coffee beans12, Vanilla seeds13 and Sunflower seeds15. Each option is a plausible plant ingredient expressed in the same noun form. The revised basis wording removes the old milk-stem leak and the first proposed main-by-weight ambiguity; the one-character difference from Coffee beans supplies no consistent pack-level signal."
-    },
-    {
-      "id": "B13-0922",
-      "rowSha256": "926f6b6ab82f3184e3def01828ad65ea091ffcc9f9eb00a67199e5e8d92e3c7e",
-      "question": "Which yellow pigment can contribute to butter's natural color?",
-      "options": [
-        "Anthocyanin",
-        "Melanin",
-        "Chlorophyll",
-        "Carotene"
-      ],
-      "codePointLengths": [
-        11,
-        7,
-        11,
-        8
-      ],
-      "correctIndex": 3,
-      "correctAnswer": "Carotene",
-      "reviewedAt": "2026-10-09T12:23:00.311215+00:00",
-      "result": "accept-length",
-      "rationale": "Carotene8 is between Melanin7 and Anthocyanin/Chlorophyll11. Removing unsupported beta specificity also removes the previous uniquely longest correct answer; alternatives remain pigment names rather than length padding."
-    },
-    {
-      "id": "B13-0938",
-      "rowSha256": "9b8652203afca628516dd2c9dd3240e687aed529e2f544938a43dddd94715bce",
-      "question": "Which species gives its name to arabica coffee?",
-      "options": [
-        "Coffea arabica",
-        "Coffea stenophylla",
-        "Coffea liberica",
-        "Coffea canephora"
-      ],
-      "codePointLengths": [
-        14,
-        18,
-        15,
-        16
-      ],
-      "correctIndex": 0,
-      "correctAnswer": "Coffea arabica",
-      "reviewedAt": "2026-10-09T12:23:00.311215+00:00",
-      "result": "accept-length",
-      "rationale": "Coffea arabica14 is shortest among the four genuine Coffea binomials18/15/16. The options were unchanged from the protected original; a shared genus and natural species names are appropriate to the literal species target. This length review does not independently settle the separately reviewed factual/lexical scope."
+      "id": "B13-0979",
+      "initialFinalShuffleRowSha256": "64ce260d5c87f2653a1c6db3808235ff56782d629f27ea3982373fc76c3d6b32",
+      "currentAmendedRowSha256": "6f3f77a9490e216aca0a22089bbef7fe4edcf009a6aafb7a135de16bdb22c258"
     }
   ],
-  "originalProtectionComparison": {
-    "head": "87693947ed87314b3f835d555197123b74f8d2be",
-    "nineChangedIds": [
-      "B13-0110",
-      "B13-0137",
-      "B13-0158",
-      "B13-0312",
-      "B13-0514",
-      "B13-0852",
-      "B13-0911",
-      "B13-0922",
-      "B13-0938"
-    ],
-    "other991ObjectsByteEquivalentAsParsed": true,
-    "all1000DifficultyAndCorrectIndexEqual": true
-  },
-  "inputPacket": {
-    "path": "/tmp/B13-root-audit-20261009/CURRENT-NINE-FULLSET-INDEPENDENT-LENGTH-REVIEW-PACKET-20261009.json",
-    "sha256": "d3cf5212acd85c3d3240b23cf348f632da341784acb769decee9cede361a1946",
-    "bytes": 2141905,
-    "createdAt": "2026-10-09T12:16:58.226618+00:00",
-    "protectedOriginalReady22Head": "87693947ed87314b3f835d555197123b74f8d2be",
-    "currentPublicSourceHeadAtPacketFreeze": "fd4bb89ca8f4e03b66182c74d4b6b4aa0103ecf6",
-    "ninePrivateRowsStillRequiredPublicationAtPacketFreeze": true
-  },
-  "independentRecomputationReceipt": {
-    "path": "/tmp/B13-ninth-revision2-peer-board-agent-20261009-1212/CURRENT-FULLSET-INDEPENDENT-METRIC-RECOMPUTATION-20261009.json",
-    "sha256": "78b32f713723cf507358a8f9e800da127f90b7f13f0bc1f078cbedb9f13c399a",
-    "computedAt": "2026-10-09T12:21:54.129934+00:00"
-  },
-  "diagnosticLargestCorrectLengthGapsActuallyInspected": [
-    {
-      "id": "B13-0423",
-      "question": "Which congressional chamber has the power to impeach federal officials?",
-      "options": [
-        "Electoral College",
-        "Supreme Court",
-        "House of Representatives",
-        "Senate"
-      ],
-      "lengths": [
-        17,
-        13,
-        24,
-        6
-      ],
-      "correctIndex": 2,
-      "correctMinusWrongMean": 12.0
-    },
-    {
-      "id": "B13-0564",
-      "question": "How was Joan of Arc executed in 1431?",
-      "options": [
-        "Drowned",
-        "Hanged",
-        "Burned at the stake",
-        "Beheaded"
-      ],
-      "lengths": [
-        7,
-        6,
-        19,
-        8
-      ],
-      "correctIndex": 2,
-      "correctMinusWrongMean": 12.0
-    },
-    {
-      "id": "B13-0466",
-      "question": "Which was Frederick Douglass's first autobiography?",
-      "options": [
-        "Narrative of the Life of Frederick Douglass",
-        "My Bondage and My Freedom",
-        "Life and Times of Frederick Douglass",
-        "Up from Slavery: An Autobiography"
-      ],
-      "lengths": [
-        43,
-        25,
-        36,
-        33
-      ],
-      "correctIndex": 0,
-      "correctMinusWrongMean": 11.666667
-    },
-    {
-      "id": "B13-0332",
-      "question": "What pattern is visible on a red panda’s tail?",
-      "options": [
-        "Alternating red and buff rings",
-        "Solid black fur",
-        "Large square patches",
-        "Black-and-white stripes"
-      ],
-      "lengths": [
-        30,
-        15,
-        20,
-        23
-      ],
-      "correctIndex": 0,
-      "correctMinusWrongMean": 10.666667
-    },
-    {
-      "id": "B13-0744",
-      "question": "Which Elton John song from The Lion King won the original-song Oscar?",
-      "options": [
-        "Can You Feel the Love Tonight",
-        "I Just Can't Wait to Be King",
-        "Circle of Life",
-        "Hakuna Matata"
-      ],
-      "lengths": [
-        29,
-        28,
-        14,
-        13
-      ],
-      "correctIndex": 0,
-      "correctMinusWrongMean": 10.666667
-    },
-    {
-      "id": "B13-0827",
-      "question": "What material is a standard ice-hockey puck made from?",
-      "options": [
-        "Leather",
-        "Hardwood",
-        "Cork",
-        "Vulcanized rubber"
-      ],
-      "lengths": [
-        7,
-        8,
-        4,
-        17
-      ],
-      "correctIndex": 3,
-      "correctMinusWrongMean": 10.666667
-    },
-    {
-      "id": "B13-0930",
-      "question": "Which organisms convert alcohol into acetic acid during vinegar making?",
-      "options": [
-        "Mold spores",
-        "Acetic acid bacteria",
-        "Algae",
-        "Bread yeasts"
-      ],
-      "lengths": [
-        11,
-        20,
-        5,
-        12
-      ],
-      "correctIndex": 1,
-      "correctMinusWrongMean": 10.666667
-    },
-    {
-      "id": "B13-0784",
-      "question": "Which city's conservatory did Tchaikovsky graduate from in 1865?",
-      "options": [
-        "Saint Petersburg",
-        "Vienna",
-        "Paris",
-        "Moscow"
-      ],
-      "lengths": [
-        16,
-        6,
-        5,
-        6
-      ],
-      "correctIndex": 0,
-      "correctMinusWrongMean": 10.333333
-    },
-    {
-      "id": "B13-0355",
-      "question": "Which cat is notably adapted for headfirst descents of tree trunks?",
-      "options": [
-        "Clouded leopard",
-        "Cheetah",
-        "Lion",
-        "Tiger"
-      ],
-      "lengths": [
-        15,
-        7,
-        4,
-        5
-      ],
-      "correctIndex": 0,
-      "correctMinusWrongMean": 9.666667
-    },
-    {
-      "id": "B13-0194",
-      "question": "What mineral-built natural barriers help form the Plitvice lake system?",
-      "options": [
-        "Basalt lava dams",
-        "Tufa or travertine barriers",
-        "Salt-crystal ridges",
-        "Granite boulder dams"
-      ],
-      "lengths": [
-        16,
-        27,
-        19,
-        20
-      ],
-      "correctIndex": 1,
-      "correctMinusWrongMean": 8.666667
-    },
-    {
-      "id": "B13-0762",
-      "question": "Duke Ellington grew up in which U.S. capital city?",
-      "options": [
-        "Dover",
-        "Richmond",
-        "Annapolis",
-        "Washington, D.C."
-      ],
-      "lengths": [
-        5,
-        8,
-        9,
-        16
-      ],
-      "correctIndex": 3,
-      "correctMinusWrongMean": 8.666667
-    },
-    {
-      "id": "B13-0581",
-      "question": "Which city did Ottoman sultan Mehmed II conquer in 1453?",
-      "options": [
-        "Cairo",
-        "Vienna",
-        "Constantinople",
-        "Baghdad"
-      ],
-      "lengths": [
-        5,
-        6,
-        14,
-        7
-      ],
-      "correctIndex": 2,
-      "correctMinusWrongMean": 8.0
-    }
-  ],
-  "limitations": "No human playtest was performed. No empirical probability or statistical acceptance threshold was invented. This assessment does not certify every possible heuristic, difficulty, factual correctness, source independence or answer uniqueness of991 unchanged rows; their existing separate records remain required. Actual independent eight-row and ninthREV2 factual/reopen receipts are separate and hash-specific. The historical accepted length assessment was read for context and preserved, but its old row/version hashes and dates are not reused as current proof. I made no edits in the B13 product or evidence folders; this receipt is authored only in my private peer directory. The protected-original comparison established all991 other complete parsed row objects and all1,000 correct indices/difficulty values were unchanged."
+  "initialAcceptedLengthAssessmentPreservedAt": "evidence/option-length-assessment-before-declared-final-amendments.json"
 }
