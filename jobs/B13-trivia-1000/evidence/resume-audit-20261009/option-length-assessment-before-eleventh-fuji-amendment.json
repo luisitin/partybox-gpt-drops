@@ -1,10 +1,10 @@
 {
-  "reviewer": "/root/restart_g01_0458 (independent; authored no B13 row)",
-  "reviewedAt": "2026-10-09T13:30:07.581491+00:00",
+  "reviewer": "/root/restart_g01_0458 (independent editorial reviewer; did not author or edit B13 rows)",
+  "reviewedAt": "2026-10-09T13:01:21.536706+00:00",
   "result": "accept",
-  "rowVersionsSha256": "4cffb6f716b3c6f41d31ae3e3fdc0f693dd6d4674613460b0074fb954e4cc594",
+  "rowVersionsSha256": "c1135522b89097c501d4d2ca3aa8cf83b6453b9e98eab2e58d8c073abb117686",
   "metricsSha256": "2eeb43b7bda9cea552d22838f22d3f9e56940bd406e2b96c4562f53b3b2b8c10",
-  "rationale": "I independently recomputed all4000 option lengths, all1000 canonical row-version hashes, complete original-checker metrics, all ten category extrema and tie policies, and the whole-pack strategies from the frozen proposed-eleven packet. Actual means9.823 correct/9.975 incorrect;162 uniquely-longest correct. Uniform-tie always-longest23.825%, always-shortest25.125%; all fixed positions25%, first/last extrema policies and exact fractions independently read. All ten category directions vary: longest16.5–28.75%, shortest19.666667–29.416667%; some first/last tie category policies reach31%, which is acknowledged rather than silently treated as every strategy below25. All eleven amended option sets and twelve largest correct-length gaps were personally read again. Ten amended sets lack a uniquely-longest correct answer; Duke is the explicitly retained16-vs5/8/9 natural-name exception. Fuji changes only question/source-version content relative to acceptedten; all4000 choices/1000indices are exactly unchanged. The new global rowVersions hash/date requires this separately reasoned current acceptance even though metrics are identical. Names, official titles, song titles, ordinary descriptions and materials explain isolated long answers; the complete distribution does not show a pack-wide correct-is-longest strategy. I accept this exact proposed-eleven dataset for the original editorial global length assessment. No invented statistical threshold or all-heuristic guarantee is asserted.",
+  "rationale": "I independently recomputed all4000 Unicode-code-point option lengths and all1000 canonical row-version hashes from the exact proposed-ten packet. Complete original-checker metrics match independently: correct mean9.823, incorrect9.975,162 uniquely-longest correct. Uniform-tie always-longest scores23.825%; always-shortest25.125%; all four fixed positions25%. I freshly read all ten category strategies, extrema/tie sizes and first/last/uniform policies: category longest16.5–28.75%, shortest19.666667–29.416667%, in varying directions. All4000 option strings and1000 indices are exactly unchanged from the previously accepted nine dataset, but the new0762 row changes the global rowVersions hash and requires this new dated assessment. I personally reread all ten current amended option sets, including the newDuke question, and the twelve largest correct-length gaps. Nine amended sets lack a uniquely-longest correct answer; Duke is an explicit natural-name exception16versus5/8/9 that was already present in the unchanged162. Its revised stem removes the federal-capital shortcut without worsening answer lengths. The twelve gap challenges are retained with actual options; names, official titles, songs, descriptions and materials account for isolated long answers. These facts do not establish a systematic pack-wide correct-is-longest rule. I accept this precise proposed-ten version for the original editorial global option-length gate, without certifying all conceivable heuristics or inventing a statistical threshold.",
   "metricsInspected": {
     "unit": "Unicode code points",
     "meanCorrect": 9.823,
@@ -615,7 +615,7 @@
       }
     }
   },
-  "categoryTieRule": "Enumerate every option attaining min/max length; exact uniform score is1/tie-size for a correct member, otherwise0. First/last policies pick lowest/highest index. All exact fractions and tie counts independently summed.",
+  "categoryTieRule": "For each row, enumerate every option attaining min/max length. Uniform expected hit is1/tie-size if the correct option is in that set and0 otherwise. First/last choose the lowest/highest option index. Independently summed exact fractions and tie distributions are retained.",
   "rowVersionsInspected": [
     {
       "id": "B13-0001",
@@ -1299,7 +1299,7 @@
     },
     {
       "id": "B13-0171",
-      "rowSha256": "8fd8f90a0d71c1ff55586e3885e636d2d1b6e6a439c82d6dcbab60ec575adccc"
+      "rowSha256": "bbe4b276f64d51db537b27838405ad4d3c4158b7192a972830470de5a5073bc7"
     },
     {
       "id": "B13-0172",
@@ -4618,7 +4618,7 @@
       "rowSha256": "79540e23233ced13972cb929b11f3c5bbf26c514cb200b9299d3cacc398be97f"
     }
   ],
-  "changedElevenOptionReviews": [
+  "changedTenOptionReviews": [
     {
       "id": "B13-0110",
       "rowSha256": "891c08d5486a0cbe625c71844939a7103daafeaeb080ee70b8c489a95bb52b7d",
@@ -4637,7 +4637,9 @@
       ],
       "correctIndex": 2,
       "correctAnswer": "2,430 meters",
-      "actualEditorialReview": "Four equally formatted four-digit meter measurements, all12 code points; no length hint."
+      "reviewedAt": "2026-10-09T13:01:21.536706+00:00",
+      "result": "accept-length",
+      "rationale": "All four approximate heights now have the same 12-code-point form; the changed distractors avoid the old 430-meter site-scope problem. No answer-length signal."
     },
     {
       "id": "B13-0137",
@@ -4657,7 +4659,9 @@
       ],
       "correctIndex": 1,
       "correctAnswer": "Sydney",
-      "actualEditorialReview": "All four are familiar Australian city names; Sydney6 is shorter than wrong8/9/8, not a uniquely longest correct pattern."
+      "reviewedAt": "2026-10-09T13:01:21.536706+00:00",
+      "result": "accept-length",
+      "rationale": "Sydney is shortest at6, versus three real Australian city names of8/9/8. The stem no longer names Sydney. Natural name length is retained, and neither the full category nor pack shows a systematic shortest-option advantage."
     },
     {
       "id": "B13-0158",
@@ -4677,7 +4681,9 @@
       ],
       "correctIndex": 1,
       "correctAnswer": "Iguazu",
-      "actualEditorialReview": "Iguazu6 ties Parana6; Sao Francisco13 is longer. Genuine distinct river names retained, no artificial padding."
+      "reviewedAt": "2026-10-09T13:01:21.536706+00:00",
+      "result": "accept-length",
+      "rationale": "Iguazu ties Paraná for shortest at6; São Francisco and Uruguay are real river names, not padded or conspicuously detailed alternatives. No uniquely longest correct answer."
     },
     {
       "id": "B13-0312",
@@ -4697,7 +4703,9 @@
       ],
       "correctIndex": 3,
       "correctAnswer": "Night",
-      "actualEditorialReview": "Night5 is shortest against morning7/afternoon9/evening7; ordinary named time periods naturally differ. This is an explicit local shortest exception, not a claim that every row is equal length."
+      "reviewedAt": "2026-10-09T13:01:21.536706+00:00",
+      "result": "accept-length",
+      "rationale": "Night is shortest at5 among ordinary broad day parts7/9/7; the new alternatives remove the prior exclusively-worded wrong choices. This individual length difference is natural vocabulary, not a pack-wide reliable rule. The prior factual peer separately retained evening/night scope caution."
     },
     {
       "id": "B13-0514",
@@ -4717,7 +4725,9 @@
       ],
       "correctIndex": 3,
       "correctAnswer": "Qin",
-      "actualEditorialReview": "Qin3 ties Han3, with Tang4/Song4. Dynasty names are coherent and no correct-longest rule."
+      "reviewedAt": "2026-10-09T13:01:21.536706+00:00",
+      "result": "accept-length",
+      "rationale": "Qin ties Han at3; Tang and Song are4. All four are genuine dynasty names, and the revised stem does not repeat Qin. No uniquely longest answer."
     },
     {
       "id": "B13-0852",
@@ -4737,7 +4747,9 @@
       ],
       "correctIndex": 0,
       "correctAnswer": "1896",
-      "actualEditorialReview": "All four years4; no length distinction."
+      "reviewedAt": "2026-10-09T13:01:21.536706+00:00",
+      "result": "accept-length",
+      "rationale": "All four years are exactly4 code points. The year-only target removes the unsupported city-in-answer clause without providing a length clue."
     },
     {
       "id": "B13-0911",
@@ -4757,7 +4769,9 @@
       ],
       "correctIndex": 3,
       "correctAnswer": "Cocoa beans",
-      "actualEditorialReview": "Cocoa beans11 is shortest against12/15/13. These are parallel genuine plant ingredients; no artificial equalization or main-by-sugar ambiguity in current stem."
+      "reviewedAt": "2026-10-09T13:01:21.536706+00:00",
+      "result": "accept-length",
+      "rationale": "Cocoa beans is11 versus Coffee beans12, Vanilla seeds13 and Sunflower seeds15. Each option is a plausible plant ingredient expressed in the same noun form. The revised basis wording removes the old milk-stem leak and the first proposed main-by-weight ambiguity; the one-character difference from Coffee beans supplies no consistent pack-level signal."
     },
     {
       "id": "B13-0922",
@@ -4777,7 +4791,9 @@
       ],
       "correctIndex": 3,
       "correctAnswer": "Carotene",
-      "actualEditorialReview": "Carotene8 lies between Melanin7 and Anthocyanin/Chlorophyll11; genuine pigment names, no uniquely-longest correct."
+      "reviewedAt": "2026-10-09T13:01:21.536706+00:00",
+      "result": "accept-length",
+      "rationale": "Carotene8 is between Melanin7 and Anthocyanin/Chlorophyll11. Removing unsupported beta specificity also removes the previous uniquely longest correct answer; alternatives remain pigment names rather than length padding."
     },
     {
       "id": "B13-0938",
@@ -4797,7 +4813,9 @@
       ],
       "correctIndex": 0,
       "correctAnswer": "Coffea arabica",
-      "actualEditorialReview": "All use Coffea binomials; arabica14 is shortest versus18/15/16. Genuine botanical names differ naturally, no invented synonyms or correct-longest cue."
+      "reviewedAt": "2026-10-09T13:01:21.536706+00:00",
+      "result": "accept-length",
+      "rationale": "Coffea arabica14 is shortest among the four genuine Coffea binomials18/15/16. The options were unchanged from the protected original; a shared genus and natural species names are appropriate to the literal species target. This length review does not independently settle the separately reviewed factual/lexical scope."
     },
     {
       "id": "B13-0762",
@@ -4817,36 +4835,17 @@
       ],
       "correctIndex": 3,
       "correctAnswer": "Washington, D.C.",
-      "actualEditorialReview": "Washington,D.C.16 is uniquely longest versus5/8/9, an explicit natural-name exception already in the unchanged162. The stem drops the capital descriptor; local name length does not create a systematic pack-wide strategy."
-    },
-    {
-      "id": "B13-0171",
-      "rowSha256": "8fd8f90a0d71c1ff55586e3885e636d2d1b6e6a439c82d6dcbab60ec575adccc",
-      "question": "Mount Fuji lies approximately southwest of which Japanese city?",
-      "options": [
-        "Kyoto",
-        "Osaka",
-        "Nagoya",
-        "Tokyo"
-      ],
-      "codePointLengths": [
-        5,
-        5,
-        6,
-        5
-      ],
-      "correctIndex": 3,
-      "correctAnswer": "Tokyo",
-      "actualEditorialReview": "Tokyo5 ties Kyoto5/Osaka5; Nagoya6 is longer. New city-only stem removes the capital shortcut without changing any of the4000 choices."
+      "reviewedAt": "2026-10-09T13:01:21.536706+00:00",
+      "result": "accept-length",
+      "rationale": "Washington,D.C. has16 Unicode code points versus Dover5/Richmond8/Annapolis9. This correct answer is uniquely longest and presents a real local clue; it already belonged to the162 such cases in the accepted nine dataset, because all4000 option strings are byte unchanged. The revised stem removes the direct capital descriptor without adding an answer-length imbalance. The four alternatives remain actual U.S. cities and the District qualifier identifies the intended Washington precisely. The full music category uniform longest accuracy23.583333% and pack23.825% do not show a systematic correct-is-longest pattern. I accept this natural city-name difference in the current global gate while preserving the measured local exception."
     }
   ],
   "originalProtectionComparison": {
     "head": "87693947ed87314b3f835d555197123b74f8d2be",
-    "elevenChangedIds": [
+    "tenChangedIds": [
       "B13-0110",
       "B13-0137",
       "B13-0158",
-      "B13-0171",
       "B13-0312",
       "B13-0514",
       "B13-0762",
@@ -4855,33 +4854,29 @@
       "B13-0922",
       "B13-0938"
     ],
-    "other989ObjectsByteEquivalentAsParsed": true,
-    "all1000DifficultyAndCorrectIndexEqual": true,
-    "995ChoiceRowsEqualProtectedOriginal": true,
-    "fiveChangedChoiceIds": [
-      "B13-0110",
-      "B13-0312",
-      "B13-0852",
-      "B13-0911",
-      "B13-0922"
-    ]
+    "other990ObjectsByteEquivalentAsParsed": true,
+    "all1000DifficultyAndCorrectIndexEqual": true
   },
-  "versusAcceptedTenComparison": {
-    "all4000OptionsAnd1000IndicesExactlyEqual": true,
-    "onlyWholeRowChanged": "B13-0171",
-    "acceptedTenPacketSHA256": "683ed0c253fe5e34d7e1d697bfb9f48821e05c0f5cc197daf05ca84b9bff5535"
+  "versusAcceptedNineComparison": {
+    "all4000OptionsAnd1000IndicesExactlyUnchanged": true,
+    "onlyChangedCompleteRow": "B13-0762",
+    "previousNineAssessmentSHA256": "224f6668f9d90bea47ad0035290af8ed8b57b58815d0060517638929a1e196f6",
+    "previousAssessmentIsHistoricalNotCurrent": true
   },
   "inputPacket": {
-    "path": "/tmp/B13-root-audit-20261009/CURRENT-ELEVEN-PROPOSED-FULLSET-INDEPENDENT-LENGTH-REVIEW-PACKET-20261009.json",
-    "bytes": 2173585,
-    "sha256": "3c042f58a2b95e0b82525479e004175646467a598347f692ce1ec706eb201ed1",
-    "authorEleventhPacketSHA256": "dbd2c75da4cc32f0c609e0a9cb75916aaa720cd1771137650f13519e500aa28d"
+    "path": "/tmp/B13-root-audit-20261009/CURRENT-TEN-PROPOSED-FULLSET-INDEPENDENT-LENGTH-REVIEW-PACKET-20261009.json",
+    "sha256": "683ed0c253fe5e34d7e1d697bfb9f48821e05c0f5cc197daf05ca84b9bff5535",
+    "bytes": 2167101,
+    "createdAt": "2026-10-09T12:54:54.791558+00:00",
+    "protectedOriginalReady22Head": "87693947ed87314b3f835d555197123b74f8d2be",
+    "publicSourceHeadAtPacketFreeze": "5baed5703369d5c9d69528472a978019be091b28",
+    "currentProposedTenthNotYetAdoptedAtPacketFreeze": true,
+    "authorTenthPacketSHA256": "572e74f7351c802e8277dc207a6a86a6337636f8ebe7e4ee933746e04a4d471d"
   },
   "independentRecomputationReceipt": {
-    "path": "/dev/shm/B13-eleventh-fuji-peer-board-agent-20261009-1325/CURRENT-FULLSET-INDEPENDENT-METRIC-RECOMPUTATION-20261009.json",
-    "bytes": 36092,
-    "sha256": "b481676279caa91befb31c3e6750d69b0ffd236ef08d774d2faefcd6d646940c",
-    "computedAt": "2026-10-09T13:28:48.634058+00:00"
+    "path": "/tmp/B13-tenth-duke-peer-board-agent-20261009-1257/CURRENT-FULLSET-INDEPENDENT-METRIC-RECOMPUTATION-20261009.json",
+    "sha256": "aee3de208fb526152f461bfd05a5b20500b25ad2cdf7670b11ee4e4c9109585c",
+    "computedAt": "2026-10-09T12:58:59.722228+00:00"
   },
   "diagnosticLargestCorrectLengthGapsActuallyInspected": [
     {
@@ -5101,5 +5096,5 @@
       "correctMinusWrongMean": 8.0
     }
   ],
-  "limitations": "No human playtest, factual-source rereview of989 unchanged objects, new hosted CI or all possible answer heuristics guarantee. All989 other parsed complete objects equal protectedoriginal;995 choice arrays equal original, with five earlier legitimate changes explicitly named. Every difficulty/index equals original. The actual eleventh factual freshGET peer is separate; acceptedten factual records remain historical and necessary. Root production/evidence files were not edited."
+  "limitations": "No human playtest, newly reopened990 unchanged facts, complete factual-source assessment, new hostedCI or all-heuristic guarantee is claimed. The actual independent tenth factual/GET receipt is separate; previous nine factual evidence remains required and historical. All990 other complete parsed objects and every difficulty/index equal the protected original. The unchanged choices are proven against the full accepted nine packet, but no historical date/hash is substituted for this current proposed-ten acceptance. No B13 product/evidence files were edited; this receipt is private peer work."
 }

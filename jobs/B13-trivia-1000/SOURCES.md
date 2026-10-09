@@ -1668,14 +1668,14 @@ Answer: A symmetrical volcanic cone. Fun fact: The mountain is a stratovolcano.
   quote: “It has an exceptionally symmetrical cone” (6 words).
   funFactQuote: “is an active stratovolcano” (4 words).
 
-## B13-0171 — Mount Fuji lies approximately southwest of which Japanese capital city?
+## B13-0171 — Mount Fuji lies approximately southwest of which Japanese city?
 
 Answer: Tokyo. Fun fact: It has been a longstanding subject of Japanese art.
 
-- world-geography-s0035: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/1418/)
+- world-geography-s5035: [UNESCO World Heritage Centre](https://whc.unesco.org/en/list/1418/)
   quote: “around 100 km south-west of Tokyo” (6 words).
   funFactQuote: “Its representation in Japanese art goes back to the 11th century” (11 words).
-- world-geography-s0036: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mount_Fuji)
+- world-geography-s5036: [Wikipedia contributors](https://en.wikipedia.org/wiki/Mount_Fuji)
   quote: “It is located about 100 km (62 mi) southwest of Tokyo” (11 words).
   funFactQuote: “It has been a frequent subject of Japanese art” (9 words).
 

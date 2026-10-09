@@ -2382,38 +2382,53 @@
   },
   {
     "id": "B13-0171",
-    "rowSha256": "bbe4b276f64d51db537b27838405ad4d3c4158b7192a972830470de5a5073bc7",
-    "author": "/root/resume_b13_lead",
+    "author": "/root",
+    "authoredAt": "2026-10-09T13:23:49.298330+00:00",
+    "rowSha256": "8fd8f90a0d71c1ff55586e3885e636d2d1b6e6a439c82d6dcbab60ec575adccc",
+    "sourceIds": [
+      "world-geography-s5035",
+      "world-geography-s5036"
+    ],
     "evidenceReads": [
       {
-        "sourceId": "world-geography-s0035",
+        "sourceId": "world-geography-s5035",
         "contentSha256": "0087e72904047606f2228f356ef4e1449e5f7b103b50bce963beb9e990563aca",
-        "quote": "around 100 km south-west of Tokyo",
-        "exactQuoteMatched": true,
-        "claimsSupported": [
-          "answer",
-          "funFact"
-        ],
-        "funFactQuote": "Its representation in Japanese art goes back to the 11th century",
-        "exactFunFactQuoteMatched": true
+        "quoteFound": true,
+        "contextRead": true,
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "around 100 km south-west of Tokyo",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Its representation in Japanese art goes back to the 11th century",
+            "exactMatch": true
+          }
+        ]
       },
       {
-        "sourceId": "world-geography-s0036",
+        "sourceId": "world-geography-s5036",
         "contentSha256": "a3d2fe2d84ef03ab55557a8a461aa4e6d90ccd6603585a4d9a63931e101ee549",
-        "quote": "It is located about 100 km (62 mi) southwest of Tokyo",
-        "exactQuoteMatched": true,
-        "claimsSupported": [
-          "answer",
-          "funFact"
-        ],
-        "funFactQuote": "It has been a frequent subject of Japanese art",
-        "exactFunFactQuoteMatched": true
+        "quoteFound": true,
+        "contextRead": true,
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "It is located about 100 km (62 mi) southwest of Tokyo",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "It has been a frequent subject of Japanese art",
+            "exactMatch": true
+          }
+        ]
       }
     ],
-    "confidenceReason": "Both actual geographic accounts explicitly identify southwest of Tokyo. Exact rounded distances are excluded; art context is independently stated rather than relying on a copied UNESCO quotation.",
-    "unresolvedProblems": [
-      "Fresh adversarial review and second source reopening are pending."
-    ]
+    "confidenceReason": "The independently written geographic accounts explicitly place Mount Fuji southwest of Tokyo. Removing the capital descriptor requires the geographical relation rather than federal-capital identification. The unchanged art fact is supported by UNESCO description and Wikipedia historical art context; the copied UNESCO World Heritage inscription quotation is excluded as independent evidence. Exact rounded distances are not claimed.",
+    "originalAuthorPacketSHA256": "dbd2c75da4cc32f0c609e0a9cb75916aaa720cd1771137650f13519e500aa28d"
   },
   {
     "id": "B13-0172",
