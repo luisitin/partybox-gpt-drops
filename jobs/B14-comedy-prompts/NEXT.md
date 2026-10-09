@@ -23,3 +23,16 @@ Exact 2f3d9443a7710c6e61cf67960ef8e2a439754644 hosted evidence was independently
 GEICO and Energizer chronology conflicts and the Motel6 light-on metaphor remain explicit. Failed LA Times and UPI403 openings remain unadopted. Shared Namu/Cel quotes were not used. The original source70f51 cadence missed its hard deadline by51 seconds; that miss remains recorded. The research26073 checkpoint was pushed at13:20:06 before its hard deadline. Preserve the failed LongHorn first adoption, canceled unchanged scan and genuine disk-full publication failure; none receives qualification credit.
 
 Root currently ownsB13. Do not follow the original B13 handoff. This task includes no private PartyBox port.
+
+
+## 2026-10-09 retail research handoff
+
+Twelve candidate sources were genuinely opened twice (24 requests,20 useful full HTTP200 bodies). Domino's Australian source failed404 both times and its UK source failed403 both times; failure bodies and every full successful native capture remain privately preserved. Actual last transport closure14:11:30.111445 UTC; controller later naturally closed0. The new source candidates concern IKEA assembly/Allen keys, Costco receipt checking/casket sales, and Domino's tracking. Full HTTP200 is transport success only; authorship, literal fact scope, quote offsets, independence and entire prompt classification still require acceptance. No new fact or prompt row is promoted.
+
+The newer2026 Domino's corporate release describes revised tracker stages; the2019 MEL firsthand stakeout describes earlier behavior. Do not present older Preparing/Baking labels or one timing experiment as a present universal guarantee. Costco's funeral FAQ distinguishes casket sales from funeral-director services; an imagined funeral package is fiction. IKEA assembly evidence does not mean IKEA sells coffins. Third-party syndicated corporate releases and a MEL repost are not independent authors. Shared Namu/Cel quotes were not used or reset.
+
+The exact parent b90 hosted packet was independently accepted14:29:00.794698 UTC. All291 native source blobs,289 manifest payloads,290 sizes,3 full safeZIP entries/CRC,1018 complete artifact line counts,all12 original scan segments/57 recomputed ratios/30 seals/3000 independent grades/600 selector/14 delivery/28 strengthened full-schema-grade-confidence-cap semantic/12 research controls passed. Research stays9 facts/13 whole rows/1187 UNVERIFIED, Readyfalse, formalKEEP0. Complete originalZIP, gzip of the complete unaltered nativeUTF8 bytes, native source index, reader and actual receipt are preserved beside this note.
+
+The local exec transport disconnected14:17 and recovered14:20; no missing-process result was treated as completed work. Early checkpoint target14:27:51 missed; hard14:32:51 still applies to this publication. Native reader and retail controller naturally closed; full captures are private and no publisher body is republished.
+
+The next exact source remains pending its own hosted whole packet; parent acceptance is historical only.
