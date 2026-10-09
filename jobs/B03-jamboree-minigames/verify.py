@@ -219,6 +219,9 @@ def run(args):
     recovered=validate_reopens(sources,reopen_docs[:2],reopen_docs[2])
     checked('All '+str(len(reopen_docs[0]))+' source URLs reopened twice with ordered HTTPS/TLS records',len(reopen_docs[0])*2,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
     checked('Every recovered reopen quotation bound to the original registry',recovered,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
+    cog_checker=module('b03_cog_candidates','check-cog-gameplay-candidates.py')
+    for result in cog_checker.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'COG candidate provenance failed'),result.get('detail',''))
     original_review_recovery=module('b03_original_review_recovery','check-original-review-recovery.py')
     for result in original_review_recovery.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Original review recovery failed'),result.get('detail',''))

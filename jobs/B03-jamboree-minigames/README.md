@@ -171,3 +171,7 @@ Latest material research:11 common-action and5 Survivathon-category candidates f
 
 
 Latest current recovery:5 literal Survivathon categories and11 narrow shared-action summaries are separately validated in reports/original-review-recovery.json, with5817 comparisons and12 real malformed fixtures and exact132-row148-source1951-quote/fullA+B historical restoration. Current337/1320 supported,983open,zero whole;categories123/9 andgameplay50/82. Current149sources/1973clips; CelStudios122 reused cumulative words andWikiList160. Night Lights motion,9Coin subdivisions, detailed mechanics andexact independent second-wiki roster remain unresolved. Original candidate packets stay historical andunchanged; full current delivery/hosted acceptance is required as recorded in NEXT.md.
+
+## Current COG research checkpoint
+
+The catalogue retains337 supported fields,983open and zero complete rows. `reports/cog-gameplay-candidates.json` contains four UNADOPTED original-review candidates for Sandwiched, Tilt-a-Golf, Treetop Treasure and Waluigi's Pinball Arcade. Complete received bylined scopes, actual24-request provenance, excluded sources and exact accepted history are checked by `check-cog-gameplay-candidates.py` (314 comparisons and12 malformed fixtures). Prior accepted0be9's genuine full original hosted receipt is retained separately; a newer source needs its own complete hosted acceptance.
