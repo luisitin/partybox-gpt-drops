@@ -50,7 +50,7 @@ case('missing second full opening', lambda root: mutate_json(root, FACTS, lambda
 case('two opening receipts both labelled pass1', lambda root: mutate_json(root, FACTS, lambda data: data[0]['sources'][0]['fullPasses'][1].update({'pass': 1})), True, False)
 case('oversized quote with false declared word count', lambda root: mutate_json(root, FACTS, lambda data: data[0]['sources'][0].update(quote=' '.join(['word'] * 26), quoteWords=11)), True, False)
 case('review belongs to different prompt wording', lambda root: mutate_json(root, 'research-review.json', lambda data: data['rows'][0].update(textSha256='0' * 64)), True, False)
-case('mark row verified while cue review is incomplete', lambda root: mutate_json(root, 'research-review.json', lambda data: data['rows'][0].update(status='VERIFIED')), True, False)
+case('mark row verified while cue review is incomplete', lambda root: mutate_json(root, 'research-review.json', lambda data: next(row for row in data['rows'] if row['status'] == 'VERIFIED').update(allActualCuesReviewed=False)), True, False)
 case('fact assigned to an unrelated prompt', lambda root: mutate_json(root, 'research-review.json', lambda data: data['rows'][0].update(verifiedFactIds=['CUE-001'])), True, False)
 case('drop required row coverage', lambda root: mutate_json(root, 'research-review.json', lambda data: data['rows'].pop()), True, False)
 case('drop actual verified row second-pass evidence', lambda root: mutate_json(root, 'research-second-pass.json', lambda data: data['rows'].pop()), True, False)

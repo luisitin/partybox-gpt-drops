@@ -760,5 +760,521 @@
       }
     ],
     "conflictIds": []
+  },
+  {
+    "id": "CUE-010",
+    "status": "VERIFIED",
+    "claim": "IKEA has a self-assembly furniture/instruction/Allen-hex-key association. This does not assert coffin products, custody proceedings or every furniture item requiring a key.",
+    "promptIds": [
+      "M0001",
+      "Q0001"
+    ],
+    "confidence": "high",
+    "confidenceReason": "Two genuinely distinct corporate/editorial authors were read in both original complete captures. Only the exact association is qualified; date, product-redirect, SKU and service limitations are preserved.",
+    "sources": [
+      {
+        "sourceId": "ikea-museum",
+        "url": "https://www.ikeamuseum.com/en/explore/the-story-of-ikea/revolutionary/",
+        "author": "IKEA Museum / Inter IKEA corporate authorship",
+        "independentAuthorGroup": "Inter IKEA",
+        "role": "primary",
+        "quote": "Even with the included Allen key, many struggled to understand the sometimes complicated assembly instructions.",
+        "quoteWords": 15,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 86217,
+            "rawSha256": "987b5ce921a24579b4376bfd110f286d8e09241316217f8cd07557fffa700b4f",
+            "visibleCharacters": 3981,
+            "visibleSha256": "85f8dd3972a1ca591e4b8ffa42a225474f0252823c94b6f9d09290fd4a9dca45",
+            "literalQuoteOffset": 1331,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:25.100821+00:00",
+            "closedUTC": "2026-10-09T14:11:26.216041+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 86217,
+            "rawSha256": "987b5ce921a24579b4376bfd110f286d8e09241316217f8cd07557fffa700b4f",
+            "visibleCharacters": 3981,
+            "visibleSha256": "85f8dd3972a1ca591e4b8ffa42a225474f0252823c94b6f9d09290fd4a9dca45",
+            "literalQuoteOffset": 1331,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:28.308987+00:00",
+            "closedUTC": "2026-10-09T14:11:29.590495+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "ikea-zhuang",
+        "url": "https://justinzhuang.com/posts/instructions-on-how-to-assemble-a-future-ikea/",
+        "author": "Justin Zhuang, original personal-site design article",
+        "independentAuthorGroup": "Justin Zhuang",
+        "role": "independent",
+        "quote": "According to the accompanying instruction manual AA-54679-2, the hexagon key numbered 100001 is used to tighten screw number 100214.",
+        "quoteWords": 19,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 65367,
+            "rawSha256": "e0830e428453c876c25010f1bcb773300d702c92d86c9b2ef8d82a21a1cdcb74",
+            "visibleCharacters": 11472,
+            "visibleSha256": "b3c38b4e2bdce20ad56de59b6764d811de4ce85f359c914118f246fa3883aa5f",
+            "literalQuoteOffset": 2208,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:25.103282+00:00",
+            "closedUTC": "2026-10-09T14:11:27.441991+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 65366,
+            "rawSha256": "fd3fb6c7a0e2aa4f64289d9bc4164595ced2300871d8c5282680a9a3aa97cf34",
+            "visibleCharacters": 11472,
+            "visibleSha256": "b3c38b4e2bdce20ad56de59b6764d811de4ce85f359c914118f246fa3883aa5f",
+            "literalQuoteOffset": 2208,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:28.310146+00:00",
+            "closedUTC": "2026-10-09T14:11:29.988612+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": [
+      "IKEA-FICTIONAL-SERVICES"
+    ]
+  },
+  {
+    "id": "CUE-011",
+    "status": "VERIFIED",
+    "claim": "IKEA is associated with beds and bed frames: its current product catalogue lists Beds and mattresses, while the independent original article discusses an earlier HEMNES bed frame. No current HEMNES availability or repossession service is asserted.",
+    "promptIds": [
+      "M1001"
+    ],
+    "confidence": "medium",
+    "confidenceReason": "Two genuinely distinct corporate/editorial authors were read in both original complete captures. Only the exact association is qualified; date, product-redirect, SKU and service limitations are preserved.",
+    "sources": [
+      {
+        "sourceId": "ikea-hemnes-bed-official",
+        "url": "https://www.ikea.com/us/en/cat/products-products/",
+        "author": "IKEA / Inter IKEA current product-category catalogue",
+        "independentAuthorGroup": "Inter IKEA",
+        "role": "primary",
+        "quote": "Beds & mattresses Shop all Beds Mattresses",
+        "quoteWords": 7,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 1108685,
+            "rawSha256": "5f34e5dc29c5e89db89b7c22d65bb81cf778492511f754c6e8a47ad3a645887d",
+            "visibleCharacters": 7015,
+            "visibleSha256": "86098d3678c30d604c89a073399ab932d0a8d8e5902d1b02f891b8cfd1b6ef96",
+            "literalQuoteOffset": 1066,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:39:14.748541+00:00",
+            "closedUTC": "2026-10-09T14:39:16.091347+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 1108685,
+            "rawSha256": "5f34e5dc29c5e89db89b7c22d65bb81cf778492511f754c6e8a47ad3a645887d",
+            "visibleCharacters": 7015,
+            "visibleSha256": "86098d3678c30d604c89a073399ab932d0a8d8e5902d1b02f891b8cfd1b6ef96",
+            "literalQuoteOffset": 1066,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:39:16.093470+00:00",
+            "closedUTC": "2026-10-09T14:39:18.271469+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "ikea-zhuang",
+        "url": "https://justinzhuang.com/posts/instructions-on-how-to-assemble-a-future-ikea/",
+        "author": "Justin Zhuang, original personal-site design article",
+        "independentAuthorGroup": "Justin Zhuang",
+        "role": "independent",
+        "quote": "The same key can also be used on screw number 105236 when putting together the HEMNES bed frame",
+        "quoteWords": 18,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 65367,
+            "rawSha256": "e0830e428453c876c25010f1bcb773300d702c92d86c9b2ef8d82a21a1cdcb74",
+            "visibleCharacters": 11472,
+            "visibleSha256": "b3c38b4e2bdce20ad56de59b6764d811de4ce85f359c914118f246fa3883aa5f",
+            "literalQuoteOffset": 2341,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:25.103282+00:00",
+            "closedUTC": "2026-10-09T14:11:27.441991+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 65366,
+            "rawSha256": "fd3fb6c7a0e2aa4f64289d9bc4164595ced2300871d8c5282680a9a3aa97cf34",
+            "visibleCharacters": 11472,
+            "visibleSha256": "b3c38b4e2bdce20ad56de59b6764d811de4ce85f359c914118f246fa3883aa5f",
+            "literalQuoteOffset": 2341,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:28.310146+00:00",
+            "closedUTC": "2026-10-09T14:11:29.988612+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": [
+      "IKEA-PRODUCT-REDIRECT",
+      "IKEA-FICTIONAL-SERVICES"
+    ]
+  },
+  {
+    "id": "CUE-012",
+    "status": "VERIFIED",
+    "claim": "Costco has a casket-sale association, documented by its current ordering FAQ and an independently reported 2005 account. This does not assert a funeral-director service, funeral package, universal stock or a particular coffin membership reward.",
+    "promptIds": [
+      "M0002",
+      "Q0002",
+      "Q1002"
+    ],
+    "confidence": "medium",
+    "confidenceReason": "Two genuinely distinct corporate/editorial authors were read in both original complete captures. Only the exact association is qualified; date, product-redirect, SKU and service limitations are preserved.",
+    "sources": [
+      {
+        "sourceId": "costco-funeral-official",
+        "url": "https://www.costco.com/f/-/funeral-faq",
+        "author": "Costco Wholesale corporate authorship",
+        "independentAuthorGroup": "Costco Wholesale",
+        "role": "primary",
+        "quote": "Q: Why is Costco Wholesale selling caskets?",
+        "quoteWords": 7,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 2206747,
+            "rawSha256": "a13eead807e4e258af37be55e0449e2cb55824705cc0bab86f3bdf1a57dae607",
+            "visibleCharacters": 6270,
+            "visibleSha256": "f1db8c94ae1a2ed0e13d853e4b71f699202ba2c358ca07a26662dcc828367ee5",
+            "literalQuoteOffset": 1924,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:25.645256+00:00",
+            "closedUTC": "2026-10-09T14:11:26.143129+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 2206747,
+            "rawSha256": "a13eead807e4e258af37be55e0449e2cb55824705cc0bab86f3bdf1a57dae607",
+            "visibleCharacters": 6270,
+            "visibleSha256": "f1db8c94ae1a2ed0e13d853e4b71f699202ba2c358ca07a26662dcc828367ee5",
+            "literalQuoteOffset": 1924,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:28.744642+00:00",
+            "closedUTC": "2026-10-09T14:11:29.263646+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "costco-washpost",
+        "url": "https://www.washingtonpost.com/archive/politics/2005/12/18/at-costco-bargains-for-the-bereaved/ed621cf2-48ff-446c-9165-48257b956b23/",
+        "author": "Tiffany Montgomery, The Washington Post",
+        "independentAuthorGroup": "The Washington Post / Tiffany Montgomery",
+        "role": "independent",
+        "quote": "has sold the caskets online for just over a year.",
+        "quoteWords": 10,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 993749,
+            "rawSha256": "d2db34dd2de88db92ee1cfab6653704c1c286fa5ea74af6e957c3f3e723a8c32",
+            "visibleCharacters": 7141,
+            "visibleSha256": "34b1c19871df0047282c4f7daadebe9dde65b14e0b659101d022c446a33952a2",
+            "literalQuoteOffset": 1120,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:26.151703+00:00",
+            "closedUTC": "2026-10-09T14:11:27.334116+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 993749,
+            "rawSha256": "d2db34dd2de88db92ee1cfab6653704c1c286fa5ea74af6e957c3f3e723a8c32",
+            "visibleCharacters": 7141,
+            "visibleSha256": "34b1c19871df0047282c4f7daadebe9dde65b14e0b659101d022c446a33952a2",
+            "literalQuoteOffset": 1120,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:29.263698+00:00",
+            "closedUTC": "2026-10-09T14:11:29.814441+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": [
+      "COSTCO-FUNERAL-SERVICE-LIMIT",
+      "COSTCO-HISTORICAL-OFFERING"
+    ]
+  },
+  {
+    "id": "CUE-013",
+    "status": "VERIFIED",
+    "claim": "Costco warehouse exits use receipt checking to compare purchases/items. This does not assert checking coffins or a universal refund/charge guarantee.",
+    "promptIds": [
+      "Q1002"
+    ],
+    "confidence": "high",
+    "confidenceReason": "Two genuinely distinct corporate/editorial authors were read in both original complete captures. Only the exact association is qualified; date, product-redirect, SKU and service limitations are preserved.",
+    "sources": [
+      {
+        "sourceId": "costco-receipts-official",
+        "url": "https://customerservice.costco.com/app/answers/answer_view/a_id/714/~/why-do-i-have-to-show-my-receipt-at-the-door%3F",
+        "author": "Costco customer-service corporate authorship",
+        "independentAuthorGroup": "Costco Wholesale",
+        "role": "primary",
+        "quote": "It is standard practice at all our warehouse locations to verify purchase receipts when customers exit our buildings.",
+        "quoteWords": 18,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 104968,
+            "rawSha256": "0c4b6ad98d3a1b3382106c37a4183863858db285f24b30869b8894efcf45ab4d",
+            "visibleCharacters": 4635,
+            "visibleSha256": "dbd288684a6d6a7b666e8e734b284a7627370645f5a07fb9944c6f15b5768a84",
+            "literalQuoteOffset": 1795,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:25.105645+00:00",
+            "closedUTC": "2026-10-09T14:11:27.334785+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 104968,
+            "rawSha256": "70b1af8c452388c271f7d8188f8d0317ac4767b21dc22d7c309de6f0c32b9554",
+            "visibleCharacters": 4635,
+            "visibleSha256": "dbd288684a6d6a7b666e8e734b284a7627370645f5a07fb9944c6f15b5768a84",
+            "literalQuoteOffset": 1795,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:28.312824+00:00",
+            "closedUTC": "2026-10-09T14:11:30.553409+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "costco-sfgate",
+        "url": "https://www.sfgate.com/living/article/Costco-exit-greeters-check-receipts-door-13405328.php",
+        "author": "Amy Graff, SFGATE, original reported interview",
+        "independentAuthorGroup": "SFGATE / Amy Graff",
+        "role": "independent",
+        "quote": "are trained to note the numbers of items on a receipt and then quickly count items in the basket",
+        "quoteWords": 19,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 602100,
+            "rawSha256": "94047ab493912b6ec16648aa4e2e8a1a8ea52916e630e54c4d5d94ec47067923",
+            "visibleCharacters": 10718,
+            "visibleSha256": "2f80893cd7037977586df20cf4d772e892f6250668600d9032e8f042f0a182bf",
+            "literalQuoteOffset": 6580,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:26.143319+00:00",
+            "closedUTC": "2026-10-09T14:11:27.072275+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 602514,
+            "rawSha256": "5e2ebcbcda7b76e4b04cff9ad513d7ba15fa6f4a6d44e1e2887d2196d17ac21d",
+            "visibleCharacters": 10754,
+            "visibleSha256": "1c620417622b84e028343b213a6daafa20326ea88e5ec7962ba406b3584ff4b8",
+            "literalQuoteOffset": 6580,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:28.823066+00:00",
+            "closedUTC": "2026-10-09T14:11:29.812652+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": []
+  },
+  {
+    "id": "CUE-014",
+    "status": "VERIFIED",
+    "claim": "Costco is a membership retail warehouse. The original current membership page and independent reported article support this association, without a specific perk amount, casket reward or universal membership rule.",
+    "promptIds": [
+      "M0002"
+    ],
+    "confidence": "medium",
+    "confidenceReason": "Two genuinely distinct corporate/editorial authors were read in both original complete captures. Only the exact association is qualified; date, product-redirect, SKU and service limitations are preserved.",
+    "sources": [
+      {
+        "sourceId": "costco-membership-official",
+        "url": "https://www.costco.com/f/-/join-costco",
+        "author": "Costco Wholesale membership-page corporate authorship",
+        "independentAuthorGroup": "Costco Wholesale",
+        "role": "primary",
+        "quote": "set up auto renewal of your Costco membership",
+        "quoteWords": 8,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 2547893,
+            "rawSha256": "9c1425fa67a8be1528fff8203525fdaee174aeaf81cd7ece27eeaa4db6c27e3f",
+            "visibleCharacters": 5045,
+            "visibleSha256": "d1aaeafad6e8f83401adb442946b514acfabfd1b91535622cc624e2af64b0ead",
+            "literalQuoteOffset": 1980,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:39:14.750128+00:00",
+            "closedUTC": "2026-10-09T14:39:15.727806+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 2547893,
+            "rawSha256": "9c1425fa67a8be1528fff8203525fdaee174aeaf81cd7ece27eeaa4db6c27e3f",
+            "visibleCharacters": 5045,
+            "visibleSha256": "d1aaeafad6e8f83401adb442946b514acfabfd1b91535622cc624e2af64b0ead",
+            "literalQuoteOffset": 1980,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:39:16.094311+00:00",
+            "closedUTC": "2026-10-09T14:39:17.253313+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "costco-washpost",
+        "url": "https://www.washingtonpost.com/archive/politics/2005/12/18/at-costco-bargains-for-the-bereaved/ed621cf2-48ff-446c-9165-48257b956b23/",
+        "author": "Tiffany Montgomery, The Washington Post",
+        "independentAuthorGroup": "The Washington Post / Tiffany Montgomery",
+        "role": "independent",
+        "quote": "Costco, the membership warehouse",
+        "quoteWords": 4,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 993749,
+            "rawSha256": "d2db34dd2de88db92ee1cfab6653704c1c286fa5ea74af6e957c3f3e723a8c32",
+            "visibleCharacters": 7141,
+            "visibleSha256": "34b1c19871df0047282c4f7daadebe9dde65b14e0b659101d022c446a33952a2",
+            "literalQuoteOffset": 974,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:26.151703+00:00",
+            "closedUTC": "2026-10-09T14:11:27.334116+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 993749,
+            "rawSha256": "d2db34dd2de88db92ee1cfab6653704c1c286fa5ea74af6e957c3f3e723a8c32",
+            "visibleCharacters": 7141,
+            "visibleSha256": "34b1c19871df0047282c4f7daadebe9dde65b14e0b659101d022c446a33952a2",
+            "literalQuoteOffset": 974,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:29.263698+00:00",
+            "closedUTC": "2026-10-09T14:11:29.814441+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": [
+      "COSTCO-HISTORICAL-OFFERING"
+    ]
+  },
+  {
+    "id": "CUE-015",
+    "status": "VERIFIED",
+    "claim": "Domino's offers pizza-order/delivery tracking with preparation and oven phases. The independent firsthand 2019 report and corporate 2026 update establish the tracking association, without accuracy guarantees or unchanged UI labels.",
+    "promptIds": [
+      "M0033",
+      "Q0033",
+      "Q1033"
+    ],
+    "confidence": "high",
+    "confidenceReason": "Two genuinely distinct corporate/editorial authors were read in both original complete captures. Only the exact association is qualified; date, product-redirect, SKU and service limitations are preserved.",
+    "sources": [
+      {
+        "sourceId": "dominos-us-2026-official",
+        "url": "https://ir.dominos.com/news-releases/news-release-details/dominosr-updates-its-iconic-industry-first-tracker-even-better",
+        "author": "Domino's Pizza corporate press-release authorship",
+        "independentAuthorGroup": "Domino's Pizza",
+        "role": "primary",
+        "quote": "from when it's placed to when it's being made, placed in the oven and then ready for pickup or delivery",
+        "quoteWords": 20,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 46415,
+            "rawSha256": "0e026988aeb1b4a7e2c5c1e3c36a5493e7de328f9a19ad84c63dfc26d2d93e3b",
+            "visibleCharacters": 6368,
+            "visibleSha256": "5035c92013b5e98d6772d04210e99eb6d546eb7191bc3e7addcef345380ff699",
+            "literalQuoteOffset": 2016,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:27.190066+00:00",
+            "closedUTC": "2026-10-09T14:11:28.051867+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 46415,
+            "rawSha256": "0e026988aeb1b4a7e2c5c1e3c36a5493e7de328f9a19ad84c63dfc26d2d93e3b",
+            "visibleCharacters": 6368,
+            "visibleSha256": "5035c92013b5e98d6772d04210e99eb6d546eb7191bc3e7addcef345380ff699",
+            "literalQuoteOffset": 2016,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:29.814480+00:00",
+            "closedUTC": "2026-10-09T14:11:30.634043+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "dominos-mel",
+        "url": "https://melmagazine.com/en-us/story/i-staked-out-my-local-dominos-to-see-just-how-accurate-its-pizza-tracker-is",
+        "author": "Brian VanHooker, MEL Magazine, original firsthand report",
+        "independentAuthorGroup": "MEL Magazine / Brian VanHooker",
+        "role": "independent",
+        "quote": "tracks each step of your pizza’s progress, from when it’s first being prepared until it arrives at your home.",
+        "quoteWords": 19,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 102423,
+            "rawSha256": "3cec7ff2072f649c750d463182d1fecbebb4a2472bcb872d5c73b72be7e2932a",
+            "visibleCharacters": 12323,
+            "visibleSha256": "30a88eea1b0ac2cefde617820fb07ce8a801c9b03f95b2540def6a596cf5045f",
+            "literalQuoteOffset": 1490,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:27.334166+00:00",
+            "closedUTC": "2026-10-09T14:11:27.637766+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 102423,
+            "rawSha256": "3cec7ff2072f649c750d463182d1fecbebb4a2472bcb872d5c73b72be7e2932a",
+            "visibleCharacters": 12323,
+            "visibleSha256": "30a88eea1b0ac2cefde617820fb07ce8a801c9b03f95b2540def6a596cf5045f",
+            "literalQuoteOffset": 1490,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T14:11:29.838792+00:00",
+            "closedUTC": "2026-10-09T14:11:30.111445+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": [
+      "DOMINOS-TRACKER-STAGE-VERSION",
+      "DOMINOS-ONE-STORE-ACCURACY"
+    ]
   }
 ]
