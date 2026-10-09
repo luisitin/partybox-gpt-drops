@@ -1066,7 +1066,7 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | western-land:gatesPaths:skeleton_gate | single_source/high | W_GAME-Q003, MPL_GAME-Q003 |
 | western-land:events:train_hit | corroborated/high | MPL_BOARDS-Q019, DS_BOARDS-Q005 |
 | western-land:events:train_event | unverified/low | W_WESTERN-Q025 |
-| western-land:events:hootenanny | single_source/medium | W_WESTERN-Q026, W_GAME-Q010 |
+| western-land:events:hootenanny | corroborated/medium | W_WESTERN-Q026, W_GAME-Q010, NAMU_KR_COUNTS-Q024, CEL_BOARDS-Q001 |
 | western-land:events:steamer_ticket | single_source/medium | W_GAME-Q011, W_WESTERN-Q027 |
 | western-land:phases:unlock | corroborated/high | W_GAME-Q012, MPL_BOARDS-Q020, GR_UNLOCK-Q001, GR_UNLOCK-Q002 |
 | western-land:map_link:train_transfer | single_source/medium | W_WESTERN-Q024, MPL_BOARDS-Q021 |
@@ -1170,3 +1170,14 @@ Only6 new authored words. Shared same-work literal author total241→247/250;21 
 | NAMU_KR_COUNTS-Q023 | 이벤트 칸 | Event Space |
 
 Only two new literal authored words. The complete original Galleria special-shop introduction and named Gold Shop paragraph support landing and gold-item sales; the clip alone is not the complete context. Both actual original captured bodies recover it. Local unchanged gate:21 numeral fragments+6 weather words+2 Event Space words=29/200. Shared same-work authored total247→249/250; Namu English mirror is the same work/publisher. No new Wiki/GameRant/Cel wording or full bodies/images. Earlier247-word weather report is dated history, not the new cumulative ledger.
+
+## Milk Saloon complete scope, 2026-10-09T10:02:16.469208+00:00
+
+Independent original Namu full Western context explicitly supplies randomness/10-one/20-all; original Cel full current Western review supplies Event trigger. Neither partial source alone is called a whole-fact witness; every value clause has two independent publishers. SASKE20-two prose versus20-all menu remains disclosed in the dated candidate.
+
+| Exact quote ID | Literal short clip | Assistant meaning |
+| --- | --- | --- |
+| NAMU_KR_COUNTS-Q024 | 랜덤으로 | randomly |
+| CEL_BOARDS-Q001 | the hootenanny is now locked behind a Happening space | current hootenanny requires Event landing |
+
+Namu authored shared249→250/250, local21numeric+9authored=30/unchanged200; no further new expressive Namu clips. Cel B03actual122+B04new9=131, B03reserve150+B04reserve50=200. Full bodies/footnotes/screenshots private. Cel originalHTTP captures05:26 retained, B04 independently read complete11344-character board/ranking scopes and Western1613 in both passes, without claiming a new request or whole remaining minigame review. Native CelStudios rel-author link and October20,2024 publication independently checked; all authored outgoing links empty, no copied attribution detected.

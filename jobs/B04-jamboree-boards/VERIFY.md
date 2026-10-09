@@ -1,6 +1,6 @@
 # B04 — Verification
 
-**Original research standard NOT_MET.** Keep PR18 draft: 90/518 complete factual rows have independent publisher agreement. All 16 complete type-count profiles use the original permitted CONFLICTS.md route. One current event retains unknown trigger/effect.
+**Original research standard NOT_MET.** Keep PR18 draft: 91/518 complete factual rows have independent publisher agreement. All 16 complete type-count profiles use the original permitted CONFLICTS.md route. One current event retains unknown trigger/effect.
 
 ## Historical completed checks and commands, 2026-10-07
 
@@ -841,3 +841,5 @@ Exactly one full fact and its containing board fingerprint change. Current88/518
 2026-10-09T09:10:10.648638+00:00: Actual new Gold local original command outputs recorded in validator-output.txt: structural/checksum exit0, strict actual1/90of518FAIL/37of38FAIL/NOT_MET. Both complete command stdout/stderr and timestamps retained privately. New source-candidate report adds zero original author words and no additional factual promotions; launch-day advance play scope is explicit. After recording these real outputs, all88 exact manifest entries are resealed and original full checks rerun to cover the final packaged bytes.
 
 - 2026-10-09T09:33:36.137849+00:00: Parent5dd full original run37909673282/job113751529217 naturally closed09:11:40:26suites/5671cases/88manifest structural PASS, strict actual1/90of518FAIL/37of38FAIL/NOT_MET. Entire native21436B SHA51a497233308ecd0535d0379c0e7436049a8671aef9a51d3d4d6b99426f811c0 personally read, checkout04bc8c3aac0de047ca9eeaf1bb473e88e09879e9 explicitly merges exact5dd into92ef1b3dded085727509345aa22bd8b59fa0c1b8. This is dated parent proof for the new substantive visual checkpoint, whose exact full native remains pending. All original product/source registries/verifier/schema/workflow/rejection fixtures/gates/conflicts remain byte-identical.
+
+2026-10-09T10:02:16.469208+00:00: One complete Milk event independently corroborated91/518 with two refreshed row fingerprints; all518 values/517 other full facts/18 conflicts/gates unchanged. Parent cfce full original26/5673/89 naturallyclosed09:36:28, nativeSHA2f57ce7deb80379ca61464b920867c5e0be6721462d2f85beb920abfbb06a4c9, is dated historical proof for this new source. Current local original commands and exact hosted whole run remain required.
