@@ -1,0 +1,75 @@
+"""Exactly one source-bound paired fold-column diagnostic; not acceptance."""
+from pathlib import Path
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+import shutil
+import subprocess
+
+repo = Path(__file__).resolve().parents[2]
+out = Path(__file__).resolve().parent
+candidate = repo / '.work/B19-fold-column-DFA-candidate'
+job = repo / 'jobs/B19-name-filter'
+utc = lambda: datetime.now(timezone.utc).isoformat()
+sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
+assert not (candidate / 'timing-latest.json').exists()
+assert not (candidate / 'timing.stdout').exists()
+assert not (out / 'grant.json').exists()
+assert not (out / 'command-CLOSED.json').exists()
+ready_path = candidate / 'TIMING_READY.json'
+ready = json.loads(ready_path.read_text())
+assert ready['scope'] == 'one original 24-phase 12-million-call paired fold-column diagnostic'
+assert ready['timingStarted'] is False and ready['grantAuthorized'] is False
+assert ready['candidateSourceSha256'] == 'bfe73f402b6851549f01367bcecd60e483e35e17b35910a0b43078ac253ae498'
+assert ready['candidateJsSha256'] == '9b55e31c9275354ece9a4071dcf07911850d5710c5604f0a7583e7731fbb4997'
+assert ready['baselineHead'] == '8d65ecc384af43732b6cb0453f27a0cea2b6c3f1'
+assert ready['controllerSha256'] == sha(Path(__file__))
+assert subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=repo, text=True).strip() == ready['baselineHead']
+assert not subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=repo, text=True)
+for path, digest in ready['sourceGuards'].items():
+    assert sha(Path(path)) == digest, path
+equivalence = json.loads((candidate / 'equivalence-latest.json').read_text())
+assert equivalence['passed'] and equivalence['sourcesUnchanged'] and equivalence['cases'] == 214308
+assert equivalence['sourceStart'] == equivalence['sourceEnd'] and len(equivalence['sourceStart']) == 1001
+mutants = json.loads((repo / '.work/B19-fold-column-DFA-mutation/CLOSED.json').read_text())
+assert mutants['cases'] == mutants['passed'] == 25 and mutants['sourcesUnchanged']
+assert mutants['sourceStart'] == mutants['sourceEnd'] and len(mutants['sourceStart']) == 1003
+assert all(m['parsedAndExecuted'] and m['killed'] and m['cases'] == 43830 and m['excludedBaselineFailures'] == 0 for m in mutants['results'])
+acks = json.loads((out / 'ACKS.json').read_text())
+assert set(acks) == {'G01', 'B03', 'static', 'G10', 'tracker'}
+assert all(v['zeroWorkload'] is True and v['zeroWriter'] is True and v['actualNaturalClosedUtc'] for v in acks.values())
+delegation = json.loads((out / 'root-delegation.json').read_text())
+assert delegation['rootZeroWorkloadAndWriter'] is True and delegation['oneMixedComparisonDelegated'] is True
+assert delegation['scope'] == ready['scope']
+assert delegation['expectedControllerSha256'] == sha(Path(__file__))
+assert delegation['expectedReadySha256'] == sha(ready_path)
+assert delegation['actualRootGrantUtc']
+raw = subprocess.check_output(['ps', '-eo', 'pid,ppid,pgid,stat,comm,pcpu,rss'], text=True)
+lines = raw.splitlines()
+live = [line for line in lines[1:] if not line.split()[3].startswith('Z')]
+(out / 'pre-grant-processes.txt').write_text(lines[0] + '\n' + '\n'.join(live) + '\n')
+names = {'node', 'MainThread', 'chromium', 'chrome', 'headless_shell', 'ffmpeg', 'ffprobe', 'tsc', 'tsx', 'esbuild', 'python', 'python3', 'git', 'curl', 'wget'}
+blocked = [line for line in live if line.split()[4] in names and int(line.split()[0]) != os.getpid()]
+assert not blocked, blocked
+paths = [Path(p) for p in ready['sourceGuards']] + [ready_path, out / 'ACKS.json', out / 'root-delegation.json']
+guards = lambda: {str(p): sha(p) for p in paths}
+external_start = guards()
+receipt = {'kind': 'delegated-once-only-fold-column-DFA-ABBA-BAAB', 'grantUtc': utc(), 'rootDelegation': delegation, 'acknowledgments': acks, 'runnableWorkloads': blocked, 'liveProcesses': live, 'ignoredZombieEntries': len(lines)-1-len(live), 'STOPorCONTUsed': False, 'baselineHead': ready['baselineHead'], 'baselineSourceSha256': ready['baselineSourceSha256'], 'baselineCompiledSha256': ready['baselineCompiledSha256'], 'candidateSourceSha256': ready['candidateSourceSha256'], 'candidateJsSha256': ready['candidateJsSha256'], 'historicalProofHead': ready['historicalProofHead'], 'documentationBridgeSha256': ready['documentationBridgeSha256'], 'externalSourceStart': external_start, 'argv': ready['argv'], 'originalAcceptanceNotRun': True, 'allPriorFailuresRetained': True, 'originalWarmupAndSamplesUnchanged': True, 'startupExcludedFromPhaseGains': True}
+(out / 'grant.json').write_text(json.dumps(receipt, indent=2)+'\n')
+print(json.dumps({'event': 'GRANT', 'actualUtc': receipt['grantUtc'], 'baselineHead': ready['baselineHead'], 'scope': ready['scope']}), flush=True)
+receipt['commandStartedUtc'] = utc()
+with (candidate / 'timing.stdout').open('w') as stdout, (candidate / 'timing.stderr').open('w') as stderr:
+    process = subprocess.run(receipt['argv'], cwd=repo, stdout=stdout, stderr=stderr)
+receipt['commandClosedUtc'] = utc()
+receipt['exitCode'] = process.returncode
+receipt['externalSourceEnd'] = guards()
+receipt['externalSourcesUnchanged'] = receipt['externalSourceEnd'] == external_start
+if (candidate / 'timing-latest.json').exists():
+    report = json.loads((candidate / 'timing-latest.json').read_text())
+    receipt.update(naturalClosedUtc=report['closedUtc'], harnessStartedUtc=report['startedUtc'], sourcesUnchanged=report['sourcesUnchanged'], harnessGuardCount=len(report['sourceStart']), proofBridge=report.get('documentationProofBridge'), summaries=report.get('summaries'), phaseCount=len(report.get('phases', [])), allCalls=report.get('totalMeasuredCalls'), timingReportSha256=sha(candidate/'timing-latest.json'))
+else:
+    receipt['stderr'] = (candidate / 'timing.stderr').read_text()
+(out / 'command-CLOSED.json').write_text(json.dumps(receipt, indent=2)+'\n')
+print(json.dumps({k: receipt.get(k) for k in ['naturalClosedUtc', 'commandClosedUtc', 'exitCode', 'sourcesUnchanged', 'externalSourcesUnchanged', 'harnessGuardCount', 'phaseCount', 'allCalls', 'summaries']}), flush=True)
+raise SystemExit(process.returncode if receipt['externalSourcesUnchanged'] else 2)

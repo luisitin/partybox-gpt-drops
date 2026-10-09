@@ -178,3 +178,10 @@ Current hosted2/0/0 and first-local12/9/2 are distinct genuine failures; all non
 
 - Original PROMPTS.md:311 literally requires rerunning every check after all pass. “Once-after-green” is a bounded interpretation supporting one required scope, not literal wording or permission for unchanged retries. Exact7817/e4b first-local12/9/2 started pre-green; exact6a genuine4981-audited green justified the single subsequent full which actually failed13/5/10. Prior failures/green scopes stay separate, cause unknown and no promotion or retry authorized.
 - Distinct fold-column candidate reuses ASCII_FOLD values<26, which actual65536code-unit comparison proves equivalent to the original ASCII-letter regex; out-of-range undefined fails <26. It is functionally proven but not measured/adopted. New static/timing/gain/source acceptance does not transfer from rejected40cc or historical7817. Compression observations use different existing Python/Node implementations; their actual5293/5314 byte results both remain below6000.
+
+
+## Actual8d hosted validation and once-only fold-column rejection (2026-10-09T01:11:15.241079+00:00)
+
+Immutable8d hosted run37866126547 genuine11588287156 independently passes5591 assertions,1101 actualGit hashes,100 original rows,75 actual mutants and literal0/0/0; reader naturalCLOSED00:44:58.120405. Required originalaftergreen literal13/5/10 remains failed and is not rerun.
+
+Actual distinct fold-column paired trial naturalCLOSED01:09:38.922650/EXIT0 with24 original phases/12M calls and all1131+1154 guards equal. Aggregate+7.7875/+2.7706/+0.6678%, but only5of6 balanced blocks improve; seed3block0 regresses. No adoption/no unchanged comparison retry/no cause claim; all61GC events and allphases retained. Original faulty761a controller/READY preserved; targetedca78 reaping repair independently passed1406 assertions before root actualgrant. Historical6a semantic/mutant proofs and original timing loop remain immutable.

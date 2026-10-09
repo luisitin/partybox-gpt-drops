@@ -337,3 +337,10 @@ Original acceptance still fails. Strict/214308/25actualmutants/8controls pass; s
 Exact6a full hosted genuineGREEN verified4981 actual-byte assertions. Required original PROMPTS311 step1 runs once after that green, naturalCLOSED00:34:44.366961UTC EXIT1: literal13/5/10, all1006 guards unchanged/all100 fresh rows/nonlatency/75mutants retained. This failed step does not complete KEEP. No unchanged second attempt or cause inference. Weakest part remains literal latency; all28 outliers retained. The earlier first-local12/9/2 predates green and is not this scope.
 
 One distinct private fold-column algorithm reuses existing lower-derived column for classification/transition; strict214308/all25 actual original mutants/eight AssertionErrors/65536code-unit equivalence pass,1001/1003 guards stable. It is unadopted and untimed pending independent static review/fresh once-only original mixed comparison. Source/driver/policy/reference/corpora/warmup/sample/gate stay frozen. Full meaningful green/failure/candidate proofs are archived; only-cosmetic stopping point is not reached.
+
+
+## Actual8d hosted validation and once-only fold-column rejection (2026-10-09T01:11:15.241079+00:00)
+
+Immutable8d hosted run37866126547 genuine11588287156 independently passes5591 assertions,1101 actualGit hashes,100 original rows,75 actual mutants and literal0/0/0; reader naturalCLOSED00:44:58.120405. Required originalaftergreen literal13/5/10 remains failed and is not rerun.
+
+Actual distinct fold-column paired trial naturalCLOSED01:09:38.922650/EXIT0 with24 original phases/12M calls and all1131+1154 guards equal. Aggregate+7.7875/+2.7706/+0.6678%, but only5of6 balanced blocks improve; seed3block0 regresses. No adoption/no unchanged comparison retry/no cause claim; all61GC events and allphases retained. Original faulty761a controller/READY preserved; targetedca78 reaping repair independently passed1406 assertions before root actualgrant. Historical6a semantic/mutant proofs and original timing loop remain immutable.
