@@ -219,6 +219,9 @@ def run(args):
     recovered=validate_reopens(sources,reopen_docs[:2],reopen_docs[2])
     checked('All '+str(len(reopen_docs[0]))+' source URLs reopened twice with ordered HTTPS/TLS records',len(reopen_docs[0])*2,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
     checked('Every recovered reopen quotation bound to the original registry',recovered,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
+    rosalina_candidate=module('b03_rosalina_structural_candidate','check-rosalina-structural-candidate.py')
+    for result in rosalina_candidate.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Rosalina structural candidate failed'),result.get('detail',''))
     ranked_recovery=module('b03_ranked_gameplay_recovery','check-ranked-gameplay-recovery.py')
     for result in ranked_recovery.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Six ranked-guide action recovery failed'),result.get('detail',''))
