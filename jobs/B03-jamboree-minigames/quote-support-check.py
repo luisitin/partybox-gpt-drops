@@ -40,7 +40,7 @@ def words(text):
 def substantive(text):
     # Unicode words include authored Korean clauses; every old clip's Boolean
     # classification is separately checked against the original ASCII rule.
-    return len(re.findall(r"[^\W_]+(?:'[^\W_]+)*", text, re.UNICODE)) >= 6 and not text.strip().endswith(':')
+    return (len(re.findall(r"[^\W_]+(?:'[^\W_]+)*", text, re.UNICODE)) >= 6 and not text.strip().endswith(':')) or (bool(re.search(r'[ぁ-ゖ]', text)) and len(re.findall(r'[ぁ-ゖァ-ヶ一-龯]', text)) >= 18 and text.endswith(('です。', 'ます。', 'ましょう。')) and '\n' not in text and ':' not in text)
 
 
 def numbers(text):

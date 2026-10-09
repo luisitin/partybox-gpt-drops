@@ -1,3 +1,62 @@
+## Four shared native-author action summaries (source checks still pending)
+
+Exact excerpts below are registered unique canonical fragments already included in the unchanged cumulative budgets. Only the narrowly stated gameplay actions qualify; every precise rule keeps its own evidence status.
+
+### MG079 Noggin Knock
+
+Players strike mechanical moles emerging from holes. They move toward the targets to collect coins.
+
+- W079_q4 | https://www.mariowiki.com/Noggin_Knock | "Players can freely move around to spaces corresponding to each hole."
+- W079_q7 | https://www.mariowiki.com/Noggin_Knock | "Regular Monty Moles, which are the most common, yield one coin each."
+- FGS_BASEQ158 | https://familygamesquad.com/super-mario-party-jamboree-game-guide/ | "Try"
+- W079_native_action_candidate_1 | https://www.mariowiki.com/Noggin_Knock | "various objects pop in and out of these holes"
+- W079_native_action_candidate_2 | https://www.mariowiki.com/Noggin_Knock | "they must be hit with a hammer before they leave"
+- KUMA_NATIVE_action_MG079_1 | https://kumanote1.com/2024/12/24/bowserathlon/ | "穴から飛び出すメカチョロプーやコインカプセルを叩いてコインを稼ぐゲームです。"
+- KUMA_NATIVE_action_MG079_2 | https://kumanote1.com/2024/12/24/bowserathlon/ | "メカチョロプーが出てき次第最短ルートで向かいどんどん叩きましょう。"
+
+Only narrowed shared actions have full paired Jamboree primary and independently authored Japanese Kumanote support under exact native names. Koopathlon initial-position qualifier preserved; FreePlay/level variants, precise controls/timers/win/score/tie/payout, wider zero-coin pastry penalty, row confidence and phone-fit remain separately qualified.
+
+### MG080 Brick Breaker
+
+Players use a bar to bounce shells upward. They break the blocks above.
+
+- W080_q5 | https://www.mariowiki.com/Brick_Breaker | "In this minigame, the player's character carries a paddle in a similar manner to Mario in the Bonus Stage of Pinball."
+- W080_q2 | https://www.mariowiki.com/Brick_Breaker | "The player loses the shell(s) that fall(s) offscreen."
+- FGS_BASEQ160 | https://familygamesquad.com/super-mario-party-jamboree-game-guide/ | "Try"
+- W080_native_action_candidate_1 | https://www.mariowiki.com/Brick_Breaker | "try to bounce the Green Shell so that it hits the bricks"
+- KUMA_NATIVE_action_MG080_1 | https://kumanote1.com/2024/12/24/bowserathlon/ | "コウラを下のバーで弾いて上のブロックを崩していくゲームです。"
+
+Only narrowed shared actions have full paired Jamboree primary and independently authored Japanese Kumanote support under exact native names. Koopathlon initial-position qualifier preserved; FreePlay/level variants, precise controls/timers/win/score/tie/payout, wider zero-coin pastry penalty, row confidence and phone-fit remain separately qualified.
+
+### MG081 Gold 'n Brown
+
+Watch pastries bake and remove them when they are ready. Track their appearance to avoid taking unbaked pastries or leaving them to burn.
+
+- W081_q4 | https://www.mariowiki.com/Gold_%27n_Brown | "In this minigame, the player has to pull baked goods out of a wood-fired oven using a peel."
+- W081_q7 | https://www.mariowiki.com/Gold_%27n_Brown | "There are seven tiles in the oven on which pastry dough can appear and progressively rise."
+- FGS_BASEQ162 | https://familygamesquad.com/super-mario-party-jamboree-game-guide/ | "Try"
+- W081_native_action_candidate_1 | https://www.mariowiki.com/Gold_%27n_Brown | "When a pastry is baked, it takes on a golden-brown color, bounces, and starts to sizzle"
+- KUMA_NATIVE_action_MG081_1 | https://kumanote1.com/2024/12/24/bowserathlon/ | "７か所のパンを焼くエリアに補充される生地が焼けたら取り出していくゲームです。"
+- KUMA_NATIVE_action_MG081_2 | https://kumanote1.com/2024/12/24/bowserathlon/ | "色の付き具合膨らみ具合をしっかりとみて焼きあがる前に取ったり焦がさないように注意しましょう。"
+- W081_q3 | https://www.mariowiki.com/Gold_%27n_Brown | "If the pastry is not pulled out in time, it will get burnt and will not award any coins."
+- W081_native_early_removal_Q001 | https://www.mariowiki.com/Gold_%27n_Brown | "Likewise, pulling out an unbaked pastry does not award coins either."
+
+Only narrowed shared actions have full paired Jamboree primary and independently authored Japanese Kumanote support under exact native names. Koopathlon initial-position qualifier preserved; FreePlay/level variants, precise controls/timers/win/score/tie/payout, wider zero-coin pastry penalty, row confidence and phone-fit remain separately qualified. Ready-removal, appearance, early-removal and ordinary burn caution are explicitly bound to their full primary clauses. The active-Star no-burn exception is preserved; no all-item or zero-payout claim is made.
+
+### MG087 Sky-High Cannons
+
+Players launch from cannons to collect airborne coins. They time the shots to choose the direction of travel.
+
+- W087_q3 | https://www.mariowiki.com/Sky-High_Cannons | "The minigame takes place in the sky, with several cannons resting on cloud platforms and coins floating in mid-air."
+- W087_q5 | https://www.mariowiki.com/Sky-High_Cannons | "The player must launch themself from cannon to cannon to collect the coins."
+- FGS_BASEQ174 | https://familygamesquad.com/super-mario-party-jamboree-game-guide/ | "Time"
+- W087_native_action_candidate_1 | https://www.mariowiki.com/Sky-High_Cannons | "Other cannons rotate left and right automatically."
+- W087_native_action_candidate_2 | https://www.mariowiki.com/Sky-High_Cannons | "Launch out of cannons at the right time to grab coins."
+- KUMA_NATIVE_action_MG087_1 | https://kumanote1.com/2024/12/24/bowserathlon/ | "大砲に入って発射されたキャラで空中のコインを回収していくゲームです。"
+- KUMA_NATIVE_action_MG087_2 | https://kumanote1.com/2024/12/24/bowserathlon/ | "大砲は自動でスイングするタイプのものもあり発射のタイミングで飛んでいく方向が決まるようになっています。"
+
+Only narrowed shared actions have full paired Jamboree primary and independently authored Japanese Kumanote support under exact native names. Koopathlon initial-position qualifier preserved; FreePlay/level variants, precise controls/timers/win/score/tie/payout, wider zero-coin pastry penalty, row confidence and phone-fit remain separately qualified.
+
 ## Current Coin-category research — UNADOPTED
 
 Canonical https://mariopartylegacy.com/2024/09/every-minigame-in-super-mario-party-jamboree-so-far/ — original authorSuperZambezi; exact paired full3662-character contexts and pre-release uncertainty remain privately retained. Candidate fragments, each<=25 words, canonical reserved27/200:

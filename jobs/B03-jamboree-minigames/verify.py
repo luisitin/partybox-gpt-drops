@@ -169,7 +169,7 @@ def run(args):
         spec=importlib.util.spec_from_file_location('quote_support_check',ROOT/'quote-support-check.py');qsc=importlib.util.module_from_spec(spec);spec.loader.exec_module(qsc)
         quotes=qsc.quote_index(sources)
         for r in rows:require(r['fieldEvidence']['gameplay']['status']==qsc.expected_gameplay_status(r['fieldEvidence']['gameplay']['quoteIds'],quotes),'Gameplay status breaks the two-lineage substantive-quote rule: '+r['id'])
-        require(sum(r['fieldEvidence']['gameplay']['status']=='corroborated' for r in rows)==61,'Corroborated summaries differ from the verified common-action rule')
+        require(sum(r['fieldEvidence']['gameplay']['status']=='corroborated' for r in rows)==65,'Corroborated summaries differ from the verified common-action rule')
     checked('Narrow summary status follows the two-lineage substantive-quote rule',132,gameplay_rule_check,'Only summaries with sentence-length quotes from two publisher lineages are corroborated')
     def same_publisher_rejects():
         altered=copy.deepcopy(data)
@@ -225,6 +225,9 @@ def run(args):
     preview_arrangement_recovery=module('b03_preview_arrangement_recovery','check-preview-arrangement-recovery.py')
     for result in preview_arrangement_recovery.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Preview arrangement recovery failed'),result.get('detail',''))
+    native_gameplay_recovery=module('b03_native_gameplay_recovery','check-native-gameplay-recovery.py')
+    for result in native_gameplay_recovery.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Native gameplay recovery failed'),result.get('detail',''))
     native_gameplay_recovery_preflight=module('b03_native_gameplay_recovery_preflight','check-native-gameplay-recovery-preflight.py')
     for result in native_gameplay_recovery_preflight.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Native gameplay recovery preflight failed'),result.get('detail',''))
