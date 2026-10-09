@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFileSync,writeFileSync } from 'node:fs';
+import { readFileSync,writeFileSync,mkdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -7,6 +7,7 @@ import ts from 'typescript';
 import { verify } from './checks.mjs';
 const seed=Number(process.argv[2]);
 assert.ok([1,2,3].includes(seed));
+mkdirSync('.verification',{recursive:true});
 const original=readFileSync('monopolyOdds.ts','utf8');
 const digest=createHash('sha256').update(original).digest('hex');
 const mutations=[

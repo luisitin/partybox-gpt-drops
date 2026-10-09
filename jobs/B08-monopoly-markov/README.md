@@ -63,3 +63,7 @@ Model conventions: "landing" is where a movement roll ends after cards and Go To
   - the PartyBox suite: exact checks and a fuzz, 20M simulated rolls per plan of turn ends, card arrivals and utility dice, and 20 `boardOdds.ts` mutants.
 - CI (`.github/workflows/B08.yml`) runs the same command on Node 22.16.0 and uploads `.verification/`.
 - Production and the blind references were authored and sealed before any exchange (`PRODUCTION-AUTHORING.md`, `INTEGRATION-AUTHORING.md`, `blind-authoring/`); the seals must stay unchanged.
+
+## Current recovery audit, 2026-10-09
+
+The preserved original delivery is Ready PR14 at5f35. The isolated followup repairs clean standalone output-directory creation in all four exposed runners and ensures changes to the verification workflow trigger it. All twelve clean-start commands passed at unchanged component workloads, including720M rolls and135 strict/runtime kills; new-head hosted full proof is still pending. See [recovery evidence](reports/recovery-20261009/README.md) and [NEXT.md](NEXT.md).

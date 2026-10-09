@@ -1,10 +1,11 @@
 import assert from 'node:assert/strict';
-import { writeFileSync } from 'node:fs';
+import { writeFileSync,mkdirSync } from 'node:fs';
 import { references, strategies } from './checks.mjs';
 import { samplingVariance } from './sampling-variance.mjs';
 
 const seed=Number(process.argv[2]);
 assert.ok([1,2,3].includes(seed),'Fixed required seed');
+mkdirSync('.verification',{recursive:true});
 const rolls=100000000;
 const burnIn=10000;
 const output=[];

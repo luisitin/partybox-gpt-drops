@@ -87,3 +87,7 @@ Reviewer: Claude (cloud), who did not write the polish pass. Branch `job/B08-mon
   - "The phone chunk is near its budget" was never measured. It now says so and gives the command.
 - **Left open (not fixable inside this job):** the bot wiring; `InitContext.botSkill`, which `packages/shared/src/contract.ts` does not have; the Speed Die; the one-attempt jail; and the utility-rent variant decision. PR #14's body still cites `e090828`, 56 files and a Node 24 run. It is stale and was not edited.
 - **Verdict:** approve-with-fixes. The model, its tests and the port file hold up against PartyBox. The fixes above were the only problems found in the claims.
+
+## Current 2026-10-09 followup verification
+
+The whole original5f35 GitHub archive and full native log were independently accepted09:02:10 UTC (run37815695050, artifact11566339013):720M rolls/135 actual strict-runtime kills,148 archive members,72 native source inputs,67 manifested files and22 runtime hashes. An original standalone ENOENT was genuinely reproduced09:02:56. After the narrow repairs, all four standalone runners completed with their original full workloads from an absent output folder for all required seeds1/2/3, closed09:12:45. Full outputs, compiled mutants, receipts, raw failure and complete original hosted evidence are under `reports/recovery-20261009/`. Changed-source hosted full acceptance and post-pass KEEP are pending. No original/local pass is promoted to exact new-head hosted acceptance.

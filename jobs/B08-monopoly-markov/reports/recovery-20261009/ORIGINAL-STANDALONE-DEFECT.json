@@ -1,0 +1,13 @@
+{
+  "reproduced": true,
+  "source": "5f35ba66a2169b4126c8ae312efa8c1635b3f5e3",
+  "command": "node test.mjs 1 after a fresh strict build, with no .verification directory",
+  "strictBuildExit": 0,
+  "childExit": 1,
+  "expectedFailure": "ENOENT writing .verification/exact-seed-1.json after actual exact checks",
+  "stderrSHA256": "c8fa6f8926e89970910d7ead894e33b1e91e34b3a106be93d0282933029b8f42",
+  "sourceInputsUnchanged": 72,
+  "elapsedSeconds": 0.21544575691223145,
+  "completedUTC": "2026-10-09T09:02:56Z",
+  "scope": "Actual original standalone failure. No source edit or workload reduction."
+}
