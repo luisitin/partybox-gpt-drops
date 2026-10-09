@@ -1,30 +1,11 @@
-# Current resume point: B09 malformed-input repair
+# B09 current handoff
 
-Owned branch: `job/B09-clue-validation-audit-20261009`
-Protected canonical: `job/B09-clue-solver` at original2b395, Ready/open/unmerged PR12 unchanged.
-Lawful MAIN claim: e146, row2026-10-09T09:37:20Z; owned branch initialized from claimed MAIN09:37:45. A supplemental Draft PR into the canonical branch follows first meaningful source publication.
+Supplemental PR26 is Draft until this exact final proof-source head passes the original full hosted workflow and whole official archive/native reader. Canonical Ready PR12/source 2b39550d395bab5ea0ad5c18cae19c3f78fdd84c is protected and unmerged.
 
-Completed actual work:
-- Fresh original README/RUN-ALL/PROMPTS, original job instructions/NEXT/source/reviews and all24 queue refs/committers read; B09 actual lowest eligible.
-- Original complete native full run37636605896 accepted09:40:48, original full random counts,25 strict variants/75 seeded kills and literal200ms gate passed. Original workflow has zero artifacts by design; no archive acceptance claimed.
-- Reproduced12 actual malformed production false successes against the unchanged independent reference:3 sparse tuple slots,null deck,8 related shape/category cases.
-- Narrow shape validation fixes plus12 deterministic fixtures; exact counting/propagation tail, reference, contract and random generation unchanged.
-- Strict build and all three actual206-case smoke suites passed09:49:47, including all original194 cases. Each new malformed case still actually succeeds with the retained original compiled solver.
-- Preserve raw six-player samples/compiled mutant bytes in generated output; retain original full workflow steps and append a successful output upload. Historical committed reports untouched.
+Implementation c47cdf5570896c0ca80869c2cfca8116d945db16 whole acceptance is genuine at 2026-10-09T10:00:38Z, run37914222209/job113766377701/artifact11609910617. Archive SHA256 c62d564f1ca61d4a1271fead2e3b9e7eed9263e05e35d3fef3c8f18afe91c398, full native SHA256 fdaa195feef19a0335993c01d7f0dbc6393f69e9ba485584c81afbf58b806083. Counts: 60,000 reduced logs, 15,000 games, 135,391 full updates, 1,260 sparse, three dense, 25 strict-compiled variants times three seeds =75 actual kills, 618 fixed and 35,305 independently checked raw six-player timing samples. All original literal 200 ms gates pass.
 
-Still required:
-1. Publish this checkpoint with ordinary ancestry from the lawful claimed-main branch and original canonical source; keep the final tree scoped to original root plus this job/workflow, excluding coordination CLAIMS from the delivery diff.
-2. Refresh only B09 MAIN claim under the serialized lease, and open the supplemental Draft PR.
-3. Accept exact new-head complete genuine hosted archive/native log: all original60000 reduced logs,15000 games/135391 updates,75 seeded mutation kills, every raw six-player timing/p50/p99/literalmaximum<=200ms, and all source/manifest hashes. Original/local passes cannot substitute.
-4. Perform substantive post-pass KEEP reviews and retain every failure/control. Publish final handoff and reaccept exact final-head full proof before Ready.
-5. Stop cosmetic changes and continue the authorized queue after real delivery.
+KEEP chronology: attempt1 PASS; attempt2 failed/uncredited observer accessor assumption resets streak; actual attempts3,4,5 PASS at 10:08:40,10:11:48.625,10:15:44.158 for three consecutive substantive no-gain rounds. Do not backdate the corrected execution or credit raw private oracle accessor throws as differential success. See reports/recovery-20261009/current-c47/KEEP-STOP-CHRONOLOGY.json and raw evidence. No cosmetic continuation.
 
-All evidence and failure attempts are public in `reports/recovery-20261009/`. No private PartyBox port, merge or current native performance claim is made. Assumptions remain in ASSUMPTIONS.md.
+Remaining delivery: publish this material final proof handoff, refresh only the owned B09 main CLAIMS row under the serialized lease, wait for exact final-source full workflow and independently check its complete official archive/native log and every raw timing; update PR26 with these actual facts and mark Ready only after all checks pass. Then resume the fresh lowest eligible stalled project under original RUN-ALL rules. No private PartyBox port or root/product edits are authorized here.
 
----
-
-## Preserved original resume record
-
-# Next step
-
-B09 implementation and full improvement-loop checks are complete. For future B09 maintenance, reproduce with npm ci && npm test and preserve exact counting, all original counts, the literal 200 ms maximum gate, and blind reference independence. PR 12 contains the final-head CI link. No B09 merge or main-branch push is authorized by this drop.
+UNVERIFIED: raw private reference error-return behavior for caller-defined throwing accessors (actual throws preserved). Production returns INVALID_INPUT on the six probes. No reference wrapper or code change. Other runtimes and untested six-player logs remain unverified.
