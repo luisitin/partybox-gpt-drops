@@ -843,3 +843,74 @@ Exactly one full fact and its containing board fingerprint change. Current88/518
 - 2026-10-09T09:33:36.137849+00:00: Parent5dd full original run37909673282/job113751529217 naturally closed09:11:40:26suites/5671cases/88manifest structural PASS, strict actual1/90of518FAIL/37of38FAIL/NOT_MET. Entire native21436B SHA51a497233308ecd0535d0379c0e7436049a8671aef9a51d3d4d6b99426f811c0 personally read, checkout04bc8c3aac0de047ca9eeaf1bb473e88e09879e9 explicitly merges exact5dd into92ef1b3dded085727509345aa22bd8b59fa0c1b8. This is dated parent proof for the new substantive visual checkpoint, whose exact full native remains pending. All original product/source registries/verifier/schema/workflow/rejection fixtures/gates/conflicts remain byte-identical.
 
 2026-10-09T10:02:16.469208+00:00: One complete Milk event independently corroborated91/518 with two refreshed row fingerprints; all518 values/517 other full facts/18 conflicts/gates unchanged. Parent cfce full original26/5673/89 naturallyclosed09:36:28, nativeSHA2f57ce7deb80379ca61464b920867c5e0be6721462d2f85beb920abfbb06a4c9, is dated historical proof for this new source. Current local original commands and exact hosted whole run remain required.
+
+
+2026-10-09T10:24:34.944093+00:00: Complete fresh Steamer original A/B10683-character articles and all current502-character chapter/12references were read after two real HTTP200 captures naturally closed10:18:16.709828. Ordinary3/6 fares agree with original Namu; availability quotes/photos share Nintendo dialogue provenance, so whole train remains UNADOPTED single-source. Complete Cel1691/Wiki2580 tide scopes received an actual negative independent peer; no tide-switch promotion or extra Cel clips. See reports/train-tide-source-scope-checkpoint-20261009.json. All518 wholefacts/values/593fingerprints/18conflicts/registries/gates byteunchanged; Namu250/Cel131 held. Parent d9 original26/5693/92 and strict91FAIL37FAILNOT_MET remain dated proof; current next exact whole CI required after publication.
+
+Actual original local commands for train/tide UNADOPTED checkpoint (no product or quote changes):
+
+```text
+$ python verify.py --structural --checksums
+PASS CLOSED_JSON_SCHEMAS: 60/60
+PASS UNIQUE_ID_COLLECTIONS: 31/31
+PASS SEVEN_BOARD_TWO_PUBLISHER_ROSTER: 7/7
+PASS EVERY_RECORDED_FACT_HAS_SOURCE: 518/518
+PASS FACT_QUOTATION_REFERENCES: 710/710
+PASS SHORT_QUOTE_BUDGETS_AND_LINEAGES: 29/29
+PASS EVERY_SOURCE_REOPENED_A_B: 54/54
+PASS QUOTATIONS_RECOVERED_BOTH_PASSES: 792/792
+PASS SOURCE_CAPTURE_REPORT_REFERENCES: 54/54
+PASS SPACE_PROFILE_SUMS_AND_CONFLICT_DISCLOSURE: 16/16
+PASS INDIVIDUAL_TYPE_COUNT_ROWS: 176/176
+PASS SHOP_INVENTORY_ITEM_ROWS: 215/215
+PASS FRESH_SOURCE_CELL_COMPARISONS_A_B: 782/782
+PASS EVENT_TRIGGER_EFFECT_SOURCE_OR_EXPLICIT_GAP: 38/38
+PASS SHARED_RULE_REFERENCES: 126/126
+PASS CITED_REGIONAL_MAP_LINKS: 11/11
+PASS MAP_IMAGE_REOPEN_AND_VISUAL_REVIEW_A_B: 20/20
+PASS ALL_RETAINED_ROWS_PASS_A: 593/593
+PASS ALL_RETAINED_ROWS_PASS_B: 593/593
+PASS REVIEWED_ROW_CONTENT_FINGERPRINTS: 593/593
+PASS BOARD_DOCUMENT_REQUIRED_SECTIONS: 7/7
+PASS BOARD_DOC_TABLES_MATCH_JSON: 51/51
+PASS ALL_FACTUAL_CONFLICTS_PRESERVED: 18/18
+PASS DELIBERATE_REJECTION_FIXTURES: 14/14
+PASS FILE_SIZE_LIMIT: 95/95
+PASS SHA256_MANIFEST: 94/94
+STRUCTURAL_RESULT=PASS; suites=26; cases=5697; seed=N/A (deterministic)
+Actual exit 0
+
+$ python verify.py --strict
+PASS CLOSED_JSON_SCHEMAS: 60/60
+PASS UNIQUE_ID_COLLECTIONS: 31/31
+PASS SEVEN_BOARD_TWO_PUBLISHER_ROSTER: 7/7
+PASS EVERY_RECORDED_FACT_HAS_SOURCE: 518/518
+PASS FACT_QUOTATION_REFERENCES: 710/710
+PASS SHORT_QUOTE_BUDGETS_AND_LINEAGES: 29/29
+PASS EVERY_SOURCE_REOPENED_A_B: 54/54
+PASS QUOTATIONS_RECOVERED_BOTH_PASSES: 792/792
+PASS SOURCE_CAPTURE_REPORT_REFERENCES: 54/54
+PASS SPACE_PROFILE_SUMS_AND_CONFLICT_DISCLOSURE: 16/16
+PASS INDIVIDUAL_TYPE_COUNT_ROWS: 176/176
+PASS SHOP_INVENTORY_ITEM_ROWS: 215/215
+PASS FRESH_SOURCE_CELL_COMPARISONS_A_B: 782/782
+PASS EVENT_TRIGGER_EFFECT_SOURCE_OR_EXPLICIT_GAP: 38/38
+PASS SHARED_RULE_REFERENCES: 126/126
+PASS CITED_REGIONAL_MAP_LINKS: 11/11
+PASS MAP_IMAGE_REOPEN_AND_VISUAL_REVIEW_A_B: 20/20
+PASS ALL_RETAINED_ROWS_PASS_A: 593/593
+PASS ALL_RETAINED_ROWS_PASS_B: 593/593
+PASS REVIEWED_ROW_CONTENT_FINGERPRINTS: 593/593
+PASS BOARD_DOCUMENT_REQUIRED_SECTIONS: 7/7
+PASS BOARD_DOC_TABLES_MATCH_JSON: 51/51
+PASS ALL_FACTUAL_CONFLICTS_PRESERVED: 18/18
+PASS DELIBERATE_REJECTION_FIXTURES: 14/14
+PASS FILE_SIZE_LIMIT: 95/95
+STRUCTURAL_RESULT=PASS; suites=25; cases=5603; seed=N/A (deterministic)
+FULL_FACTS_TWO_SOURCE=91/518; FAIL
+CURRENT_EVENT_TRIGGER_EFFECT=37/38; FAIL
+EXACT_NUMBERED_MAPS=0/7; descriptive UNVERIFIED provenance; cited regional maps supplied
+NINTENDO_GAMEPLAY_EXECUTED=NO
+STRICT_RESEARCH_RESULT=NOT_MET; exit=1
+Actual exit 1
+```
