@@ -4,23 +4,23 @@ Research PARTIAL; overall confidence low. Reported facts and exact qualifiers re
 
 ## Space counts
 
-These one-publisher count profiles include the Start space. All sums are independently recomputed, and missing independent totals are listed in CONFLICTS.md. Pro/Homestretch counts are not extrapolated.
+Whole count profiles remain single-source and include Start. The scoped original Korean comparison corroborates some ordinary type cells and records differing cells below, without supplying Start/Rally or verifying complete totals. All original integers and sums are preserved; see CONFLICTS.md and the dated recovery report. Pro/Homestretch, angry and TV profiles are not promoted.
 
 ### baseline_party
 
 | Type | Count | Evidence |
 |---|---:|---|
 | start | 1 | W_RACEWAY-Q002 |
-| blue | 32 | W_RACEWAY-Q003 |
-| red | 3 | W_RACEWAY-Q004 |
-| event | 11 | W_RACEWAY-Q005 |
-| chance_time | 1 | W_RACEWAY-Q002 |
-| item | 10 | W_RACEWAY-Q006 |
-| vs | 2 | W_RACEWAY-Q007 |
+| blue | 32 | W_RACEWAY-Q003, NAMU_KR_COUNTS-Q019 (conflict/low; Namu 33) |
+| red | 3 | W_RACEWAY-Q004, NAMU_KR_COUNTS-Q003 (corroborated/medium) |
+| event | 11 | W_RACEWAY-Q005, NAMU_KR_COUNTS-Q011 (corroborated/medium) |
+| chance_time | 1 | W_RACEWAY-Q002, NAMU_KR_COUNTS-Q001 (corroborated/medium) |
+| item | 10 | W_RACEWAY-Q006, NAMU_KR_COUNTS-Q010 (corroborated/medium) |
+| vs | 2 | W_RACEWAY-Q007, NAMU_KR_COUNTS-Q002 (corroborated/medium) |
 | rally | 0 | W_RACEWAY-Q008 |
-| lucky | 14 | W_RACEWAY-Q009 |
-| unlucky | 2 | W_RACEWAY-Q007 |
-| bowser | 2 | W_RACEWAY-Q007 |
+| lucky | 14 | W_RACEWAY-Q009, NAMU_KR_COUNTS-Q013 (corroborated/medium) |
+| unlucky | 2 | W_RACEWAY-Q007, NAMU_KR_COUNTS-Q002 (corroborated/medium) |
+| bowser | 2 | W_RACEWAY-Q007, NAMU_KR_COUNTS-Q002 (corroborated/medium) |
 | Total, including Start | 78 | W_RACEWAY |
 
 ### tv_tag_team

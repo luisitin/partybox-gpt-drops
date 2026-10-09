@@ -4,23 +4,23 @@ Research PARTIAL; overall confidence low. Reported facts and exact qualifiers re
 
 ## Space counts
 
-These one-publisher count profiles include the Start space. All sums are independently recomputed, and missing independent totals are listed in CONFLICTS.md. Pro/Homestretch counts are not extrapolated.
+Whole count profiles remain single-source and include Start. The scoped original Korean comparison corroborates some ordinary type cells and records differing cells below, without supplying Start/Rally or verifying complete totals. All original integers and sums are preserved; see CONFLICTS.md and the dated recovery report. Pro/Homestretch, angry and TV profiles are not promoted.
 
 ### baseline_party
 
 | Type | Count | Evidence |
 |---|---:|---|
 | start | 1 | W_WESTERN-Q002 |
-| blue | 37 | W_WESTERN-Q003 |
-| red | 6 | W_WESTERN-Q004 |
-| event | 10 | W_WESTERN-Q005 |
-| chance_time | 4 | W_WESTERN-Q006 |
-| item | 14 | W_WESTERN-Q007 |
-| vs | 4 | W_WESTERN-Q006 |
+| blue | 37 | W_WESTERN-Q003, NAMU_KR_COUNTS-Q021 (corroborated/medium) |
+| red | 6 | W_WESTERN-Q004, NAMU_KR_COUNTS-Q006 (corroborated/medium) |
+| event | 10 | W_WESTERN-Q005, NAMU_KR_COUNTS-Q010 (corroborated/medium) |
+| chance_time | 4 | W_WESTERN-Q006, NAMU_KR_COUNTS-Q004 (corroborated/medium) |
+| item | 14 | W_WESTERN-Q007, NAMU_KR_COUNTS-Q013 (corroborated/medium) |
+| vs | 4 | W_WESTERN-Q006, NAMU_KR_COUNTS-Q003 (conflict/low; Namu 3) |
 | rally | 0 | W_WESTERN-Q008 |
-| lucky | 21 | W_WESTERN-Q009 |
-| unlucky | 4 | W_WESTERN-Q006 |
-| bowser | 3 | W_WESTERN-Q010 |
+| lucky | 21 | W_WESTERN-Q009, NAMU_KR_COUNTS-Q016 (corroborated/medium) |
+| unlucky | 4 | W_WESTERN-Q006, NAMU_KR_COUNTS-Q004 (corroborated/medium) |
+| bowser | 3 | W_WESTERN-Q010, NAMU_KR_COUNTS-Q003 (corroborated/medium) |
 | Total, including Start | 104 | W_WESTERN |
 
 ### tv_tag_team

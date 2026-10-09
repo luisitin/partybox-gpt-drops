@@ -1,8 +1,8 @@
 # B04 — Verification
 
-**Original research standard NOT_MET.** Keep PR18 draft: 33/518 complete factual rows have independent publisher agreement. All 16 complete type-count profiles use the original permitted CONFLICTS.md route. One current event retains unknown trigger/effect.
+**Original research standard NOT_MET.** Keep PR18 draft: 87/518 complete factual rows have independent publisher agreement. All 16 complete type-count profiles use the original permitted CONFLICTS.md route. One current event retains unknown trigger/effect.
 
-## Completed checks and commands
+## Historical completed checks and commands, 2026-10-07
 
 Python 3.12.14; jsonschema 4.26.0. Every check is deterministic, seed N/A. These checks validate retained data, citations, review receipts and integrity; they do not execute Nintendo gameplay.
 
@@ -49,7 +49,7 @@ Final complete manifest run: 25/25 suites, 5,407/5,407 cases, exit 0. All 69 man
 
 The strict command completes with expected exit 1: full facts 31/518 FAIL; known current event trigger/effect 37/38 FAIL. Numbered maps remain descriptive provenance; the original request permits sourced map descriptions as best sources allow. No additional human-review or gameplay-build gate is introduced.
 
-## Actual validator output
+## Historical actual validator output, 2026-10-07
 
 ```text
 $ python3 verify.py --structural
@@ -143,7 +143,7 @@ STRUCTURAL_RESULT=PASS; suites=25; cases=5407; seed=N/A (deterministic)
 EXIT_CODE=0
 ```
 
-## Full second-pass evidence
+## Historical full second-pass evidence, 2026-10-07
 
 Both fresh passes reopened all 22 retained publisher URLs and recovered all 364 registered short quotations: 728 recoveries across 44 capture records. Each capture records its actual UTC retrieval time, URL, exact excerpts and retrieved-markdown SHA-256. Exa may be cached; tool reopening is not a claim of direct origin freshness. See reports/source-reopen-audit.json.
 
@@ -151,7 +151,7 @@ All 176 type-count rows and 215 inventory rows were compared against the exact f
 
 All ten original map-image URLs were fetched and visually reviewed in both fresh passes, with 20 actual native HTTP 200 responses. All current A/B pairs are byte-identical. The earlier Wiggler JPEG representation change is preserved with both former hashes in CONFLICTS.md and the prior commit; identical current bytes establish no installed game version. Images are not republished.
 
-All 593 retained rows were reviewed in both passes: 518 factual rows, seven board records, seven regional map descriptions, 16 count profiles, 35 inventory profiles and ten map assets. Both passes use the same assistant. Each recorded canonical content hash binds the reviewed row to its current data; later edits invalidate the review. The full row log follows and is also in reports/research-row-audit.json.
+All 593 retained rows were reviewed in both passes: 518 factual rows, seven board records, seven regional map descriptions, 16 count profiles, 35 inventory profiles and ten map assets. Both passes use the same assistant. Each recorded canonical content hash binds the reviewed row to its current data; later edits invalidate the review. The historical row log follows. Current reports/research-row-audit.json supersedes only the specifically changed rows with dated scoped fingerprints; this old static table is not a claim that every retained source was reread today.
 
 | Row | Pass A | Pass B | Reviewed content SHA-256 |
 |---|---|---|---|
@@ -823,3 +823,9 @@ The first scoped structural run returned actual exit2 because the containing wes
 The single narrow Super Shop event now has two independently authored sources;33/518 complete facts,475 single-source,9 conflicts,1 unknown. Only that fact and its containing board have new row fingerprints. All original checks, schema, strict requirements and workflow are unchanged. Original667hostedCI run 37894352773 / verify 113702166642 succeeded 06:35:57; its complete 21,432-byte native log SHA220e4481dca0c5384b9472cbc81a37c808bafcf82f2eda89d10b17ed274c6973 is historical for this new source milestone and documents strict 32/518 FAIL / 37/38 FAIL. New exact command output follows in validator-output.txt after execution.
 
 Current full structural command:25/25suites,5,426/5,426cases PASS, exit0. The full original strict command actually returns1:33/518complete facts FAIL,37/38known current events FAIL. Manifest is regenerated after these results and checked separately; structural integrity does not certify completed research.
+
+### Scoped original Korean numeric review, 2026-10-09
+
+Current87/518 independent complete facts;412 single-source,18 unresolved disputes,1 unknown. Exactly63 ordinary type facts reviewed against both publishers in actualA/B captures (252 numeric observations),54 medium matches and9 low disagreements. Only those63 facts and their7 containing profiles/7 boards receive refreshed fingerprints; all518 values, profile totals and prior9 conflicts remain identical. Broad original audits retain historical dates. No source body, expressive author quotation or English-mirror second source is published. Unchanged original checks must pass; strict remains NOT_MET. Whole genuine prior44b5 hosted run37899943053/job113719886950 accepted original26 suites/5505 cases/78 manifest and strict33/518FAIL at07:36:07, full21429-byte native SHAac09f12b5aba9eb135e98631be0dfa176516e1af664a2494859a90a1862bf37e; that is historical for this new adoption, not current CI proof. Current original local outputs are recorded in validator-output.txt after actual execution.
+
+Actual local original commands completed2026-10-09T07:47:24–25Z:structural/checksum exit0,26 suites/5633 cases/81 manifest PASS;strict exit1,87/518FACTS FAIL and37/38EVENTS FAIL/NOT_MET. Whole current outputs are in validator-output.txt. Manifest regeneration and final unchanged command/readback remain required after packaging.

@@ -1,6 +1,6 @@
 # B04 — Sources and claim quotations
 
-22 retained publisher URLs were freshly reopened in both passes. All 364 short quotation strings were recovered twice (728 recoveries). Same-publisher pages count once; GameRant and DualShockers are grouped under Valnet. Maps share one underlying game screenshot lineage. No full articles or images are published.
+Historical 2026-10-07 audit:22 retained URLs/364 short quotation strings/728 recoveries. Current registered delivery adds the dated Western, Galleria and Korean scoped captures; broad historical rows are not represented as freshly reread. Same-publisher pages count once; GameRant and DualShockers are grouped under Valnet. Maps share one underlying game screenshot lineage. No full articles or images are published.
 
 ## W_WIGGLER
 
@@ -572,16 +572,16 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 |---|---|---|
 | mega-wiggler-tree-party:presence | corroborated/high | W_WIGGLER-Q001, NL_BOARDS-Q001 |
 | mega-wiggler-tree-party:space:baseline_party:start | single_source/medium | W_WIGGLER-Q002 |
-| mega-wiggler-tree-party:space:baseline_party:blue | single_source/medium | W_WIGGLER-Q003 |
-| mega-wiggler-tree-party:space:baseline_party:red | single_source/medium | W_WIGGLER-Q004 |
-| mega-wiggler-tree-party:space:baseline_party:event | single_source/medium | W_WIGGLER-Q005 |
-| mega-wiggler-tree-party:space:baseline_party:chance_time | single_source/medium | W_WIGGLER-Q002 |
-| mega-wiggler-tree-party:space:baseline_party:item | single_source/medium | W_WIGGLER-Q006 |
-| mega-wiggler-tree-party:space:baseline_party:vs | single_source/medium | W_WIGGLER-Q007 |
+| mega-wiggler-tree-party:space:baseline_party:blue | conflict/low | W_WIGGLER-Q003, NAMU_KR_COUNTS-Q017 |
+| mega-wiggler-tree-party:space:baseline_party:red | corroborated/medium | W_WIGGLER-Q004, NAMU_KR_COUNTS-Q004 |
+| mega-wiggler-tree-party:space:baseline_party:event | conflict/low | W_WIGGLER-Q005, NAMU_KR_COUNTS-Q011 |
+| mega-wiggler-tree-party:space:baseline_party:chance_time | corroborated/medium | W_WIGGLER-Q002, NAMU_KR_COUNTS-Q001 |
+| mega-wiggler-tree-party:space:baseline_party:item | corroborated/medium | W_WIGGLER-Q006, NAMU_KR_COUNTS-Q003 |
+| mega-wiggler-tree-party:space:baseline_party:vs | corroborated/medium | W_WIGGLER-Q007, NAMU_KR_COUNTS-Q002 |
 | mega-wiggler-tree-party:space:baseline_party:rally | single_source/medium | W_WIGGLER-Q008 |
-| mega-wiggler-tree-party:space:baseline_party:lucky | single_source/medium | W_WIGGLER-Q009 |
-| mega-wiggler-tree-party:space:baseline_party:unlucky | single_source/medium | W_WIGGLER-Q002 |
-| mega-wiggler-tree-party:space:baseline_party:bowser | single_source/medium | W_WIGGLER-Q010 |
+| mega-wiggler-tree-party:space:baseline_party:lucky | corroborated/medium | W_WIGGLER-Q009, NAMU_KR_COUNTS-Q012 |
+| mega-wiggler-tree-party:space:baseline_party:unlucky | corroborated/medium | W_WIGGLER-Q002, NAMU_KR_COUNTS-Q001 |
+| mega-wiggler-tree-party:space:baseline_party:bowser | corroborated/medium | W_WIGGLER-Q010, NAMU_KR_COUNTS-Q002 |
 | mega-wiggler-tree-party:space:tv_tag_team:start | single_source/medium | W_WIGGLER-Q002 |
 | mega-wiggler-tree-party:space:tv_tag_team:blue | single_source/medium | W_WIGGLER-Q011 |
 | mega-wiggler-tree-party:space:tv_tag_team:red | single_source/medium | W_WIGGLER-Q012 |
@@ -647,16 +647,16 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | mega-wiggler-tree-party:map_link:variable_bridge | single_source/medium | MPL_BOARDS-Q004, W_WIGGLER-Q030 |
 | rainbow-galleria:presence | corroborated/high | W_GALLERIA-Q001, NL_BOARDS-Q002 |
 | rainbow-galleria:space:baseline_party:start | single_source/medium | W_GALLERIA-Q002 |
-| rainbow-galleria:space:baseline_party:blue | single_source/medium | W_GALLERIA-Q003 |
-| rainbow-galleria:space:baseline_party:red | single_source/medium | W_GALLERIA-Q004 |
-| rainbow-galleria:space:baseline_party:event | single_source/medium | W_GALLERIA-Q005 |
-| rainbow-galleria:space:baseline_party:chance_time | single_source/medium | W_GALLERIA-Q002 |
-| rainbow-galleria:space:baseline_party:item | single_source/medium | W_GALLERIA-Q004 |
-| rainbow-galleria:space:baseline_party:vs | single_source/medium | W_GALLERIA-Q006 |
+| rainbow-galleria:space:baseline_party:blue | conflict/low | W_GALLERIA-Q003, NAMU_KR_COUNTS-Q015 |
+| rainbow-galleria:space:baseline_party:red | corroborated/medium | W_GALLERIA-Q004, NAMU_KR_COUNTS-Q006 |
+| rainbow-galleria:space:baseline_party:event | corroborated/medium | W_GALLERIA-Q005, NAMU_KR_COUNTS-Q011 |
+| rainbow-galleria:space:baseline_party:chance_time | corroborated/medium | W_GALLERIA-Q002, NAMU_KR_COUNTS-Q001 |
+| rainbow-galleria:space:baseline_party:item | corroborated/medium | W_GALLERIA-Q004, NAMU_KR_COUNTS-Q006 |
+| rainbow-galleria:space:baseline_party:vs | corroborated/medium | W_GALLERIA-Q006, NAMU_KR_COUNTS-Q003 |
 | rainbow-galleria:space:baseline_party:rally | single_source/medium | W_GALLERIA-Q007 |
-| rainbow-galleria:space:baseline_party:lucky | single_source/medium | W_GALLERIA-Q008 |
-| rainbow-galleria:space:baseline_party:unlucky | single_source/medium | W_GALLERIA-Q009 |
-| rainbow-galleria:space:baseline_party:bowser | single_source/medium | W_GALLERIA-Q009 |
+| rainbow-galleria:space:baseline_party:lucky | corroborated/medium | W_GALLERIA-Q008, NAMU_KR_COUNTS-Q013 |
+| rainbow-galleria:space:baseline_party:unlucky | corroborated/medium | W_GALLERIA-Q009, NAMU_KR_COUNTS-Q002 |
+| rainbow-galleria:space:baseline_party:bowser | corroborated/medium | W_GALLERIA-Q009, NAMU_KR_COUNTS-Q002 |
 | rainbow-galleria:space:tv_tag_team:start | single_source/medium | W_GALLERIA-Q002 |
 | rainbow-galleria:space:tv_tag_team:blue | single_source/medium | W_GALLERIA-Q010 |
 | rainbow-galleria:space:tv_tag_team:red | single_source/medium | W_GALLERIA-Q005 |
@@ -732,16 +732,16 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | rainbow-galleria:map_link:elevator | corroborated/high | W_GALLERIA-Q023, GR_GALLERIA-Q007 |
 | goomba-lagoon:presence | corroborated/high | W_LAGOON-Q001, NL_BOARDS-Q003 |
 | goomba-lagoon:space:baseline_party:start | single_source/medium | W_LAGOON-Q002 |
-| goomba-lagoon:space:baseline_party:blue | single_source/medium | W_LAGOON-Q003 |
-| goomba-lagoon:space:baseline_party:red | single_source/medium | W_LAGOON-Q004 |
-| goomba-lagoon:space:baseline_party:event | single_source/medium | W_LAGOON-Q005 |
-| goomba-lagoon:space:baseline_party:chance_time | single_source/medium | W_LAGOON-Q006 |
-| goomba-lagoon:space:baseline_party:item | single_source/medium | W_LAGOON-Q005 |
-| goomba-lagoon:space:baseline_party:vs | single_source/medium | W_LAGOON-Q007 |
+| goomba-lagoon:space:baseline_party:blue | corroborated/medium | W_LAGOON-Q003, NAMU_KR_COUNTS-Q020 |
+| goomba-lagoon:space:baseline_party:red | corroborated/medium | W_LAGOON-Q004, NAMU_KR_COUNTS-Q009 |
+| goomba-lagoon:space:baseline_party:event | corroborated/medium | W_LAGOON-Q005, NAMU_KR_COUNTS-Q008 |
+| goomba-lagoon:space:baseline_party:chance_time | corroborated/medium | W_LAGOON-Q006, NAMU_KR_COUNTS-Q002 |
+| goomba-lagoon:space:baseline_party:item | corroborated/medium | W_LAGOON-Q005, NAMU_KR_COUNTS-Q008 |
+| goomba-lagoon:space:baseline_party:vs | corroborated/medium | W_LAGOON-Q007, NAMU_KR_COUNTS-Q004 |
 | goomba-lagoon:space:baseline_party:rally | single_source/medium | W_LAGOON-Q008 |
-| goomba-lagoon:space:baseline_party:lucky | single_source/medium | W_LAGOON-Q009 |
-| goomba-lagoon:space:baseline_party:unlucky | single_source/medium | W_LAGOON-Q007 |
-| goomba-lagoon:space:baseline_party:bowser | single_source/medium | W_LAGOON-Q006 |
+| goomba-lagoon:space:baseline_party:lucky | conflict/low | W_LAGOON-Q009, NAMU_KR_COUNTS-Q014 |
+| goomba-lagoon:space:baseline_party:unlucky | conflict/low | W_LAGOON-Q007, NAMU_KR_COUNTS-Q003 |
+| goomba-lagoon:space:baseline_party:bowser | corroborated/medium | W_LAGOON-Q006, NAMU_KR_COUNTS-Q002 |
 | goomba-lagoon:space:tv_tag_team:start | single_source/medium | W_LAGOON-Q002 |
 | goomba-lagoon:space:tv_tag_team:blue | single_source/medium | W_LAGOON-Q010 |
 | goomba-lagoon:space:tv_tag_team:red | single_source/medium | W_LAGOON-Q011 |
@@ -796,16 +796,16 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | goomba-lagoon:map_link:zipline | single_source/medium | W_LAGOON-Q038 |
 | roll-em-raceway:presence | corroborated/high | W_RACEWAY-Q001, NL_BOARDS-Q004 |
 | roll-em-raceway:space:baseline_party:start | single_source/medium | W_RACEWAY-Q002 |
-| roll-em-raceway:space:baseline_party:blue | single_source/medium | W_RACEWAY-Q003 |
-| roll-em-raceway:space:baseline_party:red | single_source/medium | W_RACEWAY-Q004 |
-| roll-em-raceway:space:baseline_party:event | single_source/medium | W_RACEWAY-Q005 |
-| roll-em-raceway:space:baseline_party:chance_time | single_source/medium | W_RACEWAY-Q002 |
-| roll-em-raceway:space:baseline_party:item | single_source/medium | W_RACEWAY-Q006 |
-| roll-em-raceway:space:baseline_party:vs | single_source/medium | W_RACEWAY-Q007 |
+| roll-em-raceway:space:baseline_party:blue | conflict/low | W_RACEWAY-Q003, NAMU_KR_COUNTS-Q019 |
+| roll-em-raceway:space:baseline_party:red | corroborated/medium | W_RACEWAY-Q004, NAMU_KR_COUNTS-Q003 |
+| roll-em-raceway:space:baseline_party:event | corroborated/medium | W_RACEWAY-Q005, NAMU_KR_COUNTS-Q011 |
+| roll-em-raceway:space:baseline_party:chance_time | corroborated/medium | W_RACEWAY-Q002, NAMU_KR_COUNTS-Q001 |
+| roll-em-raceway:space:baseline_party:item | corroborated/medium | W_RACEWAY-Q006, NAMU_KR_COUNTS-Q010 |
+| roll-em-raceway:space:baseline_party:vs | corroborated/medium | W_RACEWAY-Q007, NAMU_KR_COUNTS-Q002 |
 | roll-em-raceway:space:baseline_party:rally | single_source/medium | W_RACEWAY-Q008 |
-| roll-em-raceway:space:baseline_party:lucky | single_source/medium | W_RACEWAY-Q009 |
-| roll-em-raceway:space:baseline_party:unlucky | single_source/medium | W_RACEWAY-Q007 |
-| roll-em-raceway:space:baseline_party:bowser | single_source/medium | W_RACEWAY-Q007 |
+| roll-em-raceway:space:baseline_party:lucky | corroborated/medium | W_RACEWAY-Q009, NAMU_KR_COUNTS-Q013 |
+| roll-em-raceway:space:baseline_party:unlucky | corroborated/medium | W_RACEWAY-Q007, NAMU_KR_COUNTS-Q002 |
+| roll-em-raceway:space:baseline_party:bowser | corroborated/medium | W_RACEWAY-Q007, NAMU_KR_COUNTS-Q002 |
 | roll-em-raceway:space:tv_tag_team:start | single_source/medium | W_RACEWAY-Q002 |
 | roll-em-raceway:space:tv_tag_team:blue | single_source/medium | W_RACEWAY-Q010 |
 | roll-em-raceway:space:tv_tag_team:red | single_source/medium | W_RACEWAY-Q011 |
@@ -860,16 +860,16 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | roll-em-raceway:map_link:pad | single_source/medium | W_RACEWAY-Q032 |
 | king-bowser-keep:presence | corroborated/high | W_KEEP-Q001, NL_BOARDS-Q005 |
 | king-bowser-keep:space:baseline_party:start | single_source/medium | W_KEEP-Q002 |
-| king-bowser-keep:space:baseline_party:blue | single_source/medium | W_KEEP-Q003 |
-| king-bowser-keep:space:baseline_party:red | single_source/medium | W_KEEP-Q004 |
-| king-bowser-keep:space:baseline_party:event | single_source/medium | W_KEEP-Q005 |
-| king-bowser-keep:space:baseline_party:chance_time | single_source/medium | W_KEEP-Q006 |
-| king-bowser-keep:space:baseline_party:item | single_source/medium | W_KEEP-Q007 |
-| king-bowser-keep:space:baseline_party:vs | single_source/medium | W_KEEP-Q008 |
+| king-bowser-keep:space:baseline_party:blue | conflict/low | W_KEEP-Q003, NAMU_KR_COUNTS-Q018 |
+| king-bowser-keep:space:baseline_party:red | corroborated/medium | W_KEEP-Q004, NAMU_KR_COUNTS-Q005 |
+| king-bowser-keep:space:baseline_party:event | corroborated/medium | W_KEEP-Q005, NAMU_KR_COUNTS-Q006 |
+| king-bowser-keep:space:baseline_party:chance_time | corroborated/medium | W_KEEP-Q006, NAMU_KR_COUNTS-Q003 |
+| king-bowser-keep:space:baseline_party:item | corroborated/medium | W_KEEP-Q007, NAMU_KR_COUNTS-Q010 |
+| king-bowser-keep:space:baseline_party:vs | corroborated/medium | W_KEEP-Q008, NAMU_KR_COUNTS-Q003 |
 | king-bowser-keep:space:baseline_party:rally | single_source/medium | W_KEEP-Q009 |
-| king-bowser-keep:space:baseline_party:lucky | single_source/medium | W_KEEP-Q010 |
-| king-bowser-keep:space:baseline_party:unlucky | single_source/medium | W_KEEP-Q002 |
-| king-bowser-keep:space:baseline_party:bowser | single_source/medium | W_KEEP-Q011 |
+| king-bowser-keep:space:baseline_party:lucky | conflict/low | W_KEEP-Q010, NAMU_KR_COUNTS-Q017 |
+| king-bowser-keep:space:baseline_party:unlucky | corroborated/medium | W_KEEP-Q002, NAMU_KR_COUNTS-Q001 |
+| king-bowser-keep:space:baseline_party:bowser | corroborated/medium | W_KEEP-Q011, NAMU_KR_COUNTS-Q002 |
 | king-bowser-keep:space:tv_tag_team:start | single_source/medium | W_KEEP-Q002 |
 | king-bowser-keep:space:tv_tag_team:blue | single_source/medium | W_KEEP-Q012 |
 | king-bowser-keep:space:tv_tag_team:red | single_source/medium | W_KEEP-Q013 |
@@ -928,16 +928,16 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | king-bowser-keep:map_link:red_pipe | single_source/medium | W_KEEP-Q027 |
 | mario-rainbow-castle:presence | corroborated/high | W_CASTLE-Q001, NL_BOARDS-Q006 |
 | mario-rainbow-castle:space:baseline_party:start | single_source/medium | W_CASTLE-Q002 |
-| mario-rainbow-castle:space:baseline_party:blue | single_source/medium | W_CASTLE-Q003 |
-| mario-rainbow-castle:space:baseline_party:red | single_source/medium | W_CASTLE-Q004 |
-| mario-rainbow-castle:space:baseline_party:event | single_source/medium | W_CASTLE-Q005 |
-| mario-rainbow-castle:space:baseline_party:chance_time | single_source/medium | W_CASTLE-Q002 |
-| mario-rainbow-castle:space:baseline_party:item | single_source/medium | W_CASTLE-Q006 |
-| mario-rainbow-castle:space:baseline_party:vs | single_source/medium | W_CASTLE-Q007 |
+| mario-rainbow-castle:space:baseline_party:blue | corroborated/medium | W_CASTLE-Q003, NAMU_KR_COUNTS-Q016 |
+| mario-rainbow-castle:space:baseline_party:red | corroborated/medium | W_CASTLE-Q004, NAMU_KR_COUNTS-Q003 |
+| mario-rainbow-castle:space:baseline_party:event | corroborated/medium | W_CASTLE-Q005, NAMU_KR_COUNTS-Q007 |
+| mario-rainbow-castle:space:baseline_party:chance_time | corroborated/medium | W_CASTLE-Q002, NAMU_KR_COUNTS-Q001 |
+| mario-rainbow-castle:space:baseline_party:item | corroborated/medium | W_CASTLE-Q006, NAMU_KR_COUNTS-Q005 |
+| mario-rainbow-castle:space:baseline_party:vs | corroborated/medium | W_CASTLE-Q007, NAMU_KR_COUNTS-Q002 |
 | mario-rainbow-castle:space:baseline_party:rally | single_source/medium | W_CASTLE-Q008 |
-| mario-rainbow-castle:space:baseline_party:lucky | single_source/medium | W_CASTLE-Q005 |
-| mario-rainbow-castle:space:baseline_party:unlucky | single_source/medium | W_CASTLE-Q007 |
-| mario-rainbow-castle:space:baseline_party:bowser | single_source/medium | W_CASTLE-Q007 |
+| mario-rainbow-castle:space:baseline_party:lucky | corroborated/medium | W_CASTLE-Q005, NAMU_KR_COUNTS-Q007 |
+| mario-rainbow-castle:space:baseline_party:unlucky | corroborated/medium | W_CASTLE-Q007, NAMU_KR_COUNTS-Q002 |
+| mario-rainbow-castle:space:baseline_party:bowser | corroborated/medium | W_CASTLE-Q007, NAMU_KR_COUNTS-Q002 |
 | mario-rainbow-castle:space:tv_tag_team:start | single_source/medium | W_CASTLE-Q002 |
 | mario-rainbow-castle:space:tv_tag_team:blue | single_source/medium | W_CASTLE-Q009 |
 | mario-rainbow-castle:space:tv_tag_team:red | single_source/medium | W_CASTLE-Q005 |
@@ -1009,16 +1009,16 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | mario-rainbow-castle:map_link:tower_return | single_source/medium | W_GAME-Q008, MPL_BOARDS-Q018 |
 | western-land:presence | corroborated/high | W_WESTERN-Q001, NL_BOARDS-Q007 |
 | western-land:space:baseline_party:start | single_source/medium | W_WESTERN-Q002 |
-| western-land:space:baseline_party:blue | single_source/medium | W_WESTERN-Q003 |
-| western-land:space:baseline_party:red | single_source/medium | W_WESTERN-Q004 |
-| western-land:space:baseline_party:event | single_source/medium | W_WESTERN-Q005 |
-| western-land:space:baseline_party:chance_time | single_source/medium | W_WESTERN-Q006 |
-| western-land:space:baseline_party:item | single_source/medium | W_WESTERN-Q007 |
-| western-land:space:baseline_party:vs | single_source/medium | W_WESTERN-Q006 |
+| western-land:space:baseline_party:blue | corroborated/medium | W_WESTERN-Q003, NAMU_KR_COUNTS-Q021 |
+| western-land:space:baseline_party:red | corroborated/medium | W_WESTERN-Q004, NAMU_KR_COUNTS-Q006 |
+| western-land:space:baseline_party:event | corroborated/medium | W_WESTERN-Q005, NAMU_KR_COUNTS-Q010 |
+| western-land:space:baseline_party:chance_time | corroborated/medium | W_WESTERN-Q006, NAMU_KR_COUNTS-Q004 |
+| western-land:space:baseline_party:item | corroborated/medium | W_WESTERN-Q007, NAMU_KR_COUNTS-Q013 |
+| western-land:space:baseline_party:vs | conflict/low | W_WESTERN-Q006, NAMU_KR_COUNTS-Q003 |
 | western-land:space:baseline_party:rally | single_source/medium | W_WESTERN-Q008 |
-| western-land:space:baseline_party:lucky | single_source/medium | W_WESTERN-Q009 |
-| western-land:space:baseline_party:unlucky | single_source/medium | W_WESTERN-Q006 |
-| western-land:space:baseline_party:bowser | single_source/medium | W_WESTERN-Q010 |
+| western-land:space:baseline_party:lucky | corroborated/medium | W_WESTERN-Q009, NAMU_KR_COUNTS-Q016 |
+| western-land:space:baseline_party:unlucky | corroborated/medium | W_WESTERN-Q006, NAMU_KR_COUNTS-Q004 |
+| western-land:space:baseline_party:bowser | corroborated/medium | W_WESTERN-Q010, NAMU_KR_COUNTS-Q003 |
 | western-land:space:tv_tag_team:start | single_source/medium | W_WESTERN-Q002 |
 | western-land:space:tv_tag_team:blue | single_source/medium | W_WESTERN-Q011 |
 | western-land:space:tv_tag_team:red | single_source/medium | W_WESTERN-Q012 |
@@ -1110,3 +1110,33 @@ SASKE, published 2024-11-02T11:01:00Z. Independent personal blog, distinct from 
 | --- | --- | --- |
 | SASKE_GALLERIA-Q001 | スーパーショップもあって、イベントマスに止まると特別なアイテムを売ってくれるらしい | There is also a Super Shop; apparently, landing on an event space lets it sell you special items. |
 | SASKE_GALLERIA-Q002 | ５コインでスーパーのろいサイコロ買えるの？！ | Can you buy Super Creepy Dice for five coins?! |
+
+## NAMU_KR_COUNTS — scoped original Korean numeric cells, 2026-10-09
+
+URL: https://namu.wiki/w/%EC%8A%88%ED%8D%BC%20%EB%A7%88%EB%A6%AC%EC%98%A4%20%ED%8C%8C%ED%8B%B0%20%EC%9E%BC%EB%B2%84%EB%A6%AC
+
+Community contributors; independent editorial narrative and no copied-table attribution found after all relevant section/footnote/link checks. Medium-confidence matching ordinary typed counts only; nine new unresolved differences preserve the Wiki integer and Namu alternative. English mirror is one publisher. Only literal numeric facts are registered below, adding zero expressive author words. The same-canonical shared prose budget warning remains; no new original prose is quoted. All full raw captures stay private. Start/Rally omissions do not corroborate totals or complete profiles.
+
+| Quote ID | Literal numeric fragment |
+| --- | --- |
+| NAMU_KR_COUNTS-Q001 | 1 |
+| NAMU_KR_COUNTS-Q002 | 2 |
+| NAMU_KR_COUNTS-Q003 | 3 |
+| NAMU_KR_COUNTS-Q004 | 4 |
+| NAMU_KR_COUNTS-Q005 | 5 |
+| NAMU_KR_COUNTS-Q006 | 6 |
+| NAMU_KR_COUNTS-Q007 | 7 |
+| NAMU_KR_COUNTS-Q008 | 8 |
+| NAMU_KR_COUNTS-Q009 | 9 |
+| NAMU_KR_COUNTS-Q010 | 10 |
+| NAMU_KR_COUNTS-Q011 | 11 |
+| NAMU_KR_COUNTS-Q012 | 13 |
+| NAMU_KR_COUNTS-Q013 | 14 |
+| NAMU_KR_COUNTS-Q014 | 18 |
+| NAMU_KR_COUNTS-Q015 | 20 |
+| NAMU_KR_COUNTS-Q016 | 21 |
+| NAMU_KR_COUNTS-Q017 | 23 |
+| NAMU_KR_COUNTS-Q018 | 26 |
+| NAMU_KR_COUNTS-Q019 | 33 |
+| NAMU_KR_COUNTS-Q020 | 34 |
+| NAMU_KR_COUNTS-Q021 | 37 |

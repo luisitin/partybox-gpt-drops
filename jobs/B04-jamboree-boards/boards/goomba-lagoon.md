@@ -4,23 +4,23 @@ Research PARTIAL; overall confidence low. Reported facts and exact qualifiers re
 
 ## Space counts
 
-These one-publisher count profiles include the Start space. All sums are independently recomputed, and missing independent totals are listed in CONFLICTS.md. Pro/Homestretch counts are not extrapolated.
+Whole count profiles remain single-source and include Start. The scoped original Korean comparison corroborates some ordinary type cells and records differing cells below, without supplying Start/Rally or verifying complete totals. All original integers and sums are preserved; see CONFLICTS.md and the dated recovery report. Pro/Homestretch, angry and TV profiles are not promoted.
 
 ### baseline_party
 
 | Type | Count | Evidence |
 |---|---:|---|
 | start | 1 | W_LAGOON-Q002 |
-| blue | 34 | W_LAGOON-Q003 |
-| red | 9 | W_LAGOON-Q004 |
-| event | 8 | W_LAGOON-Q005 |
-| chance_time | 2 | W_LAGOON-Q006 |
-| item | 8 | W_LAGOON-Q005 |
-| vs | 4 | W_LAGOON-Q007 |
+| blue | 34 | W_LAGOON-Q003, NAMU_KR_COUNTS-Q020 (corroborated/medium) |
+| red | 9 | W_LAGOON-Q004, NAMU_KR_COUNTS-Q009 (corroborated/medium) |
+| event | 8 | W_LAGOON-Q005, NAMU_KR_COUNTS-Q008 (corroborated/medium) |
+| chance_time | 2 | W_LAGOON-Q006, NAMU_KR_COUNTS-Q002 (corroborated/medium) |
+| item | 8 | W_LAGOON-Q005, NAMU_KR_COUNTS-Q008 (corroborated/medium) |
+| vs | 4 | W_LAGOON-Q007, NAMU_KR_COUNTS-Q004 (corroborated/medium) |
 | rally | 0 | W_LAGOON-Q008 |
-| lucky | 19 | W_LAGOON-Q009 |
-| unlucky | 4 | W_LAGOON-Q007 |
-| bowser | 2 | W_LAGOON-Q006 |
+| lucky | 19 | W_LAGOON-Q009, NAMU_KR_COUNTS-Q014 (conflict/low; Namu 18) |
+| unlucky | 4 | W_LAGOON-Q007, NAMU_KR_COUNTS-Q003 (conflict/low; Namu 3) |
+| bowser | 2 | W_LAGOON-Q006, NAMU_KR_COUNTS-Q002 (corroborated/medium) |
 | Total, including Start | 91 | W_LAGOON |
 
 ### tv_tag_team

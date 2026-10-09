@@ -2,7 +2,7 @@
 
 ## Per-board count gaps
 
-The original count test permits unresolved totals in this file. Every normal/TagTeam/angry profile has only one retained publisher; correct arithmetic is not a second source. Historical Mario Party / 2 totals are excluded.
+The original count test permits unresolved totals in this file. Every complete normal/TagTeam/angry profile still has only one complete retained publisher. Narrow ordinary type cells can have independent numeric agreement, but Start/Rally omissions and differing cells prevent complete-profile or total promotion; correct arithmetic is not a second source. Historical Mario Party / 2 totals are excluded.
 
 | Board | Profile | Reported total inclStart | Source |
 |---|---|---:|---|
@@ -51,3 +51,19 @@ The original count test permits unresolved totals in this file. Every normal/Tag
 - The fresh credited GameRant guide closes only the complete Boo Shop event row. It does not establish Super Shop landing activation, exactly one raffle draw per purchase, stamp passing-only activation, or Buddy/rank stock qualifiers.
 - Ice_Dragon14’s original post #10 independently closes Pro Homestretch. Its statement of two shop items for the entire game does not independently establish inventory sharing between shops with the same host; the composite stock row remains single-source.
 - Bounded searches found no independent complete current type-count tables or numbered gate endpoints. Historical tables, copied Fandom content, fan fiction and apparently generated guides were excluded. A twice-opened NamuWiki English translation was retained privately as a rejected lead: its unattributed translated totals differ from the current detailed tables, and no clear build/ruleset provenance was recovered. It certifies no row in this delivery.
+
+## Current ordinary numeric disagreements, 2026-10-09
+
+The original nine disagreements above are retained exactly. These nine additional typed baseline disagreements are unresolved; all Wiki integers and original whole-profile sums/totals are preserved. Neither source is silently selected as correct. Original Korean ordinary tables omit Start/Rally and do not certify totals or other modes.
+
+| Fact ID | Retained Wiki integer | Korean Namu alternative | Evidence |
+| --- | ---: | ---: | --- |
+| mega-wiggler-tree-party:space:baseline_party:blue | 26 | 23 | W_WIGGLER-Q003, NAMU_KR_COUNTS-Q017 |
+| mega-wiggler-tree-party:space:baseline_party:event | 10 | 11 | W_WIGGLER-Q005, NAMU_KR_COUNTS-Q011 |
+| roll-em-raceway:space:baseline_party:blue | 32 | 33 | W_RACEWAY-Q003, NAMU_KR_COUNTS-Q019 |
+| goomba-lagoon:space:baseline_party:lucky | 19 | 18 | W_LAGOON-Q009, NAMU_KR_COUNTS-Q014 |
+| goomba-lagoon:space:baseline_party:unlucky | 4 | 3 | W_LAGOON-Q007, NAMU_KR_COUNTS-Q003 |
+| rainbow-galleria:space:baseline_party:blue | 23 | 20 | W_GALLERIA-Q003, NAMU_KR_COUNTS-Q015 |
+| king-bowser-keep:space:baseline_party:blue | 27 | 26 | W_KEEP-Q003, NAMU_KR_COUNTS-Q018 |
+| king-bowser-keep:space:baseline_party:lucky | 26 | 23 | W_KEEP-Q010, NAMU_KR_COUNTS-Q017 |
+| western-land:space:baseline_party:vs | 4 | 3 | W_WESTERN-Q006, NAMU_KR_COUNTS-Q003 |

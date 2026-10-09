@@ -4,23 +4,23 @@ Research PARTIAL; overall confidence low. Reported facts and exact qualifiers re
 
 ## Space counts
 
-These one-publisher count profiles include the Start space. All sums are independently recomputed, and missing independent totals are listed in CONFLICTS.md. Pro/Homestretch counts are not extrapolated.
+Whole count profiles remain single-source and include Start. The scoped original Korean comparison corroborates some ordinary type cells and records differing cells below, without supplying Start/Rally or verifying complete totals. All original integers and sums are preserved; see CONFLICTS.md and the dated recovery report. Pro/Homestretch, angry and TV profiles are not promoted.
 
 ### baseline_party
 
 | Type | Count | Evidence |
 |---|---:|---|
 | start | 1 | W_GALLERIA-Q002 |
-| blue | 23 | W_GALLERIA-Q003 |
-| red | 6 | W_GALLERIA-Q004 |
-| event | 11 | W_GALLERIA-Q005 |
-| chance_time | 1 | W_GALLERIA-Q002 |
-| item | 6 | W_GALLERIA-Q004 |
-| vs | 3 | W_GALLERIA-Q006 |
+| blue | 23 | W_GALLERIA-Q003, NAMU_KR_COUNTS-Q015 (conflict/low; Namu 20) |
+| red | 6 | W_GALLERIA-Q004, NAMU_KR_COUNTS-Q006 (corroborated/medium) |
+| event | 11 | W_GALLERIA-Q005, NAMU_KR_COUNTS-Q011 (corroborated/medium) |
+| chance_time | 1 | W_GALLERIA-Q002, NAMU_KR_COUNTS-Q001 (corroborated/medium) |
+| item | 6 | W_GALLERIA-Q004, NAMU_KR_COUNTS-Q006 (corroborated/medium) |
+| vs | 3 | W_GALLERIA-Q006, NAMU_KR_COUNTS-Q003 (corroborated/medium) |
 | rally | 0 | W_GALLERIA-Q007 |
-| lucky | 14 | W_GALLERIA-Q008 |
-| unlucky | 2 | W_GALLERIA-Q009 |
-| bowser | 2 | W_GALLERIA-Q009 |
+| lucky | 14 | W_GALLERIA-Q008, NAMU_KR_COUNTS-Q013 (corroborated/medium) |
+| unlucky | 2 | W_GALLERIA-Q009, NAMU_KR_COUNTS-Q002 (corroborated/medium) |
+| bowser | 2 | W_GALLERIA-Q009, NAMU_KR_COUNTS-Q002 (corroborated/medium) |
 | Total, including Start | 69 | W_GALLERIA |
 
 ### tv_tag_team
