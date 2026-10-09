@@ -222,6 +222,9 @@ def run(args):
     preview_arrangement_recovery=module('b03_preview_arrangement_recovery','check-preview-arrangement-recovery.py')
     for result in preview_arrangement_recovery.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Preview arrangement recovery failed'),result.get('detail',''))
+    eleven_source_preflight=module('b03_eleven_source_preflight','check-eleven-source-preflight.py')
+    for result in eleven_source_preflight.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Eleven-source preflight failed'),result.get('detail',''))
     japanese_coin=module('b03_japanese_coin_candidates','check-japanese-coin-candidates.py')
     for result in japanese_coin.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Japanese Coin candidate failed'),result.get('detail',''))
