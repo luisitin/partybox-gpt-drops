@@ -1276,5 +1276,520 @@
       "DOMINOS-TRACKER-STAGE-VERSION",
       "DOMINOS-ONE-STORE-ACCURACY"
     ]
+  },
+  {
+    "id": "CUE-016",
+    "status": "VERIFIED",
+    "claim": "Netflix has an Are you still watching? viewing prompt. Only that question/feature association is qualified; numeric triggering, device timing, disabling instructions and exact punctuation are not claimed.",
+    "promptIds": [
+      "Q0003"
+    ],
+    "confidence": "medium",
+    "confidenceReason": "Two distinct corporate/editorial authors were personally read in both complete original captures. Only the stated association is qualified; dated UI, device, household, marketing, regional and service limits remain explicit.",
+    "sources": [
+      {
+        "sourceId": "netflix-still-primary",
+        "url": "https://help.netflix.com/en/node/114059",
+        "author": "Netflix Help Center corporate authorship",
+        "independentAuthorGroup": "Netflix",
+        "role": "primary",
+        "quote": "Netflix asks, \"Are you still watching ...?\"",
+        "quoteWords": 7,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 39327,
+            "rawSha256": "da83f93c7298cb749fce12a4b29c29dbd5dc02c3f1c6fc65b764bce69e9c1566",
+            "visibleCharacters": 1549,
+            "visibleSha256": "8ef9c481baea51502df021b8f7872d9e25641bd58f3092321f973c6c34d11d77",
+            "literalQuoteOffset": 173,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:22.632122+00:00",
+            "closedUTC": "2026-10-09T15:02:23.428623+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 39327,
+            "rawSha256": "18f77ad50fd992b95d3552ee649ae91cfd3f5859169c6400578db9ecfda782c9",
+            "visibleCharacters": 1549,
+            "visibleSha256": "8ef9c481baea51502df021b8f7872d9e25641bd58f3092321f973c6c34d11d77",
+            "literalQuoteOffset": 173,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:25.771235+00:00",
+            "closedUTC": "2026-10-09T15:02:26.339356+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "netflix-still-howto",
+        "url": "https://www.howtogeek.com/685919/why-netflix-asks-are-you-still-watching-and-how-to-stop-it/",
+        "author": "Vann Vicente, How-To Geek original explanatory article, 2020",
+        "independentAuthorGroup": "How-To Geek / Vann Vicente",
+        "role": "independent",
+        "quote": "You will then be asked, \"Are you still watching?\"",
+        "quoteWords": 9,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 261912,
+            "rawSha256": "6c54714494c929bfc804acb4c810812e82428f61a53f3d0bd28b7e364889ec42",
+            "visibleCharacters": 8312,
+            "visibleSha256": "f57855070ca30ba7bd3abdc4a2200eb14df9bcf93e9fccd585312c8289be27c2",
+            "literalQuoteOffset": 2256,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:22.633992+00:00",
+            "closedUTC": "2026-10-09T15:02:23.544997+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 261608,
+            "rawSha256": "bd773d0c17e7d3b4d89e525c9e75c745e2c1175fed3a9297938a6e5d459f44f5",
+            "visibleCharacters": 8232,
+            "visibleSha256": "0eb6675fe983f03af23790da0f9fdc3fc357049329b208b1909b93484d04f0e6",
+            "literalQuoteOffset": 2256,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:25.772077+00:00",
+            "closedUTC": "2026-10-09T15:02:26.195780+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": [
+      "NETFLIX-STILL-WATCHING-TRIGGER-VERSION"
+    ]
+  },
+  {
+    "id": "CUE-017",
+    "status": "VERIFIED",
+    "claim": "Netflix has personalized user profiles. This does not assert a particular number of profiles, a universal account-sharing entitlement, extra-member terms or permission for a ghost to rent an account.",
+    "promptIds": [
+      "M1003"
+    ],
+    "confidence": "high",
+    "confidenceReason": "Two distinct corporate/editorial authors were personally read in both complete original captures. Only the stated association is qualified; dated UI, device, household, marketing, regional and service limits remain explicit.",
+    "sources": [
+      {
+        "sourceId": "netflix-profile-primary",
+        "url": "https://help.netflix.com/en/node/10421",
+        "author": "Netflix Help Center corporate authorship",
+        "independentAuthorGroup": "Netflix",
+        "role": "primary",
+        "quote": "People who live together in a single household can have their own personalized Netflix experience.",
+        "quoteWords": 15,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 126817,
+            "rawSha256": "55818a080c97921cd47986da1a3727021a33fdda46681d936190b5fda0b23e28",
+            "visibleCharacters": 6306,
+            "visibleSha256": "981db20b0c57b5ff85055e85af3c9e498e15543936f88e8102bb266994cd9ec0",
+            "literalQuoteOffset": 225,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:22.634864+00:00",
+            "closedUTC": "2026-10-09T15:02:23.607825+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 126817,
+            "rawSha256": "5327c233ed217635b4fc92f720f6cb79c2391e6ead48ede912b382dfb2df3412",
+            "visibleCharacters": 6306,
+            "visibleSha256": "981db20b0c57b5ff85055e85af3c9e498e15543936f88e8102bb266994cd9ec0",
+            "literalQuoteOffset": 225,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:25.772829+00:00",
+            "closedUTC": "2026-10-09T15:02:26.485444+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "netflix-profile-howto",
+        "url": "https://www.howtogeek.com/295978/how-to-configure-netflix-profiles/",
+        "author": "Jason Fitzpatrick, How-To Geek original profile tutorial, 2017",
+        "independentAuthorGroup": "How-To Geek / Jason Fitzpatrick",
+        "role": "independent",
+        "quote": "Here's how to improve recommendations for everyone with user profiles.",
+        "quoteWords": 10,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 284863,
+            "rawSha256": "2a0604d53eddf82729c0e0969d31d25d0f04f0afff76eeb20794bfb583329bc4",
+            "visibleCharacters": 10640,
+            "visibleSha256": "3dc659a4b378a4eecb3b2172f8f18cc220f25411228591d976d70be136de9761",
+            "literalQuoteOffset": 3490,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:22.640443+00:00",
+            "closedUTC": "2026-10-09T15:02:23.530967+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 284928,
+            "rawSha256": "dec875711aaf9ae672d1b7c3bdfc7aa5f23d1926a39eabd280ec6039aed20856",
+            "visibleCharacters": 10581,
+            "visibleSha256": "abe5b873df025d1e02632a7eeb8ac7709c51b0b0ea3c976a00e3f3d74068dbd2",
+            "literalQuoteOffset": 3490,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:25.773943+00:00",
+            "closedUTC": "2026-10-09T15:02:26.123816+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": [
+      "NETFLIX-PROFILE-HOUSEHOLD-SCOPE"
+    ]
+  },
+  {
+    "id": "CUE-018",
+    "status": "VERIFIED",
+    "claim": "Netflix has a Skip Intro button associated with skipping opening credits. The 2017 original report was an initial test; the 2022 firsthand product retrospective establishes the later feature. Availability on every title/platform, precise dates, usage counts and skipping real wedding vows are not claimed.",
+    "promptIds": [
+      "Q1003"
+    ],
+    "confidence": "high",
+    "confidenceReason": "Two distinct corporate/editorial authors were personally read in both complete original captures. Only the stated association is qualified; dated UI, device, household, marketing, regional and service limits remain explicit.",
+    "sources": [
+      {
+        "sourceId": "netflix-skip-primary-https",
+        "url": "https://about.netflix.com/en/news/looking-back-on-the-origin-of-skip-intro-five-years-later",
+        "author": "Cameron Johnson, Netflix Director of Product Innovation, original firsthand product account, 2022",
+        "independentAuthorGroup": "Netflix",
+        "role": "primary",
+        "quote": "Nowadays, it's hard to imagine streaming your favorite series without using the 'Skip Intro' button.",
+        "quoteWords": 15,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 73861,
+            "rawSha256": "d1fb1259b63c7c81cb86e499c31e86ed2a6b799de480159b3353adefb712d257",
+            "visibleCharacters": 3483,
+            "visibleSha256": "f8fea8d120ae4e83eb3e9c7241fc8fa87c73c33cb7b471d6801ef995c0197f93",
+            "literalQuoteOffset": 267,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:04:36.092927+00:00",
+            "closedUTC": "2026-10-09T15:04:36.698290+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 73861,
+            "rawSha256": "d1fb1259b63c7c81cb86e499c31e86ed2a6b799de480159b3353adefb712d257",
+            "visibleCharacters": 3483,
+            "visibleSha256": "f8fea8d120ae4e83eb3e9c7241fc8fa87c73c33cb7b471d6801ef995c0197f93",
+            "literalQuoteOffset": 267,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:04:36.699377+00:00",
+            "closedUTC": "2026-10-09T15:04:37.306400+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "netflix-skip-verge",
+        "url": "https://www.theverge.com/2017/3/17/14959650/netflix-skip-intro-button",
+        "author": "Casey Newton, The Verge original report with Netflix spokesperson comment, 2017",
+        "independentAuthorGroup": "The Verge / Casey Newton",
+        "role": "independent",
+        "quote": "Netflix is testing a button that lets you skip the opening credits on some television shows, the company said.",
+        "quoteWords": 19,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 403269,
+            "rawSha256": "239ffd17f8bc80c5ef27794d74286013ed1701b96fa2b11cf8aad39c1f12623f",
+            "visibleCharacters": 8618,
+            "visibleSha256": "eaf18b19fdb3808001d76b3c924efef0e0fa8bf820dca559a60cc3f90357f0cf",
+            "literalQuoteOffset": 2644,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:23.428708+00:00",
+            "closedUTC": "2026-10-09T15:02:24.050161+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 403269,
+            "rawSha256": "239ffd17f8bc80c5ef27794d74286013ed1701b96fa2b11cf8aad39c1f12623f",
+            "visibleCharacters": 8618,
+            "visibleSha256": "eaf18b19fdb3808001d76b3c924efef0e0fa8bf820dca559a60cc3f90357f0cf",
+            "literalQuoteOffset": 2644,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:26.123936+00:00",
+            "closedUTC": "2026-10-09T15:02:26.277439+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": [
+      "NETFLIX-SKIP-INTRO-HISTORICAL-ROLLOUT",
+      "NETFLIX-LEGACY-HTTP-REDIRECT"
+    ]
+  },
+  {
+    "id": "CUE-019",
+    "status": "VERIFIED",
+    "claim": "Burger King has crown imagery in its branding/marketing, documented by a dated original mascot history and current corporate campaign. This establishes the crown association, not universal free paper-crown availability, a currently active King mascot or any legal/royal authority.",
+    "promptIds": [
+      "M0031",
+      "M0602",
+      "Q0602"
+    ],
+    "confidence": "medium",
+    "confidenceReason": "Two distinct corporate/editorial authors were personally read in both complete original captures. Only the stated association is qualified; dated UI, device, household, marketing, regional and service limits remain explicit.",
+    "sources": [
+      {
+        "sourceId": "bk-crown-primary",
+        "url": "https://news.bk.com/blog-posts/burger-king-crowns-its-guests-king-in-new-ad-campaign",
+        "author": "Burger King corporate newsroom, original 2026 campaign announcement",
+        "independentAuthorGroup": "Burger King",
+        "role": "primary",
+        "quote": "places the crown on its Guests",
+        "quoteWords": 6,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 31821,
+            "rawSha256": "c37f56c824730dade6c24a0301f49f1c70f8f92cf3b3d72725f7773b69df1931",
+            "visibleCharacters": 3698,
+            "visibleSha256": "5a7965893961d41e9014b496feca9e58c5801015f8291a454fa8a11fe399f88a",
+            "literalQuoteOffset": 738,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:23.531129+00:00",
+            "closedUTC": "2026-10-09T15:02:23.941695+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 31821,
+            "rawSha256": "c37f56c824730dade6c24a0301f49f1c70f8f92cf3b3d72725f7773b69df1931",
+            "visibleCharacters": 3698,
+            "visibleSha256": "5a7965893961d41e9014b496feca9e58c5801015f8291a454fa8a11fe399f88a",
+            "literalQuoteOffset": 738,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:26.195860+00:00",
+            "closedUTC": "2026-10-09T15:02:26.431580+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "bk-crown-tasting",
+        "url": "https://www.tastingtable.com/2239841/burger-king-facts-everybody-should-know/",
+        "author": "Catherine Brookes, Tasting Table original historical feature, 2026",
+        "independentAuthorGroup": "Tasting Table / Catherine Brookes",
+        "role": "independent",
+        "quote": "By 2004, the character was portrayed by a human actor in a costume featuring a giant plastic head and a golden crown.",
+        "quoteWords": 22,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 86307,
+            "rawSha256": "0aa303b9433e4248c8f561b32ed1732afa9d78108fe3aa556ae220033061a05d",
+            "visibleCharacters": 14367,
+            "visibleSha256": "f9648a73967a0028dd00cfe23387a2a183a8ad997dad1384532915b949055eb8",
+            "literalQuoteOffset": 13295,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:23.545123+00:00",
+            "closedUTC": "2026-10-09T15:02:24.400603+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 86307,
+            "rawSha256": "0aa303b9433e4248c8f561b32ed1732afa9d78108fe3aa556ae220033061a05d",
+            "visibleCharacters": 14367,
+            "visibleSha256": "f9648a73967a0028dd00cfe23387a2a183a8ad997dad1384532915b949055eb8",
+            "literalQuoteOffset": 13295,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:26.277579+00:00",
+            "closedUTC": "2026-10-09T15:02:26.911392+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": [
+      "BURGER-KING-CROWN-ASSOCIATION-SCOPE"
+    ]
+  },
+  {
+    "id": "CUE-020",
+    "status": "VERIFIED",
+    "claim": "Wendy's has a social-media roasting/insult association, supported by its dated original Roast Day account and an independently reported original interview. This does not assert a current platform policy, 2026 event date or an actual divorce/obituary/condolence writing service.",
+    "promptIds": [
+      "M0040",
+      "M0603",
+      "Q0040"
+    ],
+    "confidence": "high",
+    "confidenceReason": "Two distinct corporate/editorial authors were personally read in both complete original captures. Only the stated association is qualified; dated UI, device, household, marketing, regional and service limits remain explicit.",
+    "sources": [
+      {
+        "sourceId": "wendy-roast-primary",
+        "url": "https://www.wendys.com/blog/wendys-spiciest-roasts-from-roast-day-2021",
+        "author": "Wendy's corporate blog, original dated 2021 Roast Day account",
+        "independentAuthorGroup": "Wendy's",
+        "role": "primary",
+        "quote": "Every year we invite our fans to get roasted by @Wendys",
+        "quoteWords": 11,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 63467,
+            "rawSha256": "d0d5942d7c528b189e81d168278c679ba66f8f4b70908c25dc6c3feb64587b17",
+            "visibleCharacters": 2764,
+            "visibleSha256": "cb5eb76931d910aa604de8a1d86ecbe52742912a9843f0e20e66cdd4771f05e6",
+            "literalQuoteOffset": 709,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:23.608042+00:00",
+            "closedUTC": "2026-10-09T15:02:24.000768+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 63467,
+            "rawSha256": "d0d5942d7c528b189e81d168278c679ba66f8f4b70908c25dc6c3feb64587b17",
+            "visibleCharacters": 2764,
+            "visibleSha256": "cb5eb76931d910aa604de8a1d86ecbe52742912a9843f0e20e66cdd4771f05e6",
+            "literalQuoteOffset": 709,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:26.339639+00:00",
+            "closedUTC": "2026-10-09T15:02:26.636945+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "wendy-roast-dailydot",
+        "url": "https://dailydot.com/wendys-twitter-burn-interview",
+        "author": "David Covucci, The Daily Dot original interview with Amy Brown and Brandon Rhoten, 2017, retained 2018 editorial update",
+        "independentAuthorGroup": "The Daily Dot / David Covucci",
+        "role": "independent",
+        "quote": "We'll roast you, but with a wink. It's all in good fun!",
+        "quoteWords": 12,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 283957,
+            "rawSha256": "d1195ac5fbdd5a86a77ef12fee142a8932214d0a2ba91ef6b08cc62b98337b24",
+            "visibleCharacters": 8586,
+            "visibleSha256": "e267d1431183eaab6a1bd0819363ae769d5d5b9553d231862991ee966f37c2ba",
+            "literalQuoteOffset": 3830,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:23.941745+00:00",
+            "closedUTC": "2026-10-09T15:02:25.769418+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 283957,
+            "rawSha256": "d1195ac5fbdd5a86a77ef12fee142a8932214d0a2ba91ef6b08cc62b98337b24",
+            "visibleCharacters": 8586,
+            "visibleSha256": "e267d1431183eaab6a1bd0819363ae769d5d5b9553d231862991ee966f37c2ba",
+            "literalQuoteOffset": 3830,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:26.431611+00:00",
+            "closedUTC": "2026-10-09T15:02:26.574924+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": [
+      "WENDYS-ROAST-DATED-PLATFORM-SCOPE"
+    ]
+  },
+  {
+    "id": "CUE-021",
+    "status": "VERIFIED",
+    "claim": "Wendy's has a burger-food association. Its current corporate food page and the independent original feature's comparison of burger chains support this association only; rankings, freshness in every region, patties/amounts and any obituary service are not claimed.",
+    "promptIds": [
+      "M0603"
+    ],
+    "confidence": "high",
+    "confidenceReason": "Two distinct corporate/editorial authors were personally read in both complete original captures. Only the stated association is qualified; dated UI, device, household, marketing, regional and service limits remain explicit.",
+    "sources": [
+      {
+        "sourceId": "wendy-burger-primary",
+        "url": "https://www.wendys.com/fresh-beef",
+        "author": "Wendy's original corporate burger-product page",
+        "independentAuthorGroup": "Wendy's",
+        "role": "primary",
+        "quote": "Our Burgers Are Crave Worthy",
+        "quoteWords": 5,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 96775,
+            "rawSha256": "5a54a81df20c5b6b8ba008bad3c548785b93de1e161dfe9cd58362e98b1ed2f2",
+            "visibleCharacters": 4422,
+            "visibleSha256": "061905bdea7c3940d10efadfbae2ea18503a6fd42f287b96be8523ade74fd387",
+            "literalQuoteOffset": 384,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:08:03.307798+00:00",
+            "closedUTC": "2026-10-09T15:08:03.863049+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 96775,
+            "rawSha256": "5a54a81df20c5b6b8ba008bad3c548785b93de1e161dfe9cd58362e98b1ed2f2",
+            "visibleCharacters": 4422,
+            "visibleSha256": "061905bdea7c3940d10efadfbae2ea18503a6fd42f287b96be8523ade74fd387",
+            "literalQuoteOffset": 384,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:08:03.864100+00:00",
+            "closedUTC": "2026-10-09T15:08:04.260717+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "bk-crown-tasting",
+        "url": "https://www.tastingtable.com/2239841/burger-king-facts-everybody-should-know/",
+        "author": "Catherine Brookes, Tasting Table original historical feature, 2026",
+        "independentAuthorGroup": "Tasting Table / Catherine Brookes",
+        "role": "independent",
+        "quote": "It also recently overtook Wendy's to become the second-largest fast-food burger chain in America, behind only McDonald's.",
+        "quoteWords": 17,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 86307,
+            "rawSha256": "0aa303b9433e4248c8f561b32ed1732afa9d78108fe3aa556ae220033061a05d",
+            "visibleCharacters": 14367,
+            "visibleSha256": "f9648a73967a0028dd00cfe23387a2a183a8ad997dad1384532915b949055eb8",
+            "literalQuoteOffset": 12706,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:23.545123+00:00",
+            "closedUTC": "2026-10-09T15:02:24.400603+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 86307,
+            "rawSha256": "0aa303b9433e4248c8f561b32ed1732afa9d78108fe3aa556ae220033061a05d",
+            "visibleCharacters": 14367,
+            "visibleSha256": "f9648a73967a0028dd00cfe23387a2a183a8ad997dad1384532915b949055eb8",
+            "literalQuoteOffset": 12706,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T15:02:26.277579+00:00",
+            "closedUTC": "2026-10-09T15:02:26.911392+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": [
+      "WENDYS-BURGER-RANKING-REGIONAL-SCOPE"
+    ]
   }
 ]
