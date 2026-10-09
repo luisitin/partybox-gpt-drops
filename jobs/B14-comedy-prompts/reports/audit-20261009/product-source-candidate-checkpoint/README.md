@@ -1,4 +1,4 @@
-# Current adopted scope and unadopted source candidate
+# UNADOPTED product-source candidate checkpoint
 
 Current adopted qualification remains21 facts and30 complete whole rows;1170 selected prompts remain UNVERIFIED. This is a material original-source discovery/authoring checkpoint with28 new genuine complete secure source opens and an immutable author proposal dated2026-10-09T16:12:09.355415Z. The UNADOPTED candidate contains29 total narrow facts,42 classified whole rows and1158 unresolved rows. Candidate quantities are not current pack qualification; a separate independent peer is still required.
 

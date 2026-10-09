@@ -102,3 +102,8 @@ Enterprise U.S. car rental is associated with a security deposit. The cult leade
 
 ## Exact13-row cultural-cue qualification
 research-second-pass.json contains13 literal-text human cue/creative classifications, bound to9facts and every actual full capture/secondopening/hash/quote. Onlythese13 rows nowqualify; remaining1187 are UNVERIFIED. Creative details for these specific rows are explicitly described and do not exempt any real cultural association elsewhere. GEICOcar-insurance/Energizerdrumming/endurance/EnterpriseU.S.deposit cues are separately sourced. No policyamount,globalrule,debutyear,battery efficacy,realghost/mascotdeath orservice promise is asserted.
+
+
+## UNADOPTED product-source candidate
+
+Current accepted source scope is21 facts/30 whole rows,1170 UNKNOWN. The distinct proposed CUE022-029/source metadata and exact quotations are in reports/audit-20261009/product-source-candidate-checkpoint/UNADOPTED-verified-initial-cues.json. They are an authored candidate pending separate peer, never a new accepted source register. Full captured copyrighted article bodies remain private and intact. No shared Namu/Cel words were added or reset.

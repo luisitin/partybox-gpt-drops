@@ -1,0 +1,37 @@
+{
+  "actualClosedUTC": "2026-10-09T16:17:05.128427+00:00",
+  "cases": [
+    {
+      "scope": "unadopted candidate metadata only",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/tmp/gpt-drops-B14-audit-20261009/jobs/B14-comedy-prompts/scripts/check_research.py",
+        "--root",
+        "/dev/shm/gpt-drops-B14-product-fresh-20261009-1606/candidate-metadata-only-fixture",
+        "--partial"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"mode\": \"partial-metadata\",\n  \"schemaValidatedFacts\": 29,\n  \"reviewRows\": 1200,\n  \"fullyQualifiedRows\": 42,\n  \"unverifiedRows\": 1158,\n  \"ready\": false,\n  \"scope\": \"Metadata integrity only; original full-source acceptance receipts qualify individual facts. Partial mode never grants readiness.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "scope": "unadopted candidate metadata only",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/tmp/gpt-drops-B14-audit-20261009/jobs/B14-comedy-prompts/scripts/check_research.py",
+        "--root",
+        "/dev/shm/gpt-drops-B14-product-fresh-20261009-1606/candidate-metadata-only-fixture"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/gpt-drops-B14-audit-20261009/jobs/B14-comedy-prompts/scripts/check_research.py\", line 76, in <module>\n    print(json.dumps(check(args.root, args.partial), indent=2))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/gpt-drops-B14-audit-20261009/jobs/B14-comedy-prompts/scripts/check_research.py\", line 68, in check\n    assert not incomplete, f\"UNVERIFIED: {len(incomplete)} selected prompts still need complete cultural-cue review\"\n           ^^^^^^^^^^^^^^\nAssertionError: UNVERIFIED: 1158 selected prompts still need complete cultural-cue review\n"
+    }
+  ],
+  "originalCheckScriptSha256": "06d08a580ece73f8ad047317eac47972170d511d863a97b93ed7e984828ba945",
+  "allPrivateFixtureBytesPreserved": true,
+  "allOwnedChildrenNaturallyClosed": true,
+  "allPrivateTemporaryFixturesRemoved": true,
+  "productionResearchInputsUnchanged": true,
+  "proposedFactsOrWholeRowsAdopted": false,
+  "wholePackReady": false
+}
