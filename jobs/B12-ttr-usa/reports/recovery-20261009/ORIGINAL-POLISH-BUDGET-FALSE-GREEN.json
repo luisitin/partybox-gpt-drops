@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "source": "a8be0e08392850178f50713361054dc86436e5eb",
+  "actualCLIExitStatus": 0,
+  "actualOutput": [
+    {
+      "check": "compare-small-random",
+      "cases": 300,
+      "valueMismatches": 0
+    },
+    {
+      "check": "compare-budget-feasible",
+      "setsCompared": 1000,
+      "valueMismatches": 1000,
+      "b12TotalMs": 161,
+      "otherTotalMs": 1,
+      "b12WorstMs": 1.2,
+      "otherWorstMs": 0.1,
+      "otherSource": "/tmp/gpt-drops-B12-audit-20261009/.work/20261009-audit/original-budget-owner.mjs"
+    }
+  ],
+  "independentOwnerPassedAll300SmallCasesBefore1000ActualBudgetMismatches": true,
+  "timingClaim": false
+}

@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "original": {
+    "passed": true,
+    "assertions": 22292,
+    "randomGraphChecks": [
+      {
+        "seed": 1,
+        "graphs": 2000,
+        "maxEdges": 12
+      },
+      {
+        "seed": 2,
+        "graphs": 2000,
+        "maxEdges": 12
+      },
+      {
+        "seed": 3,
+        "graphs": 2000,
+        "maxEdges": 12
+      }
+    ],
+    "scoringChecks": [
+      {
+        "seed": 1,
+        "games": 1000,
+        "legalClaims": 1000
+      },
+      {
+        "seed": 2,
+        "games": 1000,
+        "legalClaims": 1000
+      },
+      {
+        "seed": 3,
+        "games": 1000,
+        "legalClaims": 1000
+      }
+    ],
+    "provenance": "Original B12 prompt/root README and public mathematical contract only; no primary source/tests/data/results viewed"
+  },
+  "amended": {
+    "passed": true,
+    "assertions": 22292,
+    "randomGraphChecks": [
+      {
+        "seed": 1,
+        "graphs": 2000,
+        "maxEdges": 12
+      },
+      {
+        "seed": 2,
+        "graphs": 2000,
+        "maxEdges": 12
+      },
+      {
+        "seed": 3,
+        "graphs": 2000,
+        "maxEdges": 12
+      }
+    ],
+    "scoringChecks": [
+      {
+        "seed": 1,
+        "games": 1000,
+        "legalClaims": 1000
+      },
+      {
+        "seed": 2,
+        "games": 1000,
+        "legalClaims": 1000
+      },
+      {
+        "seed": 3,
+        "games": 1000,
+        "legalClaims": 1000
+      }
+    ],
+    "provenance": "Original B12 prompt/root README and public mathematical contract only; no primary source/tests/data/results viewed"
+  },
+  "sparse": {
+    "passed": true,
+    "originalLongestResult": 0,
+    "amendedLongestError": "RangeError",
+    "amendedTicketError": "RangeError",
+    "input": {
+      "routes": [
+        {
+          "id": "r",
+          "a": "A",
+          "b": "B",
+          "length": 1,
+          "color": "gray"
+        }
+      ],
+      "ownedIds": "new Array(1) (one sparse hole, not an actual undefined-filled array)",
+      "ticket": {
+        "id": "t",
+        "a": "A",
+        "b": "B",
+        "points": 1
+      }
+    },
+    "publicRequirement": "Every owned ID must be a known distinct route ID; malformed ownedIds throws RangeError"
+  },
+  "note": "Original archive files remain unchanged; compilation and report writes occur in test-output/oracle-replay."
+}

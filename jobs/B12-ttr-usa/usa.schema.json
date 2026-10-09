@@ -1,0 +1,435 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/B12/usa.schema.json",
+  "title": "ClassicUSA plus separateUSA1910 ticket catalog",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "edition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cities": {
+      "type": "array",
+      "minItems": 36,
+      "maxItems": 36,
+      "items": {
+        "$ref": "#/$defs/city"
+      }
+    },
+    "routes": {
+      "type": "array",
+      "minItems": 100,
+      "maxItems": 100,
+      "items": {
+        "$ref": "#/$defs/route"
+      }
+    },
+    "baseTickets": {
+      "type": "array",
+      "minItems": 30,
+      "maxItems": 30,
+      "items": {
+        "$ref": "#/$defs/baseTicket"
+      }
+    },
+    "usa1910Tickets": {
+      "type": "array",
+      "minItems": 69,
+      "maxItems": 69,
+      "items": {
+        "$ref": "#/$defs/expansionTicket"
+      }
+    },
+    "cardCounts": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "$ref": "#/$defs/cardCount"
+      }
+    },
+    "routePoints": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "$ref": "#/$defs/routePoints"
+      }
+    },
+    "parameters": {
+      "type": "array",
+      "minItems": 14,
+      "maxItems": 14,
+      "items": {
+        "$ref": "#/$defs/parameter"
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "edition",
+    "cities",
+    "routes",
+    "baseTickets",
+    "usa1910Tickets",
+    "cardCounts",
+    "routePoints",
+    "parameters"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "city": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^C[0-9]{2}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "confidence",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "route": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^R[0-9]{3}$"
+        },
+        "a": {
+          "type": "string",
+          "minLength": 1
+        },
+        "b": {
+          "type": "string",
+          "minLength": 1
+        },
+        "length": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "color": {
+          "enum": [
+            "pink",
+            "white",
+            "blue",
+            "yellow",
+            "orange",
+            "black",
+            "red",
+            "green",
+            "gray"
+          ]
+        },
+        "parallelGroup": {
+          "type": "string",
+          "pattern": "^P[0-9]+$"
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "id",
+        "a",
+        "b",
+        "length",
+        "color",
+        "confidence",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "baseTicket": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[BU][0-9]{2}$"
+        },
+        "a": {
+          "type": "string",
+          "minLength": 1
+        },
+        "b": {
+          "type": "string",
+          "minLength": 1
+        },
+        "points": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "confidence",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "expansionTicket": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[BU][0-9]{2}$"
+        },
+        "a": {
+          "type": "string",
+          "minLength": 1
+        },
+        "b": {
+          "type": "string",
+          "minLength": 1
+        },
+        "points": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "origin": {
+          "enum": [
+            "baseReprint",
+            "new1910",
+            "mysteryTrain"
+          ]
+        },
+        "revisedFrom": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "id",
+        "a",
+        "b",
+        "points",
+        "origin",
+        "confidence",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "cardCount": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "enum": [
+            "pink",
+            "white",
+            "blue",
+            "yellow",
+            "orange",
+            "black",
+            "red",
+            "green",
+            "locomotive"
+          ]
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 110
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "color",
+        "count",
+        "confidence",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "routePoints": {
+      "type": "object",
+      "properties": {
+        "length": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "points": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 15
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "length",
+        "points",
+        "confidence",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "parameter": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "enum": [
+            "playersMinimum",
+            "playersMaximum",
+            "trainsPerPlayer",
+            "trainCardsTotal",
+            "baseTicketCount",
+            "new1910TicketCount",
+            "mysteryTicketCount",
+            "revisedBaseTicketCount",
+            "megaTicketCount",
+            "cityCount",
+            "adjacencyGroupCount",
+            "physicalRouteCount",
+            "routeLengthTotal",
+            "longestTrailBonus"
+          ]
+        },
+        "value": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "name",
+        "value",
+        "confidence",
+        "evidence"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
