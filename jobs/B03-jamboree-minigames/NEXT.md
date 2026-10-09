@@ -1,3 +1,17 @@
+# Current four original-review action handoff
+
+Read root README/PROMPTS B03 original instructions. Own only jobs/B03-jamboree-minigames, canonical job/B03-jamboree-minigames/originalPR20draft/open. No main/CLAIMS, foreign job, force push, merge or new PR.
+
+Current material:307/1320 narrow facts supported,1013open,zero whole;39/93gameplay;148sources1948clips3902recorded quote recoveries across151 current/historical records per pass. Reports/tv-action-recovery.json validates four literal common actions and exact34fd303 baseline restoration:132rows147sourcesall1938oldclassifications/fullA+B. Historical TVcandidate stays UNADOPTED at its own303 baseline and receives only the validated restored view. BestBuy94/200,ConsoleCreatures23/200,oldguide200,tips73,Namu195; no Namu expansion.
+
+Current full local protocol naturally CLOSED03:21:28.519384 UTC:87/37123content;88/37225/all102integrity;strictdeliberateEXIT1 NOT_MET307/zero. First finish exact staged immutable bytes and normal canonical push by hard03:25:03.345178 UTC, then entire current genuine hosted native log and official ZIP safe paths/CRC/EOF/full JSON/native reports/all immutable local+Git manifest hashes. Parent34fd official acceptance is historical only; rewrite exact new source/results in originalPR20 and read back actual body/draft/open. Keep actual times honest.
+
+The four product summaries have complete raw original-author and full Wiki narratives from the actual34-request02:36 native packet (32full200/TLS,2Substacknoresponse). Full private bodies and complete paragraphs are .work/remaining-research-0038/tv-author-captures-0236. Source adoption makes zero freshHTTP requests. Newchecker2529comparisons+10malformed fixtures; every inherited control remains active. Full current protocol closure/result must be recorded before delivery notes. Early03:20:03 target may be missed during finite original-source restoration; hard03:25:03 must use actual push receipt.
+
+Then research93remaining summaries,28categories and detailed mechanics from unused independent authored publishers. FGStips127remainingwords,BB106remaining,CC177remaining only within cumulative canonical-page cross-job budget; available54-worktreeURL audit is bounded, not unseenremote proof. Existing Namu195 shares the same top-level article acrossB03/B05/B01, so coordinate aggregate budgets and never expand/delete old clips. Numerical132 but exact second-wiki English identities/spelling gate remains unmet. No complete-row/Ready/strict KEEP GOING claim. Native elapsed experiments require fresh root quiet grant; all finite processes naturally close before HOLD.
+
+## Preserved historical handoff
+
 # Current unadopted review-candidate handoff
 
 Original canonical branch job/B03-jamboree-minigames, originalPR20draft/open. Current303/1017/zero;35/97gameplay. All product/source/reopen values remain exactly accepted38ec475. New four UNADOPTED summaries are in reports/tv-author-candidate.json; checker452comparisons+8malformed controls. Actual32successful source bodies plus2no-response Substack failures are preserved in .work/remaining-research-0038/tv-author-captures-0236 of the original /workspace worktree. Raw cloud37-result ledger is there too. Private RAM clone is /dev/shm/partybox-B03-tv-research-20261009-0242; preserve unique files if moving it.
@@ -91,3 +105,6 @@ Candidate logger repair: exact82faed hosted run37872314164 succeeded with both82
 Actual candidate logger-fix full controller naturally CLOSED 2026-10-09T02:01:31.804169+00:00: content81/31,430 EXIT0; integrity82/31,523/all93hashes EXIT0; strictsame82/31,523 deliberateEXIT1/NOT_MET299,zero complete. All native candidate suites now emit their usual PASS lines. Only these delivery notes change afterward; every regenerated manifest entry and staged Git byte is checked before the normal canonical push.
 
 Actual complete current candidate controller naturally CLOSED2026-10-09 02:54:02.847470 UTC:content85suites/34,540cases EXIT0;integrity86/34,639/all99hashes EXIT0;deliberate strictsame86/34,639 EXIT1 NOT_MET303/zero. Only these delivery notes change afterward; every regenerated manifest entry and immutable staged Git byte is checked before normal canonical push.
+
+
+Actual current full controller naturally CLOSED2026-10-09 03:21:28.519384 UTC:content87suites/37123cases EXIT0;integrity88suites/37225cases/all102manifestfiles EXIT0;deliberate strictsame88/37225/all102 EXIT1 NOT_MET307/zero. New original-review proof2529comparisons+ten malformed fixtures and all inherited controls passed. Early03:20:03.345178 target was missed while completing literal source restoration and full checks after coordinated quiet; actual hard03:25:03.345178 remains binding. Only these delivery notes change afterward; every regenerated manifest entry and immutable staged Git byte is verified before the normal canonical push. Actual push/hosted official acceptance is observed in originaldraftPR20.

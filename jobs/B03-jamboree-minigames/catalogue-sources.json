@@ -4573,12 +4573,36 @@
           "text": "you punch the air to hit coin blocks",
           "locator": "Game description: Hitting It Rich",
           "scope": "Fact context must be read at the locator; short clip is not an exhaustive rule."
+        },
+        {
+          "id": "BB_TV_common_MG113_1",
+          "text": "Shell Hockey feels like arcade air hockey you’d find in most movie theatre arcades.",
+          "locator": "Full original Shell Hockey review paragraph; Jon Scarr; two actual full native responses02:36.",
+          "scope": "Only the literal narrowed common actions; not precise parameters, mode/player counts or copied game-instruction cells. Complete authored paragraph was compared with full primary narrative."
+        },
+        {
+          "id": "BB_TV_common_MG113_2",
+          "text": "It was tough to stop playing once I got competitive and figured out how to aim.",
+          "locator": "Full original Shell Hockey review paragraph; Jon Scarr; two actual full native responses02:36.",
+          "scope": "Only the literal narrowed common actions; not precise parameters, mode/player counts or copied game-instruction cells. Complete authored paragraph was compared with full primary narrative."
+        },
+        {
+          "id": "BB_TV_common_MG115_1",
+          "text": "You drag and drop plush blocks, rotating and pivoting them to build the highest tower.",
+          "locator": "Full original Stuffie Stacker review paragraph; Jon Scarr; two actual full native responses02:36.",
+          "scope": "Only the literal narrowed common actions; not precise parameters, mode/player counts or copied game-instruction cells. Complete authored paragraph was compared with full primary narrative."
+        },
+        {
+          "id": "BB_TV_common_MG117_1",
+          "text": "Domino Effect has you and a partner lining up pieces with the mouse to topple dominoes toward a goal.",
+          "locator": "Full original Domino Effect review paragraph; Jon Scarr; two actual full native responses02:36.",
+          "scope": "Only the literal narrowed common actions; not precise parameters, mode/player counts or copied game-instruction cells. Complete authored paragraph was compared with full primary narrative."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "Exa web-fetch fresh request; timestamp is completion observation",
+          "retrieval": "Actual complete native HTTPS/TLS02:36 responses retained and reread; zero new HTTP requests for adoption.",
           "retrievalTimestampUTC": null,
           "requestOrder": 1,
           "textSha256": "05f185f527db60b9a178a4d0dae633ec0346d442740b5b8685dccd9c592d66e7",
@@ -4588,12 +4612,22 @@
             "BB_TVQ002",
             "BB_TVQ003",
             "BB_TVQ004",
-            "BB_TVQ005"
-          ]
+            "BB_TVQ005",
+            "BB_TV_common_MG113_1",
+            "BB_TV_common_MG113_2",
+            "BB_TV_common_MG115_1",
+            "BB_TV_common_MG117_1"
+          ],
+          "observedAtUTC": "2026-10-09T02:36:15.907297+00:00",
+          "bodySha256": "c11ec446949bf626f80d5bf129f67aff0b0af56697b33fa9c159e05608afd34c",
+          "bodyBytes": 400610,
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "fullArticleScopeSha256": "0f8013c710ad2a7d57573d6ad5861c5b4b70f7ad3a754f87d32feea9cad11f5c"
         },
         {
           "pass": "B",
-          "retrieval": "Exa web-fetch fresh reopening",
+          "retrieval": "Actual complete native HTTPS/TLS02:36 responses retained and reread; zero new HTTP requests for adoption.",
           "retrievalTimestampUTC": null,
           "requestOrder": 2,
           "textSha256": "bf97958b97c9c5ab28a545c046e94eaa6111d138b6ace07a35accd1030c708d0",
@@ -4603,11 +4637,21 @@
             "BB_TVQ002",
             "BB_TVQ003",
             "BB_TVQ004",
-            "BB_TVQ005"
-          ]
+            "BB_TVQ005",
+            "BB_TV_common_MG113_1",
+            "BB_TV_common_MG113_2",
+            "BB_TV_common_MG115_1",
+            "BB_TV_common_MG117_1"
+          ],
+          "observedAtUTC": "2026-10-09T02:36:19.802942+00:00",
+          "bodySha256": "c11ec446949bf626f80d5bf129f67aff0b0af56697b33fa9c159e05608afd34c",
+          "bodyBytes": 400610,
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "fullArticleScopeSha256": "0f8013c710ad2a7d57573d6ad5861c5b4b70f7ad3a754f87d32feea9cad11f5c"
         }
       ],
-      "uniqueQuotedWords": 30
+      "uniqueQuotedWords": 94
     },
     {
       "id": "GT_PREVIEW",
@@ -8716,13 +8760,19 @@
           "text": "The solo player must hit every team player over the course of five rounds in order to win; otherwise, all",
           "locator": "Overview/gameplay rule context for winRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W030_tv_1",
+          "text": "The other players must move within the runway's limited space to try to avoid the Bomber Bill.",
+          "locator": "Complete named-game Overview narrative in both actual retained02:36 native responses.",
+          "scope": "Literal primary action clause only. Precise controls, modes, times, score, ties, rewards and every unrelated value stay qualified."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:15.895993+00:00",
+          "retrieval": "Actual complete native HTTPS/TLS02:36 responses retained and reread; zero new HTTP requests for adoption.",
+          "observedAtUTC": "2026-10-09T02:36:13.019579+00:00",
           "bodySha256": "bd61c396eefddc7bf75c64bbb7c301e0a81a18737542a2cea42372173a56370f",
           "bodyBytes": 58586,
           "httpStatus": 200,
@@ -8733,14 +8783,15 @@
             "W030_q3",
             "W030_q4",
             "W030_q5",
-            "W030Q006"
+            "W030Q006",
+            "W030_tv_1"
           ],
-          "fullArticleScopeSha256": "6f3e4a8f4e2f287bea13cddcfe2a9b885759e765febbf1b0d992e614fe94b562"
+          "fullArticleScopeSha256": "2c27be720a77f36525b0cb5e0a26484b402507d163fb4f1d10c08b586bad517d"
         },
         {
           "pass": "B",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:22.712685+00:00",
+          "retrieval": "Actual complete native HTTPS/TLS02:36 responses retained and reread; zero new HTTP requests for adoption.",
+          "observedAtUTC": "2026-10-09T02:36:18.379928+00:00",
           "bodySha256": "bd61c396eefddc7bf75c64bbb7c301e0a81a18737542a2cea42372173a56370f",
           "bodyBytes": 58586,
           "httpStatus": 200,
@@ -8751,12 +8802,13 @@
             "W030_q3",
             "W030_q4",
             "W030_q5",
-            "W030Q006"
+            "W030Q006",
+            "W030_tv_1"
           ],
-          "fullArticleScopeSha256": "6f3e4a8f4e2f287bea13cddcfe2a9b885759e765febbf1b0d992e614fe94b562"
+          "fullArticleScopeSha256": "2c27be720a77f36525b0cb5e0a26484b402507d163fb4f1d10c08b586bad517d"
         }
       ],
-      "uniqueQuotedWords": 99
+      "uniqueQuotedWords": 116
     },
     {
       "id": "W031",
@@ -20558,13 +20610,25 @@
           "text": "When 20 seconds are left, four Koopa Troopas will spawn onto the board, which can eventually be knocked as additional",
           "locator": "Overview/gameplay rule context for scoreRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W113_tv_1",
+          "text": "the teams use the Joy-Con 2 controller in mouse mode to maneuver their character as a puck,",
+          "locator": "Complete named-game Overview narrative in both actual retained02:36 native responses.",
+          "scope": "Literal primary action clause only. Precise controls, modes, times, score, ties, rewards and every unrelated value stay qualified."
+        },
+        {
+          "id": "W113_tv_2",
+          "text": "trying to prevent Koopa shells from entering their goal, much like air hockey.",
+          "locator": "Complete named-game Overview narrative in both actual retained02:36 native responses.",
+          "scope": "Literal primary action clause only. Precise controls, modes, times, score, ties, rewards and every unrelated value stay qualified."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:20.163183+00:00",
+          "retrieval": "Actual complete native HTTPS/TLS02:36 responses retained and reread; zero new HTTP requests for adoption.",
+          "observedAtUTC": "2026-10-09T02:36:13.054806+00:00",
           "bodySha256": "5656bbcae2dbdc5c2345ec6a878b65d2bc278a6cb11eb9621bf7ceb93889cc4a",
           "bodyBytes": 52993,
           "httpStatus": 200,
@@ -20583,14 +20647,16 @@
             "W113_q11",
             "W113Q012",
             "W113Q013",
-            "W113Q014"
+            "W113Q014",
+            "W113_tv_1",
+            "W113_tv_2"
           ],
-          "fullArticleScopeSha256": "f344aa19e27757bfd3c5eac5c0a5625ec1ec21e42e5f63f6aa398be457a2d683"
+          "fullArticleScopeSha256": "4fd7512a1f0cb6d04bfe8c5e6feb8c5f7eaf04ed5a2aeff31a60e925ce244a7a"
         },
         {
           "pass": "B",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:27.887783+00:00",
+          "retrieval": "Actual complete native HTTPS/TLS02:36 responses retained and reread; zero new HTTP requests for adoption.",
+          "observedAtUTC": "2026-10-09T02:36:18.441148+00:00",
           "bodySha256": "5656bbcae2dbdc5c2345ec6a878b65d2bc278a6cb11eb9621bf7ceb93889cc4a",
           "bodyBytes": 52993,
           "httpStatus": 200,
@@ -20609,12 +20675,14 @@
             "W113_q11",
             "W113Q012",
             "W113Q013",
-            "W113Q014"
+            "W113Q014",
+            "W113_tv_1",
+            "W113_tv_2"
           ],
-          "fullArticleScopeSha256": "f344aa19e27757bfd3c5eac5c0a5625ec1ec21e42e5f63f6aa398be457a2d683"
+          "fullArticleScopeSha256": "4fd7512a1f0cb6d04bfe8c5e6feb8c5f7eaf04ed5a2aeff31a60e925ce244a7a"
         }
       ],
-      "uniqueQuotedWords": 104
+      "uniqueQuotedWords": 134
     },
     {
       "id": "W114",
@@ -20855,8 +20923,8 @@
       "passes": [
         {
           "pass": "A",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:20.237784+00:00",
+          "retrieval": "Actual complete native HTTPS/TLS02:36 responses retained and reread; zero new HTTP requests for adoption.",
+          "observedAtUTC": "2026-10-09T02:36:12.952293+00:00",
           "bodySha256": "a0bfcc57e435049178f156e167e9c8a0e66e782b9cc5d1d693e0c12d7b53c67a",
           "bodyBytes": 56464,
           "httpStatus": 200,
@@ -20872,12 +20940,12 @@
             "W115Q008",
             "W115Q009"
           ],
-          "fullArticleScopeSha256": "cb07725fcf5c0d243fa9225ec982c3d10381aa968bfde4b092384df85820a75a"
+          "fullArticleScopeSha256": "53551c8ba15a11d5b30367a65344472658886f3c799e17a9073e1edd4e5af4e5"
         },
         {
           "pass": "B",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:28.009418+00:00",
+          "retrieval": "Actual complete native HTTPS/TLS02:36 responses retained and reread; zero new HTTP requests for adoption.",
+          "observedAtUTC": "2026-10-09T02:36:18.348596+00:00",
           "bodySha256": "a0bfcc57e435049178f156e167e9c8a0e66e782b9cc5d1d693e0c12d7b53c67a",
           "bodyBytes": 56464,
           "httpStatus": 200,
@@ -20893,7 +20961,7 @@
             "W115Q008",
             "W115Q009"
           ],
-          "fullArticleScopeSha256": "cb07725fcf5c0d243fa9225ec982c3d10381aa968bfde4b092384df85820a75a"
+          "fullArticleScopeSha256": "53551c8ba15a11d5b30367a65344472658886f3c799e17a9073e1edd4e5af4e5"
         }
       ],
       "uniqueQuotedWords": 91
@@ -21185,13 +21253,19 @@
           "text": "If no one reaches the flower pot within three minutes, the minigame ends in a tie.",
           "locator": "Overview/gameplay rule context for tieRules",
           "scope": "Short supporting clip; retained rule qualifiers were manually read in the complete current article. Shared returning-game scope remains single-source and alternate variants stay unknown."
+        },
+        {
+          "id": "W117_tv_1",
+          "text": "assemble a path of dominoes that leads from the Toad at the start to the flower pot at the end by dragging them.",
+          "locator": "Complete named-game Overview narrative in both actual retained02:36 native responses.",
+          "scope": "Literal primary action clause only. Precise controls, modes, times, score, ties, rewards and every unrelated value stay qualified."
         }
       ],
       "passes": [
         {
           "pass": "A",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:20.339205+00:00",
+          "retrieval": "Actual complete native HTTPS/TLS02:36 responses retained and reread; zero new HTTP requests for adoption.",
+          "observedAtUTC": "2026-10-09T02:36:13.362111+00:00",
           "bodySha256": "1be1aafc03649399451608cc25ae22c45cef6e5abafbf722067bd26a99b7b806",
           "bodyBytes": 56697,
           "httpStatus": 200,
@@ -21206,14 +21280,15 @@
             "W117_q7",
             "W117Q008",
             "W117Q009",
-            "W117Q010"
+            "W117Q010",
+            "W117_tv_1"
           ],
-          "fullArticleScopeSha256": "ab57f79cb6f4d93c2c750080822dd2d7d6605abb9d26df957cf9c55f7ba4b5e4"
+          "fullArticleScopeSha256": "d8467a6250c8f23624e93d83b45f06057d6b625bcafe97eb1e70325b0f1f7957"
         },
         {
           "pass": "B",
-          "retrieval": "fresh curl HTTPS capture with TLS verification",
-          "observedAtUTC": "2026-10-07T16:51:28.097559+00:00",
+          "retrieval": "Actual complete native HTTPS/TLS02:36 responses retained and reread; zero new HTTP requests for adoption.",
+          "observedAtUTC": "2026-10-09T02:36:18.617957+00:00",
           "bodySha256": "1be1aafc03649399451608cc25ae22c45cef6e5abafbf722067bd26a99b7b806",
           "bodyBytes": 56697,
           "httpStatus": 200,
@@ -21228,12 +21303,13 @@
             "W117_q7",
             "W117Q008",
             "W117Q009",
-            "W117Q010"
+            "W117Q010",
+            "W117_tv_1"
           ],
-          "fullArticleScopeSha256": "ab57f79cb6f4d93c2c750080822dd2d7d6605abb9d26df957cf9c55f7ba4b5e4"
+          "fullArticleScopeSha256": "d8467a6250c8f23624e93d83b45f06057d6b625bcafe97eb1e70325b0f1f7957"
         }
       ],
-      "uniqueQuotedWords": 92
+      "uniqueQuotedWords": 115
     },
     {
       "id": "W118",
@@ -23817,6 +23893,58 @@
         }
       ],
       "uniqueQuotedWords": 73
+    },
+    {
+      "id": "CC_TV",
+      "url": "https://www.consolecreatures.com/super-mario-party-jamboree-tv-review/",
+      "publisherLineage": "consolecreatures",
+      "kind": "publisher_article",
+      "title": "Super Mario Party Jamboree - Nintendo Switch 2 Edition + Jamboree TV Review | Console Creatures",
+      "quotes": [
+        {
+          "id": "CC_TV_common_MG030_1",
+          "text": "Sunset Standoff mode has one player flying Bomber Bill to the team.",
+          "locator": "Full original Sunset Standoff review paragraph; Bobby Pashalidis; two actual full native responses02:36.",
+          "scope": "Only the literal narrowed common actions; not precise parameters, mode/player counts or copied game-instruction cells. Complete authored paragraph was compared with full primary narrative."
+        },
+        {
+          "id": "CC_TV_common_MG030_2",
+          "text": "The three other players must work together to avoid being hit;",
+          "locator": "Full original Sunset Standoff review paragraph; Bobby Pashalidis; two actual full native responses02:36.",
+          "scope": "Only the literal narrowed common actions; not precise parameters, mode/player counts or copied game-instruction cells. Complete authored paragraph was compared with full primary narrative."
+        }
+      ],
+      "passes": [
+        {
+          "pass": "A",
+          "retrieval": "Actual complete native HTTPS/TLS02:36 responses retained and reread; zero new HTTP requests for adoption.",
+          "observedAtUTC": "2026-10-09T02:36:14.537584+00:00",
+          "bodySha256": "217120e2dd7fe22718259f07ae2326ac02902fecb792fdbee26eae99c2ac3d8a",
+          "bodyBytes": 230198,
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "recoveredQuoteIds": [
+            "CC_TV_common_MG030_1",
+            "CC_TV_common_MG030_2"
+          ],
+          "fullArticleScopeSha256": "2754002aa84326fe497fca4fd849187ed07fdc34ca47010937476451638897b7"
+        },
+        {
+          "pass": "B",
+          "retrieval": "Actual complete native HTTPS/TLS02:36 responses retained and reread; zero new HTTP requests for adoption.",
+          "observedAtUTC": "2026-10-09T02:36:19.685511+00:00",
+          "bodySha256": "217120e2dd7fe22718259f07ae2326ac02902fecb792fdbee26eae99c2ac3d8a",
+          "bodyBytes": 230198,
+          "httpStatus": 200,
+          "tlsVerified": true,
+          "recoveredQuoteIds": [
+            "CC_TV_common_MG030_1",
+            "CC_TV_common_MG030_2"
+          ],
+          "fullArticleScopeSha256": "2754002aa84326fe497fca4fd849187ed07fdc34ca47010937476451638897b7"
+        }
+      ],
+      "uniqueQuotedWords": 23
     }
   ],
   "independence": "Pages in one publisher lineage, mirrors and reprints of one Nintendo instruction are not independent factual observations.",

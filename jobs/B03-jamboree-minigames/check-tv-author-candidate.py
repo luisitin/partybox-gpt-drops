@@ -64,7 +64,11 @@ def validate(p,d,s,rs):
  require(sb['NAMU_BASE']['uniqueQuotedWords']==195 and sb['FGS_BASE']['uniqueQuotedWords']==200 and sb['FGS_TIPS']['uniqueQuotedWords']==73,'Prior authored-source budgets changed')
  return count
 def run():
- p=read('reports/tv-author-candidate.json');d=read('minigames.json');s=read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+x+'.json') for x in 'AB'];count=validate(p,d,s,rs)
+ p=read('reports/tv-author-candidate.json');d=read('minigames.json');s=read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+x+'.json') for x in 'AB']
+ if (ROOT/'reports/tv-action-recovery.json').exists():
+  import importlib.util
+  sp=importlib.util.spec_from_file_location('b03_tv_exact_historical_view',ROOT/'check-tv-action-recovery.py');m=importlib.util.module_from_spec(sp);sp.loader.exec_module(m);d,s,rs=m.historical_view(d,s,rs)
+ count=validate(p,d,s,rs)
  mutations=[
   lambda p,d,s,rs:p.__setitem__('status','ADOPTED'),
   lambda p,d,s,rs:d['minigames'][29]['fieldEvidence']['gameplay'].__setitem__('status','corroborated'),

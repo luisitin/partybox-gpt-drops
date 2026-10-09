@@ -108,16 +108,23 @@ def validate(proof, data, sources, reopens):
  module('check-family-tips-candidate.py').validate(candidate, restored, historical, h_reopens)
  return restored, historical, h_reopens, count
 
+def before_review_view(data, sources, reopens):
+ if not (ROOT / 'reports/tv-action-recovery.json').exists(): return data, sources, reopens
+ return module('check-tv-action-recovery.py').historical_view(data, sources, reopens)
+
 def historical_view(data, sources, reopens):
  if not (ROOT / 'reports/family-tips-recovery.json').exists(): return data, sources, reopens
  proof = read('reports/family-tips-recovery.json')
  if digest(data) == BASE_DATA and digest(sources) == BASE_SOURCES and [digest(x) for x in reopens] == BASE_REOPENS:
-  validate(proof, read('minigames.json'), read('catalogue-sources.json'), [read('reports/source-reopens-pass' + p + '.json') for p in 'AB'])
+  current = before_review_view(read('minigames.json'), read('catalogue-sources.json'), [read('reports/source-reopens-pass' + p + '.json') for p in 'AB'])
+  validate(proof, *current)
   return data, sources, reopens
+ data, sources, reopens = before_review_view(data, sources, reopens)
  return validate(proof, data, sources, reopens)[:3]
 
 def run():
  proof = read('reports/family-tips-recovery.json'); data = read('minigames.json'); sources = read('catalogue-sources.json'); reopens = [read('reports/source-reopens-pass' + p + '.json') for p in 'AB']
+ data, sources, reopens = before_review_view(data, sources, reopens)
  count = validate(proof, data, sources, reopens)[3]
  for number in range(10):
   p, d, s, rs = copy.deepcopy(proof), copy.deepcopy(data), copy.deepcopy(sources), copy.deepcopy(reopens)
