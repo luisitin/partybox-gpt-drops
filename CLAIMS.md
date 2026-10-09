@@ -15,4 +15,4 @@ B08 2026-10-09T09:31:04Z codex-monopoly-audit-20261009
 B10 2026-10-09T10:31:50Z codex-battleship-audit-20261009
 B11 2026-10-09T10:48:45Z codex-rummikub-audit-20261009
 B12 2026-10-09T11:37:47Z codex-ttr-audit-20261009
-B13 2026-10-09T11:13:34Z codex-trivia-audit-20261009
+B13 2026-10-09T11:42:57Z codex-trivia-audit-20261009
