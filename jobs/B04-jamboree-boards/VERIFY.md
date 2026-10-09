@@ -1,6 +1,6 @@
 # B04 — Verification
 
-**Original research standard NOT_MET.** Keep PR18 draft: 91/518 complete factual rows have independent publisher agreement. All 16 complete type-count profiles use the original permitted CONFLICTS.md route. One current event retains unknown trigger/effect.
+**Original research standard NOT_MET.** Keep PR18 draft: 93/518 complete factual rows have independent publisher agreement. All 16 complete type-count profiles use the original permitted CONFLICTS.md route. One current event retains unknown trigger/effect.
 
 ## Historical completed checks and commands, 2026-10-07
 
@@ -913,4 +913,75 @@ EXACT_NUMBERED_MAPS=0/7; descriptive UNVERIFIED provenance; cited regional maps 
 NINTENDO_GAMEPLAY_EXECUTED=NO
 STRICT_RESEARCH_RESULT=NOT_MET; exit=1
 Actual exit 1
+```
+
+2026-10-09T10:50:43.256606+00:00: Current two Skeleton Key gate facts gain independent medium support for the missing3-coin price via complete original H1g editorial table versus Wiki price cell; existing complete MPL item row confirms gate use and both board names but its price is blank. All518values/516otherfacts/18conflicts unchanged; only4review fingerprints. 93/518 corroborated,406single-source,18conflicts,1unknown;37/38 events, originalNOT_MET/PR18Draft. See reports/skeleton-key-price-recovery-20261009.json. Original Namu250/Cel131 ledgers/gates/captures remain unchanged. Parent75900 whole original26/5697/94 structuralPASS/strict91FAIL37FAIL actual1 is historical; exact next whole hosted acceptance remains pending publication.
+
+
+2026-10-09T10:50:44.803799+00:00: Actual full original local Skeleton Key recovery commands, source parent75900; whole outputs below. Source-specific hosted original CI pending next publication. Gates/schema/workflow unchanged.
+
+```text
+$ python3 verify.py --structural --checksums
+PASS CLOSED_JSON_SCHEMAS: 62/62
+PASS UNIQUE_ID_COLLECTIONS: 32/32
+PASS SEVEN_BOARD_TWO_PUBLISHER_ROSTER: 7/7
+PASS EVERY_RECORDED_FACT_HAS_SOURCE: 518/518
+PASS FACT_QUOTATION_REFERENCES: 712/712
+PASS SHORT_QUOTE_BUDGETS_AND_LINEAGES: 30/30
+PASS EVERY_SOURCE_REOPENED_A_B: 56/56
+PASS QUOTATIONS_RECOVERED_BOTH_PASSES: 794/794
+PASS SOURCE_CAPTURE_REPORT_REFERENCES: 56/56
+PASS SPACE_PROFILE_SUMS_AND_CONFLICT_DISCLOSURE: 16/16
+PASS INDIVIDUAL_TYPE_COUNT_ROWS: 176/176
+PASS SHOP_INVENTORY_ITEM_ROWS: 215/215
+PASS FRESH_SOURCE_CELL_COMPARISONS_A_B: 782/782
+PASS EVENT_TRIGGER_EFFECT_SOURCE_OR_EXPLICIT_GAP: 38/38
+PASS SHARED_RULE_REFERENCES: 126/126
+PASS CITED_REGIONAL_MAP_LINKS: 11/11
+PASS MAP_IMAGE_REOPEN_AND_VISUAL_REVIEW_A_B: 20/20
+PASS ALL_RETAINED_ROWS_PASS_A: 593/593
+PASS ALL_RETAINED_ROWS_PASS_B: 593/593
+PASS REVIEWED_ROW_CONTENT_FINGERPRINTS: 593/593
+PASS BOARD_DOCUMENT_REQUIRED_SECTIONS: 7/7
+PASS BOARD_DOC_TABLES_MATCH_JSON: 51/51
+PASS ALL_FACTUAL_CONFLICTS_PRESERVED: 18/18
+PASS DELIBERATE_REJECTION_FIXTURES: 14/14
+PASS FILE_SIZE_LIMIT: 99/99
+PASS SHA256_MANIFEST: 98/98
+STRUCTURAL_RESULT=PASS; suites=26; cases=5717; seed=N/A (deterministic)
+
+$ python3 verify.py --strict
+PASS CLOSED_JSON_SCHEMAS: 62/62
+PASS UNIQUE_ID_COLLECTIONS: 32/32
+PASS SEVEN_BOARD_TWO_PUBLISHER_ROSTER: 7/7
+PASS EVERY_RECORDED_FACT_HAS_SOURCE: 518/518
+PASS FACT_QUOTATION_REFERENCES: 712/712
+PASS SHORT_QUOTE_BUDGETS_AND_LINEAGES: 30/30
+PASS EVERY_SOURCE_REOPENED_A_B: 56/56
+PASS QUOTATIONS_RECOVERED_BOTH_PASSES: 794/794
+PASS SOURCE_CAPTURE_REPORT_REFERENCES: 56/56
+PASS SPACE_PROFILE_SUMS_AND_CONFLICT_DISCLOSURE: 16/16
+PASS INDIVIDUAL_TYPE_COUNT_ROWS: 176/176
+PASS SHOP_INVENTORY_ITEM_ROWS: 215/215
+PASS FRESH_SOURCE_CELL_COMPARISONS_A_B: 782/782
+PASS EVENT_TRIGGER_EFFECT_SOURCE_OR_EXPLICIT_GAP: 38/38
+PASS SHARED_RULE_REFERENCES: 126/126
+PASS CITED_REGIONAL_MAP_LINKS: 11/11
+PASS MAP_IMAGE_REOPEN_AND_VISUAL_REVIEW_A_B: 20/20
+PASS ALL_RETAINED_ROWS_PASS_A: 593/593
+PASS ALL_RETAINED_ROWS_PASS_B: 593/593
+PASS REVIEWED_ROW_CONTENT_FINGERPRINTS: 593/593
+PASS BOARD_DOCUMENT_REQUIRED_SECTIONS: 7/7
+PASS BOARD_DOC_TABLES_MATCH_JSON: 51/51
+PASS ALL_FACTUAL_CONFLICTS_PRESERVED: 18/18
+PASS DELIBERATE_REJECTION_FIXTURES: 14/14
+PASS FILE_SIZE_LIMIT: 99/99
+STRUCTURAL_RESULT=PASS; suites=25; cases=5619; seed=N/A (deterministic)
+FULL_FACTS_TWO_SOURCE=93/518; FAIL
+CURRENT_EVENT_TRIGGER_EFFECT=37/38; FAIL
+EXACT_NUMBERED_MAPS=0/7; descriptive UNVERIFIED provenance; cited regional maps supplied
+NINTENDO_GAMEPLAY_EXECUTED=NO
+STRICT_RESEARCH_RESULT=NOT_MET; exit=1
+
+Actual exit codes0 and1 respectively.
 ```

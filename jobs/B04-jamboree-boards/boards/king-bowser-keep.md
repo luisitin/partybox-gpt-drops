@@ -46,7 +46,7 @@ Whole count profiles remain single-source and include Start. The scoped original
 
 ## Gates, keys and paid paths
 
-- `king-bowser-keep:gatesPaths:skeleton_gate` (single_source, high): {"trigger": "Reach closed Skeleton Key gate with key.", "effect": "Use key to access separate path; precise gate endpoints unknown.", "keyPriceCoins": 3, "exactEndpoints": null} — W_GAME-Q003, MPL_GAME-Q003. Gate use/sourceboard scope corroborated; keyprice 3 has one complete price source.
+- `king-bowser-keep:gatesPaths:skeleton_gate` (corroborated, medium): {"trigger": "Reach closed Skeleton Key gate with key.", "effect": "Use key to access separate path; precise gate endpoints unknown.", "keyPriceCoins": 3, "exactEndpoints": null} — W_GAME-Q003, MPL_GAME-Q003, H1G_ITEMS-Q001. 2026-10-09: complete current Wiki item row and separate H1g editorial item price table agree on3 coins; independent MarioPartyLegacy complete named row explicitly supports gate/key/separate-path use and exclusive Western/Keep board scope but has an empty price cell. Every retained substantive clause has two publishers. Medium confidence retains editorial/community authorship and unobserved installed build; reproduced Nintendo item-description wording alone is not counted as independent authored support. Precise endpoints remain explicitly unknown; no shop inventory, stock, rule mode, route topology or other item field is promoted.
 
 ## Events: triggers and effects
 

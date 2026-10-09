@@ -1,6 +1,6 @@
 # B04 design digest: how the seven Jamboree boards are built
 
-For the designer and the PartyBox port. Reference only: nothing here ships, and no board name, item name, artwork or map image may appear in PartyBox. Every number is a count or a sum from `boards.json` (seven boards). The factual rows are 518: 91 corroborated, 408 single-source, 18 conflicting, 1 unknown (README "Status"). Read a number as "what the retained source reports", not as settled fact.
+For the designer and the PartyBox port. Reference only: nothing here ships, and no board name, item name, artwork or map image may appear in PartyBox. Every number is a count or a sum from `boards.json` (seven boards). The factual rows are 518: 93 corroborated, 406 single-source, 18 conflicting, 1 unknown (README "Status"). Read a number as "what the retained source reports", not as settled fact.
 
 Status tags used below: **[C]** corroborated by a second publisher, **[S]** single source, **[X]** conflicting sources (both values kept), **[?]** unknown. Sentences marked *editorial* are reading, not source.
 
@@ -116,3 +116,5 @@ Nothing here is a copy target. The existing pieces in `/home/user/partybox` that
 - **Probabilities and payouts absent:** Star selection, tower turn chance, anger probability, Raceway dice-pool weights, Hive payout distribution, Gold Goomba payout. Do not invent weights.
 - **Raceway shop count:** one shop is reported active at a time (low confidence); a swapped visual state exists for two turns.
 - **Licence:** names, prices, maps and artwork belong to Nintendo or its licensors. A PartyBox port needs its own names, art and text, built from the mechanics above, not from the source pages.
+
+2026-10-09T10:50:43.256606+00:00: Current two Skeleton Key gate facts gain independent medium support for the missing3-coin price via complete original H1g editorial table versus Wiki price cell; existing complete MPL item row confirms gate use and both board names but its price is blank. All518values/516otherfacts/18conflicts unchanged; only4review fingerprints. 93/518 corroborated,406single-source,18conflicts,1unknown;37/38 events, originalNOT_MET/PR18Draft. See reports/skeleton-key-price-recovery-20261009.json. Original Namu250/Cel131 ledgers/gates/captures remain unchanged. Parent75900 whole original26/5697/94 structuralPASS/strict91FAIL37FAIL actual1 is historical; exact next whole hosted acceptance remains pending publication.

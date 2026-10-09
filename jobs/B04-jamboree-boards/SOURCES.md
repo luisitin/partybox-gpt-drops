@@ -911,7 +911,7 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | king-bowser-keep:shop:3:item:3 | single_source/medium | W_KEEP-Q021 |
 | king-bowser-keep:shop:3:item:4 | single_source/medium | W_KEEP-Q023 |
 | king-bowser-keep:shop:3:item:5 | single_source/medium | W_KEEP-Q023 |
-| king-bowser-keep:gatesPaths:skeleton_gate | single_source/high | W_GAME-Q003, MPL_GAME-Q003 |
+| king-bowser-keep:gatesPaths:skeleton_gate | corroborated/medium | W_GAME-Q003, MPL_GAME-Q003, H1G_ITEMS-Q001 |
 | king-bowser-keep:events:byway_reverse | corroborated/high | W_KEEP-Q026, MPL_BOARDS-Q011 |
 | king-bowser-keep:events:red_pipe | single_source/medium | W_KEEP-Q027, W_KEEP-Q028 |
 | king-bowser-keep:events:bill_blaster | single_source/medium | W_KEEP-Q029 |
@@ -1063,7 +1063,7 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | western-land:shop:4:location | single_source/medium | W_GAME-Q009 |
 | western-land:shop:4:item:0 | single_source/medium | W_WESTERN-Q017 |
 | western-land:gatesPaths:train | single_source/medium | W_WESTERN-Q023, W_WESTERN-Q024 |
-| western-land:gatesPaths:skeleton_gate | single_source/high | W_GAME-Q003, MPL_GAME-Q003 |
+| western-land:gatesPaths:skeleton_gate | corroborated/medium | W_GAME-Q003, MPL_GAME-Q003, H1G_ITEMS-Q001 |
 | western-land:events:train_hit | corroborated/high | MPL_BOARDS-Q019, DS_BOARDS-Q005 |
 | western-land:events:train_event | unverified/low | W_WESTERN-Q025 |
 | western-land:events:hootenanny | corroborated/medium | W_WESTERN-Q026, W_GAME-Q010, NAMU_KR_COUNTS-Q024, CEL_BOARDS-Q001 |
@@ -1181,3 +1181,7 @@ Independent original Namu full Western context explicitly supplies randomness/10
 | CEL_BOARDS-Q001 | the hootenanny is now locked behind a Happening space | current hootenanny requires Event landing |
 
 Namu authored shared249→250/250, local21numeric+9authored=30/unchanged200; no further new expressive Namu clips. Cel B03actual122+B04new9=131, B03reserve150+B04reserve50=200. Full bodies/footnotes/screenshots private. Cel originalHTTP captures05:26 retained, B04 independently read complete11344-character board/ranking scopes and Western1613 in both passes, without claiming a new request or whole remaining minigame review. Native CelStudios rel-author link and October20,2024 publication independently checked; all authored outgoing links empty, no copied attribution detected.
+
+## H1G_ITEMS — Skeleton Key price, 2026-10-09T10:50:43.256606+00:00
+
+Canonical source is the H1g editorial current Jamboree item table. Only exact registered numeral `3`, H1G_ITEMS-Q001, is quoted. Both actual full native passes recover it from the named item’s Price column. Entire authored table and linked editorial/company context were read, rather than treating a generic numeral as complete proof. Local original gate1/200; zero new expressive source prose. Existing MPL/Wiki clips and their original historical captures remain unchanged. No shared Namu/Cel words; no inventory, stock, mode or gate endpoint promotion.

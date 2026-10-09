@@ -1,5 +1,17 @@
 # B04 — Current continuation
 
+2026-10-09T10:50:43.256606+00:00:93/518 corroborated,406single-source,18conflicts,1unknown;37/38events. PR18Draft/originalNOT_MET.
+
+Only two existing whole Skeleton Key gate facts gained medium independent support, covering the previously missing3-coin price; all518 values/516otherfacts/18conflicts unchanged. Full source and editorial contexts/private original A/B closures are in /tmp/b04-boards-resume-20261009-0605/private/h1g-items-original-1042/, h1g-editorial-original-1044/ and mpl-game-original-1045/. Read reports/skeleton-key-price-recovery-20261009.json. No inventory/stock/ruleset/endpoint inference; MPL native price is empty and its old markdown-pipe capture remains historical. H1g quote is one factual numeral only, unchanged original1/200 gate.
+
+Resume accessible source research for the remaining406 single-source facts, including whole Raceway jump/Event/Turbo qualifiers and exact Steamer Event. H1g Turbo specifies4dice/sum/skip but does not explicitly establish range minimum4; do not infer the missing range or promote the entire fact. Western source image27 is a distinct unreviewed own gameplay gate lead, not needed to claim route endpoints. The opened ticket sequence21–23 does not close ordinary train boarding availability; primary/photo introductory words share Nintendo origin. Goomba tide Event stays single-source after actual negative peer, no new Cel clips. Shared authoredNamu250/250fully spent/Cel131 and reserved150+50=200 unchanged.
+
+Read exact whole original current hosted run after publication; parent75900 genuine run37917786873/job113778097263 naturallyclosed10:28:34, full21433B SHA90f14549779a4e24334df3bf1d5997289387a2f8ef8d1427e9dd4e736100b91e/26suites5697cases94manifest/strict91FAIL37FAILactual1 is dated history. Full parentnative sealed in reports/train-tide-parent-native-113778097263.log. Ownmainclaim794 publish10:29:55/read10:29:56 preserved everyotherrow/released; request fresh rootserialized lease after actual nextsource. No backdating cadence or fullresearch/Ready claim.
+
+Previous detailed context follows:
+
+# B04 — Current continuation
+
 2026-10-09T10:24:34.944093+00:00:91/518 corroborated,408single-source,18conflicts,1unknown;37/38events. PR18Draft/originalNOT_MET.
 
 Immediate exact next step: resolve whole ordinary western-land:gatesPaths:train provenance using new complete original Steamer article/current chapter/12references plus retained Namu847 and SASKE introimage5. The two availability-wording reproductions share Nintendo dialogue origin; do not count different domains or localizations alone as independence. Ordinary Namu3/6 excludes Buddy6/12. No whole train promotion or direction/end-station inference yet. Full originals/private scopes are in /tmp/b04-boards-resume-20261009-0605/private/current-steamer-original-1018/; actual fresh collector closed10:18:16.709828/nochildren. Public checkpoint gives hashes and scopes; copyrighted full bodies/images remain private.
