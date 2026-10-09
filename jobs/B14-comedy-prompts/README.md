@@ -6,7 +6,7 @@ Every selected row was graded 4 or 5 by both its author and a fresh independent
 reviewer. The complete 1,500+1,500 original candidate pool, every low grade and
 all grading reasons remain in `candidates.json`, `batches/` and `grading/`.
 
-The combined final pack has 630 canonical named references, at most three
+The current combined final pack has 644 canonical named references, at most three
 appearances each across both genres. `named-reference-audit.json` and
 `editorial-review.json` record the actual names visible in each selected row;
 `similarity-resolutions.json` explains every retained pair above 0.75 similarity.
@@ -37,7 +37,7 @@ fiction. Cultural references do not assert real incidents, endorsements,
 product features, or misconduct. Read `SOURCES.md` and `ASSUMPTIONS.md` for
 that scope. Humor was independently reviewed, but has not been audience-tested.
 
-The2026-10-09 follow-up is an active Draft audit. It adds a read-only delivery gate and preserves genuine original full evidence. Both-genre ranking, semantic Folgers repetition and strict cultural-cue research remain unresolved. See NEXT.md and reports/audit-20261009/CURRENT-SCOPE.md; the original zero-facts fiction exemption does not certify real cultural references.
+The 2026-10-09 follow-up is an active Draft audit. It repairs both-genre ranking and personally reviewed repeated premises, adds a read-only delivery gate and preserves genuine original full evidence. Strict cultural-cue research remains unfinished. See NEXT.md and reports/audit-20261009/CURRENT-SCOPE.md; the original zero-facts fiction exemption does not certify real cultural references.
 
 
 ## Supplemental repair status

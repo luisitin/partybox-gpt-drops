@@ -42,3 +42,6 @@ Preserve original Ready13 and every sealed grade/source batch; repair on a separ
 
 ## Scoped adult-fiction cue classification
 Only13 specifically read rows have a complete classification: actual advertising/product associations cite9 facts; ghosts,corpses,cults,licencecertifications,invoices,mascothiring and imaginedlastwords are creative situations, not reportedreal events orpromisedservices. Enterprise deposit association uses documentedU.S.rental context without an amount,refundtime orworldwide rule. Other1187rows remainUNVERIFIED; no blanketfiction/named-brand exemption. Independentcourt institutional author used; absentnamedjudge notguessed. Originalhumorgrades/words/sealsunchanged.
+
+
+The old semantic controls proved same-size/genre behavior only. Missing fixture confidence and independently unchecked cap are now repaired without changing production prompt words or grades. Historical accepted packets are not inherited by later source. Purely fictional surroundings do not exempt any unreviewed cultural cue;13 whole rows are actually qualified and1187 remain open.
