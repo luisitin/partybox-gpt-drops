@@ -1,5 +1,19 @@
 # B04 — Current continuation
 
+2026-10-09T13:47:42.040725+00:00: One real Keep Star citation error repaired. Product status remains100/518 corroborated,398 single-source,19 conflicts,1 unknown;37/38 events,0/7 exact maps. Strict NOT_MET; PR18 Draft.
+
+Read reports/keep-star-citation-scope-correction-20261009.json. Existing Keep purchase fact incorrectly cited MPL's rotating-Star phrase from OTHER board sections. Both entire5992-character MPL originals prove that the Keep section has no such sentence. Replace only that evidence/note with existing Namu numeric20 plus actual complete Keep2523/ordinary452 scopes, leaving whole movement single_source. Numeric20 proves price only; movement comes from the actual specific Star-position field. Unknown eligible positions/selection law remain unchanged. All518 values/517 other completefacts/19disputes/591 otherauditrows remain byteequivalent; exactlyfact+containingboard fingerprints updated. Registry/capture dates/schema/verifier/workflow/gates unchanged; zero new quotations or quota.
+
+Four actual full HTTP200 new requests naturally closed13:36:11.506491/4.191s/60, nochildren/signals. Whole Keep Wiki17623 and ngamer Western1819 A/B scopes match and were read. ngamer relauthor is SASKE and this is the already-held Western article, so no new independence. Preserve its Milk two-vs-all discrepancy and train parked-availability gap. Namu every3/two/turn24one/max17 does not silently prove exact start-of-turn wording. Root full Raceway negative peer is retained: two original maps differ in raw/pixels and do not independently identify both Star markers. No101 promotion.
+
+Parent122356 published13:20:38 with actual1798s hard30PASS/early25MISS298s aftercontext recovery and privateENOSPC. Entire current run37936171247/job113838662862/all9SUCCESS13:21:00, actualmerged2cb61b0782354d810b872c29901e5906840e58b parentsc2cb1a65+122356. Full21441B nativeSHAe0458f6f7ec382750927b7d212882bfdc5424cf108f95303d6573d706c40d63c personallyread13:24:52; structural26/5762/116PASS0, strict25/5646/100FAIL37FAILNOT_MET actual1 required. First private reader wrongly expected previous21443B and stopped; actual21441 checked unchanged. Parent evidence is historical; newsource needs its own entire original hosted read.
+
+Own MAIN7cd072b claim row13:21:46/pub13:21:49/read13:21:50, all17foreign rows/rootentries preserved; lease released. No MAIN writes without fresh root serialized lease; claims do not reset cadence. Namu250/250 authored fullyspent, local30/200 unchanged; Cel131 unchanged. Exact next step: seek a complete independent witness for remaining train/Event/Star clauses; no partial-to-whole promotion. Separate actual Fuji trivia peers completed13:28:03/13:30:07 without any B13 product edits or board proof transfer.
+
+Previous detailed continuation follows:
+
+# B04 — Current continuation
+
 2026-10-09T13:19:54.571337+00:00: Whole original Raceway research checkpoint, all100/518 facts unchanged;398 single-source,19 conflicts,1 unknown;37/38 events,0/7 maps. Strict NOT_MET; PR18 Draft.
 
 Read reports/raceway-whole-original-scopes-UNADOPTED-20261009.json. Four full HTTP200 pages naturally closed13:04:12.735739; entire Wiki13668/DualShockers7872 authored scopes and all24 main outgoing links read. DS native Austin Conrad/Valnet identity verified; DS raw differs, authored pairs match. Both actual original normal maps fetched200/naturally closed13:07:19.899022 and viewed. Raw AND decoded pixels differ. No exact Star-marker or numbered graph is invented. Copyrighted originals stay private.

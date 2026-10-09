@@ -1,0 +1,175 @@
+{
+  "correctedAt": "2026-10-09T13:47:42.040725+00:00",
+  "sourceParent": "122356e7d93c7f45389e0fd7d543c630a6b71fe0",
+  "kind": "actual misplaced source locator repair; not a two-source verdict promotion",
+  "exactBeforeFact": {
+    "id": "king-bowser-keep:stars:purchase",
+    "kind": "stars",
+    "status": "single_source",
+    "confidence": "medium",
+    "value": {
+      "movement": "relocating Star; exact eligible locations/selection law unverified",
+      "normalCostCoins": 20,
+      "selectionProbabilities": null
+    },
+    "evidence": [
+      {
+        "sourceId": "MPL_BOARDS",
+        "quote": "features a rotating star spot",
+        "locator": "King Bowser’s Keep section",
+        "quoteId": "MPL_BOARDS-Q001"
+      },
+      {
+        "sourceId": "MPL_BOARDS",
+        "quote": "purchase it for 20 coins",
+        "locator": "shared objective intro",
+        "quoteId": "MPL_BOARDS-Q002"
+      }
+    ],
+    "note": "MPL reports core movement and standard cost. Complete locations, Pro cycle, discounts and post-Homestretch additions are separate qualifiers; no RNG weights inferred."
+  },
+  "exactCorrectedFact": {
+    "id": "king-bowser-keep:stars:purchase",
+    "kind": "stars",
+    "status": "single_source",
+    "confidence": "medium",
+    "value": {
+      "movement": "relocating Star; exact eligible locations/selection law unverified",
+      "normalCostCoins": 20,
+      "selectionProbabilities": null
+    },
+    "evidence": [
+      {
+        "sourceId": "MPL_BOARDS",
+        "quote": "purchase it for 20 coins",
+        "locator": "shared objective intro",
+        "quoteId": "MPL_BOARDS-Q002"
+      },
+      {
+        "sourceId": "NAMU_KR_COUNTS",
+        "quote": "20",
+        "locator": "4.2.1 ordinary Star Exchange price paragraph; complete4.2.5.5 Keep table separately states variable Star position. Numeric quote supports price only; full scope supports recorded movement.",
+        "quoteId": "NAMU_KR_COUNTS-Q015"
+      }
+    ],
+    "note": "The full paired Namu Keep table explicitly reports a variable Star location; its complete ordinary-Star paragraph supplies the default20 price. MPL shared introduction independently supports price only. Its rotating-Star phrase belongs to other board sections and has been removed from this Keep evidence. Whole movement remains one authored publisher, so single_source/medium is retained. Exact eligible positions, selection law, Pro/TV and discounts remain unverified or separate."
+  },
+  "fullMplA_B5992Sha256": "5fe9e2cf8e651d162c5867f3adfdd84274afa5f71014b00e23a0ebe2e3e4ac91",
+  "entireKeepMplSectionHasNoRotatingStarSentence": true,
+  "NamuKeepA_B2523Sha256": "865bf3dfb477dd63c2364f2eea1e078dc853935e181a33e7522435a4ace333fa",
+  "NamuOrdinaryA_B452Sha256": "c729a2b26787d27d579ce859e388e7428370b2e8166439796ab1d5d6eec8480b",
+  "numeric20QuoteScope": "Only default price. Variable movement is from complete specific Keep table; not from bare20 or exact RNG weights.",
+  "all518ValuesAnd517OtherWholeFactsByteEquivalent": true,
+  "all19CompleteDisagreementsUnchanged": true,
+  "all591OtherAuditRowsUnchanged": true,
+  "onlyChangedFingerprints": [
+    "king-bowser-keep:board_record",
+    "king-bowser-keep:stars:purchase"
+  ],
+  "countsUnchanged": "100/398/19/1 of518; strictNOT_MET; Draft",
+  "newExpressiveQuotedWords": 0,
+  "registeredQuotationsSourceCaptureDatesSchemaVerifierWorkflowGatesUnchanged": true,
+  "newGenuineFourFullHTTP200Captures": [
+    {
+      "sourceId": "W_KEEP_CURRENT",
+      "pass": "A",
+      "requestedUrl": "https://www.mariowiki.com/King_Bowser%27s_Keep",
+      "startedAt": "2026-10-09T13:36:07.315796+00:00",
+      "finishedAt": "2026-10-09T13:36:08.411579+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mariowiki.com/King_Bowser%27s_Keep",
+      "rawBytes": 120236,
+      "rawSha256": "3afcf38a2d58187f14977d1ad050138d3fa68541f4e31a69ede4e4f69138a275"
+    },
+    {
+      "sourceId": "W_KEEP_CURRENT",
+      "pass": "B",
+      "requestedUrl": "https://www.mariowiki.com/King_Bowser%27s_Keep",
+      "startedAt": "2026-10-09T13:36:08.412047+00:00",
+      "finishedAt": "2026-10-09T13:36:09.440824+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mariowiki.com/King_Bowser%27s_Keep",
+      "rawBytes": 120236,
+      "rawSha256": "3afcf38a2d58187f14977d1ad050138d3fa68541f4e31a69ede4e4f69138a275"
+    },
+    {
+      "sourceId": "NGAMER_WESTERN",
+      "pass": "A",
+      "requestedUrl": "https://ngamer.hatenablog.com/entry/2024/10/30/210000",
+      "startedAt": "2026-10-09T13:36:09.441264+00:00",
+      "finishedAt": "2026-10-09T13:36:10.749551+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://ngamer.hatenablog.com/entry/2024/10/30/210000",
+      "rawBytes": 118489,
+      "rawSha256": "6fa8108bce92f7acad807f9370bfbd28281259339b815276f9f158fbd934ae42"
+    },
+    {
+      "sourceId": "NGAMER_WESTERN",
+      "pass": "B",
+      "requestedUrl": "https://ngamer.hatenablog.com/entry/2024/10/30/210000",
+      "startedAt": "2026-10-09T13:36:10.749780+00:00",
+      "finishedAt": "2026-10-09T13:36:11.506153+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://ngamer.hatenablog.com/entry/2024/10/30/210000",
+      "rawBytes": 118489,
+      "rawSha256": "6fa8108bce92f7acad807f9370bfbd28281259339b815276f9f158fbd934ae42"
+    }
+  ],
+  "nativeNaturalClosure": {
+    "startedAt": "2026-10-09T13:36:07.315780+00:00",
+    "closedAt": "2026-10-09T13:36:11.506491+00:00",
+    "elapsedSeconds": 4.190705828019418,
+    "declaredWholeBoundSeconds": 60,
+    "nativePid": 388703,
+    "externalChildren": [],
+    "terminationSignals": [],
+    "completedRequests": 4,
+    "allRequestedFullHttp200": true,
+    "failure": null,
+    "fullRawPublic": false
+  },
+  "wholeAuthoredScopeMetadata": [
+    {
+      "sourceId": "W_KEEP_CURRENT",
+      "selector": ".mw-parser-output",
+      "chars": 17623,
+      "sha256": "f702854d7325bcbf2b5198971d73fc6f0aaa30786dde3c96c84201977e572296",
+      "nativeMetadata": [
+        {
+          "property": "article:modified_time",
+          "content": "2026-10-01T15:44:31Z"
+        },
+        {
+          "property": "article:published_time",
+          "content": "2026-10-01T15:44:31Z"
+        }
+      ],
+      "relAuthors": []
+    },
+    {
+      "sourceId": "NGAMER_WESTERN",
+      "selector": ".entry-content",
+      "chars": 1819,
+      "sha256": "cea8bfd77a110ca91be51f48007569a9ed0c3e95a5c66a3842fa4192b551adb4",
+      "nativeMetadata": [
+        {
+          "property": "article:published_time",
+          "content": "2024-10-30T12:00:00Z"
+        }
+      ],
+      "relAuthors": [
+        {
+          "text": "",
+          "href": "http://www.hatena.ne.jp/SASKE/"
+        }
+      ]
+    }
+  ],
+  "newScopeFindings": {
+    "W_KEEP_CURRENT": "Entire17623 authored characters personally read, all mechanics/currentmode tables/language footnotes11 and navigation. It supports the full recorded Byway mechanics, but is a fresh request to the existing Wiki editorial family. No new independence.",
+    "NGAMER_WESTERN": "Entire1819 authored characters personally read. Exact native rel=author is Hatena SASKE profile; this is the previously retained SASKE Western article, not a new author or independent publisher. Its two-vs-all Milk prose discrepancy remains. The actual train ticket/ride narrative still does not independently establish every retained parked-train/availability qualifier. Unknown train Event trigger/effect remains unverified.",
+    "fireGrowth": "Namu explicitly gives every3turns/two additions/last24one/max17. The exact start-of-turn qualifier is not silently promoted from period wording.",
+    "Raceway": "Root complete negative peer confirms no independently identified second northern Star marker account; remains100."
+  },
+  "fullCopyrightedBodiesImagesHeadersPublic": false
+}

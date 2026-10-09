@@ -881,7 +881,7 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | king-bowser-keep:space:tv_tag_team:lucky | single_source/medium | W_KEEP-Q015 |
 | king-bowser-keep:space:tv_tag_team:unlucky | single_source/medium | W_KEEP-Q016 |
 | king-bowser-keep:space:tv_tag_team:bowser | single_source/medium | W_KEEP-Q011 |
-| king-bowser-keep:stars:purchase | single_source/medium | MPL_BOARDS-Q001, MPL_BOARDS-Q002 |
+| king-bowser-keep:stars:purchase | single_source/medium | MPL_BOARDS-Q002, NAMU_KR_COUNTS-Q015 |
 | king-bowser-keep:shop:0:item:0 | single_source/medium | W_KEEP-Q017 |
 | king-bowser-keep:shop:0:item:1 | single_source/medium | W_KEEP-Q018 |
 | king-bowser-keep:shop:0:item:2 | single_source/medium | W_KEEP-Q019 |

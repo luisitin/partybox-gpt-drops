@@ -42,7 +42,7 @@ Whole count profiles remain single-source and include Start. The scoped original
 
 ## Star movement and cost
 
-- `king-bowser-keep:stars:purchase` (single_source, medium): {"movement": "relocating Star; exact eligible locations/selection law unverified", "normalCostCoins": 20, "selectionProbabilities": null} — MPL_BOARDS-Q001, MPL_BOARDS-Q002. MPL reports core movement and standard cost. Complete locations, Pro cycle, discounts and post-Homestretch additions are separate qualifiers; no RNG weights inferred.
+- `king-bowser-keep:stars:purchase` (single_source, medium): {"movement": "relocating Star; exact eligible locations/selection law unverified", "normalCostCoins": 20, "selectionProbabilities": null} — MPL_BOARDS-Q002, NAMU_KR_COUNTS-Q015. The full paired Namu Keep table explicitly reports a variable Star location; its complete ordinary-Star paragraph supplies the default20 price. MPL shared introduction independently supports price only. Its rotating-Star phrase belongs to other board sections and has been removed from this Keep evidence. Whole movement remains one authored publisher, so single_source/medium is retained. Exact eligible positions, selection law, Pro/TV and discounts remain unverified or separate.
 
 ## Gates, keys and paid paths
 
