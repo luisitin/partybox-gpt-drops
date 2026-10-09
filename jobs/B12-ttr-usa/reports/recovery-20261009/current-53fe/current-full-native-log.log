@@ -1,0 +1,537 @@
+﻿2026-10-09T11:26:06.3386961Z Current runner version: '2.337.0'
+2026-10-09T11:26:06.3421349Z ##[group]Runner Image Provisioner
+2026-10-09T11:26:06.3422665Z Hosted Compute Agent
+2026-10-09T11:26:06.3423698Z Version: 20261002.596
+2026-10-09T11:26:06.3424750Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-09T11:26:06.3426020Z Build Date: 2026-10-02T22:28:27Z
+2026-10-09T11:26:06.3427123Z Worker ID: {94af07ae-6c91-4bb3-b3e3-0bf341357ef2}
+2026-10-09T11:26:06.3428369Z Region: eastus
+2026-10-09T11:26:06.3429696Z Cloud: Azure
+2026-10-09T11:26:06.3430540Z ##[endgroup]
+2026-10-09T11:26:06.3432892Z ##[group]Operating System
+2026-10-09T11:26:06.3433880Z Ubuntu
+2026-10-09T11:26:06.3434737Z 24.04.5
+2026-10-09T11:26:06.3435698Z LTS
+2026-10-09T11:26:06.3436509Z ##[endgroup]
+2026-10-09T11:26:06.3437431Z ##[group]Runner Image
+2026-10-09T11:26:06.3438463Z Image: ubuntu-24.04
+2026-10-09T11:26:06.3439696Z Version: 20261004.327.1
+2026-10-09T11:26:06.3441910Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-09T11:26:06.3444716Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-09T11:26:06.3446386Z ##[endgroup]
+2026-10-09T11:26:06.3448332Z ##[group]GITHUB_TOKEN Permissions
+2026-10-09T11:26:06.3451216Z Contents: read
+2026-10-09T11:26:06.3452370Z Metadata: read
+2026-10-09T11:26:06.3453291Z ##[endgroup]
+2026-10-09T11:26:06.3456374Z Secret source: Actions
+2026-10-09T11:26:06.3457808Z Cache mode: write
+2026-10-09T11:26:06.3459028Z Prepare workflow directory
+2026-10-09T11:26:06.4037067Z Prepare all required actions
+2026-10-09T11:26:06.4107891Z Getting action download info
+2026-10-09T11:26:06.6060611Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-09T11:26:06.7026895Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-09T11:26:06.7888319Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-09T11:26:06.9955189Z Complete job name: verify
+2026-10-09T11:26:07.0760106Z ##[group]Run actions/checkout@v4
+2026-10-09T11:26:07.0761131Z with:
+2026-10-09T11:26:07.0761575Z   persist-credentials: false
+2026-10-09T11:26:07.0762124Z   repository: luisitin/partybox-gpt-drops
+2026-10-09T11:26:07.0766049Z   token: ***
+2026-10-09T11:26:07.0766483Z   ssh-strict: true
+2026-10-09T11:26:07.0766910Z   ssh-user: git
+2026-10-09T11:26:07.0767316Z   clean: true
+2026-10-09T11:26:07.0767759Z   sparse-checkout-cone-mode: true
+2026-10-09T11:26:07.0768284Z   fetch-depth: 1
+2026-10-09T11:26:07.0768717Z   fetch-tags: false
+2026-10-09T11:26:07.0769353Z   show-progress: true
+2026-10-09T11:26:07.0769812Z   lfs: false
+2026-10-09T11:26:07.0770209Z   submodules: false
+2026-10-09T11:26:07.0770654Z   set-safe-directory: true
+2026-10-09T11:26:07.0771169Z   allow-unsafe-pr-checkout: false
+2026-10-09T11:26:07.0772000Z ##[endgroup]
+2026-10-09T11:26:07.1792438Z Syncing repository: luisitin/partybox-gpt-drops
+2026-10-09T11:26:07.1794845Z ##[group]Getting Git version info
+2026-10-09T11:26:07.1795763Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-09T11:26:07.1796884Z [command]/usr/bin/git version
+2026-10-09T11:26:07.1896505Z git version 2.55.0
+2026-10-09T11:26:07.1922789Z ##[endgroup]
+2026-10-09T11:26:07.1940776Z Temporarily overriding HOME='/home/runner/work/_temp/4b8e3f32-bcd7-4930-b58e-815749758305' before making global git config changes
+2026-10-09T11:26:07.1961043Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-09T11:26:07.1963287Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-09T11:26:07.2011230Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-09T11:26:07.2025653Z ##[group]Initializing the repository
+2026-10-09T11:26:07.2030846Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-09T11:26:07.2165726Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-09T11:26:07.2167410Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-09T11:26:07.2168922Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-09T11:26:07.2170612Z hint: call:
+2026-10-09T11:26:07.2171245Z hint:
+2026-10-09T11:26:07.2172190Z hint: 	git config --global init.defaultBranch <name>
+2026-10-09T11:26:07.2173238Z hint:
+2026-10-09T11:26:07.2174168Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-09T11:26:07.2175674Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-09T11:26:07.2176874Z hint:
+2026-10-09T11:26:07.2177521Z hint: 	git branch -m <name>
+2026-10-09T11:26:07.2178433Z hint:
+2026-10-09T11:26:07.2179687Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-09T11:26:07.2182252Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+2026-10-09T11:26:07.2185270Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+2026-10-09T11:26:07.2255678Z ##[endgroup]
+2026-10-09T11:26:07.2257006Z ##[group]Disabling automatic garbage collection
+2026-10-09T11:26:07.2259569Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-09T11:26:07.2291841Z ##[endgroup]
+2026-10-09T11:26:07.2293076Z ##[group]Setting up auth
+2026-10-09T11:26:07.2300682Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-09T11:26:07.2333261Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-09T11:26:07.2730639Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-09T11:26:07.2780743Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-09T11:26:07.3010796Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-09T11:26:07.3052073Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-09T11:26:07.3284702Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-09T11:26:07.3330161Z ##[endgroup]
+2026-10-09T11:26:07.3331580Z ##[group]Fetching the repository
+2026-10-09T11:26:07.3340729Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f0e842f596c37a6a772a7cc5c0a41b3ddb4d86a5:refs/remotes/pull/27/merge
+2026-10-09T11:26:07.6117111Z From https://github.com/luisitin/partybox-gpt-drops
+2026-10-09T11:26:07.6121055Z  * [new ref]         f0e842f596c37a6a772a7cc5c0a41b3ddb4d86a5 -> pull/27/merge
+2026-10-09T11:26:07.6124525Z ##[endgroup]
+2026-10-09T11:26:07.6126468Z ##[group]Determining the checkout info
+2026-10-09T11:26:07.6128391Z ##[endgroup]
+2026-10-09T11:26:07.6134513Z [command]/usr/bin/git sparse-checkout disable
+2026-10-09T11:26:07.6193726Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-09T11:26:07.6237102Z ##[group]Checking out the ref
+2026-10-09T11:26:07.6241873Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/27/merge
+2026-10-09T11:26:07.6411147Z Note: switching to 'refs/remotes/pull/27/merge'.
+2026-10-09T11:26:07.6411739Z 
+2026-10-09T11:26:07.6412283Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-09T11:26:07.6413393Z changes and commit them, and you can discard any commits you make in this
+2026-10-09T11:26:07.6414370Z state without impacting any branches by switching back to a branch.
+2026-10-09T11:26:07.6414935Z 
+2026-10-09T11:26:07.6415315Z If you want to create a new branch to retain commits you create, you may
+2026-10-09T11:26:07.6416538Z do so (now or later) by using -c with the switch command. Example:
+2026-10-09T11:26:07.6417075Z 
+2026-10-09T11:26:07.6417313Z   git switch -c <new-branch-name>
+2026-10-09T11:26:07.6417739Z 
+2026-10-09T11:26:07.6418113Z Or undo this operation with:
+2026-10-09T11:26:07.6418728Z 
+2026-10-09T11:26:07.6419415Z   git switch -
+2026-10-09T11:26:07.6419945Z 
+2026-10-09T11:26:07.6420685Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-09T11:26:07.6421853Z 
+2026-10-09T11:26:07.6423041Z HEAD is now at f0e842f Merge 53fe4e0c7109cf59c0e49ca53720912649900bd8 into a8be0e08392850178f50713361054dc86436e5eb
+2026-10-09T11:26:07.6426334Z ##[endgroup]
+2026-10-09T11:26:07.6469688Z [command]/usr/bin/git log -1 --format=%H
+2026-10-09T11:26:07.6496521Z f0e842f596c37a6a772a7cc5c0a41b3ddb4d86a5
+2026-10-09T11:26:07.6507704Z ##[group]Removing auth
+2026-10-09T11:26:07.6512603Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-09T11:26:07.6547707Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-09T11:26:07.6787223Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-09T11:26:07.6817109Z http.https://github.com/.extraheader
+2026-10-09T11:26:07.6824708Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-09T11:26:07.6860486Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-09T11:26:07.7081319Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-09T11:26:07.7114743Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-09T11:26:07.7335262Z ##[endgroup]
+2026-10-09T11:26:07.7610728Z ##[group]Run actions/setup-node@v4
+2026-10-09T11:26:07.7611310Z with:
+2026-10-09T11:26:07.7611714Z   node-version: 22.16.0
+2026-10-09T11:26:07.7612167Z   always-auth: false
+2026-10-09T11:26:07.7612613Z   check-latest: false
+2026-10-09T11:26:07.7616426Z   token: ***
+2026-10-09T11:26:07.7616840Z ##[endgroup]
+2026-10-09T11:26:07.9092189Z Attempting to download 22.16.0...
+2026-10-09T11:26:07.9205213Z (node:2387) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-09T11:26:07.9208875Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-09T11:26:08.3537544Z Acquiring 22.16.0 - x64 from https://github.com/actions/node-versions/releases/download/22.16.0-15177438473/node-22.16.0-linux-x64.tar.gz
+2026-10-09T11:26:08.7693369Z Extracting ...
+2026-10-09T11:26:08.7802720Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/72a032a6-65d6-45ef-abe8-612057c8f0f6 -f /home/runner/work/_temp/b19661a0-1ea9-4bb7-8a72-61b9f05e7781
+2026-10-09T11:26:10.0045447Z Adding to the cache ...
+2026-10-09T11:26:12.1046749Z ##[group]Environment details
+2026-10-09T11:26:12.3320735Z node: v22.16.0
+2026-10-09T11:26:12.3321458Z npm: 10.9.2
+2026-10-09T11:26:12.3321936Z yarn: 1.22.22
+2026-10-09T11:26:12.3322805Z ##[endgroup]
+2026-10-09T11:26:12.3517760Z ##[group]Run sha256sum -c SHA256SUMS.txt
+2026-10-09T11:26:12.3518259Z [36;1msha256sum -c SHA256SUMS.txt[0m
+2026-10-09T11:26:12.3808838Z shell: /usr/bin/bash -e {0}
+2026-10-09T11:26:12.3809607Z ##[endgroup]
+2026-10-09T11:26:12.3953651Z .gitignore: OK
+2026-10-09T11:26:12.3954380Z ASSUMPTIONS.md: OK
+2026-10-09T11:26:12.3954742Z CONFLICTS.md: OK
+2026-10-09T11:26:12.3955068Z INTEGRATION.md: OK
+2026-10-09T11:26:12.3955357Z LOOP.md: OK
+2026-10-09T11:26:12.3955621Z NEXT.md: OK
+2026-10-09T11:26:12.3955885Z ORACLE.md: OK
+2026-10-09T11:26:12.3956214Z ORACLE_AMENDMENTS.md: OK
+2026-10-09T11:26:12.3956811Z README.md: OK
+2026-10-09T11:26:12.3957097Z SOURCES.md: OK
+2026-10-09T11:26:12.3957374Z VERIFY.md: OK
+2026-10-09T11:26:12.3957660Z citations.json: OK
+2026-10-09T11:26:12.3957968Z package-lock.json: OK
+2026-10-09T11:26:12.3958288Z package.json: OK
+2026-10-09T11:26:12.3958698Z reference.amended.snapshot.ts.txt: OK
+2026-10-09T11:26:12.3959493Z reference.snapshot.ts.txt: OK
+2026-10-09T11:26:12.3960029Z reference.ts: OK
+2026-10-09T11:26:12.3960418Z reports/data-schema-audit.json: OK
+2026-10-09T11:26:12.3960883Z reports/exported-constant-pre-repair.json: OK
+2026-10-09T11:26:12.3961308Z reports/fact-rows.json: OK
+2026-10-09T11:26:12.3961649Z reports/full-games.json: OK
+2026-10-09T11:26:12.3962027Z reports/full-suite-summary.json: OK
+2026-10-09T11:26:12.3962421Z reports/graph-comparison.json: OK
+2026-10-09T11:26:12.3962847Z reports/helper-full-differential.json: OK
+2026-10-09T11:26:12.3963286Z reports/helper-probe-record.md: OK
+2026-10-09T11:26:12.3963894Z reports/mutations.json: OK
+2026-10-09T11:26:12.3964376Z reports/oracle-amended-selfcheck.json: OK
+2026-10-09T11:26:12.3964866Z reports/oracle-archive/AMENDED-SELFCHECK.json: OK
+2026-10-09T11:26:12.3965356Z reports/oracle-archive/AMENDED-SHA256SUMS.txt: OK
+2026-10-09T11:26:12.3965961Z reports/oracle-archive/AMENDMENT.md: OK
+2026-10-09T11:26:12.3966445Z reports/oracle-archive/AUTHORING.md: OK
+2026-10-09T11:26:12.3967008Z reports/oracle-archive/DIFFERENTIAL-PROBE.json: OK
+2026-10-09T11:26:12.3967585Z reports/oracle-archive/PROBE-RECORD.md: OK
+2026-10-09T11:26:12.3968140Z reports/oracle-archive/PROBE-SHA256SUMS.txt: OK
+2026-10-09T11:26:12.3968708Z reports/oracle-archive/SEALED-SHA256SUMS.txt: OK
+2026-10-09T11:26:12.3969787Z reports/oracle-archive/SELFCHECK.json: OK
+2026-10-09T11:26:12.3970724Z reports/oracle-archive/SPARSE-REPLAY.json: OK
+2026-10-09T11:26:12.3971460Z reports/oracle-archive/amended-reference.ts: OK
+2026-10-09T11:26:12.3971961Z reports/oracle-archive/amended-selfcheck.mjs: OK
+2026-10-09T11:26:12.3972426Z reports/oracle-archive/package.json: OK
+2026-10-09T11:26:12.3972894Z reports/oracle-archive/primary-probe.ts: OK
+2026-10-09T11:26:12.3973365Z reports/oracle-archive/probe-tsconfig.json: OK
+2026-10-09T11:26:12.3973814Z reports/oracle-archive/probe.log: OK
+2026-10-09T11:26:12.3974216Z reports/oracle-archive/probe.mjs: OK
+2026-10-09T11:26:12.3974618Z reports/oracle-archive/reference.ts: OK
+2026-10-09T11:26:12.3975055Z reports/oracle-archive/selfcheck.mjs: OK
+2026-10-09T11:26:12.3975487Z reports/oracle-archive/sparse-replay.mjs: OK
+2026-10-09T11:26:12.3975918Z reports/oracle-archive/tsconfig.json: OK
+2026-10-09T11:26:12.3976319Z reports/oracle-replay.json: OK
+2026-10-09T11:26:12.3976698Z reports/oracle-selfcheck.json: OK
+2026-10-09T11:26:12.3977099Z reports/oracle-sparse-replay.json: OK
+2026-10-09T11:26:12.3977568Z reports/polish-2026-10-08/budget-timing.jsonl: OK
+2026-10-09T11:26:12.3978030Z reports/polish-2026-10-08/map-check.png: OK
+2026-10-09T11:26:12.3978469Z reports/polish-2026-10-08/map-check.svg: OK
+2026-10-09T11:26:12.3978936Z reports/polish-2026-10-08/solver-compare.jsonl: OK
+2026-10-09T11:26:12.3979581Z reports/polish-2026-10-08/spot-check.jsonl: OK
+2026-10-09T11:26:12.3980020Z reports/pre-loop-full-games.json: OK
+2026-10-09T11:26:12.3980723Z reports/pre-loop-full-suite-summary.json: OK
+2026-10-09T11:26:12.3981521Z reports/pre-repair-boundaries.json: OK
+2026-10-09T11:26:12.3982321Z reports/preliminary-full-game-run.log: OK
+2026-10-09T11:26:12.3983641Z reports/recovery-20261009/CORE-FIELD-CORRECTION.json: OK
+2026-10-09T11:26:12.3984903Z reports/recovery-20261009/CURRENT-884-INHERITED-CORE-REGRESSION.json: OK
+2026-10-09T11:26:12.3985996Z reports/recovery-20261009/CURRENT-FIRST-FULL-LOCAL-ACCEPTANCE.json: OK
+2026-10-09T11:26:12.3986709Z reports/recovery-20261009/FOCUSED-REVIEW-ATTEMPT1-FAILURE.json: OK
+2026-10-09T11:26:12.3987352Z reports/recovery-20261009/ORIGINAL-A8BE0E-FULL-ACCEPTANCE.json: OK
+2026-10-09T11:26:12.3988054Z reports/recovery-20261009/ORIGINAL-AND-PATCHED-PDF-TRANSPORT-CONTROLS.json: OK
+2026-10-09T11:26:12.3988972Z reports/recovery-20261009/ORIGINAL-POLISH-BUDGET-FALSE-GREEN.json: OK
+2026-10-09T11:26:12.3990090Z reports/recovery-20261009/ORIGINAL-POLISH-FALSE-GREEN.json: OK
+2026-10-09T11:26:12.3990702Z reports/recovery-20261009/ORIGINAL-VALIDATION-REPRO.json: OK
+2026-10-09T11:26:12.3991382Z reports/recovery-20261009/SOURCE-EXTRACTION-MANIFEST-SCOPE-CORRECTION.json: OK
+2026-10-09T11:26:12.3992089Z reports/recovery-20261009/core-field-correction-build.stderr: OK
+2026-10-09T11:26:12.3992691Z reports/recovery-20261009/core-field-correction-build.stdout: OK
+2026-10-09T11:26:12.3993299Z reports/recovery-20261009/core-field-correction-review.stderr: OK
+2026-10-09T11:26:12.3993902Z reports/recovery-20261009/core-field-correction-review.stdout: OK
+2026-10-09T11:26:12.3994553Z reports/recovery-20261009/current-884/CURRENT-884-FULL-ACCEPTANCE.json: OK
+2026-10-09T11:26:12.3995185Z reports/recovery-20261009/current-884/accept-current-884.py: OK
+2026-10-09T11:26:12.3995764Z reports/recovery-20261009/current-884/claim-refresh.json: OK
+2026-10-09T11:26:12.3996345Z reports/recovery-20261009/current-884/current-artifacts.json: OK
+2026-10-09T11:26:12.3996949Z reports/recovery-20261009/current-884/current-full-native-log.log: OK
+2026-10-09T11:26:12.3997540Z reports/recovery-20261009/current-884/current-jobs.json: OK
+2026-10-09T11:26:12.3998106Z reports/recovery-20261009/current-884/current-official.zip: OK
+2026-10-09T11:26:12.3998662Z reports/recovery-20261009/current-884/current-run.json: OK
+2026-10-09T11:26:12.3999564Z reports/recovery-20261009/current-884/current-source-files.json: OK
+2026-10-09T11:26:12.4000263Z reports/recovery-20261009/current-884/current-whole-reader.stderr: OK
+2026-10-09T11:26:12.4000911Z reports/recovery-20261009/current-884/current-whole-reader.stdout: OK
+2026-10-09T11:26:12.4001527Z reports/recovery-20261009/current-884-prototype-repro.stderr: OK
+2026-10-09T11:26:12.4002141Z reports/recovery-20261009/current-884-prototype-repro.stdout: OK
+2026-10-09T11:26:12.4002716Z reports/recovery-20261009/current-first-MILESTONE.json: OK
+2026-10-09T11:26:12.4003300Z reports/recovery-20261009/current-first-full-local.stderr: OK
+2026-10-09T11:26:12.4003875Z reports/recovery-20261009/current-first-full-local.stdout: OK
+2026-10-09T11:26:12.4004431Z reports/recovery-20261009/current-local-schema-1.stderr: OK
+2026-10-09T11:26:12.4004985Z reports/recovery-20261009/current-local-schema-1.stdout: OK
+2026-10-09T11:26:12.4005537Z reports/recovery-20261009/current-local-schema-2.stderr: OK
+2026-10-09T11:26:12.4006080Z reports/recovery-20261009/current-local-schema-2.stdout: OK
+2026-10-09T11:26:12.4006648Z reports/recovery-20261009/current-local-schema-3.stderr: OK
+2026-10-09T11:26:12.4007200Z reports/recovery-20261009/current-local-schema-3.stdout: OK
+2026-10-09T11:26:12.4007819Z reports/recovery-20261009/focused-core-field-corrected-review.json: OK
+2026-10-09T11:26:12.4008430Z reports/recovery-20261009/focused-current-review.json: OK
+2026-10-09T11:26:12.4009012Z reports/recovery-20261009/frozen-original-source-files.json: OK
+2026-10-09T11:26:12.4010027Z reports/recovery-20261009/original-a8be0e-NEXT.md.txt: OK
+2026-10-09T11:26:12.4010605Z reports/recovery-20261009/original-a8be0e-full-native.log: OK
+2026-10-09T11:26:12.4011178Z reports/recovery-20261009/original-a8be0e-official.zip: OK
+2026-10-09T11:26:12.4011779Z reports/recovery-20261009/original-a8be0e-polish-check.mjs.txt: OK
+2026-10-09T11:26:12.4012562Z reports/recovery-20261009/original-a8be0e-reopen.py.txt: OK
+2026-10-09T11:26:12.4013204Z reports/recovery-20261009/original-a8be0e-validation-repro.mjs.txt: OK
+2026-10-09T11:26:12.4013933Z reports/recovery-20261009/original-inherited-core-regression-repro.mjs.txt: OK
+2026-10-09T11:26:12.4014608Z reports/recovery-20261009/original-polish-bad-owner.stderr: OK
+2026-10-09T11:26:12.4015206Z reports/recovery-20261009/original-polish-bad-owner.stdout: OK
+2026-10-09T11:26:12.4015838Z reports/recovery-20261009/original-polish-budget-bad-owner.stderr: OK
+2026-10-09T11:26:12.4016501Z reports/recovery-20261009/original-polish-budget-bad-owner.stdout: OK
+2026-10-09T11:26:12.4017292Z reports/recovery-20261009/original-strict-build.stderr: OK
+2026-10-09T11:26:12.4017855Z reports/recovery-20261009/original-strict-build.stdout: OK
+2026-10-09T11:26:12.4018434Z reports/recovery-20261009/original-validation-repro.stderr: OK
+2026-10-09T11:26:12.4019028Z reports/recovery-20261009/original-validation-repro.stdout: OK
+2026-10-09T11:26:12.4019916Z reports/recovery-20261009/patched-review-attempt1.stderr: OK
+2026-10-09T11:26:12.4020510Z reports/recovery-20261009/patched-review-attempt1.stdout: OK
+2026-10-09T11:26:12.4021039Z reports/recovery-20261009/patched-review.stderr: OK
+2026-10-09T11:26:12.4021535Z reports/recovery-20261009/patched-review.stdout: OK
+2026-10-09T11:26:12.4022071Z reports/recovery-20261009/patched-strict-build.stderr: OK
+2026-10-09T11:26:12.4022623Z reports/recovery-20261009/patched-strict-build.stdout: OK
+2026-10-09T11:26:12.4023196Z reports/recovery-20261009/pdf-transport-controls.stderr: OK
+2026-10-09T11:26:12.4023765Z reports/recovery-20261009/pdf-transport-controls.stdout: OK
+2026-10-09T11:26:12.4024252Z reports/source-comparison.json: OK
+2026-10-09T11:26:12.4024649Z reports/source-reopening.json: OK
+2026-10-09T11:26:12.4025070Z sources/agnias-1910.usa.tickets.json: OK
+2026-10-09T11:26:12.4025457Z sources/agnias-LICENSE: OK
+2026-10-09T11:26:12.4025830Z sources/agnias-colors.json: OK
+2026-10-09T11:26:12.4026246Z sources/agnias-route-point-values.json: OK
+2026-10-09T11:26:12.4026668Z sources/agnias-routes.json: OK
+2026-10-09T11:26:12.4027052Z sources/agnias-usa.cities.json: OK
+2026-10-09T11:26:12.4027447Z sources/agnias-usa.tickets.json: OK
+2026-10-09T11:26:12.4027808Z sources/discovery.json: OK
+2026-10-09T11:26:12.4028187Z sources/fetch-discovery-0.json: OK
+2026-10-09T11:26:12.4028584Z sources/fetch-discovery-1.json: OK
+2026-10-09T11:26:12.4028976Z sources/fetch-ticket-lists.json: OK
+2026-10-09T11:26:12.4029566Z sources/index.json: OK
+2026-10-09T11:26:12.4029942Z sources/mystery-discovery-2.json: OK
+2026-10-09T11:26:12.4030357Z sources/mystery-discovery.json: OK
+2026-10-09T11:26:12.4030751Z sources/mystery-facts.json: OK
+2026-10-09T11:26:12.4031101Z sources/rob-cities.json: OK
+2026-10-09T11:26:12.4031433Z sources/rob-routes.csv: OK
+2026-10-09T11:26:12.4031762Z sources/rob-tickets.csv: OK
+2026-10-09T11:26:12.4032168Z sources/supercheats-mega-extracted.json: OK
+2026-10-09T11:26:12.4032607Z sources/ticket-discovery-2.json: OK
+2026-10-09T11:26:12.4033040Z sources/ticket-discovery.json: OK
+2026-10-09T11:26:12.4033512Z tests/__pycache__/reopen-control.cpython-312.pyc: OK
+2026-10-09T11:26:12.4033921Z tests/brute.mjs: OK
+2026-10-09T11:26:12.4034222Z tests/common.mjs: OK
+2026-10-09T11:26:12.4034518Z tests/data.mjs: OK
+2026-10-09T11:26:12.4034810Z tests/games.mjs: OK
+2026-10-09T11:26:12.4035103Z tests/goldens.mjs: OK
+2026-10-09T11:26:12.4035411Z tests/graphs.mjs: OK
+2026-10-09T11:26:12.4035780Z tests/helper-probe.snapshot.mjs.txt: OK
+2026-10-09T11:26:12.4036149Z tests/mutations.mjs: OK
+2026-10-09T11:26:12.4036471Z tests/oracle-self.mjs: OK
+2026-10-09T11:26:12.4036797Z tests/probe.mjs: OK
+2026-10-09T11:26:12.4037103Z tests/reopen-control.py: OK
+2026-10-09T11:26:12.4037441Z tests/review-tools.mjs: OK
+2026-10-09T11:26:12.4037759Z tests/review.mjs: OK
+2026-10-09T11:26:12.4038046Z tests/run.mjs: OK
+2026-10-09T11:26:12.4038340Z tools/build-data.py: OK
+2026-10-09T11:26:12.4038664Z tools/polish-check.mjs: OK
+2026-10-09T11:26:12.4038976Z tools/reopen.py: OK
+2026-10-09T11:26:12.4039752Z tools/write-sources.mjs: OK
+2026-10-09T11:26:12.4040117Z tools/write-verify.mjs: OK
+2026-10-09T11:26:12.4040427Z tsconfig.json: OK
+2026-10-09T11:26:12.4040723Z ttr.snapshot.ts.txt: OK
+2026-10-09T11:26:12.4041005Z ttr.ts: OK
+2026-10-09T11:26:12.4041263Z usa.json: OK
+2026-10-09T11:26:12.4041543Z usa.schema.json: OK
+2026-10-09T11:26:12.4041818Z validate.ts: OK
+2026-10-09T11:26:12.4042120Z validate_schema.py: OK
+2026-10-09T11:26:12.4154792Z ##[group]Run npm ci --ignore-scripts --no-audit --no-fund
+2026-10-09T11:26:12.4155348Z [36;1mnpm ci --ignore-scripts --no-audit --no-fund[0m
+2026-10-09T11:26:12.4222226Z shell: /usr/bin/bash -e {0}
+2026-10-09T11:26:12.4222556Z ##[endgroup]
+2026-10-09T11:26:13.2567539Z 
+2026-10-09T11:26:13.2568586Z added 1 package in 778ms
+2026-10-09T11:26:13.3023770Z ##[group]Run python -m pip install --disable-pip-version-check 'jsonschema==4.26.0'
+2026-10-09T11:26:13.3024417Z [36;1mpython -m pip install --disable-pip-version-check 'jsonschema==4.26.0'[0m
+2026-10-09T11:26:13.3090739Z shell: /usr/bin/bash -e {0}
+2026-10-09T11:26:13.3091013Z ##[endgroup]
+2026-10-09T11:26:13.7221078Z Defaulting to user installation because normal site-packages is not writeable
+2026-10-09T11:26:14.1180019Z Collecting jsonschema==4.26.0
+2026-10-09T11:26:14.1473029Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-10-09T11:26:14.1637632Z Requirement already satisfied: attrs>=22.2.0 in /usr/lib/python3/dist-packages (from jsonschema==4.26.0) (23.2.0)
+2026-10-09T11:26:14.1825209Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema==4.26.0)
+2026-10-09T11:26:14.1861596Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-10-09T11:26:14.2245539Z Collecting referencing>=0.28.4 (from jsonschema==4.26.0)
+2026-10-09T11:26:14.2278469Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-10-09T11:26:14.5493789Z Collecting rpds-py>=0.25.0 (from jsonschema==4.26.0)
+2026-10-09T11:26:14.5530060Z   Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-10-09T11:26:14.5917412Z Requirement already satisfied: typing-extensions>=4.4.0 in /usr/lib/python3/dist-packages (from referencing>=0.28.4->jsonschema==4.26.0) (4.10.0)
+2026-10-09T11:26:14.5977565Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-10-09T11:26:14.6070690Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 kB 12.1 MB/s eta 0:00:00
+2026-10-09T11:26:14.6105201Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-10-09T11:26:14.6156515Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-10-09T11:26:14.6208403Z Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+2026-10-09T11:26:14.6286990Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 371.3/371.3 kB 62.4 MB/s eta 0:00:00
+2026-10-09T11:26:14.9091379Z Installing collected packages: rpds-py, referencing, jsonschema-specifications, jsonschema
+2026-10-09T11:26:15.0259513Z Successfully installed jsonschema-4.26.0 jsonschema-specifications-2025.9.1 referencing-0.37.0 rpds-py-2026.9.1
+2026-10-09T11:26:15.1238826Z ##[group]Run npm test
+2026-10-09T11:26:15.1239493Z [36;1mnpm test[0m
+2026-10-09T11:26:15.1303703Z shell: /usr/bin/bash -e {0}
+2026-10-09T11:26:15.1303973Z ##[endgroup]
+2026-10-09T11:26:15.2291117Z 
+2026-10-09T11:26:15.2291730Z > b12-ttr-usa@1.0.0 test
+2026-10-09T11:26:15.2292256Z > npm run build && node tests/run.mjs
+2026-10-09T11:26:15.2292528Z 
+2026-10-09T11:26:15.3255724Z 
+2026-10-09T11:26:15.3256397Z > b12-ttr-usa@1.0.0 build
+2026-10-09T11:26:15.3257031Z > tsc -p tsconfig.json
+2026-10-09T11:26:15.3257363Z 
+2026-10-09T11:26:16.2505372Z B12 review: starting all seeds
+2026-10-09T11:26:17.9332012Z {"passed":true,"seeds":[{"seed":1,"passed":true,"assertions":624,"validExtensionPreservationControls":40,"originalOracleLimitation":"Raw reference still accepts non-enumerable card counts and drops extension fields; untouched and explicitly excluded as a correctness oracle for those two controls."},{"seed":2,"passed":true,"assertions":624,"validExtensionPreservationControls":40,"originalOracleLimitation":"Raw reference still accepts non-enumerable card counts and drops extension fields; untouched and explicitly excluded as a correctness oracle for those two controls."},{"seed":3,"passed":true,"assertions":624,"validExtensionPreservationControls":40,"originalOracleLimitation":"Raw reference still accepts non-enumerable card counts and drops extension fields; untouched and explicitly excluded as a correctness oracle for those two controls."}],"toolControls":{"passed":true,"actualCLIControls":3,"actualHTTPControls":5,"temporaryOwnedControllersClosed":true,"scope":"Correctness checks only; no new performance claim or live fourteen-source research pass.","rows":[{"mode":"bad-small","actualCLIStatus":1,"naturallyClosed":true,"output":[{"check":"compare-small-random","cases":300,"valueMismatches":300}]},{"mode":"bad-budget","actualCLIStatus":1,"naturallyClosed":true,"output":[{"check":"compare-small-random","cases":300,"valueMismatches":0},{"check":"compare-budget-feasible","setsCompared":1000,"valueMismatches":1000}]},{"mode":"correct","actualCLIStatus":0,"naturallyClosed":true,"output":[{"check":"compare-small-random","cases":300,"valueMismatches":0},{"check":"compare-budget-feasible","setsCompared":1000,"valueMismatches":0}]},{"mode":"reopen-HTTP-component","passed":true,"actualComponentExecuted":true,"controls":5,"bytes":94,"transportOnly":true,"freshResearchClaim":false,"completedUTC":"2026-10-09T11:26:17.410470+00:00"}]},"timingClaim":false}
+2026-10-09T11:26:17.9339074Z 
+2026-10-09T11:26:17.9339740Z B12 data: starting all seeds
+2026-10-09T11:26:26.9756681Z [{"seed":1,"checks":2903,"schemaCases":125,"passed":true},{"seed":2,"checks":2903,"schemaCases":125,"passed":true},{"seed":3,"checks":2903,"schemaCases":125,"passed":true}]
+2026-10-09T11:26:26.9757728Z 
+2026-10-09T11:26:26.9758017Z B12 oracle-self: starting all seeds
+2026-10-09T11:26:31.5326656Z {"suite":"sealed-oracle-replay","originalChecks":22292,"amendedChecks":22292,"passed":true}
+2026-10-09T11:26:31.5327329Z 
+2026-10-09T11:26:31.5327620Z B12 probe: starting all seeds
+2026-10-09T11:26:31.6424165Z {"seed":1,"checks":175,"passed":true}
+2026-10-09T11:26:31.6424804Z {"seed":2,"checks":175,"passed":true}
+2026-10-09T11:26:31.6425379Z {"seed":3,"checks":175,"passed":true}
+2026-10-09T11:26:31.6425694Z 
+2026-10-09T11:26:31.6425951Z B12 graphs: starting all seeds
+2026-10-09T11:26:47.4964020Z {"seed":1,"assertions":60000,"discrepancies":0}
+2026-10-09T11:26:47.4964602Z {"seed":2,"assertions":120000,"discrepancies":0}
+2026-10-09T11:26:47.4965087Z {"seed":3,"assertions":180000,"discrepancies":0}
+2026-10-09T11:26:47.4968507Z {"passed":true,"assertions":186053,"seeds":[{"seed":1,"graphs":20000,"exhaustiveSubsetComparisons":20000,"checks":60000},{"seed":2,"graphs":20000,"exhaustiveSubsetComparisons":20000,"checks":60000},{"seed":3,"graphs":20000,"exhaustiveSubsetComparisons":20000,"checks":60000}],"sourceHashes":{"original":"317cce5eaa7e896a936e74d57a1d959b3d411b97afd5fd199f0490043961cf52","amended":"ee875cffa3ed8960479c6dd74bcbdc24257a2ee2665cb1cf6da9f61de6c6da83","primary":"ee4851509fa7b68a989b3c5447ab428c047145fbaca4fd44b418473b99c197c1"},"discrepancies":[]}
+2026-10-09T11:26:47.4971286Z 
+2026-10-09T11:26:47.4971449Z B12 games: starting all seeds
+2026-10-09T11:30:40.6313287Z {"suite":"games","seed":1,"completed":100,"turns":14270}
+2026-10-09T11:30:40.6313956Z {"suite":"games","seed":1,"completed":200,"turns":29399}
+2026-10-09T11:30:40.6314729Z {"suite":"games","seed":1,"completed":300,"turns":44331}
+2026-10-09T11:30:40.6315547Z {"suite":"games","seed":1,"completed":400,"turns":58732}
+2026-10-09T11:30:40.6316420Z {"suite":"games","seed":1,"completed":500,"turns":73083}
+2026-10-09T11:30:40.6317184Z {"suite":"games","seed":1,"completed":600,"turns":87402}
+2026-10-09T11:30:40.6317952Z {"suite":"games","seed":1,"completed":700,"turns":102158}
+2026-10-09T11:30:40.6318697Z {"suite":"games","seed":1,"completed":800,"turns":116894}
+2026-10-09T11:30:40.6319704Z {"suite":"games","seed":1,"completed":900,"turns":131446}
+2026-10-09T11:30:40.6320475Z {"suite":"games","seed":1,"completed":1000,"turns":145399}
+2026-10-09T11:30:40.6321217Z {"suite":"games","seed":1,"completed":1100,"turns":160581}
+2026-10-09T11:30:40.6321677Z {"suite":"games","seed":1,"completed":1200,"turns":175540}
+2026-10-09T11:30:40.6322206Z {"suite":"games","seed":1,"completed":1300,"turns":190737}
+2026-10-09T11:30:40.6322710Z {"suite":"games","seed":1,"completed":1400,"turns":205295}
+2026-10-09T11:30:40.6323155Z {"suite":"games","seed":1,"completed":1500,"turns":220529}
+2026-10-09T11:30:40.6323859Z {"suite":"games","seed":1,"completed":1600,"turns":235432}
+2026-10-09T11:30:40.6324286Z {"suite":"games","seed":1,"completed":1700,"turns":250074}
+2026-10-09T11:30:40.6324703Z {"suite":"games","seed":1,"completed":1800,"turns":264318}
+2026-10-09T11:30:40.6325115Z {"suite":"games","seed":1,"completed":1900,"turns":279899}
+2026-10-09T11:30:40.6325522Z {"suite":"games","seed":1,"completed":2000,"turns":295271}
+2026-10-09T11:30:40.6327828Z {"suite":"games","seed":2,"completed":100,"turns":15520}
+2026-10-09T11:30:40.6328583Z {"suite":"games","seed":2,"completed":200,"turns":30053}
+2026-10-09T11:30:40.6329586Z {"suite":"games","seed":2,"completed":300,"turns":44730}
+2026-10-09T11:30:40.6330292Z {"suite":"games","seed":2,"completed":400,"turns":59295}
+2026-10-09T11:30:40.6330981Z {"suite":"games","seed":2,"completed":500,"turns":74773}
+2026-10-09T11:30:40.6331682Z {"suite":"games","seed":2,"completed":600,"turns":88968}
+2026-10-09T11:30:40.6332370Z {"suite":"games","seed":2,"completed":700,"turns":103576}
+2026-10-09T11:30:40.6333102Z {"suite":"games","seed":2,"completed":800,"turns":119061}
+2026-10-09T11:30:40.6333803Z {"suite":"games","seed":2,"completed":900,"turns":133989}
+2026-10-09T11:30:40.6334521Z {"suite":"games","seed":2,"completed":1000,"turns":148839}
+2026-10-09T11:30:40.6335280Z {"suite":"games","seed":2,"completed":1100,"turns":164206}
+2026-10-09T11:30:40.6336012Z {"suite":"games","seed":2,"completed":1200,"turns":178326}
+2026-10-09T11:30:40.6336787Z {"suite":"games","seed":2,"completed":1300,"turns":193393}
+2026-10-09T11:30:40.6337621Z {"suite":"games","seed":2,"completed":1400,"turns":207952}
+2026-10-09T11:30:40.6338450Z {"suite":"games","seed":2,"completed":1500,"turns":221738}
+2026-10-09T11:30:40.6339762Z {"suite":"games","seed":2,"completed":1600,"turns":236742}
+2026-10-09T11:30:40.6340615Z {"suite":"games","seed":2,"completed":1700,"turns":251297}
+2026-10-09T11:30:40.6341432Z {"suite":"games","seed":2,"completed":1800,"turns":266292}
+2026-10-09T11:30:40.6342238Z {"suite":"games","seed":2,"completed":1900,"turns":280081}
+2026-10-09T11:30:40.6343044Z {"suite":"games","seed":2,"completed":2000,"turns":295199}
+2026-10-09T11:30:40.6343786Z {"suite":"games","seed":3,"completed":100,"turns":14670}
+2026-10-09T11:30:40.6344527Z {"suite":"games","seed":3,"completed":200,"turns":29476}
+2026-10-09T11:30:40.6345256Z {"suite":"games","seed":3,"completed":300,"turns":44309}
+2026-10-09T11:30:40.6345993Z {"suite":"games","seed":3,"completed":400,"turns":58965}
+2026-10-09T11:30:40.6347008Z {"suite":"games","seed":3,"completed":500,"turns":73914}
+2026-10-09T11:30:40.6347770Z {"suite":"games","seed":3,"completed":600,"turns":88853}
+2026-10-09T11:30:40.6348549Z {"suite":"games","seed":3,"completed":700,"turns":103358}
+2026-10-09T11:30:40.6349596Z {"suite":"games","seed":3,"completed":800,"turns":118126}
+2026-10-09T11:30:40.6350342Z {"suite":"games","seed":3,"completed":900,"turns":132790}
+2026-10-09T11:30:40.6351094Z {"suite":"games","seed":3,"completed":1000,"turns":147794}
+2026-10-09T11:30:40.6351856Z {"suite":"games","seed":3,"completed":1100,"turns":162811}
+2026-10-09T11:30:40.6352622Z {"suite":"games","seed":3,"completed":1200,"turns":177441}
+2026-10-09T11:30:40.6353381Z {"suite":"games","seed":3,"completed":1300,"turns":192017}
+2026-10-09T11:30:40.6354122Z {"suite":"games","seed":3,"completed":1400,"turns":206481}
+2026-10-09T11:30:40.6354905Z {"suite":"games","seed":3,"completed":1500,"turns":221607}
+2026-10-09T11:30:40.6355667Z {"suite":"games","seed":3,"completed":1600,"turns":236405}
+2026-10-09T11:30:40.6356402Z {"suite":"games","seed":3,"completed":1700,"turns":251108}
+2026-10-09T11:30:40.6357112Z {"suite":"games","seed":3,"completed":1800,"turns":266059}
+2026-10-09T11:30:40.6357857Z {"suite":"games","seed":3,"completed":1900,"turns":280689}
+2026-10-09T11:30:40.6358666Z {"suite":"games","seed":3,"completed":2000,"turns":295133}
+2026-10-09T11:30:40.6359424Z 
+2026-10-09T11:30:40.6359715Z B12 mutations: starting all seeds
+2026-10-09T11:31:03.8116289Z {"mutant":1,"name":"six-point-table","seedsKilled":3}
+2026-10-09T11:31:03.8117599Z {"mutant":2,"name":"minimum-route-length","seedsKilled":3}
+2026-10-09T11:31:03.8118398Z {"mutant":3,"name":"maximum-route-length","seedsKilled":3}
+2026-10-09T11:31:03.8119343Z {"mutant":4,"name":"minimum-players","seedsKilled":3}
+2026-10-09T11:31:03.8120090Z {"mutant":5,"name":"existing-three-player-parallel","seedsKilled":3}
+2026-10-09T11:31:03.8120735Z {"mutant":6,"name":"candidate-three-player-parallel","seedsKilled":3}
+2026-10-09T11:31:03.8121517Z {"mutant":7,"name":"same-player-parallel","seedsKilled":3}
+2026-10-09T11:31:03.8122085Z {"mutant":8,"name":"exact-train-balance","seedsKilled":3}
+2026-10-09T11:31:03.8122759Z {"mutant":9,"name":"payment-length","seedsKilled":3}
+2026-10-09T11:31:03.8123393Z {"mutant":10,"name":"double-spend","seedsKilled":3}
+2026-10-09T11:31:03.8124089Z {"mutant":11,"name":"exact-card-balance","seedsKilled":3}
+2026-10-09T11:31:03.8124651Z {"mutant":12,"name":"mixed-gray-payment","seedsKilled":3}
+2026-10-09T11:31:03.8125279Z {"mutant":13,"name":"all-locomotive-payment","seedsKilled":3}
+2026-10-09T11:31:03.8125735Z {"mutant":14,"name":"card-deduction","seedsKilled":3}
+2026-10-09T11:31:03.8126147Z {"mutant":15,"name":"train-deduction","seedsKilled":3}
+2026-10-09T11:31:03.8126555Z {"mutant":16,"name":"claim-owner","seedsKilled":3}
+2026-10-09T11:31:03.8126976Z {"mutant":17,"name":"zero-edge-ticket","seedsKilled":3}
+2026-10-09T11:31:03.8127420Z {"mutant":18,"name":"reverse-ticket-adjacency","seedsKilled":3}
+2026-10-09T11:31:03.8127898Z {"mutant":19,"name":"breadth-first-frontier","seedsKilled":3}
+2026-10-09T11:31:03.8128364Z {"mutant":20,"name":"four-odd-euler-shortcut","seedsKilled":3}
+2026-10-09T11:31:03.8128796Z {"mutant":21,"name":"weighted-edge","seedsKilled":3}
+2026-10-09T11:31:03.8129548Z {"mutant":22,"name":"edge-reuse-guard","seedsKilled":3}
+2026-10-09T11:31:03.8130033Z {"mutant":23,"name":"disconnected-component-sum","seedsKilled":3}
+2026-10-09T11:31:03.8130528Z {"mutant":24,"name":"incomplete-ticket-sign","seedsKilled":3}
+2026-10-09T11:31:03.8131266Z {"mutant":25,"name":"longest-tie-bonus","seedsKilled":3}
+2026-10-09T11:31:03.8172808Z 
+2026-10-09T11:31:03.8173255Z {"passed":true,"graphs":60000,"fullGames":6000,"mutations":25,"kills":75,"fingerprints":48}
+2026-10-09T11:31:03.8331553Z ##[group]Run python -m pip install --disable-pip-version-check 'jsonschema==4.26.0'
+2026-10-09T11:31:03.8332195Z [36;1mpython -m pip install --disable-pip-version-check 'jsonschema==4.26.0'[0m
+2026-10-09T11:31:03.8332850Z [36;1mfor seed in 1 2 3; do echo "Schema audit repetition $seed"; python validate_schema.py; done[0m
+2026-10-09T11:31:03.8394691Z shell: /usr/bin/bash -e {0}
+2026-10-09T11:31:03.8394946Z ##[endgroup]
+2026-10-09T11:31:04.1109883Z Defaulting to user installation because normal site-packages is not writeable
+2026-10-09T11:31:04.2159617Z Requirement already satisfied: jsonschema==4.26.0 in /home/runner/.local/lib/python3.12/site-packages (4.26.0)
+2026-10-09T11:31:04.2412719Z Requirement already satisfied: attrs>=22.2.0 in /usr/lib/python3/dist-packages (from jsonschema==4.26.0) (23.2.0)
+2026-10-09T11:31:04.2422060Z Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /home/runner/.local/lib/python3.12/site-packages (from jsonschema==4.26.0) (2025.9.1)
+2026-10-09T11:31:04.2431533Z Requirement already satisfied: referencing>=0.28.4 in /home/runner/.local/lib/python3.12/site-packages (from jsonschema==4.26.0) (0.37.0)
+2026-10-09T11:31:04.2440408Z Requirement already satisfied: rpds-py>=0.25.0 in /home/runner/.local/lib/python3.12/site-packages (from jsonschema==4.26.0) (2026.9.1)
+2026-10-09T11:31:04.2641203Z Requirement already satisfied: typing-extensions>=4.4.0 in /usr/lib/python3/dist-packages (from referencing>=0.28.4->jsonschema==4.26.0) (4.10.0)
+2026-10-09T11:31:04.5477401Z Schema audit repetition 1
+2026-10-09T11:31:04.6801863Z {"validator":"jsonschema Draft202012Validator","schemaValid":true,"cases":1,"valid":[true],"passed":true}
+2026-10-09T11:31:04.6932756Z Schema audit repetition 2
+2026-10-09T11:31:04.8256568Z {"validator":"jsonschema Draft202012Validator","schemaValid":true,"cases":1,"valid":[true],"passed":true}
+2026-10-09T11:31:04.8400393Z Schema audit repetition 3
+2026-10-09T11:31:04.9785645Z {"validator":"jsonschema Draft202012Validator","schemaValid":true,"cases":1,"valid":[true],"passed":true}
+2026-10-09T11:31:04.9985933Z ##[group]Run actions/upload-artifact@v4
+2026-10-09T11:31:04.9986238Z with:
+2026-10-09T11:31:04.9986441Z   name: B12-verification-results
+2026-10-09T11:31:04.9986709Z   path: jobs/B12-ttr-usa/test-output/
+2026-10-09T11:31:04.9986979Z   if-no-files-found: warn
+2026-10-09T11:31:04.9987208Z   compression-level: 6
+2026-10-09T11:31:04.9987429Z   overwrite: false
+2026-10-09T11:31:04.9987640Z   include-hidden-files: false
+2026-10-09T11:31:04.9987876Z ##[endgroup]
+2026-10-09T11:31:05.1671028Z (node:3802) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-09T11:31:05.1672679Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-09T11:31:05.1890017Z With the provided path, there will be 51 files uploaded
+2026-10-09T11:31:05.1891223Z Artifact name is valid!
+2026-10-09T11:31:05.1891854Z Root directory input is valid!
+2026-10-09T11:31:05.3878323Z Beginning upload of artifact content to blob storage
+2026-10-09T11:31:05.5474661Z (node:3802) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-09T11:31:05.6051912Z Uploaded bytes 200847
+2026-10-09T11:31:05.6225966Z Finished uploading artifact content to blob storage!
+2026-10-09T11:31:05.6227048Z SHA256 digest of uploaded artifact zip is ef7e52afd3699b045442799bb577f5db573e0ad648c9fe2d2fd1a8588f1ac720
+2026-10-09T11:31:05.6228715Z Finalizing artifact upload
+2026-10-09T11:31:05.8539609Z Artifact B12-verification-results.zip successfully finalized. Artifact ID 11613157606
+2026-10-09T11:31:05.8541578Z Artifact B12-verification-results has been successfully uploaded! Final size is 200847 bytes. Artifact ID is 11613157606
+2026-10-09T11:31:05.8547612Z Artifact download URL: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37923690901/artifacts/11613157606
+2026-10-09T11:31:05.8800432Z Post job cleanup.
+2026-10-09T11:31:06.0092911Z (node:3818) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-09T11:31:06.0094456Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-09T11:31:06.0282988Z Post job cleanup.
+2026-10-09T11:31:06.1260178Z [command]/usr/bin/git version
+2026-10-09T11:31:06.1310220Z git version 2.55.0
+2026-10-09T11:31:06.1362920Z Temporarily overriding HOME='/home/runner/work/_temp/e8fd0ed3-284f-4cce-b1db-ab9d04ab7918' before making global git config changes
+2026-10-09T11:31:06.1364565Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-09T11:31:06.1366130Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-09T11:31:06.1420285Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-09T11:31:06.1461716Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-09T11:31:06.1819044Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-09T11:31:06.1868877Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-09T11:31:06.2148830Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-09T11:31:06.2181353Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-09T11:31:06.2559696Z Cleaning up orphan processes
+2026-10-09T11:31:06.2928357Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

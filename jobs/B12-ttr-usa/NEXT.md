@@ -68,3 +68,21 @@ Pending before this supplemental delivery can become Ready:
 All original264 fact rows/528 citations/14 historical second-pass receipts remain.
 No new quote allocations, fact promotion, private PartyBox merge, game loop, UI,
 bot, strategic strength or fresh unchanged latency claim is included.
+
+Current corrected core53fe received whole official acceptance11:32:31UTC:
+run37923690901/job113797469570/artifact11613157606,200847 bytes,SHA256
+ef7e52afd3699b045442799bb577f5db573e0ad648c9fe2d2fd1a8588f1ac720.
+Complete51-entry archive,45666-byte native log,178 native inputs/172 manifest
+hashes/48 fingerprints and every original mandatory gate plus1872 new focused
+assertions are preserved in reports/recovery-20261009/current-53fe.
+
+Formal post-green review1 actually ran after that acceptance and closed naturally
+at 2026-10-09T11:33:53.524Z. It checked2592 claim states across all2–5 player counts,
+six route lengths, nine colors and four record/prototype topologies, with frozen
+caller metadata, direct unchanged raw-reference core comparisons, scores and
+ticket connectivity. 20944 assertions passed; 1646 legal moves and
+946 rejected payments/balances were retained. No new player-visible gain.
+This separately logged/pushed substantive round begins the no-gain streak at1;
+do not credit the earlier inherited-field repair as a no-gain round.
+Remaining: two distinct successful logged/pushed reviews, then final exact source
+whole hosted acceptance before supplemental Draft27 becomes Ready.

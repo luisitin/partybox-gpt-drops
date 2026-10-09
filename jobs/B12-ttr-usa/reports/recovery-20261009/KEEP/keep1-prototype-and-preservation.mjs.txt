@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';import * as p from '../../jobs/B12-ttr-usa/dist/ttr.js';import * as r from '../../jobs/B12-ttr-usa/dist/reference.js';import {writeFileSync} from 'node:fs';
+let checks=0,legal=0,invalid=0;const eq=(a,b)=>{assert.deepEqual(a,b);checks++;};const rows=[];
+const core=g=>({playerCount:g.playerCount,players:g.players.map(({id,cards,trainsRemaining,ticketIds})=>({id,cards,trainsRemaining,ticketIds})),claims:g.claims});
+const freeze=o=>{if(o&&typeof o==='object'&&!Object.isFrozen(o)){for(const k of Reflect.ownKeys(o))freeze(o[k]);Object.freeze(o);}return o;};
+for(const seed of [1,2,3]){
+ const rng=p.seeded(seed);let cases=0;
+ for(const count of [2,3,4,5])for(let length=1;length<=6;length++)for(const colour of ['gray',...p.CARDS.slice(0,8)])for(const shape of ['own','inherited-game','inherited-player','null-prototype']){
+  const routes=[{id:'r',a:'A',b:'B',length,color:colour}],matching=colour==='gray'?'red':colour;
+  const players=Array.from({length:count},(_,i)=>({id:'p'+i,cards:Object.fromEntries(p.CARDS.map(c=>[c,Math.floor(rng()*10)])),trainsRemaining:Math.floor(rng()*46),ticketIds:i===0?['t']:[],name:'Player '+i,metadata:{seed,i,shape}}));
+  const claim={routeId:'r',playerId:'p0',cards:Array.from({length},(_,i)=>i%2?'locomotive':matching)};
+  if(shape==='inherited-player')players[0]=Object.assign(Object.create(players[0]),{name:'Inherited Player',metadata:{seed,shape}});
+  const own={playerCount:count,players,claims:{},tableName:'Example',metadata:{seed,count,shape}};
+  let game=shape==='inherited-game'?Object.assign(Object.create(own),{tableName:'Inherited Table',metadata:{seed,shape}}):shape==='null-prototype'?Object.assign(Object.create(null),own):own;
+  const ticket={id:'t',a:'A',b:'B',points:length+2},before=JSON.stringify(core(game));
+  for(const pl of game.players){freeze(pl.cards);freeze(pl.ticketIds);freeze(pl.metadata);freeze(pl);}freeze(game.players);freeze(game.claims);freeze(own);freeze(game);freeze(claim);freeze(routes);freeze(ticket);cases++;const a=p.canClaim(routes,game,claim),b=r.canClaim(routes,game,claim);eq(a,b);
+  if(!a){invalid++;assert.throws(()=>p.applyClaim(routes,game,claim),RangeError);checks++;eq(JSON.stringify(core(game)),before);continue;}
+  legal++;const next=p.applyClaim(routes,game,claim),raw=r.applyClaim(routes,game,claim);eq(core(next),raw);eq(JSON.stringify(core(game)),before);
+  eq(next.tableName,game.tableName);eq(next.metadata,game.metadata);eq(next.players.map(x=>x.name),game.players.map(x=>x.name));eq(next.players.map(x=>x.metadata),game.players.map(x=>x.metadata));
+  eq(p.scoreGame(routes,[ticket],next),r.scoreGame(routes,[ticket],raw));eq(p.ticketComplete(routes,['r'],ticket),true);
+  assert.notEqual(next,game);assert.notEqual(next.players[0].cards,game.players[0].cards);checks+=2;
+ }
+ rows.push({seed,cases});
+}
+assert.equal(rows.reduce((n,x)=>n+x.cases,0),2592);assert.ok(legal>100&&invalid>100);
+const report={passed:true,source:'53fe4e0c7109cf59c0e49ca53720912649900bd8',review:'Distinct post-green review1: valid prototype/record topology, frozen caller metadata preservation, claim/score connectivity across all player counts, nine route colors and six lengths.',rows,legalMoves:legal,rejectedPaymentsOrBalances:invalid,assertions:checks,rawReferenceUnmodified:true,referenceProjectionScope:'Raw reference is directly called. Its own metadata-discard limitation is known; compare only documented core fields and verify extension fields directly against frozen caller data.',newPlayerGain:false,completedUTC:new Date().toISOString()};
+writeFileSync('KEEP1-ACTUAL.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

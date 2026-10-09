@@ -72,3 +72,7 @@ this unresolved functional defect and says not Ready. Keep explicit required
 fields beside the spread;12 inherited-record combinations and3×624 focused
 assertions now pass. No formal no-gain credit is awarded to this gain, and the
 corrected normal child must receive its own complete hosted packet.
+
+## Formal post-green recovery review1
+
+Whole corrected53fe packet independently accepted11:32:31UTC. Actual review1 closed 2026-10-09T11:33:53.524Z:2592 states/20944 assertions, all supported player counts/route lengths/colors and own/inherited/null prototypes, frozen metadata, unchanged raw-oracle core values, connectivity and scores. Passed, naturally closed, no new player-visible gain; successful no-gain streak1. Complete raw result and actual reviewer source retained in reports/recovery-20261009/KEEP. This milestone separately publishes that round; the corrected implementation and mandatory gates remain unchanged.
