@@ -1,6 +1,6 @@
 # B04 — Verification
 
-**Original research standard NOT_MET.** Keep PR18 draft: 31/518 complete factual rows have independent publisher agreement. All 16 complete type-count profiles use the original permitted CONFLICTS.md route. One current event retains unknown trigger/effect.
+**Original research standard NOT_MET.** Keep PR18 draft: 32/518 complete factual rows have independent publisher agreement. All 16 complete type-count profiles use the original permitted CONFLICTS.md route. One current event retains unknown trigger/effect.
 
 ## Completed checks and commands
 
@@ -811,3 +811,9 @@ Changed:
 - `VERIFY.md`: this section. `SHA256SUMS.txt`: regenerated.
 
 Not changed: no factual row in `boards.json` or any `boards/*.md` table. No source was re-fetched in this pass (the offline verifier makes no freshness claim), no map image was retrieved, and no PR comment, review, merge or close was made. PR #18 stays a draft.
+
+### 2026-10-09 scoped addition
+
+Western Land unlock is now 32/518 complete facts, with 476 single-source, nine conflicts and one unknown. Only that factual row and its board-content fingerprint changed. The original broad audits retain their original dates and unchanged gates; today’s checks validate current file integrity, not a new human review of all historical source facts. PR18 stays draft and strict research is expected to fail. Current exact command results are recorded in validator-output.txt after execution.
+
+The first scoped structural run returned actual exit2 because the containing western-land:board_record fingerprint had not yet been updated. The unchanged original check caught the omission. The exact original retained-row identity was then refreshed; no validator or acceptance gate was changed. Subsequent command results are recorded, and the manifest is regenerated after this receipt.

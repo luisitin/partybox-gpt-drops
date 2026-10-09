@@ -1068,7 +1068,7 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | western-land:events:train_event | unverified/low | W_WESTERN-Q025 |
 | western-land:events:hootenanny | single_source/medium | W_WESTERN-Q026, W_GAME-Q010 |
 | western-land:events:steamer_ticket | single_source/medium | W_GAME-Q011, W_WESTERN-Q027 |
-| western-land:phases:unlock | single_source/medium | W_GAME-Q012, MPL_BOARDS-Q020 |
+| western-land:phases:unlock | corroborated/high | W_GAME-Q012, MPL_BOARDS-Q020, GR_UNLOCK-Q001, GR_UNLOCK-Q002 |
 | western-land:map_link:train_transfer | single_source/medium | W_WESTERN-Q024, MPL_BOARDS-Q021 |
 | shared:star_cost | corroborated/high | N_AU-Q003, MPL_BOARDS-Q002 |
 | shared:homestretch_base | single_source/medium | W_HOME-Q003, W_HOME-Q004 |
@@ -1088,3 +1088,14 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | shared:tv_tag | corroborated/high | W_TV-Q005, W_TV-Q006, MPL_TV-Q005, MPL_TV-Q006 |
 | shared:tv_tag_qualifiers | single_source/medium | W_TV-Q007, W_TV-Q008, W_TV-Q009 |
 | shared:no_new_boards | corroborated/high | MPL_TV-Q007, W_TV-Q010, CD_TV-Q001 |
+
+## GR_UNLOCK — scoped 2026-10-09 addition
+
+URL: https://gamerant.com/unlock-new-boards-super-mario-party-jamboree-unlocking-new-board/
+
+Erik Petrovich, published 2024-10-25. Publisher lineage: `valnet`, shared with GameRant/DualShockers/TheGamer; distinct from `mariowiki`. Both actual original HTTP200 passes recover the exact Western Land unlock bullet. The registered fragments total 9 words. They qualify only the complete Western Land Silver-rank/ten-achievement unlock row. Raw HTML/full authored text remain private. The prior 22-source capture set retains its original dates; no fresh all-source research pass is implied.
+
+| Quote ID | Exact fragment |
+| --- | --- |
+| GR_UNLOCK-Q001 | Western Land |
+| GR_UNLOCK-Q002 | you must reach Silver Rank (10 Achievements) |

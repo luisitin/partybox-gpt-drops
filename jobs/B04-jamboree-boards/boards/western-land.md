@@ -58,7 +58,7 @@ These one-publisher count profiles include the Start space. All sums are indepen
 
 ## Board state and rule changes
 
-- `western-land:phases:unlock` (single_source, medium): {"trigger": "Player progress reachesSilverrank.", "effect": "Unlock WesternLand; ten-achievement qualification reported.", "achievementCount": 10, "rank": "Silver"} — W_GAME-Q012, MPL_BOARDS-Q020. Silver rank and number 10 independently agree; MPL wording level 10 does not explicitly corroborate the full ten-achievement qualifier.
+- `western-land:phases:unlock` (corroborated, high): {"trigger": "Player progress reachesSilverrank.", "effect": "Unlock WesternLand; ten-achievement qualification reported.", "achievementCount": 10, "rank": "Silver"} — W_GAME-Q012, MPL_BOARDS-Q020, GR_UNLOCK-Q001, GR_UNLOCK-Q002. 2026-10-09: complete Silver-rank, ten-achievement and Western Land unlock claim independently agrees in current Wiki and Erik Petrovich’s postlaunch GameRant guide. GameRant, TheGamer and DualShockers share Valnet lineage; no additional publisher is counted for them. Base Jamboree unlock only; no TV default or installed-hardware proof added.
 
 ## Local Homestretch behavior
 
