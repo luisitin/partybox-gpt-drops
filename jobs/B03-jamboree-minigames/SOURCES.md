@@ -3769,3 +3769,28 @@ https://www.mariowiki.com/Blame_It_on_the_Crane
 https://www.mariowiki.com/Short-Stack_Chef
 - W107_tips_1: by getting a perfectly timed "Nice!" rating, they get two points.
 
+## Current original-review research checkpoint — 2026-10-09
+
+Four current single-source summary candidates remain explicitly UNADOPTED in reports/tv-author-candidate.json: Sunset Standoff, Shell Hockey, Stuffie Stacker and Domino Effect. No catalogue product value/status/evidence, all132rows/147sources/1938oldclips/complete A+B history, or current303/1017/zero coverage changes. Gameplay remains35/97. The original accepted38ec475 full native/official artifact reader CLOSED02:26:56.203123 UTC; its receipt is historical for this new research checkpoint.
+
+Actual34native HTTPS attempts naturally CLOSED02:36:19.847612 UTC:32fullHTTP200/TLS0 responses, plus two JamesSubstack curl56/HTTP000 failures that received no response body. Both failures retain actual headers/stderr/zero-byte metadata; no empty response was invented. Six source pairs support the four candidates; all other captures remain unadopted research leads. Complete full bodies and named authored paragraphs stay private. Bobby Pashalidis is verified by ConsoleCreatures JSON-LD; Jon Scarr by BestBuy native metadata. Four proposed action scopes have complete paired named paragraphs and Wiki contexts. Known B03 cumulative page quotations:BestBuy94/200(including30old), ConsoleCreatures23/200. Parent must reconcile any remote same-page quotation use before adoption. Namu195/guide200/FGStips73 stay unchanged; no new Namu quotation.
+
+Six cloud searches actually returned37requested/37reviewed entries; two known-URL fetch calls requested8pages. Raw tool results are private. Anonymous review examples, duplicate author Jon Scarr atCloudDosage, native-failed Substack, Nintendo instruction copies and exact-name errors do not establish new accepted sources. CGMagazine's coins vsWiki Bowser medals forSpeakUpJunior is explicit and unadopted; Goombalance/Gooombalancing spellings and incorrect generic mode claims stay excluded. Seven initially proposed descriptions were already corroborated; the first private writer stopped before publication rather than claiming11new facts. That failure and the first absent-response helper assumption remain preserved.
+
+Workspace overlay ENOSPC actually blocked the first native collector before mkdir/ANYrequest at02:31:25 UTC. The private isolated RAM clone CLOSED02:42:53.613726; shared writable storage was restored by root02:43:15. Exact32successful body/text hashes and all28old registered quote recoveries passed the finite parser CLOSED02:40:21.356419. Writer naturally CLOSED02:50:45.877577 UTC, withzero product writes. New candidate checker actually passed452comparisons and8malformed source/scope/history/premature-promotion rejections; original checked() native logger is used. All inherited fullchecks/integrity/deliberate strict remain required for actual current delivery. The02:50:36.305164 early target passed during the space/source-scope work; hard02:55:36.305164 remains the actual push bound. No deadline/result is backdated. No strict KEEP GOING,whole-row completion,Ready or cosmetic-only stopping claim.
+
+Exact new unadopted author clips:
+
+Sunset Standoff — https://www.consolecreatures.com/super-mario-party-jamboree-tv-review/
+- Sunset Standoff mode has one player flying Bomber Bill to the team.
+- The three other players must work together to avoid being hit;
+
+Shell Hockey — https://blog.bestbuy.ca/video-games/super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv-review
+- Shell Hockey feels like arcade air hockey you’d find in most movie theatre arcades.
+- It was tough to stop playing once I got competitive and figured out how to aim.
+
+Stuffie Stacker — https://blog.bestbuy.ca/video-games/super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv-review
+- You drag and drop plush blocks, rotating and pivoting them to build the highest tower.
+
+Domino Effect — https://blog.bestbuy.ca/video-games/super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv-review
+- Domino Effect has you and a partner lining up pieces with the mouse to topple dominoes toward a goal.

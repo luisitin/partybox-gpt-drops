@@ -1,3 +1,13 @@
+# Current unadopted review-candidate handoff
+
+Original canonical branch job/B03-jamboree-minigames, originalPR20draft/open. Current303/1017/zero;35/97gameplay. All product/source/reopen values remain exactly accepted38ec475. New four UNADOPTED summaries are in reports/tv-author-candidate.json; checker452comparisons+8malformed controls. Actual32successful source bodies plus2no-response Substack failures are preserved in .work/remaining-research-0038/tv-author-captures-0236 of the original /workspace worktree. Raw cloud37-result ledger is there too. Private RAM clone is /dev/shm/partybox-B03-tv-research-20261009-0242; preserve unique files if moving it.
+
+First finish exact current normal canonical push/fullnative official ZIP reader/immutable manifest acceptance and originalPR20body actual readback. Then validate4proposed shared actions through a new exact accepted38ec132-row/147-source/complete A+B restoration before any promotion. Preserve every old classification and malformed test. Reconcile same canonical-page budgets across other jobs before adding author clips:known B03BestBuy94/200,ConsoleCreatures23/200; no Namu expansion. Never count already-corrobated targets asnew facts. Current unadopted packet must receive a validated historical baseline view after any later adoption; never strip a new source without fully validating current truth.
+
+Original detailed mechanics/categories/roster remain open. First code helper failures, source errors, workspace space failure and actual cadence notes are recorded honestly below. Read original rootREADME/PROMPTS instructions. All native elapsed experiments require fresh root quiet grant; finite scripts must naturally close beforeHOLD.
+
+## Preserved previous handoff
+
 # Current four-action handoff
 
 Read original B03 instructions in root PROMPTS.md and root README.md. Own only jobs/B03-jamboree-minigames; canonical branch job/B03-jamboree-minigames, original PR20 draft/open, no main/CLAIMS, force push, foreign job or merge.
@@ -79,3 +89,5 @@ Candidate logger repair: exact82faed hosted run37872314164 succeeded with both82
 
 
 Actual candidate logger-fix full controller naturally CLOSED 2026-10-09T02:01:31.804169+00:00: content81/31,430 EXIT0; integrity82/31,523/all93hashes EXIT0; strictsame82/31,523 deliberateEXIT1/NOT_MET299,zero complete. All native candidate suites now emit their usual PASS lines. Only these delivery notes change afterward; every regenerated manifest entry and staged Git byte is checked before the normal canonical push.
+
+Actual complete current candidate controller naturally CLOSED2026-10-09 02:54:02.847470 UTC:content85suites/34,540cases EXIT0;integrity86/34,639/all99hashes EXIT0;deliberate strictsame86/34,639 EXIT1 NOT_MET303/zero. Only these delivery notes change afterward; every regenerated manifest entry and immutable staged Git byte is checked before normal canonical push.

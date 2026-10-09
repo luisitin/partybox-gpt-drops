@@ -234,6 +234,9 @@ def run(args):
     tips_recovery_checker=module('b03_family_tips_recovery','check-family-tips-recovery.py')
     for result in tips_recovery_checker.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Four shared-action recovery failed'),result.get('detail',''))
+    tv_candidate_checker=module('b03_tv_author_candidate','check-tv-author-candidate.py')
+    for result in tv_candidate_checker.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Unadopted review candidate proof failed'),result.get('detail',''))
     tips_candidate_checker=module('b03_family_tips_candidate','check-family-tips-candidate.py')
     for result in tips_candidate_checker.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Candidate provenance check failed'),result.get('detail',''))

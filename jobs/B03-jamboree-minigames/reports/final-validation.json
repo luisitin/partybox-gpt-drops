@@ -12,7 +12,7 @@
     },
     {
       "name": "All delivery JSON rejects duplicate keys",
-      "caseCount": 60,
+      "caseCount": 62,
       "passed": true,
       "seed": null,
       "detail": ""
@@ -233,6 +233,20 @@
       "passed": true,
       "seed": null,
       "detail": ""
+    },
+    {
+      "name": "Four original-review candidate scopes preserve the entire accepted catalogue",
+      "caseCount": 452,
+      "passed": true,
+      "seed": null,
+      "detail": "Actual complete34-request packet,32successful/2failed; four UNADOPTED actions and exact132-row/147-source/A+B baseline."
+    },
+    {
+      "name": "Malformed original-review candidate source, scope, history and premature-promotion rejection",
+      "caseCount": 8,
+      "passed": true,
+      "seed": null,
+      "detail": "Eight actual rejected fixtures; no current fact promotion."
     },
     {
       "name": "Four unadopted authored-tips candidates,14 actual ordered A/B captures and exact accepted product/history preservation",
@@ -579,14 +593,14 @@
     },
     {
       "name": "Every delivered file below 30 MB",
-      "caseCount": 97,
+      "caseCount": 100,
       "passed": true,
       "seed": null,
       "detail": ""
     }
   ],
-  "suites": 83,
-  "cases": 34075,
+  "suites": 85,
+  "cases": 34540,
   "rows": 132,
   "fieldStatuses": {
     "name": {
