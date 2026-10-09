@@ -1,6 +1,6 @@
 # B04 design digest: how the seven Jamboree boards are built
 
-For the designer and the PartyBox port. Reference only: nothing here ships, and no board name, item name, artwork or map image may appear in PartyBox. Every number is a count or a sum from `boards.json` (seven boards). The factual rows are 518: 87 corroborated, 412 single-source, 18 conflicting, 1 unknown (README "Status"). Read a number as "what the retained source reports", not as settled fact.
+For the designer and the PartyBox port. Reference only: nothing here ships, and no board name, item name, artwork or map image may appear in PartyBox. Every number is a count or a sum from `boards.json` (seven boards). The factual rows are 518: 89 corroborated, 410 single-source, 18 conflicting, 1 unknown (README "Status"). Read a number as "what the retained source reports", not as settled fact.
 
 Status tags used below: **[C]** corroborated by a second publisher, **[S]** single source, **[X]** conflicting sources (both values kept), **[?]** unknown. Sentences marked *editorial* are reading, not source.
 
@@ -74,7 +74,7 @@ Baseline party profile, Start included. Each total has one publisher; the sums c
 ## 5. Phases (rules that switch on during the game, 20 rows)
 
 - **Periodic:** flash sale every fifth turn [C]. King Bowser's fire growth: at the start of every third turn, two eligible Byway spaces become Bowser; turn 24 adds one more and then stops [S, high]. Every Galleria shop closes on the final turn [S].
-- **Triggered:** Mega Wiggler's anger [X]: a bell in the second half turns Lucky spaces Red and Blue spaces Bowser until a later bell restores them (the wiki and PocketTactics disagree on the converted types; no probability is known). Castle weather [S]: while Bowser holds the tower the sky goes stormy (no day-night cycle asserted). Tower Turner [C]: a chance to swap tower characters (probability unknown). Goomba's Pro chest replaces the Bowser Phone chest with a Creepy Dice Block [S].
+- **Triggered:** Mega Wiggler's anger [X]: a bell in the second half turns Lucky spaces Red and Blue spaces Bowser until a later bell restores them (the wiki and PocketTactics disagree on the converted types; no probability is known). Castle weather [C, medium]: while Impostor Bowser holds the tower the sky turns dark/stormy and the music gains an electric-guitar variation (no day-night cycle asserted). Tower Turner [C]: a chance to swap tower characters (probability unknown). Goomba's Pro chest replaces the Bowser Phone chest with a Creepy Dice Block [S].
 - **Unlocks:** Western Land unlocks at Silver rank with ten achievements [S]. King Bowser's Keep needs 30 achievements (or the Party-Planner Trek and the credits); the rank is disputed (Platinum on the wiki, Diamond in MPL and NintendoAU) [X].
 - **Exceptions:** Mario's Rainbow Castle's shop swap has a disputed trigger (passing a shop vs buying) [X].
 
@@ -110,7 +110,7 @@ Nothing here is a copy target. The existing pieces in `/home/user/partybox` that
 ## 9. Limits
 
 - **Single-source numbers:** all count totals (baseline, Tag Team and angry), the Pro stock and shop-period rules, and all four board-level Homestretch facts are single-source. Of the Homestretch rules, only the Pro Homestretch behaviour and the second Blue/Red doubling are corroborated; the base doubling and the special-event list are single-source.
-- **Nine preserved conflicts** (kept, not resolved): Mega Wiggler anger; Galleria stamp colour labels, Loadstone payout, Peach/Daisy availability and Shop Hop Box price; Goomba eruption and tide cadence; King Bowser's unlock rank; Castle shop swap trigger. Listed with values in CONFLICTS.md.
+- **Eighteen preserved conflicts** (kept, not resolved): nine additional ordinary baseline type-count disagreements, plus the original nine mechanical disputes: Mega Wiggler anger; Galleria stamp colour labels, Loadstone payout, Peach/Daisy availability and Shop Hop Box price; Goomba eruption and tide cadence; King Bowser's unlock rank; Castle shop swap trigger. Listed with values in CONFLICTS.md.
 - **Unknown:** the current Steamer Event Space movement (Western Land). The MarioParty 2 precedent is historical and not used.
 - **No route graph:** the map links are regional (11 cited) and carry no numbered space ids or directions the sources do not state. Gate endpoints are unknown for the Skeleton Key gates (King Bowser's Keep, Western Land) and the Galleria escalators.
 - **Probabilities and payouts absent:** Star selection, tower turn chance, anger probability, Raceway dice-pool weights, Hive payout distribution, Gold Goomba payout. Do not invent weights.

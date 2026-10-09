@@ -7,8 +7,8 @@
   "reviewDate": "2026-10-07",
   "reviewer": "same assistant in both passes; no independent-person review claimed",
   "factStatuses": {
-    "corroborated": 87,
-    "single_source": 412,
+    "corroborated": 89,
+    "single_source": 410,
     "conflict": 18,
     "unverified": 1
   },
@@ -5273,15 +5273,16 @@
     {
       "rowId": "mario-rainbow-castle:events:tower_event",
       "kind": "events",
-      "passA": "single_source",
-      "passB": "single_source",
-      "confidence": "high",
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "confidence": "medium",
       "sourceIds": [
         "MPL_BOARDS",
+        "SASKE_CASTLE",
         "W_GAME"
       ],
-      "review": "same-assistant full-claim qualifier review; unresolved qualifiers retain recorded status",
-      "reviewedRowSha256": "dd0128b10e331ad58ccda934ae25ad5cdf96f9f5436f47035caa704ba4713cb4"
+      "review": "2026-10-09 actual paired original Castle contexts plus eleven personal-source images each pass; complete narrow Event landing/Yellow Toad/Bowser/coupled shop reviewed, original naming discrepancy retained, medium confidence.",
+      "reviewedRowSha256": "a50366c428e2381016546483b002832a17e94e2b3da13b8a407115eae165f260"
     },
     {
       "rowId": "mario-rainbow-castle:events:ztar_shortfall",
@@ -5324,14 +5325,15 @@
     {
       "rowId": "mario-rainbow-castle:phases:weather",
       "kind": "phases",
-      "passA": "single_source",
-      "passB": "single_source",
+      "passA": "corroborated",
+      "passB": "corroborated",
       "confidence": "medium",
       "sourceIds": [
+        "NAMU_KR_COUNTS",
         "W_CASTLE"
       ],
-      "review": "same-assistant full-claim qualifier review; unresolved qualifiers retain recorded status",
-      "reviewedRowSha256": "7c8d7c1879308960c57ffeb7cad32138c51e96757cd1ac1c58553dbec3fcb91a"
+      "review": "2026-10-09 actual paired original Korean full Castle context and current Wiki scope; only FakeBowser dark-background/electric-guitar variant accepted. Parent independently read full scope/footnote; no day/night or other qualifiers inferred.",
+      "reviewedRowSha256": "cd626731ad793609896f5abebcef9c3223cf4b34cb9fef177bef8fb656532d42"
     },
     {
       "rowId": "mario-rainbow-castle:homestretch:no_extra_star",
@@ -6922,8 +6924,8 @@
         "NL_BOARDS",
         "W_CASTLE"
       ],
-      "review": "2026-10-09 containing-object fingerprint refreshed solely for the nine reviewed baseline type cells. Start, Rally, total, profile status/scope and every other constituent fact preserve their prior values and review dates; this is not a fresh whole-board review.",
-      "reviewedRowSha256": "d5ab5a3aa0aee99dc71329e3500779cae42e166676648c83619926adfcba4753"
+      "review": "2026-10-09 containing board fingerprint refreshed solely for two complete scoped Castle Event/weather evidence/verdict changes; every other constituent fact/value/mode retains prior scope/date. No fresh whole-board claim.",
+      "reviewedRowSha256": "8eea680f6e75c332533e4f52a986df2aa6b3dc86fc70dc0908632f3c40c31fd7"
     },
     {
       "rowId": "mario-rainbow-castle:map_description",

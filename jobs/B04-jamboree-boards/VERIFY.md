@@ -1,6 +1,6 @@
 # B04 — Verification
 
-**Original research standard NOT_MET.** Keep PR18 draft: 87/518 complete factual rows have independent publisher agreement. All 16 complete type-count profiles use the original permitted CONFLICTS.md route. One current event retains unknown trigger/effect.
+**Original research standard NOT_MET.** Keep PR18 draft: 89/518 complete factual rows have independent publisher agreement. All 16 complete type-count profiles use the original permitted CONFLICTS.md route. One current event retains unknown trigger/effect.
 
 ## Historical completed checks and commands, 2026-10-07
 
@@ -829,3 +829,9 @@ Current full structural command:25/25suites,5,426/5,426cases PASS, exit0. The fu
 Current87/518 independent complete facts;412 single-source,18 unresolved disputes,1 unknown. Exactly63 ordinary type facts reviewed against both publishers in actualA/B captures (252 numeric observations),54 medium matches and9 low disagreements. Only those63 facts and their7 containing profiles/7 boards receive refreshed fingerprints; all518 values, profile totals and prior9 conflicts remain identical. Broad original audits retain historical dates. No source body, expressive author quotation or English-mirror second source is published. Unchanged original checks must pass; strict remains NOT_MET. Whole genuine prior44b5 hosted run37899943053/job113719886950 accepted original26 suites/5505 cases/78 manifest and strict33/518FAIL at07:36:07, full21429-byte native SHAac09f12b5aba9eb135e98631be0dfa176516e1af664a2494859a90a1862bf37e; that is historical for this new adoption, not current CI proof. Current original local outputs are recorded in validator-output.txt after actual execution.
 
 Actual local original commands completed2026-10-09T07:47:24–25Z:structural/checksum exit0,26 suites/5633 cases/81 manifest PASS;strict exit1,87/518FACTS FAIL and37/38EVENTS FAIL/NOT_MET. Whole current outputs are in validator-output.txt. Manifest regeneration and final unchanged command/readback remain required after packaging.
+
+### Castle scoped qualifier review, 2026-10-09
+
+Exactly one full fact and its containing board fingerprint change. Current88/518 facts,411 single-source,18 conflicts,1 unknown;37/38 events. All original schema/verifier/requirements/workflow unchanged. Whole exact parent47f hosted run37904587791/job113734870677 succeeded08:22:56:26 suites/5635 cases/82 manifest, but strict87/518 and37/38 FAIL. Complete21434-byte original native SHA faf2288e3a1c82dc0bef6a07d4d6704211ff3aa0a78c0b5fc27304051daddeee is historical for this new milestone. Current local original full output is validator-output.txt after actual execution; new hosted whole proof remains pending publication. Original old broad audits remain dated historical.
+
+2026-10-09T08:42:05.358282+00:00:Combined Castle scope is89/518,410single-source,18conflicts,1unknown; exactly2 fact verdicts and3 containing fingerprints updated. All518 values and516 other objects, all original gates and18 conflicts unchanged. Current local original outputs follow actual commands in validator-output.txt; new complete hosted native acceptance remains pending publication. Previous47f whole26/5635/82 proof is dated history.

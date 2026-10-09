@@ -1000,11 +1000,11 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | mario-rainbow-castle:shop:5:item:6 | single_source/medium | W_CASTLE-Q016 |
 | mario-rainbow-castle:shop:5:item:7 | single_source/medium | W_CASTLE-Q014 |
 | mario-rainbow-castle:events:tower | single_source/medium | W_CASTLE-Q018, MPL_BOARDS-Q014, MPL_BOARDS-Q015 |
-| mario-rainbow-castle:events:tower_event | single_source/high | W_GAME-Q005, MPL_BOARDS-Q016 |
+| mario-rainbow-castle:events:tower_event | corroborated/medium | W_GAME-Q005, MPL_BOARDS-Q016, SASKE_CASTLE-Q001, SASKE_CASTLE-Q002, SASKE_CASTLE-Q003 |
 | mario-rainbow-castle:events:ztar_shortfall | single_source/medium | W_GAME-Q006 |
 | mario-rainbow-castle:phases:shop_swap | conflict/low | W_CASTLE-Q019, MPL_BOARDS-Q017 |
 | mario-rainbow-castle:phases:tower_turner | corroborated/high | W_GAME-Q007, MPL_GAME-Q004 |
-| mario-rainbow-castle:phases:weather | single_source/medium | W_CASTLE-Q020 |
+| mario-rainbow-castle:phases:weather | corroborated/medium | W_CASTLE-Q020, NAMU_KR_COUNTS-Q022 |
 | mario-rainbow-castle:homestretch:no_extra_star | single_source/medium | W_HOME-Q002 |
 | mario-rainbow-castle:map_link:tower_return | single_source/medium | W_GAME-Q008, MPL_BOARDS-Q018 |
 | western-land:presence | corroborated/high | W_WESTERN-Q001, NL_BOARDS-Q007 |
@@ -1140,3 +1140,25 @@ Community contributors; independent editorial narrative and no copied-table attr
 | NAMU_KR_COUNTS-Q019 | 33 |
 | NAMU_KR_COUNTS-Q020 | 34 |
 | NAMU_KR_COUNTS-Q021 | 37 |
+
+## SASKE_CASTLE — scoped Event recovery, 2026-10-09
+
+https://ngamer.hatenablog.com/entry/2024/11/04/180000
+
+Profile username SASKE from native author-link href; published2024-11-04. Entire1598-character personal session reviewed twice; eleven of32 original images fetched/opened in each pass. The screenshot sequence supplies Yellow Toad/Event/Bowser/coupled shop details. The prose’s erroneous Toad-shop label and passing-versus-purchase discrepancy remain explicit. Independent from Wiki; same author as SASKE_GALLERIA, CDN aliases count as the same source. Full article/images remain private.
+
+| Quote ID | Exact original Japanese fragment | Assistant English translation |
+| --- | --- | --- |
+| SASKE_CASTLE-Q001 | もちろんは キノピオ と クッパ が入れ替わるタイミングは訪れたときだけではない。 | Toad and Bowser do not switch only when someone visits. |
+| SASKE_CASTLE-Q002 | ステージのハプニングマスを踏むと全ての入れ替わり場所が逆になるのだ！ | Landing on a Happening Space reverses every location that can switch. |
+| SASKE_CASTLE-Q003 | お店も逆になって キノピオ ショップが カメック ショップに！ | The shop also changes, from the author-named Toad Shop to the Kamek Shop. |
+
+Translations are assistant renderings, not extra literal source quotations. Zero new expressive Namu/Cel/GameRant words. The original prompt requires25-word clips; the unchanged inherited verifier separately retains200 unique words per source-entry. Shared article quota is also coordinated.
+
+## NAMU_KR_COUNTS — permitted Castle weather clause, 2026-10-09
+
+| Quote ID | Exact original Korean clip | Assistant meaning |
+| --- | --- | --- |
+| NAMU_KR_COUNTS-Q022 | 가짜쿠파로 전환되면 배경이 어두워지고 BGM도 일렉기타 | On FakeBowser transition the background turns dark and the music becomes electric guitar. |
+
+Only6 new authored words. Shared same-work literal author total241→247/250;21 numeric facts are non-expressive and counted separately. The unchanged per-source-entry local gate counts21+6=27/200. Both original bodies recover the exact clip; complete adjacent context and internal footnote82 reviewed. Same publisher as its English mirror. No additional Namu words or full body/images published.
