@@ -219,6 +219,9 @@ def run(args):
     recovered=validate_reopens(sources,reopen_docs[:2],reopen_docs[2])
     checked('All '+str(len(reopen_docs[0]))+' source URLs reopened twice with ordered HTTPS/TLS records',len(reopen_docs[0])*2,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
     checked('Every recovered reopen quotation bound to the original registry',recovered,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
+    mouse_candidate_checker=module('b03_mouse_category_candidate','check-mouse-category-candidate.py')
+    for result in mouse_candidate_checker.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Mouse candidate provenance failed'),result.get('detail',''))
     category_checker=module('b03_category_heading_repair','check-category-heading-repair.py')
     for result in category_checker.run():
         checks.append(result);print(f"PASS {result['name']}: {result['caseCount']} cases; seed=n/a")
