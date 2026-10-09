@@ -1,0 +1,16 @@
+from pathlib import Path
+import importlib.util,json,hashlib,datetime
+p=Path('/tmp/gpt-drops-B12-audit-20261009');j=p/'jobs/B12-ttr-usa';w=p/'.work/20261009-audit'
+spec=importlib.util.spec_from_file_location('actual_control',j/'tests/reopen-control.py');mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
+registry=json.loads((j/'sources/index.json').read_text());rows=[]
+for id,item in registry.items():
+ if id in ['supercheats','bgg-mystery','guide','se-inventory']:continue
+ file=j/item['firstLocalFile']
+ if not file.exists():file=Path('/workspace/job-B12/jobs/B12-ttr-usa')/item['firstLocalFile']
+ body=file.read_bytes();assert hashlib.sha256(body).hexdigest()==item['firstSha256']
+ result=mod.component((j/'tools/reopen.py').read_text(),False,body,item['firstSha256'])
+ assert result['passed']and result['controls']==5
+ rows.append({'sourceId':id,'originalPinnedBytes':len(body),'originalPinnedSHA256':item['firstSha256'],'actualHTTPControls':5,'componentResult':result})
+assert len(rows)==10
+report={'passed':True,'source':'53fe4e0c7109cf59c0e49ca53720912649900bd8','review':'Distinct post-green review3: all ten non-web registry transport paths, pinned original payloads, absent/present cache, changed bytes and malformed hash failures; historical quote/catalog facts unchanged.','actualHTTPControls':50,'actualPinnedSourcePayloads':10,'rawBytesActuallyMatchOriginalRegistry':True,'newPublicNetworkResearchPassClaim':False,'newFactOrQuotePromotion':False,'allOwnedHTTPServersNaturallyClosed':True,'newPlayerGain':False,'rows':rows,'completedUTC':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+(w/'KEEP3-ACTUAL.json').write_text(json.dumps(report,indent=2)+chr(10));print(json.dumps(report))

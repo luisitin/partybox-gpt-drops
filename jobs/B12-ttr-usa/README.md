@@ -65,3 +65,5 @@ hashes without requiring ignored PDF cache files. See NEXT.md and
 reports/recovery-20261009 for exact original baseline proof, executable original
 failures, focused controls, preserved oracle limitations and pending current
 hosted acceptance. Original ReadyPR19 remains protected.
+
+The corrected core53fe passed its complete original hosted package plus1872 focused assertions. Three substantive recovery reviews found no further player-visible gain; all results/failures are retained. Source work stops at the final handoff. PR27 records the exact final whole hosted observation and Ready state once they actually occur. Original Ready19 remains protected and unmerged.
