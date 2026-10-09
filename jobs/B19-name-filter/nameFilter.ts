@@ -140,7 +140,7 @@ function blocked(text: string): boolean {
   }
   return false;
 }
-const CONTROLS = /[\u0000-\u001f\u007f-\u009f\ud800-\udfff\u202a-\u202e\u2066-\u2069]/u;
+const CONTROLS = /[\u0000-\u001f\u007f-\u009f\ud800-\udfff\u061c\u200e\u200f\u202a-\u202e\u2066-\u2069]/u;
 const ASCII = /^[\x20-\x7e]*$/;
 const SIMPLE_ASCII = /^[A-Za-z]+$/;
 const WORD = /^[a-z]+$/;

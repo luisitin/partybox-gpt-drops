@@ -2,7 +2,7 @@
 
 **What this is:** one pure TypeScript function, `nameFilter(input)`, that rejects player names containing a finite English list of sexual terms and slurs (leetspeak, repeated letters, separators, confusables, reversals) and accepts a reviewed list of benign names and words. Zero runtime dependencies.
 **How to use it:** `import { nameFilter } from './nameFilter.js'`; it returns `{ ok: true }` or `{ ok: false, reason, suggestion }`. Test with `npm ci --ignore-scripts --no-audit --no-fund && npm test` (Node 22+).
-**Status:** PR #23 remains an isolated draft targeting `job/B19-name-filter`, preserving original PR #2. Production7817/e4b retains the previously measured ASCII-letter DFA shortcut. Exact6a hosted full passes all100 suites and literal0/0/0; the genuine artifact is independently verified by4981 byte/structure assertions. Its single binding after-green original full rerun fails literal13/5/10, with all1006 source guards unchanged; every non-latency check and75 real original mutants pass. Earlier first-local12/9/2 and all historical failures remain intact. Cause is unknown and complete acceptance/KEEP remain incomplete. Full evidence is in results/required-after-green-original-acceptance-20261009/. Two additional candidates were rejected for inconsistent whole-call gains. The distinct fold-column candidate has strict/214308/all25 proofs and65536 classification checks but is still unadopted and untimed. Phase gains exclude startup; no universal0.05ms or first-call bound is claimed. VERIFY.md binds each actual source and scope.
+**Status:** PR #23 remains Draft. The latest narrow correction rejects missing Unicode bidi controls U+061C/U+200E/U+200F and integrates a new independently sealed run-boundary reference. Original workloads, all old failures and immutable historical references remain intact. Every original input agreed with the new reference before the correction; 102 control discrepancies were retained. The corrected untimed functional preflight passes106 suites/75 original plus12 added mutants; all952,198 unassigned/private-use points pass their finite barrier-context check. Current full acceptance and renewed KEEP remain pending. No performance gain or universal 0.05 ms bound is claimed.
 
 ## Quick start
 
@@ -13,9 +13,8 @@ npm test          # strict tsc, then every suite at seeds 1, 2 and 3
 npm run test:core # same, without public corpora (NOT full verification)
 ```
 
-Clean corpus acquisition restores the fully validated retained snapshot without network;
-`tests/retained-snapshot.py` checks restoration and corruption rejection for all 32,000 original rows. Results, fixtures, rejections and
-mutation witnesses land in `reports/latest/` (git-ignored).
+Clean corpus acquisition restores the validated retained snapshot without network.
+`tests/retained-snapshot.py` checks all32,000 rows and corruption rejection. Raw reports stay in `reports/latest/` (git-ignored).
 
 ## API
 
@@ -35,8 +34,7 @@ isAllowedName('Bob');      // true
 | `control` | C0/C1 controls, lone surrogates, bidi formatting | `remove-characters` |
 | `blocked` | a blocked term after mapping, outside the exact exceptions | `choose-another` |
 
-Results are frozen and safe to reuse. Render the original text with `textContent`, never `innerHTML`.
-The filter is not an HTML sanitizer.
+Results are frozen. Render original text with `textContent`; the filter is not an HTML sanitizer.
 
 ## Policy and acceptance
 
@@ -55,24 +53,8 @@ The filter is not an HTML sanitizer.
 
 - **Product:** `nameFilter.ts` (the only runtime file; no imports), `POLICY.md`, `INTEGRATION.md`,
   `data/policy.json` (the lists the source copies; checked for consistency).
-- **Evidence:** `tests/` (`run.mjs` harness, `reference.ts` historical NFA oracle, `blind/` sealed
+- **Evidence:** `tests/` (`run.mjs` harness, `reference.ts` historical NFA oracle, `independent-unicode-20261009/` current sealed and `blind/` historical sealed
   independent reference, `retained-snapshot.py`), `scripts/` (fetch, integrity, profilers), `results/`,
   `historical/`, `data/kept-rejections.json`, `data/exception-review.json`, `data/snapshot-manifest.json`.
 - **Job record:** `VERIFY.md`, `LOOP.md`, `NEXT.md`, `ASSUMPTIONS.md`, `CONFLICTS.md`, `SOURCES.md`,
   `SHA256SUMS.txt`. The workflow `../../.github/workflows/B19.yml` runs `npm test` on pull requests.
-
-
-## Actual8d hosted validation and once-only fold-column rejection (2026-10-09T01:11:15.241079+00:00)
-
-Immutable8d hosted run37866126547 genuine11588287156 independently passes5591 assertions,1101 actualGit hashes,100 original rows,75 actual mutants and literal0/0/0; reader naturalCLOSED00:44:58.120405. Required originalaftergreen literal13/5/10 remains failed and is not rerun.
-
-Actual distinct fold-column paired trial naturalCLOSED01:09:38.922650/EXIT0 with24 original phases/12M calls and all1131+1154 guards equal. Aggregate+7.7875/+2.7706/+0.6678%, but only5of6 balanced blocks improve; seed3block0 regresses. No adoption/no unchanged comparison retry/no cause claim; all61GC events and allphases retained. Original faulty761a controller/READY preserved; targetedca78 reaping repair independently passed1406 assertions before root actualgrant. Historical6a semantic/mutant proofs and original timing loop remain immutable.
-
-
-## Original currenta7 fullproof and rejected distinctASCII table (2026-10-09T01:39:05.094377+00:00)
-
-Actualfulla7 hosted37868586332/job113621118296 official11588977738/14744550B independentlyPASS5851assertions/1153immutableGit files/all100rows/all75actualmutants/literal0/0/0; readernaturalCLOSED01:15:21.319446/EXIT0. Originalrequiredaftergreen13/5/10 remainsFAIL and wasnotrerun.
-
-DistinctASCII mapping2a1/68f2 passesstrictcompile/8executedassertioncontrols/128mapping/65536classification/214308three-seed semanticcases/25realoriginalseed1mutants43830each/noexclusions. Actualonceonly24phase12M comparisonnaturallyCLOSED01:34:33.427399/EXIT0 with1175+1206guards unchanged/reapedempty; seedgains-10.5052/-1.2451/+4.7080% fail predeclared5%allthree+positiveallsixblocks. REJECTED/NOADOPTION; everyphase/GC event retained/no causeattribution. ENOENT scaffoldfailureandwrongba70-DFA paths werecaughtbefore anyelapsedlaunch; exactfailedhelper/READY bytes preserved, targetonly1e19/9494 repair independentlyPASS1241. Current1175a7 proofmap needsno documentbridge.
-
-This is a bounded substantive optimization round without an acceptable gain. Bindingacceptance/KEEP remainunfinished; no unchangedretry, relaxedgate/clock, exclusions or claimedcompletion. Production7817/e4b/originalrunnerbff0 and alloriginalsourceworkloads stay unchanged.

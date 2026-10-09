@@ -1,0 +1,1739 @@
+{
+  "status": "FAIL",
+  "startedAt": "2026-10-09T03:25:24.350Z",
+  "timed": false,
+  "before": [
+    {
+      "path": "/tmp/B19-new-reference-original-preflight-20261009.mjs",
+      "bytes": 4603,
+      "sha256": "a7136a87be6ce6ce26d90db9577558cb9b76b2b5896cabdbaeb661be8c40756a"
+    },
+    {
+      "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "bytes": 125989464,
+      "sha256": "bc17c508ffeed0ec622934f9b7fa72f8e78da65350e63c3eceb56fa688aa5e12"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/nameFilter.ts",
+      "bytes": 14430,
+      "sha256": "7817489fc1d0908a87914223a84b31c15ea7e13b3555cb4238594751616f163d"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/dist/nameFilter.js",
+      "bytes": 15203,
+      "sha256": "e4b39efbf033bef9c41788e9bf0f002cdb61ff9dbbdfa6cbfcbfda65122d2cf9"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/tests/reference.ts",
+      "bytes": 2477,
+      "sha256": "962bab309ddf9cc2d8ccc7237f782d69db6aa2b603417f1a8935c3d5b167b5f6"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/dist/tests/reference.js",
+      "bytes": 2365,
+      "sha256": "fb41af66df9ec5db3464ee870ed2db138903a1b7211614ab34e1344f6a1059f8"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/tests/run.mjs",
+      "bytes": 23449,
+      "sha256": "bff0c17b62aa75d342527a8ced855678380411053476557acde61f2e1b6fbdd9"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/tests/blind/reference.mjs",
+      "bytes": 2814,
+      "sha256": "40449357a616619cc649d6b8efab2f6664a187de178511b8b0f17e28e92eea9a"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/data/policy.json",
+      "bytes": 4260,
+      "sha256": "3e3a3eab49e39e2971f02736a0bf6a189486436030ea4e58963fa2514efcd9e2"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/data/original-workload-policy.json",
+      "bytes": 4233,
+      "sha256": "ac400db6c9733f6becc82df93f91cdde13563767d2b9b3883684779b28c48dc9"
+    },
+    {
+      "path": "/tmp/B19-independent-reference-20261009/reference.mjs",
+      "bytes": 4784,
+      "sha256": "a93b35e3170122b2fd0a77619eff36716c3b9fc2f4c47f3bfce1971778a76e71"
+    },
+    {
+      "path": "/tmp/B19-independent-reference-20261009/seal.json",
+      "bytes": 2101,
+      "sha256": "a8cded0ef5e4bf8da574184baabdfa57e9103c43981e8bc9019085ff0b9b1511"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/.work/B19-ASCII-mapping-candidate/original-workload-declarations.mjs",
+      "bytes": 11361,
+      "sha256": "6943ea7541f4efe191268e84884b9e6ddc3ff5b994ed6f750649be7fd808796a"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/data/cache/names.json",
+      "bytes": 1178061,
+      "sha256": "98ea30b5406ed5abdf5587dc3d4117ad0c4f60208657eb3317fe0b6007eeedab"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/data/cache/words.json",
+      "bytes": 534784,
+      "sha256": "458a956fc9c3c415eb44b23394d88ddf18e26fb9fd3ca116e26f6c7dae6449a3"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/data/cache/places.json",
+      "bytes": 187002,
+      "sha256": "3e865402f14e284327d6c69b807008faef092dfcb7841322d40eaf0da9324cac"
+    }
+  ],
+  "suites": [
+    {
+      "name": "every-original-43830-input",
+      "seed": 1,
+      "cases": 43830,
+      "productionAgreements": 43830,
+      "historicalNFAAgreements": 43830,
+      "bothResultsFrozen": 43830,
+      "wrapperAgreements": 43830
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "cases": 27606,
+      "productionAgreements": 27579,
+      "historicalNFAAgreements": 27579,
+      "bothResultsFrozen": 27606,
+      "wrapperAgreements": 27606
+    },
+    {
+      "name": "every-original-43830-input",
+      "seed": 2,
+      "cases": 43830,
+      "productionAgreements": 43830,
+      "historicalNFAAgreements": 43830,
+      "bothResultsFrozen": 43830,
+      "wrapperAgreements": 43830
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "cases": 27606,
+      "productionAgreements": 27579,
+      "historicalNFAAgreements": 27579,
+      "bothResultsFrozen": 27606,
+      "wrapperAgreements": 27606
+    },
+    {
+      "name": "every-original-43830-input",
+      "seed": 3,
+      "cases": 43830,
+      "productionAgreements": 43830,
+      "historicalNFAAgreements": 43830,
+      "bothResultsFrozen": 43830,
+      "wrapperAgreements": 43830
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "cases": 27606,
+      "productionAgreements": 27579,
+      "historicalNFAAgreements": 27579,
+      "bothResultsFrozen": 27606,
+      "wrapperAgreements": 27606
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "cases": 96,
+      "productionAgreements": 75,
+      "historicalNFAAgreements": 75,
+      "bothResultsFrozen": 96,
+      "wrapperAgreements": 96
+    }
+  ],
+  "disagreements": [
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 726,
+      "input": "؜",
+      "points": [
+        1564
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 727,
+      "input": "a؜",
+      "points": [
+        97,
+        1564
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 728,
+      "input": "؜a",
+      "points": [
+        1564,
+        97
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 729,
+      "input": "s؜ex",
+      "points": [
+        115,
+        1564,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 730,
+      "input": "se؜x",
+      "points": [
+        115,
+        101,
+        1564,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 731,
+      "input": "Σ؜A",
+      "points": [
+        931,
+        1564,
+        65
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 732,
+      "input": "A؜Σ",
+      "points": [
+        65,
+        1564,
+        931
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 733,
+      "input": "AΣ؜",
+      "points": [
+        65,
+        931,
+        1564
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 734,
+      "input": "ſ؜ex",
+      "points": [
+        383,
+        1564,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 771,
+      "input": "‎",
+      "points": [
+        8206
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 772,
+      "input": "a‎",
+      "points": [
+        97,
+        8206
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 773,
+      "input": "‎a",
+      "points": [
+        8206,
+        97
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 774,
+      "input": "s‎ex",
+      "points": [
+        115,
+        8206,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 775,
+      "input": "se‎x",
+      "points": [
+        115,
+        101,
+        8206,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 776,
+      "input": "Σ‎A",
+      "points": [
+        931,
+        8206,
+        65
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 777,
+      "input": "A‎Σ",
+      "points": [
+        65,
+        8206,
+        931
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 778,
+      "input": "AΣ‎",
+      "points": [
+        65,
+        931,
+        8206
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 779,
+      "input": "ſ‎ex",
+      "points": [
+        383,
+        8206,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 780,
+      "input": "‏",
+      "points": [
+        8207
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 781,
+      "input": "a‏",
+      "points": [
+        97,
+        8207
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 782,
+      "input": "‏a",
+      "points": [
+        8207,
+        97
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 783,
+      "input": "s‏ex",
+      "points": [
+        115,
+        8207,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 784,
+      "input": "se‏x",
+      "points": [
+        115,
+        101,
+        8207,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 785,
+      "input": "Σ‏A",
+      "points": [
+        931,
+        8207,
+        65
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 786,
+      "input": "A‏Σ",
+      "points": [
+        65,
+        8207,
+        931
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 787,
+      "input": "AΣ‏",
+      "points": [
+        65,
+        931,
+        8207
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 1,
+      "index": 788,
+      "input": "ſ‏ex",
+      "points": [
+        383,
+        8207,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 726,
+      "input": "؜",
+      "points": [
+        1564
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 727,
+      "input": "a؜",
+      "points": [
+        97,
+        1564
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 728,
+      "input": "؜a",
+      "points": [
+        1564,
+        97
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 729,
+      "input": "s؜ex",
+      "points": [
+        115,
+        1564,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 730,
+      "input": "se؜x",
+      "points": [
+        115,
+        101,
+        1564,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 731,
+      "input": "Σ؜A",
+      "points": [
+        931,
+        1564,
+        65
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 732,
+      "input": "A؜Σ",
+      "points": [
+        65,
+        1564,
+        931
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 733,
+      "input": "AΣ؜",
+      "points": [
+        65,
+        931,
+        1564
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 734,
+      "input": "ſ؜ex",
+      "points": [
+        383,
+        1564,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 771,
+      "input": "‎",
+      "points": [
+        8206
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 772,
+      "input": "a‎",
+      "points": [
+        97,
+        8206
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 773,
+      "input": "‎a",
+      "points": [
+        8206,
+        97
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 774,
+      "input": "s‎ex",
+      "points": [
+        115,
+        8206,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 775,
+      "input": "se‎x",
+      "points": [
+        115,
+        101,
+        8206,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 776,
+      "input": "Σ‎A",
+      "points": [
+        931,
+        8206,
+        65
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 777,
+      "input": "A‎Σ",
+      "points": [
+        65,
+        8206,
+        931
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 778,
+      "input": "AΣ‎",
+      "points": [
+        65,
+        931,
+        8206
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 779,
+      "input": "ſ‎ex",
+      "points": [
+        383,
+        8206,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 780,
+      "input": "‏",
+      "points": [
+        8207
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 781,
+      "input": "a‏",
+      "points": [
+        97,
+        8207
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 782,
+      "input": "‏a",
+      "points": [
+        8207,
+        97
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 783,
+      "input": "s‏ex",
+      "points": [
+        115,
+        8207,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 784,
+      "input": "se‏x",
+      "points": [
+        115,
+        101,
+        8207,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 785,
+      "input": "Σ‏A",
+      "points": [
+        931,
+        8207,
+        65
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 786,
+      "input": "A‏Σ",
+      "points": [
+        65,
+        8207,
+        931
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 787,
+      "input": "AΣ‏",
+      "points": [
+        65,
+        931,
+        8207
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 2,
+      "index": 788,
+      "input": "ſ‏ex",
+      "points": [
+        383,
+        8207,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 726,
+      "input": "؜",
+      "points": [
+        1564
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 727,
+      "input": "a؜",
+      "points": [
+        97,
+        1564
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 728,
+      "input": "؜a",
+      "points": [
+        1564,
+        97
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 729,
+      "input": "s؜ex",
+      "points": [
+        115,
+        1564,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 730,
+      "input": "se؜x",
+      "points": [
+        115,
+        101,
+        1564,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 731,
+      "input": "Σ؜A",
+      "points": [
+        931,
+        1564,
+        65
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 732,
+      "input": "A؜Σ",
+      "points": [
+        65,
+        1564,
+        931
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 733,
+      "input": "AΣ؜",
+      "points": [
+        65,
+        931,
+        1564
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 734,
+      "input": "ſ؜ex",
+      "points": [
+        383,
+        1564,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 771,
+      "input": "‎",
+      "points": [
+        8206
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 772,
+      "input": "a‎",
+      "points": [
+        97,
+        8206
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 773,
+      "input": "‎a",
+      "points": [
+        8206,
+        97
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 774,
+      "input": "s‎ex",
+      "points": [
+        115,
+        8206,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 775,
+      "input": "se‎x",
+      "points": [
+        115,
+        101,
+        8206,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 776,
+      "input": "Σ‎A",
+      "points": [
+        931,
+        8206,
+        65
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 777,
+      "input": "A‎Σ",
+      "points": [
+        65,
+        8206,
+        931
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 778,
+      "input": "AΣ‎",
+      "points": [
+        65,
+        931,
+        8206
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 779,
+      "input": "ſ‎ex",
+      "points": [
+        383,
+        8206,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 780,
+      "input": "‏",
+      "points": [
+        8207
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 781,
+      "input": "a‏",
+      "points": [
+        97,
+        8207
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 782,
+      "input": "‏a",
+      "points": [
+        8207,
+        97
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 783,
+      "input": "s‏ex",
+      "points": [
+        115,
+        8207,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 784,
+      "input": "se‏x",
+      "points": [
+        115,
+        101,
+        8207,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 785,
+      "input": "Σ‏A",
+      "points": [
+        931,
+        8207,
+        65
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 786,
+      "input": "A‏Σ",
+      "points": [
+        65,
+        8207,
+        931
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 787,
+      "input": "AΣ‏",
+      "points": [
+        65,
+        931,
+        8207
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "existing-supplemental-cases",
+      "seed": 3,
+      "index": 788,
+      "input": "ſ‏ex",
+      "points": [
+        383,
+        8207,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 0,
+      "input": "؜",
+      "points": [
+        1564
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 1,
+      "input": "Alice؜",
+      "points": [
+        65,
+        108,
+        105,
+        99,
+        101,
+        1564
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 2,
+      "input": "؜Alice",
+      "points": [
+        1564,
+        65,
+        108,
+        105,
+        99,
+        101
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 3,
+      "input": "an؜al",
+      "points": [
+        97,
+        110,
+        1564,
+        97,
+        108
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 4,
+      "input": "s؜ex",
+      "points": [
+        115,
+        1564,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 5,
+      "input": "analysis؜",
+      "points": [
+        97,
+        110,
+        97,
+        108,
+        121,
+        115,
+        105,
+        115,
+        1564
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 6,
+      "input": "؜؜؜؜؜؜؜؜؜؜؜؜؜؜؜؜",
+      "points": [
+        1564,
+        1564,
+        1564,
+        1564,
+        1564,
+        1564,
+        1564,
+        1564,
+        1564,
+        1564,
+        1564,
+        1564,
+        1564,
+        1564,
+        1564,
+        1564
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 8,
+      "input": "‎",
+      "points": [
+        8206
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 9,
+      "input": "Alice‎",
+      "points": [
+        65,
+        108,
+        105,
+        99,
+        101,
+        8206
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 10,
+      "input": "‎Alice",
+      "points": [
+        8206,
+        65,
+        108,
+        105,
+        99,
+        101
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 11,
+      "input": "an‎al",
+      "points": [
+        97,
+        110,
+        8206,
+        97,
+        108
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 12,
+      "input": "s‎ex",
+      "points": [
+        115,
+        8206,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 13,
+      "input": "analysis‎",
+      "points": [
+        97,
+        110,
+        97,
+        108,
+        121,
+        115,
+        105,
+        115,
+        8206
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 14,
+      "input": "‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎",
+      "points": [
+        8206,
+        8206,
+        8206,
+        8206,
+        8206,
+        8206,
+        8206,
+        8206,
+        8206,
+        8206,
+        8206,
+        8206,
+        8206,
+        8206,
+        8206,
+        8206
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 16,
+      "input": "‏",
+      "points": [
+        8207
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 17,
+      "input": "Alice‏",
+      "points": [
+        65,
+        108,
+        105,
+        99,
+        101,
+        8207
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 18,
+      "input": "‏Alice",
+      "points": [
+        8207,
+        65,
+        108,
+        105,
+        99,
+        101
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 19,
+      "input": "an‏al",
+      "points": [
+        97,
+        110,
+        8207,
+        97,
+        108
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 20,
+      "input": "s‏ex",
+      "points": [
+        115,
+        8207,
+        101,
+        120
+      ],
+      "production": "blocked",
+      "newIndependentReference": "control",
+      "historicalNFA": "blocked"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 21,
+      "input": "analysis‏",
+      "points": [
+        97,
+        110,
+        97,
+        108,
+        121,
+        115,
+        105,
+        115,
+        8207
+      ],
+      "production": "ok",
+      "newIndependentReference": "control",
+      "historicalNFA": "ok"
+    },
+    {
+      "name": "all-twelve-bidi-controls-and-original-length-precedence",
+      "seed": null,
+      "index": 22,
+      "input": "‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏",
+      "points": [
+        8207,
+        8207,
+        8207,
+        8207,
+        8207,
+        8207,
+        8207,
+        8207,
+        8207,
+        8207,
+        8207,
+        8207,
+        8207,
+        8207,
+        8207,
+        8207
+      ],
+      "production": "empty",
+      "newIndependentReference": "control",
+      "historicalNFA": "empty"
+    }
+  ],
+  "limitations": [
+    "Untimed functional comparison only; original benchmark and mutation command are not executed by this helper.",
+    "Expected current production disagreement on three newly interpreted Unicode Bidi_Control points is retained, not waived."
+  ],
+  "after": [
+    {
+      "path": "/tmp/B19-new-reference-original-preflight-20261009.mjs",
+      "bytes": 4603,
+      "sha256": "a7136a87be6ce6ce26d90db9577558cb9b76b2b5896cabdbaeb661be8c40756a"
+    },
+    {
+      "path": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "bytes": 125989464,
+      "sha256": "bc17c508ffeed0ec622934f9b7fa72f8e78da65350e63c3eceb56fa688aa5e12"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/nameFilter.ts",
+      "bytes": 14430,
+      "sha256": "7817489fc1d0908a87914223a84b31c15ea7e13b3555cb4238594751616f163d"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/dist/nameFilter.js",
+      "bytes": 15203,
+      "sha256": "e4b39efbf033bef9c41788e9bf0f002cdb61ff9dbbdfa6cbfcbfda65122d2cf9"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/tests/reference.ts",
+      "bytes": 2477,
+      "sha256": "962bab309ddf9cc2d8ccc7237f782d69db6aa2b603417f1a8935c3d5b167b5f6"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/dist/tests/reference.js",
+      "bytes": 2365,
+      "sha256": "fb41af66df9ec5db3464ee870ed2db138903a1b7211614ab34e1344f6a1059f8"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/tests/run.mjs",
+      "bytes": 23449,
+      "sha256": "bff0c17b62aa75d342527a8ced855678380411053476557acde61f2e1b6fbdd9"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/tests/blind/reference.mjs",
+      "bytes": 2814,
+      "sha256": "40449357a616619cc649d6b8efab2f6664a187de178511b8b0f17e28e92eea9a"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/data/policy.json",
+      "bytes": 4260,
+      "sha256": "3e3a3eab49e39e2971f02736a0bf6a189486436030ea4e58963fa2514efcd9e2"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/data/original-workload-policy.json",
+      "bytes": 4233,
+      "sha256": "ac400db6c9733f6becc82df93f91cdde13563767d2b9b3883684779b28c48dc9"
+    },
+    {
+      "path": "/tmp/B19-independent-reference-20261009/reference.mjs",
+      "bytes": 4784,
+      "sha256": "a93b35e3170122b2fd0a77619eff36716c3b9fc2f4c47f3bfce1971778a76e71"
+    },
+    {
+      "path": "/tmp/B19-independent-reference-20261009/seal.json",
+      "bytes": 2101,
+      "sha256": "a8cded0ef5e4bf8da574184baabdfa57e9103c43981e8bc9019085ff0b9b1511"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/.work/B19-ASCII-mapping-candidate/original-workload-declarations.mjs",
+      "bytes": 11361,
+      "sha256": "6943ea7541f4efe191268e84884b9e6ddc3ff5b994ed6f750649be7fd808796a"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/data/cache/names.json",
+      "bytes": 1178061,
+      "sha256": "98ea30b5406ed5abdf5587dc3d4117ad0c4f60208657eb3317fe0b6007eeedab"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/data/cache/words.json",
+      "bytes": 534784,
+      "sha256": "458a956fc9c3c415eb44b23394d88ddf18e26fb9fd3ca116e26f6c7dae6449a3"
+    },
+    {
+      "path": "/workspace/partybox-gpt-drops-B19-finish/jobs/B19-name-filter/data/cache/places.json",
+      "bytes": 187002,
+      "sha256": "3e865402f14e284327d6c69b807008faef092dfcb7841322d40eaf0da9324cac"
+    }
+  ],
+  "guardsUnchanged": true,
+  "finishedAt": "2026-10-09T03:25:38.601Z"
+}

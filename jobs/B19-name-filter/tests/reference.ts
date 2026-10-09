@@ -30,6 +30,7 @@ export function reference(input: unknown): Result {
   for (const c of input) {
     const n = c.codePointAt(0) ?? 0;
     if (n < 32 || (n >= 127 && n <= 159) || (n >= 0xd800 && n <= 0xdfff) ||
+        n === 0x061c || n === 0x200e || n === 0x200f ||
         (n >= 0x202a && n <= 0x202e) || (n >= 0x2066 && n <= 0x2069)) return {ok:false, reason:'control'};
   }
   let plain = '';

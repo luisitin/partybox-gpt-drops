@@ -7,7 +7,8 @@ import os from 'node:os';
 import { integrity } from '../scripts/integrity.mjs';
 import { nameFilter, isAllowedName } from '../dist/nameFilter.js';
 import { reference } from '../dist/tests/reference.js';
-import { createReference } from './blind/reference.mjs';
+import { createReference } from './independent-unicode-20261009/reference.mjs';
+import { makeUnicodeCases, verifyIndependentSeal, unicodeMutations } from './unicode-contract.mjs';
 
 const root = new URL('../', import.meta.url);
 process.chdir(root.pathname);
@@ -26,7 +27,7 @@ const refSource = readFileSync('tests/reference.ts', 'utf8');
 const sha = x => createHash('sha256').update(x).digest('hex');
 const label = x => x.ok ? 'ok' : x.reason;
 const json = (path, data) => writeFileSync(`${out}/${path}`, JSON.stringify(data,null,2)+'\n');
-const result = {mode:coreOnly?'core-only':'full', environment:{node:process.version,platform:process.platform,arch:process.arch,cpu:os.cpus()[0]?.model,unicode:process.versions.unicode},sourceSha256:sha(source),referenceSha256:sha(refSource),blindReferenceSha256:sha(readFileSync('tests/blind/reference.mjs')),suites:[],failures:[],unverified:[]};
+const result = {mode:coreOnly?'core-only':'full', environment:{node:process.version,platform:process.platform,arch:process.arch,cpu:os.cpus()[0]?.model,unicode:process.versions.unicode},sourceSha256:sha(source),referenceSha256:sha(refSource),blindReferenceSha256:sha(readFileSync('tests/independent-unicode-20261009/reference.mjs')),historicalBlindReferenceSha256:sha(readFileSync('tests/blind/reference.mjs')),suites:[],failures:[],unverified:[]};
 function record(name, cases, passed, seed, details={}) {
   const row={name,cases,passed,seed,command:`node tests/run.mjs${coreOnly?' --core':''}`, ...details};
   result.suites.push(row);
@@ -100,12 +101,12 @@ for(const character of [...knownCharacters]){knownCharacters.add(character.toUpp
 const knownCases=[...knownCharacters].flatMap(c=>[c,'a'+c,c+'a','s'+c+'ex','se'+c+'x','Σ'+c+'A','A'+c+'Σ','AΣ'+c,'ſ'+c+'ex'].map(input=>({input,expected:label(blind.nameFilter(input)),kind:'precompiled-Unicode-policy'})));
 // The original suites and their counts are unchanged. Independently challenge
 // every extra compiled code point in ordinary, contextual-case and fallback
-// positions; expected outcomes come from the original sealed reference.
+// positions; expected outcomes come from the new separately sealed reference.
 const rangeCharacters=[...Array.from({length:64},(_,i)=>String.fromCharCode(0x00c0+i)),...Array.from({length:94},(_,i)=>String.fromCharCode(0xff01+i))];
 const rangeCases=rangeCharacters.flatMap(c=>[c,'a'+c,c+'a','s'+c+'ex','se'+c+'x','Σ'+c+'A','A'+c+'Σ','AΣ'+c,'ſ'+c+'ex'].map(input=>({input,expected:label(blind.nameFilter(input)),kind:'precompiled-Unicode-ranges'})));
 // Exhaust short mapped ASCII inputs and term-length/repetition boundaries.
 // These supplement rather than alter the original 43,830-case workload, and
-// expectations are supplied only by the unchanged sealed independent oracle.
+// expectations are supplied only by the new sealed independent oracle.
 const lengthCases=[];
 for(let a=97;a<=122;a++) {
  const first=String.fromCharCode(a);
@@ -188,6 +189,23 @@ const approvedPath='data/kept-rejections.json';
 const reviewed=JSON.parse(readFileSync(approvedPath,'utf8'));
 const approved=reviewed.rows.map(([group,name,reason,explanation])=>({group,name,reason,explanation:reviewed.explanations[explanation]??explanation}));
 for(const seed of [1,2,3]) {
+ const independentSeal=verifyIndependentSeal();
+ record('new-independent-reference-seal-and-input-identities',independentSeal.cases,independentSeal.passed,seed,{errors:independentSeal.errors});
+ const unicodeCases=makeUnicodeCases(seed,rng);
+ const unicodeProduction=evalCases(nameFilter,unicodeCases);
+ const unicodeIndependent=evalCases(blind.nameFilter,unicodeCases);
+ const unicodeHistoricalNFA=evalCases(reference,unicodeCases);
+ record('expanded-bidi-surrogate-and-unknown-category-contract',unicodeCases.length*3,unicodeProduction.passed+unicodeIndependent.passed+unicodeHistoricalNFA.passed,seed,{perImplementationCases:unicodeCases.length,productionErrors:unicodeProduction.errors,independentErrors:unicodeIndependent.errors,historicalNFAErrors:unicodeHistoricalNFA.errors});
+ const unicodeMutationRows=[];
+ for(const [id,description,from,to] of unicodeMutations){
+  if(compiled.split(from).length!==2)throw new Error(`Unicode mutation anchor must be unique: ${id}`);
+  const code=compiled.replace(from,to);
+  const module=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+  const checks=evalCases(module.nameFilter,unicodeCases);
+  unicodeMutationRows.push({id,description,seed,cases:unicodeCases.length,killed:checks.passed<unicodeCases.length,disagreements:unicodeCases.length-checks.passed,witness:checks.errors[0]??null,mutantSha256:sha(code)});
+ }
+ json(`unicode-mutations-seed${seed}.json`,unicodeMutationRows);
+ record('four-additional-real-Unicode-contract-mutations',unicodeMutationRows.length,unicodeMutationRows.filter(row=>row.killed).length,seed,{survivors:unicodeMutationRows.filter(row=>!row.killed).map(row=>row.id)});
  const snapshot=spawnSync('python3',['tests/retained-snapshot.py'],{encoding:'utf8'});
  const snapshotResult=snapshot.status===0?JSON.parse(snapshot.stdout):null;
  record('retained-original-snapshot-offline-and-corruption',8,snapshotResult?.passed===8?8:0,seed,{command:'python3 tests/retained-snapshot.py',output:snapshotResult??{stderr:snapshot.stderr,status:snapshot.status}});
