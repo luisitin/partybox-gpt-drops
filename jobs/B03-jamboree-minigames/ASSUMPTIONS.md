@@ -1,3 +1,17 @@
+## Current exact category assumptions
+
+Category research has found one precise Lane Change candidate, still UNADOPTED. The complete independently authored SuperZambezi preview at https://mariopartylegacy.com/2024/09/every-minigame-in-super-mario-party-jamboree-so-far/ names Lane Change under its nine-member single-player coin-collecting group; eight other cells are unknown. Both complete3662-character native authored bodies and the full group paragraphs were reread. Publication is2024-09-02T22:45:15-07:00, before release, with explicit uncertainty; final-game category qualification remains separate. Exactly27 reserved words across three literal <=25-word clips, unchanged200/source ceiling, no full body public. No product/source registry quote is added.
+
+The paired complete retained Namu fourteen-member table and original Wiki nine-member Coin table were physically rehashed before/after, four actual bodies, zero newHTTP for those retained witnesses. Actual full Namu group4064characters/SHA2e83d602467bbb048e654d9d611988a286778a8aab4abc658d23a6e091db105d contains all14 combined members, not a literal nine-member Coin assignment. No new Namu prose/clip/registry/gate change; sharedNamu250/250 is full, B03195 unchanged. Generic names, combined headings, translated aliases and existing coin-game mechanics do not establish the narrower category by themselves.
+
+Four real new native requests naturally CLOSED10:16:37.749171 UTC, concurrency2, retry0, ordered passB after all passA children closed. Two complete MPL HTTP200/TLS0 bodies arrived; two YouTube curl56/HTTP000 attempts received no response body, with actual403 headers. The source lead https://www.youtube.com/watch?v=QZNNVuI5asA is BLOCKED_SOURCE_LEAD; its Exa description is discovery only, author identity is unverified and no source fact is accepted. This failed lead does not block all other independent B03 research.
+
+The new guard actually passes2627 comparisons and16 malformed fixtures, preserving all132 accepted465 rows,151 sources,2001 original quotation classifications, both entire154-record A+B histories and the complete84-witness reward audit. Only a new candidate/exclusion packet and guard are added; no existing predicate or negative is weakened or removed. Writer naturally CLOSED10:21:51.581548 UTC, actualEXIT0. Every product value/evidence stays exact:351/1320 supported,969open,zero complete rows; categories123/9,gameplay61/71. Strict remainsNOT_MET/deliberateEXIT1.
+
+Pre-release scope is recorded explicitly and not silently resolved. One failed source lead does not make available independent research unavailable. No true category fact or confidence level is inferred from a search result.
+
+## Preserved preceding handoff (historical)
+
 ## Three exact player formats
 
 Exactly three core arrangements gain format evidence: Income Stream (MG038), one player versus a team of three; Prime Cut (MG044), two teams of two; All the Marbles (MG058), a two-player duel. Original format values remain exact; only their three format evidence fields change. Proposed coverage:351/1320 supported,969 open,zero complete rows. Categories123/9 and gameplay61/71 stay exact. Every precise control, timer, win/score/tie/payout, alternate-mode qualifier, summary, category, confidence and phone assessment stays exact. Counts advance only after actual checked source delivery.

@@ -1,3 +1,13 @@
+## Current Coin-category research — UNADOPTED
+
+Canonical https://mariopartylegacy.com/2024/09/every-minigame-in-super-mario-party-jamboree-so-far/ — original authorSuperZambezi; exact paired full3662-character contexts and pre-release uncertainty remain privately retained. Candidate fragments, each<=25 words, canonical reserved27/200:
+
+- "These are single player minigames where you collect coins to move your character in the Koopathlon mode."
+- "We’re not quite sure what’s what just yet."
+- "Lane Change"
+
+Primary https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames — complete literal nine-name Coin table reread in both retained full bodies. No new registry clip or accepted field is added. Combined Namu14 group is excluded for Coin9 assignment; no new Namu author quotation is allocated. YouTubeQZNNVuI5asA is a failed native source lead, not accepted evidence.
+
 ## Exact core player-format evidence
 
 Three arrangements only; precise mechanics and alternate modes keep their separate qualifications. These are the exact registered <=25-word quotations. Repeats add no new canonical-source allocation. Whole native paired scopes and original context remain private, bound by the research hashes and finite request receipts.

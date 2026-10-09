@@ -219,6 +219,9 @@ def run(args):
     recovered=validate_reopens(sources,reopen_docs[:2],reopen_docs[2])
     checked('All '+str(len(reopen_docs[0]))+' source URLs reopened twice with ordered HTTPS/TLS records',len(reopen_docs[0])*2,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
     checked('Every recovered reopen quotation bound to the original registry',recovered,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
+    coin_frontier=module('b03_coin_category_frontier','check-coin-category-frontier.py')
+    for result in coin_frontier.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Coin category frontier failed'),result.get('detail',''))
     format_recovery=module('b03_format_recovery','check-format-recovery.py')
     for result in format_recovery.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Player-format recovery failed'),result.get('detail',''))
