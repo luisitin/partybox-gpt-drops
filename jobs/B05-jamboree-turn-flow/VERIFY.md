@@ -2,134 +2,135 @@
 
 ## Verdict
 
-**Structural checks PASS; strict research acceptance NOT MET.** Of 95 claim/gap rows, 33 are corroborated, 39 remain single-source, three retain conflicts and 20 remain explicit unknowns. Four new complete confirmations cover the Classic pair/trio, ordinary 20-coin Star price, retained Pro doubled spaces/duels and the full Pro Lucky/Unlucky outcomes. The six other Bonus criteria, all nine tie procedures and complete event priorities remain unresolved.
+**Structural checks PASS; strict original research acceptance NOT MET.** Current coverage is 37/95 corroborated, 35 single-source, three conflicts and 20 explicit unknowns. Bonus criteria remain 3/9; all nine tie procedures are null. Keep original PR9 draft.
 
-All 25 retained URLs were actually reopened in both fresh passes; all 192 short registered quotations recovered per pass, 384 total. All 141 claim/bonus/effect/string/policy rows were reviewed in both contextual passes. Each review carries a canonical SHA-256 matching the exact delivered data. The same assistant performed both passes; no independent researcher or primary-frame observation is claimed.
+The four literal confirmations are PRO08/EFFECT03/EFFECT04/EFFECT06, all medium confidence. Only evidence/status and three matching effect statuses change; all existing factual wording, the other 91 claim objects, nine Bonus records, seven policies and 22 strings remain unchanged. `verify_evidence_scope.py` checks that finite boundary, all immutable original bytes, complete new capture identities, and 12 actual malformed-scope rejection fixtures. This is an integrity check, not a game replay.
 
-The 22 source-attributed strings include 11 voice and 11 host-text lines. Speaker/when fields follow the actual source headings. Their timestamp fields remain null. An untimed automatic-caption lead was retained separately and is excluded from accepted criterion/tie evidence.
+All 26 retained URLs were actually reopened in two new full Exa passes: A observed 2026-10-09 01:34:33–01:34:38 UTC; B observed 01:36:18–01:36:20 UTC. All 200 registered short quotations recovered in each pass, 400 total. Every one of 141 retained claim/bonus/effect/string/policy records received both contextual reviews bound to its canonical SHA-256. Same returned page bytes may be cached. The same assistant performed both passes; original HTTP/TLS freshness, installed patch, playable frames and game timestamps were not exposed.
 
-## Executed commands and results
+All 75 original delivery files from immutable source `91345bb1adc69328f0c696cb9f638fd6c20620ba` are preserved in `reports/historical-before-namu-four/`, including prior captures, reports, failed-access history, documentation and original workflow. Their earlier dates, counts and green runs are historical. Snapshot hashes are checked in the new scope suite.
 
-Environment: Python 3.12.14; jsonschema 4.26.0. Seed N/A (deterministic). No Monte Carlo, controlled gameplay replay or exhaustive engine-state test is claimed.
+## Actual executed commands
 
-`python verify.py --structural` exits 0: 18 suites, 1129 suite cases. `python verify.py --strict` exits 1 for the documented unresolved research gates. `python verify.py --structural --checksums` additionally checks all 72 manifest hashes. The full CI uses these same commands and expects strict exit 1 while the PR remains a research draft.
+Seed: N/A (deterministic). Source of the complete output below: actual local commands naturally closed at `2026-10-09T01:45:16.760268+00:00`, owned groups empty, all 156 source hashes unchanged. Neither structural success nor draft CI certifies the full original factual requirements.
 
-| Suite | Cases passed | Seed | Exact command |
-|---|---:|---|---|
-| JSON_SCHEMA | 6/6 | N/A | `python verify.py --structural` |
-| UNIQUE_IDS | 7/7 | N/A | `python verify.py --structural` |
-| CLAIM_SOURCE_REFERENCES | 147/147 | N/A | `python verify.py --structural` |
-| CATALOG_REFERENCES | 24/24 | N/A | `python verify.py --structural` |
-| STRING_SOURCE_COMPLETENESS | 22/22 | N/A | `python verify.py --structural` |
-| SOURCE_EXCERPT_BUDGET | 25/25 | N/A | `python verify.py --structural` |
-| CITATION_CAPTURE_SCHEMA | 50/50 | N/A | `python verify.py --structural` |
-| REGISTERED_QUOTATIONS_RECOVERED | 384/384 | N/A | `python verify.py --structural` |
-| AUDIT_REPORT_SCHEMAS_AND_COVERAGE | 2/2 | N/A | `python verify.py --structural` |
-| CORROBORATION_LINEAGE_GUARD | 34/34 | N/A | `python verify.py --structural` |
-| DOCUMENTED_CATALOG_COUNTS | 2/2 | N/A | `python verify.py --structural` |
-| UNKNOWN_BEHAVIOR_REMAINS_NULL | 11/11 | N/A | `python verify.py --structural` |
-| RECORDED_ROW_RECHECK_A | 141/141 | N/A | `python verify.py --structural` |
-| RECORDED_SOURCE_REOPEN_A | 25/25 | N/A | `python verify.py --structural` |
-| RECORDED_ROW_RECHECK_B | 141/141 | N/A | `python verify.py --structural` |
-| RECORDED_SOURCE_REOPEN_B | 25/25 | N/A | `python verify.py --structural` |
-| NEGATIVE_REJECTION_CASES | 10/10 | N/A | `python verify.py --structural` |
-| FILE_SIZE_LIMIT | 73/73 | N/A | `python verify.py --structural` |
-| SHA256_MANIFEST | 72/72 | N/A | `python verify.py --structural --checksums` |
+| Test | Cases passed | Seed | Exact command |
+| --- | ---: | --- | --- |
+| JSON_SCHEMA | 6/6 | N/A | `python3 verify.py --structural --checksums` |
+| UNIQUE_IDS | 7/7 | N/A | `python3 verify.py --structural --checksums` |
+| CLAIM_SOURCE_REFERENCES | 151/151 | N/A | `python3 verify.py --structural --checksums` |
+| CATALOG_REFERENCES | 24/24 | N/A | `python3 verify.py --structural --checksums` |
+| STRING_SOURCE_COMPLETENESS | 22/22 | N/A | `python3 verify.py --structural --checksums` |
+| SOURCE_EXCERPT_BUDGET | 26/26 | N/A | `python3 verify.py --structural --checksums` |
+| CITATION_CAPTURE_SCHEMA | 52/52 | N/A | `python3 verify.py --structural --checksums` |
+| REGISTERED_QUOTATIONS_RECOVERED | 400/400 | N/A | `python3 verify.py --structural --checksums` |
+| AUDIT_REPORT_SCHEMAS_AND_COVERAGE | 2/2 | N/A | `python3 verify.py --structural --checksums` |
+| CORROBORATION_LINEAGE_GUARD | 38/38 | N/A | `python3 verify.py --structural --checksums` |
+| DOCUMENTED_CATALOG_COUNTS | 2/2 | N/A | `python3 verify.py --structural --checksums` |
+| UNKNOWN_BEHAVIOR_REMAINS_NULL | 11/11 | N/A | `python3 verify.py --structural --checksums` |
+| RECORDED_ROW_RECHECK_A | 141/141 | N/A | `python3 verify.py --structural --checksums` |
+| RECORDED_SOURCE_REOPEN_A | 26/26 | N/A | `python3 verify.py --structural --checksums` |
+| RECORDED_ROW_RECHECK_B | 141/141 | N/A | `python3 verify.py --structural --checksums` |
+| RECORDED_SOURCE_REOPEN_B | 26/26 | N/A | `python3 verify.py --structural --checksums` |
+| NEGATIVE_REJECTION_CASES | 10/10 | N/A | `python3 verify.py --structural --checksums` |
+| FOUR_LITERAL_CORE_SCOPE | 538/538 | N/A | `python3 verify.py --structural --checksums` |
+| FILE_SIZE_LIMIT | 156/156 | N/A | `python3 verify.py --structural --checksums` |
+| SHA256_MANIFEST | 154/154 | N/A | `python3 verify.py --structural --checksums` |
 
-The negative cases include a syntactically malformed review hash and an actual post-review claim-text change. Both are rejected. All files are below 30,000,000 bytes. The manifest includes the job files and B05 workflow, excluding itself. Final manifest output is observed locally after this document is finalized.
+Actual structural suite cases: 1933. Actual strict command: `python3 verify.py --strict`, expected unresolved exit 1. Malformed input still fails, and no original strict gate was relaxed. Full manifest command: `sha256sum -c SHA256SUMS.txt` before canonical push. Final current workflow runs the complete same commands and uploads the full checked delivery, read-only workflow, and complete structural/strict output.
 
-## Actual schema-validator and strict output
+## Complete actual validator output
 
 ```text
-$ python verify.py --structural
 PASS JSON_SCHEMA: 6/6
 PASS UNIQUE_IDS: 7/7
-PASS CLAIM_SOURCE_REFERENCES: 147/147
+PASS CLAIM_SOURCE_REFERENCES: 151/151
 PASS CATALOG_REFERENCES: 24/24
 PASS STRING_SOURCE_COMPLETENESS: 22/22
-PASS SOURCE_EXCERPT_BUDGET: 25/25
-PASS CITATION_CAPTURE_SCHEMA: 50/50
-PASS REGISTERED_QUOTATIONS_RECOVERED: 384/384
+PASS SOURCE_EXCERPT_BUDGET: 26/26
+PASS CITATION_CAPTURE_SCHEMA: 52/52
+PASS REGISTERED_QUOTATIONS_RECOVERED: 400/400
 PASS AUDIT_REPORT_SCHEMAS_AND_COVERAGE: 2/2
-PASS CORROBORATION_LINEAGE_GUARD: 34/34
+PASS CORROBORATION_LINEAGE_GUARD: 38/38
 PASS DOCUMENTED_CATALOG_COUNTS: 2/2
 PASS UNKNOWN_BEHAVIOR_REMAINS_NULL: 11/11
 PASS RECORDED_ROW_RECHECK_A: 141/141
-PASS RECORDED_SOURCE_REOPEN_A: 25/25
+PASS RECORDED_SOURCE_REOPEN_A: 26/26
 PASS RECORDED_ROW_RECHECK_B: 141/141
-PASS RECORDED_SOURCE_REOPEN_B: 25/25
+PASS RECORDED_SOURCE_REOPEN_B: 26/26
 PASS NEGATIVE_REJECTION_CASES: 10/10
-PASS FILE_SIZE_LIMIT: 73/73
-STRUCTURAL_RESULT=PASS; suites=18; seed=N/A (deterministic)
-EXIT=0
+PASS FOUR_LITERAL_CORE_SCOPE: 538/538
+PASS FILE_SIZE_LIMIT: 156/156
+PASS SHA256_MANIFEST: 154/154
+STRUCTURAL_RESULT=PASS; suites=20; seed=N/A (deterministic)
+```
 
-$ python verify.py --strict
+```text
 PASS JSON_SCHEMA: 6/6
 PASS UNIQUE_IDS: 7/7
-PASS CLAIM_SOURCE_REFERENCES: 147/147
+PASS CLAIM_SOURCE_REFERENCES: 151/151
 PASS CATALOG_REFERENCES: 24/24
 PASS STRING_SOURCE_COMPLETENESS: 22/22
-PASS SOURCE_EXCERPT_BUDGET: 25/25
-PASS CITATION_CAPTURE_SCHEMA: 50/50
-PASS REGISTERED_QUOTATIONS_RECOVERED: 384/384
+PASS SOURCE_EXCERPT_BUDGET: 26/26
+PASS CITATION_CAPTURE_SCHEMA: 52/52
+PASS REGISTERED_QUOTATIONS_RECOVERED: 400/400
 PASS AUDIT_REPORT_SCHEMAS_AND_COVERAGE: 2/2
-PASS CORROBORATION_LINEAGE_GUARD: 34/34
+PASS CORROBORATION_LINEAGE_GUARD: 38/38
 PASS DOCUMENTED_CATALOG_COUNTS: 2/2
 PASS UNKNOWN_BEHAVIOR_REMAINS_NULL: 11/11
 PASS RECORDED_ROW_RECHECK_A: 141/141
-PASS RECORDED_SOURCE_REOPEN_A: 25/25
+PASS RECORDED_SOURCE_REOPEN_A: 26/26
 PASS RECORDED_ROW_RECHECK_B: 141/141
-PASS RECORDED_SOURCE_REOPEN_B: 25/25
+PASS RECORDED_SOURCE_REOPEN_B: 26/26
 PASS NEGATIVE_REJECTION_CASES: 10/10
-PASS FILE_SIZE_LIMIT: 73/73
-STRUCTURAL_RESULT=PASS; suites=18; seed=N/A (deterministic)
-FACTS_DUAL_SOURCE=33/95; FAIL
+PASS FOUR_LITERAL_CORE_SCOPE: 538/538
+PASS FILE_SIZE_LIMIT: 156/156
+STRUCTURAL_RESULT=PASS; suites=19; seed=N/A (deterministic)
+FACTS_DUAL_SOURCE=37/95; FAIL
 BONUS_CRITERIA_DUAL_SOURCE=3/9; FAIL
 BONUS_TIE_PROCEDURES_EVIDENCED=0/9; FAIL
 STRING_PRIMARY_CAPTURES=0/22; descriptive provenance, not an additional prompt requirement
 FULL_TIMELINE_COVERAGE=INCOMPLETE
 STRICT_RESEARCH_RESULT=NOT_MET; exit=1
-EXIT=1
 ```
 
-## Source reopening log
+## Complete source reopening log
 
-Retrieval times and exact returned-markdown fingerprints are in the linked per-source receipts. Exa text may be cached; these do not claim a direct HTTP 200 or a fresh Nintendo-origin response.
-
-| Source | Pass A | Pass B | Registered quotations per pass |
-|---|---|---|---:|
-| NIN | [opened, all recovered](reports/source-captures/A-NIN.json) | [opened, all recovered](reports/source-captures/B-NIN.json) | 7 |
-| GAME | [opened, all recovered](reports/source-captures/A-GAME.json) | [opened, all recovered](reports/source-captures/B-GAME.json) | 20 |
-| BONUS | [opened, all recovered](reports/source-captures/A-BONUS.json) | [opened, all recovered](reports/source-captures/B-BONUS.json) | 11 |
-| QUOTE | [opened, all recovered](reports/source-captures/A-QUOTE.json) | [opened, all recovered](reports/source-captures/B-QUOTE.json) | 41 |
-| HOME | [opened, all recovered](reports/source-captures/A-HOME.json) | [opened, all recovered](reports/source-captures/B-HOME.json) | 14 |
-| MNN | [opened, all recovered](reports/source-captures/A-MNN.json) | [opened, all recovered](reports/source-captures/B-MNN.json) | 9 |
-| GR | [opened, all recovered](reports/source-captures/A-GR.json) | [opened, all recovered](reports/source-captures/B-GR.json) | 4 |
-| MPL | [opened, all recovered](reports/source-captures/A-MPL.json) | [opened, all recovered](reports/source-captures/B-MPL.json) | 5 |
-| MPLTV | [opened, all recovered](reports/source-captures/A-MPLTV.json) | [opened, all recovered](reports/source-captures/B-MPLTV.json) | 7 |
-| TV | [opened, all recovered](reports/source-captures/A-TV.json) | [opened, all recovered](reports/source-captures/B-TV.json) | 7 |
-| IGN | [opened, all recovered](reports/source-captures/A-IGN.json) | [opened, all recovered](reports/source-captures/B-IGN.json) | 8 |
-| ZU | [opened, all recovered](reports/source-captures/A-ZU.json) | [opened, all recovered](reports/source-captures/B-ZU.json) | 6 |
-| TRACKER | [opened, all recovered](reports/source-captures/A-TRACKER.json) | [opened, all recovered](reports/source-captures/B-TRACKER.json) | 10 |
-| EXCHANGE | [opened, all recovered](reports/source-captures/A-EXCHANGE.json) | [opened, all recovered](reports/source-captures/B-EXCHANGE.json) | 5 |
-| MINI | [opened, all recovered](reports/source-captures/A-MINI.json) | [opened, all recovered](reports/source-captures/B-MINI.json) | 4 |
-| BOWSER | [opened, all recovered](reports/source-captures/A-BOWSER.json) | [opened, all recovered](reports/source-captures/B-BOWSER.json) | 8 |
-| HIDDEN | [opened, all recovered](reports/source-captures/A-HIDDEN.json) | [opened, all recovered](reports/source-captures/B-HIDDEN.json) | 2 |
-| RACE | [opened, all recovered](reports/source-captures/A-RACE.json) | [opened, all recovered](reports/source-captures/B-RACE.json) | 1 |
-| CGM | [opened, all recovered](reports/source-captures/A-CGM.json) | [opened, all recovered](reports/source-captures/B-CGM.json) | 2 |
-| MPLGAME | [opened, all recovered](reports/source-captures/A-MPLGAME.json) | [opened, all recovered](reports/source-captures/B-MPLGAME.json) | 8 |
-| FAMI | [opened, all recovered](reports/source-captures/A-FAMI.json) | [opened, all recovered](reports/source-captures/B-FAMI.json) | 1 |
-| NINTV | [opened, all recovered](reports/source-captures/A-NINTV.json) | [opened, all recovered](reports/source-captures/B-NINTV.json) | 2 |
-| GFAQCLASSIC | [opened, all recovered](reports/source-captures/A-GFAQCLASSIC.json) | [opened, all recovered](reports/source-captures/B-GFAQCLASSIC.json) | 3 |
-| GFAQPRO | [opened, all recovered](reports/source-captures/A-GFAQPRO.json) | [opened, all recovered](reports/source-captures/B-GFAQPRO.json) | 6 |
-| NINUK | [opened, all recovered](reports/source-captures/A-NINUK.json) | [opened, all recovered](reports/source-captures/B-NINUK.json) | 1 |
+| Source | Pass A | Pass B | URL |
+| --- | --- | --- | --- |
+| NIN | [actual capture](reports/source-captures/A-NIN.json) | [actual capture](reports/source-captures/B-NIN.json) | https://www.nintendo.com/au/news-and-articles/super-mario-party-jamboree-heres-a-quick-overview-of-the-game/ |
+| GAME | [actual capture](reports/source-captures/A-GAME.json) | [actual capture](reports/source-captures/B-GAME.json) | https://www.mariowiki.com/Super_Mario_Party_Jamboree |
+| BONUS | [actual capture](reports/source-captures/A-BONUS.json) | [actual capture](reports/source-captures/B-BONUS.json) | https://www.mariowiki.com/Bonus_Star |
+| QUOTE | [actual capture](reports/source-captures/A-QUOTE.json) | [actual capture](reports/source-captures/B-QUOTE.json) | https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_quotes |
+| HOME | [actual capture](reports/source-captures/A-HOME.json) | [actual capture](reports/source-captures/B-HOME.json) | https://www.mariowiki.com/Homestretch |
+| MNN | [actual capture](reports/source-captures/A-MNN.json) | [actual capture](reports/source-captures/B-MNN.json) | https://mynintendonews.com/2024/10/01/preview-super-mario-party-jamboree/ |
+| GR | [actual capture](reports/source-captures/A-GR.json) | [actual capture](reports/source-captures/B-GR.json) | https://www.gamesradar.com/games/puzzle/with-super-mario-party-jamboree-nintendos-finally-letting-you-cut-out-the-random-nonsense-thats-defined-its-multiplayer-games-for-decades/ |
+| MPL | [actual capture](reports/source-captures/A-MPL.json) | [actual capture](reports/source-captures/B-MPL.json) | https://mariopartylegacy.com/super-mario-party-jamboree/unlockables-rewards-achievements |
+| MPLTV | [actual capture](reports/source-captures/A-MPLTV.json) | [actual capture](reports/source-captures/B-MPLTV.json) | https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/ |
+| TV | [actual capture](reports/source-captures/A-TV.json) | [actual capture](reports/source-captures/B-TV.json) | https://www.mariowiki.com/Jamboree_TV |
+| IGN | [actual capture](reports/source-captures/A-IGN.json) | [actual capture](reports/source-captures/B-IGN.json) | https://me.ign.com/en/super-mario-party-jamboree/225526/review/super-mario-party-jamboree-review |
+| ZU | [actual capture](reports/source-captures/A-ZU.json) | [actual capture](reports/source-captures/B-ZU.json) | https://zeldauniverse.net/features/review-super-mario-party-jamboree/ |
+| TRACKER | [actual capture](reports/source-captures/A-TRACKER.json) | [actual capture](reports/source-captures/B-TRACKER.json) | https://blueyoshi9000.github.io/MarioPartyOverlay/bonus.html |
+| EXCHANGE | [actual capture](reports/source-captures/A-EXCHANGE.json) | [actual capture](reports/source-captures/B-EXCHANGE.json) | https://www.mariowiki.com/Star_Exchange |
+| MINI | [actual capture](reports/source-captures/A-MINI.json) | [actual capture](reports/source-captures/B-MINI.json) | https://www.mariowiki.com/Minigame |
+| BOWSER | [actual capture](reports/source-captures/A-BOWSER.json) | [actual capture](reports/source-captures/B-BOWSER.json) | https://www.mariowiki.com/Bowser_Space |
+| HIDDEN | [actual capture](reports/source-captures/A-HIDDEN.json) | [actual capture](reports/source-captures/B-HIDDEN.json) | https://www.mariowiki.com/Hidden_Block_(Mario_Party_series) |
+| RACE | [actual capture](reports/source-captures/A-RACE.json) | [actual capture](reports/source-captures/B-RACE.json) | https://www.mariowiki.com/Roll_%27em_Raceway |
+| CGM | [actual capture](reports/source-captures/A-CGM.json) | [actual capture](reports/source-captures/B-CGM.json) | https://www.cgmagonline.com/review/game/super-mario-party-jamboree-switch/ |
+| MPLGAME | [actual capture](reports/source-captures/A-MPLGAME.json) | [actual capture](reports/source-captures/B-MPLGAME.json) | https://mariopartylegacy.com/games/super-mario-party-jamboree/ |
+| FAMI | [actual capture](reports/source-captures/A-FAMI.json) | [actual capture](reports/source-captures/B-FAMI.json) | https://famiboards.com/threads/super-mario-party-jamboree-st-friendship-preserves-and-salt-spreads.11348/page-2 |
+| NINTV | [actual capture](reports/source-captures/A-NINTV.json) | [actual capture](reports/source-captures/B-NINTV.json) | https://www.nintendo.com/us/whatsnew/the-party-is-getting-even-bigger-with-jamboree-tv/ |
+| GFAQCLASSIC | [actual capture](reports/source-captures/A-GFAQCLASSIC.json) | [actual capture](reports/source-captures/B-GFAQCLASSIC.json) | https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80869247 |
+| GFAQPRO | [actual capture](reports/source-captures/A-GFAQPRO.json) | [actual capture](reports/source-captures/B-GFAQPRO.json) | https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80870887 |
+| NINUK | [actual capture](reports/source-captures/A-NINUK.json) | [actual capture](reports/source-captures/B-NINUK.json) | https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Super-Mario-Party-Jamboree-2591147.html |
+| NAMU | [actual capture](reports/source-captures/A-NAMU.json) | [actual capture](reports/source-captures/B-NAMU.json) | https://namu.wiki/w/%EC%8A%88%ED%8D%BC%20%EB%A7%88%EB%A6%AC%EC%98%A4%20%ED%8C%8C%ED%8B%B0%20%EC%9E%BC%EB%B2%84%EB%A6%AC |
 
 ## Full per-row review log
 
-Pass A challenges factual scope/composite qualifiers. Pass B challenges same-game applicability, lineage, aliases, numerical implications, speaker headings and unresolved exceptions. A matching row fingerprint is checked before either review can pass validation. Unknown bonus ties keep each full bonus record unverified even when its core criterion is corroborated.
+These outcomes record contextual manual reviews. A checked unknown remains unknown; a file fingerprint does not supply missing gameplay evidence.
 
 | Row | Pass A | Pass B | Canonical SHA-256 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | claim:SET01 | single_source | single_source | `514d5039fa83b4abb8bb64075afe76035d5082299c4447fafc38476f906a3afc` |
 | claim:SET02 | corroborated | corroborated | `002a3dc1270a2935a10ec0f6bb72e98274f64f12e64f33a1b436267edfa35cdb` |
 | claim:SET03 | single_source | single_source | `37dcc9c147b8e08f5d78b9bddf4d2274a5fed7a5f0d23097c891cc49d01f4ff2` |
@@ -182,7 +183,7 @@ Pass A challenges factual scope/composite qualifiers. Pass B challenges same-gam
 | claim:PRO05 | single_source | single_source | `96184aa8fc3faaad31496ab1af527e2d566b5318ebed1d1fac83243ad0c71cd5` |
 | claim:PRO06 | single_source | single_source | `50d579e161adec81008be460e4cfa78ff9c5403a046c31158f9c6a582d9e28a6` |
 | claim:PRO07 | corroborated | corroborated | `ae29ad36b9c4dfc6823c5f49bc509dd9cad4dcda21c43c52dfe2e7e8a9b00e9a` |
-| claim:PRO08 | single_source | single_source | `dcde25de990717437893ad610ddb2f378354772b3db576379f17d9348615a9bd` |
+| claim:PRO08 | corroborated | corroborated | `74aa54784475d764f815bbe7c117519d37c9643275828eeeb4cb1d6dec3e8b42` |
 | claim:PRO09 | conflict | conflict | `1a8f1a91cc2a53ceda3659c6c82180622a2691ca2ca81df0fb47597905f578b6` |
 | claim:TV01 | corroborated | corroborated | `5e45791349abdd12ebf41147910e0ec8f0728f89aa59d1432c1d5bef4b303e34` |
 | claim:TV02 | corroborated | corroborated | `0c91e768369ef982291cea7a37ae9373dbc187a653db248dc3c1f8b234cb7cba` |
@@ -219,10 +220,10 @@ Pass A challenges factual scope/composite qualifiers. Pass B challenges same-gam
 | claim:BONUS09 | corroborated | corroborated | `9016baee74490548bde962eea61af95698e0505cb9c546a542bc40f7f9e436dc` |
 | claim:EFFECT01 | single_source | single_source | `28a2a68df9b403c24e8d67b484ebd4aec6e745d0035ce373a4e7c9ed1e9ed9ed` |
 | claim:EFFECT02 | single_source | single_source | `1e79d9a1d58619df5f44fd2582ba695a75c31681827bc52e35050c3d5cba2dd0` |
-| claim:EFFECT03 | single_source | single_source | `cd3513aafb13ff0f8570ae68fddcb6d1473de09424aa10c443403347128a4f22` |
-| claim:EFFECT04 | single_source | single_source | `8b8868813622c5bd433a09b9a97a72bddcc745c70d587df2f20dd5c196f76aa0` |
+| claim:EFFECT03 | corroborated | corroborated | `06856c62961cc162e58c12fd4809dcdb41ac69124770cc27435666935b311260` |
+| claim:EFFECT04 | corroborated | corroborated | `40583f9c1edcebc6a1c9bdfc1564a0e0ef6c38324c972a767246a85e33411db7` |
 | claim:EFFECT05 | corroborated | corroborated | `bef7cb6937465de3d18af2ab70c8626c3f416fe22aed7a733c7376fa6e91126b` |
-| claim:EFFECT06 | single_source | single_source | `55f52ea144f35d52be946546a2381173393a32b87bb46a2381720bae25a9ba02` |
+| claim:EFFECT06 | corroborated | corroborated | `74781f7a48c3b2b0348f0d212e1021400ba814e24ab5b6671c1af01e74447513` |
 | claim:EFFECT07 | single_source | single_source | `9ef4d6653aee56881288338613e553d000e0f3d984c3cb25222f7e8d65038d1f` |
 | claim:EFFECT08 | single_source | single_source | `f6e8f38737c0fb4f5c92ddaf29fe18900a40b30c78a3c5b71118ce69bbc0415e` |
 | bonus:bowser-space | unverified | unverified | `3b75fdd95d2f427ccdd356cd31c39a76fac1f2c3d3a91410037609ae0fb7530f` |
@@ -236,10 +237,10 @@ Pass A challenges factual scope/composite qualifiers. Pass B challenges same-gam
 | bonus:slowpoke | unverified | unverified | `4d4480cb08366696218735dbf5a3d58dd45f237caef422015eb576de624c655c` |
 | effect:mushroom | single_source | single_source | `68aaeca06afded5f1fbd92029ca3b307b116513fe01f7a142c43f74255fe89dd` |
 | effect:extra-star | single_source | single_source | `3dfb0583249232d23baed2ac643a27eb49f87cba75a9d00f5d184708e31617c6` |
-| effect:star-steal-traps | single_source | single_source | `6213436e7cfe66c248e342ec608e6556340ded550cdde519dc2884a0670eead1` |
-| effect:double-dice | single_source | single_source | `ec569f26f1fa737485f6edb69612f7064820a9dd57a812f9e3bd656523300a5f` |
+| effect:star-steal-traps | corroborated | corroborated | `0cd02fbc0690106e46def795c82ddead776295a553a9cc28a7b58b4d1c5ce27b` |
+| effect:double-dice | corroborated | corroborated | `769a523251718ef0c283406b71d1c6c60c40119dd94e7a45e1c1dde8c019e596` |
 | effect:space-coins | corroborated | corroborated | `eed1dc1f8468b2770ab7b7360b6a1bef9315a010bf5d25c601ecd359614ba7e1` |
-| effect:wallet-coins | single_source | single_source | `3d79b6fee9ded3e92816686dcb2dcae25b24031154e0b55750db391c916e745c` |
+| effect:wallet-coins | corroborated | corroborated | `55002d81dc69e586fdc857a26d9242b8288be3b82cc38322b2ec318a4dbcabd0` |
 | effect:more-bowser | single_source | single_source | `1a37a40a4df3ba6b509f3aa5de4d6a4b7134f1b59774f0309166998d0c57a35f` |
 | effect:more-chance | single_source | single_source | `654a95ac36193120dadf62ed80a30fd350a332541a698aca6b7ecd0dc4452f0d` |
 | string:ann-start | single_source | single_source | `3df520a98cb9f4bf95e9053812c212c7654302878d3319d10976121a759b1feb` |
@@ -274,12 +275,13 @@ Pass A challenges factual scope/composite qualifiers. Pass B challenges same-gam
 
 ## UNVERIFIED
 
-- Complete original research acceptance remains NOT MET: 62 of 95 claim/gap rows lack complete independent confirmation.
-- Six Bonus criteria and all nine tie/zero-activity procedures remain open. Random category sampling and probabilities remain null.
-- Exact item/Buddy ordering, branches, trap/landing priorities, board phase hooks, payouts and all ending tie cardinalities remain incomplete.
-- Selected strings match the retrieved transcript, not captured game frames. Region/build variants and a complete script remain unknown.
-- Independent second researcher, controlled replay and exhaustive engine-state testing were not performed.
-- The direct video URL access failed with an actual 403 tunnel response; its untimed auto-caption lead was not promoted to accepted evidence.
+- Full original acceptance remains NOT MET: 58 of 95 claim/gap records lack complete independent confirmation.
+- Six Bonus criteria, all nine Bonus tie/cardinality/no-recipient procedures, internal counters and sampling algorithms remain open.
+- Complete item/Buddy/branch/landing priorities, board phase hooks, vote/payout rules, final ordering and implementation state transitions remain unresolved.
+- Inventory overflow, wallet caps, Rich-counter inclusion and per-effect Frenzy eligibility remain unverified.
+- PRO05 lacks the independent roulette-presentation qualifier, PRO06 has unresolved reset/exclusion qualifiers, and PRO09 retains the independent contradictory fallback account.
+- All 22 strings remain source-transcribed only, without primary frames, real gameplay timestamps, a complete script or region/build/voice verification.
+- Controlled game replay and an independent second researcher were not performed. Existing failed video requests and untimed captions remain rejected evidence.
 
 ### Every unresolved claim/gap row
 
@@ -309,7 +311,6 @@ Pass A challenges factual scope/composite qualifiers. Pass B challenges same-gam
 - **TIE02 — single_source; medium:** The host transcript attests that an award can have no recipient. All-zero thresholds and Slowpoke zero-distance handling are not established.
 - **PRO05 — single_source; medium:** Pro uses item roulette without item minigames. The independent player report confirms absence of Item minigames, but not the precise roulette presentation. The complete row remains single_source.
 - **PRO06 — single_source; medium:** Pro marks future Star sites; a used site becomes eligible again after the other sites have been used. The independent player report confirms marked spawn sites but omits the used-site reset cycle. The complete row remains single_source.
-- **PRO08 — single_source; medium:** Pro VS stakes are 20 coins; the landing player selects the minigame.
 - **PRO09 — conflict; low:** Pro Bowser takes a Star; without one, the reported fallback is half the coins, or all coins at King Bowser Keep. C05: GAME omits the board exception and ZU says zero exceptions. Preserve the board-specific report without calling it independently settled.
 - **TV03 — single_source; medium:** Tag-Team shares Stars and coins; higher combined opening rolls act first, and teams alternate players. Both sources confirm shared Stars/coins; only MPLTV explicitly supplies the opening-roll and alternating-order rules. Entire row is not dual-confirmed.
 - **U01 — unverified; low:** Exact opening-roll range, descending-order display, and tied-order-roll resolution. Unanswered requirement; this row is a question, not a proposed game rule.
@@ -340,25 +341,5 @@ Pass A challenges factual scope/composite qualifiers. Pass B challenges same-gam
 - **BONUS07 — single_source; medium:** Maximize items bought at shops, not coins spent there. No independent second criterion source established. TRACKER is derived and is excluded from independence counts.
 - **EFFECT01 — single_source; medium:** Grant one player a Mushroom. If a player selects it, that player receives it; host selection uses a random recipient.
 - **EFFECT02 — single_source; medium:** Add one temporary Star Exchange. It disappears permanently after its one purchase.
-- **EFFECT03 — single_source; medium:** Give all players a Star Steal Trap. Inventory-overflow resolution is unverified.
-- **EFFECT04 — single_source; medium:** Give all players Double Dice. Inventory-overflow resolution is unverified.
-- **EFFECT06 — single_source; medium:** Double each player's coins. Coin-cap and overflow behavior are unverified.
 - **EFFECT07 — single_source; medium:** Replace two or three spaces with Bowser Spaces. Exact candidate-space selection is unverified.
 - **EFFECT08 — single_source; medium:** Replace two to four spaces with Chance Time Spaces. Exact candidate-space selection is unverified.
-
-## Polish pass 2026-10-08
-
-Scope: correctness, product review and documentation only. No research row, data value or evidence capture was changed.
-
-| Check | Command | Result |
-| --- | --- | --- |
-| Structural suites | `python3 verify.py --structural --checksums` | PASS, 19 suites, about 2 s |
-| Manifest | `sha256sum -c SHA256SUMS.txt` | 72 of 72 OK before this pass; regenerated for the files this pass changed |
-| Strict gate | `python3 verify.py --strict` | exit 1, as documented: FACTS_DUAL_SOURCE 33/95, BONUS_CRITERIA_DUAL_SOURCE 3/9, BONUS_TIE_PROCEDURES_EVIDENCED 0/9, STRING_PRIMARY_CAPTURES 0/22 |
-| Hosted CI | GitHub run 37675945275 on head `a84fd4e` | success (`verify`) |
-| Strings against capture | inline python: each `strings.json` `text` checked against the recovered quotations in `reports/source-captures/A-QUOTE.json` | 22 of 22 exact matches; all 22 single-source; none visually captured |
-| Evidence spot-check | COUNT01, COUNT02, TURN04, TIE02, HOME04 excerpts read in the captures | support their claims; COUNT01's excerpt is partial, scope noted in INTEGRATION.md |
-
-Seed: not applicable (deterministic). Case counts are as `verify.py` reports them.
-
-UNVERIFIED in this pass: no live re-fetch of any source (most hosts are blocked from this box). Evidence was checked against the captures this job stored, not against live pages. No gameplay, installed game or primary-frame capture was observed.

@@ -20,3 +20,11 @@ Strict research acceptance remains NOT MET; six bonus criteria, tie procedures, 
 - Regenerated docs and manifests, ran structural and strict commands, and pushed an evidence milestone. Hosted exact-head results are linked in PR9 once observed.
 
 - 2026-10-08 polish pass (Claude, cloud): added INTEGRATION.md (reference only, IP box first), DESIGN-DIGEST.md and a status block in README; checked all 22 strings against their QUOTE capture (22 of 22 exact) and five evidence excerpts; structural and checksum PASS, strict exit 1 as documented; no research row or data value changed.
+
+## Bounded evidence milestone — 2026-10-09
+
+Read the complete original B05 prompt and repository contract, current PR9 and all canonical research data. Three targeted Exa search workstreams reviewed 30 returned search results; full original Korean Namu, English same-lineage translation, TheSixthAxis, Famiboards, MarioWiki Jamboree and Homestretch contexts were inspected. Untimed video captions, generic SEO, mirrors and incomplete qualifiers were not promoted.
+
+Added four literal medium-confidence confirmations only. Reopened every one of 26 current URLs in actual sequential A/B passes and recovered every 200 registered clip per pass, 400 total. Reviewed all 141 retained records twice, preserving all Bonus ties, conflicts and incomplete composite claims. Snapshotted every original delivery file from immutable Git bytes before changing it. Added scope/immutability and real malformed-scope rejection checks, kept every original verifier and strict gate, and added a genuine hosted artifact containing the full checked delivery and complete command output. Actual final verification output is in VERIFY.md; current native proof is linked in PR9 after observation.
+
+Original acceptance remains NOT MET, so the original after-all-green KEEP GOING loop has not completed. NEXT.md records the precise outstanding evidence work.

@@ -128,10 +128,10 @@ Each row below is triggered when that extra **Party Rules** Homestretch event is
 |---|---|---|---|
 | mushroom | Grant one player a Mushroom. If a player selects it, that player receives it; host selection uses a random recipient. No exclusion is documented here; this is not proof that none exists. | [EFFECT01](SOURCES.md#effect01) | medium; single_source |
 | extra-star | Add one temporary Star Exchange. It disappears permanently after its one purchase. Excluded on Mario's Rainbow Castle. | [EFFECT02](SOURCES.md#effect02) | medium; single_source |
-| star-steal-traps | Give all players a Star Steal Trap. Inventory-overflow resolution is unverified. No exclusion is documented here; this is not proof that none exists. | [EFFECT03](SOURCES.md#effect03) | medium; single_source |
-| double-dice | Give all players Double Dice. Inventory-overflow resolution is unverified. No exclusion is documented here; this is not proof that none exists. | [EFFECT04](SOURCES.md#effect04) | medium; single_source |
+| star-steal-traps | Give all players a Star Steal Trap. Inventory-overflow resolution is unverified. No exclusion is documented here; this is not proof that none exists. | [EFFECT03](SOURCES.md#effect03) | medium; corroborated |
+| double-dice | Give all players Double Dice. Inventory-overflow resolution is unverified. No exclusion is documented here; this is not proof that none exists. | [EFFECT04](SOURCES.md#effect04) | medium; corroborated |
 | space-coins | Double Blue/Red values again to +12/−12. This is additional to the mandatory +6/−6 change. No exclusion is documented here; this is not proof that none exists. | [EFFECT05](SOURCES.md#effect05) | high; corroborated |
-| wallet-coins | Double each player's coins. Coin-cap and overflow behavior are unverified. No exclusion is documented here; this is not proof that none exists. | [EFFECT06](SOURCES.md#effect06) | medium; single_source |
+| wallet-coins | Double each player's coins. Coin-cap and overflow behavior are unverified. No exclusion is documented here; this is not proof that none exists. | [EFFECT06](SOURCES.md#effect06) | medium; corroborated |
 | more-bowser | Replace two or three spaces with Bowser Spaces. Exact candidate-space selection is unverified. Excluded on King Bowser's Keep. | [EFFECT07](SOURCES.md#effect07) | medium; single_source |
 | more-chance | Replace two to four spaces with Chance Time Spaces. Exact candidate-space selection is unverified. No exclusion is documented here; this is not proof that none exists. | [EFFECT08](SOURCES.md#effect08) | medium; single_source |
 
@@ -220,7 +220,7 @@ Pro marks future Star sites; a used site becomes eligible again after the other 
 
 Pro permits Star wagers in duels. [PRO07](SOURCES.md#pro07) — corroborated; high confidence. The additional requirement that both participants have a Star is stated only by GAME and is not promoted to a dual-confirmed rule.
 
-Pro VS stakes are 20 coins; the landing player selects the minigame. [PRO08](SOURCES.md#pro08) — single_source; medium confidence.
+Pro VS stakes are 20 coins; the landing player selects the minigame. [PRO08](SOURCES.md#pro08) — corroborated; medium confidence. Original Korean Namu and MarioWiki independently state the existing 20-coin stake and landing-player choice; insufficient-coin treatment, six-option/Boss details and event priorities remain unverified.
 
 Pro Bowser takes a Star; without one, the reported fallback is half the coins, or all coins at King Bowser Keep. [PRO09](SOURCES.md#pro09) — conflict; low confidence. C05: GAME omits the board exception and ZU says zero exceptions. Preserve the board-specific report without calling it independently settled.
 
@@ -249,3 +249,7 @@ The five-turn Frenzy start must not receive an additional invented midgame Homes
 **UNVERIFIED U20:** Controlled game replay, independent second researcher and exhaustive event-priority tests were not performed.
 
 [strings.json](strings.json) contains **22 short exact source-transcribed excerpts**, including **11 voice lines and 11 host-text entries**, with all nine award descriptions. It is deliberately not the full dialogue script. Every entry has a URL, speaker attribution, medium, occurrence description, confidence and explicit absence of visual capture. No guessed timestamps are included. All remaining requested exact dialogue stays unverified.
+
+## Evidence refresh — 2026-10-09
+
+Four literal cores now have independent secondary editorial corroboration: PRO08 and the all-player Star Steal Trap, Double Dice and wallet-doubling events. All factual wording and medium confidence are retained. Coin caps, item overflow, selection probabilities, Rich counter inclusion, timing, Frenzy eligibility and game-frame fidelity remain unresolved. PRO05/PRO06/PRO09 and all Bonus ties are unchanged. The original delivery is preserved in `reports/historical-before-namu-four/`.

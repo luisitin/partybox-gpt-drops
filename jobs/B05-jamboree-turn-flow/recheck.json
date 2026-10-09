@@ -1,6 +1,6 @@
 {
   "job": "B05",
-  "method": "Two actual fresh same-assistant Exa URL reopening passes, 2026-10-07, followed by complete contextual review of all 141 retained rows in each pass. The A review challenged full composite qualifiers; the B review challenged source lineage, same-game applicability, aliases, numerical implications, exact speaker headings and unresolved exceptions. Per-row canonical SHA-256 binds both reviews to the delivered data version. Source captures include observed UTC retrieval time, short exact quotes and returned-markdown SHA-256. Cached text is possible; no installed-game observation or independent researcher is claimed.",
+  "method": "Two actual new sequential full same-assistant Exa reopening passes on 2026-10-09: A observed 01:34:33–01:34:38 UTC, B 01:36:18–01:36:20 UTC. Every one of 26 retained URLs and 200 registered short quotes was recovered in both calls. Full contextual A review checked composite qualifiers; full B review challenged separate editorial lineage, all-player scope, language glosses, arithmetic, board/Pro/TV applicability, missing counters, exact source headings and unresolved exceptions for all 141 rows. Canonical SHA-256 binds both manual decisions to this exact data version. Identical returned bodies may reflect cache; no independent researcher, primary frame, origin TLS freshness, installed build, new on-screen label, voice or game timestamp is claimed.",
   "sourceReopens": [
     {
       "pass": "A",
@@ -228,6 +228,15 @@
       "opened": true
     },
     {
+      "pass": "A",
+      "sourceId": "NAMU",
+      "tool": "Exa.web_fetch_exa",
+      "references": [
+        "reports/source-captures/A-NAMU.json"
+      ],
+      "opened": true
+    },
+    {
       "pass": "B",
       "sourceId": "NIN",
       "tool": "Exa.web_fetch_exa",
@@ -449,6 +458,15 @@
       "tool": "Exa.web_fetch_exa",
       "references": [
         "reports/source-captures/B-NINUK.json"
+      ],
+      "opened": true
+    },
+    {
+      "pass": "B",
+      "sourceId": "NAMU",
+      "tool": "Exa.web_fetch_exa",
+      "references": [
+        "reports/source-captures/B-NAMU.json"
       ],
       "opened": true
     }
@@ -784,9 +802,9 @@
     },
     {
       "rowId": "claim:PRO08",
-      "passA": "single_source",
-      "passB": "single_source",
-      "canonicalSha256": "dcde25de990717437893ad610ddb2f378354772b3db576379f17d9348615a9bd"
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "canonicalSha256": "74aa54784475d764f815bbe7c117519d37c9643275828eeeb4cb1d6dec3e8b42"
     },
     {
       "rowId": "claim:PRO09",
@@ -1006,15 +1024,15 @@
     },
     {
       "rowId": "claim:EFFECT03",
-      "passA": "single_source",
-      "passB": "single_source",
-      "canonicalSha256": "cd3513aafb13ff0f8570ae68fddcb6d1473de09424aa10c443403347128a4f22"
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "canonicalSha256": "06856c62961cc162e58c12fd4809dcdb41ac69124770cc27435666935b311260"
     },
     {
       "rowId": "claim:EFFECT04",
-      "passA": "single_source",
-      "passB": "single_source",
-      "canonicalSha256": "8b8868813622c5bd433a09b9a97a72bddcc745c70d587df2f20dd5c196f76aa0"
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "canonicalSha256": "40583f9c1edcebc6a1c9bdfc1564a0e0ef6c38324c972a767246a85e33411db7"
     },
     {
       "rowId": "claim:EFFECT05",
@@ -1024,9 +1042,9 @@
     },
     {
       "rowId": "claim:EFFECT06",
-      "passA": "single_source",
-      "passB": "single_source",
-      "canonicalSha256": "55f52ea144f35d52be946546a2381173393a32b87bb46a2381720bae25a9ba02"
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "canonicalSha256": "74781f7a48c3b2b0348f0d212e1021400ba814e24ab5b6671c1af01e74447513"
     },
     {
       "rowId": "claim:EFFECT07",
@@ -1108,15 +1126,15 @@
     },
     {
       "rowId": "effect:star-steal-traps",
-      "passA": "single_source",
-      "passB": "single_source",
-      "canonicalSha256": "6213436e7cfe66c248e342ec608e6556340ded550cdde519dc2884a0670eead1"
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "canonicalSha256": "0cd02fbc0690106e46def795c82ddead776295a553a9cc28a7b58b4d1c5ce27b"
     },
     {
       "rowId": "effect:double-dice",
-      "passA": "single_source",
-      "passB": "single_source",
-      "canonicalSha256": "ec569f26f1fa737485f6edb69612f7064820a9dd57a812f9e3bd656523300a5f"
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "canonicalSha256": "769a523251718ef0c283406b71d1c6c60c40119dd94e7a45e1c1dde8c019e596"
     },
     {
       "rowId": "effect:space-coins",
@@ -1126,9 +1144,9 @@
     },
     {
       "rowId": "effect:wallet-coins",
-      "passA": "single_source",
-      "passB": "single_source",
-      "canonicalSha256": "3d79b6fee9ded3e92816686dcb2dcae25b24031154e0b55750db391c916e745c"
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "canonicalSha256": "55002d81dc69e586fdc857a26d9242b8288be3b82cc38322b2ec318a4dbcabd0"
     },
     {
       "rowId": "effect:more-bowser",
@@ -1423,6 +1441,22 @@
     {
       "rowId": "claim:PRO06",
       "decision": "2026-10-07 continuation: partial independent support added; omitted full qualifier prevents status promotion."
+    },
+    {
+      "rowId": "claim:EFFECT03",
+      "decision": "2026-10-09: only the existing literal core independently corroborated by the separate original Korean Namu editorial article and exact MarioWiki context. All factual wording and medium confidence retained; unknown overflow/caps, selection, primary frames and event ordering remain open."
+    },
+    {
+      "rowId": "claim:EFFECT04",
+      "decision": "2026-10-09: only the existing literal core independently corroborated by the separate original Korean Namu editorial article and exact MarioWiki context. All factual wording and medium confidence retained; unknown overflow/caps, selection, primary frames and event ordering remain open."
+    },
+    {
+      "rowId": "claim:EFFECT06",
+      "decision": "2026-10-09: only the existing literal core independently corroborated by the separate original Korean Namu editorial article and exact MarioWiki context. All factual wording and medium confidence retained; unknown overflow/caps, selection, primary frames and event ordering remain open."
+    },
+    {
+      "rowId": "claim:PRO08",
+      "decision": "2026-10-09: only the existing literal core independently corroborated by the separate original Korean Namu editorial article and exact MarioWiki context. All factual wording and medium confidence retained; unknown overflow/caps, selection, primary frames and event ordering remain open."
     }
   ]
 }

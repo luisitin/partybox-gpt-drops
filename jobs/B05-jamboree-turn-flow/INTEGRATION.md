@@ -20,7 +20,7 @@
 
 A research draft of one party-board game in this family: setup, order roll, one turn step by step, round end and minigame choice, Homestretch (the last five turns), the final turn, the ceremony, the nine bonus-star counters, and the Pro and Frenzy deltas. It also holds 22 short quoted host and announcer lines, each with a source URL.
 
-How good it is, honestly: the ordering is an editorial framework, not a trace of the real engine. Of 95 claim rows, 33 have two independent sources. All nine bonus tie procedures are unverified (0 of 9), and the zero-recipient and cardinality rules are open. Item use versus Buddy ordering, the branch prompt and landing priority are unknown (U02–U06). It is a good map of the decisions a port must make. It is not a spec to implement behaviour from.
+How good it is, honestly: the ordering is an editorial framework, not a trace of the real engine. Of 95 claim rows, 37 have two independent source lineages after the four literal 2026-10-09 confirmations; their medium confidence and unresolved exceptions remain explicit. All nine bonus tie procedures are unverified (0 of 9), and the zero-recipient and cardinality rules are open. Item use versus Buddy ordering, the branch prompt and landing priority are unknown (U02–U06). It is a good map of the decisions a port must make. It is not a spec to implement behaviour from.
 
 ## Take these files (the product, re-worded)
 
@@ -99,3 +99,7 @@ Nit:
 - Checked all 22 `strings.json` texts against their QUOTE capture (`reports/source-captures/A-QUOTE.json`): 22 of 22 exact matches. All 22 are single-source, with no independent second source and no visual capture.
 - Spot-checked the evidence excerpts behind COUNT01, COUNT02, TURN04, TIE02 and HOME04 against the captures. They support their claims. COUNT01's excerpt is partial. No research row was changed.
 - Added this file, `DESIGN-DIGEST.md`, a status block at the top of the README and the LOOP and VERIFY entries. Checksums regenerated for the changed files.
+
+## Evidence refresh — 2026-10-09
+
+The latest data adds only the literal Pro VS chooser/stake and three all-player Homestretch grants. The historical green run above belongs to its stated earlier source; PR9 links the current full native logs and checked artifact. Structural success does not establish the complete original research acceptance.

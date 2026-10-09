@@ -1,12 +1,12 @@
 {
   "job": "B05",
-  "reviewDate": "2026-10-07",
-  "reviewer": "same assistant, two full contextual passes",
+  "reviewDate": "2026-10-09",
+  "reviewer": "same assistant, two actual new full contextual source and row passes",
   "rowsReviewedEachPass": 141,
-  "sourceUrlsReopenedEachPass": 25,
+  "sourceUrlsReopenedEachPass": 26,
   "claimStatuses": {
-    "single_source": 39,
-    "corroborated": 33,
+    "single_source": 35,
+    "corroborated": 37,
     "conflict": 3,
     "unverified": 20
   },
@@ -325,9 +325,9 @@
     },
     {
       "rowId": "claim:PRO08",
-      "passA": "single_source",
-      "passB": "single_source",
-      "canonicalSha256": "dcde25de990717437893ad610ddb2f378354772b3db576379f17d9348615a9bd"
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "canonicalSha256": "74aa54784475d764f815bbe7c117519d37c9643275828eeeb4cb1d6dec3e8b42"
     },
     {
       "rowId": "claim:PRO09",
@@ -547,15 +547,15 @@
     },
     {
       "rowId": "claim:EFFECT03",
-      "passA": "single_source",
-      "passB": "single_source",
-      "canonicalSha256": "cd3513aafb13ff0f8570ae68fddcb6d1473de09424aa10c443403347128a4f22"
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "canonicalSha256": "06856c62961cc162e58c12fd4809dcdb41ac69124770cc27435666935b311260"
     },
     {
       "rowId": "claim:EFFECT04",
-      "passA": "single_source",
-      "passB": "single_source",
-      "canonicalSha256": "8b8868813622c5bd433a09b9a97a72bddcc745c70d587df2f20dd5c196f76aa0"
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "canonicalSha256": "40583f9c1edcebc6a1c9bdfc1564a0e0ef6c38324c972a767246a85e33411db7"
     },
     {
       "rowId": "claim:EFFECT05",
@@ -565,9 +565,9 @@
     },
     {
       "rowId": "claim:EFFECT06",
-      "passA": "single_source",
-      "passB": "single_source",
-      "canonicalSha256": "55f52ea144f35d52be946546a2381173393a32b87bb46a2381720bae25a9ba02"
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "canonicalSha256": "74781f7a48c3b2b0348f0d212e1021400ba814e24ab5b6671c1af01e74447513"
     },
     {
       "rowId": "claim:EFFECT07",
@@ -649,15 +649,15 @@
     },
     {
       "rowId": "effect:star-steal-traps",
-      "passA": "single_source",
-      "passB": "single_source",
-      "canonicalSha256": "6213436e7cfe66c248e342ec608e6556340ded550cdde519dc2884a0670eead1"
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "canonicalSha256": "0cd02fbc0690106e46def795c82ddead776295a553a9cc28a7b58b4d1c5ce27b"
     },
     {
       "rowId": "effect:double-dice",
-      "passA": "single_source",
-      "passB": "single_source",
-      "canonicalSha256": "ec569f26f1fa737485f6edb69612f7064820a9dd57a812f9e3bd656523300a5f"
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "canonicalSha256": "769a523251718ef0c283406b71d1c6c60c40119dd94e7a45e1c1dde8c019e596"
     },
     {
       "rowId": "effect:space-coins",
@@ -667,9 +667,9 @@
     },
     {
       "rowId": "effect:wallet-coins",
-      "passA": "single_source",
-      "passB": "single_source",
-      "canonicalSha256": "3d79b6fee9ded3e92816686dcb2dcae25b24031154e0b55750db391c916e745c"
+      "passA": "corroborated",
+      "passB": "corroborated",
+      "canonicalSha256": "55002d81dc69e586fdc857a26d9242b8288be3b82cc38322b2ec318a4dbcabd0"
     },
     {
       "rowId": "effect:more-bowser",
@@ -858,5 +858,5 @@
       "canonicalSha256": "2062ecc5ab4c36be9c796a3d62a53b5f623fcf3a3a855d27070d7082df0d5288"
     }
   ],
-  "scope": "Each canonical row fingerprint binds both decisions to the final source-attributed data. Bonus rows remain unverified for unresolved ties/counters; partial support does not promote composite claims."
+  "scope": "Only PRO08/EFFECT03/EFFECT04/EFFECT06 receive corroborated medium-confidence classifications; three corresponding effect statuses/citations follow those claims. All factual text, 91 other claim objects, nine Bonus records, seven policies and 22 strings remain unchanged. All Bonus-row decisions remain unverified for null tie procedures."
 }
