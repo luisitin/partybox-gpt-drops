@@ -70,3 +70,6 @@ Initial Event-only step88/518 corroborated,411 single-source,18 unresolved dispu
 
 
 2026-10-09T14:08:42.672672+00:00: Only the existing ordinary regional Steamer station-link/fare fact gains medium two-publisher support;101/518,397single-source,19conflicts,1unknown. Broader availability remains single-source, Steamer Event unknown and numbered maps0/7. All518values/517otherfacts/19conflicts preserved;3fingerprints;zero new quotes/registry/capturetimes/gates. See reports/ordinary-regional-train-link-recovery-20261009.json. Original strictNOT_MET/PR18Draft; new source-specific hosted original acceptance pending.
+
+
+2026-10-09T14:31:01.278880+00:00: Native Western ticket screenshot scope reviewed in reports/western-ticket-native-image-scope-UNADOPTED-20261009.json. Four actual paired originals leave full price-update/currenttrainEvent facts unresolved; all101 current corroborated facts and nineteen disputes unchanged.
