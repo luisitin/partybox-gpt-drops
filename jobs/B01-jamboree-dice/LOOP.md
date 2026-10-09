@@ -15,3 +15,7 @@ The weakest code gate accepted arbitrary mutant errors. It now accepts only asse
 Weakness: F07 relied on one editorial family and a historical inheritance chain. Improvement: actual full-page A/B captures of direct MarioWiki Jamboree and original Korean Namu passages, checked by a separate reader; registered exact quotes, restored source-specific provenance, revisited all 120 rows and retained the e33 snapshot. Research gaps decrease 12→11; code/model/table bytes unchanged. Full original code checks and exact-head CI are pending. This is not an after-all-checks KEEP stop; incomplete original research remains binding.
 
 Current original local suite naturally CLOSED00:10:09.159089UTC EXIT0:48/48 suites,534,138 cases,75 genuine mutants,870,000,000 rolls. Exact new-head hosted verification remains pending; original research still has11 gaps. No after-all-checks KEEP stop is asserted.
+
+## Material hosted-delivery audit (2026-10-09)
+
+Recovered original fdc fullnative/officialZIP, independently read every result/rawstatistic and all immutableGit inputs,13,506 assertionsPASS; repaired current VERIFY text that still mixed historical58-entry tables and outdated Triple/source-pass limitation wording. Actual local73 vs hosted87 manifest count is explicitly separated. Original code/models/workload untouched; no new completed research gate or after-all-checks KEEP stop. This archive head requires fresh CI observation.

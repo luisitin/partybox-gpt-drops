@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "startedUtc": "2026-10-09T00:26:42.537069+00:00",
+  "naturallyClosedUtc": "2026-10-09T00:26:43.228603+00:00",
+  "assertions": 13506,
+  "sourceHead": "fdc4dedc2809cf68f64ec3706692c7c48d3a3fc0",
+  "workflowRun": 37863550931,
+  "workflowJob": 113604766539,
+  "officialArtifactId": 11587402175,
+  "zipBytes": 69243,
+  "zipSha256": "013e597cd7c6abb5197d1e3ac7e8d005d4378bb11e2149dd0db2aae0fdc40740",
+  "actualImmutableSourceEntries": 87,
+  "wholeNativeLogBytes": 31487,
+  "wholeNativeLogSha256": "900b0e7f3b29e1ecb545bc60e6654083e9ea5d805a9cdb4798196576680a41c7",
+  "suites": 48,
+  "actualLocalCases": 534138,
+  "actualHostedCases": 534180,
+  "localHostedCaseDifference": "Exactly14 extra delivered manifest entries per seed; all other full suite rows and all original source/workload unchanged.",
+  "trials": 870000000,
+  "completeIndependentBins": 3588,
+  "compiledMutationKills": 75,
+  "nativeAll48RowsMatched": true,
+  "localHostedCompleteMonteCarloAndMutantReportsEqual": true,
+  "allSourcesUnchanged": true,
+  "members": {
+    "blind-selfcheck/SELFCHECK.json": {
+      "bytes": 128,
+      "sha256": "43dec0d6c8cc03177eec10eb85c3cad9a2b74481e89893ca38f258039ece5a39"
+    },
+    "blind-selfcheck/package.json": {
+      "bytes": 62,
+      "sha256": "2a90eb4a149c050ea8d254b170087ce133830fa09390a2eba8688ad3e1dd89df"
+    },
+    "blind-selfcheck/compiled/reference.js": {
+      "bytes": 5304,
+      "sha256": "0401123056f9de05367db6aad6f79fb5110e451f8a35909511e1e0f693a996d6"
+    },
+    "blind-selfcheck/reference.ts": {
+      "bytes": 6053,
+      "sha256": "c98f59f1372ad59904437e93bfed9f0cc6872b92cc58efc249380beb5bad2718"
+    },
+    "blind-selfcheck/selfcheck.mjs": {
+      "bytes": 3058,
+      "sha256": "8d2e83738900623d00306061d5b91bd2271d7bc12e46e4a11183d20b7ad9b550"
+    },
+    "monte-carlo-seed-1.json": {
+      "bytes": 229448,
+      "sha256": "383942196ae81f075803d950fd58d958fd2b18b5857fd500c511176de499f1e7"
+    },
+    "monte-carlo-seed-2.json": {
+      "bytes": 229452,
+      "sha256": "4f12afb0fa00c83b04b7c2d496efb663e20df7d4ab831d9800c51474ae071c42"
+    },
+    "monte-carlo-seed-3.json": {
+      "bytes": 229430,
+      "sha256": "a7e54e0b9b85bd9025ef17a0fab32e0ba07ca611cf5339bdad15c39ff7049811"
+    },
+    "montecarlo": {
+      "bytes": 17360,
+      "sha256": "911e53e1015ddebb2a0db1eecc81f8fd78335652c391b6dd3100a7e75bc33134"
+    },
+    "mutations-seed-1.json": {
+      "bytes": 11656,
+      "sha256": "7cf447de9ae6665d22a897a12f6d5490b2e3dfd698c901372c20b807a6a07209"
+    },
+    "mutations-seed-2.json": {
+      "bytes": 11656,
+      "sha256": "7cf447de9ae6665d22a897a12f6d5490b2e3dfd698c901372c20b807a6a07209"
+    },
+    "mutations-seed-3.json": {
+      "bytes": 11656,
+      "sha256": "7cf447de9ae6665d22a897a12f6d5490b2e3dfd698c901372c20b807a6a07209"
+    },
+    "suites.json": {
+      "bytes": 11868,
+      "sha256": "a255601628143e00b82eb3613871a09c339bf6b42465c3bf7306dcb04c6a363e"
+    },
+    "validator-seed-1.txt": {
+      "bytes": 93,
+      "sha256": "f97a6fb26c665e241fd29649f118dbc49c2d35f63102765d457111ca2ebc49ff"
+    },
+    "validator-seed-2.txt": {
+      "bytes": 93,
+      "sha256": "2d8f3916637109a726095b0b1be466aa6edcbaa5327dea5ceb21191a3ed0c43a"
+    },
+    "validator-seed-3.txt": {
+      "bytes": 93,
+      "sha256": "1a0ff6f0897f32f8e2eee87ee771895afcbeb3acfaf6aa63f3390314266da9e3"
+    }
+  },
+  "earlierReaderFailures": [
+    "Unnormalized ../../ workflow path passed to Git show; actual EXIT1 before normalized actual87 proof.",
+    "urllib temporary FileService HTTP403 before ZIP saved; actual curl same signed reference later succeeded.",
+    "Initial apply_patch full-log save added an extra terminal newline; replaced from untouched full original native connector string before any acceptance."
+  ],
+  "researchStillPartial": true,
+  "remainingResearchGates": 11
+}
