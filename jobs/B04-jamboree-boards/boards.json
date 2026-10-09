@@ -13775,7 +13775,7 @@
           {
             "id": "western-land:map_link:train_transfer",
             "kind": "map_link",
-            "status": "single_source",
+            "status": "corroborated",
             "confidence": "medium",
             "value": {
               "from": "train station",
@@ -13795,9 +13795,21 @@
                 "quote": "get from one train station to another",
                 "locator": "Western",
                 "quoteId": "MPL_BOARDS-Q021"
+              },
+              {
+                "sourceId": "NAMU_KR_COUNTS",
+                "quote": "3",
+                "locator": "Complete4.2.5.7 Western/Jamboree current train-fare paragraph: one station3 coins, two stations6; Buddy6/12 separately excluded. Existing numeric quote supports fare, complete authored paragraph supports regional station linkage.",
+                "quoteId": "NAMU_KR_COUNTS-Q003"
+              },
+              {
+                "sourceId": "NAMU_KR_COUNTS",
+                "quote": "6",
+                "locator": "Complete4.2.5.7 Western/Jamboree current train-fare paragraph: two stations6 coins; ordinary no-Buddy fare. Full chapter/footnotes83–86 examined; no quote/source budget reset.",
+                "quoteId": "NAMU_KR_COUNTS-Q006"
               }
             ],
-            "note": "Regional connection only; endpoints are editorial region labels, not game space IDs."
+            "note": "2026-10-09 complete narrow regional-link review: Wiki Western current Jamboree introduction and same-family Steamer current chapter, versus independently authored Namu Western chapter, agree on ordinary no-Buddy station transport for one/two stops at3/6 coins. Existing numeric Namu quotes cite prices only; the whole native chapter establishes the station relationship. The same Wiki family is one publisher, and bare MPL station prose is supporting context without independent fare proof. Exact station space IDs and direction-selection mechanism remain unknown. Broader train availability is a separate single-source fact; no Steamer Event, exact numbered adjacency, Buddy price, Pro/TV profile or current Nintendo execution is promoted. Medium confidence reflects community provenance and an unobserved game build. Zero new expressive quotations."
           }
         ],
         "unverified": [

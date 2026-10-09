@@ -1069,7 +1069,7 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | western-land:events:hootenanny | corroborated/medium | W_WESTERN-Q026, W_GAME-Q010, NAMU_KR_COUNTS-Q024, CEL_BOARDS-Q001 |
 | western-land:events:steamer_ticket | single_source/medium | W_GAME-Q011, W_WESTERN-Q027 |
 | western-land:phases:unlock | corroborated/high | W_GAME-Q012, MPL_BOARDS-Q020, GR_UNLOCK-Q001, GR_UNLOCK-Q002 |
-| western-land:map_link:train_transfer | single_source/medium | W_WESTERN-Q024, MPL_BOARDS-Q021 |
+| western-land:map_link:train_transfer | corroborated/medium | W_WESTERN-Q024, MPL_BOARDS-Q021, NAMU_KR_COUNTS-Q003, NAMU_KR_COUNTS-Q006 |
 | shared:star_cost | corroborated/high | N_AU-Q003, MPL_BOARDS-Q002 |
 | shared:homestretch_base | single_source/medium | W_HOME-Q003, W_HOME-Q004 |
 | shared:mushroom | single_source/medium | W_HOME-Q005 |
