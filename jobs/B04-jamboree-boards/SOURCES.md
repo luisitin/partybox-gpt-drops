@@ -720,7 +720,7 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | rainbow-galleria:events:boo_shop | corroborated/high | W_GALLERIA-Q031, W_GALLERIA-Q047, W_GALLERIA-Q048, GR_GALLERIA-Q022, GR_GALLERIA-Q023, GR_GALLERIA-Q024, GR_GALLERIA-Q025 |
 | rainbow-galleria:events:thrift | corroborated/high | W_GALLERIA-Q032, GR_GALLERIA-Q012 |
 | rainbow-galleria:events:loadstone | conflict/low | W_GALLERIA-Q033, GR_GALLERIA-Q013 |
-| rainbow-galleria:events:raffle | single_source/medium | W_GALLERIA-Q034, W_GALLERIA-Q035, GR_GALLERIA-Q014, GR_GALLERIA-Q015, GR_GALLERIA-Q016 |
+| rainbow-galleria:events:raffle | corroborated/medium | W_GALLERIA-Q034, W_GALLERIA-Q035, GR_GALLERIA-Q014, GR_GALLERIA-Q015, GR_GALLERIA-Q016, W_GALLERIA-Q048, NAMU_KR_COUNTS-Q023, SASKE_GALLERIA-Q003 |
 | rainbow-galleria:phases:stamp_color_labels | conflict/low | W_GALLERIA-Q036, GR_GALLERIA-Q017 |
 | rainbow-galleria:phases:flash_sale | corroborated/high | W_GALLERIA-Q037, W_GALLERIA-Q038, GR_GALLERIA-Q018, GR_GALLERIA-Q019 |
 | rainbow-galleria:phases:flash_qualifiers | single_source/medium | W_GALLERIA-Q039, W_GALLERIA-Q040, W_GALLERIA-Q041 |
@@ -1189,3 +1189,13 @@ Canonical source is the H1g editorial current Jamboree item table. Only exact re
 2026-10-09T11:25:34.542209+00:00: Four ordinary moving-Star values use unchanged MPL clips and existing NAMU_KR_COUNTS-Q015 numeral20 in complete ordinary Star Exchange context. Full native A/B reads explicitly support normal20-price and generally relocating Star. Zero new quotes, registry or historical capture changes; sharedNamu250/250/Cel131 remain. Keep/Raceway/Castle/special-mode/location/selection qualifiers excluded.
 
 2026-10-09T12:05:23.144038+00:00: Four explicitly angry ordinary Wiggler typed counts compared in both complete original publishers and both passes. Three matches11/6/4 medium,blue21v24 newLOWdisagreement retaining24. Existing Namu numeric fragmentsQ011/Q006/Q004/Q016 reused in full named typed context; zero new quotes/registry/capture edits. No entire-profile,total,Start/Rally,TV or other-mode promotion.
+
+### SASKE_GALLERIA complete raffle stopping scope, 2026-10-09T15:23:01.424576+00:00
+
+Canonical original https://ngamer.hatenablog.com/entry/2024/11/02/200100, author SASKE, native date 2024-11-02.
+
+| Quote ID | Exact brief author clause | Assistant meaning |
+| --- | --- | --- |
+| SASKE_GALLERIA-Q003 | このマスに止まらないといけない | One must stop on this square. |
+
+One new tiny original clause:15 Japanese characters/one whitespace word. Same canonical source now3 original whitespace words under unchanged200 gate; no source-ID budget reset. Entire1640-character A/B source account and both native raffle images reviewed privately. Old full-page retrieval dates remain unchanged; image requests genuinely closed15:10:19.358463. Complete Korean2377-character chapter supplies exact ordinary draw count using existing NAMU_KR_COUNTS-Q023 as a context locator; no new Korean expressive words. Shared Namu250/250 full/local30/200 and Cel131 unchanged. Full bodies/images stay private.

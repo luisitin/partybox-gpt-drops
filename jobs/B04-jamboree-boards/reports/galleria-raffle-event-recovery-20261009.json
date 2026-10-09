@@ -1,0 +1,377 @@
+{
+  "job": "B04",
+  "actualReviewedAt": "2026-10-09T15:23:01.424576+00:00",
+  "reviewer": "codex-board-audit-20261009",
+  "sourceParent": "98d7346a260aa39d8a8a38493385f64cfb16fa8d",
+  "decision": "Support only the complete existing ordinary raffle fact at medium",
+  "onlyChangedFact": "rainbow-galleria:events:raffle",
+  "currentFactStatuses": {
+    "corroborated": 102,
+    "single_source": 396,
+    "conflict": 19,
+    "unverified": 1
+  },
+  "all518ValuesUnchanged": true,
+  "all517OtherCompleteFactsUnchanged": true,
+  "all19ConflictObjectsUnchanged": true,
+  "onlyChangedAuditFingerprints": [
+    "rainbow-galleria:events:raffle",
+    "rainbow-galleria:board_record"
+  ],
+  "other591AuditRowsByteEquivalent": true,
+  "wholeFact": {
+    "id": "rainbow-galleria:events:raffle",
+    "kind": "events",
+    "status": "corroborated",
+    "confidence": "medium",
+    "value": {
+      "name": "Raffle",
+      "trigger": "Land on Raffle Event Space after buying items.",
+      "effect": "A draw per purchased item: white 1,green 5,blue 15,red 30 coins or gold Golden Pipe.",
+      "payouts": {
+        "white": 1,
+        "green": 5,
+        "blue": 15,
+        "red": 30,
+        "gold": "Golden Pipe"
+      },
+      "probabilities": null
+    },
+    "evidence": [
+      {
+        "sourceId": "W_GALLERIA",
+        "quote": "one drawing per item purchased",
+        "locator": "Drawing",
+        "quoteId": "W_GALLERIA-Q034"
+      },
+      {
+        "sourceId": "W_GALLERIA",
+        "quote": "1, 5, 15, 30 coins, or a Golden Pipe",
+        "locator": "same payout",
+        "quoteId": "W_GALLERIA-Q035"
+      },
+      {
+        "sourceId": "GR_GALLERIA",
+        "quote": "white ball grants the player 1 coin, a green ball gives 5 coins, a blue ball awards 15 coins",
+        "locator": "raffle",
+        "quoteId": "GR_GALLERIA-Q014"
+      },
+      {
+        "sourceId": "GR_GALLERIA",
+        "quote": "red ball provides 30 coins",
+        "locator": "same",
+        "quoteId": "GR_GALLERIA-Q015"
+      },
+      {
+        "sourceId": "GR_GALLERIA",
+        "quote": "golden ball, they win the grand prize: a Golden Pipe",
+        "locator": "same",
+        "quoteId": "GR_GALLERIA-Q016"
+      },
+      {
+        "sourceId": "W_GALLERIA",
+        "quote": "landing on either",
+        "quoteId": "W_GALLERIA-Q048",
+        "locator": "Entire current native Event Spaces introduction and complete raffle paragraph: landing after item purchases, one drawing per purchased item and five exact color outcomes. Existing brief locator, not the whole supporting context."
+      },
+      {
+        "sourceId": "NAMU_KR_COUNTS",
+        "quote": "이벤트 칸",
+        "quoteId": "NAMU_KR_COUNTS-Q023",
+        "locator": "Entire retained 2377-character Galleria chapter A/B and all six attached footnotes: special Event Space shop introduction followed by named raffle booth, draw count equal all prior item purchases, and five exact color awards. Existing two-word space-type locator reused; complete paragraph, not that clip alone, supplies the exact ordinary draw-count clause. No Buddy purchase/draw multiplication inferred."
+      },
+      {
+        "sourceId": "SASKE_GALLERIA",
+        "quote": "このマスに止まらないといけない",
+        "quoteId": "SASKE_GALLERIA-Q003",
+        "locator": "Entire independent SASKE first-person 1640-character board account A/B: raffle paragraph explicitly requires stopping, then later Donkey cannot draw because he had not shopped. Both native 1200x675 images 6 and21 show green exclamation Event Spaces at the raffle. Nintendo instructional wording in the image is first-party corroboration only, not another authored source."
+      }
+    ],
+    "note": "2026-10-09: whole ordinary raffle fact corroborated at medium. Native Wiki states Event Space landing after shopping, exactly one draw per purchased item and all five color outcomes. Independent original Namu full Galleria paragraph equates draws to prior item purchases and states all five outcomes; SASKE independently observes required stopping and no draw without earlier shopping, with actual green Event Spaces pictured. GameRant separately supports all five prizes but still omits exact one-per-item and space-type qualifiers. No probability, reset implementation, Buddy transaction/draw multiplier, count, numbered location, stock, price, Pro/TV profile or installed-version claim is added. Prior unadopted candidate is preserved as dated history."
+  },
+  "literalNewQuote": {
+    "id": "SASKE_GALLERIA-Q003",
+    "text": "このマスに止まらないといけない"
+  },
+  "newQuoteCharacters": 15,
+  "newQuoteOriginalWhitespaceWords": 1,
+  "assistantQuoteMeaning": "One must stop on this square.",
+  "assistantMeaningIsSourceQuote": false,
+  "sourcePasses": [
+    {
+      "pass": "A",
+      "originalRetrievedAt": "2026-10-09T06:57:01.956444+00:00",
+      "entireAuthoredBodySHA256": "8049c3ad73f2073e4dd4508875a024a7623c05923095e95804654cd8e4108aba",
+      "rawSHA256": "dfb5fe610ee546d40ce44dabd728637cc00cd4b18881eb2f7e864ab50230d0f2",
+      "entireBodyCharacters": 1640
+    },
+    {
+      "pass": "B",
+      "originalRetrievedAt": "2026-10-09T06:57:06.228309+00:00",
+      "entireAuthoredBodySHA256": "8049c3ad73f2073e4dd4508875a024a7623c05923095e95804654cd8e4108aba",
+      "rawSHA256": "dfb5fe610ee546d40ce44dabd728637cc00cd4b18881eb2f7e864ab50230d0f2",
+      "entireBodyCharacters": 1640
+    }
+  ],
+  "independentSourceScopeMapping": {
+    "trigger": "Wiki complete introduction/raffle plus independent SASKE whole first-person stopping/no-shopping observations and native Event Space type images; Namu complete special-shop/Event introduction and named booth support.",
+    "oneDrawPerPurchasedItem": "Wiki explicit exact one-per-item plus independent complete Namu ordinary item-purchase-count paragraph. No Buddy transaction multiplication inferred.",
+    "allFiveColorOutcomes": "Wiki plus independent full GameRant raffle paragraph; Namu agrees too."
+  },
+  "editorialIndependence": "MarioWiki editorial community; Namu Korean community narrative with all relevant footnotes/outgoing lineage previously audited and reread; SASKE separately attributed first-person authored game observations; GameRant/Jessica Bell/Valnet independent of those three. Repeated requests are each one publisher; native Nintendo instruction is not another independently authored witness. No exhaustive contributor-identity or external referenced-work reread claim.",
+  "priorCandidateSHA256": "49ac5266ba7b51050ac0997d02f5ef742b5af3a1b46c044a116fedcaa5d3f178",
+  "pairedWikiGameRantScopeIntegrity": {
+    "wholeCandidateReport": "reports/galleria-raffle-whole-clause-candidate-UNADOPTED-20261009.json"
+  },
+  "nativeImageCollector": {
+    "startedAt": "2026-10-09T15:10:14.813978+00:00",
+    "closedAt": "2026-10-09T15:10:19.358463+00:00",
+    "elapsedSeconds": 4.544481677003205,
+    "declaredWholeBoundSeconds": 40,
+    "declaredMaxResponseBytes": 4000000,
+    "nativePid": 414703,
+    "externalChildren": [],
+    "terminationSignals": [],
+    "allRequestedFullHttp200": true,
+    "completedRequests": 4,
+    "requestedImageIndices": [
+      5,
+      20
+    ],
+    "fullPairedSourceHTMLHashes": {
+      "A": "dfb5fe610ee546d40ce44dabd728637cc00cd4b18881eb2f7e864ab50230d0f2",
+      "B": "dfb5fe610ee546d40ce44dabd728637cc00cd4b18881eb2f7e864ab50230d0f2"
+    },
+    "failure": null,
+    "rawPublic": false
+  },
+  "pairedImageIntegrity": [
+    {
+      "zeroBasedNativeEntryIndex": 5,
+      "humanOneBasedIndex": 6,
+      "originalRawBytes": 650390,
+      "rawA_SHA256": "8fad3082242136d2f915451b6856579ff3d14cd4f014061f8954cbaaa9518583",
+      "rawB_SHA256": "8fad3082242136d2f915451b6856579ff3d14cd4f014061f8954cbaaa9518583",
+      "rawPairEqual": true,
+      "RGBPixelPairEqual": true,
+      "RGBPixelSHA256": "a260db2649990fe491d9ee5574eef6aeb7a43a86bf9d43d62390f9a131febfb1",
+      "originalDimensions": [
+        1200,
+        675
+      ]
+    },
+    {
+      "zeroBasedNativeEntryIndex": 20,
+      "humanOneBasedIndex": 21,
+      "originalRawBytes": 670092,
+      "rawA_SHA256": "a6881b05efde7ba781ed911a4b514c2a433975904d2d720b5e769b8284ec69b1",
+      "rawB_SHA256": "a6881b05efde7ba781ed911a4b514c2a433975904d2d720b5e769b8284ec69b1",
+      "rawPairEqual": true,
+      "RGBPixelPairEqual": true,
+      "RGBPixelSHA256": "f5dadf0470d3f59b4cfdf28375b7ad70dfe6d8dd3332a316749ebc5f990d873a",
+      "originalDimensions": [
+        1200,
+        675
+      ]
+    }
+  ],
+  "bothWholeOriginalImagesPersonallyViewed": true,
+  "localSASKEOriginalWhitespaceWords": 3,
+  "localQuoteGateUnchanged": 200,
+  "NamuLocalQuotaUnchanged": 30,
+  "NamuSharedAuthoredQuotaUnchanged": "250/250 FULL; zero new expressive words",
+  "CelSharedCommittedUnchanged": 131,
+  "newWikiGameRantNamuCelWords": 0,
+  "existingSASKECanonicalQuoteBudgetNotReset": true,
+  "otherChatSASKEQuoteAudit": "B03 read-only exact canonical current registry/reservations audit reports zero use; this transfers no fact proof. One tiny 15-character original excerpt added by B04.",
+  "limitations": "No probability, reset implementation, Buddy double items/draws, complete inventory/price/count, numbered map, profile, Pro/TV or physical installed-version claim. Current unknown train Event and all conflicts remain. Raw original bodies/images remain private.",
+  "actualParentWholeOriginalAcceptance": {
+    "sourceSHA": "98d7346a260aa39d8a8a38493385f64cfb16fa8d",
+    "sourceNormalFFActualUTC": "2026-10-09T14:59:46Z",
+    "actualWholeOriginalNativePersonallyReadAt": "2026-10-09 15:03:08 UTC",
+    "workflowPath": ".github/workflows/B04.yml",
+    "workflowRunId": 37948369642,
+    "runHeadSHA": "98d7346a260aa39d8a8a38493385f64cfb16fa8d",
+    "runStatus": "completed",
+    "runConclusion": "success",
+    "runCreatedAt": "2026-10-09T14:59:53Z",
+    "jobId": 113880462547,
+    "jobStartedAt": "2026-10-09T14:59:56Z",
+    "jobClosedAt": "2026-10-09T15:00:06Z",
+    "allNineActualOriginalSteps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-10-09T14:59:57Z",
+        "completed_at": "2026-10-09T14:59:58Z"
+      },
+      {
+        "name": "Run actions/checkout@v4",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-10-09T14:59:58Z",
+        "completed_at": "2026-10-09T14:59:59Z"
+      },
+      {
+        "name": "Run actions/setup-python@v5",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-10-09T14:59:59Z",
+        "completed_at": "2026-10-09T14:59:59Z"
+      },
+      {
+        "name": "Run python -m pip install -r requirements.txt",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-10-09T14:59:59Z",
+        "completed_at": "2026-10-09T15:00:01Z"
+      },
+      {
+        "name": "Run python verify.py --structural --checksums",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-10-09T15:00:01Z",
+        "completed_at": "2026-10-09T15:00:02Z"
+      },
+      {
+        "name": "Record explicit unresolved original research standard",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-10-09T15:00:02Z",
+        "completed_at": "2026-10-09T15:00:03Z"
+      },
+      {
+        "name": "Post Run actions/setup-python@v5",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 11,
+        "started_at": "2026-10-09T15:00:03Z",
+        "completed_at": "2026-10-09T15:00:03Z"
+      },
+      {
+        "name": "Post Run actions/checkout@v4",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 12,
+        "started_at": "2026-10-09T15:00:03Z",
+        "completed_at": "2026-10-09T15:00:03Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 13,
+        "started_at": "2026-10-09T15:00:03Z",
+        "completed_at": "2026-10-09T15:00:03Z"
+      }
+    ],
+    "actualOfficialMerge": {
+      "sha": "5b88d9a6b5f55930575ce8d5786ef987ce684f2f",
+      "node_id": "C_kwDOU-9Il9oAKDViODhkOWE2YjVmNTU5MzA1NzVjZThkNTc4NmVmOTg3Y2U2ODRmMmY",
+      "url": "https://api.github.com/repos/luisitin/partybox-gpt-drops/git/commits/5b88d9a6b5f55930575ce8d5786ef987ce684f2f",
+      "html_url": "https://github.com/luisitin/partybox-gpt-drops/commit/5b88d9a6b5f55930575ce8d5786ef987ce684f2f",
+      "author": {
+        "name": "luisitin",
+        "email": "86866707+luisitin@users.noreply.github.com",
+        "date": "2026-10-09T14:59:49Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-10-09T14:59:49Z"
+      },
+      "tree": {
+        "sha": "4bd7fd7854eca943020fbcbe8716183a5e40f6f6",
+        "url": "https://api.github.com/repos/luisitin/partybox-gpt-drops/git/trees/4bd7fd7854eca943020fbcbe8716183a5e40f6f6"
+      },
+      "message": "Merge 98d7346a260aa39d8a8a38493385f64cfb16fa8d into 964f55c961fd1a93d1a9f2711f60d2a70c535b23",
+      "parents": [
+        {
+          "sha": "964f55c961fd1a93d1a9f2711f60d2a70c535b23",
+          "url": "https://api.github.com/repos/luisitin/partybox-gpt-drops/git/commits/964f55c961fd1a93d1a9f2711f60d2a70c535b23",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/commit/964f55c961fd1a93d1a9f2711f60d2a70c535b23"
+        },
+        {
+          "sha": "98d7346a260aa39d8a8a38493385f64cfb16fa8d",
+          "url": "https://api.github.com/repos/luisitin/partybox-gpt-drops/git/commits/98d7346a260aa39d8a8a38493385f64cfb16fa8d",
+          "html_url": "https://github.com/luisitin/partybox-gpt-drops/commit/98d7346a260aa39d8a8a38493385f64cfb16fa8d"
+        }
+      ],
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqyQFlCRC1aQ7uu5UhlAAAhzAQAElEoZKOC4/ACb1ib02K9F/I\neawkOh6TY2MS+QDG3CZ89VC3n0zgo43rvuJ5vKxrEbMdDpaAGVKmeOFYYA1Gzk+g\nS9cNGzwZ5L7PXwO+Izo9CF5kf/syggAoDnKy9thn8jtMY9/Q/G6iIct6hVNoaFNB\n+G5mT4rp3tsHhF/ZEPH3taZF4AJrg+5m9I1szldaSc5RAOWKbiTaQlgjE5HBjHPr\nLQa+7yJG7bqfN8ZJ5o2Fzog5z2IZ4Ld7j5Jk40WSpz8fRhmRH45cPDpV/Kpnwe4F\nRiBvww859M8je5CEQBtChAAY7xeNyOC5t214n0OuAl5C2IaoP/0Ze7AYFRSX8kcX\nNVIY9xEV16wywUBwrWYpTewabQMO1/grS/hdUFGm1tYVi2WyMXlh74mygX9AiWKl\nahMrLAay+H9lGDgZaXvHDM2efCUkKUUYO5/JgzLTnXnLCGoFF2SrwPIvfMZvpyKj\nfmGJ9773ij/ZfmZu5VNWkiZh7kEqebufbGLDchk3JQ1bx+LR870Z4Z1keduySTB+\nvtgvWHYrMEXMSCnx9dDVWTQVpiQEgb1Rh/usI8yefhG/aj1A9cmkfjKBK9srVFIP\nEKH5TPfSEXtqX882Dg8ngrZeMn/ZWlU4K9elktq8vB5O9acZMNRPX/bQsb0yT2/Z\nXfM4la8ZAClxCIg7ho3u\n=qceN\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 4bd7fd7854eca943020fbcbe8716183a5e40f6f6\nparent 964f55c961fd1a93d1a9f2711f60d2a70c535b23\nparent 98d7346a260aa39d8a8a38493385f64cfb16fa8d\nauthor luisitin <86866707+luisitin@users.noreply.github.com> 1791557989 +0000\ncommitter GitHub <noreply@github.com> 1791557989 +0000\n\nMerge 98d7346a260aa39d8a8a38493385f64cfb16fa8d into 964f55c961fd1a93d1a9f2711f60d2a70c535b23\n",
+        "verified_at": "2026-10-09T14:59:50Z"
+      }
+    },
+    "native": {
+      "path": "/dev/shm/B04-Galleria-raffle-original-20261009-1456/current-native-113880462547.log",
+      "utf8Bytes": 21441,
+      "characters": 21439,
+      "sha256": "a615e0818d9a19b05f8b215204497eeed99d67cd14a233a4c2582d65b22f9239",
+      "entireUnfilteredOriginal": true,
+      "BOMAndANSIAndCleanupRetained": true,
+      "setupDependenciesWarningsEntireNativePersonallyRead": true
+    },
+    "structural": {
+      "actualExitCode": 0,
+      "suites": 26,
+      "cases": 5792,
+      "manifest": 130
+    },
+    "strict": {
+      "actualExitCode": 1,
+      "suites": 25,
+      "cases": 5662,
+      "twoSource": "101/518 FAIL",
+      "currentEvents": "37/38 FAIL",
+      "exactNumberedMaps": "0/7",
+      "nintendoGameplay": "NO",
+      "research": "NOT_MET",
+      "unchangedOriginalExpectedExitOneGate": true
+    },
+    "all518FactsAndValuesAnd593AuditFingerprintsUnchanged": true,
+    "all19ConflictsUnchanged": true,
+    "zeroQuotesRegistryCaptureDatesSchemaWorkflowGateChanges": true,
+    "allForeignTreeLeavesPreserved": true,
+    "wholeFactCandidate": "UNADOPTED raffle; counts101 unchanged",
+    "prStatus": {
+      "number": 18,
+      "Draft": true,
+      "open": true,
+      "unmerged": true
+    },
+    "cadence": {
+      "priorSourceHonestBounds": [
+        "2026-10-09T14:33:37Z",
+        "2026-10-09T14:33:45Z"
+      ],
+      "actualPublication": "2026-10-09T14:59:46Z",
+      "actualIntervalBoundsSeconds": [
+        1561,
+        1569
+      ],
+      "early25MissSeconds": 69,
+      "hard30Pass": true,
+      "nextEarly": "2026-10-09T15:24:46Z",
+      "nextHard": "2026-10-09T15:29:46Z"
+    },
+    "limitations": "Structural packaging passes while the original strict research standard remains explicitly unmet. Historical5cd acceptance is not substituted. Full bodies/images/private response headers remain private. Repeated requests are one publisher each; no physical Nintendo execution or new102count claimed.",
+    "runMetadataUpdatedAt": "2026-10-09T15:00:07Z"
+  },
+  "currentHostedOriginalAcceptance": "Pending new source publication; parent98d is historical only.",
+  "knownEvents": "37/38",
+  "exactNumberedMaps": "0/7",
+  "strictResearch": "NOT_MET",
+  "prDraft": true,
+  "parentIndependentPeer": "Optional additional peer not received at this review; current decision is this reviewer own complete A/B scope review, not an invented parent approval.",
+  "negativeTrainResearch": "New paired AtWiki full original context still lacks initial5/passing Milk stall and current Event direction/end. Japanese Fandom full-original A/B request failed HTTP402; search snippets remain leads, not adopted source proof."
+}

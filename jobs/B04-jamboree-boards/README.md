@@ -76,3 +76,9 @@ Initial Event-only step88/518 corroborated,411 single-source,18 unresolved dispu
 
 
 2026-10-09T14:58:35.247096+00:00: New complete raffle clause evidence and precise pending triggerbinding are retained in reports/galleria-raffle-whole-clause-candidate-UNADOPTED-20261009.json. All101supportedfacts/19disputes unchanged; no probability/mode/price extension or newauthorword quota allocated.
+
+### Current complete raffle recovery, 2026-10-09T15:23:01.424576+00:00
+
+2026-10-09T15:23:01.424576+00:00: One complete ordinary raffle fact gains medium two-publisher-per-clause support:102/518 corroborated,396 single-source,19 conflicts,1 unknown;37/38 known events,0/7 exact numbered maps. All518 values,517 other complete fact objects and591 other audit rows unchanged. Original strict NOT_MET; PR18 Draft. Only SASKE15-character one-word stopping excerpt added; Namu250/full and Cel131 unchanged. Parent98d entire original hosted proof accepted15:03:08, now historical for the child; child whole CI pending after publication.
+
+See reports/galleria-raffle-event-recovery-20261009.json for full clause mapping, native image integrity and original capture-date limits. Dated earlier101-candidate reports remain historical.
