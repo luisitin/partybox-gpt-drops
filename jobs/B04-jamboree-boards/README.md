@@ -88,3 +88,5 @@ See reports/galleria-raffle-event-recovery-20261009.json for full clause mapping
 2026-10-09T15:37:09.506559+00:00:106/518 corroborated,392 single-source,19 disagreements,1 unknown;37/38 current events and0/7 exact numbered maps. Four complete existing coarse shop locations gain medium independent support; all518 values/514 other complete facts/584 other audit rows/19conflicts unchanged. Only9fingerprints:4facts+4partialshopprofiles+partialboard. No new quotations, registry/capture dates, gates, schema or workflow. Namu250/full/local30 and Cel131 unchanged. PR18Draft; original strict NOT_MET.
 
 Exact scope and source lineage:reports/galleria-four-regional-locations-recovery-20261009.json. Earlier102 raffle milestone, all previous101 records and actual source gaps remain dated history. Parent9e422 whole original acceptance is retained separately; currentchild hostedCI pending after publication.
+
+- 2026-10-09T16:13:37.559288+00:00: The new complete prerelease Western source is an explicit negative finding, not current gameplay evidence. Its hypothetical train/ticket/stock claims remain unadopted; current106 counts unchanged.
