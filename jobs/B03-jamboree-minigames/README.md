@@ -141,3 +141,4 @@ The new exact restoration checker passed2438actual comparisons plus eight reject
 
 The writer naturally CLOSED03:38:16.354713 UTC. New and inherited exact restoration/negative-control checks passed. Full current verifier/manifest/deliberate strict and genuine exact new-source hosted native/official ZIP acceptance are required before current delivery acceptance. Early03:47:06.498688/hard03:52:06.498688; actual delivery timestamps belong in originaldraftPR20. Source/controller bodies are private; bounded quotes and complete actual metadata are public. Strict research, exact independent full second-wiki roster and original KEEP GOING whole completion remain unmet.
 
+The latest proof-publication checkpoint preserves307 supported facts and adds the actual accepteded7 hosted receipt plus14 explicitly unadopted mouse-category leads. See reports/remaining-category-research.json and NEXT.md. No complete-row or strict research acceptance is claimed.

@@ -1,3 +1,23 @@
+# Actual late delivery recovery — 2026-10-09 04:40 UTC
+
+Actual full current proof-publication controller naturally CLOSED 2026-10-09T04:06:50.429976+00:00: content89suites/39581cases EXIT0; integrity90suites/39688cases/all107manifestfiles EXIT0; deliberate strictsame90/39688/all107 EXIT1 NOT_MET307/zero. Every inherited restoration and malformed control passed. All product/source/quote classifications remain unchanged;14mouse-category leads stayUNADOPTED and14Koopathlon subdivisions unsupported. Acceptedparented7 official readerCLOSED03:44:21.099275 is published as historical proof only. The early04:06:46.272233 target and hard04:11:46.272233 bound were missed. A malformed tool-construction call failed before native execution; delivery subsequently stalled until the actual04:40:00 recovery clock. This delay is not attributed to source transport or a workspace outage. Only delivery notes change after the full checks; every regenerated manifest entry and immutable staged Git byte is verified before normal push. The actual late push and genuine new-head full hosted/official acceptance are recorded after observation in originaldraftPR20, never backdated. No new factual coverage or whole-row completion is claimed.
+
+First finish the normal canonical push and entire genuine current hosted native log/official ZIP acceptance, then originaldraftPR20 exact body/state readback. The retained14mouse-category packet remains UNADOPTED; no new source adoption happened during the delay.
+
+## Preserved handoff
+
+# Current accepted proof and unadopted category research handoff
+
+Read original root README/PROMPTS B03 instructions. Own only this job folder, canonical job/B03-jamboree-minigames and original draft/open PR20. No main/CLAIMS, foreign-job write, force push, merge or new PR.
+
+Current307/1320 supported narrow facts,1013open,zero whole rows;39/93gameplay and104/28category. Every catalogue row, source, clip, classification and complete A+B remains exact accepteded7e36b. Its actual full hosted/official acceptance is reports/hosted-ci-ed7e36b-artifact.json, readerCLOSED03:44:21.099275. That proof is historical for this new checkpoint. First complete the exact new checkpoint's full content/integrity/deliberate strict protocol, all immutable staged Git bytes and normal canonical push byhard04:11:46.272233 (early04:06:46.272233), then read the whole genuine current native log and official ZIP/all immutable source hashes and rewrite/read back only original draftPR20.
+
+The14 mouse-category candidates are UNADOPTED in reports/remaining-category-research.json. Before any status promotion, read complete fresh native NintendoLifeTV article scopes and both historicalW_LIST bodies from .work/remaining-research-0038/category-lead-captures-0403 and .work/registry-repair-2255. Literal complete Mouse Minigames membership matches14 current English names after only case/punctuation normalization. Introduce a new exact accepteded7 restoration proof preserving132rows148sources1949old quotation classifications/full A+B, append only bounded heading clips with cumulative public-heading allowance, regenerate CSV/audits/gap reports, preserve all inherited malformed tests, and rerun every complete check before adoption. No generic format or copied Nintendo instruction is independent gameplay support. The other14 Koopathlon subdivisions remain unsupported by the complete generic MarioPartyLegacy heading.
+
+Continue93remaining gameplay summaries and detailed controls/timers/win/score/tie/mode-payout facts from original independent publishers. Exact second-wiki full English roster remains unresolved; Fandom's98 cloudlead plus actual2×HTTP402/55received bytes does not close132. Namu same canonical top-level article is shared acrossjobs, so do not expand its195 historical words or delete history. Original guide200 is exhausted; tips73, GNC26, BestBuy94 andConsoleCreatures23 retain their histories. Public candidate heading metadata addsW_LIST2/NL_TV2/MPL_BASE3 outside the registry; preserve those in cumulative budgets. All source bodies stay private. No whole-row/Ready/strict KEEP GOING/cosmetic-only claim. Every elapsed native performance experiment requires a fresh explicit root quiet grant; finite commands naturally close beforeHOLD.
+
+## Preserved historical handoff
+
 # Current Knock-Knock Match summary-scope handoff
 
 Read original root README/PROMPTS B03 instructions. Own only jobs/B03-jamboree-minigames/canonicaljob/B03-jamboree-minigames/originalPR20draft/open; no main/CLAIMS/foreign job/force/merge/newPR.
