@@ -9,3 +9,9 @@ The weakest code gate accepted arbitrary mutant errors. It now accepts only asse
 2026-10-07T15:07:38Z: Cloud revalidation used the complete unchanged test command and passed all 48 suites, 870M trials and 75 mutation checks. Investigated the weakest gate, missing independent research; every registered source and six search/gameplay hosts were denied by current networking. Preserved exact errors, recorded BLOCKED.md and continued queue order. No probability or citation was guessed.
 
 2026-10-07: After access recovered, reopened every registered source twice and audited all 34 facts. All accepted quotations were recovered; the twelve weakest research gates still need independent observations, exact Luigi data or vetted RNG/version evidence. Recorded concrete evidence gaps and current search/capture limits instead of preserving an obsolete blanket network blocker. Code and conditional model were unchanged.
+
+## 2026-10-09 material research review
+
+Weakness: F07 relied on one editorial family and a historical inheritance chain. Improvement: actual full-page A/B captures of direct MarioWiki Jamboree and original Korean Namu passages, checked by a separate reader; registered exact quotes, restored source-specific provenance, revisited all 120 rows and retained the e33 snapshot. Research gaps decrease 12→11; code/model/table bytes unchanged. Full original code checks and exact-head CI are pending. This is not an after-all-checks KEEP stop; incomplete original research remains binding.
+
+Current original local suite naturally CLOSED00:10:09.159089UTC EXIT0:48/48 suites,534,138 cases,75 genuine mutants,870,000,000 rolls. Exact new-head hosted verification remains pending; original research still has11 gaps. No after-all-checks KEEP stop is asserted.

@@ -362,7 +362,7 @@ Pass 1: `reports/source-captures/new-source-nintendo-tv.json`. Pass 2: `reports/
 | F04 | Double Dice rolls two normal blocks and sums movement. | S03, S05 | two-source | high |
 | F05 | Matching Double Dice awards 10 coins, including matching sevens. | S05, S04, S27 | two-source | high |
 | F06 | Triple Dice rolls three normal blocks and sums movement. | S03, S06 | two-source | high |
-| F07 | Triple Dice reportedly awards 20 for all-equal non-sevens or 50 for 7+7+7. | S04, S06, S08 | single-source | medium |
+| F07 | Triple Dice reportedly awards 20 for all-equal non-sevens or 50 for 7+7+7. | S04, S06, S08, S29 | two-source | medium |
 | F08 | Payday Double Dice adds coins equal to the total movement roll. | S03, S07 | two-source | high |
 | F09 | Payday Double Dice reportedly also pays the 10-coin matching bonus. | S07, S04 | single-source | medium |
 | F10 | Payday Triple Dice adds coins equal to the total movement roll. | S03, S08 | two-source | high |
@@ -396,3 +396,16 @@ Ten targeted follow-up searches examined 50 result slots, alongside two initial 
 ## Current source re-open status
 
 Two post-recovery passes retrieved all 25 accepted sources and matched their registered quotations; precise times/hashes and per-fact references are in reports/cloud-post-recovery-research.json. The original source-family assignments and unresolved statuses are unchanged. Rejected mirror S23 remains unavailable and is not independent corroboration.
+
+## S29 — current independent Korean corroboration
+
+URL: https://namu.wiki/w/%EC%8A%88%ED%8D%BC%20%EB%A7%88%EB%A6%AC%EC%98%A4%20%ED%8C%8C%ED%8B%B0%20%EC%9E%BC%EB%B2%84%EB%A6%AC
+
+Publisher: NamuWiki contributors, a separate secondary editorial family. Exact originals from section 4.2.4 Items → Triple Dice:
+
+- “모두 동일한 눈이 나왔다면 보너스로 20코인을 준다.” — reports 20 coins when every die matches.
+- “모든 주사위가 7로 나왔다면 키노피오가 기적이라면서 50코인을 준다.” — reports 50 coins when every die is seven.
+
+The direct MarioWiki Jamboree item row now also has its exact 18-word matching-bonus quote registered under S04. Native two-pass receipts bind full retrieved bodies/text and quotes. A separate reader accepted the Namu scope/provenance at 2026-10-09T00:03:49.798412Z: community copyright/license, distinct operator, no observed MarioWiki borrowing attribution, direct Jamboree narrative. This is secondary corroboration; it does not prove hardware reward accounting or the RNG law. English Namu is the same editorial family and is not counted separately.
+
+Current re-open receipts are reports/source-captures/20261009-source-pass-{A,B}.json and reports/independent-F07-research-20261009.json. All 26 accepted sources have actual quote recovery in both passes; native S11/S27 HTTP400 failures are retained beside genuine Exa text recovery. Rejected S23/S24 remain excluded. Four new targeted searches returned 24 result positions with duplicates retained; original full remote responses are private, not a claimed 24 distinct publishers. Previous 70-position research history remains historical.

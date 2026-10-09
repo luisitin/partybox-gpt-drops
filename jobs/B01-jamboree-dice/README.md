@@ -8,7 +8,7 @@ Jamboree does not give each playable character a distinct die. The 22 characters
 
 ## Contents
 
-- `dice.json`: 28 source records, 34 fact rows, all 22 character aliases, complete listed outcome sets, 12 items, compatibility decisions and 29 explicit mathematical models.
+- `dice.json`: 29 source records, 34 fact rows, all 22 character aliases, complete listed outcome sets, 12 items, compatibility decisions and 29 explicit mathematical models.
 - `odds.json`: reduced fraction strings, exact ordered-outcome counts, movement/coin marginals, joint outcomes and expectations. `null` is unknown, never zero.
 - `odds.ts`: immutable, pure lookup API. It does not generate probabilities, mutate callers or sample randomness.
 - `engine-a.ts`: TypeScript recursive Cartesian enumeration using bigint arithmetic.
@@ -54,7 +54,7 @@ sha256sum -c SHA256SUMS.txt
 
 The normal, Double and Triple models use one, two and three independent uniform 1–10 outcomes. Creepy uses 1–3; Mushroom adds five. Custom has ten separate deterministic choices, not a randomized 1–10 policy. Tickets reuse the single-use effect; their disputed quantity distribution is not guessed. Super Creepy shares the affected player's Creepy model rather than inventing a three-die movement roll.
 
-Payday adds the rolled total to the matching reward. Reported matching rewards are 10 for doubles, 20 for non-seven triples / 50 for triple sevens, and 30 for non-seven quadruples / 70 for quadruple sevens. Special rewards replace ordinary rewards. The +10 Double Dice matching reward now has independent player corroboration. The other listed matching rewards lack a second independent confirmation and remain medium-confidence rule inputs, despite exact arithmetic.
+Payday adds the rolled total to the matching reward. Reported matching rewards are 10 for doubles, 20 for non-seven triples / 50 for triple sevens, and 30 for non-seven quadruples / 70 for quadruple sevens. Special rewards replace ordinary rewards. The +10 Double Dice matching reward now has independent player corroboration. The ordinary Triple Dice 20/50 amounts now have direct Jamboree corroboration from MarioWiki and a distinct Korean Namu editorial family. Payday-specific and Turbo matching rewards remain single-family inputs. The existing conditional arithmetic and medium confidence are preserved.
 
 `together` supplies movement with unknown rewards. `together-reported-bonus` adds the single-source reported 10-coin match reward. Its modeled reward is the reported award; per-member team accounting was not observed. `mario-*` means a player has Mario as a buddy, not that playing as Mario gives a special die. The buddy contributes one extra 3–8 result, not one per item die. Eligibility of every possible character/buddy pairing is not modeled. Custom does not gain this extra result. A Creepy curse is canceled by Double/Triple/Custom rather than yielding 2d3 or 3d3.
 
@@ -67,3 +67,7 @@ Every possible ordered tuple is checked against both algorithms, as are every jo
 `(c*d - N*n)^2 <= 16*N*n*(d-n)`
 
 Impossible/mandatory outcomes are handled exactly. PRNG streams are reproducible from the base seed and model ID; rejection sampling prevents modulo bias. They are test streams, not a reconstruction of Nintendo's generator. The RNG closure contains explicit sampler state; the lookup and probability functions do not. The sealed TypeScript oracle was authored by a separate agent context before production or prior test-source access. `tests/blind/AUTHORING.md` records the inputs and `SEALED-SHA256SUMS.txt` preserves the original hashes. The original Python reference is retained as an additional algorithmic check.
+
+## Current independent research repair (2026-10-09)
+
+F07 now has two independent secondary publication families. There are 23 two-source facts and 11 unresolved facts: F09, F11, F16, F22, F25, F28, F30, F31, F32, F33, F34. All 120 dependent rows were revisited. Native whole-page reads were attempted twice for all 29 sources; two accepted GameFAQs pages required actual Exa text recovery after native HTTP400. The connector exposes neither origin TLS status nor cache freshness. Original failures and the prior e33 data/audit snapshot are retained. Namu English and Korean are one family. Current original local code/simulation checks passed all48 suites,534,138 cases,75 genuine mutants and870,000,000 rolls (natural command closure00:10:09.159089UTC). Exact new-head GitHub CI is pending; research remains partial with11 gaps.

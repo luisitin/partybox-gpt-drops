@@ -16,7 +16,7 @@ The test-only C++ sampler preserves the TypeScript xoshiro128** stream and rejec
 
 ## UNVERIFIED
 
-Research remains **PARTIAL**. Fact statuses: {'two-source': 22, 'single-source': 9, 'conflict': 1, 'unknown': 1, 'assumption': 1}. Unresolved IDs: F07, F09, F11, F16, F22, F25, F28, F30, F31, F32, F33, F34.
+Research remains **PARTIAL**. Fact statuses: {'two-source': 23, 'single-source': 8, 'conflict': 1, 'unknown': 1, 'assumption': 1}. Unresolved IDs: F09, F11, F16, F22, F25, F28, F30, F31, F32, F33, F34.
 
 - Triple, Payday, Turbo and Together matching reward amounts still lack a second independent confirmation. The +10 Double Dice matching reward now has independent player corroboration (S27); this does not promote other item rewards. Together team coin accounting was not independently observed.
 - Exact outcome frequencies, face independence and Nintendo RNG behavior are model assumptions (F32); no hardware roll dataset or RNG reverse engineering is claimed. Luigi activation and conditional nonactivation probabilities remain unknown.
@@ -398,3 +398,13 @@ UNVERIFIED: current source access and fresh source pass. All 34 attempted GETs f
 ## Post-recovery source passes
 
 The earlier 403 access results are historical. Two fresh TLS-verified passes attempted all 28 registered source URLs: 27 HTTP200 per pass, including all 25 accepted sources; the rejected derivative S23 returned HTTP402 in both passes. Accepted quotations matched after whitespace-before-punctuation normalization. Exact per-request commands/times, <=25-word quotations, retrieved hashes and all 34 fact-row records are in reports/cloud-post-recovery-research.json. No new independent corroboration was found for the twelve remaining gates; their research outcomes remain UNVERIFIED/PARTIAL as detailed in reports/cloud-post-recovery-research.md. These retrieval checks do not replace missing empirical evidence.
+
+## Current material F07 repair — acceptance pending
+
+At 2026-10-09T00:06:53.953679Z the new direct-source registry/data repair closed F07 only. All 120 rows were revisited against two actual captures per accepted source. The original Korean source and direct S04 Jamboree item row contain the exact registered quotations; quote counts remain ≤25 each and unique quoted words ≤200 per URL. All original code, schema, lookup tables, models, runner, mutants and sealed oracle bytes are unchanged. The original complete npm test (48 suites, seeds 1/2/3, all 870,000,000 trials) has not yet run for this repaired delivery. Old executed test sections are historical until a new complete result is appended. No current green or completed research is claimed.
+
+UNVERIFIED: F09, F11, F16, F22, F25, F28, F30, F31, F32, F33, F34. Also unverified: connector-origin TLS/cache freshness for the two Exa GameFAQs recovery reads; they are not mislabeled as native HTTP200. Native rejected-source failures and two root auxiliary read errors (wrong schema filename and schema root properties assumption) occurred before product changes and remain in the tool/private evidence history.
+
+## Executed original full suite for the 2026-10-09 F07 delivery
+
+Command: `npm test`, actual START 2026-10-09T00:09:40.622427Z; command naturally CLOSED 2026-10-09T00:10:09.159089Z, EXIT0. All 48 suites / 534,138 cases passed for original seeds1,2,3. Every one of29 models received10,000,000 rolls per seed:870,000,000 actual trials; every unchanged exact four-sigma comparison passed. All75 separately compiled genuine mutation assertion kills passed, strict TypeScript/schema/zero-dependency checks and sealed independent tables/tuples/fractions passed. Full actual stdout, all per-bin counts, all mutation witnesses and per-suite exactcommands/counts/seeds are delivered in reports/full-suite-20261009/. These current code/model results leave all11 original research gaps open. Exact new-head GitHub CI is pending; original PR8 remains draft.
