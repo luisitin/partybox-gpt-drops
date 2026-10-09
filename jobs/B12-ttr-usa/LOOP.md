@@ -76,3 +76,7 @@ corrected normal child must receive its own complete hosted packet.
 ## Formal post-green recovery review1
 
 Whole corrected53fe packet independently accepted11:32:31UTC. Actual review1 closed 2026-10-09T11:33:53.524Z:2592 states/20944 assertions, all supported player counts/route lengths/colors and own/inherited/null prototypes, frozen metadata, unchanged raw-oracle core values, connectivity and scores. Passed, naturally closed, no new player-visible gain; successful no-gain streak1. Complete raw result and actual reviewer source retained in reports/recovery-20261009/KEEP. This milestone separately publishes that round; the corrected implementation and mandatory gates remain unchanged.
+
+## Formal post-green recovery review2
+
+After separately publishing review1, actual review2 naturally closed 2026-10-09T11:36:42.787Z:128 inventory countercontrols and545 assertions, every one of the nine keys tested for absence, inheritance, non-enumerability, wrong-key substitution and ten invalid numeric/value types; two malformed array/function record families; three supported valid card-record prototypes. Nine raw-oracle non-enumerable limitations remain explicit rather than changing the oracle. Passed/no new player-visible gain; consecutive successful no-gain streak2. Complete raw result and actual reviewer source are preserved in reports/recovery-20261009/KEEP, separately published by this milestone. Core algorithms, current53fe implementation, independent seals, all facts/schema/counts/thresholds remain unchanged.
