@@ -1,5 +1,8 @@
 # VERIFY — complete draft catalogue, incomplete research
 
+Current proof is the final machine report, current catalogue-second-pass row fingerprints and the latest authored-tip section below. Earlier pasted outputs and row tables retain their historical checkpoint scope.
+
+
 **Original B03 acceptance: NOT_MET.** All 132 requested JSON/CSV rows exist and the full structural/evidence suite passes. Detailed independent mechanics and the second complete wiki roster remain unverified. CI integrity success is separate from research completion.
 
 Executed under Python 3.12.14, jsonschema 4.26.0 and beautifulsoup4 4.15.0. Deterministic research checks use seed n/a. Reports include actual counts, never estimated gameplay execution.
@@ -431,3 +434,11 @@ Historical accepted checkpoint 4a60fc7 is preserved in `reports/hosted-ci-4a60fc
 Actual holds: B19 ACK 00:17:11 through direct release 00:17:50.697578; G01 coordination ACK 00:19:36 through the root's direct finite-work release before candidate writer 00:22:36.714252 (release clock not separately sampled). No owned reader/writer/process ran during either HOLD; none was paused or stopped. The hard next checkpoint bound remains 00:36:54.057127 until the next actual normal push.
 
 Final content report was regenerated after documentation. Complete full hash and strict commands naturally closed before actual observation 2026-10-09T00:26:21.840141+00:00: **76 suites / 26,844 cases / all 83 hashes**, integrity exit 0 and strict deliberate exit 1 (NOT_MET 286/1,320, zero complete rows). Only documentation metadata changed afterward; the manifest is regenerated and every file directly checked before commit.
+
+## Current authored-tip source checkpoint 2026-10-09
+
+The complete initial current verifier actually exited0: **77 suites /28,970 cases**, coverage 288/1,320, open 1,032, zero complete. Two authored Korean clauses are independent narrow action witnesses, with translated Nintendo-description cells excluded. The checker preserves the exact accepted 132-row and145-source baseline, checks all 1,898 old substantive classifications and rejects eight actual malformed confidence/receipt/copyright-column/baseline fixtures. All prior category/common-action negative fixtures remain active on a validated exact historical view. Regenerated schemas require146 current sources and149 current/historical reopening records per pass.
+
+Full final content/hash/strict verification is recorded in the final report and checkpoint receipt. Integrity passing is distinct from strict research NOT_MET/exit 1. The 5e6ad25 hosted artifact receipt is explicitly historical; every later source needs its own complete exact-head native log, downloadable artifact JSON, CRC and immutable-file manifest check before acceptance. Original PR20 remains draft.
+
+Actual complete final commands naturally CLOSED 2026-10-09T00:48:44.829862+00:00: **78 suites / 29,059 cases / all 87 hashes** in each full run. Integrity exited 0; deliberate strict exited 1 with NOT_MET, coverage 288 / 1,320 and zero complete rows. Subsequent delivery notes are metadata only; the manifest is regenerated and all file hashes rechecked before the normal push.

@@ -8,8 +8,8 @@ URL: https://www.mariowiki.com/List_of_Super_Mario_Party_Jamboree_minigames
 
 | Pass | Retrieved UTC | Source-byte SHA-256 | Bytes | HTTP |
 | --- | --- | --- | ---: | --- |
-| pass1 | 2026-10-07T15:59:30.205547Z | `a38f52d833467bbfc4ac69ef853c1ea3646ce68178190d740fe46415bbaa134e` | 200673 | 200 |
-| pass2 | 2026-10-07T15:59:31.335346Z | `a38f52d833467bbfc4ac69ef853c1ea3646ce68178190d740fe46415bbaa134e` | 200673 | 200 |
+| pass 1 | 2026-10-07T15:59:30.205547Z | `a38f52d833467bbfc4ac69ef853c1ea3646ce68178190d740fe46415bbaa134e` | 200673 | 200 |
+| pass 2 | 2026-10-07T15:59:31.335346Z | `a38f52d833467bbfc4ac69ef853c1ea3646ce68178190d740fe46415bbaa134e` | 200673 | 200 |
 
 Short quotations checked in both passes:
 
@@ -24,8 +24,8 @@ URL: https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-
 
 | Pass | Retrieved UTC | Source-byte SHA-256 | Bytes | HTTP |
 | --- | --- | --- | ---: | --- |
-| pass1 | 2026-10-07T15:59:30.206110Z | `d4327873395fcaa86d4ca3e18c4f47c2dcdcc39b9f404b8562ef0677e79993d7` | 138782 | 200 |
-| pass2 | 2026-10-07T15:59:31.335253Z | `c3ea68af3c2a852a37ba2c490982cb8ab61f35ca48bfde6eba5232c5f8768130` | 138782 | 200 |
+| pass 1 | 2026-10-07T15:59:30.206110Z | `d4327873395fcaa86d4ca3e18c4f47c2dcdcc39b9f404b8562ef0677e79993d7` | 138782 | 200 |
+| pass 2 | 2026-10-07T15:59:31.335253Z | `c3ea68af3c2a852a37ba2c490982cb8ab61f35ca48bfde6eba5232c5f8768130` | 138782 | 200 |
 
 Short quotations checked in both passes:
 
@@ -37,8 +37,8 @@ URL: https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/
 
 | Pass | Retrieved UTC | Source-byte SHA-256 | Bytes | HTTP |
 | --- | --- | --- | ---: | --- |
-| pass1 | 2026-10-07T15:59:30.206587Z | `32278c21f1c8a5bb80fa8929bd8de50ea10b6eb83acdb6966d533741a0f44381` | 88132 | 200 |
-| pass2 | 2026-10-07T15:59:31.336053Z | `27c34793a46264a2c3179b88a3763517a64e4442a2c685d7331087a91181ed89` | 88132 | 200 |
+| pass 1 | 2026-10-07T15:59:30.206587Z | `32278c21f1c8a5bb80fa8929bd8de50ea10b6eb83acdb6966d533741a0f44381` | 88132 | 200 |
+| pass 2 | 2026-10-07T15:59:31.336053Z | `27c34793a46264a2c3179b88a3763517a64e4442a2c685d7331087a91181ed89` | 88132 | 200 |
 
 Short quotations checked in both passes:
 
@@ -54,8 +54,8 @@ URL: https://www.nintendo.com/us/store/products/super-mario-party-jamboree-ninte
 
 | Pass | Retrieved UTC | Source-byte SHA-256 | Bytes | HTTP |
 | --- | --- | --- | ---: | --- |
-| pass1 | 2026-10-07T15:59:30.207225Z | `260211938de49aa52e8267fec821034cc23108e9137abcce792e3ec63bf51881` | 708005 | 200 |
-| pass2 | 2026-10-07T15:59:31.336538Z | `260211938de49aa52e8267fec821034cc23108e9137abcce792e3ec63bf51881` | 708005 | 200 |
+| pass 1 | 2026-10-07T15:59:30.207225Z | `260211938de49aa52e8267fec821034cc23108e9137abcce792e3ec63bf51881` | 708005 | 200 |
+| pass 2 | 2026-10-07T15:59:31.336538Z | `260211938de49aa52e8267fec821034cc23108e9137abcce792e3ec63bf51881` | 708005 | 200 |
 
 Short quotations checked in both passes:
 
@@ -3602,3 +3602,9 @@ Three genuinely common-action summaries now use both complete retained source co
 | FGS_BASE_common_both_sides_fight_in_a_snowball_fight_the_one_player_side_has_the_help_of_ai_monkeys | Both sides fight in a snowball fight. The one player side has the help of AI monkeys. | ### Snow Brawl / actual full explanatory paragraph |
 | FGS_BASE_common_one_player_has_to_try_to_make_a_path_for_their_teammate_while_the_other_player_must_cross_that_path_to_the_goal | One player has to try to make a path for their teammate while the other player must cross that path to the goal. | ### Jump the Gun / actual full explanatory paragraph |
 | W040_common_the_lone_player_is_given_four_computer_controlled_teammates | The lone player is given four computer-controlled teammates | Overview / shared returning-game core action, with explicit Jamboree scope retained |
+
+## Current original Korean authored-tip recovery
+
+Original Korean NamuWiki adds one actual URL and two retained full source responses, both successfully captured with TLS verification at 2026-10-09 00:10. Only two literal clauses from the fourth/authored Tip column are used; the third translated Nintendo-description column is excluded. Their exact original-language text and complete locators are in `catalogue-sources.json` as `NAMU_BASE_tip_MG014` and `NAMU_BASE_tip_MG049`; total22 words, no full article or112-row copyrighted text published. Both complete authored-tip contexts are compared before narrowly corroborating Granite Getaway and Defuse or Lose. Original Korean strategy prose and literal English parenthetic row names are inspected; absent MarioWiki/Fandom links alone are not proof of independence.
+
+Registry146 URLs /1,900 clips;149 current/historical URLs have ordered A/B records and3,806 quote recoveries. All prior145 source objects, quotes and actual pass receipts are unchanged; guide budget remains200. Three separately recorded actual searches requested/inspected 16 entries,15 unique URLs; no full article from those results was successfully reviewed. The candidate GameFAQs URL returned actualHTTP400 Request Blocked twice, with TLS verification result0. Its snippets are not independent accepted evidence. The exact two-wiki full roster gate remains unmet.

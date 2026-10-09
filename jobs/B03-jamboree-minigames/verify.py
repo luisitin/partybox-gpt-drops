@@ -19,7 +19,7 @@ import jsonschema
 ROOT=Path(__file__).resolve().parent
 FACTS=['name','category','format','gameplay','controls','timeLimit','winRules','scoreRules','tieRules','reward']
 OWN=['minigames','catalogue-sources','catalogue-conflicts','catalogue-second-pass','historical-supplement-reopens','catalogue-list-comparison']
-LINEAGES={'www.mariowiki.com':'mariowiki','www.nintendolife.com':'hookshot','mariopartylegacy.com':'mariopartylegacy','familygamesquad.com':'familygamesquad','screenrant.com':'valnet','blog.bestbuy.ca':'bestbuy','gamingtrend.com':'gamingtrend','www.nintendo.com':'nintendo','www.thegamer.com':'valnet','www.gamenchickgaming.com':'gamenchick'}
+LINEAGES={'www.mariowiki.com':'mariowiki','www.nintendolife.com':'hookshot','mariopartylegacy.com':'mariopartylegacy','familygamesquad.com':'familygamesquad','screenrant.com':'valnet','blog.bestbuy.ca':'bestbuy','gamingtrend.com':'gamingtrend','www.nintendo.com':'nintendo','www.thegamer.com':'valnet','www.gamenchickgaming.com':'gamenchick','namu.wiki':'namuwiki'}
 def require(ok,message):
     if not ok:raise AssertionError(message)
 def pairs(items):
@@ -166,7 +166,7 @@ def run(args):
         spec=importlib.util.spec_from_file_location('quote_support_check',ROOT/'quote-support-check.py');qsc=importlib.util.module_from_spec(spec);spec.loader.exec_module(qsc)
         quotes=qsc.quote_index(sources)
         for r in rows:require(r['fieldEvidence']['gameplay']['status']==qsc.expected_gameplay_status(r['fieldEvidence']['gameplay']['quoteIds'],quotes),'Gameplay status breaks the two-lineage substantive-quote rule: '+r['id'])
-        require(sum(r['fieldEvidence']['gameplay']['status']=='corroborated' for r in rows)==18,'Corroborated summaries differ from the verified common-action rule')
+        require(sum(r['fieldEvidence']['gameplay']['status']=='corroborated' for r in rows)==20,'Corroborated summaries differ from the verified common-action rule')
     checked('Narrow summary status follows the two-lineage substantive-quote rule',132,gameplay_rule_check,'Only summaries with sentence-length quotes from two publisher lineages are corroborated')
     def same_publisher_rejects():
         altered=copy.deepcopy(data)
@@ -227,6 +227,9 @@ def run(args):
         checks.append(result);print(f"PASS {result['name']}: {result['caseCount']} cases; seed=n/a")
     common_checker=module('b03_common_gameplay_recovery','check-common-gameplay-recovery.py')
     for result in common_checker.run():
+        checks.append(result);print(f"PASS {result['name']}: {result['caseCount']} cases; seed=n/a")
+    namu_checker=module('b03_namu_gameplay_recovery','check-namu-gameplay-recovery.py')
+    for result in namu_checker.run():
         checks.append(result);print(f"PASS {result['name']}: {result['caseCount']} cases; seed=n/a")
     def negative_reopens():
         mutations=[

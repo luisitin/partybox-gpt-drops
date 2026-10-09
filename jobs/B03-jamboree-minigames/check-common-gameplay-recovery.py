@@ -25,6 +25,11 @@ def historical_unrelated(row):
     row = copy.deepcopy(row); row['fieldEvidence'].pop('category'); row['fieldEvidence'].pop('gameplay'); return row
 
 def validate(proof, data, sources, reopens, prior):
+    if any(s['id'] == 'NAMU_BASE' for s in sources['sources']):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location('validated_authored_tip_history', ROOT / 'check-namu-gameplay-recovery.py')
+        reader = importlib.util.module_from_spec(spec); spec.loader.exec_module(reader)
+        data, sources, reopens = reader.historical_view(data, sources, reopens)
     rows = {r['id']: r for r in data['minigames']}; sb = {s['id']: s for s in sources['sources']}
     qb = {q['id']: (s, q) for s in sources['sources'] for q in s['quotes']}
     require(proof['job'] == 'B03' and proof['baselineSourceCommit'] == '4a60fc7e66157ea507f957388990e5be97bd8659', 'Wrong source baseline')

@@ -38,7 +38,9 @@ def words(text):
 
 
 def substantive(text):
-    return len(re.findall(r"[A-Za-z0-9']+", text)) >= 6 and not text.strip().endswith(':')
+    # Unicode words include authored Korean clauses; every old clip's Boolean
+    # classification is separately checked against the original ASCII rule.
+    return len(re.findall(r"[^\W_]+(?:'[^\W_]+)*", text, re.UNICODE)) >= 6 and not text.strip().endswith(':')
 
 
 def numbers(text):

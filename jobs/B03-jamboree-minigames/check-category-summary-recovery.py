@@ -16,6 +16,11 @@ def key(value): return ''.join(c for c in unicodedata.normalize('NFKC', value).c
 def unchanged(row):
     result = copy.deepcopy(row); result['fieldEvidence'].pop('category'); result['fieldEvidence'].pop('gameplay'); return result
 def validate(proof, data, sources, reopens, wiki_rows, later=None):
+    if any(s['id'] == 'NAMU_BASE' for s in sources['sources']):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location('validated_authored_tip_history', ROOT / 'check-namu-gameplay-recovery.py')
+        reader = importlib.util.module_from_spec(spec); spec.loader.exec_module(reader)
+        data, sources, reopens = reader.historical_view(data, sources, reopens)
     if later is None and (ROOT / 'reports/common-gameplay-recovery.json').exists():
         import importlib.util
         spec = importlib.util.spec_from_file_location('later_common_gameplay', ROOT / 'check-common-gameplay-recovery.py')
