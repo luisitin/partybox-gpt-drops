@@ -1,5 +1,19 @@
 # B04 — Current continuation
 
+2026-10-09T13:19:54.571337+00:00: Whole original Raceway research checkpoint, all100/518 facts unchanged;398 single-source,19 conflicts,1 unknown;37/38 events,0/7 maps. Strict NOT_MET; PR18 Draft.
+
+Read reports/raceway-whole-original-scopes-UNADOPTED-20261009.json. Four full HTTP200 pages naturally closed13:04:12.735739; entire Wiki13668/DualShockers7872 authored scopes and all24 main outgoing links read. DS native Austin Conrad/Valnet identity verified; DS raw differs, authored pairs match. Both actual original normal maps fetched200/naturally closed13:07:19.899022 and viewed. Raw AND decoded pixels differ. No exact Star-marker or numbered graph is invented. Copyrighted originals stay private.
+
+Next close only complete roll-em-raceway:stars:purchase northern-route clause. Normal20/alternation are supported, but full regional marker scope awaits peer. Entire fact remains UNADOPTED/single_source; first-Star top lane also unchanged. Reuse only existing DS-Q002 and NAMU-Q01520 after full acceptance. All518 values/facts,593 fingerprints,19 disputes,registry,captures and original gates byte unchanged; no quotes/source rows. Namu250/250 fully spent; Cel131 unchanged.
+
+Parentbfd836 published12:50:40, whole run37932724344/job113827151188 closed12:50:56 and personally read12:53:40: full21443B nativeSHA4fb61c216127121283f9429a5389f9a3fddc534671892fdee4de07c37ad5f563; actual merge4b07a3fa5be77ec4dd1bce7d7cb12408a94f0c43 parents5864b5b43bfe233d465c4307817b80ae947b52b4/bfd836. Structural26/5756/113PASS; strict25/5643/100FAIL/37FAIL/NOT_MET actual1 required. Parent receipt sealedhistorical; new hostedoriginal pending.
+
+Own MAINc274 row12:52:35/pub38/read39 lease released; new own refresh requires root lease. Early13:15:40 passed during context recovery; actual ENOSPC13:18:40 stopped private checkpoint writes, no product corruption. Only own regenerable payload chunks deleted. Record actual next normal publication interval, no backdate or claimclock reset. Prior105s/92s misses retained.
+
+Previous detailed continuation follows:
+
+# B04 — Current continuation
+
 2026-10-09T12:49:11.562961+00:00: Two new complete original source scopes reviewed. Product remains100/518 corroborated,398 single-source,19 disagreements,1 unknown;37/38 events and0/7 exact numbered maps. Original strict standard is NOT_MET; PR18 stays Draft.
 
 Read reports/two-shop-tv-source-scopes-UNADOPTED-20261009.json. Entire MarioPartyLegacy unlock guide25878 characters and MyNintendoNews TV review10505 were personally read, with full A/B authored identity verified. Four real HTTP200 requests naturally closed12:40:55.646751 without children or signals. MPL raw pages differ by one byte; only authored scopes match. MNN raw pages match. Full copyrighted bodies/images remain private. Zero new quotes or registry rows.
