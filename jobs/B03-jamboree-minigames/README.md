@@ -2,7 +2,7 @@
 
 **What this is:** a research catalogue of 132 minigames (112 base games, 20 Jamboree TV additions) with name, category, format, time limit, controls, win, score, tie and reward rules, a two-sentence summary, and a 1-5 phone-touch fit. Data is JSON and CSV, checked by a JSON Schema and an offline verifier.
 **How to use it:** read `DESIGN-DIGEST.md` for the design reading, `INTEGRATION.md` for what PartyBox does with it. Query `minigames.json` (or `minigames.csv`, see below). Do not ship names, art or strings.
-**Status:** reference only. Draft research, strict gate **NOT_MET**: 337 of 1,320 narrow fact fields corroborated, 983 still open, 0 of 132 rows complete. Nothing here is Nintendo-verified gameplay.
+**Status:** reference only. Draft research, strict gate **NOT_MET**: 341 of 1,320 narrow fact fields corroborated, 979 still open, 0 of 132 rows complete. Nothing here is Nintendo-verified gameplay.
 
 ## Quick start (from the repo root)
 
@@ -172,6 +172,10 @@ Latest material research:11 common-action and5 Survivathon-category candidates f
 
 Latest current recovery:5 literal Survivathon categories and11 narrow shared-action summaries are separately validated in reports/original-review-recovery.json, with5817 comparisons and12 real malformed fixtures and exact132-row148-source1951-quote/fullA+B historical restoration. Current337/1320 supported,983open,zero whole;categories123/9 andgameplay50/82. Current149sources/1973clips; CelStudios122 reused cumulative words andWikiList160. Night Lights motion,9Coin subdivisions, detailed mechanics andexact independent second-wiki roster remain unresolved. Original candidate packets stay historical andunchanged; full current delivery/hosted acceptance is required as recorded in NEXT.md.
 
-## Current COG research checkpoint
+## Historical COG candidate checkpoint07b9
 
 The catalogue retains337 supported fields,983open and zero complete rows. `reports/cog-gameplay-candidates.json` contains four UNADOPTED original-review candidates for Sandwiched, Tilt-a-Golf, Treetop Treasure and Waluigi's Pinball Arcade. Complete received bylined scopes, actual24-request provenance, excluded sources and exact accepted history are checked by `check-cog-gameplay-candidates.py` (314 comparisons and12 malformed fixtures). Prior accepted0be9's genuine full original hosted receipt is retained separately; a newer source needs its own complete hosted acceptance.
+
+## Current four-action COG recovery
+
+Exactly four narrowed summaries now have complete primary and independently authored original-review support: Sandwiched, Tilt-a-Golf, Treetop Treasure and Waluigi's Pinball Arcade. Current341/1320 supported fields,979open,zero completed rows; gameplay54/78 and categories123/9. The new8655-comparison recovery validator plus14 genuine malformed fixtures restore the exact accepted07b9 history before inherited checks; the earlier four-field candidate remains an unchanged historicalUNADOPTED packet. Registry150sources/1982clips/3970recorded paired recoveries with153records/pass. No precise controls, timers, scoring, tie or payout fact is promoted.

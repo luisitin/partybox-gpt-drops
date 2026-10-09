@@ -62,6 +62,9 @@ def validate(p,d,s,rs):
  return count
 def run():
  p,d,s=read('reports/cog-gameplay-candidates.json'),read('minigames.json'),read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+n+'.json') for n in 'AB']
+ if (ROOT/'reports/cog-gameplay-recovery.json').exists():
+  import importlib.util
+  spec=importlib.util.spec_from_file_location('b03_cog_recovery',ROOT/'check-cog-gameplay-recovery.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);d,s,rs=m.historical_view(d,s,rs)
  count=validate(p,d,s,rs)
  for n in range(12):
   a,b,c,e=copy.deepcopy([p,d,s,rs])

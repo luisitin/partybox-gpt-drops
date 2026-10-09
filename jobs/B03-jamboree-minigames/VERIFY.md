@@ -617,3 +617,12 @@ Then research9 remaining Coin categories,82 remaining gameplay summaries and det
 | Genuine malformed provenance/promotion fixtures | 12 | yes | none | same command |
 
 Every inherited original suite remains active. Four action candidates are UNADOPTED;337 facts,983open,zero whole rows and deliberate strict NOT_MET remain unchanged. Actual22 full200/TLS responses plus two failed no-body requests are distinguished from recorded quote recoveries. The original0be9 hosted whole acceptance is historical for0be9 only. The first wrong48-word expected total failed before commit; actual45 was corrected without weakening any predicate or changing any quote. Complete current protocol results and source hashes belong in the final receipt and original PR20 after natural closure.
+
+## Current four COG action recovery
+
+| Test | Cases | Passed | Seed | Exact command |
+| --- | ---: | --- | --- | --- |
+| Four independent original COG actions restore all accepted rows/sources/classifiers/complete A+B history | 8655 | yes | none | `PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minigames/check-cog-gameplay-recovery.py` |
+| Genuine malformed adoption/restoration plus currentCoverage/disclaimer fixtures | 14 | yes | none | same command |
+
+Every inherited original suite/negative fixture stays active at a completely validated historical view. Current proposed341/1320corroborated,979open,zero rows;54/78gameplay and123/9categories. First full current content101suites/57990cases EXIT0 was observed07:03:15 before two additional guards/two negatives. Exact final content/integrity/strict and staged immutable checks are required before publication; strict remains deliberateEXIT1/NOT_MET. The genuinely accepted07b9 hosted receipt is historical for07b9 only. Actual22 received body files plus two failed-body absences are checked across24 capture records, zero newHTTP at adoption.

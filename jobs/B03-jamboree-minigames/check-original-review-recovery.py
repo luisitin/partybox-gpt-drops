@@ -125,12 +125,16 @@ def historical_view(d,s,rs):
     if not (ROOT/'reports/original-review-recovery.json').exists(): return d,s,rs
     p=read('reports/original-review-recovery.json')
     if digest(d)==DATA and digest(s)==SOURCES and [digest(x) for x in rs]==REOPENS:
-        validate(p,read('minigames.json'),read('catalogue-sources.json'),[read('reports/source-reopens-pass'+x+'.json') for x in 'AB'])
+        a,b,c=read('minigames.json'),read('catalogue-sources.json'),[read('reports/source-reopens-pass'+x+'.json') for x in 'AB']
+        if (ROOT/'reports/cog-gameplay-recovery.json').exists(): a,b,c=module('check-cog-gameplay-recovery.py').historical_view(a,b,c)
+        validate(p,a,b,c)
         return d,s,rs
+    if (ROOT/'reports/cog-gameplay-recovery.json').exists(): d,s,rs=module('check-cog-gameplay-recovery.py').historical_view(d,s,rs)
     return validate(p,d,s,rs)[:3]
 
 def run():
     p,d,s=read('reports/original-review-recovery.json'),read('minigames.json'),read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+x+'.json') for x in 'AB']
+    if (ROOT/'reports/cog-gameplay-recovery.json').exists(): d,s,rs=module('check-cog-gameplay-recovery.py').historical_view(d,s,rs)
     count=validate(p,d,s,rs)[3]
     for n in range(12):
         a,b,c,e=copy.deepcopy([p,d,s,rs])
