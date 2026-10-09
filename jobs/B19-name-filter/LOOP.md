@@ -331,3 +331,9 @@ Hosted37856872614 fails2/0/0, independently audited3786 assertions at23:19:19.41
 ##00:17 rejected fused classification development refinement
 
 Original acceptance still fails. Strict/214308/25actualmutants/8controls pass; sole root-executed24phase comparison shows+16.601/-2.084/-16.205% seedgains, so40cc never enters production. Complete raw evidence and actual4551-assertion11a1 failed artifact archived; prospective fold-column sentinel follows only after the coordinated G01 window. This does not fulfill after-green KEEP.
+
+##00:34 binding after-green KEEP rerun fails; fold-column candidate remains private
+
+Exact6a full hosted genuineGREEN verified4981 actual-byte assertions. Required original PROMPTS311 step1 runs once after that green, naturalCLOSED00:34:44.366961UTC EXIT1: literal13/5/10, all1006 guards unchanged/all100 fresh rows/nonlatency/75mutants retained. This failed step does not complete KEEP. No unchanged second attempt or cause inference. Weakest part remains literal latency; all28 outliers retained. The earlier first-local12/9/2 predates green and is not this scope.
+
+One distinct private fold-column algorithm reuses existing lower-derived column for classification/transition; strict214308/all25 actual original mutants/eight AssertionErrors/65536code-unit equivalence pass,1001/1003 guards stable. It is unadopted and untimed pending independent static review/fresh once-only original mixed comparison. Source/driver/policy/reference/corpora/warmup/sample/gate stay frozen. Full meaningful green/failure/candidate proofs are archived; only-cosmetic stopping point is not reached.

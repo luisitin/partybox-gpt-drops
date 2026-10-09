@@ -1,0 +1,39 @@
+{
+  "kind": "independent-fresh-after-green-failure-byte-and-receipt-review",
+  "head": "6a079fec45c7e721fd16e988288b25c103ff29c6",
+  "verifiedUtc": "2026-10-09T00:40:47.751430+00:00",
+  "originalFullRunStart": "2026-10-09T00:34:25.852441+00:00",
+  "originalFullNaturalClosed": "2026-10-09T00:34:44.366961+00:00",
+  "exitCode": 1,
+  "sourceSha256": "7817489fc1d0908a87914223a84b31c15ea7e13b3555cb4238594751616f163d",
+  "compiledSha256": "e4b39efbf033bef9c41788e9bf0f002cdb61ff9dbbdfa6cbfcbfda65122d2cf9",
+  "actualGuardsCompared": 1006,
+  "allSourceGuardsEqual": true,
+  "all100FreshStdoutRowsEqualCurrentSummary": true,
+  "allNonLatencyRowsPassed": true,
+  "actualOriginalMutantsPassed": 75,
+  "recordedBenchmarks": [
+    {
+      "seed": 1,
+      "over005Ms": 13,
+      "maxMs": 0.8997339999996257,
+      "originalSink": 94721
+    },
+    {
+      "seed": 2,
+      "over005Ms": 5,
+      "maxMs": 0.3093109999990702,
+      "originalSink": 93467
+    },
+    {
+      "seed": 3,
+      "over005Ms": 10,
+      "maxMs": 0.30112000000008265,
+      "originalSink": 94479
+    }
+  ],
+  "requiredAfterGreenKEEPCheckPassed": false,
+  "unchangedSecondAttemptAuthorized": false,
+  "failureCauseKnown": false,
+  "scope": "Audits the sole actual original full after-green failure, without rerunning the driver, retiming calls or reconstructing absent individual measurements. All captured outliers and raw logs remain."
+}

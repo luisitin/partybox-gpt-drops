@@ -1,0 +1,9 @@
+# Exact6a original acceptance and required follow-up
+
+Production7817/e4b is unchanged. Hosted37864218510/job113606984120 genuinely passes all100 suites with literal0/0/0; independent audit4981 verifies actual official artifact11587348649. This scope is a historical source-bound passing observation, not universal latency or final completion.
+
+Original PROMPTS.md:311 says: “When the job passes every check, do not stop: loop (1) rerun every check, (2) find the weakest part (lowest confidence row, slowest test, least covered case, ugliest asset), (3) improve it, add tests for it, push, log it in LOOP.md, and repeat.” Exactly one original full after-green rerun was authorized. Its actual grant00:34:24.768578UTC, START00:34:25.852441UTC and naturalCLOSED00:34:44.366961UTC/EXIT1 are preserved. All1006 before/after source guards agree; all100 fresh rawstdout rows equal the captured full summary, all non-latency checks and75 real original mutants pass. Literal13/5/10 fail, maxima0.8997339999996257/0.3093109999990702/0.30112000000008265ms. All28 outliers remain. Original sinks94721/93467/94479 remain. No second attempt was authorized or performed.
+
+The first-local12/9/2 run was pre-green and remains a separate failure. Earlier hosted failures and the previous-source after-green6/3/5 failure remain intact. Cause is unknown. Current required acceptance/KEEP is incomplete; PR23 stays draft. Source, corpora, reference, policy, fixed/generated counts,100kwarmup,10ksamples, clocks and literal0.05ms gate were unchanged.
+
+Captured reports include historical diagnostic files already present in reports/latest; those are preserved as captured and do not represent new diagnostic executions. Raw captured paths/clock data are immutable. Archived once-only controllers describe completed attempts and must not be rerun unchanged. Source/compiled/all individual hosted call times absent from the official artifact are not reconstructed.
