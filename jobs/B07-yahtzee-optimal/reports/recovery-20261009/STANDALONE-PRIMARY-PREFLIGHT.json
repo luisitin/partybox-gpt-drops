@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "mode": "official",
+      "exitCode": 0,
+      "bytes": 8388608,
+      "sha256": "6e93512a9b983afa721f6a7f1c51261a3d464f469b6c89a0c21e689efd76cbe1",
+      "calculation": {
+        "mode": "official",
+        "expectedValue": 254.58772873449593,
+        "canonicalComponents": 359616,
+        "validStates": 536448,
+        "tableEntries": 1048576
+      },
+      "elapsedSeconds": 4.39994478225708
+    },
+    {
+      "mode": "published",
+      "exitCode": 0,
+      "bytes": 8388608,
+      "sha256": "2b2f401a4d6588decb2fbdab46eb86989d8ce6faa8f4a677b534306bb93b314c",
+      "calculation": {
+        "mode": "published",
+        "expectedValue": 254.58960948196315,
+        "canonicalComponents": 359616,
+        "validStates": 536448,
+        "tableEntries": 1048576
+      },
+      "elapsedSeconds": 2.884880304336548
+    }
+  ],
+  "scope": "Actual standalone primary generator preflight for both full tables; every seed still required by current full npm test."
+}

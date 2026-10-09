@@ -34,3 +34,53 @@ run separately. Publication-only document changes are recorded with hashes;
 next gate is the unchanged full Node 22.16.0 Ubuntu workflow for this exact
 published commit. Continue B19 production timing work while hosted proof runs.
 2026-10-08 B07 polish pass (cloud): eager solved tables (no mutable cache, e3591e6), P07 mutant fixed, docs corrected against the real PartyBox repo, full npm test exit 0 (31 min, shared machine), scratch gates tsc/eslint/prettier/vitest green, sims 2p/4p/6p fast 0 failed, default mixed stuck x152 pre-existing on a clean 26b85ba6 export; docs and manifest pushed to job/B07-yahtzee-optimal; pnpm verify on the port not run.
+
+2026-10-09 verification audit: original903 full hosted proof genuinely accepted
+in full, including its whole official archive/native log/source fingerprints.
+Read all original PR review comments. Reproduced the real rerun failure using
+the genuine hosted summary; restored all153 original source blobs. Repair
+preserves original Ready PR21 on903 in an isolated followup. New report-session
+helper archives fresh outputs and restores originals on success/failure;
+47 actual transport assertions include two successes and child exit7,
+SIGTERM143, exception and ENOENT. Full tests now run the actual standalone
+primary generator for both full modes in EACH seed, in addition to unchanged
+paired-sim/independent generation and all original required workloads. Current
+changed-head full hosted verification and subsequent substantive KEEP audit
+are pending; original903 proof does not establish this new source.
+
+2026-10-09 exact9c14 full hosted proof accepted08:07:08. All six standalone
+primary generations, every original workload and all72 historical report
+restoration hashes passed in the entire genuine80-member archive. The actual
+invalid-input wrapper control correctly failed and preserved its output.
+
+2026-10-09 post-full KEEP1: inspected every inherited full-test gate by
+removing only the explicitly added report control, six primary-regeneration
+operations and primary receipt field from the actual current driver. The
+remaining bytes exactly equal original903 run.mjs. Removing only the fresh
+artifact path from the current workflow exactly reproduces its original
+bytes. Every173 published delivery input remained unchanged. No further
+source gain found.
+
+2026-10-09 post-full KEEP2:18 actual report transport assertions cover
+concurrent lock rejection before callback execution, empty/binary/Unicode/deep
+original reports, successful output export, failed code5 output retention,
+original-input restoration and both retained invocation directories. The
+published helper passed; no further source gain found. These are actual
+transport controls, not extra solver semantic counts.
+2026-10-09 post-full KEEP3: fresh strict TypeScript5.8.3 compilation of the
+unchanged published solver and port passed1,714 actual assertions, including
+all548 golden states, malformed/full-card inputs, forced/published Joker
+behavior, bonus boundaries, immutable caller inputs and adapter fallbacks.
+All173 published9c14 input hashes stayed frozen. Natural close08:25:41.406Z,
+actual Node24.19.0. No further substantive source gain found. Together with
+KEEP1 and KEEP2 this exhausts the remaining verification gaps; further
+changes are cosmetic. Preserve every original game/model/contract byte.
+
+2026-10-09 cadence record: all own children were closed during root's shared
+measurement quiet window. Early08:21:20 fell inside the hold; the material
+proof/handoff normal FF source push actually closed08:27:30,70s after hard
+08:26:20. Retain the exact receipt; no source/test timestamp is backdated.
+This final material milestone preserves the whole genuine9c14 ZIP/native log,
+all native metadata, reader/control receipts and three post-pass audits.
+Its exact new-head whole hosted proof is pending as of publication; the final
+PR24 body records actual acceptance after closure. No cosmetic KEEP edits.

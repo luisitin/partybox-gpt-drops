@@ -1,0 +1,867 @@
+{
+  "jobs/B07-yahtzee-optimal/.gitignore": {
+    "bytes": 36,
+    "gitSHA": "9cd94f09acb039d44ec36958462d639e448d27b4",
+    "sha256": "2ede9a606bee347e05580c73a9e78c612ce549249bf7e8d0e80e76c4c79959fc"
+  },
+  "jobs/B07-yahtzee-optimal/AMENDMENT.md": {
+    "bytes": 1148,
+    "gitSHA": "3d7ecc434521a80436829fa9bba2d7663f40bef8",
+    "sha256": "89349db78a9cd3298a9a881a85e026d0992e676ba61fd83c99ed92d5ec1ed5c3"
+  },
+  "jobs/B07-yahtzee-optimal/ASSUMPTIONS.md": {
+    "bytes": 1147,
+    "gitSHA": "574dc379ac294cc7f63ba87fcf2ebedd3759dc17",
+    "sha256": "b4e718a88b0f67a89add90426daa44b7ee8abf401aae91fb24e992d21d6d0140"
+  },
+  "jobs/B07-yahtzee-optimal/AUTHORING.md": {
+    "bytes": 3009,
+    "gitSHA": "5cf440de31a736ec84804e48c73fca7542779c21",
+    "sha256": "660875c2f53620c90cbd38bd249b3e31b029f7b3c00e442f9215c15a05855b03"
+  },
+  "jobs/B07-yahtzee-optimal/CONFLICTS.md": {
+    "bytes": 1281,
+    "gitSHA": "9902ad5681a3465fb7f7819d23b9a3ad6dc1edce",
+    "sha256": "e4686693c67fa8338b6c71296af198a6c64085aed81fb31de30b9cc20d87244a"
+  },
+  "jobs/B07-yahtzee-optimal/CORE-SELFCHECK.json": {
+    "bytes": 399,
+    "gitSHA": "e964e2307e2927485fdf33ce4a5d18043a962b4a",
+    "sha256": "a2d54f497443455e17f2866cc7f05a106aa9099e86878118ee9904612f0c329e"
+  },
+  "jobs/B07-yahtzee-optimal/INTEGRATION.md": {
+    "bytes": 16630,
+    "gitSHA": "46ef6a88e7679ca9f75917fd777aef87e19b2700",
+    "sha256": "e610798d5379c064bc2b2292f493a8952e576c5d5be6327a4ba215102ff522bc"
+  },
+  "jobs/B07-yahtzee-optimal/LOOP.md": {
+    "bytes": 3683,
+    "gitSHA": "19c3a6b0e4efbcf90c1aa8759a19720201a64dc0",
+    "sha256": "07685c019ece2ba7a379214365ca30bad46418fdff50edf4db43efe1857ae6fb"
+  },
+  "jobs/B07-yahtzee-optimal/NEXT.md": {
+    "bytes": 2762,
+    "gitSHA": "373342442da72a78afbc8de92e9e86137292b978",
+    "sha256": "c226a296eb5343c5e1006af6bda3091c83373ead032c564947709936238d9871"
+  },
+  "jobs/B07-yahtzee-optimal/PRIMARY-SEALED-SHA256SUMS.txt": {
+    "bytes": 1631,
+    "gitSHA": "44fd3a58ea10caa24a2fed0ad23d1fe82f4264f2",
+    "sha256": "d69083a1c39fe5b6e40089e1c82fafd5fc40ee011691e84afc6bce68a0c06a4a"
+  },
+  "jobs/B07-yahtzee-optimal/PUBLIC-CONTRACT.md": {
+    "bytes": 6773,
+    "gitSHA": "e214f762e9668334d4583246ab6fc0056ea3624d",
+    "sha256": "bfa33a41b3fdfbdf6811fbf0502c775bf774fffd66502a95ef1fc03b09c4eded"
+  },
+  "jobs/B07-yahtzee-optimal/README.md": {
+    "bytes": 6478,
+    "gitSHA": "41e2dcab62262eee5cc9ba2b172a7f21cc3246cd",
+    "sha256": "6c46ef37a781e2f8325c92f57495d5487e3befc9714aeb5be9b35575cd74cc9d"
+  },
+  "jobs/B07-yahtzee-optimal/SOURCES.md": {
+    "bytes": 2296,
+    "gitSHA": "a3f63b15eb75a22f4cecb2f7114693daf33fcd38",
+    "sha256": "6ff8f8ac5c5c039772532b8712a54c2741b4768b34b7c00c9ed16e0d8d63642a"
+  },
+  "jobs/B07-yahtzee-optimal/VERIFY.md": {
+    "bytes": 15836,
+    "gitSHA": "8af476bd552c57dcfa50694821c489de144f5b91",
+    "sha256": "f7e6789d0a4cdd425103871b0a9a835ae4de6db30f79adf148faeeb7c54556b8"
+  },
+  "jobs/B07-yahtzee-optimal/component-proofs.mjs": {
+    "bytes": 3777,
+    "gitSHA": "6255dcae9d24df88e4291253329862d2ca77efde",
+    "sha256": "10015dd440e9360ecc740d1c862c88efcefe9c279f0e0452cbb29c00ae754c30"
+  },
+  "jobs/B07-yahtzee-optimal/convert-tables.mjs": {
+    "bytes": 777,
+    "gitSHA": "d781fe8d8c26083dc641189a94b332a6143e8066",
+    "sha256": "82d2f42886770b5ca65a95bfdcd23b5d323fb6f3babd1cf4d59dfdf55373f0fc"
+  },
+  "jobs/B07-yahtzee-optimal/copy-tables.mjs": {
+    "bytes": 202,
+    "gitSHA": "f8d5c782444c2ff2dc916ae0568c8102ca9f1b5a",
+    "sha256": "b67e968da0ec32d8ccd4b0acb9d93c21bc1eb67639c8eb929adc42114bb28e13"
+  },
+  "jobs/B07-yahtzee-optimal/core-selfcheck.mjs": {
+    "bytes": 6014,
+    "gitSHA": "fb1e78f90bb8569ffe5153af7d7c6f90f87d34a0",
+    "sha256": "a65792b1806de3fd7b03f7cfe5213f3f77f9a0dc85ab9244e7fd73007973b7df"
+  },
+  "jobs/B07-yahtzee-optimal/full-checks.mjs": {
+    "bytes": 10869,
+    "gitSHA": "2df4ffe54f4f74db21aba3447f46433596cd8bcb",
+    "sha256": "15575e045c264150433c2871ae44154cb79efb5f4a58ab3a65dbafe4ed56552d"
+  },
+  "jobs/B07-yahtzee-optimal/generator.cpp": {
+    "bytes": 11794,
+    "gitSHA": "597a30a693a7bc05897a5b422fcf4db7b2b0994b",
+    "sha256": "4148ffd21aeb266a7f02420cd8b91118ecc5a97e01cca527d8a4ed2bd763c633"
+  },
+  "jobs/B07-yahtzee-optimal/independent/AUTHORING.md": {
+    "bytes": 2431,
+    "gitSHA": "50bb6529f9027ddbce6f22dc128a49538ca3a8cd",
+    "sha256": "2d1a3105916009a65b5f582d6d490e8f69d8654dc59d70d0435eabe6557407de"
+  },
+  "jobs/B07-yahtzee-optimal/independent/SEALED-SHA256SUMS.txt": {
+    "bytes": 1068,
+    "gitSHA": "bc4b2c099fc1ad59e60a0d40f6a3251a65820a85",
+    "sha256": "ccaf33d7691ee100c288950ecd5acbaf7b2ecfb9fab598708b096ef6baf5c32c"
+  },
+  "jobs/B07-yahtzee-optimal/independent/SELFCHECK.json": {
+    "bytes": 415,
+    "gitSHA": "1c25d51a0107c3b180b2b13e72511699776c736a",
+    "sha256": "b97872e45f3e04d3b0ad7be8325b4053e6137b61998136e38fa6fbabfedcf28b"
+  },
+  "jobs/B07-yahtzee-optimal/independent/generate.cpp": {
+    "bytes": 7844,
+    "gitSHA": "d7e1cb0822beaa00c4d8dd389c54f16ab1a64e69",
+    "sha256": "565d2607d7cb08f34499d0900d6e317bdbacab1c3a08fccece4ecc8bba04743e"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/ADAPTER-AMENDMENT.md": {
+    "bytes": 829,
+    "gitSHA": "ea34863151902d1754d1e7ffd7f16dc4ba546fc9",
+    "sha256": "6fb5de18097cb6f40c4849a8466c91f1eca27a993d2ec761f45f7c77d300f607"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/ADAPTER-V2-SEALED-SHA256SUMS.txt": {
+    "bytes": 2745,
+    "gitSHA": "7bdc5488a088482c73a99b10fcef3bc7e4c77fb1",
+    "sha256": "cb3b7538125c5264704995f42846e8b55de1e4563531f2e6876594937f5d7bb8"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/AUTHORING.md": {
+    "bytes": 4690,
+    "gitSHA": "eed4d444c560d8be92c136201f67412836d4dfa7",
+    "sha256": "5fe78d8d26132523b2a791baef328a0b264d375213c19337d61fa310c0c8925b"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/PARSER-SELFCHECK.json": {
+    "bytes": 451,
+    "gitSHA": "0a6484759d04b3eff8fe4647e35104fd86c84102",
+    "sha256": "45c2edc1890e434728dee56943384c66953459002c2fc0e09bb4aa57a7101917"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/SCORE-SELFCHECK.json": {
+    "bytes": 226,
+    "gitSHA": "23592c7f9556a55e6277c1cb01e99c13bc86fd2a",
+    "sha256": "babe4b6ff5a4205776e9b3daa0174e3ff93a452ffbaaaeca4ae767f291f8a92e"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/SELFCHECK-KEYS.bin": {
+    "bytes": 4000,
+    "gitSHA": "ad6132ed0dc986ed066e9709507f0b2347efa817",
+    "sha256": "07622d29af34e8550e767b1ddaf29e20f3bbef4901cf9733c56905588fe20761"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/SELFCHECK.json": {
+    "bytes": 430,
+    "gitSHA": "cbe9409e3db334e96a3eae7eed5a6ea69d9885f6",
+    "sha256": "329e84740b617f4ec65041117848a0784d3cdaa6ef8c68debbfbbdf64a3713f3"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/dump-reference.cpp": {
+    "bytes": 1394,
+    "gitSHA": "1e8ac5f5ca50ce43821782c2f8cf9d925595cd79",
+    "sha256": "c0c4090166fb4077dd2658ecaab84b1d43c1039ad07d3a5570699fc23aaf7eb0"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/generate-core.hpp": {
+    "bytes": 7511,
+    "gitSHA": "4d10d8252e755750511e255a6eab251522dcfc6a",
+    "sha256": "87a7d279b8cdfc1dcae3969e6b78597435fdcacd8ab37e1b4ad6fb93f96f97f8"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/native-reference.hpp": {
+    "bytes": 7464,
+    "gitSHA": "95af98f40568e1c4e872e890091cfad090d8ad96",
+    "sha256": "0eac29cd281196a1db687506ee2946b2ae3448d347e27b9b0961194b63cd87af"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/parser-selfcheck.mjs": {
+    "bytes": 4761,
+    "gitSHA": "6ea36cb8efb1effeae0279a37a2996c47fb114cf",
+    "sha256": "1ee829f0da42c8e07e3b54fff28f4ce2fb2fc52cb086affc0264ba7a62528afe"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/reference-verification.ts": {
+    "bytes": 11021,
+    "gitSHA": "b4d38f9e612134cba040737d75e8cf9e381eecbe",
+    "sha256": "4d3ec3ebf17c51c428e1095d681821fb01f9734796449374c891cf92b6cfcef9"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/score-selfcheck.cpp": {
+    "bytes": 1442,
+    "gitSHA": "7d20c5adec59b4e42dfe8e645721e5e1940e8ada",
+    "sha256": "8373ec0031ef44711481ebe0592542064d9ee351752b2b758d9d6621af2fc064"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/score-selfcheck.mjs": {
+    "bytes": 1483,
+    "gitSHA": "e770080a95e4e3f8da2aa265c92f1593e880b7b5",
+    "sha256": "991d539842aa093843484634703b402b7e6d6826bdc417dfcb6b5d97d5447f94"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/tsconfig.json": {
+    "bytes": 275,
+    "gitSHA": "73998a18a978a2b5ad32348719988bce0e41c166",
+    "sha256": "0831ba13eaa812f4f1da6554062d30e993a59e6e1e04b78653dc7eee9e0f2251"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/ADAPTER-SEALED-SHA256SUMS.txt": {
+    "bytes": 1191,
+    "gitSHA": "a5504d7821c0b558748eaeb74076d35be271a81c",
+    "sha256": "bbe0e619a9f9a54c717f3dfb39dfcddb1326aa7c4a9e7b38dcc2e3c4330b0a70"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/AUTHORING.md": {
+    "bytes": 4690,
+    "gitSHA": "eed4d444c560d8be92c136201f67412836d4dfa7",
+    "sha256": "5fe78d8d26132523b2a791baef328a0b264d375213c19337d61fa310c0c8925b"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/PARSER-SELFCHECK.json": {
+    "bytes": 451,
+    "gitSHA": "0a6484759d04b3eff8fe4647e35104fd86c84102",
+    "sha256": "45c2edc1890e434728dee56943384c66953459002c2fc0e09bb4aa57a7101917"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/SCORE-SELFCHECK.json": {
+    "bytes": 226,
+    "gitSHA": "23592c7f9556a55e6277c1cb01e99c13bc86fd2a",
+    "sha256": "babe4b6ff5a4205776e9b3daa0174e3ff93a452ffbaaaeca4ae767f291f8a92e"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/SELFCHECK-KEYS.bin": {
+    "bytes": 4000,
+    "gitSHA": "ad6132ed0dc986ed066e9709507f0b2347efa817",
+    "sha256": "07622d29af34e8550e767b1ddaf29e20f3bbef4901cf9733c56905588fe20761"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/SELFCHECK.json": {
+    "bytes": 430,
+    "gitSHA": "cbe9409e3db334e96a3eae7eed5a6ea69d9885f6",
+    "sha256": "329e84740b617f4ec65041117848a0784d3cdaa6ef8c68debbfbbdf64a3713f3"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/dump-reference.cpp": {
+    "bytes": 1394,
+    "gitSHA": "1e8ac5f5ca50ce43821782c2f8cf9d925595cd79",
+    "sha256": "c0c4090166fb4077dd2658ecaab84b1d43c1039ad07d3a5570699fc23aaf7eb0"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/generate-core.hpp": {
+    "bytes": 7511,
+    "gitSHA": "4d10d8252e755750511e255a6eab251522dcfc6a",
+    "sha256": "87a7d279b8cdfc1dcae3969e6b78597435fdcacd8ab37e1b4ad6fb93f96f97f8"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/native-reference.hpp": {
+    "bytes": 7464,
+    "gitSHA": "95af98f40568e1c4e872e890091cfad090d8ad96",
+    "sha256": "0eac29cd281196a1db687506ee2946b2ae3448d347e27b9b0961194b63cd87af"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/parser-selfcheck.mjs": {
+    "bytes": 4761,
+    "gitSHA": "6ea36cb8efb1effeae0279a37a2996c47fb114cf",
+    "sha256": "1ee829f0da42c8e07e3b54fff28f4ce2fb2fc52cb086affc0264ba7a62528afe"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/reference-verification.ts": {
+    "bytes": 11021,
+    "gitSHA": "b4d38f9e612134cba040737d75e8cf9e381eecbe",
+    "sha256": "4d3ec3ebf17c51c428e1095d681821fb01f9734796449374c891cf92b6cfcef9"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/score-selfcheck.cpp": {
+    "bytes": 1442,
+    "gitSHA": "7d20c5adec59b4e42dfe8e645721e5e1940e8ada",
+    "sha256": "8373ec0031ef44711481ebe0592542064d9ee351752b2b758d9d6621af2fc064"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/score-selfcheck.mjs": {
+    "bytes": 1483,
+    "gitSHA": "e770080a95e4e3f8da2aa265c92f1593e880b7b5",
+    "sha256": "991d539842aa093843484634703b402b7e6d6826bdc417dfcb6b5d97d5447f94"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/tsconfig.json": {
+    "bytes": 275,
+    "gitSHA": "73998a18a978a2b5ad32348719988bce0e41c166",
+    "sha256": "0831ba13eaa812f4f1da6554062d30e993a59e6e1e04b78653dc7eee9e0f2251"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/v1-snapshot/verify-stream.mjs": {
+    "bytes": 9667,
+    "gitSHA": "e9dc92ace881e1532e5f5b75a07db84e3fd9f4ee",
+    "sha256": "22337dcf43f195bc6d314962195dcb49280bc767887b03f02f8848b6c0dec781"
+  },
+  "jobs/B07-yahtzee-optimal/independent/native-adapter/verify-stream.mjs": {
+    "bytes": 10125,
+    "gitSHA": "a2b4c832f5712b32aaca15d4db71db7d4bc47c35",
+    "sha256": "e9d8b674cdedf1f39b165ba3f1040c8ebe7273a0e6db0e9839613e7ed203d0a0"
+  },
+  "jobs/B07-yahtzee-optimal/independent/official-progress.log": {
+    "bytes": 824,
+    "gitSHA": "a70fe071954d89b14293ea1f45e334f7ccc0e852",
+    "sha256": "b6f3ad5e161cb79266d6e806569d57f61282ca231875debfc754f6e13ad309d6"
+  },
+  "jobs/B07-yahtzee-optimal/independent/official-result.json": {
+    "bytes": 143,
+    "gitSHA": "300d1255e4444b7acaa0f25f4d23e94c1fa09179",
+    "sha256": "826c7d7f938ee8dd831d35b7ce08f79c23faea29f0dc7db08b3138f6dd4fc9ab"
+  },
+  "jobs/B07-yahtzee-optimal/independent/official.bin": {
+    "bytes": 8388608,
+    "gitSHA": "f4006515a61358b35bafeda60a9e0a6812d6eea6",
+    "sha256": "c26d041831a8a7ececb20e26689c6b142e00bc0900d4925d2a19547a16183709"
+  },
+  "jobs/B07-yahtzee-optimal/independent/package.json": {
+    "bytes": 68,
+    "gitSHA": "86cb17c19a401dcbb0401374a9ff99d8a0ef44b9",
+    "sha256": "e94f0913dc3dd26873f0f1f91ffbefae3d4a1a575b5be5313fdf5a9e6300caca"
+  },
+  "jobs/B07-yahtzee-optimal/independent/published-progress.log": {
+    "bytes": 840,
+    "gitSHA": "567a05efece2e72405973952b567218161d3d650",
+    "sha256": "ae05de74e00abf99fb4dcf81ac70a17318e2f0b2cfe776c852a866fa2e82d71e"
+  },
+  "jobs/B07-yahtzee-optimal/independent/published-result.json": {
+    "bytes": 145,
+    "gitSHA": "8641a2193c961306d5cf273daaef6b22b44eb556",
+    "sha256": "5137eb8c6b630363069efb786efc2317857a8341a2518f451d41a86d1169ea50"
+  },
+  "jobs/B07-yahtzee-optimal/independent/published.bin": {
+    "bytes": 8388608,
+    "gitSHA": "0f94df4d4953f32a674536d018610465ae0e759b",
+    "sha256": "2b807d950f7027b10c296f5e91874431d6f20db9c642f4e45b430d31b7758ab5"
+  },
+  "jobs/B07-yahtzee-optimal/independent/reference.ts": {
+    "bytes": 10956,
+    "gitSHA": "0224909e662bd3ecfde439140ac3a14907dbc3f1",
+    "sha256": "da544ba90e2c5638f06b811f8ed01279e7e471a8b7f94f12f51063e00a146982"
+  },
+  "jobs/B07-yahtzee-optimal/independent/selfcheck.mjs": {
+    "bytes": 5287,
+    "gitSHA": "7c634ad5a0db197582d332bd4baf3fe6663b969b",
+    "sha256": "64804775925acf3c36bf924a9199928b4a4b44c92fe48fbaebf8a0ee66b98aad"
+  },
+  "jobs/B07-yahtzee-optimal/independent/tsconfig.json": {
+    "bytes": 281,
+    "gitSHA": "e85f136ee72b5a9549e130f51143a089135562c3",
+    "sha256": "e66b4525fa0cf661b24b3ba01002b2174f2a0a3dde0d185b1328304c7c3d4a00"
+  },
+  "jobs/B07-yahtzee-optimal/mutate.mjs": {
+    "bytes": 5384,
+    "gitSHA": "743591eea4779108804134082571e1b87856da1c",
+    "sha256": "54c070c22a0cf54546fba00b12dbfd23fee88b0b9ede7a3b98656329c59f87cd"
+  },
+  "jobs/B07-yahtzee-optimal/package-lock.json": {
+    "bytes": 772,
+    "gitSHA": "9829971d185aa50ff902ab36543023016e8fdb94",
+    "sha256": "bdc8532206e665dbe121eda83ad865dad52ed1f794a59dac5955fceddb171a5f"
+  },
+  "jobs/B07-yahtzee-optimal/package.json": {
+    "bytes": 439,
+    "gitSHA": "39cfef5e0bd697f0c4e18040e719516508dcccb2",
+    "sha256": "413978a004c4cb04e4695ed104aae0e22f4d8193fd90551dfa3b20f8f9e5efa7"
+  },
+  "jobs/B07-yahtzee-optimal/paired-sim.cpp": {
+    "bytes": 8830,
+    "gitSHA": "1f2b7aa56ced0baea3f3da854c2ce41f06ce3bfc",
+    "sha256": "a16611c5fdb4d7cb89472d983f12541dc49789b1279120dec29311a82f9182c8"
+  },
+  "jobs/B07-yahtzee-optimal/partybox/__tests__/optimal-golden.json": {
+    "bytes": 183561,
+    "gitSHA": "6833b78e348ed81af1e46e6d9be73ecb2aad310f",
+    "sha256": "8134bd297bcf491d3f46ea7cc89c6399d8f5464cff3d4a6820335773a2bcd16b"
+  },
+  "jobs/B07-yahtzee-optimal/partybox/__tests__/optimal.test.ts": {
+    "bytes": 6436,
+    "gitSHA": "cf687ba349d3d72ccb572399ab7b9df9cad4e744",
+    "sha256": "6d24a9c0306dd2142ffe08ba6dee27620b797e7dfdf637727ee2a334660a1078"
+  },
+  "jobs/B07-yahtzee-optimal/partybox/build-golden.mjs": {
+    "bytes": 3195,
+    "gitSHA": "64e003a13b5b6ced6c905235472dd7286dda6dc3",
+    "sha256": "847ad79cc1b6c7c3a1ceb564056ee3e90fce2b5fff1fa41e17682ce8fa3424c8"
+  },
+  "jobs/B07-yahtzee-optimal/partybox/build-tables.mjs": {
+    "bytes": 3077,
+    "gitSHA": "57323f02339e423015b31a2aacfec262ecfe80b3",
+    "sha256": "eed5649a00379fe25bd9bd7b290bd192387f42f43769047113d5a3e0ffcffe97"
+  },
+  "jobs/B07-yahtzee-optimal/partybox/server/optimal/rules.ts": {
+    "bytes": 6174,
+    "gitSHA": "4049caffd56c07c66037f7bc2adb0bedcddb98fa",
+    "sha256": "07b4f400c64c00d6c5e9e4de7380ce49ad31bd25ab7ca540e2e45b6ba4bc7844"
+  },
+  "jobs/B07-yahtzee-optimal/partybox/server/optimal/solver.ts": {
+    "bytes": 6769,
+    "gitSHA": "678218449f5a404d351bb783d9c97440cb4d78cb",
+    "sha256": "53348b05115e832476e0f1957ae57c1513bde1376b09b023fa13cc9893982164"
+  },
+  "jobs/B07-yahtzee-optimal/partybox/server/optimal/tables-official.generated.ts": {
+    "bytes": 3836313,
+    "gitSHA": "c13531e4633a8c35e1a5889026c571b159b2ef9b",
+    "sha256": "b982f6cf07433fe5c14a24c50df2bca4313abd618f954fa1cde27213cef7fc6a"
+  },
+  "jobs/B07-yahtzee-optimal/partybox/server/optimal/tables-published.generated.ts": {
+    "bytes": 3836317,
+    "gitSHA": "0de99a4d8142f68354fbfdb4d67b68e3ebda2cbe",
+    "sha256": "ca43bf35aa7109b1e59ca1f04bfb41f949c2935fd3f631f2634718d3d2ef560f"
+  },
+  "jobs/B07-yahtzee-optimal/partybox/server/optimal/tables.ts": {
+    "bytes": 4416,
+    "gitSHA": "6f29a533756fa4b3a1155640c95c5c35926c7831",
+    "sha256": "e16f22e0f152d1f13557c6a49f3b42371be60a54d65d33f36a2e2107d27e0c19"
+  },
+  "jobs/B07-yahtzee-optimal/partybox/server/optimal-bot.ts": {
+    "bytes": 8058,
+    "gitSHA": "73c3b6c9ec4a5a13da9f58a6612e7f0e8fa5f62f",
+    "sha256": "494a6cac3253035fc4729bdc36b6c70f2f5b95e75a4efa9014decabd1c254956"
+  },
+  "jobs/B07-yahtzee-optimal/partybox/test-port.mjs": {
+    "bytes": 22128,
+    "gitSHA": "beba78f726512fec295fc9a51951b81af0e1ff58",
+    "sha256": "6669e0d8ed0903f574c2d81e809eef0564d3147f69ea801bf033e092f5924b54"
+  },
+  "jobs/B07-yahtzee-optimal/partybox/tsconfig.json": {
+    "bytes": 532,
+    "gitSHA": "89071f6358ddb6f123d10af120640a13da81d7fa",
+    "sha256": "0fc516b6e367ac1ab3b8f2d9f9c5a6bebdeb922fbf049c302f006872bfcc8b9d"
+  },
+  "jobs/B07-yahtzee-optimal/primary-bridge.mjs": {
+    "bytes": 2812,
+    "gitSHA": "7060524853d1dd944b41211b24fcd8f60100af21",
+    "sha256": "1c603d2570354af248484985bec9b0c9bec1113dd60f98c336c58fad99f51d39"
+  },
+  "jobs/B07-yahtzee-optimal/primary-snapshot/PRIMARY-SEALED-SHA256SUMS.txt": {
+    "bytes": 1631,
+    "gitSHA": "44fd3a58ea10caa24a2fed0ad23d1fe82f4264f2",
+    "sha256": "d69083a1c39fe5b6e40089e1c82fafd5fc40ee011691e84afc6bce68a0c06a4a"
+  },
+  "jobs/B07-yahtzee-optimal/primary-snapshot/yahtzeeOpt.ts": {
+    "bytes": 9862,
+    "gitSHA": "b2067385a9ecf3a6e3c3086cde8c70126b2b7296",
+    "sha256": "4e4933c5202f6e5f57ce5cb110b09f11cd6de7fda6432beb6f3825c274ec1222"
+  },
+  "jobs/B07-yahtzee-optimal/proof-selfcheck.mjs": {
+    "bytes": 2718,
+    "gitSHA": "2264b5b044d8f998748ca73ea47d44dd97522f86",
+    "sha256": "db3c0fe35175ce98625a42635b96e29984ae4bc328980474be8155c7bf638bb3"
+  },
+  "jobs/B07-yahtzee-optimal/report-session-selfcheck.mjs": {
+    "bytes": 4351,
+    "gitSHA": "49ed4602d78f143d7e13e076ae50033df2a25a81",
+    "sha256": "2be06c067c6ac5fdbe23d95d7fbfdb94803a4ffda4212615cd923f414a8bb23f"
+  },
+  "jobs/B07-yahtzee-optimal/report-session.mjs": {
+    "bytes": 3874,
+    "gitSHA": "ff97f09c269e58e36a600cbebbf2f518a7bd10ab",
+    "sha256": "8022dfed6311f44a54c6b112a585ff15ab656b0cda0603617e2c5e8324cd2cf5"
+  },
+  "jobs/B07-yahtzee-optimal/reports/action-superset-invariant.json": {
+    "bytes": 757,
+    "gitSHA": "1ab06295d0c2084eded0767aba77869b02d0aa71",
+    "sha256": "577feb0dc9da7a58c91121551382d63c40dec06784082ce3d83d93f0d21c9af5"
+  },
+  "jobs/B07-yahtzee-optimal/reports/bridge-official-seed-1.json": {
+    "bytes": 1269,
+    "gitSHA": "5fd35c4b7b04654d45d2769878d7be5a780c8b6d",
+    "sha256": "bd93b43fb1dff18334eccb015328a23b01277cadc46a183a9a186d0eae35b984"
+  },
+  "jobs/B07-yahtzee-optimal/reports/bridge-official-seed-2.json": {
+    "bytes": 1264,
+    "gitSHA": "5d8790e9b73c6986b4d11f2d6e3ee257ea9f6fa3",
+    "sha256": "1205ae4a2a817f7c47765b725bdce8a594ca4d27d6d20c6896cb66ea03cc54e6"
+  },
+  "jobs/B07-yahtzee-optimal/reports/bridge-official-seed-3.json": {
+    "bytes": 1263,
+    "gitSHA": "edde005c2bea50188491c4d57fd8546298250c3c",
+    "sha256": "5a38dcf48618ec97c2089a7de63cfa3b6260730c27960656a1503e0b4a93dd1a"
+  },
+  "jobs/B07-yahtzee-optimal/reports/bridge-published-seed-1.json": {
+    "bytes": 1269,
+    "gitSHA": "ed1ca70974b1e690fd0ef595634f0e1b8cfb2adb",
+    "sha256": "66b0f78fd8a50c7af8aa08fb638f3acc0152f4eded93cc24c68665563512f09e"
+  },
+  "jobs/B07-yahtzee-optimal/reports/bridge-published-seed-2.json": {
+    "bytes": 1264,
+    "gitSHA": "aa472667d8bd48f02105c8124a1decf20ed83ea9",
+    "sha256": "dd50be9e30c413253ccf970fdc0667434ff9c4f48737afa49920f2457cc260cd"
+  },
+  "jobs/B07-yahtzee-optimal/reports/bridge-published-seed-3.json": {
+    "bytes": 1263,
+    "gitSHA": "e34b17d5f41bd248e3913dbf8b215589fad9ab27",
+    "sha256": "288721d25c9fd03eec253bba0d8e529bfd5e4be461a855961364687ad2688f98"
+  },
+  "jobs/B07-yahtzee-optimal/reports/final-full-npm-test.log": {
+    "bytes": 59529,
+    "gitSHA": "06ebb7de40b290dbdc9fa36ab396e10c00007cfa",
+    "sha256": "658b67738b3ebf29d54d1749668ebf50963b6e88380728881788aabfafa183e8"
+  },
+  "jobs/B07-yahtzee-optimal/reports/final-local-receipt.json": {
+    "bytes": 918,
+    "gitSHA": "0388e5d24130edac14e5ebe153f6a3e9b62b0859",
+    "sha256": "fb46cc8e896b2bd709921d6faf6c17c02df61cf4f74ba256a1e73cd9736637f0"
+  },
+  "jobs/B07-yahtzee-optimal/reports/full-seed-1.json": {
+    "bytes": 21695,
+    "gitSHA": "833f196ab54716a63835a14bf842645c758472d1",
+    "sha256": "3a9697c87542bd83eccab8e6d150a5f7677677bc8081aaf9a09667e185fcd900"
+  },
+  "jobs/B07-yahtzee-optimal/reports/full-seed-2.json": {
+    "bytes": 21427,
+    "gitSHA": "0c6c7bce4df7435d7a981b6db5da57b661ef1593",
+    "sha256": "b057b916dbf82c4943c1de472db33b8bd556a5319855b81d76241f020e4625bf"
+  },
+  "jobs/B07-yahtzee-optimal/reports/full-seed-3.json": {
+    "bytes": 21684,
+    "gitSHA": "fe919de6fd8ec311badd69595990801920b869bd",
+    "sha256": "084dcb10c66d6386460f268400cfaef1a5cfb173e736478fe9e3d99f46f505d4"
+  },
+  "jobs/B07-yahtzee-optimal/reports/historical/full-pass-20261007T171451Z.json": {
+    "bytes": 79926,
+    "gitSHA": "30da80e794e210017c595446c8c6250fb4b4eb5c",
+    "sha256": "db2dabba4a7cb3db2c2551bac7cfe079a3b5f9a5c14ddd7dbb70cdcaea16180e"
+  },
+  "jobs/B07-yahtzee-optimal/reports/historical/full-pass-20261007T171451Z.log": {
+    "bytes": 58257,
+    "gitSHA": "48f9aaa17598e86823d9c7934cd2e98c70d0ad13",
+    "sha256": "0d18349e64a65a469aaff5975b51cb78ac60629844bf734c3d7b0134417a6901"
+  },
+  "jobs/B07-yahtzee-optimal/reports/historical/integration-changes-before-final-rerun.json": {
+    "bytes": 1000,
+    "gitSHA": "94231e382d135013f6930640bbacf0a36a15669e",
+    "sha256": "ce1badd71b420c5777a049fc3a516ff82fbf9da81112ccf97918bb147d9753b3"
+  },
+  "jobs/B07-yahtzee-optimal/reports/initial-generation-official.log": {
+    "bytes": 608,
+    "gitSHA": "a59c136f71625d80f09a40c979bfb508365092ac",
+    "sha256": "017c09517e083b43acf6bf37632ed7c56011f07e88d096be49390d7289abac45"
+  },
+  "jobs/B07-yahtzee-optimal/reports/initial-generation-published.log": {
+    "bytes": 609,
+    "gitSHA": "5bc5396516bba86fe7817b75cd1b746bc344308c",
+    "sha256": "a8f982b9c17749654b8605f2c21ad42c62520e4bdd21ed3986de3626982a3c8c"
+  },
+  "jobs/B07-yahtzee-optimal/reports/initial-integration.json": {
+    "bytes": 1344,
+    "gitSHA": "dde6ed477b89ffe82a773692f0cbe97a1fd90478",
+    "sha256": "266e57902ba4facce44df085c7057e4e5f19f8ee0c26e5fc4318cde01af7c4eb"
+  },
+  "jobs/B07-yahtzee-optimal/reports/initial-simulation-official-seed-1.json": {
+    "bytes": 280,
+    "gitSHA": "b60f3788b1071d123af8c700fbea091984d1825c",
+    "sha256": "a4d3ee647ec7f9c60cb4dc436f6764f93287ae1373085d07666c546b933a8730"
+  },
+  "jobs/B07-yahtzee-optimal/reports/mutations-seed-1.json": {
+    "bytes": 13247,
+    "gitSHA": "a059131c4305a57e7086da25f6907f98cb1896eb",
+    "sha256": "c31db77c237752c31e466f3bc36790d166268f5c2121a3ef9dcb0b728ad35bec"
+  },
+  "jobs/B07-yahtzee-optimal/reports/mutations-seed-2.json": {
+    "bytes": 12989,
+    "gitSHA": "93b266e2a8cfa20edeb22d0215ff92febc6edec5",
+    "sha256": "80687432fd33e02e947d15c16ad0ed87cc6b4887b72d6707060f18a49fbeba89"
+  },
+  "jobs/B07-yahtzee-optimal/reports/mutations-seed-3.json": {
+    "bytes": 13248,
+    "gitSHA": "a67f0328925b1c3fe826f13f3861fc55236fac62",
+    "sha256": "24b34e3140e2f8dbfae83683a3e4b37d2c1eab0cce95579d4a648892ee55868f"
+  },
+  "jobs/B07-yahtzee-optimal/reports/paired-official-seed-1.json": {
+    "bytes": 2451,
+    "gitSHA": "11d6c01d70b9458993a4c0a98e54989a6df10ccf",
+    "sha256": "947f3fa7e055155ed2a6d8c43a54b9802fc977963de14b6bf6d57bdea5b70847"
+  },
+  "jobs/B07-yahtzee-optimal/reports/paired-official-seed-2.json": {
+    "bytes": 2446,
+    "gitSHA": "6a789a7afdd59a9b8b43d325b14108849dfbf416",
+    "sha256": "f4396c7fd85e86fb5520aedce407589fa7952336247a0c2b4c4099cfd8af6770"
+  },
+  "jobs/B07-yahtzee-optimal/reports/paired-official-seed-3.json": {
+    "bytes": 2447,
+    "gitSHA": "dad14901442e9132fc64f8c11ace9dd175d8aad7",
+    "sha256": "f14aaefad6c69c3c957d344e4f8100a998ee2fd63d448322c9d71c0d6a4fc49b"
+  },
+  "jobs/B07-yahtzee-optimal/reports/paired-published-seed-1.json": {
+    "bytes": 2454,
+    "gitSHA": "8e4d0ee3bd6471f6bd223aad51c52e6dcb785ffc",
+    "sha256": "1e1a0bb687c4a0404cde0ac015c0fb031e8ee80563ec9f20fb578e2b138974f7"
+  },
+  "jobs/B07-yahtzee-optimal/reports/paired-published-seed-2.json": {
+    "bytes": 2449,
+    "gitSHA": "a33fca5ea6e603352a7b91bf8a123e8c6b13c7c0",
+    "sha256": "9a36108d2a00d53341b318c5c09bf37654e26acea280b2e9d8a287c07f424cdf"
+  },
+  "jobs/B07-yahtzee-optimal/reports/paired-published-seed-3.json": {
+    "bytes": 2446,
+    "gitSHA": "fbb7e6c56c71deb1cbe641a5658fb245a096d79d",
+    "sha256": "f5db8ec8c3b689e50ba24db40981868382defb94465080a53da8c0ffb7085fc2"
+  },
+  "jobs/B07-yahtzee-optimal/reports/partybox-port.json": {
+    "bytes": 6993,
+    "gitSHA": "4a8eb97065bbc106c5e2dfc989303790fdba1efd",
+    "sha256": "23cb9b11dacb54718e3a272a5ae45fb64f119681331f99b48c5ade10788e5805"
+  },
+  "jobs/B07-yahtzee-optimal/reports/pre-repair-null-mode.json": {
+    "bytes": 280,
+    "gitSHA": "d9b5068904e391ccf6457cd9a04b45efadd369d9",
+    "sha256": "d2c10109053016aeaf4f3f08496eae4cf317bfde3c9350dcf68cd41394c1d008"
+  },
+  "jobs/B07-yahtzee-optimal/reports/proof-cache-selfcheck.json": {
+    "bytes": 291,
+    "gitSHA": "ab7a74e2f3b6f3abb125ed989b9fd0765bbaadc7",
+    "sha256": "78e37a61376317ddcc751eae9ecacb38e93f7a8f49c8f1f4efa481d221e9d4f1"
+  },
+  "jobs/B07-yahtzee-optimal/reports/publication-document-changes.json": {
+    "bytes": 977,
+    "gitSHA": "a4ad344da7f1f7962eaa63f510f7ccedf20c5cb2",
+    "sha256": "8cfe832cd9ebd2bde8e6612bda229f66d8a2d9bab2dec31aa2ccd0708acdddbd"
+  },
+  "jobs/B07-yahtzee-optimal/reports/random-seed-1.json": {
+    "bytes": 609,
+    "gitSHA": "81752fe84a38a78306ebdbe73c1e500182f7c511",
+    "sha256": "a6f63feda67b1fd03a108b42be281bbc5bab780536d0c626dc1f42e90613c183"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/STANDALONE-PRIMARY-PREFLIGHT.json": {
+    "bytes": 1006,
+    "gitSHA": "73dcd7a155df62e6f7faf1d820b9cf76a1871ea5",
+    "sha256": "8d8ad3dd2acb8b9aba3f9234c8feeba17803410882a7dcc5fc489c46f61bf7b2"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/B07.yml": {
+    "bytes": 815,
+    "gitSHA": "ead399c18fdb4e6e024c7c8cbac310425339cf75",
+    "sha256": "09b4367668bbc29168163aa0b9125b2d321e96de0dbe171fd080d1ddb2820235"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/COMPILED-BOUNDARY-AUDIT.json": {
+    "bytes": 405,
+    "gitSHA": "c61ba3707aea2951c1cb433d13d3ba3ad0803549",
+    "sha256": "db14e29659f7e46554e18d655b8a32a31fc58334033d67e467849b6b8f1ae70c"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/CURRENT-903-FULL-ACCEPTANCE.json": {
+    "bytes": 2766,
+    "gitSHA": "b43c8783fa62dddcae99ee3f47672ca81c2a2ca2",
+    "sha256": "31fca5a2192339cacf8667d8ed55da3528f82fc8f23aca67be36e1011fbdb991"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/NUMERIC-SEAL-AUDIT.json": {
+    "bytes": 1403,
+    "gitSHA": "a6a30be8a696d05f2acb9e95c625a48d5455d494",
+    "sha256": "a9f2442f4b1e1646418ff4f4216408f87176905bcd54adf6ec6ac804e6f2b7f7"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/ORIGINAL-RERUN-DEFECT.json": {
+    "bytes": 684,
+    "gitSHA": "38dcab11cb4dd819db6c22479b77cc526a16123c",
+    "sha256": "a4aeab998b64d6aa989e160d1638e22313eea89d311c3a5fc19c0d8bb41c92ec"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/compiled-audit.stdout": {
+    "bytes": 368,
+    "gitSHA": "1857672eae8eaa14d281f3e636e7372bb4feaf1e",
+    "sha256": "c954727c10fe0cb85851102e2b5c08f85cb6c8f26e59f8a3b3c4da274623aed8"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/current-903-full-native.log": {
+    "bytes": 84070,
+    "gitSHA": "8d56fcea5249ce129ce081b92fabd63925e15e1b",
+    "sha256": "8d8089eeb16d1d0b6edafdeec8fc61a76571ed77cabf1d46285e94f55d10f0cb"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/current-903-official.zip": {
+    "bytes": 2598244,
+    "gitSHA": "d7152aa1c6f71a27991fe89165a4e7d0a5ac5763",
+    "sha256": "a18f5c80b16c95ffac5a85d5a886bf1e1dbfccb77edc18ae071071241cf290e5"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/native-artifacts.json": {
+    "bytes": 866,
+    "gitSHA": "1225d7670d42f9bf98e51097bfc2fee2c06c538f",
+    "sha256": "352f523d959b3faf6189b1ae9943c19f6e9333879c242b27e6f78cb48f0fc060"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/native-jobs.json": {
+    "bytes": 1474,
+    "gitSHA": "fb1d852b3fb49e46878bf3698a48fda407854ff3",
+    "sha256": "2d638d92d5bcf45428b020e612e0221b54cc1cc8fd4dd1dc37f845e3d5292516"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/native-run.json": {
+    "bytes": 15458,
+    "gitSHA": "9a51c87f6afe1569b272fb91be1d96cdfe0e526c",
+    "sha256": "08e05171e66b7bd367aed6586cff2d12753a34886f8d2ece329c5a9a70349563"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/native-source-tree.json": {
+    "bytes": 55557,
+    "gitSHA": "fda3cc5eb059fbbd63a5b0d88fe4ababf81484bc",
+    "sha256": "2f2d4afe8b20fa20fc9e38fbf49c0af20165d4e48630b3c5eeba3e9c491f824f"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/original-second-run-rejection.stderr": {
+    "bytes": 896,
+    "gitSHA": "74728d7aba9ff9dc7473510d0ec2f020a04a2e56",
+    "sha256": "99c5b5480ebe9e12873388ecc731bed703c2e570064516822bb9ffdd10e34a6c"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/original-second-run-rejection.stdout": {
+    "bytes": 0,
+    "gitSHA": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/original-current903/run.mjs": {
+    "bytes": 9635,
+    "gitSHA": "154a5c545ac14c621399adfe79d4c516f4069266",
+    "sha256": "eb7cfdd7276512bd3d34d5aa5f3830cb38d22a121a01aed2b7883e2cb1b7a79c"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/report-session-partial-check.json": {
+    "bytes": 893,
+    "gitSHA": "2d6cfff3781fe023b48cd8f606eaeb7852bb8a5b",
+    "sha256": "34df8174af2d4e232f4c06066330bf333737cf68248213b09024327063b0f248"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/standalone-positive-official.stderr": {
+    "bytes": 0,
+    "gitSHA": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/standalone-positive-official.stdout": {
+    "bytes": 608,
+    "gitSHA": "a59c136f71625d80f09a40c979bfb508365092ac",
+    "sha256": "017c09517e083b43acf6bf37632ed7c56011f07e88d096be49390d7289abac45"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/standalone-positive-published.stderr": {
+    "bytes": 0,
+    "gitSHA": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "jobs/B07-yahtzee-optimal/reports/recovery-20261009/standalone-positive-published.stdout": {
+    "bytes": 609,
+    "gitSHA": "5bc5396516bba86fe7817b75cd1b746bc344308c",
+    "sha256": "a8f982b9c17749654b8605f2c21ad42c62520e4bdd21ed3986de3626982a3c8c"
+  },
+  "jobs/B07-yahtzee-optimal/reports/research-exa-raw.json": {
+    "bytes": 116291,
+    "gitSHA": "2c93452db71e8172402ed6aeb3593693a2a80c1c",
+    "sha256": "e9bf6b6d471eeb06ba174ca90350323a629b67e12bffbddbc617bdc7dc497779"
+  },
+  "jobs/B07-yahtzee-optimal/reports/root-full-table-differential.json": {
+    "bytes": 1339,
+    "gitSHA": "32c6d743196b3c7f36954910fcb0e6b28dbd7111",
+    "sha256": "c4c41223f123b263b097062c6b9b94beb84e8d38f12b77e737e984896edecbbe"
+  },
+  "jobs/B07-yahtzee-optimal/reports/simulation-official-seed-1.json": {
+    "bytes": 696,
+    "gitSHA": "daf9611ec4cf78cbb1c07946cf95f0deda902af7",
+    "sha256": "63148f63d3b0e91e2911e1d0e0f43e047cf1186073686744e6bee37e910f3a7f"
+  },
+  "jobs/B07-yahtzee-optimal/reports/simulation-official-seed-2.json": {
+    "bytes": 688,
+    "gitSHA": "9a1419f19a80b63766a66fbae3571fa68d3fe52e",
+    "sha256": "f70af933c20bb73d35b951ea7df4ccb1f811978cccf0c5b234911d65b2677ea7"
+  },
+  "jobs/B07-yahtzee-optimal/reports/simulation-official-seed-3.json": {
+    "bytes": 688,
+    "gitSHA": "4ff78971d05ff339bbfaec00a41c93aa42d1911e",
+    "sha256": "994a202bdb618bbd99517d42314e7045d3183878b8ff88385a71256bff095b98"
+  },
+  "jobs/B07-yahtzee-optimal/reports/simulation-published-seed-1.json": {
+    "bytes": 697,
+    "gitSHA": "97afaf78bf591d9ee3724e8e4e9468b64cacb53a",
+    "sha256": "17c3fd0edfeda10fc1e2cf75aaa22b28d186414312b7d966eb9d52f6326a589d"
+  },
+  "jobs/B07-yahtzee-optimal/reports/simulation-published-seed-2.json": {
+    "bytes": 698,
+    "gitSHA": "cfa737067febcbf0cbadf5156a709f2b1efd89d4",
+    "sha256": "3993cec2c40efb22611f3b477a0dc2a0d5ea5ac91bf95edb90b43409c558cb47"
+  },
+  "jobs/B07-yahtzee-optimal/reports/simulation-published-seed-3.json": {
+    "bytes": 689,
+    "gitSHA": "ce6fac515ce3f81406d2de3def6d60cfe778bf55",
+    "sha256": "b392115c1286e4c337fb49ab4b0e83d1c2ccbd11fffbbc33a4edf6e2ea996625"
+  },
+  "jobs/B07-yahtzee-optimal/reports/summary.json": {
+    "bytes": 80660,
+    "gitSHA": "15b89ada4aa5c4b95328d98487850648cf7a7acf",
+    "sha256": "2144b1f1967e97d3055f7bfecadc744d3a85f17ac916b52ba00675cc497dea52"
+  },
+  "jobs/B07-yahtzee-optimal/reports/verification-seed-1.json": {
+    "bytes": 1742,
+    "gitSHA": "f6b9064a93c1ffe733a155a7a423faa9834803e0",
+    "sha256": "9ef59ab54e83fe13cd88144f838ad9e95bad62aebdbccf07af211433f3a25472"
+  },
+  "jobs/B07-yahtzee-optimal/reports/verification-seed-2.json": {
+    "bytes": 1742,
+    "gitSHA": "ab45b59ab349f7131755a37abaa98b893e1dd193",
+    "sha256": "0db426605f026e6d3cfc07857611adc3b98d17264a09c84dd8dd92aa77e6a671"
+  },
+  "jobs/B07-yahtzee-optimal/reports/verification-seed-3.json": {
+    "bytes": 1742,
+    "gitSHA": "31443af849738886a1aeb7a9ccc63bb31dcd03ec",
+    "sha256": "9a758c160ac99d842a88e132a09be4183290fb3b31769e514c710e406c019e16"
+  },
+  "jobs/B07-yahtzee-optimal/reports/visited-official-seed-1.bin": {
+    "bytes": 656588,
+    "gitSHA": "8637b9da89c66dc3cf06148d93d45e5e25e91611",
+    "sha256": "e210d2e980eb3a43d0b9f1064c131de943c74972e90bdca263b8b1a9c0935261"
+  },
+  "jobs/B07-yahtzee-optimal/reports/visited-official-seed-2.bin": {
+    "bytes": 657612,
+    "gitSHA": "02fa837a3c23821067ec61097412c4a1fba9be97",
+    "sha256": "28115e8c19b94d6f99016aad1f12599e1b6964959735094c4dd90455fe143669"
+  },
+  "jobs/B07-yahtzee-optimal/reports/visited-official-seed-3.bin": {
+    "bytes": 657456,
+    "gitSHA": "b50dd8fa47d02dedeff156332f22dce2ba8eccc3",
+    "sha256": "acf6c9017bec03b401a5bd4b75e56b3c2e728d2c68ebecb208f8ed607423b962"
+  },
+  "jobs/B07-yahtzee-optimal/reports/visited-published-seed-1.bin": {
+    "bytes": 656872,
+    "gitSHA": "68ac311a5e70367b99e070e4757f6562a3d7fc6b",
+    "sha256": "332ccd390a7410f3f92e4a280604bf2d1f591be3fc626c38c5e4772f47d79ddc"
+  },
+  "jobs/B07-yahtzee-optimal/reports/visited-published-seed-2.bin": {
+    "bytes": 658040,
+    "gitSHA": "5bb058d8a8f20512fd44c7f34e9d42748ade61df",
+    "sha256": "a0db78606b9e4ce6e04cb2c73c56ecefa345f102395d8df5a3c153e6ce0af729"
+  },
+  "jobs/B07-yahtzee-optimal/reports/visited-published-seed-3.bin": {
+    "bytes": 656964,
+    "gitSHA": "d62b0080419c4ecab230cde03e343e3bdb3590db",
+    "sha256": "0c95c0e7054f38dfdae73d87180cd118931df7b0c9f6c3fbee3a0dfa61abf0c7"
+  },
+  "jobs/B07-yahtzee-optimal/run.mjs": {
+    "bytes": 1702,
+    "gitSHA": "c8e00d9477b52695434323e8f20ece0cad344c4b",
+    "sha256": "4081d1264bc4b98423b0ad245fc8045aad30f2d1959bbef8d41138e5e3c46480"
+  },
+  "jobs/B07-yahtzee-optimal/simulate.mjs": {
+    "bytes": 3409,
+    "gitSHA": "875922dd09e16b56322255d678fcf5a441be4b91",
+    "sha256": "8fb087f2d723d014f8fd038f46aa43bd748f119f1c28c95bf49fcebc41786c03"
+  },
+  "jobs/B07-yahtzee-optimal/tables/METADATA.json": {
+    "bytes": 435,
+    "gitSHA": "bc8588124a9b5dd7951b3a4dad9ed9b881575062",
+    "sha256": "6f3702eea9d3f956a855c4cc2b4956ef7d8f20f19944e80588477ec7e4be9e0b"
+  },
+  "jobs/B07-yahtzee-optimal/tables/official.bin": {
+    "bytes": 8388608,
+    "gitSHA": "d5da52d23a0a537dc96dffd4291952329315fee9",
+    "sha256": "6e93512a9b983afa721f6a7f1c51261a3d464f469b6c89a0c21e689efd76cbe1"
+  },
+  "jobs/B07-yahtzee-optimal/tables/official.json": {
+    "bytes": 12438459,
+    "gitSHA": "6d6973597643c20a82950b56288fa421ea9a3851",
+    "sha256": "665238f92971b722452ec3e490315d8479d623899798053afd6e4688b0954726"
+  },
+  "jobs/B07-yahtzee-optimal/tables/published.bin": {
+    "bytes": 8388608,
+    "gitSHA": "72b4e5e7615731f2d0b3ae734858bf3e3fff9150",
+    "sha256": "2b2f401a4d6588decb2fbdab46eb86989d8ce6faa8f4a677b534306bb93b314c"
+  },
+  "jobs/B07-yahtzee-optimal/tables/published.json": {
+    "bytes": 12437673,
+    "gitSHA": "8489415b7f5e7cd10c5c11f11d264664dd25d2d6",
+    "sha256": "80457c9fc93f04c0bf38bcb51c04272b9a4a2eb28d04c4b1bd854c0fca844a06"
+  },
+  "jobs/B07-yahtzee-optimal/tables.d.ts": {
+    "bytes": 97,
+    "gitSHA": "1271356af2e3e600309f0e231fda661f9860d195",
+    "sha256": "cb1925f8dca1b0f5ac671d0dbaea07622cbbc48cbabd1eb928ac9e222177296c"
+  },
+  "jobs/B07-yahtzee-optimal/test.mjs": {
+    "bytes": 11106,
+    "gitSHA": "0b10d249a2f3714eccf1de6389481597a422187e",
+    "sha256": "b89c9ea01da7a699c0b819fbc97934f8992ac3755959a9ff8e74866b51c8dac5"
+  },
+  "jobs/B07-yahtzee-optimal/tsconfig.json": {
+    "bytes": 436,
+    "gitSHA": "b8143a399ac2da4db8caea0a97936e4965ec39a4",
+    "sha256": "528517dba7fe0086e4f87e3ec5836e9767206d3adaa772f0d850baa6216a3717"
+  },
+  "jobs/B07-yahtzee-optimal/verify-seed.mjs": {
+    "bytes": 708,
+    "gitSHA": "72ff82c527169e97b89dc6946c3751a3b8509479",
+    "sha256": "e766b352f4121a884a1ff81e7feffa9c9867bc1463aaae7dab899b0ff95eb52d"
+  },
+  "jobs/B07-yahtzee-optimal/yahtzeeOpt.ts": {
+    "bytes": 9887,
+    "gitSHA": "c51c3c80b595ec959d4e4f6c36b7f2b93807227c",
+    "sha256": "878f038112b2a12a5bd9f0ecaed375b89360cfa0e7894fc91ec4cc923f4de0fa"
+  },
+  ".github/workflows/B07.yml": {
+    "bytes": 845,
+    "gitSHA": "68206d33336c88535ce570da705bb6db49887122",
+    "sha256": "060d4b5edc369854cca3502c2903c75bba1d6372faa7259c6227f5fb83e75f2f"
+  },
+  "jobs/B07-yahtzee-optimal/SHA256SUMS.txt": {
+    "bytes": 22082,
+    "gitSHA": "1a03613291a98b266a902c6c764d09a7644b9ea0",
+    "sha256": "81af2f2e0c76b1d8053d9591eb0b3225d592c2ec667650fa29bb32432db374c2"
+  }
+}

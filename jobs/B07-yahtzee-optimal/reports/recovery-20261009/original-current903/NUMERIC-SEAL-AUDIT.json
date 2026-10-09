@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "source": "90378abaaa7cbc3f4a61b58087c1ea4a9f4a8b26",
+  "independentFinitePairs": 1072896,
+  "independentTableRows": [
+    {
+      "mode": "official",
+      "validPairs": 536448,
+      "maximumDifference": 8.526512829121202e-13,
+      "worstIndex": 245800,
+      "primaryEV": 254.58772873449593,
+      "independentEV": 254.5877287344961
+    },
+    {
+      "mode": "published",
+      "validPairs": 536448,
+      "maximumDifference": 9.379164112033322e-13,
+      "worstIndex": 368677,
+      "primaryEV": 254.58960948196315,
+      "independentEV": 254.58960948196366
+    }
+  ],
+  "actionSupersetPairs": 536448,
+  "minimumModeGap": 0.0,
+  "maximumModeGap": 0.15396235930569446,
+  "originalSeals": [
+    {
+      "manifest": "PRIMARY-SEALED-SHA256SUMS.txt",
+      "files": 19
+    },
+    {
+      "manifest": "independent/SEALED-SHA256SUMS.txt",
+      "files": 13
+    },
+    {
+      "manifest": "independent/native-adapter/v1-snapshot/ADAPTER-SEALED-SHA256SUMS.txt",
+      "files": 14
+    },
+    {
+      "manifest": "independent/native-adapter/ADAPTER-V2-SEALED-SHA256SUMS.txt",
+      "files": 30
+    }
+  ],
+  "sourceBlobsUnchanged": 153,
+  "elapsedSeconds": 1.1321063041687012,
+  "completedUTC": "2026-10-09T07:41:36Z",
+  "scope": "Own finite exhaustive read-only comparison of delivered independent tables and all original seals; no fresh generation or full simulation rerun claimed."
+}

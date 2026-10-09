@@ -147,3 +147,80 @@ Failure found and fixed in this pass: the first `test-port.mjs` run after the ea
 Corrections to the record (INTEGRATION.md, "This pass (continued)" lists each one): the roll-log files, the `bot.ts` header and signature, the ADR number, the Joker default, and removal of two unsupported figures (solo averages; `stuck×76`).
 
 Still not run here: `pnpm verify` (the whole gate, including fuzz replay, build, drift and i18n) on the port. CI on the pushed head is recorded in the PR, not in this file.
+
+## Complete followup proof, 2026-10-09
+
+Exact source `9c14f8525a2c7eda2acd50974b3781d1e0d74e0b` passed the
+unchanged full Ubuntu / Node22.16.0 workflow:
+[run37902011418](https://github.com/luisitin/partybox-gpt-drops/actions/runs/37902011418),
+job113726516680. Genuine artifact11603280899 is5,058,453 bytes, SHA256
+`1c71e460976527b2024ac4911cf9a58c3c7963678bdb6626da9464d74ddb7bc4`.
+The independent whole reader accepted it at2026-10-09T08:07:08Z:
+all80 safe unique ZIP members with full CRC/EOF,173 native delivery inputs,
+99 immutable fingerprints,97 complete native JSON records,72 original report
+hashes restored exactly and79 actual fresh output reports bound to the
+restoration receipt. The complete87,299-byte native log has SHA256
+`aed67ff9a281e8b2164074d310bb1603f33389542e3d1f0f60bf23113abc8315`.
+
+Every mode in every seed executes the actual standalone primary generator:
+six full regenerations, each536,448 valid /1,048,576 total entries and359,616
+canonical components. Each complete output binary matches its shipped table.
+All original three-seed gates also pass:150,000 midgames,606,528 scoring cases,
+75 separately strict-compiled/runtime-killed mutants,six million paired games,
+234M decisions,78M scoring transitions and985,883 visited component vectors.
+The original19/13/14/30-file seals and all port-kit gates pass, including16
+port mutants,16,644 bitwise differential states and1,800 adapter games.
+The complete report-session47-assertion control suite also ran.
+
+A separate actual expected-failure replay executed the current full wrapper
+against a deliberately invalid owned summary. Both child and final delivery
+manifest rejected it with exit1; failed outputs were archived and inputs
+restored. The controlled fixture was then removed and every published input
+restored. This proves rejection/restoration, not a semantic full pass.
+
+The original current903 full evidence remains under
+`reports/recovery-20261009/original-current903/`.
+The complete9c14 official archive, native log, source metadata, reader and
+post-pass receipts are preserved separately under
+`reports/recovery-20261009/current-9c14/`.
+A handoff commit containing this evidence is a new head: its own whole hosted
+verification is pending as of publication. Only the actual exact final-head
+workflow and whole fresh archive can close that final gate; see the followup
+PR24 body for subsequent native acceptance. Original Ready PR21 and canonical
+903 remain unmerged and unchanged.
+
+The official/published mathematical conflict, independent IEEE754 comparison
+tolerance and unrun full private PartyBox integration remain explicit.
+
+## Post-pass KEEP and remaining verification
+
+2026-10-09 post-full KEEP1: inspected every inherited full-test gate by
+removing only the explicitly added report control, six primary-regeneration
+operations and primary receipt field from the actual current driver. The
+remaining bytes exactly equal original903 run.mjs. Removing only the fresh
+artifact path from the current workflow exactly reproduces its original
+bytes. Every173 published delivery input remained unchanged. No further
+source gain found.
+
+2026-10-09 post-full KEEP2:18 actual report transport assertions cover
+concurrent lock rejection before callback execution, empty/binary/Unicode/deep
+original reports, successful output export, failed code5 output retention,
+original-input restoration and both retained invocation directories. The
+published helper passed; no further source gain found. These are actual
+transport controls, not extra solver semantic counts.
+2026-10-09 post-full KEEP3: fresh strict TypeScript5.8.3 compilation of the
+unchanged published solver and port passed1,714 actual assertions, including
+all548 golden states, malformed/full-card inputs, forced/published Joker
+behavior, bonus boundaries, immutable caller inputs and adapter fallbacks.
+All173 published9c14 input hashes stayed frozen. Natural close08:25:41.406Z,
+actual Node24.19.0. No further substantive source gain found. Together with
+KEEP1 and KEEP2 this exhausts the remaining verification gaps; further
+changes are cosmetic. Preserve every original game/model/contract byte.
+
+## UNVERIFIED — current publication and integration
+
+The exact new handoff-head hosted whole verification is pending AS OF THIS
+PUBLICATION. The9c14 proof establishes its source only. PR24 records the final
+native exact-head run, complete archive digest and whole acceptance only after
+actual closure. All private-product whole verification/port limitations and
+original official/published target conflict remain unchanged.
