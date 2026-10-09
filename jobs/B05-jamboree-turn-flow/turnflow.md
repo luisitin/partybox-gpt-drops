@@ -92,7 +92,7 @@ Showdown, Item, Duel and VS interruptions are distinct from the ordinary round-e
 
 ## 4. End of round and minigame selection
 
-After all four players have moved, a minigame concludes the round. [ROUND01](SOURCES.md#round01) — single_source; medium confidence.
+After all four players have moved, a minigame concludes the round. [ROUND01](SOURCES.md#round01) — corroborated; medium confidence. Independent authored four-player/round description added; final-round and event-priority exceptions remain open.
 
 Vote offers three minigame choices; all four players vote. [ROUND02](SOURCES.md#round02) — single_source; medium confidence. The independent player report confirms three choices and a random player-choice selection, but omits explicit four-voter cardinality. The complete row remains single_source; weights, tie effects and repeat suppression are not inferred.
 

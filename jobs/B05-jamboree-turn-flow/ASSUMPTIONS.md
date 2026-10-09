@@ -17,3 +17,11 @@
 - Both fresh full Exa passes completed against all 26 URLs. UTC capture times record observed pass completion, not invented origin response clocks; identical page bodies may be cached. Original HTTP status, TLS, patch/build and playable game frames were not exposed.
 - Only the four literal core statuses/citations change. Three corresponding effect records follow them; all unknown caps/overflow, precise Bonus counters, tie procedures, random sampling and event priorities remain unchanged. PRO05/PRO06/PRO09 were explicitly reviewed without promotion.
 - Existing failed video-access receipts and the entire original Git delivery are preserved. A schema, a quote recovery or a green draft CI result never substitutes for unresolved factual requirements.
+
+## One literal round-end recovery — 2026-10-09
+
+- A separately authored firsthand introductory paragraph establishes the four-player/round core, not all of its later claims. The Lucky Bonus example is excluded as a source reliability limitation.
+- Nintendo regional copies share one lineage. The Mac Weekly author is a separate editorial lineage; no syndicated wiki/tracker is double-counted.
+- Full27-page Exa A/B calls are real, but matching returned bodies may be cached. No origin HTTP freshness, Switch hardware, installed patch, playable frame, verified speaker or invented video mm:ss.
+- Only22 new Mac Weekly quote words are retained; zero new Cel/Namu words. Full copyrighted contexts remain private.
+- Original official e6 archive/raw audits, original75-file snapshot and original strict gates remain intact. Original four-fact scope uses authentic archived data; a separate current scope checks every other94 claim unchanged and rejects14 actual malformed amendments.

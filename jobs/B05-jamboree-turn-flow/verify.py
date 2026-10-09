@@ -205,7 +205,9 @@ def run(mode: str, checksums: bool) -> int:
     passed('NEGATIVE_REJECTION_CASES', len(negatives) + caught + stale_caught)
     import runpy
     scope = runpy.run_path(str(ROOT / 'verify_evidence_scope.py'))
-    passed('FOUR_LITERAL_CORE_SCOPE', scope['run'](ROOT, data))
+    legacy_data, recovery_cases = runpy.run_path(str(ROOT / 'verify_recovery_scope.py'))['run'](ROOT, data)
+    passed('FOUR_LITERAL_CORE_SCOPE', scope['run'](ROOT, legacy_data))
+    passed('ROUND01_RECOVERY_SCOPE', recovery_cases)
     files = [p for p in ROOT.rglob('*') if p.is_file() and '__pycache__' not in p.parts]
     workflow = ROOT.parent.parent / '.github/workflows/B05.yml'
     require(workflow.is_file(), 'Missing B05 delivery workflow')

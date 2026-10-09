@@ -4,7 +4,7 @@ What this is: a ranked read of the party-board flow and bonus-star logic in this
 
 ## 1. Turn structure (ranked by how much to copy)
 
-1. **A round is closed by a minigame that every player feels.** One round means four moves, then one minigame (ROUND01, single-source). Copy it. It gives each round a payoff. The host is the ADR-087 minigame mode, which lives in the owner's local main and the satellite contract, not in this checkout.
+1. **A round is closed by a minigame that every player feels.** One round means four moves, then one minigame (ROUND01, corroborated at medium confidence). Copy it. It gives each round a payoff. The host is the ADR-087 minigame mode, which lives in the owner's local main and the satellite contract, not in this checkout.
 2. **Decide on the phone, move on the TV.** Item use, roll and branch are phone choices. The walk is a TV spectacle. The drop's ordering is open, so the split is a design choice, not a sourced fact.
 3. **Stars are bought while passing.** A Star purchase can be offered without landing on it (TURN03, medium). Good: the decision comes mid-motion, so there is tension without a stop. Watch the wallet check on every pass.
 4. **A visible last lap.** Homestretch fires with five turns left (HOME01, single). Blue and Red swing to plus or minus six (HOME02, single). Pro keeps those values (PRO03, medium). This is the strongest pacing device in the drop. Copy the idea, not the wording.
@@ -39,3 +39,7 @@ Ranked by fit with existing PartyBox pieces, clarity of evidence and risk.
 - Pick the tie and no-recipient rule (an ADR is needed).
 - Confirm the player range. This drop supports four; two and three are unverified.
 - Confirm whether Pro and Frenzy ship as settings variants (recommended) or as separate modes.
+
+## 2026-10-09 round-end recovery status
+
+Current research is partial:38/95 facts,3/9 Bonus criteria,0/9 tie procedures. Earlier CI links above are historical. ROUND01 alone gains independent corroboration; no turn priority, payout or exact-string expansion. Current delivery proof and remaining evidence needs are in VERIFY.md, NEXT.md and PR9.

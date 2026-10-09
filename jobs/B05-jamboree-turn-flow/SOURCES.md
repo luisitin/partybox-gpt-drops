@@ -1,6 +1,6 @@
 # B05 — Sources and claim quotations
 
-Research date: 2026-10-09. Every quotation is at most 25 words; no source retains more than 200 quoted words. All 26 source URLs were reopened in two actual new calls per full pass; 200 quotations recovered in each pass. Full private contexts support the recorded manual scope reviews; extraction can be cached.
+Research date: 2026-10-09. Every quotation is at most 25 words; no source retains more than 200 quoted words. All 27 source URLs were reopened in two actual sequential complete calls, one per pass; 202 quotations recovered in each pass. Full private contexts support the recorded manual scope reviews; extraction can be cached.
 
 ## Source lineages
 
@@ -159,6 +159,13 @@ Lineage: `nintendo`; kind: `primary`. Official default 20-coin exchange descript
 https://namu.wiki/w/%EC%8A%88%ED%8D%BC%20%EB%A7%88%EB%A6%AC%EC%98%A4%20%ED%8C%8C%ED%8B%B0%20%EC%9E%BC%EB%B2%84%EB%A6%AC
 
 Lineage: `namuwiki`; kind: `secondary`. Separately edited Korean encyclopedia article. Its English translation shares the same editorial lineage and is not counted separately. Original Korean short quotations attest only PRO08 and three literal Party Homestretch grants; no primary frame, installed patch, overflow, cap, selection algorithm or full event ordering was observed. No MarioWiki attribution was visible in the retrieved Korean text; individual editor histories were not recovered. The four original Korean clips total 31 whitespace-delimited words. The footnote marker in the VS quote is retained exactly; the translated minigame names and six-option details are not promoted.
+
+
+### MACW — The Mac Weekly: Scarlet Dunning firsthand Jamboree review, 14 November 2024
+
+https://themacweekly.com/2024/11/aint-no-party-like-a-super-mario-party-jamboree/
+
+Lineage: `mac-weekly-scarlet-dunning`; kind: `hands_on_review`. Independent student-newspaper review based on play with the author's boyfriend; only introductory four-player/round paragraph used. Its later Lucky Bonus example conflicts with the retained nine-category catalog and is excluded. No exact strings, primary frames, counter inclusions, tie/cardinality rules or game patch is inferred.
 
 ## SET01
 
@@ -433,13 +440,19 @@ Status: **corroborated**; confidence: **high**. Fresh independent full-core corr
 
 After all four players have moved, a minigame concludes the round.
 
-Status: **single_source**; confidence: **medium**.
+Status: **corroborated**; confidence: **medium**.
 
 - [NIN](https://www.nintendo.com/au/news-and-articles/super-mario-party-jamboree-heres-a-quick-overview-of-the-game/) — Mario Party mode overview
   - `NIN-E1`: “four players”
   - `NIN-E3`: “After each player has moved”
 - [CGM](https://www.cgmagonline.com/review/game/super-mario-party-jamboree-switch/) — Traditional Mario Party mechanics paragraphs
   - `CGM-E2`: “with each round culminating in a mini-game”
+
+- [MACW](https://themacweekly.com/2024/11/aint-no-party-like-a-super-mario-party-jamboree/) — introductory four-player/round paragraph
+  - `MACW-ROUND01-1`: “A game has four players taking turns rolling dice to move, with a minigame for coins”
+  - `MACW-ROUND01-2`: “at the end of each round.”
+
+Limit: the later Lucky Bonus example is excluded; no event priority, final-round exception, payout or counter claim is added.
 
 ## ROUND02
 
