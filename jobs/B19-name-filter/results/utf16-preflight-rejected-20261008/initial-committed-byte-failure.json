@@ -1,0 +1,15 @@
+{
+  "observedUtc": "2026-10-09T00:00:09.583035+00:00",
+  "head": "c463fd847788ab9fc82c14348fd8975727718d48",
+  "actualVerifierExit": 1,
+  "reason": "Existing Git dist ignore rule excluded exact compiled archive files from c463 although original integrity hashed them on disk. No committed integrity PASS is claimed.",
+  "missingFiles": [
+    "jobs/B19-name-filter/results/utf16-preflight-rejected-20261008/candidate/baseline-loaded/dist/data/policy.json",
+    "jobs/B19-name-filter/results/utf16-preflight-rejected-20261008/candidate/baseline-loaded/dist/nameFilter.d.ts",
+    "jobs/B19-name-filter/results/utf16-preflight-rejected-20261008/candidate/baseline-loaded/dist/nameFilter.js",
+    "jobs/B19-name-filter/results/utf16-preflight-rejected-20261008/candidate/baseline-loaded/dist/tests/reference.d.ts",
+    "jobs/B19-name-filter/results/utf16-preflight-rejected-20261008/candidate/baseline-loaded/dist/tests/reference.js"
+  ],
+  "correction": "Force-add only these exact frozen archived compiled bytes; original source/driver/policy/corpora unchanged.",
+  "failedCorrectionPreflight": "A first finite packaging check compared the original ../../.github/workflows/B19.yml manifest path without normalization and exited before any write/stage; corrected normalization only."
+}
