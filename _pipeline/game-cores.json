@@ -6287,6 +6287,16 @@
       "minimumOverdueSecondsAtRecovery": 25.736438,
       "precision": "Recovery observation is seconds precision; restart beginning/process termination time are unknown.",
       "note": "A further workspace restart removed previous collaborating agents; foreground publication missed the hard 30-minute interval. No backdate or uninterrupted delivery is inferred."
+    },
+    "latestForegroundCadenceMiss": {
+      "previousPushAt": "2026-10-09T01:50:07.093735+00:00",
+      "hardDeadlineAt": "2026-10-09T02:20:07.093735+00:00",
+      "actualPushAt": "2026-10-09T02:21:30.399459+00:00",
+      "actualCommit": "e342ad662aec25dea5fb8b1dbfe931e2f894f0a8",
+      "elapsedSeconds": 1883.305724,
+      "overdueSeconds": 83.30572400000005,
+      "backdated": false,
+      "note": "Actual current material tracker push missed the hard30-minute interval; this miss is retained explicitly."
     }
   },
   "trackerCorrections": [
@@ -6304,7 +6314,11 @@
     "coreRecheckedAt": "2026-10-09 02:17:41 UTC",
     "immutableSourceReadsCompletedAt": "2026-10-09 02:17:41 UTC",
     "scope": "Every workflow status belongs to its actual read window: all32checked02:16:03, corePR/ref/claim metadata separatelyrechecked later. Lateroperatorproof isdated separately anddoesnotimply CI/byte acceptance.",
-    "supplementalG02PRReadAt": "2026-10-09T02:19:00Z"
+    "supplementalG02PRReadWindow": {
+      "after": "2026-10-09T02:17:41Z",
+      "before": "2026-10-09T02:21:28.682976+00:00",
+      "precision": "Exact request terminal timestamp was not recorded; these are actual observation/source-write bounds, not an asserted exact read time."
+    }
   },
   "supplementalReviews": [
     {
