@@ -1,0 +1,158 @@
+{
+  "kind": "private-fused-ASCII-DFA-actual-assertion-controls",
+  "closedUtc": "2026-10-09T00:04:42.186Z",
+  "candidateSourceSha256": "40cc83aaac089ec1842f37ee28481ff87ddabdc157c513a2b334a9c0f77383d0",
+  "candidateJsSha256": "90f3e5a9afa9ebc304184183f6219c9f2ecc24b4cb0904d2b1abeeb4ee936185",
+  "table": {
+    "states": 539,
+    "empty": false,
+    "fallback": false,
+    "folds": [
+      0,
+      25,
+      0,
+      25
+    ]
+  },
+  "cases": 8,
+  "passed": 8,
+  "results": [
+    {
+      "id": "M01",
+      "witness": "SEX",
+      "baseline": {
+        "ok": false,
+        "reason": "blocked",
+        "suggestion": "choose-another"
+      },
+      "mutated": {
+        "ok": true
+      },
+      "mutantSha256": "9319b2a93bea92c595b0b9680af02550099e321d8d8b2604cd45c62f7e58d135",
+      "actualAssertionFailure": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION"
+      }
+    },
+    {
+      "id": "M15",
+      "witness": "c1it",
+      "baseline": {
+        "ok": false,
+        "reason": "blocked",
+        "suggestion": "choose-another"
+      },
+      "mutated": {
+        "ok": true
+      },
+      "mutantSha256": "4f6f25d0a553049e71521c22ce4804ff3d2e880e979ee8433ecccec7b27479e0",
+      "actualAssertionFailure": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION"
+      }
+    },
+    {
+      "id": "M18",
+      "witness": "Bob",
+      "baseline": {
+        "ok": true
+      },
+      "mutated": {
+        "ok": false,
+        "reason": "blocked",
+        "suggestion": "choose-another"
+      },
+      "mutantSha256": "42e4b65bfce578187f66e17ccdef4e9340ef4f1788266faf666f21602ca7aff4",
+      "actualAssertionFailure": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION"
+      }
+    },
+    {
+      "id": "M19",
+      "witness": "seeex",
+      "baseline": {
+        "ok": false,
+        "reason": "blocked",
+        "suggestion": "choose-another"
+      },
+      "mutated": {
+        "ok": true
+      },
+      "mutantSha256": "b64a1463fe9d2312cbdf82c63955ef163f8b5ba7e4e5d07ff5bd7728c584611f",
+      "actualAssertionFailure": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION"
+      }
+    },
+    {
+      "id": "M21",
+      "witness": "Hancocksex",
+      "baseline": {
+        "ok": false,
+        "reason": "blocked",
+        "suggestion": "choose-another"
+      },
+      "mutated": {
+        "ok": true
+      },
+      "mutantSha256": "9829e459ad202cf364bb0d2a0cc5034a0f8de67d42985304232beca0b9b3d21e",
+      "actualAssertionFailure": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION"
+      }
+    },
+    {
+      "id": "M25",
+      "witness": "Bobby",
+      "baseline": {
+        "ok": true
+      },
+      "mutated": {
+        "ok": false,
+        "reason": "blocked",
+        "suggestion": "choose-another"
+      },
+      "mutantSha256": "7a4ef094ab329a97c45539088b47b3c9e1897addf074d49c97be632e22d1f326",
+      "actualAssertionFailure": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION"
+      }
+    },
+    {
+      "id": "M22",
+      "witness": "aaaaaaaaaaaaaaaaa",
+      "baseline": {
+        "ok": false,
+        "reason": "length",
+        "suggestion": "shorten"
+      },
+      "mutated": {
+        "ok": true
+      },
+      "mutantSha256": "20e3f9971b67067f86f9660ef6f629a76894e4907a61d3fc313ba202987e6c3e",
+      "actualAssertionFailure": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION"
+      }
+    },
+    {
+      "id": "M23",
+      "witness": "𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨𐐨",
+      "baseline": {
+        "ok": true
+      },
+      "mutated": {
+        "ok": false,
+        "reason": "length",
+        "suggestion": "shorten"
+      },
+      "mutantSha256": "55d92c68f4c122a3b3e03b18bf1cacf80f3a584cf88e35651517b21718e83cc7",
+      "actualAssertionFailure": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION"
+      }
+    }
+  ],
+  "acceptanceReplacement": false
+}

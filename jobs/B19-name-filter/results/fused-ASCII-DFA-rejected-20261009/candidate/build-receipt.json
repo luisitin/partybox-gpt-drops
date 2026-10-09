@@ -1,0 +1,24 @@
+{
+  "kind": "distinct-private-fused-ASCII-classification-DFA",
+  "preparedUtc": "2026-10-09T00:04:27.707791+00:00",
+  "baseCheckpoint": "11a1ff53bad077132fb353aaaec5482f6401066b",
+  "baselineSourceSha256": "7817489fc1d0908a87914223a84b31c15ea7e13b3555cb4238594751616f163d",
+  "baselineCompiledSha256": "e4b39efbf033bef9c41788e9bf0f002cdb61ff9dbbdfa6cbfcbfda65122d2cf9",
+  "candidateSha256": "40cc83aaac089ec1842f37ee28481ff87ddabdc157c513a2b334a9c0f77383d0",
+  "candidateSourceGzipLevel9Bytes": 5316,
+  "originalRunnerSha256": "bff0c17b62aa75d342527a8ced855678380411053476557acde61f2e1b6fbdd9",
+  "candidateChange": "Raw nonempty <=16 inputs classify each ASCII letter while traversing the unchanged DFA, eliminating the preliminary SIMPLE_ASCII regex on that path. After a hit, continue classifying all remaining characters; any nonletter resets simpleMatch and uses the original control/normalization/SAFE/general scanner fallback. Empty, raw>16 and undefined table retain original SIMPLE_ASCII test. Original type/codepoint-length checks, lower-derived fold table, all mutation anchors and all downstream code remain unchanged.",
+  "originalWorkloadsWarmupSamplesUnchanged": true,
+  "startupExcludedFromProspectivePhaseGains": true,
+  "gainClaimed": false,
+  "historicalOutlierCauseClaimed": false,
+  "timingStarted": false,
+  "productionChanged": false,
+  "baselineCapturedFiles": {
+    "baseline-loaded/dist/nameFilter.d.ts": "9673a32967adaba04613fd1cf3757a9459e4ad82795b270338683a9fe5475d0d",
+    "baseline-loaded/dist/nameFilter.js": "e4b39efbf033bef9c41788e9bf0f002cdb61ff9dbbdfa6cbfcbfda65122d2cf9",
+    "baseline-loaded/dist/data/policy.json": "c0c0b41d20f8356d2c42540d8068ecb7fa42d67a24e19323ce334c4d5de73658",
+    "baseline-loaded/dist/tests/reference.js": "fb41af66df9ec5db3464ee870ed2db138903a1b7211614ab34e1344f6a1059f8",
+    "baseline-loaded/dist/tests/reference.d.ts": "f284287643ef3f4c6d52e79ef995ffbe3eae50baac425e4872280e0c707490d3"
+  }
+}

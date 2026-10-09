@@ -1,0 +1,88 @@
+{
+  "kind": "rejected-inconsistent-whole-call-gains",
+  "recordedUtc": "2026-10-09T00:18:36.880775+00:00",
+  "productionAdopted": false,
+  "sourceSha256": "40cc83aaac089ec1842f37ee28481ff87ddabdc157c513a2b334a9c0f77383d0",
+  "compiledSha256": "90f3e5a9afa9ebc304184183f6219c9f2ecc24b4cb0904d2b1abeeb4ee936185",
+  "actualGrantUtc": "2026-10-09T00:17:44.585387+00:00",
+  "actualCommandStartedUtc": "2026-10-09T00:17:44.585681+00:00",
+  "actualHarnessStartedUtc": "2026-10-09T00:17:44.924Z",
+  "actualNaturalClosedUtc": "2026-10-09T00:17:50.670Z",
+  "actualControllerClosedUtc": "2026-10-09T00:17:50.697578+00:00",
+  "actualControllerExitCode": 0,
+  "rootActualToolExitObserved": true,
+  "rootDirectReleaseReceived": true,
+  "seedSummaries": [
+    {
+      "seed": 1,
+      "baselineMs": 895.0163350000003,
+      "candidateMs": 746.4302950000003,
+      "candidateToBaseline": 0.8339851082159301,
+      "improvementPercent": 16.601489178406993,
+      "sinksAgree": true
+    },
+    {
+      "seed": 2,
+      "baselineMs": 759.3746730000003,
+      "candidateMs": 775.2001329999998,
+      "candidateToBaseline": 1.020840120908272,
+      "improvementPercent": -2.084012090827206,
+      "sinksAgree": true
+    },
+    {
+      "seed": 3,
+      "baselineMs": 726.0164030000005,
+      "candidateMs": 843.6649429999998,
+      "candidateToBaseline": 1.1620466693505258,
+      "improvementPercent": -16.204666935052586,
+      "sinksAgree": true
+    }
+  ],
+  "balancedBlocks": [
+    {
+      "seed": 1,
+      "block": 0,
+      "baselineMs": 528.8100720000002,
+      "candidateMs": 355.4935290000001,
+      "gainPercent": 32.77481882001674
+    },
+    {
+      "seed": 1,
+      "block": 1,
+      "baselineMs": 366.20626300000004,
+      "candidateMs": 390.93676600000026,
+      "gainPercent": -6.753162219948217
+    },
+    {
+      "seed": 2,
+      "block": 0,
+      "baselineMs": 376.5447220000001,
+      "candidateMs": 400.25871099999995,
+      "gainPercent": -6.297788181452679
+    },
+    {
+      "seed": 2,
+      "block": 1,
+      "baselineMs": 382.82995100000016,
+      "candidateMs": 374.9414219999999,
+      "gainPercent": 2.0605830289386895
+    },
+    {
+      "seed": 3,
+      "block": 0,
+      "baselineMs": 366.7799839999998,
+      "candidateMs": 498.5146530000002,
+      "gainPercent": -35.91653709216598
+    },
+    {
+      "seed": 3,
+      "block": 1,
+      "baselineMs": 359.23641900000075,
+      "candidateMs": 345.1502899999996,
+      "gainPercent": 3.9211305577570466
+    }
+  ],
+  "reason": "Seed2 and3 slow; seed1 gain alone cannot justify adopting the candidate.",
+  "literalAcceptancePassed": false,
+  "unchangedRetryAllowed": false
+}

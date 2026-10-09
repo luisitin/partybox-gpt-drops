@@ -1,0 +1,22 @@
+  let simple = false;
+  let simpleMatch = false;
+  if (input.length > 0 && input.length <= 16 && SCAN !== undefined) {
+    simple = true;
+    simpleMatch = SCAN.empty;
+    let state = 0;
+    for (let index = 0; index < input.length; index++) {
+      const code = input.charCodeAt(index);
+      if (!((code >= 65 && code <= 90) || (code >= 97 && code <= 122))) {
+        simple = false;
+        simpleMatch = false;
+        break;
+      }
+      if (!simpleMatch) {
+        state = SCAN.table[state + ASCII_FOLD[code]!]!;
+        simpleMatch = state === -1;
+      }
+    }
+    if (simple && !simpleMatch) return OK;
+  } else {
+    simple = SIMPLE_ASCII.test(input);
+  }

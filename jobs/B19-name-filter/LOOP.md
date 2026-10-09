@@ -327,3 +327,7 @@ No unchanged extra acceptance test is launched to chase luck.
 ## First current ASCII-DFA original full failures
 
 Hosted37856872614 fails2/0/0, independently audited3786 assertions at23:19:19.410668. Sole first-local grant23:24:15.063016/START23:24:16.514021/natural CLOSED23:24:33.285692UTC EXIT1, all760 guards unchanged, literal12/9/2. All other checks/all75 mutants pass. Full raw proof and direct releases preserved. This is not a completed KEEP round or after-green scope. Weakest part remains literal latency with unknown cause; substantive UTF16 preflight is prospective after G10 release, not a cosmetic stop.
+
+##00:17 rejected fused classification development refinement
+
+Original acceptance still fails. Strict/214308/25actualmutants/8controls pass; sole root-executed24phase comparison shows+16.601/-2.084/-16.205% seedgains, so40cc never enters production. Complete raw evidence and actual4551-assertion11a1 failed artifact archived; prospective fold-column sentinel follows only after the coordinated G01 window. This does not fulfill after-green KEEP.
