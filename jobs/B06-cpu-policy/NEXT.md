@@ -1,3 +1,25 @@
+# Current queue checkpoint — 2026-10-09
+
+B06's research is blocked on 24 controlled four-difficulty behavior rows.
+Read `BLOCKED.md` and `reports/20261009-recovery/bounded-evidence-search.json`.
+The bounded search read eight authored contexts after six distinct searches
+(48 candidates / 43 exact unique URLs); no row was promoted. The actual inherited
+baf full CI and every original detailed seed archive have been read. The current
+strict research command genuinely exits 1; it is not waived.
+
+Finish acceptance of this blocked evidence checkpoint by reading the complete
+new exact-head PR17 hosted log and all original gates, then record its actual
+conclusion in the PR body. Keep PR17 draft. Only after safe publication of the
+blocker, set the main claim to `B06 BLOCKED` under the serialized CLAIMS-only
+lease. The research resumes only when the required controlled original-version
+source is available; apply both independent-source and full-reopen requirements.
+The unchanged original npm test, schema, source audits, seals, toy counts and
+mutation gates remain required. Do not restart cosmetic policy reviews or infer
+Nintendo behavior from the toy. The original owner's port handoff below is
+preserved; it is a separate integration task, not a completed research claim.
+
+---
+
 # Next work
 
 The original full three-seed policy code, independent implementation and toy

@@ -93,3 +93,16 @@ Scope: correctness review, product review and documentation. No production file 
 Toy-board reading: the Hard rate (99.3 to 99.7 percent) is far above the 65 percent floor. The floor is a smoke test, not a balance target, and the INTEGRATION says so.
 
 UNVERIFIED in this pass: the 24 per-difficulty behaviour rows (branch, item, shop, Star, Buddy and minigame at four levels) are still unverified. No live source was re-fetched; most hosts are blocked from this box.
+
+## Controlled-evidence blocker recovery — 2026-10-09
+
+- Initial exact native Git snapshot: all 52 B06/workflow files verified by size and Git blob SHA. The original policy, reference, contract, all research and both source audits, original full harness and workflow remain unchanged.
+- Full inherited-head native log: actual run 37814340582 / job 113438974582, head baf87d4400d832b6fe9356ae0d5f43cd109bbd48, SUCCESS. Read all 22,094 UTF-8 bytes; SHA256 9f1cb698a81d0bdc83b6f5751f82f36accfd0f51033e374498825f1c3cda72e3. Three seeds retain 240 scenarios, 1.2M states, 30K toy games and 75 mutation kills. This is acceptance of the original run, not a fresh local full-suite execution.
+- Exact command: `node reports/20261009-recovery/read-original-evidence.mjs`. PASS: all six complete historical seed archives, every explained scenario, all original mutation hashes and assertion witnesses, the full native log and nine seals checked. Separate historical archives are not counted as fresh runs or doubled current coverage.
+- Exact command: `node tests/research-strict.mjs`. Fresh actual exit 1: Ajv 8.17.1 validates 33 rows / 11 sources / 44 recorded quote recoveries; 24 coverage gaps remain NOT_MET. Raw stdout and actual exit are archived. No gate is waived.
+- Search: six Exa angles, eight requested results each; actual 48 candidates / 43 exact unique URLs. One full fetch call recovered eight authored contexts, all read in full. Candidate discovery and rejection are logged with capture hashes; origin HTTP status unobserved, videos read as transcripts, zero fact promotions. Original source timestamps and audit versions remain historical and unchanged.
+- New source checkpoint: its complete hosted npm test is pending at this dated writing; inspect the current exact-head PR17 run and full native log before accepting the blocked delivery. Original workflow intentionally has no uploaded artifact. The evidence is its full native log plus all committed detailed records.
+
+### UNVERIFIED in this recovery
+
+The original 24 per-difficulty branch/item/shop/star/Buddy/minigame behavior rows remain unverified. This bounded search is not an exhaustive proof that no controlled source exists. No physical gameplay experiment, Nintendo probability, CPU win rate, origin HTTP status, personally watched video frame or PartyBox port is claimed.

@@ -1,0 +1,258 @@
+﻿2026-10-08T17:09:17.8637283Z Current runner version: '2.337.0'
+2026-10-08T17:09:17.8662609Z ##[group]Runner Image Provisioner
+2026-10-08T17:09:17.8663444Z Hosted Compute Agent
+2026-10-08T17:09:17.8664029Z Version: 20261002.596
+2026-10-08T17:09:17.8664627Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T17:09:17.8665244Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T17:09:17.8666083Z Worker ID: {2d18d8e1-b2c0-4ce8-985d-b405215aed14}
+2026-10-08T17:09:17.8666736Z Region: centralus
+2026-10-08T17:09:17.8667260Z Cloud: Azure
+2026-10-08T17:09:17.8667824Z ##[endgroup]
+2026-10-08T17:09:17.8668917Z ##[group]Operating System
+2026-10-08T17:09:17.8669506Z Ubuntu
+2026-10-08T17:09:17.8669944Z 24.04.5
+2026-10-08T17:09:17.8670444Z LTS
+2026-10-08T17:09:17.8670934Z ##[endgroup]
+2026-10-08T17:09:17.8671402Z ##[group]Runner Image
+2026-10-08T17:09:17.8671946Z Image: ubuntu-24.04
+2026-10-08T17:09:17.8672449Z Version: 20261004.327.1
+2026-10-08T17:09:17.8673640Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T17:09:17.8675100Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T17:09:17.8676196Z ##[endgroup]
+2026-10-08T17:09:17.8677180Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T17:09:17.8679342Z Contents: read
+2026-10-08T17:09:17.8679932Z Metadata: read
+2026-10-08T17:09:17.8680459Z ##[endgroup]
+2026-10-08T17:09:17.8682511Z Secret source: Actions
+2026-10-08T17:09:17.8683302Z Cache mode: write
+2026-10-08T17:09:17.8684070Z Prepare workflow directory
+2026-10-08T17:09:17.8995882Z Prepare all required actions
+2026-10-08T17:09:17.9040789Z Getting action download info
+2026-10-08T17:09:18.1268336Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-08T17:09:18.2248815Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-08T17:09:18.3889470Z Complete job name: verify
+2026-10-08T17:09:18.4385461Z ##[group]Run actions/checkout@v4
+2026-10-08T17:09:18.4386148Z with:
+2026-10-08T17:09:18.4386426Z   repository: luisitin/partybox-gpt-drops
+2026-10-08T17:09:18.4388746Z   token: ***
+2026-10-08T17:09:18.4388993Z   ssh-strict: true
+2026-10-08T17:09:18.4389250Z   ssh-user: git
+2026-10-08T17:09:18.4389510Z   persist-credentials: true
+2026-10-08T17:09:18.4389788Z   clean: true
+2026-10-08T17:09:18.4390053Z   sparse-checkout-cone-mode: true
+2026-10-08T17:09:18.4390355Z   fetch-depth: 1
+2026-10-08T17:09:18.4390604Z   fetch-tags: false
+2026-10-08T17:09:18.4390862Z   show-progress: true
+2026-10-08T17:09:18.4391117Z   lfs: false
+2026-10-08T17:09:18.4391354Z   submodules: false
+2026-10-08T17:09:18.4391612Z   set-safe-directory: true
+2026-10-08T17:09:18.4391906Z   allow-unsafe-pr-checkout: false
+2026-10-08T17:09:18.4392273Z ##[endgroup]
+2026-10-08T17:09:18.5120140Z Syncing repository: luisitin/partybox-gpt-drops
+2026-10-08T17:09:18.5121831Z ##[group]Getting Git version info
+2026-10-08T17:09:18.5122661Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-08T17:09:18.5123680Z [command]/usr/bin/git version
+2026-10-08T17:09:18.5148557Z git version 2.55.0
+2026-10-08T17:09:18.5162228Z ##[endgroup]
+2026-10-08T17:09:18.5186450Z Temporarily overriding HOME='/home/runner/work/_temp/a5181dc5-dd3f-490e-b430-4d6ed855b4cf' before making global git config changes
+2026-10-08T17:09:18.5187459Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T17:09:18.5197206Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-08T17:09:18.5242346Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-08T17:09:18.5249415Z ##[group]Initializing the repository
+2026-10-08T17:09:18.5257071Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-08T17:09:18.5339302Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T17:09:18.5340735Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T17:09:18.5341781Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T17:09:18.5343049Z hint: call:
+2026-10-08T17:09:18.5343750Z hint:
+2026-10-08T17:09:18.5344321Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T17:09:18.5344959Z hint:
+2026-10-08T17:09:18.5345456Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T17:09:18.5346378Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T17:09:18.5347015Z hint:
+2026-10-08T17:09:18.5347378Z hint: 	git branch -m <name>
+2026-10-08T17:09:18.5347649Z hint:
+2026-10-08T17:09:18.5347996Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T17:09:18.5348608Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+2026-10-08T17:09:18.5349791Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+2026-10-08T17:09:18.5399530Z ##[endgroup]
+2026-10-08T17:09:18.5400217Z ##[group]Disabling automatic garbage collection
+2026-10-08T17:09:18.5402588Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T17:09:18.5432263Z ##[endgroup]
+2026-10-08T17:09:18.5432943Z ##[group]Setting up auth
+2026-10-08T17:09:18.5438080Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T17:09:18.5476943Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T17:09:18.5764719Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T17:09:18.5796298Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T17:09:18.5981565Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T17:09:18.6013734Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T17:09:18.6198147Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T17:09:18.6235125Z ##[endgroup]
+2026-10-08T17:09:18.6236040Z ##[group]Fetching the repository
+2026-10-08T17:09:18.6242932Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +51e65e78f1d81da01d416c7bb1c39ef93bd1b426:refs/remotes/pull/17/merge
+2026-10-08T17:09:18.9867942Z From https://github.com/luisitin/partybox-gpt-drops
+2026-10-08T17:09:18.9869035Z  * [new ref]         51e65e78f1d81da01d416c7bb1c39ef93bd1b426 -> pull/17/merge
+2026-10-08T17:09:18.9871663Z ##[endgroup]
+2026-10-08T17:09:18.9872485Z ##[group]Determining the checkout info
+2026-10-08T17:09:18.9874016Z ##[endgroup]
+2026-10-08T17:09:18.9879069Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T17:09:18.9930224Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T17:09:18.9959799Z ##[group]Checking out the ref
+2026-10-08T17:09:18.9961950Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/17/merge
+2026-10-08T17:09:19.0042141Z Note: switching to 'refs/remotes/pull/17/merge'.
+2026-10-08T17:09:19.0042494Z 
+2026-10-08T17:09:19.0042878Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-08T17:09:19.0043761Z changes and commit them, and you can discard any commits you make in this
+2026-10-08T17:09:19.0044648Z state without impacting any branches by switching back to a branch.
+2026-10-08T17:09:19.0045172Z 
+2026-10-08T17:09:19.0045671Z If you want to create a new branch to retain commits you create, you may
+2026-10-08T17:09:19.0046513Z do so (now or later) by using -c with the switch command. Example:
+2026-10-08T17:09:19.0047229Z 
+2026-10-08T17:09:19.0047482Z   git switch -c <new-branch-name>
+2026-10-08T17:09:19.0047807Z 
+2026-10-08T17:09:19.0048018Z Or undo this operation with:
+2026-10-08T17:09:19.0048323Z 
+2026-10-08T17:09:19.0048508Z   git switch -
+2026-10-08T17:09:19.0048771Z 
+2026-10-08T17:09:19.0049029Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-08T17:09:19.0049368Z 
+2026-10-08T17:09:19.0049745Z HEAD is now at 51e65e7 Merge baf87d4400d832b6fe9356ae0d5f43cd109bbd48 into b7ee73dc5c1818112531f3667c283874fe1e578e
+2026-10-08T17:09:19.0052374Z ##[endgroup]
+2026-10-08T17:09:19.0092057Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T17:09:19.0116139Z 51e65e78f1d81da01d416c7bb1c39ef93bd1b426
+2026-10-08T17:09:19.0337781Z ##[group]Run actions/setup-node@v4
+2026-10-08T17:09:19.0338143Z with:
+2026-10-08T17:09:19.0338405Z   node-version: 22
+2026-10-08T17:09:19.0338715Z   always-auth: false
+2026-10-08T17:09:19.0338992Z   check-latest: false
+2026-10-08T17:09:19.0341118Z   token: ***
+2026-10-08T17:09:19.0341376Z ##[endgroup]
+2026-10-08T17:09:19.1351758Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+2026-10-08T17:09:19.1354421Z (node:2154) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T17:09:19.1355326Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T17:09:19.1356312Z ##[group]Environment details
+2026-10-08T17:09:19.4181167Z node: v22.23.3
+2026-10-08T17:09:19.4182250Z npm: 10.9.9
+2026-10-08T17:09:19.4182847Z yarn: 1.22.22
+2026-10-08T17:09:19.4184200Z ##[endgroup]
+2026-10-08T17:09:19.4362963Z ##[group]Run npm ci --ignore-scripts --no-audit --no-fund
+2026-10-08T17:09:19.4364333Z [36;1mnpm ci --ignore-scripts --no-audit --no-fund[0m
+2026-10-08T17:09:19.4576761Z shell: /usr/bin/bash -e {0}
+2026-10-08T17:09:19.4577687Z ##[endgroup]
+2026-10-08T17:09:20.2766461Z 
+2026-10-08T17:09:20.2772343Z added 6 packages in 774ms
+2026-10-08T17:09:20.3120814Z ##[group]Run npm test
+2026-10-08T17:09:20.3121028Z [36;1mnpm test[0m
+2026-10-08T17:09:20.3176297Z shell: /usr/bin/bash -e {0}
+2026-10-08T17:09:20.3176482Z ##[endgroup]
+2026-10-08T17:09:20.4581752Z 
+2026-10-08T17:09:20.4582503Z > b06-cpu-policy@1.0.0 test
+2026-10-08T17:09:20.4582935Z > node tests/run.mjs
+2026-10-08T17:09:20.4583094Z 
+2026-10-08T17:09:21.4343909Z seed 1: 80 manual scenarios passed
+2026-10-08T17:09:24.5030862Z seed 1: 400000 random legal states passed
+2026-10-08T17:09:26.7436055Z seed 1: Hard 9971/10000 (99.71%), Easy 28, ties 1
+2026-10-08T17:09:27.6600667Z seed 1: mutant 1/25 killed (easy exploration disabled)
+2026-10-08T17:09:28.4618451Z seed 1: mutant 2/25 killed (normal exploration disabled)
+2026-10-08T17:09:29.2701645Z seed 1: mutant 3/25 killed (hard exploration disabled)
+2026-10-08T17:09:30.0837053Z seed 1: mutant 4/25 killed (master explores all)
+2026-10-08T17:09:30.8820151Z seed 1: mutant 5/25 killed (easy always purchases)
+2026-10-08T17:09:31.6847384Z seed 1: mutant 6/25 killed (normal always purchases)
+2026-10-08T17:09:32.5180420Z seed 1: mutant 7/25 killed (hard always purchases)
+2026-10-08T17:09:33.3524846Z seed 1: mutant 8/25 killed (master half purchases)
+2026-10-08T17:09:34.1524842Z seed 1: mutant 9/25 killed (negative RNG accepted)
+2026-10-08T17:09:34.9730948Z seed 1: mutant 10/25 killed (RNG endpoint one accepted)
+2026-10-08T17:09:35.7728100Z seed 1: mutant 11/25 killed (throwing RNG replaced by zero)
+2026-10-08T17:09:36.5661532Z seed 1: mutant 12/25 killed (branch allowed at zero turns)
+2026-10-08T17:09:37.3499756Z seed 1: mutant 13/25 killed (actions allowed at zero turns)
+2026-10-08T17:09:38.1436124Z seed 1: mutant 14/25 killed (full inventory shop allowed)
+2026-10-08T17:09:38.9152284Z seed 1: mutant 15/25 killed (branch exact affordability rejected)
+2026-10-08T17:09:39.6836381Z seed 1: mutant 16/25 killed (illegal action accepted)
+2026-10-08T17:09:40.4911756Z seed 1: mutant 17/25 killed (action exact affordability rejected)
+2026-10-08T17:09:41.3014837Z seed 1: mutant 18/25 killed (star budget equality loses branch bonus)
+2026-10-08T17:09:42.0644176Z seed 1: mutant 19/25 killed (affordable branch proximity bonus removed)
+2026-10-08T17:09:42.8199050Z seed 1: mutant 20/25 killed (branch buddy gain removed)
+2026-10-08T17:09:43.5924733Z seed 1: mutant 21/25 killed (action star utility removed)
+2026-10-08T17:09:44.3464705Z seed 1: mutant 22/25 killed (branch risk penalty removed)
+2026-10-08T17:09:45.1197376Z seed 1: mutant 23/25 killed (exact movement arrival bonus omitted)
+2026-10-08T17:09:45.8974739Z seed 1: mutant 24/25 killed (shop star reserve penalty removed)
+2026-10-08T17:09:46.6629366Z seed 1: mutant 25/25 killed (exact star affordability rejected)
+2026-10-08T17:09:46.6874159Z {"validator":"Ajv 8.17.1","schemaValid":true,"sourceQuoteChecks":44,"rows":33,"sources":11,"coverageGaps":["G-easy-branches","G-easy-items","G-easy-shop","G-easy-stars","G-easy-buddy","G-easy-minigames","G-normal-branches","G-normal-items","G-normal-shop","G-normal-stars","G-normal-buddy","G-normal-minigames","G-hard-branches","G-hard-items","G-hard-shop","G-hard-stars","G-hard-buddy","G-hard-minigames","G-master-branches","G-master-items","G-master-shop","G-master-stars","G-master-buddy","G-master-minigames"],"strictResearchAcceptance":"NOT_MET"}
+2026-10-08T17:09:47.4663776Z seed 2: 80 manual scenarios passed
+2026-10-08T17:09:50.5944276Z seed 2: 400000 random legal states passed
+2026-10-08T17:09:52.7692440Z seed 2: Hard 9934/10000 (99.33999999999999%), Easy 56, ties 10
+2026-10-08T17:09:53.5915428Z seed 2: mutant 1/25 killed (easy exploration disabled)
+2026-10-08T17:09:54.3543082Z seed 2: mutant 2/25 killed (normal exploration disabled)
+2026-10-08T17:09:55.1561059Z seed 2: mutant 3/25 killed (hard exploration disabled)
+2026-10-08T17:09:55.9332422Z seed 2: mutant 4/25 killed (master explores all)
+2026-10-08T17:09:56.7143563Z seed 2: mutant 5/25 killed (easy always purchases)
+2026-10-08T17:09:57.4926664Z seed 2: mutant 6/25 killed (normal always purchases)
+2026-10-08T17:09:58.3000873Z seed 2: mutant 7/25 killed (hard always purchases)
+2026-10-08T17:09:59.0984843Z seed 2: mutant 8/25 killed (master half purchases)
+2026-10-08T17:09:59.9348193Z seed 2: mutant 9/25 killed (negative RNG accepted)
+2026-10-08T17:10:00.7665234Z seed 2: mutant 10/25 killed (RNG endpoint one accepted)
+2026-10-08T17:10:01.5683872Z seed 2: mutant 11/25 killed (throwing RNG replaced by zero)
+2026-10-08T17:10:02.3757724Z seed 2: mutant 12/25 killed (branch allowed at zero turns)
+2026-10-08T17:10:03.1786243Z seed 2: mutant 13/25 killed (actions allowed at zero turns)
+2026-10-08T17:10:03.9651749Z seed 2: mutant 14/25 killed (full inventory shop allowed)
+2026-10-08T17:10:04.7584306Z seed 2: mutant 15/25 killed (branch exact affordability rejected)
+2026-10-08T17:10:05.5478804Z seed 2: mutant 16/25 killed (illegal action accepted)
+2026-10-08T17:10:06.3440220Z seed 2: mutant 17/25 killed (action exact affordability rejected)
+2026-10-08T17:10:07.1638651Z seed 2: mutant 18/25 killed (star budget equality loses branch bonus)
+2026-10-08T17:10:07.9679040Z seed 2: mutant 19/25 killed (affordable branch proximity bonus removed)
+2026-10-08T17:10:08.7707223Z seed 2: mutant 20/25 killed (branch buddy gain removed)
+2026-10-08T17:10:09.5676146Z seed 2: mutant 21/25 killed (action star utility removed)
+2026-10-08T17:10:10.3550269Z seed 2: mutant 22/25 killed (branch risk penalty removed)
+2026-10-08T17:10:11.1390071Z seed 2: mutant 23/25 killed (exact movement arrival bonus omitted)
+2026-10-08T17:10:11.9189518Z seed 2: mutant 24/25 killed (shop star reserve penalty removed)
+2026-10-08T17:10:12.6853631Z seed 2: mutant 25/25 killed (exact star affordability rejected)
+2026-10-08T17:10:12.6994487Z {"validator":"Ajv 8.17.1","schemaValid":true,"sourceQuoteChecks":44,"rows":33,"sources":11,"coverageGaps":["G-easy-branches","G-easy-items","G-easy-shop","G-easy-stars","G-easy-buddy","G-easy-minigames","G-normal-branches","G-normal-items","G-normal-shop","G-normal-stars","G-normal-buddy","G-normal-minigames","G-hard-branches","G-hard-items","G-hard-shop","G-hard-stars","G-hard-buddy","G-hard-minigames","G-master-branches","G-master-items","G-master-shop","G-master-stars","G-master-buddy","G-master-minigames"],"strictResearchAcceptance":"NOT_MET"}
+2026-10-08T17:10:13.4964803Z seed 3: 80 manual scenarios passed
+2026-10-08T17:10:16.5967836Z seed 3: 400000 random legal states passed
+2026-10-08T17:10:18.7914332Z seed 3: Hard 9952/10000 (99.52%), Easy 46, ties 2
+2026-10-08T17:10:19.5854519Z seed 3: mutant 1/25 killed (easy exploration disabled)
+2026-10-08T17:10:20.4254034Z seed 3: mutant 2/25 killed (normal exploration disabled)
+2026-10-08T17:10:21.1840589Z seed 3: mutant 3/25 killed (hard exploration disabled)
+2026-10-08T17:10:21.9851413Z seed 3: mutant 4/25 killed (master explores all)
+2026-10-08T17:10:22.7580469Z seed 3: mutant 5/25 killed (easy always purchases)
+2026-10-08T17:10:23.5236956Z seed 3: mutant 6/25 killed (normal always purchases)
+2026-10-08T17:10:24.3140361Z seed 3: mutant 7/25 killed (hard always purchases)
+2026-10-08T17:10:25.0895349Z seed 3: mutant 8/25 killed (master half purchases)
+2026-10-08T17:10:25.8663086Z seed 3: mutant 9/25 killed (negative RNG accepted)
+2026-10-08T17:10:26.6652761Z seed 3: mutant 10/25 killed (RNG endpoint one accepted)
+2026-10-08T17:10:27.4530912Z seed 3: mutant 11/25 killed (throwing RNG replaced by zero)
+2026-10-08T17:10:28.2343865Z seed 3: mutant 12/25 killed (branch allowed at zero turns)
+2026-10-08T17:10:29.0292827Z seed 3: mutant 13/25 killed (actions allowed at zero turns)
+2026-10-08T17:10:29.8146057Z seed 3: mutant 14/25 killed (full inventory shop allowed)
+2026-10-08T17:10:30.6293385Z seed 3: mutant 15/25 killed (branch exact affordability rejected)
+2026-10-08T17:10:31.3972136Z seed 3: mutant 16/25 killed (illegal action accepted)
+2026-10-08T17:10:32.2459453Z seed 3: mutant 17/25 killed (action exact affordability rejected)
+2026-10-08T17:10:33.0172210Z seed 3: mutant 18/25 killed (star budget equality loses branch bonus)
+2026-10-08T17:10:33.8182647Z seed 3: mutant 19/25 killed (affordable branch proximity bonus removed)
+2026-10-08T17:10:34.6006979Z seed 3: mutant 20/25 killed (branch buddy gain removed)
+2026-10-08T17:10:35.3972681Z seed 3: mutant 21/25 killed (action star utility removed)
+2026-10-08T17:10:36.1656642Z seed 3: mutant 22/25 killed (branch risk penalty removed)
+2026-10-08T17:10:36.9260707Z seed 3: mutant 23/25 killed (exact movement arrival bonus omitted)
+2026-10-08T17:10:37.6860242Z seed 3: mutant 24/25 killed (shop star reserve penalty removed)
+2026-10-08T17:10:38.4506302Z seed 3: mutant 25/25 killed (exact star affordability rejected)
+2026-10-08T17:10:38.4675106Z {"validator":"Ajv 8.17.1","schemaValid":true,"sourceQuoteChecks":44,"rows":33,"sources":11,"coverageGaps":["G-easy-branches","G-easy-items","G-easy-shop","G-easy-stars","G-easy-buddy","G-easy-minigames","G-normal-branches","G-normal-items","G-normal-shop","G-normal-stars","G-normal-buddy","G-normal-minigames","G-hard-branches","G-hard-items","G-hard-shop","G-hard-stars","G-hard-buddy","G-hard-minigames","G-master-branches","G-master-items","G-master-shop","G-master-stars","G-master-buddy","G-master-minigames"],"strictResearchAcceptance":"NOT_MET"}
+2026-10-08T17:10:38.4676712Z All code suites passed for seeds 1, 2, 3. Research acceptance is tracked separately and may remain UNVERIFIED.
+2026-10-08T17:10:38.4931960Z Post job cleanup.
+2026-10-08T17:10:38.5737218Z (node:2805) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T17:10:38.5737684Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T17:10:38.5907286Z Post job cleanup.
+2026-10-08T17:10:38.6495173Z [command]/usr/bin/git version
+2026-10-08T17:10:38.6528532Z git version 2.55.0
+2026-10-08T17:10:38.6553779Z Temporarily overriding HOME='/home/runner/work/_temp/405f5d7e-16c4-4153-add3-4b91fb4a15ac' before making global git config changes
+2026-10-08T17:10:38.6554791Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T17:10:38.6558121Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-08T17:10:38.6591176Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T17:10:38.6621391Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T17:10:38.6828418Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T17:10:38.6853306Z http.https://github.com/.extraheader
+2026-10-08T17:10:38.6861751Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-08T17:10:38.6892795Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T17:10:38.7089111Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T17:10:38.7120800Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T17:10:38.7430878Z Cleaning up orphan processes
+2026-10-08T17:10:38.7628994Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
