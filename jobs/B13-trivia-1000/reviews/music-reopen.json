@@ -5869,29 +5869,32 @@
   },
   {
     "id": "B13-0762",
-    "rowSha256": "bc8e0115efa1d653f4b3e45edfc6ceb5e5f600039c0ff3ab8618bbd25dc8e493",
-    "reviewer": "/root/r2048_history",
-    "reviewedAt": "2026-10-07T21:14:11.174660+00:00",
+    "reviewer": "/root/restart_g01_0458",
+    "reviewedAt": "2026-10-09T13:00:04.160234+00:00",
+    "rowSha256": "48196304a32390cba8d1b59cd97d59a83bfee0ac11dd4421005365e754610270",
     "result": "supported",
+    "assessment": "Both newly opened full original sources explicitly distinguish Washington childhood from later NewYork professional work. Britannica childhood paragraph and Wiki lead plus schooling/family paragraphs agree. D.C.-area and Virginia professional performances or later NYC residence do not change the childhood answer. No birth-only inference. Both sources directly support Ellington-orchestra Cotton Club performances. The new clause deliberately claims neither sole cause of national fame nor an entire Harlem residency date span. Wiki explicitly places the1937 return at a relocated midtown club; the earlier Harlem performances still support this narrower existential claim. Britannica1927–32/1937–38 grouping is retained as scope caution, not new date claim. Both actual independent HTTPS GETs12:57:00.663149 and12:57:01.255768 follow frozen authoring12:54:54.791558. Complete200 responses retained and hashes verified. Wikipedia response headers show a cache hit and earlier date12:51:32; this is a fresh request, not a cache-free origin claim. Historical childhood/performance facts are timeless and do not infer a current residency.",
     "sources": [
       {
-        "sourceId": "music-s0031",
+        "sourceId": "music-s5031",
         "receipt": {
           "pass": "reopen",
-          "retrievedAt": "2026-10-07T19:27:44.677764+00:00",
-          "method": "urllib-http-get",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T12:57:00.663149+00:00",
+          "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://en.wikipedia.org/wiki/Duke_Ellington",
           "resolvedUrl": "https://en.wikipedia.org/wiki/Duke_Ellington",
           "status": 200,
-          "contentType": "text/html",
-          "rawSha256": "fcbeccd5c8c94d379a9e54876d66f75fc6622af1057db574a06b95464d996f23",
-          "rawPath": ".work/music/reopen/music-s0031.raw",
-          "title": "Duke Ellington - Wikipedia",
-          "contentSha256": "0c711e610ef49f208b1e6d18bcb0928bfc8a85cae0bcdb58793818bb3394a45c",
-          "capturePath": ".work/music/reopen/music-s0031.txt",
+          "contentSha256": "46abd8b99db3a2a889ff199e465e7e9893f03ec3fe7aff31ff85cf0b67437a49",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/music-s5031.txt",
+          "sourceId": "music-s5031",
+          "rawSha256": "db92c74e487ae27d42499884739b72ef7f404454c5a1f5b33cb3b25053cf74bf",
           "captureComplete": true,
-          "characters": 96088
+          "originalPeerPacketSHA256": "c1a502093e3856ea4d3ee6160cb1863933646cdd9cef29d51c7f6f1da944db53",
+          "captureRelocatedWithoutByteChanges": true
         },
+        "contextRead": true,
+        "claimAssessment": "Both newly opened full original sources explicitly distinguish Washington childhood from later NewYork professional work. Britannica childhood paragraph and Wiki lead plus schooling/family paragraphs agree. D.C.-area and Virginia professional performances or later NYC residence do not change the childhood answer. No birth-only inference. Both sources directly support Ellington-orchestra Cotton Club performances. The new clause deliberately claims neither sole cause of national fame nor an entire Harlem residency date span. Wiki explicitly places the1937 return at a relocated midtown club; the earlier Harlem performances still support this narrower existential claim. Britannica1927–32/1937–38 grouping is retained as scope caution, not new date claim.",
         "quotations": [
           {
             "field": "quote",
@@ -5904,28 +5907,44 @@
             "exactMatch": true
           }
         ],
-        "contextRead": true,
-        "answerAssessment": "Compared later New York career base with childhood; both upbringing accounts identify Washington, D.C.",
-        "funFactAssessment": "Both accounts describe the Cotton Club engagement in Harlem and its career significance."
+        "actualWholeScopeRead": {
+          "allRelevantAndAdjacentParagraphsAndNativeReferencesPersonallyRead": true,
+          "scopeHashes": [
+            {
+              "sourceId": "music-s5031",
+              "field": "quote",
+              "words": 6,
+              "literalRecovered": true
+            },
+            {
+              "sourceId": "music-s5031",
+              "field": "funFactQuote",
+              "words": 14,
+              "literalRecovered": true
+            }
+          ]
+        }
       },
       {
-        "sourceId": "music-s0032",
+        "sourceId": "music-s5032",
         "receipt": {
           "pass": "reopen",
-          "retrievedAt": "2026-10-07T19:27:45.388580+00:00",
-          "method": "urllib-http-get",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T12:57:01.255768+00:00",
+          "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://www.britannica.com/biography/Duke-Ellington",
           "resolvedUrl": "https://www.britannica.com/biography/Duke-Ellington",
           "status": 200,
-          "contentType": "text/html",
-          "rawSha256": "84488d7ebeefe569d1a0a4d7f687429363f732e462aee96e53b32796c0279b98",
-          "rawPath": ".work/music/reopen/music-s0032.raw",
-          "title": "Duke Ellington | Biography, Songs, Albums, & Facts | Britannica",
-          "contentSha256": "4f6073da51a0081c87bbb1a8dcff3d81aaf16b2c5ab45d14e15a900f6c9a525c",
-          "capturePath": ".work/music/reopen/music-s0032.txt",
+          "contentSha256": "96b2b1c552578dfc98b9ebb838d694d38631fa1f8be6e8c95a3c7736d5efef5d",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/music-s5032.txt",
+          "sourceId": "music-s5032",
+          "rawSha256": "8fb12cd17f75a135720d326412216ec18098ec9e6fb212049b55d077f55da0d8",
           "captureComplete": true,
-          "characters": 15859
+          "originalPeerPacketSHA256": "c1a502093e3856ea4d3ee6160cb1863933646cdd9cef29d51c7f6f1da944db53",
+          "captureRelocatedWithoutByteChanges": true
         },
+        "contextRead": true,
+        "claimAssessment": "Both newly opened full original sources explicitly distinguish Washington childhood from later NewYork professional work. Britannica childhood paragraph and Wiki lead plus schooling/family paragraphs agree. D.C.-area and Virginia professional performances or later NYC residence do not change the childhood answer. No birth-only inference. Both sources directly support Ellington-orchestra Cotton Club performances. The new clause deliberately claims neither sole cause of national fame nor an entire Harlem residency date span. Wiki explicitly places the1937 return at a relocated midtown club; the earlier Harlem performances still support this narrower existential claim. Britannica1927–32/1937–38 grouping is retained as scope caution, not new date claim.",
         "quotations": [
           {
             "field": "quote",
@@ -5938,30 +5957,25 @@
             "exactMatch": true
           }
         ],
-        "contextRead": true,
-        "answerAssessment": "Compared later New York career base with childhood; both upbringing accounts identify Washington, D.C.",
-        "funFactAssessment": "Both accounts describe the Cotton Club engagement in Harlem and its career significance."
+        "actualWholeScopeRead": {
+          "allRelevantAndAdjacentParagraphsAndNativeReferencesPersonallyRead": true,
+          "scopeHashes": [
+            {
+              "sourceId": "music-s5032",
+              "field": "quote",
+              "words": 7,
+              "literalRecovered": true
+            },
+            {
+              "sourceId": "music-s5032",
+              "field": "funFactQuote",
+              "words": 8,
+              "literalRecovered": true
+            }
+          ]
+        }
       }
-    ],
-    "assessment": "Compared later New York career base with childhood; both upbringing accounts identify Washington, D.C. Both accounts describe the Cotton Club engagement in Harlem and its career significance. Final ordered alternatives and unchanged contextual fact personally reread; physical source GET receipts remain at their actual original times.",
-    "finalOrderedOptionReview": {
-      "inspectedAt": "2026-10-07T21:14:11.174660+00:00",
-      "questionInspected": "Duke Ellington grew up in which U.S. capital city?",
-      "optionsInspected": [
-        "Dover",
-        "Richmond",
-        "Annapolis",
-        "Washington, D.C."
-      ],
-      "correctIndexInspected": 3,
-      "correctAnswerInspected": "Washington, D.C.",
-      "funFactInspected": "Ellington's orchestra became famous at Harlem's Cotton Club.",
-      "difficultyInspected": 2,
-      "priorAcceptedRowSha256": "eebae5e635e8cb30f57cb3871f1d57aba832f4ed82276af0a6103341af914f3e",
-      "factsUnchanged": true,
-      "manualResult": "accept",
-      "method": "Personally read every one of the final200 full question/four ordered choices/correct-answer/fun-fact records before executing this recorder. The retained concrete prior row counterexample was reconsidered against the exact same alternative strings in their new order. This is an actual final-order editorial reread, not acceptance merely because a permutation or hash passed. Full-source factual support was previously personally read and actually reopened; its original physical GET timestamps are preserved rather than fabricated anew."
-    }
+    ]
   },
   {
     "id": "B13-0763",

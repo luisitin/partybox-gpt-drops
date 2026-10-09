@@ -1840,32 +1840,53 @@
   },
   {
     "id": "B13-0762",
-    "rowSha256": "bc8e0115efa1d653f4b3e45edfc6ceb5e5f600039c0ff3ab8618bbd25dc8e493",
-    "author": "/root/resume_b14_review",
-    "evidenceReadAt": "2026-10-07T18:39:25.175314+00:00",
-    "assessment": "Both independently written duke ellington histories explicitly support the answer and contextual fact. Birth and childhood location are distinguished from his later New York career.",
-    "captures": [
+    "author": "/root",
+    "authoredAt": "2026-10-09T12:54:54.791558+00:00",
+    "rowSha256": "48196304a32390cba8d1b59cd97d59a83bfee0ac11dd4421005365e754610270",
+    "sourceIds": [
+      "music-s5031",
+      "music-s5032"
+    ],
+    "evidenceReads": [
       {
-        "sourceId": "music-s0031",
-        "contentSha256": "277c5565b3d0ac1aed91698ee5e763ceeff6236fa292fb0bf9306e7d3331029f",
-        "answerQuoteMatched": true,
-        "funFactQuoteMatched": true,
-        "answerQuoteWords": 6,
-        "funFactQuoteWords": 14,
-        "rawSha256": "fcbeccd5c8c94d379a9e54876d66f75fc6622af1057db574a06b95464d996f23"
+        "sourceId": "music-s5031",
+        "contentSha256": "46abd8b99db3a2a889ff199e465e7e9893f03ec3fe7aff31ff85cf0b67437a49",
+        "quoteFound": true,
+        "contextRead": true,
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "Born and raised in Washington, D.C.",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "gained a national profile through his orchestra's appearances at the Cotton Club in Harlem",
+            "exactMatch": true
+          }
+        ]
       },
       {
-        "sourceId": "music-s0032",
-        "contentSha256": "64908ece731918ce1c4c914bf88c9382850e6980471995b89922dda194d1aa33",
-        "answerQuoteMatched": true,
-        "funFactQuoteMatched": true,
-        "answerQuoteWords": 7,
-        "funFactQuoteWords": 8,
-        "rawSha256": "e577b5534561cc7d04e4fb00215d7c0e7cac37ca52b33e39ae755190d15e114b"
+        "sourceId": "music-s5032",
+        "contentSha256": "96b2b1c552578dfc98b9ebb838d694d38631fa1f8be6e8c95a3c7736d5efef5d",
+        "quoteFound": true,
+        "contextRead": true,
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "Duke Ellington grew up in Washington, D.C.",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Extended residencies at the Cotton Club in Harlem",
+            "exactMatch": true
+          }
+        ]
       }
     ],
-    "unresolvedProblems": [],
-    "recoveredEvidenceRepair": "Quote verification selects the actual extracted plaintext with its own actual hash; original raw HTML remains captured separately with its verified raw hash and path."
+    "confidenceReason": "The actual complete independently written Wikipedia and Britannica biographies distinguish Washington childhood from later New York work and directly describe Cotton Club appearances or residencies. The revised question removes the federal-capital shortcut; the fun fact claims performances without inferring a unique cause of fame.",
+    "originalAuthorPacketSHA256": "572e74f7351c802e8277dc207a6a86a6337636f8ebe7e4ee933746e04a4d471d"
   },
   {
     "id": "B13-0763",

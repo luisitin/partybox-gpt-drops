@@ -7880,14 +7880,14 @@ Answer: Piano. Fun fact: “Take the A Train” became Ellington's band theme.
   quote: “an American pianist” (3 words).
   funFactQuote: “the band’s theme song, “ Take the ‘A’ Train,”” (9 words).
 
-## B13-0762 — Duke Ellington grew up in which U.S. capital city?
+## B13-0762 — In which U.S. city did Duke Ellington grow up?
 
-Answer: Washington, D.C.. Fun fact: Ellington's orchestra became famous at Harlem's Cotton Club.
+Answer: Washington, D.C.. Fun fact: Ellington's orchestra performed at Harlem's Cotton Club.
 
-- music-s0031: [Wikipedia](https://en.wikipedia.org/wiki/Duke_Ellington)
+- music-s5031: [Wikipedia](https://en.wikipedia.org/wiki/Duke_Ellington)
   quote: “Born and raised in Washington, D.C.” (6 words).
   funFactQuote: “gained a national profile through his orchestra's appearances at the Cotton Club in Harlem” (14 words).
-- music-s0032: [Encyclopaedia Britannica](https://www.britannica.com/biography/Duke-Ellington)
+- music-s5032: [Encyclopaedia Britannica](https://www.britannica.com/biography/Duke-Ellington)
   quote: “Duke Ellington grew up in Washington, D.C.” (7 words).
   funFactQuote: “Extended residencies at the Cotton Club in Harlem” (8 words).
 

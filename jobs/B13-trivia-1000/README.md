@@ -1,7 +1,7 @@
 # B13 — 1,000 verified trivia questions
 
 All original research gates passed for the checked local version. 1000 questions in ten categories; 1000 current independent acceptances; 1000 current second-pass support reviews.
-Latest actually checked version rendered 2026-10-09T12:29:39.007098+00:00; exact hashes and every open gate are in [reports/checks.json](reports/checks.json).
+Latest actually checked version rendered 2026-10-09T13:05:21.829152+00:00; exact hashes and every open gate are in [reports/checks.json](reports/checks.json).
 
 The original B13 prompt and [CONTRACT.md](CONTRACT.md) require four plausible choices, balanced difficulty/positions, two independent actual source accounts per factual claim, 100% fresh adversarial review and second-pass source reopening. JSON categories, schema, brief source quotes, immutable retrieval receipts, rejected versions and concrete corrections are included. Full copyrighted bodies remain in ignored local `.work/`.
 
