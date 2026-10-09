@@ -3530,7 +3530,7 @@
   {
     "id": "B13-0273",
     "category": "science-space",
-    "question": "Which named SI derived unit measures Celsius temperature?",
+    "question": "Which named SI derived unit expresses temperature relative to 273.15 K?",
     "difficulty": 2,
     "options": [
       "kilogram",
@@ -3542,36 +3542,37 @@
     "correctAnswer": "degree Celsius",
     "funFact": "The symbol for the degree Celsius is °C.",
     "confidence": "high",
-    "confidenceReason": "NIST and the separately edited SI derived-unit table agree on the quantity, special unit name and symbol. Related quantities such as magnetic flux versus flux density, or absorbed versus equivalent dose, remain explicitly distinguished. The ohm symbols Ω and Ω are Unicode representations of the same unit symbol.",
+    "confidenceReason": "The separately edited Wikipedia SI table explicitly states temperature relative to273.15K. The complete NIST4.2.1.1 definition independently sets t=T-T0 with T0=273.15K and names degree Celsius, symbol°C. This removes the literal Celsius answer cue while preserving the named derived quantity, allfour genuine units/index3/difficulty2 and originalsymbol funfact. It asks neither unqualified absolute temperature nor a temperature interval.",
     "sources": [
       {
-        "sourceId": "science-space-s0003",
+        "sourceId": "science-space-s5003",
         "url": "https://en.wikipedia.org/wiki/SI_derived_unit",
         "publisher": "Wikipedia contributors",
         "quote": "degree Celsius °C temperature relative to 273.15 K"
       },
       {
-        "sourceId": "science-space-s0005",
+        "sourceId": "science-space-s5005",
         "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
         "publisher": "National Institute of Standards and Technology",
-        "quote": "Celsius temperature degree Celsius (f) °C"
+        "quote": "Celsius temperature degree Celsius (f) °C",
+        "extraQuote": "where T 0 = 273.15 K by definition."
       }
     ],
     "claims": [
       {
         "kind": "answer",
-        "text": "The named SI derived unit of Celsius temperature is the degree Celsius",
+        "text": "The named SI derived unit for temperature relative to 273.15 K is the degree Celsius.",
         "sourceIds": [
-          "science-space-s0003",
-          "science-space-s0005"
+          "science-space-s5003",
+          "science-space-s5005"
         ]
       },
       {
         "kind": "funFact",
         "text": "The symbol for the degree Celsius is °C.",
         "sourceIds": [
-          "science-space-s0003",
-          "science-space-s0005"
+          "science-space-s5003",
+          "science-space-s5005"
         ]
       }
     ]

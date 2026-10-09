@@ -1102,36 +1102,53 @@
   },
   {
     "id": "B13-0930",
-    "rowSha256": "e1488e49443155abc4a605e5e711d8ec79b80fa5bf9addfefdea308687195b26",
-    "author": "/root/continue_b14_author",
+    "author": "/root",
+    "authoredAt": "2026-10-09T14:47:25.344987+00:00",
+    "rowSha256": "44b7f4b3ec5168dc12b86c681ae05b65ddf9afb786d7e1e6fc8c538b0eef7c5f",
+    "sourceIds": [
+      "food-everyday-life-s5025",
+      "food-everyday-life-s5026"
+    ],
     "evidenceReads": [
       {
-        "sourceId": "food-everyday-life-s0025",
-        "captureSha256": "3100c9810a46569c9c551cb77416f73fab3674ad7e045508712d8f19055d4478",
-        "capturePath": ".work/food-everyday-life/author/food-everyday-life-s0025.txt",
-        "retrievedAt": "2026-10-07T19:01:01.296970+00:00",
-        "answerQuoteExactMatch": true,
-        "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Acetic acid bacteria carry out vinegar's alcohol-to-acid conversion.",
-        "funFactSupport": "Vinegar is widely used for pickling vegetables."
+        "sourceId": "food-everyday-life-s5025",
+        "contentSha256": "a4f2262acda94a46041b95f1116215b21ede9a3260b8cf12415c53d35a734d09",
+        "quoteFound": true,
+        "contextRead": true,
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "by the action of Acetobacter bacteria, forming acetic acid and water",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "widely used in the pickling of cucumbers and other vegetables",
+            "exactMatch": true
+          }
+        ]
       },
       {
-        "sourceId": "food-everyday-life-s0026",
-        "captureSha256": "1523a290664f3656f5397f896734b74af91c29b4cada69750261812dd6369915",
-        "capturePath": ".work/food-everyday-life/author/food-everyday-life-s0026.txt",
-        "retrievedAt": "2026-10-07T19:01:01.757252+00:00",
-        "answerQuoteExactMatch": true,
-        "funFactQuoteExactMatch": true,
-        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
-        "answerSupport": "Acetic acid bacteria carry out vinegar's alcohol-to-acid conversion.",
-        "funFactSupport": "Vinegar is widely used for pickling vegetables."
+        "sourceId": "food-everyday-life-s5026",
+        "contentSha256": "1523a290664f3656f5397f896734b74af91c29b4cada69750261812dd6369915",
+        "quoteFound": true,
+        "contextRead": true,
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "converting ethanol to acetic acid using acetic acid bacteria",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "salad dressing, or pickling agent",
+            "exactMatch": true
+          }
+        ]
       }
     ],
-    "confidenceReason": "Britannica names an example genus and Wikipedia the functional group; the broader answer is valid for both.",
-    "unresolvedProblems": [
-      "Fresh adversarial review and second source reopening are pending."
-    ]
+    "confidenceReason": "The full Britannica two-stage account explicitly separates yeast conversion of sugar to alcohol from bacterial conversion of that alcohol into vinegar, and the full Wikipedia lead and production context independently identify the functional bacterial group. This removes the literal acetic-acid answer cue without changing the scientificgroup/index1/difficulty3, genuine distractors or supportedpickling funfact. The question names the alcohol stage and does not imply yeast never participates in vinegar production.",
+    "originalAuthorPacketSHA256": "6102abcd570c7c88f4d188c08f0f6ef625275a99a1bb3b99c425494759e2bca7"
   },
   {
     "id": "B13-0931",

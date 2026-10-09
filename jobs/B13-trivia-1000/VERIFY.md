@@ -1,19 +1,19 @@
 # B13 verification
 
-## Current acceptance report documentation rendered — 2026-10-09T14:29:06.229144+00:00
+## Current acceptance report documentation rendered — 2026-10-09T14:59:09.916744+00:00
 
 Command actually executed: `python scripts/check-data.py --require-local-captures`.
-Deterministic research validation; random seed n/a. Full raw validator output: [reports/checks.json](reports/checks.json). This table records that exact checked row set, whose canonical version-list SHA is `1874acaea0d08ad819c4d0c45288b45bd390a52c20782242c5478026e5dc86ce`.
+Deterministic research validation; random seed n/a. Full raw validator output: [reports/checks.json](reports/checks.json). This table records that exact checked row set, whose canonical version-list SHA is `553f8398c1dbd8d65cc3052c65bb4e2db1de36a3a94cd00b69fcf9be6725b995`.
 
 | Check | Cases | Passed |
 |---|---:|---:|
 | Authored rows against JSON Schema, IDs, four unique options, answer/index and author hashes | 1000 | 1000 |
 | Category difficulty 34/33/33 and exact answer positions 25/25/25/25 | 10 | 10 |
-| Author quotation fields in actual hash-checked retained bodies | 3509 | 3509 |
+| Author quotation fields in actual hash-checked retained bodies | 3510 | 3510 |
 | Current independent adversarial acceptances | 1000 | 1000 |
 | Current actual second-pass source support reviews | 1000 | 1000 |
-| Second-pass quotation associations/body matches | 3509 | 3509 |
-| Retained similarity flags with current accepted concrete resolutions | 2210 | 2210 |
+| Second-pass quotation associations/body matches | 3510 | 3510 |
+| Retained similarity flags with current accepted concrete resolutions | 2205 | 2205 |
 
 Schema/data errors: 0. Ten category files each have 100 real rows. Quote matching proves retained text presence, not factual entailment or independent editorial origin: the independent per-row reviewers read actual surrounding paragraphs/footnotes, tried concrete counterexamples, checked scope/fun facts/options and preserved original rejects. Source GET timestamps are actual original opens, not refreshed when a later choice order is reviewed.
 

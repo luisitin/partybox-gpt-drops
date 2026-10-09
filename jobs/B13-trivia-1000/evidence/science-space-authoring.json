@@ -2931,44 +2931,48 @@
   },
   {
     "id": "B13-0273",
-    "rowSha256": "471a8510148c140368c98bb4deff6e991d55c0ee93d4b2d08702d423c65b2a53",
+    "author": "/root",
+    "authoredAt": "2026-10-09T14:47:25.344987+00:00",
+    "rowSha256": "54b8488835f89e690fea9161aa83ab3514520941a30a30460a41d62a908af9ad",
+    "sourceIds": [
+      "science-space-s5003",
+      "science-space-s5005"
+    ],
     "evidenceReads": [
       {
-        "sourceId": "science-space-s0003",
-        "contentSha256": "dade87a6b4656086062b685c569d3267bb57a9418d656291f7c04f5f145a3cbb",
-        "quote": "degree Celsius °C temperature relative to 273.15 K",
-        "funFactQuote": null,
-        "exactQuoteMatched": true,
-        "claimsSupported": [
-          "answer",
-          "funFact"
+        "sourceId": "science-space-s5003",
+        "contentSha256": "25feb54193352339ca93194d3637fc1ba6bd98cb76da8e3087ec2fb80820e594",
+        "quoteFound": true,
+        "contextRead": true,
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "degree Celsius °C temperature relative to 273.15 K",
+            "exactMatch": true
+          }
         ]
       },
       {
-        "sourceId": "science-space-s0005",
-        "contentSha256": "8661e8421ab80f21d0e0ab92fc28d3dfe33104170e55591d00a0d6340676aa87",
-        "quote": "Celsius temperature degree Celsius (f) °C",
-        "funFactQuote": null,
-        "exactQuoteMatched": true,
-        "claimsSupported": [
-          "answer",
-          "funFact"
+        "sourceId": "science-space-s5005",
+        "contentSha256": "818679368999d7cf2983607f8a3ee71304e03c8c8764db3b5b20daa827099188",
+        "quoteFound": true,
+        "contextRead": true,
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "Celsius temperature degree Celsius (f) °C",
+            "exactMatch": true
+          },
+          {
+            "field": "extraQuote",
+            "quote": "where T 0 = 273.15 K by definition.",
+            "exactMatch": true
+          }
         ]
       }
     ],
-    "confidenceReason": "NIST and the separately edited SI derived-unit table agree on the quantity, special unit name and symbol. Related quantities such as magnetic flux versus flux density, or absorbed versus equivalent dose, remain explicitly distinguished. The ohm symbols Ω and Ω are Unicode representations of the same unit symbol.",
-    "unresolvedProblems": [
-      "Fresh independent adversarial review is pending.",
-      "Second full source reopening is pending.",
-      "Scientific names, quantities and tables need the full-set similarity and answer-length checks."
-    ],
-    "author": "/root",
-    "authorIdentityProvenance": {
-      "file": "evidence/root-categories-difficulty-author-repairs.json",
-      "sha256": "9a7d6519645eb0b1e826ab0e0eba17244df23f4ba7e37e8082d4afed1610d82c",
-      "explicitOriginalAuthorStatement": "/root (original author of these categories)",
-      "scope": "Original chat identity only; no new authorship, historical row version, factual review or retrieval time claimed."
-    }
+    "confidenceReason": "The separately edited Wikipedia SI table explicitly states temperature relative to273.15K. The complete NIST4.2.1.1 definition independently sets t=T-T0 with T0=273.15K and names degree Celsius, symbol°C. This removes the literal Celsius answer cue while preserving the named derived quantity, allfour genuine units/index3/difficulty2 and originalsymbol funfact. It asks neither unqualified absolute temperature nor a temperature interval.",
+    "originalAuthorPacketSHA256": "6102abcd570c7c88f4d188c08f0f6ef625275a99a1bb3b99c425494759e2bca7"
   },
   {
     "id": "B13-0274",

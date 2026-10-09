@@ -2631,14 +2631,15 @@ Answer: weber. Fun fact: The symbol for the weber is Wb.
 - science-space-s0005: [National Institute of Standards and Technology](https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes)
   quote: “magnetic flux weber Wb” (4 words).
 
-## B13-0273 — Which named SI derived unit measures Celsius temperature?
+## B13-0273 — Which named SI derived unit expresses temperature relative to 273.15 K?
 
 Answer: degree Celsius. Fun fact: The symbol for the degree Celsius is °C.
 
-- science-space-s0003: [Wikipedia contributors](https://en.wikipedia.org/wiki/SI_derived_unit)
+- science-space-s5003: [Wikipedia contributors](https://en.wikipedia.org/wiki/SI_derived_unit)
   quote: “degree Celsius °C temperature relative to 273.15 K” (8 words).
-- science-space-s0005: [National Institute of Standards and Technology](https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes)
+- science-space-s5005: [National Institute of Standards and Technology](https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes)
   quote: “Celsius temperature degree Celsius (f) °C” (6 words).
+  extraQuote: “where T 0 = 273.15 K by definition.” (8 words).
 
 ## B13-0274 — Which named SI derived unit measures luminous flux?
 
@@ -9729,14 +9730,14 @@ Answer: Alcohol. Fun fact: Acetic acid bacteria carry out vinegar's alcohol-to-a
   quote: “converting simple sugars to ethanol using yeast” (7 words).
   funFactQuote: “converting ethanol to acetic acid using acetic acid bacteria” (9 words).
 
-## B13-0930 — Which organisms convert alcohol into acetic acid during vinegar making?
+## B13-0930 — Which organisms carry out the alcohol-to-vinegar conversion?
 
 Answer: Acetic acid bacteria. Fun fact: Vinegar is widely used for pickling vegetables.
 
-- food-everyday-life-s0025: [Encyclopaedia Britannica](https://www.britannica.com/topic/vinegar)
+- food-everyday-life-s5025: [Encyclopaedia Britannica](https://www.britannica.com/topic/vinegar)
   quote: “by the action of Acetobacter bacteria, forming acetic acid and water” (11 words).
   funFactQuote: “widely used in the pickling of cucumbers and other vegetables” (10 words).
-- food-everyday-life-s0026: [Wikipedia contributors](https://en.wikipedia.org/wiki/Vinegar)
+- food-everyday-life-s5026: [Wikipedia contributors](https://en.wikipedia.org/wiki/Vinegar)
   quote: “converting ethanol to acetic acid using acetic acid bacteria” (9 words).
   funFactQuote: “salad dressing, or pickling agent” (5 words).
 
