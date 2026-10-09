@@ -1,5 +1,23 @@
 # B04 — Current continuation
 
+2026-10-09T12:27:35.088682+00:00: Material research checkpoint; all518 complete facts remain unchanged. Current100 corroborated /398 single-source /19 disagreements /1 unknown;37/38 events and0/7 exact numbered maps. The original research standard is NOT_MET and PR18 stays Draft.
+
+Read reports/three-native-scope-negatives-20261009.json. Three complete paired original scopes were examined: Atwiki current Jamboree2737 characters, clear_xt play report7548, and SASKE Goomba match1847. All six original HTTP requests returned200, both finite collectors naturally closed, and each authored A/B scope is identical. Full copyrighted bodies and images remain private. No new quotes or source-registry rows were registered.
+
+The new sources do not close the exact tide-switch Event, Party Rules zipline fee/trigger, complete Lakitu relocation destination, train boarding availability or current Steamer Event. The SASKE article explicitly supports GoldenGoomba5 coins against the retained MPL3 wording, but the full eruption fact stays conflict/low with goldCoins null. Preserve this partial lead for a complete source reconciliation; do not silently resolve the disagreement or infer tide timing from the author's approximate recollection. The clear_xt zipline observation belongs to the separate helper mode, not Party Rules.
+
+Next resume full original image/context investigation for exact tide Event and train availability, then distinct complete inventory/state facts. All19 disputes,593 fingerprints,518 values and complete fact objects, source registry/capture dates, fixtures/schema/verifier/workflow/gates are unchanged. Shared Namu250/250 is fully spent; Cel131 and150+50 reserved ceiling200 remain unchanged. New candidate URLs have no B03 wording reservation as of the sibling's actual12:25:52 audit; no allowance or fact proof is transferred.
+
+Source488ea genuinely published12:06:52. Its entire original run37927935135/job113811293362 closed12:07:10, native21443B SHAbe5ce8dea99e950a648a893059067d1541c808be7345a57235a7821359ae2962 was personally read12:08:27. Structural26 suites/5744 cases/107 manifest passed; strict25/5637 retained100/518 FAIL and37/38 FAIL/NOT_MET with actual exit1, expressly required by the unchanged workflow. This is now historical parent evidence, sealed in the new parent report/native. New checkpoint source-specific whole original hosted acceptance must be read after actual publication; no inherited green or Ready claim.
+
+GP main own-row claim df060 was normally published12:11:45 and fully read12:11:46, preserving17 foreign rows/all other root entries; lease released. Only refresh after the next actual product checkpoint and a fresh serialized root lease. Claims do not reset the source clock. Previous hard cadence misses105s and92s remain historical, without backdating.
+
+The independent B13 nine-variant factual peer and current1000-option-length assessment were separately authored in private directories; no B13 product edits were made and none of that evidence counts as board research.
+
+Previous detailed continuation follows:
+
+# B04 — Current continuation
+
 2026-10-09T12:05:23.144038+00:00:100/518corroborated,398single-source,19disagreements,1unknown;37/38events/0of7exactmaps. OriginalNOT_MET/PR18Draft.
 
 Only4ordinary angry-Wiggler typed facts gain new source comparison: lucky11/red6/Bowser4match atmedium;blueWiki24vsNamu21isLOWconflict,retaining24. Both complete source contexts explicitly define parentheses as angry, normalWikicolumnseparatefromTagTeam. All518values/514otherfacts/18previousconflicts/allprofilemetadataandtotals unchanged,6updatedfingerprints. Existing numeric fragments21/11/6/4reused,zero newquotes,capturedates orregistrychanges. Read reports/wiggler-angry-count-recovery-20261009.json; priorreports/wiggler-angry-counts-UNADOPTED-20261009.json stays genuinehistorical67fcheckpoint. Do notcorroborate fullangry/TVprofiles, Start/Rally,totalorothernontypedstates.
