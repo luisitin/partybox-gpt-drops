@@ -219,6 +219,9 @@ def run(args):
     recovered=validate_reopens(sources,reopen_docs[:2],reopen_docs[2])
     checked('All '+str(len(reopen_docs[0]))+' source URLs reopened twice with ordered HTTPS/TLS records',len(reopen_docs[0])*2,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
     checked('Every recovered reopen quotation bound to the original registry',recovered,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
+    ranked_checker=module('b03_ranked_gameplay_candidates','check-ranked-gameplay-candidates.py')
+    for result in ranked_checker.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Ranked independent gameplay candidate proof failed'),result.get('detail',''))
     cog_recovery=module('b03_cog_recovery','check-cog-gameplay-recovery.py')
     for result in cog_recovery.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'COG action recovery failed'),result.get('detail',''))
