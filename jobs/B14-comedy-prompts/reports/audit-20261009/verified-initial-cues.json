@@ -425,5 +425,340 @@
       }
     ],
     "conflictIds": []
+  },
+  {
+    "id": "CUE-006",
+    "status": "VERIFIED",
+    "claim": "The Energizer Bunny advertising character is depicted beating a drum. The lie-detector interview inM1089 is creative fiction, not an actual campaign or service.",
+    "promptIds": [
+      "M1089"
+    ],
+    "confidence": "high",
+    "confidenceReason": "Actual corporate timeline and independently authored federal court opinion describe the same drumming advertising character; both full sources reopened and literal contexts read. No debut year asserted.",
+    "sources": [
+      {
+        "sourceId": "energizer-official",
+        "url": "https://energizer.com/energizer-bunny/bunny-timeline/",
+        "author": "Energizer corporate authorship",
+        "independentAuthorGroup": "Energizer",
+        "role": "primary",
+        "quote": "where he drummed away—in full flip flop and sunglasses glory",
+        "quoteWords": 10,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 430802,
+            "rawSha256": "a9c4429a7d108afd608a0126f6583ea3b15333ddf410c2c4508e2af72f4657ad",
+            "visibleCharacters": 10845,
+            "visibleSha256": "4ac50fa0ff9185b7e77a4d4aabec7b126893590ec67a66f7188aa3b83db9bd51",
+            "literalQuoteOffset": 9688,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T12:14:32.841628+00:00",
+            "closedUTC": "2026-10-09T12:14:34.090430+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 430802,
+            "rawSha256": "a9c4429a7d108afd608a0126f6583ea3b15333ddf410c2c4508e2af72f4657ad",
+            "visibleCharacters": 10845,
+            "visibleSha256": "4ac50fa0ff9185b7e77a4d4aabec7b126893590ec67a66f7188aa3b83db9bd51",
+            "literalQuoteOffset": 9688,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T12:14:35.275717+00:00",
+            "closedUTC": "2026-10-09T12:14:36.716825+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "energizer-court",
+        "url": "https://openjurist.org/765/fsupp/440/eveready-battery-co-inc-v-adolph-coors-co-2351049",
+        "author": "U.S. District Court, Northern District of Illinois; opinion in765F.Supp.440 (named judge not asserted from absent metadata)",
+        "independentAuthorGroup": "Federal judicial opinion in765F.Supp.440",
+        "role": "independent",
+        "quote": "the Energizer Bunny — which virtually always appears in its characteristic beach thongs and sunglasses — strolls onto screen beating his bass drum.",
+        "quoteWords": 23,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 500135,
+            "rawSha256": "f2e85c0a8dce6736eff9ba9cc0f969864ffa72c3fc77565381ab89744ae06f72",
+            "visibleCharacters": 50390,
+            "visibleSha256": "ca302c08b5a5cddc22f2e770b8aad61c5c10b86465e759e707f9a8bcd230fb4e",
+            "literalQuoteOffset": 5125,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T13:05:57.028101+00:00",
+            "closedUTC": "2026-10-09T13:05:57.788360+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 500135,
+            "rawSha256": "f2e85c0a8dce6736eff9ba9cc0f969864ffa72c3fc77565381ab89744ae06f72",
+            "visibleCharacters": 50390,
+            "visibleSha256": "ca302c08b5a5cddc22f2e770b8aad61c5c10b86465e759e707f9a8bcd230fb4e",
+            "literalQuoteOffset": 5125,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T13:05:57.791621+00:00",
+            "closedUTC": "2026-10-09T13:05:58.253233+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": [
+      "ENERGIZER-DEBUT-DATE"
+    ]
+  },
+  {
+    "id": "CUE-007",
+    "status": "VERIFIED",
+    "claim": "GEICO advertising is associated with automobile insurance. Fictional Gecko inspections of ghosts and their driving licences are not an actual service claim.",
+    "promptIds": [
+      "M1111",
+      "Q1111"
+    ],
+    "confidence": "high",
+    "confidenceReason": "Actual two differently authored full contexts support this precise advertising association; both full captures and literal short quotes rechecked. Fictional events and physical efficacy are excluded.",
+    "sources": [
+      {
+        "sourceId": "geico-official",
+        "url": "https://www.geico.com/about/corporate/history-the-full-story/",
+        "author": "GEICO corporate authorship",
+        "independentAuthorGroup": "GEICO",
+        "role": "primary",
+        "quote": "a successful auto insurance business",
+        "quoteWords": 5,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 65647,
+            "rawSha256": "ed0179e3129e8a4f33ad0aaa229e56c74de719068f008b6671448ee6716bd128",
+            "visibleCharacters": 12729,
+            "visibleSha256": "9242c25153bc22e9b2e8d2974f69d9cfb3bba962928d4fa419ad5543aef40abf",
+            "literalQuoteOffset": 3315,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T12:14:32.361674+00:00",
+            "closedUTC": "2026-10-09T12:14:33.497103+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 65648,
+            "rawSha256": "3ff218521ff34bc35c0ed4fdc13ffa545a6ad10ead39988fcca9eb6d7a8a1ee7",
+            "visibleCharacters": 12729,
+            "visibleSha256": "9242c25153bc22e9b2e8d2974f69d9cfb3bba962928d4fa419ad5543aef40abf",
+            "literalQuoteOffset": 3315,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T12:14:35.041260+00:00",
+            "closedUTC": "2026-10-09T12:14:35.383455+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "geico-insurance",
+        "url": "https://insurancenewsnet.com/innarticle/at-age-20-the-geico-gecko-remains-king-of-the-insurance-ads",
+        "author": "Staff Reports, InsuranceNewsNet",
+        "independentAuthorGroup": "InsuranceNewsNet",
+        "role": "independent",
+        "quote": "could save you hundreds on car insurance",
+        "quoteWords": 7,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 106154,
+            "rawSha256": "3f7ea7643153cd3c803307b30f32d84cb8306350438b83964321a9a8058b0564",
+            "visibleCharacters": 8322,
+            "visibleSha256": "6b36c015a98ed4f3e0a0d364cec7471205ddc423ec542b62d7193dc71998ea23",
+            "literalQuoteOffset": 2682,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T12:14:32.704756+00:00",
+            "closedUTC": "2026-10-09T12:14:34.778411+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 106154,
+            "rawSha256": "3f7ea7643153cd3c803307b30f32d84cb8306350438b83964321a9a8058b0564",
+            "visibleCharacters": 8322,
+            "visibleSha256": "6b36c015a98ed4f3e0a0d364cec7471205ddc423ec542b62d7193dc71998ea23",
+            "literalQuoteOffset": 2682,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T12:14:35.062110+00:00",
+            "closedUTC": "2026-10-09T12:14:35.560661+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": []
+  },
+  {
+    "id": "CUE-008",
+    "status": "VERIFIED",
+    "claim": "Energizer Bunny advertising uses a keep-going/endurance association. This does not assert physically everlasting batteries or a real mascot death.",
+    "promptIds": [
+      "Q0089"
+    ],
+    "confidence": "high",
+    "confidenceReason": "Actual two differently authored full contexts support this precise advertising association; both full captures and literal short quotes rechecked. Fictional events and physical efficacy are excluded.",
+    "sources": [
+      {
+        "sourceId": "energizer-official",
+        "url": "https://energizer.com/energizer-bunny/bunny-timeline/",
+        "author": "Energizer corporate authorship",
+        "independentAuthorGroup": "Energizer",
+        "role": "primary",
+        "quote": "keep going and going …",
+        "quoteWords": 5,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 430802,
+            "rawSha256": "a9c4429a7d108afd608a0126f6583ea3b15333ddf410c2c4508e2af72f4657ad",
+            "visibleCharacters": 10845,
+            "visibleSha256": "4ac50fa0ff9185b7e77a4d4aabec7b126893590ec67a66f7188aa3b83db9bd51",
+            "literalQuoteOffset": 7050,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T12:14:32.841628+00:00",
+            "closedUTC": "2026-10-09T12:14:34.090430+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 430802,
+            "rawSha256": "a9c4429a7d108afd608a0126f6583ea3b15333ddf410c2c4508e2af72f4657ad",
+            "visibleCharacters": 10845,
+            "visibleSha256": "4ac50fa0ff9185b7e77a4d4aabec7b126893590ec67a66f7188aa3b83db9bd51",
+            "literalQuoteOffset": 7050,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T12:14:35.275717+00:00",
+            "closedUTC": "2026-10-09T12:14:36.716825+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "energizer-forbes",
+        "url": "https://www.forbes.com/2008/07/08/advertising-mars-geico-biz-media-cx_lr_0708spokescreatures_slide.html",
+        "author": "Lacey Rose, Forbes (actual article:author and JSON-LD metadata)",
+        "independentAuthorGroup": "Forbes",
+        "role": "independent",
+        "quote": "The battery-operated mascot has been going and going ever since.",
+        "quoteWords": 10,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 845695,
+            "rawSha256": "8edf01324acd41f86382128f5e1911002feb1d8a69d5c45124da4e17e89b5faf",
+            "visibleCharacters": 16675,
+            "visibleSha256": "39ee18b431407a097ce3b75a6a9142cc4aaead492dead906f0815c185cf2d5ee",
+            "literalQuoteOffset": 13480,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T12:14:32.969345+00:00",
+            "closedUTC": "2026-10-09T12:14:34.611689+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 845695,
+            "rawSha256": "8edf01324acd41f86382128f5e1911002feb1d8a69d5c45124da4e17e89b5faf",
+            "visibleCharacters": 16675,
+            "visibleSha256": "39ee18b431407a097ce3b75a6a9142cc4aaead492dead906f0815c185cf2d5ee",
+            "literalQuoteOffset": 13480,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T12:14:35.382201+00:00",
+            "closedUTC": "2026-10-09T12:14:36.004107+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": []
+  },
+  {
+    "id": "CUE-009",
+    "status": "VERIFIED",
+    "claim": "Enterprise U.S. car rental is associated with a security deposit. The cult leader and purpose of a fictional deposit inQ1173 are imagined; no amount, refund timing or global uniform policy is asserted.",
+    "promptIds": [
+      "Q1173"
+    ],
+    "confidence": "high",
+    "confidenceReason": "Actual Enterprise U.S. FAQ and Kristin independent AutoSlash report both describe rental security deposits; both full pages reopened and exact paragraph contexts checked. Amount/location differences are not resolved into a numerical claim.",
+    "sources": [
+      {
+        "sourceId": "enterprise-deposit-official",
+        "url": "https://www.enterprise.com/en/car-rental-faqs/us-deposits-and-payments/car-rental-deposit.html",
+        "author": "Enterprise Rent-A-Car corporate authorship",
+        "independentAuthorGroup": "Enterprise Rent-A-Car",
+        "role": "primary",
+        "quote": "a deposit is required to rent a car from Enterprise in the United States.",
+        "quoteWords": 14,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 610629,
+            "rawSha256": "bd322251621cb58d675299493972133bbe183aef40b327eb7aa89f726e94e695",
+            "visibleCharacters": 8378,
+            "visibleSha256": "ad15a74133a0e13f1792b617875bed4c7d4bfeaeca509f412b3b8d088171e880",
+            "literalQuoteOffset": 6163,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T13:15:04.295207+00:00",
+            "closedUTC": "2026-10-09T13:15:05.180591+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 610629,
+            "rawSha256": "1bc80807aaa616b06fa170e2f9a30f2ee870e372f277334b98cead418d95fc2d",
+            "visibleCharacters": 8378,
+            "visibleSha256": "ad15a74133a0e13f1792b617875bed4c7d4bfeaeca509f412b3b8d088171e880",
+            "literalQuoteOffset": 6163,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T13:15:05.184228+00:00",
+            "closedUTC": "2026-10-09T13:15:05.636242+00:00"
+          }
+        ]
+      },
+      {
+        "sourceId": "enterprise-deposit-autoslash",
+        "url": "https://blog.autoslash.com/how-much-does-enterprise-hold-on-your-card/",
+        "author": "Kristin, AutoSlash (actual visible byline)",
+        "independentAuthorGroup": "AutoSlash",
+        "role": "independent",
+        "quote": "The hold is equal to the rental rate plus a security deposit.",
+        "quoteWords": 12,
+        "fullPasses": [
+          {
+            "pass": 1,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 70855,
+            "rawSha256": "44bdc86fbaeb0a9cf4e53f13eb59be8fccc624d0976e5ee55836077d6c3695f1",
+            "visibleCharacters": 5669,
+            "visibleSha256": "92340749f9fe3899005c2ea8176c3aaa0de82648f37387cd6087a465aa05aec7",
+            "literalQuoteOffset": 318,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T13:15:04.300221+00:00",
+            "closedUTC": "2026-10-09T13:15:04.659180+00:00"
+          },
+          {
+            "pass": 2,
+            "actualHTTP200FullBody": true,
+            "rawBytes": 70855,
+            "rawSha256": "44bdc86fbaeb0a9cf4e53f13eb59be8fccc624d0976e5ee55836077d6c3695f1",
+            "visibleCharacters": 5669,
+            "visibleSha256": "92340749f9fe3899005c2ea8176c3aaa0de82648f37387cd6087a465aa05aec7",
+            "literalQuoteOffset": 318,
+            "quoteExactInFullText": true,
+            "openedUTC": "2026-10-09T13:15:05.185122+00:00",
+            "closedUTC": "2026-10-09T13:15:05.399270+00:00"
+          }
+        ]
+      }
+    ],
+    "conflictIds": []
   }
 ]

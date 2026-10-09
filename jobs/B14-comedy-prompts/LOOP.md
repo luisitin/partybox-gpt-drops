@@ -100,3 +100,7 @@ Read original instructions and all four unresolved P2 reviews. Whole original so
 
 ## 2026-10-09 material recovery milestone
 Actual exact both-genre reranking repairs four rows; Folgers premise duplicate removed; original words/grades/seals preserved. Complete changed-source pool/final scans closed12:47:50 UTC with frozen inputs unchanged. Real independent600-case exhaustive selector controls and14 delivery controls passed. Five narrowly scoped two-author cultural facts are now recorded; all-selected research remains incomplete. This is a substantive gain, not a no-gain KEEP round. Preserved failed premature scan/adoption and actual cancellation receive zero credit. Exact new hosted whole proof pending.
+
+
+## Research-coverage repair checkpoint
+Actual9 narrowly scoped associations; strict research rejects all1200 unfinished rows. Exact70f51 original+600selector+14delivery whole packet accepted13:11:31. Separate local26-pair/22-row semantic repair fullscan is pending and not shipped in this checkpoint. Substantivegain, zero formalKEEP credit. Previous51s hard cadence miss retained.
