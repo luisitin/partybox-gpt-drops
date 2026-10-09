@@ -47,3 +47,29 @@ primary generator for both full modes in EACH seed, in addition to unchanged
 paired-sim/independent generation and all original required workloads. Current
 changed-head full hosted verification and subsequent substantive KEEP audit
 are pending; original903 proof does not establish this new source.
+
+2026-10-09 exact9c14 full hosted proof accepted08:07:08. All six standalone
+primary generations, every original workload and all72 historical report
+restoration hashes passed in the entire genuine80-member archive. The actual
+invalid-input wrapper control correctly failed and preserved its output.
+
+2026-10-09 post-full KEEP1: inspected every inherited full-test gate by
+removing only the explicitly added report control, six primary-regeneration
+operations and primary receipt field from the actual current driver. The
+remaining bytes exactly equal original903 run.mjs. Removing only the fresh
+artifact path from the current workflow exactly reproduces its original
+bytes. Every173 published delivery input remained unchanged. No further
+source gain found.
+
+2026-10-09 post-full KEEP2:18 actual report transport assertions cover
+concurrent lock rejection before callback execution, empty/binary/Unicode/deep
+original reports, successful output export, failed code5 output retention,
+original-input restoration and both retained invocation directories. The
+published helper passed; no further source gain found. These are actual
+transport controls, not extra solver semantic counts.
+
+2026-10-09 shared measurement coordination hold: all own native children were
+closed during the global quiet window; source early08:21:20 fell within that
+hold. Explicit release arrived before this publication; third finite compiled
+API/port audit and whole official archive public preservation remain pending.
+No deadline or test result is backdated.
