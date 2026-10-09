@@ -10,8 +10,8 @@
 
 | | |
 | --- | --- |
-| Status | **Port with fixes** (listed below). The filter is ready; the join wiring, the Spanish lexicon and two policy calls are not. |
-| Branch | `job/B19-name-filter`; the head commit that adds this file (`git log --oneline -1 -- jobs/B19-name-filter/INTEGRATION.md`) · PR #2 (draft, do not mark ready from here) · CI: `303f4f0` red only on the literal latency gate (run 37810714023: seed 1, 3 calls above 0.05 ms, max 0.093 ms; all other rows passed); `2b54431` was green (run 37809073933, 0 failures) |
+| Status | Current corrected standalone drop has two genuine full checks and completed finite runtime review; final delivery/PR23 status is on GitHub. All parent-repository port behavior below remains UNVERIFIED in this review. |
+| Branch | Supplemental `job/B19-name-filter-protocol-review-20261008`, PR23 into canonical `job/B19-name-filter`; originalPR2 remains untouched. Corrected-runtime full run37880030043 attempts1/2 is independently accepted at exact89ea55. Current final delivery CI must be accepted separately. |
 | Repo | luisitin/partybox-gpt-drops |
 | Test | `cd jobs/B19-name-filter && npm ci --ignore-scripts --no-audit --no-fund && npm test` (Node 22+). Full run ≈ 1 min on an idle box; `npm run test:core` skips corpora. |
 | Lands in PartyBox | `packages/engine/src/name-filter.ts` (new, pure) · called from `packages/engine/src/players.ts` `join()` · tests `packages/engine/src/name-filter.test.ts` (new) |
@@ -23,8 +23,8 @@ when it contains a finite English list of sexual terms and slurs, including leet
 inserted separators, reversals and a documented set of confusable letters. It accepts a reviewed list of
 benign names and words (Scunthorpe, Cumming, Dickens, Sussex and so on) and returns a frozen
 `{ ok: true }` or `{ ok: false, reason, suggestion }`. Measured here: 5,000 seeded obfuscations all blocked,
-465 handwritten cases and 5,000 generated obfuscations pass per seed (15,000 across seeds 1–3), 25 real executed mutants are caught,
-and a sealed independent reference agrees on every compared input. Honest limits: English only (Spanish
+459 immutable original fixed cases and 5,000 generated obfuscations pass per seed (15,000 across seeds1–3), all25 original mutants per seed are executed/killed,
+and the new independently sealed run-boundary reference agrees on every current compared original/supplementary input. The historical sealed oracle has retained Unicode disagreements. Honest limits: English only (Spanish
 profanity passes), a finite confusable table (not UTS #39), and 11 Census names are blocked by design.
 
 ## Take these files (the product)
@@ -50,8 +50,8 @@ profanity passes), a finite confusable table (not UTS #39), and 11 Census names 
 
 1. **Copy** `nameFilter.ts` to `packages/engine/src/name-filter.ts`. It needs no import rewrite (it imports
    nothing). Run `pnpm lint`: the engine rules (no `Date.now`, `Math.random`, timers, I/O) already hold.
-2. **Normalize first, then filter.** In `join()` (`packages/engine/src/players.ts`, around line 73) the name
-   is `const name = normalizeName(event.name);`. Call the filter on that value, not on `event.name`.
+2. **Host-specific normalization ordering remains UNVERIFIED.** In `join()` (`packages/engine/src/players.ts`, around line 73) the name
+   is `const name = normalizeName(event.name);`. The historical suggestion was to filter that normalized value. That is a host-policy decision, not the standalone B19 contract: B19 checks raw16-code-point length and rejects bidi controls before normalization. Do not treat invisible/bidi stripping as preserving that raw rejection contract; verify the actual host adapter and the chosen raw-input policy before porting.
    Reason: PartyBox's `normalizeName` (`packages/shared/src/ids.ts`, line ~49) strips invisible and bidi
    characters, collapses whitespace and only then counts 1–16 code points. The filter counts the raw input
    and rejects controls, so an unfiltered call would reject a name that `normalizeName` accepts (for
@@ -104,8 +104,7 @@ needed: the room lobby never shows a rejected name, so nothing reaches the TV.
    lexicon is English only (POLICY.md scope). PartyBox ships es, so an es room needs a reviewed Spanish
    lexicon (its own `ES_TERMS`, same matcher) before this filter can claim to cover that room. This is
    an owner decision on which terms count; no list was invented here.
-2. **Normalize-first wiring** (step 2) is mandatory. Without it, invisible characters count against the
-   16-point limit and a valid name can be rejected.
+2. **Raw-input versus host-normalized wiring** (step2) is not verified here. The standalone contract counts raw codepoints and rejects controls; a host that strips them first changes that contract. Verify adapter ordering and raw-control/length regressions in the actual parent repository before porting.
 3. **Legacy and reconnect paths** (step 5) bypass the filter. A blocked name saved before the port stays
    in play unless restore filters it.
 4. **Real names blocked by design.** Eleven Census names are rejected (`Lana`, `Dick`, `Bonner`, `Coon`,
