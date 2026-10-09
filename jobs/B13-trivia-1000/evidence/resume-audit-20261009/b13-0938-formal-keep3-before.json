@@ -1,0 +1,235 @@
+{
+  "id": "B13-0938",
+  "row": {
+    "id": "B13-0938",
+    "category": "food-everyday-life",
+    "question": "Which species gives its name to arabica coffee?",
+    "difficulty": 2,
+    "options": [
+      "Coffea arabica",
+      "Coffea stenophylla",
+      "Coffea liberica",
+      "Coffea canephora"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": "Coffea arabica",
+    "funFact": "Robusta belongs to Coffea canephora.",
+    "confidence": "high",
+    "confidenceReason": "Both passages distinguish the species; the question asks the scientific name of arabica, not a production ranking.",
+    "sources": [
+      {
+        "sourceId": "food-everyday-life-s5029",
+        "url": "https://www.britannica.com/topic/coffee",
+        "publisher": "Encyclopaedia Britannica",
+        "quote": "Coffea arabica and C. canephora",
+        "funFactQuote": "Robusta, the main variety of C. canephora"
+      },
+      {
+        "sourceId": "food-everyday-life-s5030",
+        "url": "https://en.wikipedia.org/wiki/Coffee",
+        "publisher": "Wikipedia contributors",
+        "quote": "C. canephora (predominantly a form known as 'robusta') and C. arabica",
+        "funFactQuote": "C. canephora (predominantly a form known as 'robusta')"
+      }
+    ],
+    "claims": [
+      {
+        "kind": "answer",
+        "text": "Arabica coffee is obtained from the species Coffea arabica.",
+        "sourceIds": [
+          "food-everyday-life-s5029",
+          "food-everyday-life-s5030"
+        ]
+      },
+      {
+        "kind": "funFact",
+        "text": "Robusta belongs to Coffea canephora.",
+        "sourceIds": [
+          "food-everyday-life-s5029",
+          "food-everyday-life-s5030"
+        ]
+      }
+    ]
+  },
+  "author": {
+    "id": "B13-0938",
+    "author": "/root",
+    "authoredAt": "2026-10-09T11:36:35.920276+00:00",
+    "rowSha256": "9b8652203afca628516dd2c9dd3240e687aed529e2f544938a43dddd94715bce",
+    "evidenceReads": [
+      {
+        "sourceId": "food-everyday-life-s5029",
+        "contentSha256": "034836ce227b201da517d192e1a4a4f071e3c0e7a7f75a611750cd8f1d485043",
+        "capturePath": ".work/root-current-food-everyday-life-20261009/author/food-everyday-life-s0029.txt",
+        "retrievedAt": "2026-10-09T11:30:40.148013+00:00",
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "Coffea arabica and C. canephora",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Robusta, the main variety of C. canephora",
+            "exactMatch": true
+          }
+        ],
+        "contextRead": true,
+        "scope": "Actual fresh author source body and whole selected paragraphs read; factual assessments below separately supplied by the independent reviewer."
+      },
+      {
+        "sourceId": "food-everyday-life-s5030",
+        "contentSha256": "541d0b390682e3424aa3bd6b3d54e1a0d1aa8074a5fb1b823319807d26840705",
+        "capturePath": ".work/root-current-food-everyday-life-20261009/author/food-everyday-life-s0030.txt",
+        "retrievedAt": "2026-10-09T11:30:40.208936+00:00",
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "C. canephora (predominantly a form known as 'robusta') and C. arabica",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "C. canephora (predominantly a form known as 'robusta')",
+            "exactMatch": true
+          }
+        ],
+        "contextRead": true,
+        "scope": "Actual fresh author source body and whole selected paragraphs read; factual assessments below separately supplied by the independent reviewer."
+      }
+    ],
+    "confidenceReason": "Both passages distinguish the species; the question asks the scientific name of arabica, not a production ranking.",
+    "unresolvedProblems": []
+  },
+  "adversarial": {
+    "id": "B13-0938",
+    "reviewer": "codex-board-audit-20261009 / root-independent B13 peer",
+    "reviewerTask": "/root/restart_g01_0458",
+    "reviewedAt": "2026-10-09T11:52:32.534419+00:00",
+    "rowSha256": "9b8652203afca628516dd2c9dd3240e687aed529e2f544938a43dddd94715bce",
+    "result": "accept",
+    "attemptedCounterexample": "Britannica whole commercial-plant paragraph contrastsCoffea arabica/Arabica withC.canephora/Robusta; Wikipedia whole botanical paragraph names the same two distinct species. Correcting the retained claim now matches the asked scientific species rather than an unrelated production-ranking claim. All four are realCoffea species; canephora is robusta and liberica/stenophylla are distinct less-common species. The shared arabica spelling is a definitional taxonomy clue, not a new unasked answer leak introduced by this revision.",
+    "scopeDateCheck": "Stable species identity, no changing consumption share/ranking asked.",
+    "distractorsChecked": [
+      "Coffea arabica",
+      "Coffea stenophylla",
+      "Coffea liberica",
+      "Coffea canephora"
+    ],
+    "funFactCheck": "Both whole paragraphs explicitly connect robusta withC.canephora.",
+    "sourceIndependenceCheck": "Britannica native Nathan Myhrvold/editor links and Wikipedia independently structured botanical context. Entire references61International Coffee Organization botanical account,62Anthony etal1987 and63van der Vossen/CliffordWilson were read; no selected attribution to the paired Britannica page.",
+    "difficultyCheck": "2 is acceptable for elementary coffee taxonomy, with a transparent lexical clue that can make it easier for some players. No factual or answer-class ambiguity requires rejecting the label.",
+    "cautions": [
+      "Bare commercial-species lists are insufficient alone; the full Britannica paragraph supplies the Arabica-versusRobusta naming relationship."
+    ],
+    "originalIndependentPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590"
+  },
+  "reopen": {
+    "id": "B13-0938",
+    "reviewer": "codex-board-audit-20261009 / root-independent B13 peer",
+    "reviewedAt": "2026-10-09T11:52:32.534419+00:00",
+    "rowSha256": "9b8652203afca628516dd2c9dd3240e687aed529e2f544938a43dddd94715bce",
+    "result": "supported",
+    "assessment": "Britannica whole commercial-plant paragraph contrastsCoffea arabica/Arabica withC.canephora/Robusta; Wikipedia whole botanical paragraph names the same two distinct species. Correcting the retained claim now matches the asked scientific species rather than an unrelated production-ranking claim. Both whole paragraphs explicitly connect robusta withC.canephora. Stable species identity, no changing consumption share/ranking asked.",
+    "sources": [
+      {
+        "sourceId": "food-everyday-life-s5029",
+        "receipt": {
+          "pass": "reopen",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T11:41:20.950905+00:00",
+          "method": "actual urllib HTTPS GET",
+          "requestedUrl": "https://www.britannica.com/topic/coffee",
+          "resolvedUrl": "https://www.britannica.com/topic/coffee",
+          "status": 200,
+          "contentSha256": "034836ce227b201da517d192e1a4a4f071e3c0e7a7f75a611750cd8f1d485043",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/food-everyday-life-s5029.txt",
+          "sourceId": "food-everyday-life-s5029",
+          "rawSha256": "696dab97bc242f9c8e918d0365446cd88c75dc98c908f2a2e87ca9226bd6a20d",
+          "captureComplete": true,
+          "originalPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590",
+          "captureRelocatedWithoutByteChanges": true
+        },
+        "contextRead": true,
+        "claimAssessment": "Britannica whole commercial-plant paragraph contrastsCoffea arabica/Arabica withC.canephora/Robusta; Wikipedia whole botanical paragraph names the same two distinct species. Correcting the retained claim now matches the asked scientific species rather than an unrelated production-ranking claim. Both whole paragraphs explicitly connect robusta withC.canephora.",
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "Coffea arabica and C. canephora",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Robusta, the main variety of C. canephora",
+            "exactMatch": true
+          }
+        ],
+        "actualWholeScopeRead": [
+          {
+            "field": "quote",
+            "wholeParagraphSHA256": "8e2d62c1c45b11ab61097c43b8ac7625993ff2e80edcc7a6c09da8a05f5b74d9",
+            "wholeParagraphChars": 1021,
+            "literalClipWords": 5,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          },
+          {
+            "field": "funFactQuote",
+            "wholeParagraphSHA256": "8e2d62c1c45b11ab61097c43b8ac7625993ff2e80edcc7a6c09da8a05f5b74d9",
+            "wholeParagraphChars": 1021,
+            "literalClipWords": 7,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          }
+        ]
+      },
+      {
+        "sourceId": "food-everyday-life-s5030",
+        "receipt": {
+          "pass": "reopen",
+          "originalPhase": "independent-reopen",
+          "retrievedAt": "2026-10-09T11:41:21.339710+00:00",
+          "method": "actual urllib HTTPS GET",
+          "requestedUrl": "https://en.wikipedia.org/wiki/Coffee",
+          "resolvedUrl": "https://en.wikipedia.org/wiki/Coffee",
+          "status": 200,
+          "contentSha256": "541d0b390682e3424aa3bd6b3d54e1a0d1aa8074a5fb1b823319807d26840705",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/food-everyday-life-s5030.txt",
+          "sourceId": "food-everyday-life-s5030",
+          "rawSha256": "4d9b163594f6ff67e32a7adc6d76b604ab1cd8dcdf469abec0e91e07916d46a8",
+          "captureComplete": true,
+          "originalPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590",
+          "captureRelocatedWithoutByteChanges": true
+        },
+        "contextRead": true,
+        "claimAssessment": "Britannica whole commercial-plant paragraph contrastsCoffea arabica/Arabica withC.canephora/Robusta; Wikipedia whole botanical paragraph names the same two distinct species. Correcting the retained claim now matches the asked scientific species rather than an unrelated production-ranking claim. Both whole paragraphs explicitly connect robusta withC.canephora.",
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "C. canephora (predominantly a form known as 'robusta') and C. arabica",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "C. canephora (predominantly a form known as 'robusta')",
+            "exactMatch": true
+          }
+        ],
+        "actualWholeScopeRead": [
+          {
+            "field": "quote",
+            "wholeParagraphSHA256": "a7784db4c075a6512afbe9759aee08db2efcc87fc4627c75903fe3cfc8da268f",
+            "wholeParagraphChars": 613,
+            "literalClipWords": 11,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          },
+          {
+            "field": "funFactQuote",
+            "wholeParagraphSHA256": "a7784db4c075a6512afbe9759aee08db2efcc87fc4627c75903fe3cfc8da268f",
+            "wholeParagraphChars": 613,
+            "literalClipWords": 8,
+            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
+          }
+        ]
+      }
+    ]
+  }
+}

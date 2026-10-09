@@ -1,0 +1,353 @@
+{
+  "authorPacketSHA256": "4178d0b4792a08e64c5afd5db2895a1e64cee68e0185ed0c2dc75f135df2d26d",
+  "reviewer": "/root/restart_g01_0458",
+  "actualReviewedAt": "2026-10-09T13:54:23.483884+00:00",
+  "result": "accept",
+  "decision": "PASS",
+  "reviews": [
+    {
+      "rowId": "B13-0592",
+      "authorPacketSHA256": "4178d0b4792a08e64c5afd5db2895a1e64cee68e0185ed0c2dc75f135df2d26d",
+      "proposedRowSHA256": "98fedb66af22b4bb87cd57eebf623e1c816758bc238b4332f13c9cdab8cde1cc",
+      "actualReviewedAt": "2026-10-09T13:54:23.483884+00:00",
+      "reviewer": "/root/restart_g01_0458; independently authored no B13 rows",
+      "decision": "PASS",
+      "result": "accept",
+      "actualSecondGetSources": [
+        {
+          "rowId": "B13-0592",
+          "sourceId": "world-history-s5047",
+          "url": "https://www.britannica.com/biography/Justinian-I",
+          "pass": "independent-reopen",
+          "retrievedAt": "2026-10-09T13:50:41.579416+00:00",
+          "method": "actual urllib HTTPS GET",
+          "authorPacketSHA256": "4178d0b4792a08e64c5afd5db2895a1e64cee68e0185ed0c2dc75f135df2d26d",
+          "status": 200,
+          "resolvedUrl": "https://www.britannica.com/biography/Justinian-I",
+          "contentSHA256": "cc2d096a81ae84d8cb70764f02473fcebcc9b0675c395eab5c7105a6af81c08e",
+          "rawSHA256": "16c576f6159bfb08f6b30977839898f65335ce1cb5e18c5e0548fa4a48c424df",
+          "captureComplete": true,
+          "finishedAt": "2026-10-09T13:50:42.097589+00:00"
+        },
+        {
+          "rowId": "B13-0592",
+          "sourceId": "world-history-s5048",
+          "url": "https://www.worldhistory.org/Justinian_I/",
+          "pass": "independent-reopen",
+          "retrievedAt": "2026-10-09T13:50:42.097936+00:00",
+          "method": "actual urllib HTTPS GET",
+          "authorPacketSHA256": "4178d0b4792a08e64c5afd5db2895a1e64cee68e0185ed0c2dc75f135df2d26d",
+          "status": 200,
+          "resolvedUrl": "https://www.worldhistory.org/Justinian_I/",
+          "contentSHA256": "f9b841d49abc51489b03aeafe8b3a4f4cdb276e3f80accebbcdc255c9cfdc608",
+          "rawSHA256": "da78647be9562f8cb4f8f5feff37fbcdebb8568e5de13697ee996bd76a66b1f2",
+          "captureComplete": true,
+          "finishedAt": "2026-10-09T13:50:42.374603+00:00"
+        }
+      ],
+      "answerScopeCheck": "Both full native encyclopedia contexts explicitly describe a Byzantine emperor commissioning or sponsoring this codification. Britannica paragraphs1/3/4/5 and WHE whole legal paragraph8 plus its complete7Apr529 timeline entry support the exact collection, without inferring identity solely from a Latin heading. Justinian/Codex Iustinianus spelling variants are equivalent here. The question neither adds a precise issuance date nor conflates all legal subdivisions.",
+      "funFactCheck": "Britannica native introduction and WHE first full paragraph explicitly identify Justinian as Byzantine emperor; the unchanged funfact is supported. The answer is not present in the question stem.",
+      "independenceCheck": "Britannica native contributor Joan Mervyn Hussey/editor accounts and WHE native Will Wyeth article are different editorial owners and independently phrased histories. Complete selected legal/adjacent contexts and the WHE full timeline and outgoing attribution links show no selected copied attribution to Britannica. No attached numbered references occur in these selected paragraphs; underlying legal sources were not opened. WHE remains CC BY-NC-SA4.0, Britannica copyrighted; no unrestricted commercial license asserted.",
+      "dateCheck": "WHE actual native publication2012-09-28T21:48:51+0000 and Britannica last-modified2026-08-27 were read. Historical529 issuance and534 revised codification appear in context and are not asked. Retrieval is actual post-author review2026-10-09, not a new publication date.",
+      "difficultyCheck": "Difficulty3 is defensible for recalling Byzantine legal history among four coherent legal collections; it is an editorial judgment, not a human-playtest result.",
+      "counterexampleCheck": "Hammurabi belongs to ancient Babylon; Twelve Tables to the earlier Roman Republic; Napoleonic Code to later France. Among these four legal collections only the designated collection fits the Byzantine commission. I did not separately open source works for every distractor. The empire clue requires legal-history knowledge without repeating Justinian in the stem.",
+      "wholeRelevantParagraphsAvailableAdjacentParagraphsAllAttachedNativeReferencesPersonallyRead": true,
+      "nativeSelectedParagraphHashes": [
+        {
+          "sourceId": "world-history-s5047",
+          "paragraphHashes": [
+            {
+              "index": 0,
+              "sha256": "e6bd63bbec0afac8c9ffc6e8f8eed5d97eeda66578215ac84fd86001cf7d0223"
+            },
+            {
+              "index": 1,
+              "sha256": "2fe2a09f22a448b9a8140baabc9bf14a05f53cde5690cf4086217f15621c50cd"
+            },
+            {
+              "index": 2,
+              "sha256": "63fa78a7b3d8861ea718104389e953d22142721b08cbe059241d1ce018885b34"
+            },
+            {
+              "index": 3,
+              "sha256": "d390ef727c3ef0857f844bb7ad74affe474620c86a7f9194c47124f1d1a7f1ce"
+            },
+            {
+              "index": 4,
+              "sha256": "7ded36e104b425c59f5c66ef252d1db47f697c0a7591a96438c37038dcb84b81"
+            },
+            {
+              "index": 5,
+              "sha256": "a0f0c2f9ad522530898252dcb372e7c2691579caafe21e516b61c34dddb7b6d6"
+            },
+            {
+              "index": 6,
+              "sha256": "2bb9fddad259c3876ed6365f9792670800dbce63c1e776ee2a890308529e239e"
+            },
+            {
+              "index": 10,
+              "sha256": "93855ea38342402b9046c3da9f015c4a6f823043907421a58522bdc9fe5e93c8"
+            },
+            {
+              "index": 11,
+              "sha256": "4930d00ef602859a23ef9500137ee431b1d9f16ef4fe4d6ae22b696394951e51"
+            },
+            {
+              "index": 12,
+              "sha256": "f39313fb0f7650c6c1c037a931ef42391f2948f698d33dbb5ce9f5d8a52b1c57"
+            }
+          ],
+          "attachedReferenceCount": 0,
+          "wholeBodyEqualAuthor": true
+        },
+        {
+          "sourceId": "world-history-s5048",
+          "paragraphHashes": [
+            {
+              "index": 0,
+              "sha256": "0cfabbc6af103a4a6f24cd5065a5c586852936cbcaaf0dc816c61c641282b0d2"
+            },
+            {
+              "index": 1,
+              "sha256": "ee31a6f50cf15499b22766dd66bf6854b1dde3efa6336f46cd4da1d9d949218e"
+            },
+            {
+              "index": 2,
+              "sha256": "4c7b0e92c601272f40cb83eba57b6cbf4d2aa2d693a2a6cd8f08a90fc9dea4f7"
+            },
+            {
+              "index": 7,
+              "sha256": "317ff3ccccfc9c432784491f93dd51874a6deed16f3b5133625abf4363a4bb3d"
+            },
+            {
+              "index": 8,
+              "sha256": "d827ae2037ea4bf9d5a77d5a6efe6ec7e3b25433247b1fc62b7202f81e607f56"
+            },
+            {
+              "index": 9,
+              "sha256": "bdd4141161ae3af719d083bdab55da7e14f4851a56aa56f937ff98c1fe9a49f2"
+            }
+          ],
+          "attachedReferenceCount": 0,
+          "wholeBodyEqualAuthor": true
+        }
+      ],
+      "exactShortClipCounts": [
+        {
+          "sourceId": "world-history-s5047",
+          "field": "quote",
+          "exactWords": 11,
+          "literalMatch": true
+        },
+        {
+          "sourceId": "world-history-s5047",
+          "field": "funFactQuote",
+          "exactWords": 5,
+          "literalMatch": true
+        },
+        {
+          "sourceId": "world-history-s5048",
+          "field": "quote",
+          "exactWords": 18,
+          "literalMatch": true
+        },
+        {
+          "sourceId": "world-history-s5048",
+          "field": "funFactQuote",
+          "exactWords": 14,
+          "literalMatch": true
+        }
+      ],
+      "canonicalURLBudgets": {
+        "https://www.britannica.com/biography/Justinian-I": 32,
+        "https://www.worldhistory.org/Justinian_I/": 45
+      },
+      "noNewSourceIdBudgetReset": true,
+      "sourceLedgerHistoricalReviewCaution": "Coffee new source ledger contains an older11:52 currentIndependentReview bound to a different row SHA. That is preserved historical evidence only and cannot certify this revision. This receipt is the actual new exact-row review; lead should label/adapt that historical field faithfully.",
+      "limitations": "Fresh actual HTTP requests may be cached. Full originals/private headers retained privately; no new source publication date, universal copying audit, whole unrelated-reference review, human playtest, or hosted-current CI is claimed."
+    },
+    {
+      "rowId": "B13-0938",
+      "authorPacketSHA256": "4178d0b4792a08e64c5afd5db2895a1e64cee68e0185ed0c2dc75f135df2d26d",
+      "proposedRowSHA256": "2218c83eff6a99cf1261ef01892dbed8ad1dfd68dc0229ee7f2654683cf54876",
+      "actualReviewedAt": "2026-10-09T13:54:23.483884+00:00",
+      "reviewer": "/root/restart_g01_0458; independently authored no B13 rows",
+      "decision": "PASS",
+      "result": "accept",
+      "actualSecondGetSources": [
+        {
+          "rowId": "B13-0938",
+          "sourceId": "food-everyday-life-s5129",
+          "url": "https://www.britannica.com/topic/coffee",
+          "pass": "independent-reopen",
+          "retrievedAt": "2026-10-09T13:50:42.375572+00:00",
+          "method": "actual urllib HTTPS GET",
+          "authorPacketSHA256": "4178d0b4792a08e64c5afd5db2895a1e64cee68e0185ed0c2dc75f135df2d26d",
+          "status": 200,
+          "resolvedUrl": "https://www.britannica.com/topic/coffee",
+          "contentSHA256": "a4ffb02e5f1e5cea3c36a166cc603b757d401f4c31df5c6c3bdea99f11a4d4aa",
+          "rawSHA256": "aec255356c4ba76ef9d96285d418382d213188f13f79b2a7bb7f509a907c970c",
+          "captureComplete": true,
+          "finishedAt": "2026-10-09T13:50:43.022627+00:00"
+        },
+        {
+          "rowId": "B13-0938",
+          "sourceId": "food-everyday-life-s5130",
+          "url": "https://en.wikipedia.org/wiki/Coffee",
+          "pass": "independent-reopen",
+          "retrievedAt": "2026-10-09T13:50:43.023035+00:00",
+          "method": "actual urllib HTTPS GET",
+          "authorPacketSHA256": "4178d0b4792a08e64c5afd5db2895a1e64cee68e0185ed0c2dc75f135df2d26d",
+          "status": 200,
+          "resolvedUrl": "https://en.wikipedia.org/wiki/Coffee",
+          "contentSHA256": "541d0b390682e3424aa3bd6b3d54e1a0d1aa8074a5fb1b823319807d26840705",
+          "rawSHA256": "4d9b163594f6ff67e32a7adc6d76b604ab1cd8dcdf469abec0e91e07916d46a8",
+          "captureComplete": true,
+          "finishedAt": "2026-10-09T13:50:43.655401+00:00"
+        }
+      ],
+      "answerScopeCheck": "Both complete botanical contexts explicitly associate Robusta with C.canephora; both identify Arabica as C.arabica. The new question asks the botanical species of Robusta, not the species suggested by the identical arabica word, a current market share, or every ingredient in a commercial blend. Predominantly/form/main-variety wording is preserved in the short quotes.",
+      "funFactCheck": "The reversed Arabica funfact is explicit in both full contexts. It is not inferred from the names alone, and no caffeine or production-share value is added.",
+      "independenceCheck": "Britannica native Nathan Myhrvold/editor account and Wikipedia community botanical paragraphs have separate editorial ownership and wording. All19 attached native footnote bodies/outgoing links plus the entire internally linked Clifford/Wilson1985 bibliography entry were personally read. Direct botanical reference61 is International Coffee Organization; adjacent referencesAnthonyetal1987 and van der Vossen/CliffordWilson1985 are not a selected attribution to paired Britannica. I did not reopen those underlying source works or inspect every unrelated reference in the111813-character whole page. Native Wiki rel=license confirms CC BY-SA4.0; Britannica remains copyrighted.",
+      "dateCheck": "Britannica native last-modified2026-10-02 was read. No Wikipedia individual byline or unobserved revision time is invented. Nearby2020/2021 production and synthetic-coffee statements are dated context only and are not added to this enduring taxonomy question.",
+      "difficultyCheck": "Difficulty2 is reasonable for botanical/common-name recall among genuine related species; harder than a mere same-word match, and no playtest is claimed.",
+      "counterexampleCheck": "Four genuine Coffea binomials remain. Whole Wiki paragraph27 identifies less-popular liberica and stenophylla separately, and both full contexts separate arabica from Robusta/canephora. Only existing choices0 and3 are swapped; index0 and difficulty2 stay fixed. Commercial blended coffee and botanical hybrids are outside this species-identification question.",
+      "wholeRelevantParagraphsAvailableAdjacentParagraphsAllAttachedNativeReferencesPersonallyRead": true,
+      "nativeSelectedParagraphHashes": [
+        {
+          "sourceId": "food-everyday-life-s5129",
+          "paragraphHashes": [
+            {
+              "index": 1,
+              "sha256": "272f7886e43671a8bf535c860253de58bc328e75c01ef33e6802e5af9f4cb772"
+            },
+            {
+              "index": 2,
+              "sha256": "85ae072d5a63ac12c16acebe77917844539a2c182adb10b8aca75ea231bdc571"
+            },
+            {
+              "index": 3,
+              "sha256": "e47e4e8a059d8bd0b1be09142be5cc132585d1745b46b0c1ac62da4e2fc68f43"
+            },
+            {
+              "index": 7,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "index": 8,
+              "sha256": "8e2d62c1c45b11ab61097c43b8ac7625993ff2e80edcc7a6c09da8a05f5b74d9"
+            },
+            {
+              "index": 9,
+              "sha256": "e99c8307c0b8853b4bd059b911b70508876cacf84372780d5930df83cde7e5ca"
+            },
+            {
+              "index": 13,
+              "sha256": "99ede3bd269027c8fb6dd572d1d792e7bb852efd6d5977f5c862f4b3ed409342"
+            },
+            {
+              "index": 14,
+              "sha256": "30d0cfb835c57264c9f5b9d2186e672151cd930b6fcfbbfc18ade618ff507d93"
+            }
+          ],
+          "attachedReferenceCount": 0,
+          "wholeBodyEqualAuthor": true
+        },
+        {
+          "sourceId": "food-everyday-life-s5130",
+          "paragraphHashes": [
+            {
+              "index": 26,
+              "sha256": "36342caf032751725d0716442f0b4dec117dcc2a3f07ae3188d51052f6ee73f3"
+            },
+            {
+              "index": 27,
+              "sha256": "a7784db4c075a6512afbe9759aee08db2efcc87fc4627c75903fe3cfc8da268f"
+            },
+            {
+              "index": 28,
+              "sha256": "fcb0a7b3e13aad3b0df7e0b3de0bcbb18ac1ca3d0ccf3363907eb382fb94b74c"
+            },
+            {
+              "index": 31,
+              "sha256": "2484819b01b8ff3e1b5166b250888ce9b30b12de192b5a1d0f87d5fdf4efbeee"
+            },
+            {
+              "index": 32,
+              "sha256": "d4daedb09b33fc8da1324bedb0f19e3b876b1bacf0ac75c180f8662fa888d45f"
+            },
+            {
+              "index": 33,
+              "sha256": "f22768fb9e338181696beaaebef3bb9339e05c43c0c6331e3ec0088b31dfc51c"
+            }
+          ],
+          "attachedReferenceCount": 19,
+          "wholeBodyEqualAuthor": true
+        }
+      ],
+      "exactShortClipCounts": [
+        {
+          "sourceId": "food-everyday-life-s5129",
+          "field": "quote",
+          "exactWords": 7,
+          "literalMatch": true
+        },
+        {
+          "sourceId": "food-everyday-life-s5129",
+          "field": "funFactQuote",
+          "exactWords": 5,
+          "literalMatch": true
+        },
+        {
+          "sourceId": "food-everyday-life-s5130",
+          "field": "quote",
+          "exactWords": 8,
+          "literalMatch": true
+        },
+        {
+          "sourceId": "food-everyday-life-s5130",
+          "field": "funFactQuote",
+          "exactWords": 11,
+          "literalMatch": true
+        }
+      ],
+      "canonicalURLBudgets": {
+        "https://www.britannica.com/topic/coffee": 23,
+        "https://en.wikipedia.org/wiki/Coffee": 33
+      },
+      "noNewSourceIdBudgetReset": true,
+      "sourceLedgerHistoricalReviewCaution": "Coffee new source ledger contains an older11:52 currentIndependentReview bound to a different row SHA. That is preserved historical evidence only and cannot certify this revision. This receipt is the actual new exact-row review; lead should label/adapt that historical field faithfully.",
+      "limitations": "Fresh actual HTTP requests may be cached. Full originals/private headers retained privately; no new source publication date, universal copying audit, whole unrelated-reference review, human playtest, or hosted-current CI is claimed."
+    }
+  ],
+  "controller": {
+    "startedAt": "2026-10-09T13:50:41.579375+00:00",
+    "closedAt": "2026-10-09T13:50:43.655891+00:00",
+    "elapsedSeconds": 2.076549988007173,
+    "declaredWholeBoundSeconds": 40,
+    "declaredMaxResponseBytes": 4000000,
+    "nativePid": 393428,
+    "externalChildren": [],
+    "terminationSignals": [],
+    "requestedDistinctOriginalURLs": 4,
+    "completedRequests": 4,
+    "allRequestedFullHTTP200": true,
+    "failure": null,
+    "noPublicSourceBodies": true,
+    "noB13ProductFilesEdited": true
+  },
+  "privateScopeSHA256": "45cf1898839cb9eb2900bcfae611c08de4897e0d8891c5ecf5bfc9b6382c7760",
+  "noB13ProductFilesEdited": true,
+  "firstPrivateExtractorFailurePreserved": "Initial read-only extractor assumed a reference list; actual field is a dict keyed by native ID. It failed before writing any scope/product output; corrected extraction matched every selected full paragraph and reference against own fresh originals.",
+  "adoptedAt": "2026-10-09T14:02:48.753874+00:00",
+  "originalIndependentPeerPacketSHA256": "d3bf6b1947cba605aa1ba0deb8ab811b7e505c7cc5eff249e9992366d1dac2ac",
+  "privateFullBodiesAndHTTPHeadersExcluded": true,
+  "currentGlobalAcceptancePending": true,
+  "originalCanonicalURLBudgetsIndependentlyComparedToNinePlusOriginal": {
+    "JustinianBritannica": 32,
+    "JustinianWHE": 45,
+    "CoffeeBritannica": 23,
+    "CoffeeWiki": 33
+  },
+  "newDistinctExpressiveQuoteWords": 0
+}

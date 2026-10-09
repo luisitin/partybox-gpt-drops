@@ -1,22 +1,22 @@
 {
   "reviewer": "/root/restart_g01_0458 (independent; authored no B13 row)",
-  "reviewedAt": "2026-10-09T13:56:10.490500+00:00",
+  "reviewedAt": "2026-10-09T13:30:07.581491+00:00",
   "result": "accept",
-  "rowVersionsSha256": "54fb1f1b86cc169ac24117a409748cacc84ff956c2b5c638e76b41064c32d588",
-  "metricsSha256": "95165fc2407288e3e1f1a1ea3d6c7fdb208f1b11bd7bda91ef9e8b296cb8a5ef",
-  "rationale": "I independently recomputed every one of the4000 Unicode option lengths, all1000 canonical current row-version hashes, all original checker metrics, exact tie fractions and first/last tie policies for all10 categories and the whole pack from this frozen proposed-twelve packet. Actual correct/incorrect means9.825/9.9743;162 uniquely-longest correct. Uniform-tie always-longest23.825%, always-shortest25.025%; first/last longest24.9%/23.0%, first/last shortest25.2%/24.9%; all fixed positions25%. Longest category uniform results16.5–28.75%; shortest19.666667–28.666667%; some fixed tie policies in categories reach31%, explicitly acknowledged. All12 changed option sets and12 largest correct-length gaps were personally read again against current options. Eleven amended sets lack a uniquely-longest correct answer; Duke retains the explicit natural-name16-versus5/8/9 exception among the162. Justinian ties another legal title at17; Robusta correct16 is between18 and15/14, removing the same-name shortcut and changing shortest outcomes. This is a NEW actual metrics95165 and versions54fb acceptance, not inherited eleven2eeb/4cff. The entire distribution does not show a pack-wide correct-is-longest strategy; natural titles/names/descriptions explain local differences. I accept this exact proposed-twelve set for the original editorial length assessment without inventing a statistical threshold, playtest, or guarantee covering every heuristic.",
+  "rowVersionsSha256": "4cffb6f716b3c6f41d31ae3e3fdc0f693dd6d4674613460b0074fb954e4cc594",
+  "metricsSha256": "2eeb43b7bda9cea552d22838f22d3f9e56940bd406e2b96c4562f53b3b2b8c10",
+  "rationale": "I independently recomputed all4000 option lengths, all1000 canonical row-version hashes, complete original-checker metrics, all ten category extrema and tie policies, and the whole-pack strategies from the frozen proposed-eleven packet. Actual means9.823 correct/9.975 incorrect;162 uniquely-longest correct. Uniform-tie always-longest23.825%, always-shortest25.125%; all fixed positions25%, first/last extrema policies and exact fractions independently read. All ten category directions vary: longest16.5–28.75%, shortest19.666667–29.416667%; some first/last tie category policies reach31%, which is acknowledged rather than silently treated as every strategy below25. All eleven amended option sets and twelve largest correct-length gaps were personally read again. Ten amended sets lack a uniquely-longest correct answer; Duke is the explicitly retained16-vs5/8/9 natural-name exception. Fuji changes only question/source-version content relative to acceptedten; all4000 choices/1000indices are exactly unchanged. The new global rowVersions hash/date requires this separately reasoned current acceptance even though metrics are identical. Names, official titles, song titles, ordinary descriptions and materials explain isolated long answers; the complete distribution does not show a pack-wide correct-is-longest strategy. I accept this exact proposed-eleven dataset for the original editorial global length assessment. No invented statistical threshold or all-heuristic guarantee is asserted.",
   "metricsInspected": {
     "unit": "Unicode code points",
-    "meanCorrect": 9.825,
-    "meanIncorrect": 9.9743,
+    "meanCorrect": 9.823,
+    "meanIncorrect": 9.975,
     "meanOptionByPosition": {
-      "0": 9.853,
+      "0": 9.851,
       "1": 9.999,
       "2": 9.819,
-      "3": 10.077
+      "3": 10.079
     },
     "meanCorrectByPosition": {
-      "0": 9.796,
+      "0": 9.788,
       "1": 10.288,
       "2": 9.26,
       "3": 9.956
@@ -190,8 +190,8 @@
   },
   "additionalWholePackStrategies": {
     "rows": 1000,
-    "meanCorrect": 9.825,
-    "meanIncorrect": 9.9743,
+    "meanCorrect": 9.823,
+    "meanIncorrect": 9.975,
     "fixedPositions": {
       "0": 0.25,
       "1": 0.25,
@@ -213,11 +213,11 @@
       }
     },
     "shortest": {
-      "uniformTieExpectedAccuracy": 0.25025,
-      "exactUniformTieExpectedScore": "1001/4",
-      "firstPositionTieAccuracy": 0.252,
-      "lastPositionTieAccuracy": 0.249,
-      "uniqueCorrect": 146,
+      "uniformTieExpectedAccuracy": 0.25125,
+      "exactUniformTieExpectedScore": "1005/4",
+      "firstPositionTieAccuracy": 0.253,
+      "lastPositionTieAccuracy": 0.25,
+      "uniqueCorrect": 147,
       "uniqueOpportunities": 619,
       "tieSizeCounts": {
         "1": 619,
@@ -268,8 +268,8 @@
     },
     "food-everyday-life": {
       "rows": 100,
-      "meanCorrect": 10.02,
-      "meanIncorrect": 10.1433,
+      "meanCorrect": 10.0,
+      "meanIncorrect": 10.15,
       "fixedPositions": {
         "0": 0.25,
         "1": 0.25,
@@ -291,11 +291,11 @@
         }
       },
       "shortest": {
-        "uniformTieExpectedAccuracy": 0.28416667,
-        "exactUniformTieExpectedScore": "341/12",
-        "firstPositionTieAccuracy": 0.28,
-        "lastPositionTieAccuracy": 0.3,
-        "uniqueCorrect": 19,
+        "uniformTieExpectedAccuracy": 0.29416667,
+        "exactUniformTieExpectedScore": "353/12",
+        "firstPositionTieAccuracy": 0.29,
+        "lastPositionTieAccuracy": 0.31,
+        "uniqueCorrect": 20,
         "uniqueOpportunities": 71,
         "tieSizeCounts": {
           "1": 71,
@@ -615,7 +615,7 @@
       }
     }
   },
-  "categoryTieRule": "Enumerate every option attaining min/max; exact uniform score1/tie-size for a correct member, otherwise0. First/last pick lowest/highest eligible index. All exact fractions and tie counts were independently summed and read.",
+  "categoryTieRule": "Enumerate every option attaining min/max length; exact uniform score is1/tie-size for a correct member, otherwise0. First/last policies pick lowest/highest index. All exact fractions and tie counts independently summed.",
   "rowVersionsInspected": [
     {
       "id": "B13-0001",
@@ -2983,7 +2983,7 @@
     },
     {
       "id": "B13-0592",
-      "rowSha256": "98fedb66af22b4bb87cd57eebf623e1c816758bc238b4332f13c9cdab8cde1cc"
+      "rowSha256": "e4cb61120c02118a9a52f7ae55d5a0d388b725afe07e4196c3e59d734f99262a"
     },
     {
       "id": "B13-0593",
@@ -4367,7 +4367,7 @@
     },
     {
       "id": "B13-0938",
-      "rowSha256": "2218c83eff6a99cf1261ef01892dbed8ad1dfd68dc0229ee7f2654683cf54876"
+      "rowSha256": "9b8652203afca628516dd2c9dd3240e687aed529e2f544938a43dddd94715bce"
     },
     {
       "id": "B13-0939",
@@ -4618,7 +4618,7 @@
       "rowSha256": "79540e23233ced13972cb929b11f3c5bbf26c514cb200b9299d3cacc398be97f"
     }
   ],
-  "changedTwelveOptionReviews": [
+  "changedElevenOptionReviews": [
     {
       "id": "B13-0110",
       "rowSha256": "891c08d5486a0cbe625c71844939a7103daafeaeb080ee70b8c489a95bb52b7d",
@@ -4680,26 +4680,6 @@
       "actualEditorialReview": "Iguazu6 ties Parana6; Sao Francisco13 is longer. Genuine distinct river names retained, no artificial padding."
     },
     {
-      "id": "B13-0171",
-      "rowSha256": "8fd8f90a0d71c1ff55586e3885e636d2d1b6e6a439c82d6dcbab60ec575adccc",
-      "question": "Mount Fuji lies approximately southwest of which Japanese city?",
-      "options": [
-        "Kyoto",
-        "Osaka",
-        "Nagoya",
-        "Tokyo"
-      ],
-      "codePointLengths": [
-        5,
-        5,
-        6,
-        5
-      ],
-      "correctIndex": 3,
-      "correctAnswer": "Tokyo",
-      "actualEditorialReview": "Tokyo5 ties Kyoto5/Osaka5; Nagoya6 is longer. New city-only stem removes the capital shortcut without changing any of the4000 choices."
-    },
-    {
       "id": "B13-0312",
       "rowSha256": "5049c515c23dfe163dae2bfeaa4346d6eed4c0a751459fe36b0de44b9e326c3d",
       "question": "Wild tigers are most active for hunting during which part of the day?",
@@ -4738,46 +4718,6 @@
       "correctIndex": 3,
       "correctAnswer": "Qin",
       "actualEditorialReview": "Qin3 ties Han3, with Tang4/Song4. Dynasty names are coherent and no correct-longest rule."
-    },
-    {
-      "id": "B13-0592",
-      "rowSha256": "98fedb66af22b4bb87cd57eebf623e1c816758bc238b4332f13c9cdab8cde1cc",
-      "question": "Which of these legal collections was commissioned in the Byzantine Empire?",
-      "options": [
-        "Code of Hammurabi",
-        "Napoleonic Code",
-        "Twelve Tables",
-        "Code of Justinian"
-      ],
-      "codePointLengths": [
-        17,
-        15,
-        13,
-        17
-      ],
-      "correctIndex": 3,
-      "correctAnswer": "Code of Justinian",
-      "actualEditorialReview": "Code of Justinian17 ties Code of Hammurabi17, with15/13 coherent shorter legal titles. No uniquely-longest correct answer or emperor-name stem match; choice lengths unchanged from accepted eleven."
-    },
-    {
-      "id": "B13-0762",
-      "rowSha256": "48196304a32390cba8d1b59cd97d59a83bfee0ac11dd4421005365e754610270",
-      "question": "In which U.S. city did Duke Ellington grow up?",
-      "options": [
-        "Dover",
-        "Richmond",
-        "Annapolis",
-        "Washington, D.C."
-      ],
-      "codePointLengths": [
-        5,
-        8,
-        9,
-        16
-      ],
-      "correctIndex": 3,
-      "correctAnswer": "Washington, D.C.",
-      "actualEditorialReview": "Washington,D.C.16 is uniquely longest versus5/8/9, an explicit natural-name exception already in the unchanged162. The stem drops the capital descriptor; local name length does not create a systematic pack-wide strategy."
     },
     {
       "id": "B13-0852",
@@ -4841,74 +4781,107 @@
     },
     {
       "id": "B13-0938",
-      "rowSha256": "2218c83eff6a99cf1261ef01892dbed8ad1dfd68dc0229ee7f2654683cf54876",
-      "question": "Robusta coffee belongs to which species?",
+      "rowSha256": "9b8652203afca628516dd2c9dd3240e687aed529e2f544938a43dddd94715bce",
+      "question": "Which species gives its name to arabica coffee?",
       "options": [
-        "Coffea canephora",
+        "Coffea arabica",
         "Coffea stenophylla",
         "Coffea liberica",
-        "Coffea arabica"
+        "Coffea canephora"
       ],
       "codePointLengths": [
-        16,
+        14,
         18,
         15,
-        14
+        16
       ],
       "correctIndex": 0,
-      "correctAnswer": "Coffea canephora",
-      "actualEditorialReview": "Coffea canephora16 sits between stenophylla18 and liberica15/arabica14. All are genuine parallel botanical binomials. Only0/3 existing choices swap; shortest is now wrong and correct is neither shortest nor longest. No padding or invented species."
+      "correctAnswer": "Coffea arabica",
+      "actualEditorialReview": "All use Coffea binomials; arabica14 is shortest versus18/15/16. Genuine botanical names differ naturally, no invented synonyms or correct-longest cue."
+    },
+    {
+      "id": "B13-0762",
+      "rowSha256": "48196304a32390cba8d1b59cd97d59a83bfee0ac11dd4421005365e754610270",
+      "question": "In which U.S. city did Duke Ellington grow up?",
+      "options": [
+        "Dover",
+        "Richmond",
+        "Annapolis",
+        "Washington, D.C."
+      ],
+      "codePointLengths": [
+        5,
+        8,
+        9,
+        16
+      ],
+      "correctIndex": 3,
+      "correctAnswer": "Washington, D.C.",
+      "actualEditorialReview": "Washington,D.C.16 is uniquely longest versus5/8/9, an explicit natural-name exception already in the unchanged162. The stem drops the capital descriptor; local name length does not create a systematic pack-wide strategy."
+    },
+    {
+      "id": "B13-0171",
+      "rowSha256": "8fd8f90a0d71c1ff55586e3885e636d2d1b6e6a439c82d6dcbab60ec575adccc",
+      "question": "Mount Fuji lies approximately southwest of which Japanese city?",
+      "options": [
+        "Kyoto",
+        "Osaka",
+        "Nagoya",
+        "Tokyo"
+      ],
+      "codePointLengths": [
+        5,
+        5,
+        6,
+        5
+      ],
+      "correctIndex": 3,
+      "correctAnswer": "Tokyo",
+      "actualEditorialReview": "Tokyo5 ties Kyoto5/Osaka5; Nagoya6 is longer. New city-only stem removes the capital shortcut without changing any of the4000 choices."
     }
   ],
   "originalProtectionComparison": {
     "head": "87693947ed87314b3f835d555197123b74f8d2be",
-    "twelveChangedIds": [
+    "elevenChangedIds": [
       "B13-0110",
       "B13-0137",
       "B13-0158",
       "B13-0171",
       "B13-0312",
       "B13-0514",
-      "B13-0592",
       "B13-0762",
       "B13-0852",
       "B13-0911",
       "B13-0922",
       "B13-0938"
     ],
-    "other988ObjectsByteEquivalentAsParsed": true,
+    "other989ObjectsByteEquivalentAsParsed": true,
     "all1000DifficultyAndCorrectIndexEqual": true,
-    "994ChoiceArraysEqualOriginal": true,
-    "sixChangedChoiceIds": [
+    "995ChoiceRowsEqualProtectedOriginal": true,
+    "fiveChangedChoiceIds": [
       "B13-0110",
       "B13-0312",
       "B13-0852",
       "B13-0911",
-      "B13-0922",
-      "B13-0938"
+      "B13-0922"
     ]
   },
-  "versusAcceptedElevenComparison": {
-    "onlyTwoWholeRowsChanged": [
-      "B13-0592",
-      "B13-0938"
-    ],
-    "999ChoiceArraysExactlyEqual": true,
-    "onlyChoiceChange0938ExistingPositions0And3Swapped": true,
-    "all1000IndicesAndDifficultyEqual": true,
-    "acceptedElevenPacketSHA256": "3c042f58a2b95e0b82525479e004175646467a598347f692ce1ec706eb201ed1"
+  "versusAcceptedTenComparison": {
+    "all4000OptionsAnd1000IndicesExactlyEqual": true,
+    "onlyWholeRowChanged": "B13-0171",
+    "acceptedTenPacketSHA256": "683ed0c253fe5e34d7e1d697bfb9f48821e05c0f5cc197daf05ca84b9bff5535"
   },
   "inputPacket": {
-    "path": "/tmp/B13-root-audit-20261009/CURRENT-TWELVE-PROPOSED-FULLSET-INDEPENDENT-LENGTH-REVIEW-PACKET-20261009.json",
-    "bytes": 2137910,
-    "sha256": "f6d4552b447b0fa3f49982e6701f6aeb39285f9bbf39a23ccd086c31ab3fabf0",
-    "authorTwelfthPacketSHA256": "4178d0b4792a08e64c5afd5db2895a1e64cee68e0185ed0c2dc75f135df2d26d"
+    "path": "/tmp/B13-root-audit-20261009/CURRENT-ELEVEN-PROPOSED-FULLSET-INDEPENDENT-LENGTH-REVIEW-PACKET-20261009.json",
+    "bytes": 2173585,
+    "sha256": "3c042f58a2b95e0b82525479e004175646467a598347f692ce1ec706eb201ed1",
+    "authorEleventhPacketSHA256": "dbd2c75da4cc32f0c609e0a9cb75916aaa720cd1771137650f13519e500aa28d"
   },
   "independentRecomputationReceipt": {
-    "path": "/dev/shm/B13-twelfth-two-rows-peer-board-agent-20261009-1350/CURRENT-FULLSET-INDEPENDENT-METRIC-RECOMPUTATION-20261009.json",
-    "bytes": 36946,
-    "sha256": "3dcbcbc2a609dc9ba7960be8447759901c52783e2b7022c286c68118a75083db",
-    "computedAt": "2026-10-09T13:55:29.999026+00:00"
+    "path": "/dev/shm/B13-eleventh-fuji-peer-board-agent-20261009-1325/CURRENT-FULLSET-INDEPENDENT-METRIC-RECOMPUTATION-20261009.json",
+    "bytes": 36092,
+    "sha256": "b481676279caa91befb31c3e6750d69b0ffd236ef08d774d2faefcd6d646940c",
+    "computedAt": "2026-10-09T13:28:48.634058+00:00"
   },
   "diagnosticLargestCorrectLengthGapsActuallyInspected": [
     {
@@ -5128,5 +5101,5 @@
       "correctMinusWrongMean": 8.0
     }
   ],
-  "limitations": "No human playtest, fresh factual-source rereview of988 unchanged complete rows, hosted CI, or all-heuristic guarantee. All988 other parsed complete objects equal protected original;994 original choice arrays remain equal, with six legitimate changed IDs explicitly named. All1000 indices and difficulties equal protected original. Against accepted eleven, only0592 and0938 complete objects differ,999 choice arrays remain equal, and0938 only swaps prior choices0 and3. Root product/evidence files were not edited; two actual new factual peers/four post-author GETs are separate."
+  "limitations": "No human playtest, factual-source rereview of989 unchanged objects, new hosted CI or all possible answer heuristics guarantee. All989 other parsed complete objects equal protectedoriginal;995 choice arrays equal original, with five earlier legitimate changes explicitly named. Every difficulty/index equals original. The actual eleventh factual freshGET peer is separate; acceptedten factual records remain historical and necessary. Root production/evidence files were not edited."
 }

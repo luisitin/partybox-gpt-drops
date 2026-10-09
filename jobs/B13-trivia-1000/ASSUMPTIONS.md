@@ -25,3 +25,5 @@
 - 2026-10-09 eight-row checkpoint: preserve stale assessment refusal and Draft status until an independent current option-length review is completed. Never attach an earlier ninth review to changed wording. Public evidence omits HTTP response headers and full copyrighted bodies.
 
 - 2026-10-09 final nine checkpoint: only genuine changed-row independent reviews and a newly authored exact full-set length assessment certify the current hashes. The original998-row shuffle audit and optional PartyBox port are historical scope. Preserve every failed control/old assessment and actual late publication; no empirically calibrated audience difficulty or human playtest is claimed.
+
+Formal review3 assumption: Robusta common-name taxonomy asks species identity rather than a commercial blend. Existing four botanical alternatives are preserved; positions0/3 swap retains original index0. WHE remains noncommercial sharealike; bibliography-reference bodies were read but underlying source works were not independently reopened. No new source-ID resets quotation budgets. Deadlines refer to actual pushed source, not private review completion.

@@ -6010,14 +6010,14 @@ Answer: Belisarius. Fun fact: Justinian I sponsored the Code of Justinian.
   quote: “General Belisarius (Justinian's most successful military leader)” (7 words).
   funFactQuote: “The Justinian Code is issued by Byzantine Emperor Justinian I at Constantinople , streamlining and reorganizing Roman law” (18 words).
 
-## B13-0592 — Which legal collection is associated with Justinian I’s codification project?
+## B13-0592 — Which of these legal collections was commissioned in the Byzantine Empire?
 
 Answer: Code of Justinian. Fun fact: Justinian I was emperor of the Byzantine Empire.
 
-- world-history-s0047: [Encyclopaedia Britannica](https://www.britannica.com/biography/Justinian-I)
+- world-history-s5047: [Encyclopaedia Britannica](https://www.britannica.com/biography/Justinian-I)
   quote: “codification of laws known as the Codex Justinianus (Code of Justinian)” (11 words).
   funFactQuote: “was a Byzantine emperor (527–565)” (5 words).
-- world-history-s0048: [World History Encyclopedia](https://www.worldhistory.org/Justinian_I/)
+- world-history-s5048: [World History Encyclopedia](https://www.worldhistory.org/Justinian_I/)
   quote: “The Justinian Code is issued by Byzantine Emperor Justinian I at Constantinople , streamlining and reorganizing Roman law” (18 words).
   funFactQuote: “Justinian I reigned as emperor of the Byzantine Empire from 527 to 565 CE.” (14 words).
 
@@ -9817,16 +9817,16 @@ Answer: Caffeine. Fun fact: Arabica and robusta are major commercial coffee type
   quote: “stimulating effect on humans due to its caffeine content” (9 words).
   funFactQuote: “C. canephora (predominantly a form known as 'robusta') and C. arabica” (11 words).
 
-## B13-0938 — Which species gives its name to arabica coffee?
+## B13-0938 — Robusta coffee belongs to which species?
 
-Answer: Coffea arabica. Fun fact: Robusta belongs to Coffea canephora.
+Answer: Coffea canephora. Fun fact: Arabica coffee comes from Coffea arabica.
 
-- food-everyday-life-s5029: [Encyclopaedia Britannica](https://www.britannica.com/topic/coffee)
-  quote: “Coffea arabica and C. canephora” (5 words).
-  funFactQuote: “Robusta, the main variety of C. canephora” (7 words).
-- food-everyday-life-s5030: [Wikipedia contributors](https://en.wikipedia.org/wiki/Coffee)
-  quote: “C. canephora (predominantly a form known as 'robusta') and C. arabica” (11 words).
-  funFactQuote: “C. canephora (predominantly a form known as 'robusta')” (8 words).
+- food-everyday-life-s5129: [Encyclopaedia Britannica](https://www.britannica.com/topic/coffee)
+  quote: “Robusta, the main variety of C. canephora” (7 words).
+  funFactQuote: “Coffea arabica and C. canephora” (5 words).
+- food-everyday-life-s5130: [Wikipedia contributors](https://en.wikipedia.org/wiki/Coffee)
+  quote: “C. canephora (predominantly a form known as 'robusta')” (8 words).
+  funFactQuote: “C. canephora (predominantly a form known as 'robusta') and C. arabica” (11 words).
 
 ## B13-0939 — Robusta coffee is chiefly a variety of which species?
 

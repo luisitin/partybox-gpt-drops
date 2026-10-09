@@ -3180,109 +3180,157 @@
   },
   {
     "id": "B13-0938",
-    "reviewer": "codex-board-audit-20261009 / root-independent B13 peer",
-    "reviewedAt": "2026-10-09T11:52:32.534419+00:00",
-    "rowSha256": "9b8652203afca628516dd2c9dd3240e687aed529e2f544938a43dddd94715bce",
+    "reviewer": "/root/restart_g01_0458; independently authored no B13 rows",
+    "reviewedAt": "2026-10-09T13:54:23.483884+00:00",
+    "rowSha256": "2218c83eff6a99cf1261ef01892dbed8ad1dfd68dc0229ee7f2654683cf54876",
     "result": "supported",
-    "assessment": "Britannica whole commercial-plant paragraph contrastsCoffea arabica/Arabica withC.canephora/Robusta; Wikipedia whole botanical paragraph names the same two distinct species. Correcting the retained claim now matches the asked scientific species rather than an unrelated production-ranking claim. Both whole paragraphs explicitly connect robusta withC.canephora. Stable species identity, no changing consumption share/ranking asked.",
+    "assessment": "Both complete botanical contexts explicitly associate Robusta with C.canephora; both identify Arabica as C.arabica. The new question asks the botanical species of Robusta, not the species suggested by the identical arabica word, a current market share, or every ingredient in a commercial blend. Predominantly/form/main-variety wording is preserved in the short quotes. The reversed Arabica funfact is explicit in both full contexts. It is not inferred from the names alone, and no caffeine or production-share value is added. Britannica native last-modified2026-10-02 was read. No Wikipedia individual byline or unobserved revision time is invented. Nearby2020/2021 production and synthetic-coffee statements are dated context only and are not added to this enduring taxonomy question.",
     "sources": [
       {
-        "sourceId": "food-everyday-life-s5029",
+        "sourceId": "food-everyday-life-s5129",
         "receipt": {
           "pass": "reopen",
           "originalPhase": "independent-reopen",
-          "retrievedAt": "2026-10-09T11:41:20.950905+00:00",
+          "retrievedAt": "2026-10-09T13:50:42.375572+00:00",
           "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://www.britannica.com/topic/coffee",
           "resolvedUrl": "https://www.britannica.com/topic/coffee",
           "status": 200,
-          "contentSha256": "034836ce227b201da517d192e1a4a4f071e3c0e7a7f75a611750cd8f1d485043",
-          "capturePath": ".work/root-independent-editorial-20261009/reopen/food-everyday-life-s5029.txt",
-          "sourceId": "food-everyday-life-s5029",
-          "rawSha256": "696dab97bc242f9c8e918d0365446cd88c75dc98c908f2a2e87ca9226bd6a20d",
+          "contentSha256": "a4ffb02e5f1e5cea3c36a166cc603b757d401f4c31df5c6c3bdea99f11a4d4aa",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/food-everyday-life-s5129.txt",
+          "sourceId": "food-everyday-life-s5129",
+          "rawSha256": "aec255356c4ba76ef9d96285d418382d213188f13f79b2a7bb7f509a907c970c",
           "captureComplete": true,
-          "originalPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590",
+          "originalPeerPacketSHA256": "d3bf6b1947cba605aa1ba0deb8ab811b7e505c7cc5eff249e9992366d1dac2ac",
           "captureRelocatedWithoutByteChanges": true
         },
         "contextRead": true,
-        "claimAssessment": "Britannica whole commercial-plant paragraph contrastsCoffea arabica/Arabica withC.canephora/Robusta; Wikipedia whole botanical paragraph names the same two distinct species. Correcting the retained claim now matches the asked scientific species rather than an unrelated production-ranking claim. Both whole paragraphs explicitly connect robusta withC.canephora.",
+        "claimAssessment": "Both complete botanical contexts explicitly associate Robusta with C.canephora; both identify Arabica as C.arabica. The new question asks the botanical species of Robusta, not the species suggested by the identical arabica word, a current market share, or every ingredient in a commercial blend. Predominantly/form/main-variety wording is preserved in the short quotes. The reversed Arabica funfact is explicit in both full contexts. It is not inferred from the names alone, and no caffeine or production-share value is added.",
         "quotations": [
           {
             "field": "quote",
-            "quote": "Coffea arabica and C. canephora",
+            "quote": "Robusta, the main variety of C. canephora",
             "exactMatch": true
           },
           {
             "field": "funFactQuote",
-            "quote": "Robusta, the main variety of C. canephora",
+            "quote": "Coffea arabica and C. canephora",
             "exactMatch": true
           }
         ],
-        "actualWholeScopeRead": [
-          {
-            "field": "quote",
-            "wholeParagraphSHA256": "8e2d62c1c45b11ab61097c43b8ac7625993ff2e80edcc7a6c09da8a05f5b74d9",
-            "wholeParagraphChars": 1021,
-            "literalClipWords": 5,
-            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
-          },
-          {
-            "field": "funFactQuote",
-            "wholeParagraphSHA256": "8e2d62c1c45b11ab61097c43b8ac7625993ff2e80edcc7a6c09da8a05f5b74d9",
-            "wholeParagraphChars": 1021,
-            "literalClipWords": 7,
-            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
-          }
-        ]
+        "actualWholeScopeRead": {
+          "allRelevantAndAdjacentParagraphsAndAttachedNativeReferencesPersonallyRead": true,
+          "scopeHashes": [
+            {
+              "sourceId": "food-everyday-life-s5129",
+              "paragraphHashes": [
+                {
+                  "index": 1,
+                  "sha256": "272f7886e43671a8bf535c860253de58bc328e75c01ef33e6802e5af9f4cb772"
+                },
+                {
+                  "index": 2,
+                  "sha256": "85ae072d5a63ac12c16acebe77917844539a2c182adb10b8aca75ea231bdc571"
+                },
+                {
+                  "index": 3,
+                  "sha256": "e47e4e8a059d8bd0b1be09142be5cc132585d1745b46b0c1ac62da4e2fc68f43"
+                },
+                {
+                  "index": 7,
+                  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                },
+                {
+                  "index": 8,
+                  "sha256": "8e2d62c1c45b11ab61097c43b8ac7625993ff2e80edcc7a6c09da8a05f5b74d9"
+                },
+                {
+                  "index": 9,
+                  "sha256": "e99c8307c0b8853b4bd059b911b70508876cacf84372780d5930df83cde7e5ca"
+                },
+                {
+                  "index": 13,
+                  "sha256": "99ede3bd269027c8fb6dd572d1d792e7bb852efd6d5977f5c862f4b3ed409342"
+                },
+                {
+                  "index": 14,
+                  "sha256": "30d0cfb835c57264c9f5b9d2186e672151cd930b6fcfbbfc18ade618ff507d93"
+                }
+              ],
+              "attachedReferenceCount": 0,
+              "wholeBodyEqualAuthor": true
+            }
+          ]
+        }
       },
       {
-        "sourceId": "food-everyday-life-s5030",
+        "sourceId": "food-everyday-life-s5130",
         "receipt": {
           "pass": "reopen",
           "originalPhase": "independent-reopen",
-          "retrievedAt": "2026-10-09T11:41:21.339710+00:00",
+          "retrievedAt": "2026-10-09T13:50:43.023035+00:00",
           "method": "actual urllib HTTPS GET",
           "requestedUrl": "https://en.wikipedia.org/wiki/Coffee",
           "resolvedUrl": "https://en.wikipedia.org/wiki/Coffee",
           "status": 200,
           "contentSha256": "541d0b390682e3424aa3bd6b3d54e1a0d1aa8074a5fb1b823319807d26840705",
-          "capturePath": ".work/root-independent-editorial-20261009/reopen/food-everyday-life-s5030.txt",
-          "sourceId": "food-everyday-life-s5030",
+          "capturePath": ".work/root-independent-editorial-20261009/reopen/food-everyday-life-s5130.txt",
+          "sourceId": "food-everyday-life-s5130",
           "rawSha256": "4d9b163594f6ff67e32a7adc6d76b604ab1cd8dcdf469abec0e91e07916d46a8",
           "captureComplete": true,
-          "originalPeerPacketSHA256": "9846e3d854debc4acf376cac982f0413897c16ffee4763519e643fd8e7c62590",
+          "originalPeerPacketSHA256": "d3bf6b1947cba605aa1ba0deb8ab811b7e505c7cc5eff249e9992366d1dac2ac",
           "captureRelocatedWithoutByteChanges": true
         },
         "contextRead": true,
-        "claimAssessment": "Britannica whole commercial-plant paragraph contrastsCoffea arabica/Arabica withC.canephora/Robusta; Wikipedia whole botanical paragraph names the same two distinct species. Correcting the retained claim now matches the asked scientific species rather than an unrelated production-ranking claim. Both whole paragraphs explicitly connect robusta withC.canephora.",
+        "claimAssessment": "Both complete botanical contexts explicitly associate Robusta with C.canephora; both identify Arabica as C.arabica. The new question asks the botanical species of Robusta, not the species suggested by the identical arabica word, a current market share, or every ingredient in a commercial blend. Predominantly/form/main-variety wording is preserved in the short quotes. The reversed Arabica funfact is explicit in both full contexts. It is not inferred from the names alone, and no caffeine or production-share value is added.",
         "quotations": [
           {
             "field": "quote",
-            "quote": "C. canephora (predominantly a form known as 'robusta') and C. arabica",
+            "quote": "C. canephora (predominantly a form known as 'robusta')",
             "exactMatch": true
           },
           {
             "field": "funFactQuote",
-            "quote": "C. canephora (predominantly a form known as 'robusta')",
+            "quote": "C. canephora (predominantly a form known as 'robusta') and C. arabica",
             "exactMatch": true
           }
         ],
-        "actualWholeScopeRead": [
-          {
-            "field": "quote",
-            "wholeParagraphSHA256": "a7784db4c075a6512afbe9759aee08db2efcc87fc4627c75903fe3cfc8da268f",
-            "wholeParagraphChars": 613,
-            "literalClipWords": 11,
-            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
-          },
-          {
-            "field": "funFactQuote",
-            "wholeParagraphSHA256": "a7784db4c075a6512afbe9759aee08db2efcc87fc4627c75903fe3cfc8da268f",
-            "wholeParagraphChars": 613,
-            "literalClipWords": 8,
-            "wholeParagraphAndAvailableAdjacentParagraphsAndEveryNativeReferenceRead": true
-          }
-        ]
+        "actualWholeScopeRead": {
+          "allRelevantAndAdjacentParagraphsAndAttachedNativeReferencesPersonallyRead": true,
+          "scopeHashes": [
+            {
+              "sourceId": "food-everyday-life-s5130",
+              "paragraphHashes": [
+                {
+                  "index": 26,
+                  "sha256": "36342caf032751725d0716442f0b4dec117dcc2a3f07ae3188d51052f6ee73f3"
+                },
+                {
+                  "index": 27,
+                  "sha256": "a7784db4c075a6512afbe9759aee08db2efcc87fc4627c75903fe3cfc8da268f"
+                },
+                {
+                  "index": 28,
+                  "sha256": "fcb0a7b3e13aad3b0df7e0b3de0bcbb18ac1ca3d0ccf3363907eb382fb94b74c"
+                },
+                {
+                  "index": 31,
+                  "sha256": "2484819b01b8ff3e1b5166b250888ce9b30b12de192b5a1d0f87d5fdf4efbeee"
+                },
+                {
+                  "index": 32,
+                  "sha256": "d4daedb09b33fc8da1324bedb0f19e3b876b1bacf0ac75c180f8662fa888d45f"
+                },
+                {
+                  "index": 33,
+                  "sha256": "f22768fb9e338181696beaaebef3bb9339e05c43c0c6331e3ec0088b31dfc51c"
+                }
+              ],
+              "attachedReferenceCount": 19,
+              "wholeBodyEqualAuthor": true
+            }
+          ]
+        }
       }
     ]
   },
