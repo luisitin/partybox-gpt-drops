@@ -1,5 +1,21 @@
 # B04 — Current continuation
 
+2026-10-09T12:49:11.562961+00:00: Two new complete original source scopes reviewed. Product remains100/518 corroborated,398 single-source,19 disagreements,1 unknown;37/38 events and0/7 exact numbered maps. Original strict standard is NOT_MET; PR18 stays Draft.
+
+Read reports/two-shop-tv-source-scopes-UNADOPTED-20261009.json. Entire MarioPartyLegacy unlock guide25878 characters and MyNintendoNews TV review10505 were personally read, with full A/B authored identity verified. Four real HTTP200 requests naturally closed12:40:55.646751 without children or signals. MPL raw pages differ by one byte; only authored scopes match. MNN raw pages match. Full copyrighted bodies/images remain private. Zero new quotes or registry rows.
+
+The MPL Item Connoisseur tip identifies Creepy Tickets/Kamek/Raceway/first half. It does not close every retained stock/pricing/profile qualifier. Generic H1g price5 alone is not complete board-stock corroboration. Its explicit Reddit credit concerns missing achievement titles; the stock tip has no inline attribution, but the credited original has not been reopened. Retain that lineage gap. The MNN review gives noBuddies/second-half TogetherDice but omits20price and complete layout changes, so the whole TagTeam fact also stays single_source. Do not promote ordinary/Pro/TV inventories, entire shop stock or a complete multi-clause fact from partial support.
+
+Next reopen the credited source and find exact complete shop qualifiers, or a distinct complete remaining Event/train fact. All518 complete facts/593 fingerprints/19 disputes, source/capture dates, fixtures/schema/verifier/workflow and gates are byte unchanged. Namu250/250 is fully spent; Cel131 and150+50 reservations under200 remain unchanged. B03 actual12:41 audit found no quote use of these two canonical URLs; that audit transfers no fact proof or editorial independence.
+
+Exacteddb source normally published12:29:09. Whole original run37930338757/job113819226514 closed12:29:23/24, official full merge3943bd8cad2e408d9bbf6f17988180ac9db155a5 has actualbase948d0df5ceff88a17e539abea620bb0ca77e438a and eddb parents. Entire21443B native SHA4863239e4b7fe4fdce7072b0deb7e6f7310d4b488ba2cb942ec7368852f5109e personally read12:30:36; structural26/5750/110PASS and strict25/5640/100FAIL/37FAIL/NOT_MET actual1 required by unchanged workflow. This is now historical parent evidence sealed in the new reports; next source requires its own complete hosted read, no inherited green or Ready claim.
+
+Own main8a673 claim row12:32:50 normally published12:33:10/read12:33:11, all17 foreign rows/all other root entries byte preserved, lease released. No further main write without fresh serialized root lease. Claims do not reset source cadence; previous105s/92s misses retained. B13 independent immutable-copy final audit actually passed12:37:05 after a separately retained private output-path failure; no B13 edits or board-proof transfer.
+
+Previous detailed continuation follows:
+
+# B04 — Current continuation
+
 2026-10-09T12:27:35.088682+00:00: Material research checkpoint; all518 complete facts remain unchanged. Current100 corroborated /398 single-source /19 disagreements /1 unknown;37/38 events and0/7 exact numbered maps. The original research standard is NOT_MET and PR18 stays Draft.
 
 Read reports/three-native-scope-negatives-20261009.json. Three complete paired original scopes were examined: Atwiki current Jamboree2737 characters, clear_xt play report7548, and SASKE Goomba match1847. All six original HTTP requests returned200, both finite collectors naturally closed, and each authored A/B scope is identical. Full copyrighted bodies and images remain private. No new quotes or source-registry rows were registered.
