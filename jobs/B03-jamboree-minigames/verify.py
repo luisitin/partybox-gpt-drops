@@ -222,6 +222,9 @@ def run(args):
     preview_arrangement_recovery=module('b03_preview_arrangement_recovery','check-preview-arrangement-recovery.py')
     for result in preview_arrangement_recovery.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Preview arrangement recovery failed'),result.get('detail',''))
+    japanese_coin=module('b03_japanese_coin_candidates','check-japanese-coin-candidates.py')
+    for result in japanese_coin.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Japanese Coin candidate failed'),result.get('detail',''))
     deferred_facts=module('b03_deferred_fact_reconciliation','check-deferred-fact-reconciliation.py')
     for result in deferred_facts.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Deferred fact reconciliation failed'),result.get('detail',''))
