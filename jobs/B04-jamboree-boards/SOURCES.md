@@ -715,7 +715,7 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | rainbow-galleria:events:stamps | single_source/medium | W_GALLERIA-Q025, GR_GALLERIA-Q009 |
 | rainbow-galleria:events:last_place_shop | corroborated/high | W_GALLERIA-Q026, GR_GALLERIA-Q010, GR_GALLERIA-Q011 |
 | rainbow-galleria:events:last_place_qualifiers | single_source/medium | W_GALLERIA-Q027, W_GALLERIA-Q028 |
-| rainbow-galleria:events:super_shop | single_source/medium | W_GALLERIA-Q029 |
+| rainbow-galleria:events:super_shop | corroborated/medium | W_GALLERIA-Q029, W_GALLERIA-Q048, SASKE_GALLERIA-Q001, SASKE_GALLERIA-Q002 |
 | rainbow-galleria:events:gold_shop | single_source/medium | W_GALLERIA-Q030 |
 | rainbow-galleria:events:boo_shop | corroborated/high | W_GALLERIA-Q031, W_GALLERIA-Q047, W_GALLERIA-Q048, GR_GALLERIA-Q022, GR_GALLERIA-Q023, GR_GALLERIA-Q024, GR_GALLERIA-Q025 |
 | rainbow-galleria:events:thrift | corroborated/high | W_GALLERIA-Q032, GR_GALLERIA-Q012 |
@@ -1099,3 +1099,14 @@ Erik Petrovich, published 2024-10-25. Publisher lineage: `valnet`, shared with G
 | --- | --- |
 | GR_UNLOCK-Q001 | Western Land |
 | GR_UNLOCK-Q002 | you must reach Silver Rank (10 Achievements) |
+
+## SASKE_GALLERIA — scoped 2026-10-09 addition
+
+URL: https://ngamer.hatenablog.com/entry/2024/11/02/200100
+
+SASKE, published 2024-11-02T11:01:00Z. Independent personal blog, distinct from MarioWiki and Valnet. Actual A/B original HTTP200 captures recover the entire authored 1640-character play account and both registered Japanese fragments. The assistant’s English translations below preserve the original apparently qualifier; they are labeled translations, not additional source quotations. This narrow Super Shop landing/sale row is corroborated with medium confidence. No complete stock, item-price profile, exact Event Space count, Pro/Frenzy/TV scope, closure or location is promoted. Full originals remain private.
+
+| Quote ID | Exact Japanese fragment | Assistant English translation |
+| --- | --- | --- |
+| SASKE_GALLERIA-Q001 | スーパーショップもあって、イベントマスに止まると特別なアイテムを売ってくれるらしい | There is also a Super Shop; apparently, landing on an event space lets it sell you special items. |
+| SASKE_GALLERIA-Q002 | ５コインでスーパーのろいサイコロ買えるの？！ | Can you buy Super Creepy Dice for five coins?! |

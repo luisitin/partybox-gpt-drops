@@ -1,6 +1,6 @@
 # B04 design digest: how the seven Jamboree boards are built
 
-For the designer and the PartyBox port. Reference only: nothing here ships, and no board name, item name, artwork or map image may appear in PartyBox. Every number is a count or a sum from `boards.json` (seven boards). The factual rows are 518: 31 corroborated, 477 single-source, 9 conflicting, 1 unknown (README "Status"). Read a number as "what the retained source reports", not as settled fact.
+For the designer and the PartyBox port. Reference only: nothing here ships, and no board name, item name, artwork or map image may appear in PartyBox. Every number is a count or a sum from `boards.json` (seven boards). The factual rows are 518: 33 corroborated, 475 single-source, 9 conflicting, 1 unknown (README "Status"). Read a number as "what the retained source reports", not as settled fact.
 
 Status tags used below: **[C]** corroborated by a second publisher, **[S]** single source, **[X]** conflicting sources (both values kept), **[?]** unknown. Sentences marked *editorial* are reading, not source.
 

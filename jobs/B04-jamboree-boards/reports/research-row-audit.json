@@ -7,8 +7,8 @@
   "reviewDate": "2026-10-07",
   "reviewer": "same assistant in both passes; no independent-person review claimed",
   "factStatuses": {
-    "corroborated": 32,
-    "single_source": 476,
+    "corroborated": 33,
+    "single_source": 475,
     "conflict": 9,
     "unverified": 1
   },
@@ -1767,14 +1767,15 @@
     {
       "rowId": "rainbow-galleria:events:super_shop",
       "kind": "events",
-      "passA": "single_source",
-      "passB": "single_source",
+      "passA": "corroborated",
+      "passB": "corroborated",
       "confidence": "medium",
       "sourceIds": [
+        "SASKE_GALLERIA",
         "W_GALLERIA"
       ],
-      "review": "same-assistant full-claim qualifier review; unresolved qualifiers retain recorded status",
-      "reviewedRowSha256": "bbd8705b4ef2627c1e37f1341092866df3f0a874166de0bffc025dcf4ed386a8"
+      "review": "2026-10-09 scoped full-claim review of two actual original Japanese HTTP captures and current Wiki Event Spaces context; named shop, landing Event Space and Super-item sale agree. Japanese apparently qualifier remains medium confidence. No full inventory/ruleset promotion.",
+      "reviewedRowSha256": "65262e23b75543c40279f0637710ae331850dd0fe7ca7136c898cbe019338273"
     },
     {
       "rowId": "rainbow-galleria:events:gold_shop",
@@ -6422,8 +6423,8 @@
         "NL_BOARDS",
         "W_GALLERIA"
       ],
-      "review": "all required fields present; incompleteness remains explicit",
-      "reviewedRowSha256": "0a9293c198eab4808fa91bb903b3e890aa43cac539244c84d59b2dfeb919fbe0"
+      "review": "2026-10-09 containing-board fingerprint refreshed only for Super Shop event evidence/status; all other constituent claims retain their recorded dates and verdicts.",
+      "reviewedRowSha256": "ac281b35e2133e4d15fbbeed834bd7da39cab11341a6839d5c367e2f2630a823"
     },
     {
       "rowId": "rainbow-galleria:map_description",

@@ -1,6 +1,6 @@
 # B04 — Verification
 
-**Original research standard NOT_MET.** Keep PR18 draft: 32/518 complete factual rows have independent publisher agreement. All 16 complete type-count profiles use the original permitted CONFLICTS.md route. One current event retains unknown trigger/effect.
+**Original research standard NOT_MET.** Keep PR18 draft: 33/518 complete factual rows have independent publisher agreement. All 16 complete type-count profiles use the original permitted CONFLICTS.md route. One current event retains unknown trigger/effect.
 
 ## Completed checks and commands
 
@@ -817,3 +817,9 @@ Not changed: no factual row in `boards.json` or any `boards/*.md` table. No sour
 Western Land unlock is now 32/518 complete facts, with 476 single-source, nine conflicts and one unknown. Only that factual row and its board-content fingerprint changed. The original broad audits retain their original dates and unchanged gates; today’s checks validate current file integrity, not a new human review of all historical source facts. PR18 stays draft and strict research is expected to fail. Current exact command results are recorded in validator-output.txt after execution.
 
 The first scoped structural run returned actual exit2 because the containing western-land:board_record fingerprint had not yet been updated. The unchanged original check caught the omission. The exact original retained-row identity was then refreshed; no validator or acceptance gate was changed. Subsequent command results are recorded, and the manifest is regenerated after this receipt.
+
+### Galleria full-qualifier check, 2026-10-09
+
+The single narrow Super Shop event now has two independently authored sources;33/518 complete facts,475 single-source,9 conflicts,1 unknown. Only that fact and its containing board have new row fingerprints. All original checks, schema, strict requirements and workflow are unchanged. Original667hostedCI run 37894352773 / verify 113702166642 succeeded 06:35:57; its complete 21,432-byte native log SHA220e4481dca0c5384b9472cbc81a37c808bafcf82f2eda89d10b17ed274c6973 is historical for this new source milestone and documents strict 32/518 FAIL / 37/38 FAIL. New exact command output follows in validator-output.txt after execution.
+
+Current full structural command:25/25suites,5,426/5,426cases PASS, exit0. The full original strict command actually returns1:33/518complete facts FAIL,37/38known current events FAIL. Manifest is regenerated after these results and checked separately; structural integrity does not certify completed research.

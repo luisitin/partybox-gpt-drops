@@ -3715,7 +3715,7 @@
         {
           "id": "rainbow-galleria:events:super_shop",
           "kind": "events",
-          "status": "single_source",
+          "status": "corroborated",
           "confidence": "medium",
           "value": {
             "name": "Super Shop",
@@ -3728,9 +3728,27 @@
               "quote": "sells items that have the word \"super\" in their names",
               "locator": "Event spaces Super Shop",
               "quoteId": "W_GALLERIA-Q029"
+            },
+            {
+              "sourceId": "W_GALLERIA",
+              "quote": "landing on either",
+              "locator": "Current Event Spaces introduction explicitly requires landing for special shops; Super Shop paragraph identifies Super items. No exact event-space count is part of this narrow row.",
+              "quoteId": "W_GALLERIA-Q048"
+            },
+            {
+              "sourceId": "SASKE_GALLERIA",
+              "quote": "スーパーショップもあって、イベントマスに止まると特別なアイテムを売ってくれるらしい",
+              "locator": "Entire 2024-11-02 first-person Galleria play account; adjacent Super Shop Event Space paragraph and Super Creepy Dice purchase example; translation and apparently qualifier retained in scoped report.",
+              "quoteId": "SASKE_GALLERIA-Q001"
+            },
+            {
+              "sourceId": "SASKE_GALLERIA",
+              "quote": "５コインでスーパーのろいサイコロ買えるの？！",
+              "locator": "Entire 2024-11-02 first-person Galleria play account; adjacent Super Shop Event Space paragraph and Super Creepy Dice purchase example; translation and apparently qualifier retained in scoped report.",
+              "quoteId": "SASKE_GALLERIA-Q002"
             }
           ],
-          "note": "Full special-shop stock, trigger and price scope is recorded below; independently supported item costs do not verify all event qualifiers."
+          "note": "2026-10-09: current Wiki and SASKE’s independently authored Japanese play account agree that landing on a Super Shop Event Space permits buying a Super item. The source says apparently; medium confidence is retained. The following purchase example names Super Creepy Dice. Exact space count, full inventory/stock, ruleset, regional location, closure and other prices remain separate single-source claims; no installed Nintendo gameplay was executed by this audit."
         },
         {
           "id": "rainbow-galleria:events:gold_shop",
