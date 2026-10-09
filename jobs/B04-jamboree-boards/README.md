@@ -73,3 +73,6 @@ Initial Event-only step88/518 corroborated,411 single-source,18 unresolved dispu
 
 
 2026-10-09T14:31:01.278880+00:00: Native Western ticket screenshot scope reviewed in reports/western-ticket-native-image-scope-UNADOPTED-20261009.json. Four actual paired originals leave full price-update/currenttrainEvent facts unresolved; all101 current corroborated facts and nineteen disputes unchanged.
+
+
+2026-10-09T14:58:35.247096+00:00: New complete raffle clause evidence and precise pending triggerbinding are retained in reports/galleria-raffle-whole-clause-candidate-UNADOPTED-20261009.json. All101supportedfacts/19disputes unchanged; no probability/mode/price extension or newauthorword quota allocated.
