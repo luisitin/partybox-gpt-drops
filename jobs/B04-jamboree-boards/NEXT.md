@@ -1,5 +1,19 @@
 # B04 — Current continuation
 
+2026-10-09T11:54:02.981185+00:00: Genuine97/518 supported facts remains unchanged;402single-source,18conflicts,1unknown;37/38events/0of7exactmaps. OriginalresearchNOT_MET/PR18Draft.
+
+Material new research checkpoint: reports/wiggler-angry-counts-UNADOPTED-20261009.json compares four explicitly labeled ordinary angry-Wiggler rows from entire paired Namu chapter and Wiki normal/TagTeam table. Proposed next adoption is three matching typed counts11/6/4 and one new low blue21-v24 disagreement, preserving canonical24/all518values. No candidate fact or fingerprint is changed yet. Complete original source/type and all preservation checks are required before adoption. No Start/Rally/total/profile/TV promotion.
+
+Fresh two-HTTP200 finite Atwiki Steamer originals closed11:35:38.257520; complete730-character authored body/current-game scope/all17links read. New report records a genuine negative: Jamboree ticket text does not close ordinary station availability, and old MarioParty2 Happening text must not be transferred. Train remains single_source, no new quotes or registry edits.
+
+Sourcebbad3 pub11:26:46/read47; whole original run37923773047/job113797740348 naturallyclosed11:27:02/03, full21440-byte native SHA20d8ffc21145d859ebd9da31ccef5cdcde8b803a8de27c61b5b9b5ef92137b6f personallyread11:29:44. 26/5727/101structuralPASS; strict25/5626/97FAIL/37FAIL/NOT_MET actual1 required by unchanged workflow. Whole original acceptance now sealed as historical parent evidence in reports/star-adoption-parent-full-acceptance-20261009.json and fullnative log. New checkpoint hosted whole acceptance pending actual publication, never inherited. Sourcebbad3 PRentire8080-character body current11:31:45 Draft; MAINf00c5 ownrow11:27:27/fullread11:28:10 released. No main mutation without fresh parent lease; claims do not reset source clock.
+
+SharedNamu250/250 fully spent; existing numeric21/11/6/4 locator reuse only. Cel131 reserve150+50=200. No new expressive words. Full copyrighted originals remain private.
+
+Previous continuation details follow:
+
+# B04 — Current continuation
+
 2026-10-09T11:25:34.542209+00:00:97/518corroborated,402single-source,18conflicts,1unknown;37/38events. PR18Draft/originalNOT_MET.
 
 Four existing ordinary moving-Star purchase facts alone gain independent medium support: Wiggler/Galleria/Lagoon/Western. Full fresh native MPL5992A/B and complete Namu452ordinaryStar/5881ordinary-types A/B were personally read; existing NamuQ015 numeral20 reused, no new quotes/registry/capture times. All518values/514otherfacts/18conflicts unchanged,8fingerprints. Read reports/ordinary-moving-star-recovery-20261009.json. Private originals remain under /tmp/b04-boards-resume-20261009-0605/private/mpl-boards-original-1103/ and current-Namu-entire-ordinary-Star-paragraph-A-B-private.json.
