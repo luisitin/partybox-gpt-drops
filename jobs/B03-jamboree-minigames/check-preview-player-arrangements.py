@@ -52,7 +52,9 @@ def validate(p,d,s,rs):
  require(p['fullCopyrightBodiesPublished'] is False and p['newNamuQuotes']==[] and p['newRegistryQuotes']==[] and p['allAcceptedProductSourceAndPairedHistoryUnchanged'] is True,'Bodies/registry/old quota changed')
  return count
 def run():
- p,d,s=read('reports/preview-player-arrangement-candidates.json'),read('minigames.json'),read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+n+'.json') for n in 'AB'];count=validate(p,d,s,rs)
+ p,d,s=read('reports/preview-player-arrangement-candidates.json'),read('minigames.json'),read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+n+'.json') for n in 'AB']
+ if (ROOT/'reports/preview-player-arrangement-recovery.json').exists():d,s,rs=module('check-preview-arrangement-recovery.py').historical_view(d,s,rs)
+ count=validate(p,d,s,rs)
  for n in range(20):
   a,b,c,z=copy.deepcopy([p,d,s,rs])
   if n==0:b['minigames'][5]['fieldEvidence']['format']['status']='corroborated'

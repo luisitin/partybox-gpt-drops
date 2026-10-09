@@ -219,6 +219,9 @@ def run(args):
     recovered=validate_reopens(sources,reopen_docs[:2],reopen_docs[2])
     checked('All '+str(len(reopen_docs[0]))+' source URLs reopened twice with ordered HTTPS/TLS records',len(reopen_docs[0])*2,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
     checked('Every recovered reopen quotation bound to the original registry',recovered,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
+    preview_arrangement_recovery=module('b03_preview_arrangement_recovery','check-preview-arrangement-recovery.py')
+    for result in preview_arrangement_recovery.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Preview arrangement recovery failed'),result.get('detail',''))
     preview_arrangements=module('b03_preview_player_arrangements','check-preview-player-arrangements.py')
     for result in preview_arrangements.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Preview arrangement candidate failed'),result.get('detail',''))
