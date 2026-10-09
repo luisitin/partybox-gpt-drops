@@ -42,3 +42,9 @@ Original-author tips research checkpoint: 14 actual native HTTPS/TLS A/B request
 
 
 Actual candidate checkpoint full controller naturally CLOSED 2026-10-09T01:57:26.792681+00:00: content81suites/31,430cases EXIT0; integrity82suites/31,523cases/all93hashes EXIT0; strict82suites/31,523cases/all93hashes deliberateEXIT1/NOT_MET299,zero complete. Only delivery notes change after these full checks; the regenerated manifest and every staged immutable Git byte are checked before normal canonical push.
+
+
+Candidate logger repair: exact82faed hosted run37872314164 succeeded with both82suite/31,523case reports, but the acceptance helper correctly stopped before artifact acceptance because direct appends omitted the two new per-run PASS lines (160actual/164expected). The entire115,990-character native log and failed reader are preserved privately. Both candidate suites now use the original checked() logger; no check, gate, source wording or product classification changes. Full exact new-head verification/artifact acceptance is required.
+
+
+Actual candidate logger-fix full controller naturally CLOSED 2026-10-09T02:01:31.804169+00:00: content81/31,430 EXIT0; integrity82/31,523/all93hashes EXIT0; strictsame82/31,523 deliberateEXIT1/NOT_MET299,zero complete. All native candidate suites now emit their usual PASS lines. Only these delivery notes change afterward; every regenerated manifest entry and staged Git byte is checked before the normal canonical push.

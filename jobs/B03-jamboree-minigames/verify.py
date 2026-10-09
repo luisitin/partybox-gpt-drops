@@ -233,7 +233,7 @@ def run(args):
         checks.append(result);print(f"PASS {result['name']}: {result['caseCount']} cases; seed=n/a")
     tips_candidate_checker=module('b03_family_tips_candidate','check-family-tips-candidate.py')
     for result in tips_candidate_checker.run():
-        checks.append(result)
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Candidate provenance check failed'),result.get('detail',''))
     namu_batch_checker=module('b03_namu_batch_recovery','check-namu-batch-recovery.py')
     for result in namu_batch_checker.run():
         checks.append(result);print(f"PASS {result['name']}: {result['caseCount']} cases; seed=n/a")
