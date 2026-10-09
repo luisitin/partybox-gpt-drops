@@ -67,3 +67,5 @@ Model conventions: "landing" is where a movement roll ends after cards and Go To
 ## Current recovery audit, 2026-10-09
 
 The preserved original delivery is Ready PR14 at5f35. The isolated followup repairs clean standalone output-directory creation in all four exposed runners and ensures changes to the verification workflow trigger it. All twelve clean-start commands passed at unchanged component workloads, including720M rolls and135 strict/runtime kills; new-head hosted full proof is still pending. See [recovery evidence](reports/recovery-20261009/README.md) and [NEXT.md](NEXT.md).
+
+The current implementation81da now has genuine full hosted720M/135 acceptance and three substantive no-gain KEEP audits. Complete current proof and retained raw edge failures are in [current evidence](reports/recovery-20261009/current81da/README.md). Supplemental PR25 remains Draft until the final handoff commit receives its own complete exact-head hosted proof.

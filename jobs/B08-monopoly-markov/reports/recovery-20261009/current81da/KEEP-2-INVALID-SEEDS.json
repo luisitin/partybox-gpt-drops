@@ -1,0 +1,215 @@
+{
+  "passed": true,
+  "round": 2,
+  "concreteAudit": "Actual invalid seed and omitted argument failure controls for every exposed runner, checking validation happens before directory creation.",
+  "actualExpectedRejections": 16,
+  "records": [
+    {
+      "label": "test.mjs-zero",
+      "argv": [
+        "node",
+        "test.mjs",
+        "0"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "09d206bd1a65440dac3389b0e000a46a1adbc649f1f97b32c9dada0bca157dcc",
+      "closedUTC": "2026-10-09T09:25:39Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "test.mjs-four",
+      "argv": [
+        "node",
+        "test.mjs",
+        "4"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "09d206bd1a65440dac3389b0e000a46a1adbc649f1f97b32c9dada0bca157dcc",
+      "closedUTC": "2026-10-09T09:25:39Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "test.mjs-text",
+      "argv": [
+        "node",
+        "test.mjs",
+        "invalid"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "09d206bd1a65440dac3389b0e000a46a1adbc649f1f97b32c9dada0bca157dcc",
+      "closedUTC": "2026-10-09T09:25:39Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "test.mjs-omitted",
+      "argv": [
+        "node",
+        "test.mjs"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "09d206bd1a65440dac3389b0e000a46a1adbc649f1f97b32c9dada0bca157dcc",
+      "closedUTC": "2026-10-09T09:25:39Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "simulate.mjs-zero",
+      "argv": [
+        "node",
+        "simulate.mjs",
+        "0"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "157c074d8a56a0f4bf6006e26d58955ad290539c22911fccd352c8f02b455a49",
+      "closedUTC": "2026-10-09T09:25:40Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "simulate.mjs-four",
+      "argv": [
+        "node",
+        "simulate.mjs",
+        "4"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "157c074d8a56a0f4bf6006e26d58955ad290539c22911fccd352c8f02b455a49",
+      "closedUTC": "2026-10-09T09:25:40Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "simulate.mjs-text",
+      "argv": [
+        "node",
+        "simulate.mjs",
+        "invalid"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "157c074d8a56a0f4bf6006e26d58955ad290539c22911fccd352c8f02b455a49",
+      "closedUTC": "2026-10-09T09:25:40Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "simulate.mjs-omitted",
+      "argv": [
+        "node",
+        "simulate.mjs"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "157c074d8a56a0f4bf6006e26d58955ad290539c22911fccd352c8f02b455a49",
+      "closedUTC": "2026-10-09T09:25:40Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "mutate.mjs-zero",
+      "argv": [
+        "node",
+        "mutate.mjs",
+        "0"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "118b08d2736c4019f58b72a98af2a26fe6a404f18bb5d3ad089b14380374ddfc",
+      "closedUTC": "2026-10-09T09:25:41Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "mutate.mjs-four",
+      "argv": [
+        "node",
+        "mutate.mjs",
+        "4"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "118b08d2736c4019f58b72a98af2a26fe6a404f18bb5d3ad089b14380374ddfc",
+      "closedUTC": "2026-10-09T09:25:41Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "mutate.mjs-text",
+      "argv": [
+        "node",
+        "mutate.mjs",
+        "invalid"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "118b08d2736c4019f58b72a98af2a26fe6a404f18bb5d3ad089b14380374ddfc",
+      "closedUTC": "2026-10-09T09:25:42Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "mutate.mjs-omitted",
+      "argv": [
+        "node",
+        "mutate.mjs"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "118b08d2736c4019f58b72a98af2a26fe6a404f18bb5d3ad089b14380374ddfc",
+      "closedUTC": "2026-10-09T09:25:42Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "partybox.mjs-zero",
+      "argv": [
+        "node",
+        "partybox.mjs",
+        "0"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "3925da44b61a504e3d8d3fd7d3aa417bb5291f70691c8c327522ed30db2526ef",
+      "closedUTC": "2026-10-09T09:25:42Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "partybox.mjs-four",
+      "argv": [
+        "node",
+        "partybox.mjs",
+        "4"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "3925da44b61a504e3d8d3fd7d3aa417bb5291f70691c8c327522ed30db2526ef",
+      "closedUTC": "2026-10-09T09:25:43Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "partybox.mjs-text",
+      "argv": [
+        "node",
+        "partybox.mjs",
+        "invalid"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "3925da44b61a504e3d8d3fd7d3aa417bb5291f70691c8c327522ed30db2526ef",
+      "closedUTC": "2026-10-09T09:25:43Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    },
+    {
+      "label": "partybox.mjs-omitted",
+      "argv": [
+        "node",
+        "partybox.mjs"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "3925da44b61a504e3d8d3fd7d3aa417bb5291f70691c8c327522ed30db2526ef",
+      "closedUTC": "2026-10-09T09:25:44Z",
+      "noOutputDirectoryOrFalseSuccess": true
+    }
+  ],
+  "currentSourceInputsFrozen": 98,
+  "playerFacingGainFound": false,
+  "completedUTC": "2026-10-09T09:25:44Z"
+}
