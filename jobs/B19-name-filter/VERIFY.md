@@ -1034,3 +1034,11 @@ Actualfulla7 hosted37868586332/job113621118296 official11588977738/14744550B ind
 DistinctASCII mapping2a1/68f2 passesstrictcompile/8executedassertioncontrols/128mapping/65536classification/214308three-seed semanticcases/25realoriginalseed1mutants43830each/noexclusions. Actualonceonly24phase12M comparisonnaturallyCLOSED01:34:33.427399/EXIT0 with1175+1206guards unchanged/reapedempty; seedgains-10.5052/-1.2451/+4.7080% fail predeclared5%allthree+positiveallsixblocks. REJECTED/NOADOPTION; everyphase/GC event retained/no causeattribution. ENOENT scaffoldfailureandwrongba70-DFA paths werecaughtbefore anyelapsedlaunch; exactfailedhelper/READY bytes preserved, targetonly1e19/9494 repair independentlyPASS1241. Current1175a7 proofmap needsno documentbridge.
 
 This is a bounded substantive optimization round without an acceptable gain. Bindingacceptance/KEEP remainunfinished; no unchangedretry, relaxedgate/clock, exclusions or claimedcompletion. Production7817/e4b/originalrunnerbff0 and alloriginalsourceworkloads stay unchanged.
+
+## Actual8d57 failure and prospective diagnostic checkpoint
+
+The complete hosted run37870853694/job113628364491 failed1/0/0;99/100 rows passed. Genuineofficial11590167227 bytes/SHA/fullZIP and6321 independent structural assertions confirm the failure, not completion. All earlier13/5/10 literal failures and four rejected candidates remain. `results/failed-hosted-and-diagnostic-20261009/proof.zip` preserves complete native log, official public metadata, reader and byte proofs.
+
+### UNVERIFIED
+
+The newly instrumented30000-sample CPU/GC diagnostic is UNEXECUTED. It preserves original sample inputs/warmup but changes conditions through sampling, extra endpoint storage and eager declaration import; no past cause or original gate waiver. Its frozen source/runtime/rootgrant protocol must be regenerated at this new documentary head and independently reviewed before launch. Wholearchive member-byte/CRC and original integrity checks pass; no repeated original acceptance benchmark was run.
