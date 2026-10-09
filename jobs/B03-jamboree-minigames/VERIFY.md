@@ -442,3 +442,23 @@ The complete initial current verifier actually exited0: **77 suites /28,970 case
 Full final content/hash/strict verification is recorded in the final report and checkpoint receipt. Integrity passing is distinct from strict research NOT_MET/exit 1. The 5e6ad25 hosted artifact receipt is explicitly historical; every later source needs its own complete exact-head native log, downloadable artifact JSON, CRC and immutable-file manifest check before acceptance. Original PR20 remains draft.
 
 Actual complete final commands naturally CLOSED 2026-10-09T00:48:44.829862+00:00: **78 suites / 29,059 cases / all 87 hashes** in each full run. Integrity exited 0; deliberate strict exited 1 with NOT_MET, coverage 288 / 1,320 and zero complete rows. Subsequent delivery notes are metadata only; the manifest is regenerated and all file hashes rechecked before the normal push.
+
+## Current eleven-action packet 2026-10-09
+
+Actual full native collector CLOSED **01:15:27.558651 UTC**: **24 requests**, HTTP200/TLS verified, ordered A/B for twelve candidate Wiki URLs. Eleven pairs are registered; Gate remains unadopted because its memory advice attributes the in-game explanation. Complete original Korean authored Tip contexts were read in both retained actual earlier Namu bodies. Raw source bodies are private, and no new Namu request, fabricated retrieval date or hardware execution is claimed.
+
+Writer naturally CLOSED **01:22:30.564985 UTC**, exit0: **299/1,320 corroborated /1,021 open /zero complete rows**, **31 gameplay corroborated /101 single-source**, categories104/28. Registry146 sources /1,931 clips /3,868 A/B recoveries. Source quotation budgets retain the inherited unique-text definition; Namu195/200 and guide200/200. The first pre-write batch assertion accidentally counted duplicate historical clips twice; it failed before data writes, its code/failure are preserved, and the original unique-text budget definition was restored. The inherited hard expected gameplay total was updated from20 to31 only after the exact eleven-row proof passed; its earlier failing full log is retained.
+
+Complete initial current command, seed n/a:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 jobs/B03-jamboree-minigames/verify.py --report .work/remaining-research-0038/second-batch-content-report.json
+```
+
+Actual exit0: **79 suites /31,337 cases**. The new independent packet performs **2,246** source/row/classification/capture comparisons and **ten** actual malformed-proof rejections. All1,900 earlier quote classifications, exact132-row and146-source accepted baseline, complete accepted A/B records, all121 other summaries and every unrelated field remain hash-bound. The original category, common-action and first Korean Tip checks still run, including all earlier negative cases, on validated exact historical views. No general exception strips an unchecked source.
+
+Historical accepted dd1e54f receipt is `reports/hosted-ci-dd1e54f-artifact.json`: full run37867934315/job113619054067 SUCCESS, actual artifact11589366040 (3,100bytes/SHA3368371729bbf76b2a701670f256f7bd5ab59a08a5ea0ca05d934fe44214da1c), complete111,736-character native log/two78-suite29,059-case reports/156PASS lines/all87 immutable source hashes. Reader naturally CLOSED01:05:37.307014 UTC. This accepts that previous source only; a newer head needs its own full hosted run/native/official artifact reader.
+
+Final content, integrity and deliberate strict commands are recorded in the final delivery receipt and report. Strict remains NOT_MET; exact detailed gameplay parameters and the second full independent wiki roster remain UNVERIFIED. No completed strict KEEP GOING or Ready claim is made.
+
+Actual final full commands naturally CLOSED 2026-10-09T01:27:21.722116+00:00: content79suites/31,337cases; integrity80suites/31,427cases/all90hashes EXIT0; strict the same80suites/31,427cases/all90hashes deliberateEXIT1/NOT_MET299fields,zero complete. Only delivery metadata changed after these checks; every staged immutable Git byte and regenerated manifest entry is verified before the normal push.

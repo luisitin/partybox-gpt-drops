@@ -70,12 +70,20 @@ def validate(proof, data, sources, reopens):
     require(qsc.substantive(CONFIG['MG014'][1]) and not qsc.substantive('Granite Getaway:') and not qsc.substantive('도화선 불') and not qsc.substantive('도화선이 겹치는 부분에 불이 닿기 전에:'), 'Unicode substantive rule accepts headings or fragments')
     return restored, historical, [[r for r in rs if r['sourceId'] != 'NAMU_BASE'] for rs in reopens]
 
+def before_batch_view(data, sources, reopens):
+    if not (ROOT / 'reports/namu-batch-recovery.json').exists(): return data, sources, reopens
+    spec = importlib.util.spec_from_file_location('b03_namu_batch_historical_view', ROOT / 'check-namu-batch-recovery.py')
+    batch = importlib.util.module_from_spec(spec); spec.loader.exec_module(batch)
+    return batch.historical_view(data, sources, reopens)
+
 def historical_view(data, sources, reopens):
+    data, sources, reopens = before_batch_view(data, sources, reopens)
     if not any(s['id'] == 'NAMU_BASE' for s in sources['sources']): return data, sources, reopens
     return validate(read('reports/namu-gameplay-recovery.json'), data, sources, reopens)
 
 def run():
     proof = read('reports/namu-gameplay-recovery.json'); data = read('minigames.json'); sources = read('catalogue-sources.json'); reopens = [read('reports/source-reopens-pass' + p + '.json') for p in 'AB']
+    data, sources, reopens = before_batch_view(data, sources, reopens)
     validate(proof, data, sources, reopens)
     for number in range(8):
         p, d, s, rs = copy.deepcopy(proof), copy.deepcopy(data), copy.deepcopy(sources), copy.deepcopy(reopens)

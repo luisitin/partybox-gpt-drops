@@ -3608,3 +3608,132 @@ Three genuinely common-action summaries now use both complete retained source co
 Original Korean NamuWiki adds one actual URL and two retained full source responses, both successfully captured with TLS verification at 2026-10-09 00:10. Only two literal clauses from the fourth/authored Tip column are used; the third translated Nintendo-description column is excluded. Their exact original-language text and complete locators are in `catalogue-sources.json` as `NAMU_BASE_tip_MG014` and `NAMU_BASE_tip_MG049`; total22 words, no full article or112-row copyrighted text published. Both complete authored-tip contexts are compared before narrowly corroborating Granite Getaway and Defuse or Lose. Original Korean strategy prose and literal English parenthetic row names are inspected; absent MarioWiki/Fandom links alone are not proof of independence.
 
 Registry146 URLs /1,900 clips;149 current/historical URLs have ordered A/B records and3,806 quote recoveries. All prior145 source objects, quotes and actual pass receipts are unchanged; guide budget remains200. Three separately recorded actual searches requested/inspected 16 entries,15 unique URLs; no full article from those results was successfully reviewed. The candidate GameFAQs URL returned actualHTTP400 Request Blocked twice, with TLS verification result0. Its snippets are not independent accepted evidence. The exact two-wiki full roster gate remains unmet.
+
+## Current eleven-action source packet 2026-10-09
+
+The selected original Korean NamuWiki authored Tip cells are independent community strategy prose. Adjacent translated Nintendo-description cells are excluded. URL: https://namu.wiki/w/%EC%8A%88%ED%8D%BC%20%EB%A7%88%EB%A6%AC%EC%98%A4%20%ED%8C%8C%ED%8B%B0%20%EC%9E%BC%EB%B2%84%EB%A6%AC . Both complete retained original responses have their actual 00:10 timestamps; reusing them invents no new HTTP request. Named exact English row identities and complete tips were compared with full fresh Wiki narratives. No first-hand Nintendo gameplay or current hardware observation is claimed.
+
+Each following original-language clip is at most 25 words. The narrow English shared actions are in minigames.json; full copyrighted bodies remain private. Namu total is195 words including all earlier22 words; the independent guide remains200 words. All previous quotation objects and classifications are preserved.
+
+### MG001 — Lumber Tumble
+
+Namu originally authored Tip: “두 개의 통나무 사이에서 다리를 건너야 하며 뒤로 갈수록 두 통나무가 앞이나 뒤로 움직이기 때문에 [117] 앞에 바닥이 어디가 없는지 파악을 해두는 편이 좋다.” (24 words).
+
+Independent complete Wiki URL: https://www.mariowiki.com/Lumber_Tumble
+
+- W001_batch_1: “Players attempt to stay on a maze-like bridge.” (8 words).
+- W001_batch_2: “The players cannot jump over the gaps and must go around them instead.” (13 words).
+
+Only the common actions are corroborated. Exact bindings, timers, score/tie rules, board payouts, mode differences and low whole-row confidence retain their existing qualifiers.
+
+### MG003 — Camera-Ready
+
+Namu originally authored Tip: “화면을 움직이는 것 뿐만 아니라 확대 및 축소를 해야하기 때문에 보기의 사진에서 조형물을 참고하면서 사진을 찍으면 높은 점수를 받기 쉽다.” (20 words).
+
+Independent complete Wiki URL: https://www.mariowiki.com/Camera-Ready
+
+- W003_batch_1: “Players need to move their cameras, zoom in, zoom out, and wait for the perfect time before taking the picture.” (20 words).
+- W003_batch_2: “Players are shown a picture at the beginning of each round and have to attempt to take an exact copy of the shown picture.” (24 words).
+
+Only the common actions are corroborated. Exact bindings, timers, score/tie rules, board payouts, mode differences and low whole-row confidence retain their existing qualifiers.
+
+### MG017 — Hammer It Home
+
+Namu originally authored Tip: “깊게 들어가 있는 못은 재빠르게 치고 들어가지 않은 못은 힘을 모아서 치자.” (12 words).
+
+Independent complete Wiki URL: https://www.mariowiki.com/Hammer_It_Home
+
+- W017_batch_1: “Different nails appear at different heights, with the higher ones requiring more power.” (13 words).
+
+Only the common actions are corroborated. Exact bindings, timers, score/tie rules, board payouts, mode differences and low whole-row confidence retain their existing qualifiers.
+
+### MG028 — Stamp Out!
+
+Namu originally authored Tip: “다른 사람의 색 위에 자신의 색으로 덧칠하면 효율적으로 진행할 수 있다.” (11 words).
+
+Independent complete Wiki URL: https://www.mariowiki.com/Stamp_Out!
+
+- W028_batch_1: “Each player tries to cover as much of the drawing pad they are on with stamps matching their color,” (19 words).
+- W028_batch_2: “including over areas already covered by opponents.” (7 words).
+
+Only the common actions are corroborated. Exact bindings, timers, score/tie rules, board payouts, mode differences and low whole-row confidence retain their existing qualifiers.
+
+### MG043 — Pickin' Produce
+
+Namu originally authored Tip: “즉, 각자 정리할 수 없는 과일이 무조건 한 종류 있다. 팀원이 정리할 수 있도록 빠르게 중앙 컨베이어, 특히 시작 부분으로 넘겨 주자.” (22 words).
+
+Independent complete Wiki URL: https://www.mariowiki.com/Pickin%27_Produce
+
+- W043_batch_1: “Sort the fruits in teams of two. Work together to send bananas, apples, and watermelons along the correct conveyor belts.” (20 words).
+- W043_batch_2: “players are placed on a wooden platform between two conveyor belts, with the remaining one being accessible only for the other player.” (22 words).
+
+Only the common actions are corroborated. Exact bindings, timers, score/tie rules, board payouts, mode differences and low whole-row confidence retain their existing qualifiers.
+
+### MG082 — Spike's Gambit
+
+Namu originally authored Tip: “2층에 걸친 오르막 언덕에 떨어지는 코인을 모으는 게임. 가시롤러에 맞으면 일정 거리만큼 굴러 떨어지고, 거대가시롤러에 맞으면 맨 밑까지 굴러 떨어진다.” (20 words).
+
+Independent complete Wiki URL: https://www.mariowiki.com/Spike%27s_Gambit
+
+- W082_batch_1: “Coins regularly drop from the sky into the sand and must be touched to be collected.” (16 words).
+- W082_batch_2: “Regularly, the three top Spikes spew spiked rollers.” (8 words).
+
+Only the common actions are corroborated. Exact bindings, timers, score/tie rules, board payouts, mode differences and low whole-row confidence retain their existing qualifiers.
+
+### MG084 — Lane Change
+
+Namu originally authored Tip: “차선을 변경해가며 코인을 모으는 미니게임. 장애물에 부딪히면 속도가 초기화된다.” (9 words).
+
+Independent complete Wiki URL: https://www.mariowiki.com/Lane_Change
+
+- W084_batch_1: “Players can move between each lane next to each other as they advance along the track, collecting coins as they do so.” (22 words).
+
+Only the common actions are corroborated. Exact bindings, timers, score/tie rules, board payouts, mode differences and low whole-row confidence retain their existing qualifiers.
+
+### MG085 — Coin Conveyor
+
+Namu originally authored Tip: “컨베이어 벨트 위에서 움직이는 퍼즐 조각을 잘 정렬해서 한번에 많은 열을 지우며 코인을 획득하는 미니게임.” (15 words).
+
+Independent complete Wiki URL: https://www.mariowiki.com/Coin_Conveyor
+
+- W085_batch_1: “The player must take the pieces and place them on a 7-by-7 grid.” (13 words).
+- W085_batch_2: “When a row or column is filled, it is cleared.” (10 words).
+- W085_batch_3: “The coins it contained get collected and the Bob-ombs it contained clear the surrounding blocks.” (15 words).
+
+Only the common actions are corroborated. Exact bindings, timers, score/tie rules, board payouts, mode differences and low whole-row confidence retain their existing qualifiers.
+
+### MG086 — Which Door Has More?
+
+Namu originally authored Tip: “오브젝트 방에서 두 오브젝트의 수를 비교해 더 많은 쪽을 골라 코인 방으로 가는 미니게임.” (14 words).
+
+Independent complete Wiki URL: https://www.mariowiki.com/Which_Door_Has_More%3F
+
+- W086_batch_1: “To accomplish this, the player must determine which of the species present on the floor is of greater quantity.” (19 words).
+
+Only the common actions are corroborated. Exact bindings, timers, score/tie rules, board payouts, mode differences and low whole-row confidence retain their existing qualifiers.
+
+### MG088 — Burning Bridges
+
+Namu originally authored Tip: “소, 중, 대형 불덩이가 양 끝에서 날아오고 그것을 점프로 피하면 된다.” (11 words).
+
+Independent complete Wiki URL: https://www.mariowiki.com/Burning_Bridges
+
+- W088_batch_1: “These statues frequently spit fireballs, which players must jump over or they are eliminated.” (14 words).
+- W088_batch_2: “Overtime, the fireballs increase in speed and larger fireballs can appear.” (11 words).
+
+Only the common actions are corroborated. Exact bindings, timers, score/tie rules, board payouts, mode differences and low whole-row confidence retain their existing qualifiers.
+
+### MG092 — The Floor Is Falling
+
+Namu originally authored Tip: “시간이 지나면 초록색, 노란색, 빨간색으로 번쩍이는 시간이 점점 빨라지며 번쩍이지 않는 곳으로 이동하는 것이 좋다.” (15 words).
+
+Independent complete Wiki URL: https://www.mariowiki.com/The_Floor_Is_Falling
+
+- W092_batch_1: “Parts of the floor that are about to disappear change colors from green to yellow to red before disappearing.” (19 words).
+- W092_batch_2: “Watch the panels, be careful where you stand, and don't fall!” (11 words).
+
+Only the common actions are corroborated. Exact bindings, timers, score/tie rules, board payouts, mode differences and low whole-row confidence retain their existing qualifiers.
+
+Actual source collector:24 native full requests, HTTP200/TLS verified, naturally CLOSED01:15:27.558651 UTC. Eleven registered Wiki source pairs were freshly recovered, including every old clip; the unadopted Gate pair stays in the research packet. Current registry146 URLs /1,931 clips /3,868 A/B recoveries across149 current/historical URLs. Every remaining registry response keeps its actual original date.
+
+Gate Key-pers remains single-source: its otherwise useful memory Tip explicitly invokes the game explanation (설명대로), so independence of that advice is uncertain. A source column label alone does not establish independence.
