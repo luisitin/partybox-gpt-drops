@@ -62,7 +62,9 @@ def validate(p,d,s,rs):
  count+=module('check-rosalina-gameplay-recovery.py').validate(read('reports/rosalina-gameplay-recovery.json'),d,s,rs)[4]
  return count
 def run():
- p,d,s=read('reports/player-format-candidates.json'),read('minigames.json'),read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+n+'.json') for n in 'AB'];count=validate(p,d,s,rs)
+ p,d,s=read('reports/player-format-candidates.json'),read('minigames.json'),read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+n+'.json') for n in 'AB']
+ if (ROOT/'reports/player-format-recovery.json').exists():d,s,rs=module('check-format-recovery.py').historical_view(d,s,rs)
+ count=validate(p,d,s,rs)
  for n in range(16):
   a,b,c,z=copy.deepcopy([p,d,s,rs])
   if n==0:a['status']='ADOPTED'

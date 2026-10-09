@@ -1,3 +1,53 @@
+## Exact core player-format evidence
+
+Three arrangements only; precise mechanics and alternate modes keep their separate qualifications. These are the exact registered <=25-word quotations. Repeats add no new canonical-source allocation. Whole native paired scopes and original context remain private, bound by the research hashes and finite request receipts.
+
+### MG038 Income Stream — One player faces a team of three.
+
+Source: https://www.mariowiki.com/Income_Stream (mariowiki).
+
+- W038_format_common: “Income Stream is a 1-vs.-3 coin -collecting minigame in Super Mario Party Jamboree.”
+- W038_q2: “The solo player rides Plessie, which can bump other players away with great force.”
+- W038_q3: “The team players ride on water scooters that allow them to collect coins farther away from each other with ease.”
+
+Source: https://www.thegamer.com/super-mario-party-jamboree-best-minigames/ (valnet).
+
+- RANK_MG038_format_common: “and get to combine their totals”
+- RANK_MG038_action: “Here, three players ride paddle boards, and another rides Plessie. The three players can cover more ground as they collect coins”
+
+Only the literal core arrangement of one solo player versus a team of three is independently described. Exact controls, timers, win/score/tie/payout and alternate-mode availability retain separate qualifications.
+
+### MG044 Prime Cut — Two teams of two.
+
+Source: https://www.mariowiki.com/Prime_Cut (mariowiki).
+
+- W044_format_common: “Prime Cut is a 2-vs.-2 minigame found in Super Mario Party Jamboree.”
+- W044Q012: “In each of the three rounds, both players on each team hold one end of a knife and have 10”
+- W044_q3: “It is possible for both teams to win if they have the same number of points.”
+
+Source: https://www.thegamer.com/super-mario-party-jamboree-best-minigames/ (valnet).
+
+- RANK_MG044_format_common: “2 vs. 2 Minigames see the regular travelling troupe split into two teams”
+- RANK_MG044_action: “But only one asks you to cut a steak perfectly down the middle.”
+
+Only the literal core arrangement of two teams of two players is independently described. Exact controls, timers, win/score/tie/payout and alternate-mode availability retain separate qualifications.
+
+### MG058 All the Marbles — Two-player duel.
+
+Source: https://www.mariowiki.com/All_the_Marbles (mariowiki).
+
+- W058_format_common: “In the introduction, the camera scrolls through a cardboard track before meeting the two player characters at the end.”
+
+Source: https://www.thegamer.com/super-mario-party-jamboree-best-minigames/ (valnet).
+
+- RANK_MG058_format_common: “They pit two players against each other”
+- RANK_MG058_action: “In All The Marbles, you race through big marbles. That's it. You can push your opponent”
+
+Only the literal core arrangement of a two-player duel is independently described. Exact controls, timers, win/score/tie/payout and alternate-mode availability retain separate qualifications.
+
+
+## Preserved source history
+
 # Sources — preliminary list and name evidence
 
 All quotations are at most 25 words each. The index records names, raw category headings and count claims. Context quotations are retained with disagreements; they are not a completed per-game specification. `source-excerpts.json` records four URLs reopened in two fresh passes. The two Legacy pages are one publisher family, independent of the wiki; Nintendo separately corroborates the additions count.
