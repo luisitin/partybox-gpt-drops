@@ -1,0 +1,36 @@
+{
+  "schema": "b19-expanded-correctness-discrepancy/1",
+  "scope": "Original frozen production vs historical NFA and sealed regex reference, four declared contexts over all Unicode codepoints. Failure retained. No original acceptance, production change or sealed oracle edit.",
+  "actualCompleteCases": 4456448,
+  "historicalNFAAgreements": 4456448,
+  "sealedRegexDisagreements": 952198,
+  "naturalNodeExitCode": 1,
+  "naturallyClosedInHelperAt": "2026-10-09T02:48:58.924Z",
+  "observedNaturallyClosedBy": "2026-10-09T02:49:32Z",
+  "sourceUnchanged": true,
+  "runtimeUnicodeVersion": "17.0",
+  "classificationScope": "Every actual retained failure row independently streamed and classified with actual Node Unicode17 properties: exactly Cn814730/Co137468, no other category. Earlier separate Python15 observations remain historical only.",
+  "publicationPreparedAt": "2026-10-09T02:53:26.436621+00:00",
+  "members": {
+    "original-supplement.mjs": {
+      "bytes": 3892,
+      "sha256": "e02d446329023110fcfeb38fda98c673ca4fdf91290b95ef972156386eb310f3"
+    },
+    "actual-failed-supplement.json": {
+      "bytes": 2743,
+      "sha256": "601fc337ec7b7c699fb1af49f02b05a5c4c2a309773b9b025cc55aff032cbfe6"
+    },
+    "all-952198-disagreements.jsonl": {
+      "bytes": 145768769,
+      "sha256": "73daec7711d7eda92c8bc6d4b3d7a3c4b01b469868ac2fbf153abcb237f4deea"
+    },
+    "actual-native-unicode17-full-failure-classification.json": {
+      "bytes": 550,
+      "sha256": "848d6baf552771bea981200d81d937388248c93ecbf5a6951d7423f316348ed2"
+    }
+  },
+  "archive": {
+    "bytes": 4912614,
+    "sha256": "7c9515c2b57c883bc1de69592aa924ef5cf7233e099d3c114f16c2ab7ad9199a"
+  }
+}

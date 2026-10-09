@@ -31,3 +31,5 @@ needs a native review and an owner decision. This is a known scope gap, not a pa
 11. Substring policy versus given names. Analía (and Analia) and Sexto were blocked by the substrings
 `anal` and `sex`. They are now exact exceptions (`analia`, `analise`, `sexto`). Other given names with a
 blocked substring remain blocked until someone adds them with the same exact-spelling review.
+
+12. Expanded all-scalar contexts expose952198 old sealed-oracle disagreements on unassigned/private-use separators; production and historical NFA agree on all4456448. Unknown remaining categories are kept as barriers. Complete bidi-property interpretation additionally exposes accepted061c/200e/200f format controls. New independent reference remains unadopted, old seal and all failed inputs retained; original finite green never claimed complete Unicode coverage.
