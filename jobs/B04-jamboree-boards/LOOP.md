@@ -23,3 +23,5 @@
 2026-10-09T08:39:04.380349+00:00:Scoped Castle recovery:actual paired complete original article/current Wiki contexts and eleven personal images each pass establish complete Event landing/Yellow Toad/Bowser/coupled shop. Source prose/visual errors retained; one medium fact87→88, all518 values/517 other facts/18 disputes preserved. Original strict NOT_MET, not completed KEEP.
 
 2026-10-09T08:42:05.358282+00:00:Complete scoped independent medium recovery of Castle dark-background/electric music; combine with earlier Event step for87→89 full facts,2 verdicts/3 fingerprints,all518values/516otherobjects/18disputes unchanged. Actual shared quota reconciled241+6=247; no further Namu author words. Original strict incomplete, no completed KEEP verdict.
+
+- 2026-10-09T09:09:06.322549+00:00: Substantive independent original-context recovery of one complete Gold Shop Event Space landing/sale fact89→90 at medium; all518values/517otherfacts/18conflicts preserved,2fingerprints. Original strict incomplete; no completed KEEP verdict. Prior1fc current entire native accepted then becomes historical for this new source.

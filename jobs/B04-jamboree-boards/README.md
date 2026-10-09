@@ -2,11 +2,11 @@
 
 **What this is:** a research file for the seven current Jamboree boards: space-type counts for 16 profiles (baseline, TV Tag Team and angry), 35 shop profiles with 215 item rows, and Star, event, phase, Homestretch and TV rules, each with its source quotes. Seven board documents are checked cell by cell against `boards.json`, and eleven regional map links are cited.
 **How to use it:** read `INTEGRATION.md` first (the port plan for the desktop agent), then `DESIGN-DIGEST.md` (the design reading). Query `boards.json` for numbers; every row carries its status. Do not ship names, prices written as text, artwork or map images.
-**Status:** reference only. Research PARTIAL; the strict original standard is **NOT_MET** (89 of 518 factual rows corroborated; one of 38 event rows has no source-backed trigger or effect). PR #18 stays a draft. The 2026-10-08 polish pass changed no factual row; it added a verifier suite (board tables equal the JSON) and the integration and design documents.
+**Status:** reference only. Research PARTIAL; the strict original standard is **NOT_MET** (90 of 518 factual rows corroborated; one of 38 event rows has no source-backed trigger or effect). PR #18 stays a draft. The 2026-10-08 polish pass changed no factual row; it added a verifier suite (board tables equal the JSON) and the integration and design documents.
 
 **Research PARTIAL.** Seven current boards with 16 baseline, Tag Team and angry count profiles; 176 type-count rows; 35 inventory profiles and 215 item rows. Includes sourced Star, event, path, phase, Homestretch and TV rules, seven detailed board documents and eleven cited regional connections. Exact numbered adjacency, event completeness, gate positions and unsupported qualifiers remain explicit gaps.
 
-518 factual rows: **89 corroborated, 410 single-source, eighteen conflicting and one unknown**. Previously recovered independent claims include the Boo Shop landing/Peepa/15-coin purchase and complete Pro Homestretch behavior. The original research standard remains NOT_MET; keep PR18 draft.
+518 factual rows: **90 corroborated, 409 single-source, eighteen conflicting and one unknown**. Previously recovered independent claims include the Boo Shop landing/Peepa/15-coin purchase and complete Pro Homestretch behavior. The original research standard remains NOT_MET; keep PR18 draft.
 
 Historical 2026-10-07:both passes reopened all22 retained URLs and recovered all 364 quotations (728 recoveries). All 593 retained rows were reviewed twice; 391 numerical/table rows additionally compared against exact fresh source cells twice. Ten map images were retrieved and visually reviewed twice, with 20 actual HTTP 200 responses; only citations and fingerprints are published. Both passes use the same assistant and Exa retrieval may be cached. Each reviewed row now has a canonical content hash, so a subsequent factual edit invalidates its review receipt.
 
@@ -45,6 +45,10 @@ Current coverage is87/518:412 single-source,18 disagreements,1 unknown. Paired c
 
 Initial Event-only step88/518 corroborated,411 single-source,18 unresolved disputes,1 unknown. SASKE’s current personal Castle account and actual paired original screenshots independently support the entire narrow tower Event landing/Yellow Toad/Impostor Bowser/coupled-shop fact. Medium confidence and source prose/visual naming discrepancy remain. All518 values and other517 verdicts are unchanged; the shop passing/purchase conflict remains. See reports/castle-event-recovery-20261009.json. Earlier87/518 ordinary-count milestone remains dated history. Strict NOT_MET; PR18 Draft.
 
-### Current combined Castle recovery, 2026-10-09
+### Historical combined Castle recovery, 2026-10-09
 
 89/518 corroborated,410 single-source,18 conflicts,1 unknown. Exactly two complete narrow facts gain independent medium support: tower Event/Yellow Toad/Bowser/coupled shop and FakeBowser dark/electric music. All518 values and other516 fact objects remain unchanged. See the two scoped Castle recovery reports; the prior47f UNADOPTED report remains historical. Strict NOT_MET; PR18 remains Draft.
+
+### Current Gold Shop event recovery, 2026-10-09T09:09:06.322549+00:00
+
+90/518 corroborated,409 single-source,18 conflicts,1 unknown. Only the existing Gold Shop Event Space landing/gold-item purchase fact gains medium independent support; all518 values and other517 full fact objects remain unchanged. Earlier GameRant omission of exact space type remains a dated rejection; current original Korean full shop context supplies the missing qualifier. No complete inventory, price, profile, count, regional position, host or closure promotion. Original strict NOT_MET; PR18 remains Draft. See reports/gold-shop-event-recovery-20261009.json.

@@ -716,7 +716,7 @@ URLs and quotations resolve through the registry above. Whole-claim status is re
 | rainbow-galleria:events:last_place_shop | corroborated/high | W_GALLERIA-Q026, GR_GALLERIA-Q010, GR_GALLERIA-Q011 |
 | rainbow-galleria:events:last_place_qualifiers | single_source/medium | W_GALLERIA-Q027, W_GALLERIA-Q028 |
 | rainbow-galleria:events:super_shop | corroborated/medium | W_GALLERIA-Q029, W_GALLERIA-Q048, SASKE_GALLERIA-Q001, SASKE_GALLERIA-Q002 |
-| rainbow-galleria:events:gold_shop | single_source/medium | W_GALLERIA-Q030 |
+| rainbow-galleria:events:gold_shop | corroborated/medium | W_GALLERIA-Q030, W_GALLERIA-Q048, NAMU_KR_COUNTS-Q023 |
 | rainbow-galleria:events:boo_shop | corroborated/high | W_GALLERIA-Q031, W_GALLERIA-Q047, W_GALLERIA-Q048, GR_GALLERIA-Q022, GR_GALLERIA-Q023, GR_GALLERIA-Q024, GR_GALLERIA-Q025 |
 | rainbow-galleria:events:thrift | corroborated/high | W_GALLERIA-Q032, GR_GALLERIA-Q012 |
 | rainbow-galleria:events:loadstone | conflict/low | W_GALLERIA-Q033, GR_GALLERIA-Q013 |
@@ -1162,3 +1162,11 @@ Translations are assistant renderings, not extra literal source quotations. Zero
 | NAMU_KR_COUNTS-Q022 | 가짜쿠파로 전환되면 배경이 어두워지고 BGM도 일렉기타 | On FakeBowser transition the background turns dark and the music becomes electric guitar. |
 
 Only6 new authored words. Shared same-work literal author total241→247/250;21 numeric facts are non-expressive and counted separately. The unchanged per-source-entry local gate counts21+6=27/200. Both original bodies recover the exact clip; complete adjacent context and internal footnote82 reviewed. Same publisher as its English mirror. No additional Namu words or full body/images published.
+
+## NAMU_KR_COUNTS — Gold Shop Event Space clause, 2026-10-09T09:09:06.322549+00:00
+
+| Quote ID | Exact original clip | Assistant meaning |
+| --- | --- | --- |
+| NAMU_KR_COUNTS-Q023 | 이벤트 칸 | Event Space |
+
+Only two new literal authored words. The complete original Galleria special-shop introduction and named Gold Shop paragraph support landing and gold-item sales; the clip alone is not the complete context. Both actual original captured bodies recover it. Local unchanged gate:21 numeral fragments+6 weather words+2 Event Space words=29/200. Shared same-work authored total247→249/250; Namu English mirror is the same work/publisher. No new Wiki/GameRant/Cel wording or full bodies/images. Earlier247-word weather report is dated history, not the new cumulative ledger.

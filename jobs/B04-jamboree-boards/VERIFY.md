@@ -1,6 +1,6 @@
 # B04 — Verification
 
-**Original research standard NOT_MET.** Keep PR18 draft: 89/518 complete factual rows have independent publisher agreement. All 16 complete type-count profiles use the original permitted CONFLICTS.md route. One current event retains unknown trigger/effect.
+**Original research standard NOT_MET.** Keep PR18 draft: 90/518 complete factual rows have independent publisher agreement. All 16 complete type-count profiles use the original permitted CONFLICTS.md route. One current event retains unknown trigger/effect.
 
 ## Historical completed checks and commands, 2026-10-07
 
@@ -835,3 +835,7 @@ Actual local original commands completed2026-10-09T07:47:24–25Z:structural/che
 Exactly one full fact and its containing board fingerprint change. Current88/518 facts,411 single-source,18 conflicts,1 unknown;37/38 events. All original schema/verifier/requirements/workflow unchanged. Whole exact parent47f hosted run37904587791/job113734870677 succeeded08:22:56:26 suites/5635 cases/82 manifest, but strict87/518 and37/38 FAIL. Complete21434-byte original native SHA faf2288e3a1c82dc0bef6a07d4d6704211ff3aa0a78c0b5fc27304051daddeee is historical for this new milestone. Current local original full output is validator-output.txt after actual execution; new hosted whole proof remains pending publication. Original old broad audits remain dated historical.
 
 2026-10-09T08:42:05.358282+00:00:Combined Castle scope is89/518,410single-source,18conflicts,1unknown; exactly2 fact verdicts and3 containing fingerprints updated. All518 values and516 other objects, all original gates and18 conflicts unchanged. Current local original outputs follow actual commands in validator-output.txt; new complete hosted native acceptance remains pending publication. Previous47f whole26/5635/82 proof is dated history.
+
+2026-10-09T09:09:06.322549+00:00: Gold Shop current scoped recovery90/518,409single-source,18conflict,1unverified. Exactly one complete fact verdict and its containing board fingerprint change; all518 factual values and517 other full fact objects unchanged. Original verifier/schema/workflow/gates and18 conflicts remain unchanged. Prior1fc full original run37907122367/job113743154384 naturally closed08:47:29:26suites/5663cases/86manifestPASS; strict89/518FAIL37/38FAILactual1; entire21436-byte nativeSHA b1622ac23487ab3f49051977c7c02d062e15a3cfc10fb253973850ed1cdddbd1. This is historical for the new Gold source. Its own complete current original acceptance remains pending publication. Prior47f source lateness92seconds remains recorded;1fc source interval24m31s met cadence.
+
+2026-10-09T09:10:10.648638+00:00: Actual new Gold local original command outputs recorded in validator-output.txt: structural/checksum exit0, strict actual1/90of518FAIL/37of38FAIL/NOT_MET. Both complete command stdout/stderr and timestamps retained privately. New source-candidate report adds zero original author words and no additional factual promotions; launch-day advance play scope is explicit. After recording these real outputs, all88 exact manifest entries are resealed and original full checks rerun to cover the final packaged bytes.
