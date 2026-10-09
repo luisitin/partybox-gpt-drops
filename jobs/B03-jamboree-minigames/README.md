@@ -2,7 +2,7 @@
 
 **What this is:** a research catalogue of 132 minigames (112 base games, 20 Jamboree TV additions) with name, category, format, time limit, controls, win, score, tie and reward rules, a two-sentence summary, and a 1-5 phone-touch fit. Data is JSON and CSV, checked by a JSON Schema and an offline verifier.
 **How to use it:** read `DESIGN-DIGEST.md` for the design reading, `INTEGRATION.md` for what PartyBox does with it. Query `minigames.json` (or `minigames.csv`, see below). Do not ship names, art or strings.
-**Status:** reference only. Draft research, strict gate **NOT_MET**: 321 of 1,320 narrow fact fields corroborated, 999 still open, 0 of 132 rows complete. Nothing here is Nintendo-verified gameplay.
+**Status:** reference only. Draft research, strict gate **NOT_MET**: 337 of 1,320 narrow fact fields corroborated, 983 still open, 0 of 132 rows complete. Nothing here is Nintendo-verified gameplay.
 
 ## Quick start (from the repo root)
 
@@ -168,3 +168,6 @@ Acceptedparent1bbc43d genuine original run37887292236/job113680039676 and offici
 
 
 Latest material research:11 common-action and5 Survivathon-category candidates from a complete independent CelStudios article and26 actual ordered native HTTPS/TLS requests are explicitly UNADOPTED in reports/original-review-candidates.json. The new390-assertion validator and12 genuine negative fixtures preserve all132 accepted rows/148 sources/1951 old quotes/full A+B history. Current supported facts remain321/1320,999 open,zero complete. Night Lights motion disagreement and9 Coin subcategories remain excluded. See NEXT.md for exact source provenance and the adoption handoff.
+
+
+Latest current recovery:5 literal Survivathon categories and11 narrow shared-action summaries are separately validated in reports/original-review-recovery.json, with5817 comparisons and12 real malformed fixtures and exact132-row148-source1951-quote/fullA+B historical restoration. Current337/1320 supported,983open,zero whole;categories123/9 andgameplay50/82. Current149sources/1973clips; CelStudios122 reused cumulative words andWikiList160. Night Lights motion,9Coin subdivisions, detailed mechanics andexact independent second-wiki roster remain unresolved. Original candidate packets stay historical andunchanged; full current delivery/hosted acceptance is required as recorded in NEXT.md.

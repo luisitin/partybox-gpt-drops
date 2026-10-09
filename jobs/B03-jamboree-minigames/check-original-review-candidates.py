@@ -100,6 +100,8 @@ def validate(p, d, s, rs):
 def run():
     p, d, s = read('reports/original-review-candidates.json'), read('minigames.json'), read('catalogue-sources.json')
     rs = [read('reports/source-reopens-pass'+n+'.json') for n in 'AB']
+    if (ROOT/'reports/original-review-recovery.json').exists():
+        d,s,rs = module('check-original-review-recovery.py').historical_view(d,s,rs)
     count = validate(p,d,s,rs)
     for n in range(12):
         a,b,c,e = copy.deepcopy([p,d,s,rs])

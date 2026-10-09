@@ -109,13 +109,20 @@ def historical_view(d, s, rs):
     if not (ROOT / 'reports/mouse-category-recovery.json').exists(): return d, s, rs
     proof = read('reports/mouse-category-recovery.json')
     if digest(d) == BASE_DATA and digest(s) == BASE_SOURCES and [digest(x) for x in rs] == BASE_REOPENS:
-        validate(proof, read('minigames.json'), read('catalogue-sources.json'), [read('reports/source-reopens-pass' + x + '.json') for x in 'AB'])
+        current = (read('minigames.json'), read('catalogue-sources.json'), [read('reports/source-reopens-pass' + x + '.json') for x in 'AB'])
+        if (ROOT/'reports/original-review-recovery.json').exists():
+            current = module('check-original-review-recovery.py').historical_view(*current)
+        validate(proof, *current)
         return d, s, rs
+    if (ROOT/'reports/original-review-recovery.json').exists():
+        d,s,rs = module('check-original-review-recovery.py').historical_view(d,s,rs)
     return validate(proof, d, s, rs)[:3]
 
 def run():
     p, d, s = read('reports/mouse-category-recovery.json'), read('minigames.json'), read('catalogue-sources.json')
     rs = [read('reports/source-reopens-pass' + x + '.json') for x in 'AB']
+    if (ROOT/'reports/original-review-recovery.json').exists():
+        d,s,rs = module('check-original-review-recovery.py').historical_view(d,s,rs)
     count = validate(p, d, s, rs)[3]
     for n in range(12):
         a, b, c, e = copy.deepcopy([p, d, s, rs])

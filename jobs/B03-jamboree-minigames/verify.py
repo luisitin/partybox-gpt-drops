@@ -19,7 +19,7 @@ import jsonschema
 ROOT=Path(__file__).resolve().parent
 FACTS=['name','category','format','gameplay','controls','timeLimit','winRules','scoreRules','tieRules','reward']
 OWN=['minigames','catalogue-sources','catalogue-conflicts','catalogue-second-pass','historical-supplement-reopens','catalogue-list-comparison']
-LINEAGES={'www.mariowiki.com':'mariowiki','www.nintendolife.com':'hookshot','mariopartylegacy.com':'mariopartylegacy','familygamesquad.com':'familygamesquad','screenrant.com':'valnet','blog.bestbuy.ca':'bestbuy','gamingtrend.com':'gamingtrend','www.nintendo.com':'nintendo','www.thegamer.com':'valnet','www.gamenchickgaming.com':'gamenchick','namu.wiki':'namuwiki','www.consolecreatures.com':'consolecreatures'}
+LINEAGES={'www.mariowiki.com':'mariowiki','www.nintendolife.com':'hookshot','mariopartylegacy.com':'mariopartylegacy','familygamesquad.com':'familygamesquad','screenrant.com':'valnet','blog.bestbuy.ca':'bestbuy','gamingtrend.com':'gamingtrend','www.nintendo.com':'nintendo','www.thegamer.com':'valnet','www.gamenchickgaming.com':'gamenchick','namu.wiki':'namuwiki','www.consolecreatures.com':'consolecreatures','simplestreviews.blogspot.com':'celstudios'}
 def require(ok,message):
     if not ok:raise AssertionError(message)
 def pairs(items):
@@ -166,7 +166,7 @@ def run(args):
         spec=importlib.util.spec_from_file_location('quote_support_check',ROOT/'quote-support-check.py');qsc=importlib.util.module_from_spec(spec);spec.loader.exec_module(qsc)
         quotes=qsc.quote_index(sources)
         for r in rows:require(r['fieldEvidence']['gameplay']['status']==qsc.expected_gameplay_status(r['fieldEvidence']['gameplay']['quoteIds'],quotes),'Gameplay status breaks the two-lineage substantive-quote rule: '+r['id'])
-        require(sum(r['fieldEvidence']['gameplay']['status']=='corroborated' for r in rows)==39,'Corroborated summaries differ from the verified common-action rule')
+        require(sum(r['fieldEvidence']['gameplay']['status']=='corroborated' for r in rows)==50,'Corroborated summaries differ from the verified common-action rule')
     checked('Narrow summary status follows the two-lineage substantive-quote rule',132,gameplay_rule_check,'Only summaries with sentence-length quotes from two publisher lineages are corroborated')
     def same_publisher_rejects():
         altered=copy.deepcopy(data)
@@ -219,6 +219,9 @@ def run(args):
     recovered=validate_reopens(sources,reopen_docs[:2],reopen_docs[2])
     checked('All '+str(len(reopen_docs[0]))+' source URLs reopened twice with ordered HTTPS/TLS records',len(reopen_docs[0])*2,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
     checked('Every recovered reopen quotation bound to the original registry',recovered,lambda:validate_reopens(sources,reopen_docs[:2],reopen_docs[2]))
+    original_review_recovery=module('b03_original_review_recovery','check-original-review-recovery.py')
+    for result in original_review_recovery.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Original review recovery failed'),result.get('detail',''))
     original_review_checker=module('b03_original_review_candidates','check-original-review-candidates.py')
     for result in original_review_checker.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Original review candidate provenance failed'),result.get('detail',''))
