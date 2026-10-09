@@ -1,0 +1,436 @@
+﻿2026-10-09T09:21:33.3285639Z Current runner version: '2.337.0'
+2026-10-09T09:21:33.3306017Z ##[group]Runner Image Provisioner
+2026-10-09T09:21:33.3306703Z Hosted Compute Agent
+2026-10-09T09:21:33.3307293Z Version: 20261002.596
+2026-10-09T09:21:33.3307815Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-09T09:21:33.3308613Z Build Date: 2026-10-02T22:28:27Z
+2026-10-09T09:21:33.3309282Z Worker ID: {9bbf9e8d-a3fc-4ecc-a2bd-41dff8fb26d9}
+2026-10-09T09:21:33.3309913Z Region: westus3
+2026-10-09T09:21:33.3310407Z Cloud: Azure
+2026-10-09T09:21:33.3310870Z ##[endgroup]
+2026-10-09T09:21:33.3311930Z ##[group]Operating System
+2026-10-09T09:21:33.3312506Z Ubuntu
+2026-10-09T09:21:33.3312935Z 24.04.5
+2026-10-09T09:21:33.3313408Z LTS
+2026-10-09T09:21:33.3313848Z ##[endgroup]
+2026-10-09T09:21:33.3314300Z ##[group]Runner Image
+2026-10-09T09:21:33.3314870Z Image: ubuntu-24.04
+2026-10-09T09:21:33.3315365Z Version: 20261004.327.1
+2026-10-09T09:21:33.3316432Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-09T09:21:33.3317692Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-09T09:21:33.3318729Z ##[endgroup]
+2026-10-09T09:21:33.3319631Z ##[group]GITHUB_TOKEN Permissions
+2026-10-09T09:21:33.3321220Z Contents: read
+2026-10-09T09:21:33.3321707Z Metadata: read
+2026-10-09T09:21:33.3322234Z ##[endgroup]
+2026-10-09T09:21:33.3323866Z Secret source: Actions
+2026-10-09T09:21:33.3324727Z Cache mode: write
+2026-10-09T09:21:33.3325297Z Prepare workflow directory
+2026-10-09T09:21:33.3677801Z Prepare all required actions
+2026-10-09T09:21:33.3714704Z Getting action download info
+2026-10-09T09:21:33.6703217Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-09T09:21:33.7760329Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-09T09:21:33.8832359Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-09T09:21:34.1112395Z Complete job name: verify
+2026-10-09T09:21:34.1740286Z ##[group]Run actions/checkout@v4
+2026-10-09T09:21:34.1741129Z with:
+2026-10-09T09:21:34.1741525Z   repository: luisitin/partybox-gpt-drops
+2026-10-09T09:21:34.1744824Z   token: ***
+2026-10-09T09:21:34.1745182Z   ssh-strict: true
+2026-10-09T09:21:34.1745538Z   ssh-user: git
+2026-10-09T09:21:34.1745892Z   persist-credentials: true
+2026-10-09T09:21:34.1746292Z   clean: true
+2026-10-09T09:21:34.1746652Z   sparse-checkout-cone-mode: true
+2026-10-09T09:21:34.1747072Z   fetch-depth: 1
+2026-10-09T09:21:34.1747424Z   fetch-tags: false
+2026-10-09T09:21:34.1747779Z   show-progress: true
+2026-10-09T09:21:34.1748142Z   lfs: false
+2026-10-09T09:21:34.1748737Z   submodules: false
+2026-10-09T09:21:34.1749115Z   set-safe-directory: true
+2026-10-09T09:21:34.1749530Z   allow-unsafe-pr-checkout: false
+2026-10-09T09:21:34.1750198Z ##[endgroup]
+2026-10-09T09:21:34.2555039Z Syncing repository: luisitin/partybox-gpt-drops
+2026-10-09T09:21:34.2557132Z ##[group]Getting Git version info
+2026-10-09T09:21:34.2558448Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-09T09:21:34.2559830Z [command]/usr/bin/git version
+2026-10-09T09:21:34.3202795Z git version 2.55.0
+2026-10-09T09:21:34.3219615Z ##[endgroup]
+2026-10-09T09:21:34.3231536Z Temporarily overriding HOME='/home/runner/work/_temp/71a04d66-227a-47f7-8698-6a4c8d648d7a' before making global git config changes
+2026-10-09T09:21:34.3233087Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-09T09:21:34.3235760Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-09T09:21:34.3278583Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-09T09:21:34.3282046Z ##[group]Initializing the repository
+2026-10-09T09:21:34.3285214Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-09T09:21:34.3356245Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-09T09:21:34.3357527Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-09T09:21:34.3358817Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-09T09:21:34.3359717Z hint: call:
+2026-10-09T09:21:34.3360349Z hint:
+2026-10-09T09:21:34.3360771Z hint: 	git config --global init.defaultBranch <name>
+2026-10-09T09:21:34.3361270Z hint:
+2026-10-09T09:21:34.3361730Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-09T09:21:34.3362639Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-09T09:21:34.3363557Z hint:
+2026-10-09T09:21:34.3364053Z hint: 	git branch -m <name>
+2026-10-09T09:21:34.3364520Z hint:
+2026-10-09T09:21:34.3365010Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-09T09:21:34.3365891Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+2026-10-09T09:21:34.3368013Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+2026-10-09T09:21:34.3408065Z ##[endgroup]
+2026-10-09T09:21:34.3408923Z ##[group]Disabling automatic garbage collection
+2026-10-09T09:21:34.3411383Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-09T09:21:34.3439194Z ##[endgroup]
+2026-10-09T09:21:34.3439799Z ##[group]Setting up auth
+2026-10-09T09:21:34.3444033Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-09T09:21:34.3471982Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-09T09:21:34.3768297Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-09T09:21:34.3802645Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-09T09:21:34.4016208Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-09T09:21:34.4040595Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-09T09:21:34.4254202Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-09T09:21:34.4289888Z ##[endgroup]
+2026-10-09T09:21:34.4290854Z ##[group]Fetching the repository
+2026-10-09T09:21:34.4297897Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +89a2f4cdfd52332572cffc180ce62f3dcccb0d52:refs/remotes/pull/25/merge
+2026-10-09T09:21:35.3108547Z From https://github.com/luisitin/partybox-gpt-drops
+2026-10-09T09:21:35.3110104Z  * [new ref]         89a2f4cdfd52332572cffc180ce62f3dcccb0d52 -> pull/25/merge
+2026-10-09T09:21:35.3121907Z ##[endgroup]
+2026-10-09T09:21:35.3122979Z ##[group]Determining the checkout info
+2026-10-09T09:21:35.3124111Z ##[endgroup]
+2026-10-09T09:21:35.3124774Z [command]/usr/bin/git sparse-checkout disable
+2026-10-09T09:21:35.3168463Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-09T09:21:35.3201566Z ##[group]Checking out the ref
+2026-10-09T09:21:35.3204703Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/25/merge
+2026-10-09T09:21:35.3347729Z Note: switching to 'refs/remotes/pull/25/merge'.
+2026-10-09T09:21:35.3348752Z 
+2026-10-09T09:21:35.3349386Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-09T09:21:35.3350535Z changes and commit them, and you can discard any commits you make in this
+2026-10-09T09:21:35.3351547Z state without impacting any branches by switching back to a branch.
+2026-10-09T09:21:35.3352163Z 
+2026-10-09T09:21:35.3352624Z If you want to create a new branch to retain commits you create, you may
+2026-10-09T09:21:35.3353885Z do so (now or later) by using -c with the switch command. Example:
+2026-10-09T09:21:35.3354484Z 
+2026-10-09T09:21:35.3354769Z   git switch -c <new-branch-name>
+2026-10-09T09:21:35.3355218Z 
+2026-10-09T09:21:35.3355560Z Or undo this operation with:
+2026-10-09T09:21:35.3355979Z 
+2026-10-09T09:21:35.3356221Z   git switch -
+2026-10-09T09:21:35.3356573Z 
+2026-10-09T09:21:35.3357092Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-09T09:21:35.3357883Z 
+2026-10-09T09:21:35.3359259Z HEAD is now at 89a2f4c Merge 81da8e378d9d67f7ad62c5f1abefe8806bc85686 into 5f35ba66a2169b4126c8ae312efa8c1635b3f5e3
+2026-10-09T09:21:35.3369598Z ##[endgroup]
+2026-10-09T09:21:35.3408588Z [command]/usr/bin/git log -1 --format=%H
+2026-10-09T09:21:35.3432323Z 89a2f4cdfd52332572cffc180ce62f3dcccb0d52
+2026-10-09T09:21:35.3795520Z ##[group]Run actions/setup-node@v4
+2026-10-09T09:21:35.3796365Z with:
+2026-10-09T09:21:35.3796993Z   node-version: 22.16.0
+2026-10-09T09:21:35.3797737Z   always-auth: false
+2026-10-09T09:21:35.3798782Z   check-latest: false
+2026-10-09T09:21:35.3806188Z   token: ***
+2026-10-09T09:21:35.3806827Z ##[endgroup]
+2026-10-09T09:21:35.4920124Z Attempting to download 22.16.0...
+2026-10-09T09:21:35.5004200Z (node:2083) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-09T09:21:36.5694688Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-09T09:21:36.5737621Z Acquiring 22.16.0 - x64 from https://github.com/actions/node-versions/releases/download/22.16.0-15177438473/node-22.16.0-linux-x64.tar.gz
+2026-10-09T09:21:37.0098389Z Extracting ...
+2026-10-09T09:21:37.0178795Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/03151ffb-9ae6-49ef-a7ec-3bf607f1a6b5 -f /home/runner/work/_temp/68095cf5-b606-455d-8d96-74f4854044fd
+2026-10-09T09:21:38.0051422Z Adding to the cache ...
+2026-10-09T09:21:40.0536979Z ##[group]Environment details
+2026-10-09T09:21:40.2522743Z node: v22.16.0
+2026-10-09T09:21:40.2523138Z npm: 10.9.2
+2026-10-09T09:21:40.2523524Z yarn: 1.22.22
+2026-10-09T09:21:40.2524150Z ##[endgroup]
+2026-10-09T09:21:40.2682617Z ##[group]Run npm ci --ignore-scripts --no-audit --no-fund
+2026-10-09T09:21:40.2683036Z [36;1mnpm ci --ignore-scripts --no-audit --no-fund[0m
+2026-10-09T09:21:40.2881022Z shell: /usr/bin/bash -e {0}
+2026-10-09T09:21:40.2881308Z ##[endgroup]
+2026-10-09T09:21:40.8627375Z 
+2026-10-09T09:21:40.8632840Z added 1 package in 527ms
+2026-10-09T09:21:40.8980795Z ##[group]Run npm test
+2026-10-09T09:21:40.8981041Z [36;1mnpm test[0m
+2026-10-09T09:21:40.9039067Z shell: /usr/bin/bash -e {0}
+2026-10-09T09:21:40.9039305Z ##[endgroup]
+2026-10-09T09:21:40.9831344Z 
+2026-10-09T09:21:40.9831864Z > b08-monopoly-markov@1.0.0 test
+2026-10-09T09:21:40.9832226Z > node run.mjs
+2026-10-09T09:21:40.9832352Z 
+2026-10-09T09:21:41.0118928Z RUN node hashes.mjs
+2026-10-09T09:21:41.0407899Z SHA256: 93 files verified
+2026-10-09T09:21:41.0439031Z RUN node node_modules/typescript/bin/tsc -p tsconfig.json
+2026-10-09T09:21:41.7039509Z RUN node export.mjs
+2026-10-09T09:21:41.7519651Z {"suite":"computed-outputs","passed":true,"strategies":2,"squares":80,"roiRows":348}
+2026-10-09T09:21:41.7548021Z RUN node partybox-export.mjs
+2026-10-09T09:21:41.8030604Z {"suite":"partybox-generated","passed":true,"mode":"checked","files":["boardOdds.ts","preview/hottest-squares.html"]}
+2026-10-09T09:21:41.8101358Z RUN node test.mjs 1
+2026-10-09T09:21:41.9478536Z {"suite":"exact-and-published","seed":1,"passed":true,"assertions":37981,"exactTransitionCells":28800,"stationaryStates":240,"publishedSquares":240,"ownershipScenarios":348,"observations":[{"strategy":"leave ASAP","maxStateDifference":9.194034422677078e-16,"iterations":197,"residual":3.469446951953614e-17,"turnStartMass":0.8427269589619967,"rollsPerTurn":1.186623958525926,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":4.782849026552238e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.964513661276371e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0000011468197552155779,"tolerance":0.0001,"matchedSquares":40,"documentedGaps":[],"conflictRecord":null}]},{"strategy":"stay max","maxStateDifference":8.847089727481716e-16,"iterations":255,"residual":2.7755575615628914e-17,"turnStartMass":0.8577091677010615,"rollsPerTurn":1.165896364009171,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":6.87574422397752e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.994465015173422e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0006835468757442065,"tolerance":0.0001,"matchedSquares":39,"documentedGaps":[{"position":10,"difference":-0.0006835468757442065}],"conflictRecord":"CONFLICTS.md"}]}]}
+2026-10-09T09:21:41.9536001Z RUN node simulate.mjs 1
+2026-10-09T09:21:42.3132900Z simulation seed=1 strategy=leave ASAP rolls=10000000
+2026-10-09T09:21:42.6310625Z simulation seed=1 strategy=leave ASAP rolls=20000000
+2026-10-09T09:21:42.9437352Z simulation seed=1 strategy=leave ASAP rolls=30000000
+2026-10-09T09:21:43.2595218Z simulation seed=1 strategy=leave ASAP rolls=40000000
+2026-10-09T09:21:43.5721737Z simulation seed=1 strategy=leave ASAP rolls=50000000
+2026-10-09T09:21:43.8844099Z simulation seed=1 strategy=leave ASAP rolls=60000000
+2026-10-09T09:21:44.1977817Z simulation seed=1 strategy=leave ASAP rolls=70000000
+2026-10-09T09:21:44.5105929Z simulation seed=1 strategy=leave ASAP rolls=80000000
+2026-10-09T09:21:44.8234594Z simulation seed=1 strategy=leave ASAP rolls=90000000
+2026-10-09T09:21:45.1362571Z simulation seed=1 strategy=leave ASAP rolls=100000000
+2026-10-09T09:21:45.1579213Z {"suite":"simulation","strategy":"leave ASAP","seed":1,"rolls":100000000,"passed":true,"maxSigma":1.9794398220894414,"poissonResidual":1.5379335085874474e-15}
+2026-10-09T09:21:45.4803601Z simulation seed=1 strategy=stay max rolls=10000000
+2026-10-09T09:21:45.7938486Z simulation seed=1 strategy=stay max rolls=20000000
+2026-10-09T09:21:46.1074674Z simulation seed=1 strategy=stay max rolls=30000000
+2026-10-09T09:21:46.4217896Z simulation seed=1 strategy=stay max rolls=40000000
+2026-10-09T09:21:46.7347344Z simulation seed=1 strategy=stay max rolls=50000000
+2026-10-09T09:21:47.0508362Z simulation seed=1 strategy=stay max rolls=60000000
+2026-10-09T09:21:47.3640470Z simulation seed=1 strategy=stay max rolls=70000000
+2026-10-09T09:21:47.6763834Z simulation seed=1 strategy=stay max rolls=80000000
+2026-10-09T09:21:47.9923039Z simulation seed=1 strategy=stay max rolls=90000000
+2026-10-09T09:21:48.3065329Z simulation seed=1 strategy=stay max rolls=100000000
+2026-10-09T09:21:48.3214021Z {"suite":"simulation","strategy":"stay max","seed":1,"rolls":100000000,"passed":true,"maxSigma":2.389731545521216,"poissonResidual":2.8171909249863347e-15}
+2026-10-09T09:21:48.3250590Z RUN node mutate.mjs 1
+2026-10-09T09:21:49.2053709Z {"suite":"mutation","seed":1,"name":"M01 denominator","strictCompilation":true,"runtimeKilled":true,"failure":"Exact common denominator\n\n9217 !== 9216\n"}
+2026-10-09T09:21:49.5361872Z {"suite":"mutation","seed":1,"name":"M02 early triple-double jail","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+2026-10-09T09:21:49.7973497Z {"suite":"mutation","seed":1,"name":"M03 reversed doubles","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n16 !== 96\n"}
+2026-10-09T09:21:50.0730936Z {"suite":"mutation","seed":1,"name":"M04 premature third jail attempt","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/118/0\n\n112 !== 16\n"}
+2026-10-09T09:21:50.2984954Z {"suite":"mutation","seed":1,"name":"M05 jail doubles extra roll","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/117/0\n\n0 !== 16\n"}
+2026-10-09T09:21:50.4687127Z {"suite":"mutation","seed":1,"name":"M06 ASAP inherited jail streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/117/1\n\n0 !== 16\n"}
+2026-10-09T09:21:50.6170269Z {"suite":"mutation","seed":1,"name":"M07 ordinary streak reset","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n0 !== 96\n"}
+2026-10-09T09:21:50.7658574Z {"suite":"mutation","seed":1,"name":"M08 movement off by one","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n64 !== 96\n"}
+2026-10-09T09:21:50.9320077Z {"suite":"mutation","seed":1,"name":"M09 GoToJail relocation","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+2026-10-09T09:21:51.1070150Z {"suite":"mutation","seed":1,"name":"M10 CC jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/31\n\n272 !== 256\n"}
+2026-10-09T09:21:51.2660188Z {"suite":"mutation","seed":1,"name":"M11 Chance jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+2026-10-09T09:21:51.3819965Z {"suite":"mutation","seed":1,"name":"M12 CC card multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+2026-10-09T09:21:51.4930514Z {"suite":"mutation","seed":1,"name":"M13 Chance stay multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+2026-10-09T09:21:51.6026114Z {"suite":"mutation","seed":1,"name":"M14 missing second railroad card","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+2026-10-09T09:21:51.7156633Z {"suite":"mutation","seed":1,"name":"M15 nearest railroad mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/15\n\n1312 !== 1120\n"}
+2026-10-09T09:21:51.8244477Z {"suite":"mutation","seed":1,"name":"M16 nearest utility mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/36\n\n0 !== 96\n"}
+2026-10-09T09:21:51.9400273Z {"suite":"mutation","seed":1,"name":"M17 back-three card","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/12\n\n512 !== 608\n"}
+2026-10-09T09:21:52.0480036Z {"suite":"mutation","seed":1,"name":"M18 jail does not reset streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+2026-10-09T09:21:52.1900962Z {"suite":"mutation","seed":1,"name":"M19 end-turn filter","strictCompilation":true,"runtimeKilled":true,"failure":"Blind turn landing: 0.022518443650798692 != 0.031357958722416555"}
+2026-10-09T09:21:52.2991866Z {"suite":"mutation","seed":1,"name":"M20 Marvin Gardens rent edition","strictCompilation":true,"runtimeKilled":true,"failure":"Official street rents\n+ actual - expected\n\n  [\n+   22,\n-   24,\n    120,\n    360,\n    850,\n    1025,\n    1200\n"}
+2026-10-09T09:21:52.4375534Z {"suite":"mutation","seed":1,"name":"M21 missing full-set rent doubling","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI ordinaryRent\n\n2 !== 4\n"}
+2026-10-09T09:21:52.5708093Z {"suite":"mutation","seed":1,"name":"M22 hotel construction investment","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI investment\n\n260 !== 310\n"}
+2026-10-09T09:21:52.7129965Z {"suite":"mutation","seed":1,"name":"M23 railroad premium missing","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.7407758002128082 != 0.8130152464211912"}
+2026-10-09T09:21:52.8683254Z {"suite":"mutation","seed":1,"name":"M24 utility Chance premium","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.8099534939406092 != 0.8503649878708002"}
+2026-10-09T09:21:53.0456225Z {"suite":"mutation","seed":1,"name":"M25 per-turn rent conversion","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerOpponentTurn: 0.03592338284004056 != 0.05058286826589295"}
+2026-10-09T09:21:53.0756718Z RUN node partybox.mjs 1
+2026-10-09T09:21:53.5085120Z {"suite":"partybox-exact","seed":1,"passed":true,"assertions":24023,"fuzzCases":20000}
+2026-10-09T09:21:54.2744247Z {"suite":"partybox-simulation","plan":"leave ASAP","seed":1,"rolls":20000000,"statistics":48,"passed":true,"maxZ":2.085734959976426,"rollsPerTurn":{"exact":1.186623958525926,"simulated":1.186753669160491}}
+2026-10-09T09:21:55.0402959Z {"suite":"partybox-simulation","plan":"stay max","seed":1,"rolls":20000000,"statistics":48,"passed":true,"maxZ":2.8008544795145047,"rollsPerTurn":{"exact":1.165896364009171,"simulated":1.1658971356938708}}
+2026-10-09T09:21:55.4448126Z {"suite":"partybox-mutation","seed":1,"name":"P01 per-turn conversion dropped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 1/unimproved without color set/1: 0.04262754674929125 != 0.05058286826589295"}
+2026-10-09T09:21:55.6900140Z {"suite":"partybox-mutation","seed":1,"name":"P02 railroad card premium dropped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 5/1 railroad owned/1: 0.879022312428733 != 0.964743370050246"}
+2026-10-09T09:21:55.8601195Z {"suite":"partybox-mutation","seed":1,"name":"P03 full-group doubling dropped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 1/complete color set/2: 0.05058286826589295 != 0.1011657365317859"}
+2026-10-09T09:21:56.0059635Z {"suite":"partybox-mutation","seed":1,"name":"P04 houses without the group earn","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP houses without the group 1: 2.2762290719651825 !== 0"}
+2026-10-09T09:21:56.1311173Z {"suite":"partybox-mutation","seed":1,"name":"P05 card pays the owned multiplier","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 12/1 utility owned/1: 0.865203727406931 != 1.0090634680991"}
+2026-10-09T09:21:56.2527690Z {"suite":"partybox-mutation","seed":1,"name":"P06 fresh dice mean 6","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 12/1 utility owned/1: 0.8649115440849428 != 1.0090634680991"}
+2026-10-09T09:21:56.3632061Z {"suite":"partybox-mutation","seed":1,"name":"P07 card rent dropped on movement dice","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP movement utility 12/1: 0.7558641262068909 != 0.9956303606938393"}
+2026-10-09T09:21:56.4830280Z {"suite":"partybox-mutation","seed":1,"name":"P08 railroad rent off by one","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 5/1 railroad owned/1: 1.929486740100492 != 0.964743370050246"}
+2026-10-09T09:21:56.6032267Z {"suite":"partybox-mutation","seed":1,"name":"P09 hotel invested as four houses","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI 1/hotel with color set/2: 0.024318686666294685 != 0.020396317849150383"}
+2026-10-09T09:21:56.7272741Z {"suite":"partybox-mutation","seed":1,"name":"P10 coldest first","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP hottest order"}
+2026-10-09T09:21:56.8665239Z {"suite":"partybox-mutation","seed":1,"name":"P11 hottest per roll and turn swapped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP jail, Illinois-position 24, GO lead"}
+2026-10-09T09:21:56.9681057Z {"suite":"partybox-mutation","seed":1,"name":"P12 share per roll and turn swapped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP share per roll 0: 0.03135795872241765 !== 0.030961230334104268"}
+2026-10-09T09:21:57.0626905Z {"suite":"partybox-mutation","seed":1,"name":"P13 share counts duplicates","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP duplicates count once: 0.14690756922297585 != 0.08813171190903636"}
+2026-10-09T09:21:57.1695087Z {"suite":"partybox-mutation","seed":1,"name":"P14 multi-step build priced as one","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP build gain 1/0->2: 0.013151545749132167 != 0.006575772874566083"}
+2026-10-09T09:21:57.2780257Z {"suite":"partybox-mutation","seed":1,"name":"P15 default plan differs per site","strictCompilation":true,"runtimeKilled":true,"failure":"default options rent 1: 0.24849650880814814 !== 0.2529143413294648"}
+2026-10-09T09:21:57.3707624Z {"suite":"partybox-mutation","seed":1,"name":"P16 default utility dice fresh","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP movement utility 12/1: 1.0090634680991 != 0.9956303606938393"}
+2026-10-09T09:21:57.4709108Z {"suite":"partybox-mutation","seed":1,"name":"P17 one generated digit","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP per-roll 24: 0.0318576628665499 !== 0.0318576628665498"}
+2026-10-09T09:21:57.5745844Z {"suite":"partybox-mutation","seed":1,"name":"P18 negative rent allowed","strictCompilation":true,"runtimeKilled":true,"failure":"Totality case 509: [-0.12829791230357976,0,0,0,0]"}
+2026-10-09T09:21:57.6613630Z {"suite":"partybox-mutation","seed":1,"name":"P19 hottest count rounds up","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP hottest count 2.7: 3 !== 2"}
+2026-10-09T09:21:57.7630516Z {"suite":"partybox-mutation","seed":1,"name":"P20 hottest default plan","strictCompilation":true,"runtimeKilled":true,"failure":"default hottest plan and per"}
+2026-10-09T09:21:57.7632117Z {"suite":"partybox","seed":1,"passed":true,"assertions":24023,"simulatedRolls":40000000,"mutants":20,"killed":20}
+2026-10-09T09:21:57.7897504Z RUN node test.mjs 2
+2026-10-09T09:21:57.9248113Z {"suite":"exact-and-published","seed":2,"passed":true,"assertions":37981,"exactTransitionCells":28800,"stationaryStates":240,"publishedSquares":240,"ownershipScenarios":348,"observations":[{"strategy":"leave ASAP","maxStateDifference":9.194034422677078e-16,"iterations":197,"residual":3.469446951953614e-17,"turnStartMass":0.8427269589619967,"rollsPerTurn":1.186623958525926,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":4.782849026552238e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.964513661276371e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0000011468197552155779,"tolerance":0.0001,"matchedSquares":40,"documentedGaps":[],"conflictRecord":null}]},{"strategy":"stay max","maxStateDifference":8.847089727481716e-16,"iterations":255,"residual":2.7755575615628914e-17,"turnStartMass":0.8577091677010615,"rollsPerTurn":1.165896364009171,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":6.87574422397752e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.994465015173422e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0006835468757442065,"tolerance":0.0001,"matchedSquares":39,"documentedGaps":[{"position":10,"difference":-0.0006835468757442065}],"conflictRecord":"CONFLICTS.md"}]}]}
+2026-10-09T09:21:57.9310166Z RUN node simulate.mjs 2
+2026-10-09T09:21:58.2906940Z simulation seed=2 strategy=leave ASAP rolls=10000000
+2026-10-09T09:21:58.6093631Z simulation seed=2 strategy=leave ASAP rolls=20000000
+2026-10-09T09:21:58.9231106Z simulation seed=2 strategy=leave ASAP rolls=30000000
+2026-10-09T09:21:59.2365758Z simulation seed=2 strategy=leave ASAP rolls=40000000
+2026-10-09T09:21:59.5501955Z simulation seed=2 strategy=leave ASAP rolls=50000000
+2026-10-09T09:21:59.8636267Z simulation seed=2 strategy=leave ASAP rolls=60000000
+2026-10-09T09:22:00.1771592Z simulation seed=2 strategy=leave ASAP rolls=70000000
+2026-10-09T09:22:00.4909912Z simulation seed=2 strategy=leave ASAP rolls=80000000
+2026-10-09T09:22:00.8045816Z simulation seed=2 strategy=leave ASAP rolls=90000000
+2026-10-09T09:22:01.1182626Z simulation seed=2 strategy=leave ASAP rolls=100000000
+2026-10-09T09:22:01.1399273Z {"suite":"simulation","strategy":"leave ASAP","seed":2,"rolls":100000000,"passed":true,"maxSigma":2.5024991114465203,"poissonResidual":1.5379335085874474e-15}
+2026-10-09T09:22:01.4659079Z simulation seed=2 strategy=stay max rolls=10000000
+2026-10-09T09:22:01.7785879Z simulation seed=2 strategy=stay max rolls=20000000
+2026-10-09T09:22:02.0910758Z simulation seed=2 strategy=stay max rolls=30000000
+2026-10-09T09:22:02.4040482Z simulation seed=2 strategy=stay max rolls=40000000
+2026-10-09T09:22:02.7167986Z simulation seed=2 strategy=stay max rolls=50000000
+2026-10-09T09:22:03.0295430Z simulation seed=2 strategy=stay max rolls=60000000
+2026-10-09T09:22:03.3425059Z simulation seed=2 strategy=stay max rolls=70000000
+2026-10-09T09:22:03.6555981Z simulation seed=2 strategy=stay max rolls=80000000
+2026-10-09T09:22:03.9686907Z simulation seed=2 strategy=stay max rolls=90000000
+2026-10-09T09:22:04.2814870Z simulation seed=2 strategy=stay max rolls=100000000
+2026-10-09T09:22:04.2878109Z {"suite":"simulation","strategy":"stay max","seed":2,"rolls":100000000,"passed":true,"maxSigma":1.570822181594039,"poissonResidual":2.8171909249863347e-15}
+2026-10-09T09:22:04.2914073Z RUN node mutate.mjs 2
+2026-10-09T09:22:05.0454027Z {"suite":"mutation","seed":2,"name":"M01 denominator","strictCompilation":true,"runtimeKilled":true,"failure":"Exact common denominator\n\n9217 !== 9216\n"}
+2026-10-09T09:22:05.3490025Z {"suite":"mutation","seed":2,"name":"M02 early triple-double jail","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+2026-10-09T09:22:05.5527503Z {"suite":"mutation","seed":2,"name":"M03 reversed doubles","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n16 !== 96\n"}
+2026-10-09T09:22:05.7560988Z {"suite":"mutation","seed":2,"name":"M04 premature third jail attempt","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/118/0\n\n112 !== 16\n"}
+2026-10-09T09:22:05.9323047Z {"suite":"mutation","seed":2,"name":"M05 jail doubles extra roll","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/117/0\n\n0 !== 16\n"}
+2026-10-09T09:22:06.0706097Z {"suite":"mutation","seed":2,"name":"M06 ASAP inherited jail streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/117/1\n\n0 !== 16\n"}
+2026-10-09T09:22:06.1983632Z {"suite":"mutation","seed":2,"name":"M07 ordinary streak reset","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n0 !== 96\n"}
+2026-10-09T09:22:06.3291029Z {"suite":"mutation","seed":2,"name":"M08 movement off by one","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n64 !== 96\n"}
+2026-10-09T09:22:06.4780731Z {"suite":"mutation","seed":2,"name":"M09 GoToJail relocation","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+2026-10-09T09:22:06.6450230Z {"suite":"mutation","seed":2,"name":"M10 CC jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/31\n\n272 !== 256\n"}
+2026-10-09T09:22:06.7900511Z {"suite":"mutation","seed":2,"name":"M11 Chance jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+2026-10-09T09:22:06.9086486Z {"suite":"mutation","seed":2,"name":"M12 CC card multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+2026-10-09T09:22:07.0219496Z {"suite":"mutation","seed":2,"name":"M13 Chance stay multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+2026-10-09T09:22:07.1325361Z {"suite":"mutation","seed":2,"name":"M14 missing second railroad card","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+2026-10-09T09:22:07.2444004Z {"suite":"mutation","seed":2,"name":"M15 nearest railroad mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/15\n\n1312 !== 1120\n"}
+2026-10-09T09:22:07.3565698Z {"suite":"mutation","seed":2,"name":"M16 nearest utility mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/36\n\n0 !== 96\n"}
+2026-10-09T09:22:07.4780282Z {"suite":"mutation","seed":2,"name":"M17 back-three card","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/12\n\n512 !== 608\n"}
+2026-10-09T09:22:07.5873776Z {"suite":"mutation","seed":2,"name":"M18 jail does not reset streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+2026-10-09T09:22:07.7260529Z {"suite":"mutation","seed":2,"name":"M19 end-turn filter","strictCompilation":true,"runtimeKilled":true,"failure":"Blind turn landing: 0.022518443650798692 != 0.031357958722416555"}
+2026-10-09T09:22:07.8388997Z {"suite":"mutation","seed":2,"name":"M20 Marvin Gardens rent edition","strictCompilation":true,"runtimeKilled":true,"failure":"Official street rents\n+ actual - expected\n\n  [\n+   22,\n-   24,\n    120,\n    360,\n    850,\n    1025,\n    1200\n"}
+2026-10-09T09:22:07.9978026Z {"suite":"mutation","seed":2,"name":"M21 missing full-set rent doubling","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI ordinaryRent\n\n2 !== 4\n"}
+2026-10-09T09:22:08.1688846Z {"suite":"mutation","seed":2,"name":"M22 hotel construction investment","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI investment\n\n260 !== 310\n"}
+2026-10-09T09:22:08.3148130Z {"suite":"mutation","seed":2,"name":"M23 railroad premium missing","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.7407758002128082 != 0.8130152464211912"}
+2026-10-09T09:22:08.4711424Z {"suite":"mutation","seed":2,"name":"M24 utility Chance premium","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.8099534939406092 != 0.8503649878708002"}
+2026-10-09T09:22:08.6065961Z {"suite":"mutation","seed":2,"name":"M25 per-turn rent conversion","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerOpponentTurn: 0.03592338284004056 != 0.05058286826589295"}
+2026-10-09T09:22:08.6320668Z RUN node partybox.mjs 2
+2026-10-09T09:22:09.0480508Z {"suite":"partybox-exact","seed":2,"passed":true,"assertions":24023,"fuzzCases":20000}
+2026-10-09T09:22:09.8122141Z {"suite":"partybox-simulation","plan":"leave ASAP","seed":2,"rolls":20000000,"statistics":48,"passed":true,"maxZ":2.6056064069429135,"rollsPerTurn":{"exact":1.186623958525926,"simulated":1.1866950832671306}}
+2026-10-09T09:22:10.5748725Z {"suite":"partybox-simulation","plan":"stay max","seed":2,"rolls":20000000,"statistics":48,"passed":true,"maxZ":3.0766524414234975,"rollsPerTurn":{"exact":1.165896364009171,"simulated":1.1658539110434811}}
+2026-10-09T09:22:10.9849881Z {"suite":"partybox-mutation","seed":2,"name":"P01 per-turn conversion dropped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 1/unimproved without color set/1: 0.04262754674929125 != 0.05058286826589295"}
+2026-10-09T09:22:11.2423847Z {"suite":"partybox-mutation","seed":2,"name":"P02 railroad card premium dropped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 5/1 railroad owned/1: 0.879022312428733 != 0.964743370050246"}
+2026-10-09T09:22:11.4188011Z {"suite":"partybox-mutation","seed":2,"name":"P03 full-group doubling dropped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 1/complete color set/2: 0.05058286826589295 != 0.1011657365317859"}
+2026-10-09T09:22:11.5690160Z {"suite":"partybox-mutation","seed":2,"name":"P04 houses without the group earn","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP houses without the group 1: 2.2762290719651825 !== 0"}
+2026-10-09T09:22:11.7018977Z {"suite":"partybox-mutation","seed":2,"name":"P05 card pays the owned multiplier","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 12/1 utility owned/1: 0.865203727406931 != 1.0090634680991"}
+2026-10-09T09:22:11.8216478Z {"suite":"partybox-mutation","seed":2,"name":"P06 fresh dice mean 6","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 12/1 utility owned/1: 0.8649115440849428 != 1.0090634680991"}
+2026-10-09T09:22:11.9368727Z {"suite":"partybox-mutation","seed":2,"name":"P07 card rent dropped on movement dice","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP movement utility 12/1: 0.7558641262068909 != 0.9956303606938393"}
+2026-10-09T09:22:12.0551068Z {"suite":"partybox-mutation","seed":2,"name":"P08 railroad rent off by one","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 5/1 railroad owned/1: 1.929486740100492 != 0.964743370050246"}
+2026-10-09T09:22:12.1713417Z {"suite":"partybox-mutation","seed":2,"name":"P09 hotel invested as four houses","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI 1/hotel with color set/2: 0.024318686666294685 != 0.020396317849150383"}
+2026-10-09T09:22:12.2960078Z {"suite":"partybox-mutation","seed":2,"name":"P10 coldest first","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP hottest order"}
+2026-10-09T09:22:12.4433001Z {"suite":"partybox-mutation","seed":2,"name":"P11 hottest per roll and turn swapped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP jail, Illinois-position 24, GO lead"}
+2026-10-09T09:22:12.5468294Z {"suite":"partybox-mutation","seed":2,"name":"P12 share per roll and turn swapped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP share per roll 0: 0.03135795872241765 !== 0.030961230334104268"}
+2026-10-09T09:22:12.6532602Z {"suite":"partybox-mutation","seed":2,"name":"P13 share counts duplicates","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP duplicates count once: 0.14690756922297585 != 0.08813171190903636"}
+2026-10-09T09:22:12.7601590Z {"suite":"partybox-mutation","seed":2,"name":"P14 multi-step build priced as one","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP build gain 1/0->2: 0.013151545749132167 != 0.006575772874566083"}
+2026-10-09T09:22:12.8707185Z {"suite":"partybox-mutation","seed":2,"name":"P15 default plan differs per site","strictCompilation":true,"runtimeKilled":true,"failure":"default options rent 1: 0.24849650880814814 !== 0.2529143413294648"}
+2026-10-09T09:22:12.9658325Z {"suite":"partybox-mutation","seed":2,"name":"P16 default utility dice fresh","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP movement utility 12/1: 1.0090634680991 != 0.9956303606938393"}
+2026-10-09T09:22:13.0615093Z {"suite":"partybox-mutation","seed":2,"name":"P17 one generated digit","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP per-roll 24: 0.0318576628665499 !== 0.0318576628665498"}
+2026-10-09T09:22:13.1652743Z {"suite":"partybox-mutation","seed":2,"name":"P18 negative rent allowed","strictCompilation":true,"runtimeKilled":true,"failure":"Totality case 634: [-0.4831756452911868,-0.002196252933141758,220,0,0]"}
+2026-10-09T09:22:13.2574290Z {"suite":"partybox-mutation","seed":2,"name":"P19 hottest count rounds up","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP hottest count 2.7: 3 !== 2"}
+2026-10-09T09:22:13.3581487Z {"suite":"partybox-mutation","seed":2,"name":"P20 hottest default plan","strictCompilation":true,"runtimeKilled":true,"failure":"default hottest plan and per"}
+2026-10-09T09:22:13.3583366Z {"suite":"partybox","seed":2,"passed":true,"assertions":24023,"simulatedRolls":40000000,"mutants":20,"killed":20}
+2026-10-09T09:22:13.3853834Z RUN node test.mjs 3
+2026-10-09T09:22:13.5181202Z {"suite":"exact-and-published","seed":3,"passed":true,"assertions":37981,"exactTransitionCells":28800,"stationaryStates":240,"publishedSquares":240,"ownershipScenarios":348,"observations":[{"strategy":"leave ASAP","maxStateDifference":9.194034422677078e-16,"iterations":197,"residual":3.469446951953614e-17,"turnStartMass":0.8427269589619967,"rollsPerTurn":1.186623958525926,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":4.782849026552238e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.964513661276371e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0000011468197552155779,"tolerance":0.0001,"matchedSquares":40,"documentedGaps":[],"conflictRecord":null}]},{"strategy":"stay max","maxStateDifference":8.847089727481716e-16,"iterations":255,"residual":2.7755575615628914e-17,"turnStartMass":0.8577091677010615,"rollsPerTurn":1.165896364009171,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":6.87574422397752e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.994465015173422e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0006835468757442065,"tolerance":0.0001,"matchedSquares":39,"documentedGaps":[{"position":10,"difference":-0.0006835468757442065}],"conflictRecord":"CONFLICTS.md"}]}]}
+2026-10-09T09:22:13.5236926Z RUN node simulate.mjs 3
+2026-10-09T09:22:13.8835293Z simulation seed=3 strategy=leave ASAP rolls=10000000
+2026-10-09T09:22:14.2030021Z simulation seed=3 strategy=leave ASAP rolls=20000000
+2026-10-09T09:22:14.5157818Z simulation seed=3 strategy=leave ASAP rolls=30000000
+2026-10-09T09:22:14.8287227Z simulation seed=3 strategy=leave ASAP rolls=40000000
+2026-10-09T09:22:15.1427930Z simulation seed=3 strategy=leave ASAP rolls=50000000
+2026-10-09T09:22:15.4553758Z simulation seed=3 strategy=leave ASAP rolls=60000000
+2026-10-09T09:22:15.7681344Z simulation seed=3 strategy=leave ASAP rolls=70000000
+2026-10-09T09:22:16.0808138Z simulation seed=3 strategy=leave ASAP rolls=80000000
+2026-10-09T09:22:16.3940404Z simulation seed=3 strategy=leave ASAP rolls=90000000
+2026-10-09T09:22:16.7072200Z simulation seed=3 strategy=leave ASAP rolls=100000000
+2026-10-09T09:22:16.7291053Z {"suite":"simulation","strategy":"leave ASAP","seed":3,"rolls":100000000,"passed":true,"maxSigma":2.1157739420388237,"poissonResidual":1.5379335085874474e-15}
+2026-10-09T09:22:17.0538521Z simulation seed=3 strategy=stay max rolls=10000000
+2026-10-09T09:22:17.3659255Z simulation seed=3 strategy=stay max rolls=20000000
+2026-10-09T09:22:17.6796019Z simulation seed=3 strategy=stay max rolls=30000000
+2026-10-09T09:22:18.0005614Z simulation seed=3 strategy=stay max rolls=40000000
+2026-10-09T09:22:18.3122959Z simulation seed=3 strategy=stay max rolls=50000000
+2026-10-09T09:22:18.6243752Z simulation seed=3 strategy=stay max rolls=60000000
+2026-10-09T09:22:18.9360736Z simulation seed=3 strategy=stay max rolls=70000000
+2026-10-09T09:22:19.2479684Z simulation seed=3 strategy=stay max rolls=80000000
+2026-10-09T09:22:19.5598355Z simulation seed=3 strategy=stay max rolls=90000000
+2026-10-09T09:22:19.8716224Z simulation seed=3 strategy=stay max rolls=100000000
+2026-10-09T09:22:19.8784467Z {"suite":"simulation","strategy":"stay max","seed":3,"rolls":100000000,"passed":true,"maxSigma":2.136073308429187,"poissonResidual":2.8171909249863347e-15}
+2026-10-09T09:22:19.8849252Z RUN node mutate.mjs 3
+2026-10-09T09:22:20.6589219Z {"suite":"mutation","seed":3,"name":"M01 denominator","strictCompilation":true,"runtimeKilled":true,"failure":"Exact common denominator\n\n9217 !== 9216\n"}
+2026-10-09T09:22:20.9732236Z {"suite":"mutation","seed":3,"name":"M02 early triple-double jail","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+2026-10-09T09:22:21.1722658Z {"suite":"mutation","seed":3,"name":"M03 reversed doubles","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n16 !== 96\n"}
+2026-10-09T09:22:21.3925533Z {"suite":"mutation","seed":3,"name":"M04 premature third jail attempt","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/118/0\n\n112 !== 16\n"}
+2026-10-09T09:22:21.5754633Z {"suite":"mutation","seed":3,"name":"M05 jail doubles extra roll","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/117/0\n\n0 !== 16\n"}
+2026-10-09T09:22:21.7199352Z {"suite":"mutation","seed":3,"name":"M06 ASAP inherited jail streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/117/1\n\n0 !== 16\n"}
+2026-10-09T09:22:21.8535745Z {"suite":"mutation","seed":3,"name":"M07 ordinary streak reset","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n0 !== 96\n"}
+2026-10-09T09:22:21.9848958Z {"suite":"mutation","seed":3,"name":"M08 movement off by one","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n64 !== 96\n"}
+2026-10-09T09:22:22.1340865Z {"suite":"mutation","seed":3,"name":"M09 GoToJail relocation","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+2026-10-09T09:22:22.3180184Z {"suite":"mutation","seed":3,"name":"M10 CC jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/31\n\n272 !== 256\n"}
+2026-10-09T09:22:22.4590108Z {"suite":"mutation","seed":3,"name":"M11 Chance jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+2026-10-09T09:22:22.5757390Z {"suite":"mutation","seed":3,"name":"M12 CC card multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+2026-10-09T09:22:22.6846786Z {"suite":"mutation","seed":3,"name":"M13 Chance stay multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+2026-10-09T09:22:22.7981175Z {"suite":"mutation","seed":3,"name":"M14 missing second railroad card","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+2026-10-09T09:22:22.9109154Z {"suite":"mutation","seed":3,"name":"M15 nearest railroad mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/15\n\n1312 !== 1120\n"}
+2026-10-09T09:22:23.0175166Z {"suite":"mutation","seed":3,"name":"M16 nearest utility mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/36\n\n0 !== 96\n"}
+2026-10-09T09:22:23.1335387Z {"suite":"mutation","seed":3,"name":"M17 back-three card","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/12\n\n512 !== 608\n"}
+2026-10-09T09:22:23.2401539Z {"suite":"mutation","seed":3,"name":"M18 jail does not reset streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+2026-10-09T09:22:23.3804457Z {"suite":"mutation","seed":3,"name":"M19 end-turn filter","strictCompilation":true,"runtimeKilled":true,"failure":"Blind turn landing: 0.022518443650798692 != 0.031357958722416555"}
+2026-10-09T09:22:23.4906391Z {"suite":"mutation","seed":3,"name":"M20 Marvin Gardens rent edition","strictCompilation":true,"runtimeKilled":true,"failure":"Official street rents\n+ actual - expected\n\n  [\n+   22,\n-   24,\n    120,\n    360,\n    850,\n    1025,\n    1200\n"}
+2026-10-09T09:22:23.6302855Z {"suite":"mutation","seed":3,"name":"M21 missing full-set rent doubling","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI ordinaryRent\n\n2 !== 4\n"}
+2026-10-09T09:22:23.7646952Z {"suite":"mutation","seed":3,"name":"M22 hotel construction investment","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI investment\n\n260 !== 310\n"}
+2026-10-09T09:22:23.8992243Z {"suite":"mutation","seed":3,"name":"M23 railroad premium missing","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.7407758002128082 != 0.8130152464211912"}
+2026-10-09T09:22:24.0512546Z {"suite":"mutation","seed":3,"name":"M24 utility Chance premium","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.8099534939406092 != 0.8503649878708002"}
+2026-10-09T09:22:24.2124303Z {"suite":"mutation","seed":3,"name":"M25 per-turn rent conversion","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerOpponentTurn: 0.03592338284004056 != 0.05058286826589295"}
+2026-10-09T09:22:24.2412956Z RUN node partybox.mjs 3
+2026-10-09T09:22:24.6856419Z {"suite":"partybox-exact","seed":3,"passed":true,"assertions":24023,"fuzzCases":20000}
+2026-10-09T09:22:25.4590844Z {"suite":"partybox-simulation","plan":"leave ASAP","seed":3,"rolls":20000000,"statistics":48,"passed":true,"maxZ":2.541858636158746,"rollsPerTurn":{"exact":1.186623958525926,"simulated":1.1865675803632558}}
+2026-10-09T09:22:26.2253410Z {"suite":"partybox-simulation","plan":"stay max","seed":3,"rolls":20000000,"statistics":48,"passed":true,"maxZ":3.6393343978616346,"rollsPerTurn":{"exact":1.165896364009171,"simulated":1.165896659933419}}
+2026-10-09T09:22:26.6361102Z {"suite":"partybox-mutation","seed":3,"name":"P01 per-turn conversion dropped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 1/unimproved without color set/1: 0.04262754674929125 != 0.05058286826589295"}
+2026-10-09T09:22:26.8755059Z {"suite":"partybox-mutation","seed":3,"name":"P02 railroad card premium dropped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 5/1 railroad owned/1: 0.879022312428733 != 0.964743370050246"}
+2026-10-09T09:22:27.0534555Z {"suite":"partybox-mutation","seed":3,"name":"P03 full-group doubling dropped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 1/complete color set/2: 0.05058286826589295 != 0.1011657365317859"}
+2026-10-09T09:22:27.1960725Z {"suite":"partybox-mutation","seed":3,"name":"P04 houses without the group earn","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP houses without the group 1: 2.2762290719651825 !== 0"}
+2026-10-09T09:22:27.3270772Z {"suite":"partybox-mutation","seed":3,"name":"P05 card pays the owned multiplier","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 12/1 utility owned/1: 0.865203727406931 != 1.0090634680991"}
+2026-10-09T09:22:27.4470410Z {"suite":"partybox-mutation","seed":3,"name":"P06 fresh dice mean 6","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 12/1 utility owned/1: 0.8649115440849428 != 1.0090634680991"}
+2026-10-09T09:22:27.5649511Z {"suite":"partybox-mutation","seed":3,"name":"P07 card rent dropped on movement dice","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP movement utility 12/1: 0.7558641262068909 != 0.9956303606938393"}
+2026-10-09T09:22:27.6726336Z {"suite":"partybox-mutation","seed":3,"name":"P08 railroad rent off by one","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI rent 5/1 railroad owned/1: 1.929486740100492 != 0.964743370050246"}
+2026-10-09T09:22:27.7901082Z {"suite":"partybox-mutation","seed":3,"name":"P09 hotel invested as four houses","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP ROI 1/hotel with color set/2: 0.024318686666294685 != 0.020396317849150383"}
+2026-10-09T09:22:27.9090141Z {"suite":"partybox-mutation","seed":3,"name":"P10 coldest first","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP hottest order"}
+2026-10-09T09:22:28.0477713Z {"suite":"partybox-mutation","seed":3,"name":"P11 hottest per roll and turn swapped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP jail, Illinois-position 24, GO lead"}
+2026-10-09T09:22:28.1453141Z {"suite":"partybox-mutation","seed":3,"name":"P12 share per roll and turn swapped","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP share per roll 0: 0.03135795872241765 !== 0.030961230334104268"}
+2026-10-09T09:22:28.2435749Z {"suite":"partybox-mutation","seed":3,"name":"P13 share counts duplicates","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP duplicates count once: 0.14690756922297585 != 0.08813171190903636"}
+2026-10-09T09:22:28.3589002Z {"suite":"partybox-mutation","seed":3,"name":"P14 multi-step build priced as one","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP build gain 1/0->2: 0.013151545749132167 != 0.006575772874566083"}
+2026-10-09T09:22:28.5000614Z {"suite":"partybox-mutation","seed":3,"name":"P15 default plan differs per site","strictCompilation":true,"runtimeKilled":true,"failure":"default options rent 1: 0.24849650880814814 !== 0.2529143413294648"}
+2026-10-09T09:22:28.6038997Z {"suite":"partybox-mutation","seed":3,"name":"P16 default utility dice fresh","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP movement utility 12/1: 1.0090634680991 != 0.9956303606938393"}
+2026-10-09T09:22:28.7025408Z {"suite":"partybox-mutation","seed":3,"name":"P17 one generated digit","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP per-roll 24: 0.0318576628665499 !== 0.0318576628665498"}
+2026-10-09T09:22:28.8076611Z {"suite":"partybox-mutation","seed":3,"name":"P18 negative rent allowed","strictCompilation":true,"runtimeKilled":true,"failure":"Totality case 842: [-0.7312239152004588,0,0,0,0]"}
+2026-10-09T09:22:28.8930635Z {"suite":"partybox-mutation","seed":3,"name":"P19 hottest count rounds up","strictCompilation":true,"runtimeKilled":true,"failure":"leave ASAP hottest count 2.7: 3 !== 2"}
+2026-10-09T09:22:28.9897770Z {"suite":"partybox-mutation","seed":3,"name":"P20 hottest default plan","strictCompilation":true,"runtimeKilled":true,"failure":"default hottest plan and per"}
+2026-10-09T09:22:28.9899626Z {"suite":"partybox","seed":3,"passed":true,"assertions":24023,"simulatedRolls":40000000,"mutants":20,"killed":20}
+2026-10-09T09:22:29.0136967Z RUN node hashes.mjs
+2026-10-09T09:22:29.0411841Z SHA256: 93 files verified
+2026-10-09T09:22:29.0458407Z {"suite":"complete","passed":true,"node":"v22.16.0","typescript":"5.8.3","seeds":[1,2,3],"totals":{"exactTransitionCells":86400,"stationaryStates":720,"publishedSquares":720,"matchedPublishedSquares":717,"documentedPublishedGaps":3,"requiredButlerComparisons":480,"roiScenarios":1044,"simulationRolls":600000000,"simulationSquares":240,"strictCompiledMutants":75,"runtimeKilledMutants":75,"partyboxRoiRows":1044,"partyboxSimulationRolls":120000000,"partyboxSimulatedStatistics":288,"partyboxStrictCompiledMutants":60,"partyboxRuntimeKilledMutants":60}}
+2026-10-09T09:22:29.0610942Z ##[group]Run actions/upload-artifact@v4
+2026-10-09T09:22:29.0611180Z with:
+2026-10-09T09:22:29.0611356Z   name: B08-verification
+2026-10-09T09:22:29.0611582Z   path: jobs/B08-monopoly-markov/.verification/
+2026-10-09T09:22:29.0611835Z   include-hidden-files: true
+2026-10-09T09:22:29.0612036Z   if-no-files-found: warn
+2026-10-09T09:22:29.0612228Z   compression-level: 6
+2026-10-09T09:22:29.0612411Z   overwrite: false
+2026-10-09T09:22:29.0612588Z ##[endgroup]
+2026-10-09T09:22:29.1955311Z (node:2342) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-09T09:22:29.1955991Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-09T09:22:29.2144570Z With the provided path, there will be 148 files uploaded
+2026-10-09T09:22:29.2148707Z Artifact name is valid!
+2026-10-09T09:22:29.2149171Z Root directory input is valid!
+2026-10-09T09:22:29.7072014Z Beginning upload of artifact content to blob storage
+2026-10-09T09:22:29.8330302Z (node:2342) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-09T09:22:30.2820594Z Uploaded bytes 678278
+2026-10-09T09:22:30.3373663Z Finished uploading artifact content to blob storage!
+2026-10-09T09:22:30.3374781Z SHA256 digest of uploaded artifact zip is b92464ee73ac439ca8a7c496f7b7fcfac723ec1c43ce7127ad12811bf8da7623
+2026-10-09T09:22:30.3375598Z Finalizing artifact upload
+2026-10-09T09:22:30.6375361Z Artifact B08-verification.zip successfully finalized. Artifact ID 11606910737
+2026-10-09T09:22:30.6376146Z Artifact B08-verification has been successfully uploaded! Final size is 678278 bytes. Artifact ID is 11606910737
+2026-10-09T09:22:30.6381886Z Artifact download URL: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37910743806/artifacts/11606910737
+2026-10-09T09:22:30.6536552Z Post job cleanup.
+2026-10-09T09:22:30.7487989Z (node:2355) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-09T09:22:30.7488777Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-09T09:22:30.7623169Z Post job cleanup.
+2026-10-09T09:22:30.8335471Z [command]/usr/bin/git version
+2026-10-09T09:22:30.8370641Z git version 2.55.0
+2026-10-09T09:22:30.8400292Z Temporarily overriding HOME='/home/runner/work/_temp/e02b4e9a-0244-4176-9b4e-830718709572' before making global git config changes
+2026-10-09T09:22:30.8401716Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-09T09:22:30.8404803Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-09T09:22:30.8435484Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-09T09:22:30.8463356Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-09T09:22:30.8672834Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-09T09:22:30.8696472Z http.https://github.com/.extraheader
+2026-10-09T09:22:30.8721285Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-09T09:22:30.8767380Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-09T09:22:30.8976284Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-09T09:22:30.9009182Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-09T09:22:30.9373964Z Cleaning up orphan processes
+2026-10-09T09:22:30.9661833Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

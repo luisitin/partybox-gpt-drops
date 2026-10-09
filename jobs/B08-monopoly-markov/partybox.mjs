@@ -6,7 +6,7 @@
 // 4. Planted mutants of boardOdds.ts, each strictly compiled and each killed by verifyBoardOdds().
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import ts from 'typescript';
@@ -16,6 +16,7 @@ import * as boardOdds from './build/boardOdds.js';
 
 const seed = Number(process.argv[2]);
 assert.ok([1, 2, 3].includes(seed), 'Fixed required seed');
+mkdirSync('.verification',{recursive:true});
 const source = readFileSync('boardOdds.ts', 'utf8');
 const digest = createHash('sha256').update(source).digest('hex');
 

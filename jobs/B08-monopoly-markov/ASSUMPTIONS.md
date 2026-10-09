@@ -25,3 +25,7 @@
 - Break-even turns mean opponent turns, with rolls-per-turn derived from the
   stationary distribution. Multiple identical opponents can be accounted for
   by summing their expected incomes per round.
+
+## Recovery scope, 2026-10-09
+
+The clean-start defect applies to all four exposed runners, so each initializes its own output folder after seed validation. A workflow-only edit must trigger the same original full workflow. This repair retains the original scientific model, driver and sealed bytes. Protected original Ready14 remains open/unmerged; a supplemental owned branch carries recovery work. Only genuine whole exact new-head hosted proof qualifies the new delivery. Current private PartyBox full verification and implementation decisions are outside this audit.

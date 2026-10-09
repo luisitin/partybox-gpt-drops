@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "round": 3,
+  "concreteAudit": "Two actual full exact runs with missing then existing output folder; report bytes repeat exactly and unrelated binary sentinel survives. Four actual regular-file collision failures preserve original bytes and cannot produce success.",
+  "actualExactRuns": 2,
+  "exactAssertionsPerRun": 37981,
+  "repeatableReportSHA256": "f3fc21a80b9344624d13205fe3bbe3dfac7b7db4088641ac2b52c7610a742ccd",
+  "binarySentinelPreserved": true,
+  "actualExpectedFileCollisionRejections": 4,
+  "validCommands": [
+    {
+      "label": "valid-first-absent",
+      "argv": [
+        "node",
+        "test.mjs",
+        "1"
+      ],
+      "exitCode": 0,
+      "stdoutSHA256": "b00917d1b5db6c1844bf446213a72d1ad4c4a8dfd65367f756e27d73880f9a6e",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "closedUTC": "2026-10-09T09:25:44Z"
+    },
+    {
+      "label": "valid-repeat-existing",
+      "argv": [
+        "node",
+        "test.mjs",
+        "1"
+      ],
+      "exitCode": 0,
+      "stdoutSHA256": "b00917d1b5db6c1844bf446213a72d1ad4c4a8dfd65367f756e27d73880f9a6e",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "closedUTC": "2026-10-09T09:25:44Z"
+    }
+  ],
+  "collisionCommands": [
+    {
+      "label": "test.mjs-file-collision",
+      "argv": [
+        "node",
+        "test.mjs",
+        "1"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "ec48fac6568858404da54a66c30171ad4b4de69f1d5a964fe0034adf2c21e54c",
+      "closedUTC": "2026-10-09T09:25:44Z"
+    },
+    {
+      "label": "simulate.mjs-file-collision",
+      "argv": [
+        "node",
+        "simulate.mjs",
+        "1"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "2c6712bf479ab4608589aacb3ad14ff7efaf6aa8209a07ab63e4187d8281fbe2",
+      "closedUTC": "2026-10-09T09:25:44Z"
+    },
+    {
+      "label": "mutate.mjs-file-collision",
+      "argv": [
+        "node",
+        "mutate.mjs",
+        "1"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "054a1a94522e5638a7eae2a8a24079f145920a1335e16d798d63c22b8fdf0571",
+      "closedUTC": "2026-10-09T09:25:45Z"
+    },
+    {
+      "label": "partybox.mjs-file-collision",
+      "argv": [
+        "node",
+        "partybox.mjs",
+        "1"
+      ],
+      "exitCode": 1,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "03f1831b8d3f8dcacd6fc026aed90414a103543ca0833d40b5f3672ea01d6ad2",
+      "closedUTC": "2026-10-09T09:25:45Z"
+    }
+  ],
+  "currentSourceInputsFrozen": 98,
+  "playerFacingGainFound": false,
+  "completedUTC": "2026-10-09T09:25:45Z"
+}
