@@ -1,3 +1,14 @@
+# Current candidate handoff
+
+Current accepted fact baseline is76880fa120a98e2b16e11ee0d1e7233277e8742c, normal canonical push CLOSED01:28:15.484915; full native/official artifact reader CLOSED01:29:59.649411, originalPR20draft/open. Historical exact acceptance is reports/hosted-ci-76880fa-artifact.json. Next hard push bound01:58:15.484915; early01:53:15 passed during the coordinated HOLD. Actual new push/CI/reader times belong in originalPR20 after observed.
+
+
+Original-author tips research checkpoint: 14 actual native HTTPS/TLS A/B requests naturally CLOSED 2026-10-09 01:47:48.610964 UTC. Four candidates are explicitly UNADOPTED in reports/family-tips-candidate.json. Every original product value, evidence status and source/quote/A+B history remains exactly accepted76880fa; current299/1021/zero,31gameplay/101single stays unchanged. The separate Gaming Chickadee tips-and-tricks page has73 bounded original words; the old guide200 and Namu195 histories remain intact. Big-Top/Burger are excluded for insufficient shared-summary scope. Six negative controls reject premature promotion or altered provenance. Actual current full CI/artifact acceptance is required after this push. No strict KEEP GOING/completion claim.
+
+First finish exact current staged bytes, normal canonical push and entire current hosted native log/official ZIP acceptance. Then validate the four pending shared actions through a new exact768 baseline proof that retains all132rows/146sources/1931oldclips/A+B records and every malformed historical control before any field-status promotion. Private actual full bodies are .work/remaining-research-0038/authored-tips-captures-0148; if absent recaptureA/B rather than infer from snippets. Read original B03 PROMPTS.md, then the four full contexts. New quote budget is73/200; broad exact buttons, timers, scoring, ties, rewards and full roster remain separately UNVERIFIED.
+
+## Preserved handoff
+
 # Continue B03
 
 Current material recovery: **299/1,320 narrow fields corroborated /1,021 open /zero complete rows**; gameplay31corroborated/101single-source, categories104/28. Original canonical branch `job/B03-jamboree-minigames`, original PR20 stays draft. No main/CLAIMS, force push, duplicate PR, other-job write or merge.
@@ -42,3 +53,6 @@ Actual complete final commands naturally CLOSED 2026-10-09T00:48:44.829862+00:00
 Restart recovery observed 2026-10-09 01:03:33 UTC: this material checkpoint remained uncommitted after the workspace interruption. The 00:56:45.601889 hard push bound was missed. The preserved final controller receipt proves both full commands naturally closed at 00:48:44.829862; no interrupted process or later-head CI acceptance is inferred. Only these delivery notes changed after that receipt, and all final committed bytes are checked against the regenerated manifest before the normal canonical push. The actual push completion time is recorded in the private receipt and PR20 when observed; no deadline is backdated.
 
 Actual final full commands naturally CLOSED 2026-10-09T01:27:21.722116+00:00: content79suites/31,337cases; integrity80suites/31,427cases/all90hashes EXIT0; strict the same80suites/31,427cases/all90hashes deliberateEXIT1/NOT_MET299fields,zero complete. Only delivery metadata changed after these checks; every staged immutable Git byte and regenerated manifest entry is verified before the normal push.
+
+
+Actual candidate checkpoint full controller naturally CLOSED 2026-10-09T01:57:26.792681+00:00: content81suites/31,430cases EXIT0; integrity82suites/31,523cases/all93hashes EXIT0; strict82suites/31,523cases/all93hashes deliberateEXIT1/NOT_MET299,zero complete. Only delivery notes change after these full checks; the regenerated manifest and every staged immutable Git byte are checked before normal canonical push.

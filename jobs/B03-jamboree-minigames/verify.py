@@ -231,6 +231,9 @@ def run(args):
     namu_checker=module('b03_namu_gameplay_recovery','check-namu-gameplay-recovery.py')
     for result in namu_checker.run():
         checks.append(result);print(f"PASS {result['name']}: {result['caseCount']} cases; seed=n/a")
+    tips_candidate_checker=module('b03_family_tips_candidate','check-family-tips-candidate.py')
+    for result in tips_candidate_checker.run():
+        checks.append(result)
     namu_batch_checker=module('b03_namu_batch_recovery','check-namu-batch-recovery.py')
     for result in namu_batch_checker.run():
         checks.append(result);print(f"PASS {result['name']}: {result['caseCount']} cases; seed=n/a")

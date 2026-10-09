@@ -462,3 +462,9 @@ Historical accepted dd1e54f receipt is `reports/hosted-ci-dd1e54f-artifact.json`
 Final content, integrity and deliberate strict commands are recorded in the final delivery receipt and report. Strict remains NOT_MET; exact detailed gameplay parameters and the second full independent wiki roster remain UNVERIFIED. No completed strict KEEP GOING or Ready claim is made.
 
 Actual final full commands naturally CLOSED 2026-10-09T01:27:21.722116+00:00: content79suites/31,337cases; integrity80suites/31,427cases/all90hashes EXIT0; strict the same80suites/31,427cases/all90hashes deliberateEXIT1/NOT_MET299fields,zero complete. Only delivery metadata changed after these checks; every staged immutable Git byte and regenerated manifest entry is verified before the normal push.
+
+
+Original-author tips research checkpoint: 14 actual native HTTPS/TLS A/B requests naturally CLOSED 2026-10-09 01:47:48.610964 UTC. Four candidates are explicitly UNADOPTED in reports/family-tips-candidate.json. Every original product value, evidence status and source/quote/A+B history remains exactly accepted76880fa; current299/1021/zero,31gameplay/101single stays unchanged. The separate Gaming Chickadee tips-and-tricks page has73 bounded original words; the old guide200 and Namu195 histories remain intact. Big-Top/Burger are excluded for insufficient shared-summary scope. Six negative controls reject premature promotion or altered provenance. Actual current full CI/artifact acceptance is required after this push. No strict KEEP GOING/completion claim.
+
+
+Actual candidate checkpoint full controller naturally CLOSED 2026-10-09T01:57:26.792681+00:00: content81suites/31,430cases EXIT0; integrity82suites/31,523cases/all93hashes EXIT0; strict82suites/31,523cases/all93hashes deliberateEXIT1/NOT_MET299,zero complete. Only delivery notes change after these full checks; the regenerated manifest and every staged immutable Git byte are checked before normal canonical push.
