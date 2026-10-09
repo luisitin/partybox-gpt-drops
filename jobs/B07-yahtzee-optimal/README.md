@@ -2,7 +2,7 @@
 
 **What this is:** an exact solver for solitaire Yahtzee (every hold and every box choice maximizes the expected final score), plus a PartyBox port kit (`partybox/`) that makes it Yahtzee's 'sharp' bot.
 **How to use it:** run `npm ci && npm test` to prove it; `npm run build` builds the library; PartyBox copies `partybox/server/` and `partybox/__tests__/` (steps in INTEGRATION.md).
-**Status:** original delivery Ready for review; verification repair in Draft PR24. The empty-card EV is 254.5877 under Hasbro's forced Joker rule and 254.5896 under the free-choice Joker (the published figure). CI `verify` was green on PR #21 at `4258453` and `7cdb272`. The port's solved tables now decode once at import, with no mutable cache (`e3591e6`). On 2026-10-08 the port kit passed inside a scratch PartyBox copy: tsc, eslint, prettier, vitest and sim (2p, 4p, 6p). depcruise and check-bundle passed there in an earlier pass, before that change.
+**Status:** original delivery Ready for review; verification repair in PR24, with final handoff-head hosted proof pending as of this publication. The empty-card EV is 254.5877 under Hasbro's forced Joker rule and 254.5896 under the free-choice Joker (the published figure). CI `verify` was green on PR #21 at `4258453` and `7cdb272`. The port's solved tables now decode once at import, with no mutable cache (`e3591e6`). On 2026-10-08 the port kit passed inside a scratch PartyBox copy: tsc, eslint, prettier, vitest and sim (2p, 4p, 6p). depcruise and check-bundle passed there in an earlier pass, before that change.
 
 ## Quick start
 
@@ -100,13 +100,10 @@ restored. This proves rejection/restoration, not a semantic full pass.
 
 The original current903 full evidence remains under
 `reports/recovery-20261009/original-current903/`.
-The9c14 native log, source metadata, whole-reader acceptance and completed
+The complete9c14 official archive, native log, source metadata, reader and
 post-pass receipts are preserved separately under
 `reports/recovery-20261009/current-9c14/`.
-The5,058,453-byte complete official archive is retained in the owned working
-evidence folder; its public preservation and the third finite post-pass audit
-are in progress. A handoff commit containing this evidence is a new head:
-its own whole hosted
+A handoff commit containing this evidence is a new head: its own whole hosted
 verification is pending as of publication. Only the actual exact final-head
 workflow and whole fresh archive can close that final gate; see the followup
 PR24 body for subsequent native acceptance. Original Ready PR21 and canonical
@@ -114,3 +111,9 @@ PR24 body for subsequent native acceptance. Original Ready PR21 and canonical
 
 The official/published mathematical conflict, independent IEEE754 comparison
 tolerance and unrun full private PartyBox integration remain explicit.
+
+Post-pass KEEP completed three substantive no-gain audits: exact original gate
+preservation,18 actual transport edge/concurrency assertions and1,714 freshly
+compiled solver/port assertions over548 golden states. No additional gameplay,
+model, table or verifier source changes are needed. Final exact-head acceptance
+and the Ready transition are recorded in PR24 only after actual completion.

@@ -1,0 +1,70 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { pathToFileURL } from 'node:url';
+import { execFileSync } from 'node:child_process';
+import ts from '/workspace/job-B07/jobs/B07-yahtzee-optimal/node_modules/typescript/lib/typescript.js';
+
+const root='/tmp/gpt-drops-B07-audit-20261009';
+const job=path.join(root,'jobs/B07-yahtzee-optimal');
+const work=path.join(root,'.work/20261009-reverify');
+assert.equal(ts.version,'5.8.3');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const frozen=JSON.parse(fs.readFileSync(path.join(work,'current-source-files.json'),'utf8'));
+const freeze=()=>{for(const [name,row] of Object.entries(frozen))assert.equal(sha(fs.readFileSync(path.join(root,name))),row.sha256,name);};
+freeze();
+const rootOut=path.join(work,'compiled-root-keep3'),kitOut=path.join(work,'compiled-kit-keep3');
+for(const out of [rootOut,kitOut]){assert.ok(!fs.existsSync(out));fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'package.json'),'{"type":"module"}\n');}
+execFileSync(process.execPath,['/workspace/job-B07/jobs/B07-yahtzee-optimal/node_modules/typescript/bin/tsc','-p',path.join(job,'tsconfig.json'),'--outDir',rootOut],{stdio:'inherit',timeout:60000});
+fs.mkdirSync(path.join(rootOut,'tables'));
+for(const mode of ['official','published'])fs.copyFileSync(path.join(job,'tables',mode+'.json'),path.join(rootOut,'tables',mode+'.json'));
+const config=ts.readConfigFile(path.join(job,'partybox/tsconfig.json'),ts.sys.readFile);
+assert.equal(config.error,undefined);
+const parsed=ts.parseJsonConfigFileContent(config.config,ts.sys,path.join(job,'partybox'));assert.equal(parsed.errors.length,0);
+const host=ts.createCompilerHost({...parsed.options,outDir:kitOut,noEmit:false});
+host.writeFile=(file,text)=>{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,text.replace(/(from '\.{1,2}\/[^']+)'/g,"$1.js'"));};
+const program=ts.createProgram(parsed.fileNames,{...parsed.options,outDir:kitOut,noEmit:false},host);
+const diagnostics=[...ts.getPreEmitDiagnostics(program),...program.emit().diagnostics];
+assert.equal(diagnostics.length,0,ts.formatDiagnostics(diagnostics,{getCurrentDirectory:()=>job,getCanonicalFileName:x=>x,getNewLine:()=> '\n'}));
+const primary=await import(pathToFileURL(path.join(rootOut,'yahtzeeOpt.js')).href);
+const rules=await import(pathToFileURL(path.join(kitOut,'optimal/rules.js')).href);
+const solver=await import(pathToFileURL(path.join(kitOut,'optimal/solver.js')).href);
+const bot=await import(pathToFileURL(path.join(kitOut,'optimal-bot.js')).href);
+const kit={...rules,...solver};
+let checks=0;
+const equal=(a,b)=>{assert.deepEqual(a,b);checks++;};
+const throws=f=>{assert.throws(f,RangeError);checks++;};
+for(const api of [primary,kit]){
+ equal(api.expectedValue(),254.58772873449593);
+ equal(api.expectedValue({usedMask:0,upper:0,yahtzeeBonus:false,ruleMode:'published'}),254.58960948196315);
+ for(const card of [null,[],{}, {usedMask:0,upper:1,yahtzeeBonus:false}, {usedMask:0,upper:0,yahtzeeBonus:true}, {usedMask:0,upper:0,yahtzeeBonus:false,ruleMode:null}])throws(()=>api.expectedValue(card));
+ for(const dice of [null,[],[1,2,3,4],[1,2,3,4,7],[1,2,3,4,NaN],Array(5),[1,2,3,4,1.5]])throws(()=>api.bestCategory(dice,{usedMask:0,upper:0,yahtzeeBonus:false}));
+ const terminal=Object.freeze({usedMask:8191,upper:63,yahtzeeBonus:true,ruleMode:'official'});
+ equal(api.expectedValue(terminal),0);throws(()=>api.bestCategory([1,1,1,1,1],terminal));throws(()=>api.bestHold([1,1,1,1,1],1,terminal));
+ const forced=Object.freeze({usedMask:2048,upper:0,yahtzeeBonus:true,ruleMode:'official'});
+ equal(api.score([6,6,6,6,6],5,forced),{legal:true,points:30,yahtzeeBonus:100,upperBonus:0,next:{usedMask:2080,upper:30,yahtzeeBonus:true,ruleMode:'official'}});
+ equal(api.score([6,6,6,6,6],12,forced).legal,false);
+ equal(api.score([6,6,6,6,6],12,{...forced,ruleMode:'published'}).legal,true);
+ equal(api.score([6,6,6,6,6],5,{...forced,yahtzeeBonus:false}).yahtzeeBonus,0);
+ const earned=Object.freeze({usedMask:63,upper:63,yahtzeeBonus:false,ruleMode:'official'});
+ equal(api.score([1,2,3,4,5],12,earned).upperBonus,0);
+ const dice=Object.freeze([6,1,6,1,6]);const card=Object.freeze({usedMask:0,upper:0,yahtzeeBonus:false,ruleMode:'official'});
+ const first=api.bestHold(dice,2,card);equal(api.bestHold(dice,2,card),first);
+ equal(dice,[6,1,6,1,6]);equal(card,{usedMask:0,upper:0,yahtzeeBonus:false,ruleMode:'official'});
+ equal(api.bestHold(dice,0,card).hold,[1,1,6,6,6]);
+ for(const remaining of [-1,3,NaN,0.5])throws(()=>api.bestHold(dice,remaining,card));
+}
+const golden=JSON.parse(fs.readFileSync(path.join(job,'partybox/__tests__/optimal-golden.json'),'utf8'));
+for(const c of golden.cases){
+ const card={usedMask:c.usedMask,upper:c.upper,yahtzeeBonus:c.yahtzeeBonus,ruleMode:c.ruleMode};
+ equal(kit.expectedValue(card),primary.expectedValue(card));
+ equal(kit.bestHold(c.dice,c.rollsLeft,card),primary.bestHold(c.dice,c.rollsLeft,card));
+ equal(kit.bestCategory(c.dice,card),primary.bestCategory(c.dice,card));
+}
+for(const invalid of [null,{}, {phase:null},{phase:{id:'done'}}, {phase:{id:'roll'},cards:{}}, {phase:{id:'roll'},turn:'missing',cards:{}}])equal(bot.optimalInput(null,invalid),null);
+equal(bot.keepIndices([3,3,1,2,4],[3],[1]),[1]);
+equal(bot.keepIndices([3,3,1,2,4],[3,3],[1]),[0,1]);
+freeze();
+const report={passed:true,source:'9c14f8525a2c7eda2acd50974b3781d1e0d74e0b',strictCompiler:'5.8.3',runtime:process.version,assertions:checks,goldenStates:golden.cases.length,sourceBlobsFrozen:Object.keys(frozen).length,completedUTC:new Date().toISOString(),scope:'Finite additional compiled source and port boundary audit; does not replace full hosted all-seed proof or assert whole PartyBox integration.'};
+fs.writeFileSync(path.join(work,'KEEP-3-BOUNDARY.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

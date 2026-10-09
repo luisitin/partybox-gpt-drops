@@ -180,13 +180,10 @@ restored. This proves rejection/restoration, not a semantic full pass.
 
 The original current903 full evidence remains under
 `reports/recovery-20261009/original-current903/`.
-The9c14 native log, source metadata, whole-reader acceptance and completed
+The complete9c14 official archive, native log, source metadata, reader and
 post-pass receipts are preserved separately under
 `reports/recovery-20261009/current-9c14/`.
-The5,058,453-byte complete official archive is retained in the owned working
-evidence folder; its public preservation and the third finite post-pass audit
-are in progress. A handoff commit containing this evidence is a new head:
-its own whole hosted
+A handoff commit containing this evidence is a new head: its own whole hosted
 verification is pending as of publication. Only the actual exact final-head
 workflow and whole fresh archive can close that final gate; see the followup
 PR24 body for subsequent native acceptance. Original Ready PR21 and canonical
@@ -194,3 +191,36 @@ PR24 body for subsequent native acceptance. Original Ready PR21 and canonical
 
 The official/published mathematical conflict, independent IEEE754 comparison
 tolerance and unrun full private PartyBox integration remain explicit.
+
+## Post-pass KEEP and remaining verification
+
+2026-10-09 post-full KEEP1: inspected every inherited full-test gate by
+removing only the explicitly added report control, six primary-regeneration
+operations and primary receipt field from the actual current driver. The
+remaining bytes exactly equal original903 run.mjs. Removing only the fresh
+artifact path from the current workflow exactly reproduces its original
+bytes. Every173 published delivery input remained unchanged. No further
+source gain found.
+
+2026-10-09 post-full KEEP2:18 actual report transport assertions cover
+concurrent lock rejection before callback execution, empty/binary/Unicode/deep
+original reports, successful output export, failed code5 output retention,
+original-input restoration and both retained invocation directories. The
+published helper passed; no further source gain found. These are actual
+transport controls, not extra solver semantic counts.
+2026-10-09 post-full KEEP3: fresh strict TypeScript5.8.3 compilation of the
+unchanged published solver and port passed1,714 actual assertions, including
+all548 golden states, malformed/full-card inputs, forced/published Joker
+behavior, bonus boundaries, immutable caller inputs and adapter fallbacks.
+All173 published9c14 input hashes stayed frozen. Natural close08:25:41.406Z,
+actual Node24.19.0. No further substantive source gain found. Together with
+KEEP1 and KEEP2 this exhausts the remaining verification gaps; further
+changes are cosmetic. Preserve every original game/model/contract byte.
+
+## UNVERIFIED — current publication and integration
+
+The exact new handoff-head hosted whole verification is pending AS OF THIS
+PUBLICATION. The9c14 proof establishes its source only. PR24 records the final
+native exact-head run, complete archive digest and whole acceptance only after
+actual closure. All private-product whole verification/port limitations and
+original official/published target conflict remain unchanged.

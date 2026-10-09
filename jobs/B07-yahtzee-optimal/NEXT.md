@@ -1,34 +1,47 @@
-# Exact resume step — B07 followup audit
+# Exact resume step — B07 final verification handoff
 
-Owned followup: `job/B07-yahtzee-verification-audit-20261009`, DraftPR24 into
-canonical903. Original ReadyPR21/canonical903 remain unchanged and unmerged.
-Read original B07 in PROMPTS.md and RUN-ALL.md. No original workload, seed,
-model, independent seal, product source or historical report may be weakened.
+Owned followup: `job/B07-yahtzee-verification-audit-20261009`, PR24 into
+canonical `job/B07-yahtzee-optimal`/903. Original ReadyPR21/canonical903 stay
+unchanged and unmerged. Read originalB07 PROMPTS.md and RUN-ALL.md. Preserve
+all original workloads, seeds, model, independent seals, product source,
+port kit, historical reports and earlier genuine failures.
 
 Exact9c14 full workflow run37902011418/job113726516680 and entire genuine
-artifact11603280899 passed independent acceptance2026-10-09T08:07:08Z:
-80 safe ZIP members,173 delivery inputs,99 immutable fingerprints,97 full
-native JSON records,all six standalone primary regenerations,all original
-150k/606528/75/6M/234M/78M gates and every original port-kit gate.72 sealed
-report inputs restored exactly;79 fresh outputs retained and bound to status.
-Current proof/native records are under reports/recovery-20261009/current-9c14/.
+artifact11603280899 passed whole acceptance2026-10-09T08:07:08Z:
+80 safe ZIP members,173 delivery inputs,99 immutable fingerprints,97 complete
+native JSON records,six standalone primary regenerations,all original
+150k/606528/75/6M/234M/78M gates and every port-kit gate.72 sealed report
+inputs restored exactly;79 fresh outputs retained and bound to actual status.
+The whole official archive/native log/source metadata/whole-reader acceptance
+and all expected-failure controls are now preserved under
+reports/recovery-20261009/current-9c14/. This proves9c14 only.
 
-KEEP1 original driver/workflow gate-byte preservation and KEEP2 eighteen
-transport edge/concurrency assertions passed. Third fresh compiled API/port
-boundary audit is running after the shared measurement quiet window ended.
-The complete9c14 official archive remains in the owned private evidence folder
-and is the next material preservation milestone. Keep this followup Draft.
+Post-pass KEEP finished with three substantive no-gain audits:
+1. Original full driver gates and workflow bytes preserved except explicitly
+   added control/generator operations and the fresh-report artifact path.
+2.18 actual helper edge/concurrency assertions, including concurrent lock
+   rejection before executing callback and all original/output/archive bytes.
+3. Fresh strict compilation and1,714 solver/port assertions over548 golden
+   states and malformed, terminal, Joker, bonus, immutability, adapter cases.
+All three receipts and raw retained controls are in the same evidence folder.
+No further source improvement is justified; do not make cosmetic changes.
 
-Next: record the naturally closed third audit honestly, preserve the whole
-current official archive plus all controls, update this handoff and manifest,
-push expected-head/force=false, refresh only B07's MAIN claim under coordinator
-lease, and obtain genuine whole hosted acceptance for that exact final head.
-Never inherit the9c14 full pass onto a newer publication head. Stop further
-source improvements when substantive audits show no gain, then return to the
-fresh queue. All runtime invocations/backups remain retained; original reports
-restore on both successful and failed children.
+NEXT GATE: this publication carries new evidence/docs and a new manifest.
+Its exact-head whole hosted npm ci/npm test and genuine fresh report archive
+are PENDING AS OF PUBLICATION. Obtain native exact-source jobs/artifact/full
+log; verify all files, every native semantic record and raw visited stream,
+all unchanged counts,six standalone generations and every restored report.
+Keep PR24 Draft until that exact whole pass is genuinely accepted. Record
+final native acceptance in PR24's body and mark it Ready only then; no new
+source/doc commit is required simply to quote its own successful head.
+If PR24 is already Ready with exact-source full acceptance, resume the fresh
+lowest eligible queue under serialized MAIN claims rather than edit B07.
 
-Official default remains254.58772873449593; published mode254.58960948196315.
-Preserve the documented target/rule conflict and IEEE754 comparison boundary.
-Whole private PartyBox pnpm verify, desktop integration, port and merge remain
-unverified. No literal official254.5896 pass is claimed.
+The9c14→8b4350c source checkpoint closed08:27:30Z,70 seconds after its08:26:20Z
+hard cadence deadline following the shared measurement quiet hold. The actual
+lateness is retained in PROOF-CHECKPOINT-NATIVE-RECEIPT.json, never backdated.
+This final material preservation checkpoint follows immediately.
+
+Official default254.58772873449593; published254.58960948196315. Preserve the
+documented target/rule conflict and IEEE754 boundary. Whole private PartyBox
+pnpm verify, desktop integration, actual port and merge remain unverified.

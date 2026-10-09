@@ -67,9 +67,20 @@ original reports, successful output export, failed code5 output retention,
 original-input restoration and both retained invocation directories. The
 published helper passed; no further source gain found. These are actual
 transport controls, not extra solver semantic counts.
+2026-10-09 post-full KEEP3: fresh strict TypeScript5.8.3 compilation of the
+unchanged published solver and port passed1,714 actual assertions, including
+all548 golden states, malformed/full-card inputs, forced/published Joker
+behavior, bonus boundaries, immutable caller inputs and adapter fallbacks.
+All173 published9c14 input hashes stayed frozen. Natural close08:25:41.406Z,
+actual Node24.19.0. No further substantive source gain found. Together with
+KEEP1 and KEEP2 this exhausts the remaining verification gaps; further
+changes are cosmetic. Preserve every original game/model/contract byte.
 
-2026-10-09 shared measurement coordination hold: all own native children were
-closed during the global quiet window; source early08:21:20 fell within that
-hold. Explicit release arrived before this publication; third finite compiled
-API/port audit and whole official archive public preservation remain pending.
-No deadline or test result is backdated.
+2026-10-09 cadence record: all own children were closed during root's shared
+measurement quiet window. Early08:21:20 fell inside the hold; the material
+proof/handoff normal FF source push actually closed08:27:30,70s after hard
+08:26:20. Retain the exact receipt; no source/test timestamp is backdated.
+This final material milestone preserves the whole genuine9c14 ZIP/native log,
+all native metadata, reader/control receipts and three post-pass audits.
+Its exact new-head whole hosted proof is pending as of publication; the final
+PR24 body records actual acceptance after closure. No cosmetic KEEP edits.
