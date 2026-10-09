@@ -83,10 +83,15 @@ def historical_view(d,s,rs):
  if not (ROOT/'reports/cog-gameplay-recovery.json').exists():return d,s,rs
  p=read('reports/cog-gameplay-recovery.json')
  if {'data':digest(d),'sources':digest(s),'reopens':[digest(x) for x in rs]}==BASE_DIGESTS:
-  validate(p,read('minigames.json'),read('catalogue-sources.json'),[read('reports/source-reopens-pass'+x+'.json') for x in 'AB']);return d,s,rs
+  a,b,c=read('minigames.json'),read('catalogue-sources.json'),[read('reports/source-reopens-pass'+x+'.json') for x in 'AB']
+  if (ROOT/'reports/ranked-gameplay-recovery.json').exists():a,b,c=module('check-ranked-gameplay-recovery.py').historical_view(a,b,c)
+  validate(p,a,b,c);return d,s,rs
+ if (ROOT/'reports/ranked-gameplay-recovery.json').exists():d,s,rs=module('check-ranked-gameplay-recovery.py').historical_view(d,s,rs)
  return validate(p,d,s,rs)[:3]
 def run():
- p,d,s=read('reports/cog-gameplay-recovery.json'),read('minigames.json'),read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+x+'.json') for x in 'AB'];count=validate(p,d,s,rs)[3]
+ p,d,s=read('reports/cog-gameplay-recovery.json'),read('minigames.json'),read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+x+'.json') for x in 'AB']
+ if (ROOT/'reports/ranked-gameplay-recovery.json').exists():d,s,rs=module('check-ranked-gameplay-recovery.py').historical_view(d,s,rs)
+ count=validate(p,d,s,rs)[3]
  for n in range(14):
   a,b,c,e=copy.deepcopy([p,d,s,rs])
   if n==0:b['minigames'][0]['summary']='Unsupported action. Another action.'
