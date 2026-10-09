@@ -87,15 +87,21 @@ def validate(p,d,s,rs):
  require(sum(e['status']=='corroborated' for row in d['minigames'] for e in row['fieldEvidence'].values())==307 and sum(row['fieldEvidence']['gameplay']['status']=='corroborated' for row in d['minigames'])==39,'Unexpected fact/gameplay promotion count')
  cm.validate(candidate,restored,historical,h_rs)
  return restored,historical,h_rs,count
+def before_knock_view(d,s,rs):
+ if not (ROOT/'reports/knock-scope-recovery.json').exists():return d,s,rs
+ return module('check-knock-scope-recovery.py').historical_view(d,s,rs)
+
 def historical_view(d,s,rs):
  if not (ROOT/'reports/tv-action-recovery.json').exists():return d,s,rs
  p=read('reports/tv-action-recovery.json')
  if digest(d)==BASE_DATA and digest(s)==BASE_SOURCES and [digest(x) for x in rs]==BASE_REOPENS:
-  validate(p,read('minigames.json'),read('catalogue-sources.json'),[read('reports/source-reopens-pass'+x+'.json') for x in 'AB'])
+  current=before_knock_view(read('minigames.json'),read('catalogue-sources.json'),[read('reports/source-reopens-pass'+x+'.json') for x in 'AB'])
+  validate(p,*current)
   return d,s,rs
+ d,s,rs=before_knock_view(d,s,rs)
  return validate(p,d,s,rs)[:3]
 def run():
- p=read('reports/tv-action-recovery.json');d=read('minigames.json');s=read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+x+'.json') for x in 'AB'];count=validate(p,d,s,rs)[3]
+ p=read('reports/tv-action-recovery.json');d=read('minigames.json');s=read('catalogue-sources.json');rs=[read('reports/source-reopens-pass'+x+'.json') for x in 'AB'];d,s,rs=before_knock_view(d,s,rs);count=validate(p,d,s,rs)[3]
  for n in range(10):
   a,b,c,e=copy.deepcopy([p,d,s,rs])
   if n==0:a['repairs'][0]['summary']+=' Exact timer10seconds.'

@@ -1,3 +1,17 @@
+# Current Knock-Knock Match summary-scope handoff
+
+Read original root README/PROMPTS B03 instructions. Own only jobs/B03-jamboree-minigames/canonicaljob/B03-jamboree-minigames/originalPR20draft/open; no main/CLAIMS/foreign job/force/merge/newPR.
+
+Current307/1320,1013open,zero;39/93gameplay stays unchanged. One already-corroborated MG125 summary removes universal-pair wording because full primary Co-op4 uses groups of four. Corrected generic matching/allmatches actions have full independent GameNChick/Wiki support; precise parameters remain separately qualified. GNCexact9wordclause raisesold17to26/200,not27. Current148sources1949clips3904recorded A+B recoveries,151recordsperpass. New proof reports/knock-scope-recovery.json restores acceptedF7all132rows148sources1948quoteclassifications/fullA+B before historical views. No308fact/newgameplaystatus claim.
+
+Actual full current protocol naturallyCLOSED03:41:12.375976:89/39577content,90/39682/all105integrity,strictdeliberateEXIT1 NOT_MET307/zero. First finish all immutable staged Git bytes and normal canonical push beforehard03:52:06.498688 UTC (early03:47:06.498688). Then entire genuine current hosted native log and official ZIP safeentry/CRC/EOF/fullJSON/twocomplete reports/all immutable local+Git source hashes; update only originaldraftPR20exactsource/body and read back actual state. HistoricalF7proof does not accept the newer source. Record actual full closure and delivery times, never backdate.
+
+Actual6native requestsCLOSED03:29:43.149580:4full200/TLSGNC+W125,2FandomHTTP402each55B. Full21797-char original article and2572-char named paragraph, actual JSONLD author, raw bodies/headers/stderr/receipts are private .work/remaining-research-0038/GNC-fandom-captures-0330. Fandomcloud98count lead is excluded; no independent132roster acceptance or guessedalias. WriterCLOSED03:38:16.354713;2438comparisons/eight malformed fixtures plus inherited controls pass. All full current protocol results still required.
+
+Continue independent original-publisher research for93remaining summaries,28categories and detailed mechanics. Anonymous GNC minigame examples cannot establish literal identities. BigTop/Burger/Sleight FGS tips lack full current summary support, and no uncertain container/action substitution is adopted. Namu same top-levelarticleaggregate spansotherjobs,so no expansion;oldguide200exhausted,FGStips73unchanged. Every native elapsed experiment needs fresh rootquiet grant; all finite commands must naturally close beforeHOLD.
+
+## Preserved historical handoff
+
 # Current four original-review action handoff
 
 Read root README/PROMPTS B03 original instructions. Own only jobs/B03-jamboree-minigames, canonical job/B03-jamboree-minigames/originalPR20draft/open. No main/CLAIMS, foreign job, force push, merge or new PR.
@@ -108,3 +122,6 @@ Actual complete current candidate controller naturally CLOSED2026-10-09 02:54:02
 
 
 Actual current full controller naturally CLOSED2026-10-09 03:21:28.519384 UTC:content87suites/37123cases EXIT0;integrity88suites/37225cases/all102manifestfiles EXIT0;deliberate strictsame88/37225/all102 EXIT1 NOT_MET307/zero. New original-review proof2529comparisons+ten malformed fixtures and all inherited controls passed. Early03:20:03.345178 target was missed while completing literal source restoration and full checks after coordinated quiet; actual hard03:25:03.345178 remains binding. Only these delivery notes change afterward; every regenerated manifest entry and immutable staged Git byte is verified before the normal canonical push. Actual push/hosted official acceptance is observed in originaldraftPR20.
+
+
+Actual full current protocol naturally CLOSED2026-10-09 03:41:12.375976 UTC:content89suites/39577cases EXIT0;integrity90suites/39682cases/all105manifestfiles EXIT0;deliberate strictsame90/39682/all105 EXIT1 NOT_MET307/zero. Mode-scope checker2438comparisons/eight rejectedfixtures and every inherited control passed. Current307facts/39gameplay stays unchanged; no newstatus gain. Early03:47:06.498688/hard03:52:06.498688 are observed against the actual normal push receipt. Only these delivery notes change afterward; every regenerated manifest and immutable staged Git byte is verified before normal canonical push; exact current hosted/native/official acceptance is required afterward.

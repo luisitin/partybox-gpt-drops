@@ -231,6 +231,9 @@ def run(args):
     namu_checker=module('b03_namu_gameplay_recovery','check-namu-gameplay-recovery.py')
     for result in namu_checker.run():
         checks.append(result);print(f"PASS {result['name']}: {result['caseCount']} cases; seed=n/a")
+    knock_checker=module('b03_knock_scope_recovery','check-knock-scope-recovery.py')
+    for result in knock_checker.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Knock whole-scope repair failed'),result.get('detail',''))
     tv_action_checker=module('b03_tv_action_recovery','check-tv-action-recovery.py')
     for result in tv_action_checker.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Four original-review actions failed'),result.get('detail',''))
