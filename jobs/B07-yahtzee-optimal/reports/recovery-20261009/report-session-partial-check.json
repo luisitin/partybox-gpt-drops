@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "assertions": 47,
+  "successfulInvocations": 2,
+  "failedInvocations": 4,
+  "records": [
+    {
+      "name": "first actual invocation",
+      "code": 0,
+      "passed": true
+    },
+    {
+      "name": "second actual invocation",
+      "code": 0,
+      "passed": true
+    },
+    {
+      "name": "failed actual child",
+      "code": 7,
+      "signal": null,
+      "passed": false
+    },
+    {
+      "name": "terminated actual child",
+      "code": 143,
+      "signal": "SIGTERM",
+      "passed": false
+    },
+    {
+      "name": "thrown exception",
+      "passed": false
+    },
+    {
+      "name": "actual missing executable",
+      "passed": false
+    }
+  ],
+  "syntheticReportTransportOnly": true,
+  "description": "Actual child exits, SIGTERM, exception and ENOENT exercise the production report-session helper; no solver semantic count is claimed by these fixtures."
+}

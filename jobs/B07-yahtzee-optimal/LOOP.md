@@ -34,3 +34,16 @@ run separately. Publication-only document changes are recorded with hashes;
 next gate is the unchanged full Node 22.16.0 Ubuntu workflow for this exact
 published commit. Continue B19 production timing work while hosted proof runs.
 2026-10-08 B07 polish pass (cloud): eager solved tables (no mutable cache, e3591e6), P07 mutant fixed, docs corrected against the real PartyBox repo, full npm test exit 0 (31 min, shared machine), scratch gates tsc/eslint/prettier/vitest green, sims 2p/4p/6p fast 0 failed, default mixed stuck x152 pre-existing on a clean 26b85ba6 export; docs and manifest pushed to job/B07-yahtzee-optimal; pnpm verify on the port not run.
+
+2026-10-09 verification audit: original903 full hosted proof genuinely accepted
+in full, including its whole official archive/native log/source fingerprints.
+Read all original PR review comments. Reproduced the real rerun failure using
+the genuine hosted summary; restored all153 original source blobs. Repair
+preserves original Ready PR21 on903 in an isolated followup. New report-session
+helper archives fresh outputs and restores originals on success/failure;
+47 actual transport assertions include two successes and child exit7,
+SIGTERM143, exception and ENOENT. Full tests now run the actual standalone
+primary generator for both full modes in EACH seed, in addition to unchanged
+paired-sim/independent generation and all original required workloads. Current
+changed-head full hosted verification and subsequent substantive KEEP audit
+are pending; original903 proof does not establish this new source.

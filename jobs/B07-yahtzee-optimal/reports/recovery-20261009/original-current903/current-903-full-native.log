@@ -1,0 +1,450 @@
+﻿2026-10-08T16:54:41.7473151Z Current runner version: '2.337.0'
+2026-10-08T16:54:41.7492806Z ##[group]Runner Image Provisioner
+2026-10-08T16:54:41.7493580Z Hosted Compute Agent
+2026-10-08T16:54:41.7494248Z Version: 20261002.596
+2026-10-08T16:54:41.7494775Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T16:54:41.7495430Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T16:54:41.7495983Z Worker ID: {d0fe2558-6686-46af-a22a-0ddb0eda4a49}
+2026-10-08T16:54:41.7496568Z Region: westus3
+2026-10-08T16:54:41.7497056Z Cloud: Azure
+2026-10-08T16:54:41.7497501Z ##[endgroup]
+2026-10-08T16:54:41.7498679Z ##[group]Operating System
+2026-10-08T16:54:41.7499180Z Ubuntu
+2026-10-08T16:54:41.7499677Z 24.04.5
+2026-10-08T16:54:41.7500113Z LTS
+2026-10-08T16:54:41.7500532Z ##[endgroup]
+2026-10-08T16:54:41.7501020Z ##[group]Runner Image
+2026-10-08T16:54:41.7501511Z Image: ubuntu-24.04
+2026-10-08T16:54:41.7501956Z Version: 20261004.327.1
+2026-10-08T16:54:41.7503057Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T16:54:41.7504503Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T16:54:41.7505269Z ##[endgroup]
+2026-10-08T16:54:41.7506265Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T16:54:41.7507760Z Contents: read
+2026-10-08T16:54:41.7508222Z Metadata: read
+2026-10-08T16:54:41.7508802Z ##[endgroup]
+2026-10-08T16:54:41.7510433Z Secret source: Actions
+2026-10-08T16:54:41.7511228Z Cache mode: write
+2026-10-08T16:54:41.7511775Z Prepare workflow directory
+2026-10-08T16:54:41.7766010Z Prepare all required actions
+2026-10-08T16:54:41.7805469Z Getting action download info
+2026-10-08T16:54:42.1062232Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-08T16:54:42.1900189Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-08T16:54:42.3077695Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-08T16:54:42.5411863Z Complete job name: verify
+2026-10-08T16:54:42.6041674Z ##[group]Run actions/checkout@v4
+2026-10-08T16:54:42.6042327Z with:
+2026-10-08T16:54:42.6042715Z   repository: luisitin/partybox-gpt-drops
+2026-10-08T16:54:42.6045989Z   token: ***
+2026-10-08T16:54:42.6046347Z   ssh-strict: true
+2026-10-08T16:54:42.6046696Z   ssh-user: git
+2026-10-08T16:54:42.6047057Z   persist-credentials: true
+2026-10-08T16:54:42.6047446Z   clean: true
+2026-10-08T16:54:42.6047804Z   sparse-checkout-cone-mode: true
+2026-10-08T16:54:42.6048211Z   fetch-depth: 1
+2026-10-08T16:54:42.6048553Z   fetch-tags: false
+2026-10-08T16:54:42.6048913Z   show-progress: true
+2026-10-08T16:54:42.6049266Z   lfs: false
+2026-10-08T16:54:42.6049588Z   submodules: false
+2026-10-08T16:54:42.6049950Z   set-safe-directory: true
+2026-10-08T16:54:42.6050345Z   allow-unsafe-pr-checkout: false
+2026-10-08T16:54:42.6050917Z ##[endgroup]
+2026-10-08T16:54:42.6862199Z Syncing repository: luisitin/partybox-gpt-drops
+2026-10-08T16:54:42.6864495Z ##[group]Getting Git version info
+2026-10-08T16:54:42.6865284Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-08T16:54:42.6866364Z [command]/usr/bin/git version
+2026-10-08T16:54:42.6934951Z git version 2.55.0
+2026-10-08T16:54:42.6960041Z ##[endgroup]
+2026-10-08T16:54:42.6970058Z Temporarily overriding HOME='/home/runner/work/_temp/1056c285-536d-4f6d-b44b-a6b5cbb02fc9' before making global git config changes
+2026-10-08T16:54:42.6975903Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T16:54:42.6977023Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-08T16:54:42.7026586Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-08T16:54:42.7033655Z ##[group]Initializing the repository
+2026-10-08T16:54:42.7034837Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-08T16:54:42.7141175Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T16:54:42.7142096Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T16:54:42.7142841Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T16:54:42.7143419Z hint: call:
+2026-10-08T16:54:42.7144012Z hint:
+2026-10-08T16:54:42.7144716Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T16:54:42.7145209Z hint:
+2026-10-08T16:54:42.7145661Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T16:54:42.7146368Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T16:54:42.7146926Z hint:
+2026-10-08T16:54:42.7147251Z hint: 	git branch -m <name>
+2026-10-08T16:54:42.7147617Z hint:
+2026-10-08T16:54:42.7148098Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T16:54:42.7152924Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+2026-10-08T16:54:42.7161090Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+2026-10-08T16:54:42.7209491Z ##[endgroup]
+2026-10-08T16:54:42.7210507Z ##[group]Disabling automatic garbage collection
+2026-10-08T16:54:42.7213507Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T16:54:42.7311892Z ##[endgroup]
+2026-10-08T16:54:42.7312912Z ##[group]Setting up auth
+2026-10-08T16:54:42.7318051Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T16:54:42.7352007Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T16:54:42.7672615Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T16:54:42.7702911Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T16:54:42.7890122Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T16:54:42.7919145Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T16:54:42.8112814Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T16:54:42.8148327Z ##[endgroup]
+2026-10-08T16:54:42.8149289Z ##[group]Fetching the repository
+2026-10-08T16:54:42.8157245Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9ed258866a7098ec6fd5322246a46e993bf769ea:refs/remotes/pull/21/merge
+2026-10-08T16:54:44.5461321Z From https://github.com/luisitin/partybox-gpt-drops
+2026-10-08T16:54:44.5463116Z  * [new ref]         9ed258866a7098ec6fd5322246a46e993bf769ea -> pull/21/merge
+2026-10-08T16:54:44.5467331Z ##[endgroup]
+2026-10-08T16:54:44.5468909Z ##[group]Determining the checkout info
+2026-10-08T16:54:44.5470485Z ##[endgroup]
+2026-10-08T16:54:44.5471384Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T16:54:44.5528031Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T16:54:44.5556399Z ##[group]Checking out the ref
+2026-10-08T16:54:44.5559383Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/21/merge
+2026-10-08T16:54:44.7643143Z Note: switching to 'refs/remotes/pull/21/merge'.
+2026-10-08T16:54:44.7643510Z 
+2026-10-08T16:54:44.7643723Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-08T16:54:44.7644453Z changes and commit them, and you can discard any commits you make in this
+2026-10-08T16:54:44.7645261Z state without impacting any branches by switching back to a branch.
+2026-10-08T16:54:44.7645634Z 
+2026-10-08T16:54:44.7645843Z If you want to create a new branch to retain commits you create, you may
+2026-10-08T16:54:44.7646547Z do so (now or later) by using -c with the switch command. Example:
+2026-10-08T16:54:44.7646796Z 
+2026-10-08T16:54:44.7646919Z   git switch -c <new-branch-name>
+2026-10-08T16:54:44.7647101Z 
+2026-10-08T16:54:44.7647222Z Or undo this operation with:
+2026-10-08T16:54:44.7647418Z 
+2026-10-08T16:54:44.7647525Z   git switch -
+2026-10-08T16:54:44.7647681Z 
+2026-10-08T16:54:44.7647891Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-08T16:54:44.7648203Z 
+2026-10-08T16:54:44.7648518Z HEAD is now at 9ed2588 Merge 90378abaaa7cbc3f4a61b58087c1ea4a9f4a8b26 into b7ee73dc5c1818112531f3667c283874fe1e578e
+2026-10-08T16:54:44.7666170Z ##[endgroup]
+2026-10-08T16:54:44.7705495Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T16:54:44.7728812Z 9ed258866a7098ec6fd5322246a46e993bf769ea
+2026-10-08T16:54:44.8012847Z ##[group]Run actions/setup-node@v4
+2026-10-08T16:54:44.8013117Z with:
+2026-10-08T16:54:44.8013339Z   node-version: 22.16.0
+2026-10-08T16:54:44.8013569Z   cache: npm
+2026-10-08T16:54:44.8013856Z   cache-dependency-path: jobs/B07-yahtzee-optimal/package-lock.json
+2026-10-08T16:54:44.8014562Z   always-auth: false
+2026-10-08T16:54:44.8014781Z   check-latest: false
+2026-10-08T16:54:44.8016730Z   token: ***
+2026-10-08T16:54:44.8016935Z ##[endgroup]
+2026-10-08T16:54:44.9091804Z Attempting to download 22.16.0...
+2026-10-08T16:54:44.9174211Z (node:2080) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T16:54:44.9175265Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T16:54:45.9527995Z Acquiring 22.16.0 - x64 from https://github.com/actions/node-versions/releases/download/22.16.0-15177438473/node-22.16.0-linux-x64.tar.gz
+2026-10-08T16:54:46.4878688Z Extracting ...
+2026-10-08T16:54:46.4974886Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/37682cdb-ccb6-4304-84be-22af139a3efe -f /home/runner/work/_temp/8324b847-552b-4517-a3b7-b131f24af65b
+2026-10-08T16:54:47.4833721Z Adding to the cache ...
+2026-10-08T16:54:50.0411329Z ##[group]Environment details
+2026-10-08T16:54:50.2332403Z node: v22.16.0
+2026-10-08T16:54:50.2344568Z npm: 10.9.2
+2026-10-08T16:54:50.2344897Z yarn: 1.22.22
+2026-10-08T16:54:50.2345607Z ##[endgroup]
+2026-10-08T16:54:50.2349552Z [command]/opt/hostedtoolcache/node/22.16.0/x64/bin/npm config get cache
+2026-10-08T16:54:50.3085284Z /home/runner/.npm
+2026-10-08T16:54:50.5190975Z Cache hit for: node-cache-Linux-x64-npm-6dafa92bf61ad34505513340e45834f82a83a77ff64c9d193b158b177cfc9fd6
+2026-10-08T16:54:50.5277222Z (node:2080) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-08T16:54:51.4991561Z Received 4254446 of 4254446 (100.0%), 5.4 MBs/sec
+2026-10-08T16:54:51.4992122Z Cache Size: ~4 MB (4254446 B)
+2026-10-08T16:54:51.5015312Z [command]/usr/bin/tar -xf /home/runner/work/_temp/25323881-3eb5-44ea-a0e3-1fb276489eb8/cache.tzst -P -C /home/runner/work/partybox-gpt-drops/partybox-gpt-drops --use-compress-program unzstd
+2026-10-08T16:54:51.5121896Z Cache restored successfully
+2026-10-08T16:54:51.5127092Z Cache restored from key: node-cache-Linux-x64-npm-6dafa92bf61ad34505513340e45834f82a83a77ff64c9d193b158b177cfc9fd6
+2026-10-08T16:54:51.5347788Z ##[group]Run npm ci
+2026-10-08T16:54:51.5348079Z [36;1mnpm ci[0m
+2026-10-08T16:54:51.5348280Z [36;1mnpm test[0m
+2026-10-08T16:54:51.5679463Z shell: /usr/bin/bash -e {0}
+2026-10-08T16:54:51.5679716Z env:
+2026-10-08T16:54:51.5679901Z   OMP_NUM_THREADS: 2
+2026-10-08T16:54:51.5680107Z ##[endgroup]
+2026-10-08T16:54:52.0579296Z 
+2026-10-08T16:54:52.0586718Z added 1 package, and audited 2 packages in 443ms
+2026-10-08T16:54:52.0587115Z 
+2026-10-08T16:54:52.0587313Z found 0 vulnerabilities
+2026-10-08T16:54:52.1632197Z 
+2026-10-08T16:54:52.1632992Z > b07-yahtzee-optimal@1.0.0 test
+2026-10-08T16:54:52.1634012Z > node run.mjs
+2026-10-08T16:54:52.1634391Z 
+2026-10-08T16:55:12.0942670Z seed 1: 5000/10000 exact midgame comparisons
+2026-10-08T16:55:15.2349269Z seed 1: 10000/10000 exact midgame comparisons
+2026-10-08T16:55:18.7136931Z seed 2: 5000/10000 exact midgame comparisons
+2026-10-08T16:55:21.8592860Z seed 2: 10000/10000 exact midgame comparisons
+2026-10-08T16:55:25.2842278Z seed 3: 5000/10000 exact midgame comparisons
+2026-10-08T16:55:28.4367158Z seed 3: 10000/10000 exact midgame comparisons
+2026-10-08T16:56:01.6665129Z {"partyboxPort":"PASS","tables":{"valid":1072896,"invalid":1024256},"suites":3,"differential":16644,"adapterGames":["official/1:255.99 (0.39 SE)","published/1:256.54 (0.55 SE)","official/2:256.36 (0.50 SE)","published/2:253.85 (-0.20 SE)","official/3:254.42 (-0.05 SE)","published/3:254.98 (0.12 SE)"],"mutantsKilled":16,"seconds":59}
+2026-10-08T16:56:01.7093348Z B07 full seed 1: begin
+2026-10-08T16:56:01.7132878Z prepared 462 holds,252 rolls,4368 weighted completions
+2026-10-08T16:56:02.0906630Z official mask=7680 computed=29964 copied=14612
+2026-10-08T16:56:02.4814511Z official mask=7168 computed=59932 copied=29348
+2026-10-08T16:56:02.8718676Z official mask=6656 computed=89900 copied=44084
+2026-10-08T16:56:03.2759027Z official mask=6144 computed=119868 copied=58820
+2026-10-08T16:56:03.4765696Z official mask=5632 computed=134852 copied=66188
+2026-10-08T16:56:03.6831288Z official mask=5120 computed=149836 copied=73556
+2026-10-08T16:56:03.8903493Z official mask=4608 computed=164820 copied=80924
+2026-10-08T16:56:04.1052795Z official mask=4096 computed=179804 copied=88292
+2026-10-08T16:56:04.4964713Z official mask=3584 computed=209772 copied=103028
+2026-10-08T16:56:04.8994957Z official mask=3072 computed=239740 copied=117764
+2026-10-08T16:56:05.3028905Z official mask=2560 computed=269708 copied=132500
+2026-10-08T16:56:05.7219465Z official mask=2048 computed=299676 copied=147236
+2026-10-08T16:56:05.9288816Z official mask=1536 computed=314660 copied=154604
+2026-10-08T16:56:06.1437746Z official mask=1024 computed=329644 copied=161972
+2026-10-08T16:56:06.3579860Z official mask=512 computed=344628 copied=169340
+2026-10-08T16:56:06.5805376Z official mask=0 computed=359612 copied=176708
+2026-10-08T16:56:06.6046436Z prepared 462 holds,252 rolls,4368 weighted completions
+2026-10-08T16:56:06.9826965Z published mask=7680 computed=29964 copied=14612
+2026-10-08T16:56:07.3735060Z published mask=7168 computed=59932 copied=29348
+2026-10-08T16:56:07.7644876Z published mask=6656 computed=89900 copied=44084
+2026-10-08T16:56:08.1700526Z published mask=6144 computed=119868 copied=58820
+2026-10-08T16:56:08.3694752Z published mask=5632 computed=134852 copied=66188
+2026-10-08T16:56:08.5767573Z published mask=5120 computed=149836 copied=73556
+2026-10-08T16:56:08.7840426Z published mask=4608 computed=164820 copied=80924
+2026-10-08T16:56:08.9996606Z published mask=4096 computed=179804 copied=88292
+2026-10-08T16:56:09.3922297Z published mask=3584 computed=209772 copied=103028
+2026-10-08T16:56:09.7962048Z published mask=3072 computed=239740 copied=117764
+2026-10-08T16:56:10.1999680Z published mask=2560 computed=269708 copied=132500
+2026-10-08T16:56:10.6202717Z published mask=2048 computed=299676 copied=147236
+2026-10-08T16:56:10.8272301Z published mask=1536 computed=314660 copied=154604
+2026-10-08T16:56:11.0419750Z published mask=1024 computed=329644 copied=161972
+2026-10-08T16:56:11.2568581Z published mask=512 computed=344628 copied=169340
+2026-10-08T16:56:11.4796426Z published mask=0 computed=359612 copied=176708
+2026-10-08T16:56:12.8058309Z {"passed":true,"assertions":16,"syntheticProtocolOnly":true,"description":"Fresh/direct/audit/reused/new record counts, exact-byte corruption, duplicate/order/partial rejection and source fingerprint mismatch. No semantic strategy success is claimed by synthetic vectors."}
+2026-10-08T16:56:16.5329975Z seed 1: 5000/50000 exact midgame comparisons
+2026-10-08T16:56:19.5005230Z seed 1: 10000/50000 exact midgame comparisons
+2026-10-08T16:56:22.5212609Z seed 1: 15000/50000 exact midgame comparisons
+2026-10-08T16:56:25.5614740Z seed 1: 20000/50000 exact midgame comparisons
+2026-10-08T16:56:28.5795651Z seed 1: 25000/50000 exact midgame comparisons
+2026-10-08T16:56:31.5791229Z seed 1: 30000/50000 exact midgame comparisons
+2026-10-08T16:56:34.5887211Z seed 1: 35000/50000 exact midgame comparisons
+2026-10-08T16:56:37.5982245Z seed 1: 40000/50000 exact midgame comparisons
+2026-10-08T16:56:40.5788140Z seed 1: 45000/50000 exact midgame comparisons
+2026-10-08T16:56:43.6268665Z seed 1: 50000/50000 exact midgame comparisons
+2026-10-08T16:56:43.6282603Z {"passed":true,"seed":1,"boundaries":{"passed":true,"assertions":1056},"fullTables":{"passed":true,"tolerance":1e-10,"modes":[{"mode":"official","statesCompared":536448,"maximumDifference":8.526512829121202e-13,"worstIndex":245800,"primaryStartingValue":254.58772873449593,"independentStartingValue":254.5877287344961},{"mode":"published","statesCompared":536448,"maximumDifference":9.379164112033322e-13,"worstIndex":368677,"primaryStartingValue":254.58960948196315,"independentStartingValue":254.58960948196366}],"actionSupersetInvariant":{"passed":true,"monotonicPairs":536448,"minimumGap":0,"maximumGap":0.15396235930569446,"worstIndex":6477,"tolerance":1e-10}},"scoring":{"passed":true,"seed":1,"orderedRolls":7776,"categories":13,"modes":2,"scoringCases":202176},"random":{"passed":true,"seed":1,"states":50000,"distinctScorecards":47533,"modes":{"official":25000,"published":25000},"rollLayers":[16667,16667,16666],"orderedHoldChecks":33333,"tolerance":1e-10,"maximumValueDifference":7.389644451905042e-13,"maximumHoldResidual":1.0103917702508625e-11,"holdAlternates":317,"categoryAlternates":0,"alternateMeaning":"Different floating evaluation orders may select different holds within the declared roundoff tolerance; every selected hold was directly evaluated with ordered chance outcomes."}}
+2026-10-08T16:56:44.5796964Z {"seed":1,"name":"M01 upper bonus","before":"card.upper+points>=63?35:0","after":"card.upper+points>=63?34:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 63,\n...\n    points: 18,\n+   upperBonus: 34,\n-   upperBonus: 35,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T16:56:44.8937816Z {"seed":1,"name":"M02 Yahtzee bonus","before":"card.yahtzeeBonus?100:0","after":"card.yahtzeeBonus?99:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Extra Yahtzee/Joker legal choices\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 5,\n...\n    upperBonus: 0,\n+   yahtzeeBonus: 99\n-   yahtzeeBonus: 100\n  }\n"}
+2026-10-08T16:56:45.1170818Z {"seed":1,"name":"M03 capped upper","before":"Math.min(63,card.upper+points)","after":"Math.min(62,card.upper+points)","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n+     upper: 62,\n-     upper: 63,\n      usedMask: 63,\n      yahtzeeBonus: false\n    },\n    points: 18,\n    upperBonus: 35,\n"}
+2026-10-08T16:56:45.2820394Z {"seed":1,"name":"M04 full house","before":"case 8:return pair&&triple?25:0","after":"case 8:return pair&&triple?24:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 24,\n-   points: 25,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T16:56:45.4337463Z {"seed":1,"name":"M05 small straight","before":"(bits&60)===60?30:0","after":"(bits&60)===60?29:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 29,\n-   points: 30,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T16:56:45.5858587Z {"seed":1,"name":"M06 large straight","before":"case 10:return bits===31||bits===62?40:0","after":"case 10:return bits===31||bits===62?39:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 39,\n-   points: 40,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T16:56:45.7189393Z {"seed":1,"name":"M07 Yahtzee","before":"case 11:return max===5?50:0","after":"case 11:return max===5?49:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n      usedMask: 2048,\n+     yahtzeeBonus: false\n-     yahtzeeBonus: true\n    },\n+   points: 49,\n-   points: 50,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T16:56:45.8502161Z {"seed":1,"name":"M08 upper face multiplier","before":"counts[category]!*(category+1)","after":"counts[category]!*(category+2)","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n+     upper: 6,\n-     upper: 3,\n      usedMask: 1,\n      yahtzeeBonus: false\n    },\n+   points: 6,\n-   points: 3,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T16:56:45.9861021Z {"seed":1,"name":"M09 three of a kind","before":"case 6:return max>=3?sum:0","after":"case 6:return max>=4?sum:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 7,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T16:56:46.1116643Z {"seed":1,"name":"M10 four of a kind","before":"case 7:return max>=4?sum:0","after":"case 7:return max>=5?sum:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 25,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T16:56:46.2432953Z {"seed":1,"name":"M11 chance","before":"case 12:return sum;","after":"case 12:return sum+1;","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 8,\n-   points: 7,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T16:56:46.3695688Z {"seed":1,"name":"M12 full house conjunction","before":"case 8:return pair&&triple","after":"case 8:return pair||triple","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 25,\n-   points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T16:56:46.5309947Z {"seed":1,"name":"M13 high small straight","before":"||(bits&60)===60","after":"||(bits&60)===61","strictCompilation":true,"runtimeKilled":true,"gate":"independent seeded objective comparison","failure":"Hold objective 1:4 {\"card\":{\"usedMask\":2153,\"upper\":42,\"yahtzeeBonus\":false,\"ruleMode\":\"published\"},\"dice\":[2,3,6,3,4],\"rollsLeft\":1,\"chosen\":{\"hold\":[3,3],\"expectedValue\":170.23970968735327},\"optimum\":{\"hold\":[3,3],\"expectedValue\":170.38275712293552}}"}
+2026-10-08T16:56:46.6500002Z {"seed":1,"name":"M14 high large straight","before":"bits===31||bits===62","after":"bits===31||bits===63","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 40,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T16:56:46.7821349Z {"seed":1,"name":"M15 category maximization","before":"value>best.expectedValue","after":"value<best.expectedValue","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"216.51959643767444 != 253.9091948744762"}
+2026-10-08T16:56:46.8980438Z {"seed":1,"name":"M16 fair die denominator","before":"values[hand]=total/6","after":"values[hand]=total/7","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n+   2,\n+   3,\n    4,\n    6\n  ]\n"}
+2026-10-08T16:56:47.0164832Z {"seed":1,"name":"M17 hold maximization","before":"values[prior]!>values[hand]!","after":"values[prior]!<values[hand]!","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n+   2,\n+   3\n-   4,\n-   6\n  ]\n"}
+2026-10-08T16:56:47.1383551Z {"seed":1,"name":"M18 hold equality ordering","before":"rank[choices[prior]!]!<rank[choices[hand]!]!","after":"rank[choices[prior]!]!>rank[choices[hand]!]!","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    1,\n    2,\n    3,\n    4,\n+   4\n  ]\n"}
+2026-10-08T16:56:47.2587553Z {"seed":1,"name":"M19 terminal hold ordering","before":"return {hold:sorted,expectedValue:categoryChoice","after":"return {hold:sorted.slice().reverse(),expectedValue:categoryChoice","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   6,\n+   4,\n+   3,\n+   2,\n    1,\n-   2,\n-   3,\n-   4,\n-   6\n  ]\n"}
+2026-10-08T16:56:47.3738374Z {"seed":1,"name":"M20 table mask","before":"const index=card.usedMask+card.upper","after":"const index=(card.usedMask===ALL?0:card.usedMask)+card.upper","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"275.087728734496 != 20.5"}
+2026-10-08T16:56:47.4942155Z {"seed":1,"name":"M21 filled legality","before":"if(!(legal&(1<<category)))","after":"if(false&&!(legal&(1<<category)))","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Extra Yahtzee/Joker legal choices\n+ actual - expected\n\n  {\n+   legal: true,\n-   legal: false,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 2050,\n-     usedMask: 2048,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"}
+2026-10-08T16:56:47.6061171Z {"seed":1,"name":"M22 Yahtzee eligibility","before":"category===11&&points===50","after":"category===11&&points===0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n      usedMask: 2048,\n+     yahtzeeBonus: true\n-     yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T16:56:47.7143670Z {"seed":1,"name":"M23 first Yahtzee forced","before":"const extra=face>=0&&Boolean(card.usedMask&YAHTZEE);","after":"const extra=face>=0;","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n\n  {\n+   legal: false,\n-   legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 0,\n-     usedMask: 1,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"}
+2026-10-08T16:56:47.8367928Z {"seed":1,"name":"M24 already earned upper bonus","before":"upperBonus:category<6&&card.upper<63","after":"upperBonus:category<6&&card.upper<=63","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 63,\n...\n    points: 18,\n+   upperBonus: 35,\n-   upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T16:56:48.0018573Z {"seed":1,"name":"M25 convention reversal","before":"extra&&card.ruleMode==='official'","after":"extra&&card.ruleMode==='published'","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Extra Yahtzee/Joker legal choices\n+ actual - expected\n\n  {\n+   legal: true,\n-   legal: false,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 2050,\n-     usedMask: 2048,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"}
+2026-10-08T16:56:50.9844391Z prepared 462 holds,252 rolls,4368 weighted completions
+2026-10-08T16:59:12.2477696Z {"suite":"paired-native-and-actual-TypeScript","passed":true,"mode":"official","seed":1,"simulation":{"passed":true,"mode":"official","seed":1,"games":1000000,"pairedResults":1000000,"holdComparisons":26000000,"categoryComparisons":13000000,"scoreTransitionComparisons":13000000,"decisionComparisons":39000000,"individualDiceDraws":125835535,"distinctVisitedComponents":164147,"referenceComputedComponents":164147,"observationRecordBytes":8572,"maximumDecisionGap":5.684341886080802e-14,"decisionTolerance":1e-10,"alternateHolds":170050,"alternateCategories":0,"expectedValue":254.58772873449593,"independentExpectedValue":254.5877287344961,"mean":254.566784,"sampleVariance":3536.8376827350266,"standardError":0.05947131815198842,"sigma":0.3521821131051014,"minimum":87,"maximum":832},"actualTypeScriptBridge":{"records":164147,"numericChecks":124095132,"policyChecks":124095132,"alternativeCategories":0,"alternativeHolds":0,"maxDifference":0,"tolerance":1e-10,"streamSha256":"48e6734300df29d56b04c0ce463308aed2bdfa1919f904d6669d1a4050c28e79","orderedComponentKeysSha256":"e210d2e980eb3a43d0b9f1064c131de943c74972e90bdca263b8b1a9c0935261","format":"paired","recordBytes":8572,"allPassed":true,"primaryNumericChecks":124095132,"primaryPolicyChecks":124095132,"primaryAlternativeCategories":0,"primaryAlternativeHolds":0,"primaryCrossImplementationAlternatives":257296,"primaryMaxDifference":8.526512829121202e-13,"directRecords":164147,"reusedRecords":0,"auditRecords":0,"distinctComponentProofs":164147,"sourceFingerprint":"a9437f3fd5c29cd846dbf63f3bdd2ffebe9e40663c696ab8cb6ba6cb3be6fe4f","directStreamSha256":"48e6734300df29d56b04c0ce463308aed2bdfa1919f904d6669d1a4050c28e79","directOrderedKeysSha256":"e210d2e980eb3a43d0b9f1064c131de943c74972e90bdca263b8b1a9c0935261","reuseRule":"Every8572-byte policy/value record exactly matches a SHA256 proof previously checked against both actual TS bodies during this npm test; first component is directly audited every stream."},"regeneratedBinarySHA256":"6e93512a9b983afa721f6a7f1c51261a3d464f469b6c89a0c21e689efd76cbe1","visitedKeysSHA256":"e210d2e980eb3a43d0b9f1064c131de943c74972e90bdca263b8b1a9c0935261"}
+2026-10-08T16:59:15.2484876Z prepared 462 holds,252 rolls,4368 weighted completions
+2026-10-08T17:01:37.4062663Z {"suite":"paired-native-and-actual-TypeScript","passed":true,"mode":"published","seed":1,"simulation":{"passed":true,"mode":"published","seed":1,"games":1000000,"pairedResults":1000000,"holdComparisons":26000000,"categoryComparisons":13000000,"scoreTransitionComparisons":13000000,"decisionComparisons":39000000,"individualDiceDraws":125849532,"distinctVisitedComponents":164218,"referenceComputedComponents":164218,"observationRecordBytes":8572,"maximumDecisionGap":5.684341886080802e-14,"decisionTolerance":1e-10,"alternateHolds":174850,"alternateCategories":0,"expectedValue":254.58960948196315,"independentExpectedValue":254.58960948196366,"mean":254.603886,"sampleVariance":3545.6734453724494,"standardError":0.05954555772996378,"sigma":0.2397579027067053,"minimum":70,"maximum":847},"actualTypeScriptBridge":{"records":164218,"numericChecks":124148808,"policyChecks":124148808,"alternativeCategories":0,"alternativeHolds":0,"maxDifference":0,"tolerance":1e-10,"streamSha256":"ab1a1571c4f2433bdb83b50b4ba69e771c3c2c0d01dff6167ff8efd95682ba43","orderedComponentKeysSha256":"332ccd390a7410f3f92e4a280604bf2d1f591be3fc626c38c5e4772f47d79ddc","format":"paired","recordBytes":8572,"allPassed":true,"primaryNumericChecks":124148808,"primaryPolicyChecks":124148808,"primaryAlternativeCategories":0,"primaryAlternativeHolds":0,"primaryCrossImplementationAlternatives":260083,"primaryMaxDifference":8.526512829121202e-13,"directRecords":164218,"reusedRecords":0,"auditRecords":0,"distinctComponentProofs":164218,"sourceFingerprint":"a9437f3fd5c29cd846dbf63f3bdd2ffebe9e40663c696ab8cb6ba6cb3be6fe4f","directStreamSha256":"ab1a1571c4f2433bdb83b50b4ba69e771c3c2c0d01dff6167ff8efd95682ba43","directOrderedKeysSha256":"332ccd390a7410f3f92e4a280604bf2d1f591be3fc626c38c5e4772f47d79ddc","reuseRule":"Every8572-byte policy/value record exactly matches a SHA256 proof previously checked against both actual TS bodies during this npm test; first component is directly audited every stream."},"regeneratedBinarySHA256":"2b2f401a4d6588decb2fbdab46eb86989d8ce6faa8f4a677b534306bb93b314c","visitedKeysSHA256":"332ccd390a7410f3f92e4a280604bf2d1f591be3fc626c38c5e4772f47d79ddc"}
+2026-10-08T17:01:37.4982176Z B07 full seed 1: PASS all required counts
+2026-10-08T17:01:37.4982674Z B07 full seed 2: begin
+2026-10-08T17:01:37.5021183Z prepared 462 holds,252 rolls,4368 weighted completions
+2026-10-08T17:01:37.8820979Z official mask=7680 computed=29964 copied=14612
+2026-10-08T17:01:38.2742741Z official mask=7168 computed=59932 copied=29348
+2026-10-08T17:01:38.6659067Z official mask=6656 computed=89900 copied=44084
+2026-10-08T17:01:39.0722918Z official mask=6144 computed=119868 copied=58820
+2026-10-08T17:01:39.2725796Z official mask=5632 computed=134852 copied=66188
+2026-10-08T17:01:39.4800958Z official mask=5120 computed=149836 copied=73556
+2026-10-08T17:01:39.6884998Z official mask=4608 computed=164820 copied=80924
+2026-10-08T17:01:39.9038829Z official mask=4096 computed=179804 copied=88292
+2026-10-08T17:01:40.2957516Z official mask=3584 computed=209772 copied=103028
+2026-10-08T17:01:40.7009222Z official mask=3072 computed=239740 copied=117764
+2026-10-08T17:01:41.1059533Z official mask=2560 computed=269708 copied=132500
+2026-10-08T17:01:41.5252526Z official mask=2048 computed=299676 copied=147236
+2026-10-08T17:01:41.7323902Z official mask=1536 computed=314660 copied=154604
+2026-10-08T17:01:41.9490918Z official mask=1024 computed=329644 copied=161972
+2026-10-08T17:01:42.1647145Z official mask=512 computed=344628 copied=169340
+2026-10-08T17:01:42.3875719Z official mask=0 computed=359612 copied=176708
+2026-10-08T17:01:42.4284558Z prepared 462 holds,252 rolls,4368 weighted completions
+2026-10-08T17:01:42.8063703Z published mask=7680 computed=29964 copied=14612
+2026-10-08T17:01:43.1976828Z published mask=7168 computed=59932 copied=29348
+2026-10-08T17:01:43.5881508Z published mask=6656 computed=89900 copied=44084
+2026-10-08T17:01:43.9933956Z published mask=6144 computed=119868 copied=58820
+2026-10-08T17:01:44.1929936Z published mask=5632 computed=134852 copied=66188
+2026-10-08T17:01:44.4004823Z published mask=5120 computed=149836 copied=73556
+2026-10-08T17:01:44.6081541Z published mask=4608 computed=164820 copied=80924
+2026-10-08T17:01:44.8233140Z published mask=4096 computed=179804 copied=88292
+2026-10-08T17:01:45.2139066Z published mask=3584 computed=209772 copied=103028
+2026-10-08T17:01:45.6177977Z published mask=3072 computed=239740 copied=117764
+2026-10-08T17:01:46.0220069Z published mask=2560 computed=269708 copied=132500
+2026-10-08T17:01:46.4405249Z published mask=2048 computed=299676 copied=147236
+2026-10-08T17:01:46.6475556Z published mask=1536 computed=314660 copied=154604
+2026-10-08T17:01:46.8630544Z published mask=1024 computed=329644 copied=161972
+2026-10-08T17:01:47.0776863Z published mask=512 computed=344628 copied=169340
+2026-10-08T17:01:47.2999454Z published mask=0 computed=359612 copied=176708
+2026-10-08T17:01:48.6172132Z {"passed":true,"assertions":16,"syntheticProtocolOnly":true,"description":"Fresh/direct/audit/reused/new record counts, exact-byte corruption, duplicate/order/partial rejection and source fingerprint mismatch. No semantic strategy success is claimed by synthetic vectors."}
+2026-10-08T17:01:52.4129596Z seed 2: 5000/50000 exact midgame comparisons
+2026-10-08T17:01:55.4454612Z seed 2: 10000/50000 exact midgame comparisons
+2026-10-08T17:01:58.5187073Z seed 2: 15000/50000 exact midgame comparisons
+2026-10-08T17:02:01.6066159Z seed 2: 20000/50000 exact midgame comparisons
+2026-10-08T17:02:04.6740907Z seed 2: 25000/50000 exact midgame comparisons
+2026-10-08T17:02:07.7258982Z seed 2: 30000/50000 exact midgame comparisons
+2026-10-08T17:02:10.8000003Z seed 2: 35000/50000 exact midgame comparisons
+2026-10-08T17:02:13.8955081Z seed 2: 40000/50000 exact midgame comparisons
+2026-10-08T17:02:16.9780615Z seed 2: 45000/50000 exact midgame comparisons
+2026-10-08T17:02:20.0604994Z seed 2: 50000/50000 exact midgame comparisons
+2026-10-08T17:02:20.0619378Z {"passed":true,"seed":2,"boundaries":{"passed":true,"assertions":1056},"fullTables":{"passed":true,"tolerance":1e-10,"modes":[{"mode":"official","statesCompared":536448,"maximumDifference":8.526512829121202e-13,"worstIndex":245800,"primaryStartingValue":254.58772873449593,"independentStartingValue":254.5877287344961},{"mode":"published","statesCompared":536448,"maximumDifference":9.379164112033322e-13,"worstIndex":368677,"primaryStartingValue":254.58960948196315,"independentStartingValue":254.58960948196366}],"actionSupersetInvariant":{"passed":true,"monotonicPairs":536448,"minimumGap":0,"maximumGap":0.15396235930569446,"worstIndex":6477,"tolerance":1e-10}},"scoring":{"passed":true,"seed":2,"orderedRolls":7776,"categories":13,"modes":2,"scoringCases":202176},"random":{"passed":true,"seed":2,"states":50000,"distinctScorecards":47496,"modes":{"official":25000,"published":25000},"rollLayers":[16667,16667,16666],"orderedHoldChecks":33333,"tolerance":1e-10,"maximumValueDifference":7.958078640513122e-13,"maximumHoldResidual":2.2396307031158358e-11,"holdAlternates":283,"categoryAlternates":0,"alternateMeaning":"Different floating evaluation orders may select different holds within the declared roundoff tolerance; every selected hold was directly evaluated with ordered chance outcomes."}}
+2026-10-08T17:02:21.0242845Z {"seed":2,"name":"M01 upper bonus","before":"card.upper+points>=63?35:0","after":"card.upper+points>=63?34:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 63,\n...\n    points: 18,\n+   upperBonus: 34,\n-   upperBonus: 35,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:02:21.3580366Z {"seed":2,"name":"M02 Yahtzee bonus","before":"card.yahtzeeBonus?100:0","after":"card.yahtzeeBonus?99:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Extra Yahtzee/Joker legal choices\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 5,\n...\n    upperBonus: 0,\n+   yahtzeeBonus: 99\n-   yahtzeeBonus: 100\n  }\n"}
+2026-10-08T17:02:21.5776935Z {"seed":2,"name":"M03 capped upper","before":"Math.min(63,card.upper+points)","after":"Math.min(62,card.upper+points)","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n+     upper: 62,\n-     upper: 63,\n      usedMask: 63,\n      yahtzeeBonus: false\n    },\n    points: 18,\n    upperBonus: 35,\n"}
+2026-10-08T17:02:21.7444984Z {"seed":2,"name":"M04 full house","before":"case 8:return pair&&triple?25:0","after":"case 8:return pair&&triple?24:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 24,\n-   points: 25,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:02:21.8988761Z {"seed":2,"name":"M05 small straight","before":"(bits&60)===60?30:0","after":"(bits&60)===60?29:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 29,\n-   points: 30,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:02:22.0468022Z {"seed":2,"name":"M06 large straight","before":"case 10:return bits===31||bits===62?40:0","after":"case 10:return bits===31||bits===62?39:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 39,\n-   points: 40,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:02:22.1777558Z {"seed":2,"name":"M07 Yahtzee","before":"case 11:return max===5?50:0","after":"case 11:return max===5?49:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n      usedMask: 2048,\n+     yahtzeeBonus: false\n-     yahtzeeBonus: true\n    },\n+   points: 49,\n-   points: 50,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:02:22.3246733Z {"seed":2,"name":"M08 upper face multiplier","before":"counts[category]!*(category+1)","after":"counts[category]!*(category+2)","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n+     upper: 6,\n-     upper: 3,\n      usedMask: 1,\n      yahtzeeBonus: false\n    },\n+   points: 6,\n-   points: 3,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:02:22.4643730Z {"seed":2,"name":"M09 three of a kind","before":"case 6:return max>=3?sum:0","after":"case 6:return max>=4?sum:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 7,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:02:22.5969950Z {"seed":2,"name":"M10 four of a kind","before":"case 7:return max>=4?sum:0","after":"case 7:return max>=5?sum:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 25,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:02:22.7204934Z {"seed":2,"name":"M11 chance","before":"case 12:return sum;","after":"case 12:return sum+1;","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 8,\n-   points: 7,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:02:22.8449830Z {"seed":2,"name":"M12 full house conjunction","before":"case 8:return pair&&triple","after":"case 8:return pair||triple","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 25,\n-   points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:02:23.0041192Z {"seed":2,"name":"M13 high small straight","before":"||(bits&60)===60","after":"||(bits&60)===61","strictCompilation":true,"runtimeKilled":true,"gate":"independent seeded objective comparison","failure":"Category objective 2:7"}
+2026-10-08T17:02:23.1240076Z {"seed":2,"name":"M14 high large straight","before":"bits===31||bits===62","after":"bits===31||bits===63","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 40,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:02:23.2474010Z {"seed":2,"name":"M15 category maximization","before":"value>best.expectedValue","after":"value<best.expectedValue","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"216.51959643767444 != 253.9091948744762"}
+2026-10-08T17:02:23.3643595Z {"seed":2,"name":"M16 fair die denominator","before":"values[hand]=total/6","after":"values[hand]=total/7","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n+   2,\n+   3,\n    4,\n    6\n  ]\n"}
+2026-10-08T17:02:23.4852258Z {"seed":2,"name":"M17 hold maximization","before":"values[prior]!>values[hand]!","after":"values[prior]!<values[hand]!","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n+   2,\n+   3\n-   4,\n-   6\n  ]\n"}
+2026-10-08T17:02:23.6134958Z {"seed":2,"name":"M18 hold equality ordering","before":"rank[choices[prior]!]!<rank[choices[hand]!]!","after":"rank[choices[prior]!]!>rank[choices[hand]!]!","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    1,\n    2,\n    3,\n    4,\n+   4\n  ]\n"}
+2026-10-08T17:02:23.7356891Z {"seed":2,"name":"M19 terminal hold ordering","before":"return {hold:sorted,expectedValue:categoryChoice","after":"return {hold:sorted.slice().reverse(),expectedValue:categoryChoice","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   6,\n+   4,\n+   3,\n+   2,\n    1,\n-   2,\n-   3,\n-   4,\n-   6\n  ]\n"}
+2026-10-08T17:02:23.8618392Z {"seed":2,"name":"M20 table mask","before":"const index=card.usedMask+card.upper","after":"const index=(card.usedMask===ALL?0:card.usedMask)+card.upper","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"275.087728734496 != 20.5"}
+2026-10-08T17:02:23.9838163Z {"seed":2,"name":"M21 filled legality","before":"if(!(legal&(1<<category)))","after":"if(false&&!(legal&(1<<category)))","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Extra Yahtzee/Joker legal choices\n+ actual - expected\n\n  {\n+   legal: true,\n-   legal: false,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 2050,\n-     usedMask: 2048,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"}
+2026-10-08T17:02:24.0992435Z {"seed":2,"name":"M22 Yahtzee eligibility","before":"category===11&&points===50","after":"category===11&&points===0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n      usedMask: 2048,\n+     yahtzeeBonus: true\n-     yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:02:24.2277750Z {"seed":2,"name":"M23 first Yahtzee forced","before":"const extra=face>=0&&Boolean(card.usedMask&YAHTZEE);","after":"const extra=face>=0;","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n\n  {\n+   legal: false,\n-   legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 0,\n-     usedMask: 1,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"}
+2026-10-08T17:02:24.3853172Z {"seed":2,"name":"M24 already earned upper bonus","before":"upperBonus:category<6&&card.upper<63","after":"upperBonus:category<6&&card.upper<=63","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 63,\n...\n    points: 18,\n+   upperBonus: 35,\n-   upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:02:24.5117516Z {"seed":2,"name":"M25 convention reversal","before":"extra&&card.ruleMode==='official'","after":"extra&&card.ruleMode==='published'","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Extra Yahtzee/Joker legal choices\n+ actual - expected\n\n  {\n+   legal: true,\n-   legal: false,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 2050,\n-     usedMask: 2048,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"}
+2026-10-08T17:02:27.5510605Z prepared 462 holds,252 rolls,4368 weighted completions
+2026-10-08T17:03:02.0137161Z {"suite":"paired-native-and-actual-TypeScript","passed":true,"mode":"official","seed":2,"simulation":{"passed":true,"mode":"official","seed":2,"games":1000000,"pairedResults":1000000,"holdComparisons":26000000,"categoryComparisons":13000000,"scoreTransitionComparisons":13000000,"decisionComparisons":39000000,"individualDiceDraws":125841696,"distinctVisitedComponents":164403,"referenceComputedComponents":164403,"observationRecordBytes":8572,"maximumDecisionGap":5.684341886080802e-14,"decisionTolerance":1e-10,"alternateHolds":170133,"alternateCategories":0,"expectedValue":254.58772873449593,"independentExpectedValue":254.5877287344961,"mean":254.579815,"sampleVariance":3554.0055035712785,"standardError":0.05961548040208414,"sigma":0.1327463008358578,"minimum":85,"maximum":845},"actualTypeScriptBridge":{"records":164403,"numericChecks":9012276,"policyChecks":9012276,"alternativeCategories":0,"alternativeHolds":0,"maxDifference":0,"tolerance":1e-10,"streamSha256":"fee26c010a7797d06798e10ec7c1cdeaf30ac8e6a9e8d8a3cca0433fd7157f09","orderedComponentKeysSha256":"28115e8c19b94d6f99016aad1f12599e1b6964959735094c4dd90455fe143669","format":"paired","recordBytes":8572,"allPassed":true,"primaryNumericChecks":9012276,"primaryPolicyChecks":9012276,"primaryAlternativeCategories":0,"primaryAlternativeHolds":0,"primaryCrossImplementationAlternatives":21490,"primaryMaxDifference":6.821210263296962e-13,"directRecords":11921,"reusedRecords":152482,"auditRecords":1,"distinctComponentProofs":176067,"sourceFingerprint":"a9437f3fd5c29cd846dbf63f3bdd2ffebe9e40663c696ab8cb6ba6cb3be6fe4f","directStreamSha256":"93e3fe46daa877cdfa674040546d58c995807be954fc18ad05cab40d7c5e01ab","directOrderedKeysSha256":"b9ada866e2c0607d4373ba9ed5dee55ccd546da84fba235b840260b2e214bf18","reuseRule":"Every8572-byte policy/value record exactly matches a SHA256 proof previously checked against both actual TS bodies during this npm test; first component is directly audited every stream."},"regeneratedBinarySHA256":"6e93512a9b983afa721f6a7f1c51261a3d464f469b6c89a0c21e689efd76cbe1","visitedKeysSHA256":"28115e8c19b94d6f99016aad1f12599e1b6964959735094c4dd90455fe143669"}
+2026-10-08T17:03:05.0608636Z prepared 462 holds,252 rolls,4368 weighted completions
+2026-10-08T17:03:40.4677005Z {"suite":"paired-native-and-actual-TypeScript","passed":true,"mode":"published","seed":2,"simulation":{"passed":true,"mode":"published","seed":2,"games":1000000,"pairedResults":1000000,"holdComparisons":26000000,"categoryComparisons":13000000,"scoreTransitionComparisons":13000000,"decisionComparisons":39000000,"individualDiceDraws":125834384,"distinctVisitedComponents":164510,"referenceComputedComponents":164510,"observationRecordBytes":8572,"maximumDecisionGap":5.684341886080802e-14,"decisionTolerance":1e-10,"alternateHolds":174469,"alternateCategories":0,"expectedValue":254.58960948196315,"independentExpectedValue":254.58960948196366,"mean":254.575741,"sampleVariance":3547.9104872114062,"standardError":0.05956433905627936,"sigma":0.2328319625951727,"minimum":89,"maximum":944},"actualTypeScriptBridge":{"records":164510,"numericChecks":8961624,"policyChecks":8961624,"alternativeCategories":0,"alternativeHolds":0,"maxDifference":0,"tolerance":1e-10,"streamSha256":"cbcf46c90428d2a046bf66990e3dd075907815d3f7f901be4ce5f229f8670a4f","orderedComponentKeysSha256":"a0db78606b9e4ce6e04cb2c73c56ecefa345f102395d8df5a3c153e6ce0af729","format":"paired","recordBytes":8572,"allPassed":true,"primaryNumericChecks":8961624,"primaryPolicyChecks":8961624,"primaryAlternativeCategories":0,"primaryAlternativeHolds":0,"primaryCrossImplementationAlternatives":21274,"primaryMaxDifference":7.958078640513122e-13,"directRecords":11854,"reusedRecords":152656,"auditRecords":1,"distinctComponentProofs":176071,"sourceFingerprint":"a9437f3fd5c29cd846dbf63f3bdd2ffebe9e40663c696ab8cb6ba6cb3be6fe4f","directStreamSha256":"c0121b9cfe49d882200e3dc344e391753b67be55688e4aa21ed8e814cada3267","directOrderedKeysSha256":"c1258a12d7e013ebcfffceec72a26a298aef8931d09bffd2052f72ed5ba6587e","reuseRule":"Every8572-byte policy/value record exactly matches a SHA256 proof previously checked against both actual TS bodies during this npm test; first component is directly audited every stream."},"regeneratedBinarySHA256":"2b2f401a4d6588decb2fbdab46eb86989d8ce6faa8f4a677b534306bb93b314c","visitedKeysSHA256":"a0db78606b9e4ce6e04cb2c73c56ecefa345f102395d8df5a3c153e6ce0af729"}
+2026-10-08T17:03:40.5447166Z B07 full seed 2: PASS all required counts
+2026-10-08T17:03:40.5447551Z B07 full seed 3: begin
+2026-10-08T17:03:40.5662462Z prepared 462 holds,252 rolls,4368 weighted completions
+2026-10-08T17:03:40.9445324Z official mask=7680 computed=29964 copied=14612
+2026-10-08T17:03:41.3359169Z official mask=7168 computed=59932 copied=29348
+2026-10-08T17:03:41.7267755Z official mask=6656 computed=89900 copied=44084
+2026-10-08T17:03:42.1319624Z official mask=6144 computed=119868 copied=58820
+2026-10-08T17:03:42.3378192Z official mask=5632 computed=134852 copied=66188
+2026-10-08T17:03:42.5454998Z official mask=5120 computed=149836 copied=73556
+2026-10-08T17:03:42.7533659Z official mask=4608 computed=164820 copied=80924
+2026-10-08T17:03:42.9693254Z official mask=4096 computed=179804 copied=88292
+2026-10-08T17:03:43.3637171Z official mask=3584 computed=209772 copied=103028
+2026-10-08T17:03:43.7713200Z official mask=3072 computed=239740 copied=117764
+2026-10-08T17:03:44.1782307Z official mask=2560 computed=269708 copied=132500
+2026-10-08T17:03:44.5993723Z official mask=2048 computed=299676 copied=147236
+2026-10-08T17:03:44.8102559Z official mask=1536 computed=314660 copied=154604
+2026-10-08T17:03:45.0287051Z official mask=1024 computed=329644 copied=161972
+2026-10-08T17:03:45.2474501Z official mask=512 computed=344628 copied=169340
+2026-10-08T17:03:45.4714484Z official mask=0 computed=359612 copied=176708
+2026-10-08T17:03:45.4956670Z prepared 462 holds,252 rolls,4368 weighted completions
+2026-10-08T17:03:45.8748180Z published mask=7680 computed=29964 copied=14612
+2026-10-08T17:03:46.2669203Z published mask=7168 computed=59932 copied=29348
+2026-10-08T17:03:46.6589851Z published mask=6656 computed=89900 copied=44084
+2026-10-08T17:03:47.0647451Z published mask=6144 computed=119868 copied=58820
+2026-10-08T17:03:47.2641979Z published mask=5632 computed=134852 copied=66188
+2026-10-08T17:03:47.4716145Z published mask=5120 computed=149836 copied=73556
+2026-10-08T17:03:47.6793889Z published mask=4608 computed=164820 copied=80924
+2026-10-08T17:03:47.8946701Z published mask=4096 computed=179804 copied=88292
+2026-10-08T17:03:48.2880147Z published mask=3584 computed=209772 copied=103028
+2026-10-08T17:03:48.6950327Z published mask=3072 computed=239740 copied=117764
+2026-10-08T17:03:49.1023033Z published mask=2560 computed=269708 copied=132500
+2026-10-08T17:03:49.5244574Z published mask=2048 computed=299676 copied=147236
+2026-10-08T17:03:49.7352248Z published mask=1536 computed=314660 copied=154604
+2026-10-08T17:03:49.9527968Z published mask=1024 computed=329644 copied=161972
+2026-10-08T17:03:50.1689612Z published mask=512 computed=344628 copied=169340
+2026-10-08T17:03:50.3920861Z published mask=0 computed=359612 copied=176708
+2026-10-08T17:03:51.7002354Z {"passed":true,"assertions":16,"syntheticProtocolOnly":true,"description":"Fresh/direct/audit/reused/new record counts, exact-byte corruption, duplicate/order/partial rejection and source fingerprint mismatch. No semantic strategy success is claimed by synthetic vectors."}
+2026-10-08T17:03:55.4863057Z seed 3: 5000/50000 exact midgame comparisons
+2026-10-08T17:03:58.5444794Z seed 3: 10000/50000 exact midgame comparisons
+2026-10-08T17:04:01.5874873Z seed 3: 15000/50000 exact midgame comparisons
+2026-10-08T17:04:04.6493801Z seed 3: 20000/50000 exact midgame comparisons
+2026-10-08T17:04:07.7433516Z seed 3: 25000/50000 exact midgame comparisons
+2026-10-08T17:04:10.8019173Z seed 3: 30000/50000 exact midgame comparisons
+2026-10-08T17:04:13.8857173Z seed 3: 35000/50000 exact midgame comparisons
+2026-10-08T17:04:16.9670265Z seed 3: 40000/50000 exact midgame comparisons
+2026-10-08T17:04:20.0086535Z seed 3: 45000/50000 exact midgame comparisons
+2026-10-08T17:04:23.1098450Z seed 3: 50000/50000 exact midgame comparisons
+2026-10-08T17:04:23.1112447Z {"passed":true,"seed":3,"boundaries":{"passed":true,"assertions":1056},"fullTables":{"passed":true,"tolerance":1e-10,"modes":[{"mode":"official","statesCompared":536448,"maximumDifference":8.526512829121202e-13,"worstIndex":245800,"primaryStartingValue":254.58772873449593,"independentStartingValue":254.5877287344961},{"mode":"published","statesCompared":536448,"maximumDifference":9.379164112033322e-13,"worstIndex":368677,"primaryStartingValue":254.58960948196315,"independentStartingValue":254.58960948196366}],"actionSupersetInvariant":{"passed":true,"monotonicPairs":536448,"minimumGap":0,"maximumGap":0.15396235930569446,"worstIndex":6477,"tolerance":1e-10}},"scoring":{"passed":true,"seed":3,"orderedRolls":7776,"categories":13,"modes":2,"scoringCases":202176},"random":{"passed":true,"seed":3,"states":50000,"distinctScorecards":47560,"modes":{"official":25000,"published":25000},"rollLayers":[16667,16667,16666],"orderedHoldChecks":33333,"tolerance":1e-10,"maximumValueDifference":7.673861546209082e-13,"maximumHoldResidual":1.3855583347321954e-11,"holdAlternates":307,"categoryAlternates":0,"alternateMeaning":"Different floating evaluation orders may select different holds within the declared roundoff tolerance; every selected hold was directly evaluated with ordered chance outcomes."}}
+2026-10-08T17:04:24.0573230Z {"seed":3,"name":"M01 upper bonus","before":"card.upper+points>=63?35:0","after":"card.upper+points>=63?34:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 63,\n...\n    points: 18,\n+   upperBonus: 34,\n-   upperBonus: 35,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:04:24.3807403Z {"seed":3,"name":"M02 Yahtzee bonus","before":"card.yahtzeeBonus?100:0","after":"card.yahtzeeBonus?99:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Extra Yahtzee/Joker legal choices\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 5,\n...\n    upperBonus: 0,\n+   yahtzeeBonus: 99\n-   yahtzeeBonus: 100\n  }\n"}
+2026-10-08T17:04:24.5987770Z {"seed":3,"name":"M03 capped upper","before":"Math.min(63,card.upper+points)","after":"Math.min(62,card.upper+points)","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n+     upper: 62,\n-     upper: 63,\n      usedMask: 63,\n      yahtzeeBonus: false\n    },\n    points: 18,\n    upperBonus: 35,\n"}
+2026-10-08T17:04:24.7632303Z {"seed":3,"name":"M04 full house","before":"case 8:return pair&&triple?25:0","after":"case 8:return pair&&triple?24:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 24,\n-   points: 25,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:04:24.9244278Z {"seed":3,"name":"M05 small straight","before":"(bits&60)===60?30:0","after":"(bits&60)===60?29:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 29,\n-   points: 30,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:04:25.0679410Z {"seed":3,"name":"M06 large straight","before":"case 10:return bits===31||bits===62?40:0","after":"case 10:return bits===31||bits===62?39:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 39,\n-   points: 40,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:04:25.2026621Z {"seed":3,"name":"M07 Yahtzee","before":"case 11:return max===5?50:0","after":"case 11:return max===5?49:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n      usedMask: 2048,\n+     yahtzeeBonus: false\n-     yahtzeeBonus: true\n    },\n+   points: 49,\n-   points: 50,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:04:25.3440489Z {"seed":3,"name":"M08 upper face multiplier","before":"counts[category]!*(category+1)","after":"counts[category]!*(category+2)","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n+     upper: 6,\n-     upper: 3,\n      usedMask: 1,\n      yahtzeeBonus: false\n    },\n+   points: 6,\n-   points: 3,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:04:25.4848686Z {"seed":3,"name":"M09 three of a kind","before":"case 6:return max>=3?sum:0","after":"case 6:return max>=4?sum:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 7,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:04:25.6233748Z {"seed":3,"name":"M10 four of a kind","before":"case 7:return max>=4?sum:0","after":"case 7:return max>=5?sum:0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 25,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:04:25.7513623Z {"seed":3,"name":"M11 chance","before":"case 12:return sum;","after":"case 12:return sum+1;","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 8,\n-   points: 7,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:04:25.8768052Z {"seed":3,"name":"M12 full house conjunction","before":"case 8:return pair&&triple","after":"case 8:return pair||triple","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 25,\n-   points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:04:26.0210197Z {"seed":3,"name":"M13 high small straight","before":"||(bits&60)===60","after":"||(bits&60)===61","strictCompilation":true,"runtimeKilled":true,"gate":"independent seeded objective comparison","failure":"Hold objective 3:2 {\"card\":{\"usedMask\":7478,\"upper\":11,\"yahtzeeBonus\":true,\"ruleMode\":\"published\"},\"dice\":[2,2,4,2,3],\"rollsLeft\":2,\"chosen\":{\"hold\":[2,2,2],\"expectedValue\":92.95815502719417},\"optimum\":{\"hold\":[2,2,2],\"expectedValue\":92.99273679510392}}"}
+2026-10-08T17:04:26.1382467Z {"seed":3,"name":"M14 high large straight","before":"bits===31||bits===62","after":"bits===31||bits===63","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 40,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:04:26.2644168Z {"seed":3,"name":"M15 category maximization","before":"value>best.expectedValue","after":"value<best.expectedValue","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"216.51959643767444 != 253.9091948744762"}
+2026-10-08T17:04:26.3868900Z {"seed":3,"name":"M16 fair die denominator","before":"values[hand]=total/6","after":"values[hand]=total/7","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n+   2,\n+   3,\n    4,\n    6\n  ]\n"}
+2026-10-08T17:04:26.5101832Z {"seed":3,"name":"M17 hold maximization","before":"values[prior]!>values[hand]!","after":"values[prior]!<values[hand]!","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n+   2,\n+   3\n-   4,\n-   6\n  ]\n"}
+2026-10-08T17:04:26.6348975Z {"seed":3,"name":"M18 hold equality ordering","before":"rank[choices[prior]!]!<rank[choices[hand]!]!","after":"rank[choices[prior]!]!>rank[choices[hand]!]!","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    1,\n    2,\n    3,\n    4,\n+   4\n  ]\n"}
+2026-10-08T17:04:26.7547261Z {"seed":3,"name":"M19 terminal hold ordering","before":"return {hold:sorted,expectedValue:categoryChoice","after":"return {hold:sorted.slice().reverse(),expectedValue:categoryChoice","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   6,\n+   4,\n+   3,\n+   2,\n    1,\n-   2,\n-   3,\n-   4,\n-   6\n  ]\n"}
+2026-10-08T17:04:26.8754680Z {"seed":3,"name":"M20 table mask","before":"const index=card.usedMask+card.upper","after":"const index=(card.usedMask===ALL?0:card.usedMask)+card.upper","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"275.087728734496 != 20.5"}
+2026-10-08T17:04:26.9937196Z {"seed":3,"name":"M21 filled legality","before":"if(!(legal&(1<<category)))","after":"if(false&&!(legal&(1<<category)))","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Extra Yahtzee/Joker legal choices\n+ actual - expected\n\n  {\n+   legal: true,\n-   legal: false,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 2050,\n-     usedMask: 2048,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"}
+2026-10-08T17:04:27.1122721Z {"seed":3,"name":"M22 Yahtzee eligibility","before":"category===11&&points===50","after":"category===11&&points===0","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n      usedMask: 2048,\n+     yahtzeeBonus: true\n-     yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:04:27.2388569Z {"seed":3,"name":"M23 first Yahtzee forced","before":"const extra=face>=0&&Boolean(card.usedMask&YAHTZEE);","after":"const extra=face>=0;","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Manual scoring and transition\n+ actual - expected\n\n  {\n+   legal: false,\n-   legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 0,\n-     usedMask: 1,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"}
+2026-10-08T17:04:27.3926510Z {"seed":3,"name":"M24 already earned upper bonus","before":"upperBonus:category<6&&card.upper<63","after":"upperBonus:category<6&&card.upper<=63","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 63,\n...\n    points: 18,\n+   upperBonus: 35,\n-   upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"}
+2026-10-08T17:04:27.5248898Z {"seed":3,"name":"M25 convention reversal","before":"extra&&card.ruleMode==='official'","after":"extra&&card.ruleMode==='published'","strictCompilation":true,"runtimeKilled":true,"gate":"manual, independent boundary and contract checks","failure":"Extra Yahtzee/Joker legal choices\n+ actual - expected\n\n  {\n+   legal: true,\n-   legal: false,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 2050,\n-     usedMask: 2048,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"}
+2026-10-08T17:04:30.5856988Z prepared 462 holds,252 rolls,4368 weighted completions
+2026-10-08T17:05:01.4233480Z {"suite":"paired-native-and-actual-TypeScript","passed":true,"mode":"official","seed":3,"simulation":{"passed":true,"mode":"official","seed":3,"games":1000000,"pairedResults":1000000,"holdComparisons":26000000,"categoryComparisons":13000000,"scoreTransitionComparisons":13000000,"decisionComparisons":39000000,"individualDiceDraws":125829535,"distinctVisitedComponents":164364,"referenceComputedComponents":164364,"observationRecordBytes":8572,"maximumDecisionGap":5.684341886080802e-14,"decisionTolerance":1e-10,"alternateHolds":170653,"alternateCategories":0,"expectedValue":254.58772873449593,"independentExpectedValue":254.5877287344961,"mean":254.577033,"sampleVariance":3550.8771807940916,"standardError":0.059589237122101936,"sigma":0.17949104590832957,"minimum":81,"maximum":925},"actualTypeScriptBridge":{"records":164364,"numericChecks":4601772,"policyChecks":4601772,"alternativeCategories":0,"alternativeHolds":0,"maxDifference":0,"tolerance":1e-10,"streamSha256":"faf42ce98f8f6fb650d10458ecf4ba131b41d53e462f7db8028a5d9a1abc6ad4","orderedComponentKeysSha256":"acf6c9017bec03b401a5bd4b75e56b3c2e728d2c68ebecb208f8ed607423b962","format":"paired","recordBytes":8572,"allPassed":true,"primaryNumericChecks":4601772,"primaryPolicyChecks":4601772,"primaryAlternativeCategories":0,"primaryAlternativeHolds":0,"primaryCrossImplementationAlternatives":11149,"primaryMaxDifference":6.821210263296962e-13,"directRecords":6087,"reusedRecords":158277,"auditRecords":1,"distinctComponentProofs":182153,"sourceFingerprint":"a9437f3fd5c29cd846dbf63f3bdd2ffebe9e40663c696ab8cb6ba6cb3be6fe4f","directStreamSha256":"86cae139cbe6c4934d10562a9c5c9c90299fed8c43a4898574d72f9007612e20","directOrderedKeysSha256":"1bdf171162f38dbf9d89a4968050ef3b68dfc5419e63330b10060b56acba7895","reuseRule":"Every8572-byte policy/value record exactly matches a SHA256 proof previously checked against both actual TS bodies during this npm test; first component is directly audited every stream."},"regeneratedBinarySHA256":"6e93512a9b983afa721f6a7f1c51261a3d464f469b6c89a0c21e689efd76cbe1","visitedKeysSHA256":"acf6c9017bec03b401a5bd4b75e56b3c2e728d2c68ebecb208f8ed607423b962"}
+2026-10-08T17:05:04.4551014Z prepared 462 holds,252 rolls,4368 weighted completions
+2026-10-08T17:05:33.6749494Z {"suite":"paired-native-and-actual-TypeScript","passed":true,"mode":"published","seed":3,"simulation":{"passed":true,"mode":"published","seed":3,"games":1000000,"pairedResults":1000000,"holdComparisons":26000000,"categoryComparisons":13000000,"scoreTransitionComparisons":13000000,"decisionComparisons":39000000,"individualDiceDraws":125836799,"distinctVisitedComponents":164241,"referenceComputedComponents":164241,"observationRecordBytes":8572,"maximumDecisionGap":5.684341886080802e-14,"decisionTolerance":1e-10,"alternateHolds":175300,"alternateCategories":0,"expectedValue":254.58960948196315,"independentExpectedValue":254.58960948196366,"mean":254.485353,"sampleVariance":3534.569240034631,"standardError":0.059452243355777847,"sigma":1.75361729143255,"minimum":91,"maximum":835},"actualTypeScriptBridge":{"records":164241,"numericChecks":4619916,"policyChecks":4619916,"alternativeCategories":0,"alternativeHolds":0,"maxDifference":0,"tolerance":1e-10,"streamSha256":"d79d21605f8a06410e848c5f2fb676ee2dc9ad9724d55fcb5d9e49ed76064dc4","orderedComponentKeysSha256":"0c95c0e7054f38dfdae73d87180cd118931df7b0c9f6c3fbee3a0dfa61abf0c7","format":"paired","recordBytes":8572,"allPassed":true,"primaryNumericChecks":4619916,"primaryPolicyChecks":4619916,"primaryAlternativeCategories":0,"primaryAlternativeHolds":0,"primaryCrossImplementationAlternatives":11418,"primaryMaxDifference":7.958078640513122e-13,"directRecords":6111,"reusedRecords":158130,"auditRecords":1,"distinctComponentProofs":182181,"sourceFingerprint":"a9437f3fd5c29cd846dbf63f3bdd2ffebe9e40663c696ab8cb6ba6cb3be6fe4f","directStreamSha256":"127ac10d02192d07d4c96af24cdc3912ed138a1bab2badaed2336ad50df04f7e","directOrderedKeysSha256":"247e027d6f43f4a9813b8a5d211833f3b91c4f2db38badff0344efce51d72d4a","reuseRule":"Every8572-byte policy/value record exactly matches a SHA256 proof previously checked against both actual TS bodies during this npm test; first component is directly audited every stream."},"regeneratedBinarySHA256":"2b2f401a4d6588decb2fbdab46eb86989d8ce6faa8f4a677b534306bb93b314c","visitedKeysSHA256":"0c95c0e7054f38dfdae73d87180cd118931df7b0c9f6c3fbee3a0dfa61abf0c7"}
+2026-10-08T17:05:33.7517434Z B07 full seed 3: PASS all required counts
+2026-10-08T17:05:33.7738895Z {"passed":true,"totals":{"midgameStates":150000,"scoringCases":606528,"strictCompiledMutants":75,"runtimeKilledMutants":75,"fullPairedGames":6000000,"nativeDecisionComparisons":234000000,"nativeScoringTransitionComparisons":78000000,"visitedComponentVectors":985883,"directActualTypeScriptComponents":364338,"reusedVerifiedComponentVectors":621545},"runtime":{"node":"v22.16.0","typescript":"5.8.3","cpp":"g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"}}
+2026-10-08T17:05:33.7913343Z ##[group]Run actions/upload-artifact@v4
+2026-10-08T17:05:33.7913577Z with:
+2026-10-08T17:05:33.7913750Z   name: B07-full-verification-reports
+2026-10-08T17:05:33.7913980Z   path: jobs/B07-yahtzee-optimal/reports/
+2026-10-08T17:05:33.7914433Z   if-no-files-found: warn
+2026-10-08T17:05:33.7914626Z   compression-level: 6
+2026-10-08T17:05:33.7914803Z   overwrite: false
+2026-10-08T17:05:33.7914974Z   include-hidden-files: false
+2026-10-08T17:05:33.7915189Z ##[endgroup]
+2026-10-08T17:05:33.9221928Z (node:2549) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T17:05:33.9222953Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T17:05:33.9342314Z With the provided path, there will be 51 files uploaded
+2026-10-08T17:05:33.9346504Z Artifact name is valid!
+2026-10-08T17:05:33.9347205Z Root directory input is valid!
+2026-10-08T17:05:34.2793301Z Beginning upload of artifact content to blob storage
+2026-10-08T17:05:34.4290695Z (node:2549) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-08T17:05:35.0271381Z Uploaded bytes 2598244
+2026-10-08T17:05:35.0868651Z Finished uploading artifact content to blob storage!
+2026-10-08T17:05:35.0869469Z SHA256 digest of uploaded artifact zip is a18f5c80b16c95ffac5a85d5a886bf1e1dbfccb77edc18ae071071241cf290e5
+2026-10-08T17:05:35.0870242Z Finalizing artifact upload
+2026-10-08T17:05:35.3663890Z Artifact B07-full-verification-reports.zip successfully finalized. Artifact ID 11565573928
+2026-10-08T17:05:35.3665033Z Artifact B07-full-verification-reports has been successfully uploaded! Final size is 2598244 bytes. Artifact ID is 11565573928
+2026-10-08T17:05:35.3669606Z Artifact download URL: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37812451169/artifacts/11565573928
+2026-10-08T17:05:35.3830243Z Post job cleanup.
+2026-10-08T17:05:35.4808627Z (node:2562) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T17:05:35.4809298Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T17:05:35.4811675Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-6dafa92bf61ad34505513340e45834f82a83a77ff64c9d193b158b177cfc9fd6, not saving cache.
+2026-10-08T17:05:35.4934305Z Post job cleanup.
+2026-10-08T17:05:35.5631322Z [command]/usr/bin/git version
+2026-10-08T17:05:35.5666231Z git version 2.55.0
+2026-10-08T17:05:35.5696947Z Temporarily overriding HOME='/home/runner/work/_temp/78e8c051-ea5a-420b-9bca-672dad217293' before making global git config changes
+2026-10-08T17:05:35.5698036Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T17:05:35.5701801Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-08T17:05:35.5735402Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T17:05:35.5765297Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T17:05:35.6029109Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T17:05:35.6057663Z http.https://github.com/.extraheader
+2026-10-08T17:05:35.6069740Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-08T17:05:35.6106926Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T17:05:35.6365536Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T17:05:35.6399896Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T17:05:35.6737941Z Cleaning up orphan processes
+2026-10-08T17:05:35.7009130Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

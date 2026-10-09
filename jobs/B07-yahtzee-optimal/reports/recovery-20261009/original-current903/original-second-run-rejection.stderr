@@ -1,0 +1,23 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Committed manifest jobs/B07-yahtzee-optimal/reports/summary.json
++ actual - expected
+
++ '032cdf402474b5eecba2f83f477c14cef87c626991db5a9cc4e9cf489d5f25dd'
+- '2144b1f1967e97d3055f7bfecadc744d3a85f17ac916b52ba00675cc497dea52'
+
+    at file:///tmp/gpt-drops-B07-audit-20261009/jobs/B07-yahtzee-optimal/run.mjs:30:97
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: '032cdf402474b5eecba2f83f477c14cef87c626991db5a9cc4e9cf489d5f25dd',
+  expected: '2144b1f1967e97d3055f7bfecadc744d3a85f17ac916b52ba00675cc497dea52',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

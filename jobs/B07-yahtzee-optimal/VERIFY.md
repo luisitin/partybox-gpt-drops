@@ -147,3 +147,44 @@ Failure found and fixed in this pass: the first `test-port.mjs` run after the ea
 Corrections to the record (INTEGRATION.md, "This pass (continued)" lists each one): the roll-log files, the `bot.ts` header and signature, the ADR number, the Joker default, and removal of two unsupported figures (solo averages; `stuck×76`).
 
 Still not run here: `pnpm verify` (the whole gate, including fuzz replay, build, drift and i18n) on the port. CI on the pushed head is recorded in the PR, not in this file.
+
+## Verification audit 2026-10-09 — current source pending hosted proof
+
+The original903 delivery was genuinely accepted before this repair: full
+run37812451169/job113432500423, official artifact11565573928,2598244 bytes,
+SHA256 a18f5c80b16c95ffac5a85d5a886bf1e1dbfccb77edc18ae071071241cf290e5.
+The complete84070-byte native log SHA256 is
+8d8089eeb16d1d0b6edafdeec8fc61a76571ed77cabf1d46285e94f55d10f0cb.
+All153 original Git blobs,148 manifest entries,96 immutable source hashes,
+51 safe ZIP members and89 native JSON records matched in full. Its old
+75 actual mutants,150000 midgames,606528 scorers,6M games,234M decisions,
+78M transitions and16 port mutants passed. This is historical903 proof only.
+
+Actual original defect replay: replacing only the original tracked summary
+with the genuine original hosted summary makes `node run.mjs` exit1 at the
+original `Committed manifest .../reports/summary.json` assertion. Every original
+source blob was restored. The raw failure and receipt remain in
+reports/recovery-20261009/original-current903/.
+
+Current additions (no reduction or replacement of original checks):
+
+| Check | Cases | Command | Current observation |
+|---|---:|---|---|
+| Report-session success/failure restoration |47 assertions,2 successes,4 failures| `node report-session-selfcheck.mjs` |PASS: actual child exit7, SIGTERM143, thrown exception and ENOENT retain fresh outputs and restore originals|
+| Standalone primary regeneration |2 modes x3 seeds,536448 reachable states/mode| `npm test`, `.verification/generator --mode MODE --seed SEED --output PATH` |Full changed-source hosted proof PENDING at publication; entire SHA256 must equal shipped binary|
+| Full original workloads and original seals |all original counts and seeds1/2/3| `npm ci && npm test` |Full changed-source hosted proof PENDING at publication|
+| Final delivery manifest and report originals |every current manifest entry| `node run.mjs` after child naturally closes|Full changed-source hosted proof PENDING at publication|
+
+Fresh runtime reports are exported by the original single workflow from
+.verification/full-run-reports/latest/ rather than from restored historical
+inputs. report-session.json binds original/output/restored hashes and actual
+child status; passed=false is retained for failures. All invocation archives
+and original-input backups survive repeated runs. Historical tracked reports,
+all original independent/primary/adapter seals and all original workload gates
+remain checked. The workflow retains its original read-only permissions,
+Ubuntu runner, pinned Actions majors, original Node22.16.0 and30-minute cap.
+
+UNVERIFIED: changed-head hosted whole acceptance and final KEEP GOING are still
+pending at this publication. All prior documented rule conflict, numerical
+limits and private-product whole pnpm verify/port risks remain. Transport
+selfchecks prove restoration mechanics, not Yahtzee semantic outcomes.

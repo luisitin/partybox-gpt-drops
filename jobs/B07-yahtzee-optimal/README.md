@@ -67,3 +67,20 @@ After any file change, regenerate `SHA256SUMS.txt`. Its format is `<sha256>  <re
 ## How it was proven
 
 VERIFY.md has the counts. Two solvers, written separately, agree on all 1,072,896 valid states (worst gap 9.4e-13). Three seeds of exhaustive scoring checks, 150,000 mid-game states and 75 mutants all pass. Six million complete paired games stay within 4 standard errors of the EV.
+
+## Verification audit 2026-10-09
+
+The isolated followup preserves canonical903 and Ready PR21. It fixes two
+actual verification defects: full tests now restore every SHA-sealed tracked
+report after success or failure, while fresh reports are retained under
+`.verification/full-run-reports/latest/`; the shipped standalone primary
+`generator.cpp` is executed for both complete modes in every seed and its
+entire binary must match the shipped table. The original paired simulator,
+independent generator, six million games, all three seeds,75 mutants and every
+original delivery/seal gate still run. `npm test` remains the single full command.
+
+Report-session controls pass47 assertions, including actual child failure and
+SIGTERM restoration. Original903's complete hosted proof is retained under
+`reports/recovery-20261009/original-current903/`. Full hosted proof for this
+changed followup is pending at publication; see NEXT.md. No private PartyBox
+port, literal official254.5896 compliance or merge is claimed.
