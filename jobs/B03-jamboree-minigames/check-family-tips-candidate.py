@@ -1,7 +1,7 @@
 """Validate an unadopted research packet against its exact accepted source."""
 from pathlib import Path
 from datetime import datetime
-import copy, hashlib, json
+import copy, hashlib, json, importlib.util
 
 ROOT = Path(__file__).resolve().parent
 DATA = 'dff256225fedebc602e2ab9d7c486e3c187344b7643814dfb7126f3b9adca194'
@@ -55,6 +55,10 @@ def validate(proof, data, sources, reopens):
  return checks
 def run():
  proof = read('reports/family-tips-candidate.json'); data = read('minigames.json'); sources = read('catalogue-sources.json'); reopens = [read('reports/source-reopens-pass' + p + '.json') for p in 'AB']
+ if (ROOT / 'reports/family-tips-recovery.json').exists():
+  spec = importlib.util.spec_from_file_location('b03_tips_candidate_exact_history', ROOT / 'check-family-tips-recovery.py')
+  tips = importlib.util.module_from_spec(spec); spec.loader.exec_module(tips)
+  data, sources, reopens = tips.historical_view(data, sources, reopens)
  count = validate(proof, data, sources, reopens)
  mutations = [lambda p: p.__setitem__('status', 'ADOPTED'), lambda p: p['source'].__setitem__('publisherLineage', 'mariowiki'), lambda p: p['source'].__setitem__('uniqueQuotedWords', 74), lambda p: p.__setitem__('baselineDataSha256', '0' * 64), lambda p: p['captures'][0].__setitem__('curlExitCode', 1), lambda p: p['candidates'][0].__setitem__('status', 'corroborated')]
  for mutate in mutations:

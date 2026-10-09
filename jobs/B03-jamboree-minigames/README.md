@@ -2,7 +2,7 @@
 
 **What this is:** a research catalogue of 132 minigames (112 base games, 20 Jamboree TV additions) with name, category, format, time limit, controls, win, score, tie and reward rules, a two-sentence summary, and a 1-5 phone-touch fit. Data is JSON and CSV, checked by a JSON Schema and an offline verifier.
 **How to use it:** read `DESIGN-DIGEST.md` for the design reading, `INTEGRATION.md` for what PartyBox does with it. Query `minigames.json` (or `minigames.csv`, see below). Do not ship names, art or strings.
-**Status:** reference only. Draft research, strict gate **NOT_MET**: 299 of 1,320 narrow fact fields corroborated, 1,021 still open, 0 of 132 rows complete. Nothing here is Nintendo-verified gameplay.
+**Status:** reference only. Draft research, strict gate **NOT_MET**: 303 of 1,320 narrow fact fields corroborated, 1,017 still open, 0 of 132 rows complete. Nothing here is Nintendo-verified gameplay.
 
 ## Quick start (from the repo root)
 
@@ -42,7 +42,7 @@ The verifier enforces them (`Narrow summary status follows...`, `Quote-support r
 
 - **Product** (what a reader uses): `minigames.json`, `minigames.csv`, `minigames.schema.json`, `DESIGN-DIGEST.md`, `INTEGRATION.md`.
 - **Checks** (run by the verifier): `verify.py`, `quote-support-check.py`, `reports/quote-support-check.json`, `reports/research-gaps.json` (the exact open ledger), `catalogue-second-pass.json` (per-row fingerprints).
-- **Evidence** (proves the rows, not needed by a port): `catalogue-sources.json` and `SOURCES.md` (146 URLs, 1,900 clips), `catalogue-conflicts.json` and `CONFLICTS.md`, the `reports/source-reopens-*` captures, the earlier gameplay leads and the legacy helpers. `HISTORICAL-INDEX-NOTES.md` explains the preserved history.
+- **Evidence** (proves the rows, not needed by a port): `catalogue-sources.json` and `SOURCES.md` (147 URLs, 1,938 clips), `catalogue-conflicts.json` and `CONFLICTS.md`, the `reports/source-reopens-*` captures, the earlier gameplay leads and the legacy helpers. `HISTORICAL-INDEX-NOTES.md` explains the preserved history.
 - **Process**: `LOOP.md`, `NEXT.md`, `VERIFY.md`, `ASSUMPTIONS.md`, `SHA256SUMS.txt` (every file except itself).
 
 ## Known limits
@@ -82,7 +82,7 @@ Granite Getaway and Defuse or Lose now have narrower two-sentence common-action 
 
 Three new Exa searches produced 16 inspected result entries and 15 unique URLs; their full result ledger stays private and a concise decision ledger is in `reports/remaining-source-research.json`. The potentially useful actual Jamboree GameFAQs thread returned HTTP400 Request Blocked on both native TLS-verified attempts; no forum claim is adopted. Prize Drop's authored Tip cell is empty. The exact second independent full 132-name wiki roster gate still remains unmet, so original PR20 stays draft.
 
-## Current eleven-action recovery 2026-10-09
+## Historical eleven-action recovery 2026-10-09
 
 Eleven additional common-action summaries now have independent originally authored Korean Tip support and complete freshly reopened Wiki contexts: Lumber Tumble, Camera-Ready, Hammer It Home, Stamp Out!, Pickin' Produce, Spike's Gambit, Lane Change, Coin Conveyor, Which Door Has More?, Burning Bridges and The Floor Is Falling. Coverage is **299/1,320 corroborated /1,021 open /zero complete rows**. Gameplay is **31 corroborated /101 single-source**; categories remain **104/28**. All 121 other summaries, all unrelated row values/evidence and every old quote remain intact.
 
@@ -91,4 +91,17 @@ The actual 24 native HTTPS requests naturally CLOSED **01:15:27.558651 UTC**, wi
 `reports/namu-batch-recovery.json` and its checker bind the exact accepted dd1e54f 132-row/146-source/A+B baseline, preserve all 1,900 earlier quote classifications and reject ten malformed source/scope/history fixtures. The old authored-tip/category/common-action checks still run on exact-hash validated historical views. The complete initial content verifier passes **79 suites /31,337 cases**. Strict research, the independent exact full second-wiki roster and original KEEP GOING completion remain unmet; PR20 stays draft.
 
 
-Original-author tips research checkpoint: 14 actual native HTTPS/TLS A/B requests naturally CLOSED 2026-10-09 01:47:48.610964 UTC. Four candidates are explicitly UNADOPTED in reports/family-tips-candidate.json. Every original product value, evidence status and source/quote/A+B history remains exactly accepted76880fa; current299/1021/zero,31gameplay/101single stays unchanged. The separate Gaming Chickadee tips-and-tricks page has73 bounded original words; the old guide200 and Namu195 histories remain intact. Big-Top/Burger are excluded for insufficient shared-summary scope. Six negative controls reject premature promotion or altered provenance. Actual current full CI/artifact acceptance is required after this push. No strict KEEP GOING/completion claim.
+Historical original-author tips research checkpoint: 14 actual native HTTPS/TLS A/B requests naturally CLOSED 2026-10-09 01:47:48.610964 UTC. Four candidates are explicitly UNADOPTED in reports/family-tips-candidate.json. Every original product value, evidence status and source/quote/A+B history remains exactly accepted76880fa; current299/1021/zero,31gameplay/101single stays unchanged. The separate Gaming Chickadee tips-and-tricks page has73 bounded original words; the old guide200 and Namu195 histories remain intact. Big-Top/Burger are excluded for insufficient shared-summary scope. Six negative controls reject premature promotion or altered provenance. Actual current full CI/artifact acceptance is required after this push. No strict KEEP GOING/completion claim.
+
+## Current four-action recovery — 2026-10-09
+
+The exact accepted parent is 9e43a19e256538d57b8334ffdafd5d656804c712 (normal push CLOSED 02:02:10.663895 UTC; complete exact-head native/official artifact reader CLOSED 02:03:48.955081). Its historical receipt is reports/hosted-ci-9e43a19-artifact.json. This checkpoint adds four independently corroborated common-action summaries: Hot Cross Blocks, Blame It on the Crane, Match! That! Item! and Short-Stack Chef. Current coverage is **303/1,320 narrow fields corroborated /1,017 open /zero of 132 whole rows complete**; gameplay **35 corroborated /97 single-source**, categories **104/28**.
+
+Gaming Chickadee's original article, Super Mario Party Jamboree – Tips and Tricks, published 2024-11-05, is https://familygamesquad.com/super-mario-party-jamboree-tips-and-tricks/. Four exact clips total **73/200 unique quoted words**. Separate pages of Family Game Squad share one publisher lineage. Complete named-game paragraphs and adjacent advice were reread in both retained full bodies; corresponding full Wiki narratives provide the other independent publisher. Every exact control binding, timer, scoring parameter, tie, board reward, category, unrelated evidence field and whole-row confidence remains unchanged. All128 other summaries remain byte-semantically equal to the accepted parent.
+
+The actual 14 native HTTPS/TLS requests naturally CLOSED 01:47:48.610964 UTC; adoption invents **zero** new HTTP requests. Ten responses supply the five registered source pairs; four excluded research-lead responses remain retained. The writer naturally CLOSED 02:17:50.110958 UTC. Registry: **147 URLs /1,938 short clips /3,882 recorded A+B recoveries**, with150 current/historical source records per pass. The old Family Game Squad guide remains200/200 and Namu remains195/200; every1931 old clip and classification is preserved. The historical unadopted candidate packet remains unchanged and is checked against a validated restored parent view; it is not the current product status.
+
+The new checker binds all four full-context hashes and actual transport receipts, restores exact132-row/146-source/full A+B accepted-parent hashes before supplying any historical view, and rejects ten malformed scope/source/history cases after2600 exact comparisons. The old candidate82-comparison/six-negative-control suites still run. The first full verifier correctly rejected stale closed-schema array maxima (146/149); its complete failed log/controller are retained. The three explicit maxima now exactly allow147 registered sources and150 historical reopen records; object schemas, baseline gates and all negative controls remain active.
+
+Actual full controller naturally CLOSED **2026-10-09 02:24:20.539498 UTC**: content **83 suites /34,075 cases**, EXIT0; integrity **84 suites /34,171 cases /all96 manifest files**, EXIT0; deliberate strict same84/34,171, EXIT1 with **NOT_MET303/zero**. Seeds n/a. Exact commands are the Quick start verifier commands (content additionally uses --report jobs/B03-jamboree-minigames/reports/final-validation.json). Only delivery documentation changes afterward; every regenerated manifest entry and immutable staged Git byte is verified before the normal canonical push. Early bound02:27:10.663895 UTC; hard02:32:10.663895 UTC. Actual push/CI/artifact times are recorded after observation in original draft PR20. Strict research, exact independent two-wiki full roster and original KEEP GOING completion remain unmet.
+

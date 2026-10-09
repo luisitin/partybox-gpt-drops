@@ -166,7 +166,7 @@ def run(args):
         spec=importlib.util.spec_from_file_location('quote_support_check',ROOT/'quote-support-check.py');qsc=importlib.util.module_from_spec(spec);spec.loader.exec_module(qsc)
         quotes=qsc.quote_index(sources)
         for r in rows:require(r['fieldEvidence']['gameplay']['status']==qsc.expected_gameplay_status(r['fieldEvidence']['gameplay']['quoteIds'],quotes),'Gameplay status breaks the two-lineage substantive-quote rule: '+r['id'])
-        require(sum(r['fieldEvidence']['gameplay']['status']=='corroborated' for r in rows)==31,'Corroborated summaries differ from the verified common-action rule')
+        require(sum(r['fieldEvidence']['gameplay']['status']=='corroborated' for r in rows)==35,'Corroborated summaries differ from the verified common-action rule')
     checked('Narrow summary status follows the two-lineage substantive-quote rule',132,gameplay_rule_check,'Only summaries with sentence-length quotes from two publisher lineages are corroborated')
     def same_publisher_rejects():
         altered=copy.deepcopy(data)
@@ -231,6 +231,9 @@ def run(args):
     namu_checker=module('b03_namu_gameplay_recovery','check-namu-gameplay-recovery.py')
     for result in namu_checker.run():
         checks.append(result);print(f"PASS {result['name']}: {result['caseCount']} cases; seed=n/a")
+    tips_recovery_checker=module('b03_family_tips_recovery','check-family-tips-recovery.py')
+    for result in tips_recovery_checker.run():
+        checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Four shared-action recovery failed'),result.get('detail',''))
     tips_candidate_checker=module('b03_family_tips_candidate','check-family-tips-candidate.py')
     for result in tips_candidate_checker.run():
         checked(result['name'],result['caseCount'],lambda:require(result['passed'] is True,'Candidate provenance check failed'),result.get('detail',''))

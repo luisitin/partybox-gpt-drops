@@ -3740,3 +3740,32 @@ Gate Key-pers remains single-source: its otherwise useful memory Tip explicitly 
 
 
 Original-author tips research checkpoint: 14 actual native HTTPS/TLS A/B requests naturally CLOSED 2026-10-09 01:47:48.610964 UTC. Four candidates are explicitly UNADOPTED in reports/family-tips-candidate.json. Every original product value, evidence status and source/quote/A+B history remains exactly accepted76880fa; current299/1021/zero,31gameplay/101single stays unchanged. The separate Gaming Chickadee tips-and-tricks page has73 bounded original words; the old guide200 and Namu195 histories remain intact. Big-Top/Burger are excluded for insufficient shared-summary scope. Six negative controls reject premature promotion or altered provenance. Actual current full CI/artifact acceptance is required after this push. No strict KEEP GOING/completion claim.
+
+## Current four-action recovery — 2026-10-09
+
+The exact accepted parent is 9e43a19e256538d57b8334ffdafd5d656804c712 (normal push CLOSED 02:02:10.663895 UTC; complete exact-head native/official artifact reader CLOSED 02:03:48.955081). Its historical receipt is reports/hosted-ci-9e43a19-artifact.json. This checkpoint adds four independently corroborated common-action summaries: Hot Cross Blocks, Blame It on the Crane, Match! That! Item! and Short-Stack Chef. Current coverage is **303/1,320 narrow fields corroborated /1,017 open /zero of 132 whole rows complete**; gameplay **35 corroborated /97 single-source**, categories **104/28**.
+
+Gaming Chickadee's original article, Super Mario Party Jamboree – Tips and Tricks, published 2024-11-05, is https://familygamesquad.com/super-mario-party-jamboree-tips-and-tricks/. Four exact clips total **73/200 unique quoted words**. Separate pages of Family Game Squad share one publisher lineage. Complete named-game paragraphs and adjacent advice were reread in both retained full bodies; corresponding full Wiki narratives provide the other independent publisher. Every exact control binding, timer, scoring parameter, tie, board reward, category, unrelated evidence field and whole-row confidence remains unchanged. All128 other summaries remain byte-semantically equal to the accepted parent.
+
+The actual 14 native HTTPS/TLS requests naturally CLOSED 01:47:48.610964 UTC; adoption invents **zero** new HTTP requests. Ten responses supply the five registered source pairs; four excluded research-lead responses remain retained. The writer naturally CLOSED 02:17:50.110958 UTC. Registry: **147 URLs /1,938 short clips /3,882 recorded A+B recoveries**, with150 current/historical source records per pass. The old Family Game Squad guide remains200/200 and Namu remains195/200; every1931 old clip and classification is preserved. The historical unadopted candidate packet remains unchanged and is checked against a validated restored parent view; it is not the current product status.
+
+The new checker binds all four full-context hashes and actual transport receipts, restores exact132-row/146-source/full A+B accepted-parent hashes before supplying any historical view, and rejects ten malformed scope/source/history cases after2600 exact comparisons. The old candidate82-comparison/six-negative-control suites still run. The first full verifier correctly rejected stale closed-schema array maxima (146/149); its complete failed log/controller are retained. The three explicit maxima now exactly allow147 registered sources and150 historical reopen records; object schemas, baseline gates and all negative controls remain active.
+
+Actual full controller naturally CLOSED **2026-10-09 02:24:20.539498 UTC**: content **83 suites /34,075 cases**, EXIT0; integrity **84 suites /34,171 cases /all96 manifest files**, EXIT0; deliberate strict same84/34,171, EXIT1 with **NOT_MET303/zero**. Seeds n/a. Exact commands are the Quick start verifier commands (content additionally uses --report jobs/B03-jamboree-minigames/reports/final-validation.json). Only delivery documentation changes afterward; every regenerated manifest entry and immutable staged Git byte is verified before the normal canonical push. Early bound02:27:10.663895 UTC; hard02:32:10.663895 UTC. Actual push/CI/artifact times are recorded after observation in original draft PR20. Strict research, exact independent two-wiki full roster and original KEEP GOING completion remain unmet.
+
+
+Exact new bounded quotations (full copyrighted articles are private):
+
+https://familygamesquad.com/super-mario-party-jamboree-tips-and-tricks/
+- FGS_TIPS_common_MG007: to all get across by selecting different paths and calling out what path they chose so someone else doesn’t chose it also.
+- FGS_TIPS_common_MG039: stay in the inner ring and move slowly until you get to the crane then speed past and repeat to survive
+- FGS_TIPS_common_MG098: So you can press it then and spam the button to get the right item you need.
+- FGS_TIPS_common_MG107: Wait for it to disappear completely before flipping it to get a “Nice”.
+
+https://www.mariowiki.com/Blame_It_on_the_Crane
+- W039_tips_1: The balls and characters are on a large circular platform that spins counterclockwise.
+- W039_tips_2: controls a large crane that must be used to capture the team players as they pass.
+
+https://www.mariowiki.com/Short-Stack_Chef
+- W107_tips_1: by getting a perfectly timed "Nice!" rating, they get two points.
+

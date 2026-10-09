@@ -100,13 +100,21 @@ def validate(proof, data, sources, reopens):
  require(sum(e['status'] == 'corroborated' for r in data['minigames'] for e in r['fieldEvidence'].values()) == 299, 'Unexpected fact coverage')
  return restored, historical, h_reopens
 
+def before_tips_view(data, sources, reopens):
+ if not (ROOT / 'reports/family-tips-recovery.json').exists(): return data, sources, reopens
+ spec = importlib.util.spec_from_file_location('b03_tips_exact_historical_view', ROOT / 'check-family-tips-recovery.py')
+ tips = importlib.util.module_from_spec(spec); spec.loader.exec_module(tips)
+ return tips.historical_view(data, sources, reopens)
+
 def historical_view(data, sources, reopens):
+ data, sources, reopens = before_tips_view(data, sources, reopens)
  path = ROOT / 'reports/namu-batch-recovery.json'
  if not path.exists(): return data, sources, reopens
  return validate(read('reports/namu-batch-recovery.json'), data, sources, reopens)
 
 def run():
  proof = read('reports/namu-batch-recovery.json'); data = read('minigames.json'); sources = read('catalogue-sources.json'); reopens = [read('reports/source-reopens-pass' + p + '.json') for p in 'AB']
+ data, sources, reopens = before_tips_view(data, sources, reopens)
  validate(proof, data, sources, reopens)
  for number in range(10):
   p, d, s, rs = copy.deepcopy(proof), copy.deepcopy(data), copy.deepcopy(sources), copy.deepcopy(reopens)

@@ -1,3 +1,20 @@
+# Current four-action handoff
+
+Read original B03 instructions in root PROMPTS.md and root README.md. Own only jobs/B03-jamboree-minigames; canonical branch job/B03-jamboree-minigames, original PR20 draft/open, no main/CLAIMS, force push, foreign job or merge.
+
+Current material source:303/1320 corroborated,1017open,zero whole rows;35/97gameplay,104/28category. Four exact common-action repairs are in reports/family-tips-recovery.json; all1931 historical quote classifications, all132 parent rows/146 sources/A+B restore exactly accepted9e43a19. Current147sources1938clips3882recorded recoveries. Authored FGS tips73/200, oldguide200/200 and Namu195/200. Old candidate packet describes its historical UNADOPTED checkpoint and remains preserved; current four product summary facts are promoted only through the new complete proof.
+
+Full final controller naturally CLOSED02:24:20.539498 UTC:83/34075content,84/34171integrity/all96hashes EXIT0, deliberate strict EXIT1 NOT_MET303/zero. Failed stale-schema-bound full output is preserved. Early push02:27:10.663895, hard02:32:10.663895; actual times must be observed, never inferred or backdated.
+
+1. First read actual canonical remote HEAD and originalPR20. If the material source is not pushed, finish every staged immutable manifest byte and normal push. If exact current full hosted proof is not accepted, inspect the entire real native log (both complete84-suite/34171-case reports,168 actual PASS lines) and official artifact ZIP through safe paths,CRC/EOF/fullJSON equality and all96 immutable local/Git hashes. Rewrite only originalPR20 body with actual run/artifact IDs and natural reader closure, keeping draft/open. Historical receipts do not accept a newer source.
+2. Find unused original publishers for97 remaining summaries,28 categories and the many detailed controls/timers/win/score/tie/mode-payout facts. Reopen full complete scopes in orderedA/B and preserve every historic quote/actual timestamp. FGS tips has127 words left; full oldguide exhausted. Namu has5 remaining under this catalogue's source budget. Actual NAMU_BASE URL is the top-level Jamboree article, NOT a separate/minigames subpage; coordinate cross-job use of that same article with parent rather than assuming separate lineage/budgets.
+3. Continue literal bilingual second-wiki roster witnesses;112 English base+20 Korean TV numbers agree132 but one base spelling and missing20 literalEnglishTV identities remain unresolved. No guessed alias, copied Nintendo translation as independent source, or completion claim.
+
+Complete actual full author-context guards are private .work/remaining-research-0038/FGS-tips-complete-contexts-closed.json (CLOSED02:08:37.841118); writer CLOSED02:17:50.110958. Full actual fourteen source bodies/receipts are .work/remaining-research-0038/authored-tips-captures-0148. If absent recapture A/B; do not reconstruct from snippets. No new HTTP request was made for adoption. Native elapsed experiments require fresh root quiet-window grant; all readers/writers must naturally close before any HOLD ACK.
+
+
+## Preserved historical handoffs
+
 # Current candidate handoff
 
 Current accepted fact baseline is76880fa120a98e2b16e11ee0d1e7233277e8742c, normal canonical push CLOSED01:28:15.484915; full native/official artifact reader CLOSED01:29:59.649411, originalPR20draft/open. Historical exact acceptance is reports/hosted-ci-76880fa-artifact.json. Next hard push bound01:58:15.484915; early01:53:15 passed during the coordinated HOLD. Actual new push/CI/reader times belong in originalPR20 after observed.
