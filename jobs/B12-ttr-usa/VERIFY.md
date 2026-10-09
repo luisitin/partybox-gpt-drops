@@ -528,3 +528,34 @@ Added UNVERIFIED items from this pass:
 - The owner's `longest-trail.ts` was measured here only, on one machine, not in its own CI. Its branch was read through `gh api`, not cloned.
 - The suite ran on Node 22.22.0, not the pinned 22.16.0.
 - This pass did not reopen the web sources; it checked the local copies in `sources/` and the owner's files on GitHub.
+
+## Recovery2026-10-09 verification
+
+Run the same full npm test command. It now also executes tests/review.mjs before
+the six original suites; all original60k graph/6k game/25 compiled mutation/75
+seeded kill gates remain literal and unchanged. The review suite has three seeded
+600-assertion records, immutable input/metadata controls, actual failing and
+passing comparison CLI subprocesses, and actual HTTP hash/cache controls.
+All original pure API, schema and independently sealed/reference checks remain.
+
+Focused commands after npm run build:
+  node tests/review.mjs
+  node tests/review-tools.mjs
+  python3 tests/reopen-control.py
+These are correctness controls, not a new latency or complete network-research
+claim. Both comparison phases must fail nonzero on an actual value mismatch.
+Full original baseline receipt and its complete genuine archive/native log,
+original failure controls, patched focused output and uncredited ENOENT failure
+are in reports/recovery-20261009. Current hosted evidence is pending at this
+first milestone; historical baseline green does not qualify modified source.
+
+The second material correction preserves inherited playerCount/id on valid
+prototypes while retaining caller own metadata. Focused seeds now have624
+assertions each. Whole source884 proof is preserved separately with its known
+regression and non-Ready status; it does not qualify the corrected source.
+
+Corrected53fe full official packet passed11:32:31UTC with every original gate and1872 focused assertions. Formal post-green review1 adds2592 supported-topology states/20944 assertions. All raw evidence is retained; final exact published handoff still requires its own complete hosted packet.
+
+Formal recovery review2 adds128 inventory/record countercontrols and545 assertions. Every expected rejection and supported prototype passed; nine unchanged raw-reference non-enumerable limitations remain disclosed. This separately published review raises the consecutive no-gain streak to2; final exact-source qualification remains pending.
+
+Formal recovery review3 adds50 actual HTTP transport controls/all10 original pinned non-web payloads, with no new fact or public-network reopening claim. All passed and servers naturally closed. Three separately logged/pushed substantive postgreen no-gain rounds exhaust the KEEP stop rule. Final exact handoff whole hosted acceptance must still precede Ready27; its complete immutable receipt is recorded in the PR body without changing source again.

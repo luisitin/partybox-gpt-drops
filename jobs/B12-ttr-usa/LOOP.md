@@ -51,3 +51,36 @@ Research remains264 rows/528 citations across14 actually reopened source URLs.
 No further semantic weakness was found in this completed review; external CI
 is the final publication check, and the next independent job handoff is root's.
 Polish pass 2026-10-08: added tools/polish-check.mjs (spot, budget, compare, map) and checked the 45-train budget (at most 27 routes; sampled worst 41 to 635 ms, not proven). The owner's lane-t3 longest-trail agrees on 1,300 sets with 0 mismatches but runs slower. usa.json matches the owner's map.json except the colour label (purple versus pink). INTEGRATION.md gives the verdict port with fixes.
+
+## Recovery milestone2026-10-09 — substantive repairs; zero post-green credits
+
+Original exacta8 baseline whole accepted11:01:19UTC. Twelve executable primary
+counterexamples, two genuinely false-green original CLI controls, and the actual
+ignored-PDF transport failure justified a new supplemental branch. Strict build
+and three600-assertion focused seeds now pass. Original raw reference/seals/data/
+facts/schema/counts/timing thresholds are unchanged. Current full suite and hosted
+archive are pending. This is a material repair checkpoint, not a credited
+post-green KEEP review. Preserve the original historical LOOP records above.
+
+## Recovery second material gain — inherited core fields,2026-10-09
+
+Actual witness11:21:06UTC: initial metadata spread accepted valid game/player
+prototypes but omitted inherited playerCount/id, so the applied game then failed
+scoring. Original primary and unchanged raw oracle preserve both. Source884 whole
+hosted packet independently passed11:23:25UTC but its receipt explicitly retains
+this unresolved functional defect and says not Ready. Keep explicit required
+fields beside the spread;12 inherited-record combinations and3×624 focused
+assertions now pass. No formal no-gain credit is awarded to this gain, and the
+corrected normal child must receive its own complete hosted packet.
+
+## Formal post-green recovery review1
+
+Whole corrected53fe packet independently accepted11:32:31UTC. Actual review1 closed 2026-10-09T11:33:53.524Z:2592 states/20944 assertions, all supported player counts/route lengths/colors and own/inherited/null prototypes, frozen metadata, unchanged raw-oracle core values, connectivity and scores. Passed, naturally closed, no new player-visible gain; successful no-gain streak1. Complete raw result and actual reviewer source retained in reports/recovery-20261009/KEEP. This milestone separately publishes that round; the corrected implementation and mandatory gates remain unchanged.
+
+## Formal post-green recovery review2
+
+After separately publishing review1, actual review2 naturally closed 2026-10-09T11:36:42.787Z:128 inventory countercontrols and545 assertions, every one of the nine keys tested for absence, inheritance, non-enumerability, wrong-key substitution and ten invalid numeric/value types; two malformed array/function record families; three supported valid card-record prototypes. Nine raw-oracle non-enumerable limitations remain explicit rather than changing the oracle. Passed/no new player-visible gain; consecutive successful no-gain streak2. Complete raw result and actual reviewer source are preserved in reports/recovery-20261009/KEEP, separately published by this milestone. Core algorithms, current53fe implementation, independent seals, all facts/schema/counts/thresholds remain unchanged.
+
+## Formal post-green recovery review3 — stop after this publication
+
+Actual review3 naturally closed 2026-10-09T11:39:49.669175+00:00 after review2 publication:50 real controlled HTTP checks across all10 non-web registry payloads, each actual payload matched its original first SHA256, absent/present cache and changed-byte/invalid-hash/conflicting-cache controls all passed. Both original publisher PDFs were included from preserved original captures; no new public-network research/facts/quotes or latency claim. All owned HTTP servers and threads closed. Passed/no new player-visible gain; consecutive successful substantive no-gain streak3. Complete raw records and actual reviewer source are separately published by this final handoff. Do not continue cosmetic source work. Observe the exact final handoff full hosted packet, put the immutable receipt in PR27 and mark it Ready only after every original gate passes. Preserve all preceding gains and failures in actual order.

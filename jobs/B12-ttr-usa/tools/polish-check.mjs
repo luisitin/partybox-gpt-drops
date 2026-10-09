@@ -108,6 +108,7 @@ async function compare(ownerPath) {
     if (longestTrail(routes, owned) !== other(owned.map((id) => otherRoutes.get(id))).length) mismatches++;
   }
   out({check: 'compare-small-random', cases, valueMismatches: mismatches});
+  if (mismatches > 0) throw new Error('Small-graph longest-trail comparison failed: ' + mismatches + ' mismatches');
   const rng2 = seed(424242);
   const started = performance.now();
   let kept = 0, mismatch = 0, tb = 0, to = 0, wb = 0, wo = 0;
@@ -123,6 +124,7 @@ async function compare(ownerPath) {
     tb += da; to += db; wb = Math.max(wb, da); wo = Math.max(wo, db);
   }
   out({check: 'compare-budget-feasible', setsCompared: kept, valueMismatches: mismatch, b12TotalMs: +tb.toFixed(0), otherTotalMs: +to.toFixed(0), b12WorstMs: +wb.toFixed(1), otherWorstMs: +wo.toFixed(1), otherSource: ownerPath});
+  if (mismatch > 0) throw new Error('Budget-feasible longest-trail comparison failed: ' + mismatch + ' mismatches');
 }
 
 async function map() {

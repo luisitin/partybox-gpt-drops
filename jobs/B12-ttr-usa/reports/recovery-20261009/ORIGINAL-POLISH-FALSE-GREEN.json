@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "source": "a8be0e08392850178f50713361054dc86436e5eb",
+  "command": "node tools/polish-check.mjs compare --owner bad-owner.mjs",
+  "actualCLIExitStatus": 0,
+  "actualOutput": [
+    {
+      "check": "compare-small-random",
+      "cases": 300,
+      "valueMismatches": 300
+    },
+    {
+      "check": "compare-budget-feasible",
+      "setsCompared": 1000,
+      "valueMismatches": 1000,
+      "b12TotalMs": 281,
+      "otherTotalMs": 1,
+      "b12WorstMs": 18.3,
+      "otherWorstMs": 0.2,
+      "otherSource": "/tmp/gpt-drops-B12-audit-20261009/.work/20261009-audit/bad-owner.mjs"
+    }
+  ],
+  "meaning": "Both differential phases reported actual mismatches but exited success; no timing performance claim."
+}

@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "actualControls": 12,
+  "publisherByteComponents": [
+    {
+      "sourceId": "official-base",
+      "firstBytesActuallyMatchPinnedOriginal": true,
+      "original": {
+        "originalFailure": "FileNotFoundError",
+        "actualComponentExecuted": true,
+        "recordedSHA256": "2c331d825e863bf4850c058e29cf7b07c58798a0799a490e6706a14254d7ab19",
+        "bytes": 3560487,
+        "scope": "controlled actual HTTP transport only; no fresh source reopening or fact promotion"
+      },
+      "patched": {
+        "passed": true,
+        "actualComponentExecuted": true,
+        "controls": 5,
+        "bytes": 3560487,
+        "transportOnly": true,
+        "freshResearchClaim": false,
+        "completedUTC": "2026-10-09T11:09:54.715327+00:00"
+      }
+    },
+    {
+      "sourceId": "official-1910",
+      "firstBytesActuallyMatchPinnedOriginal": true,
+      "original": {
+        "originalFailure": "FileNotFoundError",
+        "actualComponentExecuted": true,
+        "recordedSHA256": "70fb7ffda44aaef42031404a6072a00df34b5f548901445f10572a9106f4f6f0",
+        "bytes": 872234,
+        "scope": "controlled actual HTTP transport only; no fresh source reopening or fact promotion"
+      },
+      "patched": {
+        "passed": true,
+        "actualComponentExecuted": true,
+        "controls": 5,
+        "bytes": 872234,
+        "transportOnly": true,
+        "freshResearchClaim": false,
+        "completedUTC": "2026-10-09T11:09:55.733334+00:00"
+      }
+    }
+  ],
+  "newNetworkResearchClaim": false,
+  "allOwnedHTTPServersNaturallyClosed": true
+}

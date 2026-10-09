@@ -7,7 +7,11 @@ def fetch(item):
  if id in ['supercheats','bgg-mystery','guide','se-inventory']:return None
  request=urllib.request.Request(s['url'],headers={'Cache-Control':'no-cache'})
  with urllib.request.urlopen(request)as response:body=response.read();status=response.status
- path=out/(id+('.pdf'if s['url'].endswith('.pdf')else'.txt'));path.write_bytes(body);first=(root/s['firstLocalFile']).read_bytes();assert body==first,(id,'source changed, review required')
+ path=out/(id+('.pdf'if s['url'].endswith('.pdf')else'.txt'));path.write_bytes(body)
+ assert re.fullmatch(r'[0-9a-f]{64}',s['firstSha256']),(id,'invalid recorded first hash')
+ assert hashlib.sha256(body).hexdigest()==s['firstSha256'],(id,'source changed, review required')
+ firstPath=root/s['firstLocalFile']
+ if firstPath.exists():assert body==firstPath.read_bytes(),(id,'first local snapshot disagrees, review required')
  return id,{'url':s['url'],'method':'actual urllib HTTPS GET with Cache-Control:no-cache','httpStatus':status,'sha256':hashlib.sha256(body).hexdigest(),'sameAsFirstBytes':True,'bytes':len(body),'snapshotKind':'original bytes'}
 with concurrent.futures.ThreadPoolExecutor(max_workers=4)as pool:
  for result in pool.map(fetch,registry.items()):

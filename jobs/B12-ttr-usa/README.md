@@ -57,3 +57,13 @@ The polish checks are not part of `npm test`. Rerun them with `node tools/polish
 
 - **Product:** `usa.json`, `usa.schema.json`, `ttr.ts`, `reference.ts`, `validate.ts`.
 - **Evidence:** `SOURCES.md`, `CONFLICTS.md`, `ASSUMPTIONS.md`, `citations.json`, `VERIFY.md`, `ORACLE*.md`, `reports/`, `sources/`, `tests/`, `tools/`, `SHA256SUMS.txt`, `validate_schema.py`, `LOOP.md`, `NEXT.md`.
+
+Recovery2026-10-09 repairs malformed record/inventory boundaries, retains caller
+game/player metadata after a claim, and makes both differential comparison phases
+fail on disagreement. The source-reopening component now checks pinned first-byte
+hashes without requiring ignored PDF cache files. See NEXT.md and
+reports/recovery-20261009 for exact original baseline proof, executable original
+failures, focused controls, preserved oracle limitations and pending current
+hosted acceptance. Original ReadyPR19 remains protected.
+
+The corrected core53fe passed its complete original hosted package plus1872 focused assertions. Three substantive recovery reviews found no further player-visible gain; all results/failures are retained. Source work stops at the final handoff. PR27 records the exact final whole hosted observation and Ready state once they actually occur. Original Ready19 remains protected and unmerged.

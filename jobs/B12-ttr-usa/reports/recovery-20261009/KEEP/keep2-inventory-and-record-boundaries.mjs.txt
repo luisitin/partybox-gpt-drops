@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';import * as p from '../../jobs/B12-ttr-usa/dist/ttr.js';import * as r from '../../jobs/B12-ttr-usa/dist/reference.js';import {writeFileSync} from 'node:fs';
+let checks=0;const records=[];const eq=(a,b)=>{assert.deepEqual(a,b);checks++;};const routes=[{id:'r',a:'A',b:'B',length:1,color:'red'}],claim={routeId:'r',playerId:'p',cards:['red']},ticket={id:'t',a:'A',b:'B',points:4};
+const makeCards=()=>Object.fromEntries(p.CARDS.map(c=>[c,5])),makeGame=cards=>({playerCount:2,players:[{id:'p',cards,trainsRemaining:45,ticketIds:['t']},{id:'q',cards:makeCards(),trainsRemaining:45,ticketIds:[]}],claims:{}});
+const rejection=(label,cards,knownOracle=false)=>{const g=makeGame(cards);eq(p.canClaim(routes,g,claim),false);const raw=r.canClaim(routes,g,claim);eq(raw,knownOracle);assert.throws(()=>p.applyClaim(routes,g,claim),RangeError);assert.throws(()=>p.scoreGame(routes,[ticket],g),RangeError);checks+=2;records.push({label,primaryRejected:true,rawReferenceAccepted:raw,oracleLimitation:knownOracle});};
+for(const key of p.CARDS){
+ const missing=makeCards();delete missing[key];rejection('missing '+key,missing);
+ const unrelated=makeCards();delete unrelated[key];unrelated.other=5;rejection('unrelated key replaces '+key,unrelated);
+ const inherited=makeCards();delete inherited[key];Object.setPrototypeOf(inherited,{[key]:5});inherited.other=5;rejection('inherited '+key+' with wrong own key',inherited);
+ const hidden=makeCards();Object.defineProperty(hidden,key,{value:5,enumerable:false});hidden.other=5;rejection('nonenumerable '+key+' with wrong own key',hidden,true);
+ for(const value of [-1,NaN,Infinity,-Infinity,0.5,Number.MAX_SAFE_INTEGER+1,'5',null,undefined,true]){
+  const c=makeCards();c[key]=value;rejection('invalid '+key+' '+String(value),c);
+ }
+}
+rejection('array inventory',Object.assign([],makeCards()));rejection('function inventory',Object.assign(function(){},makeCards()));
+for(const kind of ['array','function']){
+ const shape=value=>Object.assign(kind==='array'?[]:function(){},value);
+ const g=makeGame(makeCards()),c=shape(claim),t=shape(ticket);
+ eq(p.canClaim(routes,g,c),false);eq(r.canClaim(routes,g,c),false);assert.throws(()=>p.applyClaim(routes,g,c),RangeError);checks++;
+ eq(p.canClaim(routes,shape(g),claim),false);eq(r.canClaim(routes,shape(g),claim),false);assert.throws(()=>p.scoreGame(routes,[ticket],shape(g)),RangeError);checks++;
+ const playerGame=makeGame(makeCards());playerGame.players[0]=shape(playerGame.players[0]);eq(p.canClaim(routes,playerGame,claim),false);eq(r.canClaim(routes,playerGame,claim),false);assert.throws(()=>p.applyClaim(routes,playerGame,claim),RangeError);checks++;
+ assert.throws(()=>p.ticketComplete(routes,['r'],t),RangeError);assert.throws(()=>r.ticketComplete(routes,['r'],t),RangeError);assert.throws(()=>p.scoreGame(routes,[t],g),RangeError);checks+=3;
+}
+for(const inventory of [makeCards(),Object.assign(Object.create(null),makeCards()),Object.assign(Object.create({irrelevant:9}),makeCards())]){
+ const g=makeGame(inventory);eq(p.canClaim(routes,g,claim),true);eq(r.canClaim(routes,g,claim),true);eq(p.applyClaim(routes,g,claim).players[0].cards.red,4);
+}
+assert.equal(records.length,128);
+const report={passed:true,source:'53fe4e0c7109cf59c0e49ca53720912649900bd8',review:'Distinct post-green review2: each of nine card-key ownership/enumerability/value boundaries, malformed record APIs and supported valid inventory prototypes.',actualInventoryCountercontrols:records.length,explicitKnownOracleLimitations:records.filter(x=>x.oracleLimitation).length,recordShapeFamilies:2,validPrototypeControls:3,assertions:checks,records,rawReferenceUnmodified:true,newPlayerGain:false,completedUTC:new Date().toISOString()};
+writeFileSync('KEEP2-ACTUAL.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

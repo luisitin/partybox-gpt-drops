@@ -31,3 +31,23 @@
 - A late-game claim preference seeks an actual end condition. It changes only
   which legal move is chosen; both independently authored implementations
   check every generated claim/application and every final score.
+
+- Recovery 2026-10-09: malformed record boundaries reject arrays and functions.
+  Inventories must be non-array records with exactly the nine enumerable own
+  card keys; inherited/non-enumerable counts cannot masquerade as a complete
+  spendable inventory. Valid object prototypes are not otherwise restricted.
+- Caller-data preservation means enumerable own game/player extension fields
+  (including symbols) survive applyClaim. Core mutable containers are copied;
+  unrelated metadata is retained by identity and is not mutated. The immutable
+  independently authored reference predates this correction and drops extensions,
+  so direct frozen-input contract controls verify those fields.
+- Reopening uses the source registry's original firstSha256 when ignored first PDF
+  files are absent. A present local first snapshot is checked too. An upstream
+  byte change remains a hard review failure; no source is silently replaced.
+- Recovery research claims are limited to rechecking the historical full archive
+  and controlled transport tests. The complete14-source second network pass has
+  not been rerun in this recovery, and no new factual rows or quotes are promoted.
+
+- Accepted record prototypes may provide core fields. applyClaim retains explicit
+  playerCount/id even when inherited; metadata spread cannot remove those required
+  fields. Twelve inherited-game/player combinations are checked across all seeds.

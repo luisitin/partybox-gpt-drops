@@ -1,0 +1,37 @@
+import assert from 'node:assert/strict';
+import * as p from './original-dist/ttr.js';
+import * as r from './original-dist/reference.js';
+import {writeFileSync} from 'node:fs';
+const routes=[{id:'r',a:'A',b:'B',length:1,color:'red'}];
+const cards=()=>Object.fromEntries(p.CARDS.map(c=>[c,2]));
+const game=()=>({playerCount:2,players:[{id:'p',cards:cards(),trainsRemaining:45,ticketIds:['t']},{id:'q',cards:cards(),trainsRemaining:45,ticketIds:[]}],claims:{}});
+const claim={routeId:'r',playerId:'p',cards:['red']}, ticket={id:'t',a:'A',b:'B',points:4};
+const shaped=(shape,value)=>Object.assign(shape==='array'?[]:function(){},value);
+const cases=[];
+const test=(label,g,c=claim)=>{const actual=p.canClaim(routes,g,c),oracle=r.canClaim(routes,g,c);assert.equal(actual,true,label);assert.equal(oracle,false,label);cases.push({label,primaryAccepted:actual,rawReferenceAccepted:oracle,demonstrated:true});};
+for(const shape of ['array','function']) {
+ test('non-record claim '+shape,game(),shaped(shape,claim));
+ const g=game();test('non-record game '+shape,shaped(shape,g));
+ const gp=game();gp.players[0]=shaped(shape,gp.players[0]);test('non-record player '+shape,gp);
+ const t=shaped(shape,ticket);assert.equal(p.ticketComplete(routes,['r'],t),true);
+ assert.throws(()=>r.ticketComplete(routes,['r'],t),RangeError);
+ cases.push({label:'non-record ticket '+shape,primaryAccepted:true,rawReferenceRangeError:true,demonstrated:true});
+}
+const inherited=Object.create(cards());for(let i=0;i<9;i++)inherited['unrelated'+i]=0;
+const ig=game();ig.players[0].cards=inherited;test('inherited counts and nine unrelated own keys',ig);
+const applied=p.applyClaim(routes,ig,claim);assert.equal(Number.isNaN(applied.players[0].cards.red),true);
+cases.at(-1).actualAppliedRedIsNaN=true;
+const ag=game();ag.players[0].cards=Object.assign([],cards());test('array card inventory',ag);
+const nonEnum={};for(const c of p.CARDS)Object.defineProperty(nonEnum,c,{value:2,enumerable:false});for(let i=0;i<9;i++)nonEnum['unrelated'+i]=0;
+const ng=game();ng.players[0].cards=nonEnum;
+assert.equal(p.canClaim(routes,ng,claim),true);assert.equal(r.canClaim(routes,ng,claim),true);
+assert.equal(Number.isNaN(p.applyClaim(routes,ng,claim).players[0].cards.red),true);
+cases.push({label:'non-enumerable card counts plus unrelated keys',primaryAccepted:true,rawReferenceAlsoAccepted:true,actualAppliedRedIsNaN:true,oracleLimitationPreserved:true,demonstrated:true});
+const e=game();e.displayName='Table';e.metadata={theme:'blue'};e.players[0].displayName='Alice';e.players[1].displayName='Bob';
+const before=JSON.stringify(e), result=p.applyClaim(routes,e,claim), raw=r.applyClaim(routes,e,claim);
+assert.equal(JSON.stringify(e),before);assert.equal(Object.hasOwn(result,'metadata'),false);assert.equal(Object.hasOwn(result.players[0],'displayName'),false);
+assert.equal(Object.hasOwn(raw,'metadata'),false);
+cases.push({label:'caller extension fields dropped',primaryDrops:true,rawReferenceAlsoDrops:true,oracleLimitationPreserved:true,inputUnchanged:true,demonstrated:true});
+assert.equal(cases.length,12);
+const report={passed:true,source:'a8be0e08392850178f50713361054dc86436e5eb',actualOriginalRegressions:cases,rawOracleUnmodified:true,completedUTC:new Date().toISOString()};
+writeFileSync('ORIGINAL-VALIDATION-REPRO.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

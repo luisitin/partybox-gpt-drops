@@ -10,20 +10,21 @@ export interface Score {readonly playerId:string;readonly routePoints:number;rea
 export const ROUTE_POINTS:Readonly<Record<number,number>>=Object.freeze({1:1,2:2,3:4,4:7,5:10,6:15});
 const validName=(v:unknown):v is string=>typeof v==='string'&&v.length>0;
 const whole=(v:number):boolean=>Number.isFinite(v)&&Number.isSafeInteger(v)&&v>=0;
+const record=(v:unknown):boolean=>v!==null&&typeof v==='object'&&!Array.isArray(v);
 const parallel=(r:Route):string=>JSON.stringify([r.a,r.b].sort());
 function routeIndex(routes:readonly Route[]):Map<string,Route>{
  if(!Array.isArray(routes))throw new RangeError('Routes must be an array');const index=new Map<string,Route>();
  for(const r of routes){if(!r||typeof r!=='object'||Array.isArray(r)||!validName(r.id)||!validName(r.a)||!validName(r.b)||!Number.isInteger(r.length)||r.length<1||r.length>6||!(r.color==='gray'||CARDS.slice(0,8).includes(r.color))||index.has(r.id)||(r.parallelGroup!==undefined&&!validName(r.parallelGroup)))throw new RangeError('Invalid/duplicate route');index.set(r.id,r);}return index;
 }
 function owned(routes:readonly Route[],ids:readonly string[]):Route[]{const index=routeIndex(routes);if(!Array.isArray(ids)||![...ids].every(validName)||new Set(ids).size!==ids.length)throw new RangeError('Invalid/duplicate owned IDs');return ids.map(id=>{const r=index.get(id);if(!r)throw new RangeError('Unknown owned route');return r;});}
-function validateTicket(ticket:Ticket):void {if(!ticket||!validName(ticket.id)||!validName(ticket.a)||!validName(ticket.b)||!Number.isSafeInteger(ticket.points)||ticket.points<=0)throw new RangeError('Invalid ticket');}
+function validateTicket(ticket:Ticket):void {if(!record(ticket)||!validName(ticket.id)||!validName(ticket.a)||!validName(ticket.b)||!Number.isSafeInteger(ticket.points)||ticket.points<=0)throw new RangeError('Invalid ticket');}
 function validateGame(routes:Map<string,Route>,game:Game):void {
- if(!game||!Number.isInteger(game.playerCount)||game.playerCount<2||game.playerCount>5||!Array.isArray(game.players)||game.players.length!==game.playerCount||!game.claims||typeof game.claims!=='object'||Array.isArray(game.claims))throw new RangeError('Invalid game');
- const players=new Set<string>();for(const p of game.players){if(!p||!validName(p.id)||players.has(p.id)||!whole(p.trainsRemaining)||p.trainsRemaining>45||!p.cards||typeof p.cards!=='object'||Object.keys(p.cards).length!==CARDS.length||!CARDS.every(c=>whole(p.cards[c]))||!Array.isArray(p.ticketIds)||![...p.ticketIds].every(validName)||new Set(p.ticketIds).size!==p.ticketIds.length)throw new RangeError('Invalid player');players.add(p.id);}
+ if(!record(game)||!Number.isInteger(game.playerCount)||game.playerCount<2||game.playerCount>5||!Array.isArray(game.players)||game.players.length!==game.playerCount||!game.claims||typeof game.claims!=='object'||Array.isArray(game.claims))throw new RangeError('Invalid game');
+ const players=new Set<string>();for(const p of game.players){if(!record(p)||!validName(p.id)||players.has(p.id)||!whole(p.trainsRemaining)||p.trainsRemaining>45||!record(p.cards)||Object.keys(p.cards).length!==CARDS.length||!Object.keys(p.cards).every(c=>CARDS.includes(c as Card))||!CARDS.every(c=>Object.hasOwn(p.cards,c)&&whole(p.cards[c]))||!Array.isArray(p.ticketIds)||![...p.ticketIds].every(validName)||new Set(p.ticketIds).size!==p.ticketIds.length)throw new RangeError('Invalid player');players.add(p.id);}
  const groups=new Map<string,string[]>();for(const[id,player]of Object.entries(game.claims)){const r=routes.get(id);if(!r||!players.has(player))throw new RangeError('Unknown claim');const key=parallel(r),owners=groups.get(key)??[];if(owners.length>0&&(game.playerCount<=3||owners.includes(player)))throw new RangeError('Illegal existing parallel claims');owners.push(player);groups.set(key,owners);}
 }
 export function canClaim(routes:readonly Route[],game:Game,claim:Claim):boolean {
- try{const index=routeIndex(routes);validateGame(index,game);if(!claim||!validName(claim.routeId)||!validName(claim.playerId)||!Array.isArray(claim.cards)||![...claim.cards].every(c=>CARDS.includes(c)))return false;
+ try{const index=routeIndex(routes);validateGame(index,game);if(!record(claim)||!validName(claim.routeId)||!validName(claim.playerId)||!Array.isArray(claim.cards)||![...claim.cards].every(c=>CARDS.includes(c)))return false;
  const r=index.get(claim.routeId),player=game.players.find(p=>p.id===claim.playerId);if(!r||!player||Object.hasOwn(game.claims,r.id)||player.trainsRemaining<r.length||claim.cards.length!==r.length)return false;
  for(const[id,owner]of Object.entries(game.claims)){const other=index.get(id)!;if(parallel(other)===parallel(r)&&(game.playerCount<=3||owner===player.id))return false;}
  const spend:Record<Card,number>={pink:0,white:0,blue:0,yellow:0,orange:0,black:0,red:0,green:0,locomotive:0};for(const card of claim.cards as readonly Card[])spend[card]++;
@@ -32,7 +33,7 @@ export function canClaim(routes:readonly Route[],game:Game,claim:Claim):boolean 
 }
 export function applyClaim(routes:readonly Route[],game:Game,claim:Claim):Game {
  if(!canClaim(routes,game,claim))throw new RangeError('Illegal claim');const r=routes.find(r=>r.id===claim.routeId)!;
- const players=game.players.map(p=>{const cards={...p.cards};if(p.id===claim.playerId)for(const c of claim.cards)cards[c]--;return{id:p.id,cards,trainsRemaining:p.trainsRemaining-(p.id===claim.playerId?r.length:0),ticketIds:p.ticketIds.slice()};});return{playerCount:game.playerCount,players,claims:{...game.claims,[r.id]:claim.playerId}};
+ const players=game.players.map(p=>{const cards={...p.cards};if(p.id===claim.playerId)for(const c of claim.cards)cards[c]--;return{...p,id:p.id,cards,trainsRemaining:p.trainsRemaining-(p.id===claim.playerId?r.length:0),ticketIds:p.ticketIds.slice()};});return{...game,playerCount:game.playerCount,players,claims:{...game.claims,[r.id]:claim.playerId}};
 }
 export function ticketComplete(routes:readonly Route[],ownedIds:readonly string[],ticket:Ticket):boolean {
  validateTicket(ticket);const selected=owned(routes,ownedIds);if(ticket.a===ticket.b)return true;const adjacency=new Map<string,string[]>();for(const r of selected){adjacency.set(r.a,[...(adjacency.get(r.a)??[]),r.b]);adjacency.set(r.b,[...(adjacency.get(r.b)??[]),r.a]);}
