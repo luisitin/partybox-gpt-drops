@@ -1,0 +1,13 @@
+# Unresolved original research
+
+Eleven original evidence gates remain: F09, F11, F16, F22, F25, F28, F30, F31, F32, F33, F34. Public sources are generally accessible; blanket network unavailability is not the reason. The actual needed independent observations/data are listed in NEXT.md and the existing per-fact recovery report. F07 is now corroborated by two secondary editorial families. Exact Luigi activation weights, independent uniform game RNG and complete TV bonus parity remain unverified. No unsupported values are emitted.
+
+## Historical blocker record
+
+# B01 independent-evidence blocker
+
+Source and GitHub API access recovered; blanket access/push failures are no longer current blockers. Two fresh TLS-verified GET passes returned HTTP200 for 27/28 registered URLs, including all 25 accepted sources; all accepted registered quotations matched after harmless whitespace normalization. S23 is a rejected derivative mirror and returned HTTP402. All 34 fact rows have fresh per-source re-open records in reports/cloud-post-recovery-research.json.
+
+The job remains blocked on twelve required research gates. F07, F09, F11, F22, F25, F28, F31 and F34 still lack independent award/interaction observations. F16's two-to-four uses versus two-to-four MORE turns conflict remains. F30's exact Luigi activation/base law is unavailable, F32 is still an independent/equiprobable model assumption rather than verified Nintendo RNG, and F33's precise Jamboree TV bonus/buddy parity lacks controlled version evidence. See reports/cloud-post-recovery-research.md for the exact missing evidence and original-capture/search limitations. No probability or source-family independence was guessed.
+
+Code verification passed: 48/48 local suites, seeds 1,2,3, all 870,000,000 trials and 75 mutations. The previous published head 7ca5c3ce47ecfa37912d4cd8f56089f71505d179 had successful full CI run 37643639426. This evidence-only checkpoint creates a new head; PR #8 is updated with its exact green run only after that run completes. Research remains PARTIAL regardless of green code checks.

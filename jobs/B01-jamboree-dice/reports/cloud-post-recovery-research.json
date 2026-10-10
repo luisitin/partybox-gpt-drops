@@ -1,0 +1,2376 @@
+{
+  "job": "B01",
+  "observedAt": "2026-10-07T15:34:03.392920+00:00",
+  "priorBlanketNetworkBlockerObsolete": true,
+  "networkPolicyState": "unknown (root observation); successful requests do not establish draft publication",
+  "registeredSourcesAttemptedPerPass": 28,
+  "http200PerPass": 27,
+  "acceptedSourcesHttp200PerPass": 25,
+  "acceptedSourceRegisteredQuoteMatchesPerPass": true,
+  "rejectedUnavailableSource": {
+    "id": "S23",
+    "httpStatus": 402,
+    "body": "Fandom mirror not retrieved; not used for independent support"
+  },
+  "freshTwoPassSourceReopenCompletedForAcceptedSources": true,
+  "freshAllRegisteredSourcesSuccessful": false,
+  "factsReviewed": 34,
+  "independentNewCorroborationFound": false,
+  "gates": [
+    {
+      "fact": "F07",
+      "remainsPartial": true,
+      "status": "single-source",
+      "diagnosis": "Ordinary triples 20 / sevens 50 are repeated by MarioWiki pages only. No second independent award observation was found; requires an independent Jamboree gameplay award capture or independent report.",
+      "evidence": [
+        {
+          "source": "S06",
+          "url": "https://www.mariowiki.com/Triple_Dice",
+          "independenceGroup": "MarioWiki",
+          "quote": "The player earns 20 coins for any three numbers matched (50 for matching three 7's).",
+          "quoteWords": 15,
+          "pass1Found": true,
+          "pass2Found": true,
+          "pass1TextSha256": "fee52a0b39ecd7bae5ef8823487129e5d753c815e640c6fd8f573887100f3a80",
+          "pass2TextSha256": "fee52a0b39ecd7bae5ef8823487129e5d753c815e640c6fd8f573887100f3a80"
+        }
+      ]
+    },
+    {
+      "fact": "F09",
+      "remainsPartial": true,
+      "status": "single-source",
+      "diagnosis": "Payday doubles additional 10-coin reward remains supported by MarioWiki only; requires an independent Payday doubles award capture or report.",
+      "evidence": [
+        {
+          "source": "S07",
+          "url": "https://www.mariowiki.com/Payday_Double_Dice",
+          "independenceGroup": "MarioWiki",
+          "quote": "an additional 10 coin bonus for matching numbers",
+          "quoteWords": 8,
+          "pass1Found": true,
+          "pass2Found": true,
+          "pass1TextSha256": "ac8039f3ac3f98fd5558a8ab7d088707358964b09d1eabb538020c4e8131eaa2",
+          "pass2TextSha256": "ac8039f3ac3f98fd5558a8ab7d088707358964b09d1eabb538020c4e8131eaa2"
+        }
+      ]
+    },
+    {
+      "fact": "F11",
+      "remainsPartial": true,
+      "status": "single-source",
+      "diagnosis": "Payday triples additional 20/50 reward remains supported by MarioWiki only; requires independent ordinary and seven-triple award captures or reports.",
+      "evidence": [
+        {
+          "source": "S08",
+          "url": "https://www.mariowiki.com/Payday_Triple_Dice",
+          "independenceGroup": "MarioWiki",
+          "quote": "an additional 20 coin bonus for matching numbers or 50 coin bonus for matching sevens",
+          "quoteWords": 15,
+          "pass1Found": true,
+          "pass2Found": true,
+          "pass1TextSha256": "3fc69c83ecf4c442f3c3c7b022519c0d2a693728a049d9e0543b04b0ca497b66",
+          "pass2TextSha256": "3fc69c83ecf4c442f3c3c7b022519c0d2a693728a049d9e0543b04b0ca497b66"
+        }
+      ]
+    },
+    {
+      "fact": "F16",
+      "remainsPartial": true,
+      "status": "conflict",
+      "diagnosis": "Fresh GameFAQs S11 and MarioWiki S12 agree on two-to-four Creepy Ticket uses. Legacy S03 still says two-to-four MORE turns for both ticket types. Preserve disagreement; primary item-use counts or official exact total are needed to resolve, and ticket quantity weights remain unknown.",
+      "evidence": [
+        {
+          "source": "S11",
+          "url": "https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80898998",
+          "independenceGroup": "GameFAQs player Cozy",
+          "quote": "Bargain tickets to use Creepy Dice Blocks, which roll a number from 1 to 3, two to four times.",
+          "quoteWords": 19,
+          "pass1Found": true,
+          "pass2Found": true,
+          "pass1TextSha256": "6addcbae739c1b4d5ffb035714f98d9ead41ae16239f1f266f3153ec6ec41b59",
+          "pass2TextSha256": "6addcbae739c1b4d5ffb035714f98d9ead41ae16239f1f266f3153ec6ec41b59"
+        },
+        {
+          "source": "S03",
+          "url": "https://mariopartylegacy.com/games/super-mario-party-jamboree/",
+          "independenceGroup": "Mario Party Legacy",
+          "quote": "you have the chance to use the item again for two to four more turns.",
+          "quoteWords": 15,
+          "pass1Found": true,
+          "pass2Found": true,
+          "pass1TextSha256": "13c2b7159cbd91aee2b77ab3996e20820e9c5ac7a9e885193b9962779aa32afb",
+          "pass2TextSha256": "13c2b7159cbd91aee2b77ab3996e20820e9c5ac7a9e885193b9962779aa32afb"
+        }
+      ]
+    },
+    {
+      "fact": "F22",
+      "remainsPartial": true,
+      "status": "single-source",
+      "diagnosis": "Turbo 30/70 remains a MarioWiki claim sourced to original footage. YouTube original is destination-blocked; original Reddit HTML is an app shell and JSON403. Derivative wiki plus its underlying footage are not two independent sources. Need separately observed four-equal ordinary and four-seven rewards.",
+      "evidence": [
+        {
+          "source": "S14",
+          "url": "https://www.mariowiki.com/Turbo_Dice",
+          "independenceGroup": "MarioWiki",
+          "quote": "grants the player 30 coins.",
+          "quoteWords": 5,
+          "pass1Found": true,
+          "pass2Found": true,
+          "pass1TextSha256": "95d766ef1642dbb47ace41098d965d55bdea304e23d6dbd747eec4e040fbe6c0",
+          "pass2TextSha256": "95d766ef1642dbb47ace41098d965d55bdea304e23d6dbd747eec4e040fbe6c0"
+        },
+        {
+          "source": "S14",
+          "url": "https://www.mariowiki.com/Turbo_Dice",
+          "independenceGroup": "MarioWiki",
+          "quote": "awards 70 coins.",
+          "quoteWords": 3,
+          "pass1Found": true,
+          "pass2Found": true,
+          "pass1TextSha256": "95d766ef1642dbb47ace41098d965d55bdea304e23d6dbd747eec4e040fbe6c0",
+          "pass2TextSha256": "95d766ef1642dbb47ace41098d965d55bdea304e23d6dbd747eec4e040fbe6c0"
+        }
+      ]
+    },
+    {
+      "fact": "F25",
+      "remainsPartial": true,
+      "status": "single-source",
+      "diagnosis": "Together matching award of 10 coins remains on MarioWiki only. Nintendo, Nintendo Wire and Legacy corroborate movement/interactions but do not state this award; require an independent Together-match capture/report including team coin accounting.",
+      "evidence": [
+        {
+          "source": "S17",
+          "url": "https://www.mariowiki.com/Together_Dice",
+          "independenceGroup": "MarioWiki",
+          "quote": "If both players roll the same number, they will receive 10 coins",
+          "quoteWords": 12,
+          "pass1Found": true,
+          "pass2Found": true,
+          "pass1TextSha256": "cd3f7b4cb7d0d83b42c9955f5b39be5fcc227e952a0fdb3cf2525bfaf61e1222",
+          "pass2TextSha256": "cd3f7b4cb7d0d83b42c9955f5b39be5fcc227e952a0fdb3cf2525bfaf61e1222"
+        }
+      ]
+    },
+    {
+      "fact": "F28",
+      "remainsPartial": true,
+      "status": "single-source",
+      "diagnosis": "Mario addend contributing to Payday coins remains on MarioWiki S07/S08 only. Needs independent Payday-plus-Mario before/after coin capture or independent report.",
+      "evidence": [
+        {
+          "source": "S07",
+          "url": "https://www.mariowiki.com/Payday_Double_Dice",
+          "independenceGroup": "MarioWiki",
+          "quote": "Mario 's Jamboree Buddy ability dice roll also adds to the total amount of coins",
+          "quoteWords": 15,
+          "pass1Found": true,
+          "pass2Found": true,
+          "pass1TextSha256": "ac8039f3ac3f98fd5558a8ab7d088707358964b09d1eabb538020c4e8131eaa2",
+          "pass2TextSha256": "ac8039f3ac3f98fd5558a8ab7d088707358964b09d1eabb538020c4e8131eaa2"
+        }
+      ]
+    },
+    {
+      "fact": "F30",
+      "remainsPartial": true,
+      "status": "unknown",
+      "diagnosis": "Arqade still explicitly labels 33% unclear/approximate; comments question natural tens. No source code, authoritative activation weights, or inspectable controlled roll dataset was retrieved. Exact Luigi law remains unavailable and must not be inferred from the estimate.",
+      "evidence": [
+        {
+          "source": "S20",
+          "url": "https://gaming.stackexchange.com/questions/410058/how-does-luigi-affect-your-chance-of-rolling-bigger-numbers",
+          "independenceGroup": "Arqade player Pilzkopf",
+          "quote": "The specific chance of the ability triggering is unclear but it seems to be around 33%.",
+          "quoteWords": 16,
+          "pass1Found": true,
+          "pass2Found": true,
+          "pass1TextSha256": "5827776ffebe12aaca539b70852b1a97fbb4693ef1a1f9506794a81ff5a207e2",
+          "pass2TextSha256": "02f23888f60e814a880dc6c3b5a38582f7de53c198f8e571763801b89905f1cc"
+        }
+      ]
+    },
+    {
+      "fact": "F31",
+      "remainsPartial": true,
+      "status": "single-source",
+      "diagnosis": "MarioWiki Custom Dice and Buddy pages remain one editorial family. Need independent Custom-plus-Mario and Custom-plus-Luigi observations/report establishing suppression.",
+      "evidence": [
+        {
+          "source": "S09",
+          "url": "https://www.mariowiki.com/Custom_Dice_Block",
+          "independenceGroup": "MarioWiki",
+          "quote": "If the player has Mario or Luigi as a Jamboree Buddy, their ability will not activate.",
+          "quoteWords": 16,
+          "pass1Found": true,
+          "pass2Found": true,
+          "pass1TextSha256": "a80607415fb872db35b4b2f25928c3e6e8a355987f4f858e8ac640f444ac8c5a",
+          "pass2TextSha256": "a80607415fb872db35b4b2f25928c3e6e8a355987f4f858e8ac640f444ac8c5a"
+        }
+      ]
+    },
+    {
+      "fact": "F32",
+      "remainsPartial": true,
+      "status": "assumption",
+      "diagnosis": "Independent equiprobable faces remain a declared mathematical model assumption. No Nintendo RNG description, vetted game-code analysis, or controlled hardware roll dataset was retrieved. Exact fractions are conditional on this assumption; seeded model simulation cannot prove the game RNG.",
+      "evidence": []
+    },
+    {
+      "fact": "F33",
+      "remainsPartial": true,
+      "status": "partial",
+      "diagnosis": "Jamboree TV underlying item availability is documented. Exact per-item matching-bonus and buddy-interaction parity has no independent controlled version comparison; do not infer it from shared navigation/latest-appearance labels.",
+      "evidence": [
+        {
+          "source": "S16",
+          "url": "https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/",
+          "independenceGroup": "Mario Party Legacy",
+          "quote": "From the start, players recieve Double Dice, 50 coins, and one Star.",
+          "quoteWords": 12,
+          "pass1Found": true,
+          "pass2Found": true,
+          "pass1TextSha256": "8bfc8a06d755576e856b06ec650afc15754f259d0b15658ef9cc5a01653359e4",
+          "pass2TextSha256": "8bfc8a06d755576e856b06ec650afc15754f259d0b15658ef9cc5a01653359e4"
+        }
+      ]
+    },
+    {
+      "fact": "F34",
+      "remainsPartial": true,
+      "status": "single-source",
+      "diagnosis": "Turbo junction choices remain stated only by MarioWiki S14. Need an independent Turbo junction gameplay observation/report.",
+      "evidence": [
+        {
+          "source": "S14",
+          "url": "https://www.mariowiki.com/Turbo_Dice",
+          "independenceGroup": "MarioWiki",
+          "quote": "They are still allowed to choose which direction to go to at junctions.",
+          "quoteWords": 13,
+          "pass1Found": true,
+          "pass2Found": true,
+          "pass1TextSha256": "95d766ef1642dbb47ace41098d965d55bdea304e23d6dbd747eec4e040fbe6c0",
+          "pass2TextSha256": "95d766ef1642dbb47ace41098d965d55bdea304e23d6dbd747eec4e040fbe6c0"
+        }
+      ]
+    }
+  ],
+  "factSecondPassReviews": [
+    {
+      "fact": "F01",
+      "claim": "Jamboree has no character-specific playable dice.",
+      "sources": [
+        "S01",
+        "S02"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S01",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S02",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F02",
+      "claim": "All 22 listed playable characters share the normal 1 through 10 block.",
+      "sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S04"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S01",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S02",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S03",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S04",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F03",
+      "claim": "No normal playable die has a coin face; +2/-2 coin faces do not apply to these games.",
+      "sources": [
+        "S01",
+        "S02"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S01",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S02",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F04",
+      "claim": "Double Dice rolls two normal blocks and sums movement.",
+      "sources": [
+        "S03",
+        "S05"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S03",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S05",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F05",
+      "claim": "Matching Double Dice awards 10 coins, including matching sevens.",
+      "sources": [
+        "S05",
+        "S04",
+        "S27"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S05",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S04",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S27",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F06",
+      "claim": "Triple Dice rolls three normal blocks and sums movement.",
+      "sources": [
+        "S03",
+        "S06"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S03",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S06",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F07",
+      "claim": "Triple Dice reportedly awards 20 for all-equal non-sevens or 50 for 7+7+7.",
+      "sources": [
+        "S04",
+        "S06",
+        "S08"
+      ],
+      "existingStatus": "single-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S04",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S06",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S08",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Ordinary triples 20 / sevens 50 are repeated by MarioWiki pages only. No second independent award observation was found; requires an independent Jamboree gameplay award capture or independent report."
+    },
+    {
+      "fact": "F08",
+      "claim": "Payday Double Dice adds coins equal to the total movement roll.",
+      "sources": [
+        "S03",
+        "S07"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S03",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S07",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F09",
+      "claim": "Payday Double Dice reportedly also pays the 10-coin matching bonus.",
+      "sources": [
+        "S07",
+        "S04"
+      ],
+      "existingStatus": "single-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S07",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S04",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Payday doubles additional 10-coin reward remains supported by MarioWiki only; requires an independent Payday doubles award capture or report."
+    },
+    {
+      "fact": "F10",
+      "claim": "Payday Triple Dice adds coins equal to the total movement roll.",
+      "sources": [
+        "S03",
+        "S08"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S03",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S08",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F11",
+      "claim": "Payday Triple Dice reportedly also pays the 20/50 matching bonus.",
+      "sources": [
+        "S08",
+        "S04"
+      ],
+      "existingStatus": "single-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S08",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S04",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Payday triples additional 20/50 reward remains supported by MarioWiki only; requires independent ordinary and seven-triple award captures or reports."
+    },
+    {
+      "fact": "F12",
+      "claim": "Custom Dice chooses one integer from 1 through 10; it is not a random uniform choice.",
+      "sources": [
+        "S03",
+        "S09"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S03",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S09",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F13",
+      "claim": "Creepy Dice restricts the affected player to 1, 2 or 3; self-targeting is possible.",
+      "sources": [
+        "S10",
+        "S11",
+        "S03"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S10",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S11",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S03",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F14",
+      "claim": "Super Creepy Dice applies the 1 through 3 restriction to all opponents.",
+      "sources": [
+        "S25",
+        "S11",
+        "S03"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S25",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S11",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S03",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F15",
+      "claim": "Creepy Dice Block Tickets provides repeated Creepy Dice uses.",
+      "sources": [
+        "S12",
+        "S11",
+        "S03"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S12",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S11",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S03",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F16",
+      "claim": "Ticket quantity is reported as two to four total uses; Legacy says two to four more turns.",
+      "sources": [
+        "S12",
+        "S13",
+        "S03",
+        "S11"
+      ],
+      "existingStatus": "conflict",
+      "secondPassSourceRequests": [
+        {
+          "source": "S12",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S13",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S03",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S11",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Fresh GameFAQs S11 and MarioWiki S12 agree on two-to-four Creepy Ticket uses. Legacy S03 still says two-to-four MORE turns for both ticket types. Preserve disagreement; primary item-use counts or official exact total are needed to resolve, and ticket quantity weights remain unknown."
+    },
+    {
+      "fact": "F17",
+      "claim": "Mushroom adds five movement to the roll.",
+      "sources": [
+        "S03",
+        "S04"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S03",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S04",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F18",
+      "claim": "Mushroom Tickets repeats the Mushroom effect.",
+      "sources": [
+        "S03",
+        "S13"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S03",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S13",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F19",
+      "claim": "Mushroom, Double, Triple and Custom cancel an existing Creepy restriction.",
+      "sources": [
+        "S10",
+        "S11"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S10",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S11",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F20",
+      "claim": "Turbo Dice rolls four normal blocks on Roll em Raceway.",
+      "sources": [
+        "S14",
+        "S15",
+        "S03"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S14",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S15",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S03",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F21",
+      "claim": "Turbo Dice skips passed board events including Stars.",
+      "sources": [
+        "S14",
+        "S03"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S14",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S03",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F22",
+      "claim": "Turbo Dice reportedly pays 30 for ordinary quadruples or 70 for four sevens.",
+      "sources": [
+        "S14",
+        "S04"
+      ],
+      "existingStatus": "single-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S14",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S04",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Turbo 30/70 remains a MarioWiki claim sourced to original footage. YouTube original is destination-blocked; original Reddit HTML is an app shell and JSON403. Derivative wiki plus its underlying footage are not two independent sources. Need separately observed four-equal ordinary and four-seven rewards."
+    },
+    {
+      "fact": "F23",
+      "claim": "Together Dice in Jamboree TV Tag Team rolls one normal block per teammate and sums movement.",
+      "sources": [
+        "S16",
+        "S17",
+        "S18",
+        "S28"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S16",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S17",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S18",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S28",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F24",
+      "claim": "Together Dice doubles applicable board interactions.",
+      "sources": [
+        "S16",
+        "S17",
+        "S18",
+        "S28"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S16",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S17",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S18",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S28",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F25",
+      "claim": "Together Dice reportedly awards 10 coins when the two rolls match.",
+      "sources": [
+        "S17"
+      ],
+      "existingStatus": "single-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S17",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Together matching award of 10 coins remains on MarioWiki only. Nintendo, Nintendo Wire and Legacy corroborate movement/interactions but do not state this award; require an independent Together-match capture/report including team coin accounting."
+    },
+    {
+      "fact": "F26",
+      "claim": "Frenzy Rules gives players a Double Dice at the start.",
+      "sources": [
+        "S16",
+        "S21",
+        "S28"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S16",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S21",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S28",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F27",
+      "claim": "Mario buddy adds an extra result from 3 through 8, not a selectable character die.",
+      "sources": [
+        "S19",
+        "S26"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S19",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S26",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F28",
+      "claim": "Mario buddy reportedly contributes to Payday coin totals.",
+      "sources": [
+        "S07",
+        "S08"
+      ],
+      "existingStatus": "single-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S07",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S08",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Mario addend contributing to Payday coins remains on MarioWiki S07/S08 only. Needs independent Payday-plus-Mario before/after coin capture or independent report."
+    },
+    {
+      "fact": "F29",
+      "claim": "Luigi buddy can turn rolls into their maximum, including all dice of multi-dice items.",
+      "sources": [
+        "S19",
+        "S20"
+      ],
+      "existingStatus": "two-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S19",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S20",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Registered cited pages and excerpts were freshly reopened in both passes; prior evidence status retained."
+    },
+    {
+      "fact": "F30",
+      "claim": "Luigi activation probability is unknown; 33 percent is an unverified player estimate.",
+      "sources": [
+        "S19",
+        "S20"
+      ],
+      "existingStatus": "unknown",
+      "secondPassSourceRequests": [
+        {
+          "source": "S19",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S20",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Arqade still explicitly labels 33% unclear/approximate; comments question natural tens. No source code, authoritative activation weights, or inspectable controlled roll dataset was retrieved. Exact Luigi law remains unavailable and must not be inferred from the estimate."
+    },
+    {
+      "fact": "F31",
+      "claim": "Custom Dice reportedly disables Mario and Luigi buddy roll abilities.",
+      "sources": [
+        "S09",
+        "S19"
+      ],
+      "existingStatus": "single-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S09",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S19",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "MarioWiki Custom Dice and Buddy pages remain one editorial family. Need independent Custom-plus-Mario and Custom-plus-Luigi observations/report establishing suppression."
+    },
+    {
+      "fact": "F32",
+      "claim": "Exact tables assume independent, equally likely listed faces. This is a model assumption, not a game-PRNG audit.",
+      "sources": [],
+      "existingStatus": "assumption",
+      "secondPassSourceRequests": [],
+      "note": "Independent equiprobable faces remain a declared mathematical model assumption. No Nintendo RNG description, vetted game-code analysis, or controlled hardware roll dataset was retrieved. Exact fractions are conditional on this assumption; seeded model simulation cannot prove the game RNG."
+    },
+    {
+      "fact": "F33",
+      "claim": "Standard dice items are carried over to Jamboree TV; full per-bonus parity was not independently tested.",
+      "sources": [
+        "S16",
+        "S21"
+      ],
+      "existingStatus": "single-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S16",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        },
+        {
+          "source": "S21",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Jamboree TV underlying item availability is documented. Exact per-item matching-bonus and buddy-interaction parity has no independent controlled version comparison; do not infer it from shared navigation/latest-appearance labels."
+    },
+    {
+      "fact": "F34",
+      "claim": "Turbo Dice reportedly still allows choosing a route at junctions.",
+      "sources": [
+        "S14"
+      ],
+      "existingStatus": "single-source",
+      "secondPassSourceRequests": [
+        {
+          "source": "S14",
+          "httpStatus": 200,
+          "registeredQuotesFound": true
+        }
+      ],
+      "note": "Turbo junction choices remain stated only by MarioWiki S14. Need an independent Turbo junction gameplay observation/report."
+    }
+  ],
+  "sourcePass1": [
+    {
+      "id": "S01",
+      "url": "https://www.destructoid.com/reviews/review-super-mario-party-jamboree/",
+      "host": "www.destructoid.com",
+      "retrievedAt": "2026-10-07T15:28:37.563199+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.destructoid.com/reviews/review-super-mario-party-jamboree/\n0\n",
+      "error": "",
+      "htmlBytes": 158789,
+      "htmlSha256": "b11b8d3ab4ff73826ca989973e65ff6e6b09188f5f4b439a3849763e47192d9d",
+      "textSha256": "c853982e51fbd915b954d567a30a653a34acabb98894aaf0d89fdab48ebd8bbf",
+      "quoteMatches": [
+        {
+          "quote": "Character-specific dice aren\u2019t included, and it reverts to the 1-10 dice blocks.",
+          "found": true,
+          "words": 12,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S02",
+      "url": "https://www.cgmagonline.com/review/game/super-mario-party-jamboree-switch/",
+      "host": "www.cgmagonline.com",
+      "retrievedAt": "2026-10-07T15:28:37.564239+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.cgmagonline.com/review/game/super-mario-party-jamboree-switch/\n0\n",
+      "error": "",
+      "htmlBytes": 217839,
+      "htmlSha256": "b7f7745b702fbbfc096517c44d05b6cde24c86d0f44928a8d774e9b1386071a4",
+      "textSha256": "8e1da9422aa3144efe2e5d146b45893349fe40b3cff0f407f8048bba5a1f3e87",
+      "quoteMatches": [
+        {
+          "quote": "Super Mario Party Jamboree removes each character\u2019s unique dice",
+          "found": true,
+          "words": 9,
+          "foundWhitespaceNormalized": true
+        },
+        {
+          "quote": "a standard dice that rolls from one to ten",
+          "found": true,
+          "words": 9,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S03",
+      "url": "https://mariopartylegacy.com/games/super-mario-party-jamboree/",
+      "host": "mariopartylegacy.com",
+      "retrievedAt": "2026-10-07T15:28:37.564991+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://mariopartylegacy.com/games/super-mario-party-jamboree/\n0\n",
+      "error": "",
+      "htmlBytes": 117477,
+      "htmlSha256": "f626ca9542155302ee79ad14d99fe3bccec355cb7620682c81709f439c57c98d",
+      "textSha256": "13c2b7159cbd91aee2b77ab3996e20820e9c5ac7a9e885193b9962779aa32afb",
+      "quoteMatches": [
+        {
+          "quote": "Roll two dice blocks",
+          "found": true,
+          "words": 4,
+          "foundWhitespaceNormalized": true
+        },
+        {
+          "quote": "Roll three dice blocks",
+          "found": true,
+          "words": 4,
+          "foundWhitespaceNormalized": true
+        },
+        {
+          "quote": "Adds +5 to your roll.",
+          "found": true,
+          "words": 5,
+          "foundWhitespaceNormalized": true
+        },
+        {
+          "quote": "1 to 10",
+          "found": true,
+          "words": 3,
+          "foundWhitespaceNormalized": true
+        },
+        {
+          "quote": "1 through 3",
+          "found": true,
+          "words": 3,
+          "foundWhitespaceNormalized": true
+        },
+        {
+          "quote": "coins equal to",
+          "found": true,
+          "words": 3,
+          "foundWhitespaceNormalized": true
+        },
+        {
+          "quote": "four dice blocks",
+          "found": true,
+          "words": 3,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S04",
+      "url": "https://www.mariowiki.com/Super_Mario_Party_Jamboree",
+      "host": "www.mariowiki.com",
+      "retrievedAt": "2026-10-07T15:28:37.566085+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Super_Mario_Party_Jamboree\n0\n",
+      "error": "",
+      "htmlBytes": 410096,
+      "htmlSha256": "752f44e68892d46cd64f889fef375ec596908be38ecab389292acb8089327703",
+      "textSha256": "91f568f850ed8c0a7d343b037dcdcdc3d94fb3853df0737bfd7529c6c2273698",
+      "quoteMatches": [
+        {
+          "quote": "Super Mario Party Jamboree features 22 playable characters",
+          "found": true,
+          "words": 8,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S05",
+      "url": "https://www.mariowiki.com/Double_Dice",
+      "host": "www.mariowiki.com",
+      "retrievedAt": "2026-10-07T15:28:37.566640+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Double_Dice\n0\n",
+      "error": "",
+      "htmlBytes": 157815,
+      "htmlSha256": "6da8728da952449bee3b19373632dcf4100d4b78b2d20b9297830d8f72ed02a8",
+      "textSha256": "f2d94083a0055ab715e1d95a9ea2f8577cd2756597535cdc787b7301a572d4fd",
+      "quoteMatches": [
+        {
+          "quote": "rolling two \"7's\" now only awards 10 coins instead of 30",
+          "found": true,
+          "words": 11,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S06",
+      "url": "https://www.mariowiki.com/Triple_Dice",
+      "host": "www.mariowiki.com",
+      "retrievedAt": "2026-10-07T15:28:37.567006+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Triple_Dice\n0\n",
+      "error": "",
+      "htmlBytes": 114889,
+      "htmlSha256": "f02a1aa9b012b6b31aebf1ef3baf6203febfc4a4944cf5e39ebd99791181a78b",
+      "textSha256": "fee52a0b39ecd7bae5ef8823487129e5d753c815e640c6fd8f573887100f3a80",
+      "quoteMatches": [
+        {
+          "quote": "The player earns 20 coins for any three numbers matched (50 for matching three 7's).",
+          "found": true,
+          "words": 15,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S07",
+      "url": "https://www.mariowiki.com/Payday_Double_Dice",
+      "host": "www.mariowiki.com",
+      "retrievedAt": "2026-10-07T15:28:37.860719+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Payday_Double_Dice\n0\n",
+      "error": "",
+      "htmlBytes": 55436,
+      "htmlSha256": "1c18d300837c2c09a5fe9f7596ee1ca10a20560db74fe5ee3b7fcd13b9c05e7e",
+      "textSha256": "ac8039f3ac3f98fd5558a8ab7d088707358964b09d1eabb538020c4e8131eaa2",
+      "quoteMatches": [
+        {
+          "quote": "an additional 10 coin bonus for matching numbers",
+          "found": true,
+          "words": 8,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S08",
+      "url": "https://www.mariowiki.com/Payday_Triple_Dice",
+      "host": "www.mariowiki.com",
+      "retrievedAt": "2026-10-07T15:28:37.885243+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Payday_Triple_Dice\n0\n",
+      "error": "",
+      "htmlBytes": 54192,
+      "htmlSha256": "0b4ce50b13a3123cc01539bb2d736153d6a4f1853dbe97f5a9c82d81f37815c9",
+      "textSha256": "3fc69c83ecf4c442f3c3c7b022519c0d2a693728a049d9e0543b04b0ca497b66",
+      "quoteMatches": [
+        {
+          "quote": "an additional 20 coin bonus for matching numbers or 50 coin bonus for matching sevens",
+          "found": true,
+          "words": 15,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S09",
+      "url": "https://www.mariowiki.com/Custom_Dice_Block",
+      "host": "www.mariowiki.com",
+      "retrievedAt": "2026-10-07T15:28:38.283068+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Custom_Dice_Block\n0\n",
+      "error": "",
+      "htmlBytes": 138913,
+      "htmlSha256": "dd4889b35cd0d1f0225355e5c5ec2362ecb33b88232e69d213c9d91d901ba9e7",
+      "textSha256": "a80607415fb872db35b4b2f25928c3e6e8a355987f4f858e8ac640f444ac8c5a",
+      "quoteMatches": [
+        {
+          "quote": "If the player has Mario or Luigi as a Jamboree Buddy, their ability will not activate.",
+          "found": true,
+          "words": 16,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S10",
+      "url": "https://www.mariowiki.com/Creepy_Dice_Block",
+      "host": "www.mariowiki.com",
+      "retrievedAt": "2026-10-07T15:28:38.353113+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Creepy_Dice_Block\n0\n",
+      "error": "",
+      "htmlBytes": 128556,
+      "htmlSha256": "96fe86039e96239020e886db4b4dc0cc4d3f937e28426a15867ce7a65686998e",
+      "textSha256": "c493c0d22b060dffa9557a083c089ee38a40f61dd367592ca716f41e69b02243",
+      "quoteMatches": [
+        {
+          "quote": "potential roll reduced to 1 to 3",
+          "found": true,
+          "words": 7,
+          "foundWhitespaceNormalized": true
+        },
+        {
+          "quote": "Players can break the curse by using",
+          "found": true,
+          "words": 7,
+          "foundWhitespaceNormalized": true
+        },
+        {
+          "quote": "functioning identically",
+          "found": true,
+          "words": 2,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S11",
+      "url": "https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80898998",
+      "host": "gamefaqs.gamespot.com",
+      "retrievedAt": "2026-10-07T15:28:38.460838+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80898998\n0\n",
+      "error": "",
+      "htmlBytes": 45987,
+      "htmlSha256": "694b4a7973c7a952f354c53178922e72dafdc867b5e5f19d1b982041ab503278",
+      "textSha256": "6addcbae739c1b4d5ffb035714f98d9ead41ae16239f1f266f3153ec6ec41b59",
+      "quoteMatches": [
+        {
+          "quote": "All Creepy Dice can be canceled out if the player under its effect uses a Mushroom, Double Dice, Triple Dice, or Custom Dice Block.",
+          "found": true,
+          "words": 24,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S12",
+      "url": "https://www.mariowiki.com/Creepy_Dice_Block_Tickets",
+      "host": "www.mariowiki.com",
+      "retrievedAt": "2026-10-07T15:28:38.503337+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Creepy_Dice_Block_Tickets\n0\n",
+      "error": "",
+      "htmlBytes": 53068,
+      "htmlSha256": "b0723607d481d0d4069597473118c5a5105d59434d0539dddf2fd8056e337d9a",
+      "textSha256": "df12abb1ddc5ad7d48c3c4ad48af3bc1af90d0854afe025da05b417013da8a91",
+      "quoteMatches": [
+        {
+          "quote": "Bargain tickets to use Creepy Dice, which roll a number from 1 to 3, two to four times.",
+          "found": true,
+          "words": 18,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S13",
+      "url": "https://www.mariowiki.com/Mushroom_Tickets",
+      "host": "www.mariowiki.com",
+      "retrievedAt": "2026-10-07T15:28:38.514772+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Mushroom_Tickets\n0\n",
+      "error": "",
+      "htmlBytes": 53784,
+      "htmlSha256": "16dfdd61942c1428eb47b06deb3efb84fa1ee6942f015ce816e44fdf90516262",
+      "textSha256": "6ee1ccd553c07869f073bc17cc4272279394c9eeba69abae7ffaea6d2a1b36a8",
+      "quoteMatches": [
+        {
+          "quote": "Bargain tickets that let you use Mushrooms, which add +5 to dice roll, two to four times.",
+          "found": true,
+          "words": 17,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S14",
+      "url": "https://www.mariowiki.com/Turbo_Dice",
+      "host": "www.mariowiki.com",
+      "retrievedAt": "2026-10-07T15:28:38.526022+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Turbo_Dice\n0\n",
+      "error": "",
+      "htmlBytes": 56673,
+      "htmlSha256": "ff97598252748ff7b3e9f8de24dc509fa8981399ceb4bad21c0795453ec1ce57",
+      "textSha256": "95d766ef1642dbb47ace41098d965d55bdea304e23d6dbd747eec4e040fbe6c0",
+      "quoteMatches": [
+        {
+          "quote": "grants the player 30 coins.",
+          "found": true,
+          "words": 5,
+          "foundWhitespaceNormalized": true
+        },
+        {
+          "quote": "awards 70 coins.",
+          "found": true,
+          "words": 3,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S15",
+      "url": "https://play.nintendo.com/news-tips/tips-tricks/super-mario-party-jamboree-tips-and-tricks/",
+      "host": "play.nintendo.com",
+      "retrievedAt": "2026-10-07T15:28:38.706978+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://play.nintendo.com/news-tips/tips-tricks/super-mario-party-jamboree-tips-and-tricks/\n0\n",
+      "error": "",
+      "htmlBytes": 14814,
+      "htmlSha256": "a8119552d2a053755a74d4321123f288de5cf2486e0e601fba869e2451f7bc87",
+      "textSha256": "2e04363f99c00115fb0851ea111ba666c36074a1eda1f7b9aec74965ea6ac49e",
+      "quoteMatches": [
+        {
+          "quote": "you can use the board-exclusive Turbo Dice item to roll four Dice Blocks at once.",
+          "found": true,
+          "words": 15,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S16",
+      "url": "https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/",
+      "host": "mariopartylegacy.com",
+      "retrievedAt": "2026-10-07T15:28:38.793827+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/\n0\n",
+      "error": "",
+      "htmlBytes": 88132,
+      "htmlSha256": "82ec3540c6b6bd3a1c870fdf30bf55d53df1f14bca76fb92094e9528fab82059",
+      "textSha256": "8bfc8a06d755576e856b06ec650afc15754f259d0b15658ef9cc5a01653359e4",
+      "quoteMatches": [
+        {
+          "quote": "The combined roll determines how many spaces both you and your partner move",
+          "found": true,
+          "words": 13,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S17",
+      "url": "https://www.mariowiki.com/Together_Dice",
+      "host": "www.mariowiki.com",
+      "retrievedAt": "2026-10-07T15:28:38.863262+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Together_Dice\n0\n",
+      "error": "",
+      "htmlBytes": 53017,
+      "htmlSha256": "37dfac0e81568ccfb39b2c258e545453e8d361bcc79c484143194c228214e4dd",
+      "textSha256": "cd3f7b4cb7d0d83b42c9955f5b39be5fcc227e952a0fdb3cf2525bfaf61e1222",
+      "quoteMatches": [
+        {
+          "quote": "Call teammate, roll 2 dice, and move total amount. Items, Stars, and space effects are doubled.",
+          "found": true,
+          "words": 16,
+          "foundWhitespaceNormalized": true
+        },
+        {
+          "quote": "they will receive 10 coins",
+          "found": true,
+          "words": 5,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S18",
+      "url": "https://nintendowire.com/news/2025/05/30/overview-trailer-super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv/",
+      "host": "nintendowire.com",
+      "retrievedAt": "2026-10-07T15:28:38.871510+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://nintendowire.com/news/2025/05/30/overview-trailer-super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv/\n0\n",
+      "error": "",
+      "htmlBytes": 219478,
+      "htmlSha256": "3342e430e73002526eca493f54b7841e0fe34709b7d7726c21afe3b4a7305e9b",
+      "textSha256": "bbce4f8750d8679eebaadef1afc3986725c95be2f12266ef7bfeb28e6c5fbe23",
+      "quoteMatches": [
+        {
+          "quote": "Together Dice: Exclusive to Tag-Team Rules",
+          "found": true,
+          "words": 6,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S19",
+      "url": "https://www.mariowiki.com/Jamboree_Buddy",
+      "host": "www.mariowiki.com",
+      "retrievedAt": "2026-10-07T15:28:38.911241+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Jamboree_Buddy\n0\n",
+      "error": "",
+      "htmlBytes": 77907,
+      "htmlSha256": "68cadd7ced40e8fb26a656a725f3a455c0e61aa1c5584af9ea9973c13773bcff",
+      "textSha256": "35a6654da1951b6aa18cadd7386581d252d81ff6e1993dd3359cd31e44c4c95d",
+      "quoteMatches": [
+        {
+          "quote": "Adds 3 to 8 to the dice roll.",
+          "found": true,
+          "words": 8,
+          "foundWhitespaceNormalized": true
+        },
+        {
+          "quote": "You'll have an easier time rolling bigger numbers.",
+          "found": true,
+          "words": 8,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S20",
+      "url": "https://gaming.stackexchange.com/questions/410058/how-does-luigi-affect-your-chance-of-rolling-bigger-numbers",
+      "host": "gaming.stackexchange.com",
+      "retrievedAt": "2026-10-07T15:28:39.031953+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://gaming.stackexchange.com/questions/410058/how-does-luigi-affect-your-chance-of-rolling-bigger-numbers\n0\n",
+      "error": "",
+      "htmlBytes": 138401,
+      "htmlSha256": "813ef5283c74848402beeba98d351e941b3147d45bce01987662941172339d71",
+      "textSha256": "5827776ffebe12aaca539b70852b1a97fbb4693ef1a1f9506794a81ff5a207e2",
+      "quoteMatches": [
+        {
+          "quote": "The specific chance of the ability triggering is unclear but it seems to be around 33%.",
+          "found": true,
+          "words": 16,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S21",
+      "url": "https://www.mariowiki.com/Super_Mario_Party_Jamboree_%E2%80%93_Nintendo_Switch_2_Edition_%2B_Jamboree_TV",
+      "host": "www.mariowiki.com",
+      "retrievedAt": "2026-10-07T15:28:39.041865+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Super_Mario_Party_Jamboree_%E2%80%93_Nintendo_Switch_2_Edition_%2B_Jamboree_TV\n0\n",
+      "error": "",
+      "htmlBytes": 249505,
+      "htmlSha256": "5effe754e99d3b387a1eda6da89149fe01b2ac5e586da598c0bb0b3fae82e0fd",
+      "textSha256": "b3b4f3e8f7292c3d6e7206f5da98522c7d64e587c5a0136f42cd25215fb0e219",
+      "quoteMatches": [
+        {
+          "quote": "All players are also given fifty coins, a Double Dice, and one Star to start with.",
+          "found": false,
+          "words": 16,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S22",
+      "url": "https://superluigibros.com/super-mario-party-jamboree/",
+      "host": "superluigibros.com",
+      "retrievedAt": "2026-10-07T15:28:39.092275+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://superluigibros.com/super-mario-party-jamboree/\n0\n",
+      "error": "",
+      "htmlBytes": 278387,
+      "htmlSha256": "9311a9e6c5e4f96171d87df5d39d8bef85b2d0587196dc628938b0996a441ece",
+      "textSha256": "482c974544cfc90abfea39a25bbd77fe21144afb915fefe31a28db5281d70282",
+      "quoteMatches": [
+        {
+          "quote": "Beyond the standard 1\u20136 dice block",
+          "found": true,
+          "words": 6,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S23",
+      "url": "https://mario.fandom.com/wiki/Payday_Double_Dice",
+      "host": "mario.fandom.com",
+      "retrievedAt": "2026-10-07T15:28:39.263227+00:00",
+      "curlExit": 0,
+      "curlOutput": "402\nhttps://mario.fandom.com/wiki/Payday_Double_Dice\n0\n",
+      "error": "",
+      "htmlBytes": 55,
+      "htmlSha256": "35e642f0e1bd426b9d8b0ee0284aefe801873dc13c18819fbeeaf2bf47136664",
+      "textSha256": "35e642f0e1bd426b9d8b0ee0284aefe801873dc13c18819fbeeaf2bf47136664",
+      "quoteMatches": [
+        {
+          "quote": "This article contains content from the article Payday Double Dice from the Super Mario Wiki",
+          "found": false,
+          "words": 15,
+          "foundWhitespaceNormalized": false
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S24",
+      "url": "https://gamefaqs.gamespot.com/switch/470862-super-mario-party-jamboree/answers/648422-how-do-i-roll-the-same-number-on-triple-dice",
+      "host": "gamefaqs.gamespot.com",
+      "retrievedAt": "2026-10-07T15:28:39.364179+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://gamefaqs.gamespot.com/switch/470862-super-mario-party-jamboree/answers/648422-how-do-i-roll-the-same-number-on-triple-dice\n0\n",
+      "error": "",
+      "htmlBytes": 51539,
+      "htmlSha256": "897c3bf1324380a8228fe0dd0944530f9fc897f90dca3dde2a6c6d193bf91531",
+      "textSha256": "ee3ca017d86866a85d0a830b652576b58448e4c8cc9527dd4bb57e0d1b68a363",
+      "quoteMatches": [
+        {
+          "quote": "it's a 1/10000 (0.01%) chance to roll three of the same number.",
+          "found": true,
+          "words": 12,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S25",
+      "url": "https://www.mariowiki.com/Super_Creepy_Dice",
+      "host": "www.mariowiki.com",
+      "retrievedAt": "2026-10-07T15:28:39.366761+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Super_Creepy_Dice\n0\n",
+      "error": "",
+      "htmlBytes": 55023,
+      "htmlSha256": "8cd8878b0b8c56455087da1479f0362494f191ddefdad22615c951f1adf60f99",
+      "textSha256": "0c8d990e3a16a95f37dbcc00b7c73c31c1f46f51f6c06a87a16c57ac5c30b59e",
+      "quoteMatches": [
+        {
+          "quote": "Use on all opponents to make it so their dice can only roll a number from one to three.",
+          "found": true,
+          "words": 19,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S26",
+      "url": "https://clutchpoints.com/gaming/all-jamboree-buddies-in-super-mario-party-jamboree",
+      "host": "clutchpoints.com",
+      "retrievedAt": "2026-10-07T15:28:39.430756+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://clutchpoints.com/gaming/all-jamboree-buddies-in-super-mario-party-jamboree\n0\n",
+      "error": "",
+      "htmlBytes": 202273,
+      "htmlSha256": "0db01beb6b07e25738c0bf18c0c9ef63b27d461699a87ae1c13912af4cd009bd",
+      "textSha256": "a158e38b55edcead7030f5ed9f0a4937b8f4e1ac8d998c62d3329a051e31bb7a",
+      "quoteMatches": [
+        {
+          "quote": "Ability: Adds 3 to 8 to the Dice Roll",
+          "found": true,
+          "words": 9,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S27",
+      "url": "https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80896637",
+      "host": "gamefaqs.gamespot.com",
+      "retrievedAt": "2026-10-07T15:28:39.545797+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80896637\n0\n",
+      "error": "",
+      "htmlBytes": 48221,
+      "htmlSha256": "2d907b3f06fe78c3bbac437c6c7b1884cd32891a945c343df1860e6a06b0d50d",
+      "textSha256": "c2e5db1126ca6a3036b48f5c47120ef624b8ea74c677e4a04b307b9ef6d0560c",
+      "quoteMatches": [
+        {
+          "quote": "if you roll doubles (e.g. 5 + 5) you get 10 coins.",
+          "found": true,
+          "words": 12,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S28",
+      "url": "https://www.nintendo.com/us/whatsnew/the-party-is-getting-even-bigger-with-jamboree-tv/",
+      "host": "www.nintendo.com",
+      "retrievedAt": "2026-10-07T15:28:39.812954+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.nintendo.com/us/whatsnew/the-party-is-getting-even-bigger-with-jamboree-tv/\n0\n",
+      "error": "",
+      "htmlBytes": 272682,
+      "htmlSha256": "d6609a9d8e9ab9702709feb94b1c74b8e2ee477c6c5baa00ea933d44f9df7fe4",
+      "textSha256": "52db452a5acd69f435f31538e0c2519102398c4eebdb190793d6881110b3e25b",
+      "quoteMatches": [
+        {
+          "quote": "Call your teammate to your location to help you roll two dice",
+          "found": true,
+          "words": 12,
+          "foundWhitespaceNormalized": true
+        },
+        {
+          "quote": "items, Stars, and even space effects are doubled!",
+          "found": false,
+          "words": 8,
+          "foundWhitespaceNormalized": true
+        },
+        {
+          "quote": "Each player will start with 50 coins, a Double Dice item, and a Star.",
+          "found": true,
+          "words": 14,
+          "foundWhitespaceNormalized": true
+        }
+      ],
+      "tlsVerificationEnabled": true
+    }
+  ],
+  "sourcePass2": [
+    {
+      "id": "S01",
+      "url": "https://www.destructoid.com/reviews/review-super-mario-party-jamboree/",
+      "retrievedAt": "2026-10-07T15:31:53.685059+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.destructoid.com/reviews/review-super-mario-party-jamboree/\n0\n",
+      "error": "",
+      "htmlSha256": "b11b8d3ab4ff73826ca989973e65ff6e6b09188f5f4b439a3849763e47192d9d",
+      "textSha256": "c853982e51fbd915b954d567a30a653a34acabb98894aaf0d89fdab48ebd8bbf",
+      "quoteMatches": [
+        {
+          "quote": "Character-specific dice aren\u2019t included, and it reverts to the 1-10 dice blocks.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 12
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S02",
+      "url": "https://www.cgmagonline.com/review/game/super-mario-party-jamboree-switch/",
+      "retrievedAt": "2026-10-07T15:31:53.685542+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.cgmagonline.com/review/game/super-mario-party-jamboree-switch/\n0\n",
+      "error": "",
+      "htmlSha256": "b7f7745b702fbbfc096517c44d05b6cde24c86d0f44928a8d774e9b1386071a4",
+      "textSha256": "8e1da9422aa3144efe2e5d146b45893349fe40b3cff0f407f8048bba5a1f3e87",
+      "quoteMatches": [
+        {
+          "quote": "Super Mario Party Jamboree removes each character\u2019s unique dice",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 9
+        },
+        {
+          "quote": "a standard dice that rolls from one to ten",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 9
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S03",
+      "url": "https://mariopartylegacy.com/games/super-mario-party-jamboree/",
+      "retrievedAt": "2026-10-07T15:31:53.686144+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://mariopartylegacy.com/games/super-mario-party-jamboree/\n0\n",
+      "error": "",
+      "htmlSha256": "3f646503eb3616e178f455c93f452fb04163d937e0afabd9b5287af07ff9cba0",
+      "textSha256": "13c2b7159cbd91aee2b77ab3996e20820e9c5ac7a9e885193b9962779aa32afb",
+      "quoteMatches": [
+        {
+          "quote": "Roll two dice blocks",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 4
+        },
+        {
+          "quote": "Roll three dice blocks",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 4
+        },
+        {
+          "quote": "Adds +5 to your roll.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 5
+        },
+        {
+          "quote": "1 to 10",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 3
+        },
+        {
+          "quote": "1 through 3",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 3
+        },
+        {
+          "quote": "coins equal to",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 3
+        },
+        {
+          "quote": "four dice blocks",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 3
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S04",
+      "url": "https://www.mariowiki.com/Super_Mario_Party_Jamboree",
+      "retrievedAt": "2026-10-07T15:31:53.686395+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Super_Mario_Party_Jamboree\n0\n",
+      "error": "",
+      "htmlSha256": "752f44e68892d46cd64f889fef375ec596908be38ecab389292acb8089327703",
+      "textSha256": "91f568f850ed8c0a7d343b037dcdcdc3d94fb3853df0737bfd7529c6c2273698",
+      "quoteMatches": [
+        {
+          "quote": "Super Mario Party Jamboree features 22 playable characters",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 8
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S05",
+      "url": "https://www.mariowiki.com/Double_Dice",
+      "retrievedAt": "2026-10-07T15:31:53.686703+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Double_Dice\n0\n",
+      "error": "",
+      "htmlSha256": "6da8728da952449bee3b19373632dcf4100d4b78b2d20b9297830d8f72ed02a8",
+      "textSha256": "f2d94083a0055ab715e1d95a9ea2f8577cd2756597535cdc787b7301a572d4fd",
+      "quoteMatches": [
+        {
+          "quote": "rolling two \"7's\" now only awards 10 coins instead of 30",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 11
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S06",
+      "url": "https://www.mariowiki.com/Triple_Dice",
+      "retrievedAt": "2026-10-07T15:31:53.687039+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Triple_Dice\n0\n",
+      "error": "",
+      "htmlSha256": "f02a1aa9b012b6b31aebf1ef3baf6203febfc4a4944cf5e39ebd99791181a78b",
+      "textSha256": "fee52a0b39ecd7bae5ef8823487129e5d753c815e640c6fd8f573887100f3a80",
+      "quoteMatches": [
+        {
+          "quote": "The player earns 20 coins for any three numbers matched (50 for matching three 7's).",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 15
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S07",
+      "url": "https://www.mariowiki.com/Payday_Double_Dice",
+      "retrievedAt": "2026-10-07T15:31:53.942876+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Payday_Double_Dice\n0\n",
+      "error": "",
+      "htmlSha256": "1c18d300837c2c09a5fe9f7596ee1ca10a20560db74fe5ee3b7fcd13b9c05e7e",
+      "textSha256": "ac8039f3ac3f98fd5558a8ab7d088707358964b09d1eabb538020c4e8131eaa2",
+      "quoteMatches": [
+        {
+          "quote": "an additional 10 coin bonus for matching numbers",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 8
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S08",
+      "url": "https://www.mariowiki.com/Payday_Triple_Dice",
+      "retrievedAt": "2026-10-07T15:31:54.050597+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Payday_Triple_Dice\n0\n",
+      "error": "",
+      "htmlSha256": "0b4ce50b13a3123cc01539bb2d736153d6a4f1853dbe97f5a9c82d81f37815c9",
+      "textSha256": "3fc69c83ecf4c442f3c3c7b022519c0d2a693728a049d9e0543b04b0ca497b66",
+      "quoteMatches": [
+        {
+          "quote": "an additional 20 coin bonus for matching numbers or 50 coin bonus for matching sevens",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 15
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S09",
+      "url": "https://www.mariowiki.com/Custom_Dice_Block",
+      "retrievedAt": "2026-10-07T15:31:54.579456+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Custom_Dice_Block\n0\n",
+      "error": "",
+      "htmlSha256": "dd4889b35cd0d1f0225355e5c5ec2362ecb33b88232e69d213c9d91d901ba9e7",
+      "textSha256": "a80607415fb872db35b4b2f25928c3e6e8a355987f4f858e8ac640f444ac8c5a",
+      "quoteMatches": [
+        {
+          "quote": "If the player has Mario or Luigi as a Jamboree Buddy, their ability will not activate.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 16
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S10",
+      "url": "https://www.mariowiki.com/Creepy_Dice_Block",
+      "retrievedAt": "2026-10-07T15:31:54.668562+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Creepy_Dice_Block\n0\n",
+      "error": "",
+      "htmlSha256": "96fe86039e96239020e886db4b4dc0cc4d3f937e28426a15867ce7a65686998e",
+      "textSha256": "c493c0d22b060dffa9557a083c089ee38a40f61dd367592ca716f41e69b02243",
+      "quoteMatches": [
+        {
+          "quote": "potential roll reduced to 1 to 3",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 7
+        },
+        {
+          "quote": "Players can break the curse by using",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 7
+        },
+        {
+          "quote": "functioning identically",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 2
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S11",
+      "url": "https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80898998",
+      "retrievedAt": "2026-10-07T15:31:54.676353+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80898998\n0\n",
+      "error": "",
+      "htmlSha256": "c38e05a1f910afa883f20d13bc0f6df44c0c847466937309b411036ed7766a13",
+      "textSha256": "6addcbae739c1b4d5ffb035714f98d9ead41ae16239f1f266f3153ec6ec41b59",
+      "quoteMatches": [
+        {
+          "quote": "All Creepy Dice can be canceled out if the player under its effect uses a Mushroom, Double Dice, Triple Dice, or Custom Dice Block.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 24
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S12",
+      "url": "https://www.mariowiki.com/Creepy_Dice_Block_Tickets",
+      "retrievedAt": "2026-10-07T15:31:54.716863+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Creepy_Dice_Block_Tickets\n0\n",
+      "error": "",
+      "htmlSha256": "b0723607d481d0d4069597473118c5a5105d59434d0539dddf2fd8056e337d9a",
+      "textSha256": "df12abb1ddc5ad7d48c3c4ad48af3bc1af90d0854afe025da05b417013da8a91",
+      "quoteMatches": [
+        {
+          "quote": "Bargain tickets to use Creepy Dice, which roll a number from 1 to 3, two to four times.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 18
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S13",
+      "url": "https://www.mariowiki.com/Mushroom_Tickets",
+      "retrievedAt": "2026-10-07T15:31:54.781763+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Mushroom_Tickets\n0\n",
+      "error": "",
+      "htmlSha256": "16dfdd61942c1428eb47b06deb3efb84fa1ee6942f015ce816e44fdf90516262",
+      "textSha256": "6ee1ccd553c07869f073bc17cc4272279394c9eeba69abae7ffaea6d2a1b36a8",
+      "quoteMatches": [
+        {
+          "quote": "Bargain tickets that let you use Mushrooms, which add +5 to dice roll, two to four times.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 17
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S14",
+      "url": "https://www.mariowiki.com/Turbo_Dice",
+      "retrievedAt": "2026-10-07T15:31:54.993177+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Turbo_Dice\n0\n",
+      "error": "",
+      "htmlSha256": "ff97598252748ff7b3e9f8de24dc509fa8981399ceb4bad21c0795453ec1ce57",
+      "textSha256": "95d766ef1642dbb47ace41098d965d55bdea304e23d6dbd747eec4e040fbe6c0",
+      "quoteMatches": [
+        {
+          "quote": "grants the player 30 coins.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 5
+        },
+        {
+          "quote": "awards 70 coins.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 3
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S15",
+      "url": "https://play.nintendo.com/news-tips/tips-tricks/super-mario-party-jamboree-tips-and-tricks/",
+      "retrievedAt": "2026-10-07T15:31:55.076580+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://play.nintendo.com/news-tips/tips-tricks/super-mario-party-jamboree-tips-and-tricks/\n0\n",
+      "error": "",
+      "htmlSha256": "a8119552d2a053755a74d4321123f288de5cf2486e0e601fba869e2451f7bc87",
+      "textSha256": "2e04363f99c00115fb0851ea111ba666c36074a1eda1f7b9aec74965ea6ac49e",
+      "quoteMatches": [
+        {
+          "quote": "you can use the board-exclusive Turbo Dice item to roll four Dice Blocks at once.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 15
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S16",
+      "url": "https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/",
+      "retrievedAt": "2026-10-07T15:31:55.077544+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/\n0\n",
+      "error": "",
+      "htmlSha256": "cc062f679508502376c167380c9c9054c17cb31c96cf6aa037b41b0aa98357d1",
+      "textSha256": "8bfc8a06d755576e856b06ec650afc15754f259d0b15658ef9cc5a01653359e4",
+      "quoteMatches": [
+        {
+          "quote": "The combined roll determines how many spaces both you and your partner move",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 13
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S17",
+      "url": "https://www.mariowiki.com/Together_Dice",
+      "retrievedAt": "2026-10-07T15:31:55.161346+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Together_Dice\n0\n",
+      "error": "",
+      "htmlSha256": "37dfac0e81568ccfb39b2c258e545453e8d361bcc79c484143194c228214e4dd",
+      "textSha256": "cd3f7b4cb7d0d83b42c9955f5b39be5fcc227e952a0fdb3cf2525bfaf61e1222",
+      "quoteMatches": [
+        {
+          "quote": "Call teammate, roll 2 dice, and move total amount. Items, Stars, and space effects are doubled.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 16
+        },
+        {
+          "quote": "they will receive 10 coins",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 5
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S18",
+      "url": "https://nintendowire.com/news/2025/05/30/overview-trailer-super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv/",
+      "retrievedAt": "2026-10-07T15:31:55.166385+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://nintendowire.com/news/2025/05/30/overview-trailer-super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv/\n0\n",
+      "error": "",
+      "htmlSha256": "2763f317cf579e9d7ef18ddf81f49c9a758097cd1bdf28895a91bf9c0356b554",
+      "textSha256": "bbce4f8750d8679eebaadef1afc3986725c95be2f12266ef7bfeb28e6c5fbe23",
+      "quoteMatches": [
+        {
+          "quote": "Together Dice: Exclusive to Tag-Team Rules",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 6
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S19",
+      "url": "https://www.mariowiki.com/Jamboree_Buddy",
+      "retrievedAt": "2026-10-07T15:31:55.287486+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Jamboree_Buddy\n0\n",
+      "error": "",
+      "htmlSha256": "68cadd7ced40e8fb26a656a725f3a455c0e61aa1c5584af9ea9973c13773bcff",
+      "textSha256": "35a6654da1951b6aa18cadd7386581d252d81ff6e1993dd3359cd31e44c4c95d",
+      "quoteMatches": [
+        {
+          "quote": "Adds 3 to 8 to the dice roll.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 8
+        },
+        {
+          "quote": "You'll have an easier time rolling bigger numbers.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 8
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S20",
+      "url": "https://gaming.stackexchange.com/questions/410058/how-does-luigi-affect-your-chance-of-rolling-bigger-numbers",
+      "retrievedAt": "2026-10-07T15:31:55.437783+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://gaming.stackexchange.com/questions/410058/how-does-luigi-affect-your-chance-of-rolling-bigger-numbers\n0\n",
+      "error": "",
+      "htmlSha256": "4deee41664a055b8c381007eef8c00e3d4c5efcb8140ccec83f365e1bbf198d0",
+      "textSha256": "02f23888f60e814a880dc6c3b5a38582f7de53c198f8e571763801b89905f1cc",
+      "quoteMatches": [
+        {
+          "quote": "The specific chance of the ability triggering is unclear but it seems to be around 33%.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 16
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S21",
+      "url": "https://www.mariowiki.com/Super_Mario_Party_Jamboree_%E2%80%93_Nintendo_Switch_2_Edition_%2B_Jamboree_TV",
+      "retrievedAt": "2026-10-07T15:31:55.449663+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Super_Mario_Party_Jamboree_%E2%80%93_Nintendo_Switch_2_Edition_%2B_Jamboree_TV\n0\n",
+      "error": "",
+      "htmlSha256": "5effe754e99d3b387a1eda6da89149fe01b2ac5e586da598c0bb0b3fae82e0fd",
+      "textSha256": "b3b4f3e8f7292c3d6e7206f5da98522c7d64e587c5a0136f42cd25215fb0e219",
+      "quoteMatches": [
+        {
+          "quote": "All players are also given fifty coins, a Double Dice, and one Star to start with.",
+          "foundLiteral": false,
+          "foundWhitespaceNormalized": true,
+          "words": 16
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S22",
+      "url": "https://superluigibros.com/super-mario-party-jamboree/",
+      "retrievedAt": "2026-10-07T15:31:55.553658+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://superluigibros.com/super-mario-party-jamboree/\n0\n",
+      "error": "",
+      "htmlSha256": "d79d456f2cbe91847c85270497959fcae4dbff4aa5a8f9515cf50904d38a0af5",
+      "textSha256": "482c974544cfc90abfea39a25bbd77fe21144afb915fefe31a28db5281d70282",
+      "quoteMatches": [
+        {
+          "quote": "Beyond the standard 1\u20136 dice block",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 6
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S23",
+      "url": "https://mario.fandom.com/wiki/Payday_Double_Dice",
+      "retrievedAt": "2026-10-07T15:31:55.587703+00:00",
+      "curlExit": 0,
+      "curlOutput": "402\nhttps://mario.fandom.com/wiki/Payday_Double_Dice\n0\n",
+      "error": "",
+      "htmlSha256": "35e642f0e1bd426b9d8b0ee0284aefe801873dc13c18819fbeeaf2bf47136664",
+      "textSha256": "35e642f0e1bd426b9d8b0ee0284aefe801873dc13c18819fbeeaf2bf47136664",
+      "quoteMatches": [
+        {
+          "quote": "This article contains content from the article Payday Double Dice from the Super Mario Wiki",
+          "foundLiteral": false,
+          "foundWhitespaceNormalized": false,
+          "words": 15
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S24",
+      "url": "https://gamefaqs.gamespot.com/switch/470862-super-mario-party-jamboree/answers/648422-how-do-i-roll-the-same-number-on-triple-dice",
+      "retrievedAt": "2026-10-07T15:31:55.713577+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://gamefaqs.gamespot.com/switch/470862-super-mario-party-jamboree/answers/648422-how-do-i-roll-the-same-number-on-triple-dice\n0\n",
+      "error": "",
+      "htmlSha256": "2b230eb8aad39662580c2f14e0dc6c924ed80cb1ff2ab7d0e34864f3541bd13d",
+      "textSha256": "ee3ca017d86866a85d0a830b652576b58448e4c8cc9527dd4bb57e0d1b68a363",
+      "quoteMatches": [
+        {
+          "quote": "it's a 1/10000 (0.01%) chance to roll three of the same number.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 12
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S25",
+      "url": "https://www.mariowiki.com/Super_Creepy_Dice",
+      "retrievedAt": "2026-10-07T15:31:55.725765+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.mariowiki.com/Super_Creepy_Dice\n0\n",
+      "error": "",
+      "htmlSha256": "8cd8878b0b8c56455087da1479f0362494f191ddefdad22615c951f1adf60f99",
+      "textSha256": "0c8d990e3a16a95f37dbcc00b7c73c31c1f46f51f6c06a87a16c57ac5c30b59e",
+      "quoteMatches": [
+        {
+          "quote": "Use on all opponents to make it so their dice can only roll a number from one to three.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 19
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S26",
+      "url": "https://clutchpoints.com/gaming/all-jamboree-buddies-in-super-mario-party-jamboree",
+      "retrievedAt": "2026-10-07T15:31:55.759762+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://clutchpoints.com/gaming/all-jamboree-buddies-in-super-mario-party-jamboree\n0\n",
+      "error": "",
+      "htmlSha256": "0db01beb6b07e25738c0bf18c0c9ef63b27d461699a87ae1c13912af4cd009bd",
+      "textSha256": "a158e38b55edcead7030f5ed9f0a4937b8f4e1ac8d998c62d3329a051e31bb7a",
+      "quoteMatches": [
+        {
+          "quote": "Ability: Adds 3 to 8 to the Dice Roll",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 9
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S27",
+      "url": "https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80896637",
+      "retrievedAt": "2026-10-07T15:31:55.790270+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80896637\n0\n",
+      "error": "",
+      "htmlSha256": "74820ebc9e07b2ac10558866b3be85162973feeb7259b3d76de298b33b43d6e4",
+      "textSha256": "c2e5db1126ca6a3036b48f5c47120ef624b8ea74c677e4a04b307b9ef6d0560c",
+      "quoteMatches": [
+        {
+          "quote": "if you roll doubles (e.g. 5 + 5) you get 10 coins.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 12
+        }
+      ],
+      "tlsVerificationEnabled": true
+    },
+    {
+      "id": "S28",
+      "url": "https://www.nintendo.com/us/whatsnew/the-party-is-getting-even-bigger-with-jamboree-tv/",
+      "retrievedAt": "2026-10-07T15:31:55.992219+00:00",
+      "curlExit": 0,
+      "curlOutput": "200\nhttps://www.nintendo.com/us/whatsnew/the-party-is-getting-even-bigger-with-jamboree-tv/\n0\n",
+      "error": "",
+      "htmlSha256": "d6609a9d8e9ab9702709feb94b1c74b8e2ee477c6c5baa00ea933d44f9df7fe4",
+      "textSha256": "52db452a5acd69f435f31538e0c2519102398c4eebdb190793d6881110b3e25b",
+      "quoteMatches": [
+        {
+          "quote": "Call your teammate to your location to help you roll two dice",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 12
+        },
+        {
+          "quote": "items, Stars, and even space effects are doubled!",
+          "foundLiteral": false,
+          "foundWhitespaceNormalized": true,
+          "words": 8
+        },
+        {
+          "quote": "Each player will start with 50 coins, a Double Dice item, and a Star.",
+          "foundLiteral": true,
+          "foundWhitespaceNormalized": true,
+          "words": 14
+        }
+      ],
+      "tlsVerificationEnabled": true
+    }
+  ],
+  "additionalLimitations": [
+    "Google curl search is a JS interstitial, Bing exact queries return irrelevant leading-token results, GameFAQs title searches did not locate matching reward reports.",
+    "Chromium search fails ERR_CERT_AUTHORITY_INVALID under its current trust store; verification was preserved.",
+    "YouTube www.youtube.com CONNECT403; Reddit ordinary HTML200 is an app shell and .json403.",
+    "No hardware or controlled primary gameplay captures were available."
+  ],
+  "integrity": {
+    "pass1Sha256": "75916c3346ff5b3e3e079524e8e5a84fb6967425a2044254fdeca136b4c48c3d",
+    "pass2Sha256": "59b3cc4cc8380fa7b5ebd94856630412052f55964937e150e475266d80f332cc"
+  },
+  "checkoutModified": false
+}
