@@ -1,0 +1,39 @@
+name: B15 icons full verification
+on:
+  pull_request:
+    paths: ['jobs/B15-*/**']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: jobs/B15-icons-120
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Install development-only tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libcairo2 fonts-dejavu-core
+          npm ci --ignore-scripts --no-audit --no-fund
+          python3 -m pip install -r requirements-dev.txt
+      - name: All suites and all three seeds
+        run: npm test
+      - name: Publish icons, PNGs, contact sheets and complete evidence
+        uses: actions/upload-artifact@v7
+        with:
+          name: B15-icons-120
+          path: jobs/B15-icons-120/artifact/B15-icons-120.zip
+          if-no-files-found: error
+          retention-days: 90
