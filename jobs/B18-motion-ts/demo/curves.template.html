@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>motion.ts curves</title>
+<meta name="description" content="The browser's cubic-bezier against motion.ts, and damped springs with settle bounds. Plain page, no network.">
+<style>
+:root {
+  --bg: #0f1020;
+  --surface: #1b1d40;
+  --ink: #f5f6ff;
+  --ink-2: #b3b7d9;
+  --rule: rgba(245, 246, 255, .12);
+  --track: rgba(245, 246, 255, .10);
+  --guide: rgba(245, 246, 255, .22);
+  --css: #4cc9f0;
+  --js: #ffd166;
+  --spring: #ff5d8f;
+  --settle: #06d6a0;
+  --on-accent: #0f1020;
+  --focus: #ffd166;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f6f5ff;
+    --surface: #ffffff;
+    --ink: #171633;
+    --ink-2: #4a4d75;
+    --rule: rgba(23, 22, 51, .12);
+    --track: rgba(23, 22, 51, .10);
+    --guide: rgba(23, 22, 51, .25);
+    --css: #0b74a0;
+    --js: #9a6400;
+    --spring: #c2185b;
+    --settle: #00795a;
+    --on-accent: #ffffff;
+    --focus: #171633;
+    color-scheme: light;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.wrap { max-width: 1040px; margin: 0 auto; padding: 40px 16px 56px; }
+.eyebrow { margin: 0 0 8px; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
+h1 { margin: 0 0 12px; font-size: clamp(28px, 6vw, 40px); line-height: 1.1; letter-spacing: -.01em; }
+h2 { margin: 0; font-size: 22px; line-height: 1.2; }
+h3 { margin: 0; font-size: 16px; }
+p { margin: 0; }
+.lede { max-width: 68ch; color: var(--ink-2); }
+code, pre { font: 13px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 20px; }
+.btn {
+  appearance: none; border: 0; border-radius: 999px; padding: 10px 22px;
+  font: inherit; font-weight: 800; color: var(--on-accent); background: var(--js);
+  box-shadow: 0 10px 24px -12px var(--js); cursor: pointer;
+  transition: transform .15s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: scale(.98); }
+.btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.note { font-size: 14px; color: var(--ink-2); }
+.card {
+  margin-top: 24px; padding: 20px 20px 6px; border-radius: 22px;
+  background: var(--surface); border: 1px solid var(--rule);
+  box-shadow: 0 28px 56px -36px rgba(0, 0, 0, .7);
+}
+.card-head { padding-bottom: 6px; }
+.card-head p { margin-top: 6px; font-size: 14px; color: var(--ink-2); max-width: 72ch; }
+.row {
+  display: grid; grid-template-columns: 170px minmax(0, 1fr) 240px;
+  gap: 18px; align-items: center; padding: 16px 0; border-top: 1px solid var(--rule);
+}
+.meta p { margin-top: 4px; font-size: 13px; color: var(--ink-2); }
+.meta .clock { font-variant-numeric: tabular-nums; color: var(--ink); }
+.status { color: var(--settle) !important; font-weight: 800; opacity: 0; transition: opacity .4s ease; }
+.settled .status { opacity: 1; }
+.lanes { display: grid; gap: 14px; min-width: 0; }
+.lane { display: grid; gap: 6px; }
+.tag { font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--c); }
+.css { --c: var(--css); }
+.js { --c: var(--js); }
+.spring { --c: var(--spring); }
+.track { position: relative; height: 22px; }
+.track::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 6px; margin-top: -3px;
+  border-radius: 999px; background: var(--track);
+}
+.track::after {
+  content: ""; position: absolute; right: 0; top: 0; bottom: 0; width: 2px; border-radius: 2px; background: var(--guide);
+}
+.dot {
+  position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--c); box-shadow: 0 0 0 2px var(--bg), 0 8px 16px -6px rgba(0, 0, 0, .6);
+  will-change: transform;
+}
+.plot { position: relative; width: 100%; aspect-ratio: 320 / 140; }
+.plot svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.curve {
+  fill: none; stroke: var(--c); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.guide { stroke: var(--guide); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.mark {
+  stroke: var(--settle); stroke-width: 1.5; stroke-dasharray: 4 4; opacity: .35;
+  vector-effect: non-scaling-stroke; transition: opacity .4s ease;
+}
+.settled .mark { opacity: 1; }
+.cursor {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: var(--ink-2); opacity: .6;
+  will-change: transform;
+}
+.head {
+  position: absolute; left: 0; top: 0; width: 14px; height: 14px; border-radius: 50%;
+  background: var(--c); box-shadow: 0 0 0 3px var(--surface); will-change: transform;
+}
+.api { margin-top: 24px; padding-bottom: 18px; }
+.api pre { margin: 12px 0 0; white-space: pre-wrap; word-break: break-word; color: var(--ink-2); }
+.foot { margin-top: 20px; font-size: 13px; color: var(--ink-2); }
+@media (max-width: 760px) {
+  .wrap { padding-top: 28px; }
+  .row { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+  .status, .mark { transition: none; }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <p class="eyebrow">motion.ts · zero dependencies</p>
+    <h1>Easing and springs, side by side</h1>
+    <p class="lede">The top rows put the browser's own <code>cubic-bezier()</code> next to <code>cubicBezier()</code> from motion.ts. Both run the same curve over 1.2 s. The spring rows use <code>spring()</code>. Each tick marks <code>settleTime()</code>, a bound: after it, the spring is within 0.001 of rest.</p>
+    <div class="actions">
+      <button id="replay" class="btn" type="button">Replay</button>
+      <p id="motion-note" class="note" role="status" aria-live="polite"></p>
+    </div>
+  </header>
+
+  <section class="card" aria-labelledby="easings-title">
+    <div class="card-head">
+      <h2 id="easings-title">Named easings</h2>
+      <p>Top lane: the browser animates the transform. Bottom lane: motion.ts computes each frame. The dots should stay together.</p>
+    </div>
+    <div id="easings"></div>
+  </section>
+
+  <section class="card" aria-labelledby="springs-title">
+    <div class="card-head">
+      <h2 id="springs-title">Springs</h2>
+      <p>Mass 1, displaced by 1 from rest, at rest. Stiffness k, damping c. The plot shows the position against time, with the bound marked.</p>
+    </div>
+    <div id="springs"></div>
+  </section>
+
+  <section class="card api" aria-labelledby="api-title">
+    <h2 id="api-title">API</h2>
+<pre><code>spring(t, m, k, c, x = 1, v = 0)   -> [displacement, velocity]
+settleTime(m, k, c, x, v, e = .001) -> seconds (a bound, never early)
+cubicBezier(p, a, b, c, d)          -> eased progress, CSS-equivalent
+easings['ease-in-out'](t)           -> the four CSS named curves</code></pre>
+  </section>
+
+  <p class="foot">No network and no libraries. This page runs the code from dist/motion.js, inlined by tools/make-demo.mjs. Dots move with transform only; the settle marks fade with opacity.</p>
+</main>
+<noscript><p class="wrap">This demo needs JavaScript.</p></noscript>
+<script>
+/*MOTION*/
+(() => {
+  'use strict';
+  const RM = matchMedia('(prefers-reduced-motion: reduce)');
+  const SVGNS = 'http://www.w3.org/2000/svg';
+  const DOT = 22;                         // px, the lane dot (.dot)
+  const HEAD = 14;                        // px, the plot head (.head)
+  const W = 320, H = 140, PAD = 16, TOP = 12, BOT = 128;   // plot viewBox (aspect 320:140)
+  const EASE_MS = 1200;
+  const EASINGS = [
+    { name: 'ease', c: [0.25, 0.1, 0.25, 1] },
+    { name: 'ease-in', c: [0.42, 0, 1, 1] },
+    { name: 'ease-out', c: [0, 0, 0.58, 1] },
+    { name: 'ease-in-out', c: [0.42, 0, 0.58, 1] },
+  ];
+  const SPRINGS = [
+    { name: 'Bouncy', k: 300, c: 12 },
+    { name: 'Snappy', k: 400, c: 28 },
+    { name: 'Critical', k: 100, c: 20 },
+    { name: 'Over-damped', k: 100, c: 40 },
+  ];
+  const mapX = (t, tMax) => PAD + (t / tMax) * (W - 2 * PAD);
+  const mapY = (p, lo, hi) => BOT - ((p - lo) / (hi - lo)) * (BOT - TOP);
+  const $ = (id) => document.getElementById(id);
+  const make = (tag, cls, html) => {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (html != null) n.innerHTML = html;
+    return n;
+  };
+  const svgEl = (tag, attrs) => {
+    const n = document.createElementNS(SVGNS, tag);
+    for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, String(v));
+    return n;
+  };
+
+  const lanes = [];
+  const plots = [];
+  let raf = 0, t0 = 0, last = 0, playing = false;
+
+  function laneEl(cls, label) {
+    const wrap = make('div', `lane ${cls}`);
+    const track = make('div', 'track');
+    const dot = make('i', 'dot');
+    track.append(dot);
+    wrap.append(make('span', 'tag', label), track);
+    return { wrap, track, dot };
+  }
+
+  // samples: [seconds, value]; lo/hi: value range shown; markT: optional settle bound in seconds.
+  function plotEl(cls, tMax, samples, lo, hi, markT) {
+    const box = make('div', `plot ${cls}`);
+    const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, 'aria-hidden': 'true', focusable: 'false' });
+    const guide = (p) => svgEl('line', {
+      class: 'guide', x1: PAD, x2: W - PAD, y1: mapY(p, lo, hi), y2: mapY(p, lo, hi),
+    });
+    const d = samples.map(([t, p], i) => `${i ? 'L' : 'M'}${mapX(t, tMax).toFixed(2)} ${mapY(p, lo, hi).toFixed(2)}`).join('');
+    svg.append(guide(0), guide(1), svgEl('path', { class: 'curve', d }));
+    if (markT != null) {
+      const x = mapX(markT, tMax).toFixed(2);
+      svg.append(svgEl('line', { class: 'mark', x1: x, x2: x, y1: TOP - 6, y2: BOT + 6 }));
+    }
+    const cursor = make('div', 'cursor');
+    const head = make('div', 'head');
+    box.append(svg, cursor, head);
+    const pl = { box, cursor, head, tMax, lo, hi, w: 0, h: 0 };
+    plots.push(pl);
+    return pl;
+  }
+
+  // Moves the plot's cursor and head to time t (seconds) and value p.
+  function place(pl, t, p) {
+    const x = (mapX(t, pl.tMax) * pl.w) / W;
+    const y = (mapY(p, pl.lo, pl.hi) * pl.h) / H;
+    pl.cursor.style.transform = `translate3d(${x.toFixed(2)}px,0,0)`;
+    pl.head.style.transform = `translate3d(${(x - HEAD / 2).toFixed(2)}px,${(y - HEAD / 2).toFixed(2)}px,0)`;
+  }
+
+  function easingRow(e, host) {
+    const tMax = EASE_MS / 1000;
+    const row = make('div', 'row');
+    row.append(make('div', 'meta', `<h3>${e.name}</h3><p><code>cubic-bezier(${e.c.join(', ')})</code></p>`));
+    const css = laneEl('css', 'browser (CSS)');
+    const js = laneEl('js', 'motion.ts (cubicBezier)');
+    const stack = make('div', 'lanes');
+    stack.append(css.wrap, js.wrap);
+    const samples = Array.from({ length: 81 }, (_, i) => {
+      const u = i / 80;
+      return [u * tMax, cubicBezier(u, ...e.c)];
+    });
+    const pl = plotEl('js', tMax, samples, 0, 1, null);
+    row.append(stack, pl.box);
+    host.append(row);
+
+    const jsLane = {
+      track: js.track, dur: EASE_MS, travel: 0,
+      draw(ms) {
+        const u = Math.min(ms / EASE_MS, 1);
+        const p = cubicBezier(u, ...e.c);
+        js.dot.style.transform = `translate3d(${(p * jsLane.travel).toFixed(2)}px,0,0)`;
+        place(pl, u * tMax, p);
+      },
+    };
+    jsLane.sync = jsLane.draw;
+
+    // The browser runs its own easing through WAAPI; only its clock is ours.
+    const cssLane = {
+      track: css.track, dur: EASE_MS, travel: 0, anim: null,
+      draw() {},
+      sync(ms, running) {
+        if (cssLane.anim) cssLane.anim.cancel();
+        cssLane.anim = css.dot.animate(
+          [{ transform: 'translate3d(0,0,0)' }, { transform: `translate3d(${cssLane.travel}px,0,0)` }],
+          { duration: EASE_MS, easing: `cubic-bezier(${e.c.join(', ')})`, fill: 'both' },
+        );
+        cssLane.anim.pause();
+        cssLane.anim.currentTime = Math.min(ms, EASE_MS);
+        // play() on a finished animation rewinds it, so only resume while time is left.
+        if (running && ms < EASE_MS) cssLane.anim.play();
+      },
+    };
+    lanes.push(jsLane, cssLane);
+  }
+
+  function springRow(spec, host) {
+    const { name, k, c } = spec;
+    const m = 1;
+    const zeta = c / (2 * Math.sqrt(m * k));
+    const kind = zeta < 0.999 ? 'under-damped' : zeta > 1.001 ? 'over-damped' : 'critically damped';
+    const T = settleTime(m, k, c, 1, 0, 0.001);
+    const durMs = Math.ceil(T * 1250);
+    const tMax = durMs / 1000;
+    const samples = Array.from({ length: 161 }, (_, i) => {
+      const t = (tMax * i) / 160;
+      return [t, 1 - spring(t, m, k, c, 1, 0)[0]];
+    });
+    const lo = Math.min(0, ...samples.map((q) => q[1])) - 0.04;
+    const hi = Math.max(1, ...samples.map((q) => q[1])) + 0.04;
+
+    const row = make('div', 'row spring');
+    const meta = make('div', 'meta',
+      `<h3>${name}</h3><p><code>k ${k} · c ${c} · ζ ${zeta.toFixed(2)}</code></p>` +
+      `<p>${kind}</p><p>settle bound <code>${T.toFixed(2)} s</code></p>`);
+    const clock = make('p', 'clock', '0.00 s');
+    meta.append(clock, make('p', 'status', 'settled within 0.001'));
+    const ln = laneEl('', 'motion.ts (spring)');
+    const stack = make('div', 'lanes');
+    stack.append(ln.wrap);
+    const pl = plotEl('spring', tMax, samples, lo, hi, T);
+    row.append(meta, stack, pl.box);
+    host.append(row);
+
+    let settled = false;
+    const lane = {
+      track: ln.track, dur: durMs, travel: 0,
+      draw(ms) {
+        const at = Math.min(ms, durMs);
+        const t = at / 1000;
+        const p = at >= durMs ? 1 : 1 - spring(t, m, k, c, 1, 0)[0];
+        ln.dot.style.transform = `translate3d(${(p * lane.travel).toFixed(2)}px,0,0)`;
+        place(pl, t, p);
+        const now = ms >= T * 1000;
+        if (settled !== now) { settled = now; row.classList.toggle('settled', now); }
+        clock.textContent = `${t.toFixed(2)} s`;
+      },
+    };
+    lane.sync = lane.draw;
+    lanes.push(lane);
+  }
+
+  EASINGS.forEach((e) => easingRow(e, $('easings')));
+  SPRINGS.forEach((s) => springRow(s, $('springs')));
+
+  function note() {
+    $('motion-note').textContent = RM.matches
+      ? 'Reduced motion is on, so every dot starts at rest. Turn it off in your system settings to see the motion.'
+      : playing ? 'Running. Every lane starts from the beginning.' : 'Press Replay to run every lane again.';
+  }
+
+  // Positions every lane for time ms (Infinity = final state) and restarts the browser lanes if running.
+  function render(ms, running) {
+    for (const l of lanes) l.sync(ms, running);
+  }
+
+  function layout() {
+    for (const l of lanes) l.travel = Math.max(0, l.track.clientWidth - DOT);
+    for (const pl of plots) { pl.w = pl.box.clientWidth; pl.h = pl.box.clientHeight; }
+    render(RM.matches ? Infinity : last, playing);
+  }
+
+  function frame(now) {
+    last = Math.max(0, now - t0);
+    let live = false;
+    for (const l of lanes) {
+      l.draw(last);
+      if (last < l.dur) live = true;
+    }
+    if (live) {
+      raf = requestAnimationFrame(frame);
+    } else {
+      raf = 0;
+      playing = false;
+      note();
+    }
+  }
+
+  function play() {
+    cancelAnimationFrame(raf);
+    raf = 0;
+    if (RM.matches) {
+      playing = false;
+      render(Infinity, false);
+      note();
+      return;
+    }
+    playing = true;
+    last = 0;
+    t0 = performance.now();
+    render(0, true);
+    raf = requestAnimationFrame(frame);
+    note();
+  }
+
+  $('replay').addEventListener('click', play);
+  RM.addEventListener('change', play);
+  addEventListener('resize', layout);
+  addEventListener('load', layout);
+  layout();
+  play();
+})();
+</script>
+</body>
+</html>
