@@ -1,0 +1,64 @@
+{
+  "job": "B05",
+  "observedUtc": "2026-10-09T07:11:45.628875+00:00",
+  "commands": [
+    {
+      "command": [
+        "python",
+        "verify.py",
+        "--structural",
+        "--checksums"
+      ],
+      "exitCode": 0,
+      "suites": 21,
+      "cases": 2094,
+      "fullOutputSha256": "62710c7a987130089a868a0e693686b19ef84307ed16fd094c66ead1acdaf5e9"
+    },
+    {
+      "command": [
+        "python",
+        "verify.py",
+        "--strict"
+      ],
+      "exitCode": 1,
+      "suites": 20,
+      "cases": 1926,
+      "fullOutputSha256": "e0ed8368d2844e924a919c89d8d585a4c9af62f62e392764a0694e2b51b5b46d"
+    }
+  ],
+  "claims": "38/95",
+  "bonusCriteria": "3/9",
+  "bonusTies": "0/9",
+  "strictResearchComplete": false,
+  "originalScopeAssertions": 538,
+  "originalScopeNegativeControls": 12,
+  "newScopeAssertions": 122,
+  "newActualNegativeControls": 14,
+  "schemaNegativeRejections": 10,
+  "legacySchemaRequirementsWorkflowUnchanged": true,
+  "allOther94ClaimsAndCatalogsUnchanged": true,
+  "sourcesEachPass": 27,
+  "clipsEachPass": 202,
+  "quoteRecoveries": 404,
+  "rowsEachPass": 141,
+  "newMacWeeklyQuotationWords": 22,
+  "newCelQuotationWords": 0,
+  "newSharedNamuQuotationWords": 0,
+  "sourcePublicationAndHostedProofPending": true,
+  "preparationFailuresPreserved": {
+    "utc": "2026-10-09T07:10:10.252000+00:00",
+    "reason": "newly generated source audit omitted required empty unrecoveredQuotations field; unchanged original schema rejected before scope/checksum",
+    "exit": 2,
+    "stdoutSha256": "81d31d0ae55f688a1b6f78142e072f56d2d8692dc3cebc084fbc9ad4228f1f51",
+    "originalSchemaUnchanged": true,
+    "quotaCorrection": {
+      "utc": "2026-10-09T07:10:50.881374+00:00",
+      "incorrectExpected": 23,
+      "actualUnchangedClips": 22,
+      "exit": 2,
+      "rawPreserved": true,
+      "originalArticleBudget": 200,
+      "factsChanged": false
+    }
+  }
+}

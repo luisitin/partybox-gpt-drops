@@ -1,0 +1,138 @@
+{
+  "job": "B05",
+  "mandatoryClaimIds": [
+    "HOME01",
+    "HOME02"
+  ],
+  "selectionClaimIds": [
+    "HOME03",
+    "HOME04"
+  ],
+  "completePoolIndependentlyVerified": false,
+  "selectionProbabilities": null,
+  "effects": [
+    {
+      "id": "mushroom",
+      "trigger": "Chosen as the extra Party Rules Homestretch event.",
+      "effect": "Grant one player a Mushroom.",
+      "excludedBoards": [],
+      "detail": "If a player selects it, that player receives it; host selection uses a random recipient.",
+      "claimId": "EFFECT01",
+      "sourceIds": [
+        "HOME"
+      ],
+      "confidence": "medium",
+      "status": "single_source",
+      "frenzyEligibilityVerified": false
+    },
+    {
+      "id": "extra-star",
+      "trigger": "Chosen as the extra Party Rules Homestretch event.",
+      "effect": "Add one temporary Star Exchange.",
+      "excludedBoards": [
+        "Mario's Rainbow Castle"
+      ],
+      "detail": "It disappears permanently after its one purchase.",
+      "claimId": "EFFECT02",
+      "sourceIds": [
+        "HOME",
+        "EXCHANGE",
+        "QUOTE"
+      ],
+      "confidence": "medium",
+      "status": "single_source",
+      "frenzyEligibilityVerified": false
+    },
+    {
+      "id": "star-steal-traps",
+      "trigger": "Chosen as the extra Party Rules Homestretch event.",
+      "effect": "Give all players a Star Steal Trap.",
+      "excludedBoards": [],
+      "detail": "Inventory-overflow resolution is unverified.",
+      "claimId": "EFFECT03",
+      "sourceIds": [
+        "HOME",
+        "NAMU"
+      ],
+      "confidence": "medium",
+      "status": "corroborated",
+      "frenzyEligibilityVerified": false
+    },
+    {
+      "id": "double-dice",
+      "trigger": "Chosen as the extra Party Rules Homestretch event.",
+      "effect": "Give all players Double Dice.",
+      "excludedBoards": [],
+      "detail": "Inventory-overflow resolution is unverified.",
+      "claimId": "EFFECT04",
+      "sourceIds": [
+        "HOME",
+        "NAMU"
+      ],
+      "confidence": "medium",
+      "status": "corroborated",
+      "frenzyEligibilityVerified": false
+    },
+    {
+      "id": "space-coins",
+      "trigger": "Chosen as the extra Party Rules Homestretch event.",
+      "effect": "Double Blue/Red values again to +12/−12.",
+      "excludedBoards": [],
+      "detail": "This is additional to the mandatory +6/−6 change.",
+      "claimId": "EFFECT05",
+      "sourceIds": [
+        "HOME",
+        "QUOTE",
+        "FAMI"
+      ],
+      "confidence": "high",
+      "status": "corroborated",
+      "frenzyEligibilityVerified": false
+    },
+    {
+      "id": "wallet-coins",
+      "trigger": "Chosen as the extra Party Rules Homestretch event.",
+      "effect": "Double each player's coins.",
+      "excludedBoards": [],
+      "detail": "Coin-cap and overflow behavior are unverified.",
+      "claimId": "EFFECT06",
+      "sourceIds": [
+        "HOME",
+        "NAMU"
+      ],
+      "confidence": "medium",
+      "status": "corroborated",
+      "frenzyEligibilityVerified": false
+    },
+    {
+      "id": "more-bowser",
+      "trigger": "Chosen as the extra Party Rules Homestretch event.",
+      "effect": "Replace two or three spaces with Bowser Spaces.",
+      "excludedBoards": [
+        "King Bowser's Keep"
+      ],
+      "detail": "Exact candidate-space selection is unverified.",
+      "claimId": "EFFECT07",
+      "sourceIds": [
+        "HOME"
+      ],
+      "confidence": "medium",
+      "status": "single_source",
+      "frenzyEligibilityVerified": false
+    },
+    {
+      "id": "more-chance",
+      "trigger": "Chosen as the extra Party Rules Homestretch event.",
+      "effect": "Replace two to four spaces with Chance Time Spaces.",
+      "excludedBoards": [],
+      "detail": "Exact candidate-space selection is unverified.",
+      "claimId": "EFFECT08",
+      "sourceIds": [
+        "HOME"
+      ],
+      "confidence": "medium",
+      "status": "single_source",
+      "frenzyEligibilityVerified": false
+    }
+  ]
+}

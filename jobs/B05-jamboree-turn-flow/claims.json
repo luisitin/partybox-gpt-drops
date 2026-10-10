@@ -1,0 +1,2042 @@
+{
+  "job": "B05",
+  "scope": "Mario Party board mode; Party, Pro and separately marked Jamboree TV variants.",
+  "acceptance": "NOT_MET",
+  "independentResearcher": false,
+  "claims": [
+    {
+      "id": "SET01",
+      "phase": "setup",
+      "text": "Party turn limits: 10, 15, 20, 25, or 30.",
+      "evidence": [
+        {
+          "sourceId": "MNN",
+          "locator": "Party rules/settings paragraphs",
+          "excerptIds": [
+            "MNN-E1"
+          ]
+        },
+        {
+          "sourceId": "IGN",
+          "locator": "Party rules/settings paragraphs",
+          "excerptIds": [
+            "IGN-E1"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "MNN lists every permitted length; IGN confirms only the endpoints 10 and 30. Do not treat endpoints as a second enumeration."
+    },
+    {
+      "id": "SET02",
+      "phase": "setup",
+      "text": "Party settings include bonus awards Off, random selection, or Classic; minigames can use Random or Vote.",
+      "evidence": [
+        {
+          "sourceId": "MNN",
+          "locator": "Party rules/settings paragraphs",
+          "excerptIds": [
+            "MNN-E2",
+            "MNN-E3",
+            "MNN-E4"
+          ]
+        },
+        {
+          "sourceId": "IGN",
+          "locator": "Party rules/settings paragraphs",
+          "excerptIds": [
+            "IGN-E2",
+            "IGN-E3"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "Random selection is a description here, not a certified exact menu label."
+    },
+    {
+      "id": "SET03",
+      "phase": "setup",
+      "text": "Motion minigames and minigame explanations can be disabled; handicaps can grant 1–5 starting Stars.",
+      "evidence": [
+        {
+          "sourceId": "MNN",
+          "locator": "Before starting the game",
+          "excerptIds": [
+            "MNN-E5"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": ""
+    },
+    {
+      "id": "SET04",
+      "phase": "setup",
+      "text": "Yellow Toad supplies Party host text; Purple Toad supplies Pro host text.",
+      "evidence": [
+        {
+          "sourceId": "QUOTE",
+          "locator": "Text / Yellow Toad; Text / Purple Toad",
+          "excerptIds": [
+            "QUOTE-SET04-14",
+            "QUOTE-SET04-15"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": ""
+    },
+    {
+      "id": "START01",
+      "phase": "start",
+      "text": "The host welcomes players and offers a board explanation.",
+      "evidence": [
+        {
+          "sourceId": "QUOTE",
+          "locator": "Text / Yellow Toad / pre-game board introduction",
+          "excerptIds": [
+            "QUOTE-E12"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": ""
+    },
+    {
+      "id": "START02",
+      "phase": "start",
+      "text": "Players roll dice to establish turn order.",
+      "evidence": [
+        {
+          "sourceId": "QUOTE",
+          "locator": "Text / Yellow Toad / determine the turn order",
+          "excerptIds": [
+            "QUOTE-START02-16"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": ""
+    },
+    {
+      "id": "START03",
+      "phase": "start",
+      "text": "The host distributes 10 starting coins to each player.",
+      "evidence": [
+        {
+          "sourceId": "QUOTE",
+          "locator": "Text / Yellow Toad / before we begin",
+          "excerptIds": [
+            "QUOTE-START03-17"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": ""
+    },
+    {
+      "id": "START04",
+      "phase": "start",
+      "text": "The host introduces the first Star target before ordinary movement; the transcript marks its roaming-Star prompt as excluding Mario's Rainbow Castle.",
+      "evidence": [
+        {
+          "sourceId": "QUOTE",
+          "locator": "Text / Yellow Toad / first Star",
+          "excerptIds": [
+            "QUOTE-START04-18"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "Board-specific introduction variants are not fully transcribed or independently checked."
+    },
+    {
+      "id": "TURN01",
+      "phase": "player_turn",
+      "text": "Ordinary movement uses a Dice Block numbered 1–10.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Game modes / Mario Party",
+          "excerptIds": [
+            "GAME-E1"
+          ]
+        },
+        {
+          "sourceId": "CGM",
+          "locator": "Traditional Mario Party mechanics paragraphs",
+          "excerptIds": [
+            "CGM-E1"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open."
+    },
+    {
+      "id": "TURN02",
+      "phase": "player_turn",
+      "text": "Players take turns rolling and traversing the board to collect coins and obtain Stars.",
+      "evidence": [
+        {
+          "sourceId": "NIN",
+          "locator": "Mario Party overview",
+          "excerptIds": [
+            "NIN-E2"
+          ]
+        },
+        {
+          "sourceId": "MNN",
+          "locator": "Mario Party overview",
+          "excerptIds": [
+            "MNN-E8",
+            "MNN-E9"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "TURN03",
+      "phase": "passing",
+      "text": "A Star purchase can be offered while passing its bearer; exact landing is not required.",
+      "evidence": [
+        {
+          "sourceId": "EXCHANGE",
+          "locator": "Star Exchange opening paragraphs; Yellow Toad Star purchase dialogue",
+          "excerptIds": [
+            "EXCHANGE-E1"
+          ]
+        },
+        {
+          "sourceId": "QUOTE",
+          "locator": "Star Exchange opening paragraphs; Yellow Toad Star purchase dialogue",
+          "excerptIds": [
+            "QUOTE-TURN03-19"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": ""
+    },
+    {
+      "id": "TURN04",
+      "phase": "passing",
+      "text": "The usual Star price is 20 coins; board and Buddy modifiers require separate handling.",
+      "evidence": [
+        {
+          "sourceId": "QUOTE",
+          "locator": "Yellow Toad Star exchange; Star Exchange opening paragraphs",
+          "excerptIds": [
+            "QUOTE-TURN04-20"
+          ]
+        },
+        {
+          "sourceId": "EXCHANGE",
+          "locator": "Yellow Toad Star exchange; Star Exchange opening paragraphs",
+          "excerptIds": [
+            "EXCHANGE-E2"
+          ]
+        },
+        {
+          "sourceId": "NINUK",
+          "locator": "The rules are simple!, default Star exchange",
+          "excerptIds": [
+            "NINUK-TURN04-1"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "Nintendo UK explicitly confirms the ordinary 20-coin exchange independently of Mario Wiki. This default does not assert uniform prices at every board, time, or Buddy interaction."
+    },
+    {
+      "id": "TURN05",
+      "phase": "passing",
+      "text": "A recruited Buddy can allow two Star purchases instead of one.",
+      "evidence": [
+        {
+          "sourceId": "NIN",
+          "locator": "Jamboree Buddy descriptions",
+          "excerptIds": [
+            "NIN-E4"
+          ]
+        },
+        {
+          "sourceId": "IGN",
+          "locator": "Jamboree Buddy descriptions",
+          "excerptIds": [
+            "IGN-E5"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "TURN06",
+      "phase": "passing",
+      "text": "Reaching an unclaimed Buddy starts a Showdown; the initiating player has an advantage and the winner recruits the Buddy.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Mario Party Buddy paragraph",
+          "excerptIds": [
+            "GAME-TURN06-11"
+          ]
+        },
+        {
+          "sourceId": "MNN",
+          "locator": "Mario Party Buddy paragraph",
+          "excerptIds": [
+            "MNN-E6"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "TURN07",
+      "phase": "passing",
+      "text": "Another player passing the Buddy holder can take the Buddy.",
+      "evidence": [
+        {
+          "sourceId": "NIN",
+          "locator": "Jamboree Buddy ownership",
+          "excerptIds": [
+            "NIN-E5"
+          ]
+        },
+        {
+          "sourceId": "MNN",
+          "locator": "Jamboree Buddy ownership",
+          "excerptIds": [
+            "MNN-E7"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "TURN08",
+      "phase": "landing",
+      "text": "Buddy effects include repeated landing-space interactions, including repeated harmful Bowser encounters.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Buddy effects",
+          "excerptIds": [
+            "GAME-E3"
+          ]
+        },
+        {
+          "sourceId": "IGN",
+          "locator": "Buddy effects",
+          "excerptIds": [
+            "IGN-E6"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "TURN09",
+      "phase": "passing",
+      "text": "Turbo Dice on Roll em Raceway bypasses interactions en route, including Star purchases.",
+      "evidence": [
+        {
+          "sourceId": "RACE",
+          "locator": "Opening / Turbo Dice",
+          "excerptIds": [
+            "RACE-E1"
+          ]
+        },
+        {
+          "sourceId": "IGN",
+          "locator": "Board-specific items / Turbo Dice",
+          "excerptIds": [
+            "IGN-E7"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "Pass A added independent IGN hands-on corroboration; passing stops must not be unconditional."
+    },
+    {
+      "id": "LAND01",
+      "phase": "landing",
+      "text": "Blue adds 3 coins and Red removes 3 before Homestretch.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Spaces table",
+          "excerptIds": [
+            "GAME-E9"
+          ]
+        },
+        {
+          "sourceId": "MPLGAME",
+          "locator": "Spaces table",
+          "excerptIds": [
+            "MPLGAME-E1",
+            "MPLGAME-E2"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open."
+    },
+    {
+      "id": "LAND02",
+      "phase": "landing",
+      "text": "Event spaces invoke the board-specific event; Lucky and Unlucky spaces resolve their respective reward or penalty.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Spaces table",
+          "excerptIds": [
+            "GAME-LAND02-12"
+          ]
+        },
+        {
+          "sourceId": "MPLGAME",
+          "locator": "Spaces table",
+          "excerptIds": [
+            "MPLGAME-E3",
+            "MPLGAME-E4",
+            "MPLGAME-E5"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open."
+    },
+    {
+      "id": "LAND03",
+      "phase": "landing",
+      "text": "An Item Space can use a roulette or item minigame; no item is awarded on the final turn.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Spaces / Item Space",
+          "excerptIds": [
+            "GAME-E8"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": ""
+    },
+    {
+      "id": "LAND04",
+      "phase": "landing",
+      "text": "Chance Time can transfer or exchange Stars or coins between selected players.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Spaces / Chance Time; Yellow Toad Chance Time dialogue",
+          "excerptIds": [
+            "GAME-LAND04-13"
+          ]
+        },
+        {
+          "sourceId": "QUOTE",
+          "locator": "Spaces / Chance Time; Yellow Toad Chance Time dialogue",
+          "excerptIds": [
+            "QUOTE-LAND04-21",
+            "QUOTE-LAND04-22"
+          ]
+        },
+        {
+          "sourceId": "MPLGAME",
+          "locator": "Spaces table",
+          "excerptIds": [
+            "MPLGAME-E6"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open."
+    },
+    {
+      "id": "LAND05",
+      "phase": "landing",
+      "text": "VS spaces interrupt play for a pooled-coin minigame.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Spaces / VS Space; Yellow Toad VS dialogue",
+          "excerptIds": [
+            "GAME-LAND05-14"
+          ]
+        },
+        {
+          "sourceId": "QUOTE",
+          "locator": "Spaces / VS Space; Yellow Toad VS dialogue",
+          "excerptIds": [
+            "QUOTE-LAND05-23"
+          ]
+        },
+        {
+          "sourceId": "MPLGAME",
+          "locator": "Spaces table",
+          "excerptIds": [
+            "MPLGAME-E7"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open."
+    },
+    {
+      "id": "LAND06",
+      "phase": "landing",
+      "text": "Hidden Blocks can appear after landing on Blue or Red spaces in Party Rules.",
+      "evidence": [
+        {
+          "sourceId": "HIDDEN",
+          "locator": "Jamboree subsection; return of prior Blue-space behavior plus Red",
+          "excerptIds": [
+            "HIDDEN-E1"
+          ]
+        },
+        {
+          "sourceId": "MPL",
+          "locator": "Achievements / Lucky Star",
+          "excerptIds": [
+            "MPL-E4"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "MPL explicitly confirms both colors. Its speculation about probabilities is excluded. Pro removal is separate in PRO02."
+    },
+    {
+      "id": "LAND07",
+      "phase": "landing",
+      "text": "A Bowser Space invokes Impostor Bowser; Party outcomes include coin or Star losses, redistribution, and position shuffling.",
+      "evidence": [
+        {
+          "sourceId": "BOWSER",
+          "locator": "Super Mario Party Jamboree subsection",
+          "excerptIds": [
+            "BOWSER-E1",
+            "BOWSER-E2",
+            "BOWSER-E3",
+            "BOWSER-E4",
+            "BOWSER-E5"
+          ]
+        },
+        {
+          "sourceId": "MPLGAME",
+          "locator": "Spaces table",
+          "excerptIds": [
+            "MPLGAME-E8"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open."
+    },
+    {
+      "id": "ROUND01",
+      "phase": "round_end",
+      "text": "After all four players have moved, a minigame concludes the round.",
+      "evidence": [
+        {
+          "sourceId": "NIN",
+          "locator": "Mario Party mode overview",
+          "excerptIds": [
+            "NIN-E1",
+            "NIN-E3"
+          ]
+        },
+        {
+          "sourceId": "CGM",
+          "locator": "Traditional Mario Party mechanics paragraphs",
+          "excerptIds": [
+            "CGM-E2"
+          ]
+        },
+        {
+          "sourceId": "MACW",
+          "locator": "Introductory four-player board-game description before Classic Game Mode",
+          "excerptIds": [
+            "MACW-ROUND01-1",
+            "MACW-ROUND01-2"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "medium",
+      "note": " Independently corroborated by Scarlet Dunning's separately authored firsthand Jamboree review, introductory four-player/round paragraph. Its later Lucky Bonus example conflicts with the retained catalog and is excluded. No vote, interruption priority, final-round exception, payout, counter, tie or primary-frame claim is added."
+    },
+    {
+      "id": "ROUND02",
+      "phase": "minigame_selection",
+      "text": "Vote offers three minigame choices; all four players vote.",
+      "evidence": [
+        {
+          "sourceId": "IGN",
+          "locator": "Pro Rules paragraph",
+          "excerptIds": [
+            "IGN-E3"
+          ]
+        },
+        {
+          "sourceId": "GFAQPRO",
+          "locator": "Ice_Dragon14, post 10; partial support only, all-four voter qualifier omitted",
+          "excerptIds": [
+            "GFAQPRO-ROUND02-5"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "The independent player report confirms three choices and a random player-choice selection, but omits explicit four-voter cardinality. The complete row remains single_source; weights, tie effects and repeat suppression are not inferred."
+    },
+    {
+      "id": "ROUND03",
+      "phase": "minigame_selection",
+      "text": "Bonus Minigames double the coins won.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Game modes / Mario Party",
+          "excerptIds": [
+            "GAME-E2"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": ""
+    },
+    {
+      "id": "ROUND04",
+      "phase": "minigame_selection",
+      "text": "Showdown, Item, Duel and VS interruptions are distinct from the ordinary round-ending minigame.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Mario Party and minigame-category sections",
+          "excerptIds": [
+            "GAME-ROUND04-15"
+          ]
+        },
+        {
+          "sourceId": "MINI",
+          "locator": "Mario Party and minigame-category sections",
+          "excerptIds": [
+            "MINI-E1"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "Exact interruption/resumption event priority remains unverified."
+    },
+    {
+      "id": "HOME01",
+      "phase": "homestretch",
+      "text": "Homestretch occurs with five turns remaining, before those remaining turns are played.",
+      "evidence": [
+        {
+          "sourceId": "QUOTE",
+          "locator": "Jamboree subsection; Yellow Toad Homestretch dialogue",
+          "excerptIds": [
+            "QUOTE-HOME01-24"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": ""
+    },
+    {
+      "id": "HOME02",
+      "phase": "homestretch",
+      "text": "The host announces standings, then Blue/Red become +6/−6 and same-space landings can trigger duels.",
+      "evidence": [
+        {
+          "sourceId": "HOME",
+          "locator": "Jamboree subsection; Yellow Toad Homestretch dialogue",
+          "excerptIds": [
+            "HOME-HOME02-11"
+          ]
+        },
+        {
+          "sourceId": "QUOTE",
+          "locator": "Jamboree subsection; Yellow Toad Homestretch dialogue",
+          "excerptIds": [
+            "QUOTE-HOME02-25",
+            "QUOTE-HOME02-26"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": ""
+    },
+    {
+      "id": "HOME03",
+      "phase": "homestretch",
+      "text": "Party adds a special event chosen by a player or randomly; Pro omits this extra event.",
+      "evidence": [
+        {
+          "sourceId": "HOME",
+          "locator": "Jamboree subsection; Pro Rules paragraph",
+          "excerptIds": [
+            "HOME-E10"
+          ]
+        },
+        {
+          "sourceId": "ZU",
+          "locator": "Jamboree subsection; Pro Rules paragraph",
+          "excerptIds": [
+            "ZU-E2"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "ZU corroborates Pro omission only. Chooser rules remain single-lineage."
+    },
+    {
+      "id": "HOME04",
+      "phase": "homestretch",
+      "text": "Eight possible special effects are listed, while the source wording refers to five; full menu-generation rules are unresolved.",
+      "evidence": [
+        {
+          "sourceId": "HOME",
+          "locator": "Jamboree subsection",
+          "excerptIds": [
+            "HOME-E9"
+          ]
+        }
+      ],
+      "status": "conflict",
+      "confidence": "low",
+      "note": "C01. Do not infer eight simultaneous choices or uniform sampling."
+    },
+    {
+      "id": "HOME05",
+      "phase": "homestretch",
+      "text": "After the special event, the host gives two tips and board play resumes.",
+      "evidence": [
+        {
+          "sourceId": "HOME",
+          "locator": "Jamboree subsection final paragraph",
+          "excerptIds": [
+            "HOME-HOME05-12"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": ""
+    },
+    {
+      "id": "END01",
+      "phase": "ending",
+      "text": "The final round still has a final minigame before the results ceremony.",
+      "evidence": [
+        {
+          "sourceId": "QUOTE",
+          "locator": "Announcer / final minigame; Yellow Toad / results",
+          "excerptIds": [
+            "QUOTE-E6"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "NIN supplies the round loop, not direct evidence of the final-round exception boundary."
+    },
+    {
+      "id": "END02",
+      "phase": "ending",
+      "text": "The ceremony reviews Star totals and notable acquisitions before presenting enabled bonus awards.",
+      "evidence": [
+        {
+          "sourceId": "QUOTE",
+          "locator": "Text / Yellow Toad / ending",
+          "excerptIds": [
+            "QUOTE-END02-27"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": ""
+    },
+    {
+      "id": "END03",
+      "phase": "ending",
+      "text": "Enabled bonus awards are added before the winner is determined.",
+      "evidence": [
+        {
+          "sourceId": "BONUS",
+          "locator": "Bonus Star introduction; IGN standard-rules paragraph",
+          "excerptIds": [
+            "BONUS-END03-8"
+          ]
+        },
+        {
+          "sourceId": "IGN",
+          "locator": "Bonus Star introduction; IGN standard-rules paragraph",
+          "excerptIds": [
+            "IGN-E4"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "END04",
+      "phase": "ending",
+      "text": "The largest final Star total wins.",
+      "evidence": [
+        {
+          "sourceId": "NIN",
+          "locator": "Mario Party overview",
+          "excerptIds": [
+            "NIN-E6"
+          ]
+        },
+        {
+          "sourceId": "MNN",
+          "locator": "Mario Party overview",
+          "excerptIds": [
+            "MNN-E9"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "END05",
+      "phase": "ending",
+      "text": "The quote list attests a two-winner announcement for equal Stars and coins.",
+      "evidence": [
+        {
+          "sourceId": "QUOTE",
+          "locator": "Yellow Toad / ending / two winners",
+          "excerptIds": [
+            "QUOTE-END05-28"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "Evidence of a co-winner case, not proof of every tie-cardinality rule or a generic dice tiebreaker."
+    },
+    {
+      "id": "END06",
+      "phase": "ending",
+      "text": "Postgame statistical Awards are separate from the nine scoring Bonus Star categories.",
+      "evidence": [
+        {
+          "sourceId": "QUOTE",
+          "locator": "Yellow Toad / finer details; Bonus Star / Availability",
+          "excerptIds": [
+            "QUOTE-END06-29"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": ""
+    },
+    {
+      "id": "COUNT01",
+      "phase": "bonus_policy",
+      "text": "With random bonuses enabled, 10/15/20/25 turns award two categories; 30 turns award three.",
+      "evidence": [
+        {
+          "sourceId": "BONUS",
+          "locator": "Bonus Star distribution; IGN settings paragraph; Classic unlock section",
+          "excerptIds": [
+            "BONUS-COUNT01-9"
+          ]
+        },
+        {
+          "sourceId": "IGN",
+          "locator": "Bonus Star distribution; IGN settings paragraph; Classic unlock section",
+          "excerptIds": [
+            "IGN-E4"
+          ]
+        },
+        {
+          "sourceId": "MPL",
+          "locator": "Bonus Star distribution; IGN settings paragraph; Classic unlock section",
+          "excerptIds": [
+            "MPL-E3"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "COUNT02",
+      "phase": "bonus_policy",
+      "text": "Classic below 30 turns uses Rich and Eventful; Classic at 30 additionally uses Minigame.",
+      "evidence": [
+        {
+          "sourceId": "BONUS",
+          "locator": "Classic distribution passages",
+          "excerptIds": [
+            "BONUS-COUNT02-10"
+          ]
+        },
+        {
+          "sourceId": "MPL",
+          "locator": "Classic distribution passages",
+          "excerptIds": [
+            "MPL-E2",
+            "MPL-E3"
+          ]
+        },
+        {
+          "sourceId": "MNN",
+          "locator": "Classic distribution passages",
+          "excerptIds": [
+            "MNN-E3"
+          ]
+        },
+        {
+          "sourceId": "GFAQCLASSIC",
+          "locator": "comperko, original post 2, complete Classic policy",
+          "excerptIds": [
+            "GFAQCLASSIC-COUNT02-1",
+            "GFAQCLASSIC-COUNT02-2",
+            "GFAQCLASSIC-COUNT02-3"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "medium",
+      "note": "Complete two/trio policy corroborated by the original comperko post 2 and the Jamboree-scoped Bonus Star article. Mario Party Legacy confirms the full three-category pool and two categories below 30. Coin/Happening in the player report denote Rich/Eventful; these are not promoted to exact displayed labels. The source is a player report, not a primary-frame capture."
+    },
+    {
+      "id": "COUNT03",
+      "phase": "bonus_policy",
+      "text": "Off disables Bonus Stars.",
+      "evidence": [
+        {
+          "sourceId": "MNN",
+          "locator": "Party rules settings",
+          "excerptIds": [
+            "MNN-E2"
+          ]
+        },
+        {
+          "sourceId": "IGN",
+          "locator": "Party rules settings",
+          "excerptIds": [
+            "IGN-E2"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "COUNT04",
+      "phase": "bonus_policy",
+      "text": "Pro lasts 12 turns and announces one bonus category before play: Eventful, Sightseer or Slowpoke.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Pro Rules; Lucky stars; Pro overview",
+          "excerptIds": [
+            "GAME-E4"
+          ]
+        },
+        {
+          "sourceId": "GR",
+          "locator": "Pro Rules; Lucky stars; Pro overview",
+          "excerptIds": [
+            "GR-E1",
+            "GR-E2",
+            "GR-E3",
+            "GR-E4"
+          ]
+        },
+        {
+          "sourceId": "NIN",
+          "locator": "Pro Rules; Lucky stars; Pro overview",
+          "excerptIds": [
+            "NIN-E7"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "Some prose says Happening instead of Eventful. Name normalization is logged, not proof of a Pro-specific on-screen label."
+    },
+    {
+      "id": "TIE01",
+      "phase": "bonus_policy",
+      "text": "A series-level source describes tied bonus leaders each receiving a Star, but its adjacent Battle Royale/Tag Team exception is ambiguous for Jamboree.",
+      "evidence": [
+        {
+          "sourceId": "BONUS",
+          "locator": "Introduction tie paragraph",
+          "excerptIds": [
+            "BONUS-TIE01-11"
+          ]
+        }
+      ],
+      "status": "conflict",
+      "confidence": "low",
+      "note": "C03. No unconditional tie algorithm is certified in this drop."
+    },
+    {
+      "id": "TIE02",
+      "phase": "bonus_policy",
+      "text": "The host transcript attests that an award can have no recipient.",
+      "evidence": [
+        {
+          "sourceId": "QUOTE",
+          "locator": "Yellow Toad / ending / no one got the bonus",
+          "excerptIds": [
+            "QUOTE-TIE02-30"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "All-zero thresholds and Slowpoke zero-distance handling are not established."
+    },
+    {
+      "id": "PRO01",
+      "phase": "pro",
+      "text": "Players choose a starting item; shop stock is limited to two copies per item without replenishment.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Pro Rules",
+          "excerptIds": [
+            "GAME-E5"
+          ]
+        },
+        {
+          "sourceId": "ZU",
+          "locator": "Pro Rules",
+          "excerptIds": [
+            "ZU-E4",
+            "ZU-E5"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "PRO02",
+      "phase": "pro",
+      "text": "Pro removes Chance Time, Hidden Blocks and the extra Homestretch event.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Pro Rules",
+          "excerptIds": [
+            "GAME-PRO02-16"
+          ]
+        },
+        {
+          "sourceId": "ZU",
+          "locator": "Pro Rules",
+          "excerptIds": [
+            "ZU-E1",
+            "ZU-E2"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "PRO03",
+      "phase": "pro",
+      "text": "Pro keeps Homestretch ±6 Blue/Red values and same-space duels.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Pro Rules / Homestretch",
+          "excerptIds": [
+            "GAME-PRO03-17"
+          ]
+        },
+        {
+          "sourceId": "HOME",
+          "locator": "Pro Rules / Homestretch",
+          "excerptIds": [
+            "HOME-PRO03-13"
+          ]
+        },
+        {
+          "sourceId": "GFAQPRO",
+          "locator": "Ice_Dragon14, post 10, retained Homestretch rules; 3-coin base is separately established",
+          "excerptIds": [
+            "GFAQPRO-PRO03-1"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "medium",
+      "note": "Ice_Dragon14 explicitly reports x2 Blue/Red and continuing duels in Pro. The 3-coin baseline and numeric 6 values are separately supplied by the game/host sources. Zero-coin duel wager, tie and event-priority edge cases remain unverified."
+    },
+    {
+      "id": "PRO04",
+      "phase": "pro",
+      "text": "Pro Lucky spaces offer 10 coins or Double Dice; Unlucky transfers 7 coins to last place.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Pro Rules changes",
+          "excerptIds": [
+            "GAME-E6"
+          ]
+        },
+        {
+          "sourceId": "GFAQPRO",
+          "locator": "Ice_Dragon14, post 10, Lucky-space choice",
+          "excerptIds": [
+            "GFAQPRO-PRO04-2",
+            "GFAQPRO-PRO04-3"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "medium",
+      "note": "Both complete choices/transfers are explicit in Ice_Dragon14 post 10 and the Jamboree article. Final-turn alternatives and empty-inventory behavior remain open."
+    },
+    {
+      "id": "PRO05",
+      "phase": "pro",
+      "text": "Pro uses item roulette without item minigames.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Pro Rules changes",
+          "excerptIds": [
+            "GAME-E8"
+          ]
+        },
+        {
+          "sourceId": "GFAQPRO",
+          "locator": "Ice_Dragon14, post 10; partial support only, roulette presentation omitted",
+          "excerptIds": [
+            "GFAQPRO-PRO05-4"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "The independent player report confirms absence of Item minigames, but not the precise roulette presentation. The complete row remains single_source."
+    },
+    {
+      "id": "PRO06",
+      "phase": "pro",
+      "text": "Pro marks future Star sites; a used site becomes eligible again after the other sites have been used.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Pro Rules Star Stop Signs",
+          "excerptIds": [
+            "GAME-PRO06-18"
+          ]
+        },
+        {
+          "sourceId": "GFAQPRO",
+          "locator": "Ice_Dragon14, post 10; partial support only, used-site reset omitted",
+          "excerptIds": [
+            "GFAQPRO-PRO06-6"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "The independent player report confirms marked spawn sites but omits the used-site reset cycle. The complete row remains single_source."
+    },
+    {
+      "id": "PRO07",
+      "phase": "pro",
+      "text": "Pro permits Star wagers in duels.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Pro Rules duel",
+          "excerptIds": [
+            "GAME-PRO07-19"
+          ]
+        },
+        {
+          "sourceId": "ZU",
+          "locator": "Pro Rules duel",
+          "excerptIds": [
+            "ZU-E6"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "The additional requirement that both participants have a Star is stated only by GAME and is not promoted to a dual-confirmed rule."
+    },
+    {
+      "id": "PRO08",
+      "phase": "pro",
+      "text": "Pro VS stakes are 20 coins; the landing player selects the minigame.",
+      "evidence": [
+        {
+          "sourceId": "GAME",
+          "locator": "Pro Rules VS",
+          "excerptIds": [
+            "GAME-E7",
+            "GAME-PRO08-21"
+          ]
+        },
+        {
+          "sourceId": "NAMU",
+          "locator": "4.2.2 Championship Rules / VS Space",
+          "excerptIds": [
+            "NAMU-PRO08-1"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "medium",
+      "note": "Original Korean Namu article independently states the mandatory 20-coin pool and landing-player choice. Six-option/Boss availability, insufficient-coin treatment and all event-priority exceptions remain outside this retained core. This is secondary editorial corroboration, not observed primary frames or installed-build verification."
+    },
+    {
+      "id": "PRO09",
+      "phase": "pro",
+      "text": "Pro Bowser takes a Star; without one, the reported fallback is half the coins, or all coins at King Bowser Keep.",
+      "evidence": [
+        {
+          "sourceId": "BOWSER",
+          "locator": "Jamboree / Pro Rules",
+          "excerptIds": [
+            "BOWSER-E3",
+            "BOWSER-E6",
+            "BOWSER-E7",
+            "BOWSER-E8"
+          ]
+        },
+        {
+          "sourceId": "GAME",
+          "locator": "Jamboree / Pro Rules",
+          "excerptIds": [
+            "GAME-PRO09-20"
+          ]
+        },
+        {
+          "sourceId": "ZU",
+          "locator": "Jamboree / Pro Rules",
+          "excerptIds": [
+            "ZU-E3"
+          ]
+        }
+      ],
+      "status": "conflict",
+      "confidence": "low",
+      "note": "C05: GAME omits the board exception and ZU says zero exceptions. Preserve the board-specific report without calling it independently settled."
+    },
+    {
+      "id": "TV01",
+      "phase": "jamboree_tv",
+      "text": "Frenzy has five turns; players begin with 50 coins, one Star and Double Dice.",
+      "evidence": [
+        {
+          "sourceId": "TV",
+          "locator": "Frenzy Rules",
+          "excerptIds": [
+            "TV-E1",
+            "TV-E2",
+            "TV-E3"
+          ]
+        },
+        {
+          "sourceId": "MPLTV",
+          "locator": "Frenzy Rules",
+          "excerptIds": [
+            "MPLTV-E1",
+            "MPLTV-E2"
+          ]
+        },
+        {
+          "sourceId": "NINTV",
+          "locator": "Mario Party / Frenzy Rules",
+          "excerptIds": [
+            "NINTV-E1",
+            "NINTV-E2"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "TV02",
+      "phase": "jamboree_tv",
+      "text": "Frenzy begins with two Homestretch effects and same-space duels, and ends with one bonus category.",
+      "evidence": [
+        {
+          "sourceId": "TV",
+          "locator": "Frenzy Rules",
+          "excerptIds": [
+            "TV-E4",
+            "TV-E5"
+          ]
+        },
+        {
+          "sourceId": "MPLTV",
+          "locator": "Frenzy Rules",
+          "excerptIds": [
+            "MPLTV-E3",
+            "MPLTV-E4"
+          ]
+        },
+        {
+          "sourceId": "HOME",
+          "locator": "Frenzy Rules",
+          "excerptIds": [
+            "HOME-TV02-14"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "TV03",
+      "phase": "jamboree_tv",
+      "text": "Tag-Team shares Stars and coins; higher combined opening rolls act first, and teams alternate players.",
+      "evidence": [
+        {
+          "sourceId": "TV",
+          "locator": "Tag-Team Rules",
+          "excerptIds": [
+            "TV-E6"
+          ]
+        },
+        {
+          "sourceId": "MPLTV",
+          "locator": "Tag-Team Rules",
+          "excerptIds": [
+            "MPLTV-E5",
+            "MPLTV-E6"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "Both sources confirm shared Stars/coins; only MPLTV explicitly supplies the opening-roll and alternating-order rules. Entire row is not dual-confirmed."
+    },
+    {
+      "id": "TV04",
+      "phase": "jamboree_tv",
+      "text": "Jamboree TV does not offer Pro Rules within its own Mario Party rulesets.",
+      "evidence": [
+        {
+          "sourceId": "MPLTV",
+          "locator": "Mario Party / rulesets",
+          "excerptIds": [
+            "MPLTV-E7"
+          ]
+        },
+        {
+          "sourceId": "TV",
+          "locator": "Mario Party / rulesets",
+          "excerptIds": [
+            "TV-E7"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "The original game remains a separate context; do not infer Pro was removed from the base game."
+    },
+    {
+      "id": "U01",
+      "phase": "start",
+      "text": "Exact opening-roll range, descending-order display, and tied-order-roll resolution.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U02",
+      "phase": "player_turn",
+      "text": "Exact input menu strings, input order, and whether all item classes obey a one-item-per-turn limit.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U03",
+      "phase": "player_turn",
+      "text": "Item-use versus Buddy-start-effect ordering, cancellation and unavailable-target behavior.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U04",
+      "phase": "moving",
+      "text": "Exact movement decrement rules for every shop, Star, Boo, gate and branch node; forced movement versus dice movement.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U05",
+      "phase": "branch_choice",
+      "text": "The complete branch-choice interface, legal-edge constraints, gate/key consumption and prompt order.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U06",
+      "phase": "landing",
+      "text": "Complete priority order among traps, landing effects, Buddy repeats, Hidden Blocks and same-space duels.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U07",
+      "phase": "round_end",
+      "text": "Board phase/tide/sale/conveyor hooks relative to round minigame, Buddy lifetime decrement and the next player.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U08",
+      "phase": "minigame_selection",
+      "text": "Complete landed-space-color to team mapping, green-space randomization and category probabilities in Jamboree.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U09",
+      "phase": "minigame_selection",
+      "text": "Vote aggregation, weighting, ties, unvoted options, repeat suppression and candidate-pool algorithm.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U10",
+      "phase": "minigame_selection",
+      "text": "Exact standard/coin/team/tied/Bonus Minigame payouts and which minigames count toward the Minigame award.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U11",
+      "phase": "homestretch",
+      "text": "Chooser selection, rank ties, five-option sampling, event weights, slot order beyond reported Mushroom rule and board restrictions.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U12",
+      "phase": "homestretch",
+      "text": "Inventory overflow, coin-cap behavior and atomic ordering when Homestretch grants items or doubles wallets.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U13",
+      "phase": "ending",
+      "text": "Final ranking tie rules for every cardinality, coin secondary ranking confirmation and animation ordering.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U14",
+      "phase": "bonus_policy",
+      "text": "Independent second evidence for six non-Pro bonus criteria; exact internal counters for all nine categories.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U15",
+      "phase": "bonus_policy",
+      "text": "All tied-award cardinalities, zero-activity eligibility and whether a non-awarded category is replaced.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U16",
+      "phase": "bonus_policy",
+      "text": "Random category sampling, probabilities, timing of selection, duplicate avoidance and complete Frenzy/Tag-Team award pools.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U17",
+      "phase": "strings",
+      "text": "Complete exact English on-screen text inventory, regional/version variants, visual capture, voice attribution and punctuation.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U18",
+      "phase": "pro",
+      "text": "All board-specific Pro substitutions and every exception, including final-turn item/Lucky behavior.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U19",
+      "phase": "jamboree_tv",
+      "text": "Complete Tag-Team turn resolution, team tie rules, bonus counters, modifiers and final presentation.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "U20",
+      "phase": "verification",
+      "text": "Controlled game replay, independent second researcher and exhaustive event-priority tests were not performed.",
+      "evidence": [],
+      "status": "unverified",
+      "confidence": "low",
+      "note": "Unanswered requirement; this row is a question, not a proposed game rule."
+    },
+    {
+      "id": "BONUS01",
+      "phase": "bonus_criterion",
+      "text": "Maximize Bowser-space landings.",
+      "evidence": [
+        {
+          "sourceId": "BONUS",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "BONUS-E6"
+          ]
+        },
+        {
+          "sourceId": "QUOTE",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "QUOTE-BONUS01"
+          ]
+        },
+        {
+          "sourceId": "TRACKER",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "TRACKER-E5"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "No independent second criterion source established. TRACKER is derived and is excluded from independence counts."
+    },
+    {
+      "id": "BONUS02",
+      "phase": "bonus_criterion",
+      "text": "Maximize Event-space landings.",
+      "evidence": [
+        {
+          "sourceId": "BONUS",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "BONUS-E6"
+          ]
+        },
+        {
+          "sourceId": "QUOTE",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "QUOTE-BONUS02"
+          ]
+        },
+        {
+          "sourceId": "GR",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "GR-E1"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "GR independently corroborates this core criterion. Precise counters remain unverified."
+    },
+    {
+      "id": "BONUS03",
+      "phase": "bonus_criterion",
+      "text": "Maximize items used.",
+      "evidence": [
+        {
+          "sourceId": "BONUS",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "BONUS-E2"
+          ]
+        },
+        {
+          "sourceId": "QUOTE",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "QUOTE-BONUS03"
+          ]
+        },
+        {
+          "sourceId": "TRACKER",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "TRACKER-E9"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "No independent second criterion source established. TRACKER is derived and is excluded from independence counts."
+    },
+    {
+      "id": "BONUS04",
+      "phase": "bonus_criterion",
+      "text": "Maximize minigame wins, not minigame coin income.",
+      "evidence": [
+        {
+          "sourceId": "BONUS",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "BONUS-E1"
+          ]
+        },
+        {
+          "sourceId": "QUOTE",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "QUOTE-BONUS04"
+          ]
+        },
+        {
+          "sourceId": "TRACKER",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "TRACKER-E2"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "No independent second criterion source established. TRACKER is derived and is excluded from independence counts."
+    },
+    {
+      "id": "BONUS05",
+      "phase": "bonus_criterion",
+      "text": "Maximize combined Red-space and Unlucky-space landings.",
+      "evidence": [
+        {
+          "sourceId": "BONUS",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "BONUS-E3"
+          ]
+        },
+        {
+          "sourceId": "QUOTE",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "QUOTE-BONUS05"
+          ]
+        },
+        {
+          "sourceId": "TRACKER",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "TRACKER-E4"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "No independent second criterion source established. TRACKER is derived and is excluded from independence counts."
+    },
+    {
+      "id": "BONUS06",
+      "phase": "bonus_criterion",
+      "text": "Maximize cumulative coins collected, including coins subsequently spent or stolen; not peak wallet size.",
+      "evidence": [
+        {
+          "sourceId": "BONUS",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "BONUS-E4"
+          ]
+        },
+        {
+          "sourceId": "QUOTE",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "QUOTE-BONUS06"
+          ]
+        },
+        {
+          "sourceId": "TRACKER",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "TRACKER-E3"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "No independent second criterion source established. TRACKER is derived and is excluded from independence counts."
+    },
+    {
+      "id": "BONUS07",
+      "phase": "bonus_criterion",
+      "text": "Maximize items bought at shops, not coins spent there.",
+      "evidence": [
+        {
+          "sourceId": "BONUS",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "BONUS-E5"
+          ]
+        },
+        {
+          "sourceId": "QUOTE",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "QUOTE-BONUS07"
+          ]
+        },
+        {
+          "sourceId": "TRACKER",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "TRACKER-E8"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "No independent second criterion source established. TRACKER is derived and is excluded from independence counts."
+    },
+    {
+      "id": "BONUS08",
+      "phase": "bonus_criterion",
+      "text": "Maximize spaces traveled.",
+      "evidence": [
+        {
+          "sourceId": "BONUS",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "BONUS-E7"
+          ]
+        },
+        {
+          "sourceId": "QUOTE",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "QUOTE-BONUS08"
+          ]
+        },
+        {
+          "sourceId": "GR",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "GR-E1"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "GR independently corroborates this core criterion. Precise counters remain unverified."
+    },
+    {
+      "id": "BONUS09",
+      "phase": "bonus_criterion",
+      "text": "Minimize spaces traveled.",
+      "evidence": [
+        {
+          "sourceId": "QUOTE",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "QUOTE-BONUS09"
+          ]
+        },
+        {
+          "sourceId": "GR",
+          "locator": "Jamboree-applicable criterion; Yellow Toad ending; GamesRadar Lucky stars when present",
+          "excerptIds": [
+            "GR-E1"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "GR independently corroborates this core criterion. Precise counters remain unverified."
+    },
+    {
+      "id": "EFFECT01",
+      "phase": "homestretch_effect",
+      "text": "Grant one player a Mushroom.",
+      "evidence": [
+        {
+          "sourceId": "HOME",
+          "locator": "Homestretch / Jamboree effect list",
+          "excerptIds": [
+            "HOME-E1"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "If a player selects it, that player receives it; host selection uses a random recipient."
+    },
+    {
+      "id": "EFFECT02",
+      "phase": "homestretch_effect",
+      "text": "Add one temporary Star Exchange.",
+      "evidence": [
+        {
+          "sourceId": "HOME",
+          "locator": "Homestretch / Jamboree effect list",
+          "excerptIds": [
+            "HOME-E2"
+          ]
+        },
+        {
+          "sourceId": "EXCHANGE",
+          "locator": "Homestretch / Jamboree effect list",
+          "excerptIds": [
+            "EXCHANGE-E4",
+            "EXCHANGE-E5"
+          ]
+        },
+        {
+          "sourceId": "QUOTE",
+          "locator": "Homestretch / Jamboree effect list",
+          "excerptIds": [
+            "QUOTE-EFFECT02-31"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "It disappears permanently after its one purchase."
+    },
+    {
+      "id": "EFFECT03",
+      "phase": "homestretch_effect",
+      "text": "Give all players a Star Steal Trap.",
+      "evidence": [
+        {
+          "sourceId": "HOME",
+          "locator": "Homestretch / Jamboree effect list",
+          "excerptIds": [
+            "HOME-E3",
+            "HOME-EFFECT03-15"
+          ]
+        },
+        {
+          "sourceId": "NAMU",
+          "locator": "4.2 Mario Party / Last Spurt extra-condition list",
+          "excerptIds": [
+            "NAMU-EFFECT03-2"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "medium",
+      "note": "Inventory-overflow resolution is unverified. Original Korean Namu list independently attests the all-player grant. No inventory overflow, item timing, selection probabilities or Frenzy eligibility is inferred."
+    },
+    {
+      "id": "EFFECT04",
+      "phase": "homestretch_effect",
+      "text": "Give all players Double Dice.",
+      "evidence": [
+        {
+          "sourceId": "HOME",
+          "locator": "Homestretch / Jamboree effect list",
+          "excerptIds": [
+            "HOME-E4",
+            "HOME-EFFECT04-16"
+          ]
+        },
+        {
+          "sourceId": "NAMU",
+          "locator": "4.2 Mario Party / Last Spurt extra-condition list",
+          "excerptIds": [
+            "NAMU-EFFECT04-3"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "medium",
+      "note": "Inventory-overflow resolution is unverified. Original Korean Namu list independently attests the all-player grant. No inventory overflow, item timing, selection probabilities or Frenzy eligibility is inferred."
+    },
+    {
+      "id": "EFFECT05",
+      "phase": "homestretch_effect",
+      "text": "Double Blue/Red values again to +12/−12.",
+      "evidence": [
+        {
+          "sourceId": "HOME",
+          "locator": "Homestretch / Jamboree effect list",
+          "excerptIds": [
+            "HOME-E5"
+          ]
+        },
+        {
+          "sourceId": "QUOTE",
+          "locator": "Homestretch / Jamboree effect list",
+          "excerptIds": [
+            "QUOTE-EFFECT05-32"
+          ]
+        },
+        {
+          "sourceId": "FAMI",
+          "locator": "Lyndis Lorca, 17 October 2024; mall-course Homestretch report",
+          "excerptIds": [
+            "FAMI-E1"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "high",
+      "note": "Fresh independent full-core corroboration added on 2026-10-07; related unknown edge cases remain open."
+    },
+    {
+      "id": "EFFECT06",
+      "phase": "homestretch_effect",
+      "text": "Double each player's coins.",
+      "evidence": [
+        {
+          "sourceId": "HOME",
+          "locator": "Homestretch / Jamboree effect list",
+          "excerptIds": [
+            "HOME-E6",
+            "HOME-EFFECT06-17"
+          ]
+        },
+        {
+          "sourceId": "NAMU",
+          "locator": "4.2 Mario Party / Last Spurt extra-condition list",
+          "excerptIds": [
+            "NAMU-EFFECT06-4"
+          ]
+        }
+      ],
+      "status": "corroborated",
+      "confidence": "medium",
+      "note": "Coin-cap and overflow behavior are unverified. Original Korean Namu list independently attests doubling all players' held coin balances. No coin cap, overflow, hidden Rich counter inclusion, ordering or Frenzy eligibility is inferred."
+    },
+    {
+      "id": "EFFECT07",
+      "phase": "homestretch_effect",
+      "text": "Replace two or three spaces with Bowser Spaces.",
+      "evidence": [
+        {
+          "sourceId": "HOME",
+          "locator": "Homestretch / Jamboree effect list",
+          "excerptIds": [
+            "HOME-E7"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "Exact candidate-space selection is unverified."
+    },
+    {
+      "id": "EFFECT08",
+      "phase": "homestretch_effect",
+      "text": "Replace two to four spaces with Chance Time Spaces.",
+      "evidence": [
+        {
+          "sourceId": "HOME",
+          "locator": "Homestretch / Jamboree effect list",
+          "excerptIds": [
+            "HOME-E8"
+          ]
+        }
+      ],
+      "status": "single_source",
+      "confidence": "medium",
+      "note": "Exact candidate-space selection is unverified."
+    }
+  ]
+}
