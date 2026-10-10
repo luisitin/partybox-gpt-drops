@@ -1,0 +1,21 @@
+name: B09 exact Clue solver
+on:
+  pull_request:
+    paths: ['jobs/B09-*/**']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+        working-directory: jobs/B09-clue-solver
+      - run: sha256sum -c SHA256SUMS.txt
+        working-directory: jobs/B09-clue-solver
+      - run: npm test
+        working-directory: jobs/B09-clue-solver
