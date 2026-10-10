@@ -1,0 +1,68 @@
+{
+  "testedHead": "1738f8c9466a370d57d2b9fbf34f4052e3c3b3d6",
+  "command": "npm test",
+  "status": "passed",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "elapsedMs": 766205.24202,
+  "benchmarks": [
+    {
+      "seed": 1,
+      "cases": 200,
+      "warmupCases": 8,
+      "warmupPassed": 8,
+      "blindOptimumComparisons": 208,
+      "passed": 200,
+      "p50Ms": 16.4811279999999,
+      "p99Ms": 273.5332240000007,
+      "maxMs": 410.98173399999996,
+      "environment": {
+        "node": "v24.19.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "INTEL(R) XEON(R) PLATINUM 8573C"
+      },
+      "corpusSha256": "fb9baa8b9339e5db4323a20c87d70c24c76ce11e789a8f85bbc46ffff51a0ad0"
+    },
+    {
+      "seed": 2,
+      "cases": 200,
+      "warmupCases": 8,
+      "warmupPassed": 8,
+      "blindOptimumComparisons": 208,
+      "passed": 200,
+      "p50Ms": 12.777693,
+      "p99Ms": 144.27055300000006,
+      "maxMs": 209.26957800000014,
+      "environment": {
+        "node": "v24.19.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "INTEL(R) XEON(R) PLATINUM 8573C"
+      },
+      "corpusSha256": "55a7cf536adfa14dbcd4906fcd333db9a41386308daf4b7df52616c12602dca0"
+    },
+    {
+      "seed": 3,
+      "cases": 200,
+      "warmupCases": 8,
+      "warmupPassed": 8,
+      "blindOptimumComparisons": 208,
+      "passed": 200,
+      "p50Ms": 14.466111000000637,
+      "p99Ms": 154.20424400000002,
+      "maxMs": 426.3010369999997,
+      "environment": {
+        "node": "v24.19.0",
+        "platform": "linux",
+        "arch": "x64",
+        "cpu": "INTEL(R) XEON(R) PLATINUM 8573C"
+      },
+      "corpusSha256": "29a02955f8a1cb613876cbcaf2aa3d0f2a639436cee8ba3ee24615eb161be8fb"
+    }
+  ],
+  "warmupTiming": "Eight distinct warmup calls per seed were compared to independent answers but untimed in this run; improvement measures them."
+}

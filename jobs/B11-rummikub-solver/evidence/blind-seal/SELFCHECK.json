@@ -1,0 +1,222 @@
+{
+  "status": "passed",
+  "counts": {
+    "table": 19,
+    "position": 11,
+    "play": 10,
+    "solver": 14
+  },
+  "total": 54,
+  "cases": [
+    "empty",
+    "ascending",
+    "group3",
+    "group4",
+    "joker-run",
+    "two-joker-group",
+    "not-array",
+    "too-short",
+    "descending",
+    "run-gap",
+    "run-mixed-color",
+    "wrap",
+    "group-mixed-value",
+    "group-duplicate-color",
+    "unbound-joker",
+    "bad-joker-face",
+    "duplicate-id",
+    "three-jokers",
+    "third-physical-copy",
+    "empty-position",
+    "whitespace-id",
+    "ignored-extra-keys",
+    "empty-id",
+    "third-copy",
+    "third-joker",
+    "fraction",
+    "nonfinite",
+    "bad-color",
+    "nonboolean",
+    "shared-id",
+    "extension-opened",
+    "valid-extension",
+    "no-rack-tile",
+    "foreign-tile",
+    "missing-old",
+    "opening-30",
+    "opening-cannot-extend",
+    "opening-group-order-irrelevant",
+    "opening-binding-preserved",
+    "opened-binding-profile",
+    "empty-pass",
+    "low-opening-pass",
+    "low-after-opening",
+    "high-opening",
+    "rack-joker-high-binding",
+    "two-rack-jokers-high-group",
+    "old-extension",
+    "opening-preserves-old",
+    "opened-extends-and-melds",
+    "extract-fourth-group-tile",
+    "old-joker-new-set",
+    "rack-and-table-joker-assignments",
+    "large-16-complete-groups",
+    "large-40-table-20-hand"
+  ],
+  "checks": [
+    {
+      "name": "empty-pass",
+      "value": 0,
+      "count": 0,
+      "stats": {
+        "states": 0,
+        "memoHits": 0,
+        "boundPrunes": 0,
+        "candidates": 0
+      }
+    },
+    {
+      "name": "low-opening-pass",
+      "value": 0,
+      "count": 0,
+      "stats": {
+        "states": 3,
+        "memoHits": 0,
+        "boundPrunes": 0,
+        "candidates": 1
+      }
+    },
+    {
+      "name": "low-after-opening",
+      "value": 6,
+      "count": 3,
+      "stats": {
+        "states": 3,
+        "memoHits": 0,
+        "boundPrunes": 0,
+        "candidates": 1
+      }
+    },
+    {
+      "name": "high-opening",
+      "value": 33,
+      "count": 3,
+      "stats": {
+        "states": 3,
+        "memoHits": 0,
+        "boundPrunes": 0,
+        "candidates": 1
+      }
+    },
+    {
+      "name": "rack-joker-high-binding",
+      "value": 36,
+      "count": 3,
+      "stats": {
+        "states": 3,
+        "memoHits": 0,
+        "boundPrunes": 0,
+        "candidates": 1
+      }
+    },
+    {
+      "name": "two-rack-jokers-high-group",
+      "value": 39,
+      "count": 3,
+      "stats": {
+        "states": 3,
+        "memoHits": 0,
+        "boundPrunes": 0,
+        "candidates": 1
+      }
+    },
+    {
+      "name": "old-extension",
+      "value": 2,
+      "count": 1,
+      "stats": {
+        "states": 1,
+        "memoHits": 0,
+        "boundPrunes": 1,
+        "candidates": 3
+      }
+    },
+    {
+      "name": "opening-preserves-old",
+      "value": 30,
+      "count": 3,
+      "stats": {
+        "states": 4,
+        "memoHits": 0,
+        "boundPrunes": 0,
+        "candidates": 1
+      }
+    },
+    {
+      "name": "opened-extends-and-melds",
+      "value": 32,
+      "count": 4,
+      "stats": {
+        "states": 4,
+        "memoHits": 0,
+        "boundPrunes": 1,
+        "candidates": 4
+      }
+    },
+    {
+      "name": "extract-fourth-group-tile",
+      "value": 16,
+      "count": 2,
+      "stats": {
+        "states": 4,
+        "memoHits": 0,
+        "boundPrunes": 1,
+        "candidates": 6
+      }
+    },
+    {
+      "name": "old-joker-new-set",
+      "value": 29,
+      "count": 3,
+      "stats": {
+        "states": 2,
+        "memoHits": 0,
+        "boundPrunes": 1,
+        "candidates": 6
+      }
+    },
+    {
+      "name": "rack-and-table-joker-assignments",
+      "value": 8,
+      "count": 1,
+      "stats": {
+        "states": 4,
+        "memoHits": 0,
+        "boundPrunes": 0,
+        "candidates": 5
+      }
+    },
+    {
+      "name": "large-16-complete-groups",
+      "value": 184,
+      "count": 16,
+      "stats": {
+        "states": 95,
+        "memoHits": 40,
+        "boundPrunes": 19,
+        "candidates": 32
+      }
+    },
+    {
+      "name": "large-40-table-20-hand",
+      "value": 164,
+      "count": 20,
+      "stats": {
+        "states": 6,
+        "memoHits": 0,
+        "boundPrunes": 6,
+        "candidates": 897
+      }
+    }
+  ]
+}
