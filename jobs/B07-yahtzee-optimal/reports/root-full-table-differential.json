@@ -1,0 +1,40 @@
+{
+  "description": "Readonly full table comparison after both implementation authoring seals; every reachable state, no sampling",
+  "cases": 1072896,
+  "declaredTolerance": 1e-09,
+  "allPassed": true,
+  "rows": [
+    {
+      "mode": "official",
+      "cases": 536448,
+      "finiteMaskDisagreements": 0,
+      "maxAbsoluteDifference": 8.526512829121202e-13,
+      "worstIndex": 245800,
+      "worstCard": {
+        "usedMask": 40,
+        "upper": 30,
+        "yahtzeeBonus": false
+      },
+      "independentEV": 254.5877287344961,
+      "primaryEV": 254.58772873449593,
+      "independentFileSha256": "c26d041831a8a7ececb20e26689c6b142e00bc0900d4925d2a19547a16183709",
+      "primaryFileSha256": "6e93512a9b983afa721f6a7f1c51261a3d464f469b6c89a0c21e689efd76cbe1"
+    },
+    {
+      "mode": "published",
+      "cases": 536448,
+      "finiteMaskDisagreements": 0,
+      "maxAbsoluteDifference": 9.379164112033322e-13,
+      "worstIndex": 368677,
+      "worstCard": {
+        "usedMask": 37,
+        "upper": 45,
+        "yahtzeeBonus": false
+      },
+      "independentEV": 254.58960948196366,
+      "primaryEV": 254.58960948196315,
+      "independentFileSha256": "2b807d950f7027b10c296f5e91874431d6f20db9c642f4e45b430d31b7758ab5",
+      "primaryFileSha256": "2b2f401a4d6588decb2fbdab46eb86989d8ce6faa8f4a677b534306bb93b314c"
+    }
+  ]
+}
