@@ -1,0 +1,32 @@
+name: B16 player colors full verification
+on:
+  pull_request:
+    paths: ['jobs/B16-*/**']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: jobs/B16-player-colors
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Install pinned development compiler
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Full suite including unchanged product acceptance thresholds
+        run: npm test
+      - name: Preserve verification evidence even when acceptance fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: B16-verification
+          path: |
+            jobs/B16-player-colors/reports-run/
+            jobs/B16-player-colors/reports/
+            jobs/B16-player-colors/swatches/
+            jobs/B16-player-colors/tables/

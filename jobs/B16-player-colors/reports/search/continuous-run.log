@@ -1,0 +1,9 @@
+{
+  "provenance": "Recorded from actual optimizer stdout returned by exec session 46279; no iteration counts inferred",
+  "command": "OPENBLAS_NUM_THREADS=1 python /workspace/refine-b16.py",
+  "attempts": [
+    {"attempt":0,"success":false,"message":"Iteration limit reached","iterations":500,"margin":0.10021657562395857,"constraintMin":-1.2015043691915306e-7},
+    {"attempt":1,"success":true,"message":"Optimization terminated successfully","iterations":31,"margin":0.10021657204863631,"constraintMin":-5.3492626994611214e-12}
+  ],
+  "note": "Optimizer quantized16ContrastPass checks stricter artificial safety bounds. Original exact gates separately pass in b16-refined-independent-check.json. The first unsuccessful attempt was retained, then a reproducible seeded restart converged."
+}
