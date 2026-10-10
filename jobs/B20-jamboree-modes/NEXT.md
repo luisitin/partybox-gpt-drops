@@ -1,0 +1,5 @@
+# B20 — Exact next step
+
+The 2026-10-09 complete refresh reopened all 26 URLs twice, recovered all 230 registered short clips in both passes, and rechecked all 309 retained rows per pass. Only BUDDY_TV_TAG gained independent authored NicheGamer corroboration at medium confidence. Current status: 61/85 corroborated rules, 22 single-source, two conflicts, 84/168 empty field slots. All 28 mode objects, all factual values, all 196 original proposal phases and all other rules are unchanged. Previous bytes and dates are preserved under reports/historical-before-buddy-tag/.
+
+Inspect the exact current-head original full hosted check and its native logs/delivered artifact before treating the delivery as checked. PR16 stays draft because strict research acceptance remains NOT_MET. Further material work requires independent full-qualifier evidence for the remaining 24 partial/conflict rows, including exact clocks, rank/counter scope, rewards, unlocks and the unresolved Galleria patch restriction. Prototype gameplay remains unexecuted. Never transfer old source captures into a new current-pass claim or expand Tag Team evidence to other TV modes.
