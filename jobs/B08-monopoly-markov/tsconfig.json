@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmitOnError": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "declaration": true,
+    "outDir": "build",
+    "lib": [
+      "ES2022"
+    ],
+    "types": []
+  },
+  "include": [
+    "monopolyOdds.ts",
+    "reference.ts",
+    "roi-reference.ts",
+    "boardOdds.ts"
+  ]
+}

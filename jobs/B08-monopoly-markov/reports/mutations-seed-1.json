@@ -1,0 +1,160 @@
+{
+  "passed": true,
+  "seed": 1,
+  "mutations": 25,
+  "strictCompiled": 25,
+  "runtimeKilled": 25,
+  "productionSHA256": "b43bcb333a028cb622e027ea4563b3bfc86afbada8e189e7fae892b01b538c58",
+  "results": [
+    {
+      "name": "M01 denominator",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Exact common denominator\n\n9217 !== 9216\n"
+    },
+    {
+      "name": "M02 early triple-double jail",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Invalid free state"
+    },
+    {
+      "name": "M03 reversed doubles",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind transition leave ASAP/0/0\n\n16 !== 96\n"
+    },
+    {
+      "name": "M04 premature third jail attempt",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind transition stay max/118/0\n\n112 !== 16\n"
+    },
+    {
+      "name": "M05 jail doubles extra roll",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind transition stay max/117/0\n\n0 !== 16\n"
+    },
+    {
+      "name": "M06 ASAP inherited jail streak",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind transition leave ASAP/117/1\n\n0 !== 16\n"
+    },
+    {
+      "name": "M07 ordinary streak reset",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind transition leave ASAP/0/0\n\n0 !== 96\n"
+    },
+    {
+      "name": "M08 movement off by one",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind transition leave ASAP/0/0\n\n64 !== 96\n"
+    },
+    {
+      "name": "M09 GoToJail relocation",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Invalid free state"
+    },
+    {
+      "name": "M10 CC jail card visiting",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind transition leave ASAP/0/31\n\n272 !== 256\n"
+    },
+    {
+      "name": "M11 Chance jail card visiting",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind transition leave ASAP/0/30\n\n608 !== 512\n"
+    },
+    {
+      "name": "M12 CC card multiplicity",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Transition row mass invariant"
+    },
+    {
+      "name": "M13 Chance stay multiplicity",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Transition row mass invariant"
+    },
+    {
+      "name": "M14 missing second railroad card",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Transition row mass invariant"
+    },
+    {
+      "name": "M15 nearest railroad mapping",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind transition leave ASAP/0/15\n\n1312 !== 1120\n"
+    },
+    {
+      "name": "M16 nearest utility mapping",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind transition leave ASAP/0/36\n\n0 !== 96\n"
+    },
+    {
+      "name": "M17 back-three card",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind transition leave ASAP/0/12\n\n512 !== 608\n"
+    },
+    {
+      "name": "M18 jail does not reset streak",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind transition leave ASAP/0/30\n\n608 !== 512\n"
+    },
+    {
+      "name": "M19 end-turn filter",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind turn landing: 0.022518443650798692 != 0.031357958722416555"
+    },
+    {
+      "name": "M20 Marvin Gardens rent edition",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Official street rents\n+ actual - expected\n\n  [\n+   22,\n-   24,\n    120,\n    360,\n    850,\n    1025,\n    1200\n"
+    },
+    {
+      "name": "M21 missing full-set rent doubling",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind ROI ordinaryRent\n\n2 !== 4\n"
+    },
+    {
+      "name": "M22 hotel construction investment",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind ROI investment\n\n260 !== 310\n"
+    },
+    {
+      "name": "M23 railroad premium missing",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind ROI expectedRentPerRoll: 0.7407758002128082 != 0.8130152464211912"
+    },
+    {
+      "name": "M24 utility Chance premium",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind ROI expectedRentPerRoll: 0.8099534939406092 != 0.8503649878708002"
+    },
+    {
+      "name": "M25 per-turn rent conversion",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "failure": "Blind ROI expectedRentPerOpponentTurn: 0.03592338284004056 != 0.05058286826589295"
+    }
+  ]
+}
