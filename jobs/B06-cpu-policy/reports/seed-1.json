@@ -1,0 +1,6350 @@
+{
+  "seed": 1,
+  "research": {
+    "validator": "Ajv 8.17.1",
+    "schemaValid": true,
+    "sourceQuoteChecks": 40,
+    "rows": 33,
+    "sources": 9,
+    "coverageGaps": [
+      "F08",
+      "F09",
+      "G-easy-branches",
+      "G-easy-items",
+      "G-easy-shop",
+      "G-easy-stars",
+      "G-easy-buddy",
+      "G-easy-minigames",
+      "G-normal-branches",
+      "G-normal-items",
+      "G-normal-shop",
+      "G-normal-stars",
+      "G-normal-buddy",
+      "G-normal-minigames",
+      "G-hard-branches",
+      "G-hard-items",
+      "G-hard-shop",
+      "G-hard-stars",
+      "G-hard-buddy",
+      "G-hard-minigames",
+      "G-master-branches",
+      "G-master-items",
+      "G-master-shop",
+      "G-master-stars",
+      "G-master-buddy",
+      "G-master-minigames"
+    ],
+    "strictResearchAcceptance": "NOT_MET"
+  },
+  "artifacts": {
+    "manifestFiles": 39,
+    "sourceSeals": 9,
+    "status": "passed"
+  },
+  "command": "npm test",
+  "manual": {
+    "counts": {
+      "chooseBranch": 20,
+      "chooseItem": 20,
+      "chooseShopBuy": 20,
+      "buyStar": 20
+    },
+    "totalScenarios": 80,
+    "status": "passed",
+    "records": [
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "easy",
+        "draw": 0,
+        "expected": "near",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"near\",\"value\":50},{\"id\":\"far\",\"value\":10}]; exploration threshold 1, draw 0, all legal options in input order, index 0, expected \"near\"."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "easy",
+        "draw": 0.75,
+        "expected": "far",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"near\",\"value\":50},{\"id\":\"far\",\"value\":10}]; exploration threshold 1, draw 0.75, all legal options in input order, index 1, expected \"far\"."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "normal",
+        "draw": 0.4,
+        "expected": "far",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"near\",\"value\":50},{\"id\":\"far\",\"value\":10}]; exploration threshold 0.5, draw 0.4, all legal options in input order, index 1, expected \"far\"."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "normal",
+        "draw": 0.5,
+        "expected": "near",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"near\",\"value\":50},{\"id\":\"far\",\"value\":10}]; exploration threshold 0.5, draw 0.5, maximum utility ties in input order, index 0, expected \"near\"."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "hard",
+        "draw": 0.09,
+        "expected": "far",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"near\",\"value\":50},{\"id\":\"far\",\"value\":10}]; exploration threshold 0.1, draw 0.09, all legal options in input order, index 1, expected \"far\"."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "hard",
+        "draw": 0.1,
+        "expected": "near",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"near\",\"value\":50},{\"id\":\"far\",\"value\":10}]; exploration threshold 0.1, draw 0.1, maximum utility ties in input order, index 0, expected \"near\"."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0.99,
+        "expected": "near",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"near\",\"value\":50},{\"id\":\"far\",\"value\":10}]; exploration threshold 0, draw 0.99, maximum utility ties in input order, index 0, expected \"near\"."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 0,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": null,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": null,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 0,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "costly",
+              "cost": 1,
+              "coinGain": 0,
+              "distanceToStar": null,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": null,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": "NaN",
+        "expected": null,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": "Infinity",
+        "expected": null,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": -1,
+        "expected": null,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 1,
+        "expected": null,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": "throws",
+        "expected": null,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "a",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": null,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "b",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": null,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0.75,
+        "expected": "b",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"a\",\"value\":0},{\"id\":\"b\",\"value\":0}]; exploration threshold 0, draw 0.75, maximum utility ties in input order, index 1, expected \"b\"."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "a",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": null,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "b",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": null,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0.25,
+        "expected": "a",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"a\",\"value\":0},{\"id\":\"b\",\"value\":0}]; exploration threshold 0, draw 0.25, maximum utility ties in input order, index 0, expected \"a\"."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "risk",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": null,
+              "buddyGain": 0,
+              "risk": 1
+            },
+            {
+              "id": "cost",
+              "cost": 1,
+              "coinGain": 0,
+              "distanceToStar": null,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": "cost",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"risk\",\"value\":-20},{\"id\":\"cost\",\"value\":-1}]; exploration threshold 0, draw 0, maximum utility ties in input order, index 0, expected \"cost\"."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": true,
+          "branches": [
+            {
+              "id": "a",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": null,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "b",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": null,
+              "buddyGain": 1,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": "a",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"a\",\"value\":0},{\"id\":\"b\",\"value\":0}]; exploration threshold 0, draw 0, maximum utility ties in input order, index 0, expected \"a\"."
+      },
+      {
+        "function": "chooseBranch",
+        "input": {
+          "coins": 19,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "gain",
+              "cost": 0,
+              "coinGain": 1,
+              "distanceToStar": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": "gain",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"gain\",\"value\":101},{\"id\":\"near\",\"value\":10}]; exploration threshold 0, draw 0, maximum utility ties in input order, index 0, expected \"gain\"."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "easy",
+        "draw": 0,
+        "expected": "star",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-1},{\"id\":null,\"value\":0}]; exploration threshold 1, draw 0, all legal options in input order, index 0, expected \"star\"."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "easy",
+        "draw": 0.5,
+        "expected": "loss",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-1},{\"id\":null,\"value\":0}]; exploration threshold 1, draw 0.5, all legal options in input order, index 1, expected \"loss\"."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "easy",
+        "draw": 0.9,
+        "expected": null,
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-1},{\"id\":null,\"value\":0}]; exploration threshold 1, draw 0.9, all legal options in input order, index 2, expected null."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "normal",
+        "draw": 0.3,
+        "expected": "loss",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-1},{\"id\":null,\"value\":0}]; exploration threshold 0.5, draw 0.3, all legal options in input order, index 1, expected \"loss\"."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "normal",
+        "draw": 0.8,
+        "expected": "star",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-1},{\"id\":null,\"value\":0}]; exploration threshold 0.5, draw 0.8, maximum utility ties in input order, index 0, expected \"star\"."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "hard",
+        "draw": 0.09,
+        "expected": null,
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-1},{\"id\":null,\"value\":0}]; exploration threshold 0.1, draw 0.09, all legal options in input order, index 2, expected null."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "hard",
+        "draw": 0.1,
+        "expected": "star",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-1},{\"id\":null,\"value\":0}]; exploration threshold 0.1, draw 0.1, maximum utility ties in input order, index 0, expected \"star\"."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0.99,
+        "expected": "star",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-1},{\"id\":null,\"value\":0}]; exploration threshold 0, draw 0.99, maximum utility ties in input order, index 0, expected \"star\"."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 0,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": null,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": null,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "illegal",
+              "legal": false,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": null,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 0,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "costly",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": null,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": "NaN",
+        "expected": null,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 1,
+        "expected": null,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": "throws",
+        "expected": null,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "zero",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0.1,
+        "expected": "zero",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"zero\",\"value\":0},{\"id\":null,\"value\":0}]; exploration threshold 0, draw 0.1, maximum utility ties in input order, index 0, expected \"zero\"."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "zero",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0.9,
+        "expected": null,
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"zero\",\"value\":0},{\"id\":null,\"value\":0}]; exploration threshold 0, draw 0.9, maximum utility ties in input order, index 1, expected null."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "movement",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 5,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "coins",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 20,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": "movement",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"movement\",\"value\":35},{\"id\":\"coins\",\"value\":20},{\"id\":null,\"value\":0}]; exploration threshold 0, draw 0, maximum utility ties in input order, index 0, expected \"movement\"."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": null,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "movement",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 5,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0.9,
+        "expected": null,
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"movement\",\"value\":0},{\"id\":null,\"value\":0}]; exploration threshold 0, draw 0.9, maximum utility ties in input order, index 1, expected null."
+      },
+      {
+        "function": "chooseItem",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "gain",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 10,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": "gain",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"gain\",\"value\":9},{\"id\":null,\"value\":0}]; exploration threshold 0, draw 0, maximum utility ties in input order, index 0, expected \"gain\"."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "easy",
+        "draw": 0,
+        "expected": "star",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-31},{\"id\":null,\"value\":0}]; exploration threshold 1, draw 0, all legal options in input order, index 0, expected \"star\"."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "easy",
+        "draw": 0.5,
+        "expected": "loss",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-31},{\"id\":null,\"value\":0}]; exploration threshold 1, draw 0.5, all legal options in input order, index 1, expected \"loss\"."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "easy",
+        "draw": 0.9,
+        "expected": null,
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-31},{\"id\":null,\"value\":0}]; exploration threshold 1, draw 0.9, all legal options in input order, index 2, expected null."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "normal",
+        "draw": 0.3,
+        "expected": "loss",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-31},{\"id\":null,\"value\":0}]; exploration threshold 0.5, draw 0.3, all legal options in input order, index 1, expected \"loss\"."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "normal",
+        "draw": 0.8,
+        "expected": "star",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-31},{\"id\":null,\"value\":0}]; exploration threshold 0.5, draw 0.8, maximum utility ties in input order, index 0, expected \"star\"."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "hard",
+        "draw": 0.09,
+        "expected": null,
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-31},{\"id\":null,\"value\":0}]; exploration threshold 0.1, draw 0.09, all legal options in input order, index 2, expected null."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "hard",
+        "draw": 0.1,
+        "expected": "star",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-31},{\"id\":null,\"value\":0}]; exploration threshold 0.1, draw 0.1, maximum utility ties in input order, index 0, expected \"star\"."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0.99,
+        "expected": "star",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"star\",\"value\":50},{\"id\":\"loss\",\"value\":-31},{\"id\":null,\"value\":0}]; exploration threshold 0, draw 0.99, maximum utility ties in input order, index 0, expected \"star\"."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 0,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": null,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": []
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": null,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "illegal",
+              "legal": false,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": null,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 0,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "costly",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": null,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": "NaN",
+        "expected": null,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 1,
+        "expected": null,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": "throws",
+        "expected": null,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "gain",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 10,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": null,
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"gain\",\"value\":-21},{\"id\":null,\"value\":0}]; exploration threshold 0, draw 0, maximum utility ties in input order, index 0, expected null."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "zero",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0.9,
+        "expected": null,
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"zero\",\"value\":0},{\"id\":null,\"value\":0}]; exploration threshold 0, draw 0.9, maximum utility ties in input order, index 1, expected null."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "movement",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 5,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "coins",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 20,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": "movement",
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"movement\",\"value\":35},{\"id\":\"coins\",\"value\":20},{\"id\":null,\"value\":0}]; exploration threshold 0, draw 0, maximum utility ties in input order, index 0, expected \"movement\"."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": null,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "movement",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 5,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0.9,
+        "expected": null,
+        "draws": 1,
+        "explanation": "Utilities [{\"id\":\"movement\",\"value\":0},{\"id\":null,\"value\":0}]; exploration threshold 0, draw 0.9, maximum utility ties in input order, index 1, expected null."
+      },
+      {
+        "function": "chooseShopBuy",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "a",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "b",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "c",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": null,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "easy",
+        "draw": 0.49,
+        "expected": true,
+        "draws": 1,
+        "explanation": "Buy iff draw 0.49 is strictly below 0.5: true."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "easy",
+        "draw": 0.5,
+        "expected": false,
+        "draws": 1,
+        "explanation": "Buy iff draw 0.5 is strictly below 0.5: false."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "normal",
+        "draw": 0.84,
+        "expected": true,
+        "draws": 1,
+        "explanation": "Buy iff draw 0.84 is strictly below 0.85: true."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "normal",
+        "draw": 0.85,
+        "expected": false,
+        "draws": 1,
+        "explanation": "Buy iff draw 0.85 is strictly below 0.85: false."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "hard",
+        "draw": 0.97,
+        "expected": true,
+        "draws": 1,
+        "explanation": "Buy iff draw 0.97 is strictly below 0.98: true."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "hard",
+        "draw": 0.98,
+        "expected": false,
+        "draws": 1,
+        "explanation": "Buy iff draw 0.98 is strictly below 0.98: false."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": true,
+        "draws": 1,
+        "explanation": "Buy iff draw 0 is strictly below 1: true."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0.9999999999999999,
+        "expected": true,
+        "draws": 1,
+        "explanation": "Buy iff draw 0.9999999999999999 is strictly below 1: true."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 0,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": false,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": false,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": false,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 19,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 0,
+        "expected": false,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": "NaN",
+        "expected": false,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": "Infinity",
+        "expected": false,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": "-Infinity",
+        "expected": false,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": -1,
+        "expected": false,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": 1,
+        "expected": false,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "master",
+        "draw": "throws",
+        "expected": false,
+        "draws": 1,
+        "explanation": "Invalid or throwing random input declines the decision."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 100,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "normal",
+        "draw": 0.1,
+        "expected": true,
+        "draws": 1,
+        "explanation": "Buy iff draw 0.1 is strictly below 0.85: true."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 0,
+          "starPrice": 1,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 3,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "easy",
+        "draw": 0.1,
+        "expected": false,
+        "draws": 0,
+        "explanation": "No decision draw: turn ended, no legal affordable option, full shop inventory, or unavailable/unaffordable star, as shown by the input."
+      },
+      {
+        "function": "buyStar",
+        "input": {
+          "coins": 20,
+          "starPrice": 20,
+          "starDistance": 5,
+          "starAvailable": true,
+          "turnsLeft": 1,
+          "buddy": false,
+          "branches": [
+            {
+              "id": "near",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 1,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "far",
+              "cost": 0,
+              "coinGain": 0,
+              "distanceToStar": 9,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "inventory": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ],
+          "shop": [
+            {
+              "id": "star",
+              "legal": true,
+              "cost": 0,
+              "coinGain": 0,
+              "starGain": 1,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            },
+            {
+              "id": "loss",
+              "legal": true,
+              "cost": 1,
+              "coinGain": 0,
+              "starGain": 0,
+              "movement": 0,
+              "buddyGain": 0,
+              "risk": 0
+            }
+          ]
+        },
+        "difficulty": "hard",
+        "draw": 0.5,
+        "expected": true,
+        "draws": 1,
+        "explanation": "Buy iff draw 0.5 is strictly below 0.98: true."
+      }
+    ]
+  },
+  "random": {
+    "cases": 400000,
+    "counts": {
+      "chooseBranch": 100000,
+      "chooseItem": 100000,
+      "chooseShopBuy": 100000,
+      "buyStar": 100000
+    }
+  },
+  "toy": {
+    "games": 10000,
+    "hard": 9971,
+    "easy": 28,
+    "ties": 1,
+    "rate": 0.9971,
+    "decisionComparisons": 960000
+  },
+  "mutations": [
+    {
+      "number": 1,
+      "name": "easy exploration disabled",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\n'near' !== 'far'\n",
+      "sourceSha256": "f1bffcc89cac985c1a8e1721d394530ea2375fe1b0fb427762f32c295aa1f5a1"
+    },
+    {
+      "number": 2,
+      "name": "normal exploration disabled",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\n'near' !== 'far'\n",
+      "sourceSha256": "57c37808eb842263aedb569cb2504b3518032130b230fa6f88535db2f46955f8"
+    },
+    {
+      "number": 3,
+      "name": "hard exploration disabled",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\n'near' !== 'far'\n",
+      "sourceSha256": "c7c2406f6664fd61689d514bb850e37e691f9d106dd2f24a4e5cd172b678457b"
+    },
+    {
+      "number": 4,
+      "name": "master explores all",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\n'far' !== 'near'\n",
+      "sourceSha256": "f4ef4558e76d4a70a3315887cedd60493386e891e8c1b89887651b26e8e30b7b"
+    },
+    {
+      "number": 5,
+      "name": "easy always purchases",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\ntrue !== false\n",
+      "sourceSha256": "c545e8e89a7ab86a463e96e2696f2b9df90cf6d8f16b769dfea0c6e85789687a"
+    },
+    {
+      "number": 6,
+      "name": "normal always purchases",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\ntrue !== false\n",
+      "sourceSha256": "c001e5922087d687f1ac3e918b0d4400750840e7759e448590d0e17064d6648a"
+    },
+    {
+      "number": 7,
+      "name": "hard always purchases",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\ntrue !== false\n",
+      "sourceSha256": "c38431c1fa709daf15da4000dd28fe9d4a93f5fcbfa1a714de309039b2a91e59"
+    },
+    {
+      "number": 8,
+      "name": "master half purchases",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\nfalse !== true\n",
+      "sourceSha256": "89d9971d85cded5a27a07110df55843130aa3c7943b4204f571c21fb2cd192fa"
+    },
+    {
+      "number": 9,
+      "name": "negative RNG accepted",
+      "compiled": true,
+      "killed": true,
+      "witness": "Cannot read properties of undefined (reading 'id')",
+      "sourceSha256": "ce6d51ad1646314cfbef9d206718fcc419e0e2afe52f6a1b0c28c0043368e142"
+    },
+    {
+      "number": 10,
+      "name": "RNG endpoint one accepted",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\n'near' !== null\n",
+      "sourceSha256": "801079b7fd8d76e3993049167c94b400b03eeb7ec2dfd1c1298d689c01bd8700"
+    },
+    {
+      "number": 11,
+      "name": "throwing RNG replaced by zero",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\n'near' !== null\n",
+      "sourceSha256": "b7cfefd433cbcbd5e7c8a1a000e2a20a1022992cef3dda30c21c94e480441527"
+    },
+    {
+      "number": 12,
+      "name": "branch allowed at zero turns",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\n'near' !== null\n",
+      "sourceSha256": "d14f09b082393cc1df8d772efaa78b1dac8e2844c1b178d7ee68d027ab94c40e"
+    },
+    {
+      "number": 13,
+      "name": "actions allowed at zero turns",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\n'star' !== null\n",
+      "sourceSha256": "ae7bfff2ac9eaa7168dc6d6d7ffc3f61ae4688d80fa6f0f44b7e687a70de2056"
+    },
+    {
+      "number": 14,
+      "name": "full inventory shop allowed",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\n'star' !== null\n",
+      "sourceSha256": "32cbbfeda0660541c669faac41c131792cfaf45da8936ee7699f62c212892cf1"
+    },
+    {
+      "number": 15,
+      "name": "branch exact affordability rejected",
+      "compiled": true,
+      "killed": true,
+      "witness": "chooseBranch choice\n\nnull !== 'b1'\n",
+      "sourceSha256": "dfcdda0ef24ef77b531e04743a31c06fb6e218f8615a66cad807f613b8ac2fc0"
+    },
+    {
+      "number": 16,
+      "name": "illegal action accepted",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\n'illegal' !== null\n",
+      "sourceSha256": "3604f1a8c32e0a325e9c199f62c09502d75ace7f131355d4e2359d597696be93"
+    },
+    {
+      "number": 17,
+      "name": "action exact affordability rejected",
+      "compiled": true,
+      "killed": true,
+      "witness": "chooseItem choice\n\nnull !== 'i0'\n",
+      "sourceSha256": "e3174693bfb4c40da34713931f34ceefe4d05b92331ac696abd89468906642bf"
+    },
+    {
+      "number": 18,
+      "name": "star budget equality loses branch bonus",
+      "compiled": true,
+      "killed": true,
+      "witness": "chooseBranch choice\n\n'b2' !== 'b0'\n",
+      "sourceSha256": "84532f2a62d230df5a1f663d541d14d85cde6f3cfe680b2835a9d27fdb93b927"
+    },
+    {
+      "number": 19,
+      "name": "affordable branch proximity bonus removed",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\n'far' !== 'near'\n",
+      "sourceSha256": "c166a9e8b161102c7aba47ca7707dcd51087ac5551c48826f02d44892413c38f"
+    },
+    {
+      "number": 20,
+      "name": "branch buddy gain removed",
+      "compiled": true,
+      "killed": true,
+      "witness": "chooseBranch choice\n\n'b1' !== 'b2'\n",
+      "sourceSha256": "a2d9a7b8cdce05b7948398b26a0cfe4a607b565b76f51d1147b5b6c53cb9dc70"
+    },
+    {
+      "number": 21,
+      "name": "action star utility removed",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\nnull !== 'star'\n",
+      "sourceSha256": "31dad919ee46ec75980ad5deff6df08fe86dce41aed4e8b86fbefa05551c6d5f"
+    },
+    {
+      "number": 22,
+      "name": "branch risk penalty removed",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\n'risk' !== 'cost'\n",
+      "sourceSha256": "698b78a983d50198b091441f77683caa4445358a7f359ef6a47064ba3732dcef"
+    },
+    {
+      "number": 23,
+      "name": "exact movement arrival bonus omitted",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'coins'\n- 'movement'\n",
+      "sourceSha256": "f669d248d0150f8d3fc2c90b714de32fb8efeb3ed46650897b251ef439fa01d1"
+    },
+    {
+      "number": 24,
+      "name": "shop star reserve penalty removed",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\n'gain' !== null\n",
+      "sourceSha256": "9a52c5add078f5bec937a8e2bcf438d238bc4c18d739e3df42802ea4cd50cf94"
+    },
+    {
+      "number": 25,
+      "name": "exact star affordability rejected",
+      "compiled": true,
+      "killed": true,
+      "witness": "Expected values to be strictly equal:\n\nfalse !== true\n",
+      "sourceSha256": "118947e4f6ee980afd47e32a7886f7528417d2d97d2ab6ff6f0bcd019c37760d"
+    }
+  ],
+  "status": "passed"
+}

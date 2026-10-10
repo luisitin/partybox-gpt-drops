@@ -1,0 +1,127 @@
+{
+  "recordedAt": "2026-10-07T19:32:45.214978+00:00",
+  "originalGaps": 26,
+  "remainingGaps": 24,
+  "changedRows": [
+    "F08",
+    "F09"
+  ],
+  "sourceIndependence": {
+    "F08": "Speedrun category moderators and an independently authored Switch Squad original-game walkthrough; separate authors/publishers, no detected cross-copying.",
+    "F09": "Burritozi11a and HylianSeven publish separate first-person observations on Reddit and ResetEra."
+  },
+  "limitations": [
+    "Y is an extracted video transcript, not a claimed fresh origin HTTP body or a personally viewed screenshot. Exa may serve cached extraction. Two separate full-source fetch calls were read.",
+    "The four labels are not asserted for every game mode. Bowser Kaboom Squad stage difficulty is a different three-level setting.",
+    "Boo behavior remains low-confidence anecdotal evidence; no per-difficulty probability is inferred.",
+    "No original CPU policy, sealed implementation, code workload, RNG or toy result changed."
+  ],
+  "passes": [
+    {
+      "pass": 1,
+      "receipts": [
+        {
+          "source": "Y",
+          "url": "https://www.youtube.com/watch?v=uY822KQNdu0",
+          "retrievalMethod": "Exa web_fetch_exa full-source extraction, separate call for this pass",
+          "originHttpStatus": "not observed",
+          "captureRecordedAt": "2026-10-07T19:32:45.217097+00:00",
+          "textSha256": "967291b009da733e2d4bf843289fc767f7e8d4bf6a1cd908d371fffd6fb10ed8",
+          "quotes": {
+            "names": {
+              "registeredQuote": "change the computer difficulty from Easy normal or hard or master",
+              "words": 11,
+              "recovered": true
+            }
+          },
+          "status": "passed"
+        },
+        {
+          "source": "R",
+          "url": "https://www.resetera.com/threads/super-mario-party-jamboree-ot-salt-it-itll-last-longer.1014315/page-4",
+          "retrievalMethod": "Exa web_fetch_exa full-source extraction, separate call for this pass",
+          "originHttpStatus": "not observed",
+          "captureRecordedAt": "2026-10-07T19:32:45.217179+00:00",
+          "textSha256": "27278dd7760ef277eb3fce737f2c4ded963e8cc4d127a79625ad6a193775faae",
+          "quotes": {
+            "buddy": {
+              "registeredQuote": "He had a buddy and a ton of money, and hit boo at the top of the map, got two stars.",
+              "words": 21,
+              "recovered": true
+            }
+          },
+          "status": "passed"
+        },
+        {
+          "source": "S",
+          "url": "https://www.speedrun.com/supermariopartyjamboree?h=all-boards-party-rules-1p4c&x=xd1p0j7d-0nwmwkr8.qvvrnzrq-2lge9g78.1w4dk3mq",
+          "openedAt": "2026-10-07T19:28:42.628555+00:00",
+          "httpStatus": 200,
+          "textSha256": "b0b6289ca27537dc5375f9f40a3d8cd34a0fcd6884142e02ef4eaf3fa5bfd0f9",
+          "status": "passed",
+          "quotes": {
+            "names": {
+              "registeredQuote": "Easy Normal Hard Master",
+              "words": 4,
+              "recovered": true
+            }
+          },
+          "retrievalMethod": "Direct HTTPS GET and rendered-text HTML extraction"
+        }
+      ]
+    },
+    {
+      "pass": 2,
+      "receipts": [
+        {
+          "source": "Y",
+          "url": "https://www.youtube.com/watch?v=uY822KQNdu0",
+          "retrievalMethod": "Exa web_fetch_exa full-source extraction, separate call for this pass",
+          "originHttpStatus": "not observed",
+          "captureRecordedAt": "2026-10-07T19:32:45.221194+00:00",
+          "textSha256": "967291b009da733e2d4bf843289fc767f7e8d4bf6a1cd908d371fffd6fb10ed8",
+          "quotes": {
+            "names": {
+              "registeredQuote": "change the computer difficulty from Easy normal or hard or master",
+              "words": 11,
+              "recovered": true
+            }
+          },
+          "status": "passed"
+        },
+        {
+          "source": "R",
+          "url": "https://www.resetera.com/threads/super-mario-party-jamboree-ot-salt-it-itll-last-longer.1014315/page-4",
+          "retrievalMethod": "Exa web_fetch_exa full-source extraction, separate call for this pass",
+          "originHttpStatus": "not observed",
+          "captureRecordedAt": "2026-10-07T19:32:45.221257+00:00",
+          "textSha256": "27278dd7760ef277eb3fce737f2c4ded963e8cc4d127a79625ad6a193775faae",
+          "quotes": {
+            "buddy": {
+              "registeredQuote": "He had a buddy and a ton of money, and hit boo at the top of the map, got two stars.",
+              "words": 21,
+              "recovered": true
+            }
+          },
+          "status": "passed"
+        },
+        {
+          "source": "S",
+          "url": "https://www.speedrun.com/supermariopartyjamboree?h=all-boards-party-rules-1p4c&x=xd1p0j7d-0nwmwkr8.qvvrnzrq-2lge9g78.1w4dk3mq",
+          "openedAt": "2026-10-07T19:28:43.366758+00:00",
+          "httpStatus": 200,
+          "textSha256": "b0b6289ca27537dc5375f9f40a3d8cd34a0fcd6884142e02ef4eaf3fa5bfd0f9",
+          "status": "passed",
+          "quotes": {
+            "names": {
+              "registeredQuote": "Easy Normal Hard Master",
+              "words": 4,
+              "recovered": true
+            }
+          },
+          "retrievalMethod": "Direct HTTPS GET and rendered-text HTML extraction"
+        }
+      ]
+    }
+  ]
+}
