@@ -1,0 +1,1331 @@
+{
+  "command": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node test/run.mjs --no-bench",
+  "complete": false,
+  "node": "v24.19.0",
+  "platform": "linux",
+  "arch": "x64",
+  "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+  "logicalCPUs": 4,
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "staticChecks": [
+    {
+      "name": "strict configuration, dependency and RNG checks",
+      "cases": 6,
+      "passed": 6,
+      "seed": 1
+    },
+    {
+      "name": "strict configuration, dependency and RNG checks",
+      "cases": 6,
+      "passed": 6,
+      "seed": 2
+    },
+    {
+      "name": "strict configuration, dependency and RNG checks",
+      "cases": 6,
+      "passed": 6,
+      "seed": 3
+    }
+  ],
+  "units": [
+    {
+      "name": "horizontal and vertical edge endpoints",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "one-cell ship orientations counted once",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "all mask words and sign bits 31 32 63 64 95 96 99",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "blocked cells across every mask word",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "length one on 100 cells",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "joint exclusion and legal touching",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "labelled identical lengths not deduplicated",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "miss excludes every intersecting hull",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "named hits belong to designated ships",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "negative sinking evidence rejects fully hit afloat ship",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "every anonymous hit must be covered",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "sunk hull removed and adjacent ships still allowed",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "all sunk is terminal but empty density has one configuration",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "empty fleet is terminal",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "impossible global fleet returns error without throwing",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "enumeration budget returns no partial density",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "sample exhaustion is not contradiction",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "sample weights and conditional marginals independently reconstructed",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "one ship conditional sampling equals exact posterior",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "easy medium hard match independent policies",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "never select any previously fired cell",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "uniform endpoints of injected RNG",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "invalid RNG is an error value",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "strict malformed model options and observation checks",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "bent overlapping duplicate and mismatched sunk declarations",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "public state updates copied and repeat feedback rejected",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "sinking cannot relabel another ships earlier named hit",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "determinism and frozen inputs",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "100-cell terminal misses are contradictory not a repeat shot",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1
+    },
+    {
+      "name": "horizontal and vertical edge endpoints",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "one-cell ship orientations counted once",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "all mask words and sign bits 31 32 63 64 95 96 99",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "blocked cells across every mask word",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "length one on 100 cells",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "joint exclusion and legal touching",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "labelled identical lengths not deduplicated",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "miss excludes every intersecting hull",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "named hits belong to designated ships",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "negative sinking evidence rejects fully hit afloat ship",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "every anonymous hit must be covered",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "sunk hull removed and adjacent ships still allowed",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "all sunk is terminal but empty density has one configuration",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "empty fleet is terminal",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "impossible global fleet returns error without throwing",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "enumeration budget returns no partial density",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "sample exhaustion is not contradiction",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "sample weights and conditional marginals independently reconstructed",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "one ship conditional sampling equals exact posterior",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "easy medium hard match independent policies",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "never select any previously fired cell",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "uniform endpoints of injected RNG",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "invalid RNG is an error value",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "strict malformed model options and observation checks",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "bent overlapping duplicate and mismatched sunk declarations",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "public state updates copied and repeat feedback rejected",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "sinking cannot relabel another ships earlier named hit",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "determinism and frozen inputs",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "100-cell terminal misses are contradictory not a repeat shot",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2
+    },
+    {
+      "name": "horizontal and vertical edge endpoints",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "one-cell ship orientations counted once",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "all mask words and sign bits 31 32 63 64 95 96 99",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "blocked cells across every mask word",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "length one on 100 cells",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "joint exclusion and legal touching",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "labelled identical lengths not deduplicated",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "miss excludes every intersecting hull",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "named hits belong to designated ships",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "negative sinking evidence rejects fully hit afloat ship",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "every anonymous hit must be covered",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "sunk hull removed and adjacent ships still allowed",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "all sunk is terminal but empty density has one configuration",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "empty fleet is terminal",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "impossible global fleet returns error without throwing",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "enumeration budget returns no partial density",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "sample exhaustion is not contradiction",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "sample weights and conditional marginals independently reconstructed",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "one ship conditional sampling equals exact posterior",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "easy medium hard match independent policies",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "never select any previously fired cell",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "uniform endpoints of injected RNG",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "invalid RNG is an error value",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "strict malformed model options and observation checks",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "bent overlapping duplicate and mismatched sunk declarations",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "public state updates copied and repeat feedback rejected",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "sinking cannot relabel another ships earlier named hit",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "determinism and frozen inputs",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    },
+    {
+      "name": "100-cell terminal misses are contradictory not a repeat shot",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3
+    }
+  ],
+  "differential": [
+    {
+      "name": "6x6 full-enumeration differential",
+      "seed": 1,
+      "cases": 10000,
+      "passed": 10000,
+      "enumeratedLayouts": "1624793",
+      "policyChecks": 30000,
+      "feedbackChecks": 23625,
+      "seconds": 3.6810088380000003
+    },
+    {
+      "name": "6x6 full-enumeration differential",
+      "seed": 2,
+      "cases": 10000,
+      "passed": 10000,
+      "enumeratedLayouts": "1426510",
+      "policyChecks": 30000,
+      "feedbackChecks": 23517,
+      "seconds": 6.100757037
+    },
+    {
+      "name": "6x6 full-enumeration differential",
+      "seed": 3,
+      "cases": 10000,
+      "passed": 10000,
+      "enumeratedLayouts": "1635715",
+      "policyChecks": 30000,
+      "feedbackChecks": 23850,
+      "seconds": 3.7005618570000007
+    }
+  ],
+  "sampleAudits": [
+    {
+      "name": "independent sampled-world and weight audit",
+      "seed": 1,
+      "cases": 200,
+      "passed": 200,
+      "checkedWorlds": 12694,
+      "exhausted": 0,
+      "maxDifference": 2.6645352591003757e-15,
+      "seconds": 0.7157729999999997
+    },
+    {
+      "name": "independent sampled-world and weight audit",
+      "seed": 2,
+      "cases": 200,
+      "passed": 200,
+      "checkedWorlds": 12725,
+      "exhausted": 0,
+      "maxDifference": 3.774758283725532e-15,
+      "seconds": 1.1675103039999994
+    },
+    {
+      "name": "independent sampled-world and weight audit",
+      "seed": 3,
+      "cases": 200,
+      "passed": 200,
+      "checkedWorlds": 12773,
+      "exhausted": 0,
+      "maxDifference": 5.773159728050814e-15,
+      "seconds": 1.3767112439999982
+    }
+  ],
+  "mutations": [
+    {
+      "name": "25 one-at-a-time planted implementation bugs",
+      "seed": 1,
+      "cases": 25,
+      "passed": 25,
+      "results": [
+        {
+          "id": "M01",
+          "name": "Drop the rightmost horizontal placements",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:horizontal and vertical edge endpoints: Expected values to be strictly equal:\n\n20 !== 24\n",
+          "from": "c + length <= size",
+          "to": "c + length < size"
+        },
+        {
+          "id": "M02",
+          "name": "Drop the bottommost vertical placements",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:horizontal and vertical edge endpoints: Expected values to be strictly equal:\n\n20 !== 24\n",
+          "from": "r + length <= size",
+          "to": "r + length < size"
+        },
+        {
+          "id": "M03",
+          "name": "Double-count length-one orientations",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:one-cell ship orientations counted once: Expected values to be strictly equal:\n\n72n !== 36n\n",
+          "from": "length > 1 && r + length",
+          "to": "length >= 1 && r + length"
+        },
+        {
+          "id": "M04",
+          "name": "Put cells in the wrong 32-bit word",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:all mask words and sign bits 31 32 63 64 95 96 99: Expected values to be strictly equal:\n\n180n !== 4n\n",
+          "from": "words[c >>> 5] = words[c >>> 5]",
+          "to": "words[c >>> 4] = words[c >>> 4]"
+        },
+        {
+          "id": "M05",
+          "name": "Lose mask bits 96 through 99",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:all mask words and sign bits 31 32 63 64 95 96 99: Expected values to be strictly equal:\n\n180n !== 3n\n",
+          "from": "d: words[3]",
+          "to": "d: 0"
+        },
+        {
+          "id": "M06",
+          "name": "Ignore overlap in the second mask word",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:blocked cells across every mask word: Expected values to be strictly equal:\n\n165n !== 159n\n",
+          "from": "(x.b & y.b) | (x.c & y.c)",
+          "to": "0 | (x.c & y.c)"
+        },
+        {
+          "id": "M07",
+          "name": "Ignore overlap in the fourth mask word",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:blocked cells across every mask word: Expected values to be strictly equal:\n\n163n !== 159n\n",
+          "from": "| (x.d & y.d));",
+          "to": "| 0);"
+        },
+        {
+          "id": "M08",
+          "name": "Ignore required coverage in the fourth mask word",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:all mask words and sign bits 31 32 63 64 95 96 99: Expected values to be strictly equal:\n\n180n !== 3n\n",
+          "from": "&& ((x.d & y.d) === y.d);",
+          "to": "&& true;"
+        },
+        {
+          "id": "M09",
+          "name": "Reverse set subtraction in conditional inference",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:sample weights and conditional marginals independently reconstructed: {\"ok\":false,\"error\":\"sample-exhausted\",\"message\":\"No consistent sample found within the proposal budget; this is NOT proof of contradiction.\"}",
+          "from": "a: x.a & ~y.a",
+          "to": "a: x.a & y.a"
+        },
+        {
+          "id": "M10",
+          "name": "Allow overlapping ships during joint enumeration",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:joint exclusion and legal touching: Expected values to be strictly equal:\n\n16n !== 4n\n",
+          "from": "if (overlaps(q, used))",
+          "to": "if (false)"
+        },
+        {
+          "id": "M11",
+          "name": "Allow ship placements on blocked cells",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:blocked cells across every mask word: Expected values to be strictly equal:\n\n177n !== 159n\n",
+          "from": "!overlaps(p, blockedMask) &&",
+          "to": "true &&"
+        },
+        {
+          "id": "M12",
+          "name": "Leave sunk ships in the remaining fleet",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:sunk hull removed and adjacent ships still allowed: Expected values to be strictly equal:\n\n298n !== 20n\n",
+          "from": "if (sunken.has(ship))",
+          "to": "if (false)"
+        },
+        {
+          "id": "M13",
+          "name": "Do not block identified sunk hull cells",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:sunk hull removed and adjacent ships still allowed: Expected values to be strictly equal:\n\n23n !== 20n\n",
+          "from": "if (status === 1 || status === 3)",
+          "to": "if (status === 1)"
+        },
+        {
+          "id": "M14",
+          "name": "Assign a named hit to the wrong ship",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:named hits belong to designated ships: {\"ok\":false,\"error\":\"contradiction\",\"message\":\"An unsunk ship has no legal placement.\"}",
+          "from": "own[owner].push(c);",
+          "to": "own[(owner + 1) % own.length].push(c);"
+        },
+        {
+          "id": "M15",
+          "name": "Forbid a ships own named hits instead of foreign hits",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:named hits belong to designated ships: {\"ok\":false,\"error\":\"contradiction\",\"message\":\"An unsunk ship has no legal placement.\"}",
+          "from": "state.hitShip[c] !== ship",
+          "to": "state.hitShip[c] === ship"
+        },
+        {
+          "id": "M16",
+          "name": "Permit a fully hit ship to remain afloat",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:negative sinking evidence rejects fully hit afloat ship: Expected values to be strictly equal:\n\ntrue !== false\n",
+          "from": "&& p.cells.some(c => state.cells[c] === 0)",
+          "to": "&& true"
+        },
+        {
+          "id": "M17",
+          "name": "Forget the global anonymous-hit coverage requirement",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:all mask words and sign bits 31 32 63 64 95 96 99: Expected values to be strictly equal:\n\n180n !== 2n\n",
+          "from": "const hitMask = mask(hits);",
+          "to": "const hitMask = zero();"
+        },
+        {
+          "id": "M18",
+          "name": "Collapse the two distinct length-three ships",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:joint exclusion and legal touching: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   2n,\n+   2n,\n+   2n,\n+   2n\n-   4n,\n-   4n,\n-   4n,\n-   4n\n  ]\n",
+          "from": "fleet: [...fleet]",
+          "to": "fleet: [...new Set(fleet)]"
+        },
+        {
+          "id": "M19",
+          "name": "Normalize exact density by the wrong count",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:horizontal and vertical edge endpoints: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   0.08,\n+   0.12,\n+   0.12,\n+   0.08,\n+   0.12,\n+   0.16,\n+   0.16,\n+   0.12,\n+   0.12,\n+   0.16,\n+   0.16,\n+   0.12,\n+   0.08,\n+   0.12,\n+   0.12,\n+   0.08\n-   0.08333333333333333,\n-   0.125,\n-   0.125,\n-   0.08333333333333333,\n-   0.125,\n-   0.16666666666666666,\n-   0.16666666666666666,\n-   0.125,\n-   0.125,\n-   0.16666666666666666,\n-   0.16666666666666666,\n-   0.125,\n-   0.08333333333333333,\n-   0.125,\n-   0.125,\n-   0.08333333333333333\n  ]\n",
+          "from": "probability: counts.map(x => x / total)",
+          "to": "probability: counts.map(x => x / (total + 1))"
+        },
+        {
+          "id": "M20",
+          "name": "Increment exact per-cell counts twice",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:horizontal and vertical edge endpoints: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n-   2n,\n-   3n,\n-   3n,\n-   2n,\n-   3n,\n    4n,\n+   6n,\n+   6n,\n    4n,\n+   6n,\n+   8n,\n+   8n,\n+   6n,\n+   6n,\n+   8n,\n+   8n,\n+   6n,\n-   3n,\n-   3n,\n    4n,\n+   6n,\n+   6n,\n    4n,\n-   3n,\n-   2n,\n-   3n,\n-   3n,\n-   2n\n  ]\n",
+          "from": "counts[c]++;",
+          "to": "counts[c] += 2;"
+        },
+        {
+          "id": "M21",
+          "name": "Forget sampled target probability",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:sample weights and conditional marginals independently reconstructed: 0 != 1; tolerance 1e-10",
+          "from": "hit = !empty(need);",
+          "to": "hit = false;"
+        },
+        {
+          "id": "M22",
+          "name": "Discard importance-sampling correction",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:sample weights and conditional marginals independently reconstructed: 1 != 53.75; tolerance 1e-9",
+          "from": "weight *= z / (g.weights?.[pick] ?? 1);",
+          "to": "weight *= 1;"
+        },
+        {
+          "id": "M23",
+          "name": "Allow overlapping conditional moves",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:sample weights and conditional marginals independently reconstructed: The expression evaluated to a falsy value:\n\n  assert.ok(Number.isFinite(p)&&p>=-1e-12&&p<=1+1e-12)\n",
+          "from": "if (!overlaps(move, other) && contains(move, need))",
+          "to": "if (contains(move, need))"
+        },
+        {
+          "id": "M24",
+          "name": "Allow already-fired misses into shot choices",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:easy medium hard match independent policies: Expected values to be strictly equal:\n\n6 !== 10\n",
+          "from": "status === 0 ? [c] : []",
+          "to": "status !== 3 ? [c] : []"
+        },
+        {
+          "id": "M25",
+          "name": "Accept RNG value one and index past the candidates",
+          "seed": 1,
+          "killed": true,
+          "killedBy": "unit:invalid RNG is an error value: Expected values to be strictly equal:\n\ntrue !== false\n",
+          "from": "x >= 0 && x < 1",
+          "to": "x >= 0 && x <= 1"
+        }
+      ]
+    },
+    {
+      "name": "25 one-at-a-time planted implementation bugs",
+      "seed": 2,
+      "cases": 25,
+      "passed": 25,
+      "results": [
+        {
+          "id": "M01",
+          "name": "Drop the rightmost horizontal placements",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:horizontal and vertical edge endpoints: Expected values to be strictly equal:\n\n20 !== 24\n",
+          "from": "c + length <= size",
+          "to": "c + length < size"
+        },
+        {
+          "id": "M02",
+          "name": "Drop the bottommost vertical placements",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:horizontal and vertical edge endpoints: Expected values to be strictly equal:\n\n20 !== 24\n",
+          "from": "r + length <= size",
+          "to": "r + length < size"
+        },
+        {
+          "id": "M03",
+          "name": "Double-count length-one orientations",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:one-cell ship orientations counted once: Expected values to be strictly equal:\n\n72n !== 36n\n",
+          "from": "length > 1 && r + length",
+          "to": "length >= 1 && r + length"
+        },
+        {
+          "id": "M04",
+          "name": "Put cells in the wrong 32-bit word",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:all mask words and sign bits 31 32 63 64 95 96 99: Expected values to be strictly equal:\n\n180n !== 4n\n",
+          "from": "words[c >>> 5] = words[c >>> 5]",
+          "to": "words[c >>> 4] = words[c >>> 4]"
+        },
+        {
+          "id": "M05",
+          "name": "Lose mask bits 96 through 99",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:all mask words and sign bits 31 32 63 64 95 96 99: Expected values to be strictly equal:\n\n180n !== 3n\n",
+          "from": "d: words[3]",
+          "to": "d: 0"
+        },
+        {
+          "id": "M06",
+          "name": "Ignore overlap in the second mask word",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:blocked cells across every mask word: Expected values to be strictly equal:\n\n165n !== 159n\n",
+          "from": "(x.b & y.b) | (x.c & y.c)",
+          "to": "0 | (x.c & y.c)"
+        },
+        {
+          "id": "M07",
+          "name": "Ignore overlap in the fourth mask word",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:blocked cells across every mask word: Expected values to be strictly equal:\n\n163n !== 159n\n",
+          "from": "| (x.d & y.d));",
+          "to": "| 0);"
+        },
+        {
+          "id": "M08",
+          "name": "Ignore required coverage in the fourth mask word",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:all mask words and sign bits 31 32 63 64 95 96 99: Expected values to be strictly equal:\n\n180n !== 3n\n",
+          "from": "&& ((x.d & y.d) === y.d);",
+          "to": "&& true;"
+        },
+        {
+          "id": "M09",
+          "name": "Reverse set subtraction in conditional inference",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:sample weights and conditional marginals independently reconstructed: {\"ok\":false,\"error\":\"sample-exhausted\",\"message\":\"No consistent sample found within the proposal budget; this is NOT proof of contradiction.\"}",
+          "from": "a: x.a & ~y.a",
+          "to": "a: x.a & y.a"
+        },
+        {
+          "id": "M10",
+          "name": "Allow overlapping ships during joint enumeration",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:joint exclusion and legal touching: Expected values to be strictly equal:\n\n16n !== 4n\n",
+          "from": "if (overlaps(q, used))",
+          "to": "if (false)"
+        },
+        {
+          "id": "M11",
+          "name": "Allow ship placements on blocked cells",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:blocked cells across every mask word: Expected values to be strictly equal:\n\n177n !== 159n\n",
+          "from": "!overlaps(p, blockedMask) &&",
+          "to": "true &&"
+        },
+        {
+          "id": "M12",
+          "name": "Leave sunk ships in the remaining fleet",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:sunk hull removed and adjacent ships still allowed: Expected values to be strictly equal:\n\n298n !== 20n\n",
+          "from": "if (sunken.has(ship))",
+          "to": "if (false)"
+        },
+        {
+          "id": "M13",
+          "name": "Do not block identified sunk hull cells",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:sunk hull removed and adjacent ships still allowed: Expected values to be strictly equal:\n\n23n !== 20n\n",
+          "from": "if (status === 1 || status === 3)",
+          "to": "if (status === 1)"
+        },
+        {
+          "id": "M14",
+          "name": "Assign a named hit to the wrong ship",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:named hits belong to designated ships: {\"ok\":false,\"error\":\"contradiction\",\"message\":\"An unsunk ship has no legal placement.\"}",
+          "from": "own[owner].push(c);",
+          "to": "own[(owner + 1) % own.length].push(c);"
+        },
+        {
+          "id": "M15",
+          "name": "Forbid a ships own named hits instead of foreign hits",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:named hits belong to designated ships: {\"ok\":false,\"error\":\"contradiction\",\"message\":\"An unsunk ship has no legal placement.\"}",
+          "from": "state.hitShip[c] !== ship",
+          "to": "state.hitShip[c] === ship"
+        },
+        {
+          "id": "M16",
+          "name": "Permit a fully hit ship to remain afloat",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:negative sinking evidence rejects fully hit afloat ship: Expected values to be strictly equal:\n\ntrue !== false\n",
+          "from": "&& p.cells.some(c => state.cells[c] === 0)",
+          "to": "&& true"
+        },
+        {
+          "id": "M17",
+          "name": "Forget the global anonymous-hit coverage requirement",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:all mask words and sign bits 31 32 63 64 95 96 99: Expected values to be strictly equal:\n\n180n !== 2n\n",
+          "from": "const hitMask = mask(hits);",
+          "to": "const hitMask = zero();"
+        },
+        {
+          "id": "M18",
+          "name": "Collapse the two distinct length-three ships",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:joint exclusion and legal touching: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   2n,\n+   2n,\n+   2n,\n+   2n\n-   4n,\n-   4n,\n-   4n,\n-   4n\n  ]\n",
+          "from": "fleet: [...fleet]",
+          "to": "fleet: [...new Set(fleet)]"
+        },
+        {
+          "id": "M19",
+          "name": "Normalize exact density by the wrong count",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:horizontal and vertical edge endpoints: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   0.08,\n+   0.12,\n+   0.12,\n+   0.08,\n+   0.12,\n+   0.16,\n+   0.16,\n+   0.12,\n+   0.12,\n+   0.16,\n+   0.16,\n+   0.12,\n+   0.08,\n+   0.12,\n+   0.12,\n+   0.08\n-   0.08333333333333333,\n-   0.125,\n-   0.125,\n-   0.08333333333333333,\n-   0.125,\n-   0.16666666666666666,\n-   0.16666666666666666,\n-   0.125,\n-   0.125,\n-   0.16666666666666666,\n-   0.16666666666666666,\n-   0.125,\n-   0.08333333333333333,\n-   0.125,\n-   0.125,\n-   0.08333333333333333\n  ]\n",
+          "from": "probability: counts.map(x => x / total)",
+          "to": "probability: counts.map(x => x / (total + 1))"
+        },
+        {
+          "id": "M20",
+          "name": "Increment exact per-cell counts twice",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:horizontal and vertical edge endpoints: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n-   2n,\n-   3n,\n-   3n,\n-   2n,\n-   3n,\n    4n,\n+   6n,\n+   6n,\n    4n,\n+   6n,\n+   8n,\n+   8n,\n+   6n,\n+   6n,\n+   8n,\n+   8n,\n+   6n,\n-   3n,\n-   3n,\n    4n,\n+   6n,\n+   6n,\n    4n,\n-   3n,\n-   2n,\n-   3n,\n-   3n,\n-   2n\n  ]\n",
+          "from": "counts[c]++;",
+          "to": "counts[c] += 2;"
+        },
+        {
+          "id": "M21",
+          "name": "Forget sampled target probability",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:sample weights and conditional marginals independently reconstructed: 0 != 1; tolerance 1e-10",
+          "from": "hit = !empty(need);",
+          "to": "hit = false;"
+        },
+        {
+          "id": "M22",
+          "name": "Discard importance-sampling correction",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:sample weights and conditional marginals independently reconstructed: 1 != 53.75; tolerance 1e-9",
+          "from": "weight *= z / (g.weights?.[pick] ?? 1);",
+          "to": "weight *= 1;"
+        },
+        {
+          "id": "M23",
+          "name": "Allow overlapping conditional moves",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:sample weights and conditional marginals independently reconstructed: The expression evaluated to a falsy value:\n\n  assert.ok(Number.isFinite(p)&&p>=-1e-12&&p<=1+1e-12)\n",
+          "from": "if (!overlaps(move, other) && contains(move, need))",
+          "to": "if (contains(move, need))"
+        },
+        {
+          "id": "M24",
+          "name": "Allow already-fired misses into shot choices",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:easy medium hard match independent policies: Expected values to be strictly equal:\n\n6 !== 10\n",
+          "from": "status === 0 ? [c] : []",
+          "to": "status !== 3 ? [c] : []"
+        },
+        {
+          "id": "M25",
+          "name": "Accept RNG value one and index past the candidates",
+          "seed": 2,
+          "killed": true,
+          "killedBy": "unit:invalid RNG is an error value: Expected values to be strictly equal:\n\ntrue !== false\n",
+          "from": "x >= 0 && x < 1",
+          "to": "x >= 0 && x <= 1"
+        }
+      ]
+    },
+    {
+      "name": "25 one-at-a-time planted implementation bugs",
+      "seed": 3,
+      "cases": 25,
+      "passed": 25,
+      "results": [
+        {
+          "id": "M01",
+          "name": "Drop the rightmost horizontal placements",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:horizontal and vertical edge endpoints: Expected values to be strictly equal:\n\n20 !== 24\n",
+          "from": "c + length <= size",
+          "to": "c + length < size"
+        },
+        {
+          "id": "M02",
+          "name": "Drop the bottommost vertical placements",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:horizontal and vertical edge endpoints: Expected values to be strictly equal:\n\n20 !== 24\n",
+          "from": "r + length <= size",
+          "to": "r + length < size"
+        },
+        {
+          "id": "M03",
+          "name": "Double-count length-one orientations",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:one-cell ship orientations counted once: Expected values to be strictly equal:\n\n72n !== 36n\n",
+          "from": "length > 1 && r + length",
+          "to": "length >= 1 && r + length"
+        },
+        {
+          "id": "M04",
+          "name": "Put cells in the wrong 32-bit word",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:all mask words and sign bits 31 32 63 64 95 96 99: Expected values to be strictly equal:\n\n180n !== 4n\n",
+          "from": "words[c >>> 5] = words[c >>> 5]",
+          "to": "words[c >>> 4] = words[c >>> 4]"
+        },
+        {
+          "id": "M05",
+          "name": "Lose mask bits 96 through 99",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:all mask words and sign bits 31 32 63 64 95 96 99: Expected values to be strictly equal:\n\n180n !== 3n\n",
+          "from": "d: words[3]",
+          "to": "d: 0"
+        },
+        {
+          "id": "M06",
+          "name": "Ignore overlap in the second mask word",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:blocked cells across every mask word: Expected values to be strictly equal:\n\n165n !== 159n\n",
+          "from": "(x.b & y.b) | (x.c & y.c)",
+          "to": "0 | (x.c & y.c)"
+        },
+        {
+          "id": "M07",
+          "name": "Ignore overlap in the fourth mask word",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:blocked cells across every mask word: Expected values to be strictly equal:\n\n163n !== 159n\n",
+          "from": "| (x.d & y.d));",
+          "to": "| 0);"
+        },
+        {
+          "id": "M08",
+          "name": "Ignore required coverage in the fourth mask word",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:all mask words and sign bits 31 32 63 64 95 96 99: Expected values to be strictly equal:\n\n180n !== 3n\n",
+          "from": "&& ((x.d & y.d) === y.d);",
+          "to": "&& true;"
+        },
+        {
+          "id": "M09",
+          "name": "Reverse set subtraction in conditional inference",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:sample weights and conditional marginals independently reconstructed: {\"ok\":false,\"error\":\"sample-exhausted\",\"message\":\"No consistent sample found within the proposal budget; this is NOT proof of contradiction.\"}",
+          "from": "a: x.a & ~y.a",
+          "to": "a: x.a & y.a"
+        },
+        {
+          "id": "M10",
+          "name": "Allow overlapping ships during joint enumeration",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:joint exclusion and legal touching: Expected values to be strictly equal:\n\n16n !== 4n\n",
+          "from": "if (overlaps(q, used))",
+          "to": "if (false)"
+        },
+        {
+          "id": "M11",
+          "name": "Allow ship placements on blocked cells",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:blocked cells across every mask word: Expected values to be strictly equal:\n\n177n !== 159n\n",
+          "from": "!overlaps(p, blockedMask) &&",
+          "to": "true &&"
+        },
+        {
+          "id": "M12",
+          "name": "Leave sunk ships in the remaining fleet",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:sunk hull removed and adjacent ships still allowed: Expected values to be strictly equal:\n\n298n !== 20n\n",
+          "from": "if (sunken.has(ship))",
+          "to": "if (false)"
+        },
+        {
+          "id": "M13",
+          "name": "Do not block identified sunk hull cells",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:sunk hull removed and adjacent ships still allowed: Expected values to be strictly equal:\n\n23n !== 20n\n",
+          "from": "if (status === 1 || status === 3)",
+          "to": "if (status === 1)"
+        },
+        {
+          "id": "M14",
+          "name": "Assign a named hit to the wrong ship",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:named hits belong to designated ships: {\"ok\":false,\"error\":\"contradiction\",\"message\":\"An unsunk ship has no legal placement.\"}",
+          "from": "own[owner].push(c);",
+          "to": "own[(owner + 1) % own.length].push(c);"
+        },
+        {
+          "id": "M15",
+          "name": "Forbid a ships own named hits instead of foreign hits",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:named hits belong to designated ships: {\"ok\":false,\"error\":\"contradiction\",\"message\":\"An unsunk ship has no legal placement.\"}",
+          "from": "state.hitShip[c] !== ship",
+          "to": "state.hitShip[c] === ship"
+        },
+        {
+          "id": "M16",
+          "name": "Permit a fully hit ship to remain afloat",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:negative sinking evidence rejects fully hit afloat ship: Expected values to be strictly equal:\n\ntrue !== false\n",
+          "from": "&& p.cells.some(c => state.cells[c] === 0)",
+          "to": "&& true"
+        },
+        {
+          "id": "M17",
+          "name": "Forget the global anonymous-hit coverage requirement",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:all mask words and sign bits 31 32 63 64 95 96 99: Expected values to be strictly equal:\n\n180n !== 2n\n",
+          "from": "const hitMask = mask(hits);",
+          "to": "const hitMask = zero();"
+        },
+        {
+          "id": "M18",
+          "name": "Collapse the two distinct length-three ships",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:joint exclusion and legal touching: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   2n,\n+   2n,\n+   2n,\n+   2n\n-   4n,\n-   4n,\n-   4n,\n-   4n\n  ]\n",
+          "from": "fleet: [...fleet]",
+          "to": "fleet: [...new Set(fleet)]"
+        },
+        {
+          "id": "M19",
+          "name": "Normalize exact density by the wrong count",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:horizontal and vertical edge endpoints: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   0.08,\n+   0.12,\n+   0.12,\n+   0.08,\n+   0.12,\n+   0.16,\n+   0.16,\n+   0.12,\n+   0.12,\n+   0.16,\n+   0.16,\n+   0.12,\n+   0.08,\n+   0.12,\n+   0.12,\n+   0.08\n-   0.08333333333333333,\n-   0.125,\n-   0.125,\n-   0.08333333333333333,\n-   0.125,\n-   0.16666666666666666,\n-   0.16666666666666666,\n-   0.125,\n-   0.125,\n-   0.16666666666666666,\n-   0.16666666666666666,\n-   0.125,\n-   0.08333333333333333,\n-   0.125,\n-   0.125,\n-   0.08333333333333333\n  ]\n",
+          "from": "probability: counts.map(x => x / total)",
+          "to": "probability: counts.map(x => x / (total + 1))"
+        },
+        {
+          "id": "M20",
+          "name": "Increment exact per-cell counts twice",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:horizontal and vertical edge endpoints: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n-   2n,\n-   3n,\n-   3n,\n-   2n,\n-   3n,\n    4n,\n+   6n,\n+   6n,\n    4n,\n+   6n,\n+   8n,\n+   8n,\n+   6n,\n+   6n,\n+   8n,\n+   8n,\n+   6n,\n-   3n,\n-   3n,\n    4n,\n+   6n,\n+   6n,\n    4n,\n-   3n,\n-   2n,\n-   3n,\n-   3n,\n-   2n\n  ]\n",
+          "from": "counts[c]++;",
+          "to": "counts[c] += 2;"
+        },
+        {
+          "id": "M21",
+          "name": "Forget sampled target probability",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:sample weights and conditional marginals independently reconstructed: 0 != 1; tolerance 1e-10",
+          "from": "hit = !empty(need);",
+          "to": "hit = false;"
+        },
+        {
+          "id": "M22",
+          "name": "Discard importance-sampling correction",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:sample weights and conditional marginals independently reconstructed: 1 != 53.75; tolerance 1e-9",
+          "from": "weight *= z / (g.weights?.[pick] ?? 1);",
+          "to": "weight *= 1;"
+        },
+        {
+          "id": "M23",
+          "name": "Allow overlapping conditional moves",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:sample weights and conditional marginals independently reconstructed: The expression evaluated to a falsy value:\n\n  assert.ok(Number.isFinite(p)&&p>=-1e-12&&p<=1+1e-12)\n",
+          "from": "if (!overlaps(move, other) && contains(move, need))",
+          "to": "if (contains(move, need))"
+        },
+        {
+          "id": "M24",
+          "name": "Allow already-fired misses into shot choices",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:easy medium hard match independent policies: Expected values to be strictly equal:\n\n6 !== 10\n",
+          "from": "status === 0 ? [c] : []",
+          "to": "status !== 3 ? [c] : []"
+        },
+        {
+          "id": "M25",
+          "name": "Accept RNG value one and index past the candidates",
+          "seed": 3,
+          "killed": true,
+          "killedBy": "unit:invalid RNG is an error value: Expected values to be strictly equal:\n\ntrue !== false\n",
+          "from": "x >= 0 && x < 1",
+          "to": "x >= 0 && x <= 1"
+        }
+      ]
+    }
+  ],
+  "benchmarks": [],
+  "failures": [],
+  "sourceSHA256": "5887871a928d0d483f7d93531827c6fdec736a12eece4f6875501d42b31882e1",
+  "oracleSHA256": "f823ed358f4befdcf17428385c90d8ad1646e08b007185f01ee4fe5e45727875",
+  "policyReferenceSHA256": "ec2feff72f8d9be7bacf2d0ad3eeb59d5a5b441114b67e4b1c946750bc4193c6",
+  "integrityFiles": 25,
+  "elapsedSeconds": 21.912401383,
+  "passed": true
+}

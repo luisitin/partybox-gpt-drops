@@ -1,0 +1,14 @@
+{
+  "name": "partybox-b10-battleship-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Exact joint-fleet and sampled Battleship density with reproducible verification",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node test/run.mjs",
+    "test:quick": "npm run build && node test/run.mjs --quick"
+  },
+  "devDependencies": { "typescript": "5.8.3" }
+}
