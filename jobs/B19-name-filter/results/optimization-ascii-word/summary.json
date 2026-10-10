@@ -1,0 +1,1524 @@
+{
+  "mode": "full",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "unicode": "17.0"
+  },
+  "sourceSha256": "58c8fa49eb8a72522da4b13f41121a54c15b76bb6ca72f9b93bc8da561debace",
+  "referenceSha256": "962bab309ddf9cc2d8ccc7237f782d69db6aa2b603417f1a8935c3d5b167b5f6",
+  "blindReferenceSha256": "40449357a616619cc649d6b8efab2f6664a187de178511b8b0f17e28e92eea9a",
+  "suites": [
+    {
+      "name": "public-corpus-acquisition",
+      "cases": 1,
+      "passed": 1,
+      "seed": null,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "delivery-file-size-and-checksums",
+      "cases": 2,
+      "passed": 2,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "files": 45,
+      "checked": 45,
+      "failures": [],
+      "rootManifestPresent": true,
+      "maxFileBytes": 38715
+    },
+    {
+      "name": "immutable-return-values",
+      "cases": 3,
+      "passed": 3,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "policy-copy-consistency-and-no-duplicate-terms",
+      "cases": 3,
+      "passed": 3,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "strict-TypeScript",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1,
+      "command": "tsc -p tsconfig.json --noEmit",
+      "output": ""
+    },
+    {
+      "name": "generator-byte-identical-replay-and-coverage",
+      "cases": 2,
+      "passed": 2,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "handwritten-format-and-Scunthorpe",
+      "cases": 459,
+      "passed": 459,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "exhaustive-declared-single-glyph-substitution",
+      "cases": 1371,
+      "passed": 1371,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "precompiled-Unicode-policy-context-differential",
+      "cases": 1296,
+      "passed": 1296,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "generated-obfuscations",
+      "cases": 5000,
+      "passed": 5000,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "misses": 0,
+      "errors": [],
+      "coverage": {
+        "anal": 88,
+        "anus": 88,
+        "arsehole": 72,
+        "bastard": 80,
+        "bitch": 88,
+        "blowjob": 80,
+        "boner": 88,
+        "boob": 88,
+        "boobs": 88,
+        "bukkake": 80,
+        "chink": 88,
+        "clit": 88,
+        "cock": 88,
+        "coon": 87,
+        "cunt": 87,
+        "cum": 86,
+        "cumshot": 79,
+        "dick": 87,
+        "dildo": 87,
+        "douche": 85,
+        "dyke": 87,
+        "fag": 87,
+        "faggot": 83,
+        "fuck": 87,
+        "gook": 87,
+        "handjob": 83,
+        "hentai": 82,
+        "jizz": 85,
+        "kike": 87,
+        "nigga": 87,
+        "nigger": 84,
+        "orgasm": 86,
+        "paedophile": 49,
+        "pedophile": 51,
+        "penis": 87,
+        "porn": 87,
+        "pussy": 86,
+        "rape": 87,
+        "retard": 86,
+        "rimjob": 84,
+        "semen": 87,
+        "sex": 84,
+        "shemale": 80,
+        "slut": 87,
+        "spic": 87,
+        "spunk": 87,
+        "testicle": 67,
+        "tits": 87,
+        "titties": 77,
+        "titty": 87,
+        "tranny": 83,
+        "twat": 87,
+        "vagina": 86,
+        "wank": 87,
+        "wetback": 79,
+        "whore": 87,
+        "asshole": 80,
+        "bollocks": 71,
+        "fellatio": 70,
+        "masturbate": 39,
+        "ejaculation": 23,
+        "motherfucker": 18,
+        "masturbation": 16
+      },
+      "attempts": 5496
+    },
+    {
+      "name": "names-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "rows": 20000,
+      "unique": 20000
+    },
+    {
+      "name": "names-reviewed-corpus-policy",
+      "cases": 20000,
+      "passed": 20000,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "accepted": 19989,
+      "rejected": 11,
+      "reviewed": 11,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "names-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "words-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "rows": 10000,
+      "unique": 10000
+    },
+    {
+      "name": "words-reviewed-corpus-policy",
+      "cases": 10000,
+      "passed": 10000,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "accepted": 9951,
+      "rejected": 49,
+      "reviewed": 49,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "words-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "places-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "rows": 2000,
+      "unique": 2000
+    },
+    {
+      "name": "places-reviewed-corpus-policy",
+      "cases": 2000,
+      "passed": 2000,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "accepted": 1943,
+      "rejected": 57,
+      "reviewed": 57,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "places-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "regex-vs-bitset-NFA-differential",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "sealed-blind-reference-differential",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "repeat-call-purity",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "boolean-wrapper",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "mutation-baseline-truth",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "25-real-executed-mutations",
+      "cases": 25,
+      "passed": 25,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "survivors": []
+    },
+    {
+      "name": "runtime-gzip-size",
+      "cases": 2,
+      "passed": 2,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "sourceBytes": 9454,
+      "sourceGzipBytes": 4057,
+      "compiledBytes": 8014,
+      "compiledGzipBytes": 3162,
+      "limitBytes": 6000
+    },
+    {
+      "name": "zero-runtime-dependencies-and-forbidden-APIs",
+      "cases": 5,
+      "passed": 5,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "latency-every-observed-check-under-005ms",
+      "cases": 10000,
+      "passed": 9981,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "calls": 10000,
+      "meanMs": 0.0014398713999999927,
+      "p50Ms": 0.0006400000002031447,
+      "p99Ms": 0.004598999999871012,
+      "maxMs": 0.4707039999993867,
+      "over005Ms": 19,
+      "outliers": [
+        {
+          "index": 204,
+          "input": "ѕⅼⅼ-սսս́ｔｔｔ",
+          "timeMs": 0.06548500000008062
+        },
+        {
+          "index": 405,
+          "input": "carlock",
+          "timeMs": 0.1390879999999015
+        },
+        {
+          "index": 406,
+          "input": "ｊＩ_Ｚｚ​",
+          "timeMs": 0.06873499999983324
+        },
+        {
+          "index": 625,
+          "input": "gertude",
+          "timeMs": 0.1878260000003138
+        },
+        {
+          "index": 656,
+          "input": "ρ@E-d.ορh_іℓе",
+          "timeMs": 0.10513799999989715
+        },
+        {
+          "index": 1526,
+          "input": "experiments",
+          "timeMs": 0.20945099999971717
+        },
+        {
+          "index": 1690,
+          "input": "Kпaԝԝԝ",
+          "timeMs": 0.3282499999995707
+        },
+        {
+          "index": 1737,
+          "input": "enders",
+          "timeMs": 0.09221499999966909
+        },
+        {
+          "index": 1857,
+          "input": "соοοοո",
+          "timeMs": 0.06402100000013888
+        },
+        {
+          "index": 2458,
+          "input": "mia",
+          "timeMs": 0.09969400000045425
+        },
+        {
+          "index": 3218,
+          "input": "lynne",
+          "timeMs": 0.07031300000016927
+        },
+        {
+          "index": 3910,
+          "input": "contained",
+          "timeMs": 0.18065699999988283
+        },
+        {
+          "index": 4043,
+          "input": "blondell",
+          "timeMs": 0.08208300000023883
+        },
+        {
+          "index": 4516,
+          "input": "τԝɑt",
+          "timeMs": 0.1603660000000673
+        },
+        {
+          "index": 4796,
+          "input": "neece",
+          "timeMs": 0.19007399999918562
+        },
+        {
+          "index": 5906,
+          "input": "antonio",
+          "timeMs": 0.07024400000045716
+        },
+        {
+          "index": 7052,
+          "input": "bohanan",
+          "timeMs": 0.14508799999930488
+        },
+        {
+          "index": 7746,
+          "input": "г.℮gg.GiiNNN",
+          "timeMs": 0.0734680000005028
+        },
+        {
+          "index": 8443,
+          "input": "José",
+          "timeMs": 0.4707039999993867
+        }
+      ],
+      "measurementStartMs": 5470.175833,
+      "measurementEndMs": 5484.574547,
+      "sink": 94721
+    },
+    {
+      "name": "delivery-file-size-and-checksums",
+      "cases": 2,
+      "passed": 2,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "files": 45,
+      "checked": 45,
+      "failures": [],
+      "rootManifestPresent": true,
+      "maxFileBytes": 38715
+    },
+    {
+      "name": "immutable-return-values",
+      "cases": 3,
+      "passed": 3,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "policy-copy-consistency-and-no-duplicate-terms",
+      "cases": 3,
+      "passed": 3,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "strict-TypeScript",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2,
+      "command": "tsc -p tsconfig.json --noEmit",
+      "output": ""
+    },
+    {
+      "name": "generator-byte-identical-replay-and-coverage",
+      "cases": 2,
+      "passed": 2,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "handwritten-format-and-Scunthorpe",
+      "cases": 459,
+      "passed": 459,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "exhaustive-declared-single-glyph-substitution",
+      "cases": 1371,
+      "passed": 1371,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "precompiled-Unicode-policy-context-differential",
+      "cases": 1296,
+      "passed": 1296,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "generated-obfuscations",
+      "cases": 5000,
+      "passed": 5000,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "misses": 0,
+      "errors": [],
+      "coverage": {
+        "anal": 87,
+        "anus": 86,
+        "arsehole": 74,
+        "asshole": 78,
+        "bastard": 84,
+        "bitch": 87,
+        "blowjob": 76,
+        "bollocks": 68,
+        "boner": 87,
+        "boob": 87,
+        "boobs": 86,
+        "bukkake": 81,
+        "chink": 86,
+        "clit": 87,
+        "cock": 87,
+        "coon": 86,
+        "cunt": 87,
+        "cum": 84,
+        "cumshot": 79,
+        "dick": 86,
+        "dildo": 87,
+        "douche": 87,
+        "dyke": 87,
+        "fag": 86,
+        "faggot": 86,
+        "fellatio": 68,
+        "fuck": 87,
+        "gook": 87,
+        "handjob": 79,
+        "hentai": 87,
+        "jizz": 87,
+        "kike": 87,
+        "masturbate": 42,
+        "motherfucker": 18,
+        "nigga": 87,
+        "nigger": 86,
+        "orgasm": 86,
+        "paedophile": 45,
+        "pedophile": 49,
+        "penis": 87,
+        "porn": 86,
+        "pussy": 87,
+        "rape": 87,
+        "retard": 85,
+        "rimjob": 85,
+        "semen": 87,
+        "sex": 86,
+        "shemale": 83,
+        "slut": 86,
+        "spic": 86,
+        "spunk": 87,
+        "tits": 87,
+        "titties": 82,
+        "titty": 87,
+        "tranny": 85,
+        "twat": 86,
+        "vagina": 84,
+        "wank": 85,
+        "wetback": 77,
+        "whore": 86,
+        "testicle": 67,
+        "ejaculation": 29,
+        "masturbation": 22
+      },
+      "attempts": 5475
+    },
+    {
+      "name": "names-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "rows": 20000,
+      "unique": 20000
+    },
+    {
+      "name": "names-reviewed-corpus-policy",
+      "cases": 20000,
+      "passed": 20000,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "accepted": 19989,
+      "rejected": 11,
+      "reviewed": 11,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "names-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "words-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "rows": 10000,
+      "unique": 10000
+    },
+    {
+      "name": "words-reviewed-corpus-policy",
+      "cases": 10000,
+      "passed": 10000,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "accepted": 9951,
+      "rejected": 49,
+      "reviewed": 49,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "words-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "places-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "rows": 2000,
+      "unique": 2000
+    },
+    {
+      "name": "places-reviewed-corpus-policy",
+      "cases": 2000,
+      "passed": 2000,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "accepted": 1943,
+      "rejected": 57,
+      "reviewed": 57,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "places-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "regex-vs-bitset-NFA-differential",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "sealed-blind-reference-differential",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "repeat-call-purity",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "boolean-wrapper",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "mutation-baseline-truth",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "25-real-executed-mutations",
+      "cases": 25,
+      "passed": 25,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "survivors": []
+    },
+    {
+      "name": "runtime-gzip-size",
+      "cases": 2,
+      "passed": 2,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "sourceBytes": 9454,
+      "sourceGzipBytes": 4057,
+      "compiledBytes": 8014,
+      "compiledGzipBytes": 3162,
+      "limitBytes": 6000
+    },
+    {
+      "name": "zero-runtime-dependencies-and-forbidden-APIs",
+      "cases": 5,
+      "passed": 5,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "latency-every-observed-check-under-005ms",
+      "cases": 10000,
+      "passed": 9979,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "calls": 10000,
+      "meanMs": 0.001347364899999957,
+      "p50Ms": 0.0005819999987579649,
+      "p99Ms": 0.004723000000012689,
+      "maxMs": 0.4805319999995845,
+      "over005Ms": 21,
+      "outliers": [
+        {
+          "index": 2079,
+          "input": "Ra.р℮​",
+          "timeMs": 0.17149199999948905
+        },
+        {
+          "index": 2341,
+          "input": "c o_c-k​",
+          "timeMs": 0.4805319999995845
+        },
+        {
+          "index": 2663,
+          "input": "KK ςσσςςς",
+          "timeMs": 0.10218899999927089
+        },
+        {
+          "index": 2747,
+          "input": "malin",
+          "timeMs": 0.08168300000033923
+        },
+        {
+          "index": 3110,
+          "input": "ｒ-αρ́℮-",
+          "timeMs": 0.23473099999864644
+        },
+        {
+          "index": 3326,
+          "input": "ѕ℮χ",
+          "timeMs": 0.06514699999934237
+        },
+        {
+          "index": 3593,
+          "input": "proprietary",
+          "timeMs": 0.09376800000063668
+        },
+        {
+          "index": 4890,
+          "input": "synopsis",
+          "timeMs": 0.060256000000663335
+        },
+        {
+          "index": 5080,
+          "input": "manufacturing",
+          "timeMs": 0.09972999999990861
+        },
+        {
+          "index": 5084,
+          "input": "G o_O​Ḱ",
+          "timeMs": 0.3675419999999576
+        },
+        {
+          "index": 5208,
+          "input": "venegas",
+          "timeMs": 0.0648959999998624
+        },
+        {
+          "index": 5397,
+          "input": "​E​RооHHw",
+          "timeMs": 0.18486900000061723
+        },
+        {
+          "index": 5530,
+          "input": "αs-ʂηօ́|.E",
+          "timeMs": 0.22410800000034214
+        },
+        {
+          "index": 5874,
+          "input": "@ｒＳ℮һσ1ϵ",
+          "timeMs": 0.0811390000017127
+        },
+        {
+          "index": 6542,
+          "input": "markets",
+          "timeMs": 0.3194530000000668
+        },
+        {
+          "index": 7702,
+          "input": "schlemmer",
+          "timeMs": 0.3143049999998766
+        },
+        {
+          "index": 7791,
+          "input": "ḱn​ɑ-ω",
+          "timeMs": 0.13685999999870546
+        },
+        {
+          "index": 7950,
+          "input": "E’zhou",
+          "timeMs": 0.18095200000061595
+        },
+        {
+          "index": 7992,
+          "input": "wα-п k.",
+          "timeMs": 0.09615999999914493
+        },
+        {
+          "index": 8883,
+          "input": "Santa Fe",
+          "timeMs": 0.1262349999997241
+        },
+        {
+          "index": 9590,
+          "input": "barriers",
+          "timeMs": 0.08701199999995879
+        }
+      ],
+      "measurementStartMs": 9591.010576,
+      "measurementEndMs": 9604.484225,
+      "sink": 93467
+    },
+    {
+      "name": "delivery-file-size-and-checksums",
+      "cases": 2,
+      "passed": 2,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "files": 45,
+      "checked": 45,
+      "failures": [],
+      "rootManifestPresent": true,
+      "maxFileBytes": 38715
+    },
+    {
+      "name": "immutable-return-values",
+      "cases": 3,
+      "passed": 3,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "policy-copy-consistency-and-no-duplicate-terms",
+      "cases": 3,
+      "passed": 3,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "strict-TypeScript",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3,
+      "command": "tsc -p tsconfig.json --noEmit",
+      "output": ""
+    },
+    {
+      "name": "generator-byte-identical-replay-and-coverage",
+      "cases": 2,
+      "passed": 2,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "handwritten-format-and-Scunthorpe",
+      "cases": 459,
+      "passed": 459,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "exhaustive-declared-single-glyph-substitution",
+      "cases": 1371,
+      "passed": 1371,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "precompiled-Unicode-policy-context-differential",
+      "cases": 1296,
+      "passed": 1296,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "generated-obfuscations",
+      "cases": 5000,
+      "passed": 5000,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "misses": 0,
+      "errors": [],
+      "coverage": {
+        "anal": 87,
+        "anus": 87,
+        "arsehole": 65,
+        "asshole": 78,
+        "bastard": 76,
+        "bitch": 87,
+        "blowjob": 77,
+        "bollocks": 76,
+        "boner": 87,
+        "boob": 87,
+        "boobs": 87,
+        "bukkake": 79,
+        "chink": 87,
+        "clit": 87,
+        "cock": 87,
+        "coon": 87,
+        "cunt": 87,
+        "cum": 87,
+        "cumshot": 79,
+        "dick": 87,
+        "dildo": 87,
+        "douche": 85,
+        "dyke": 87,
+        "fag": 86,
+        "faggot": 87,
+        "fellatio": 66,
+        "fuck": 86,
+        "gook": 87,
+        "handjob": 83,
+        "hentai": 86,
+        "jizz": 87,
+        "kike": 86,
+        "masturbate": 37,
+        "nigga": 87,
+        "nigger": 85,
+        "orgasm": 86,
+        "pedophile": 55,
+        "penis": 87,
+        "porn": 87,
+        "pussy": 87,
+        "rape": 86,
+        "retard": 85,
+        "rimjob": 86,
+        "semen": 87,
+        "sex": 87,
+        "shemale": 78,
+        "slut": 87,
+        "spic": 87,
+        "spunk": 87,
+        "testicle": 69,
+        "tits": 87,
+        "titties": 84,
+        "titty": 85,
+        "tranny": 85,
+        "twat": 86,
+        "vagina": 85,
+        "wank": 86,
+        "wetback": 77,
+        "whore": 86,
+        "masturbation": 22,
+        "motherfucker": 22,
+        "paedophile": 37,
+        "ejaculation": 34
+      },
+      "attempts": 5474
+    },
+    {
+      "name": "names-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "rows": 20000,
+      "unique": 20000
+    },
+    {
+      "name": "names-reviewed-corpus-policy",
+      "cases": 20000,
+      "passed": 20000,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "accepted": 19989,
+      "rejected": 11,
+      "reviewed": 11,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "names-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "words-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "rows": 10000,
+      "unique": 10000
+    },
+    {
+      "name": "words-reviewed-corpus-policy",
+      "cases": 10000,
+      "passed": 10000,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "accepted": 9951,
+      "rejected": 49,
+      "reviewed": 49,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "words-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "places-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "rows": 2000,
+      "unique": 2000
+    },
+    {
+      "name": "places-reviewed-corpus-policy",
+      "cases": 2000,
+      "passed": 2000,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "accepted": 1943,
+      "rejected": 57,
+      "reviewed": 57,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "places-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "regex-vs-bitset-NFA-differential",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "sealed-blind-reference-differential",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "repeat-call-purity",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "boolean-wrapper",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "mutation-baseline-truth",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "25-real-executed-mutations",
+      "cases": 25,
+      "passed": 25,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "survivors": []
+    },
+    {
+      "name": "runtime-gzip-size",
+      "cases": 2,
+      "passed": 2,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "sourceBytes": 9454,
+      "sourceGzipBytes": 4057,
+      "compiledBytes": 8014,
+      "compiledGzipBytes": 3162,
+      "limitBytes": 6000
+    },
+    {
+      "name": "zero-runtime-dependencies-and-forbidden-APIs",
+      "cases": 5,
+      "passed": 5,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "latency-every-observed-check-under-005ms",
+      "cases": 10000,
+      "passed": 9988,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "calls": 10000,
+      "meanMs": 0.001060951600000044,
+      "p50Ms": 0.0005529999998543644,
+      "p99Ms": 0.004213000000163447,
+      "maxMs": 0.19649399999980233,
+      "over005Ms": 12,
+      "outliers": [
+        {
+          "index": 3419,
+          "input": "shanti",
+          "timeMs": 0.09138700000039535
+        },
+        {
+          "index": 4020,
+          "input": "dRRRаTTTSSаааBB",
+          "timeMs": 0.10508799999843177
+        },
+        {
+          "index": 4272,
+          "input": "protected",
+          "timeMs": 0.19649399999980233
+        },
+        {
+          "index": 5182,
+          "input": "britannica",
+          "timeMs": 0.1312000000016269
+        },
+        {
+          "index": 6478,
+          "input": ".i4тттп℮​һһ",
+          "timeMs": 0.08531899999979942
+        },
+        {
+          "index": 6517,
+          "input": "wilber",
+          "timeMs": 0.08202700000038021
+        },
+        {
+          "index": 7959,
+          "input": "thumbzilla",
+          "timeMs": 0.1941369999985909
+        },
+        {
+          "index": 8053,
+          "input": "disappointed",
+          "timeMs": 0.12291899999945599
+        },
+        {
+          "index": 8458,
+          "input": "mccarley",
+          "timeMs": 0.09492600000157836
+        },
+        {
+          "index": 8675,
+          "input": "cletus",
+          "timeMs": 0.18429199999991397
+        },
+        {
+          "index": 9177,
+          "input": "yards",
+          "timeMs": 0.09308400000008987
+        },
+        {
+          "index": 9286,
+          "input": "pridmore",
+          "timeMs": 0.07700199999999313
+        }
+      ],
+      "measurementStartMs": 13963.27893,
+      "measurementEndMs": 13973.888446,
+      "sink": 94479
+    }
+  ],
+  "failures": [
+    {
+      "name": "latency-every-observed-check-under-005ms",
+      "cases": 10000,
+      "passed": 9981,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "calls": 10000,
+      "meanMs": 0.0014398713999999927,
+      "p50Ms": 0.0006400000002031447,
+      "p99Ms": 0.004598999999871012,
+      "maxMs": 0.4707039999993867,
+      "over005Ms": 19,
+      "outliers": [
+        {
+          "index": 204,
+          "input": "ѕⅼⅼ-սսս́ｔｔｔ",
+          "timeMs": 0.06548500000008062
+        },
+        {
+          "index": 405,
+          "input": "carlock",
+          "timeMs": 0.1390879999999015
+        },
+        {
+          "index": 406,
+          "input": "ｊＩ_Ｚｚ​",
+          "timeMs": 0.06873499999983324
+        },
+        {
+          "index": 625,
+          "input": "gertude",
+          "timeMs": 0.1878260000003138
+        },
+        {
+          "index": 656,
+          "input": "ρ@E-d.ορh_іℓе",
+          "timeMs": 0.10513799999989715
+        },
+        {
+          "index": 1526,
+          "input": "experiments",
+          "timeMs": 0.20945099999971717
+        },
+        {
+          "index": 1690,
+          "input": "Kпaԝԝԝ",
+          "timeMs": 0.3282499999995707
+        },
+        {
+          "index": 1737,
+          "input": "enders",
+          "timeMs": 0.09221499999966909
+        },
+        {
+          "index": 1857,
+          "input": "соοοοո",
+          "timeMs": 0.06402100000013888
+        },
+        {
+          "index": 2458,
+          "input": "mia",
+          "timeMs": 0.09969400000045425
+        },
+        {
+          "index": 3218,
+          "input": "lynne",
+          "timeMs": 0.07031300000016927
+        },
+        {
+          "index": 3910,
+          "input": "contained",
+          "timeMs": 0.18065699999988283
+        },
+        {
+          "index": 4043,
+          "input": "blondell",
+          "timeMs": 0.08208300000023883
+        },
+        {
+          "index": 4516,
+          "input": "τԝɑt",
+          "timeMs": 0.1603660000000673
+        },
+        {
+          "index": 4796,
+          "input": "neece",
+          "timeMs": 0.19007399999918562
+        },
+        {
+          "index": 5906,
+          "input": "antonio",
+          "timeMs": 0.07024400000045716
+        },
+        {
+          "index": 7052,
+          "input": "bohanan",
+          "timeMs": 0.14508799999930488
+        },
+        {
+          "index": 7746,
+          "input": "г.℮gg.GiiNNN",
+          "timeMs": 0.0734680000005028
+        },
+        {
+          "index": 8443,
+          "input": "José",
+          "timeMs": 0.4707039999993867
+        }
+      ],
+      "measurementStartMs": 5470.175833,
+      "measurementEndMs": 5484.574547,
+      "sink": 94721
+    },
+    {
+      "name": "latency-every-observed-check-under-005ms",
+      "cases": 10000,
+      "passed": 9979,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "calls": 10000,
+      "meanMs": 0.001347364899999957,
+      "p50Ms": 0.0005819999987579649,
+      "p99Ms": 0.004723000000012689,
+      "maxMs": 0.4805319999995845,
+      "over005Ms": 21,
+      "outliers": [
+        {
+          "index": 2079,
+          "input": "Ra.р℮​",
+          "timeMs": 0.17149199999948905
+        },
+        {
+          "index": 2341,
+          "input": "c o_c-k​",
+          "timeMs": 0.4805319999995845
+        },
+        {
+          "index": 2663,
+          "input": "KK ςσσςςς",
+          "timeMs": 0.10218899999927089
+        },
+        {
+          "index": 2747,
+          "input": "malin",
+          "timeMs": 0.08168300000033923
+        },
+        {
+          "index": 3110,
+          "input": "ｒ-αρ́℮-",
+          "timeMs": 0.23473099999864644
+        },
+        {
+          "index": 3326,
+          "input": "ѕ℮χ",
+          "timeMs": 0.06514699999934237
+        },
+        {
+          "index": 3593,
+          "input": "proprietary",
+          "timeMs": 0.09376800000063668
+        },
+        {
+          "index": 4890,
+          "input": "synopsis",
+          "timeMs": 0.060256000000663335
+        },
+        {
+          "index": 5080,
+          "input": "manufacturing",
+          "timeMs": 0.09972999999990861
+        },
+        {
+          "index": 5084,
+          "input": "G o_O​Ḱ",
+          "timeMs": 0.3675419999999576
+        },
+        {
+          "index": 5208,
+          "input": "venegas",
+          "timeMs": 0.0648959999998624
+        },
+        {
+          "index": 5397,
+          "input": "​E​RооHHw",
+          "timeMs": 0.18486900000061723
+        },
+        {
+          "index": 5530,
+          "input": "αs-ʂηօ́|.E",
+          "timeMs": 0.22410800000034214
+        },
+        {
+          "index": 5874,
+          "input": "@ｒＳ℮һσ1ϵ",
+          "timeMs": 0.0811390000017127
+        },
+        {
+          "index": 6542,
+          "input": "markets",
+          "timeMs": 0.3194530000000668
+        },
+        {
+          "index": 7702,
+          "input": "schlemmer",
+          "timeMs": 0.3143049999998766
+        },
+        {
+          "index": 7791,
+          "input": "ḱn​ɑ-ω",
+          "timeMs": 0.13685999999870546
+        },
+        {
+          "index": 7950,
+          "input": "E’zhou",
+          "timeMs": 0.18095200000061595
+        },
+        {
+          "index": 7992,
+          "input": "wα-п k.",
+          "timeMs": 0.09615999999914493
+        },
+        {
+          "index": 8883,
+          "input": "Santa Fe",
+          "timeMs": 0.1262349999997241
+        },
+        {
+          "index": 9590,
+          "input": "barriers",
+          "timeMs": 0.08701199999995879
+        }
+      ],
+      "measurementStartMs": 9591.010576,
+      "measurementEndMs": 9604.484225,
+      "sink": 93467
+    },
+    {
+      "name": "latency-every-observed-check-under-005ms",
+      "cases": 10000,
+      "passed": 9988,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "calls": 10000,
+      "meanMs": 0.001060951600000044,
+      "p50Ms": 0.0005529999998543644,
+      "p99Ms": 0.004213000000163447,
+      "maxMs": 0.19649399999980233,
+      "over005Ms": 12,
+      "outliers": [
+        {
+          "index": 3419,
+          "input": "shanti",
+          "timeMs": 0.09138700000039535
+        },
+        {
+          "index": 4020,
+          "input": "dRRRаTTTSSаааBB",
+          "timeMs": 0.10508799999843177
+        },
+        {
+          "index": 4272,
+          "input": "protected",
+          "timeMs": 0.19649399999980233
+        },
+        {
+          "index": 5182,
+          "input": "britannica",
+          "timeMs": 0.1312000000016269
+        },
+        {
+          "index": 6478,
+          "input": ".i4тттп℮​һһ",
+          "timeMs": 0.08531899999979942
+        },
+        {
+          "index": 6517,
+          "input": "wilber",
+          "timeMs": 0.08202700000038021
+        },
+        {
+          "index": 7959,
+          "input": "thumbzilla",
+          "timeMs": 0.1941369999985909
+        },
+        {
+          "index": 8053,
+          "input": "disappointed",
+          "timeMs": 0.12291899999945599
+        },
+        {
+          "index": 8458,
+          "input": "mccarley",
+          "timeMs": 0.09492600000157836
+        },
+        {
+          "index": 8675,
+          "input": "cletus",
+          "timeMs": 0.18429199999991397
+        },
+        {
+          "index": 9177,
+          "input": "yards",
+          "timeMs": 0.09308400000008987
+        },
+        {
+          "index": 9286,
+          "input": "pridmore",
+          "timeMs": 0.07700199999999313
+        }
+      ],
+      "measurementStartMs": 13963.27893,
+      "measurementEndMs": 13973.888446,
+      "sink": 94479
+    }
+  ],
+  "unverified": [
+    "Literal all-pass corpus target is not met: reviewed blocked/overlength rows stay rejected. Exact exceptions were tuned on this corpus, so it is not held-out evidence.",
+    "All Unicode homoglyphs, all languages/slurs, intent, and arbitrary unseen obfuscations: not claimed. See POLICY.md.",
+    "Hard real-time 0.05ms bound on every platform: not established by a finite benchmark."
+  ]
+}
