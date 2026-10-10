@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/tmp/gpt-drops-B14-audit-20261009/jobs/B14-comedy-prompts/scripts/test_research.py", line 53, in <module>
+    case('mark row verified while cue review is incomplete', lambda root: mutate_json(root, 'research-review.json', lambda data: data['rows'][0].update(status='VERIFIED')), True, False)
+  File "/tmp/gpt-drops-B14-audit-20261009/jobs/B14-comedy-prompts/scripts/test_research.py", line 42, in case
+    assert (completed.returncode == 0) == expected, (name, completed.stdout, completed.stderr)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('mark row verified while cue review is incomplete', '{\n  "mode": "partial-metadata",\n  "schemaValidatedFacts": 15,\n  "reviewRows": 1200,\n  "fullyQualifiedRows": 21,\n  "unverifiedRows": 1179,\n  "ready": false,\n  "scope": "Metadata integrity only; original full-source acceptance receipts qualify individual facts. Partial mode never grants readiness."\n}\n', '')

@@ -1,0 +1,48 @@
+"""Actual immutable delivery controls, including the two old oversized false-greens."""
+import hashlib,json,subprocess,sys,tempfile,datetime
+from pathlib import Path
+job=Path(__file__).resolve().parents[1]
+w=job/".work/delivery-controls";w.mkdir(parents=True,exist_ok=True)
+results=[]
+def invoke(script,fixture,args):
+ before={str(p.relative_to(fixture)):hashlib.sha256(p.read_bytes()).hexdigest() for p in fixture.rglob('*') if p.is_file()}
+ result=subprocess.run([sys.executable,str(script)]+args,cwd=fixture,capture_output=True,text=True,timeout=10)
+ after={str(p.relative_to(fixture)):hashlib.sha256(p.read_bytes()).hexdigest() for p in fixture.rglob('*') if p.is_file()}
+ assert before==after,'check mutated fixture'
+ return {'returncode':result.returncode,'stdout':result.stdout,'stderr':result.stderr,'allFixtureBytesPreserved':True}
+def setup(base):
+ p=base/'fixture';(p/'scripts').mkdir(parents=True);(p/'payload.txt').write_bytes(b'unchanged useful delivery\n')
+ (p/'scripts/checksums.py').write_bytes((job/'scripts/checksums.py').read_bytes())
+ return p
+def manifest(p):
+ (p/'SHA256SUMS.txt').write_text('\n'.join(hashlib.sha256(f.read_bytes()).hexdigest()+'  '+str(f.relative_to(p)) for f in sorted(p.rglob('*')) if f.is_file() and f != p/'SHA256SUMS.txt')+'\n')
+def case(name,mutation,expected):
+ with tempfile.TemporaryDirectory(prefix='b14-size-control-',dir=w) as temporary:
+  p=setup(Path(temporary));manifest(p);mutation(p)
+  result=invoke(p/'scripts/checksums.py',p,['--check']);assert (result['returncode']==0)==expected,(name,result)
+  result['name']=name;results.append(result)
+case('unchanged complete positive',lambda p:None,True)
+case('unlisted nested manifest filename',lambda p:((p/'nested').mkdir(),(p/'nested/SHA256SUMS.txt').write_text('unlisted payload')),False)
+case('listed nested manifest filename',lambda p:((p/'nested').mkdir(),(p/'nested/SHA256SUMS.txt').write_text('listed payload'),manifest(p)),True)
+case('unlisted ordinary file',lambda p:(p/'unlisted.txt').write_text('extra'),False)
+case('changed listed payload',lambda p:(p/'payload.txt').write_text('changed'),False)
+case('missing listed payload',lambda p:(p/'payload.txt').unlink(),False)
+case('duplicate manifest entry',lambda p:(p/'SHA256SUMS.txt').write_text((p/'SHA256SUMS.txt').read_text()*2),False)
+case('invalid checksum syntax',lambda p:(p/'SHA256SUMS.txt').write_text('not a checksum\n'),False)
+case('absolute manifest path',lambda p:(p/'SHA256SUMS.txt').write_text('0'*64+'  /tmp/outside\n'),False)
+case('parent traversal manifest path',lambda p:(p/'SHA256SUMS.txt').write_text('0'*64+'  ../outside\n'),False)
+case('symlink delivery',lambda p:(p/'link').symlink_to(p/'payload.txt'),False)
+case('private work excluded',lambda p:((p/'.work').mkdir(),(p/'.work/private.txt').write_text('private')),True)
+legacy=[]
+for listed in [False,True]:
+ with tempfile.TemporaryDirectory(prefix='b14-old-size-witness-',dir=w) as temporary:
+  p=setup(Path(temporary));manifest(p)
+  with (p/'oversized.dat').open('wb') as f:f.truncate(30_000_001)
+  if listed:manifest(p)
+  old=subprocess.run(['sha256sum','-c','SHA256SUMS.txt'],cwd=p,capture_output=True,text=True,timeout=10)
+  new=invoke(p/'scripts/checksums.py',p,['--check'])
+  assert old.returncode==0 and new['returncode']!=0
+  legacy.append({'listed':listed,'oldExit':old.returncode,'oldStdout':old.stdout,'new':new})
+receipt={"utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),"negativeControls":sum(x["returncode"]!=0 for x in results)+len(legacy),"positiveControls":sum(x["returncode"]==0 for x in results),"legacyOversizedFalseGreens":legacy,"newReadOnlyChecks":results,"allOwnedChildrenClosedNaturally":True,"allOwnedTemporaryFixturesRemoved":True,"noDeliveryBytesChanged":True}
+(w/"report.json").write_text(json.dumps(receipt,indent=2)+"\n")
+print(json.dumps({k:v for k,v in receipt.items() if k not in ["legacyOversizedFalseGreens","newReadOnlyChecks"]}))

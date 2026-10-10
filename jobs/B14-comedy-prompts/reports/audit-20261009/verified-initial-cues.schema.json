@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "status",
+      "claim",
+      "promptIds",
+      "confidence",
+      "confidenceReason",
+      "sources",
+      "conflictIds"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^CUE-[0-9]{3}$"
+      },
+      "status": {
+        "const": "VERIFIED"
+      },
+      "claim": {
+        "type": "string",
+        "minLength": 20
+      },
+      "promptIds": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "pattern": "^[MQ][0-9]{4}$"
+        }
+      },
+      "confidence": {
+        "enum": [
+          "high",
+          "medium",
+          "low"
+        ]
+      },
+      "confidenceReason": {
+        "type": "string",
+        "minLength": 20
+      },
+      "sources": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "object",
+          "required": [
+            "sourceId",
+            "url",
+            "author",
+            "independentAuthorGroup",
+            "role",
+            "quote",
+            "quoteWords",
+            "fullPasses"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "sourceId": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string",
+              "pattern": "^https://"
+            },
+            "author": {
+              "type": "string",
+              "minLength": 3
+            },
+            "independentAuthorGroup": {
+              "type": "string",
+              "minLength": 3
+            },
+            "role": {
+              "enum": [
+                "primary",
+                "independent"
+              ]
+            },
+            "quote": {
+              "type": "string",
+              "minLength": 1
+            },
+            "quoteWords": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 25
+            },
+            "fullPasses": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": "object",
+                "required": [
+                  "pass",
+                  "actualHTTP200FullBody",
+                  "rawBytes",
+                  "rawSha256",
+                  "visibleCharacters",
+                  "visibleSha256",
+                  "literalQuoteOffset",
+                  "quoteExactInFullText",
+                  "openedUTC",
+                  "closedUTC"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "pass": {
+                    "type": "integer",
+                    "enum": [
+                      1,
+                      2
+                    ]
+                  },
+                  "actualHTTP200FullBody": {
+                    "const": true
+                  },
+                  "rawBytes": {
+                    "type": "integer",
+                    "minimum": 501
+                  },
+                  "rawSha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  "visibleCharacters": {
+                    "type": "integer",
+                    "minimum": 501
+                  },
+                  "visibleSha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  "literalQuoteOffset": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "quoteExactInFullText": {
+                    "const": true
+                  },
+                  "openedUTC": {
+                    "type": "string"
+                  },
+                  "closedUTC": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "conflictIds": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
