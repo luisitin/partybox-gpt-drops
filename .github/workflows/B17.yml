@@ -1,0 +1,38 @@
+name: B17 40 synthesized sound effects
+on:
+  pull_request:
+    paths: ['jobs/B17-*/**']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: jobs/B17-sfx-40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+          cache: npm
+          cache-dependency-path: jobs/B17-sfx-40/package-lock.json
+      - name: Install independent measurement tool
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Install development compiler only
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Full suite, all three seeds, all 25 mutations
+        run: npm test
+      - name: Preserve rerun evidence and generated media
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: B17-verification-and-media
+          if-no-files-found: error
+          path: |
+            jobs/B17-sfx-40/reports-run/
+            jobs/B17-sfx-40/audio/
+            jobs/B17-sfx-40/spectrograms/
+            jobs/B17-sfx-40/manifest.json
+            jobs/B17-sfx-40/gallery.html

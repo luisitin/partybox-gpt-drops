@@ -1,0 +1,1018 @@
+{
+  "format": "PCM16LE",
+  "sampleRate": 48000,
+  "channels": 1,
+  "loudnessTarget": -16,
+  "truePeakLimit": -1.5,
+  "version": 2,
+  "engine": "dsp.ts + recipes.ts (v2); first delivery kept as legacy.ts",
+  "sounds": [
+    {
+      "id": "coin",
+      "name": "Coin",
+      "group": "reward",
+      "description": "Two glassy pings a fifth apart over a soft low body",
+      "seconds": 0.95,
+      "samples": 45600,
+      "seed": 1,
+      "audio": "audio/coin.wav",
+      "spectrogram": "spectrograms/coin.png",
+      "sha256": "95096af3834243b1d1990342b3638a920fbaa4d903c96643f4b645909657f277",
+      "lufs": -16.00000056482892,
+      "truePeakDb": -2.479363152516059,
+      "dc": -1.6731128358004385e-8,
+      "samplePeak": 0.748138427734375,
+      "cues": [
+        {
+          "cue": "coin",
+          "action": "new",
+          "trimDb": -18,
+          "semitones": 0,
+          "moment": "Money changes hands: Monopoly rent and salary, Blind Auction payouts (as tally)"
+        }
+      ]
+    },
+    {
+      "id": "star-get",
+      "name": "Star get",
+      "group": "reward",
+      "description": "Rolled C-major mallet arpeggio, warm pad bloom, sparkle tail",
+      "seconds": 1.7,
+      "samples": 81600,
+      "seed": 1,
+      "audio": "audio/star-get.wav",
+      "spectrogram": "spectrograms/star-get.png",
+      "sha256": "110afb85d496243ad355ec68ba2c130644c1b3bc8b7e6296c4e1d2cb1d0b39c0",
+      "lufs": -16.000000839552566,
+      "truePeakDb": -2.3295895110949845,
+      "dc": 1.0845707912071078e-8,
+      "samplePeak": 0.763641357421875,
+      "cues": [
+        {
+          "cue": "jackpot",
+          "action": "replace",
+          "trimDb": -16,
+          "semitones": -5,
+          "moment": "Final-wager reveal (Lightning), in G so the C-major win can follow"
+        }
+      ]
+    },
+    {
+      "id": "dice-roll",
+      "name": "Dice roll",
+      "group": "board",
+      "description": "Thirteen seeded wooden clacks slowing down over a rolling rumble",
+      "seconds": 1.25,
+      "samples": 60000,
+      "seed": 1,
+      "audio": "audio/dice-roll.wav",
+      "spectrogram": "spectrograms/dice-roll.png",
+      "sha256": "ae46fa942ddafb703c6971bb5405e22025086c4fd0166af81a122533b9ac47d6",
+      "lufs": -16.000001103992744,
+      "truePeakDb": -2.0783993254640234,
+      "dc": 7.273356119791666e-8,
+      "samplePeak": 0.786956787109375,
+      "cues": [
+        {
+          "cue": "dice-roll",
+          "action": "new",
+          "trimDb": -18,
+          "semitones": 0,
+          "moment": "Dice leave the hand: Yahtzee and Monopoly Dice3d throws (as daub)"
+        }
+      ]
+    },
+    {
+      "id": "dice-stop",
+      "name": "Dice stop",
+      "group": "board",
+      "description": "Wooden landing with a sub thump and a small settle bounce",
+      "seconds": 0.8,
+      "samples": 38400,
+      "seed": 1,
+      "audio": "audio/dice-stop.wav",
+      "spectrogram": "spectrograms/dice-stop.png",
+      "sha256": "54e202e39afb47d797d7e5ceabaae5ac159f151baad71bcd59f56f4e32b7e662",
+      "lufs": -15.99999842019287,
+      "truePeakDb": -1.9284581942908967,
+      "dc": -1.343091328938802e-7,
+      "samplePeak": 0.7996826171875,
+      "cues": [
+        {
+          "cue": "dice-land",
+          "action": "new",
+          "trimDb": -18,
+          "semitones": 0,
+          "moment": "Dice settle on their faces, timed to Dice3d landing (as daub)"
+        }
+      ]
+    },
+    {
+      "id": "step",
+      "name": "Step",
+      "group": "board",
+      "description": "Soft felt-and-wood token hop",
+      "seconds": 0.55,
+      "samples": 26400,
+      "seed": 1,
+      "audio": "audio/step.wav",
+      "spectrogram": "spectrograms/step.png",
+      "sha256": "5fcefdaa9c8d11cfff030eb4d1c9c6f91e9bf97e7e9de725808578ae5beec785",
+      "lufs": -16.000004485741048,
+      "truePeakDb": -1.9241436197429171,
+      "dc": -5.779844341856061e-8,
+      "samplePeak": 0.800079345703125,
+      "cues": [
+        {
+          "cue": "daub",
+          "action": "replace",
+          "trimDb": -19,
+          "semitones": 0,
+          "moment": "A square daubed on a phone: a dauber landing"
+        }
+      ]
+    },
+    {
+      "id": "buzzer",
+      "name": "Buzzer",
+      "group": "verdict",
+      "description": "Warm low-passed game-show buzz, two detuned voices",
+      "seconds": 0.85,
+      "samples": 40800,
+      "seed": 1,
+      "audio": "audio/buzzer.wav",
+      "spectrogram": "spectrograms/buzzer.png",
+      "sha256": "e560930074676ee65884891635161b58b1c238670751ecc0f7c82f59d53a67f9",
+      "lufs": -16.00000393287785,
+      "truePeakDb": -2.0864138883712617,
+      "dc": -1.3089647480085785e-7,
+      "samplePeak": 0.785308837890625,
+      "cues": [
+        {
+          "cue": "wrong",
+          "action": "replace",
+          "trimDb": -16.5,
+          "semitones": 0,
+          "moment": "The wrong buzzer"
+        }
+      ]
+    },
+    {
+      "id": "ding",
+      "name": "Ding",
+      "group": "verdict",
+      "description": "FM tine and glass bell on A5 with a warm undertone",
+      "seconds": 1.3,
+      "samples": 62400,
+      "seed": 1,
+      "audio": "audio/ding.wav",
+      "spectrogram": "spectrograms/ding.png",
+      "sha256": "605f4fadb558ae8e9e8e9bf1d1cbc749aa05f4eb16d691b6fa9c92c81e549c35",
+      "lufs": -16.00000053872336,
+      "truePeakDb": -2.056989119890031,
+      "dc": -1.7117231320112178e-8,
+      "samplePeak": 0.787933349609375,
+      "cues": [
+        {
+          "cue": "correct",
+          "action": "replace",
+          "trimDb": -16.5,
+          "semitones": 0,
+          "moment": "The phone's own verdict card: right"
+        }
+      ]
+    },
+    {
+      "id": "whoosh",
+      "name": "Whoosh",
+      "group": "menu",
+      "description": "Airy band-passed sweep moving left to right",
+      "seconds": 0.85,
+      "samples": 40800,
+      "seed": 1,
+      "audio": "audio/whoosh.wav",
+      "spectrogram": "spectrograms/whoosh.png",
+      "sha256": "02e54ae557c5b64575a2e4217be5e78d7cbcb0ada52e0cfb0d14c20a3cd3c96e",
+      "lufs": -15.999997711283596,
+      "truePeakDb": -2.245506596533416,
+      "dc": -1.7951516544117645e-8,
+      "samplePeak": 0.767608642578125,
+      "cues": [
+        {
+          "cue": "stage",
+          "action": "new",
+          "trimDb": -21,
+          "semitones": 0,
+          "moment": "A TV camera move: ADR-064 stage pan, toss and curtain (as countdown)"
+        }
+      ]
+    },
+    {
+      "id": "pop",
+      "name": "Pop",
+      "group": "board",
+      "description": "Round rising bubble pop with a tiny click",
+      "seconds": 0.5,
+      "samples": 24000,
+      "seed": 1,
+      "audio": "audio/pop.wav",
+      "spectrogram": "spectrograms/pop.png",
+      "sha256": "2934611a9c3c851e5949d828ff3c3d84ab7599021f9028b5cfe90c6783a9aecb",
+      "lufs": -15.999999304878502,
+      "truePeakDb": -1.8631385450093823,
+      "dc": -2.5431315104166666e-9,
+      "samplePeak": 0.805633544921875,
+      "cues": [
+        {
+          "cue": "dibs",
+          "action": "replace",
+          "trimDb": -18,
+          "semitones": 0,
+          "moment": "Someone has dibs on BINGO! (TV): a soft rising \"hm?\""
+        }
+      ]
+    },
+    {
+      "id": "countdown-tick",
+      "name": "Countdown tick",
+      "group": "timer",
+      "description": "Woody clock tock on A4 with a soft sub; transposes cleanly per second",
+      "seconds": 0.5,
+      "samples": 24000,
+      "seed": 1,
+      "audio": "audio/countdown-tick.wav",
+      "spectrogram": "spectrograms/countdown-tick.png",
+      "sha256": "7abcb5422de2e5eb434cb70b70dfc20e3ae7b58175bf6010a1eb5b53a83e9486",
+      "lufs": -16.00000068809875,
+      "truePeakDb": -1.8859198106143835,
+      "dc": 8.138020833333333e-8,
+      "samplePeak": 0.80352783203125,
+      "cues": [
+        {
+          "cue": "countdown",
+          "action": "replace",
+          "trimDb": -21,
+          "semitones": 0,
+          "moment": "Each of the last 5 seconds on the TV; countdownSemitones [7, 5, 4, 2, 0]"
+        },
+        {
+          "cue": "tick",
+          "action": "replace",
+          "trimDb": -27,
+          "semitones": 0,
+          "moment": "The phone's half-gain countdown at its 5 s edge"
+        }
+      ]
+    },
+    {
+      "id": "final-tick",
+      "name": "Final tick",
+      "group": "timer",
+      "description": "Double tock, the second brighter with a glass overtone",
+      "seconds": 0.75,
+      "samples": 36000,
+      "seed": 1,
+      "audio": "audio/final-tick.wav",
+      "spectrogram": "spectrograms/final-tick.png",
+      "sha256": "bb8454003616327be90795b7afa45ae96f533e3354a47a72bc3e057cd5269389",
+      "lufs": -15.99999853678184,
+      "truePeakDb": -1.9797341357945506,
+      "dc": -1.6954210069444445e-9,
+      "samplePeak": 0.795013427734375,
+      "cues": [
+        {
+          "cue": "countdown-last",
+          "action": "new",
+          "trimDb": -21,
+          "semitones": 0,
+          "moment": "The last second of a countdown, in place of the fifth countdown step (as countdown)"
+        }
+      ]
+    },
+    {
+      "id": "win-fanfare",
+      "name": "Win fanfare",
+      "group": "reward",
+      "description": "Mallet pickup into a full C-major bloom, melody tines, sparkle and air",
+      "seconds": 2.6,
+      "samples": 124800,
+      "seed": 1,
+      "audio": "audio/win-fanfare.wav",
+      "spectrogram": "spectrograms/win-fanfare.png",
+      "sha256": "805879ea0d7994f07af6f12b67286c8d0f9583db5367fe3654065425418c7113",
+      "lufs": -15.999999619331739,
+      "truePeakDb": -2.3720314698042175,
+      "dc": -1.0270338792067307e-8,
+      "samplePeak": 0.75958251953125,
+      "cues": [
+        {
+          "cue": "win",
+          "action": "replace",
+          "trimDb": -15,
+          "semitones": 0,
+          "moment": "Results screen winner (the cheer sample still layers on top)"
+        }
+      ]
+    },
+    {
+      "id": "lose",
+      "name": "Lose",
+      "group": "reward",
+      "description": "Gentle falling C-minor tines with a drooping held note",
+      "seconds": 1.9,
+      "samples": 91200,
+      "seed": 1,
+      "audio": "audio/lose.wav",
+      "spectrogram": "spectrograms/lose.png",
+      "sha256": "3885fed497c3213cba5cb9b04462a87a90d227576ec560d5dca33c65868ece08",
+      "lufs": -15.99999571176657,
+      "truePeakDb": -2.361607348007379,
+      "dc": -9.369431880482456e-9,
+      "samplePeak": 0.760772705078125,
+      "cues": [
+        {
+          "cue": "bust",
+          "action": "replace",
+          "trimDb": -17,
+          "semitones": 0,
+          "moment": "A lost wager or a bust"
+        }
+      ]
+    },
+    {
+      "id": "item-use",
+      "name": "Item use",
+      "group": "power",
+      "description": "Rising FM chirp, sparkles and a fifth swelling underneath",
+      "seconds": 1,
+      "samples": 48000,
+      "seed": 1,
+      "audio": "audio/item-use.wav",
+      "spectrogram": "spectrograms/item-use.png",
+      "sha256": "d35031db9ee78e072341a0f64f0e8f7f459320f9e48e10a174b60a0f942606e9",
+      "lufs": -16.00000084444304,
+      "truePeakDb": -1.999110212496651,
+      "dc": -1.2079874674479166e-8,
+      "samplePeak": 0.7933349609375,
+      "cues": [
+        {
+          "cue": "boost",
+          "action": "new",
+          "trimDb": -17,
+          "semitones": 0,
+          "moment": "A power or event card is used: Blind Auction Mystery Box events (as claim)"
+        }
+      ]
+    },
+    {
+      "id": "shop-open",
+      "name": "Shop open",
+      "group": "menu",
+      "description": "G-major mallet roll with a little door bell",
+      "seconds": 1.4,
+      "samples": 67200,
+      "seed": 1,
+      "audio": "audio/shop-open.wav",
+      "spectrogram": "spectrograms/shop-open.png",
+      "sha256": "7c8b5e93db242b53a722bac2a4d055ce00b26c20d731c59c6d5b02f6c08610ec",
+      "lufs": -16.00000312991479,
+      "truePeakDb": -2.632857653811559,
+      "dc": 5.6312197730654764e-8,
+      "samplePeak": 0.737823486328125,
+      "cues": [
+        {
+          "cue": "wager",
+          "action": "replace",
+          "trimDb": -16.5,
+          "semitones": 0,
+          "moment": "The wager phase opens (Lightning)"
+        }
+      ]
+    },
+    {
+      "id": "vote",
+      "name": "Vote",
+      "group": "verdict",
+      "description": "Small affirmative mallet pluck with a tine lift",
+      "seconds": 0.5,
+      "samples": 24000,
+      "seed": 1,
+      "audio": "audio/vote.wav",
+      "spectrogram": "spectrograms/vote.png",
+      "sha256": "8606cae6ff345b72aa41b8e44a4f617bf03eb6c879825383e8ae9da05ad1ca6d",
+      "lufs": -15.999998157020215,
+      "truePeakDb": -1.9300561796424887,
+      "dc": -2.6702880859375e-8,
+      "samplePeak": 0.799591064453125,
+      "cues": [
+        {
+          "cue": "submit",
+          "action": "replace",
+          "trimDb": -18.5,
+          "semitones": 0,
+          "moment": "A player's own choice sent (phone)"
+        }
+      ]
+    },
+    {
+      "id": "reveal",
+      "name": "Reveal",
+      "group": "flow",
+      "description": "Breathing noise riser into a bright E-major hit",
+      "seconds": 2,
+      "samples": 96000,
+      "seed": 1,
+      "audio": "audio/reveal.wav",
+      "spectrogram": "spectrograms/reveal.png",
+      "sha256": "30f288ac620621bbc64194618098ddb8f30a275cd666e86b13b15c65ef1a227a",
+      "lufs": -15.999998819852495,
+      "truePeakDb": -2.112853979937073,
+      "dc": 5.404154459635417e-9,
+      "samplePeak": 0.782562255859375,
+      "cues": [
+        {
+          "cue": "reveal",
+          "action": "replace",
+          "trimDb": -15.5,
+          "semitones": 0,
+          "moment": "An answer or result is revealed"
+        }
+      ]
+    },
+    {
+      "id": "timer-warning",
+      "name": "Timer warning",
+      "group": "timer",
+      "description": "Three urgent tines (D D F) over woody knocks",
+      "seconds": 1,
+      "samples": 48000,
+      "seed": 1,
+      "audio": "audio/timer-warning.wav",
+      "spectrogram": "spectrograms/timer-warning.png",
+      "sha256": "13962ffb58a2c12db87bb502f71ca470d0a18d3a5426a2996034e325d7bb463f",
+      "lufs": -16.000004571466548,
+      "truePeakDb": -1.9899287385877598,
+      "dc": -5.086263020833333e-9,
+      "samplePeak": 0.79443359375,
+      "cues": [
+        {
+          "cue": "hurry",
+          "action": "new",
+          "trimDb": -18,
+          "semitones": 0,
+          "moment": "Ten seconds left, before the last-5-seconds state (as tally)"
+        }
+      ]
+    },
+    {
+      "id": "menu-move",
+      "name": "Menu move",
+      "group": "menu",
+      "description": "Muted marimba tap for moving a selection",
+      "seconds": 0.45,
+      "samples": 21600,
+      "seed": 1,
+      "audio": "audio/menu-move.wav",
+      "spectrogram": "spectrograms/menu-move.png",
+      "sha256": "6a6823ec6a924989df715469ad52b9497bd1f66250d017332d55d7b0caef8c9c",
+      "lufs": -16.00000099289995,
+      "truePeakDb": -1.8941083811399952,
+      "dc": 3.249556929976852e-8,
+      "samplePeak": 0.803314208984375,
+      "cues": [
+        {
+          "cue": "lock",
+          "action": "replace",
+          "trimDb": -24,
+          "semitones": 0,
+          "moment": "A player locks in; whole tones rise with the count (quiet)"
+        }
+      ]
+    },
+    {
+      "id": "menu-back",
+      "name": "Menu back",
+      "group": "menu",
+      "description": "Two soft marimba notes falling a fourth",
+      "seconds": 0.55,
+      "samples": 26400,
+      "seed": 1,
+      "audio": "audio/menu-back.wav",
+      "spectrogram": "spectrograms/menu-back.png",
+      "sha256": "c5364a63656fff9425f4f408d5879f49e21f785d4ebf09ffdf871e84ec3c957b",
+      "lufs": -16.0000001514525,
+      "truePeakDb": -1.945815074861886,
+      "dc": -3.5835034919507575e-8,
+      "samplePeak": 0.797332763671875,
+      "cues": [
+        {
+          "cue": "pause",
+          "action": "replace",
+          "trimDb": -17,
+          "semitones": -7,
+          "moment": "The VIP pauses (A4 → E4, a settling fourth)"
+        }
+      ]
+    },
+    {
+      "id": "confirm",
+      "name": "Confirm",
+      "group": "verdict",
+      "description": "FM tines rising a fifth (C → G)",
+      "seconds": 0.7,
+      "samples": 33600,
+      "seed": 1,
+      "audio": "audio/confirm.wav",
+      "spectrogram": "spectrograms/confirm.png",
+      "sha256": "c9ba1ccca6f0f605fa12f97cef0d05d3742551d0c55439c0ec7e8b4a6539c6bc",
+      "lufs": -15.999999541362909,
+      "truePeakDb": -2.020798173560942,
+      "dc": 1.0899135044642857e-8,
+      "samplePeak": 0.7919921875,
+      "cues": [
+        {
+          "cue": "claim",
+          "action": "replace",
+          "trimDb": -17,
+          "semitones": 0,
+          "moment": "BINGO! sent from a phone: a rising \"sent!\""
+        }
+      ]
+    },
+    {
+      "id": "cancel",
+      "name": "Cancel",
+      "group": "verdict",
+      "description": "Muted tines falling a fifth (E → A)",
+      "seconds": 0.7,
+      "samples": 33600,
+      "seed": 1,
+      "audio": "audio/cancel.wav",
+      "spectrogram": "spectrograms/cancel.png",
+      "sha256": "4eb4a5c25f91c4add454dc4159540798cad94e72c3ed1c5bbe96975cd6e38ae9",
+      "lufs": -16.000004373300712,
+      "truePeakDb": -2.006050121469663,
+      "dc": 9.082612537202381e-10,
+      "samplePeak": 0.7930908203125,
+      "cues": [
+        {
+          "cue": "cancel",
+          "action": "new",
+          "trimDb": -18.5,
+          "semitones": 0,
+          "moment": "A choice withdrawn or a sheet dismissed on the phone (as submit)"
+        }
+      ]
+    },
+    {
+      "id": "join",
+      "name": "Player join",
+      "group": "flow",
+      "description": "Warm rolled C-major arrival with a tine on top",
+      "seconds": 1.1,
+      "samples": 52800,
+      "seed": 1,
+      "audio": "audio/join.wav",
+      "spectrogram": "spectrograms/join.png",
+      "sha256": "8827b4ffd0ecae5a2d594f73c7324060fd6bb1e79a509a1aa39e98481f9e0c46",
+      "lufs": -15.99999822883258,
+      "truePeakDb": -1.9814393835677793,
+      "dc": -3.178914388020833e-8,
+      "samplePeak": 0.794464111328125,
+      "cues": [
+        {
+          "cue": "join",
+          "action": "replace",
+          "trimDb": -16,
+          "semitones": 0,
+          "moment": "A player joins; steps up joinSemitones [0, 2, 4, 5, 7]"
+        }
+      ]
+    },
+    {
+      "id": "leave",
+      "name": "Player leave",
+      "group": "flow",
+      "description": "The join roll mirrored downward, darker",
+      "seconds": 1,
+      "samples": 48000,
+      "seed": 1,
+      "audio": "audio/leave.wav",
+      "spectrogram": "spectrograms/leave.png",
+      "sha256": "1257f6f4bb3ccd3f1e4c8059d80dcbff2847f171f19e01fc0386a6dedef79677",
+      "lufs": -15.99999875808519,
+      "truePeakDb": -2.15918239150441,
+      "dc": 3.3060709635416665e-8,
+      "samplePeak": 0.778717041015625,
+      "cues": [
+        {
+          "cue": "leave",
+          "action": "replace",
+          "trimDb": -16,
+          "semitones": 0,
+          "moment": "A player leaves, is kicked or drops (the mirror of join)"
+        }
+      ]
+    },
+    {
+      "id": "ready",
+      "name": "Ready",
+      "group": "flow",
+      "description": "Sound-check bloom: C/G tine dyad, sub and a breath of air",
+      "seconds": 0.9,
+      "samples": 43200,
+      "seed": 1,
+      "audio": "audio/ready.wav",
+      "spectrogram": "spectrograms/ready.png",
+      "sha256": "52e8d1f55f94eb54f8185cbbc88b687bcc9bb5b29e5947fd43afde880d8d1f99",
+      "lufs": -15.999997749404486,
+      "truePeakDb": -1.9997217761121953,
+      "dc": -3.32019947193287e-8,
+      "samplePeak": 0.7935791015625,
+      "cues": [
+        {
+          "cue": "ready",
+          "action": "replace",
+          "trimDb": -17.5,
+          "semitones": 0,
+          "moment": "Sound enabled or unmuted: the TV proving its speakers work"
+        }
+      ]
+    },
+    {
+      "id": "start",
+      "name": "Game start",
+      "group": "flow",
+      "description": "Short riser into a strummed C-major hit with sparkle",
+      "seconds": 1.7,
+      "samples": 81600,
+      "seed": 1,
+      "audio": "audio/start.wav",
+      "spectrogram": "spectrograms/start.png",
+      "sha256": "871e7cae0183425a4b12ac7f4b55352ae845c24bbe52c69ddf91f05df91dbd3d",
+      "lufs": -15.999999672457786,
+      "truePeakDb": -2.0599263071017395,
+      "dc": -1.7577526616115197e-8,
+      "samplePeak": 0.78753662109375,
+      "cues": [
+        {
+          "cue": "start",
+          "action": "replace",
+          "trimDb": -15.5,
+          "semitones": 0,
+          "moment": "A game begins (selecting → playing)"
+        }
+      ]
+    },
+    {
+      "id": "round-end",
+      "name": "Round end",
+      "group": "flow",
+      "description": "Relaxed IV → I cadence on mallets and pad",
+      "seconds": 1.6,
+      "samples": 76800,
+      "seed": 1,
+      "audio": "audio/round-end.wav",
+      "spectrogram": "spectrograms/round-end.png",
+      "sha256": "9f39b82e6d205fcc92279aa53497cd37acc0b931f407cb35f164541057ca79f3",
+      "lufs": -15.999998390587974,
+      "truePeakDb": -2.3062894988054983,
+      "dc": 2.4239222208658855e-8,
+      "samplePeak": 0.765625,
+      "cues": [
+        {
+          "cue": "tally",
+          "action": "replace",
+          "trimDb": -18,
+          "semitones": 0,
+          "moment": "A scores or leaderboard phase"
+        }
+      ]
+    },
+    {
+      "id": "bonus",
+      "name": "Bonus",
+      "group": "reward",
+      "description": "Pentatonic glass cascade down and back up, with sparkle",
+      "seconds": 1.4,
+      "samples": 67200,
+      "seed": 1,
+      "audio": "audio/bonus.wav",
+      "spectrogram": "spectrograms/bonus.png",
+      "sha256": "d26fb1eb9000f36c0a360165206af99b6dc1e23237e4414637bc58fae769cf2d",
+      "lufs": -15.99999860337881,
+      "truePeakDb": -2.2660278907714324,
+      "dc": -5.267915271577381e-8,
+      "samplePeak": 0.769287109375,
+      "cues": [
+        {
+          "cue": "sweep",
+          "action": "replace",
+          "trimDb": -16,
+          "semitones": 0,
+          "moment": "A Wisecrack sweep: a faster cousin of win"
+        }
+      ]
+    },
+    {
+      "id": "penalty",
+      "name": "Penalty",
+      "group": "power",
+      "description": "Low falling \"womp\" with a muffled thud",
+      "seconds": 0.95,
+      "samples": 45600,
+      "seed": 1,
+      "audio": "audio/penalty.wav",
+      "spectrogram": "spectrograms/penalty.png",
+      "sha256": "63ab471e22f48c78ace59c2d7926f7054320935a07f8eb6b3005d5ed2eacb58f",
+      "lufs": -15.999996956588175,
+      "truePeakDb": -1.9882664093644338,
+      "dc": -8.834035773026316e-8,
+      "samplePeak": 0.794189453125,
+      "cues": [
+        {
+          "cue": "penalty",
+          "action": "new",
+          "trimDb": -17,
+          "semitones": 0,
+          "moment": "Points or money lost: Monopoly tax and jail fees (as bust)"
+        }
+      ]
+    },
+    {
+      "id": "teleport",
+      "name": "Teleport",
+      "group": "power",
+      "description": "Two detuned shimmering sweeps flying across the stereo field",
+      "seconds": 1.4,
+      "samples": 67200,
+      "seed": 1,
+      "audio": "audio/teleport.wav",
+      "spectrogram": "spectrograms/teleport.png",
+      "sha256": "b6d94b72fc21559447eb5700abbc20188e54e5bfa27feb960eb0867eb2b65aa4",
+      "lufs": -15.999998388799643,
+      "truePeakDb": -4.4751543825087925,
+      "dc": -4.087175641741072e-9,
+      "samplePeak": 0.59661865234375,
+      "cues": [
+        {
+          "cue": "warp",
+          "action": "new",
+          "trimDb": -16,
+          "semitones": 0,
+          "moment": "A token jumps across the board: Monopoly \"go to jail\", party-board warps (as reveal)"
+        }
+      ]
+    },
+    {
+      "id": "shield",
+      "name": "Shield",
+      "group": "power",
+      "description": "Warm humming A-major field with a glass strike",
+      "seconds": 1.4,
+      "samples": 67200,
+      "seed": 1,
+      "audio": "audio/shield.wav",
+      "spectrogram": "spectrograms/shield.png",
+      "sha256": "6b1899b155b1cd0a5245a745aade3ebf28e0718cdb83c22d8abb33adc8964499",
+      "lufs": -15.999999910718662,
+      "truePeakDb": -2.027250186915629,
+      "dc": 3.587631952194941e-8,
+      "samplePeak": 0.790557861328125,
+      "cues": [
+        {
+          "cue": "shield",
+          "action": "new",
+          "trimDb": -17,
+          "semitones": 0,
+          "moment": "A protection holds: immunity or a blocked steal in minigames (as claim)"
+        }
+      ]
+    },
+    {
+      "id": "power-up",
+      "name": "Power up",
+      "group": "power",
+      "description": "Fast rising C-major tine run over a climbing warm tone",
+      "seconds": 1.5,
+      "samples": 72000,
+      "seed": 1,
+      "audio": "audio/power-up.wav",
+      "spectrogram": "spectrograms/power-up.png",
+      "sha256": "966c70d9d4aba370f84a5f2744487b9ca26c72bd80de6e6883c1e6749e53548a",
+      "lufs": -16.00000169255736,
+      "truePeakDb": -2.0590819178464494,
+      "dc": 4.153781467013889e-8,
+      "samplePeak": 0.7880859375,
+      "cues": [
+        {
+          "cue": "power-up",
+          "action": "new",
+          "trimDb": -16,
+          "semitones": 0,
+          "moment": "Something grows stronger: a level, a multiplier, a party-board star (as reveal)"
+        }
+      ]
+    },
+    {
+      "id": "power-down",
+      "name": "Power down",
+      "group": "power",
+      "description": "Slowing falling tine run with a sinking warm tone",
+      "seconds": 1.5,
+      "samples": 72000,
+      "seed": 1,
+      "audio": "audio/power-down.wav",
+      "spectrogram": "spectrograms/power-down.png",
+      "sha256": "6dbc00168ae03b8fd36db8f283b71e49d0b1d48365a18a6e269f1174ad7f4ab2",
+      "lufs": -16.000001031061768,
+      "truePeakDb": -2.2025958606137155,
+      "dc": 8.900960286458334e-9,
+      "samplePeak": 0.774688720703125,
+      "cues": [
+        {
+          "cue": "power-down",
+          "action": "new",
+          "trimDb": -17,
+          "semitones": 0,
+          "moment": "Something weakens or runs out (as bust)"
+        }
+      ]
+    },
+    {
+      "id": "notification",
+      "name": "Notification",
+      "group": "flow",
+      "description": "Gentle E → A tine call with a glass halo",
+      "seconds": 1,
+      "samples": 48000,
+      "seed": 1,
+      "audio": "audio/notification.wav",
+      "spectrogram": "spectrograms/notification.png",
+      "sha256": "6539782b30ecdc9668926ac795babb2999ec2276df85532c42eb5912ae6b359f",
+      "lufs": -16.00000188420277,
+      "truePeakDb": -2.1214831441717372,
+      "dc": 4.9591064453125e-8,
+      "samplePeak": 0.782562255859375,
+      "cues": [
+        {
+          "cue": "phase",
+          "action": "replace",
+          "trimDb": -16,
+          "semitones": 0,
+          "moment": "A phase change that needs the phone (the shell chime)"
+        }
+      ]
+    },
+    {
+      "id": "achievement",
+      "name": "Achievement",
+      "group": "reward",
+      "description": "Mallet pickup into a Cmaj9 bloom with strummed tines and air",
+      "seconds": 2.4,
+      "samples": 115200,
+      "seed": 1,
+      "audio": "audio/achievement.wav",
+      "spectrogram": "spectrograms/achievement.png",
+      "sha256": "cb6516f2611000a6d1cbe04a0c1dc966ce5001380ccee9356cee9b1c5b190ee4",
+      "lufs": -15.999998508149616,
+      "truePeakDb": -2.076069807858679,
+      "dc": -3.2054053412543404e-8,
+      "samplePeak": 0.78533935546875,
+      "cues": [
+        {
+          "cue": "fanfare",
+          "action": "replace",
+          "trimDb": -15,
+          "semitones": 0,
+          "moment": "A game-end flourish (Yahtzee, Phase 10, Rummikub, Blanks final)"
+        }
+      ]
+    },
+    {
+      "id": "error",
+      "name": "Error",
+      "group": "verdict",
+      "description": "Two muted low pulses, soft and dark",
+      "seconds": 0.8,
+      "samples": 38400,
+      "seed": 1,
+      "audio": "audio/error.wav",
+      "spectrogram": "spectrograms/error.png",
+      "sha256": "1c3ffd2e397bf912b5218c3dc53b8f48940fb15dd01784ff02797076e1fc5326",
+      "lufs": -15.99999745396587,
+      "truePeakDb": -3.342464828742994,
+      "dc": -1.3748804728190104e-7,
+      "samplePeak": 0.679412841796875,
+      "cues": [
+        {
+          "cue": "error",
+          "action": "replace",
+          "trimDb": -17.5,
+          "semitones": 0,
+          "moment": "Rejected input or an error toast (phone)"
+        }
+      ]
+    },
+    {
+      "id": "splash",
+      "name": "Splash",
+      "group": "board",
+      "description": "Falling filtered spray with rising droplet plips",
+      "seconds": 1.1,
+      "samples": 52800,
+      "seed": 1,
+      "audio": "audio/splash.wav",
+      "spectrogram": "spectrograms/splash.png",
+      "sha256": "c7517667c80c364d32b6f93d84cea2282acb9d70fb67457823b44a34adb48619",
+      "lufs": -15.999997469371529,
+      "truePeakDb": -1.9923364842379856,
+      "dc": 7.51379764441288e-9,
+      "samplePeak": 0.79388427734375,
+      "cues": [
+        {
+          "cue": "splash",
+          "action": "new",
+          "trimDb": -18,
+          "semitones": 0,
+          "moment": "A shot lands in water: Battleship misses (as daub)"
+        }
+      ]
+    },
+    {
+      "id": "bounce",
+      "name": "Bounce",
+      "group": "board",
+      "description": "Elastic spring \"boing\" with a smaller second hop",
+      "seconds": 0.7,
+      "samples": 33600,
+      "seed": 1,
+      "audio": "audio/bounce.wav",
+      "spectrogram": "spectrograms/bounce.png",
+      "sha256": "607c7c39a8e227213385a90ab2a4af1e38d6b227f2fc266be05c8f181e71d72e",
+      "lufs": -16.000002394852864,
+      "truePeakDb": -1.9793867054344578,
+      "dc": -2.8156098865327382e-8,
+      "samplePeak": 0.794952392578125,
+      "cues": [
+        {
+          "cue": "call",
+          "action": "replace",
+          "trimDb": -17,
+          "semitones": 0,
+          "moment": "A new Bingo call: a bouncy boing"
+        }
+      ]
+    },
+    {
+      "id": "swipe",
+      "name": "Swipe",
+      "group": "menu",
+      "description": "Short papery air gesture right to left (also a card slide)",
+      "seconds": 0.5,
+      "samples": 24000,
+      "seed": 1,
+      "audio": "audio/swipe.wav",
+      "spectrogram": "spectrograms/swipe.png",
+      "sha256": "1ffcccbeb97ae854caa5c4a6a30d1376d698bc4c83902ea8475d5ae70fafe977",
+      "lufs": -16.00000351046631,
+      "truePeakDb": -2.0080986731638255,
+      "dc": 6.357828776041667e-9,
+      "samplePeak": 0.793212890625,
+      "cues": [
+        {
+          "cue": "card",
+          "action": "replace",
+          "trimDb": -18,
+          "semitones": 0,
+          "moment": "One card read out (Blanks) or dealt (Bingo); soft enough to repeat"
+        }
+      ]
+    },
+    {
+      "id": "connect",
+      "name": "Connect",
+      "group": "flow",
+      "description": "Rising A-major tine triad with a soft pad",
+      "seconds": 1.1,
+      "samples": 52800,
+      "seed": 1,
+      "audio": "audio/connect.wav",
+      "spectrogram": "spectrograms/connect.png",
+      "sha256": "b4687a02953f6b9460e928f46aec0113a69807b3d42810dfdd4fb6ffd73b4a35",
+      "lufs": -16.000001984117404,
+      "truePeakDb": -2.0408533024621316,
+      "dc": -3.988092595880682e-8,
+      "samplePeak": 0.788848876953125,
+      "cues": [
+        {
+          "cue": "close",
+          "action": "replace",
+          "trimDb": -21,
+          "semitones": 0,
+          "moment": "One square to go on a phone: a hushed rising \"ooh\""
+        }
+      ]
+    }
+  ]
+}

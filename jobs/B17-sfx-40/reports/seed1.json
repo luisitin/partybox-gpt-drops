@@ -1,0 +1,2147 @@
+{
+  "seed": 1,
+  "command": "npm test",
+  "node": "v22.22.0",
+  "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "counts": {
+    "sha256Files": 125,
+    "legacyRawComparisons": 40,
+    "legacyMasterComparisons": 40,
+    "legacyFullPcmComparisons": 40,
+    "legacyMeterComparisons": 40,
+    "stereoTwinComparisons": 40,
+    "productMasterComparisons": 40,
+    "productFullPcmComparisons": 40,
+    "audioRequirements": 40,
+    "fadeOperation": 40,
+    "byteRegeneration": 40,
+    "spectrogramPng": 40,
+    "spectrogramRegeneration": 40,
+    "externalFfmpeg": 40,
+    "ebu3341MonoAdaptations": 10,
+    "fftVsDft": 6,
+    "productCueApi": 4,
+    "canonicalDeliverables": 120,
+    "catalogAndDistinctness": 6,
+    "meterInvalidAndSilence": 6,
+    "encodeInvalid": 4,
+    "decodeInvalid": 30,
+    "pcmExtrema": 1,
+    "rngInvalid": 4,
+    "masterInvalid": 3,
+    "pureSource": 10,
+    "probe": 1,
+    "productProbe": 1,
+    "legacyRawSampleComparisons": 1649280,
+    "stereoSampleComparisons": 4305600,
+    "masteredSampleComparisons": 2152800,
+    "pcmFadeSampleComparisons": 19200
+  },
+  "legacy": [
+    {
+      "id": "coin",
+      "samples": 34560,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 2.942091015256665e-15,
+      "production": {
+        "lufs": -15.99999840064726,
+        "truePeakDb": -9.645127053591334,
+        "dc": -8.388801857277199e-8,
+        "samplePeak": 0.32891845703125
+      },
+      "reference": {
+        "lufs": -15.999998400647302,
+        "truePeakDb": -9.645127053591334,
+        "dc": -8.388801857277199e-8,
+        "samplePeak": 0.32891845703125
+      }
+    },
+    {
+      "id": "star-get",
+      "samples": 52800,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 5.551115123125783e-16,
+      "production": {
+        "lufs": -15.999999917969753,
+        "truePeakDb": -9.538896194854647,
+        "dc": -3.4679066051136364e-9,
+        "samplePeak": 0.332794189453125
+      },
+      "reference": {
+        "lufs": -15.999999917969854,
+        "truePeakDb": -9.538896194854647,
+        "dc": -3.4679066051136364e-9,
+        "samplePeak": 0.332794189453125
+      }
+    },
+    {
+      "id": "dice-roll",
+      "samples": 43200,
+      "rawMaxError": 2.7755575615628914e-16,
+      "masterMaxError": 2.7755575615628914e-16,
+      "production": {
+        "lufs": -15.99999977694676,
+        "truePeakDb": -8.153968497286098,
+        "dc": 2.9669867621527777e-8,
+        "samplePeak": 0.388946533203125
+      },
+      "reference": {
+        "lufs": -15.99999977694676,
+        "truePeakDb": -8.153968497286098,
+        "dc": 2.9669867621527777e-8,
+        "samplePeak": 0.388946533203125
+      }
+    },
+    {
+      "id": "dice-stop",
+      "samples": 24960,
+      "rawMaxError": 0,
+      "masterMaxError": 1.1102230246251565e-16,
+      "production": {
+        "lufs": -16.00000136244654,
+        "truePeakDb": -7.078635483936547,
+        "dc": 6.846892528044871e-8,
+        "samplePeak": 0.4415283203125
+      },
+      "reference": {
+        "lufs": -16.000001362446536,
+        "truePeakDb": -7.078635483936547,
+        "dc": 6.846892528044871e-8,
+        "samplePeak": 0.4415283203125
+      }
+    },
+    {
+      "id": "step",
+      "samples": 22080,
+      "rawMaxError": 2.220446049250313e-16,
+      "masterMaxError": 1.5543122344752192e-15,
+      "production": {
+        "lufs": -16.000002111674096,
+        "truePeakDb": -5.41565231528076,
+        "dc": -5.6667604308197465e-8,
+        "samplePeak": 0.52813720703125
+      },
+      "reference": {
+        "lufs": -16.000002111674096,
+        "truePeakDb": -5.41565231528076,
+        "dc": -5.6667604308197465e-8,
+        "samplePeak": 0.52813720703125
+      }
+    },
+    {
+      "id": "buzzer",
+      "samples": 32640,
+      "rawMaxError": 0,
+      "masterMaxError": 4.440892098500626e-16,
+      "production": {
+        "lufs": -16.000000396782198,
+        "truePeakDb": -10.079279640499125,
+        "dc": -1.6829546760110294e-8,
+        "samplePeak": 0.312347412109375
+      },
+      "reference": {
+        "lufs": -16.000000396782188,
+        "truePeakDb": -10.079279640499125,
+        "dc": -1.6829546760110294e-8,
+        "samplePeak": 0.312347412109375
+      }
+    },
+    {
+      "id": "ding",
+      "samples": 40800,
+      "rawMaxError": 0,
+      "masterMaxError": 1.1657341758564144e-15,
+      "production": {
+        "lufs": -15.99999932869135,
+        "truePeakDb": -7.640453897227387,
+        "dc": 7.47979856004902e-9,
+        "samplePeak": 0.41375732421875
+      },
+      "reference": {
+        "lufs": -15.999999328691358,
+        "truePeakDb": -7.640453897227387,
+        "dc": 7.47979856004902e-9,
+        "samplePeak": 0.41375732421875
+      }
+    },
+    {
+      "id": "whoosh",
+      "samples": 38400,
+      "rawMaxError": 0,
+      "masterMaxError": 4.440892098500626e-16,
+      "production": {
+        "lufs": -15.999997215578233,
+        "truePeakDb": -11.517323845860137,
+        "dc": -1.5894571940104166e-8,
+        "samplePeak": 0.26458740234375
+      },
+      "reference": {
+        "lufs": -15.999997215578247,
+        "truePeakDb": -11.517323845860137,
+        "dc": -1.5894571940104166e-8,
+        "samplePeak": 0.26458740234375
+      }
+    },
+    {
+      "id": "pop",
+      "samples": 23040,
+      "rawMaxError": 0,
+      "masterMaxError": 2.220446049250313e-16,
+      "production": {
+        "lufs": -16.000000866375114,
+        "truePeakDb": -7.902916936886346,
+        "dc": -9.5367431640625e-8,
+        "samplePeak": 0.4019775390625
+      },
+      "reference": {
+        "lufs": -16.000000866375114,
+        "truePeakDb": -7.902916936886346,
+        "dc": -9.5367431640625e-8,
+        "samplePeak": 0.4019775390625
+      }
+    },
+    {
+      "id": "countdown-tick",
+      "samples": 21600,
+      "rawMaxError": 0,
+      "masterMaxError": 1.4988010832439613e-15,
+      "production": {
+        "lufs": -16.000006719067358,
+        "truePeakDb": -8.65754882795805,
+        "dc": 1.1585376880787037e-7,
+        "samplePeak": 0.36865234375
+      },
+      "reference": {
+        "lufs": -16.000006719067358,
+        "truePeakDb": -8.65754882795805,
+        "dc": 1.1585376880787037e-7,
+        "samplePeak": 0.36865234375
+      }
+    },
+    {
+      "id": "final-tick",
+      "samples": 26880,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 6.661338147750939e-16,
+      "production": {
+        "lufs": -15.999993106435602,
+        "truePeakDb": -10.993036175791104,
+        "dc": 1.3623918805803571e-8,
+        "samplePeak": 0.281585693359375
+      },
+      "reference": {
+        "lufs": -15.999993106435603,
+        "truePeakDb": -10.993036175791104,
+        "dc": 1.3623918805803571e-8,
+        "samplePeak": 0.281585693359375
+      }
+    },
+    {
+      "id": "win-fanfare",
+      "samples": 79200,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 8.881784197001252e-16,
+      "production": {
+        "lufs": -16.00000246842908,
+        "truePeakDb": -10.75137007205335,
+        "dc": 1.3486303464330809e-8,
+        "samplePeak": 0.28948974609375
+      },
+      "reference": {
+        "lufs": -16.00000246842908,
+        "truePeakDb": -10.75137007205335,
+        "dc": 1.3486303464330809e-8,
+        "samplePeak": 0.28948974609375
+      }
+    },
+    {
+      "id": "lose",
+      "samples": 57600,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 3.1086244689504383e-15,
+      "production": {
+        "lufs": -16.0000015284694,
+        "truePeakDb": -8.852660006080079,
+        "dc": 3.6027696397569445e-8,
+        "samplePeak": 0.35992431640625
+      },
+      "reference": {
+        "lufs": -16.000001528469344,
+        "truePeakDb": -8.852660006080079,
+        "dc": 3.6027696397569445e-8,
+        "samplePeak": 0.35992431640625
+      }
+    },
+    {
+      "id": "item-use",
+      "samples": 40800,
+      "rawMaxError": 0,
+      "masterMaxError": 7.216449660063518e-16,
+      "production": {
+        "lufs": -15.99999954050028,
+        "truePeakDb": -10.919724082897577,
+        "dc": -3.2911113664215684e-8,
+        "samplePeak": 0.283782958984375
+      },
+      "reference": {
+        "lufs": -15.999999540500268,
+        "truePeakDb": -10.919724082897577,
+        "dc": -3.2911113664215684e-8,
+        "samplePeak": 0.283782958984375
+      }
+    },
+    {
+      "id": "shop-open",
+      "samples": 50400,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 1.0547118733938987e-15,
+      "production": {
+        "lufs": -16.000000839063272,
+        "truePeakDb": -8.992146851995882,
+        "dc": 2.05872550843254e-8,
+        "samplePeak": 0.3546142578125
+      },
+      "reference": {
+        "lufs": -16.000000839063247,
+        "truePeakDb": -8.992146851995882,
+        "dc": 2.05872550843254e-8,
+        "samplePeak": 0.3546142578125
+      }
+    },
+    {
+      "id": "vote",
+      "samples": 28800,
+      "rawMaxError": 0,
+      "masterMaxError": 3.0531133177191805e-15,
+      "production": {
+        "lufs": -16.000004954820707,
+        "truePeakDb": -8.098634193126497,
+        "dc": 4.026624891493056e-8,
+        "samplePeak": 0.39288330078125
+      },
+      "reference": {
+        "lufs": -16.000004954820703,
+        "truePeakDb": -8.098634193126497,
+        "dc": 4.026624891493056e-8,
+        "samplePeak": 0.39288330078125
+      }
+    },
+    {
+      "id": "reveal",
+      "samples": 57600,
+      "rawMaxError": 0,
+      "masterMaxError": 3.552713678800501e-15,
+      "production": {
+        "lufs": -16.000003281884158,
+        "truePeakDb": -11.661431392674073,
+        "dc": -1.0596381293402778e-8,
+        "samplePeak": 0.26068115234375
+      },
+      "reference": {
+        "lufs": -16.000003281884158,
+        "truePeakDb": -11.661431392674073,
+        "dc": -1.0596381293402778e-8,
+        "samplePeak": 0.26068115234375
+      }
+    },
+    {
+      "id": "timer-warning",
+      "samples": 43200,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 2.7755575615628914e-16,
+      "production": {
+        "lufs": -16.000000204615944,
+        "truePeakDb": -10.337709002075641,
+        "dc": 3.1082718460648145e-8,
+        "samplePeak": 0.303863525390625
+      },
+      "reference": {
+        "lufs": -16.000000204616,
+        "truePeakDb": -10.337709002075641,
+        "dc": 3.1082718460648145e-8,
+        "samplePeak": 0.303863525390625
+      }
+    },
+    {
+      "id": "menu-move",
+      "samples": 22080,
+      "rawMaxError": 0,
+      "masterMaxError": 1.1102230246251565e-16,
+      "production": {
+        "lufs": -16.00000145085585,
+        "truePeakDb": -8.648011868478347,
+        "dc": -6.219615106997282e-8,
+        "samplePeak": 0.368804931640625
+      },
+      "reference": {
+        "lufs": -16.00000145085585,
+        "truePeakDb": -8.648011868478347,
+        "dc": -6.219615106997282e-8,
+        "samplePeak": 0.368804931640625
+      }
+    },
+    {
+      "id": "menu-back",
+      "samples": 26400,
+      "rawMaxError": 0,
+      "masterMaxError": 2.220446049250313e-16,
+      "production": {
+        "lufs": -15.999998734194177,
+        "truePeakDb": -9.366076857368737,
+        "dc": -5.6642474550189395e-8,
+        "samplePeak": 0.339599609375
+      },
+      "reference": {
+        "lufs": -15.999998734194193,
+        "truePeakDb": -9.366076857368737,
+        "dc": -5.6642474550189395e-8,
+        "samplePeak": 0.339599609375
+      }
+    },
+    {
+      "id": "confirm",
+      "samples": 30720,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 4.996003610813204e-16,
+      "production": {
+        "lufs": -15.99999875950902,
+        "truePeakDb": -9.940504082291387,
+        "dc": 4.967053731282552e-9,
+        "samplePeak": 0.317779541015625
+      },
+      "reference": {
+        "lufs": -15.999998759509008,
+        "truePeakDb": -9.940504082291387,
+        "dc": 4.967053731282552e-9,
+        "samplePeak": 0.317779541015625
+      }
+    },
+    {
+      "id": "cancel",
+      "samples": 30720,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 9.992007221626409e-16,
+      "production": {
+        "lufs": -16.00000407302537,
+        "truePeakDb": -9.549484380156137,
+        "dc": -6.953875223795573e-9,
+        "samplePeak": 0.33251953125
+      },
+      "reference": {
+        "lufs": -16.00000407302539,
+        "truePeakDb": -9.549484380156137,
+        "dc": -6.953875223795573e-9,
+        "samplePeak": 0.33251953125
+      }
+    },
+    {
+      "id": "join",
+      "samples": 43200,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 4.440892098500626e-16,
+      "production": {
+        "lufs": -16.000000704212237,
+        "truePeakDb": -9.172342855339133,
+        "dc": -5.510118272569444e-8,
+        "samplePeak": 0.3472900390625
+      },
+      "reference": {
+        "lufs": -16.000000704212255,
+        "truePeakDb": -9.172342855339133,
+        "dc": -5.510118272569444e-8,
+        "samplePeak": 0.3472900390625
+      }
+    },
+    {
+      "id": "leave",
+      "samples": 43200,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 1.9984014443252818e-15,
+      "production": {
+        "lufs": -15.99999984225349,
+        "truePeakDb": -9.212188812030638,
+        "dc": -1.2715657552083334e-8,
+        "samplePeak": 0.345458984375
+      },
+      "reference": {
+        "lufs": -15.999999842253537,
+        "truePeakDb": -9.212188812030638,
+        "dc": -1.2715657552083334e-8,
+        "samplePeak": 0.345458984375
+      }
+    },
+    {
+      "id": "ready",
+      "samples": 29760,
+      "rawMaxError": 0,
+      "masterMaxError": 6.106226635438361e-16,
+      "production": {
+        "lufs": -15.999995262964784,
+        "truePeakDb": -9.474765843603516,
+        "dc": 5.1272812710013445e-9,
+        "samplePeak": 0.3353271484375
+      },
+      "reference": {
+        "lufs": -15.999995262964786,
+        "truePeakDb": -9.474765843603516,
+        "dc": 5.1272812710013445e-9,
+        "samplePeak": 0.3353271484375
+      }
+    },
+    {
+      "id": "start",
+      "samples": 55200,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 3.885780586188048e-16,
+      "production": {
+        "lufs": -15.9999962753197,
+        "truePeakDb": -9.88311874745693,
+        "dc": 2.5984169780344204e-8,
+        "samplePeak": 0.3199462890625
+      },
+      "reference": {
+        "lufs": -15.999996275319683,
+        "truePeakDb": -9.88311874745693,
+        "dc": 2.5984169780344204e-8,
+        "samplePeak": 0.3199462890625
+      }
+    },
+    {
+      "id": "round-end",
+      "samples": 52800,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 3.552713678800501e-15,
+      "production": {
+        "lufs": -16.000002107361375,
+        "truePeakDb": -10.321842886626158,
+        "dc": -5.779844341856061e-9,
+        "samplePeak": 0.303985595703125
+      },
+      "reference": {
+        "lufs": -16.000002107361354,
+        "truePeakDb": -10.321842886626158,
+        "dc": -5.779844341856061e-9,
+        "samplePeak": 0.303985595703125
+      }
+    },
+    {
+      "id": "bonus",
+      "samples": 50400,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 8.881784197001252e-16,
+      "production": {
+        "lufs": -16.00000605834806,
+        "truePeakDb": -10.57379924823961,
+        "dc": 2.7247837611607142e-8,
+        "samplePeak": 0.295440673828125
+      },
+      "reference": {
+        "lufs": -16.000006058348117,
+        "truePeakDb": -10.57379924823961,
+        "dc": 2.7247837611607142e-8,
+        "samplePeak": 0.295440673828125
+      }
+    },
+    {
+      "id": "penalty",
+      "samples": 33600,
+      "rawMaxError": 0,
+      "masterMaxError": 1.1657341758564144e-15,
+      "production": {
+        "lufs": -16.000001595440462,
+        "truePeakDb": -9.279564450956904,
+        "dc": 7.811046781994048e-8,
+        "samplePeak": 0.342926025390625
+      },
+      "reference": {
+        "lufs": -16.00000159544046,
+        "truePeakDb": -9.279564450956904,
+        "dc": 7.811046781994048e-8,
+        "samplePeak": 0.342926025390625
+      }
+    },
+    {
+      "id": "teleport",
+      "samples": 48000,
+      "rawMaxError": 0,
+      "masterMaxError": 8.881784197001252e-16,
+      "production": {
+        "lufs": -16.00000014365616,
+        "truePeakDb": -10.378112860686837,
+        "dc": -2.7338663736979167e-8,
+        "samplePeak": 0.3023681640625
+      },
+      "reference": {
+        "lufs": -16.000000143656173,
+        "truePeakDb": -10.378112860686837,
+        "dc": -2.7338663736979167e-8,
+        "samplePeak": 0.3023681640625
+      }
+    },
+    {
+      "id": "shield",
+      "samples": 52800,
+      "rawMaxError": 0,
+      "masterMaxError": 1.3877787807814457e-15,
+      "production": {
+        "lufs": -16.000000780841034,
+        "truePeakDb": -10.922307670732279,
+        "dc": 6.589022549715909e-8,
+        "samplePeak": 0.283905029296875
+      },
+      "reference": {
+        "lufs": -16.00000078084101,
+        "truePeakDb": -10.922307670732279,
+        "dc": 6.589022549715909e-8,
+        "samplePeak": 0.283905029296875
+      }
+    },
+    {
+      "id": "power-up",
+      "samples": 60000,
+      "rawMaxError": 0,
+      "masterMaxError": 7.771561172376096e-16,
+      "production": {
+        "lufs": -16.00000057622911,
+        "truePeakDb": -11.80617275517424,
+        "dc": -6.663004557291666e-8,
+        "samplePeak": 0.25628662109375
+      },
+      "reference": {
+        "lufs": -16.000000576229123,
+        "truePeakDb": -11.80617275517424,
+        "dc": -6.663004557291666e-8,
+        "samplePeak": 0.25628662109375
+      }
+    },
+    {
+      "id": "power-down",
+      "samples": 60000,
+      "rawMaxError": 0,
+      "masterMaxError": 1.8318679906315083e-15,
+      "production": {
+        "lufs": -15.999994567859716,
+        "truePeakDb": -10.903907568286058,
+        "dc": -5.849202473958333e-8,
+        "samplePeak": 0.283203125
+      },
+      "reference": {
+        "lufs": -15.999994567859673,
+        "truePeakDb": -10.903907568286058,
+        "dc": -5.849202473958333e-8,
+        "samplePeak": 0.283203125
+      }
+    },
+    {
+      "id": "notification",
+      "samples": 40320,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 2.0539125955565396e-15,
+      "production": {
+        "lufs": -16.000001375600263,
+        "truePeakDb": -9.711366198397961,
+        "dc": -3.784421890500992e-9,
+        "samplePeak": 0.32647705078125
+      },
+      "reference": {
+        "lufs": -16.000001375600238,
+        "truePeakDb": -9.711366198397961,
+        "dc": -3.784421890500992e-9,
+        "samplePeak": 0.32647705078125
+      }
+    },
+    {
+      "id": "achievement",
+      "samples": 72000,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 3.0531133177191805e-15,
+      "production": {
+        "lufs": -16.000000488968016,
+        "truePeakDb": -10.258814565683725,
+        "dc": -8.477105034722222e-9,
+        "samplePeak": 0.306427001953125
+      },
+      "reference": {
+        "lufs": -16.000000488968034,
+        "truePeakDb": -10.258814565683725,
+        "dc": -8.477105034722222e-9,
+        "samplePeak": 0.306427001953125
+      }
+    },
+    {
+      "id": "error",
+      "samples": 36480,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 2.7755575615628914e-16,
+      "production": {
+        "lufs": -15.999997515233837,
+        "truePeakDb": -9.462522293466435,
+        "dc": -5.521272358141447e-8,
+        "samplePeak": 0.335723876953125
+      },
+      "reference": {
+        "lufs": -15.999997515233822,
+        "truePeakDb": -9.462522293466435,
+        "dc": -5.521272358141447e-8,
+        "samplePeak": 0.335723876953125
+      }
+    },
+    {
+      "id": "splash",
+      "samples": 40800,
+      "rawMaxError": 3.3306690738754696e-16,
+      "masterMaxError": 9.992007221626409e-16,
+      "production": {
+        "lufs": -15.999999039984457,
+        "truePeakDb": -7.292442487782186,
+        "dc": -2.9919194240196077e-9,
+        "samplePeak": 0.423614501953125
+      },
+      "reference": {
+        "lufs": -15.999999039984406,
+        "truePeakDb": -7.292442487782186,
+        "dc": -2.9919194240196077e-9,
+        "samplePeak": 0.423614501953125
+      }
+    },
+    {
+      "id": "bounce",
+      "samples": 27840,
+      "rawMaxError": 0,
+      "masterMaxError": 1.4432899320127035e-15,
+      "production": {
+        "lufs": -16.000000158730842,
+        "truePeakDb": -9.418730111264221,
+        "dc": -2.7404434379489942e-8,
+        "samplePeak": 0.337493896484375
+      },
+      "reference": {
+        "lufs": -16.00000015873084,
+        "truePeakDb": -9.418730111264221,
+        "dc": -2.7404434379489942e-8,
+        "samplePeak": 0.337493896484375
+      }
+    },
+    {
+      "id": "swipe",
+      "samples": 28800,
+      "rawMaxError": 0,
+      "masterMaxError": 6.661338147750939e-16,
+      "production": {
+        "lufs": -15.99999367864674,
+        "truePeakDb": -12.09099624291651,
+        "dc": 5.2981906467013886e-8,
+        "samplePeak": 0.24652099609375
+      },
+      "reference": {
+        "lufs": -15.99999367864674,
+        "truePeakDb": -12.09099624291651,
+        "dc": 5.2981906467013886e-8,
+        "samplePeak": 0.24652099609375
+      }
+    },
+    {
+      "id": "connect",
+      "samples": 45600,
+      "rawMaxError": 1.1102230246251565e-16,
+      "masterMaxError": 1.2212453270876722e-15,
+      "production": {
+        "lufs": -15.999999708767861,
+        "truePeakDb": -9.497438986985522,
+        "dc": 7.027073910361841e-8,
+        "samplePeak": 0.334503173828125
+      },
+      "reference": {
+        "lufs": -15.999999708767824,
+        "truePeakDb": -9.497438986985522,
+        "dc": 7.027073910361841e-8,
+        "samplePeak": 0.334503173828125
+      }
+    }
+  ],
+  "sounds": [
+    {
+      "id": "coin",
+      "group": "reward",
+      "seconds": 0.95,
+      "samples": 45600,
+      "stereoMaxError": 1.4555023852835802e-13,
+      "masterMaxError": 9.658940314238862e-14,
+      "production": {
+        "lufs": -16.00000056482892,
+        "truePeakDb": -2.479363152516059,
+        "dc": -1.6731128358004385e-8,
+        "samplePeak": 0.748138427734375
+      },
+      "reference": {
+        "lufs": -16.000000564828955,
+        "truePeakDb": -2.479363152516059,
+        "dc": -1.6731128358004385e-8,
+        "samplePeak": 0.748138427734375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.5,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.5 dBFS\n"
+      },
+      "sha256": "95096af3834243b1d1990342b3638a920fbaa4d903c96643f4b645909657f277",
+      "spectrogramSha256": "9ee94c905e2ebddc12af32cd8793ff36b92aa67d31b9da9d7adb26917bacc77f",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "star-get",
+      "group": "reward",
+      "seconds": 1.7,
+      "samples": 81600,
+      "stereoMaxError": 7.08988423525625e-13,
+      "masterMaxError": 6.884492975700596e-13,
+      "production": {
+        "lufs": -16.000000839552566,
+        "truePeakDb": -2.3295895110949845,
+        "dc": 1.0845707912071078e-8,
+        "samplePeak": 0.763641357421875
+      },
+      "reference": {
+        "lufs": -16.00000083955263,
+        "truePeakDb": -2.3295895110949845,
+        "dc": 1.0845707912071078e-8,
+        "samplePeak": 0.763641357421875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.3,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.3 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.3 dBFS\n"
+      },
+      "sha256": "110afb85d496243ad355ec68ba2c130644c1b3bc8b7e6296c4e1d2cb1d0b39c0",
+      "spectrogramSha256": "8e55208010f3302d87637fb3d7965183704e33576110bfcc5630d99dbdbd0d12",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "dice-roll",
+      "group": "board",
+      "seconds": 1.25,
+      "samples": 60000,
+      "stereoMaxError": 1.25910393222739e-12,
+      "masterMaxError": 1.20525811553307e-12,
+      "production": {
+        "lufs": -16.000001103992744,
+        "truePeakDb": -2.0783993254640234,
+        "dc": 7.273356119791666e-8,
+        "samplePeak": 0.786956787109375
+      },
+      "reference": {
+        "lufs": -16.00000110399285,
+        "truePeakDb": -2.0783993254640234,
+        "dc": 7.273356119791666e-8,
+        "samplePeak": 0.786956787109375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "ae46fa942ddafb703c6971bb5405e22025086c4fd0166af81a122533b9ac47d6",
+      "spectrogramSha256": "4f6dea8f29e6d17eb687c6ef90539904ffb5fa790a19b41c383c206f6c945262",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "dice-stop",
+      "group": "board",
+      "seconds": 0.8,
+      "samples": 38400,
+      "stereoMaxError": 1.8696155734687636e-13,
+      "masterMaxError": 1.3011813848606835e-13,
+      "production": {
+        "lufs": -15.99999842019287,
+        "truePeakDb": -1.9284581942908967,
+        "dc": -1.343091328938802e-7,
+        "samplePeak": 0.7996826171875
+      },
+      "reference": {
+        "lufs": -15.99999842019287,
+        "truePeakDb": -1.9284581942908967,
+        "dc": -1.343091328938802e-7,
+        "samplePeak": 0.7996826171875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -1.9,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -30.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -1.9 dBFS\n"
+      },
+      "sha256": "54e202e39afb47d797d7e5ceabaae5ac159f151baad71bcd59f56f4e32b7e662",
+      "spectrogramSha256": "1806065af534dc78df0f6f558450295aece6297d989e6ba206445f8e1b8c1518",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "step",
+      "group": "board",
+      "seconds": 0.55,
+      "samples": 26400,
+      "stereoMaxError": 2.1538326677728037e-13,
+      "masterMaxError": 2.1926904736346842e-13,
+      "production": {
+        "lufs": -16.000004485741048,
+        "truePeakDb": -1.9241436197429171,
+        "dc": -5.779844341856061e-8,
+        "samplePeak": 0.800079345703125
+      },
+      "reference": {
+        "lufs": -16.000004485741048,
+        "truePeakDb": -1.9241436197429171,
+        "dc": -5.779844341856061e-8,
+        "samplePeak": 0.800079345703125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -1.9,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -1.9 dBFS\n"
+      },
+      "sha256": "5fcefdaa9c8d11cfff030eb4d1c9c6f91e9bf97e7e9de725808578ae5beec785",
+      "spectrogramSha256": "2c4a49ba56ab0451cc40cb185b9a6d6e054cc08d5acbd52e476d4d374b154944",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "buzzer",
+      "group": "verdict",
+      "seconds": 0.85,
+      "samples": 40800,
+      "stereoMaxError": 1.3988810110276972e-13,
+      "masterMaxError": 1.1085576900882188e-13,
+      "production": {
+        "lufs": -16.00000393287785,
+        "truePeakDb": -2.0864138883712617,
+        "dc": -1.3089647480085785e-7,
+        "samplePeak": 0.785308837890625
+      },
+      "reference": {
+        "lufs": -16.00000393287784,
+        "truePeakDb": -2.0864138883712617,
+        "dc": -1.3089647480085785e-7,
+        "samplePeak": 0.785308837890625
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.9 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "e560930074676ee65884891635161b58b1c238670751ecc0f7c82f59d53a67f9",
+      "spectrogramSha256": "61c3a50ed9d447db0fd7ed704d1b5d79254a561d13becb6c2978a2bd0a88fcf6",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "ding",
+      "group": "verdict",
+      "seconds": 1.3,
+      "samples": 62400,
+      "stereoMaxError": 1.653122083666858e-13,
+      "masterMaxError": 1.1834977442504169e-13,
+      "production": {
+        "lufs": -16.00000053872336,
+        "truePeakDb": -2.056989119890031,
+        "dc": -1.7117231320112178e-8,
+        "samplePeak": 0.787933349609375
+      },
+      "reference": {
+        "lufs": -16.000000538723388,
+        "truePeakDb": -2.056989119890031,
+        "dc": -1.7117231320112178e-8,
+        "samplePeak": 0.787933349609375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -30.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "605f4fadb558ae8e9e8e9bf1d1cbc749aa05f4eb16d691b6fa9c92c81e549c35",
+      "spectrogramSha256": "6c012783d850cef1877bf3f50c995cfd9dc0f0e37b1ca8cfad46748fe0f5be3b",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "whoosh",
+      "group": "menu",
+      "seconds": 0.85,
+      "samples": 40800,
+      "stereoMaxError": 9.129363931492662e-13,
+      "masterMaxError": 8.65529869997772e-13,
+      "production": {
+        "lufs": -15.999997711283596,
+        "truePeakDb": -2.245506596533416,
+        "dc": -1.7951516544117645e-8,
+        "samplePeak": 0.767608642578125
+      },
+      "reference": {
+        "lufs": -15.999997711283566,
+        "truePeakDb": -2.245506596533416,
+        "dc": -1.7951516544117645e-8,
+        "samplePeak": 0.767608642578125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.2 dBFS\n"
+      },
+      "sha256": "02e54ae557c5b64575a2e4217be5e78d7cbcb0ada52e0cfb0d14c20a3cd3c96e",
+      "spectrogramSha256": "19b5d15db0bf244c8b2323b331770971f42f650b51164c616028345d6f064cfc",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "pop",
+      "group": "board",
+      "seconds": 0.5,
+      "samples": 24000,
+      "stereoMaxError": 6.494318971483892e-13,
+      "masterMaxError": 5.965575256006161e-13,
+      "production": {
+        "lufs": -15.999999304878502,
+        "truePeakDb": -1.8631385450093823,
+        "dc": -2.5431315104166666e-9,
+        "samplePeak": 0.805633544921875
+      },
+      "reference": {
+        "lufs": -15.999999304878502,
+        "truePeakDb": -1.8631385450093823,
+        "dc": -2.5431315104166666e-9,
+        "samplePeak": 0.805633544921875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -1.9,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -1.9 dBFS\n"
+      },
+      "sha256": "2934611a9c3c851e5949d828ff3c3d84ab7599021f9028b5cfe90c6783a9aecb",
+      "spectrogramSha256": "71c6ad9edcf0aef0134ee2d19d13378d14f1204c1e0c2a0ae6f4b16fafa45938",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "countdown-tick",
+      "group": "timer",
+      "seconds": 0.5,
+      "samples": 24000,
+      "stereoMaxError": 2.1793677973391823e-13,
+      "masterMaxError": 7.299716386910404e-14,
+      "production": {
+        "lufs": -16.00000068809875,
+        "truePeakDb": -1.8859198106143835,
+        "dc": 8.138020833333333e-8,
+        "samplePeak": 0.80352783203125
+      },
+      "reference": {
+        "lufs": -16.00000068809875,
+        "truePeakDb": -1.8859198106143835,
+        "dc": 8.138020833333333e-8,
+        "samplePeak": 0.80352783203125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -1.9,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.9 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -1.9 dBFS\n"
+      },
+      "sha256": "7abcb5422de2e5eb434cb70b70dfc20e3ae7b58175bf6010a1eb5b53a83e9486",
+      "spectrogramSha256": "d4def6bbe7a4906ea5abbb5af2fc6211b6c53153d0b2635df0384e73efbe98d7",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "final-tick",
+      "group": "timer",
+      "seconds": 0.75,
+      "samples": 36000,
+      "stereoMaxError": 5.683231663056176e-13,
+      "masterMaxError": 5.934142066621462e-13,
+      "production": {
+        "lufs": -15.99999853678184,
+        "truePeakDb": -1.9797341357945506,
+        "dc": -1.6954210069444445e-9,
+        "samplePeak": 0.795013427734375
+      },
+      "reference": {
+        "lufs": -15.999998536781836,
+        "truePeakDb": -1.9797341357945506,
+        "dc": -1.6954210069444445e-9,
+        "samplePeak": 0.795013427734375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.2 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "bb8454003616327be90795b7afa45ae96f533e3354a47a72bc3e057cd5269389",
+      "spectrogramSha256": "04d3717b3239a96a3de7c679b575964eaad0bd362f3e83fdd677595f3e7c8668",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "win-fanfare",
+      "group": "reward",
+      "seconds": 2.6,
+      "samples": 124800,
+      "stereoMaxError": 9.875433804040767e-13,
+      "masterMaxError": 9.002798506685394e-13,
+      "production": {
+        "lufs": -15.999999619331739,
+        "truePeakDb": -2.3720314698042175,
+        "dc": -1.0270338792067307e-8,
+        "samplePeak": 0.75958251953125
+      },
+      "reference": {
+        "lufs": -15.999999619331737,
+        "truePeakDb": -2.3720314698042175,
+        "dc": -1.0270338792067307e-8,
+        "samplePeak": 0.75958251953125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.4,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.2 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.4 dBFS\n"
+      },
+      "sha256": "805879ea0d7994f07af6f12b67286c8d0f9583db5367fe3654065425418c7113",
+      "spectrogramSha256": "3f6a73337bfe14b92eb7ae57634b1fc3a3546a4ed05493bdd995a605e3215f69",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "lose",
+      "group": "reward",
+      "seconds": 1.9,
+      "samples": 91200,
+      "stereoMaxError": 1.156630347054488e-12,
+      "masterMaxError": 1.1178835634950701e-12,
+      "production": {
+        "lufs": -15.99999571176657,
+        "truePeakDb": -2.361607348007379,
+        "dc": -9.369431880482456e-9,
+        "samplePeak": 0.760772705078125
+      },
+      "reference": {
+        "lufs": -15.999995711766545,
+        "truePeakDb": -2.361607348007379,
+        "dc": -9.369431880482456e-9,
+        "samplePeak": 0.760772705078125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.4,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.4 dBFS\n"
+      },
+      "sha256": "3885fed497c3213cba5cb9b04462a87a90d227576ec560d5dca33c65868ece08",
+      "spectrogramSha256": "cf35508845e52b250784fe7e2c23c479887d96a164b7b9294574a6bf498df207",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "item-use",
+      "group": "power",
+      "seconds": 1,
+      "samples": 48000,
+      "stereoMaxError": 2.3409107985372657e-11,
+      "masterMaxError": 2.28284613434937e-11,
+      "production": {
+        "lufs": -16.00000084444304,
+        "truePeakDb": -1.999110212496651,
+        "dc": -1.2079874674479166e-8,
+        "samplePeak": 0.7933349609375
+      },
+      "reference": {
+        "lufs": -16.000000844443033,
+        "truePeakDb": -1.999110212496651,
+        "dc": -1.2079874674479166e-8,
+        "samplePeak": 0.7933349609375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.4 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "d35031db9ee78e072341a0f64f0e8f7f459320f9e48e10a174b60a0f942606e9",
+      "spectrogramSha256": "49da6b94a19a05335d92dda56548898b4aa839f1718435eb07f788aba313cdfe",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "shop-open",
+      "group": "menu",
+      "seconds": 1.4,
+      "samples": 67200,
+      "stereoMaxError": 2.881028748902281e-13,
+      "masterMaxError": 2.4991120284312274e-13,
+      "production": {
+        "lufs": -16.00000312991479,
+        "truePeakDb": -2.632857653811559,
+        "dc": 5.6312197730654764e-8,
+        "samplePeak": 0.737823486328125
+      },
+      "reference": {
+        "lufs": -16.000003129914745,
+        "truePeakDb": -2.632857653811559,
+        "dc": 5.6312197730654764e-8,
+        "samplePeak": 0.737823486328125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.6,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.4 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.6 dBFS\n"
+      },
+      "sha256": "7c8b5e93db242b53a722bac2a4d055ce00b26c20d731c59c6d5b02f6c08610ec",
+      "spectrogramSha256": "7a0a7835520a607d9f24b5602d7769e49c6c5a2fedd79be14697183757a74e3c",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "vote",
+      "group": "verdict",
+      "seconds": 0.5,
+      "samples": 24000,
+      "stereoMaxError": 3.0597746558669314e-13,
+      "masterMaxError": 2.289279876777073e-13,
+      "production": {
+        "lufs": -15.999998157020215,
+        "truePeakDb": -1.9300561796424887,
+        "dc": -2.6702880859375e-8,
+        "samplePeak": 0.799591064453125
+      },
+      "reference": {
+        "lufs": -15.999998157020231,
+        "truePeakDb": -1.9300561796424887,
+        "dc": -2.6702880859375e-8,
+        "samplePeak": 0.799591064453125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -1.9,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -1.9 dBFS\n"
+      },
+      "sha256": "8606cae6ff345b72aa41b8e44a4f617bf03eb6c879825383e8ae9da05ad1ca6d",
+      "spectrogramSha256": "247293d0a9a0904603d98fb7e81c2929d9426acb3c87f381392d48cf08ac0857",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "reveal",
+      "group": "flow",
+      "seconds": 2,
+      "samples": 96000,
+      "stereoMaxError": 5.1271209500214354e-12,
+      "masterMaxError": 4.906963724238267e-12,
+      "production": {
+        "lufs": -15.999998819852495,
+        "truePeakDb": -2.112853979937073,
+        "dc": 5.404154459635417e-9,
+        "samplePeak": 0.782562255859375
+      },
+      "reference": {
+        "lufs": -15.999998819852507,
+        "truePeakDb": -2.112853979937073,
+        "dc": 5.404154459635417e-9,
+        "samplePeak": 0.782562255859375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.5 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "30f288ac620621bbc64194618098ddb8f30a275cd666e86b13b15c65ef1a227a",
+      "spectrogramSha256": "328345c0d151ee75ca494e001d9e01427090cfcf663876709b913cd2c3830d89",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "timer-warning",
+      "group": "timer",
+      "seconds": 1,
+      "samples": 48000,
+      "stereoMaxError": 7.244205235679146e-13,
+      "masterMaxError": 6.867839630331218e-13,
+      "production": {
+        "lufs": -16.000004571466548,
+        "truePeakDb": -1.9899287385877598,
+        "dc": -5.086263020833333e-9,
+        "samplePeak": 0.79443359375
+      },
+      "reference": {
+        "lufs": -16.000004571466494,
+        "truePeakDb": -1.9899287385877598,
+        "dc": -5.086263020833333e-9,
+        "samplePeak": 0.79443359375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.5 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "13962ffb58a2c12db87bb502f71ca470d0a18d3a5426a2996034e325d7bb463f",
+      "spectrogramSha256": "b341236bbb39c62033852dd3af4285f86cc832ba0afa5b52ccd8b1bc8e62e68c",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "menu-move",
+      "group": "menu",
+      "seconds": 0.45,
+      "samples": 21600,
+      "stereoMaxError": 1.4022116801015727e-13,
+      "masterMaxError": 7.666089985036706e-14,
+      "production": {
+        "lufs": -16.00000099289995,
+        "truePeakDb": -1.8941083811399952,
+        "dc": 3.249556929976852e-8,
+        "samplePeak": 0.803314208984375
+      },
+      "reference": {
+        "lufs": -16.00000099289995,
+        "truePeakDb": -1.8941083811399952,
+        "dc": 3.249556929976852e-8,
+        "samplePeak": 0.803314208984375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -1.9,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -1.9 dBFS\n"
+      },
+      "sha256": "6a6823ec6a924989df715469ad52b9497bd1f66250d017332d55d7b0caef8c9c",
+      "spectrogramSha256": "614d0d83e684918cbb24e05d37d75123f02bc48bce58585366dfde6be60be3f1",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "menu-back",
+      "group": "menu",
+      "seconds": 0.55,
+      "samples": 26400,
+      "stereoMaxError": 2.0317081350640365e-13,
+      "masterMaxError": 1.3677947663381929e-13,
+      "production": {
+        "lufs": -16.0000001514525,
+        "truePeakDb": -1.945815074861886,
+        "dc": -3.5835034919507575e-8,
+        "samplePeak": 0.797332763671875
+      },
+      "reference": {
+        "lufs": -16.00000015145251,
+        "truePeakDb": -1.945815074861886,
+        "dc": -3.5835034919507575e-8,
+        "samplePeak": 0.797332763671875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "c5364a63656fff9425f4f408d5879f49e21f785d4ebf09ffdf871e84ec3c957b",
+      "spectrogramSha256": "0b886c218e5f1db2b6cd740ec13937c9aa1a06f547b82bb8de8e1c36df757355",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "confirm",
+      "group": "verdict",
+      "seconds": 0.7,
+      "samples": 33600,
+      "stereoMaxError": 1.9706458687096529e-13,
+      "masterMaxError": 1.1890488593735427e-13,
+      "production": {
+        "lufs": -15.999999541362909,
+        "truePeakDb": -2.020798173560942,
+        "dc": 1.0899135044642857e-8,
+        "samplePeak": 0.7919921875
+      },
+      "reference": {
+        "lufs": -15.99999954136292,
+        "truePeakDb": -2.020798173560942,
+        "dc": 1.0899135044642857e-8,
+        "samplePeak": 0.7919921875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "c9ba1ccca6f0f605fa12f97cef0d05d3742551d0c55439c0ec7e8b4a6539c6bc",
+      "spectrogramSha256": "5ea4aefd82a00b7b4ffb393e63d214b333fe6388e5586e722a9fd4ab4716df6d",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "cancel",
+      "group": "verdict",
+      "seconds": 0.7,
+      "samples": 33600,
+      "stereoMaxError": 2.952083022478291e-13,
+      "masterMaxError": 2.6501023597802487e-13,
+      "production": {
+        "lufs": -16.000004373300712,
+        "truePeakDb": -2.006050121469663,
+        "dc": 9.082612537202381e-10,
+        "samplePeak": 0.7930908203125
+      },
+      "reference": {
+        "lufs": -16.00000437330071,
+        "truePeakDb": -2.006050121469663,
+        "dc": 9.082612537202381e-10,
+        "samplePeak": 0.7930908203125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.9 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "4eb4a5c25f91c4add454dc4159540798cad94e72c3ed1c5bbe96975cd6e38ae9",
+      "spectrogramSha256": "420776a4d96bae9ee2426243bdeed5813603d34cd06188b96e531fb9994c525f",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "join",
+      "group": "flow",
+      "seconds": 1.1,
+      "samples": 52800,
+      "stereoMaxError": 4.303224443447107e-13,
+      "masterMaxError": 4.0401015866109447e-13,
+      "production": {
+        "lufs": -15.99999822883258,
+        "truePeakDb": -1.9814393835677793,
+        "dc": -3.178914388020833e-8,
+        "samplePeak": 0.794464111328125
+      },
+      "reference": {
+        "lufs": -15.999998228832563,
+        "truePeakDb": -1.9814393835677793,
+        "dc": -3.178914388020833e-8,
+        "samplePeak": 0.794464111328125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "8827b4ffd0ecae5a2d594f73c7324060fd6bb1e79a509a1aa39e98481f9e0c46",
+      "spectrogramSha256": "53533deae6738a89150a0c85690e3227de6395bed76133149ef5a914b5512457",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "leave",
+      "group": "flow",
+      "seconds": 1,
+      "samples": 48000,
+      "stereoMaxError": 5.03819208574896e-13,
+      "masterMaxError": 4.752864768420295e-13,
+      "production": {
+        "lufs": -15.99999875808519,
+        "truePeakDb": -2.15918239150441,
+        "dc": 3.3060709635416665e-8,
+        "samplePeak": 0.778717041015625
+      },
+      "reference": {
+        "lufs": -15.999998758085233,
+        "truePeakDb": -2.15918239150441,
+        "dc": 3.3060709635416665e-8,
+        "samplePeak": 0.778717041015625
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.4 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.2 dBFS\n"
+      },
+      "sha256": "1257f6f4bb3ccd3f1e4c8059d80dcbff2847f171f19e01fc0386a6dedef79677",
+      "spectrogramSha256": "11c4ca5cde623ec4f5e762a2f1a85f10e9b796914b18d0f694d2881996e0b4b1",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "ready",
+      "group": "flow",
+      "seconds": 0.9,
+      "samples": 43200,
+      "stereoMaxError": 5.022648963404208e-13,
+      "masterMaxError": 4.68292071786891e-13,
+      "production": {
+        "lufs": -15.999997749404486,
+        "truePeakDb": -1.9997217761121953,
+        "dc": -3.32019947193287e-8,
+        "samplePeak": 0.7935791015625
+      },
+      "reference": {
+        "lufs": -15.999997749404494,
+        "truePeakDb": -1.9997217761121953,
+        "dc": -3.32019947193287e-8,
+        "samplePeak": 0.7935791015625
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "52e8d1f55f94eb54f8185cbbc88b687bcc9bb5b29e5947fd43afde880d8d1f99",
+      "spectrogramSha256": "d34a1b77ff3f7ceeb02e0935ff49f0be42c2291e3591b548621ec493fc11e46a",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "start",
+      "group": "flow",
+      "seconds": 1.7,
+      "samples": 81600,
+      "stereoMaxError": 3.175876228667107e-12,
+      "masterMaxError": 2.970720891504186e-12,
+      "production": {
+        "lufs": -15.999999672457786,
+        "truePeakDb": -2.0599263071017395,
+        "dc": -1.7577526616115197e-8,
+        "samplePeak": 0.78753662109375
+      },
+      "reference": {
+        "lufs": -15.999999672457715,
+        "truePeakDb": -2.0599263071017395,
+        "dc": -1.7577526616115197e-8,
+        "samplePeak": 0.78753662109375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.4 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "871e7cae0183425a4b12ac7f4b55352ae845c24bbe52c69ddf91f05df91dbd3d",
+      "spectrogramSha256": "94d16601eda666c17b2a1c10ce0df25101b3fa042f57a780d204f67e42d916c7",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "round-end",
+      "group": "flow",
+      "seconds": 1.6,
+      "samples": 76800,
+      "stereoMaxError": 1.4244161405940758e-13,
+      "masterMaxError": 1.1157741397482823e-13,
+      "production": {
+        "lufs": -15.999998390587974,
+        "truePeakDb": -2.3062894988054983,
+        "dc": 2.4239222208658855e-8,
+        "samplePeak": 0.765625
+      },
+      "reference": {
+        "lufs": -15.99999839058796,
+        "truePeakDb": -2.3062894988054983,
+        "dc": 2.4239222208658855e-8,
+        "samplePeak": 0.765625
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.3,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.3 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.3 dBFS\n"
+      },
+      "sha256": "9f39b82e6d205fcc92279aa53497cd37acc0b931f407cb35f164541057ca79f3",
+      "spectrogramSha256": "4699ff717124866ba76b996c2a9424d8e449d3b8188f64525e4054d9017cee74",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "bonus",
+      "group": "reward",
+      "seconds": 1.4,
+      "samples": 67200,
+      "stereoMaxError": 6.652456363553938e-13,
+      "masterMaxError": 6.339373470609644e-13,
+      "production": {
+        "lufs": -15.99999860337881,
+        "truePeakDb": -2.2660278907714324,
+        "dc": -5.267915271577381e-8,
+        "samplePeak": 0.769287109375
+      },
+      "reference": {
+        "lufs": -15.999998603378792,
+        "truePeakDb": -2.2660278907714324,
+        "dc": -5.267915271577381e-8,
+        "samplePeak": 0.769287109375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.3,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.4 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.3 dBFS\n"
+      },
+      "sha256": "d26fb1eb9000f36c0a360165206af99b6dc1e23237e4414637bc58fae769cf2d",
+      "spectrogramSha256": "e543154d23cd06cdcc259ee28e3929de097bdc6f2cf95adc3abc4231a05de551",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "penalty",
+      "group": "power",
+      "seconds": 0.95,
+      "samples": 45600,
+      "stereoMaxError": 9.52560252898138e-12,
+      "masterMaxError": 9.473588580277692e-12,
+      "production": {
+        "lufs": -15.999996956588175,
+        "truePeakDb": -1.9882664093644338,
+        "dc": -8.834035773026316e-8,
+        "samplePeak": 0.794189453125
+      },
+      "reference": {
+        "lufs": -15.999996956588166,
+        "truePeakDb": -1.9882664093644338,
+        "dc": -8.834035773026316e-8,
+        "samplePeak": 0.794189453125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "63ab471e22f48c78ace59c2d7926f7054320935a07f8eb6b3005d5ed2eacb58f",
+      "spectrogramSha256": "0addd28bdf5215617bbcd7db3a9d599da1a440f5c5c5ab1532ffb9b2a5a9330e",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "teleport",
+      "group": "power",
+      "seconds": 1.4,
+      "samples": 67200,
+      "stereoMaxError": 2.9924621114396643e-10,
+      "masterMaxError": 2.8973531907006134e-10,
+      "production": {
+        "lufs": -15.999998388799643,
+        "truePeakDb": -4.4751543825087925,
+        "dc": -4.087175641741072e-9,
+        "samplePeak": 0.59661865234375
+      },
+      "reference": {
+        "lufs": -15.999998388799696,
+        "truePeakDb": -4.4751543825087925,
+        "dc": -4.087175641741072e-9,
+        "samplePeak": 0.59661865234375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -4.5,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -30.4 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -4.5 dBFS\n"
+      },
+      "sha256": "b6d94b72fc21559447eb5700abbc20188e54e5bfa27feb960eb0867eb2b65aa4",
+      "spectrogramSha256": "489e712203161340d3c1fc1c57463b120ed345875606aaef0a2b5953e342d43c",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "shield",
+      "group": "power",
+      "seconds": 1.4,
+      "samples": 67200,
+      "stereoMaxError": 4.3143266736933583e-13,
+      "masterMaxError": 3.4428015993626104e-13,
+      "production": {
+        "lufs": -15.999999910718662,
+        "truePeakDb": -2.027250186915629,
+        "dc": 3.587631952194941e-8,
+        "samplePeak": 0.790557861328125
+      },
+      "reference": {
+        "lufs": -15.999999910718701,
+        "truePeakDb": -2.027250186915629,
+        "dc": 3.587631952194941e-8,
+        "samplePeak": 0.790557861328125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.6 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "6b1899b155b1cd0a5245a745aade3ebf28e0718cdb83c22d8abb33adc8964499",
+      "spectrogramSha256": "b33b14742b7e8b6babbdb838bc44113ddc9ec75663467ccb3e63934b5246b10a",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "power-up",
+      "group": "power",
+      "seconds": 1.5,
+      "samples": 72000,
+      "stereoMaxError": 1.833361240599629e-11,
+      "masterMaxError": 1.83391357655438e-11,
+      "production": {
+        "lufs": -16.00000169255736,
+        "truePeakDb": -2.0590819178464494,
+        "dc": 4.153781467013889e-8,
+        "samplePeak": 0.7880859375
+      },
+      "reference": {
+        "lufs": -16.00000169255732,
+        "truePeakDb": -2.0590819178464494,
+        "dc": 4.153781467013889e-8,
+        "samplePeak": 0.7880859375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.8 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "966c70d9d4aba370f84a5f2744487b9ca26c72bd80de6e6883c1e6749e53548a",
+      "spectrogramSha256": "5ff88654964611a071f42f6221f06774b4165af59280548e17c520f28e54374b",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "power-down",
+      "group": "power",
+      "seconds": 1.5,
+      "samples": 72000,
+      "stereoMaxError": 5.025441868200531e-11,
+      "masterMaxError": 4.8604092972581725e-11,
+      "production": {
+        "lufs": -16.000001031061768,
+        "truePeakDb": -2.2025958606137155,
+        "dc": 8.900960286458334e-9,
+        "samplePeak": 0.774688720703125
+      },
+      "reference": {
+        "lufs": -16.000001031061718,
+        "truePeakDb": -2.2025958606137155,
+        "dc": 8.900960286458334e-9,
+        "samplePeak": 0.774688720703125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.2 dBFS\n"
+      },
+      "sha256": "6dbc00168ae03b8fd36db8f283b71e49d0b1d48365a18a6e269f1174ad7f4ab2",
+      "spectrogramSha256": "45fb1dad8fbc17545bdd04256eaf54c6dc331928977d658f5cb8aaae69f7743a",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "notification",
+      "group": "flow",
+      "seconds": 1,
+      "samples": 48000,
+      "stereoMaxError": 2.9387603461827894e-13,
+      "masterMaxError": 2.936539900133539e-13,
+      "production": {
+        "lufs": -16.00000188420277,
+        "truePeakDb": -2.1214831441717372,
+        "dc": 4.9591064453125e-8,
+        "samplePeak": 0.782562255859375
+      },
+      "reference": {
+        "lufs": -16.000001884202774,
+        "truePeakDb": -2.1214831441717372,
+        "dc": 4.9591064453125e-8,
+        "samplePeak": 0.782562255859375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.6 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "6539782b30ecdc9668926ac795babb2999ec2276df85532c42eb5912ae6b359f",
+      "spectrogramSha256": "bcff18995680ed2c24b0156871e732c58b92d304b0a86695fe6e80d45faae15c",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "achievement",
+      "group": "reward",
+      "seconds": 2.4,
+      "samples": 115200,
+      "stereoMaxError": 1.0080825063596421e-12,
+      "masterMaxError": 8.995026945513018e-13,
+      "production": {
+        "lufs": -15.999998508149616,
+        "truePeakDb": -2.076069807858679,
+        "dc": -3.2054053412543404e-8,
+        "samplePeak": 0.78533935546875
+      },
+      "reference": {
+        "lufs": -15.999998508149664,
+        "truePeakDb": -2.076069807858679,
+        "dc": -3.2054053412543404e-8,
+        "samplePeak": 0.78533935546875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -29.5 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "cb6516f2611000a6d1cbe04a0c1dc966ce5001380ccee9356cee9b1c5b190ee4",
+      "spectrogramSha256": "b348ff3427321373855812b3a14257687a3dc071912621d686c3cb0a8afc0e7f",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "error",
+      "group": "verdict",
+      "seconds": 0.8,
+      "samples": 38400,
+      "stereoMaxError": 1.0724754417879012e-13,
+      "masterMaxError": 5.806466418789569e-14,
+      "production": {
+        "lufs": -15.99999745396587,
+        "truePeakDb": -3.342464828742994,
+        "dc": -1.3748804728190104e-7,
+        "samplePeak": 0.679412841796875
+      },
+      "reference": {
+        "lufs": -15.999997453965884,
+        "truePeakDb": -3.342464828742994,
+        "dc": -1.3748804728190104e-7,
+        "samplePeak": 0.679412841796875
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -3.4,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.2 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -3.4 dBFS\n"
+      },
+      "sha256": "1c3ffd2e397bf912b5218c3dc53b8f48940fb15dd01784ff02797076e1fc5326",
+      "spectrogramSha256": "dd4ac6f7340a925eb866efcbb17b1532396486ccb9ba33c3199ccb96a09bfc79",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "splash",
+      "group": "board",
+      "seconds": 1.1,
+      "samples": 52800,
+      "stereoMaxError": 3.622657729351886e-13,
+      "masterMaxError": 3.2429614549300823e-13,
+      "production": {
+        "lufs": -15.999997469371529,
+        "truePeakDb": -1.9923364842379856,
+        "dc": 7.51379764441288e-9,
+        "samplePeak": 0.79388427734375
+      },
+      "reference": {
+        "lufs": -15.999997469371635,
+        "truePeakDb": -1.9923364842379856,
+        "dc": 7.51379764441288e-9,
+        "samplePeak": 0.79388427734375
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.2 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "c7517667c80c364d32b6f93d84cea2282acb9d70fb67457823b44a34adb48619",
+      "spectrogramSha256": "132c81611e6ae599f11d5cc08f18ab3889cc68ce615510ff61aca1e504770ab3",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "bounce",
+      "group": "board",
+      "seconds": 0.7,
+      "samples": 33600,
+      "stereoMaxError": 2.628092188317055e-12,
+      "masterMaxError": 2.5672380887797885e-12,
+      "production": {
+        "lufs": -16.000002394852864,
+        "truePeakDb": -1.9793867054344578,
+        "dc": -2.8156098865327382e-8,
+        "samplePeak": 0.794952392578125
+      },
+      "reference": {
+        "lufs": -16.00000239485283,
+        "truePeakDb": -1.9793867054344578,
+        "dc": -2.8156098865327382e-8,
+        "samplePeak": 0.794952392578125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -27.2 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "607c7c39a8e227213385a90ab2a4af1e38d6b227f2fc266be05c8f181e71d72e",
+      "spectrogramSha256": "65b75640d7f57cbc12a0aba7b0ac722709514447688caaa8d91b9e6386f1dd9d",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "swipe",
+      "group": "menu",
+      "seconds": 0.5,
+      "samples": 24000,
+      "stereoMaxError": 2.5934809855243657e-13,
+      "masterMaxError": 2.348121697082206e-13,
+      "production": {
+        "lufs": -16.00000351046631,
+        "truePeakDb": -2.0080986731638255,
+        "dc": 6.357828776041667e-9,
+        "samplePeak": 0.793212890625
+      },
+      "reference": {
+        "lufs": -16.00000351046631,
+        "truePeakDb": -2.0080986731638255,
+        "dc": 6.357828776041667e-9,
+        "samplePeak": 0.793212890625
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -26.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.0 dBFS\n"
+      },
+      "sha256": "1ffcccbeb97ae854caa5c4a6a30d1376d698bc4c83902ea8475d5ae70fafe977",
+      "spectrogramSha256": "cb065395aed412773b75536c5ff971c10a29ee21837bb85cd5797d407d57b469",
+      "fadeSamples": 240,
+      "passed": true
+    },
+    {
+      "id": "connect",
+      "group": "flow",
+      "seconds": 1.1,
+      "samples": 52800,
+      "stereoMaxError": 3.361755318564974e-13,
+      "masterMaxError": 3.290701044988964e-13,
+      "production": {
+        "lufs": -16.000001984117404,
+        "truePeakDb": -2.0408533024621316,
+        "dc": -3.988092595880682e-8,
+        "samplePeak": 0.788848876953125
+      },
+      "reference": {
+        "lufs": -16.00000198411744,
+        "truePeakDb": -2.0408533024621316,
+        "dc": -3.988092595880682e-8,
+        "samplePeak": 0.788848876953125
+      },
+      "external": {
+        "lufs": -16,
+        "truePeakDb": -2.1,
+        "summary": "Summary:\n\n  Integrated loudness:\n    I:         -16.0 LUFS\n    Threshold: -28.0 LUFS\n\n  Loudness range:\n    LRA:         0.0 LU\n    Threshold:   0.0 LUFS\n    LRA low:     0.0 LUFS\n    LRA high:    0.0 LUFS\n\n  True peak:\n    Peak:       -2.1 dBFS\n"
+      },
+      "sha256": "b4687a02953f6b9460e928f46aec0113a69807b3d42810dfdd4fb6ffd73b4a35",
+      "spectrogramSha256": "c8a2fa06dea00638086185da9a79e86e888bd5784824dc45e5ebe17a8bf0f382",
+      "fadeSamples": 240,
+      "passed": true
+    }
+  ],
+  "ebu": [
+    {
+      "id": "ebu3341-1-mono",
+      "samples": 960000,
+      "expectedLufs": [
+        -26.110299956639814,
+        -25.91029995663981
+      ],
+      "expectedTruePeak": null,
+      "production": {
+        "lufs": -26.00359708188208,
+        "truePeakDb": -22.993304053112176,
+        "dc": -4.625889515191828e-18,
+        "samplePeak": 0.0707945784384138
+      },
+      "reference": {
+        "lufs": -26.003597081871437,
+        "truePeakDb": -22.993304053112176,
+        "dc": -1.1564642472816632e-18,
+        "samplePeak": 0.0707945784384138
+      },
+      "passed": true
+    },
+    {
+      "id": "ebu3341-2-mono",
+      "samples": 960000,
+      "expectedLufs": [
+        -36.110299956639814,
+        -35.91029995663981
+      ],
+      "expectedTruePeak": null,
+      "production": {
+        "lufs": -36.00359708187097,
+        "truePeakDb": -32.993304053112176,
+        "dc": 7.228014483236697e-24,
+        "samplePeak": 0.0223872113856834
+      },
+      "reference": {
+        "lufs": -36.00359708187167,
+        "truePeakDb": -32.993304053112176,
+        "dc": -2.8912057932946783e-19,
+        "samplePeak": 0.0223872113856834
+      },
+      "passed": true
+    },
+    {
+      "id": "ebu3341-3-mono",
+      "samples": 3840000,
+      "expectedLufs": [
+        -26.110299956639814,
+        -25.91029995663981
+      ],
+      "expectedTruePeak": null,
+      "production": {
+        "lufs": -26.0241686547067,
+        "truePeakDb": -22.993304053112176,
+        "dc": -3.469434415865995e-18,
+        "samplePeak": 0.0707945784384138
+      },
+      "reference": {
+        "lufs": -26.024168654664127,
+        "truePeakDb": -22.993304053112176,
+        "dc": -9.034974058332613e-19,
+        "samplePeak": 0.0707945784384138
+      },
+      "passed": true
+    },
+    {
+      "id": "ebu3341-4-mono",
+      "samples": 4800000,
+      "expectedLufs": [
+        -26.110299956639814,
+        -25.91029995663981
+      ],
+      "expectedTruePeak": null,
+      "production": {
+        "lufs": -26.024168654706695,
+        "truePeakDb": -22.993304053112176,
+        "dc": -2.7773762189453334e-18,
+        "samplePeak": 0.0707945784384138
+      },
+      "reference": {
+        "lufs": -26.024168654664138,
+        "truePeakDb": -22.993304053112176,
+        "dc": -7.232551064647248e-19,
+        "samplePeak": 0.0707945784384138
+      },
+      "passed": true
+    },
+    {
+      "id": "ebu3341-5-mono",
+      "samples": 2884800,
+      "expectedLufs": [
+        -26.110299956639814,
+        -25.91029995663981
+      ],
+      "expectedTruePeak": null,
+      "production": {
+        "lufs": -25.988957428547913,
+        "truePeakDb": -19.993304053112176,
+        "dc": 3.0941377119024264e-18,
+        "samplePeak": 0.1
+      },
+      "reference": {
+        "lufs": -25.988957428555068,
+        "truePeakDb": -19.993304053112176,
+        "dc": -5.782456686513337e-19,
+        "samplePeak": 0.1
+      },
+      "passed": true
+    },
+    {
+      "id": "ebu3341-15-mono",
+      "samples": 48000,
+      "expectedLufs": null,
+      "expectedTruePeak": [
+        -6.4,
+        -5.8
+      ],
+      "production": {
+        "lufs": -5.699998453016091,
+        "truePeakDb": -6.217063375387428,
+        "dc": 1.3750920741251089e-17,
+        "samplePeak": 0.5
+      },
+      "reference": {
+        "lufs": -5.699998453016656,
+        "truePeakDb": -6.217063375387428,
+        "dc": 1.3750920741251089e-17,
+        "samplePeak": 0.5
+      },
+      "passed": true
+    },
+    {
+      "id": "ebu3341-16-mono",
+      "samples": 48000,
+      "expectedLufs": null,
+      "expectedTruePeak": [
+        -6.4,
+        -5.8
+      ],
+      "production": {
+        "lufs": -5.699998453014092,
+        "truePeakDb": -5.975908885140555,
+        "dc": -1.3734517266984075e-17,
+        "samplePeak": 0.35355339059327384
+      },
+      "reference": {
+        "lufs": -5.699998453015172,
+        "truePeakDb": -5.975908885140555,
+        "dc": -1.3734517266984075e-17,
+        "samplePeak": 0.35355339059327384
+      },
+      "passed": true
+    },
+    {
+      "id": "ebu3341-17-mono",
+      "samples": 48000,
+      "expectedLufs": null,
+      "expectedTruePeak": [
+        -6.4,
+        -5.8
+      ],
+      "production": {
+        "lufs": -5.703250391722163,
+        "truePeakDb": -6.3132749878473815,
+        "dc": -2.74770192312176e-17,
+        "samplePeak": 0.4330127018922195
+      },
+      "reference": {
+        "lufs": -5.703250391720814,
+        "truePeakDb": -6.3132749878473815,
+        "dc": -2.7477073441326227e-17,
+        "samplePeak": 0.4330127018922195
+      },
+      "passed": true
+    },
+    {
+      "id": "ebu3341-18-mono",
+      "samples": 48000,
+      "expectedLufs": null,
+      "expectedTruePeak": [
+        -6.4,
+        -5.8
+      ],
+      "production": {
+        "lufs": -5.71313886748485,
+        "truePeakDb": -6.026488953659377,
+        "dc": 1.3682486856477401e-17,
+        "samplePeak": 0.46193976625564337
+      },
+      "reference": {
+        "lufs": -5.713138867482369,
+        "truePeakDb": -6.026488953659377,
+        "dc": 6.863605098046214e-18,
+        "samplePeak": 0.46193976625564337
+      },
+      "passed": true
+    },
+    {
+      "id": "ebu3341-19-mono",
+      "samples": 48000,
+      "expectedLufs": null,
+      "expectedTruePeak": [
+        2.6,
+        3.2
+      ],
+      "production": {
+        "lufs": 3.3049837133707722,
+        "truePeakDb": 3.029073281246667,
+        "dc": -5.478931652987129e-17,
+        "samplePeak": 0.9970205614730322
+      },
+      "reference": {
+        "lufs": 3.30498371337266,
+        "truePeakDb": 3.029073281246667,
+        "dc": -5.478931652987129e-17,
+        "samplePeak": 0.9970205614730322
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}
