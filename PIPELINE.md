@@ -1,6 +1,6 @@
 # ChatGPT project pipeline
 
-_Last refreshed: 2026-10-10 08:16 UTC_
+_Last refreshed: 2026-10-10 14:38 UTC_
 
 This tracker follows the 20 jobs listed in [PROMPTS.md](PROMPTS.md). It checks the job branches and pull requests in this repository.
 
@@ -34,11 +34,11 @@ _None._
 | B05 | Turn flow, exact strings, bonus stars (R) | [PR #9](https://github.com/luisitin/partybox-gpt-drops/pull/9) open for review |
 | B06 | Jamboree CPU behaviour + cpuPolicy.ts (R+C) | [PR #17](https://github.com/luisitin/partybox-gpt-drops/pull/17) open for review |
 | B07 | Yahtzee exact optimal solver (C) | [PR #21](https://github.com/luisitin/partybox-gpt-drops/pull/21) open for review |
-| B08 | Monopoly exact landing odds + ROI (C) | [PR #25](https://github.com/luisitin/partybox-gpt-drops/pull/25) open for review |
-| B09 | Clue exact deduction engine (C) | [PR #26](https://github.com/luisitin/partybox-gpt-drops/pull/26) open for review |
+| B08 | Monopoly exact landing odds + ROI (C) | [PR #14](https://github.com/luisitin/partybox-gpt-drops/pull/14) open for review |
+| B09 | Clue exact deduction engine (C) | [PR #12](https://github.com/luisitin/partybox-gpt-drops/pull/12) open for review |
 | B11 | Rummikub validator + best play (C) | [PR #7](https://github.com/luisitin/partybox-gpt-drops/pull/7) open for review |
 | B12 | Ticket to Ride USA data + longest path (R+C) | [PR #19](https://github.com/luisitin/partybox-gpt-drops/pull/19) open for review |
-| B13 | 1,000 verified trivia questions (R) | [PR #28](https://github.com/luisitin/partybox-gpt-drops/pull/28) open for review |
+| B13 | 1,000 verified trivia questions (R) | [PR #22](https://github.com/luisitin/partybox-gpt-drops/pull/22) open for review |
 | B14 | 600 comedy prompts + 600 "most likely to" (R) | [PR #13](https://github.com/luisitin/partybox-gpt-drops/pull/13) open for review |
 | B15 | 120 original SVG game icons (C) | [PR #10](https://github.com/luisitin/partybox-gpt-drops/pull/10) open for review |
 | B16 | 12 accessible player colors (C) | [PR #15](https://github.com/luisitin/partybox-gpt-drops/pull/15) open for review |
