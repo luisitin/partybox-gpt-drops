@@ -1,0 +1,218 @@
+{
+  "id": "B13-0762",
+  "row": {
+    "id": "B13-0762",
+    "category": "music",
+    "question": "Duke Ellington grew up in which U.S. capital city?",
+    "difficulty": 2,
+    "options": [
+      "Dover",
+      "Richmond",
+      "Annapolis",
+      "Washington, D.C."
+    ],
+    "correctIndex": 3,
+    "correctAnswer": "Washington, D.C.",
+    "funFact": "Ellington's orchestra became famous at Harlem's Cotton Club.",
+    "confidence": "high",
+    "confidenceReason": "Both independently written duke ellington histories explicitly support the answer and contextual fact. Birth and childhood location are distinguished from his later New York career.",
+    "sources": [
+      {
+        "sourceId": "music-s0031",
+        "url": "https://en.wikipedia.org/wiki/Duke_Ellington",
+        "publisher": "Wikipedia",
+        "quote": "Born and raised in Washington, D.C.",
+        "funFactQuote": "gained a national profile through his orchestra's appearances at the Cotton Club in Harlem"
+      },
+      {
+        "sourceId": "music-s0032",
+        "url": "https://www.britannica.com/biography/Duke-Ellington",
+        "publisher": "Encyclopaedia Britannica",
+        "quote": "Duke Ellington grew up in Washington, D.C.",
+        "funFactQuote": "Extended residencies at the Cotton Club in Harlem"
+      }
+    ],
+    "claims": [
+      {
+        "kind": "answer",
+        "text": "Duke Ellington grew up in which U.S. capital city? Answer: Washington, D.C..",
+        "sourceIds": [
+          "music-s0031",
+          "music-s0032"
+        ]
+      },
+      {
+        "kind": "funFact",
+        "text": "Ellington's orchestra became famous at Harlem's Cotton Club.",
+        "sourceIds": [
+          "music-s0031",
+          "music-s0032"
+        ]
+      }
+    ]
+  },
+  "author": {
+    "id": "B13-0762",
+    "rowSha256": "bc8e0115efa1d653f4b3e45edfc6ceb5e5f600039c0ff3ab8618bbd25dc8e493",
+    "author": "/root/resume_b14_review",
+    "evidenceReadAt": "2026-10-07T18:39:25.175314+00:00",
+    "assessment": "Both independently written duke ellington histories explicitly support the answer and contextual fact. Birth and childhood location are distinguished from his later New York career.",
+    "captures": [
+      {
+        "sourceId": "music-s0031",
+        "contentSha256": "277c5565b3d0ac1aed91698ee5e763ceeff6236fa292fb0bf9306e7d3331029f",
+        "answerQuoteMatched": true,
+        "funFactQuoteMatched": true,
+        "answerQuoteWords": 6,
+        "funFactQuoteWords": 14,
+        "rawSha256": "fcbeccd5c8c94d379a9e54876d66f75fc6622af1057db574a06b95464d996f23"
+      },
+      {
+        "sourceId": "music-s0032",
+        "contentSha256": "64908ece731918ce1c4c914bf88c9382850e6980471995b89922dda194d1aa33",
+        "answerQuoteMatched": true,
+        "funFactQuoteMatched": true,
+        "answerQuoteWords": 7,
+        "funFactQuoteWords": 8,
+        "rawSha256": "e577b5534561cc7d04e4fb00215d7c0e7cac37ca52b33e39ae755190d15e114b"
+      }
+    ],
+    "unresolvedProblems": [],
+    "recoveredEvidenceRepair": "Quote verification selects the actual extracted plaintext with its own actual hash; original raw HTML remains captured separately with its verified raw hash and path."
+  },
+  "adversarial": {
+    "id": "B13-0762",
+    "rowSha256": "bc8e0115efa1d653f4b3e45edfc6ceb5e5f600039c0ff3ab8618bbd25dc8e493",
+    "reviewer": "/root/r2048_history (independent of movies/music author)",
+    "reviewedAt": "2026-10-07T21:14:11.174660+00:00",
+    "result": "accept",
+    "attemptedCounterexample": "Compared later New York career base with childhood; both upbringing accounts identify Washington, D.C.",
+    "distractorsChecked": [
+      "Dover",
+      "Richmond",
+      "Annapolis",
+      "Washington, D.C."
+    ],
+    "scopeDateCheck": "Compared later New York career base with childhood; both upbringing accounts identify Washington, D.C. The question concerns a fixed original-work credit, biographical event or defined musical concept; no live ranking or changing current membership count is substituted.",
+    "funFactCheck": "Both accounts describe the Cotton Club engagement in Harlem and its career significance.",
+    "sourceIndependenceCheck": "Read the actual selected passages in separately edited Wikimedia and Britannica accounts. Compared authored prose rather than domain names alone; Britannica AI question-answer widgets are excluded. A source pair that depends on copied prose is not accepted.",
+    "editorialOwnersCompared": [
+      "Wikimedia community contributors",
+      "Encyclopaedia Britannica, Inc."
+    ],
+    "finalOrderedOptionReview": {
+      "inspectedAt": "2026-10-07T21:14:11.174660+00:00",
+      "questionInspected": "Duke Ellington grew up in which U.S. capital city?",
+      "optionsInspected": [
+        "Dover",
+        "Richmond",
+        "Annapolis",
+        "Washington, D.C."
+      ],
+      "correctIndexInspected": 3,
+      "correctAnswerInspected": "Washington, D.C.",
+      "funFactInspected": "Ellington's orchestra became famous at Harlem's Cotton Club.",
+      "difficultyInspected": 2,
+      "priorAcceptedRowSha256": "eebae5e635e8cb30f57cb3871f1d57aba832f4ed82276af0a6103341af914f3e",
+      "factsUnchanged": true,
+      "manualResult": "accept",
+      "method": "Personally read every one of the final200 full question/four ordered choices/correct-answer/fun-fact records before executing this recorder. The retained concrete prior row counterexample was reconsidered against the exact same alternative strings in their new order. This is an actual final-order editorial reread, not acceptance merely because a permutation or hash passed. Full-source factual support was previously personally read and actually reopened; its original physical GET timestamps are preserved rather than fabricated anew."
+    }
+  },
+  "reopen": {
+    "id": "B13-0762",
+    "rowSha256": "bc8e0115efa1d653f4b3e45edfc6ceb5e5f600039c0ff3ab8618bbd25dc8e493",
+    "reviewer": "/root/r2048_history",
+    "reviewedAt": "2026-10-07T21:14:11.174660+00:00",
+    "result": "supported",
+    "sources": [
+      {
+        "sourceId": "music-s0031",
+        "receipt": {
+          "pass": "reopen",
+          "retrievedAt": "2026-10-07T19:27:44.677764+00:00",
+          "method": "urllib-http-get",
+          "requestedUrl": "https://en.wikipedia.org/wiki/Duke_Ellington",
+          "resolvedUrl": "https://en.wikipedia.org/wiki/Duke_Ellington",
+          "status": 200,
+          "contentType": "text/html",
+          "rawSha256": "fcbeccd5c8c94d379a9e54876d66f75fc6622af1057db574a06b95464d996f23",
+          "rawPath": ".work/music/reopen/music-s0031.raw",
+          "title": "Duke Ellington - Wikipedia",
+          "contentSha256": "0c711e610ef49f208b1e6d18bcb0928bfc8a85cae0bcdb58793818bb3394a45c",
+          "capturePath": ".work/music/reopen/music-s0031.txt",
+          "captureComplete": true,
+          "characters": 96088
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "Born and raised in Washington, D.C.",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "gained a national profile through his orchestra's appearances at the Cotton Club in Harlem",
+            "exactMatch": true
+          }
+        ],
+        "contextRead": true,
+        "answerAssessment": "Compared later New York career base with childhood; both upbringing accounts identify Washington, D.C.",
+        "funFactAssessment": "Both accounts describe the Cotton Club engagement in Harlem and its career significance."
+      },
+      {
+        "sourceId": "music-s0032",
+        "receipt": {
+          "pass": "reopen",
+          "retrievedAt": "2026-10-07T19:27:45.388580+00:00",
+          "method": "urllib-http-get",
+          "requestedUrl": "https://www.britannica.com/biography/Duke-Ellington",
+          "resolvedUrl": "https://www.britannica.com/biography/Duke-Ellington",
+          "status": 200,
+          "contentType": "text/html",
+          "rawSha256": "84488d7ebeefe569d1a0a4d7f687429363f732e462aee96e53b32796c0279b98",
+          "rawPath": ".work/music/reopen/music-s0032.raw",
+          "title": "Duke Ellington | Biography, Songs, Albums, & Facts | Britannica",
+          "contentSha256": "4f6073da51a0081c87bbb1a8dcff3d81aaf16b2c5ab45d14e15a900f6c9a525c",
+          "capturePath": ".work/music/reopen/music-s0032.txt",
+          "captureComplete": true,
+          "characters": 15859
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "Duke Ellington grew up in Washington, D.C.",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Extended residencies at the Cotton Club in Harlem",
+            "exactMatch": true
+          }
+        ],
+        "contextRead": true,
+        "answerAssessment": "Compared later New York career base with childhood; both upbringing accounts identify Washington, D.C.",
+        "funFactAssessment": "Both accounts describe the Cotton Club engagement in Harlem and its career significance."
+      }
+    ],
+    "assessment": "Compared later New York career base with childhood; both upbringing accounts identify Washington, D.C. Both accounts describe the Cotton Club engagement in Harlem and its career significance. Final ordered alternatives and unchanged contextual fact personally reread; physical source GET receipts remain at their actual original times.",
+    "finalOrderedOptionReview": {
+      "inspectedAt": "2026-10-07T21:14:11.174660+00:00",
+      "questionInspected": "Duke Ellington grew up in which U.S. capital city?",
+      "optionsInspected": [
+        "Dover",
+        "Richmond",
+        "Annapolis",
+        "Washington, D.C."
+      ],
+      "correctIndexInspected": 3,
+      "correctAnswerInspected": "Washington, D.C.",
+      "funFactInspected": "Ellington's orchestra became famous at Harlem's Cotton Club.",
+      "difficultyInspected": 2,
+      "priorAcceptedRowSha256": "eebae5e635e8cb30f57cb3871f1d57aba832f4ed82276af0a6103341af914f3e",
+      "factsUnchanged": true,
+      "manualResult": "accept",
+      "method": "Personally read every one of the final200 full question/four ordered choices/correct-answer/fun-fact records before executing this recorder. The retained concrete prior row counterexample was reconsidered against the exact same alternative strings in their new order. This is an actual final-order editorial reread, not acceptance merely because a permutation or hash passed. Full-source factual support was previously personally read and actually reopened; its original physical GET timestamps are preserved rather than fabricated anew."
+    }
+  }
+}

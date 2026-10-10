@@ -1,0 +1,187 @@
+{
+  "id": "B13-0171",
+  "row": {
+    "id": "B13-0171",
+    "category": "world-geography",
+    "question": "Mount Fuji lies approximately southwest of which Japanese capital city?",
+    "difficulty": 3,
+    "options": [
+      "Kyoto",
+      "Osaka",
+      "Nagoya",
+      "Tokyo"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": "Tokyo",
+    "funFact": "It has been a longstanding subject of Japanese art.",
+    "confidence": "high",
+    "confidenceReason": "Both actual geographic accounts explicitly identify southwest of Tokyo. Exact rounded distances are excluded; art context is independently stated rather than relying on a copied UNESCO quotation.",
+    "sources": [
+      {
+        "sourceId": "world-geography-s0035",
+        "url": "https://whc.unesco.org/en/list/1418/",
+        "publisher": "UNESCO World Heritage Centre",
+        "quote": "around 100 km south-west of Tokyo",
+        "funFactQuote": "Its representation in Japanese art goes back to the 11th century"
+      },
+      {
+        "sourceId": "world-geography-s0036",
+        "url": "https://en.wikipedia.org/wiki/Mount_Fuji",
+        "publisher": "Wikipedia contributors",
+        "quote": "It is located about 100 km (62 mi) southwest of Tokyo",
+        "funFactQuote": "It has been a frequent subject of Japanese art"
+      }
+    ],
+    "claims": [
+      {
+        "kind": "answer",
+        "text": "Mount Fuji lies southwest of Tokyo.",
+        "sourceIds": [
+          "world-geography-s0035",
+          "world-geography-s0036"
+        ]
+      },
+      {
+        "kind": "funFact",
+        "text": "It has been a longstanding subject of Japanese art.",
+        "sourceIds": [
+          "world-geography-s0035",
+          "world-geography-s0036"
+        ]
+      }
+    ]
+  },
+  "author": {
+    "id": "B13-0171",
+    "rowSha256": "bbe4b276f64d51db537b27838405ad4d3c4158b7192a972830470de5a5073bc7",
+    "author": "/root/resume_b13_lead",
+    "evidenceReads": [
+      {
+        "sourceId": "world-geography-s0035",
+        "contentSha256": "0087e72904047606f2228f356ef4e1449e5f7b103b50bce963beb9e990563aca",
+        "quote": "around 100 km south-west of Tokyo",
+        "exactQuoteMatched": true,
+        "claimsSupported": [
+          "answer",
+          "funFact"
+        ],
+        "funFactQuote": "Its representation in Japanese art goes back to the 11th century",
+        "exactFunFactQuoteMatched": true
+      },
+      {
+        "sourceId": "world-geography-s0036",
+        "contentSha256": "a3d2fe2d84ef03ab55557a8a461aa4e6d90ccd6603585a4d9a63931e101ee549",
+        "quote": "It is located about 100 km (62 mi) southwest of Tokyo",
+        "exactQuoteMatched": true,
+        "claimsSupported": [
+          "answer",
+          "funFact"
+        ],
+        "funFactQuote": "It has been a frequent subject of Japanese art",
+        "exactFunFactQuoteMatched": true
+      }
+    ],
+    "confidenceReason": "Both actual geographic accounts explicitly identify southwest of Tokyo. Exact rounded distances are excluded; art context is independently stated rather than relying on a copied UNESCO quotation.",
+    "unresolvedProblems": [
+      "Fresh adversarial review and second source reopening are pending."
+    ]
+  },
+  "adversarial": {
+    "id": "B13-0171",
+    "rowSha256": "bbe4b276f64d51db537b27838405ad4d3c4158b7192a972830470de5a5073bc7",
+    "reviewer": "/root (independent category reviewer)",
+    "reviewedAt": "2026-10-07T21:18:06.618725+00:00",
+    "result": "accept",
+    "attemptedCounterexample": "Compared Kyoto historical-capital association with the actual stated southwest-of-Tokyo direction. Both actual passages explicitly name Tokyo and independent art context; no exact rounded distance is asked. Final ordered-choice reread: compared every current alternative against this same specific counterexample and found one supported answer; no all/none/letter-position-dependent option is introduced.",
+    "distractorsChecked": [
+      "Kyoto",
+      "Osaka",
+      "Nagoya",
+      "Tokyo"
+    ],
+    "funFactCheck": "Compared Kyoto historical-capital association with the actual stated southwest-of-Tokyo direction. Both actual passages explicitly name Tokyo and independent art context; no exact rounded distance is asked.",
+    "scopeDateCheck": "Read the exact site/region/park, historic/current, main/subsidiary, native/modern and approximate/height-convention scope. Changing population/counts and known conflicting exact dimensions are excluded; specific remaining scope failures are recorded individually.",
+    "sourceIndependenceCheck": "Compared Kyoto historical-capital association with the actual stated southwest-of-Tokyo direction. Both actual passages explicitly name Tokyo and independent art context; no exact rounded distance is asked. Selected surrounding Wikipedia paragraphs and actual footnotes were inspected separately from matching the short excerpts; formal property titles/captions were read in their actual context.",
+    "finalOrderedOptionsCheck": {
+      "actuallyRead": true,
+      "beforeRowSha256": "4dc2a3dac3a1347c130aed60c6e9dbdad4fc3900ef522ca4d9b98b9529c22e32",
+      "orderedOptionsRead": [
+        "Kyoto",
+        "Osaka",
+        "Nagoya",
+        "Tokyo"
+      ],
+      "originalActualSourceReceiptTimesPreserved": true,
+      "factualFieldsVerifiedByteEquivalent": true
+    }
+  },
+  "reopen": {
+    "id": "B13-0171",
+    "rowSha256": "bbe4b276f64d51db537b27838405ad4d3c4158b7192a972830470de5a5073bc7",
+    "reviewer": "/root",
+    "reviewedAt": "2026-10-07T21:18:06.618725+00:00",
+    "result": "supported",
+    "sources": [
+      {
+        "sourceId": "world-geography-s0035",
+        "receipt": {
+          "sourceName": "world-geography-s0035",
+          "pass": "reopen",
+          "requestedUrl": "https://whc.unesco.org/en/list/1418/",
+          "retrievedAt": "2026-10-07T19:49:25.133712+00:00",
+          "method": "Python urllib actual HTTP GET",
+          "status": 200,
+          "resolvedUrl": "https://whc.unesco.org/en/list/1418/",
+          "contentSha256": "87f4fb3d226ea062e313786e5eeaaa49bd20f067b1e68d62231f4df84aa83c0d",
+          "localCapturePath": ".work/world-geography-review/world-geography-s0035-reopen.txt",
+          "characters": 23969
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "around 100 km south-west of Tokyo",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Its representation in Japanese art goes back to the 11th century",
+            "exactMatch": true
+          }
+        ],
+        "contextRead": true,
+        "claimAssessment": "Compared Kyoto historical-capital association with the actual stated southwest-of-Tokyo direction. Both actual passages explicitly name Tokyo and independent art context; no exact rounded distance is asked."
+      },
+      {
+        "sourceId": "world-geography-s0036",
+        "receipt": {
+          "sourceName": "world-geography-s0036",
+          "pass": "reopen",
+          "requestedUrl": "https://en.wikipedia.org/wiki/Mount_Fuji",
+          "retrievedAt": "2026-10-07T19:49:25.352028+00:00",
+          "method": "Python urllib actual HTTP GET",
+          "status": 200,
+          "resolvedUrl": "https://en.wikipedia.org/wiki/Mount_Fuji",
+          "contentSha256": "fe179677ef64707c821d9b119b800ff0b92462267e095e8a0dc4813dab4dd08e",
+          "localCapturePath": ".work/world-geography-review/world-geography-s0036-reopen.txt",
+          "characters": 57154
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "It is located about 100 km (62 mi) southwest of Tokyo",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "It has been a frequent subject of Japanese art",
+            "exactMatch": true
+          }
+        ],
+        "contextRead": true,
+        "claimAssessment": "Compared Kyoto historical-capital association with the actual stated southwest-of-Tokyo direction. Both actual passages explicitly name Tokyo and independent art context; no exact rounded distance is asked."
+      }
+    ],
+    "assessment": "Compared Kyoto historical-capital association with the actual stated southwest-of-Tokyo direction. Both actual passages explicitly name Tokyo and independent art context; no exact rounded distance is asked.",
+    "evidenceReuseScope": "Actual source openings, contexts and quotation assessments retained from the completed independent fact passes; final change is only option order/correctIndex, verified field-by-field and actually reread. This is not a newly timestamped physical source opening."
+  }
+}

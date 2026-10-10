@@ -1,0 +1,187 @@
+{
+  "authorPacketSHA256": "c81b689a9db1592973efca56a9f2860c663c893fcf7cd63b4e711f89871e9c99",
+  "proposedRowSHA256": "27e91f482232e60cf569636096982237943f9e692658046ae1cefc26b00f7d39",
+  "rowId": "B13-0077",
+  "reviewer": "/root/restart_g01_0458",
+  "actualReviewedAt": "2026-10-09T14:23:35.557402+00:00",
+  "result": "accept",
+  "decision": "PASS",
+  "reviews": [
+    {
+      "rowId": "B13-0077",
+      "authorPacketSHA256": "c81b689a9db1592973efca56a9f2860c663c893fcf7cd63b4e711f89871e9c99",
+      "proposedRowSHA256": "27e91f482232e60cf569636096982237943f9e692658046ae1cefc26b00f7d39",
+      "actualReviewedAt": "2026-10-09T14:23:35.557402+00:00",
+      "reviewer": "/root/restart_g01_0458; independently authored no B13 rows",
+      "decision": "PASS",
+      "result": "accept",
+      "actualSecondGetSources": [
+        {
+          "rowId": "B13-0077",
+          "sourceId": "us-geography-s5006",
+          "url": "https://www.nps.gov/arch/index.htm",
+          "pass": "independent-reopen",
+          "retrievedAt": "2026-10-09T14:19:12.418455+00:00",
+          "method": "actual urllib HTTPS GET",
+          "authorPacketSHA256": "c81b689a9db1592973efca56a9f2860c663c893fcf7cd63b4e711f89871e9c99",
+          "status": 200,
+          "resolvedUrl": "https://www.nps.gov/arch/index.htm",
+          "contentSHA256": "5d207806d7c8005fd65221a4369a6558a32a71359e24dbcab5b122b5f4e0e7c3",
+          "rawSHA256": "7cf1f193a0b5d643ed91c873bfe1a71f78919a5edd0add035bb5f4e60f4ddd5e",
+          "captureComplete": true,
+          "finishedAt": "2026-10-09T14:19:12.940699+00:00"
+        },
+        {
+          "rowId": "B13-0077",
+          "sourceId": "us-geography-s5007",
+          "url": "https://www.britannica.com/place/Arches-National-Park",
+          "pass": "independent-reopen",
+          "retrievedAt": "2026-10-09T14:19:12.940998+00:00",
+          "method": "actual urllib HTTPS GET",
+          "authorPacketSHA256": "c81b689a9db1592973efca56a9f2860c663c893fcf7cd63b4e711f89871e9c99",
+          "status": 200,
+          "resolvedUrl": "https://www.britannica.com/place/Arches-National-Park",
+          "contentSHA256": "aa2ec4a72e4e86b69cdcaf49c9f24a07b161757311aef5187a4cf741c5deb39d",
+          "rawSHA256": "ddbc11dcc3b9799ef2203a0ec1e62cacba5efbe33cb4e1178dff28f926ea3df4",
+          "captureComplete": true,
+          "finishedAt": "2026-10-09T14:19:13.633085+00:00"
+        }
+      ],
+      "answerScopeCheck": "The complete actual NPS institutional introductory description identifies Utah and explicitly over2000 natural stone arches. Independently edited Britannica native topic paragraph2 states morethan2000 cataloged arches; full paragraph0 independently places the park in easternUtah and paragraph1 identifies sandstone/erosion/arches. All five complete native paragraphs and adjacent geology/collapse contexts were personally read. These are native authored contexts; FAQ/AI-summary/schema answer blocks are excluded as factual evidence. The new stem removes the park-name word that gave away the answer and does not add an exact inventory, area, visitor count or north-of-Moab claim.",
+      "funFactCheck": "The unchanged Arches National Park is in Utah fact is literally established by the NPS native park/state header and Britannica whole native first paragraph. The displayed question does not reveal Arches or the word arches. No current area/establishment year/geography-direction claim is added.",
+      "independenceCheck": "The National Park Service institutional park account and the Britannica Editors native byline are separate editorial owners with distinct surrounding description and geological context. All5native Britannica paragraphs and their actual outgoing links, and the fullNPS3603character context, were read; none of the selected supporting paragraphs attributes/copies its count statement to the paired page. Neither carries attached numbered references for these clauses. I did not reopen underlying catalog works or linked related articles. This is limited independent editorial support, not a universal copying audit.",
+      "dateCheck": "Both source requests are actual independent GETs after14:14:20.440565 authoring, naturally closed14:19:13.636350. Native NPS last-updatedSeptember14,2026 and Britannica published1998-07-20/modifiedSeptember19,2026 metadata were read; fresh GET is not a new publication. No2025capture/date is invented. The original rule prohibits questions whose ANSWER changes over time unless dated asof2025. Here the requested formation type Stone arches is enduring. Morethan2000 is a coarse, separately sourced catalog/description threshold used as an identification premise, not a request for a changing exact inventory/current record-holder/ranking/visitor total. Adjacent Britannica notes on1991falls/2008WallArchcollapse mean individual arches and exact inventories can change; the answer type does not become Sea stacks/Lava tubes/Sand dunes when an individual arch falls. I therefore accept this exact enduring-answer question under that rule without claiming the threshold is eternal or was observed in2025. Any future threshold-based inventory question would require its own dated evidence.",
+      "dynamicPremiseAssessment": {
+        "decision": "Does not require invented asof2025 scope for this exact formation-answer question",
+        "originalRuleScope": "answer changes over time",
+        "answerTypeEnduring": true,
+        "coarseCatalogThresholdSeparatelyExplicitBothSources": true,
+        "exactInventoryNotAsked": true,
+        "individualArchesCanCollapseAcknowledged": true,
+        "no2025SnapshotClaimed": true
+      },
+      "difficultyCheck": "Difficulty2 is defensible for recognizing a Utah landmark formation from a sourced description among four natural-formation classes; the old literalname shortcut is removed. This is editorial judgement, not a human playtest. Correct Stonearches12characters versus three10character alternatives is an existing natural-length exception, separately evaluated in the whole13lengthassessment.",
+      "counterexampleCheck": "The surrounding geology explicitly supports rockarches rather than volcanic lava tubes, dune piles or coastal sea stacks. LandlockedUtah eliminates coastal stacks but does not by itself choose arches over remaining options. The stem is existential aUtahnationalpark, and both complete contexts provide such an example; it does not assert noUtahpark has dunes or tubes, every rockformation is an arch, or an exact present-day count. No literal answer word occurs in the stem.",
+      "wholeRelevantParagraphsAvailableAdjacentParagraphsAllAttachedNativeReferencesPersonallyRead": true,
+      "nativeSelectedParagraphHashes": [
+        {
+          "sourceId": "us-geography-s5006",
+          "scopeSHA256": "5d207806d7c8005fd65221a4369a6558a32a71359e24dbcab5b122b5f4e0e7c3",
+          "paragraphHashes": [],
+          "attachedReferenceCount": 0,
+          "wholeBodyEqualAuthor": true,
+          "rawEqualAuthor": true
+        },
+        {
+          "sourceId": "us-geography-s5007",
+          "scopeSHA256": "0ad9817aa9baf0c4229b9f4dd3164ffaf8b12b44c0548cabfd79d7e979499820",
+          "paragraphHashes": [
+            {
+              "index": 0,
+              "sha256": "2bada8ee87c6ec460eede1756139c6a76c4fe3b53021db515ab9674298431233"
+            },
+            {
+              "index": 1,
+              "sha256": "ef9f12269dae3612ea0421dbd6d6db8300102831297d19761c96a048c15d55f3"
+            },
+            {
+              "index": 2,
+              "sha256": "a7958e80a1d43cde057550bac6928cb5898ba1fd2dd753208f21e2e8ea20e156"
+            },
+            {
+              "index": 3,
+              "sha256": "4d547f8e3ad08005ee5731adf148a1a23b57f889eba7db14518ebfef7328bea0"
+            },
+            {
+              "index": 4,
+              "sha256": "7206be256d272efb94c4278e3ff4d43fb6e0f6b45588e315d2c2fc42f7c6ec5d"
+            }
+          ],
+          "attachedReferenceCount": 0,
+          "wholeBodyEqualAuthor": true,
+          "rawEqualAuthor": false
+        }
+      ],
+      "exactShortClipCounts": [
+        {
+          "sourceId": "us-geography-s5006",
+          "field": "quote",
+          "exactWords": 8,
+          "literalMatch": true
+        },
+        {
+          "sourceId": "us-geography-s5006",
+          "field": "funFactQuote",
+          "exactWords": 5,
+          "literalMatch": true
+        },
+        {
+          "sourceId": "us-geography-s5007",
+          "field": "quote",
+          "exactWords": 10,
+          "literalMatch": true
+        },
+        {
+          "sourceId": "us-geography-s5007",
+          "field": "funFactQuote",
+          "exactWords": 5,
+          "literalMatch": true
+        }
+      ],
+      "canonicalURLBudgets": {
+        "https://www.nps.gov/arch/index.htm": {
+          "protectedOriginalAndHistoryBefore": 29,
+          "newDistinctShortClipWordsConservativelyAdded": 8,
+          "after": 37
+        },
+        "https://www.britannica.com/place/Arches-National-Park": {
+          "protectedOriginalAndHistoryBefore": 47,
+          "newDistinctShortClipWordsConservativelyAdded": 15,
+          "after": 62
+        }
+      },
+      "noNewSourceIdBudgetReset": true,
+      "licenseCheck": "NPS government-authored factual text is institutional; third-party photographs/materials do not inherit that status. Britannica is copyrighted, delivered only as attributed <=25word clauses under unchanged original percanonical budgets37/62. No full bodies/images/response headers delivered publicly; no unrestricted commercial media license claimed.",
+      "limitations": "Fresh HTTPS requests may be cached. Both full plaintext captures match lead originals after completehashreadback; NPS full raw equals lead, Britannica fullraw differs while fullplaintext is identical. No new publication date, whole-source-work reopen, universal source-independence guarantee, humanplaytest or hosted-currentCI is claimed."
+    }
+  ],
+  "controller": {
+    "startedAt": "2026-10-09T14:19:12.418414+00:00",
+    "closedAt": "2026-10-09T14:19:13.636350+00:00",
+    "elapsedSeconds": 1.2179383640177548,
+    "declaredWholeBoundSeconds": 40,
+    "declaredMaxResponseBytes": 4000000,
+    "nativePid": 399498,
+    "externalChildren": [],
+    "terminationSignals": [],
+    "requestedDistinctOriginalURLs": 2,
+    "completedRequests": 2,
+    "allRequestedFullHTTP200": true,
+    "failure": null,
+    "noPublicSourceBodies": true,
+    "noB13ProductFilesEdited": true
+  },
+  "privateScopeSHA256": "8a871bf3a69df21c514bf11d1cf15e74e4237fbd859ceb3885d50f779962a70c",
+  "noB13ProductFilesEdited": true,
+  "privateReadOnlyFailuresPreserved": {
+    "CSSSelector": "Initial JSON-LD attribute selector omitted CSS quotes, failed after printing all5native topic paragraphs. No product/scope files were written in that attempt; corrected native script attribute extraction uses BeautifulSoup attrs.",
+    "leadCaptureBase": "First extractor used repository root for actual .work relative path; actual paths are job-root relative. FileNotFoundError stopped before scope/product output. Exact retained files located using rg --files --hidden --no-ignore and actual complete raw/content SHA verified."
+  },
+  "adoptedAt": "2026-10-09T14:26:35.582575+00:00",
+  "originalIndependentPeerPacketSHA256": "8bd63606d0aca5c7b3f19263da1b43a4cacf07dc4767849501e705fe277e5b48",
+  "privateFullBodiesAndHTTPHeadersExcluded": true,
+  "currentGlobalAcceptancePending": true,
+  "canonicalURLBudgetsProtectedOriginalAndHistoryPlusActualNewShortClips": {
+    "https://www.nps.gov/arch/index.htm": {
+      "protectedOriginalAndHistoryBefore": 29,
+      "newDistinctShortClipWordsConservativelyAdded": 8,
+      "after": 37
+    },
+    "https://www.britannica.com/place/Arches-National-Park": {
+      "protectedOriginalAndHistoryBefore": 47,
+      "newDistinctShortClipWordsConservativelyAdded": 15,
+      "after": 62
+    }
+  },
+  "newDistinctShortClipWordsConservativelyAdded": 23
+}

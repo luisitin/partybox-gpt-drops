@@ -1,0 +1,199 @@
+{
+  "id": "B13-0911",
+  "row": {
+    "id": "B13-0911",
+    "category": "food-everyday-life",
+    "question": "Which ingredient distinguishes milk chocolate from otherwise similar dark chocolate?",
+    "difficulty": 1,
+    "options": [
+      "Flour",
+      "Honey",
+      "Coffee",
+      "Milk"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": "Milk",
+    "funFact": "Chocolate is made from cocoa beans, the seeds of the cacao tree.",
+    "confidence": "high",
+    "confidenceReason": "Both accounts name milk; no precise cocoa-percentage regulation is implied.",
+    "sources": [
+      {
+        "sourceId": "food-everyday-life-s0015",
+        "url": "https://www.britannica.com/topic/chocolate",
+        "publisher": "Encyclopaedia Britannica",
+        "quote": "The addition of dried or concentrated milk to sweet chocolate produces milk chocolate",
+        "funFactQuote": "food product made from cocoa beans"
+      },
+      {
+        "sourceId": "food-everyday-life-s0016",
+        "url": "https://en.wikipedia.org/wiki/Chocolate",
+        "publisher": "Wikipedia contributors",
+        "quote": "with the addition of milk , can be made into milk chocolate",
+        "funFactQuote": "Cocoa beans are the processed seeds of the cacao tree"
+      }
+    ],
+    "claims": [
+      {
+        "kind": "answer",
+        "text": "Adding milk to sweet chocolate produces milk chocolate.",
+        "sourceIds": [
+          "food-everyday-life-s0015",
+          "food-everyday-life-s0016"
+        ]
+      },
+      {
+        "kind": "funFact",
+        "text": "Chocolate is made from cocoa beans, the seeds of the cacao tree.",
+        "sourceIds": [
+          "food-everyday-life-s0015",
+          "food-everyday-life-s0016"
+        ]
+      }
+    ]
+  },
+  "author": {
+    "id": "B13-0911",
+    "rowSha256": "4a035613c5e7e634146d3abeba6a0b7879e20c46467df1a95319656c9db97d8c",
+    "author": "/root/continue_b14_author",
+    "evidenceReads": [
+      {
+        "sourceId": "food-everyday-life-s0015",
+        "captureSha256": "f156c2b4fc33279cd70e56a1cf92eee97ca2e0417220cfb902135a724489278a",
+        "capturePath": ".work/food-everyday-life/author/food-everyday-life-s0015.txt",
+        "retrievedAt": "2026-10-07T19:01:00.201268+00:00",
+        "answerQuoteExactMatch": true,
+        "funFactQuoteExactMatch": true,
+        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
+        "answerSupport": "Adding milk to sweet chocolate produces milk chocolate.",
+        "funFactSupport": "Chocolate is made from cocoa beans, the seeds of the cacao tree."
+      },
+      {
+        "sourceId": "food-everyday-life-s0016",
+        "captureSha256": "093c2e58eee211ce03a9c5ce1224e3df4e03c1f013e177837093d8f84ed2b1c9",
+        "capturePath": ".work/food-everyday-life/author/food-everyday-life-s0016.txt",
+        "retrievedAt": "2026-10-07T19:00:59.803801+00:00",
+        "answerQuoteExactMatch": true,
+        "funFactQuoteExactMatch": true,
+        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
+        "answerSupport": "Adding milk to sweet chocolate produces milk chocolate.",
+        "funFactSupport": "Chocolate is made from cocoa beans, the seeds of the cacao tree."
+      }
+    ],
+    "confidenceReason": "Both accounts name milk; no precise cocoa-percentage regulation is implied.",
+    "unresolvedProblems": [
+      "Fresh adversarial review and second source reopening are pending."
+    ]
+  },
+  "adversarial": {
+    "id": "B13-0911",
+    "rowSha256": "4a035613c5e7e634146d3abeba6a0b7879e20c46467df1a95319656c9db97d8c",
+    "reviewer": "/root/r2048_lead (independent final ordered-choice reviewer)",
+    "reviewedAt": "2026-10-07T21:17:52.580474+00:00",
+    "result": "accept",
+    "attemptedCounterexample": "Compared milk with coffee, honey and flour; otherwise-similar dark chocolate narrows the defining added ingredient to milk, without denying variant sweeteners.",
+    "distractorsChecked": [
+      "Flour",
+      "Honey",
+      "Coffee",
+      "Milk"
+    ],
+    "scopeDateCheck": "Reviewed conventional food/process/botanical identity, not a current ranking; row-specific scope: Compared milk with coffee, honey and flour; otherwise-similar dark chocolate narrows the defining added ingredient to milk, without denying variant sweeteners.",
+    "funFactCheck": "Both actual bodies identify cocoa/cacao beans as the input; Wiki explicitly calls them seeds.",
+    "sourceIndependenceCheck": "Wiki selected chocolate-making introductory narration differs from Britannica kernels/liquor narrative. Its only Britannica citations are Charlie and the Chocolate Factory cultural material, excluded from our selected production/type claims.",
+    "editorialOwnersCompared": [
+      "Encyclopaedia Britannica Inc.",
+      "Wikimedia community contributors"
+    ],
+    "finalOptionOrderAssessment": "Milk supplies the named milk-chocolate distinction; flour, coffee and honey are not that dairy ingredient.",
+    "finalOrderedChoicesActuallyRead": [
+      "Flour",
+      "Honey",
+      "Coffee",
+      "Milk"
+    ]
+  },
+  "reopen": {
+    "id": "B13-0911",
+    "rowSha256": "4a035613c5e7e634146d3abeba6a0b7879e20c46467df1a95319656c9db97d8c",
+    "reviewer": "/root/continue_b13_lead (did not author food category)",
+    "reviewedAt": "2026-10-07T21:17:52.580474+00:00",
+    "result": "supported",
+    "sources": [
+      {
+        "sourceId": "food-everyday-life-s0015",
+        "receipt": {
+          "pass": "reopen",
+          "retrievedAt": "2026-10-07T19:51:54.409422+00:00",
+          "method": "urllib-http-get",
+          "requestedUrl": "https://www.britannica.com/topic/chocolate",
+          "resolvedUrl": "https://www.britannica.com/topic/chocolate",
+          "status": 200,
+          "contentType": "text/html",
+          "rawSha256": "3f20e675a8abb5428366e60ce1101fccce3334adc07293c856c34705b2e8fa8b",
+          "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0015.raw",
+          "title": "Chocolate | Definition, History, Types, Production, & Facts | Britannica",
+          "contentSha256": "45f0b19b326c2ce6a6ec6a1032bf3e6d07da449b5d35996ed99d41d3cd86aec9",
+          "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0015.txt",
+          "captureComplete": true,
+          "characters": 11749
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "The addition of dried or concentrated milk to sweet chocolate produces milk chocolate",
+            "exactMatch": true,
+            "wordCount": 13
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "food product made from cocoa beans",
+            "exactMatch": true,
+            "wordCount": 6
+          }
+        ],
+        "contextRead": true,
+        "claimAssessment": "Compared milk with coffee, honey and flour; otherwise-similar dark chocolate narrows the defining added ingredient to milk, without denying variant sweeteners. Both actual bodies identify cocoa/cacao beans as the input; Wiki explicitly calls them seeds.",
+        "sourceIndependenceAssessment": "Wiki selected chocolate-making introductory narration differs from Britannica kernels/liquor narrative. Its only Britannica citations are Charlie and the Chocolate Factory cultural material, excluded from our selected production/type claims."
+      },
+      {
+        "sourceId": "food-everyday-life-s0016",
+        "receipt": {
+          "pass": "reopen",
+          "retrievedAt": "2026-10-07T19:51:54.231283+00:00",
+          "method": "urllib-http-get",
+          "requestedUrl": "https://en.wikipedia.org/wiki/Chocolate",
+          "resolvedUrl": "https://en.wikipedia.org/wiki/Chocolate",
+          "status": 200,
+          "contentType": "text/html",
+          "rawSha256": "1b0cb73084ba1c8298b882421cc6649890f5a5b55d37d610f58bbaae17afde37",
+          "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0016.raw",
+          "title": "Chocolate - Wikipedia",
+          "contentSha256": "093c2e58eee211ce03a9c5ce1224e3df4e03c1f013e177837093d8f84ed2b1c9",
+          "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0016.txt",
+          "captureComplete": true,
+          "characters": 74788
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "with the addition of milk , can be made into milk chocolate",
+            "exactMatch": true,
+            "wordCount": 12
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Cocoa beans are the processed seeds of the cacao tree",
+            "exactMatch": true,
+            "wordCount": 10
+          }
+        ],
+        "contextRead": true,
+        "claimAssessment": "Compared milk with coffee, honey and flour; otherwise-similar dark chocolate narrows the defining added ingredient to milk, without denying variant sweeteners. Both actual bodies identify cocoa/cacao beans as the input; Wiki explicitly calls them seeds.",
+        "sourceIndependenceAssessment": "Wiki selected chocolate-making introductory narration differs from Britannica kernels/liquor narrative. Its only Britannica citations are Charlie and the Chocolate Factory cultural material, excluded from our selected production/type claims."
+      }
+    ],
+    "assessment": "Compared milk with coffee, honey and flour; otherwise-similar dark chocolate narrows the defining added ingredient to milk, without denying variant sweeteners. Both actual bodies identify cocoa/cacao beans as the input; Wiki explicitly calls them seeds.",
+    "finalOptionOrderAssessment": "Milk supplies the named milk-chocolate distinction; flour, coffee and honey are not that dairy ingredient.",
+    "sourceReceiptReuse": "Only choice order changed. The final ordered question/options/correct answer/fun fact were actually read now; retained physical second-pass GET receipts keep their actual original times."
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "authorRow": {
+    "id": "B13-0365",
+    "category": "animals-nature",
+    "question": "What shape is an Aldabra giant tortoise’s upper shell?",
+    "difficulty": 2,
+    "options": [
+      "Highly domed",
+      "A flat, streamlined shell",
+      "A low saddle-shaped shell",
+      "A roof-like ridged shell"
+    ],
+    "correctIndex": 0,
+    "correctAnswer": "Highly domed",
+    "funFact": "This tortoise has a long neck.",
+    "confidence": "high",
+    "confidenceReason": "Smithsonian and the separately compiled Wikipedia account explicitly support the selected range/feeding/anatomy facts. Their coat colors differ; the question and fun fact omit color. Copied Michigan paragraph evidence is retained as superseded.",
+    "sources": [
+      {
+        "sourceId": "animals-nature-s0033",
+        "url": "https://nationalzoo.si.edu/animals/aldabra-tortoise",
+        "publisher": "Smithsonian's National Zoo and Conservation Biology Institute",
+        "quote": "They are dark gray to black in color with a highly domed, thick carapace.",
+        "funFactQuote": "They have long necks"
+      },
+      {
+        "sourceId": "animals-nature-s0059",
+        "url": "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise",
+        "publisher": "Wikipedia contributors",
+        "quote": "with a high, domed shape.",
+        "funFactQuote": "The neck of the Aldabra giant tortoise is very long"
+      }
+    ],
+    "claims": [
+      {
+        "kind": "answer",
+        "text": "Aldabra tortoises have domed carapaces.",
+        "sourceIds": [
+          "animals-nature-s0033",
+          "animals-nature-s0059"
+        ]
+      },
+      {
+        "kind": "funFact",
+        "text": "This tortoise has a long neck.",
+        "sourceIds": [
+          "animals-nature-s0033",
+          "animals-nature-s0059"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "id": "B13-0365",
+    "rowSha256": "107ad8cc0c1b8b5adb796b48fc25f006b03165e418842fca7243b1acf9b66172",
+    "reviewer": "/root (not this category author)",
+    "reviewedAt": "2026-10-07T19:48:55.880094+00:00",
+    "result": "accept",
+    "attemptedCounterexample": "The four shell-shape options now use real turtle shape classes: highly domed, flat/streamlined, low saddle-shaped and roof-ridged. Both captured anatomy passages explicitly support domed shape and a long neck. The final claim now omits the unsupported thick adjective; color disagreement stays excluded and recorded. SeaWorld anatomy provenance replaces the potentially copied Michigan wording.",
+    "distractorsChecked": [
+      "Highly domed",
+      "A flat, streamlined shell",
+      "A low saddle-shaped shell",
+      "A roof-like ridged shell"
+    ],
+    "scopeDateCheck": "Checked the actual species, adult/sex, usual/primary and native qualifiers against the reopened surrounding contexts. No undated changing population, ranking or exact measurement is asserted.",
+    "funFactCheck": "The four shell-shape options now use real turtle shape classes: highly domed, flat/streamlined, low saddle-shaped and roof-ridged. Both captured anatomy passages explicitly support domed shape and a long neck. The final claim now omits the unsupported thick adjective; color disagreement stays excluded and recorded. SeaWorld anatomy provenance replaces the potentially copied Michigan wording.",
+    "sourceIndependenceCheck": "Reviewed the named authors/bibliographies and actual selected claim paragraphs in both independently edited bodies. No mirrored page counts as separate evidence. Replacement selected range/anatomy/diet contexts trace to Pritchard/Palkovacs, SeaWorld, and ScienceNews/Zora-Gerlach; similar Smithsonian/Michigan wording remains superseded. Smithsonian gray/black versus Wikipedia brown/tan shell color is unresolved and omitted."
+  },
+  "reopen": {
+    "id": "B13-0365",
+    "rowSha256": "107ad8cc0c1b8b5adb796b48fc25f006b03165e418842fca7243b1acf9b66172",
+    "reviewer": "/root",
+    "reviewedAt": "2026-10-07T19:48:55.880094+00:00",
+    "result": "supported",
+    "sources": [
+      {
+        "sourceId": "animals-nature-s0033",
+        "receipt": {
+          "sourceName": "animals-nature-s0033",
+          "pass": "reopen",
+          "requestedUrl": "https://nationalzoo.si.edu/animals/aldabra-tortoise",
+          "retrievedAt": "2026-10-07T18:49:58.800653+00:00",
+          "method": "Python urllib actual HTTP GET",
+          "status": 200,
+          "resolvedUrl": "https://nationalzoo.si.edu/animals/aldabra-tortoise",
+          "contentSha256": "07a0224dc00e0602ee8a1857ef88d82ec720757ef07a4476a24fcb2b5a7e2fe0",
+          "localCapturePath": ".work/animals-nature-review/animals-nature-s0033-reopen.txt",
+          "characters": 10367
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "They are dark gray to black in color with a highly domed, thick carapace.",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "They have long necks",
+            "exactMatch": true
+          }
+        ],
+        "contextRead": true,
+        "claimAssessment": "The four shell-shape options now use real turtle shape classes: highly domed, flat/streamlined, low saddle-shaped and roof-ridged. Both captured anatomy passages explicitly support domed shape and a long neck. The final claim now omits the unsupported thick adjective; color disagreement stays excluded and recorded. SeaWorld anatomy provenance replaces the potentially copied Michigan wording."
+      },
+      {
+        "sourceId": "animals-nature-s0059",
+        "receipt": {
+          "sourceName": "animals-nature-s0059",
+          "pass": "reopen",
+          "requestedUrl": "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise",
+          "retrievedAt": "2026-10-07T19:29:15.383344+00:00",
+          "method": "Python urllib actual HTTP GET",
+          "status": 200,
+          "resolvedUrl": "https://en.wikipedia.org/wiki/Aldabra_giant_tortoise",
+          "contentSha256": "2447cea454576d1fb83bcbeb65c7961c2f79deaaefb4115f98c45ba10e6241ae",
+          "localCapturePath": ".work/animals-nature-review/animals-nature-s0059-reopen.txt",
+          "characters": 29581
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "with a high, domed shape.",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "The neck of the Aldabra giant tortoise is very long",
+            "exactMatch": true
+          }
+        ],
+        "contextRead": true,
+        "claimAssessment": "The four shell-shape options now use real turtle shape classes: highly domed, flat/streamlined, low saddle-shaped and roof-ridged. Both captured anatomy passages explicitly support domed shape and a long neck. The final claim now omits the unsupported thick adjective; color disagreement stays excluded and recorded. SeaWorld anatomy provenance replaces the potentially copied Michigan wording."
+      }
+    ],
+    "assessment": "The four shell-shape options now use real turtle shape classes: highly domed, flat/streamlined, low saddle-shaped and roof-ridged. Both captured anatomy passages explicitly support domed shape and a long neck. The final claim now omits the unsupported thick adjective; color disagreement stays excluded and recorded. SeaWorld anatomy provenance replaces the potentially copied Michigan wording."
+  }
+}

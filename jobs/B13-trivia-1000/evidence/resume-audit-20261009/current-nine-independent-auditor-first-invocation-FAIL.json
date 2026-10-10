@@ -1,0 +1,30 @@
+{
+  "startedAt": "2026-10-09T12:34:44.102086+00:00",
+  "closedAt": "2026-10-09T12:35:01.920145+00:00",
+  "failure": {
+    "type": "AssertionError",
+    "message": "full-original-checker actual failure",
+    "at": "2026-10-09T12:35:01.920129+00:00"
+  },
+  "commands": [
+    {
+      "label": "full-original-checker",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/check-data.py",
+        "--require-local-captures",
+        "--output",
+        "/tmp/B13-independent-frozen-auditor-board-agent-20261009-1234/independent-current-full-checks.json"
+      ],
+      "startedAt": "2026-10-09T12:34:45.807343+00:00",
+      "closedAt": "2026-10-09T12:35:01.919535+00:00",
+      "actualExitCode": 1,
+      "ownedChildPid": 377422,
+      "wholeStdoutPath": "/tmp/B13-independent-frozen-auditor-board-agent-20261009-1234/full-original-checker.stdout.txt",
+      "wholeStderrPath": "/tmp/B13-independent-frozen-auditor-board-agent-20261009-1234/full-original-checker.stderr.txt",
+      "wholeStdout": "{\n  \"mode\": \"full\",\n  \"rows\": 1000,\n  \"sourceRecords\": 546,\n  \"quoteFields\": 3509,\n  \"quoteMatchesActualLocalCaptures\": 3509,\n  \"schemaAndDataErrors\": [],\n  \"adversarialAcceptedCurrent\": 1000,\n  \"reopenSupportedCurrent\": 1000,\n  \"similarityFlagsResolved\": 2210,\n  \"pending\": {\n    \"targetRowsMissing\": 0,\n    \"adversarialNotCurrent\": 0,\n    \"reopenNotCurrent\": 0,\n    \"similarityFlagsUnresolved\": 0,\n    \"knownExactAnswerCycle\": false,\n    \"optionLengthEditorialAssessment\": null\n  },\n  \"researchComplete\": true\n}\n",
+      "wholeStderr": "Traceback (most recent call last):\n  File \"/tmp/B13-independent-frozen-auditor-board-agent-20261009-1234/repo/jobs/B13-trivia-1000/scripts/check-data.py\", line 214, in <module>\n    print('Similarity flags:',len(flags),'Report:',str(out.relative_to(ROOT)))\n                                                       ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py\", line 682, in relative_to\n    raise ValueError(f\"{str(self)!r} is not in the subpath of {str(other)!r}\")\nValueError: '/tmp/B13-independent-frozen-auditor-board-agent-20261009-1234/independent-current-full-checks.json' is not in the subpath of '/tmp/B13-independent-frozen-auditor-board-agent-20261009-1234/repo/jobs/B13-trivia-1000'\n"
+    }
+  ],
+  "terminationSignals": []
+}

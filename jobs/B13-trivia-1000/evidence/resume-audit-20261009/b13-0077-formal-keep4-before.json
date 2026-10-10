@@ -1,0 +1,212 @@
+{
+  "id": "B13-0077",
+  "row": {
+    "id": "B13-0077",
+    "category": "us-geography",
+    "question": "What kind of natural rock formation gives Arches National Park its name?",
+    "difficulty": 2,
+    "options": [
+      "Sea stacks",
+      "Lava tubes",
+      "Stone arches",
+      "Sand dunes"
+    ],
+    "correctIndex": 2,
+    "correctAnswer": "Stone arches",
+    "funFact": "Arches National Park is in Utah.",
+    "confidence": "high",
+    "confidenceReason": "The actual NPS park description and independently edited Britannica topic text agree on Arches’s location and the stated feature. The source body, header and nearby context were read; no current visitor count, area estimate or disputed date is used.",
+    "sources": [
+      {
+        "sourceId": "us-geography-s0006",
+        "url": "https://www.nps.gov/arch/index.htm",
+        "publisher": "National Park Service",
+        "quote": "other. The park has over 2,000 natural stone arches, hundreds of soaring pinnacles, massive rock fins, and giant balanced rocks. This red-rock wonderland will",
+        "funFactQuote": "Arches National Park • Utah"
+      },
+      {
+        "sourceId": "us-geography-s0007",
+        "url": "https://www.britannica.com/place/Arches-National-Park",
+        "publisher": "Encyclopaedia Britannica",
+        "quote": "of unusual shapes, including pinnacles , windows, and arches. Notable features are Balanced Rock, Courthouse Towers (with spires that resemble skyscrapers), The Windows Section,",
+        "funFactQuote": "Arches National Park , desert area of sandstone formations in eastern Utah , U.S., on the Colorado River just north of Moab and"
+      }
+    ],
+    "claims": [
+      {
+        "kind": "answer",
+        "text": "What kind of natural rock formation gives Arches National Park its name? Correct answer: Stone arches",
+        "sourceIds": [
+          "us-geography-s0006",
+          "us-geography-s0007"
+        ]
+      },
+      {
+        "kind": "funFact",
+        "text": "Arches National Park is in Utah.",
+        "sourceIds": [
+          "us-geography-s0006",
+          "us-geography-s0007"
+        ]
+      }
+    ]
+  },
+  "author": {
+    "id": "B13-0077",
+    "rowSha256": "f1173f47811e5ac5732631a2a14712b99908025a5f4ca266579b2f70c892b5ba",
+    "evidenceReads": [
+      {
+        "sourceId": "us-geography-s0006",
+        "contentSha256": "fce0cf4858751c0604b290a2b9c04ba8cf5a5dc74b05c8f4e12298fddb39ff6c",
+        "quote": "other. The park has over 2,000 natural stone arches, hundreds of soaring pinnacles, massive rock fins, and giant balanced rocks. This red-rock wonderland will",
+        "funFactQuote": "Arches National Park • Utah",
+        "exactQuoteMatched": true,
+        "claimsSupported": [
+          "answer",
+          "funFact"
+        ]
+      },
+      {
+        "sourceId": "us-geography-s0007",
+        "contentSha256": "c481e6346ef21b265e5ad31791e8e37d40fdf1f76f7243a6ab0018152170fac5",
+        "quote": "of unusual shapes, including pinnacles , windows, and arches. Notable features are Balanced Rock, Courthouse Towers (with spires that resemble skyscrapers), The Windows Section,",
+        "funFactQuote": "Arches National Park , desert area of sandstone formations in eastern Utah , U.S., on the Colorado River just north of Moab and",
+        "exactQuoteMatched": true,
+        "claimsSupported": [
+          "answer",
+          "funFact"
+        ]
+      }
+    ],
+    "confidenceReason": "The actual NPS park description and independently edited Britannica topic text agree on Arches’s location and the stated feature. The source body, header and nearby context were read; no current visitor count, area estimate or disputed date is used.",
+    "unresolvedProblems": [
+      "Fresh independent adversarial review and second source reopening are pending.",
+      "Full-set similarity flags must be adjudicated for this exact changed row version."
+    ],
+    "author": "/root",
+    "authorIdentityProvenance": {
+      "file": "evidence/root-categories-difficulty-author-repairs.json",
+      "sha256": "9a7d6519645eb0b1e826ab0e0eba17244df23f4ba7e37e8082d4afed1610d82c",
+      "explicitOriginalAuthorStatement": "/root (original author of these categories)",
+      "scope": "Original chat identity only; no new authorship, historical row version, factual review or retrieval time claimed."
+    }
+  },
+  "adversarial": {
+    "id": "B13-0077",
+    "rowSha256": "f1173f47811e5ac5732631a2a14712b99908025a5f4ca266579b2f70c892b5ba",
+    "reviewer": "/root/r2048_sports (independent actual final ordered-choice rereviewer)",
+    "reviewedAt": "2026-10-07T21:16:10.163300+00:00",
+    "result": "accept",
+    "attemptedCounterexample": "Tried balanced rocks or pinnacles as the namesake; the actual park name and both descriptions agree on natural stone arches, and both place it in Utah.",
+    "distractorsChecked": [
+      "Sea stacks",
+      "Lava tubes",
+      "Stone arches",
+      "Sand dunes"
+    ],
+    "scopeDateCheck": "Checked the specific state, historical event, park, element or SI/major-planet scope against both full reopened bodies. No undated current population, moon count or changing measurement is asserted; roundings and explicitly excluded conflicting quantities remain documented.",
+    "funFactCheck": "Tried balanced rocks or pinnacles as the namesake; the actual park name and both descriptions agree on natural stone arches, and both place it in Utah.",
+    "sourceIndependenceCheck": "Checked the NPS institutional page and only the credited Britannica .topic-paragraph article body. Britannica AI Ask Anything output and syndicated external news were excluded; the cited passages are separately authored.",
+    "finalOrderedChoiceAssessment": {
+      "actualFullQuestionRead": "What kind of natural rock formation gives Arches National Park its name?",
+      "actualOrderedChoicesRead": [
+        "Sea stacks",
+        "Lava tubes",
+        "Stone arches",
+        "Sand dunes"
+      ],
+      "actualCorrectAnswerRead": "Stone arches",
+      "actualCorrectIndexRead": 2,
+      "actualFunFactRead": "Arches National Park is in Utah.",
+      "actualDifficultyRead": 2,
+      "assessment": "Tried balanced rocks or pinnacles as the namesake; the actual park name and both descriptions agree on natural stone arches, and both place it in Utah. All four final ordered choices were actually read in the held question context; the unchanged correct answer remains uniquely correct, and its prior scoped distractor challenges remain applicable after the permutation.",
+      "previousAcceptedRowSha256": "0031d1b2c99c80ae87131cc20585a4ac6a34c5fb28d12d2f507290da4f2d75c0"
+    },
+    "reviewScope": "Actual manual reading of all 300 final question/ordered-choice/answer/fun-fact sets, followed by exact-version recording. Unchanged historical source evidence is reused honestly; balance or hash matching alone did not grant this manual acceptance."
+  },
+  "reopen": {
+    "id": "B13-0077",
+    "rowSha256": "f1173f47811e5ac5732631a2a14712b99908025a5f4ca266579b2f70c892b5ba",
+    "reviewer": "/root/r2048_sports (independent actual final ordered-choice rereviewer)",
+    "reviewedAt": "2026-10-07T21:16:10.163300+00:00",
+    "result": "supported",
+    "sources": [
+      {
+        "sourceId": "us-geography-s0006",
+        "receipt": {
+          "category": "us-geography",
+          "sourceId": "us-geography-s0006",
+          "pass": "reopen",
+          "retrievedAt": "2026-10-07T19:02:50.208246+00:00",
+          "method": "urllib-http-get",
+          "requestedUrl": "https://www.nps.gov/arch/index.htm",
+          "resolvedUrl": "https://www.nps.gov/arch/index.htm",
+          "status": 200,
+          "contentType": "text/html",
+          "rawSha256": "7cf1f193a0b5d643ed91c873bfe1a71f78919a5edd0add035bb5f4e60f4ddd5e",
+          "rawPath": ".work/us-geography/reopen/us-geography-s0006.raw",
+          "title": "Arches National Park (U.S. National Park Service)",
+          "contentSha256": "5d207806d7c8005fd65221a4369a6558a32a71359e24dbcab5b122b5f4e0e7c3",
+          "capturePath": ".work/us-geography/reopen/us-geography-s0006.txt",
+          "captureComplete": true,
+          "characters": 3603
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "other. The park has over 2,000 natural stone arches, hundreds of soaring pinnacles, massive rock fins, and giant balanced rocks. This red-rock wonderland will",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Arches National Park • Utah",
+            "exactMatch": true
+          }
+        ],
+        "contextRead": true,
+        "claimAssessment": "Tried balanced rocks or pinnacles as the namesake; the actual park name and both descriptions agree on natural stone arches, and both place it in Utah.",
+        "creditedArticleBodyChecked": null
+      },
+      {
+        "sourceId": "us-geography-s0007",
+        "receipt": {
+          "category": "us-geography",
+          "sourceId": "us-geography-s0007",
+          "pass": "reopen",
+          "retrievedAt": "2026-10-07T19:02:50.510980+00:00",
+          "method": "urllib-http-get",
+          "requestedUrl": "https://www.britannica.com/place/Arches-National-Park",
+          "resolvedUrl": "https://www.britannica.com/place/Arches-National-Park",
+          "status": 200,
+          "contentType": "text/html",
+          "rawSha256": "9498f4ab75bf881bd0db5e1f87b2250b42e9ca7b79622f51b0edbd375529dc54",
+          "rawPath": ".work/us-geography/reopen/us-geography-s0007.raw",
+          "title": "Arches National Park | Utah, USA, Hiking, Camping | Britannica",
+          "contentSha256": "aa2ec4a72e4e86b69cdcaf49c9f24a07b161757311aef5187a4cf741c5deb39d",
+          "capturePath": ".work/us-geography/reopen/us-geography-s0007.txt",
+          "captureComplete": true,
+          "characters": 12132
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "of unusual shapes, including pinnacles , windows, and arches. Notable features are Balanced Rock, Courthouse Towers (with spires that resemble skyscrapers), The Windows Section,",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Arches National Park , desert area of sandstone formations in eastern Utah , U.S., on the Colorado River just north of Moab and",
+            "exactMatch": true
+          }
+        ],
+        "contextRead": true,
+        "claimAssessment": "Tried balanced rocks or pinnacles as the namesake; the actual park name and both descriptions agree on natural stone arches, and both place it in Utah.",
+        "creditedArticleBodyChecked": true
+      }
+    ],
+    "assessment": "Tried balanced rocks or pinnacles as the namesake; the actual park name and both descriptions agree on natural stone arches, and both place it in Utah.",
+    "sourceIndependenceCheck": "Checked the NPS institutional page and only the credited Britannica .topic-paragraph article body. Britannica AI Ask Anything output and syndicated external news were excluded; the cited passages are separately authored.",
+    "priorSupportedRowSha256": "0031d1b2c99c80ae87131cc20585a4ac6a34c5fb28d12d2f507290da4f2d75c0",
+    "finalPermutationSourceEvidenceBasis": "Final full question/ordered choices/answer/fun fact actually reread. Only option order and correct index changed; factual wording, difficulty, confidence, claims and exact selected quotations are unchanged. Original actual source GET timestamps are retained without claiming a new reopening; immutable local capture hashes and short quotations are rechecked."
+  }
+}
