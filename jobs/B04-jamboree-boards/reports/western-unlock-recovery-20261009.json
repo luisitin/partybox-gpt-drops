@@ -1,0 +1,103 @@
+{
+  "job": "B04",
+  "checkedAt": "2026-10-09T06:30:34.583684+00:00",
+  "originalSourceHead": "697fa0e1538c99e541169bcf4b84ff8fa397ed16",
+  "scope": "one complete factual row, preserving the other 517 facts and original historical audit dates",
+  "before": {
+    "corroborated": 31,
+    "single_source": 477,
+    "conflict": 9,
+    "unverified": 1
+  },
+  "after": {
+    "corroborated": 32,
+    "single_source": 476,
+    "conflict": 9,
+    "unverified": 1
+  },
+  "changedFactIds": [
+    "western-land:phases:unlock"
+  ],
+  "sourceGroups": [
+    "mariowiki",
+    "valnet"
+  ],
+  "author": "Erik Petrovich",
+  "published": "2024-10-25",
+  "sourceUrl": "https://gamerant.com/unlock-new-boards-super-mario-party-jamboree-unlocking-new-board/",
+  "exactQuotes": [
+    {
+      "id": "GR_UNLOCK-Q001",
+      "text": "Western Land"
+    },
+    {
+      "id": "GR_UNLOCK-Q002",
+      "text": "you must reach Silver Rank (10 Achievements)"
+    }
+  ],
+  "quotedWords": 9,
+  "passes": [
+    {
+      "pass": "A",
+      "actualHttpStatus": 200,
+      "finishedAt": "2026-10-09T06:26:59.416020+00:00",
+      "rawBytes": 404068,
+      "rawSha256": "309c01d655acea303e5c18114933d31510f0ef3cbbf86327cd7700fdbb45132d",
+      "completeSelectedBodyChars": 6286,
+      "completeSelectedBodySha256": "50db2b469ddf3b67d604fa738cd41c1076468b78b899d3d1e2b6dfd2d06f795b"
+    },
+    {
+      "pass": "B",
+      "actualHttpStatus": 200,
+      "finishedAt": "2026-10-09T06:27:00.335311+00:00",
+      "rawBytes": 403934,
+      "rawSha256": "a29f2e9b132058c776ec6a68e50d2813a95310371a49abb27046293000c197e2",
+      "completeSelectedBodyChars": 6285,
+      "completeSelectedBodySha256": "040d4c2a36cb7a9cfb7a633fdac012c28036aebdd54a96523c9e4da5d09cfb43"
+    }
+  ],
+  "sameAssistantBothPasses": true,
+  "sameAuthoredUnlockBulletBothPasses": true,
+  "wholeBodyIdentity": false,
+  "newGamePlayExecuted": false,
+  "wholeOriginalResearchStandard": "NOT_MET",
+  "knownCurrentEvents": "37/38",
+  "originalCapturedSourcesRemainHistorical": true,
+  "remainingSourceFactsNotRevalidatedAsCurrent": true,
+  "allOriginalGatesUnchanged": true,
+  "fullRawArticlesPublished": false,
+  "newCelStudiosQuotationWords": 0,
+  "currentWikiScopedReopens": [
+    {
+      "pass": "A",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-09T06:23:04.418083+00:00",
+      "rawSha256": "b68d6c232509a9fe4f63ff7e880ec0597640cc2c235e2a16a3c684d93245cd00",
+      "fullBodySha256": "d933b33be9291b44e95fe1411f172177e9a8be1c731dc13559affedef7072c0c",
+      "locator": "Unlockable Boards table; Western Land row",
+      "exactOriginalRegisteredQuote": "Reach Silver Player Rank (ten achievements)"
+    },
+    {
+      "pass": "B",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-09T06:23:07.289573+00:00",
+      "rawSha256": "b68d6c232509a9fe4f63ff7e880ec0597640cc2c235e2a16a3c684d93245cd00",
+      "fullBodySha256": "d933b33be9291b44e95fe1411f172177e9a8be1c731dc13559affedef7072c0c",
+      "locator": "Unlockable Boards table; Western Land row",
+      "exactOriginalRegisteredQuote": "Reach Silver Player Rank (ten achievements)"
+    }
+  ],
+  "firstStructuralFailure": {
+    "actualExitCode": 2,
+    "observedReason": "changed row after source review western-land:board_record",
+    "correction": "refresh exact original retained_rows identity; no verifier or gate change",
+    "originalGateCaughtActualOmittedContainingBoardHash": true
+  },
+  "firstChecksumFailure": {
+    "actualExitCode": 2,
+    "observedReason": "unsafe hash path",
+    "cause": "new helper used repo-relative rather than original job-relative hash paths",
+    "correction": "regenerate manifest using original job-folder convention and sole explicitly allowed ../../.github/workflows/B04.yml",
+    "acceptanceGatesChanged": false
+  }
+}

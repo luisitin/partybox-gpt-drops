@@ -1,0 +1,152 @@
+{
+  "job": "B04",
+  "checkedAt": "2026-10-09T11:54:02.981185+00:00",
+  "sourceParent": "bbad3b7868212b0fe4838fb66ababbed567b3ee3",
+  "status": "UNADOPTED",
+  "exactWholeCandidateFacts": [
+    {
+      "id": "mega-wiggler-tree-party:space:baseline_party_angry:blue",
+      "kind": "space_count",
+      "status": "single_source",
+      "confidence": "medium",
+      "value": {
+        "type": "blue",
+        "count": 24
+      },
+      "evidence": [
+        {
+          "sourceId": "W_WIGGLER",
+          "quote": "26 (24)",
+          "locator": "current Jamboree Spaces table; Blue Spaces; normal column; parenthesized angry figure",
+          "quoteId": "W_WIGGLER-Q003"
+        }
+      ],
+      "note": "One retained publisher supplies this type count; per-board profile is also listed in CONFLICTS.md."
+    },
+    {
+      "id": "mega-wiggler-tree-party:space:baseline_party_angry:lucky",
+      "kind": "space_count",
+      "status": "single_source",
+      "confidence": "medium",
+      "value": {
+        "type": "lucky",
+        "count": 11
+      },
+      "evidence": [
+        {
+          "sourceId": "W_WIGGLER",
+          "quote": "13 (11)",
+          "locator": "current Jamboree Spaces table; Lucky Spaces; normal column; parenthesized angry figure",
+          "quoteId": "W_WIGGLER-Q009"
+        }
+      ],
+      "note": "One retained publisher supplies this type count; per-board profile is also listed in CONFLICTS.md."
+    },
+    {
+      "id": "mega-wiggler-tree-party:space:baseline_party_angry:red",
+      "kind": "space_count",
+      "status": "single_source",
+      "confidence": "medium",
+      "value": {
+        "type": "red",
+        "count": 6
+      },
+      "evidence": [
+        {
+          "sourceId": "W_WIGGLER",
+          "quote": "4 (6)",
+          "locator": "current Jamboree Spaces table; Red Spaces; normal column; parenthesized angry figure",
+          "quoteId": "W_WIGGLER-Q004"
+        }
+      ],
+      "note": "One retained publisher supplies this type count; per-board profile is also listed in CONFLICTS.md."
+    },
+    {
+      "id": "mega-wiggler-tree-party:space:baseline_party_angry:bowser",
+      "kind": "space_count",
+      "status": "single_source",
+      "confidence": "medium",
+      "value": {
+        "type": "bowser",
+        "count": 4
+      },
+      "evidence": [
+        {
+          "sourceId": "W_WIGGLER",
+          "quote": "2 (4)",
+          "locator": "current Jamboree Spaces table; Bowser Spaces; normal column; parenthesized angry figure",
+          "quoteId": "W_WIGGLER-Q010"
+        }
+      ],
+      "note": "One retained publisher supplies this type count; per-board profile is also listed in CONFLICTS.md."
+    }
+  ],
+  "literalNumericComparisons": [
+    {
+      "type": "blue",
+      "canonical": 24,
+      "literalNamuParenthesizedAngry": 21,
+      "proposed": "conflict/low"
+    },
+    {
+      "type": "lucky",
+      "canonical": 11,
+      "literalNamuParenthesizedAngry": 11,
+      "proposed": "corroborated/medium"
+    },
+    {
+      "type": "red",
+      "canonical": 6,
+      "literalNamuParenthesizedAngry": 6,
+      "proposed": "corroborated/medium"
+    },
+    {
+      "type": "bowser",
+      "canonical": 4,
+      "literalNamuParenthesizedAngry": 4,
+      "proposed": "corroborated/medium"
+    }
+  ],
+  "wholePairedSourceScopeMetadata": {
+    "Namu": [
+      {
+        "pass": "A",
+        "chars": 896,
+        "sha256": "bc436d67a29de2b6b60584adfb6596f9b2a2b3591eb3f374e63b7dd41efa47ab"
+      },
+      {
+        "pass": "B",
+        "chars": 896,
+        "sha256": "bc436d67a29de2b6b60584adfb6596f9b2a2b3591eb3f374e63b7dd41efa47ab"
+      }
+    ],
+    "Wiki": [
+      {
+        "pass": "A",
+        "wholeTable": "Type of Space Number of Spaces Number of Spaces (Tag Team Rules) Start Spaces 1 1 Blue Spaces 26 (24) 22 (20) Red Spaces 4 (6) 8 (10) Event Spaces 10 10 Chance Time Spaces 1 1 Item Spaces 3 3 VS Spaces 2 0 Rally Spaces 0 2 Lucky Spaces 13 (11) 11 (9) Unlucky Spaces 1 3 Bowser Spaces 2 (4) 2 (4) Total Spaces 63 63",
+        "chars": 314,
+        "sha256": "c8920a0ca88666c9cb0a2f1dbbef442c814d77442463c9cb0e68f694a9fb0843",
+        "header": "Complete normal and Tag Team current Jamboree table; select normal parenthesized angry values only."
+      },
+      {
+        "pass": "B",
+        "wholeTable": "Type of Space Number of Spaces Number of Spaces (Tag Team Rules) Start Spaces 1 1 Blue Spaces 26 (24) 22 (20) Red Spaces 4 (6) 8 (10) Event Spaces 10 10 Chance Time Spaces 1 1 Item Spaces 3 3 VS Spaces 2 0 Rally Spaces 0 2 Lucky Spaces 13 (11) 11 (9) Unlucky Spaces 1 3 Bowser Spaces 2 (4) 2 (4) Total Spaces 63 63",
+        "chars": 314,
+        "sha256": "c8920a0ca88666c9cb0a2f1dbbef442c814d77442463c9cb0e68f694a9fb0843",
+        "header": "Complete normal and Tag Team current Jamboree table; select normal parenthesized angry values only."
+      }
+    ]
+  },
+  "wholeRelevantScopesAndAllFootnotesPersonallyRead": true,
+  "nativeScope": "Namu entire896-character named Wiggler chapter explicitly labels each parenthesized number as angry Wiggler. Select only ordinary baseline_party_angry type counts, not quiet figures or the separate Wiki Tag Team column. Full paired Wiki normal/TagTeam table read. All Namu rows have no outgoing citation; full footnotes64/65 cover pancake/honey events, not count attribution. Earlier whole board/type lineage review retained.",
+  "proposedNextChange": "Only lucky11/red6/Bowser4 may gain medium independent status; blue21 versus retained24 must become a new low unresolved disagreement preserving24. No adoption at this checkpoint.",
+  "preservation": "All518 complete fact objects,593 reviewed fingerprints,18 original disputes,allvalues,registries,capture dates and gates byte unchanged. Current97/518,402single,18conflicts,1unknown;37/38events,NOT_MET,Draft.",
+  "quoteBudget": "Existing Namu registered numeral fragments21/11/6/4 only; no new literal or expressive quotes. No Start/Rally/profile/TV/total promotion.",
+  "sharedAuthoredQuotasUnchanged": {
+    "Namu": 250,
+    "NamuCeiling": 250,
+    "Cel": 131,
+    "CelOriginalSharedReserved": 200
+  },
+  "privateCopyrightedBodiesPublished": false
+}

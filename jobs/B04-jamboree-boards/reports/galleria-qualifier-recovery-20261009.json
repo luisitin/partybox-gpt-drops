@@ -1,0 +1,143 @@
+{
+  "job": "B04",
+  "checkedAt": "2026-10-09T07:02:17.088956+00:00",
+  "sourceParent": "6671418d5eb5a9e6b96a11b142018f7824d1bdec",
+  "scope": "one complete narrow Super Shop event; Gold Shop candidate explicitly rejected; other 517 facts preserved",
+  "changedFactIds": [
+    "rainbow-galleria:events:super_shop"
+  ],
+  "before": {
+    "corroborated": 32,
+    "single_source": 476,
+    "conflict": 9,
+    "unverified": 1
+  },
+  "after": {
+    "corroborated": 33,
+    "single_source": 475,
+    "conflict": 9,
+    "unverified": 1
+  },
+  "newSource": {
+    "id": "SASKE_GALLERIA",
+    "url": "https://ngamer.hatenablog.com/entry/2024/11/02/200100",
+    "author": "SASKE",
+    "authorEvidence": "HTML link[rel=author] href http://www.hatena.ne.jp/SASKE/ and visible article footer/profile SASKE",
+    "published": "2024-11-02T11:01:00Z",
+    "group": "saske_personal_blog",
+    "independence": "Original Japanese first-person play account with personal session commentary and32 image elements; independently authored rather than Valnet or MarioWiki. No screenshot files were fetched or used as visual evidence.",
+    "exactQuotes": [
+      {
+        "id": "SASKE_GALLERIA-Q001",
+        "text": "スーパーショップもあって、イベントマスに止まると特別なアイテムを売ってくれるらしい"
+      },
+      {
+        "id": "SASKE_GALLERIA-Q002",
+        "text": "５コインでスーパーのろいサイコロ買えるの？！"
+      }
+    ],
+    "assistantTranslations": [
+      "There is also a Super Shop; apparently, landing on an event space lets it sell you special items.",
+      "Can you buy Super Creepy Dice for five coins?!"
+    ],
+    "translationIsSourceQuotation": false,
+    "conservativeTranslatedWordBudget": 27,
+    "japaneseQuoteCharacters": 63,
+    "quotedFragments": 2,
+    "passes": [
+      {
+        "pass": "A",
+        "httpStatus": 200,
+        "finishedAt": "2026-10-09T06:57:01.956444+00:00",
+        "rawBytes": 116639,
+        "rawSha256": "dfb5fe610ee546d40ce44dabd728637cc00cd4b18881eb2f7e864ab50230d0f2",
+        "selectedBodyChars": 1640,
+        "selectedBodySha256": "8049c3ad73f2073e4dd4508875a024a7623c05923095e95804654cd8e4108aba"
+      },
+      {
+        "pass": "B",
+        "httpStatus": 200,
+        "finishedAt": "2026-10-09T06:57:06.228309+00:00",
+        "rawBytes": 116639,
+        "rawSha256": "dfb5fe610ee546d40ce44dabd728637cc00cd4b18881eb2f7e864ab50230d0f2",
+        "selectedBodyChars": 1640,
+        "selectedBodySha256": "8049c3ad73f2073e4dd4508875a024a7623c05923095e95804654cd8e4108aba"
+      }
+    ],
+    "sameFullRawAndAuthoredBodyBothPasses": true,
+    "authoredBodyChars": 1640,
+    "authoredBodySha256": "8049c3ad73f2073e4dd4508875a024a7623c05923095e95804654cd8e4108aba",
+    "sourceUsesApparentlyQualifier": true
+  },
+  "currentWikiScopedReopens": [
+    {
+      "pass": "A",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-09T06:42:59.434186+00:00",
+      "rawBytes": 124695,
+      "rawSha256": "79b24451360b849c42c67d4b74e03e11c58e1a745d74a4bd6a02bdcbd97ffe71",
+      "selectedBodyChars": 16732,
+      "selectedBodySha256": "dd46b1fdec26186db21c3c84b2c76c639afa14671065cd71f79dd0ee82ee367b"
+    },
+    {
+      "pass": "B",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-09T06:43:00.795140+00:00",
+      "rawBytes": 124695,
+      "rawSha256": "79b24451360b849c42c67d4b74e03e11c58e1a745d74a4bd6a02bdcbd97ffe71",
+      "selectedBodyChars": 16732,
+      "selectedBodySha256": "dd46b1fdec26186db21c3c84b2c76c639afa14671065cd71f79dd0ee82ee367b"
+    }
+  ],
+  "rejectedGoldShop": {
+    "factId": "rainbow-galleria:events:gold_shop",
+    "retainedStatus": "single_source",
+    "supportedParts": "GameRant supports named Gold Shop landing and gold-item sale.",
+    "unprovedQualifier": "GameRant does not explicitly establish Event Space as the activation-space type; price or Golden Pipe agreement is insufficient for the whole event.",
+    "gameRantFullBodyPairIdentical": false,
+    "gameRantPasses": [
+      {
+        "pass": "A",
+        "httpStatus": 200,
+        "finishedAt": "2026-10-09T06:42:58.544973+00:00",
+        "rawBytes": 997268,
+        "rawSha256": "71e98bca3534ad2605ec744b31505a116f7f481a443e602984e720964beb4b0e",
+        "selectedBodyChars": 13033,
+        "selectedBodySha256": "13c2800edfd6e4d7bc2ea92ef4869ce03576bb660fd89906de832e8af696fbe2"
+      },
+      {
+        "pass": "B",
+        "httpStatus": 200,
+        "finishedAt": "2026-10-09T06:42:59.988003+00:00",
+        "rawBytes": 997372,
+        "rawSha256": "3be4ecb661b013e6148f31b6709fa7314c2d315a716361ff03416208438b7fff",
+        "selectedBodyChars": 13037,
+        "selectedBodySha256": "7ef5f269b12eb99d2e53fb6a1f10f1ec4a0a070867cb82f7c1f9311855dca473"
+      }
+    ],
+    "noNewGameRantQuoteWords": true,
+    "existingGameRantQuoteWords": 199,
+    "existingWikiQuoteWords": 200
+  },
+  "preservedSeparateClaims": [
+    "exact special-shop Event Space counts",
+    "full Super/Gold inventory prices, restrictions and stock",
+    "shop location and regional map",
+    "final-turn closure and unlimited Pro stock",
+    "raffle draws-per-purchased-item",
+    "all nine disagreements",
+    "unknown current Steamer Event Space"
+  ],
+  "sameAssistantBothPasses": true,
+  "wholeOriginalResearchStandard": "NOT_MET",
+  "knownCurrentEvents": "37/38",
+  "newNintendoGameplayExecuted": false,
+  "rawArticlesPublished": false,
+  "newCelStudiosQuoteWords": 0,
+  "allOriginalAcceptanceGatesUnchanged": true,
+  "historicalBroad593RowAndSourceAuditsRetainOriginalDates": true,
+  "newRowsReviewed": [
+    "rainbow-galleria:events:super_shop",
+    "rainbow-galleria:board_record"
+  ]
+}

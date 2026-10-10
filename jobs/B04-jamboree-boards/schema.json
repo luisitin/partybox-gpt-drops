@@ -1,0 +1,4098 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/luisitin/partybox-gpt-drops/jobs/B04-jamboree-boards/schema.json",
+  "title": "B04 closed typed research and evidence schemas",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/boards"
+    },
+    {
+      "$ref": "#/$defs/sources"
+    },
+    {
+      "$ref": "#/$defs/maps"
+    },
+    {
+      "$ref": "#/$defs/rowAudit"
+    },
+    {
+      "$ref": "#/$defs/sourceAudit"
+    },
+    {
+      "$ref": "#/$defs/contexts"
+    },
+    {
+      "$ref": "#/$defs/capture"
+    }
+  ],
+  "$defs": {
+    "boards": {
+      "type": "object",
+      "properties": {
+        "boards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "confidence": {
+                "type": "string",
+                "minLength": 1,
+                "enum": [
+                  "high",
+                  "medium",
+                  "low"
+                ]
+              },
+              "events": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "confidence": {
+                      "type": "string",
+                      "minLength": 1,
+                      "enum": [
+                        "high",
+                        "medium",
+                        "low"
+                      ]
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "locator": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "quote": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "quoteId": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "sourceId": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "locator",
+                          "quote",
+                          "quoteId",
+                          "sourceId"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "minItems": 1
+                    },
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "note": {
+                      "type": "string",
+                      "minLength": 0
+                    },
+                    "status": {
+                      "type": "string",
+                      "minLength": 1,
+                      "enum": [
+                        "corroborated",
+                        "single_source",
+                        "conflict",
+                        "unverified"
+                      ]
+                    },
+                    "value": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "name",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "increasePerEncounter": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "independentPlants": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "initialCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "increasePerEncounter",
+                            "independentPlants",
+                            "initialCoins",
+                            "name",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "reportedMaximumCoinsPerAttempt": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "name",
+                            "reportedMaximumCoinsPerAttempt",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "payoutsCoins": {
+                              "type": "array",
+                              "items": {
+                                "type": "integer",
+                                "minimum": 0
+                              }
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "name",
+                            "payoutsCoins",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "coins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "coins",
+                            "effect",
+                            "name",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "buddyCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "buddyCoins",
+                            "effect",
+                            "name",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "normalShopCostMultiplier": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "name",
+                            "normalShopCostMultiplier",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "alternativesCoins": {
+                              "type": "array",
+                              "items": {
+                                "type": "integer",
+                                "minimum": 0
+                              }
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "resolvedCoins": {
+                              "type": "null"
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "alternativesCoins",
+                            "effect",
+                            "name",
+                            "resolvedCoins",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "payouts": {
+                              "type": "object",
+                              "properties": {
+                                "blue": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "gold": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "green": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "red": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "white": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                }
+                              },
+                              "required": [
+                                "blue",
+                                "gold",
+                                "green",
+                                "red",
+                                "white"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "probabilities": {
+                              "type": "null"
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "name",
+                            "payouts",
+                            "probabilities",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "feeCoinsMax": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "feeCoinsMin": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "feeCoinsMax",
+                            "feeCoinsMin",
+                            "name",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "buddyPicks": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "chests": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "goombaLossCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "normalPicks": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "selectionWeights": {
+                              "type": "null"
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "buddyPicks",
+                            "chests",
+                            "effect",
+                            "goombaLossCoins",
+                            "items",
+                            "name",
+                            "normalPicks",
+                            "selectionWeights",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "buddyCapCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "normalCapCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "buddyCapCoins",
+                            "effect",
+                            "name",
+                            "normalCapCoins",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "alternativesGoldCoins": {
+                              "type": "array",
+                              "items": {
+                                "type": "integer",
+                                "minimum": 0
+                              }
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "goldCoins": {
+                              "type": "null"
+                            },
+                            "lavaLossCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "probabilities": {
+                              "type": "null"
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "alternativesGoldCoins",
+                            "effect",
+                            "goldCoins",
+                            "lavaLossCoins",
+                            "name",
+                            "probabilities",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "durationTurns": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "durationTurns",
+                            "effect",
+                            "name",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "firstCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "incrementCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "secondCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "firstCoins",
+                            "incrementCoins",
+                            "name",
+                            "secondCoins",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "buddyLossCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "normalLossCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "buddyLossCoins",
+                            "effect",
+                            "name",
+                            "normalLossCoins",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "buddyCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "normalCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "buddyCoins",
+                            "effect",
+                            "name",
+                            "normalCoins",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "bobombLossCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "coinRange": {
+                              "type": "array",
+                              "items": {
+                                "type": "integer",
+                                "minimum": 0
+                              }
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "bobombLossCoins",
+                            "coinRange",
+                            "effect",
+                            "name",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "large": {
+                              "type": "object",
+                              "properties": {
+                                "hitpoints": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "lossCoins": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "winCoins": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                }
+                              },
+                              "required": [
+                                "hitpoints",
+                                "lossCoins",
+                                "winCoins"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "small": {
+                              "type": "object",
+                              "properties": {
+                                "hitpoints": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "lossCoins": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "winCoins": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                }
+                              },
+                              "required": [
+                                "hitpoints",
+                                "lossCoins",
+                                "winCoins"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "large",
+                            "name",
+                            "small",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "buddyAttempts": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "digitMax": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "digitMin": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "digits": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "independentUniformPasscodeWeights": {
+                              "type": "null"
+                            },
+                            "initialCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "normalAttempts": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "refillCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "buddyAttempts",
+                            "digitMax",
+                            "digitMin",
+                            "digits",
+                            "effect",
+                            "independentUniformPasscodeWeights",
+                            "initialCoins",
+                            "name",
+                            "normalAttempts",
+                            "refillCoins",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "coinLossWithoutStars": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "starLoss": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "coinLossWithoutStars",
+                            "effect",
+                            "name",
+                            "starLoss",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "null"
+                            },
+                            "historicalReport": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "trigger": {
+                              "type": "null"
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "historicalReport",
+                            "name",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "allOpponentsCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "oneRandomOpponentCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "allOpponentsCoins",
+                            "effect",
+                            "name",
+                            "oneRandomOpponentCoins",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "increaseSchedule": {
+                              "type": "null"
+                            },
+                            "initialCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "increaseSchedule",
+                            "initialCoins",
+                            "name",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "confidence",
+                    "evidence",
+                    "id",
+                    "kind",
+                    "note",
+                    "status",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "gatesPaths": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "confidence": {
+                      "type": "string",
+                      "minLength": 1,
+                      "enum": [
+                        "high",
+                        "medium",
+                        "low"
+                      ]
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "locator": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "quote": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "quoteId": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "sourceId": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "locator",
+                          "quote",
+                          "quoteId",
+                          "sourceId"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "minItems": 1
+                    },
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "note": {
+                      "type": "string",
+                      "minLength": 0
+                    },
+                    "status": {
+                      "type": "string",
+                      "minLength": 1,
+                      "enum": [
+                        "corroborated",
+                        "single_source",
+                        "conflict",
+                        "unverified"
+                      ]
+                    },
+                    "value": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "bidirectional": {
+                              "type": "boolean"
+                            },
+                            "buddyTotalCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "coinsPerCharacter": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "from": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "to": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "bidirectional",
+                            "buddyTotalCoins",
+                            "coinsPerCharacter",
+                            "effect",
+                            "from",
+                            "to",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "floors": {
+                              "type": "array",
+                              "items": {
+                                "type": "integer",
+                                "minimum": 0
+                              }
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "floors",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "exactSpaceIds": {
+                              "type": "null"
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "exactSpaceIds",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "exactEndpoints": {
+                              "type": "null"
+                            },
+                            "keyPriceCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "exactEndpoints",
+                            "keyPriceCoins",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "oneStopCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "twoStopsCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "oneStopCoins",
+                            "trigger",
+                            "twoStopsCoins"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "confidence",
+                    "evidence",
+                    "id",
+                    "kind",
+                    "note",
+                    "status",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "homestretch": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "confidence": {
+                      "type": "string",
+                      "minLength": 1,
+                      "enum": [
+                        "high",
+                        "medium",
+                        "low"
+                      ]
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "locator": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "quote": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "quoteId": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "sourceId": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "locator",
+                          "quote",
+                          "quoteId",
+                          "sourceId"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "minItems": 1
+                    },
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "note": {
+                      "type": "string",
+                      "minLength": 0
+                    },
+                    "status": {
+                      "type": "string",
+                      "minLength": 1,
+                      "enum": [
+                        "corroborated",
+                        "single_source",
+                        "conflict",
+                        "unverified"
+                      ]
+                    },
+                    "value": {
+                      "type": "object",
+                      "properties": {
+                        "effect": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "trigger": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "effect",
+                        "trigger"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "confidence",
+                    "evidence",
+                    "id",
+                    "kind",
+                    "note",
+                    "status",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "map": {
+                "type": "object",
+                "properties": {
+                  "description": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "descriptionConfidence": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "descriptionEvidence": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "locator": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "quote": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "quoteId": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "sourceId": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "locator",
+                        "quote",
+                        "quoteId",
+                        "sourceId"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "descriptionStatus": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "exactNumberedAdjacency": {
+                    "type": "null"
+                  },
+                  "links": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "confidence": {
+                          "type": "string",
+                          "minLength": 1,
+                          "enum": [
+                            "high",
+                            "medium",
+                            "low"
+                          ]
+                        },
+                        "evidence": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "locator": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "quote": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "quoteId": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "sourceId": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "required": [
+                              "locator",
+                              "quote",
+                              "quoteId",
+                              "sourceId"
+                            ],
+                            "additionalProperties": false
+                          },
+                          "minItems": 1
+                        },
+                        "id": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "kind": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "note": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "status": {
+                          "type": "string",
+                          "minLength": 1,
+                          "enum": [
+                            "corroborated",
+                            "single_source",
+                            "conflict",
+                            "unverified"
+                          ]
+                        },
+                        "value": {
+                          "type": "object",
+                          "properties": {
+                            "condition": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "from": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "to": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "via": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "condition",
+                            "from",
+                            "to",
+                            "via"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "required": [
+                        "confidence",
+                        "evidence",
+                        "id",
+                        "kind",
+                        "note",
+                        "status",
+                        "value"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "sourcePage": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "unverified": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "required": [
+                  "description",
+                  "descriptionConfidence",
+                  "descriptionEvidence",
+                  "descriptionStatus",
+                  "exactNumberedAdjacency",
+                  "links",
+                  "sourcePage",
+                  "unverified"
+                ],
+                "additionalProperties": false
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "phases": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "confidence": {
+                      "type": "string",
+                      "minLength": 1,
+                      "enum": [
+                        "high",
+                        "medium",
+                        "low"
+                      ]
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "locator": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "quote": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "quoteId": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "sourceId": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "locator",
+                          "quote",
+                          "quoteId",
+                          "sourceId"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "minItems": 1
+                    },
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "note": {
+                      "type": "string",
+                      "minLength": 0
+                    },
+                    "status": {
+                      "type": "string",
+                      "minLength": 1,
+                      "enum": [
+                        "corroborated",
+                        "single_source",
+                        "conflict",
+                        "unverified"
+                      ]
+                    },
+                    "value": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "probability": {
+                              "type": "null"
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "probability",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "reportedGameRant": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "reportedWiki": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "resolvedColorNames": {
+                              "type": "null"
+                            }
+                          },
+                          "required": [
+                            "reportedGameRant",
+                            "reportedWiki",
+                            "resolvedColorNames"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "durationTurns": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "periodTurns": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "priceMultiplier": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "durationTurns",
+                            "effect",
+                            "periodTurns",
+                            "priceMultiplier",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "frenzySaleTurn": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "proSaleTurn": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "rounding": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "frenzySaleTurn",
+                            "proSaleTurn",
+                            "rounding"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "itemPriceCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "multiplier": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "itemPriceCoins",
+                            "multiplier",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "resolvedAvailability": {
+                              "type": "null"
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "resolvedAvailability",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "automaticPeriodTurns": {
+                              "type": "null"
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "reportedCadences": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "sourceId": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "text": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  }
+                                },
+                                "required": [
+                                  "sourceId",
+                                  "text"
+                                ],
+                                "additionalProperties": false
+                              }
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "automaticPeriodTurns",
+                            "effect",
+                            "reportedCadences",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "candidates": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "probabilities": {
+                              "type": "null"
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "candidates",
+                            "effect",
+                            "probabilities",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "dice": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "range": {
+                              "type": "array",
+                              "items": {
+                                "type": "integer",
+                                "minimum": 0
+                              }
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "dice",
+                            "effect",
+                            "range",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "durationTurns": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "hostSwitching": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "reportedSimultaneousShopCount": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "visualStates": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "durationTurns",
+                            "hostSwitching",
+                            "reportedSimultaneousShopCount",
+                            "visualStates"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "lastConversionCount": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "lastConversionTurn": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "normalConversions": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "periodTurns": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "lastConversionCount",
+                            "lastConversionTurn",
+                            "normalConversions",
+                            "periodTurns",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "maximumBowserSpaces": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "reportedNormal": {
+                              "type": "object",
+                              "properties": {
+                                "blue": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "itemPossibleMinimum": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "luckyPossibleMinimum": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "vsPossibleMinimum": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                }
+                              },
+                              "required": [
+                                "blue",
+                                "itemPossibleMinimum",
+                                "luckyPossibleMinimum",
+                                "vsPossibleMinimum"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "reportedTag": {
+                              "type": "object",
+                              "properties": {
+                                "blue": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "itemPossibleMinimum": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "luckyPossibleMinimum": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "rallyPossibleMinimum": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                }
+                              },
+                              "required": [
+                                "blue",
+                                "itemPossibleMinimum",
+                                "luckyPossibleMinimum",
+                                "rallyPossibleMinimum"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "maximumBowserSpaces",
+                            "reportedNormal",
+                            "reportedTag",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "baseRequirement": {
+                              "type": "object",
+                              "properties": {
+                                "achievementCount": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "alternate": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "rank": {
+                                  "type": "null"
+                                }
+                              },
+                              "required": [
+                                "achievementCount",
+                                "alternate",
+                                "rank"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "rankAlternatives": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "tvDefaultReported": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "baseRequirement",
+                            "rankAlternatives",
+                            "tvDefaultReported"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "resolvedTrigger": {
+                              "type": "null"
+                            },
+                            "triggerReports": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "resolvedTrigger",
+                            "triggerReports"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "achievementCount": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "rank": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "achievementCount",
+                            "effect",
+                            "rank",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "confidence",
+                    "evidence",
+                    "id",
+                    "kind",
+                    "note",
+                    "status",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              },
+              "presence": {
+                "type": "object",
+                "properties": {
+                  "confidence": {
+                    "type": "string",
+                    "minLength": 1,
+                    "enum": [
+                      "high",
+                      "medium",
+                      "low"
+                    ]
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "locator": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "quote": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "quoteId": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "sourceId": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "locator",
+                        "quote",
+                        "quoteId",
+                        "sourceId"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 1
+                  },
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "kind": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "note": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "status": {
+                    "type": "string",
+                    "minLength": 1,
+                    "enum": [
+                      "corroborated",
+                      "single_source",
+                      "conflict",
+                      "unverified"
+                    ]
+                  },
+                  "value": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "name"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "confidence",
+                  "evidence",
+                  "id",
+                  "kind",
+                  "note",
+                  "status",
+                  "value"
+                ],
+                "additionalProperties": false
+              },
+              "sharedRuleIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "shops": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "inventory": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "alternatives": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "coins": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                },
+                                "sourceId": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              },
+                              "required": [
+                                "coins",
+                                "sourceId"
+                              ],
+                              "additionalProperties": false
+                            }
+                          },
+                          "confidence": {
+                            "type": "string",
+                            "minLength": 1,
+                            "enum": [
+                              "high",
+                              "medium",
+                              "low"
+                            ]
+                          },
+                          "evidence": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "locator": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "quote": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "quoteId": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "sourceId": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              },
+                              "required": [
+                                "locator",
+                                "quote",
+                                "quoteId",
+                                "sourceId"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "minItems": 1
+                          },
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "kind": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "note": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "status": {
+                            "type": "string",
+                            "minLength": 1,
+                            "enum": [
+                              "corroborated",
+                              "single_source",
+                              "conflict",
+                              "unverified"
+                            ]
+                          },
+                          "value": {
+                            "type": "object",
+                            "properties": {
+                              "coins": {
+                                "type": "integer",
+                                "minimum": 0
+                              },
+                              "condition": {
+                                "type": "object",
+                                "properties": {
+                                  "conditionRulesScope": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "inventoryPeriod": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "itemRulesRestriction": {
+                                    "anyOf": [
+                                      {
+                                        "type": "null"
+                                      },
+                                      {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    ]
+                                  },
+                                  "purchaseRaisesPrice": {
+                                    "type": "boolean"
+                                  }
+                                },
+                                "required": [
+                                  "conditionRulesScope",
+                                  "inventoryPeriod",
+                                  "itemRulesRestriction",
+                                  "purchaseRaisesPrice"
+                                ],
+                                "additionalProperties": false
+                              },
+                              "name": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "priceBasis": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "required": [
+                              "coins",
+                              "condition",
+                              "name",
+                              "priceBasis"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "required": [
+                          "alternatives",
+                          "confidence",
+                          "evidence",
+                          "id",
+                          "kind",
+                          "note",
+                          "status",
+                          "value"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "location": {
+                      "anyOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "confidence": {
+                              "type": "string",
+                              "minLength": 1,
+                              "enum": [
+                                "high",
+                                "medium",
+                                "low"
+                              ]
+                            },
+                            "evidence": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "locator": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "quote": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "quoteId": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "sourceId": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  }
+                                },
+                                "required": [
+                                  "locator",
+                                  "quote",
+                                  "quoteId",
+                                  "sourceId"
+                                ],
+                                "additionalProperties": false
+                              },
+                              "minItems": 1
+                            },
+                            "id": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "kind": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "note": {
+                              "type": "string",
+                              "minLength": 0
+                            },
+                            "status": {
+                              "type": "string",
+                              "minLength": 1,
+                              "enum": [
+                                "corroborated",
+                                "single_source",
+                                "conflict",
+                                "unverified"
+                              ]
+                            },
+                            "value": {
+                              "type": "object",
+                              "properties": {
+                                "exactSpaceIds": {
+                                  "type": "null"
+                                },
+                                "region": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              },
+                              "required": [
+                                "exactSpaceIds",
+                                "region"
+                              ],
+                              "additionalProperties": false
+                            }
+                          },
+                          "required": [
+                            "confidence",
+                            "evidence",
+                            "id",
+                            "kind",
+                            "note",
+                            "status",
+                            "value"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
+                    },
+                    "locationEvidence": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "locator": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "quote": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "quoteId": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "sourceId": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "locator",
+                          "quote",
+                          "quoteId",
+                          "sourceId"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "ruleset": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "unverified": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "inventory",
+                    "location",
+                    "locationEvidence",
+                    "name",
+                    "ruleset",
+                    "unverified"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "spaceCounts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "confidence": {
+                      "type": "string",
+                      "minLength": 1,
+                      "enum": [
+                        "high",
+                        "medium",
+                        "low"
+                      ]
+                    },
+                    "counts": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "confidence": {
+                            "type": "string",
+                            "minLength": 1,
+                            "enum": [
+                              "high",
+                              "medium",
+                              "low"
+                            ]
+                          },
+                          "evidence": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "locator": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "quote": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "quoteId": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "sourceId": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              },
+                              "required": [
+                                "locator",
+                                "quote",
+                                "quoteId",
+                                "sourceId"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "minItems": 1
+                          },
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "kind": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "note": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "status": {
+                            "type": "string",
+                            "minLength": 1,
+                            "enum": [
+                              "corroborated",
+                              "single_source",
+                              "conflict",
+                              "unverified"
+                            ]
+                          },
+                          "value": {
+                            "type": "object",
+                            "properties": {
+                              "count": {
+                                "type": "integer",
+                                "minimum": 0
+                              },
+                              "type": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "required": [
+                              "count",
+                              "type"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "required": [
+                          "confidence",
+                          "evidence",
+                          "id",
+                          "kind",
+                          "note",
+                          "status",
+                          "value"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "edition": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "includesStart": {
+                      "type": "boolean"
+                    },
+                    "profile": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "sourceId": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "status": {
+                      "type": "string",
+                      "minLength": 1,
+                      "enum": [
+                        "corroborated",
+                        "single_source",
+                        "conflict",
+                        "unverified"
+                      ]
+                    },
+                    "total": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "unverified": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "required": [
+                    "confidence",
+                    "counts",
+                    "edition",
+                    "includesStart",
+                    "profile",
+                    "sourceId",
+                    "status",
+                    "total",
+                    "unverified"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "stars": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "confidence": {
+                      "type": "string",
+                      "minLength": 1,
+                      "enum": [
+                        "high",
+                        "medium",
+                        "low"
+                      ]
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "locator": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "quote": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "quoteId": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "sourceId": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "locator",
+                          "quote",
+                          "quoteId",
+                          "sourceId"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "minItems": 1
+                    },
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "kind": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "note": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "status": {
+                      "type": "string",
+                      "minLength": 1,
+                      "enum": [
+                        "corroborated",
+                        "single_source",
+                        "conflict",
+                        "unverified"
+                      ]
+                    },
+                    "value": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "movement": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "normalCostCoins": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "selectionProbabilities": {
+                              "type": "null"
+                            }
+                          },
+                          "required": [
+                            "movement",
+                            "normalCostCoins",
+                            "selectionProbabilities"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "effect": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "initialLane": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "spotCount": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "trigger": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "effect",
+                            "initialLane",
+                            "spotCount",
+                            "trigger"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "confidence",
+                    "evidence",
+                    "id",
+                    "kind",
+                    "note",
+                    "status",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "tvChanges": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "unverified": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "confidence",
+              "events",
+              "gatesPaths",
+              "homestretch",
+              "id",
+              "map",
+              "name",
+              "phases",
+              "presence",
+              "sharedRuleIds",
+              "shops",
+              "spaceCounts",
+              "stars",
+              "tvChanges",
+              "unverified"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "job": {
+          "type": "string",
+          "minLength": 1
+        },
+        "researchDate": {
+          "type": "string",
+          "minLength": 1,
+          "format": "date"
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sharedRules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "confidence": {
+                "type": "string",
+                "minLength": 1,
+                "enum": [
+                  "high",
+                  "medium",
+                  "low"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "locator": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "quote": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "quoteId": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "sourceId": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "locator",
+                    "quote",
+                    "quoteId",
+                    "sourceId"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              },
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "type": "string",
+                "minLength": 1
+              },
+              "note": {
+                "type": "string",
+                "minLength": 0
+              },
+              "status": {
+                "type": "string",
+                "minLength": 1,
+                "enum": [
+                  "corroborated",
+                  "single_source",
+                  "conflict",
+                  "unverified"
+                ]
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "standardCoins": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    },
+                    "required": [
+                      "standardCoins"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "blueGainCoins": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "effect": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "redLossCoins": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "trigger": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "blueGainCoins",
+                      "effect",
+                      "redLossCoins",
+                      "trigger"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "effect": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "trigger": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "effect",
+                      "trigger"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "effect": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "replacementCountRange": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      },
+                      "trigger": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "effect",
+                      "replacementCountRange",
+                      "trigger"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "boundaryTurnFormula": {
+                        "type": "null"
+                      },
+                      "effect": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "trigger": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "boundaryTurnFormula",
+                      "effect",
+                      "trigger"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "effect": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "initialStockPerItem": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "trigger": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "effect",
+                      "initialStockPerItem",
+                      "trigger"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "effect": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "proRulesAvailable": {
+                        "type": "boolean"
+                      },
+                      "trigger": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "effect",
+                      "proRulesAvailable",
+                      "trigger"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "bonusStars": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "effect": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "startingCoins": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "startingHomestretchEvents": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "startingItem": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "startingStars": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "trigger": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "turns": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    },
+                    "required": [
+                      "bonusStars",
+                      "effect",
+                      "startingCoins",
+                      "startingHomestretchEvents",
+                      "startingItem",
+                      "startingStars",
+                      "trigger",
+                      "turns"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "effect": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "playersPerTeam": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "rallyCoins": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "teams": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "trigger": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "effect",
+                      "playersPerTeam",
+                      "rallyCoins",
+                      "teams",
+                      "trigger"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "buddyAvailable": {
+                        "type": "boolean"
+                      },
+                      "effect": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "togetherDiceCoins": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "trigger": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "buddyAvailable",
+                      "effect",
+                      "togetherDiceCoins",
+                      "trigger"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "boardCount": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "effect": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "trigger": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "boardCount",
+                      "effect",
+                      "trigger"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            },
+            "required": [
+              "confidence",
+              "evidence",
+              "id",
+              "kind",
+              "note",
+              "status",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "status": {
+          "enum": [
+            "PARTIAL",
+            "VERIFIED"
+          ]
+        }
+      },
+      "required": [
+        "boards",
+        "job",
+        "researchDate",
+        "scope",
+        "sharedRules",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "sources": {
+      "type": "object",
+      "properties": {
+        "job": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "accessedDate": {
+                "type": "string",
+                "minLength": 1,
+                "format": "date"
+              },
+              "group": {
+                "type": "string",
+                "minLength": 1
+              },
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "quotations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "text"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "url": {
+                "type": "string",
+                "minLength": 1,
+                "format": "uri",
+                "pattern": "^https://"
+              }
+            },
+            "required": [
+              "accessedDate",
+              "group",
+              "id",
+              "quotations",
+              "title",
+              "url"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "job",
+        "sources"
+      ],
+      "additionalProperties": false
+    },
+    "maps": {
+      "type": "object",
+      "properties": {
+        "assets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "basis": {
+                "type": "string",
+                "minLength": 1
+              },
+              "confidence": {
+                "type": "string",
+                "minLength": 1,
+                "enum": [
+                  "high",
+                  "medium",
+                  "low"
+                ]
+              },
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "passA": {
+                "type": "object",
+                "properties": {
+                  "bytes": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "retrieved": {
+                    "type": "boolean"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "visualReview": {
+                    "type": "boolean"
+                  },
+                  "retrievedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "httpStatus": {
+                    "type": "integer",
+                    "enum": [
+                      200
+                    ]
+                  }
+                },
+                "required": [
+                  "bytes",
+                  "retrieved",
+                  "sha256",
+                  "visualReview",
+                  "retrievedAt",
+                  "httpStatus"
+                ],
+                "additionalProperties": false
+              },
+              "passB": {
+                "type": "object",
+                "properties": {
+                  "bytes": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "retrieved": {
+                    "type": "boolean"
+                  },
+                  "sameBytesAsA": {
+                    "type": "boolean"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "visualReview": {
+                    "type": "boolean"
+                  },
+                  "retrievedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "httpStatus": {
+                    "type": "integer",
+                    "enum": [
+                      200
+                    ]
+                  }
+                },
+                "required": [
+                  "bytes",
+                  "retrieved",
+                  "sameBytesAsA",
+                  "sha256",
+                  "visualReview",
+                  "retrievedAt",
+                  "httpStatus"
+                ],
+                "additionalProperties": false
+              },
+              "status": {
+                "type": "string",
+                "minLength": 1,
+                "enum": [
+                  "corroborated",
+                  "single_source",
+                  "conflict",
+                  "unverified"
+                ]
+              },
+              "url": {
+                "type": "string",
+                "minLength": 1,
+                "format": "uri",
+                "pattern": "^https://"
+              }
+            },
+            "required": [
+              "basis",
+              "confidence",
+              "id",
+              "passA",
+              "passB",
+              "status",
+              "url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "job": {
+          "type": "string",
+          "minLength": 1
+        },
+        "representationChangeNote": {
+          "type": "string",
+          "minLength": 1
+        },
+        "republishedImages": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "assets",
+        "job",
+        "representationChangeNote",
+        "republishedImages"
+      ],
+      "additionalProperties": false
+    },
+    "rowAudit": {
+      "type": "object",
+      "properties": {
+        "factStatuses": {
+          "type": "object",
+          "properties": {
+            "conflict": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "corroborated": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "single_source": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unverified": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "conflict",
+            "corroborated",
+            "single_source",
+            "unverified"
+          ],
+          "additionalProperties": false
+        },
+        "job": {
+          "type": "string",
+          "minLength": 1
+        },
+        "passes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "reviewDate": {
+          "type": "string",
+          "minLength": 1,
+          "format": "date"
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "confidence": {
+                "type": "string",
+                "minLength": 1,
+                "enum": [
+                  "high",
+                  "medium",
+                  "low"
+                ]
+              },
+              "kind": {
+                "type": "string",
+                "minLength": 1
+              },
+              "passA": {
+                "type": "string",
+                "minLength": 1,
+                "enum": [
+                  "corroborated",
+                  "single_source",
+                  "conflict",
+                  "unverified",
+                  "proposal_reviewed",
+                  "partial",
+                  "matched"
+                ]
+              },
+              "passB": {
+                "type": "string",
+                "minLength": 1,
+                "enum": [
+                  "corroborated",
+                  "single_source",
+                  "conflict",
+                  "unverified",
+                  "proposal_reviewed",
+                  "partial",
+                  "matched"
+                ]
+              },
+              "review": {
+                "type": "string",
+                "minLength": 1
+              },
+              "rowId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sourceIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "reviewedRowSha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "confidence",
+              "kind",
+              "passA",
+              "passB",
+              "review",
+              "rowId",
+              "sourceIds",
+              "reviewedRowSha256"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "rowsPerPass": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "factStatuses",
+        "job",
+        "passes",
+        "reviewDate",
+        "reviewer",
+        "rows",
+        "rowsPerPass"
+      ],
+      "additionalProperties": false
+    },
+    "sourceAudit": {
+      "type": "object",
+      "properties": {
+        "captures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "capture": {
+                "type": "string",
+                "minLength": 1
+              },
+              "pass": {
+                "type": "string",
+                "minLength": 1,
+                "enum": [
+                  "A",
+                  "B"
+                ]
+              },
+              "quotationCount": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "recoveredCount": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "sourceId": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "capture",
+              "pass",
+              "quotationCount",
+              "recoveredCount",
+              "sourceId"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "job": {
+          "type": "string",
+          "minLength": 1
+        },
+        "passes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "sources": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unrecovered": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 0
+        }
+      },
+      "required": [
+        "captures",
+        "job",
+        "passes",
+        "sources",
+        "unrecovered"
+      ],
+      "additionalProperties": false
+    },
+    "contexts": {
+      "type": "object",
+      "properties": {
+        "basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "job": {
+          "type": "string",
+          "minLength": 1
+        },
+        "passes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "check": {
+                "type": "string",
+                "minLength": 1
+              },
+              "observedA": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "count": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "type": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "count",
+                      "type"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "coins": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "condition": {
+                        "type": "object",
+                        "properties": {
+                          "conditionRulesScope": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "inventoryPeriod": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "itemRulesRestriction": {
+                            "anyOf": [
+                              {
+                                "type": "null"
+                              },
+                              {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            ]
+                          },
+                          "purchaseRaisesPrice": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "conditionRulesScope",
+                          "inventoryPeriod",
+                          "itemRulesRestriction",
+                          "purchaseRaisesPrice"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "name": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "priceBasis": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "coins",
+                      "condition",
+                      "name",
+                      "priceBasis"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              },
+              "observedB": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "count": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "type": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "count",
+                      "type"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "coins": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "condition": {
+                        "type": "object",
+                        "properties": {
+                          "conditionRulesScope": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "inventoryPeriod": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "itemRulesRestriction": {
+                            "anyOf": [
+                              {
+                                "type": "null"
+                              },
+                              {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            ]
+                          },
+                          "purchaseRaisesPrice": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "conditionRulesScope",
+                          "inventoryPeriod",
+                          "itemRulesRestriction",
+                          "purchaseRaisesPrice"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "name": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "priceBasis": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "coins",
+                      "condition",
+                      "name",
+                      "priceBasis"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              },
+              "passA": {
+                "type": "string",
+                "minLength": 1,
+                "enum": [
+                  "corroborated",
+                  "single_source",
+                  "conflict",
+                  "unverified",
+                  "proposal_reviewed",
+                  "partial",
+                  "matched"
+                ]
+              },
+              "passB": {
+                "type": "string",
+                "minLength": 1,
+                "enum": [
+                  "corroborated",
+                  "single_source",
+                  "conflict",
+                  "unverified",
+                  "proposal_reviewed",
+                  "partial",
+                  "matched"
+                ]
+              },
+              "rowId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sourceId": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "check",
+              "observedA",
+              "observedB",
+              "passA",
+              "passB",
+              "rowId",
+              "sourceId"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "rowsPerPass": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "basis",
+        "job",
+        "passes",
+        "rows",
+        "rowsPerPass"
+      ],
+      "additionalProperties": false
+    },
+    "capture": {
+      "type": "object",
+      "properties": {
+        "accessedDate": {
+          "type": "string",
+          "minLength": 1,
+          "format": "date"
+        },
+        "fullPagePublished": {
+          "type": "boolean"
+        },
+        "job": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pass": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "A",
+            "B"
+          ]
+        },
+        "quotations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "recovered": {
+                "type": "boolean"
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "recovered",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "retrieval": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retrievedTextSha256": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1,
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "retrievedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "accessedDate",
+        "fullPagePublished",
+        "job",
+        "pass",
+        "quotations",
+        "retrieval",
+        "retrievedTextSha256",
+        "sourceId",
+        "url",
+        "retrievedAt"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
