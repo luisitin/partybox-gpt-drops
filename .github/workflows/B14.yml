@@ -1,0 +1,36 @@
+name: B14 comedy prompt verification
+on:
+  pull_request:
+    paths:
+      - 'jobs/B14-comedy-prompts/**'
+      - '.github/workflows/B14.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned schema validator
+        working-directory: jobs/B14-comedy-prompts
+        run: python3 -m pip install -r requirements.txt
+      - name: Rerun complete 3000-candidate and 1200-selection checks
+        working-directory: jobs/B14-comedy-prompts
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p .work
+          npm test | tee .work/ci.log
+      - name: Retain measured CI evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: B14-complete-content-verification
+          path: |
+            jobs/B14-comedy-prompts/.work/ci.log
+            jobs/B14-comedy-prompts/.work/pool-similarity-rerun.json
