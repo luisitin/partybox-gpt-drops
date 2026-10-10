@@ -1,0 +1,107 @@
+{
+  "actualSearchCalls": 3,
+  "actualRequestedAndInspectedEntries": 16,
+  "actualUniqueResultUrls": 15,
+  "fullArticlesReviewedFromTheseSearches": 0,
+  "historicalPriorWorkerRequestedResults": 22,
+  "historicalPriorWorkerRawLedgerRetained": false,
+  "knownUrlFetchesAccountedSeparately": true,
+  "calls": [
+    {
+      "query": "Independently written hands-on Super Mario Party Jamboree minigame strategy guides for individual minigames, explaining player actions, exact controller buttons, timers, scoring and tie rules after release",
+      "requestedResults": 6,
+      "observedAtUTC": "2026-10-09T00:30:28Z",
+      "decision": "All six result entries were unrelated sports schedules and rejected; no article fetched or fact adopted.",
+      "resultUrls": [
+        "https://exa.ai/library/sports/ncaa-regular-season-women?date=2026-10-09",
+        "https://exa.ai/library/sports/liga-3?date=2026-10-09",
+        "https://exa.ai/library/sports/superliga?date=2026-10-09",
+        "https://exa.ai/library/sports/premier-league?date=2026-10-09",
+        "https://exa.ai/library/sports/second-division?date=2026-10-09",
+        "https://exa.ai/library/sports/first-division?date=2026-10-09"
+      ]
+    },
+    {
+      "query": "\"Super Mario Party Jamboree\" \"Granite Getaway\" guide walkthrough strategy",
+      "requestedResults": 5,
+      "observedAtUTC": "2026-10-09T00:30:52Z",
+      "decision": "Five result entries inspected: Wiki and Nintendo instruction repost are not additional independently authored mechanics; Legacy URL may alias the already registered list, and video/run indexes do not establish exact mechanics.",
+      "resultUrls": [
+        "https://www.mariowiki.com/Super_Mario_Party_Jamboree",
+        "https://www.nintendolife.com/guides/super-mario-party-jamboree-all-minigames",
+        "https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables",
+        "https://www.speedrun.com/pl-PL/supermariopartyjamboree/runs/y6e8291z",
+        "https://www.letsplayindex.com/channels/2456431-the-princess-peachy-fan-99/videos/page-12"
+      ]
+    },
+    {
+      "query": "\"Super Mario Party Jamboree\" GameFAQs minigame walkthrough strategies controls",
+      "requestedResults": 5,
+      "observedAtUTC": "2026-10-09T00:37:04Z",
+      "decision": "Five result entries inspected. GameFAQs Jamboree thread is a first-person strategy candidate; older Super Mario Party page is excluded. Generic tips and instruction reposts do not automatically prove per-game rules.",
+      "resultUrls": [
+        "https://gamerant.com/super-mario-party-jamboree-beginner-tips-best-strategies/",
+        "https://www.nintendolife.com/guides/super-mario-party-jamboree-all-minigames",
+        "https://play.nintendo.com/news-tips/tips-tricks/super-mario-party-jamboree-tips-and-tricks/",
+        "https://gamefaqs.gamespot.com/switch/241207-super-mario-party",
+        "https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80869095"
+      ]
+    }
+  ],
+  "job": "B03",
+  "scope": "Actual search-result lead inspection only; snippets and access failures do not corroborate catalogue fields.",
+  "failedNativeGameFaqsCaptures": [
+    {
+      "sourceId": "GAMEFAQS_GATE",
+      "url": "https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80869095",
+      "pass": 1,
+      "requestBeganUTC": "2026-10-09T00:41:34.364625+00:00",
+      "requestCompletedUTC": "2026-10-09T00:41:34.791492+00:00",
+      "curlExit": 0,
+      "httpEffectiveTls": [
+        "400",
+        "0",
+        "https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80869095"
+      ],
+      "bodyBytes": 198,
+      "bodySha256": "19fa55b2b6b63cdeaf987ba55c118273003f757e32dcd654c38cf9aa340eebb4",
+      "tlsVerificationDisabled": false,
+      "stderr": ""
+    },
+    {
+      "sourceId": "GAMEFAQS_GATE",
+      "url": "https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80869095",
+      "pass": 2,
+      "requestBeganUTC": "2026-10-09T00:41:34.792120+00:00",
+      "requestCompletedUTC": "2026-10-09T00:41:35.113398+00:00",
+      "curlExit": 0,
+      "httpEffectiveTls": [
+        "400",
+        "0",
+        "https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80869095"
+      ],
+      "bodyBytes": 198,
+      "bodySha256": "19fa55b2b6b63cdeaf987ba55c118273003f757e32dcd654c38cf9aa340eebb4",
+      "tlsVerificationDisabled": false,
+      "stderr": ""
+    }
+  ],
+  "failedSourceAdopted": false,
+  "originalNamuCaptureScope": "Two retained original Korean full responses are reused only for the two independently authored Tip clauses in namu-gameplay-recovery.json. They are separate from these three new Exa searches.",
+  "remainingCandidates": [
+    {
+      "name": "Stamp Out!",
+      "decision": "Original authored tip discusses repainting other players’ colors, but the current complete retained summary and its hopping/stamp mechanics have not been independently corroborated."
+    },
+    {
+      "name": "Gate Key-pers",
+      "decision": "Original authored Korean tip discusses remembering keys that fail to match a door. The existing Wiki clips describe the opening rather than the complete memory action; native GameFAQs full-page access failed twice."
+    },
+    {
+      "name": "Prize Drop",
+      "decision": "The original authored Namu Tip cell is empty. The adjacent translated Nintendo-description cell is excluded from independent support."
+    }
+  ],
+  "twoWikiFullRosterGate": "Still unclosed: Namu base has one literal Thwormp/Thwomp spelling difference and its twenty TV names lack actual accepted English identity witnesses.",
+  "copyrightBodiesPublished": false
+}

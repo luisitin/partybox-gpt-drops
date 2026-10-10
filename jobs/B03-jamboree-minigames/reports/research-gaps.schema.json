@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "job",
+    "verdict",
+    "requiredFactFields",
+    "corroboratedNarrowFacts",
+    "remainingFactFields",
+    "wholeRowsComplete",
+    "rows"
+  ],
+  "properties": {
+    "job": {
+      "const": "B03"
+    },
+    "verdict": {
+      "const": "NOT_MET"
+    },
+    "requiredFactFields": {
+      "const": 1320
+    },
+    "corroboratedNarrowFacts": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1320
+    },
+    "remainingFactFields": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1320
+    },
+    "wholeRowsComplete": {
+      "const": 0
+    },
+    "rows": {
+      "type": "array",
+      "minItems": 132,
+      "maxItems": 132,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "unresolvedFields"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^MG[0-9]{3}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "unresolvedFields": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 10,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "field",
+                "status",
+                "limitation",
+                "quoteIds"
+              ],
+              "properties": {
+                "field": {
+                  "enum": [
+                    "name",
+                    "category",
+                    "format",
+                    "gameplay",
+                    "controls",
+                    "timeLimit",
+                    "winRules",
+                    "scoreRules",
+                    "tieRules",
+                    "reward"
+                  ]
+                },
+                "status": {
+                  "enum": [
+                    "single_source",
+                    "conflict",
+                    "unverified"
+                  ]
+                },
+                "limitation": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "quoteIds": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "bodyBytes",
+      "bodySha256",
+      "curlExit",
+      "httpEffectiveTls",
+      "missingQuoteIds",
+      "pass",
+      "quotes",
+      "rawBodyPublished",
+      "recoveredQuoteIds",
+      "requestBeganUTC",
+      "requestCompletedUTC",
+      "sourceId",
+      "url"
+    ],
+    "properties": {
+      "bodyBytes": {
+        "type": "integer"
+      },
+      "bodySha256": {
+        "type": "string",
+        "maxLength": 20000
+      },
+      "curlExit": {
+        "type": "integer"
+      },
+      "httpEffectiveTls": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxLength": 20000
+        }
+      },
+      "missingQuoteIds": {
+        "type": "array",
+        "items": {
+          "type": [
+            "string",
+            "object",
+            "number",
+            "null",
+            "boolean",
+            "array"
+          ]
+        }
+      },
+      "pass": {
+        "type": "integer"
+      },
+      "quotes": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "locator",
+            "text"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "maxLength": 20000
+            },
+            "locator": {
+              "type": "string",
+              "maxLength": 20000
+            },
+            "text": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          }
+        }
+      },
+      "rawBodyPublished": {
+        "type": "boolean"
+      },
+      "recoveredQuoteIds": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxLength": 20000
+        }
+      },
+      "requestBeganUTC": {
+        "type": "string",
+        "maxLength": 20000
+      },
+      "requestCompletedUTC": {
+        "type": "string",
+        "maxLength": 20000
+      },
+      "sourceId": {
+        "type": "string",
+        "maxLength": 20000
+      },
+      "url": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "minItems": 156,
+  "maxItems": 156
+}

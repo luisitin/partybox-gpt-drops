@@ -1,0 +1,59 @@
+{
+  "scope": "isolated validator-boundary mutations plus accepted baseline",
+  "caseCount": 6,
+  "sourceSHA256": {
+    "verify-index.py": "21e5a7d58711f4a7c122c391048197b49bf0ea0a471f0764cc4a5c7f6f8bd830",
+    "catalogue-index.json": "46aad1b4352447496bbc40460229e30942376419a02124e20c6217e590f157db",
+    "source-excerpts.json": "6fe25ef1cec96323589e2a8b290043dd6ff13ac396cbdce82908e762050fa462",
+    "catalogue-index.schema.json": "a18b1b70b796c396839e1338755987df883266da7a762835711212046572fd6c"
+  },
+  "cases": [
+    {
+      "name": "unmodified_baseline",
+      "expected": "accept",
+      "accepted": true,
+      "passed": true,
+      "verificationGroups": 11
+    },
+    {
+      "name": "wrong_article_for_verified_name",
+      "expected": "reject",
+      "accepted": false,
+      "passed": true,
+      "exceptionType": "AssertionError",
+      "reason": "Article URL differs from extracted path or HTTPS wiki host"
+    },
+    {
+      "name": "omitted_category_disagreements",
+      "expected": "reject",
+      "accepted": false,
+      "passed": true,
+      "exceptionType": "AssertionError",
+      "reason": "Category difference groups omitted/added"
+    },
+    {
+      "name": "duplicate_wiki_category_replaces_all_name_and_independent_citations",
+      "expected": "reject",
+      "accepted": false,
+      "passed": true,
+      "exceptionType": "AssertionError",
+      "reason": "Citation multiset omits/substitutes/duplicates required exact name/category evidence"
+    },
+    {
+      "name": "unrelated_http_publisher_replaces_all_expected_sources",
+      "expected": "reject",
+      "accepted": false,
+      "passed": true,
+      "exceptionType": "AssertionError",
+      "reason": "Wrong HTTPS source URL or publisher scope"
+    },
+    {
+      "name": "combined_curl_short_option_records_disabled_tls_verification",
+      "expected": "reject",
+      "accepted": true,
+      "passed": false,
+      "verificationGroups": 11
+    }
+  ],
+  "passed": false
+}
