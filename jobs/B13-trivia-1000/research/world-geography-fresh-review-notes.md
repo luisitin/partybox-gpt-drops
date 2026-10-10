@@ -1,0 +1,10 @@
+# Independent world-geography review
+
+Root personally read all100 sealed questions, options, answers, additional facts and actual reopened surrounding contexts. All53 selected URLs were actually requested again and returnedHTTP200; every original receipt timestamp and body hash is retained. Matching the327 short excerpt fields is a recovery check, not automatic factual acceptance. The actual separate manual outcome is78 accepted and22 requiring revision. The full original rows, hashes and specific counterexamples remain in evidence/world-geography-original-fresh-review.json.
+
+The reviewer separately inspected selected Wikipedia paragraphs and actual footnotes, including Britannica quotations in references, public-domain encyclopedia attribution, formal property captions, credited archaeological literature and national-park fauna bodies. Direct reuse of the paired UNESCO property, unclear selected claim provenance, city/province and rainforest/basin scope differences, uncorroborated fun-fact clauses and implausible alternatives are explicitly rejected where found. The UNESCO-hosted Stonehenge management plan has named writers but has not been independently opened/assessed; its independence is not inferred. Full copyrighted bodies and longer paragraph extracts remain only in ignored.work or outside the delivery.
+
+No final category seal is claimed. The author must correct each rejected exact version, preserve the rejected snapshots and send every changed version through a new separate manual review. Previously accepted rows changed during source replacement also need fresh hashes. Full-set similarity and option-length editorial checks remain open.
+
+
+Current complete factual review at 2026-10-07T21:06:47.370231+00:00: all100 current versions accepted/supported, category SHA 86196c07f12c735e1c3e33356aaa2b521bf419cf772680e70423ef8a93abe6e5. First28 authored repairs received25accept3reject; second3substantive fixes plus Wiltshire difficulty adjustment received4actualacceptances. All originals/rejects preserved. 60 actual reopened selected source IDs and331 short quotation fields. Final option permutation still pending actual reread.

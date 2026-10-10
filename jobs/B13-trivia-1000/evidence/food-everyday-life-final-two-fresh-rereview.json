@@ -1,0 +1,526 @@
+[
+  {
+    "id": "B13-0916",
+    "heldRevisedRow": {
+      "id": "B13-0916",
+      "category": "food-everyday-life",
+      "question": "What process turns milk into ordinary yogurt?",
+      "difficulty": 1,
+      "options": [
+        "Enzyme coagulation",
+        "Direct acid addition",
+        "Cream separation",
+        "Bacterial fermentation"
+      ],
+      "correctIndex": 3,
+      "correctAnswer": "Bacterial fermentation",
+      "funFact": "Lactic acid gives yogurt its sour or tart flavor.",
+      "confidence": "high",
+      "confidenceReason": "Both actual bodies identify fermented milk, and Britannica explicitly describes inoculating bacteria. Direct acid addition differs from bacterial production of lactic acid; both sources independently support the tart-flavor fun fact.",
+      "sources": [
+        {
+          "sourceId": "food-everyday-life-s0019",
+          "url": "https://www.britannica.com/topic/yogurt",
+          "publisher": "Encyclopaedia Britannica",
+          "quote": "semifluid fermented milk food",
+          "funFactQuote": "mildly sour flavour because of its lactic acid content"
+        },
+        {
+          "sourceId": "food-everyday-life-s0020",
+          "url": "https://en.wikipedia.org/wiki/Yogurt",
+          "publisher": "Wikipedia contributors",
+          "quote": "a food produced by bacterial fermentation of milk",
+          "funFactQuote": "produce lactic acid , which acts on milk protein to give yogurt its texture and characteristic tart flavor"
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "What process turns milk into ordinary yogurt? Answer: Bacterial fermentation",
+          "sourceIds": [
+            "food-everyday-life-s0019",
+            "food-everyday-life-s0020"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "Lactic acid gives yogurt its sour or tart flavor.",
+          "sourceIds": [
+            "food-everyday-life-s0019",
+            "food-everyday-life-s0020"
+          ]
+        }
+      ]
+    },
+    "rejectedPreviousAdversarial": {
+      "id": "B13-0916",
+      "rowSha256": "6a180d2d2a7ce1c55b9470984e33a5139ba464c75747e76c87e3a1cb08903ff5",
+      "reviewer": "/root/r2048_lead (independent of food author)",
+      "reviewedAt": "2026-10-07T21:00:41.570083+00:00",
+      "result": "revise",
+      "attemptedCounterexample": "Acid coagulation also names the resulting acid-driven milk-protein coagulation in yogurt, making it a competing process under the generic question. Distinguish direct acid addition from bacterial fermentation before acceptance; lactic-acid tartness is supported in both.",
+      "distractorsChecked": [
+        "Enzyme coagulation",
+        "Acid coagulation",
+        "Cream separation",
+        "Bacterial fermentation"
+      ],
+      "scopeDateCheck": "Acid coagulation also names the resulting acid-driven milk-protein coagulation in yogurt, making it a competing process under the generic question. Distinguish direct acid addition from bacterial fermentation before acceptance; lactic-acid tartness is supported in both.",
+      "funFactCheck": "Acid coagulation also names the resulting acid-driven milk-protein coagulation in yogurt, making it a competing process under the generic question. Distinguish direct acid addition from bacterial fermentation before acceptance; lactic-acid tartness is supported in both.",
+      "sourceIndependenceCheck": "Wiki yogurt fermentation passage cites the FDA standardized milk/cream rule; raita food-use paragraph is separately narrated. Britannica describes its own incubation organisms and geography; no paired-source citation or mirrored paragraph was found.",
+      "editorialOwnersCompared": [
+        "Encyclopaedia Britannica Inc.",
+        "Wikimedia community contributors"
+      ]
+    },
+    "rejectedPreviousReopen": {
+      "id": "B13-0916",
+      "rowSha256": "6a180d2d2a7ce1c55b9470984e33a5139ba464c75747e76c87e3a1cb08903ff5",
+      "reviewer": "/root/r2048_lead",
+      "reviewedAt": "2026-10-07T21:00:41.570083+00:00",
+      "result": "needs-revision",
+      "sources": [
+        {
+          "sourceId": "food-everyday-life-s0019",
+          "receipt": {
+            "pass": "reopen",
+            "retrievedAt": "2026-10-07T19:51:55.208972+00:00",
+            "method": "urllib-http-get",
+            "requestedUrl": "https://www.britannica.com/topic/yogurt",
+            "resolvedUrl": "https://www.britannica.com/topic/yogurt",
+            "status": 200,
+            "contentType": "text/html",
+            "rawSha256": "198f8268bcf1a4e5a927233cacc676e576aaaad55e162f70f5a7573c88d3f133",
+            "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0019.raw",
+            "title": "Yogurt | Definition, Production, & Uses | Britannica",
+            "contentSha256": "001a05c3ddc7f78a2d2f99fa9a6507bb848d4d7ab458ac9bf4a14041e42fc6d2",
+            "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0019.txt",
+            "captureComplete": true,
+            "characters": 5695
+          },
+          "quotations": [
+            {
+              "field": "quote",
+              "quote": "semifluid fermented milk food",
+              "exactMatch": true,
+              "wordCount": 4
+            },
+            {
+              "field": "funFactQuote",
+              "quote": "mildly sour flavour because of its lactic acid content",
+              "exactMatch": true,
+              "wordCount": 9
+            }
+          ],
+          "contextRead": true,
+          "claimAssessment": "Acid coagulation also names the resulting acid-driven milk-protein coagulation in yogurt, making it a competing process under the generic question. Distinguish direct acid addition from bacterial fermentation before acceptance; lactic-acid tartness is supported in both.",
+          "sourceIndependenceAssessment": "Wiki yogurt fermentation passage cites the FDA standardized milk/cream rule; raita food-use paragraph is separately narrated. Britannica describes its own incubation organisms and geography; no paired-source citation or mirrored paragraph was found."
+        },
+        {
+          "sourceId": "food-everyday-life-s0020",
+          "receipt": {
+            "pass": "reopen",
+            "retrievedAt": "2026-10-07T19:51:55.057030+00:00",
+            "method": "urllib-http-get",
+            "requestedUrl": "https://en.wikipedia.org/wiki/Yogurt",
+            "resolvedUrl": "https://en.wikipedia.org/wiki/Yogurt",
+            "status": 200,
+            "contentType": "text/html",
+            "rawSha256": "d54c0b9905ea8acc4dd1862c70816110e60ae4469a9702e2e99fbabd3cea663a",
+            "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0020.raw",
+            "title": "Yogurt - Wikipedia",
+            "contentSha256": "7e917cb736b255f18121008ab2ac34becffc05e7e824edf599cdf1d65acd8c94",
+            "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0020.txt",
+            "captureComplete": true,
+            "characters": 53322
+          },
+          "quotations": [
+            {
+              "field": "quote",
+              "quote": "a food produced by bacterial fermentation of milk",
+              "exactMatch": true,
+              "wordCount": 8
+            },
+            {
+              "field": "funFactQuote",
+              "quote": "produce lactic acid , which acts on milk protein to give yogurt its texture and characteristic tart flavor",
+              "exactMatch": true,
+              "wordCount": 18
+            }
+          ],
+          "contextRead": true,
+          "claimAssessment": "Acid coagulation also names the resulting acid-driven milk-protein coagulation in yogurt, making it a competing process under the generic question. Distinguish direct acid addition from bacterial fermentation before acceptance; lactic-acid tartness is supported in both.",
+          "sourceIndependenceAssessment": "Wiki yogurt fermentation passage cites the FDA standardized milk/cream rule; raita food-use paragraph is separately narrated. Britannica describes its own incubation organisms and geography; no paired-source citation or mirrored paragraph was found."
+        }
+      ],
+      "assessment": "Acid coagulation also names the resulting acid-driven milk-protein coagulation in yogurt, making it a competing process under the generic question. Distinguish direct acid addition from bacterial fermentation before acceptance; lactic-acid tartness is supported in both.",
+      "sourceReceiptReuse": "Actual second-pass GET receipts retain their original retrieval times. Revised wording/options and actual retained surrounding bodies reread now; this is not a new remote GET claim."
+    },
+    "freshAdversarial": {
+      "id": "B13-0916",
+      "rowSha256": "660f27a984e11d71f0fb6e6c006b35b5b0f3ffbe6d327f993534d1f2e26b8d18",
+      "reviewer": "/root/r2048_lead (independent food reviewer)",
+      "reviewedAt": "2026-10-07T21:01:04.458356+00:00",
+      "result": "accept",
+      "attemptedCounterexample": "Retested the original overlapping acid-coagulation alternative: Direct acid addition now means deliberate addition rather than the bacteria producing lactic acid themselves. Enzyme coagulation and cream separation are other dairy processes, while both actual accounts explicitly identify ordinary yogurt from bacterial milk fermentation. The original tart-lactic-acid contexts remain explicit in both.",
+      "distractorsChecked": [
+        "Enzyme coagulation",
+        "Direct acid addition",
+        "Cream separation",
+        "Bacterial fermentation"
+      ],
+      "scopeDateCheck": "Retested the original overlapping acid-coagulation alternative: Direct acid addition now means deliberate addition rather than the bacteria producing lactic acid themselves. Enzyme coagulation and cream separation are other dairy processes, while both actual accounts explicitly identify ordinary yogurt from bacterial milk fermentation. The original tart-lactic-acid contexts remain explicit in both.",
+      "funFactCheck": "Retested the original overlapping acid-coagulation alternative: Direct acid addition now means deliberate addition rather than the bacteria producing lactic acid themselves. Enzyme coagulation and cream separation are other dairy processes, while both actual accounts explicitly identify ordinary yogurt from bacterial milk fermentation. The original tart-lactic-acid contexts remain explicit in both.",
+      "sourceIndependenceCheck": "Wiki yogurt fermentation passage cites the FDA standardized milk/cream rule; raita food-use paragraph is separately narrated. Britannica describes its own incubation organisms and geography; no paired-source citation or mirrored paragraph was found.",
+      "editorialOwnersCompared": [
+        "Encyclopaedia Britannica Inc.",
+        "Wikimedia community contributors"
+      ]
+    },
+    "freshReopen": {
+      "id": "B13-0916",
+      "rowSha256": "660f27a984e11d71f0fb6e6c006b35b5b0f3ffbe6d327f993534d1f2e26b8d18",
+      "reviewer": "/root/r2048_lead",
+      "reviewedAt": "2026-10-07T21:01:04.458356+00:00",
+      "result": "supported",
+      "sources": [
+        {
+          "sourceId": "food-everyday-life-s0019",
+          "receipt": {
+            "pass": "reopen",
+            "retrievedAt": "2026-10-07T19:51:55.208972+00:00",
+            "method": "urllib-http-get",
+            "requestedUrl": "https://www.britannica.com/topic/yogurt",
+            "resolvedUrl": "https://www.britannica.com/topic/yogurt",
+            "status": 200,
+            "contentType": "text/html",
+            "rawSha256": "198f8268bcf1a4e5a927233cacc676e576aaaad55e162f70f5a7573c88d3f133",
+            "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0019.raw",
+            "title": "Yogurt | Definition, Production, & Uses | Britannica",
+            "contentSha256": "001a05c3ddc7f78a2d2f99fa9a6507bb848d4d7ab458ac9bf4a14041e42fc6d2",
+            "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0019.txt",
+            "captureComplete": true,
+            "characters": 5695
+          },
+          "quotations": [
+            {
+              "field": "quote",
+              "quote": "semifluid fermented milk food",
+              "exactMatch": true,
+              "wordCount": 4
+            },
+            {
+              "field": "funFactQuote",
+              "quote": "mildly sour flavour because of its lactic acid content",
+              "exactMatch": true,
+              "wordCount": 9
+            }
+          ],
+          "contextRead": true,
+          "claimAssessment": "Retested the original overlapping acid-coagulation alternative: Direct acid addition now means deliberate addition rather than the bacteria producing lactic acid themselves. Enzyme coagulation and cream separation are other dairy processes, while both actual accounts explicitly identify ordinary yogurt from bacterial milk fermentation. The original tart-lactic-acid contexts remain explicit in both.",
+          "sourceIndependenceAssessment": "Wiki yogurt fermentation passage cites the FDA standardized milk/cream rule; raita food-use paragraph is separately narrated. Britannica describes its own incubation organisms and geography; no paired-source citation or mirrored paragraph was found."
+        },
+        {
+          "sourceId": "food-everyday-life-s0020",
+          "receipt": {
+            "pass": "reopen",
+            "retrievedAt": "2026-10-07T19:51:55.057030+00:00",
+            "method": "urllib-http-get",
+            "requestedUrl": "https://en.wikipedia.org/wiki/Yogurt",
+            "resolvedUrl": "https://en.wikipedia.org/wiki/Yogurt",
+            "status": 200,
+            "contentType": "text/html",
+            "rawSha256": "d54c0b9905ea8acc4dd1862c70816110e60ae4469a9702e2e99fbabd3cea663a",
+            "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0020.raw",
+            "title": "Yogurt - Wikipedia",
+            "contentSha256": "7e917cb736b255f18121008ab2ac34becffc05e7e824edf599cdf1d65acd8c94",
+            "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0020.txt",
+            "captureComplete": true,
+            "characters": 53322
+          },
+          "quotations": [
+            {
+              "field": "quote",
+              "quote": "a food produced by bacterial fermentation of milk",
+              "exactMatch": true,
+              "wordCount": 8
+            },
+            {
+              "field": "funFactQuote",
+              "quote": "produce lactic acid , which acts on milk protein to give yogurt its texture and characteristic tart flavor",
+              "exactMatch": true,
+              "wordCount": 18
+            }
+          ],
+          "contextRead": true,
+          "claimAssessment": "Retested the original overlapping acid-coagulation alternative: Direct acid addition now means deliberate addition rather than the bacteria producing lactic acid themselves. Enzyme coagulation and cream separation are other dairy processes, while both actual accounts explicitly identify ordinary yogurt from bacterial milk fermentation. The original tart-lactic-acid contexts remain explicit in both.",
+          "sourceIndependenceAssessment": "Wiki yogurt fermentation passage cites the FDA standardized milk/cream rule; raita food-use paragraph is separately narrated. Britannica describes its own incubation organisms and geography; no paired-source citation or mirrored paragraph was found."
+        }
+      ],
+      "assessment": "Retested the original overlapping acid-coagulation alternative: Direct acid addition now means deliberate addition rather than the bacteria producing lactic acid themselves. Enzyme coagulation and cream separation are other dairy processes, while both actual accounts explicitly identify ordinary yogurt from bacterial milk fermentation. The original tart-lactic-acid contexts remain explicit in both.",
+      "sourceReceiptReuse": "Actual second-pass GET receipts retain their original retrieval times. Revised wording/options and actual retained surrounding bodies reread now; this is not a new remote GET claim."
+    }
+  },
+  {
+    "id": "B13-0979",
+    "heldRevisedRow": {
+      "id": "B13-0979",
+      "category": "food-everyday-life",
+      "question": "Which of these spices belongs to the same plant family as ginger?",
+      "difficulty": 2,
+      "options": [
+        "Saffron",
+        "Mustard",
+        "Turmeric",
+        "Fenugreek"
+      ],
+      "correctIndex": 2,
+      "correctAnswer": "Turmeric",
+      "funFact": "Common culinary ginger is Zingiber officinale.",
+      "confidence": "high",
+      "confidenceReason": "The credited Britannica ginger-family body identifies turmeric among its economically valuable members, while separately compiled Wikipedia groups ginger and turmeric in Zingiberaceae. Both identify common ginger as Zingiber officinale; the revised stem asserts no selected-source color claim.",
+      "sources": [
+        {
+          "sourceId": "food-everyday-life-s0065",
+          "url": "https://www.britannica.com/plant/Zingiberaceae",
+          "publisher": "Encyclopaedia Britannica",
+          "quote": "The dried thick rhizome of turmeric ( Curcuma longa )",
+          "funFactQuote": "Ginger is obtained from the fresh or dried rhizomes of Zingiber officinale"
+        },
+        {
+          "sourceId": "food-everyday-life-s0052",
+          "url": "https://en.wikipedia.org/wiki/Ginger",
+          "publisher": "Wikipedia contributors",
+          "quote": "Ginger is in the family Zingiberaceae , which also includes turmeric",
+          "funFactQuote": "Ginger ( Zingiber officinale )"
+        }
+      ],
+      "claims": [
+        {
+          "kind": "answer",
+          "text": "Which of these spices belongs to the same plant family as ginger? Answer: Turmeric",
+          "sourceIds": [
+            "food-everyday-life-s0065",
+            "food-everyday-life-s0052"
+          ]
+        },
+        {
+          "kind": "funFact",
+          "text": "Common culinary ginger is Zingiber officinale.",
+          "sourceIds": [
+            "food-everyday-life-s0065",
+            "food-everyday-life-s0052"
+          ]
+        }
+      ]
+    },
+    "rejectedPreviousAdversarial": {
+      "id": "B13-0979",
+      "rowSha256": "778081e1e45ca08ac1d24ec531eccf6c6089a6882e2dfc773196ceeb297af549",
+      "reviewer": "/root/r2048_lead (independent of food author)",
+      "reviewedAt": "2026-10-07T21:00:41.570083+00:00",
+      "result": "revise",
+      "attemptedCounterexample": "Both selected ginger-family accounts support turmeric membership and culinary ginger Zingiber officinale, but the current extra yellow qualifier is not independently selected from those same source bodies. Remove yellow to keep the stem within the actually selected evidence; saffron/mustard/fenugreek are otherwise credible spices from other plant families.",
+      "distractorsChecked": [
+        "Saffron",
+        "Mustard",
+        "Turmeric",
+        "Fenugreek"
+      ],
+      "scopeDateCheck": "Both selected ginger-family accounts support turmeric membership and culinary ginger Zingiber officinale, but the current extra yellow qualifier is not independently selected from those same source bodies. Remove yellow to keep the stem within the actually selected evidence; saffron/mustard/fenugreek are otherwise credible spices from other plant families.",
+      "funFactCheck": "Both selected ginger-family accounts support turmeric membership and culinary ginger Zingiber officinale, but the current extra yellow qualifier is not independently selected from those same source bodies. Remove yellow to keep the stem within the actually selected evidence; saffron/mustard/fenugreek are otherwise credible spices from other plant families.",
+      "sourceIndependenceCheck": "Wiki ginger rhizome/origin and family passages cite NCCIH, Southeast-Asia plant resource books, Kew and linguistic/botanical origin literature, not Britannica. The Zingiberaceae Britannica family article is read as a whole family account when selected.",
+      "editorialOwnersCompared": [
+        "Encyclopaedia Britannica Inc.",
+        "Wikimedia community contributors"
+      ]
+    },
+    "rejectedPreviousReopen": {
+      "id": "B13-0979",
+      "rowSha256": "778081e1e45ca08ac1d24ec531eccf6c6089a6882e2dfc773196ceeb297af549",
+      "reviewer": "/root/r2048_lead",
+      "reviewedAt": "2026-10-07T21:00:41.570083+00:00",
+      "result": "needs-revision",
+      "sources": [
+        {
+          "sourceId": "food-everyday-life-s0065",
+          "receipt": {
+            "pass": "reopen",
+            "retrievedAt": "2026-10-07T19:52:01.176162+00:00",
+            "method": "urllib-http-get",
+            "requestedUrl": "https://www.britannica.com/plant/Zingiberaceae",
+            "resolvedUrl": "https://www.britannica.com/plant/Zingiberaceae",
+            "status": 200,
+            "contentType": "text/html",
+            "rawSha256": "1e0d38cd6306fd06a5c6b904218cdff74a570cde03751f3a401aecd6b639a215",
+            "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0065.raw",
+            "title": "Zingiberaceae | Description, Genera, & Facts | Britannica",
+            "contentSha256": "6d6f0a05310b983f9a7f8e30aa584538451dee239db078f22f59a716c888954f",
+            "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0065.txt",
+            "captureComplete": true,
+            "characters": 5684
+          },
+          "quotations": [
+            {
+              "field": "quote",
+              "quote": "The dried thick rhizome of turmeric ( Curcuma longa )",
+              "exactMatch": true,
+              "wordCount": 10
+            },
+            {
+              "field": "funFactQuote",
+              "quote": "Ginger is obtained from the fresh or dried rhizomes of Zingiber officinale",
+              "exactMatch": true,
+              "wordCount": 12
+            }
+          ],
+          "contextRead": true,
+          "claimAssessment": "Both selected ginger-family accounts support turmeric membership and culinary ginger Zingiber officinale, but the current extra yellow qualifier is not independently selected from those same source bodies. Remove yellow to keep the stem within the actually selected evidence; saffron/mustard/fenugreek are otherwise credible spices from other plant families.",
+          "sourceIndependenceAssessment": "Wiki ginger rhizome/origin and family passages cite NCCIH, Southeast-Asia plant resource books, Kew and linguistic/botanical origin literature, not Britannica. The Zingiberaceae Britannica family article is read as a whole family account when selected."
+        },
+        {
+          "sourceId": "food-everyday-life-s0052",
+          "receipt": {
+            "pass": "reopen",
+            "retrievedAt": "2026-10-07T19:51:59.981648+00:00",
+            "method": "urllib-http-get",
+            "requestedUrl": "https://en.wikipedia.org/wiki/Ginger",
+            "resolvedUrl": "https://en.wikipedia.org/wiki/Ginger",
+            "status": 200,
+            "contentType": "text/html",
+            "rawSha256": "16ebd244d3bb94943f4e3b7b64efb1f61d687f8d97aae47951ed70bed4c2e837",
+            "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0052.raw",
+            "title": "Ginger - Wikipedia",
+            "contentSha256": "410cd01824a1d50d12159c80f1ddce6a95862104df833360acad4c1c63539c21",
+            "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0052.txt",
+            "captureComplete": true,
+            "characters": 51444
+          },
+          "quotations": [
+            {
+              "field": "quote",
+              "quote": "Ginger is in the family Zingiberaceae , which also includes turmeric",
+              "exactMatch": true,
+              "wordCount": 11
+            },
+            {
+              "field": "funFactQuote",
+              "quote": "Ginger ( Zingiber officinale )",
+              "exactMatch": true,
+              "wordCount": 5
+            }
+          ],
+          "contextRead": true,
+          "claimAssessment": "Both selected ginger-family accounts support turmeric membership and culinary ginger Zingiber officinale, but the current extra yellow qualifier is not independently selected from those same source bodies. Remove yellow to keep the stem within the actually selected evidence; saffron/mustard/fenugreek are otherwise credible spices from other plant families.",
+          "sourceIndependenceAssessment": "Wiki ginger rhizome/origin and family passages cite NCCIH, Southeast-Asia plant resource books, Kew and linguistic/botanical origin literature, not Britannica. The Zingiberaceae Britannica family article is read as a whole family account when selected."
+        }
+      ],
+      "assessment": "Both selected ginger-family accounts support turmeric membership and culinary ginger Zingiber officinale, but the current extra yellow qualifier is not independently selected from those same source bodies. Remove yellow to keep the stem within the actually selected evidence; saffron/mustard/fenugreek are otherwise credible spices from other plant families.",
+      "sourceReceiptReuse": "Actual second-pass GET receipts retain their original retrieval times. Revised wording/options and actual retained surrounding bodies reread now; this is not a new remote GET claim."
+    },
+    "freshAdversarial": {
+      "id": "B13-0979",
+      "rowSha256": "af29ed581f89019fd0dc575f180aa57437b765ecb27350da2fdeafb4e41fb789",
+      "reviewer": "/root/r2048_lead (independent food reviewer)",
+      "reviewedAt": "2026-10-07T21:01:04.458356+00:00",
+      "result": "accept",
+      "attemptedCounterexample": "Retested the formerly unsupported yellow qualifier: the new stem asks only the shared plant family. In the actual credited Zingiberaceae topic body turmeric is a named member; the separately compiled Ginger paragraph explicitly includes it. Saffron belongs to Iridaceae, mustard Brassicaceae and fenugreek Fabaceae rather than the ginger family. Common culinary ginger is explicitly Zingiber officinale in both selected surrounding contexts.",
+      "distractorsChecked": [
+        "Saffron",
+        "Mustard",
+        "Turmeric",
+        "Fenugreek"
+      ],
+      "scopeDateCheck": "Retested the formerly unsupported yellow qualifier: the new stem asks only the shared plant family. In the actual credited Zingiberaceae topic body turmeric is a named member; the separately compiled Ginger paragraph explicitly includes it. Saffron belongs to Iridaceae, mustard Brassicaceae and fenugreek Fabaceae rather than the ginger family. Common culinary ginger is explicitly Zingiber officinale in both selected surrounding contexts.",
+      "funFactCheck": "Retested the formerly unsupported yellow qualifier: the new stem asks only the shared plant family. In the actual credited Zingiberaceae topic body turmeric is a named member; the separately compiled Ginger paragraph explicitly includes it. Saffron belongs to Iridaceae, mustard Brassicaceae and fenugreek Fabaceae rather than the ginger family. Common culinary ginger is explicitly Zingiber officinale in both selected surrounding contexts.",
+      "sourceIndependenceCheck": "Wiki ginger rhizome/origin and family passages cite NCCIH, Southeast-Asia plant resource books, Kew and linguistic/botanical origin literature, not Britannica. The Zingiberaceae Britannica family article is read as a whole family account when selected.",
+      "editorialOwnersCompared": [
+        "Encyclopaedia Britannica Inc.",
+        "Wikimedia community contributors"
+      ]
+    },
+    "freshReopen": {
+      "id": "B13-0979",
+      "rowSha256": "af29ed581f89019fd0dc575f180aa57437b765ecb27350da2fdeafb4e41fb789",
+      "reviewer": "/root/r2048_lead",
+      "reviewedAt": "2026-10-07T21:01:04.458356+00:00",
+      "result": "supported",
+      "sources": [
+        {
+          "sourceId": "food-everyday-life-s0065",
+          "receipt": {
+            "pass": "reopen",
+            "retrievedAt": "2026-10-07T19:52:01.176162+00:00",
+            "method": "urllib-http-get",
+            "requestedUrl": "https://www.britannica.com/plant/Zingiberaceae",
+            "resolvedUrl": "https://www.britannica.com/plant/Zingiberaceae",
+            "status": 200,
+            "contentType": "text/html",
+            "rawSha256": "1e0d38cd6306fd06a5c6b904218cdff74a570cde03751f3a401aecd6b639a215",
+            "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0065.raw",
+            "title": "Zingiberaceae | Description, Genera, & Facts | Britannica",
+            "contentSha256": "6d6f0a05310b983f9a7f8e30aa584538451dee239db078f22f59a716c888954f",
+            "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0065.txt",
+            "captureComplete": true,
+            "characters": 5684
+          },
+          "quotations": [
+            {
+              "field": "quote",
+              "quote": "The dried thick rhizome of turmeric ( Curcuma longa )",
+              "exactMatch": true,
+              "wordCount": 10
+            },
+            {
+              "field": "funFactQuote",
+              "quote": "Ginger is obtained from the fresh or dried rhizomes of Zingiber officinale",
+              "exactMatch": true,
+              "wordCount": 12
+            }
+          ],
+          "contextRead": true,
+          "claimAssessment": "Retested the formerly unsupported yellow qualifier: the new stem asks only the shared plant family. In the actual credited Zingiberaceae topic body turmeric is a named member; the separately compiled Ginger paragraph explicitly includes it. Saffron belongs to Iridaceae, mustard Brassicaceae and fenugreek Fabaceae rather than the ginger family. Common culinary ginger is explicitly Zingiber officinale in both selected surrounding contexts.",
+          "sourceIndependenceAssessment": "Wiki ginger rhizome/origin and family passages cite NCCIH, Southeast-Asia plant resource books, Kew and linguistic/botanical origin literature, not Britannica. The Zingiberaceae Britannica family article is read as a whole family account when selected."
+        },
+        {
+          "sourceId": "food-everyday-life-s0052",
+          "receipt": {
+            "pass": "reopen",
+            "retrievedAt": "2026-10-07T19:51:59.981648+00:00",
+            "method": "urllib-http-get",
+            "requestedUrl": "https://en.wikipedia.org/wiki/Ginger",
+            "resolvedUrl": "https://en.wikipedia.org/wiki/Ginger",
+            "status": 200,
+            "contentType": "text/html",
+            "rawSha256": "16ebd244d3bb94943f4e3b7b64efb1f61d687f8d97aae47951ed70bed4c2e837",
+            "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0052.raw",
+            "title": "Ginger - Wikipedia",
+            "contentSha256": "410cd01824a1d50d12159c80f1ddce6a95862104df833360acad4c1c63539c21",
+            "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0052.txt",
+            "captureComplete": true,
+            "characters": 51444
+          },
+          "quotations": [
+            {
+              "field": "quote",
+              "quote": "Ginger is in the family Zingiberaceae , which also includes turmeric",
+              "exactMatch": true,
+              "wordCount": 11
+            },
+            {
+              "field": "funFactQuote",
+              "quote": "Ginger ( Zingiber officinale )",
+              "exactMatch": true,
+              "wordCount": 5
+            }
+          ],
+          "contextRead": true,
+          "claimAssessment": "Retested the formerly unsupported yellow qualifier: the new stem asks only the shared plant family. In the actual credited Zingiberaceae topic body turmeric is a named member; the separately compiled Ginger paragraph explicitly includes it. Saffron belongs to Iridaceae, mustard Brassicaceae and fenugreek Fabaceae rather than the ginger family. Common culinary ginger is explicitly Zingiber officinale in both selected surrounding contexts.",
+          "sourceIndependenceAssessment": "Wiki ginger rhizome/origin and family passages cite NCCIH, Southeast-Asia plant resource books, Kew and linguistic/botanical origin literature, not Britannica. The Zingiberaceae Britannica family article is read as a whole family account when selected."
+        }
+      ],
+      "assessment": "Retested the formerly unsupported yellow qualifier: the new stem asks only the shared plant family. In the actual credited Zingiberaceae topic body turmeric is a named member; the separately compiled Ginger paragraph explicitly includes it. Saffron belongs to Iridaceae, mustard Brassicaceae and fenugreek Fabaceae rather than the ginger family. Common culinary ginger is explicitly Zingiber officinale in both selected surrounding contexts.",
+      "sourceReceiptReuse": "Actual second-pass GET receipts retain their original retrieval times. Revised wording/options and actual retained surrounding bodies reread now; this is not a new remote GET claim."
+    }
+  }
+]
