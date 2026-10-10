@@ -1,0 +1,115 @@
+{
+  "command": "npm test",
+  "node": "v22.22.0",
+  "typescript": "5.8.3",
+  "sourceSHA256": {
+    "boardOdds.ts": "9e4b0a1e9d5d008795ce7bff65d72018c4df28e952dd67dffbfa21ad6982b2cc",
+    "blind-reference.ts": "fb3358b51f3c8d6f00ca649da54d283129613cd0229ac33e626519f7daf22e5f",
+    "reference.ts": "9ffd76f76f1ed71aabad84d4b12b175ff53f333325a14b360fe7ce3583cb5bb6",
+    "blind-authoring/AUTHORING.md": "ecddae05fe55970c7752a840800b1f205da8f50f411c94530feaa4e9053ebac9",
+    "blind-authoring/SHA256SUMS.txt": "b8e38939d0901c5456bc831b24c657f9c4b3e3941fd230e929acccdf7b9c9e81",
+    "support.mjs": "64c69f6c76f1c78854151f88928a346c840589fdbdb3ed67944483dfe0f27ae2",
+    "test.mjs": "5b4abc8674c77ec502debd2683674cdb965344483f57523c2e92456a4a200433",
+    "mutate.mjs": "7f11d30e0ec36d21b8c318af17196444f842c16954fdcea862edecba9e148bd3",
+    "run.mjs": "f9d3b28c474e9767b26f76312380af6c07f9d96557d8dba4b96151c907e31f5e",
+    "tsconfig.json": "115e20af038168779851e226ba58deac110b3717c9a6f0748edceab8479b3090"
+  },
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "commands": [
+    {
+      "seed": 1,
+      "command": "node hashes.mjs",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 1,
+      "command": "node node_modules/typescript/bin/tsc -p tsconfig.json",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 1,
+      "command": "node test.mjs --seed 1",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 1,
+      "command": "node mutate.mjs --seed 1",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 1,
+      "command": "node tools/independent-check.mjs --seed 1 --graphs 300",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "command": "node hashes.mjs",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "command": "node node_modules/typescript/bin/tsc -p tsconfig.json",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "command": "node test.mjs --seed 2",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "command": "node mutate.mjs --seed 2",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "command": "node tools/independent-check.mjs --seed 2 --graphs 300",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "command": "node hashes.mjs",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "command": "node node_modules/typescript/bin/tsc -p tsconfig.json",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "command": "node test.mjs --seed 3",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "command": "node mutate.mjs --seed 3",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "command": "node tools/independent-check.mjs --seed 3 --graphs 300",
+      "exitCode": 0,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

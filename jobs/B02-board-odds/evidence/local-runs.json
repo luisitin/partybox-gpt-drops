@@ -1,0 +1,1497 @@
+{
+  "provenance": "Observed current full local execution with the unchanged sealed blind reference. Generated from .verification JSON reports; historical prior-oracle results remain separately archived.",
+  "fullSuite": {
+    "command": "npm test",
+    "node": "v24.19.0",
+    "typescript": "5.8.3",
+    "sourceSHA256": {
+      "boardOdds.ts": "7b34290f843ec634989dea8fd2c08f48997ecbd02f0e0c3f14c95742dab04b0e",
+      "blind-reference.ts": "fb3358b51f3c8d6f00ca649da54d283129613cd0229ac33e626519f7daf22e5f",
+      "reference.ts": "9ffd76f76f1ed71aabad84d4b12b175ff53f333325a14b360fe7ce3583cb5bb6",
+      "blind-authoring/AUTHORING.md": "ecddae05fe55970c7752a840800b1f205da8f50f411c94530feaa4e9053ebac9",
+      "blind-authoring/SHA256SUMS.txt": "b8e38939d0901c5456bc831b24c657f9c4b3e3941fd230e929acccdf7b9c9e81",
+      "support.mjs": "ed232abfecf3ebba6973b444cb1003744a4e5d0a551e3408e23b145a919f0f50",
+      "test.mjs": "740b5f50f6d8f71fa4147736bf07f03af047ae11735ea815fbfcfdff1ee65d23",
+      "mutate.mjs": "7f11d30e0ec36d21b8c318af17196444f842c16954fdcea862edecba9e148bd3",
+      "run.mjs": "e31ecdc5b90092c58547bd50e469e53135df43741de1fcaacfe064cc6b92e0c5",
+      "tsconfig.json": "115e20af038168779851e226ba58deac110b3717c9a6f0748edceab8479b3090"
+    },
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "commands": [
+      {
+        "seed": 1,
+        "command": "node hashes.mjs",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "seed": 1,
+        "command": "node node_modules/typescript/bin/tsc -p tsconfig.json",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "seed": 1,
+        "command": "node test.mjs --seed 1",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "seed": 1,
+        "command": "node mutate.mjs --seed 1",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "seed": 2,
+        "command": "node hashes.mjs",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "seed": 2,
+        "command": "node node_modules/typescript/bin/tsc -p tsconfig.json",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "seed": 2,
+        "command": "node test.mjs --seed 2",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "seed": 2,
+        "command": "node mutate.mjs --seed 2",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "seed": 3,
+        "command": "node hashes.mjs",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "seed": 3,
+        "command": "node node_modules/typescript/bin/tsc -p tsconfig.json",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "seed": 3,
+        "command": "node test.mjs --seed 3",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "seed": 3,
+        "command": "node mutate.mjs --seed 3",
+        "exitCode": 0,
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "tests": [
+    {
+      "seed": 1,
+      "smoke": false,
+      "suites": [
+        {
+          "name": "golden-regression-arithmetic-validation",
+          "fixtureDifferentialCases": 336,
+          "arithmeticCases": 1000,
+          "invalidInputCases": 16,
+          "directRegressionAssertions": 24,
+          "fixtureGraphs": 24,
+          "passed": true
+        },
+        {
+          "name": "dependency-purity-static-guards",
+          "checkedSources": 2,
+          "passed": true
+        },
+        {
+          "name": "random-acyclic-brute-force",
+          "graphs": 2000,
+          "policies": 2,
+          "faces": "0..10 inclusive",
+          "minimumNodes": 1,
+          "maximumNodes": 25,
+          "graphPolicyFaceCases": 44000,
+          "startFaceChecks": 576576,
+          "mixtureCases": 4000,
+          "permutationCases": 4000,
+          "bruteForceCases": 44000,
+          "enumeratedTerminalPaths": 1400694,
+          "passed": true
+        },
+        {
+          "name": "cyclic-graphs",
+          "graphs": 500,
+          "policies": 2,
+          "faces": "0..10 inclusive",
+          "minimumNodes": 2,
+          "maximumNodes": 25,
+          "graphPolicyFaceCases": 11000,
+          "startFaceChecks": 153670,
+          "mixtureCases": 1000,
+          "permutationCases": 1000,
+          "bruteForceCases": 5500,
+          "enumeratedTerminalPaths": 734049,
+          "passed": true
+        },
+        {
+          "name": "seeded-simulation",
+          "graphs": 50,
+          "rollsPerGraph": 1000000,
+          "totalRolls": 50000000,
+          "landingChecks": 706,
+          "passChecks": 235,
+          "maxLandingZ": 3.4147728105056014,
+          "maxPassZ": 2.057548703889658,
+          "enumeratedMomentPaths": 4239,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "smoke": false,
+      "suites": [
+        {
+          "name": "golden-regression-arithmetic-validation",
+          "fixtureDifferentialCases": 336,
+          "arithmeticCases": 1000,
+          "invalidInputCases": 16,
+          "directRegressionAssertions": 24,
+          "fixtureGraphs": 24,
+          "passed": true
+        },
+        {
+          "name": "dependency-purity-static-guards",
+          "checkedSources": 2,
+          "passed": true
+        },
+        {
+          "name": "random-acyclic-brute-force",
+          "graphs": 2000,
+          "policies": 2,
+          "faces": "0..10 inclusive",
+          "minimumNodes": 1,
+          "maximumNodes": 25,
+          "graphPolicyFaceCases": 44000,
+          "startFaceChecks": 568524,
+          "mixtureCases": 4000,
+          "permutationCases": 4000,
+          "bruteForceCases": 44000,
+          "enumeratedTerminalPaths": 1369925,
+          "passed": true
+        },
+        {
+          "name": "cyclic-graphs",
+          "graphs": 500,
+          "policies": 2,
+          "faces": "0..10 inclusive",
+          "minimumNodes": 2,
+          "maximumNodes": 25,
+          "graphPolicyFaceCases": 11000,
+          "startFaceChecks": 149534,
+          "mixtureCases": 1000,
+          "permutationCases": 1000,
+          "bruteForceCases": 5500,
+          "enumeratedTerminalPaths": 1080031,
+          "passed": true
+        },
+        {
+          "name": "seeded-simulation",
+          "graphs": 50,
+          "rollsPerGraph": 1000000,
+          "totalRolls": 50000000,
+          "landingChecks": 608,
+          "passChecks": 177,
+          "maxLandingZ": 2.813716536895541,
+          "maxPassZ": 2.8137165368955404,
+          "enumeratedMomentPaths": 11972,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "smoke": false,
+      "suites": [
+        {
+          "name": "golden-regression-arithmetic-validation",
+          "fixtureDifferentialCases": 336,
+          "arithmeticCases": 1000,
+          "invalidInputCases": 16,
+          "directRegressionAssertions": 24,
+          "fixtureGraphs": 24,
+          "passed": true
+        },
+        {
+          "name": "dependency-purity-static-guards",
+          "checkedSources": 2,
+          "passed": true
+        },
+        {
+          "name": "random-acyclic-brute-force",
+          "graphs": 2000,
+          "policies": 2,
+          "faces": "0..10 inclusive",
+          "minimumNodes": 1,
+          "maximumNodes": 25,
+          "graphPolicyFaceCases": 44000,
+          "startFaceChecks": 568810,
+          "mixtureCases": 4000,
+          "permutationCases": 4000,
+          "bruteForceCases": 44000,
+          "enumeratedTerminalPaths": 1388665,
+          "passed": true
+        },
+        {
+          "name": "cyclic-graphs",
+          "graphs": 500,
+          "policies": 2,
+          "faces": "0..10 inclusive",
+          "minimumNodes": 2,
+          "maximumNodes": 25,
+          "graphPolicyFaceCases": 11000,
+          "startFaceChecks": 145772,
+          "mixtureCases": 1000,
+          "permutationCases": 1000,
+          "bruteForceCases": 5500,
+          "enumeratedTerminalPaths": 511497,
+          "passed": true
+        },
+        {
+          "name": "seeded-simulation",
+          "graphs": 50,
+          "rollsPerGraph": 1000000,
+          "totalRolls": 50000000,
+          "landingChecks": 691,
+          "passChecks": 245,
+          "maxLandingZ": 3.278256273801876,
+          "maxPassZ": 2.921021740703357,
+          "enumeratedMomentPaths": 2920,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "mutationResults": [
+    {
+      "id": "M01",
+      "description": "Subtract instead of adding rational numerators",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "Die probabilities must sum to exactly one",
+      "witnessesBySeed": {
+        "1": "Die probabilities must sum to exactly one",
+        "2": "Die probabilities must sum to exactly one",
+        "3": "Die probabilities must sum to exactly one"
+      }
+    },
+    {
+      "id": "M02",
+      "description": "Add instead of multiplying rational numerators",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 2n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+      "witnessesBySeed": {
+        "1": "sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 2n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "2": "sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 2n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "3": "sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 2n\n-       numerator: 1n\n      }\n    ]\n  ]\n"
+      }
+    },
+    {
+      "id": "M03",
+      "description": "Stop reducing fractions to lowest terms",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "sink/mixture: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n+       denominator: 6n,\n+       numerator: 6n\n-       denominator: 1n,\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+      "witnessesBySeed": {
+        "1": "sink/mixture: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n+       denominator: 6n,\n+       numerator: 6n\n-       denominator: 1n,\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "2": "sink/mixture: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n+       denominator: 6n,\n+       numerator: 6n\n-       denominator: 1n,\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "3": "sink/mixture: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n+       denominator: 6n,\n+       numerator: 6n\n-       denominator: 1n,\n-       numerator: 1n\n      }\n    ]\n  ]\n"
+      }
+    },
+    {
+      "id": "M04",
+      "description": "Charge a step for pass-through destinations",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+      "witnessesBySeed": {
+        "1": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "2": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "3": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n"
+      }
+    },
+    {
+      "id": "M05",
+      "description": "Make ordinary destinations cost zero steps",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "line/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'P',\n      {\n",
+      "witnessesBySeed": {
+        "1": "line/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'P',\n      {\n",
+        "2": "line/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'P',\n      {\n",
+        "3": "line/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'P',\n      {\n"
+      }
+    },
+    {
+      "id": "M06",
+      "description": "Count every pass-through entry twice",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 2n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+      "witnessesBySeed": {
+        "1": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 2n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "2": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 2n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "3": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 2n\n-       numerator: 1n\n      }\n    ]\n  ]\n"
+      }
+    },
+    {
+      "id": "M07",
+      "description": "Do not count an entered pass-through dead end",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+      "witnessesBySeed": {
+        "1": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "2": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "3": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n"
+      }
+    },
+    {
+      "id": "M08",
+      "description": "Count the initial pass-through node as an entry",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "pass-sink/uniform/0: passes from P\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ]\n  ]\n",
+      "witnessesBySeed": {
+        "1": "pass-sink/uniform/0: passes from P\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ]\n  ]\n",
+        "2": "pass-sink/uniform/0: passes from P\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ]\n  ]\n",
+        "3": "pass-sink/uniform/0: passes from P\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ]\n  ]\n"
+      }
+    },
+    {
+      "id": "M09",
+      "description": "Divide branch probabilities by one too many choices",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "pass-sink/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n+       denominator: 2n,\n-       denominator: 1n,\n        numerator: 1n\n      }\n    ],\n    [\n      'S',\n",
+      "witnessesBySeed": {
+        "1": "pass-sink/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n+       denominator: 2n,\n-       denominator: 1n,\n        numerator: 1n\n      }\n    ],\n    [\n      'S',\n",
+        "2": "pass-sink/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n+       denominator: 2n,\n-       denominator: 1n,\n        numerator: 1n\n      }\n    ],\n    [\n      'S',\n",
+        "3": "pass-sink/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n+       denominator: 2n,\n-       denominator: 1n,\n        numerator: 1n\n      }\n    ],\n    [\n      'S',\n"
+      }
+    },
+    {
+      "id": "M10",
+      "description": "Uniform policy always selects the first branch",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "diamond/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+      "witnessesBySeed": {
+        "1": "diamond/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+        "2": "diamond/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+        "3": "diamond/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n"
+      }
+    },
+    {
+      "id": "M11",
+      "description": "Break target-distance ties by taking only the first branch",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "diamond/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+      "witnessesBySeed": {
+        "1": "diamond/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+        "2": "diamond/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+        "3": "diamond/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n"
+      }
+    },
+    {
+      "id": "M12",
+      "description": "Select the farthest rather than the nearest target route",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "uneven/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'C',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+      "witnessesBySeed": {
+        "1": "uneven/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'C',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+        "2": "uneven/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'C',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+        "3": "uneven/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'C',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n"
+      }
+    },
+    {
+      "id": "M13",
+      "description": "Use forward edges in the reverse target-distance search",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "uneven/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 3n,\n+       numerator: 1n\n-       denominator: 1n,\n-       numerator: 0n\n      }\n    ],\n    [\n      'C',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'S',\n",
+      "witnessesBySeed": {
+        "1": "uneven/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 3n,\n+       numerator: 1n\n-       denominator: 1n,\n-       numerator: 0n\n      }\n    ],\n    [\n      'C',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'S',\n",
+        "2": "uneven/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 3n,\n+       numerator: 1n\n-       denominator: 1n,\n-       numerator: 0n\n      }\n    ],\n    [\n      'C',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'S',\n",
+        "3": "uneven/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 3n,\n+       numerator: 1n\n-       denominator: 1n,\n-       numerator: 0n\n      }\n    ],\n    [\n      'C',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'S',\n"
+      }
+    },
+    {
+      "id": "M14",
+      "description": "Choose the first route when the target is unreachable",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "unreachable/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+      "witnessesBySeed": {
+        "1": "unreachable/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+        "2": "unreachable/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+        "3": "unreachable/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n"
+      }
+    },
+    {
+      "id": "M15",
+      "description": "Treat duplicate next IDs as extra probability tickets",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "duplicate/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 3n,\n+       numerator: 2n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+      "witnessesBySeed": {
+        "1": "duplicate/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 3n,\n+       numerator: 2n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+        "2": "duplicate/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 3n,\n+       numerator: 2n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+        "3": "duplicate/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 3n,\n+       numerator: 2n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n"
+      }
+    },
+    {
+      "id": "M16",
+      "description": "Drop self-loop edges",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "pass-loop-exit/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 2n\n      }\n    ]\n  ]\n",
+      "witnessesBySeed": {
+        "1": "pass-loop-exit/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 2n\n      }\n    ]\n  ]\n",
+        "2": "pass-loop-exit/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 2n\n      }\n    ]\n  ]\n",
+        "3": "pass-loop-exit/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 2n\n      }\n    ]\n  ]\n"
+      }
+    },
+    {
+      "id": "M17",
+      "description": "Lose probability mass at dead ends",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "sink/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+      "witnessesBySeed": {
+        "1": "sink/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "2": "sink/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "3": "sink/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n"
+      }
+    },
+    {
+      "id": "M18",
+      "description": "Zero-step movement loses its identity distribution",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+      "witnessesBySeed": {
+        "1": "sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "2": "sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "3": "sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n"
+      }
+    },
+    {
+      "id": "M19",
+      "description": "Move one extra step on every die face",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "pass-sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+      "witnessesBySeed": {
+        "1": "pass-sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "2": "pass-sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "3": "pass-sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n"
+      }
+    },
+    {
+      "id": "M20",
+      "description": "Ignore die weights when accumulating landing mass",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "sink/mixture: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 3n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+      "witnessesBySeed": {
+        "1": "sink/mixture: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 3n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "2": "sink/mixture: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 3n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "3": "sink/mixture: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 3n\n-       numerator: 1n\n      }\n    ]\n  ]\n"
+      }
+    },
+    {
+      "id": "M21",
+      "description": "Discard the nontermination probability",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "closed-pass-loop/uniform/1: nontermination from S\n+ actual - expected\n\n  {\n    denominator: 1n,\n+   numerator: 0n\n-   numerator: 1n\n  }\n",
+      "witnessesBySeed": {
+        "1": "closed-pass-loop/uniform/1: nontermination from S\n+ actual - expected\n\n  {\n    denominator: 1n,\n+   numerator: 0n\n-   numerator: 1n\n  }\n",
+        "2": "closed-pass-loop/uniform/1: nontermination from S\n+ actual - expected\n\n  {\n    denominator: 1n,\n+   numerator: 0n\n-   numerator: 1n\n  }\n",
+        "3": "closed-pass-loop/uniform/1: nontermination from S\n+ actual - expected\n\n  {\n    denominator: 1n,\n+   numerator: 0n\n-   numerator: 1n\n  }\n"
+      }
+    },
+    {
+      "id": "M22",
+      "description": "Report recurrent expected pass counts as finite zero",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "closed-pass-loop/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n+     {\n+       denominator: 1n,\n+       numerator: 0n\n+     }\n-     'infinity'\n    ]\n  ]\n",
+      "witnessesBySeed": {
+        "1": "closed-pass-loop/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n+     {\n+       denominator: 1n,\n+       numerator: 0n\n+     }\n-     'infinity'\n    ]\n  ]\n",
+        "2": "closed-pass-loop/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n+     {\n+       denominator: 1n,\n+       numerator: 0n\n+     }\n-     'infinity'\n    ]\n  ]\n",
+        "3": "closed-pass-loop/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n+     {\n+       denominator: 1n,\n+       numerator: 0n\n+     }\n-     'infinity'\n    ]\n  ]\n"
+      }
+    },
+    {
+      "id": "M23",
+      "description": "Misclassify mixed ordinary/pass-through cycles as zero-cost traps",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "pass-ring-exit/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ],\n    [\n      'P',\n      {\n",
+      "witnessesBySeed": {
+        "1": "pass-ring-exit/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ],\n    [\n      'P',\n      {\n",
+        "2": "pass-ring-exit/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ],\n    [\n      'P',\n      {\n",
+        "3": "pass-ring-exit/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ],\n    [\n      'P',\n      {\n"
+      }
+    },
+    {
+      "id": "M24",
+      "description": "Omit geometric resummation of pass-through self-loops",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "pass-loop-exit/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 2n,\n-       denominator: 1n,\n        numerator: 1n\n      }\n    ],\n    [\n      'P',\n",
+      "witnessesBySeed": {
+        "1": "pass-loop-exit/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 2n,\n-       denominator: 1n,\n        numerator: 1n\n      }\n    ],\n    [\n      'P',\n",
+        "2": "pass-loop-exit/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 2n,\n-       denominator: 1n,\n        numerator: 1n\n      }\n    ],\n    [\n      'P',\n",
+        "3": "pass-loop-exit/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 2n,\n-       denominator: 1n,\n        numerator: 1n\n      }\n    ],\n    [\n      'P',\n"
+      }
+    },
+    {
+      "id": "M25",
+      "description": "Forget rewards earned in the first part of composed movement",
+      "strictTypecheckPassedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "killedSeeds": [
+        1,
+        2,
+        3
+      ],
+      "witness": "pass-sink/table/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+      "witnessesBySeed": {
+        "1": "pass-sink/table/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "2": "pass-sink/table/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+        "3": "pass-sink/table/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n"
+      }
+    }
+  ],
+  "mutations": [
+    {
+      "seed": 1,
+      "sourceSHA256": "7b34290f843ec634989dea8fd2c08f48997ecbd02f0e0c3f14c95742dab04b0e",
+      "mutants": 25,
+      "killed": 25,
+      "passed": true,
+      "results": [
+        {
+          "id": "M01",
+          "description": "Subtract instead of adding rational numerators",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "Die probabilities must sum to exactly one",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M02",
+          "description": "Add instead of multiplying rational numerators",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 2n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M03",
+          "description": "Stop reducing fractions to lowest terms",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/mixture: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n+       denominator: 6n,\n+       numerator: 6n\n-       denominator: 1n,\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M04",
+          "description": "Charge a step for pass-through destinations",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M05",
+          "description": "Make ordinary destinations cost zero steps",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "line/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'P',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M06",
+          "description": "Count every pass-through entry twice",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 2n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M07",
+          "description": "Do not count an entered pass-through dead end",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M08",
+          "description": "Count the initial pass-through node as an entry",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/0: passes from P\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M09",
+          "description": "Divide branch probabilities by one too many choices",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n+       denominator: 2n,\n-       denominator: 1n,\n        numerator: 1n\n      }\n    ],\n    [\n      'S',\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M10",
+          "description": "Uniform policy always selects the first branch",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "diamond/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M11",
+          "description": "Break target-distance ties by taking only the first branch",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "diamond/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M12",
+          "description": "Select the farthest rather than the nearest target route",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "uneven/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'C',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M13",
+          "description": "Use forward edges in the reverse target-distance search",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "uneven/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 3n,\n+       numerator: 1n\n-       denominator: 1n,\n-       numerator: 0n\n      }\n    ],\n    [\n      'C',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'S',\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M14",
+          "description": "Choose the first route when the target is unreachable",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "unreachable/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M15",
+          "description": "Treat duplicate next IDs as extra probability tickets",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "duplicate/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 3n,\n+       numerator: 2n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M16",
+          "description": "Drop self-loop edges",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-loop-exit/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 2n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M17",
+          "description": "Lose probability mass at dead ends",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M18",
+          "description": "Zero-step movement loses its identity distribution",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M19",
+          "description": "Move one extra step on every die face",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M20",
+          "description": "Ignore die weights when accumulating landing mass",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/mixture: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 3n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M21",
+          "description": "Discard the nontermination probability",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "closed-pass-loop/uniform/1: nontermination from S\n+ actual - expected\n\n  {\n    denominator: 1n,\n+   numerator: 0n\n-   numerator: 1n\n  }\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M22",
+          "description": "Report recurrent expected pass counts as finite zero",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "closed-pass-loop/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n+     {\n+       denominator: 1n,\n+       numerator: 0n\n+     }\n-     'infinity'\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M23",
+          "description": "Misclassify mixed ordinary/pass-through cycles as zero-cost traps",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-ring-exit/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ],\n    [\n      'P',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M24",
+          "description": "Omit geometric resummation of pass-through self-loops",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-loop-exit/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 2n,\n-       denominator: 1n,\n        numerator: 1n\n      }\n    ],\n    [\n      'P',\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        },
+        {
+          "id": "M25",
+          "description": "Forget rewards earned in the first part of composed movement",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/table/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 1"
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "sourceSHA256": "7b34290f843ec634989dea8fd2c08f48997ecbd02f0e0c3f14c95742dab04b0e",
+      "mutants": 25,
+      "killed": 25,
+      "passed": true,
+      "results": [
+        {
+          "id": "M01",
+          "description": "Subtract instead of adding rational numerators",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "Die probabilities must sum to exactly one",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M02",
+          "description": "Add instead of multiplying rational numerators",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 2n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M03",
+          "description": "Stop reducing fractions to lowest terms",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/mixture: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n+       denominator: 6n,\n+       numerator: 6n\n-       denominator: 1n,\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M04",
+          "description": "Charge a step for pass-through destinations",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M05",
+          "description": "Make ordinary destinations cost zero steps",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "line/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'P',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M06",
+          "description": "Count every pass-through entry twice",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 2n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M07",
+          "description": "Do not count an entered pass-through dead end",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M08",
+          "description": "Count the initial pass-through node as an entry",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/0: passes from P\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M09",
+          "description": "Divide branch probabilities by one too many choices",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n+       denominator: 2n,\n-       denominator: 1n,\n        numerator: 1n\n      }\n    ],\n    [\n      'S',\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M10",
+          "description": "Uniform policy always selects the first branch",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "diamond/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M11",
+          "description": "Break target-distance ties by taking only the first branch",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "diamond/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M12",
+          "description": "Select the farthest rather than the nearest target route",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "uneven/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'C',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M13",
+          "description": "Use forward edges in the reverse target-distance search",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "uneven/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 3n,\n+       numerator: 1n\n-       denominator: 1n,\n-       numerator: 0n\n      }\n    ],\n    [\n      'C',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'S',\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M14",
+          "description": "Choose the first route when the target is unreachable",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "unreachable/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M15",
+          "description": "Treat duplicate next IDs as extra probability tickets",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "duplicate/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 3n,\n+       numerator: 2n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M16",
+          "description": "Drop self-loop edges",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-loop-exit/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 2n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M17",
+          "description": "Lose probability mass at dead ends",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M18",
+          "description": "Zero-step movement loses its identity distribution",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M19",
+          "description": "Move one extra step on every die face",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M20",
+          "description": "Ignore die weights when accumulating landing mass",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/mixture: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 3n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M21",
+          "description": "Discard the nontermination probability",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "closed-pass-loop/uniform/1: nontermination from S\n+ actual - expected\n\n  {\n    denominator: 1n,\n+   numerator: 0n\n-   numerator: 1n\n  }\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M22",
+          "description": "Report recurrent expected pass counts as finite zero",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "closed-pass-loop/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n+     {\n+       denominator: 1n,\n+       numerator: 0n\n+     }\n-     'infinity'\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M23",
+          "description": "Misclassify mixed ordinary/pass-through cycles as zero-cost traps",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-ring-exit/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ],\n    [\n      'P',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M24",
+          "description": "Omit geometric resummation of pass-through self-loops",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-loop-exit/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 2n,\n-       denominator: 1n,\n        numerator: 1n\n      }\n    ],\n    [\n      'P',\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        },
+        {
+          "id": "M25",
+          "description": "Forget rewards earned in the first part of composed movement",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/table/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 2"
+        }
+      ]
+    },
+    {
+      "seed": 3,
+      "sourceSHA256": "7b34290f843ec634989dea8fd2c08f48997ecbd02f0e0c3f14c95742dab04b0e",
+      "mutants": 25,
+      "killed": 25,
+      "passed": true,
+      "results": [
+        {
+          "id": "M01",
+          "description": "Subtract instead of adding rational numerators",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "Die probabilities must sum to exactly one",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M02",
+          "description": "Add instead of multiplying rational numerators",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 2n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M03",
+          "description": "Stop reducing fractions to lowest terms",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/mixture: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n+       denominator: 6n,\n+       numerator: 6n\n-       denominator: 1n,\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M04",
+          "description": "Charge a step for pass-through destinations",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M05",
+          "description": "Make ordinary destinations cost zero steps",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "line/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'P',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M06",
+          "description": "Count every pass-through entry twice",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 2n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M07",
+          "description": "Do not count an entered pass-through dead end",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M08",
+          "description": "Count the initial pass-through node as an entry",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/0: passes from P\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M09",
+          "description": "Divide branch probabilities by one too many choices",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n+       denominator: 2n,\n-       denominator: 1n,\n        numerator: 1n\n      }\n    ],\n    [\n      'S',\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M10",
+          "description": "Uniform policy always selects the first branch",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "diamond/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M11",
+          "description": "Break target-distance ties by taking only the first branch",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "diamond/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M12",
+          "description": "Select the farthest rather than the nearest target route",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "uneven/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'C',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M13",
+          "description": "Use forward edges in the reverse target-distance search",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "uneven/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 3n,\n+       numerator: 1n\n-       denominator: 1n,\n-       numerator: 0n\n      }\n    ],\n    [\n      'C',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'S',\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M14",
+          "description": "Choose the first route when the target is unreachable",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "unreachable/toward target/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 1n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 1n,\n+       numerator: 0n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M15",
+          "description": "Treat duplicate next IDs as extra probability tickets",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "duplicate/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 3n,\n-       denominator: 2n,\n        numerator: 1n\n      }\n    ],\n    [\n      'B',\n      {\n+       denominator: 3n,\n+       numerator: 2n\n-       denominator: 2n,\n-       numerator: 1n\n      }\n    ],\n    [\n      'S',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M16",
+          "description": "Drop self-loop edges",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-loop-exit/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 2n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M17",
+          "description": "Lose probability mass at dead ends",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M18",
+          "description": "Zero-step movement loses its identity distribution",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M19",
+          "description": "Move one extra step on every die face",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/uniform/0: landings from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 1n\n-       numerator: 0n\n      }\n    ],\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M20",
+          "description": "Ignore die weights when accumulating landing mass",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "sink/mixture: landings from S\n+ actual - expected\n\n  [\n    [\n      'S',\n      {\n        denominator: 1n,\n+       numerator: 3n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M21",
+          "description": "Discard the nontermination probability",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "closed-pass-loop/uniform/1: nontermination from S\n+ actual - expected\n\n  {\n    denominator: 1n,\n+   numerator: 0n\n-   numerator: 1n\n  }\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M22",
+          "description": "Report recurrent expected pass counts as finite zero",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "closed-pass-loop/uniform/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n+     {\n+       denominator: 1n,\n+       numerator: 0n\n+     }\n-     'infinity'\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M23",
+          "description": "Misclassify mixed ordinary/pass-through cycles as zero-cost traps",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-ring-exit/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ],\n    [\n      'P',\n      {\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M24",
+          "description": "Omit geometric resummation of pass-through self-loops",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-loop-exit/uniform/1: landings from S\n+ actual - expected\n\n  [\n    [\n      'A',\n      {\n+       denominator: 2n,\n-       denominator: 1n,\n        numerator: 1n\n      }\n    ],\n    [\n      'P',\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        },
+        {
+          "id": "M25",
+          "description": "Forget rewards earned in the first part of composed movement",
+          "strictTypecheckPassed": true,
+          "killed": true,
+          "witness": "pass-sink/table/1: passes from S\n+ actual - expected\n\n  [\n    [\n      'P',\n      {\n        denominator: 1n,\n+       numerator: 0n\n-       numerator: 1n\n      }\n    ]\n  ]\n",
+          "suite": "golden regression + independent oracle + exact arithmetic + validation",
+          "command": "node mutate.mjs --seed 3"
+        }
+      ]
+    }
+  ]
+}

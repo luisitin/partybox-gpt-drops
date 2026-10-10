@@ -1,0 +1,97 @@
+{
+  "command": "npm test",
+  "node": "v24.19.0",
+  "typescript": "5.8.3",
+  "sourceSHA256": {
+    "boardOdds.ts": "3842e637f4901d4fc9b4671b5b1820aed06fbc9ee3033c3168e6809579c45e8d",
+    "blind-reference.ts": "fb3358b51f3c8d6f00ca649da54d283129613cd0229ac33e626519f7daf22e5f",
+    "reference.ts": "9ffd76f76f1ed71aabad84d4b12b175ff53f333325a14b360fe7ce3583cb5bb6",
+    "blind-authoring/AUTHORING.md": "ecddae05fe55970c7752a840800b1f205da8f50f411c94530feaa4e9053ebac9",
+    "blind-authoring/SHA256SUMS.txt": "b8e38939d0901c5456bc831b24c657f9c4b3e3941fd230e929acccdf7b9c9e81",
+    "support.mjs": "a4498902b10d4bba7f9ae4dbf5bfd8c0ff57ec6b0c990501b8415a82534de69c",
+    "test.mjs": "740b5f50f6d8f71fa4147736bf07f03af047ae11735ea815fbfcfdff1ee65d23",
+    "mutate.mjs": "7f11d30e0ec36d21b8c318af17196444f842c16954fdcea862edecba9e148bd3",
+    "run.mjs": "e31ecdc5b90092c58547bd50e469e53135df43741de1fcaacfe064cc6b92e0c5",
+    "tsconfig.json": "115e20af038168779851e226ba58deac110b3717c9a6f0748edceab8479b3090"
+  },
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "commands": [
+    {
+      "seed": 1,
+      "command": "node hashes.mjs",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 1,
+      "command": "node node_modules/typescript/bin/tsc -p tsconfig.json",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 1,
+      "command": "node test.mjs --seed 1",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 1,
+      "command": "node mutate.mjs --seed 1",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "command": "node hashes.mjs",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "command": "node node_modules/typescript/bin/tsc -p tsconfig.json",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "command": "node test.mjs --seed 2",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "command": "node mutate.mjs --seed 2",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "command": "node hashes.mjs",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "command": "node node_modules/typescript/bin/tsc -p tsconfig.json",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "command": "node test.mjs --seed 3",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "command": "node mutate.mjs --seed 3",
+      "exitCode": 0,
+      "passed": true
+    }
+  ],
+  "passed": true
+}
