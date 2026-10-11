@@ -1,0 +1,26 @@
+{
+  "basis": "original_phone_tv_proposal",
+  "confidence": "high",
+  "authority": "One TV/server owns state, deadlines, random seed and scores. Phones send input only.",
+  "time": "Server monotonic milliseconds; client timestamps are telemetry. Windows close on server receipt, never client clock.",
+  "inputEnvelope": {
+    "required": [
+      "sessionId",
+      "modeId",
+      "playerId",
+      "phaseId",
+      "sequence",
+      "event",
+      "payload"
+    ],
+    "sequence": "strictly increasing per authenticated player/session; drop duplicate, old-phase and unknown-event inputs",
+    "payloadLimits": "choice: listed option ID; move: x/y in [-1,1]; aim: x/y in [0,1]; tap/fire: no extra fields; byte limit 1024",
+    "rateLimit": "20 accepted movement/aim inputs per second and 8 taps/shots per second; excess dropped"
+  },
+  "disconnectPolicy": "After 10 seconds without heartbeat, freeze movement and fill idle input with neutral actions. A disconnected player may reconnect for 30 seconds using the same identity; otherwise continue with deterministic bot or end a solo run as cancelled.",
+  "globalExit": "Host Leave cancels to results from every nonterminal phase. Session cap 3600 seconds also cancels to results. Never keep a phone trapped in an unbounded phase.",
+  "randomness": "Proposal: server-seeded generator, seed recorded with session. Content order, tie resolution and bot actions are replayable. Nintendo RNG distribution is not inferred.",
+  "scoreTies": "Proposal: equal totals share winner status; competitive race finish events compare server tick, then share winners if the same tick.",
+  "phoneTvRoles": "TV shows shared arena, timer, score and prompts; phones show only their controls, targets and choices. Touch buttons work without camera, microphone or motion permissions.",
+  "derivedEvents": "Server derives all_ready from ready inputs; host choice Finish becomes host_finish or finish; host choice Retry becomes retry; leave becomes cancel. Objective/deadline/disconnect/terminal events are server-generated. Child results are immutable and surfaced by the parent selector."
+}
