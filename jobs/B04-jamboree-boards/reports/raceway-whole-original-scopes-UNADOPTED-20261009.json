@@ -1,0 +1,171 @@
+{
+  "exactWholeFact": {
+    "id": "roll-em-raceway:stars:purchase",
+    "kind": "stars",
+    "status": "single_source",
+    "confidence": "medium",
+    "value": {
+      "movement": "alternate between two marked northern lane spots",
+      "normalCostCoins": 20,
+      "selectionProbabilities": null
+    },
+    "evidence": [
+      {
+        "sourceId": "MPL_BOARDS",
+        "quote": "features two rotating star spots",
+        "locator": "Roll ’em Raceway section",
+        "quoteId": "MPL_BOARDS-Q008"
+      },
+      {
+        "sourceId": "MPL_BOARDS",
+        "quote": "purchase it for 20 coins",
+        "locator": "shared objective intro",
+        "quoteId": "MPL_BOARDS-Q002"
+      }
+    ],
+    "note": "MPL reports core movement and standard cost. Complete locations, Pro cycle, discounts and post-Homestretch additions are separate qualifiers; no RNG weights inferred."
+  },
+  "naturalClosure": {
+    "startedAt": "2026-10-09T13:04:08.986267+00:00",
+    "closedAt": "2026-10-09T13:04:12.735739+00:00",
+    "elapsedSeconds": 3.7494671389868017,
+    "declaredWholeBoundSeconds": 60,
+    "nativePid": 382943,
+    "externalChildren": [],
+    "terminationSignals": [],
+    "completedRequests": 4,
+    "allRequestedFullHttp200": true,
+    "failure": null,
+    "fullRawPublic": false
+  },
+  "decodedMapMetadata": [
+    {
+      "pass": "A",
+      "rawBytes": 531198,
+      "rawSha": "2a5271fc0674ee5761aec2d08b32a193a4566ef36cffed2d331373b80135688e",
+      "format": "JPEG",
+      "mode": "RGB",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decodedRGBSHA256": "ced7c67a3a52a75bdb7baf8d93a9d3129616f42a9e82608c4ed11f6047784ec0"
+    },
+    {
+      "pass": "B",
+      "rawBytes": 156942,
+      "rawSha": "608e06d6eb94faa44b4761db8ca17200387d25d03340bd800260de83ab7f4fb9",
+      "format": "JPEG",
+      "mode": "RGB",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decodedRGBSHA256": "c167e834dec309ac6bfa2cdbb72d9c700b48651ef79b5cf3c465049c8734d289"
+    }
+  ],
+  "newExpressiveWords": 0,
+  "recordedAt": "2026-10-09T13:19:54.571337+00:00",
+  "sourceParent": "bfd836e466ec81865b9dffe5d203edd03485818d",
+  "status": "UNADOPTED whole northern-route clause pending",
+  "currentCounts": "100 corroborated /398 single_source /19 conflicts /1 unknown /518; NOT_MET; Draft",
+  "fullOriginalCaptures": [
+    {
+      "sourceId": "W_RACEWAY_CURRENT",
+      "pass": "A",
+      "requestedUrl": "https://www.mariowiki.com/Roll_%27em_Raceway",
+      "startedAt": "2026-10-09T13:04:08.986289+00:00",
+      "finishedAt": "2026-10-09T13:04:10.186621+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mariowiki.com/Roll_%27em_Raceway",
+      "rawBytes": 115420,
+      "rawSha256": "faf0269affa65441e71468ea5d2f267ccfbea6d030564dff035d78a8171723a8"
+    },
+    {
+      "sourceId": "W_RACEWAY_CURRENT",
+      "pass": "B",
+      "requestedUrl": "https://www.mariowiki.com/Roll_%27em_Raceway",
+      "startedAt": "2026-10-09T13:04:10.187148+00:00",
+      "finishedAt": "2026-10-09T13:04:10.790874+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mariowiki.com/Roll_%27em_Raceway",
+      "rawBytes": 115420,
+      "rawSha256": "faf0269affa65441e71468ea5d2f267ccfbea6d030564dff035d78a8171723a8"
+    },
+    {
+      "sourceId": "DS_BOARDS_CURRENT",
+      "pass": "A",
+      "requestedUrl": "https://www.dualshockers.com/every-super-mario-party-jamboree-game-board-ranked/",
+      "startedAt": "2026-10-09T13:04:10.792115+00:00",
+      "finishedAt": "2026-10-09T13:04:11.697688+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.dualshockers.com/every-super-mario-party-jamboree-game-board-ranked/",
+      "rawBytes": 494213,
+      "rawSha256": "eea71145faba99a2e92d05835dc8c6dd06b27bbbd4ed9047a3c1b03f5e973b89"
+    },
+    {
+      "sourceId": "DS_BOARDS_CURRENT",
+      "pass": "B",
+      "requestedUrl": "https://www.dualshockers.com/every-super-mario-party-jamboree-game-board-ranked/",
+      "startedAt": "2026-10-09T13:04:11.698099+00:00",
+      "finishedAt": "2026-10-09T13:04:12.735021+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.dualshockers.com/every-super-mario-party-jamboree-game-board-ranked/",
+      "rawBytes": 494818,
+      "rawSha256": "3dd63e7cd24f229d915de5470625fd6013d347ec4ed985c8370f29ae73e93c9f"
+    }
+  ],
+  "newMapCaptures": [
+    {
+      "sourceId": "CASTLE_IMAGE_RACEWAY_MAP",
+      "pass": "A",
+      "requestedUrl": "https://mario.wiki.gallery/images/3/31/SMPJ_Roll_%27em_Raceway_Map_1.jpg",
+      "startedAt": "2026-10-09T13:07:18.266278+00:00",
+      "finishedAt": "2026-10-09T13:07:19.203537+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://mario.wiki.gallery/images/3/31/SMPJ_Roll_%27em_Raceway_Map_1.jpg",
+      "rawBytes": 531198,
+      "rawSha256": "2a5271fc0674ee5761aec2d08b32a193a4566ef36cffed2d331373b80135688e"
+    },
+    {
+      "sourceId": "CASTLE_IMAGE_RACEWAY_MAP",
+      "pass": "B",
+      "requestedUrl": "https://mario.wiki.gallery/images/3/31/SMPJ_Roll_%27em_Raceway_Map_1.jpg",
+      "startedAt": "2026-10-09T13:07:19.204330+00:00",
+      "finishedAt": "2026-10-09T13:07:19.898613+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://mario.wiki.gallery/images/3/31/SMPJ_Roll_%27em_Raceway_Map_1.jpg",
+      "rawBytes": 156942,
+      "rawSha256": "608e06d6eb94faa44b4761db8ca17200387d25d03340bd800260de83ab7f4fb9"
+    }
+  ],
+  "wholeAuthoredScopes": [
+    {
+      "publisher": "Super Mario Wiki community",
+      "selector": ".mw-parser-output",
+      "chars": 13668,
+      "sha256": "091501589e88bbafa650519e64fc42122a58abb55c5a10ee40e88f861c530295",
+      "entirePairedAuthoredRead": true,
+      "pairedRawEqual": true
+    },
+    {
+      "publisher": "DualShockers / Valnet",
+      "individualAuthor": "Austin Conrad",
+      "nativePublishedModified": "2024-10-24T10:32:04Z",
+      "selector": ".article-body",
+      "chars": 7872,
+      "sha256": "15a3f1214c9c3c79ec25e00f3b5dc4cf75e58c6a7c4f26ee017b7f0cbfa0846c",
+      "entirePairedAuthoredRead": true,
+      "pairedRawEqual": false,
+      "all24MainOutgoingLinksRead": true
+    }
+  ],
+  "scopeAssessment": "Wiki and DualShockers explicitly support alternation. MPL whole5992 and Namu ordinary452 support normal20. DualShockers explicitly supplies northern regional wording; MPL does not literally state north. Exact current Wiki marker scope still under peer review, so whole purchase fact stays single_source. First-Star top-lane qualifier separately remains single_source; probabilities remain null. DualShockers is Valnet, not Digital Spy; related-card authors are not this byline. No main-body Wiki copying citation found, no universal unseen-history guarantee.",
+  "visualAssessment": "Both actual1280x720 original maps were opened. Both show two upper split routes, but no newly proven exact Star-marker identity or full numbered graph. Raw bytes AND decoded pixels differ; reason not asserted. Original collector literal map label contains CASTLE but actual URL/content is solely Raceway.",
+  "all518ValuesFacts593Fingerprints19DisputesRegistryCapturesGatesUnchanged": true,
+  "newQuotesOrRegistryRows": 0,
+  "NamuAuthoredQuota": "250/250 fully spent",
+  "CelCommittedWords": 131,
+  "fullCopyrightedProseAndImagesPublic": false,
+  "firstPrivateHelperFailure": "Metadata was nested lists; first introspection raised AttributeError, no public writes. Actual checkpoint write then failed ENOSPC; incomplete zero-byte private script removed/replaced after deleting only own regenerable old payload chunks."
+}

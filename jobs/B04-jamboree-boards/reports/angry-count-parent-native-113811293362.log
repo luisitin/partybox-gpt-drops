@@ -1,0 +1,271 @@
+﻿2026-10-09T12:07:00.1807565Z Current runner version: '2.337.0'
+2026-10-09T12:07:00.1826872Z ##[group]Runner Image Provisioner
+2026-10-09T12:07:00.1827431Z Hosted Compute Agent
+2026-10-09T12:07:00.1827846Z Version: 20261002.596
+2026-10-09T12:07:00.1828244Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-09T12:07:00.1828700Z Build Date: 2026-10-02T22:28:27Z
+2026-10-09T12:07:00.1829121Z Worker ID: {c26ffe94-7fa6-4a23-8963-e1ae5cead48e}
+2026-10-09T12:07:00.1829567Z Region: centralus
+2026-10-09T12:07:00.1830097Z Cloud: Azure
+2026-10-09T12:07:00.1830416Z ##[endgroup]
+2026-10-09T12:07:00.1831180Z ##[group]Operating System
+2026-10-09T12:07:00.1831595Z Ubuntu
+2026-10-09T12:07:00.1831939Z 24.04.5
+2026-10-09T12:07:00.1832269Z LTS
+2026-10-09T12:07:00.1832613Z ##[endgroup]
+2026-10-09T12:07:00.1832927Z ##[group]Runner Image
+2026-10-09T12:07:00.1833320Z Image: ubuntu-24.04
+2026-10-09T12:07:00.1833723Z Version: 20261004.327.1
+2026-10-09T12:07:00.1834515Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-09T12:07:00.1835379Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-09T12:07:00.1835983Z ##[endgroup]
+2026-10-09T12:07:00.1836649Z ##[group]GITHUB_TOKEN Permissions
+2026-10-09T12:07:00.1837895Z Contents: read
+2026-10-09T12:07:00.1838236Z Metadata: read
+2026-10-09T12:07:00.1838604Z ##[endgroup]
+2026-10-09T12:07:00.1840126Z Secret source: Actions
+2026-10-09T12:07:00.1840715Z Cache mode: write
+2026-10-09T12:07:00.1841141Z Prepare workflow directory
+2026-10-09T12:07:00.2088211Z Prepare all required actions
+2026-10-09T12:07:00.2132749Z Getting action download info
+2026-10-09T12:07:00.4550790Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-09T12:07:00.8396348Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-09T12:07:01.0368505Z Complete job name: verify
+2026-10-09T12:07:01.0829196Z ##[group]Run actions/checkout@v4
+2026-10-09T12:07:01.0829644Z with:
+2026-10-09T12:07:01.0830098Z   repository: luisitin/partybox-gpt-drops
+2026-10-09T12:07:01.0832113Z   token: ***
+2026-10-09T12:07:01.0832348Z   ssh-strict: true
+2026-10-09T12:07:01.0832592Z   ssh-user: git
+2026-10-09T12:07:01.0832839Z   persist-credentials: true
+2026-10-09T12:07:01.0833107Z   clean: true
+2026-10-09T12:07:01.0833357Z   sparse-checkout-cone-mode: true
+2026-10-09T12:07:01.0833639Z   fetch-depth: 1
+2026-10-09T12:07:01.0833878Z   fetch-tags: false
+2026-10-09T12:07:01.0834123Z   show-progress: true
+2026-10-09T12:07:01.0834369Z   lfs: false
+2026-10-09T12:07:01.0834599Z   submodules: false
+2026-10-09T12:07:01.0834844Z   set-safe-directory: true
+2026-10-09T12:07:01.0835122Z   allow-unsafe-pr-checkout: false
+2026-10-09T12:07:01.0835483Z ##[endgroup]
+2026-10-09T12:07:01.1474902Z Syncing repository: luisitin/partybox-gpt-drops
+2026-10-09T12:07:01.1476412Z ##[group]Getting Git version info
+2026-10-09T12:07:01.1477196Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-09T12:07:01.1478220Z [command]/usr/bin/git version
+2026-10-09T12:07:01.3052407Z git version 2.55.0
+2026-10-09T12:07:01.3065514Z ##[endgroup]
+2026-10-09T12:07:01.3075999Z Temporarily overriding HOME='/home/runner/work/_temp/d5c6646d-8b4d-4d72-95c3-923b64628e97' before making global git config changes
+2026-10-09T12:07:01.3077130Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-09T12:07:01.3079866Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-09T12:07:01.3415753Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-09T12:07:01.3418597Z ##[group]Initializing the repository
+2026-10-09T12:07:01.3422070Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-09T12:07:01.4113309Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-09T12:07:01.4114492Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-09T12:07:01.4115273Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-09T12:07:01.4115871Z hint: call:
+2026-10-09T12:07:01.4116223Z hint:
+2026-10-09T12:07:01.4116656Z hint: 	git config --global init.defaultBranch <name>
+2026-10-09T12:07:01.4117144Z hint:
+2026-10-09T12:07:01.4117528Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-09T12:07:01.4118016Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-09T12:07:01.4118403Z hint:
+2026-10-09T12:07:01.4118626Z hint: 	git branch -m <name>
+2026-10-09T12:07:01.4118875Z hint:
+2026-10-09T12:07:01.4119203Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-09T12:07:01.4119838Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+2026-10-09T12:07:01.4125816Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+2026-10-09T12:07:01.4498829Z ##[endgroup]
+2026-10-09T12:07:01.4499370Z ##[group]Disabling automatic garbage collection
+2026-10-09T12:07:01.4502099Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-09T12:07:01.4532972Z ##[endgroup]
+2026-10-09T12:07:01.4533405Z ##[group]Setting up auth
+2026-10-09T12:07:01.4537742Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-09T12:07:01.4565950Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-09T12:07:01.6802080Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-09T12:07:01.6830530Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-09T12:07:01.7014634Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-09T12:07:01.7045501Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-09T12:07:01.7232480Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-09T12:07:01.7265927Z ##[endgroup]
+2026-10-09T12:07:01.7267008Z ##[group]Fetching the repository
+2026-10-09T12:07:01.7272934Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +181a551875a91fb6a354811ab3579eb282bc137a:refs/remotes/pull/18/merge
+2026-10-09T12:07:02.4415814Z From https://github.com/luisitin/partybox-gpt-drops
+2026-10-09T12:07:02.4416344Z  * [new ref]         181a551875a91fb6a354811ab3579eb282bc137a -> pull/18/merge
+2026-10-09T12:07:02.4418136Z ##[endgroup]
+2026-10-09T12:07:02.4418518Z ##[group]Determining the checkout info
+2026-10-09T12:07:02.4423343Z ##[endgroup]
+2026-10-09T12:07:02.4424558Z [command]/usr/bin/git sparse-checkout disable
+2026-10-09T12:07:02.4621816Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-09T12:07:02.4652842Z ##[group]Checking out the ref
+2026-10-09T12:07:02.4655922Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/18/merge
+2026-10-09T12:07:02.4782278Z Note: switching to 'refs/remotes/pull/18/merge'.
+2026-10-09T12:07:02.4782743Z 
+2026-10-09T12:07:02.4782963Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-09T12:07:02.4783440Z changes and commit them, and you can discard any commits you make in this
+2026-10-09T12:07:02.4783906Z state without impacting any branches by switching back to a branch.
+2026-10-09T12:07:02.4784183Z 
+2026-10-09T12:07:02.4784370Z If you want to create a new branch to retain commits you create, you may
+2026-10-09T12:07:02.4784859Z do so (now or later) by using -c with the switch command. Example:
+2026-10-09T12:07:02.4785308Z 
+2026-10-09T12:07:02.4785444Z   git switch -c <new-branch-name>
+2026-10-09T12:07:02.4785610Z 
+2026-10-09T12:07:02.4785733Z Or undo this operation with:
+2026-10-09T12:07:02.4785934Z 
+2026-10-09T12:07:02.4786043Z   git switch -
+2026-10-09T12:07:02.4786167Z 
+2026-10-09T12:07:02.4786379Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-09T12:07:02.4786646Z 
+2026-10-09T12:07:02.4787005Z HEAD is now at 181a551 Merge 488ea74a9078e1530e1a58697411162eba3911f1 into b2cd5ce472f52508514c454d8578110a01f54df1
+2026-10-09T12:07:02.4830174Z ##[endgroup]
+2026-10-09T12:07:02.4832480Z [command]/usr/bin/git log -1 --format=%H
+2026-10-09T12:07:02.4857225Z 181a551875a91fb6a354811ab3579eb282bc137a
+2026-10-09T12:07:02.5062800Z ##[group]Run actions/setup-python@v5
+2026-10-09T12:07:02.5063030Z with:
+2026-10-09T12:07:02.5063177Z   python-version: 3.12
+2026-10-09T12:07:02.5063345Z   check-latest: false
+2026-10-09T12:07:02.5064801Z   token: ***
+2026-10-09T12:07:02.5064969Z   update-environment: true
+2026-10-09T12:07:02.5065137Z   allow-prereleases: false
+2026-10-09T12:07:02.5065300Z   freethreaded: false
+2026-10-09T12:07:02.5065456Z ##[endgroup]
+2026-10-09T12:07:02.5983287Z ##[group]Installed versions
+2026-10-09T12:07:02.6624776Z (node:2088) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-09T12:07:02.6625642Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-09T12:07:02.6626081Z Successfully set up CPython (3.12.15)
+2026-10-09T12:07:02.6626590Z ##[endgroup]
+2026-10-09T12:07:02.6797693Z ##[group]Run python -m pip install -r requirements.txt
+2026-10-09T12:07:02.6798121Z [36;1mpython -m pip install -r requirements.txt[0m
+2026-10-09T12:07:02.8161339Z shell: /usr/bin/bash -e {0}
+2026-10-09T12:07:02.8161637Z env:
+2026-10-09T12:07:02.8161860Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-09T12:07:02.8162181Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-09T12:07:02.8162478Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-09T12:07:02.8162726Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-09T12:07:02.8162971Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-09T12:07:02.8163221Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-09T12:07:02.8163435Z ##[endgroup]
+2026-10-09T12:07:05.9307665Z Collecting jsonschema==4.26.0 (from -r requirements.txt (line 1))
+2026-10-09T12:07:05.9880649Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-10-09T12:07:06.0559469Z Collecting attrs>=22.2.0 (from jsonschema==4.26.0->-r requirements.txt (line 1))
+2026-10-09T12:07:06.0658502Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-10-09T12:07:06.1026015Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema==4.26.0->-r requirements.txt (line 1))
+2026-10-09T12:07:06.1123169Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-10-09T12:07:06.1421367Z Collecting referencing>=0.28.4 (from jsonschema==4.26.0->-r requirements.txt (line 1))
+2026-10-09T12:07:06.1516034Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-10-09T12:07:06.3492598Z Collecting rpds-py>=0.25.0 (from jsonschema==4.26.0->-r requirements.txt (line 1))
+2026-10-09T12:07:06.3595817Z   Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-10-09T12:07:06.3847706Z Collecting typing-extensions>=4.4.0 (from referencing>=0.28.4->jsonschema==4.26.0->-r requirements.txt (line 1))
+2026-10-09T12:07:06.3956554Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-09T12:07:06.4081572Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-10-09T12:07:06.4306684Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-10-09T12:07:06.4432812Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-10-09T12:07:06.4542619Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-10-09T12:07:06.4651294Z Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+2026-10-09T12:07:06.4943726Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-09T12:07:06.6791200Z Installing collected packages: typing-extensions, rpds-py, attrs, referencing, jsonschema-specifications, jsonschema
+2026-10-09T12:07:06.8064496Z 
+2026-10-09T12:07:06.8073433Z Successfully installed attrs-26.1.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 referencing-0.37.0 rpds-py-2026.9.1 typing-extensions-4.16.0
+2026-10-09T12:07:06.8619029Z ##[group]Run python verify.py --structural --checksums
+2026-10-09T12:07:06.8619289Z [36;1mpython verify.py --structural --checksums[0m
+2026-10-09T12:07:06.8674526Z shell: /usr/bin/bash -e {0}
+2026-10-09T12:07:06.8674679Z env:
+2026-10-09T12:07:06.8674837Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-09T12:07:06.8675088Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-09T12:07:06.8675354Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-09T12:07:06.8675571Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-09T12:07:06.8675810Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-09T12:07:06.8676032Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-09T12:07:06.8676245Z ##[endgroup]
+2026-10-09T12:07:07.3530325Z PASS CLOSED_JSON_SCHEMAS: 62/62
+2026-10-09T12:07:07.3530641Z PASS UNIQUE_ID_COLLECTIONS: 32/32
+2026-10-09T12:07:07.3530970Z PASS SEVEN_BOARD_TWO_PUBLISHER_ROSTER: 7/7
+2026-10-09T12:07:07.3531235Z PASS EVERY_RECORDED_FACT_HAS_SOURCE: 518/518
+2026-10-09T12:07:07.3531491Z PASS FACT_QUOTATION_REFERENCES: 720/720
+2026-10-09T12:07:07.3531747Z PASS SHORT_QUOTE_BUDGETS_AND_LINEAGES: 30/30
+2026-10-09T12:07:07.3531993Z PASS EVERY_SOURCE_REOPENED_A_B: 56/56
+2026-10-09T12:07:07.3532232Z PASS QUOTATIONS_RECOVERED_BOTH_PASSES: 794/794
+2026-10-09T12:07:07.3532581Z PASS SOURCE_CAPTURE_REPORT_REFERENCES: 56/56
+2026-10-09T12:07:07.3532978Z PASS SPACE_PROFILE_SUMS_AND_CONFLICT_DISCLOSURE: 16/16
+2026-10-09T12:07:07.3541168Z PASS INDIVIDUAL_TYPE_COUNT_ROWS: 176/176
+2026-10-09T12:07:07.3541522Z PASS SHOP_INVENTORY_ITEM_ROWS: 215/215
+2026-10-09T12:07:07.3541819Z PASS FRESH_SOURCE_CELL_COMPARISONS_A_B: 782/782
+2026-10-09T12:07:07.3542171Z PASS EVENT_TRIGGER_EFFECT_SOURCE_OR_EXPLICIT_GAP: 38/38
+2026-10-09T12:07:07.3542513Z PASS SHARED_RULE_REFERENCES: 126/126
+2026-10-09T12:07:07.3542790Z PASS CITED_REGIONAL_MAP_LINKS: 11/11
+2026-10-09T12:07:07.3543041Z PASS MAP_IMAGE_REOPEN_AND_VISUAL_REVIEW_A_B: 20/20
+2026-10-09T12:07:07.3543296Z PASS ALL_RETAINED_ROWS_PASS_A: 593/593
+2026-10-09T12:07:07.3543516Z PASS ALL_RETAINED_ROWS_PASS_B: 593/593
+2026-10-09T12:07:07.3543752Z PASS REVIEWED_ROW_CONTENT_FINGERPRINTS: 593/593
+2026-10-09T12:07:07.3544003Z PASS BOARD_DOCUMENT_REQUIRED_SECTIONS: 7/7
+2026-10-09T12:07:07.3544241Z PASS BOARD_DOC_TABLES_MATCH_JSON: 51/51
+2026-10-09T12:07:07.3544477Z PASS ALL_FACTUAL_CONFLICTS_PRESERVED: 19/19
+2026-10-09T12:07:07.3544722Z PASS DELIBERATE_REJECTION_FIXTURES: 14/14
+2026-10-09T12:07:07.3544956Z PASS FILE_SIZE_LIMIT: 108/108
+2026-10-09T12:07:07.3545154Z PASS SHA256_MANIFEST: 107/107
+2026-10-09T12:07:07.3661026Z STRUCTURAL_RESULT=PASS; suites=26; cases=5744; seed=N/A (deterministic)
+2026-10-09T12:07:07.3695023Z ##[group]Run set +e
+2026-10-09T12:07:07.3695270Z [36;1mset +e[0m
+2026-10-09T12:07:07.3695465Z [36;1mpython verify.py --strict[0m
+2026-10-09T12:07:07.3695687Z [36;1mresult=$?[0m
+2026-10-09T12:07:07.3695862Z [36;1mset -e[0m
+2026-10-09T12:07:07.3696041Z [36;1mtest "$result" -eq 1[0m
+2026-10-09T12:07:07.3760660Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-09T12:07:07.3760870Z env:
+2026-10-09T12:07:07.3761038Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-09T12:07:07.3761288Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-09T12:07:07.3761527Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-09T12:07:07.3761916Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-09T12:07:07.3762132Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-09T12:07:07.3762348Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-09T12:07:07.3762589Z ##[endgroup]
+2026-10-09T12:07:07.8406918Z PASS CLOSED_JSON_SCHEMAS: 62/62
+2026-10-09T12:07:07.8407430Z PASS UNIQUE_ID_COLLECTIONS: 32/32
+2026-10-09T12:07:07.8407673Z PASS SEVEN_BOARD_TWO_PUBLISHER_ROSTER: 7/7
+2026-10-09T12:07:07.8407927Z PASS EVERY_RECORDED_FACT_HAS_SOURCE: 518/518
+2026-10-09T12:07:07.8408175Z PASS FACT_QUOTATION_REFERENCES: 720/720
+2026-10-09T12:07:07.8408431Z PASS SHORT_QUOTE_BUDGETS_AND_LINEAGES: 30/30
+2026-10-09T12:07:07.8408667Z PASS EVERY_SOURCE_REOPENED_A_B: 56/56
+2026-10-09T12:07:07.8408899Z PASS QUOTATIONS_RECOVERED_BOTH_PASSES: 794/794
+2026-10-09T12:07:07.8409159Z PASS SOURCE_CAPTURE_REPORT_REFERENCES: 56/56
+2026-10-09T12:07:07.8409430Z PASS SPACE_PROFILE_SUMS_AND_CONFLICT_DISCLOSURE: 16/16
+2026-10-09T12:07:07.8409734Z PASS INDIVIDUAL_TYPE_COUNT_ROWS: 176/176
+2026-10-09T12:07:07.8410230Z PASS SHOP_INVENTORY_ITEM_ROWS: 215/215
+2026-10-09T12:07:07.8410478Z PASS FRESH_SOURCE_CELL_COMPARISONS_A_B: 782/782
+2026-10-09T12:07:07.8410757Z PASS EVENT_TRIGGER_EFFECT_SOURCE_OR_EXPLICIT_GAP: 38/38
+2026-10-09T12:07:07.8411045Z PASS SHARED_RULE_REFERENCES: 126/126
+2026-10-09T12:07:07.8411268Z PASS CITED_REGIONAL_MAP_LINKS: 11/11
+2026-10-09T12:07:07.8411508Z PASS MAP_IMAGE_REOPEN_AND_VISUAL_REVIEW_A_B: 20/20
+2026-10-09T12:07:07.8411759Z PASS ALL_RETAINED_ROWS_PASS_A: 593/593
+2026-10-09T12:07:07.8411985Z PASS ALL_RETAINED_ROWS_PASS_B: 593/593
+2026-10-09T12:07:07.8412234Z PASS REVIEWED_ROW_CONTENT_FINGERPRINTS: 593/593
+2026-10-09T12:07:07.8412483Z PASS BOARD_DOCUMENT_REQUIRED_SECTIONS: 7/7
+2026-10-09T12:07:07.8412716Z PASS BOARD_DOC_TABLES_MATCH_JSON: 51/51
+2026-10-09T12:07:07.8412945Z PASS ALL_FACTUAL_CONFLICTS_PRESERVED: 19/19
+2026-10-09T12:07:07.8413178Z PASS DELIBERATE_REJECTION_FIXTURES: 14/14
+2026-10-09T12:07:07.8413419Z PASS FILE_SIZE_LIMIT: 108/108
+2026-10-09T12:07:07.8413699Z STRUCTURAL_RESULT=PASS; suites=25; cases=5637; seed=N/A (deterministic)
+2026-10-09T12:07:07.8413914Z FULL_FACTS_TWO_SOURCE=100/518; FAIL
+2026-10-09T12:07:07.8414061Z CURRENT_EVENT_TRIGGER_EFFECT=37/38; FAIL
+2026-10-09T12:07:07.8414294Z EXACT_NUMBERED_MAPS=0/7; descriptive UNVERIFIED provenance; cited regional maps supplied
+2026-10-09T12:07:07.8414530Z NINTENDO_GAMEPLAY_EXECUTED=NO
+2026-10-09T12:07:07.8414673Z STRICT_RESEARCH_RESULT=NOT_MET; exit=1
+2026-10-09T12:07:07.8627696Z Post job cleanup.
+2026-10-09T12:07:07.9384895Z (node:2128) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-09T12:07:07.9385295Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-09T12:07:07.9527652Z Post job cleanup.
+2026-10-09T12:07:08.0067459Z [command]/usr/bin/git version
+2026-10-09T12:07:08.0098951Z git version 2.55.0
+2026-10-09T12:07:08.0123007Z Temporarily overriding HOME='/home/runner/work/_temp/c9e9c31d-3975-4a58-b207-129fb3469092' before making global git config changes
+2026-10-09T12:07:08.0123695Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-09T12:07:08.0127404Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-09T12:07:08.0158418Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-09T12:07:08.0184997Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-09T12:07:08.0383204Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-09T12:07:08.0417047Z http.https://github.com/.extraheader
+2026-10-09T12:07:08.0425833Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-09T12:07:08.0460732Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-09T12:07:08.0664238Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-09T12:07:08.0693977Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-09T12:07:08.0982056Z Cleaning up orphan processes
+2026-10-09T12:07:08.1167324Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
