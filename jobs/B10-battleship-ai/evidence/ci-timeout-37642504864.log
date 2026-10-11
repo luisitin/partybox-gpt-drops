@@ -1,0 +1,289 @@
+verify	Set up job	﻿2026-10-07T15:18:19.2495917Z Current runner version: '2.337.0'
+verify	Set up job	2026-10-07T15:18:19.2521962Z ##[group]Runner Image Provisioner
+verify	Set up job	2026-10-07T15:18:19.2522943Z Hosted Compute Agent
+verify	Set up job	2026-10-07T15:18:19.2523984Z Version: 20261002.596
+verify	Set up job	2026-10-07T15:18:19.2524691Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+verify	Set up job	2026-10-07T15:18:19.2525532Z Build Date: 2026-10-02T22:28:27Z
+verify	Set up job	2026-10-07T15:18:19.2526239Z Worker ID: {18b49803-fdab-479d-92e8-c50496d1e9ca}
+verify	Set up job	2026-10-07T15:18:19.2527039Z Region: westus2
+verify	Set up job	2026-10-07T15:18:19.2527709Z Cloud: Azure
+verify	Set up job	2026-10-07T15:18:19.2528227Z ##[endgroup]
+verify	Set up job	2026-10-07T15:18:19.2529798Z ##[group]Operating System
+verify	Set up job	2026-10-07T15:18:19.2530460Z Ubuntu
+verify	Set up job	2026-10-07T15:18:19.2531058Z 24.04.5
+verify	Set up job	2026-10-07T15:18:19.2531623Z LTS
+verify	Set up job	2026-10-07T15:18:19.2532136Z ##[endgroup]
+verify	Set up job	2026-10-07T15:18:19.2532747Z ##[group]Runner Image
+verify	Set up job	2026-10-07T15:18:19.2533620Z Image: ubuntu-24.04
+verify	Set up job	2026-10-07T15:18:19.2534346Z Version: 20261004.327.1
+verify	Set up job	2026-10-07T15:18:19.2535522Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+verify	Set up job	2026-10-07T15:18:19.2537315Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+verify	Set up job	2026-10-07T15:18:19.2538299Z ##[endgroup]
+verify	Set up job	2026-10-07T15:18:19.2539522Z ##[group]GITHUB_TOKEN Permissions
+verify	Set up job	2026-10-07T15:18:19.2541414Z Contents: read
+verify	Set up job	2026-10-07T15:18:19.2542122Z Metadata: read
+verify	Set up job	2026-10-07T15:18:19.2542724Z ##[endgroup]
+verify	Set up job	2026-10-07T15:18:19.2545170Z Secret source: Actions
+verify	Set up job	2026-10-07T15:18:19.2546287Z Cache mode: write
+verify	Set up job	2026-10-07T15:18:19.2547042Z Prepare workflow directory
+verify	Set up job	2026-10-07T15:18:19.2961294Z Prepare all required actions
+verify	Set up job	2026-10-07T15:18:19.3008864Z Getting action download info
+verify	Set up job	2026-10-07T15:18:19.6681086Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verify	Set up job	2026-10-07T15:18:19.7620153Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+verify	Set up job	2026-10-07T15:18:20.0000415Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+verify	Set up job	2026-10-07T15:18:20.1993146Z Complete job name: verify
+verify	Run actions/checkout@v4	﻿2026-10-07T15:18:20.2766369Z ##[group]Run actions/checkout@v4
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2767295Z with:
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2767782Z   repository: luisitin/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2771572Z   token: ***
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2772014Z   ssh-strict: true
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2772463Z   ssh-user: git
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2772916Z   persist-credentials: true
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2773621Z   clean: true
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2774087Z   sparse-checkout-cone-mode: true
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2774616Z   fetch-depth: 1
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2775049Z   fetch-tags: false
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2775493Z   show-progress: true
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2775946Z   lfs: false
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2776374Z   submodules: false
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2776833Z   set-safe-directory: true
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2777353Z   allow-unsafe-pr-checkout: false
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.2778176Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.3806727Z Syncing repository: luisitin/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.3809382Z ##[group]Getting Git version info
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.3810708Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.3812647Z [command]/usr/bin/git version
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.3877688Z git version 2.55.0
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.3905906Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.3921221Z Temporarily overriding HOME='/home/runner/work/_temp/f5e4009c-171a-4157-bbfc-8441ab82c685' before making global git config changes
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.3936181Z Adding repository directory to the temporary git global config as a safe directory
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.3937794Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.3983120Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.3988030Z ##[group]Initializing the repository
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.3992636Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4098706Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4100708Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4102248Z hint: to use in all of your new repositories, which will suppress this warning,
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4103895Z hint: call:
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4104697Z hint:
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4105529Z hint: 	git config --global init.defaultBranch <name>
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4106543Z hint:
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4107572Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4109120Z hint: 'development'. The just-created branch can be renamed via this command:
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4110317Z hint:
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4110962Z hint: 	git branch -m <name>
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4111730Z hint:
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4112795Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4114906Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4117825Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4164732Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4165950Z ##[group]Disabling automatic garbage collection
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4169248Z [command]/usr/bin/git config --local gc.auto 0
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4202950Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4204285Z ##[group]Setting up auth
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4211759Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4248460Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4641177Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4693177Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4933139Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.4970020Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.5199095Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.5240462Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.5241876Z ##[group]Fetching the repository
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.5251930Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2d49ffc8a6327caef6bd85260ca4694577ca84df:refs/remotes/pull/6/merge
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.8817735Z From https://github.com/luisitin/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.8819272Z  * [new ref]         2d49ffc8a6327caef6bd85260ca4694577ca84df -> pull/6/merge
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.8823047Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.8824389Z ##[group]Determining the checkout info
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.8826546Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.8835106Z [command]/usr/bin/git sparse-checkout disable
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.8900160Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.8932294Z ##[group]Checking out the ref
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.8936150Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/6/merge
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9017463Z Note: switching to 'refs/remotes/pull/6/merge'.
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9018370Z 
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9018993Z You are in 'detached HEAD' state. You can look around, make experimental
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9020137Z changes and commit them, and you can discard any commits you make in this
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9021510Z state without impacting any branches by switching back to a branch.
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9022411Z 
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9023060Z If you want to create a new branch to retain commits you create, you may
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9024662Z do so (now or later) by using -c with the switch command. Example:
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9025204Z 
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9025376Z   git switch -c <new-branch-name>
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9025628Z 
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9025789Z Or undo this operation with:
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9026002Z 
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9026143Z   git switch -
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9026388Z 
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9026980Z Turn off this advice by setting config variable advice.detachedHead to false
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9027478Z 
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9028277Z HEAD is now at 2d49ffc Merge 1b8c93ff074c29f34019fb144eb702c85e683097 into d0a5d374146b623b9e27f28ad5846598a30302c9
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9029784Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9072248Z [command]/usr/bin/git log -1 --format=%H
+verify	Run actions/checkout@v4	2026-10-07T15:18:20.9098821Z 2d49ffc8a6327caef6bd85260ca4694577ca84df
+verify	Run actions/setup-node@v4	﻿2026-10-07T15:18:20.9446689Z ##[group]Run actions/setup-node@v4
+verify	Run actions/setup-node@v4	2026-10-07T15:18:20.9447133Z with:
+verify	Run actions/setup-node@v4	2026-10-07T15:18:20.9447433Z   node-version: 22
+verify	Run actions/setup-node@v4	2026-10-07T15:18:20.9447762Z   always-auth: false
+verify	Run actions/setup-node@v4	2026-10-07T15:18:20.9448069Z   check-latest: false
+verify	Run actions/setup-node@v4	2026-10-07T15:18:20.9450708Z   token: ***
+verify	Run actions/setup-node@v4	2026-10-07T15:18:20.9450999Z ##[endgroup]
+verify	Run actions/setup-node@v4	2026-10-07T15:18:21.0914715Z (node:2348) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Run actions/setup-node@v4	2026-10-07T15:18:21.0916808Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Run actions/setup-node@v4	2026-10-07T15:18:21.0918292Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+verify	Run actions/setup-node@v4	2026-10-07T15:18:21.0919088Z ##[group]Environment details
+verify	Run actions/setup-node@v4	2026-10-07T15:18:26.3525100Z node: v22.23.3
+verify	Run actions/setup-node@v4	2026-10-07T15:18:26.3525777Z npm: 10.9.9
+verify	Run actions/setup-node@v4	2026-10-07T15:18:26.3526175Z yarn: 1.22.22
+verify	Run actions/setup-node@v4	2026-10-07T15:18:26.3527820Z ##[endgroup]
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	﻿2026-10-07T15:18:26.3690797Z ##[group]Run npm ci --ignore-scripts --no-audit --no-fund
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:18:26.3691379Z [36;1mnpm ci --ignore-scripts --no-audit --no-fund[0m
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:18:26.4059380Z shell: /usr/bin/bash -e {0}
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:18:26.4059756Z ##[endgroup]
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:18:29.6437206Z 
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:18:29.6446998Z added 1 package in 3s
+verify	Run npm test	﻿2026-10-07T15:18:29.6871750Z ##[group]Run npm test
+verify	Run npm test	2026-10-07T15:18:29.6872079Z [36;1mnpm test[0m
+verify	Run npm test	2026-10-07T15:18:29.6937881Z shell: /usr/bin/bash -e {0}
+verify	Run npm test	2026-10-07T15:18:29.6938175Z ##[endgroup]
+verify	Run npm test	2026-10-07T15:18:29.8133159Z 
+verify	Run npm test	2026-10-07T15:18:29.8134264Z > partybox-b10-battleship-ai@1.0.0 test
+verify	Run npm test	2026-10-07T15:18:29.8134821Z > npm run build && node test/run.mjs
+verify	Run npm test	2026-10-07T15:18:29.8135036Z 
+verify	Run npm test	2026-10-07T15:18:29.9341748Z 
+verify	Run npm test	2026-10-07T15:18:29.9342808Z > partybox-b10-battleship-ai@1.0.0 build
+verify	Run npm test	2026-10-07T15:18:29.9343800Z > tsc -p tsconfig.json
+verify	Run npm test	2026-10-07T15:18:29.9344077Z 
+verify	Run npm test	2026-10-07T15:18:36.0784913Z {"verifiedSeed":1,"differential":{"name":"6x6 full-enumeration differential","seed":1,"cases":10000,"passed":10000,"enumeratedLayouts":"1624793","policyChecks":30000,"feedbackChecks":23625,"seconds":3.481248866},"mutationsKilled":25}
+verify	Run npm test	2026-10-07T15:18:41.8350382Z {"verifiedSeed":2,"differential":{"name":"6x6 full-enumeration differential","seed":2,"cases":10000,"passed":10000,"enumeratedLayouts":"1426510","policyChecks":30000,"feedbackChecks":23517,"seconds":3.1415170550000013},"mutationsKilled":25}
+verify	Run npm test	2026-10-07T15:18:47.2799140Z {"verifiedSeed":3,"differential":{"name":"6x6 full-enumeration differential","seed":3,"cases":10000,"passed":10000,"enumeratedLayouts":"1635715","policyChecks":30000,"feedbackChecks":23850,"seconds":3.0896233599999996},"mutationsKilled":25}
+verify	Run npm test	2026-10-07T15:19:00.9638753Z {"progress":true,"seed":2,"difficulty":"easy","games":10000,"mean":62.1303,"seconds":13.626121981}
+verify	Run npm test	2026-10-07T15:19:11.4855687Z {"progress":true,"seed":1,"difficulty":"easy","games":10000,"mean":62.186,"seconds":24.163541991}
+verify	Run npm test	2026-10-07T15:19:11.6013111Z {"progress":true,"seed":3,"difficulty":"easy","games":10000,"mean":61.7684,"seconds":24.261019093999998}
+verify	Run npm test	2026-10-07T15:19:13.8701447Z {"progress":true,"seed":2,"difficulty":"easy","games":20000,"mean":62.19385,"seconds":26.533830728999998}
+verify	Run npm test	2026-10-07T15:19:26.7911879Z {"progress":true,"seed":2,"difficulty":"easy","games":30000,"mean":62.2218,"seconds":39.45458087200001}
+verify	Run npm test	2026-10-07T15:19:35.3314765Z {"progress":true,"seed":1,"difficulty":"easy","games":20000,"mean":62.15915,"seconds":48.010287354}
+verify	Run npm test	2026-10-07T15:19:35.5100869Z {"progress":true,"seed":3,"difficulty":"easy","games":20000,"mean":62.11985,"seconds":48.170478306}
+verify	Run npm test	2026-10-07T15:19:39.6549332Z {"progress":true,"seed":2,"difficulty":"easy","games":40000,"mean":62.22195,"seconds":52.318645975}
+verify	Run npm test	2026-10-07T15:19:52.5052801Z {"progress":true,"seed":2,"difficulty":"easy","games":50000,"mean":62.22424,"seconds":65.168987688}
+verify	Run npm test	2026-10-07T15:19:59.1721035Z {"progress":true,"seed":1,"difficulty":"easy","games":30000,"mean":62.146433333333334,"seconds":71.850897757}
+verify	Run npm test	2026-10-07T15:19:59.3073715Z {"progress":true,"seed":3,"difficulty":"easy","games":30000,"mean":62.126866666666665,"seconds":71.967826375}
+verify	Run npm test	2026-10-07T15:20:05.3682520Z {"progress":true,"seed":2,"difficulty":"easy","games":60000,"mean":62.1846,"seconds":78.031666477}
+verify	Run npm test	2026-10-07T15:20:18.2417906Z {"progress":true,"seed":2,"difficulty":"easy","games":70000,"mean":62.19278571428571,"seconds":90.905465289}
+verify	Run npm test	2026-10-07T15:20:23.0221211Z {"progress":true,"seed":1,"difficulty":"easy","games":40000,"mean":62.157375,"seconds":95.70093631099999}
+verify	Run npm test	2026-10-07T15:20:23.1407952Z {"progress":true,"seed":3,"difficulty":"easy","games":40000,"mean":62.174375,"seconds":95.80124840100001}
+verify	Run npm test	2026-10-07T15:20:31.1063700Z {"progress":true,"seed":2,"difficulty":"easy","games":80000,"mean":62.1981125,"seconds":103.770054976}
+verify	Run npm test	2026-10-07T15:20:43.9155423Z {"progress":true,"seed":2,"difficulty":"easy","games":90000,"mean":62.201633333333334,"seconds":116.578946431}
+verify	Run npm test	2026-10-07T15:20:46.8473900Z {"progress":true,"seed":1,"difficulty":"easy","games":50000,"mean":62.14748,"seconds":119.526229293}
+verify	Run npm test	2026-10-07T15:20:46.9218840Z {"progress":true,"seed":3,"difficulty":"easy","games":50000,"mean":62.17296,"seconds":119.58234925}
+verify	Run npm test	2026-10-07T15:20:56.8373945Z {"progress":true,"seed":2,"difficulty":"easy","games":100000,"mean":62.19901,"seconds":129.501074083}
+verify	Run npm test	2026-10-07T15:20:56.8387083Z {"seed":2,"games":100000,"difficulty":"easy","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":130.169725,"mean":62.19901,"meanExact":"6219901/100000","median":62,"standardDeviation":14.037893561516151,"min":21,"max":100,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,4,11,13,24,42,58,83,106,156,186,275,338,470,510,661,714,864,969,1109,1165,1354,1494,1648,1698,1884,1925,2021,2076,2194,2356,2376,2563,2621,2624,2596,2668,2656,2651,2626,2552,2601,2542,2435,2462,2429,2316,2355,2217,2161,1927,1963,1897,1831,1685,1584,1453,1393,1384,1163,1158,1040,991,860,820,757,684,617,547,478,429,356,295,243,191,155,135,74,30],"shots":6219901,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.016,"p99":0.041,"max":8.182420000000008,"over50":0},"elapsedSeconds":129.501676728,"sampledShots":0,"exactShots":0,"policyComparisons":6219901,"densityComparisons":0,"maxAuditDifference":0,"slowCases":[],"hardUnder45":null,"allShotsUnder50ms":true}
+verify	Run npm test	2026-10-07T15:21:04.2173796Z {"progress":true,"seed":1,"difficulty":"easy","games":60000,"mean":62.132533333333335,"seconds":136.89610257799998}
+verify	Run npm test	2026-10-07T15:21:04.2569731Z {"progress":true,"seed":3,"difficulty":"easy","games":60000,"mean":62.17525,"seconds":136.917391129}
+verify	Run npm test	2026-10-07T15:21:16.8948774Z {"progress":true,"seed":1,"difficulty":"easy","games":70000,"mean":62.13644285714286,"seconds":149.57344778599997}
+verify	Run npm test	2026-10-07T15:21:16.9637564Z {"progress":true,"seed":3,"difficulty":"easy","games":70000,"mean":62.17098571428571,"seconds":149.624202208}
+verify	Run npm test	2026-10-07T15:21:29.5981356Z {"progress":true,"seed":1,"difficulty":"easy","games":80000,"mean":62.14455,"seconds":162.27701265299999}
+verify	Run npm test	2026-10-07T15:21:29.6900066Z {"progress":true,"seed":3,"difficulty":"easy","games":80000,"mean":62.1819625,"seconds":162.350521518}
+verify	Run npm test	2026-10-07T15:21:42.3366632Z {"progress":true,"seed":1,"difficulty":"easy","games":90000,"mean":62.15756666666667,"seconds":175.01541832599997}
+verify	Run npm test	2026-10-07T15:21:42.3850848Z {"progress":true,"seed":3,"difficulty":"easy","games":90000,"mean":62.207233333333335,"seconds":175.045492408}
+verify	Run npm test	2026-10-07T15:21:55.0337117Z {"progress":true,"seed":1,"difficulty":"easy","games":100000,"mean":62.15892,"seconds":187.712552723}
+verify	Run npm test	2026-10-07T15:21:55.0349296Z {"seed":1,"games":100000,"difficulty":"easy","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":188.418024,"mean":62.15892,"meanExact":"6215892/100000","median":62,"standardDeviation":14.02500450770388,"min":21,"max":100,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,8,11,16,21,46,47,90,126,153,210,273,336,413,514,641,797,845,957,1043,1234,1312,1445,1579,1723,1767,1933,2068,2321,2373,2402,2394,2488,2558,2670,2696,2609,2499,2673,2605,2681,2496,2448,2587,2539,2350,2375,2276,2171,2042,1980,1834,1866,1771,1692,1663,1518,1419,1343,1286,1179,1055,1001,879,791,724,661,584,572,429,408,370,304,244,190,162,116,57,39],"shots":6215892,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.023,"p99":0.056,"max":3.264611000000002,"over50":0},"elapsedSeconds":187.713082722,"sampledShots":0,"exactShots":0,"policyComparisons":6215892,"densityComparisons":0,"maxAuditDifference":0,"slowCases":[],"hardUnder45":null,"allShotsUnder50ms":true}
+verify	Run npm test	2026-10-07T15:21:55.1047747Z {"progress":true,"seed":3,"difficulty":"easy","games":100000,"mean":62.2104,"seconds":187.76523820999998}
+verify	Run npm test	2026-10-07T15:21:55.1061236Z {"seed":3,"games":100000,"difficulty":"easy","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":188.400997,"mean":62.2104,"meanExact":"6221040/100000","median":62,"standardDeviation":14.074546982717697,"min":22,"max":100,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,4,7,14,26,30,45,87,129,163,231,278,370,432,529,620,740,816,976,1090,1230,1383,1416,1585,1726,1782,2027,1962,2168,2262,2306,2529,2466,2528,2597,2596,2706,2598,2647,2678,2595,2657,2548,2553,2428,2402,2246,2298,2120,2142,1986,1923,1844,1807,1635,1562,1483,1423,1355,1320,1129,1051,987,911,753,788,685,599,550,461,403,352,341,260,222,170,114,76,41],"shots":6221040,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.023,"p99":0.055,"max":6.318567999999999,"over50":0},"elapsedSeconds":187.765769372,"sampledShots":0,"exactShots":0,"policyComparisons":6221040,"densityComparisons":0,"maxAuditDifference":0,"slowCases":[],"hardUnder45":null,"allShotsUnder50ms":true}
+verify	Run npm test	2026-10-07T15:22:22.4972874Z {"progress":true,"seed":1,"difficulty":"medium","games":10000,"mean":49.9802,"seconds":27.336289595000004}
+verify	Run npm test	2026-10-07T15:22:45.0189164Z {"progress":true,"seed":2,"difficulty":"medium","games":10000,"mean":49.8811,"seconds":49.84089972700001}
+verify	Run npm test	2026-10-07T15:22:45.5802641Z {"progress":true,"seed":3,"difficulty":"medium","games":10000,"mean":49.943,"seconds":50.40005247}
+verify	Run npm test	2026-10-07T15:22:49.0122745Z {"progress":true,"seed":1,"difficulty":"medium","games":20000,"mean":49.92745,"seconds":53.851876163}
+verify	Run npm test	2026-10-07T15:23:15.4648691Z {"progress":true,"seed":1,"difficulty":"medium","games":30000,"mean":49.8944,"seconds":80.304572665}
+verify	Run npm test	2026-10-07T15:23:34.6877016Z {"progress":true,"seed":2,"difficulty":"medium","games":20000,"mean":49.8983,"seconds":99.510451329}
+verify	Run npm test	2026-10-07T15:23:35.2310860Z {"progress":true,"seed":3,"difficulty":"medium","games":20000,"mean":49.8895,"seconds":100.051636664}
+verify	Run npm test	2026-10-07T15:23:41.9355311Z {"progress":true,"seed":1,"difficulty":"medium","games":40000,"mean":49.8926,"seconds":106.775133092}
+verify	Run npm test	2026-10-07T15:24:08.4749475Z {"progress":true,"seed":1,"difficulty":"medium","games":50000,"mean":49.88474,"seconds":133.310124575}
+verify	Run npm test	2026-10-07T15:24:22.2029125Z {"progress":true,"seed":2,"difficulty":"medium","games":30000,"mean":49.8671,"seconds":147.02569503499998}
+verify	Run npm test	2026-10-07T15:24:24.9652693Z {"progress":true,"seed":3,"difficulty":"medium","games":30000,"mean":49.92146666666667,"seconds":149.785797201}
+verify	Run npm test	2026-10-07T15:24:48.3229537Z {"progress":true,"seed":1,"difficulty":"medium","games":60000,"mean":49.88895,"seconds":173.162467142}
+verify	Run npm test	2026-10-07T15:24:48.9412161Z {"progress":true,"seed":2,"difficulty":"medium","games":40000,"mean":49.9298,"seconds":173.76400036799998}
+verify	Run npm test	2026-10-07T15:25:14.6168221Z {"progress":true,"seed":3,"difficulty":"medium","games":40000,"mean":49.931275,"seconds":199.437314801}
+verify	Run npm test	2026-10-07T15:25:15.6563982Z {"progress":true,"seed":2,"difficulty":"medium","games":50000,"mean":49.94392,"seconds":200.47912960199997}
+verify	Run npm test	2026-10-07T15:25:37.9022768Z {"progress":true,"seed":1,"difficulty":"medium","games":70000,"mean":49.89635714285714,"seconds":222.74165141699999}
+verify	Run npm test	2026-10-07T15:25:42.2843588Z {"progress":true,"seed":2,"difficulty":"medium","games":60000,"mean":49.95543333333333,"seconds":227.107007471}
+verify	Run npm test	2026-10-07T15:26:04.3222135Z {"progress":true,"seed":3,"difficulty":"medium","games":50000,"mean":49.91802,"seconds":249.142770263}
+verify	Run npm test	2026-10-07T15:26:08.9216054Z {"progress":true,"seed":2,"difficulty":"medium","games":70000,"mean":49.96485714285714,"seconds":253.744334423}
+verify	Run npm test	2026-10-07T15:26:27.4403624Z {"progress":true,"seed":1,"difficulty":"medium","games":80000,"mean":49.8795,"seconds":272.279988138}
+verify	Run npm test	2026-10-07T15:26:35.5001234Z {"progress":true,"seed":2,"difficulty":"medium","games":80000,"mean":49.9575375,"seconds":280.32289448899996}
+verify	Run npm test	2026-10-07T15:26:54.2352339Z {"progress":true,"seed":3,"difficulty":"medium","games":60000,"mean":49.92765,"seconds":299.055409396}
+verify	Run npm test	2026-10-07T15:27:02.2189842Z {"progress":true,"seed":2,"difficulty":"medium","games":90000,"mean":49.95514444444444,"seconds":307.041667638}
+verify	Run npm test	2026-10-07T15:27:17.1858862Z {"progress":true,"seed":1,"difficulty":"medium","games":90000,"mean":49.88545555555555,"seconds":322.02540061900004}
+verify	Run npm test	2026-10-07T15:27:28.8091090Z {"progress":true,"seed":2,"difficulty":"medium","games":100000,"mean":49.94174,"seconds":333.631867533}
+verify	Run npm test	2026-10-07T15:27:28.8104047Z {"seed":2,"games":100000,"difficulty":"medium","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":335.150993,"mean":49.94174,"meanExact":"4994174/100000","median":50,"standardDeviation":8.700818514072573,"min":19,"max":78,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,2,9,24,35,63,95,116,183,270,338,465,559,692,847,981,1174,1357,1584,1732,2049,2271,2555,2871,3053,3363,3477,3754,3867,4165,4296,4321,4257,4295,4179,4091,3907,3856,3737,3534,3479,3318,2779,2370,1621,1053,741,570,425,338,252,205,144,106,74,51,20,16,9,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"shots":4994174,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.025,"p99":0.073,"max":7.781079000000034,"over50":0},"elapsedSeconds":333.632435203,"sampledShots":0,"exactShots":0,"policyComparisons":4994174,"densityComparisons":0,"maxAuditDifference":0,"slowCases":[],"hardUnder45":null,"allShotsUnder50ms":true}
+verify	Run npm test	2026-10-07T15:27:36.8328694Z {"progress":true,"seed":3,"difficulty":"medium","games":70000,"mean":49.926114285714284,"seconds":341.653349776}
+verify	Run npm test	2026-10-07T15:27:48.8012101Z {"progress":true,"seed":1,"difficulty":"medium","games":100000,"mean":49.88569,"seconds":353.64082570200003}
+verify	Run npm test	2026-10-07T15:27:48.8050545Z {"seed":1,"games":100000,"difficulty":"medium","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":355.022749,"mean":49.88569,"meanExact":"4988569/100000","median":50,"standardDeviation":8.686100258877799,"min":18,"max":78,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,5,13,25,40,52,90,140,194,281,354,449,564,688,847,982,1217,1412,1570,1774,1941,2287,2527,2874,3032,3438,3460,3681,4060,4182,4308,4275,4280,4182,4155,4040,4083,3863,3799,3612,3497,3172,2907,2219,1590,1046,698,504,434,314,240,181,139,111,87,43,20,11,5,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"shots":4988569,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.027,"p99":0.076,"max":10.279052000000007,"over50":0},"elapsedSeconds":353.641405725,"sampledShots":0,"exactShots":0,"policyComparisons":4988569,"densityComparisons":0,"maxAuditDifference":0,"slowCases":[],"hardUnder45":null,"allShotsUnder50ms":true}
+verify	Run npm test	2026-10-07T15:28:02.7871599Z {"progress":true,"seed":3,"difficulty":"medium","games":80000,"mean":49.9184875,"seconds":367.60741077500006}
+verify	Run npm test	2026-10-07T15:28:28.4746438Z {"progress":true,"seed":3,"difficulty":"medium","games":90000,"mean":49.93066666666667,"seconds":393.29506799}
+verify	Run npm test	2026-10-07T15:28:54.1558011Z {"progress":true,"seed":3,"difficulty":"medium","games":100000,"mean":49.92109,"seconds":418.975956756}
+verify	Run npm test	2026-10-07T15:28:54.1565390Z {"seed":3,"games":100000,"difficulty":"medium","feedback":"named hits; named exact sunk hulls","samples":8,"cpuSeconds":420.178464,"mean":49.92109,"meanExact":"4992109/100000","median":50,"standardDeviation":8.683721395926565,"min":18,"max":78,"histogram":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,5,4,9,19,40,45,88,154,182,291,318,433,532,706,836,1028,1157,1370,1597,1765,2080,2234,2502,2838,3145,3234,3530,3869,3927,4044,4214,4370,4359,4218,4234,4150,3914,3812,3654,3613,3507,3300,2894,2295,1635,1062,677,496,414,311,258,223,132,95,81,46,27,15,9,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"shots":4992109,"repeatedShots":0,"errors":0,"latency":{"unit":"milliseconds","p50":0.031,"p99":0.082,"max":8.076840000000004,"over50":0},"elapsedSeconds":418.976472198,"sampledShots":0,"exactShots":0,"policyComparisons":4992109,"densityComparisons":0,"maxAuditDifference":0,"slowCases":[],"hardUnder45":null,"allShotsUnder50ms":true}
+verify	Run npm test	2026-10-07T15:31:43.0128939Z {"progress":true,"seed":1,"difficulty":"hard","games":10000,"mean":44.7905,"seconds":168.77141525400003}
+verify	Run npm test	2026-10-07T15:31:54.7991965Z {"progress":true,"seed":3,"difficulty":"hard","games":10000,"mean":44.9195,"seconds":180.554069171}
+verify	Run npm test	2026-10-07T15:31:57.2791806Z {"progress":true,"seed":2,"difficulty":"hard","games":10000,"mean":44.849,"seconds":183.049356488}
+verify	Run npm test	2026-10-07T15:34:35.4371959Z {"progress":true,"seed":2,"difficulty":"hard","games":20000,"mean":44.80545,"seconds":341.210560547}
+verify	Run npm test	2026-10-07T15:34:53.6682744Z {"progress":true,"seed":1,"difficulty":"hard","games":20000,"mean":44.78715,"seconds":359.427843195}
+verify	Run npm test	2026-10-07T15:34:59.1356457Z {"progress":true,"seed":3,"difficulty":"hard","games":20000,"mean":44.9124,"seconds":364.89146684799994}
+verify	Run npm test	2026-10-07T15:37:30.5702082Z {"progress":true,"seed":3,"difficulty":"hard","games":30000,"mean":44.9076,"seconds":516.325691506}
+verify	Run npm test	2026-10-07T15:37:53.2392826Z {"progress":true,"seed":1,"difficulty":"hard","games":30000,"mean":44.805933333333336,"seconds":538.998861106}
+verify	Run npm test	2026-10-07T15:37:53.5795572Z {"progress":true,"seed":2,"difficulty":"hard","games":30000,"mean":44.7892,"seconds":539.351444853}
+verify	Run npm test	2026-10-07T15:40:30.8453986Z {"progress":true,"seed":3,"difficulty":"hard","games":40000,"mean":44.912175,"seconds":696.601068278}
+verify	Run npm test	2026-10-07T15:40:38.7178308Z {"progress":true,"seed":1,"difficulty":"hard","games":40000,"mean":44.835575,"seconds":704.477413542}
+verify	Run npm test	2026-10-07T15:40:59.6003765Z {"progress":true,"seed":2,"difficulty":"hard","games":40000,"mean":44.7931,"seconds":725.3736582229999}
+verify	Run npm test	2026-10-07T15:43:01.2958024Z {"progress":true,"seed":3,"difficulty":"hard","games":50000,"mean":44.93274,"seconds":847.051250485}
+verify	Run npm test	2026-10-07T15:43:51.0666799Z {"progress":true,"seed":1,"difficulty":"hard","games":50000,"mean":44.82664,"seconds":896.826270638}
+verify	Run npm test	2026-10-07T15:44:26.3824230Z {"progress":true,"seed":2,"difficulty":"hard","games":50000,"mean":44.8124,"seconds":932.155670311}
+verify	Run npm test	2026-10-07T15:45:42.1497493Z {"progress":true,"seed":3,"difficulty":"hard","games":60000,"mean":44.92735,"seconds":1007.905498923}
+verify	Run npm test	2026-10-07T15:46:50.7768020Z {"progress":true,"seed":1,"difficulty":"hard","games":60000,"mean":44.82286666666667,"seconds":1076.5359233179997}
+verify	Run npm test	2026-10-07T15:47:18.4793586Z {"progress":true,"seed":2,"difficulty":"hard","games":60000,"mean":44.80671666666667,"seconds":1104.252344521}
+verify	Run npm test	2026-10-07T15:48:35.3326150Z ##[error]The operation was canceled.
+verify	Run actions/upload-artifact@v4	﻿2026-10-07T15:48:35.3451084Z ##[group]Run actions/upload-artifact@v4
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:35.3451597Z with:
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:35.3451930Z   name: B10-verification
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:35.3452358Z   path: jobs/B10-battleship-ai/reports/
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:35.3452835Z   if-no-files-found: warn
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:35.3453241Z   compression-level: 6
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:35.3454150Z   overwrite: false
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:35.3454517Z   include-hidden-files: false
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:35.3454942Z ##[endgroup]
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:35.6230453Z (node:2821) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:35.6242473Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:35.6697989Z With the provided path, there will be 7 files uploaded
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:35.6698982Z Artifact name is valid!
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:35.6699473Z Root directory input is valid!
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:36.1636345Z (node:2821) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:36.1645677Z Beginning upload of artifact content to blob storage
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:36.4497452Z Uploaded bytes 10932
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:36.7168603Z Finished uploading artifact content to blob storage!
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:36.7169940Z SHA256 digest of uploaded artifact zip is de050e9dde88e25ecb92068adb2ae9401be01b160a49214cedb3124cde4a51dd
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:36.7170992Z Finalizing artifact upload
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:36.8372051Z Artifact B10-verification.zip successfully finalized. Artifact ID 11493749632
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:36.8372889Z Artifact B10-verification has been successfully uploaded! Final size is 10932 bytes. Artifact ID is 11493749632
+verify	Run actions/upload-artifact@v4	2026-10-07T15:48:36.8374627Z Artifact download URL: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37642504864/artifacts/11493749632
+verify	Post Run actions/checkout@v4	﻿2026-10-07T15:48:36.8669919Z Post job cleanup.
+verify	Post Run actions/checkout@v4	2026-10-07T15:48:37.0817990Z [command]/usr/bin/git version
+verify	Post Run actions/checkout@v4	2026-10-07T15:48:37.0819387Z git version 2.55.0
+verify	Post Run actions/checkout@v4	2026-10-07T15:48:37.0827600Z Temporarily overriding HOME='/home/runner/work/_temp/fcb10515-12d7-4931-8b98-4b8b26de658e' before making global git config changes
+verify	Post Run actions/checkout@v4	2026-10-07T15:48:37.0854341Z Adding repository directory to the temporary git global config as a safe directory
+verify	Post Run actions/checkout@v4	2026-10-07T15:48:37.1153170Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify	Post Run actions/checkout@v4	2026-10-07T15:48:37.1441721Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Post Run actions/checkout@v4	2026-10-07T15:48:37.1480958Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Post Run actions/checkout@v4	2026-10-07T15:48:37.1483924Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Post Run actions/checkout@v4	2026-10-07T15:48:37.1804362Z http.https://github.com/.extraheader
+verify	Post Run actions/checkout@v4	2026-10-07T15:48:37.2396399Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verify	Post Run actions/checkout@v4	2026-10-07T15:48:37.2705572Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Post Run actions/checkout@v4	2026-10-07T15:48:37.2776981Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Post Run actions/checkout@v4	2026-10-07T15:48:37.2835289Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Complete job	﻿2026-10-07T15:48:37.3565054Z Cleaning up orphan processes
+verify	Complete job	2026-10-07T15:48:37.3938004Z Terminate orphan process: pid (2394) (npm test)
+verify	Complete job	2026-10-07T15:48:37.3985365Z Terminate orphan process: pid (2405) (sh)
+verify	Complete job	2026-10-07T15:48:37.4032433Z Terminate orphan process: pid (2427) (node)
+verify	Complete job	2026-10-07T15:48:37.4148516Z Terminate orphan process: pid (2630) (node)
+verify	Complete job	2026-10-07T15:48:37.4194715Z Terminate orphan process: pid (2631) (node)
+verify	Complete job	2026-10-07T15:48:37.4266186Z Terminate orphan process: pid (2632) (node)
+verify	Complete job	2026-10-07T15:48:37.4305005Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
