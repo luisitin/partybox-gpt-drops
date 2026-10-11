@@ -1,0 +1,72 @@
+/** Original B16 color math. All functions preserve caller inputs. */
+export type RGB=readonly[number,number,number];
+export type Lab=readonly[number,number,number];
+export type Mode='normal'|'protan'|'deutan'|'tritan';
+export const MODES:readonly Mode[]=['normal','protan','deutan','tritan'];
+export const MACHADO:Readonly<Record<Exclude<Mode,'normal'>,readonly RGB[]>>={
+ protan:[[.152286,1.052583,-.204868],[.114503,.786281,.099216],[-.003882,-.048116,1.051998]],
+ deutan:[[.367322,.860646,-.227968],[.280085,.672501,.047413],[-.011820,.042940,.968881]],
+ tritan:[[1.255528,-.076749,-.178779],[-.078411,.930809,.147602],[.004733,.691367,.303900]]
+};
+export const DARK:RGB=[18/255,18/255,24/255];
+export const LIGHT:RGB=[247/255,245/255,240/255];
+export function linear(c:number):number {if(!Number.isFinite(c)||c<0||c>1)throw new RangeError('sRGB channel outside [0,1]');return c<=.04045?c/12.92:((c+.055)/1.055)**2.4;}
+export function encoded(c:number):number {if(!Number.isFinite(c)||c<0||c>1)throw new RangeError('Linear channel outside [0,1]');return c<=.0031308?12.92*c:1.055*c**(1/2.4)-.055;}
+export function fromHex(hex:string):RGB {if(!/^#[a-fA-F0-9]{6}$/.test(hex))throw new RangeError('Expected six-digit hex RGB');return[parseInt(hex.slice(1,3),16)/255,parseInt(hex.slice(3,5),16)/255,parseInt(hex.slice(5,7),16)/255];}
+export function toHex(rgb:RGB):string {return'#'+rgb.map(c=>{linear(c);return Math.round(c*255).toString(16).padStart(2,'0');}).join('').toUpperCase();}
+export function luminance(rgb:RGB):number {return .2126*linear(rgb[0])+.7152*linear(rgb[1])+.0722*linear(rgb[2]);}
+export function contrast(a:RGB,b:RGB):number {const x=luminance(a),y=luminance(b);return(Math.max(x,y)+.05)/(Math.min(x,y)+.05);}
+export function simulate(rgb:RGB,mode:Mode):RGB {
+  const input:RGB=[linear(rgb[0]),linear(rgb[1]),linear(rgb[2])];
+  if(mode==='normal')return[rgb[0],rgb[1],rgb[2]];
+  const matrix=MACHADO[mode];if(!matrix)throw new RangeError('Unknown simulation');
+  const channel=(row:RGB):number=>encoded(Math.min(1,Math.max(0,row[0]*input[0]+row[1]*input[1]+row[2]*input[2])));
+  return[channel(matrix[0]!),channel(matrix[1]!),channel(matrix[2]!)];
+}
+export function rgbToLab(rgb:RGB):Lab {
+  const r=linear(rgb[0]),g=linear(rgb[1]),b=linear(rgb[2]);
+  const x=(.4124564*r+.3575761*g+.1804375*b)/.95047;
+  const y=.2126729*r+.7151522*g+.0721750*b;
+  const z=(.0193339*r+.1191920*g+.9503041*b)/1.08883;
+  const f=(v:number):number=>v>216/24389?Math.cbrt(v):(24389/27*v+16)/116;
+  const fx=f(x),fy=f(y),fz=f(z);return[116*fy-16,500*(fx-fy),200*(fy-fz)];
+}
+const rad=(degrees:number):number=>degrees*Math.PI/180;
+const ratio=(chroma:number):number=>chroma===0?0:1/(1+(25/chroma)**7);
+/** Sharma/Wu/Dalal 2005, equations 2–22. */
+export function deltaE(one:Lab,two:Lab):number {
+ for(const value of [...one,...two])if(!Number.isFinite(value))throw new RangeError('Lab components must be finite');
+ const [l1,a1,b1]=one,[l2,a2,b2]=two;
+ const c1=Math.hypot(a1,b1),c2=Math.hypot(a2,b2),meanC=(c1+c2)/2;
+ const G=.5*(1-Math.sqrt(ratio(meanC))),p1=(1+G)*a1,p2=(1+G)*a2;
+ const C1=Math.hypot(p1,b1),C2=Math.hypot(p2,b2);
+ const hue=(a:number,b:number,c:number):number=>c===0?0:(Math.atan2(b,a)*180/Math.PI+360)%360;
+ const h1=hue(p1,b1,C1),h2=hue(p2,b2,C2);
+ const dL=l2-l1,dC=C2-C1;
+ let dh=h2-h1;if(C1*C2===0)dh=0;else if(dh>180)dh-=360;else if(dh< -180)dh+=360;
+ const dH=2*Math.sqrt(C1*C2)*Math.sin(rad(dh/2)),meanL=(l1+l2)/2,meanCp=(C1+C2)/2;
+ let meanH:number;
+ if(C1*C2===0)meanH=h1+h2;
+ else if(Math.abs(h1-h2)<=180)meanH=(h1+h2)/2;
+ else if(h1+h2<360)meanH=(h1+h2+360)/2;
+ else meanH=(h1+h2-360)/2;
+ const T=1-.17*Math.cos(rad(meanH-30))+.24*Math.cos(rad(2*meanH))+.32*Math.cos(rad(3*meanH+6))-.20*Math.cos(rad(4*meanH-63));
+ const SL=1+.015*(meanL-50)**2/Math.sqrt(20+(meanL-50)**2),SC=1+.045*meanCp,SH=1+.015*meanCp*T;
+ const theta=30*Math.exp(-(((meanH-275)/25)**2)),RC=2*Math.sqrt(ratio(meanCp)),RT=-RC*Math.sin(rad(2*theta));
+ const dl=dL/SL,dc=dC/SC,dHue=dH/SH;
+ return Math.sqrt(Math.max(0,dl*dl+dc*dc+dHue*dHue+RT*dc*dHue));
+}
+export interface View {readonly rgb:RGB;readonly lab:Lab}
+export interface Candidate {/** 8-bit approximation; use rgb/css for actual color. */readonly hex:string;readonly css:string;readonly rgb:RGB;readonly views:Readonly<Record<Mode,View>>;readonly text:'#000000'|'#FFFFFF';readonly textContrast:number;readonly darkContrast:number;readonly lightContrast:number;readonly luminosity:number}
+export function candidate(hex:string):Candidate {return candidateRgb(fromHex(hex));}
+export function candidateRgb(input:RGB):Candidate {
+ const rgb:RGB=[input[0],input[1],input[2]],black:RGB=[0,0,0],white:RGB=[1,1,1];
+ for(const channel of rgb)linear(channel);
+ const text=contrast(rgb,black)>=contrast(rgb,white)?'#000000':'#FFFFFF';
+ const views={} as Record<Mode,View>;for(const mode of MODES){const visible=simulate(rgb,mode);views[mode]={rgb:visible,lab:rgbToLab(visible)};}
+ return{hex:toHex(rgb),css:'color(srgb '+rgb.map(c=>c.toString()).join(' ')+')',rgb,views,text,textContrast:contrast(rgb,text==='#000000'?black:white),darkContrast:contrast(rgb,DARK),lightContrast:contrast(rgb,LIGHT),luminosity:luminance(rgb)};
+}
+export function pair(a:Candidate,b:Candidate):Readonly<Record<Mode,number>> {return{normal:deltaE(a.views.normal.lab,b.views.normal.lab),protan:deltaE(a.views.protan.lab,b.views.protan.lab),deutan:deltaE(a.views.deutan.lab,b.views.deutan.lab),tritan:deltaE(a.views.tritan.lab,b.views.tritan.lab)};}
+export function minimumPair(a:Candidate,b:Candidate):number {return Math.min(...Object.values(pair(a,b)));}
+export type Rng=()=>number;
+export function seeded(seed:number):Rng {let state=seed>>>0;return()=>{state=(Math.imul(state,1664525)+1013904223)>>>0;return state/4294967296;};}

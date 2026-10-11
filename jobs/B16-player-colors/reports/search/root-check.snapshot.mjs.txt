@@ -1,0 +1,16 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import * as ref from './blind-b16/build/reference.js';
+const p=JSON.parse(fs.readFileSync('/workspace/b16-refined-palette.json'));
+let checks=0;
+for(const name of ['rgb','rgb16']){
+ const palette=p[name];let min=Infinity;const failing=[];
+ for(const mode of ['normal','protan','deutan','tritan'])for(let i=0;i<12;i++)for(let j=0;j<i;j++){
+  const d=ref.referenceDeltaE(ref.referenceLab(ref.referenceSimulate(palette[i],mode)),ref.referenceLab(ref.referenceSimulate(palette[j],mode)));const limit=mode==='normal'&&i<8?20:12;min=Math.min(min,d-limit);checks++;if(d<limit)failing.push({i,j,mode,d,limit});
+ }
+ for(let i=0;i<12;i++){
+  for(const bg of ['#121218','#F7F5F0']){const contrast=ref.referenceContrast(palette[i],ref.referenceFromHex(bg));checks++;if(contrast<3)failing.push({i,bg,contrast});}
+  const text=Math.max(ref.referenceContrast(palette[i],[0,0,0]),ref.referenceContrast(palette[i],[1,1,1]));checks++;if(text<4.5)failing.push({i,text});
+ }
+ console.log(JSON.stringify({name,min,failing}));assert.equal(failing.length,0);
+}
+fs.writeFileSync('/workspace/b16-refined-independent-check.json',JSON.stringify({author:'root',checks,status:'passed',source:'blind-b16/build/reference.js',palette:'/workspace/b16-refined-palette.json'},null,2)+'\n');
