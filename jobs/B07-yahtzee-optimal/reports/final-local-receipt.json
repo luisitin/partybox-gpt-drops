@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "exitCode": 0,
+  "command": "time npm test > .verification/final-full-npm-test.log 2>&1",
+  "installCommand": "npm ci",
+  "elapsedSeconds": 1400.454,
+  "userSeconds": 1509.939,
+  "systemSeconds": 97.383,
+  "runtime": {
+    "node": "v24.19.0",
+    "typescript": "5.8.3",
+    "cpp": "g++ (Debian 14.2.0-19) 14.2.0"
+  },
+  "totals": {
+    "midgameStates": 150000,
+    "scoringCases": 606528,
+    "strictCompiledMutants": 75,
+    "runtimeKilledMutants": 75,
+    "fullPairedGames": 6000000,
+    "nativeDecisionComparisons": 234000000,
+    "nativeScoringTransitionComparisons": 78000000,
+    "visitedComponentVectors": 985883,
+    "directActualTypeScriptComponents": 364338,
+    "reusedVerifiedComponentVectors": 621545
+  },
+  "productionSha256": "878f038112b2a12a5bd9f0ecaed375b89360cfa0e7894fc91ec4cc923f4de0fa",
+  "workflowNode": "22.16.0",
+  "workflowResult": "pending exact-head GitHub Actions"
+}

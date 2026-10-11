@@ -1,0 +1,253 @@
+{
+  "passed": true,
+  "generated": {
+    "tables": "byte-identical rebuild",
+    "golden": 548
+  },
+  "compile": {
+    "files": 6,
+    "strictFlags": 17
+  },
+  "tables": {
+    "valid": 1072896,
+    "invalid": 1024256
+  },
+  "suites": {
+    "boundary": 1056,
+    "seeds": [
+      {
+        "seed": 1,
+        "scoringCases": 202176,
+        "randomStates": 10000,
+        "orderedHoldChecks": 6666,
+        "maximumValueDifference": 6.821210263296962e-13
+      },
+      {
+        "seed": 2,
+        "scoringCases": 202176,
+        "randomStates": 10000,
+        "orderedHoldChecks": 6666,
+        "maximumValueDifference": 7.673861546209082e-13
+      },
+      {
+        "seed": 3,
+        "scoringCases": 202176,
+        "randomStates": 10000,
+        "orderedHoldChecks": 6666,
+        "maximumValueDifference": 6.821210263296962e-13
+      }
+    ]
+  },
+  "differential": [
+    {
+      "seed": 1,
+      "states": 5548
+    },
+    {
+      "seed": 2,
+      "states": 5548
+    },
+    {
+      "seed": 3,
+      "states": 5548
+    }
+  ],
+  "adapter": {
+    "unitAssertions": 48,
+    "consistency": [
+      {
+        "seed": 1,
+        "checks": 15001
+      },
+      {
+        "seed": 2,
+        "checks": 15019
+      },
+      {
+        "seed": 3,
+        "checks": 15002
+      }
+    ],
+    "games": [
+      {
+        "mode": "official",
+        "seed": 1,
+        "games": 300,
+        "mean": 255.99,
+        "expectedValue": 254.58772873449593,
+        "standardErrors": 0.39373487649471206
+      },
+      {
+        "mode": "published",
+        "seed": 1,
+        "games": 300,
+        "mean": 256.5366666666667,
+        "expectedValue": 254.58960948196315,
+        "standardErrors": 0.5477829381914822
+      },
+      {
+        "mode": "official",
+        "seed": 2,
+        "games": 300,
+        "mean": 256.36333333333334,
+        "expectedValue": 254.58772873449593,
+        "standardErrors": 0.504352239071609
+      },
+      {
+        "mode": "published",
+        "seed": 2,
+        "games": 300,
+        "mean": 253.85,
+        "expectedValue": 254.58960948196315,
+        "standardErrors": -0.20488403017550155
+      },
+      {
+        "mode": "official",
+        "seed": 3,
+        "games": 300,
+        "mean": 254.41666666666666,
+        "expectedValue": 254.58772873449593,
+        "standardErrors": -0.052940319872457335
+      },
+      {
+        "mode": "published",
+        "seed": 3,
+        "games": 300,
+        "mean": 254.97666666666666,
+        "expectedValue": 254.58960948196315,
+        "standardErrors": 0.12298557211714592
+      }
+    ]
+  },
+  "mutants": [
+    {
+      "name": "P01 canonical subtotal boundary",
+      "file": "optimal/tables.ts",
+      "before": "upper + layout.left < UPPER_GOAL ? 0 : upper",
+      "after": "upper + layout.left <= UPPER_GOAL ? 0 : upper",
+      "killed": true,
+      "failure": "official:24590"
+    },
+    {
+      "name": "P02 bonus block offset",
+      "file": "optimal/tables.ts",
+      "before": "(yahtzeeBonus ? layout.width : 0)",
+      "after": "(yahtzeeBonus ? 0 : 0)",
+      "killed": true,
+      "failure": "official:526336"
+    },
+    {
+      "name": "P03 single block per mask",
+      "file": "optimal/tables.ts",
+      "before": "(mask & 2048 ? 2 : 1)",
+      "after": "(mask & 2048 ? 1 : 1)",
+      "killed": true,
+      "failure": "Solved table layout invariant"
+    },
+    {
+      "name": "P04 big-endian decode",
+      "file": "optimal/tables.ts",
+      "before": "view.getFloat64(i * 8, true)",
+      "after": "view.getFloat64(i * 8, false)",
+      "killed": true,
+      "failure": "official:0"
+    },
+    {
+      "name": "P05 base64 alphabet",
+      "file": "optimal/tables.ts",
+      "before": "0123456789+/'",
+      "after": "0123456789-_'",
+      "killed": true,
+      "failure": "Solved table is truncated"
+    },
+    {
+      "name": "P06 unreachable subtotal accepted",
+      "file": "optimal/tables.ts",
+      "before": "if (!layout.reach[upper] ||",
+      "after": "if (!layout.reach[0] ||",
+      "killed": true,
+      "failure": "official:8192 must be unreachable"
+    },
+    {
+      "name": "P07 mode table swap",
+      "file": "optimal/tables.ts",
+      "before": "mode === 'official' ? SOLVED_OFFICIAL : SOLVED_PUBLISHED",
+      "after": "mode === 'official' ? SOLVED_PUBLISHED : SOLVED_OFFICIAL",
+      "killed": true,
+      "failure": "official:0"
+    },
+    {
+      "name": "P08 uncapped upper",
+      "file": "optimal-bot.ts",
+      "before": "upper: Math.min(63, upper)",
+      "after": "upper: Math.min(64, upper)",
+      "killed": true,
+      "failure": "Upper capped at 63, Yahtzee 50 eligible"
+    },
+    {
+      "name": "P09 scratched Yahtzee eligible",
+      "file": "optimal-bot.ts",
+      "before": "card.boxes[ids[11]!] === 50",
+      "after": "card.boxes[ids[11]!] !== null",
+      "killed": true,
+      "failure": "Scratched Yahtzee earns no bonus"
+    },
+    {
+      "name": "P10 Joker rules swapped",
+      "file": "optimal-bot.ts",
+      "before": "joker === 'forced' ? 'official' : joker === 'free' ? 'published'",
+      "after": "joker === 'forced' ? 'published' : joker === 'free' ? 'official'",
+      "killed": true,
+      "failure": "{\"jokerRule\":\"forced\",\"yahtzeeBonus\":true,\"fullHouseYahtzee\":false}"
+    },
+    {
+      "name": "P11 rerolls left",
+      "file": "optimal-bot.ts",
+      "before": "bestHold(dice, 3 - rolls, scorecard)",
+      "after": "bestHold(dice, Math.min(2, 4 - rolls), scorecard)",
+      "killed": true,
+      "failure": "Expected values to be strictly equal:"
+    },
+    {
+      "name": "P12 held dice not preferred",
+      "file": "optimal-bot.ts",
+      "before": "[...held.filter((i) => i >= 0 && i < dice.length), ...dice.keys()]",
+      "after": "[...dice.keys(), ...held.filter((i) => i >= 0 && i < dice.length)]",
+      "killed": true,
+      "failure": "Held dice stay held"
+    },
+    {
+      "name": "P13 kind slots swapped",
+      "file": "optimal-bot.ts",
+      "before": "c.count === 3 ? 6 : c.count === 4 ? 7 : -1",
+      "after": "c.count === 3 ? 7 : c.count === 4 ? 6 : -1",
+      "killed": true,
+      "failure": "Classic ids by rule"
+    },
+    {
+      "name": "P14 fair die in port solver",
+      "file": "optimal/solver.ts",
+      "before": "values[hand] = total / 6;",
+      "after": "values[hand] = total / 6.000001;",
+      "killed": true,
+      "failure": "20.499989750003415 != 20.5"
+    },
+    {
+      "name": "P15 earned upper bonus again",
+      "file": "optimal/rules.ts",
+      "before": "category < 6 && card.upper < 63 &&",
+      "after": "category < 6 && card.upper <= 63 &&",
+      "killed": true,
+      "failure": "Expected values to be strictly deep-equal:"
+    },
+    {
+      "name": "P16 unsupported rule accepted",
+      "file": "optimal-bot.ts",
+      "before": "joker === 'free' ? 'published' : null",
+      "after": "joker === 'free' ? 'published' : 'official'",
+      "killed": true,
+      "failure": "{\"jokerRule\":\"original\",\"yahtzeeBonus\":true,\"fullHouseYahtzee\":false}"
+    }
+  ],
+  "seconds": 113
+}
