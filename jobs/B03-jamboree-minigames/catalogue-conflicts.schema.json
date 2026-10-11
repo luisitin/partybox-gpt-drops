@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "conflicts",
+    "job"
+  ],
+  "properties": {
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "canonical",
+          "id",
+          "kind",
+          "publisher",
+          "raw",
+          "resolution"
+        ],
+        "properties": {
+          "canonical": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "id": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "kind": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "publisher": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "raw": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "resolution": {
+            "type": "string",
+            "maxLength": 20000
+          }
+        }
+      },
+      "minItems": 15,
+      "maxItems": 15
+    },
+    "job": {
+      "type": "string",
+      "maxLength": 20000
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "B03 catalogue-conflicts closed evidence schema"
+}

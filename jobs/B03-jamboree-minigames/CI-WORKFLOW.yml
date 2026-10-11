@@ -1,0 +1,30 @@
+name: B03 catalogue integrity
+on:
+  pull_request:
+    paths: ['jobs/B03-*/**', '.github/workflows/B03.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r jobs/B03-jamboree-minigames/requirements.txt
+      - run: python jobs/B03-jamboree-minigames/verify.py --hashes --report /tmp/B03-verification.json
+      - name: Assert explicit strict research gap
+        run: |
+          python - <<'PY'
+          import subprocess
+          result = subprocess.run(['python', 'jobs/B03-jamboree-minigames/verify.py', '--strict', '--hashes'])
+          assert result.returncode == 1, 'Incomplete research must not be promoted as complete'
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: B03-verification-${{ github.sha }}
+          path: /tmp/B03-verification.json

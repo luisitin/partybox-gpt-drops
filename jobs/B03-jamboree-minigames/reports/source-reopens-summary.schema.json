@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "failedSources",
+    "job",
+    "missingQuotes",
+    "passed",
+    "passes",
+    "quoteRecoveries",
+    "requests",
+    "scope",
+    "uniqueUrls"
+  ],
+  "properties": {
+    "failedSources": {
+      "type": "array",
+      "items": {
+        "type": [
+          "string",
+          "object",
+          "number",
+          "null",
+          "boolean",
+          "array"
+        ]
+      }
+    },
+    "job": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "missingQuotes": {
+      "type": "integer"
+    },
+    "passed": {
+      "type": "boolean"
+    },
+    "passes": {
+      "type": "integer"
+    },
+    "quoteRecoveries": {
+      "type": "integer"
+    },
+    "requests": {
+      "type": "integer"
+    },
+    "scope": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "uniqueUrls": {
+      "type": "integer"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

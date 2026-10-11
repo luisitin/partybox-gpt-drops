@@ -1,0 +1,661 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "complete",
+    "fieldStatusMeaning",
+    "job",
+    "minigames",
+    "scope"
+  ],
+  "properties": {
+    "complete": {
+      "const": false
+    },
+    "fieldStatusMeaning": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "conflict",
+        "corroborated",
+        "single_source",
+        "unverified"
+      ],
+      "properties": {
+        "conflict": {
+          "type": "string",
+          "maxLength": 20000
+        },
+        "corroborated": {
+          "type": "string",
+          "maxLength": 20000
+        },
+        "single_source": {
+          "type": "string",
+          "maxLength": 20000
+        },
+        "unverified": {
+          "type": "string",
+          "maxLength": 20000
+        }
+      }
+    },
+    "job": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "minigames": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "category",
+          "complete",
+          "confidence",
+          "controls",
+          "edition",
+          "fieldEvidence",
+          "format",
+          "id",
+          "name",
+          "phoneFit",
+          "phoneFitBasis",
+          "phoneFitReason",
+          "reward",
+          "scoreRules",
+          "summary",
+          "tieRules",
+          "timeLimit",
+          "winRules"
+        ],
+        "properties": {
+          "category": {
+            "enum": [
+              "1v3",
+              "2v2",
+              "Boss",
+              "Bowser Live",
+              "Item",
+              "Jamboree TV Mouse",
+              "Kaboom-Squad",
+              "Koopathlon Coin",
+              "Koopathlon Survivathon",
+              "Rhythm",
+              "Showdown",
+              "duel",
+              "free-for-all"
+            ]
+          },
+          "complete": {
+            "const": false
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "controls": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "bindings",
+              "inputTypes",
+              "unresolved"
+            ],
+            "properties": {
+              "bindings": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "action",
+                    "exactAlternateButtonEquivalence",
+                    "notationClip",
+                    "sourceIconLabels"
+                  ],
+                  "properties": {
+                    "action": {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    "exactAlternateButtonEquivalence": {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    "notationClip": {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    "sourceIconLabels": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "maxLength": 20000
+                      }
+                    }
+                  }
+                }
+              },
+              "inputTypes": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 3,
+                "uniqueItems": true,
+                "items": {
+                  "enum": [
+                    "buttons",
+                    "motion",
+                    "mouse",
+                    "camera",
+                    "microphone"
+                  ]
+                }
+              },
+              "unresolved": {
+                "type": "string",
+                "maxLength": 20000
+              }
+            }
+          },
+          "edition": {
+            "enum": [
+              "base",
+              "jamboree_tv"
+            ]
+          },
+          "fieldEvidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "category",
+              "controls",
+              "format",
+              "gameplay",
+              "name",
+              "reward",
+              "scoreRules",
+              "tieRules",
+              "timeLimit",
+              "winRules"
+            ],
+            "properties": {
+              "category": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "limitation",
+                  "quoteIds",
+                  "status"
+                ],
+                "properties": {
+                  "limitation": {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  "quoteIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    "uniqueItems": true
+                  },
+                  "status": {
+                    "enum": [
+                      "corroborated",
+                      "single_source",
+                      "conflict",
+                      "unverified"
+                    ]
+                  }
+                }
+              },
+              "controls": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "limitation",
+                  "quoteIds",
+                  "status"
+                ],
+                "properties": {
+                  "limitation": {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  "quoteIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    "uniqueItems": true
+                  },
+                  "status": {
+                    "enum": [
+                      "corroborated",
+                      "single_source",
+                      "conflict",
+                      "unverified"
+                    ]
+                  }
+                }
+              },
+              "format": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "limitation",
+                  "quoteIds",
+                  "status"
+                ],
+                "properties": {
+                  "limitation": {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  "quoteIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    "uniqueItems": true
+                  },
+                  "status": {
+                    "enum": [
+                      "corroborated",
+                      "single_source",
+                      "conflict",
+                      "unverified"
+                    ]
+                  }
+                }
+              },
+              "gameplay": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "limitation",
+                  "quoteIds",
+                  "status"
+                ],
+                "properties": {
+                  "limitation": {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  "quoteIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    "uniqueItems": true
+                  },
+                  "status": {
+                    "enum": [
+                      "corroborated",
+                      "single_source",
+                      "conflict",
+                      "unverified"
+                    ]
+                  }
+                }
+              },
+              "name": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "limitation",
+                  "quoteIds",
+                  "status"
+                ],
+                "properties": {
+                  "limitation": {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  "quoteIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    "uniqueItems": true
+                  },
+                  "status": {
+                    "enum": [
+                      "corroborated",
+                      "single_source",
+                      "conflict",
+                      "unverified"
+                    ]
+                  }
+                }
+              },
+              "reward": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "limitation",
+                  "quoteIds",
+                  "status"
+                ],
+                "properties": {
+                  "limitation": {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  "quoteIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    "uniqueItems": true
+                  },
+                  "status": {
+                    "enum": [
+                      "corroborated",
+                      "single_source",
+                      "conflict",
+                      "unverified"
+                    ]
+                  }
+                }
+              },
+              "scoreRules": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "limitation",
+                  "quoteIds",
+                  "status"
+                ],
+                "properties": {
+                  "limitation": {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  "quoteIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    "uniqueItems": true
+                  },
+                  "status": {
+                    "enum": [
+                      "corroborated",
+                      "single_source",
+                      "conflict",
+                      "unverified"
+                    ]
+                  }
+                }
+              },
+              "tieRules": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "limitation",
+                  "quoteIds",
+                  "status"
+                ],
+                "properties": {
+                  "limitation": {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  "quoteIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    "uniqueItems": true
+                  },
+                  "status": {
+                    "enum": [
+                      "corroborated",
+                      "single_source",
+                      "conflict",
+                      "unverified"
+                    ]
+                  }
+                }
+              },
+              "timeLimit": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "limitation",
+                  "quoteIds",
+                  "status"
+                ],
+                "properties": {
+                  "limitation": {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  "quoteIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    "uniqueItems": true
+                  },
+                  "status": {
+                    "enum": [
+                      "corroborated",
+                      "single_source",
+                      "conflict",
+                      "unverified"
+                    ]
+                  }
+                }
+              },
+              "winRules": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "limitation",
+                  "quoteIds",
+                  "status"
+                ],
+                "properties": {
+                  "limitation": {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  "quoteIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    "uniqueItems": true
+                  },
+                  "status": {
+                    "enum": [
+                      "corroborated",
+                      "single_source",
+                      "conflict",
+                      "unverified"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "format": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^MG[0-9]{3}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "phoneFit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "phoneFitBasis": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "phoneFitReason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "reward": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "coins",
+              "other",
+              "scope",
+              "stars"
+            ],
+            "properties": {
+              "coins": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "other": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "scope": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "stars": {
+                "type": "null"
+              }
+            }
+          },
+          "scoreRules": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 2000
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "tieRules": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 2000
+          },
+          "timeLimit": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "reportedLabel",
+              "unresolved",
+              "variants",
+              "wholeGameSeconds"
+            ],
+            "properties": {
+              "reportedLabel": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "unresolved": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "variants": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "scope",
+                    "seconds"
+                  ],
+                  "properties": {
+                    "scope": {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    "seconds": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              },
+              "wholeGameSeconds": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 1,
+                "maximum": 3600
+              }
+            }
+          },
+          "winRules": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 2000
+          }
+        }
+      },
+      "minItems": 132,
+      "maxItems": 132
+    },
+    "scope": {
+      "type": "string",
+      "maxLength": 20000
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "B03 minigames closed evidence schema"
+}

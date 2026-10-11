@@ -1,0 +1,337 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/luisitin/partybox-gpt-drops/blob/job/B03-jamboree-minigames/jobs/B03-jamboree-minigames/catalogue-index.schema.json",
+  "title": "B03 preliminary catalogue index (never final game specifications)",
+  "type": "object",
+  "properties": {
+    "job": {
+      "const": "B03"
+    },
+    "scope": {
+      "const": "preliminary catalogue index only"
+    },
+    "complete": {
+      "const": false
+    },
+    "sourceCounts": {
+      "type": "object",
+      "properties": {
+        "wikiBase": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "wikiTv": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "wikiCombined": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "legacyBase": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "legacyTv": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nintendoTv": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "legacyCombined": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "wikiBase",
+        "wikiTv",
+        "wikiCombined",
+        "legacyBase",
+        "legacyTv",
+        "nintendoTv",
+        "legacyCombined"
+      ],
+      "additionalProperties": false
+    },
+    "normalization": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ordinal": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "edition": {
+            "enum": [
+              "base",
+              "jamboree_tv"
+            ]
+          },
+          "wikiCategoryPath": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "wikiArticleUrl": {
+            "type": "string",
+            "pattern": "^https://www\\.mariowiki\\.com/"
+          },
+          "legacyName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "legacyCategoryPath": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "confidence": {
+            "enum": [
+              "medium",
+              "low"
+            ]
+          },
+          "citations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source": {
+                  "enum": [
+                    "wiki",
+                    "legacy",
+                    "legacyTv"
+                  ]
+                },
+                "field": {
+                  "enum": [
+                    "name",
+                    "category"
+                  ]
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "locator": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "source",
+                "field",
+                "quote",
+                "locator"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 2
+          },
+          "indexPass2": {
+            "type": "object",
+            "properties": {
+              "wiki": {
+                "const": true
+              },
+              "legacy": {
+                "enum": [
+                  true,
+                  null
+                ]
+              }
+            },
+            "required": [
+              "wiki",
+              "legacy"
+            ],
+            "additionalProperties": false
+          },
+          "legacySource": {
+            "enum": [
+              "legacy",
+              "legacyTv",
+              null
+            ]
+          }
+        },
+        "required": [
+          "ordinal",
+          "name",
+          "edition",
+          "wikiCategoryPath",
+          "wikiArticleUrl",
+          "legacyName",
+          "legacyCategoryPath",
+          "confidence",
+          "citations",
+          "indexPass2",
+          "legacySource"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "comparison": {
+      "type": "object",
+      "properties": {
+        "baseNormalizedIntersection": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "wikiOnlyBase": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "legacyOnlyBase": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "wikiOnlyTv": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "punctuationCaseVariants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "wikiName": {
+                "type": "string",
+                "minLength": 1
+              },
+              "legacyName": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "wikiName",
+              "legacyName"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "categoryDifferences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "wikiPath": {
+                "type": "string",
+                "minLength": 1
+              },
+              "legacyPath": {
+                "type": "string",
+                "minLength": 1
+              },
+              "names": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "wikiPath",
+              "legacyPath",
+              "names"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "tvNormalizedIntersection": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "combinedNormalizedIntersection": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "legacyOnlyTv": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "baseNormalizedIntersection",
+        "wikiOnlyBase",
+        "legacyOnlyBase",
+        "wikiOnlyTv",
+        "punctuationCaseVariants",
+        "categoryDifferences",
+        "tvNormalizedIntersection",
+        "combinedNormalizedIntersection",
+        "legacyOnlyTv"
+      ],
+      "additionalProperties": false
+    },
+    "unresearchedFields": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 11
+    },
+    "remainingGates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "job",
+    "scope",
+    "complete",
+    "sourceCounts",
+    "normalization",
+    "entries",
+    "comparison",
+    "unresearchedFields",
+    "remainingGates"
+  ],
+  "additionalProperties": false
+}

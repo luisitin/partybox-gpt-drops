@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "job",
+    "sources"
+  ],
+  "properties": {
+    "job": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "currentFinalCatalogueUsesFactsFromThisSource",
+          "note",
+          "passATextSha256",
+          "passBTextSha256",
+          "reopenedTwice",
+          "url"
+        ],
+        "properties": {
+          "currentFinalCatalogueUsesFactsFromThisSource": {
+            "type": "boolean"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "passATextSha256": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "passBTextSha256": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "reopenedTwice": {
+            "type": "boolean"
+          },
+          "url": {
+            "type": "string",
+            "maxLength": 20000
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "B03 historical-supplement-reopens closed evidence schema"
+}

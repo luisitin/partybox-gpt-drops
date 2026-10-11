@@ -1,0 +1,549 @@
+{
+  "scope": "English-name conflict research only; no alias silently accepted",
+  "sources": [
+    {
+      "sourceId": "wiki-sandwiched",
+      "family": "Super Mario Wiki",
+      "url": "https://www.mariowiki.com/Sandwiched",
+      "quotes": [
+        {
+          "field": "englishName",
+          "quote": "Sandwiched",
+          "locator": "h1#firstHeading"
+        },
+        {
+          "field": "nameCategory",
+          "quote": "Sandwiched is a 4-Player minigame in Super Mario Party Jamboree",
+          "locator": "lead paragraph"
+        },
+        {
+          "field": "mechanic",
+          "quote": "The players must avoid being crushed by the falling sandwiches",
+          "locator": "#Overview"
+        }
+      ],
+      "pass1": {
+        "id": "wiki-sandwiched",
+        "url": "https://www.mariowiki.com/Sandwiched",
+        "timeUtc": "2026-10-07T15:42:55.244211+00:00",
+        "curlExitCode": 0,
+        "httpStatusEffectiveUrl": "200 https://www.mariowiki.com/Sandwiched",
+        "stderr": "",
+        "byteLength": 62833,
+        "sha256": "6dd9c5e59dd983227fb9d6a0443dd224cccd99ff7278495a5b956795db5c3d71",
+        "path": "/workspace/b03-name-research/wiki-sandwiched.html",
+        "provenanceMetadataFile": "retrieval-pass1.json"
+      },
+      "pass2": {
+        "id": "wiki-sandwiched",
+        "url": "https://www.mariowiki.com/Sandwiched",
+        "timeUtc": "2026-10-07T15:48:18Z",
+        "curlExitCode": 0,
+        "httpStatusEffectiveUrl": "200 https://www.mariowiki.com/Sandwiched",
+        "stderr": "",
+        "byteLength": 62833,
+        "sha256": "6dd9c5e59dd983227fb9d6a0443dd224cccd99ff7278495a5b956795db5c3d71",
+        "path": "/workspace/b03-name-research/wiki-sandwiched-pass2.html",
+        "tlsVerification": "default curl certificate verification retained; inherited proxy retained",
+        "curlCommand": [
+          "curl",
+          "--fail",
+          "--silent",
+          "--show-error",
+          "--location",
+          "--connect-timeout",
+          "10",
+          "--max-time",
+          "35",
+          "--output",
+          "/workspace/b03-name-research/wiki-sandwiched-pass2.html",
+          "--write-out",
+          "%{http_code} %{url_effective}",
+          "https://www.mariowiki.com/Sandwiched"
+        ],
+        "provenanceMetadataFile": "retrieval-pass2.json"
+      }
+    },
+    {
+      "sourceId": "wiki-squeaky",
+      "family": "Super Mario Wiki",
+      "url": "https://www.mariowiki.com/Squeaky_Shakedown",
+      "quotes": [
+        {
+          "field": "englishName",
+          "quote": "Squeaky Shakedown",
+          "locator": "h1#firstHeading"
+        },
+        {
+          "field": "nameCategory",
+          "quote": "Squeaky Shakedown is a 1-vs.-3 coin -collecting minigame in Super Mario Party Jamboree",
+          "locator": "lead paragraph; adjacent link text creates a space before hyphen"
+        },
+        {
+          "field": "mechanic",
+          "quote": "The solo player hits the team side with the squeaky hammer to steal coins.",
+          "locator": "#In-game_text"
+        }
+      ],
+      "pass1": {
+        "id": "wiki-squeaky",
+        "url": "https://www.mariowiki.com/Squeaky_Shakedown",
+        "timeUtc": "2026-10-07T15:42:55.244808+00:00",
+        "curlExitCode": 0,
+        "httpStatusEffectiveUrl": "200 https://www.mariowiki.com/Squeaky_Shakedown",
+        "stderr": "",
+        "byteLength": 62120,
+        "sha256": "db42fcef6afd961474723a315b5fa91cc4e9e3ae6c57b48422f8c871b54dbafd",
+        "path": "/workspace/b03-name-research/wiki-squeaky.html",
+        "provenanceMetadataFile": "retrieval-pass1.json"
+      },
+      "pass2": {
+        "id": "wiki-squeaky",
+        "url": "https://www.mariowiki.com/Squeaky_Shakedown",
+        "timeUtc": "2026-10-07T15:48:18Z",
+        "curlExitCode": 0,
+        "httpStatusEffectiveUrl": "200 https://www.mariowiki.com/Squeaky_Shakedown",
+        "stderr": "",
+        "byteLength": 62120,
+        "sha256": "db42fcef6afd961474723a315b5fa91cc4e9e3ae6c57b48422f8c871b54dbafd",
+        "path": "/workspace/b03-name-research/wiki-squeaky-pass2.html",
+        "tlsVerification": "default curl certificate verification retained; inherited proxy retained",
+        "curlCommand": [
+          "curl",
+          "--fail",
+          "--silent",
+          "--show-error",
+          "--location",
+          "--connect-timeout",
+          "10",
+          "--max-time",
+          "35",
+          "--output",
+          "/workspace/b03-name-research/wiki-squeaky-pass2.html",
+          "--write-out",
+          "%{http_code} %{url_effective}",
+          "https://www.mariowiki.com/Squeaky_Shakedown"
+        ],
+        "provenanceMetadataFile": "retrieval-pass2.json"
+      }
+    },
+    {
+      "sourceId": "legacy",
+      "family": "Mario Party Legacy",
+      "url": "https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables",
+      "quotes": [
+        {
+          "field": "conflictingEnglishName",
+          "quote": "Sandwhiched",
+          "locator": "#free-for-all-minigames; row with japanese-minigame-6.jpg"
+        },
+        {
+          "field": "conflictingEnglishName",
+          "quote": "Squeaky Showdown",
+          "locator": "#1-vs-3-minigames; row with japanese-minigame-46.jpg"
+        }
+      ],
+      "pass1": {
+        "id": "legacy",
+        "url": "https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables",
+        "timeUtc": "2026-10-07T15:42:55.245449+00:00",
+        "curlExitCode": 0,
+        "httpStatusEffectiveUrl": "200 https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables",
+        "stderr": "",
+        "byteLength": 138783,
+        "sha256": "ac7307fdbd17bcf85b4545a009d49a1889a8a0f34af086df2e5e0d8c140526d6",
+        "path": "/workspace/b03-name-research/legacy.html",
+        "provenanceMetadataFile": "retrieval-pass1.json"
+      },
+      "pass2": {
+        "id": "legacy",
+        "url": "https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables",
+        "timeUtc": "2026-10-07T15:48:18Z",
+        "curlExitCode": 0,
+        "httpStatusEffectiveUrl": "200 https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables",
+        "stderr": "",
+        "byteLength": 138782,
+        "sha256": "582b8d8f9db29a61d9423b6330199bdda2602dbff33f8c68fb4ebea233ad7c3a",
+        "path": "/workspace/b03-name-research/legacy-pass2.html",
+        "tlsVerification": "default curl certificate verification retained; inherited proxy retained",
+        "curlCommand": [
+          "curl",
+          "--fail",
+          "--silent",
+          "--show-error",
+          "--location",
+          "--connect-timeout",
+          "10",
+          "--max-time",
+          "35",
+          "--output",
+          "/workspace/b03-name-research/legacy-pass2.html",
+          "--write-out",
+          "%{http_code} %{url_effective}",
+          "https://mariopartylegacy.com/super-mario-party-jamboree/minigame-list-tips-and-unlockables"
+        ],
+        "provenanceMetadataFile": "retrieval-pass2.json"
+      }
+    },
+    {
+      "sourceId": "nintendo-jp-minigames",
+      "family": "Nintendo primary",
+      "url": "https://www.nintendo.com/jp/switch/a7hla/minigame/index.html",
+      "quotes": [
+        {
+          "field": "japaneseNameAndCategoryOnly",
+          "quote": "かわしてサンドイッチ 4人対戦",
+          "locator": "div.player.p2 img[data-src=\"../assets/img/minigame/name_type_2.png\"] @alt",
+          "html_attribute": true
+        }
+      ],
+      "pass1": {
+        "id": "nintendo-jp-minigames",
+        "url": "https://www.nintendo.com/jp/switch/a7hla/minigame/index.html",
+        "timeUtc": "2026-10-07T15:43:37.238681+00:00",
+        "curlExitCode": 0,
+        "httpStatusEffectiveUrl": "200 https://www.nintendo.com/jp/switch/a7hla/minigame/index.html",
+        "stderr": "",
+        "byteLength": 50377,
+        "sha256": "4ac1b4b6d59e2cd417440c7fa54b8f9ada4ac88015ad8f4614b0173a9c7a9904",
+        "path": "/workspace/b03-name-research/nintendo-jp-minigames.html",
+        "provenanceMetadataFile": "retrieval-discovery.json"
+      },
+      "pass2": {
+        "id": "nintendo-jp-minigames",
+        "url": "https://www.nintendo.com/jp/switch/a7hla/minigame/index.html",
+        "timeUtc": "2026-10-07T15:48:18Z",
+        "curlExitCode": 0,
+        "httpStatusEffectiveUrl": "200 https://www.nintendo.com/jp/switch/a7hla/minigame/index.html",
+        "stderr": "",
+        "byteLength": 50377,
+        "sha256": "4ac1b4b6d59e2cd417440c7fa54b8f9ada4ac88015ad8f4614b0173a9c7a9904",
+        "path": "/workspace/b03-name-research/nintendo-jp-minigames-pass2.html",
+        "tlsVerification": "default curl certificate verification retained; inherited proxy retained",
+        "curlCommand": [
+          "curl",
+          "--fail",
+          "--silent",
+          "--show-error",
+          "--location",
+          "--connect-timeout",
+          "10",
+          "--max-time",
+          "35",
+          "--output",
+          "/workspace/b03-name-research/nintendo-jp-minigames-pass2.html",
+          "--write-out",
+          "%{http_code} %{url_effective}",
+          "https://www.nintendo.com/jp/switch/a7hla/minigame/index.html"
+        ],
+        "provenanceMetadataFile": "retrieval-pass2.json"
+      }
+    },
+    {
+      "sourceId": "destructoid-details",
+      "family": "Destructoid editorial guide (GAMURS)",
+      "url": "https://www.destructoid.com/everything-we-know-about-super-mario-party-jamboree-characters-mini-games-release-date/",
+      "quotes": [
+        {
+          "field": "englishName",
+          "quote": "Sandwiched",
+          "locator": "#h-all-mini-games-we-know-so-far; following list first li"
+        }
+      ],
+      "author": "Chris Penwell",
+      "publishedAt": "2024-09-10T18:09:17+00:00",
+      "pass1": {
+        "id": "destructoid-details",
+        "url": "https://www.destructoid.com/everything-we-know-about-super-mario-party-jamboree-characters-mini-games-release-date/",
+        "timeUtc": "2026-10-07T15:46:44.133643+00:00",
+        "curlExitCode": 0,
+        "httpStatusEffectiveUrl": "200 https://www.destructoid.com/everything-we-know-about-super-mario-party-jamboree-characters-mini-games-release-date/",
+        "stderr": "",
+        "byteLength": 153201,
+        "sha256": "db7f69dec603e1fa88a566ea94f64cd34b08eac21e5ca4d813f3611505e5d9da",
+        "path": "/workspace/b03-name-research/destructoid-details.html",
+        "provenanceMetadataFile": "retrieval-discovery4.json"
+      },
+      "pass2": {
+        "id": "destructoid-details",
+        "url": "https://www.destructoid.com/everything-we-know-about-super-mario-party-jamboree-characters-mini-games-release-date/",
+        "timeUtc": "2026-10-07T15:48:18Z",
+        "curlExitCode": 0,
+        "httpStatusEffectiveUrl": "200 https://www.destructoid.com/everything-we-know-about-super-mario-party-jamboree-characters-mini-games-release-date/",
+        "stderr": "",
+        "byteLength": 153201,
+        "sha256": "db7f69dec603e1fa88a566ea94f64cd34b08eac21e5ca4d813f3611505e5d9da",
+        "path": "/workspace/b03-name-research/destructoid-details-pass2.html",
+        "tlsVerification": "default curl certificate verification retained; inherited proxy retained",
+        "curlCommand": [
+          "curl",
+          "--fail",
+          "--silent",
+          "--show-error",
+          "--location",
+          "--connect-timeout",
+          "10",
+          "--max-time",
+          "35",
+          "--output",
+          "/workspace/b03-name-research/destructoid-details-pass2.html",
+          "--write-out",
+          "%{http_code} %{url_effective}",
+          "https://www.destructoid.com/everything-we-know-about-super-mario-party-jamboree-characters-mini-games-release-date/"
+        ],
+        "provenanceMetadataFile": "retrieval-pass2.json"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "sourceId": "wiki-sandwiched",
+      "passId": "pass1",
+      "field": "englishName",
+      "locator": "h1#firstHeading",
+      "quoteFound": true,
+      "wordCount": 1,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "wiki-sandwiched",
+      "passId": "pass1",
+      "field": "nameCategory",
+      "locator": "lead paragraph",
+      "quoteFound": true,
+      "wordCount": 10,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "wiki-sandwiched",
+      "passId": "pass1",
+      "field": "mechanic",
+      "locator": "#Overview",
+      "quoteFound": true,
+      "wordCount": 10,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "wiki-sandwiched",
+      "passId": "pass2",
+      "field": "englishName",
+      "locator": "h1#firstHeading",
+      "quoteFound": true,
+      "wordCount": 1,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "wiki-sandwiched",
+      "passId": "pass2",
+      "field": "nameCategory",
+      "locator": "lead paragraph",
+      "quoteFound": true,
+      "wordCount": 10,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "wiki-sandwiched",
+      "passId": "pass2",
+      "field": "mechanic",
+      "locator": "#Overview",
+      "quoteFound": true,
+      "wordCount": 10,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "wiki-squeaky",
+      "passId": "pass1",
+      "field": "englishName",
+      "locator": "h1#firstHeading",
+      "quoteFound": true,
+      "wordCount": 2,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "wiki-squeaky",
+      "passId": "pass1",
+      "field": "nameCategory",
+      "locator": "lead paragraph; adjacent link text creates a space before hyphen",
+      "quoteFound": true,
+      "wordCount": 13,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "wiki-squeaky",
+      "passId": "pass1",
+      "field": "mechanic",
+      "locator": "#In-game_text",
+      "quoteFound": true,
+      "wordCount": 14,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "wiki-squeaky",
+      "passId": "pass2",
+      "field": "englishName",
+      "locator": "h1#firstHeading",
+      "quoteFound": true,
+      "wordCount": 2,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "wiki-squeaky",
+      "passId": "pass2",
+      "field": "nameCategory",
+      "locator": "lead paragraph; adjacent link text creates a space before hyphen",
+      "quoteFound": true,
+      "wordCount": 13,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "wiki-squeaky",
+      "passId": "pass2",
+      "field": "mechanic",
+      "locator": "#In-game_text",
+      "quoteFound": true,
+      "wordCount": 14,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "legacy",
+      "passId": "pass1",
+      "field": "conflictingEnglishName",
+      "locator": "#free-for-all-minigames; row with japanese-minigame-6.jpg",
+      "quoteFound": true,
+      "wordCount": 1,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "legacy",
+      "passId": "pass1",
+      "field": "conflictingEnglishName",
+      "locator": "#1-vs-3-minigames; row with japanese-minigame-46.jpg",
+      "quoteFound": true,
+      "wordCount": 2,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "legacy",
+      "passId": "pass2",
+      "field": "conflictingEnglishName",
+      "locator": "#free-for-all-minigames; row with japanese-minigame-6.jpg",
+      "quoteFound": true,
+      "wordCount": 1,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "legacy",
+      "passId": "pass2",
+      "field": "conflictingEnglishName",
+      "locator": "#1-vs-3-minigames; row with japanese-minigame-46.jpg",
+      "quoteFound": true,
+      "wordCount": 2,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "nintendo-jp-minigames",
+      "passId": "pass1",
+      "field": "japaneseNameAndCategoryOnly",
+      "locator": "div.player.p2 img[data-src=\"../assets/img/minigame/name_type_2.png\"] @alt",
+      "quoteFound": true,
+      "wordCount": 2,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "nintendo-jp-minigames",
+      "passId": "pass2",
+      "field": "japaneseNameAndCategoryOnly",
+      "locator": "div.player.p2 img[data-src=\"../assets/img/minigame/name_type_2.png\"] @alt",
+      "quoteFound": true,
+      "wordCount": 2,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "destructoid-details",
+      "passId": "pass1",
+      "field": "englishName",
+      "locator": "#h-all-mini-games-we-know-so-far; following list first li",
+      "quoteFound": true,
+      "wordCount": 1,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    },
+    {
+      "sourceId": "destructoid-details",
+      "passId": "pass2",
+      "field": "englishName",
+      "locator": "#h-all-mini-games-we-know-so-far; following list first li",
+      "quoteFound": true,
+      "wordCount": 1,
+      "quoteLimitPassed": true,
+      "recordedResponseHashMatchesRetainedBytes": true,
+      "successfulRetrieval": true
+    }
+  ],
+  "checksPassed": true,
+  "findings": [
+    {
+      "dispute": "Sandwiched / Sandwhiched",
+      "status": "Canonical wiki English spelling corroborated by independent editorial guide; Legacy alias/typo interpretation not independently proven",
+      "acceptedEnglishNameEvidence": [
+        "wiki-sandwiched",
+        "destructoid-details"
+      ],
+      "remaining": "Retain original Legacy spelling and strict set difference; need independent identity linkage before accepting an alias."
+    },
+    {
+      "dispute": "Squeaky Shakedown / Squeaky Showdown",
+      "status": "UNVERIFIED English name/identity resolution",
+      "acceptedEnglishNameEvidence": [
+        "wiki-squeaky"
+      ],
+      "remaining": "Obtain primary English title card or independent hands-on guide naming the hammer coin game, then freshly reopen the corroborating source."
+    }
+  ],
+  "provenanceAudit": {
+    "auditedAtUtc": "2026-10-07T15:56:40Z",
+    "correction": "Prior version selected prior pass2 metadata through unspecified glob order and overwrote those response paths. Current pass1 selects explicit original metadata files whose original response bytes remain separately retained. Every retained response hash is checked before quote checks.",
+    "separateSnapshotPaths": true,
+    "originalFirstPassBytesPreserved": true,
+    "supersedes": "name-evidence-before-provenance-correction.json",
+    "hashChecksBeforeParsing": true,
+    "retainedResponsesAudited": 10
+  }
+}
