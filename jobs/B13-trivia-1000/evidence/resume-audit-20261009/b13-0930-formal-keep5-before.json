@@ -1,0 +1,199 @@
+{
+  "id": "B13-0930",
+  "row": {
+    "id": "B13-0930",
+    "category": "food-everyday-life",
+    "question": "Which organisms convert alcohol into acetic acid during vinegar making?",
+    "difficulty": 3,
+    "options": [
+      "Mold spores",
+      "Acetic acid bacteria",
+      "Algae",
+      "Bread yeasts"
+    ],
+    "correctIndex": 1,
+    "correctAnswer": "Acetic acid bacteria",
+    "funFact": "Vinegar is widely used for pickling vegetables.",
+    "confidence": "high",
+    "confidenceReason": "Britannica names an example genus and Wikipedia the functional group; the broader answer is valid for both.",
+    "sources": [
+      {
+        "sourceId": "food-everyday-life-s0025",
+        "url": "https://www.britannica.com/topic/vinegar",
+        "publisher": "Encyclopaedia Britannica",
+        "quote": "by the action of Acetobacter bacteria, forming acetic acid and water",
+        "funFactQuote": "widely used in the pickling of cucumbers and other vegetables"
+      },
+      {
+        "sourceId": "food-everyday-life-s0026",
+        "url": "https://en.wikipedia.org/wiki/Vinegar",
+        "publisher": "Wikipedia contributors",
+        "quote": "converting ethanol to acetic acid using acetic acid bacteria",
+        "funFactQuote": "salad dressing, or pickling agent"
+      }
+    ],
+    "claims": [
+      {
+        "kind": "answer",
+        "text": "Acetic acid bacteria carry out vinegar's alcohol-to-acid conversion.",
+        "sourceIds": [
+          "food-everyday-life-s0025",
+          "food-everyday-life-s0026"
+        ]
+      },
+      {
+        "kind": "funFact",
+        "text": "Vinegar is widely used for pickling vegetables.",
+        "sourceIds": [
+          "food-everyday-life-s0025",
+          "food-everyday-life-s0026"
+        ]
+      }
+    ]
+  },
+  "author": {
+    "id": "B13-0930",
+    "rowSha256": "e1488e49443155abc4a605e5e711d8ec79b80fa5bf9addfefdea308687195b26",
+    "author": "/root/continue_b14_author",
+    "evidenceReads": [
+      {
+        "sourceId": "food-everyday-life-s0025",
+        "captureSha256": "3100c9810a46569c9c551cb77416f73fab3674ad7e045508712d8f19055d4478",
+        "capturePath": ".work/food-everyday-life/author/food-everyday-life-s0025.txt",
+        "retrievedAt": "2026-10-07T19:01:01.296970+00:00",
+        "answerQuoteExactMatch": true,
+        "funFactQuoteExactMatch": true,
+        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
+        "answerSupport": "Acetic acid bacteria carry out vinegar's alcohol-to-acid conversion.",
+        "funFactSupport": "Vinegar is widely used for pickling vegetables."
+      },
+      {
+        "sourceId": "food-everyday-life-s0026",
+        "captureSha256": "1523a290664f3656f5397f896734b74af91c29b4cada69750261812dd6369915",
+        "capturePath": ".work/food-everyday-life/author/food-everyday-life-s0026.txt",
+        "retrievedAt": "2026-10-07T19:01:01.757252+00:00",
+        "answerQuoteExactMatch": true,
+        "funFactQuoteExactMatch": true,
+        "readingScope": "The author read selected supporting passages and surrounding article context; this is not the mandatory fresh independent review.",
+        "answerSupport": "Acetic acid bacteria carry out vinegar's alcohol-to-acid conversion.",
+        "funFactSupport": "Vinegar is widely used for pickling vegetables."
+      }
+    ],
+    "confidenceReason": "Britannica names an example genus and Wikipedia the functional group; the broader answer is valid for both.",
+    "unresolvedProblems": [
+      "Fresh adversarial review and second source reopening are pending."
+    ]
+  },
+  "adversarial": {
+    "id": "B13-0930",
+    "rowSha256": "e1488e49443155abc4a605e5e711d8ec79b80fa5bf9addfefdea308687195b26",
+    "reviewer": "/root/r2048_lead (independent final ordered-choice reviewer)",
+    "reviewedAt": "2026-10-07T21:17:52.580474+00:00",
+    "result": "accept",
+    "attemptedCounterexample": "Distinguished yeast first-stage conversion from acetic-acid bacteria in the second stage; molds and algae are not the described alcohol-oxidizing organisms.",
+    "distractorsChecked": [
+      "Mold spores",
+      "Acetic acid bacteria",
+      "Algae",
+      "Bread yeasts"
+    ],
+    "scopeDateCheck": "Reviewed conventional food/process/botanical identity, not a current ranking; row-specific scope: Distinguished yeast first-stage conversion from acetic-acid bacteria in the second stage; molds and algae are not the described alcohol-oxidizing organisms.",
+    "funFactCheck": "Britannica explicitly names cucumber/vegetable pickling, while Wiki identifies vinegar as a pickling agent.",
+    "sourceIndependenceCheck": "Wiki vinegar definition cites UK acetic-acid information and fermentation cites Nakayama1959 oxidation research. Distinct editorial narration and no paired-source citation/copy were observed.",
+    "editorialOwnersCompared": [
+      "Encyclopaedia Britannica Inc.",
+      "Wikimedia community contributors"
+    ],
+    "finalOptionOrderAssessment": "Acetic-acid bacteria perform the second stage; bread yeast names the preceding alcohol stage.",
+    "finalOrderedChoicesActuallyRead": [
+      "Mold spores",
+      "Acetic acid bacteria",
+      "Algae",
+      "Bread yeasts"
+    ]
+  },
+  "reopen": {
+    "id": "B13-0930",
+    "rowSha256": "e1488e49443155abc4a605e5e711d8ec79b80fa5bf9addfefdea308687195b26",
+    "reviewer": "/root/continue_b13_lead (did not author food category)",
+    "reviewedAt": "2026-10-07T21:17:52.580474+00:00",
+    "result": "supported",
+    "sources": [
+      {
+        "sourceId": "food-everyday-life-s0025",
+        "receipt": {
+          "pass": "reopen",
+          "retrievedAt": "2026-10-07T19:51:56.168585+00:00",
+          "method": "urllib-http-get",
+          "requestedUrl": "https://www.britannica.com/topic/vinegar",
+          "resolvedUrl": "https://www.britannica.com/topic/vinegar",
+          "status": 200,
+          "contentType": "text/html",
+          "rawSha256": "7184078951d4fc8ebfc02365e07eb9a4fcc038f3dc37d9da6ad2c8bbae900f82",
+          "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0025.raw",
+          "title": "Vinegar | Description, Production, Types, Uses, & Facts | Britannica",
+          "contentSha256": "a4f2262acda94a46041b95f1116215b21ede9a3260b8cf12415c53d35a734d09",
+          "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0025.txt",
+          "captureComplete": true,
+          "characters": 12121
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "by the action of Acetobacter bacteria, forming acetic acid and water",
+            "exactMatch": true,
+            "wordCount": 11
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "widely used in the pickling of cucumbers and other vegetables",
+            "exactMatch": true,
+            "wordCount": 10
+          }
+        ],
+        "contextRead": true,
+        "claimAssessment": "Distinguished yeast first-stage conversion from acetic-acid bacteria in the second stage; molds and algae are not the described alcohol-oxidizing organisms. Britannica explicitly names cucumber/vegetable pickling, while Wiki identifies vinegar as a pickling agent.",
+        "sourceIndependenceAssessment": "Wiki vinegar definition cites UK acetic-acid information and fermentation cites Nakayama1959 oxidation research. Distinct editorial narration and no paired-source citation/copy were observed."
+      },
+      {
+        "sourceId": "food-everyday-life-s0026",
+        "receipt": {
+          "pass": "reopen",
+          "retrievedAt": "2026-10-07T19:51:56.173032+00:00",
+          "method": "urllib-http-get",
+          "requestedUrl": "https://en.wikipedia.org/wiki/Vinegar",
+          "resolvedUrl": "https://en.wikipedia.org/wiki/Vinegar",
+          "status": 200,
+          "contentType": "text/html",
+          "rawSha256": "d1040c4db99e8717630cf58c2189e4781575415f1d05040eaeb057bd45a2581d",
+          "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0026.raw",
+          "title": "Vinegar - Wikipedia",
+          "contentSha256": "1523a290664f3656f5397f896734b74af91c29b4cada69750261812dd6369915",
+          "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0026.txt",
+          "captureComplete": true,
+          "characters": 42680
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "converting ethanol to acetic acid using acetic acid bacteria",
+            "exactMatch": true,
+            "wordCount": 9
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "salad dressing, or pickling agent",
+            "exactMatch": true,
+            "wordCount": 5
+          }
+        ],
+        "contextRead": true,
+        "claimAssessment": "Distinguished yeast first-stage conversion from acetic-acid bacteria in the second stage; molds and algae are not the described alcohol-oxidizing organisms. Britannica explicitly names cucumber/vegetable pickling, while Wiki identifies vinegar as a pickling agent.",
+        "sourceIndependenceAssessment": "Wiki vinegar definition cites UK acetic-acid information and fermentation cites Nakayama1959 oxidation research. Distinct editorial narration and no paired-source citation/copy were observed."
+      }
+    ],
+    "assessment": "Distinguished yeast first-stage conversion from acetic-acid bacteria in the second stage; molds and algae are not the described alcohol-oxidizing organisms. Britannica explicitly names cucumber/vegetable pickling, while Wiki identifies vinegar as a pickling agent.",
+    "finalOptionOrderAssessment": "Acetic-acid bacteria perform the second stage; bread yeast names the preceding alcohol stage.",
+    "sourceReceiptReuse": "Only choice order changed. The final ordered question/options/correct answer/fun fact were actually read now; retained physical second-pass GET receipts keep their actual original times."
+  }
+}

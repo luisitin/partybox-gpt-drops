@@ -1,0 +1,224 @@
+{
+  "authorPacketSHA256": "6102abcd570c7c88f4d188c08f0f6ef625275a99a1bb3b99c425494759e2bca7",
+  "reviewer": "/root/restart_g01_0458",
+  "actualReviewedAt": "2026-10-09T14:54:10.408766+00:00",
+  "result": "accept",
+  "decision": "PASS",
+  "reviews": [
+    {
+      "rowId": "B13-0273",
+      "authorPacketSHA256": "6102abcd570c7c88f4d188c08f0f6ef625275a99a1bb3b99c425494759e2bca7",
+      "proposedRowSHA256": "54b8488835f89e690fea9161aa83ab3514520941a30a30460a41d62a908af9ad",
+      "actualReviewedAt": "2026-10-09T14:54:10.408766+00:00",
+      "reviewer": "/root/restart_g01_0458; independently authored no B13 row",
+      "decision": "PASS",
+      "result": "accept",
+      "actualSecondGetSources": [
+        {
+          "rowId": "B13-0273",
+          "sourceId": "science-space-s5003",
+          "url": "https://en.wikipedia.org/wiki/SI_derived_unit",
+          "pass": "independent-reopen",
+          "retrievedAt": "2026-10-09T14:51:06.315750+00:00",
+          "method": "actual urllib HTTPS GET",
+          "authorPacketSHA256": "6102abcd570c7c88f4d188c08f0f6ef625275a99a1bb3b99c425494759e2bca7",
+          "status": 200,
+          "resolvedUrl": "https://en.wikipedia.org/wiki/SI_derived_unit",
+          "contentSHA256": "25feb54193352339ca93194d3637fc1ba6bd98cb76da8e3087ec2fb80820e594",
+          "rawSHA256": "e3a1c2e5a829b0d04d7aa7f18fe8d887d764528e2262206c64f11c36848ad9a8",
+          "captureComplete": true,
+          "finishedAt": "2026-10-09T14:51:06.696211+00:00"
+        },
+        {
+          "rowId": "B13-0273",
+          "sourceId": "science-space-s5005",
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+          "pass": "independent-reopen",
+          "retrievedAt": "2026-10-09T14:51:06.696483+00:00",
+          "method": "actual urllib HTTPS GET",
+          "authorPacketSHA256": "6102abcd570c7c88f4d188c08f0f6ef625275a99a1bb3b99c425494759e2bca7",
+          "status": 200,
+          "resolvedUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+          "contentSHA256": "818679368999d7cf2983607f8a3ee71304e03c8c8764db3b5b20daa827099188",
+          "rawSHA256": "271562291f48eb1472acf53a414861b5d440547bd635e1385a54cc04a6092e14",
+          "captureComplete": true,
+          "finishedAt": "2026-10-09T14:51:07.808330+00:00"
+        }
+      ],
+      "exactShortClipCounts": [
+        {
+          "sourceId": "science-space-s5003",
+          "field": "quote",
+          "exactWords": 8,
+          "literalMatch": true
+        },
+        {
+          "sourceId": "science-space-s5005",
+          "field": "quote",
+          "exactWords": 6,
+          "literalMatch": true
+        },
+        {
+          "sourceId": "science-space-s5005",
+          "field": "extraQuote",
+          "exactWords": 8,
+          "literalMatch": true
+        }
+      ],
+      "wholeRelevantParagraphsAvailableAdjacentParagraphsAllAttachedNativeReferencesPersonallyRead": true,
+      "dateCheck": "All four actual second GETs began after frozen14:47:25.344987 authoring and naturally closed14:51:08.862931. Fresh request does not imply new publication. Scientific definition and alcohol oxidation group are enduring answers, no dynamic2025 snapshot invented. Native SI last edit6October2026 and NIST updated18August2025; Britannica native modified15September2026 read.",
+      "licenseCheck": "NIST government-authored text only; Wikipedia CC BY-SA attribution retained and Britannica copyrighted brief clips only. No images/full bodies/headers publicly delivered; original percanonical budgets preserved without source-ID reset.",
+      "canonicalURLBudgets": {
+        "https://en.wikipedia.org/wiki/SI_derived_unit": {
+          "protectedOriginalAndHistoryBefore": 121,
+          "newDistinctShortClipWordsConservativelyAdded": 0,
+          "after": 121
+        },
+        "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes": {
+          "protectedOriginalAndHistoryBefore": 147,
+          "newDistinctShortClipWordsConservativelyAdded": 8,
+          "after": 155
+        }
+      },
+      "noNewSourceIdBudgetReset": true,
+      "answerScopeCheck": "The complete independently read NIST4.2.1.1 explicitly defines Celsius temperature t=T-T0 with T0=273.15K and names degree Celsius, symbol°C. Its complete table3 row and footnote(f) distinguish a temperature from an interval. The entire separately edited Wikipedia article explicitly lists degree Celsius for temperature relative to273.15K; it cites BIPM2019 at this table. The question asks the named derived temperature unit rather than absolute thermodynamic temperature or an interval. No Celsius word remains in the stem.",
+      "funFactCheck": "Both entire table contexts explicitly show degree Celsius symbol°C, unchanged funfact.",
+      "independenceCheck": "NIST US Department of Commerce authored standards guide versus Wikimedia community article with its relevant table attribution to BIPM2019. I read all three native Wiki reference entries/outgoing; its other NISTsec06 link supports general conventions and is acknowledged, not ignored. Neither separate table passage is treated as copied prose simply because the internationally standardized definition matches. I did not GET BIPM or external NISTsec06; limited independent editorial presentation, no universal provenance guarantee.",
+      "difficultyCheck": "Difficulty2 remains reasonable for recognizing a standard offset temperature definition from four genuine unit names. Kilogram is mass, becquerel radioactivity, steradian solid angle; none can express this specified temperature. This remains a clear single correct answer and removes the literal Celsius cue.",
+      "counterexampleCheck": "Kelvin also expresses an interval and is equal in magnitude to one degree Celsius, but the question specifically names temperature relative to273.15K; none of the other three units is a temperature. No approximate water freezing/boiling premise or SI2019 water triple-point claim is introduced. DegreeCelsius14 vs8/9/9 is an explicit pre-existing length exception requiring the separate current global assessment."
+    },
+    {
+      "rowId": "B13-0930",
+      "authorPacketSHA256": "6102abcd570c7c88f4d188c08f0f6ef625275a99a1bb3b99c425494759e2bca7",
+      "proposedRowSHA256": "44b7f4b3ec5168dc12b86c681ae05b65ddf9afb786d7e1e6fc8c538b0eef7c5f",
+      "actualReviewedAt": "2026-10-09T14:54:10.408766+00:00",
+      "reviewer": "/root/restart_g01_0458; independently authored no B13 row",
+      "decision": "PASS",
+      "result": "accept",
+      "actualSecondGetSources": [
+        {
+          "rowId": "B13-0930",
+          "sourceId": "food-everyday-life-s5025",
+          "url": "https://www.britannica.com/topic/vinegar",
+          "pass": "independent-reopen",
+          "retrievedAt": "2026-10-09T14:51:07.808640+00:00",
+          "method": "actual urllib HTTPS GET",
+          "authorPacketSHA256": "6102abcd570c7c88f4d188c08f0f6ef625275a99a1bb3b99c425494759e2bca7",
+          "status": 200,
+          "resolvedUrl": "https://www.britannica.com/topic/vinegar",
+          "contentSHA256": "3100c9810a46569c9c551cb77416f73fab3674ad7e045508712d8f19055d4478",
+          "rawSHA256": "08e06067f825d2c05fbc4efb84904b4a83ce9b996436af297d195b821d33ed2a",
+          "captureComplete": true,
+          "finishedAt": "2026-10-09T14:51:08.315331+00:00"
+        },
+        {
+          "rowId": "B13-0930",
+          "sourceId": "food-everyday-life-s5026",
+          "url": "https://en.wikipedia.org/wiki/Vinegar",
+          "pass": "independent-reopen",
+          "retrievedAt": "2026-10-09T14:51:08.315665+00:00",
+          "method": "actual urllib HTTPS GET",
+          "authorPacketSHA256": "6102abcd570c7c88f4d188c08f0f6ef625275a99a1bb3b99c425494759e2bca7",
+          "status": 200,
+          "resolvedUrl": "https://en.wikipedia.org/wiki/Vinegar",
+          "contentSHA256": "1523a290664f3656f5397f896734b74af91c29b4cada69750261812dd6369915",
+          "rawSHA256": "d1040c4db99e8717630cf58c2189e4781575415f1d05040eaeb057bd45a2581d",
+          "captureComplete": true,
+          "finishedAt": "2026-10-09T14:51:08.862238+00:00"
+        }
+      ],
+      "exactShortClipCounts": [
+        {
+          "sourceId": "food-everyday-life-s5025",
+          "field": "quote",
+          "exactWords": 11,
+          "literalMatch": true
+        },
+        {
+          "sourceId": "food-everyday-life-s5025",
+          "field": "funFactQuote",
+          "exactWords": 10,
+          "literalMatch": true
+        },
+        {
+          "sourceId": "food-everyday-life-s5026",
+          "field": "quote",
+          "exactWords": 9,
+          "literalMatch": true
+        },
+        {
+          "sourceId": "food-everyday-life-s5026",
+          "field": "funFactQuote",
+          "exactWords": 5,
+          "literalMatch": true
+        }
+      ],
+      "wholeRelevantParagraphsAvailableAdjacentParagraphsAllAttachedNativeReferencesPersonallyRead": true,
+      "dateCheck": "All four actual second GETs began after frozen14:47:25.344987 authoring and naturally closed14:51:08.862931. Fresh request does not imply new publication. Scientific definition and alcohol oxidation group are enduring answers, no dynamic2025 snapshot invented. Native SI last edit6October2026 and NIST updated18August2025; Britannica native modified15September2026 read.",
+      "licenseCheck": "NIST government-authored text only; Wikipedia CC BY-SA attribution retained and Britannica copyrighted brief clips only. No images/full bodies/headers publicly delivered; original percanonical budgets preserved without source-ID reset.",
+      "canonicalURLBudgets": {
+        "https://www.britannica.com/topic/vinegar": {
+          "protectedOriginalAndHistoryBefore": 42,
+          "newDistinctShortClipWordsConservativelyAdded": 0,
+          "after": 42
+        },
+        "https://en.wikipedia.org/wiki/Vinegar": {
+          "protectedOriginalAndHistoryBefore": 27,
+          "newDistinctShortClipWordsConservativelyAdded": 0,
+          "after": 27
+        }
+      },
+      "noNewSourceIdBudgetReset": true,
+      "answerScopeCheck": "Both native sources explicitly distinguish sugar-to-alcohol yeast activity from alcohol-to-acetic-acid bacterial oxidation. All six native Britannica topic paragraphs (not FAQ/AI summaries), and whole Wiki lead/production/adjacent paragraphs1–22 plus their attached native reference entries/outgoing were personally read. Britannica names Acetobacter, an example within the functional acetic acid bacterial group; Wiki explicitly names that group. The question specifies the alcohol-to-vinegar stage, not every organism ever participating.",
+      "funFactCheck": "Britannica native final paragraph explicitly states vegetable/cucumber pickling; Wiki native lead calls vinegar a pickling agent. Unchanged broad pickling statement is supported.",
+      "independenceCheck": "Britannica Editors proprietary six-paragraph account and Wikimedia community article are separately edited, with distinct narrative and examples. Relevant Wiki conversion cites Nakayama1959 and its production context has independent biochemical/engineering references rather than attributing the selected statement to Britannica. All attached native entries for the read contexts were inspected; no external paper GET or all unrelated67references read is claimed. Britannica whole flattened body differs between lead and own capture, while all six actual native authored paragraphs match exactly.",
+      "difficultyCheck": "Difficulty3 is defensible for recognizing the biological group for a specifically stated second oxidation stage. Bread yeasts are plausible first-stage distractors but cannot replace the bacteria in the asked alcohol stage; molds/algae are genuine organism groups, not meaningless word padding. No literal acetic-acid cue remains in the stem.",
+      "counterexampleCheck": "Vinegar can contain yeast/molds and sugar fermentation uses yeast, but the explicit alcohol-to-vinegar stage excludes that earlier conversion. The broader functional group is valid though Britannica names one genus. Aceticacidbacteria20 vs11/5/12 remains an explicit pre-existing length exception, separately reviewed in current global assessment."
+    }
+  ],
+  "controller": {
+    "startedAt": "2026-10-09T14:51:06.315717+00:00",
+    "closedAt": "2026-10-09T14:51:08.862931+00:00",
+    "elapsedSeconds": 2.5472109090187587,
+    "declaredWholeBoundSeconds": 40,
+    "declaredMaxResponseBytes": 4000000,
+    "nativePid": 406386,
+    "externalChildren": [],
+    "terminationSignals": [],
+    "requestedDistinctOriginalURLs": 4,
+    "completedRequests": 4,
+    "allRequestedFullHTTP200": true,
+    "failure": null,
+    "noPublicSourceBodies": true,
+    "noB13ProductFilesEdited": true
+  },
+  "privateScopeSHA256": "83b78f3841108448772886712f23dfbca73d0b0869b9555e1bc6646564e4a61b",
+  "noB13ProductFilesEdited": true,
+  "adoptedAt": "2026-10-09T14:57:19.863078+00:00",
+  "originalIndependentPeerPacketSHA256": "bd4f937f21037d0b0bcec1c57186b5cb4af1f8364078217e11ed1c4a7c6278cf",
+  "privateFullBodiesAndHTTPHeadersExcluded": true,
+  "currentGlobalAcceptancePending": true,
+  "originalCanonicalURLBudgetsIndependentlyComparedToNinePlusOriginal": {
+    "https://en.wikipedia.org/wiki/SI_derived_unit": {
+      "protectedOriginalAndHistoryBefore": 121,
+      "newDistinctShortClipWordsConservativelyAdded": 0,
+      "after": 121
+    },
+    "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes": {
+      "protectedOriginalAndHistoryBefore": 147,
+      "newDistinctShortClipWordsConservativelyAdded": 8,
+      "after": 155
+    },
+    "https://www.britannica.com/topic/vinegar": {
+      "protectedOriginalAndHistoryBefore": 42,
+      "newDistinctShortClipWordsConservativelyAdded": 0,
+      "after": 42
+    },
+    "https://en.wikipedia.org/wiki/Vinegar": {
+      "protectedOriginalAndHistoryBefore": 27,
+      "newDistinctShortClipWordsConservativelyAdded": 0,
+      "after": 27
+    }
+  },
+  "newDistinctExpressiveQuoteWords": 8
+}

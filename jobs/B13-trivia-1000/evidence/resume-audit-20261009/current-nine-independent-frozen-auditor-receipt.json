@@ -1,0 +1,142 @@
+{
+  "reviewer": "/root/restart_g01_0458",
+  "priorAuditorInvocationFailurePreserved": "/tmp/B13-independent-frozen-auditor-board-agent-20261009-1234/FAILED-auditor-private.json",
+  "correctedOnlyIgnoredOutputPathInsideCopyRoot": true,
+  "actualFullCheckerInvocationNumber": 2,
+  "freezeSHA256": "30fd4696aeb21f16d3b543b7088e7455a4df4635318e9e3fef8a41cf13c25c7a",
+  "freezeActualTime": "2026-10-09T12:29:40.962674+00:00",
+  "sourceJob": "/tmp/B13-root-source-20261009/jobs/B13-trivia-1000",
+  "copyJob": "/tmp/B13-independent-frozen-auditor-board-agent-20261009-1236/repo/jobs/B13-trivia-1000",
+  "sourceBefore": {
+    "delivered": {
+      "files": 286,
+      "bytes": 77671248,
+      "allWholeByteSizesAndSHA256Match": true,
+      "checkedAt": "2026-10-09T12:36:39.094455+00:00"
+    },
+    "bodies": {
+      "files": 1087,
+      "bytes": 49822661,
+      "allWholeByteSizesAndSHA256Match": true,
+      "checkedAt": "2026-10-09T12:36:39.846671+00:00"
+    }
+  },
+  "copyBefore": {
+    "delivered": {
+      "files": 286,
+      "bytes": 77671248,
+      "allWholeByteSizesAndSHA256Match": true,
+      "checkedAt": "2026-10-09T12:36:40.599237+00:00"
+    },
+    "bodies": {
+      "files": 1087,
+      "bytes": 49822661,
+      "allWholeByteSizesAndSHA256Match": true,
+      "checkedAt": "2026-10-09T12:36:40.809583+00:00"
+    }
+  },
+  "copiedDeliveredFiles": 286,
+  "hardlinkedBodies": 1087,
+  "hardlinkOriginalPermissionsUnchanged": true,
+  "workflowSHA256": "6901633c64ba093eb5e920fe2c8aed1c1123db21aa4c1a88f6c2bc4091b5233d",
+  "sourceAfter": {
+    "delivered": {
+      "files": 286,
+      "bytes": 77671248,
+      "allWholeByteSizesAndSHA256Match": true,
+      "checkedAt": "2026-10-09T12:37:05.032638+00:00"
+    },
+    "bodies": {
+      "files": 1087,
+      "bytes": 49822661,
+      "allWholeByteSizesAndSHA256Match": true,
+      "checkedAt": "2026-10-09T12:37:05.146783+00:00"
+    }
+  },
+  "copyAfter": {
+    "delivered": {
+      "files": 286,
+      "bytes": 77671248,
+      "allWholeByteSizesAndSHA256Match": true,
+      "checkedAt": "2026-10-09T12:37:05.261821+00:00"
+    },
+    "bodies": {
+      "files": 1087,
+      "bytes": 49822661,
+      "allWholeByteSizesAndSHA256Match": true,
+      "checkedAt": "2026-10-09T12:37:05.362627+00:00"
+    }
+  },
+  "allSourceAndCopyGuardsBeforeAfterEqual": true,
+  "wholeReportExactlyByteEqual": true,
+  "wholeReportBytes": 800173,
+  "wholeReportSHA256": "8cfddb7f0488ccc2346ee72d4e757e20eaa326044eeaf7de985a3f82f7c71b31",
+  "currentRowVersionsSHA256": "12d9a52258758158c1ce59f291d4248a7b7fd2026426f3e2eb9230d59064b863",
+  "currentCheckerSHA256": "df225dff957727d3d6171af3e26a75c8c7e47134d674dd50b6d9e0c8a4bf38df",
+  "fullOriginalCommands": [
+    {
+      "label": "full-original-checker",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/check-data.py",
+        "--require-local-captures",
+        "--output",
+        "/tmp/B13-independent-frozen-auditor-board-agent-20261009-1236/repo/jobs/B13-trivia-1000/.work/independent-current-full-checks.json"
+      ],
+      "startedAt": "2026-10-09T12:36:40.821195+00:00",
+      "closedAt": "2026-10-09T12:37:04.450165+00:00",
+      "actualExitCode": 0,
+      "ownedChildPid": 377586,
+      "wholeStdoutPath": "/tmp/B13-independent-frozen-auditor-board-agent-20261009-1236/full-original-checker.stdout.txt",
+      "wholeStderrPath": "/tmp/B13-independent-frozen-auditor-board-agent-20261009-1236/full-original-checker.stderr.txt",
+      "wholeStdout": "{\n  \"mode\": \"full\",\n  \"rows\": 1000,\n  \"sourceRecords\": 546,\n  \"quoteFields\": 3509,\n  \"quoteMatchesActualLocalCaptures\": 3509,\n  \"schemaAndDataErrors\": [],\n  \"adversarialAcceptedCurrent\": 1000,\n  \"reopenSupportedCurrent\": 1000,\n  \"similarityFlagsResolved\": 2210,\n  \"pending\": {\n    \"targetRowsMissing\": 0,\n    \"adversarialNotCurrent\": 0,\n    \"reopenNotCurrent\": 0,\n    \"similarityFlagsUnresolved\": 0,\n    \"knownExactAnswerCycle\": false,\n    \"optionLengthEditorialAssessment\": null\n  },\n  \"researchComplete\": true\n}\nSimilarity flags: 2210 Report: .work/independent-current-full-checks.json\n",
+      "wholeStderr": ""
+    },
+    {
+      "label": "fifteen-current-production-fixtures",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/verify-guard-fixtures.py",
+        "."
+      ],
+      "startedAt": "2026-10-09T12:37:04.476848+00:00",
+      "closedAt": "2026-10-09T12:37:04.747238+00:00",
+      "actualExitCode": 0,
+      "ownedChildPid": 377599,
+      "wholeStdoutPath": "/tmp/B13-independent-frozen-auditor-board-agent-20261009-1236/fifteen-current-production-fixtures.stdout.txt",
+      "wholeStderrPath": "/tmp/B13-independent-frozen-auditor-board-agent-20261009-1236/fifteen-current-production-fixtures.stderr.txt",
+      "wholeStdout": "{\n  \"requiredMissingBodyRejected\": true,\n  \"MissingReopenReceiptRejected\": true,\n  \"missingReceiptErrors\": [\n    \"isolated naked-receipt fixture: receipt pass mismatch\",\n    \"isolated naked-receipt fixture: receipt lacks actual HTTP200\",\n    \"isolated naked-receipt fixture: invalid actual UTC retrieval time\",\n    \"isolated naked-receipt fixture: missing retrieval method\",\n    \"isolated naked-receipt fixture: receipt target differs from selected source URL\",\n    \"isolated naked-receipt fixture: invalid capture SHA256\",\n    \"isolated naked-receipt fixture: no capture path\"\n  ],\n  \"RejectedDuplicateNotCountedResolved\": true,\n  \"independentReviewIdentityCases\": [\n    {\n      \"case\": \"self-review\",\n      \"rejectedByActualProductionGate\": true\n    },\n    {\n      \"case\": \"self-review-with-role-and-case\",\n      \"rejectedByActualProductionGate\": true\n    },\n    {\n      \"case\": \"missing-author\",\n      \"rejectedByActualProductionGate\": true\n    },\n    {\n      \"case\": \"blank-author\",\n      \"rejectedByActualProductionGate\": true\n    },\n    {\n      \"case\": \"missing-reviewer\",\n      \"rejectedByActualProductionGate\": true\n    }\n  ],\n  \"validCurrentIndependentReviewAccepted\": true,\n  \"actualUtcLengthAssessmentCases\": [\n    {\n      \"case\": \"malformed\",\n      \"rejectedByActualProductionGate\": true\n    },\n    {\n      \"case\": \"future\",\n      \"rejectedByActualProductionGate\": true\n    },\n    {\n      \"case\": \"non-UTC\",\n      \"rejectedByActualProductionGate\": true\n    },\n    {\n      \"case\": \"naive\",\n      \"rejectedByActualProductionGate\": true\n    },\n    {\n      \"case\": \"missing\",\n      \"rejectedByActualProductionGate\": true\n    }\n  ],\n  \"validCurrentUtcLengthAssessmentAccepted\": true,\n  \"checkerSha256\": \"df225dff957727d3d6171af3e26a75c8c7e47134d674dd50b6d9e0c8a4bf38df\",\n  \"runAt\": \"2026-10-09T12:37:04.678957+00:00\",\n  \"rerunCommand\": \"python scripts/verify-guard-fixtures.py .\",\n  \"actualInvocation\": [\n    \"python\",\n    \"scripts/verify-guard-fixtures.py\",\n    \".\"\n  ],\n  \"fixtureCount\": 15,\n  \"scope\": \"Three original evidence/duplicate controls, five author-identity counterexamples, five timestamp counterexamples and two valid current controls execute unchanged current production guards. No remote retrieval, factual grading, shared data mutation or invented real source receipt.\"\n}\n",
+      "wholeStderr": ""
+    },
+    {
+      "label": "whole-original-manifest",
+      "command": [
+        "sha256sum",
+        "--check",
+        "SHA256SUMS.txt"
+      ],
+      "startedAt": "2026-10-09T12:37:04.748437+00:00",
+      "closedAt": "2026-10-09T12:37:04.864179+00:00",
+      "actualExitCode": 0,
+      "ownedChildPid": 377600,
+      "wholeStdoutPath": "/tmp/B13-independent-frozen-auditor-board-agent-20261009-1236/whole-original-manifest.stdout.txt",
+      "wholeStderrPath": "/tmp/B13-independent-frozen-auditor-board-agent-20261009-1236/whole-original-manifest.stderr.txt",
+      "wholeStdout": ".gitignore: OK\nASSUMPTIONS.md: OK\nCONFLICTS.md: OK\nCONTRACT.md: OK\nINTEGRATION.md: OK\nLOOP.md: OK\nNEXT.md: OK\nREADME.md: OK\nSOURCES.md: OK\nVERIFY.md: OK\ncategories/animals-nature.json: OK\ncategories/food-everyday-life.json: OK\ncategories/movies-tv.json: OK\ncategories/music.json: OK\ncategories/science-space.json: OK\ncategories/sports-games.json: OK\ncategories/us-geography.json: OK\ncategories/us-history-civics.json: OK\ncategories/world-geography.json: OK\ncategories/world-history.json: OK\nevidence/animals-nature-author-seal.json: OK\nevidence/animals-nature-author-stage-revisions.json: OK\nevidence/animals-nature-authoring.json: OK\nevidence/animals-nature-current-review-needed.json: OK\nevidence/animals-nature-final-metadata-rereview.json: OK\nevidence/animals-nature-first-fresh-rereview.json: OK\nevidence/animals-nature-fresh-review-seal.json: OK\nevidence/animals-nature-length-fresh-review-seal.json: OK\nevidence/animals-nature-length-repair-fresh-rereview.json: OK\nevidence/animals-nature-option-distractor-context-reads.json: OK\nevidence/animals-nature-option-distractor-independent-context-review.json: OK\nevidence/animals-nature-option-length-revisions.json: OK\nevidence/animals-nature-pre-length-repair-snapshot.json: OK\nevidence/animals-nature-review-revisions.json: OK\nevidence/animals-nature-second-fresh-rereview.json: OK\nevidence/animals-nature-sources.json: OK\nevidence/early-category-option-length-recommendations.json: OK\nevidence/early-fullset-original-similarity-challenges.json: OK\nevidence/early-fullset-pre-repair-similarity-resolutions.json: OK\nevidence/early-fullset-similarity-resolutions-pre-final-permutation.json: OK\nevidence/early-fullset-similarity-resolutions.json: OK\nevidence/final-option-length-declared-amendment-review.json: OK\nevidence/final-option-permutation-manifest.json: OK\nevidence/final-option-post-shuffle-amendments.json: OK\nevidence/food-everyday-life-author-seal.json: OK\nevidence/food-everyday-life-author-stage-revisions.json: OK\nevidence/food-everyday-life-authoring.json: OK\nevidence/food-everyday-life-final-ordered-option-fresh-review.json: OK\nevidence/food-everyday-life-final-two-author-revisions.json: OK\nevidence/food-everyday-life-final-two-fresh-rereview.json: OK\nevidence/food-everyday-life-fresh-review-seal.json: OK\nevidence/food-everyday-life-original-emitted-adversarial.json: OK\nevidence/food-everyday-life-original-emitted-reopen.json: OK\nevidence/food-everyday-life-original-fresh-review.json: OK\nevidence/food-everyday-life-post-shuffle-family-author-amendment.json: OK\nevidence/food-everyday-life-previous-28-repair-seal.json: OK\nevidence/food-everyday-life-review-hash-corrections.json: OK\nevidence/food-everyday-life-review-revisions.json: OK\nevidence/food-everyday-life-revised-author-seal.json: OK\nevidence/food-everyday-life-revised-fresh-rereview.json: OK\nevidence/food-everyday-life-source-reopen.json: OK\nevidence/food-everyday-life-sources.json: OK\nevidence/food0979-independent-final-family-rereview.json: OK\nevidence/fullset-option-length-interim-assessment.json: OK\nevidence/fullset-position-pattern-challenge.json: OK\nevidence/history-reviewer-final-late-similarity-review.json: OK\nevidence/history-reviewer-post-amendment-similarity-metrics.json: OK\nevidence/history-reviewer-similarity-resolutions-before-final-permutation.json: OK\nevidence/history-reviewer-similarity-resolutions.json: OK\nevidence/independent-held-delivery-audit/B13-INDEPENDENT-HELD-ACCEPTANCE.json: OK\nevidence/independent-held-delivery-audit/held-20261007T212900Z-snapshot.json: OK\nevidence/independent-held-delivery-audit/held-before-after-verification.json: OK\nevidence/independent-held-delivery-audit/held-checksums-result.json: OK\nevidence/independent-held-delivery-audit/held-checksums.log: OK\nevidence/independent-held-delivery-audit/held-full-local-acceptance-result.json: OK\nevidence/independent-held-delivery-audit/held-full-local-acceptance.log: OK\nevidence/independent-held-delivery-audit/held-independent-evidence-audit.json: OK\nevidence/independent-position-audit-original-final-shuffle/audit.json: OK\nevidence/independent-position-audit-original-final-shuffle/provenance.json: OK\nevidence/independent-position-audit-original-final-shuffle/report.md: OK\nevidence/independent-position-audit-original-final-shuffle/summary.json: OK\nevidence/independent-position-audit-two-amendment-overlay/audit.json: OK\nevidence/independent-position-audit-two-amendment-overlay/provenance.json: OK\nevidence/independent-position-audit-two-amendment-overlay/report.md: OK\nevidence/independent-position-audit-two-amendment-overlay/summary.json: OK\nevidence/independent-post-repair-checker-guard-tests.json: OK\nevidence/lead-final-local-acceptance-provenance.json: OK\nevidence/movies-tv-author-snapshot.json: OK\nevidence/movies-tv-authoring.json: OK\nevidence/movies-tv-final-ordered-option-fresh-review.json: OK\nevidence/movies-tv-review-revisions.json: OK\nevidence/movies-tv-source-reopen.json: OK\nevidence/movies-tv-sources.json: OK\nevidence/music-author-snapshot.json: OK\nevidence/music-authoring.json: OK\nevidence/music-final-ordered-option-fresh-review.json: OK\nevidence/music-option-length-author-revisions.json: OK\nevidence/music-review-revisions.json: OK\nevidence/music-source-reopen.json: OK\nevidence/music-sources.json: OK\nevidence/music-stale-capture-chain-fresh-recovery.json: OK\nevidence/option-length-assessment-before-declared-final-amendments.json: OK\nevidence/option-length-assessment.json: OK\nevidence/pre-final-option-shuffle-snapshot.json: OK\nevidence/resume-audit-20261009/200-original-author-identities-bound.json: OK\nevidence/resume-audit-20261009/NEXT-before-this-audit.md: OK\nevidence/resume-audit-20261009/NEXT-eight-checkpoint-before-current-nine.md: OK\nevidence/resume-audit-20261009/current-nine-independent-length-assessment-adoption.json: OK\nevidence/resume-audit-20261009/current-nine-plus-protected-original-canonical-clip-word-counts.json: OK\nevidence/resume-audit-20261009/eight-current-full-captured-draft-report.json: OK\nevidence/resume-audit-20261009/eight-current-independent-editorial-amendments.json: OK\nevidence/resume-audit-20261009/eight-fd4bb-whole-hosted-native-actual-refusal.json: OK\nevidence/resume-audit-20261009/eight-material-source-publication-closed.json: OK\nevidence/resume-audit-20261009/eight-original-row-review-versions-before-amendment.json: OK\nevidence/resume-audit-20261009/genuine-retained-body-hashes.json: OK\nevidence/resume-audit-20261009/initial-3e9-original-whole-hosted-native-acceptance.json: OK\nevidence/resume-audit-20261009/nine-current-renderer-actual-preservation-and-scope.json: OK\nevidence/resume-audit-20261009/ninth-current-independent-editorial-amendment.json: OK\nevidence/resume-audit-20261009/ninth-original-row-review-versions-before-amendment.json: OK\nevidence/resume-audit-20261009/option-length-assessment-before-nine-current-amendments.json: OK\nevidence/resume-audit-20261009/original-baseline-acceptance.json: OK\nevidence/resume-audit-20261009/original-full-capture-check.stdout.txt: OK\nevidence/resume-audit-20261009/original-guard-fixtures.stdout.txt: OK\nevidence/resume-audit-20261009/original-renderer-actual-audit-loss.json: OK\nevidence/resume-audit-20261009/original-six-gate-counterexamples.json: OK\nevidence/resume-audit-20261009/protected-original-full-checks-before-nine-amendments.json: OK\nevidence/resume-audit-20261009/protected-original-three-guard-report.json: OK\nevidence/resume-audit-20261009/renderer-original-shuffle-provenance-scope-repair.json: OK\nevidence/resume-audit-20261009/renderer-preservation-current-regression.json: OK\nevidence/root-categories-difficulty-author-repairs.json: OK\nevidence/root-categories-difficulty-fresh-rereview.json: OK\nevidence/root-categories-fresh-review-seal.json: OK\nevidence/root-category-option-length-assessment.json: OK\nevidence/root-category-similarity-flags.json: OK\nevidence/root-category-similarity-resolutions-pre-final-permutation.json: OK\nevidence/root-category-similarity-resolutions.json: OK\nevidence/root-sports-final-option-order-review.json: OK\nevidence/root-sports-final-review-seal.json: OK\nevidence/science-space-authoring.json: OK\nevidence/science-space-original-fresh-review.json: OK\nevidence/science-space-planet-fresh-rereview.json: OK\nevidence/science-space-review-revisions.json: OK\nevidence/science-space-si-fresh-rereview.json: OK\nevidence/science-space-source-reopen.json: OK\nevidence/science-space-sources.json: OK\nevidence/similarity-flags-early-remaining.json: OK\nevidence/similarity-flags-full-1000.json: OK\nevidence/similarity-flags-late-remaining.json: OK\nevidence/similarity-resolutions-before-final-integration.json: OK\nevidence/similarity-resolutions.json: OK\nevidence/sports-games-additional-fresh-rereview.json: OK\nevidence/sports-games-additional-source-author-revisions.json: OK\nevidence/sports-games-author-capture-collision-recovery.json: OK\nevidence/sports-games-author-seal-before-additional-review-repairs.json: OK\nevidence/sports-games-author-seal-before-difficulty-swaps.json: OK\nevidence/sports-games-author-seal-before-independent-boxing-repair.json: OK\nevidence/sports-games-author-seal.json: OK\nevidence/sports-games-author-stage-revisions.json: OK\nevidence/sports-games-authoring.json: OK\nevidence/sports-games-boxing-fresh-rereview.json: OK\nevidence/sports-games-current-review-needed.json: OK\nevidence/sports-games-difficulty-author-revisions.json: OK\nevidence/sports-games-difficulty-fresh-rereview.json: OK\nevidence/sports-games-fresh-repair-source-reopens.json: OK\nevidence/sports-games-fresh-review-seal.json: OK\nevidence/sports-games-independent-boxing-author-revisions.json: OK\nevidence/sports-games-original-fresh-review.json: OK\nevidence/sports-games-pre-difficulty-fresh-review-seal.json: OK\nevidence/sports-games-source-reopen.json: OK\nevidence/sports-games-sources.json: OK\nevidence/supplemental-crosscategory-same-answer-review.json: OK\nevidence/us-geography-authoring.json: OK\nevidence/us-geography-original-fresh-review.json: OK\nevidence/us-geography-source-reopen.json: OK\nevidence/us-geography-sources.json: OK\nevidence/us-history-civics-author-seal.json: OK\nevidence/us-history-civics-author-stage-revisions.json: OK\nevidence/us-history-civics-authoring.json: OK\nevidence/us-history-civics-before-fresh-repair-snapshot.json: OK\nevidence/us-history-civics-current-review-needed.json: OK\nevidence/us-history-civics-final-option-fresh-review.json: OK\nevidence/us-history-civics-final-option-review-seal.json: OK\nevidence/us-history-civics-first-fresh-rereview.json: OK\nevidence/us-history-civics-fresh-review-author-revisions.json: OK\nevidence/us-history-civics-fresh-review-seal.json: OK\nevidence/us-history-civics-original-fresh-review.json: OK\nevidence/us-history-civics-source-reopen.json: OK\nevidence/us-history-civics-sources.json: OK\nevidence/world-geography-author-seal.json: OK\nevidence/world-geography-author-stage-revisions.json: OK\nevidence/world-geography-authoring.json: OK\nevidence/world-geography-current-review-needed.json: OK\nevidence/world-geography-difficulty-review-repairs.json: OK\nevidence/world-geography-first-repair-fresh-rereview.json: OK\nevidence/world-geography-fresh-review-author-repair-seal.json: OK\nevidence/world-geography-fresh-review-author-repairs.json: OK\nevidence/world-geography-fresh-review-seal.json: OK\nevidence/world-geography-original-fresh-review.json: OK\nevidence/world-geography-second-fresh-author-repairs.json: OK\nevidence/world-geography-second-repair-fresh-rereview.json: OK\nevidence/world-geography-sources.json: OK\nevidence/world-history-author-seal-before-extra-context-repairs.json: OK\nevidence/world-history-author-seal-before-fresh-review-repairs.json: OK\nevidence/world-history-author-seal.json: OK\nevidence/world-history-author-stage-revisions.json: OK\nevidence/world-history-authoring.json: OK\nevidence/world-history-final-order-original-0515-rejection.json: OK\nevidence/world-history-final-ordered-options-first-review.json: OK\nevidence/world-history-final-ordered-options-seal.json: OK\nevidence/world-history-fresh-review-seal.json: OK\nevidence/world-history-initial-fresh-review-snapshot.json: OK\nevidence/world-history-post-final-shuffle-0515-author-amendment.json: OK\nevidence/world-history-post-shuffle-0515-fresh-rereview.json: OK\nevidence/world-history-review-revisions.json: OK\nevidence/world-history-revised-fresh-review.json: OK\nevidence/world-history-source-exclusions.json: OK\nevidence/world-history-source-independence-audit.json: OK\nevidence/world-history-sources.json: OK\nevidence/world-nature-final-option-order-fresh-review-seal.json: OK\nevidence/world-nature-final-option-order-fresh-review.json: OK\npartybox/exclusions.json: OK\npartybox/fit-summary.json: OK\npartybox/overlap-candidates.json: OK\npartybox/validate-with-partybox.ts: OK\nreports/check-strengthening-original-failures.txt: OK\nreports/checker-guard-fixtures.json: OK\nreports/checks.json: OK\nreports/delivery-inventory.json: OK\nreports/final-lead-full-check.stdout.txt: OK\nreports/generated-continuation.md: OK\nreports/music-recovery-failure.json: OK\nrequirements.txt: OK\nresearch/animals-nature-fresh-review-notes.md: OK\nresearch/animals-nature-notes.md: OK\nresearch/food-everyday-life-fresh-review-notes.md: OK\nresearch/food-everyday-life-notes.md: OK\nresearch/movies-tv-notes.md: OK\nresearch/movies-tv-review-notes.md: OK\nresearch/music-notes.md: OK\nresearch/music-review-notes.md: OK\nresearch/science-space-fresh-review-notes.md: OK\nresearch/science-space-notes.md: OK\nresearch/sports-games-fresh-review-notes.md: OK\nresearch/sports-games-notes.md: OK\nresearch/us-geography-fresh-review-notes.md: OK\nresearch/us-geography-notes.md: OK\nresearch/us-geography-revisions.json: OK\nresearch/us-history-civics-fresh-review-notes.md: OK\nresearch/us-history-civics-notes.md: OK\nresearch/world-geography-fresh-review-notes.md: OK\nresearch/world-geography-notes.md: OK\nresearch/world-history-notes.md: OK\nreviews/animals-nature-adversarial.json: OK\nreviews/animals-nature-original-review.json: OK\nreviews/animals-nature-reopen.json: OK\nreviews/food-everyday-life-adversarial.json: OK\nreviews/food-everyday-life-reopen.json: OK\nreviews/movies-tv-adversarial.json: OK\nreviews/movies-tv-original-review.json: OK\nreviews/movies-tv-reopen.json: OK\nreviews/music-adversarial.json: OK\nreviews/music-before-option-length-repairs.json: OK\nreviews/music-option-length-challenge.json: OK\nreviews/music-option-length-fresh-review.json: OK\nreviews/music-original-review.json: OK\nreviews/music-reopen.json: OK\nreviews/science-space-adversarial.json: OK\nreviews/science-space-reopen.json: OK\nreviews/sports-games-adversarial.json: OK\nreviews/sports-games-reopen.json: OK\nreviews/us-geography-adversarial.json: OK\nreviews/us-geography-reopen.json: OK\nreviews/us-history-civics-adversarial.json: OK\nreviews/us-history-civics-reopen.json: OK\nreviews/world-geography-adversarial.json: OK\nreviews/world-geography-reopen.json: OK\nreviews/world-history-adversarial.json: OK\nreviews/world-history-reopen.json: OK\nscripts/capture-source.py: OK\nscripts/check-data.py: OK\nscripts/render-docs.py: OK\nscripts/shuffle-options.py: OK\nscripts/to-partybox.py: OK\nscripts/verify-guard-fixtures.py: OK\ntrivia.schema.json: OK\n",
+      "wholeStderr": ""
+    }
+  ],
+  "sourceFilesSizeLimit": {
+    "checked": 286,
+    "ceilingBytes": 31457280,
+    "maxBytes": 9525424
+  },
+  "passed": true,
+  "reviewedAt": "2026-10-09T12:37:05.363408+00:00",
+  "nativePid": 377578,
+  "externalChildren": [],
+  "terminationSignals": [],
+  "startedAt": "2026-10-09T12:36:38.415052+00:00",
+  "elapsedSeconds": 26.948380479007028,
+  "declaredWholeBoundSeconds": 180,
+  "limitations": "Full unchanged local acceptance with existing retained plaintext bodies was independently executed on an immutable copy; this is not a new remote reopening or fresh factual grading of991 unchanged rows. No B13 product or source evidence edits, no original-body chmod, no formal Keep gain round or CI inherited acceptance claimed."
+}

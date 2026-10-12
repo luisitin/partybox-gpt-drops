@@ -1,0 +1,436 @@
+{
+ "note": "Port-time exclusions. Each row stays in categories/ unchanged; the adapter drops it only for PartyBox. Bank text is never copied here: only ids, normalized answers and similarity.",
+ "bank": "questions.json (5567 items, ids and answers only)",
+ "excluded": [
+  {
+   "id": "B13-0003",
+   "bankId": "geo-0062",
+   "answer": "Phoenix",
+   "ratio": 0.659,
+   "reason": "state-capital-as-bank",
+   "detail": "same state capital question for Arizona"
+  },
+  {
+   "id": "B13-0005",
+   "bankId": "geo-0090",
+   "answer": "Sacramento",
+   "ratio": 0.681,
+   "reason": "state-capital-as-bank",
+   "detail": "same state capital question for California"
+  },
+  {
+   "id": "B13-0006",
+   "bankId": "geo-0060",
+   "answer": "Denver",
+   "ratio": 0.667,
+   "reason": "state-capital-as-bank",
+   "detail": "same state capital question for Colorado"
+  },
+  {
+   "id": "B13-0009",
+   "bankId": "gpt-0334",
+   "answer": "Tallahassee",
+   "ratio": 0.709,
+   "reason": "state-capital-as-bank",
+   "detail": "same state capital question for Florida"
+  },
+  {
+   "id": "B13-0011",
+   "bankId": "geo-0059",
+   "answer": "Honolulu",
+   "ratio": 0.651,
+   "reason": "state-capital-as-bank",
+   "detail": "same state capital question for Hawaii"
+  },
+  {
+   "id": "B13-0017",
+   "bankId": "geo-0107",
+   "answer": "Frankfort",
+   "ratio": 0.667,
+   "reason": "state-capital-as-bank",
+   "detail": "same state capital question for Kentucky"
+  },
+  {
+   "id": "B13-0018",
+   "bankId": "gpt-0337",
+   "answer": "Baton Rouge",
+   "ratio": 0.244,
+   "reason": "state-capital-as-bank",
+   "detail": "same state capital question for Louisiana"
+  },
+  {
+   "id": "B13-0020",
+   "bankId": "geo-0106",
+   "answer": "Annapolis",
+   "ratio": 0.667,
+   "reason": "state-capital-as-bank",
+   "detail": "same state capital question for Maryland"
+  },
+  {
+   "id": "B13-0021",
+   "bankId": "geo-0061",
+   "answer": "Boston",
+   "ratio": 0.7,
+   "reason": "state-capital-as-bank",
+   "detail": "same state capital question for Massachusetts"
+  },
+  {
+   "id": "B13-0025",
+   "bankId": "geo-0104",
+   "answer": "Jefferson City",
+   "ratio": 0.667,
+   "reason": "state-capital-as-bank",
+   "detail": "same state capital question for Missouri"
+  },
+  {
+   "id": "B13-0032",
+   "bankId": "geo-0091",
+   "answer": "Albany",
+   "ratio": 0.667,
+   "reason": "state-capital-as-bank",
+   "detail": "same state capital question for New York"
+  },
+  {
+   "id": "B13-0037",
+   "bankId": "geo-0105",
+   "answer": "Salem",
+   "ratio": 0.651,
+   "reason": "state-capital-as-bank",
+   "detail": "same state capital question for Oregon"
+  },
+  {
+   "id": "B13-0038",
+   "bankId": "gpt-0336",
+   "answer": "Harrisburg",
+   "ratio": 0.25,
+   "reason": "state-capital-as-bank",
+   "detail": "same state capital question for Pennsylvania"
+  },
+  {
+   "id": "B13-0043",
+   "bankId": "geo-0058",
+   "answer": "Austin",
+   "ratio": 0.643,
+   "reason": "state-capital-as-bank",
+   "detail": "same state capital question for Texas"
+  },
+  {
+   "id": "B13-0118",
+   "bankId": "gpt-1041",
+   "answer": "Khufu",
+   "ratio": 0.814,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0129",
+   "bankId": "geo-029",
+   "answer": "Italy",
+   "ratio": 1.0,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0137",
+   "reason": "answer-in-question",
+   "answer": "Sydney",
+   "detail": "the correct answer text appears in the question"
+  },
+  {
+   "id": "B13-0153",
+   "bankId": "geo-009",
+   "answer": "Australia",
+   "ratio": 0.921,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0158",
+   "reason": "answer-in-question",
+   "answer": "Iguazu",
+   "detail": "the correct answer text appears in the question"
+  },
+  {
+   "id": "B13-0162",
+   "bankId": "gpt-0359",
+   "answer": "Zambezi",
+   "ratio": 1.0,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0174",
+   "bankId": "geo-0186",
+   "answer": "Himalayas",
+   "ratio": 1.0,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0220",
+   "bankId": "sci-0105",
+   "answer": "Ca",
+   "ratio": 1.0,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0226",
+   "bankId": "sci-0090",
+   "answer": "Fe",
+   "ratio": 1.0,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0254",
+   "bankId": "eve-0327",
+   "answer": "ampere",
+   "ratio": 0.9,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0256",
+   "bankId": "eve-0343",
+   "answer": "mole",
+   "ratio": 0.94,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0257",
+   "bankId": "eve-0347",
+   "answer": "candela",
+   "ratio": 1.0,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0267",
+   "bankId": "eve-0315",
+   "answer": "ohm",
+   "ratio": 0.828,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0282",
+   "bankId": "sci-0201",
+   "answer": "Mercury",
+   "ratio": 0.944,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0289",
+   "bankId": "sci-019",
+   "answer": "Jupiter",
+   "ratio": 0.851,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0337",
+   "reason": "answer-in-question",
+   "answer": "One",
+   "detail": "the correct answer text appears in the question"
+  },
+  {
+   "id": "B13-0338",
+   "bankId": "nat-006",
+   "answer": "Ostrich",
+   "ratio": 0.889,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0346",
+   "bankId": "gpt-1376",
+   "answer": "A casque",
+   "ratio": 0.932,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0375",
+   "bankId": "gpt-1358",
+   "answer": "None",
+   "ratio": 0.921,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0497",
+   "bankId": "sci-0203",
+   "answer": "Neil Armstrong",
+   "ratio": 0.847,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0500",
+   "bankId": "sci-0235",
+   "answer": "Eagle",
+   "ratio": 0.935,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0505",
+   "bankId": "his-0056",
+   "answer": "Aristotle",
+   "ratio": 0.804,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0514",
+   "reason": "answer-in-question",
+   "answer": "Qin",
+   "detail": "the correct answer text appears in the question"
+  },
+  {
+   "id": "B13-0525",
+   "bankId": "gpt-1063",
+   "answer": "John",
+   "ratio": 1.0,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0566",
+   "bankId": "his-0257",
+   "answer": "The Franks",
+   "ratio": 0.851,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0577",
+   "bankId": "his-0150",
+   "answer": "The Bastille",
+   "ratio": 0.915,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0597",
+   "bankId": "art-001",
+   "answer": "Leonardo da Vinci",
+   "ratio": 1.0,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0621",
+   "bankId": "ent-0001",
+   "answer": "Steven Spielberg",
+   "ratio": 0.81,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0637",
+   "bankId": "ent-0031",
+   "answer": "Michael J. Fox",
+   "ratio": 0.917,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0697",
+   "bankId": "gpt-0531",
+   "answer": "Tim Robbins",
+   "ratio": 0.971,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0770",
+   "bankId": "art-0330",
+   "answer": "Salzburg",
+   "ratio": 1.0,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0778",
+   "bankId": "art-0335",
+   "answer": "Johann Sebastian Bach",
+   "ratio": 1.0,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0846",
+   "bankId": "spo-0286",
+   "answer": "Birdie",
+   "ratio": 1.0,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0881",
+   "bankId": "bcp-001",
+   "answer": "64",
+   "ratio": 1.0,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0897",
+   "bankId": "his-0074",
+   "answer": "Olympia",
+   "ratio": 0.844,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  },
+  {
+   "id": "B13-0911",
+   "reason": "answer-in-question",
+   "answer": "Milk",
+   "detail": "the correct answer text appears in the question"
+  },
+  {
+   "id": "B13-0986",
+   "bankId": "foo-0141",
+   "answer": "Paprika",
+   "ratio": 0.881,
+   "reason": "same-fact-as-bank",
+   "detail": "same correct answer and normalized question similarity >= 0.8"
+  }
+ ],
+ "flagged": [
+  {
+   "id": "B13-0110",
+   "reason": "distractor-proximity",
+   "detail": "distractors 1,430 / 430 / 4,430 meters orbit the correct 2,430 meters, so the answer is guessable by similarity",
+   "action": "author rewrite + fresh review"
+  },
+  {
+   "id": "B13-0846",
+   "reason": "stem-overlap",
+   "detail": "distractor \"Par\" appears in the question stem (\"under par\")",
+   "action": "minor; reword stem or keep"
+  },
+  {
+   "id": "B13-0889",
+   "reason": "stem-overlap",
+   "detail": "distractor \"Jersey City\" shares \"Jersey\" with the stem \"New Jersey\"",
+   "action": "minor; reword stem or keep"
+  },
+  {
+   "id": "B13-0074",
+   "reason": "difficulty-doubt",
+   "detail": "Mississippi admission year labelled hard; common fact",
+   "action": "reviewer calibration"
+  },
+  {
+   "id": "B13-0427",
+   "reason": "difficulty-doubt",
+   "detail": "23rd Amendment labelled hard; widely taught",
+   "action": "reviewer calibration"
+  }
+ ]
+}

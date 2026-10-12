@@ -1,0 +1,152 @@
+{
+  "recordedAt": "2026-10-07T21:20:48.982490+00:00",
+  "originalImmutablePermutationManifest": "evidence/final-option-permutation-manifest.json",
+  "originalPermutationManifestFileSha256": "d3c840d0c2876b3ae51ca216fe364e31046e769a1418ce8fa9c4e55193dbda96",
+  "originalRowVersionsSha256": "95f29cbeb7e7fd5ded8ed85da8555f7c2cc8cc1303979fed9ce3dc122132b99e",
+  "amendedRowVersionsSha256": "3af3f51c5633404d428331225d8e46dd3824f628fad5eddd503689eb168e4942",
+  "categoryFileSha256": {
+    "animals-nature": "39630117ae9585a09064363dc4f1f8c39c0bfe682539fa63d2608f299dca6bfd",
+    "food-everyday-life": "b6ed570f191f10b169e6afee056758acc2091bc08cdc9085263796a6bafabaaa",
+    "movies-tv": "b829575e06e4d62d32776f0b40a198f3282d02ece42f57adcf864b3118f3cd38",
+    "music": "3cfff8dcd005ebb0155ecdaad7f37fa6eaf770f24ed6c638935811f4b024f57d",
+    "science-space": "b2944f3412b59d2a0a4374cb690f2e58331816201bf72f69cc972c028786fdb0",
+    "sports-games": "cfe9766b76a85a22829da7aedcb56b82d93d8087de781590395d7131a503cdb2",
+    "us-geography": "18b7b4ae5e752de529916a759aacd129e2d6dffb4cb3ac40320ff3fe068be26b",
+    "us-history-civics": "3795ffc331abaf1208dc15eade4d7e777a252fe18411142fdf1a183b1f0fc059",
+    "world-geography": "bd83a20ba8a0a11c2b6127cfe278d6c46f2209418d2d90bd30d0a16e269dc38e",
+    "world-history": "2377e52be8ea7fbef4216fb80e8e98855dbf6633c299cade15b5963bc22f930e"
+  },
+  "unchangedOriginalPermutationRows": 998,
+  "declaredAmendments": [
+    {
+      "id": "B13-0979",
+      "originalPermutedRowSha256": "64ce260d5c87f2653a1c6db3808235ff56782d629f27ea3982373fc76c3d6b32",
+      "amendedRowSha256": "6f3f77a9490e216aca0a22089bbef7fe4edcf009a6aafb7a135de16bdb22c258",
+      "originalPermutedOptions": [
+        "Mustard",
+        "Fenugreek",
+        "Saffron",
+        "Turmeric"
+      ],
+      "amendedRow": {
+        "id": "B13-0979",
+        "category": "food-everyday-life",
+        "question": "What is the botanical family name shared by ginger and turmeric?",
+        "difficulty": 2,
+        "options": [
+          "Brassicaceae",
+          "Fabaceae",
+          "Iridaceae",
+          "Zingiberaceae"
+        ],
+        "correctIndex": 3,
+        "correctAnswer": "Zingiberaceae",
+        "funFact": "Common culinary ginger is Zingiber officinale.",
+        "confidence": "high",
+        "confidenceReason": "Both actual editorial bodies identify the botanical ginger family Zingiberaceae; the credited family account includes turmeric among its named economic members. This formal family-name target replaces the inverse repeat of0976 rather than changing the validated spice-family relationship. Independent amended-row review is required.",
+        "sources": [
+          {
+            "sourceId": "food-everyday-life-s0065",
+            "url": "https://www.britannica.com/plant/Zingiberaceae",
+            "publisher": "Encyclopaedia Britannica",
+            "quote": "Zingiberaceae , the ginger family of flowering plants",
+            "funFactQuote": "Ginger is obtained from the fresh or dried rhizomes of Zingiber officinale",
+            "extraQuote": "The dried thick rhizome of turmeric ( Curcuma longa )"
+          },
+          {
+            "sourceId": "food-everyday-life-s0052",
+            "url": "https://en.wikipedia.org/wiki/Ginger",
+            "publisher": "Wikipedia contributors",
+            "quote": "Ginger is in the family Zingiberaceae , which also includes turmeric",
+            "funFactQuote": "Ginger ( Zingiber officinale )"
+          }
+        ],
+        "claims": [
+          {
+            "kind": "answer",
+            "text": "Ginger and turmeric belong to the botanical family Zingiberaceae.",
+            "sourceIds": [
+              "food-everyday-life-s0065",
+              "food-everyday-life-s0052"
+            ]
+          },
+          {
+            "kind": "funFact",
+            "text": "Common culinary ginger is Zingiber officinale.",
+            "sourceIds": [
+              "food-everyday-life-s0065",
+              "food-everyday-life-s0052"
+            ]
+          }
+        ]
+      },
+      "correctIndexUnchanged": true,
+      "authorAmendmentPath": "evidence/food-everyday-life-post-shuffle-family-author-amendment.json"
+    },
+    {
+      "id": "B13-0515",
+      "originalPermutedRowSha256": "0e0630183fdc3c32468e782fceac75fa2ac0dfe87d4050651502f01823326b86",
+      "amendedRowSha256": "fd4092ad96b12c68f0d75d3c7e6ae8657b4ea919f5bd52541ecbc5629d886389",
+      "originalPermutedOptions": [
+        "Legalism",
+        "Epicureanism",
+        "Stoicism",
+        "Neoplatonism"
+      ],
+      "amendedRow": {
+        "id": "B13-0515",
+        "category": "world-history",
+        "question": "Which philosophy underpinned the strict government of Qin Shi Huang?",
+        "difficulty": 3,
+        "options": [
+          "Legalism",
+          "Confucianism",
+          "Daoism",
+          "Mohism"
+        ],
+        "correctIndex": 0,
+        "correctAnswer": "Legalism",
+        "funFact": "An army of terracotta figures was made for Qin Shi Huang\u2019s tomb.",
+        "confidence": "high",
+        "confidenceReason": "Both separately edited sources support qin Shi Huang\u2019s government followed Legalism. Scope and wording follow the captured passages.",
+        "sources": [
+          {
+            "sourceId": "world-history-s0009",
+            "url": "https://www.britannica.com/biography/Qin-Shi-Huang",
+            "publisher": "Encyclopaedia Britannica",
+            "quote": "the totalitarian state philosophy known as legalism .",
+            "funFactQuote": "terra-cotta soldier and horse figures forming an \u201carmy\u201d for the dead king."
+          },
+          {
+            "sourceId": "world-history-s0010",
+            "url": "https://www.worldhistory.org/Shi_Huangdi/",
+            "publisher": "World History Encyclopedia",
+            "quote": "Maintaining Shang Yang's strict philosophy of Legalism as the official policy of the government",
+            "funFactQuote": "an army of over 8,000 terracotta warriors, fully armed, to protect him on the other side."
+          }
+        ],
+        "claims": [
+          {
+            "kind": "answer",
+            "text": "Qin Shi Huang\u2019s government followed Legalism.",
+            "sourceIds": [
+              "world-history-s0009",
+              "world-history-s0010"
+            ]
+          },
+          {
+            "kind": "funFact",
+            "text": "An army of terracotta figures was made for Qin Shi Huang\u2019s tomb.",
+            "sourceIds": [
+              "world-history-s0009",
+              "world-history-s0010"
+            ]
+          }
+        ]
+      },
+      "correctIndexUnchanged": true,
+      "authorAmendmentPath": "evidence/world-history-post-final-shuffle-0515-author-amendment.json"
+    }
+  ],
+  "statement": "Two substantive final reviewer challenges amended after the immutable seeded shuffle. Exact old/rejected/new evidence preserved, final positions retained. These two changes are NOT claimed as option-multiset/fact-preserving permutations. Each requires a separate actual independent source/context/ordered-choice rereview. The other998 final rows match the original manifest exactly."
+}

@@ -1,0 +1,32 @@
+{
+  "detectedAt": "2026-10-07T20:53:59.594540+00:00",
+  "operator": "/root/r2048_history",
+  "mistake": "New IBHOF failure receipt and WBA source capture were initially assigned already-used IDs0062/0063. Detected by held ledger assertion before category edits.",
+  "repair": "Moved actual WBA GET capture/receipt to unused0079; preserved actual failed IBHOF receipt separately. Restored original0062/0063 receipts from immutable source ledger. Marathon0063 text restored byte-exactly from actual fresh-review body, whose content SHA equals original author content SHA.",
+  "lostOriginalRawCapture": "Original author0063 raw HTML was overwritten. It was not reconstructed or silently replaced; its original recorded raw SHA remains historical receipt metadata, not an available current local raw-file claim. Original author text is byte-exact preserved and fresh-review raw HTML remains separately captured.",
+  "originalAuthorContentSha256": "ff2b0b1dc26227dd39975c6a0e6716904ad39682b6d14e122e44669d10a7c4f8",
+  "actualWbaReceipt": {
+    "pass": "author",
+    "retrievedAt": "2026-10-07T20:51:26.398978+00:00",
+    "method": "urllib-http-get",
+    "requestedUrl": "https://www.wbaboxing.com/boxing-news/160-years-of-the-queensberry-rules-the-code-that-shaped-boxing-history",
+    "resolvedUrl": "https://www.wbaboxing.com/boxing-news/160-years-of-the-queensberry-rules-the-code-that-shaped-boxing-history",
+    "status": 200,
+    "contentType": "text/html",
+    "rawSha256": "f683a17f14b553aad19acce2f36100e621a5106cd146f4b69401d7d696797542",
+    "rawPath": ".work/sports-games/author/sports-games-s0079.raw",
+    "title": "160 Years of the Queensberry Rules: The Code That Shaped Boxing History \u2013 World Boxing Association",
+    "contentSha256": "853197ec63d577cee3aefa703262ccd562e4fc06df8017f2ed4d2acdb51b72fd",
+    "capturePath": ".work/sports-games/author/sports-games-s0079.txt",
+    "captureComplete": true,
+    "characters": 7283
+  },
+  "failedIbhofReceipt": {
+    "pass": "author",
+    "retrievedAt": "2026-10-07T20:50:50.144349+00:00",
+    "method": "urllib-http-get",
+    "requestedUrl": "https://www.ibhof.com/pages/about/inductees/nonparticipant/queensberry.html",
+    "error": "HTTP Error 503: Service Unavailable",
+    "status": 503
+  }
+}

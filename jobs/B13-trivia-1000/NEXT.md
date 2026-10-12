@@ -1,0 +1,10 @@
+# B13 continuation — final supplemental review handoff
+
+The bank passed all original local captured-source checks and exact0243 whole hosted acceptance; six substantive review rounds qualify. Final post-green originals passed 2026-10-09T16:11:05.977144+00:00, then the lead personally ranked and challenged five current rows and decided the remaining assessed gains were cosmetic. Read SUPPLEMENTAL-REVIEW.md and formal-keep7-five-ranked-cosmetic-stop.json for the exact scope and retained limitations.
+
+1. Qualify the exact final handoff commit with the complete original hosted run: all ten steps, whole native log, every actual manifest member, artifact list and actual merge parents. Its bank/scripts/schema/source/review bodies are unchanged from qualified0243. Mark supplemental PR28 Ready only after that exact whole acceptance; preserve original Ready22/canonical87693947 unmerged.
+2. Refresh only the own B13 CLAIMS.md line at the actual push under serialized GP MAIN access. Read the actual main ledger and all matching branch commit dates, claim the lowest eligible next queue job under the six-hour rule, and continue. No merge is authorized by Ready.
+
+Verified bank:1000 rows/562 retained ledgers/3510 author+3510 independently reopened literal matches/4000 associations/1000 accepted+supported/2205 flags resolved/15 fixtures/6 adapter controls. Fifteen original row IDs changed,985 other whole objects and993 choice arrays preserved, all original indices/difficulties equal. Current rowVersions d8a627a3ee6e0d8ed16dc8e267186d83d9452671758e7603930e8f8f91d864b2; metrics37545581d6a1ba995f113bd0ccba0c2f9a192530793cb35b857a07bf54463e54. No current whole-bank PartyBox port or human playtest is claimed; historical fit summary949 kept/51 excluded remains historical.
+
+Previous actual source publication16:04:43.546459 UTC; early16:29:43.546459/hard16:34:43.546459. The new actual publication receipt defines the next window. Earlier real misses, private helper failures and the formal5 rendering/execution timestamp correction remain retained.
