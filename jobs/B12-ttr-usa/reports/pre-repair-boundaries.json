@@ -1,0 +1,56 @@
+[
+  {
+    "name": "sparse claim card array",
+    "primary": {
+      "value": true
+    },
+    "reference": {
+      "value": false
+    }
+  },
+  {
+    "name": "sparse held ticket IDs",
+    "primary": {
+      "value": true
+    },
+    "reference": {
+      "value": false
+    }
+  },
+  {
+    "name": "unsafe card integer",
+    "primary": {
+      "value": true
+    },
+    "reference": {
+      "value": false
+    }
+  },
+  {
+    "name": "unsafe ticket integer",
+    "primary": {
+      "value": true
+    },
+    "reference": {
+      "error": "RangeError"
+    }
+  },
+  {
+    "name": "invalid NaN seed",
+    "primary": {
+      "value": 0.23606797284446657
+    },
+    "reference": {
+      "error": "RangeError"
+    }
+  },
+  {
+    "name": "sparse owned edge IDs",
+    "primary": {
+      "error": "TypeError"
+    },
+    "reference": {
+      "value": 0
+    }
+  }
+]
