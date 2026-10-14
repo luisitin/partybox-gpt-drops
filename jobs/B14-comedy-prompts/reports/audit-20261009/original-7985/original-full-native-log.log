@@ -1,0 +1,531 @@
+﻿2026-10-07T19:36:40.9537463Z Current runner version: '2.337.0'
+2026-10-07T19:36:40.9563112Z ##[group]Runner Image Provisioner
+2026-10-07T19:36:40.9564004Z Hosted Compute Agent
+2026-10-07T19:36:40.9564604Z Version: 20261002.596
+2026-10-07T19:36:40.9565347Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-07T19:36:40.9566123Z Build Date: 2026-10-02T22:28:27Z
+2026-10-07T19:36:40.9566956Z Worker ID: {ad6ce781-438c-4262-8e40-c32559fd7518}
+2026-10-07T19:36:40.9567708Z Region: westus
+2026-10-07T19:36:40.9568261Z Cloud: Azure
+2026-10-07T19:36:40.9568889Z ##[endgroup]
+2026-10-07T19:36:40.9570626Z ##[group]Operating System
+2026-10-07T19:36:40.9571398Z Ubuntu
+2026-10-07T19:36:40.9571968Z 24.04.5
+2026-10-07T19:36:40.9572506Z LTS
+2026-10-07T19:36:40.9573095Z ##[endgroup]
+2026-10-07T19:36:40.9573673Z ##[group]Runner Image
+2026-10-07T19:36:40.9574399Z Image: ubuntu-24.04
+2026-10-07T19:36:40.9575010Z Version: 20261004.327.1
+2026-10-07T19:36:40.9576375Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-07T19:36:40.9578040Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-07T19:36:40.9579518Z ##[endgroup]
+2026-10-07T19:36:40.9580729Z ##[group]GITHUB_TOKEN Permissions
+2026-10-07T19:36:40.9582740Z Contents: read
+2026-10-07T19:36:40.9583396Z Metadata: read
+2026-10-07T19:36:40.9584013Z ##[endgroup]
+2026-10-07T19:36:40.9586194Z Secret source: Actions
+2026-10-07T19:36:40.9587174Z Cache mode: write
+2026-10-07T19:36:40.9587928Z Prepare workflow directory
+2026-10-07T19:36:40.9943638Z Prepare all required actions
+2026-10-07T19:36:41.0016236Z Getting action download info
+2026-10-07T19:36:41.3735244Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-07T19:36:41.5140314Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-07T19:36:41.6736047Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-07T19:36:41.9577689Z Complete job name: verify
+2026-10-07T19:36:42.0366773Z ##[group]Run actions/checkout@v4
+2026-10-07T19:36:42.0367712Z with:
+2026-10-07T19:36:42.0368241Z   repository: luisitin/partybox-gpt-drops
+2026-10-07T19:36:42.0373572Z   token: ***
+2026-10-07T19:36:42.0374068Z   ssh-strict: true
+2026-10-07T19:36:42.0374566Z   ssh-user: git
+2026-10-07T19:36:42.0375068Z   persist-credentials: true
+2026-10-07T19:36:42.0375630Z   clean: true
+2026-10-07T19:36:42.0376136Z   sparse-checkout-cone-mode: true
+2026-10-07T19:36:42.0376731Z   fetch-depth: 1
+2026-10-07T19:36:42.0377219Z   fetch-tags: false
+2026-10-07T19:36:42.0377728Z   show-progress: true
+2026-10-07T19:36:42.0378233Z   lfs: false
+2026-10-07T19:36:42.0378689Z   submodules: false
+2026-10-07T19:36:42.0379334Z   set-safe-directory: true
+2026-10-07T19:36:42.0379917Z   allow-unsafe-pr-checkout: false
+2026-10-07T19:36:42.0380796Z ##[endgroup]
+2026-10-07T19:36:42.1435739Z Syncing repository: luisitin/partybox-gpt-drops
+2026-10-07T19:36:42.1437656Z ##[group]Getting Git version info
+2026-10-07T19:36:42.1438601Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-07T19:36:42.1440117Z [command]/usr/bin/git version
+2026-10-07T19:36:42.1580367Z git version 2.55.0
+2026-10-07T19:36:42.1605850Z ##[endgroup]
+2026-10-07T19:36:42.1623844Z Temporarily overriding HOME='/home/runner/work/_temp/6e3d5a20-a860-4e0c-9d24-2cfe604a876f' before making global git config changes
+2026-10-07T19:36:42.1626881Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-07T19:36:42.1631264Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-07T19:36:42.1687007Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+2026-10-07T19:36:42.1692712Z ##[group]Initializing the repository
+2026-10-07T19:36:42.1696777Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-07T19:36:42.1818525Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-07T19:36:42.1820686Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-07T19:36:42.1823624Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-07T19:36:42.1826304Z hint: call:
+2026-10-07T19:36:42.1827691Z hint:
+2026-10-07T19:36:42.1829562Z hint: 	git config --global init.defaultBranch <name>
+2026-10-07T19:36:42.1831531Z hint:
+2026-10-07T19:36:42.1833595Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-07T19:36:42.1835652Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-07T19:36:42.1837104Z hint:
+2026-10-07T19:36:42.1837929Z hint: 	git branch -m <name>
+2026-10-07T19:36:42.1838900Z hint:
+2026-10-07T19:36:42.1843017Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-07T19:36:42.1845155Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+2026-10-07T19:36:42.1848560Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+2026-10-07T19:36:42.1901680Z ##[endgroup]
+2026-10-07T19:36:42.1904313Z ##[group]Disabling automatic garbage collection
+2026-10-07T19:36:42.1908279Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-07T19:36:42.1944483Z ##[endgroup]
+2026-10-07T19:36:42.1946026Z ##[group]Setting up auth
+2026-10-07T19:36:42.1952745Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-07T19:36:42.1990869Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-07T19:36:42.2373201Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-07T19:36:42.2412194Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-07T19:36:42.2642947Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-07T19:36:42.2680830Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-07T19:36:42.2909952Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-07T19:36:42.2953429Z ##[endgroup]
+2026-10-07T19:36:42.2954965Z ##[group]Fetching the repository
+2026-10-07T19:36:42.2965389Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7c9652f93aef073382a4a2baf3dee217baaedaf0:refs/remotes/pull/13/merge
+2026-10-07T19:36:42.9415165Z From https://github.com/luisitin/partybox-gpt-drops
+2026-10-07T19:36:42.9417994Z  * [new ref]         7c9652f93aef073382a4a2baf3dee217baaedaf0 -> pull/13/merge
+2026-10-07T19:36:42.9423646Z ##[endgroup]
+2026-10-07T19:36:42.9426349Z ##[group]Determining the checkout info
+2026-10-07T19:36:42.9428883Z ##[endgroup]
+2026-10-07T19:36:42.9434138Z [command]/usr/bin/git sparse-checkout disable
+2026-10-07T19:36:42.9488821Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-07T19:36:42.9524330Z ##[group]Checking out the ref
+2026-10-07T19:36:42.9527985Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/13/merge
+2026-10-07T19:36:42.9789781Z Note: switching to 'refs/remotes/pull/13/merge'.
+2026-10-07T19:36:42.9790632Z 
+2026-10-07T19:36:42.9791169Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-07T19:36:42.9792429Z changes and commit them, and you can discard any commits you make in this
+2026-10-07T19:36:42.9793666Z state without impacting any branches by switching back to a branch.
+2026-10-07T19:36:42.9794385Z 
+2026-10-07T19:36:42.9794890Z If you want to create a new branch to retain commits you create, you may
+2026-10-07T19:36:42.9796376Z do so (now or later) by using -c with the switch command. Example:
+2026-10-07T19:36:42.9797263Z 
+2026-10-07T19:36:42.9797780Z   git switch -c <new-branch-name>
+2026-10-07T19:36:42.9798672Z 
+2026-10-07T19:36:42.9799404Z Or undo this operation with:
+2026-10-07T19:36:42.9800168Z 
+2026-10-07T19:36:42.9800603Z   git switch -
+2026-10-07T19:36:42.9801263Z 
+2026-10-07T19:36:42.9802113Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-07T19:36:42.9803528Z 
+2026-10-07T19:36:42.9805091Z HEAD is now at 7c9652f Merge 7985b82423a9419bbbfcdc6c1dfb12b816bc461e into 40fd69b080a096bf959c9cd89a56f91298ed3799
+2026-10-07T19:36:42.9809709Z ##[endgroup]
+2026-10-07T19:36:42.9853758Z [command]/usr/bin/git log -1 --format=%H
+2026-10-07T19:36:42.9881626Z 7c9652f93aef073382a4a2baf3dee217baaedaf0
+2026-10-07T19:36:43.0283678Z ##[group]Run actions/setup-python@v5
+2026-10-07T19:36:43.0284378Z with:
+2026-10-07T19:36:43.0284846Z   python-version: 3.12
+2026-10-07T19:36:43.0285396Z   check-latest: false
+2026-10-07T19:36:43.0290189Z   token: ***
+2026-10-07T19:36:43.0290703Z   update-environment: true
+2026-10-07T19:36:43.0291270Z   allow-prereleases: false
+2026-10-07T19:36:43.0291832Z   freethreaded: false
+2026-10-07T19:36:43.0292335Z ##[endgroup]
+2026-10-07T19:36:43.1673562Z ##[group]Installed versions
+2026-10-07T19:36:43.2336006Z (node:2305) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-07T19:36:43.2338577Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-07T19:36:43.2340387Z Successfully set up CPython (3.12.15)
+2026-10-07T19:36:43.2341981Z ##[endgroup]
+2026-10-07T19:36:43.2607083Z ##[group]Run python3 -m pip install -r requirements.txt
+2026-10-07T19:36:43.2609031Z [36;1mpython3 -m pip install -r requirements.txt[0m
+2026-10-07T19:36:43.3090411Z shell: /usr/bin/bash -e {0}
+2026-10-07T19:36:43.3091469Z env:
+2026-10-07T19:36:43.3092550Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-07T19:36:43.3094715Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-07T19:36:43.3096436Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-07T19:36:43.3097945Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-07T19:36:43.3099626Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-07T19:36:43.3101179Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-07T19:36:43.3102455Z ##[endgroup]
+2026-10-07T19:36:47.3191307Z Collecting jsonschema==4.26.0 (from -r requirements.txt (line 1))
+2026-10-07T19:36:47.3672473Z   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-10-07T19:36:47.3823853Z Collecting attrs>=22.2.0 (from jsonschema==4.26.0->-r requirements.txt (line 1))
+2026-10-07T19:36:47.3857917Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-10-07T19:36:47.3996744Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema==4.26.0->-r requirements.txt (line 1))
+2026-10-07T19:36:47.4027868Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-10-07T19:36:47.4216409Z Collecting referencing>=0.28.4 (from jsonschema==4.26.0->-r requirements.txt (line 1))
+2026-10-07T19:36:47.4246877Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-10-07T19:36:47.6960224Z Collecting rpds-py>=0.25.0 (from jsonschema==4.26.0->-r requirements.txt (line 1))
+2026-10-07T19:36:47.6998109Z   Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-10-07T19:36:47.7201876Z Collecting typing-extensions>=4.4.0 (from referencing>=0.28.4->jsonschema==4.26.0->-r requirements.txt (line 1))
+2026-10-07T19:36:47.7235248Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-07T19:36:47.7306485Z Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-10-07T19:36:47.7421480Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-10-07T19:36:47.7480991Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-10-07T19:36:47.7530893Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-10-07T19:36:47.7581763Z Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+2026-10-07T19:36:47.7664714Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-07T19:36:47.9594382Z Installing collected packages: typing-extensions, rpds-py, attrs, referencing, jsonschema-specifications, jsonschema
+2026-10-07T19:36:48.1493793Z 
+2026-10-07T19:36:48.1507578Z Successfully installed attrs-26.1.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 referencing-0.37.0 rpds-py-2026.9.1 typing-extensions-4.16.0
+2026-10-07T19:36:48.2032650Z ##[group]Run set -o pipefail
+2026-10-07T19:36:48.2033012Z [36;1mset -o pipefail[0m
+2026-10-07T19:36:48.2033285Z [36;1mmkdir -p .work[0m
+2026-10-07T19:36:48.2033530Z [36;1mnpm test | tee .work/ci.log[0m
+2026-10-07T19:36:48.2102748Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-07T19:36:48.2103177Z env:
+2026-10-07T19:36:48.2103505Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-07T19:36:48.2104027Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-07T19:36:48.2104591Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-07T19:36:48.2105077Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-07T19:36:48.2105569Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-07T19:36:48.2106039Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-07T19:36:48.2106431Z ##[endgroup]
+2026-10-07T19:36:54.1780140Z 
+2026-10-07T19:36:54.1781120Z > b14-comedy-prompts@1.0.0 test
+2026-10-07T19:36:54.1782367Z > python3 scripts/scan_pool.py --check && python3 scripts/verify.py && sha256sum -c SHA256SUMS.txt
+2026-10-07T19:36:54.1783343Z 
+2026-10-07T19:39:15.7567507Z {"completedLeftStart": 0, "completedLeftEndExclusive": 250, "pairComparisons": 718625, "flaggedPairs": 10, "elapsedSeconds": 141.243}
+2026-10-07T19:40:07.3448101Z {"completedLeftStart": 250, "completedLeftEndExclusive": 500, "pairComparisons": 656125, "flaggedPairs": 12, "elapsedSeconds": 192.83}
+2026-10-07T19:42:30.4424015Z {"completedLeftStart": 500, "completedLeftEndExclusive": 750, "pairComparisons": 593625, "flaggedPairs": 8, "elapsedSeconds": 335.928}
+2026-10-07T19:43:11.3262781Z {"completedLeftStart": 750, "completedLeftEndExclusive": 1000, "pairComparisons": 531125, "flaggedPairs": 6, "elapsedSeconds": 376.812}
+2026-10-07T19:44:27.7780923Z {"completedLeftStart": 1000, "completedLeftEndExclusive": 1250, "pairComparisons": 468625, "flaggedPairs": 4, "elapsedSeconds": 453.264}
+2026-10-07T19:45:07.0149912Z {"completedLeftStart": 1250, "completedLeftEndExclusive": 1500, "pairComparisons": 406125, "flaggedPairs": 6, "elapsedSeconds": 492.501}
+2026-10-07T19:46:00.0763124Z {"completedLeftStart": 1500, "completedLeftEndExclusive": 1750, "pairComparisons": 343625, "flaggedPairs": 6, "elapsedSeconds": 545.562}
+2026-10-07T19:46:42.8135834Z {"completedLeftStart": 1750, "completedLeftEndExclusive": 2000, "pairComparisons": 281125, "flaggedPairs": 2, "elapsedSeconds": 588.3}
+2026-10-07T19:47:09.4108115Z {"completedLeftStart": 2000, "completedLeftEndExclusive": 2250, "pairComparisons": 218625, "flaggedPairs": 1, "elapsedSeconds": 614.897}
+2026-10-07T19:47:36.1061024Z {"completedLeftStart": 2250, "completedLeftEndExclusive": 2500, "pairComparisons": 156125, "flaggedPairs": 2, "elapsedSeconds": 641.592}
+2026-10-07T19:47:36.1064199Z {"completedLeftStart": 2500, "completedLeftEndExclusive": 2750, "pairComparisons": 93625, "flaggedPairs": 0, "elapsedSeconds": 641.592}
+2026-10-07T19:47:44.3554352Z {"completedLeftStart": 2750, "completedLeftEndExclusive": 3000, "pairComparisons": 31125, "flaggedPairs": 0, "elapsedSeconds": 649.841}
+2026-10-07T19:47:44.3634072Z {
+2026-10-07T19:47:44.3634817Z   "candidateSha256": "ff0900a35c93a45f7cde3cadfeb5988ed5098a825e03513676204fa963e3d201",
+2026-10-07T19:47:44.3636284Z   "selectedSha256": "a8b6473f2b9b821a17fe618ba303027fc203e3cd0ba02354f6d13ebff53b84a2",
+2026-10-07T19:47:44.3637103Z   "candidateCases": 3000,
+2026-10-07T19:47:44.3637542Z   "pairComparisons": 4498500,
+2026-10-07T19:47:44.3637986Z   "textForms": 2,
+2026-10-07T19:47:44.3638391Z   "wordingDirectionsPerPair": 2,
+2026-10-07T19:47:44.3638856Z   "workerCount": 2,
+2026-10-07T19:47:44.3639541Z   "threshold": 0.75,
+2026-10-07T19:47:44.3639932Z   "strictlyGreater": true,
+2026-10-07T19:47:44.3641176Z   "normalization": "lowercase ASCII alphanumeric tokens; full wording and wording without most-likely prefix; maximum SequenceMatcher ratio over both argument orders",
+2026-10-07T19:47:44.3642501Z   "coverageSegments": [
+2026-10-07T19:47:44.3643203Z     {
+2026-10-07T19:47:44.3643549Z       "leftStart": 0,
+2026-10-07T19:47:44.3643949Z       "leftEndExclusive": 250,
+2026-10-07T19:47:44.3644400Z       "pairComparisons": 718625
+2026-10-07T19:47:44.3644814Z     },
+2026-10-07T19:47:44.3645128Z     {
+2026-10-07T19:47:44.3645478Z       "leftStart": 250,
+2026-10-07T19:47:44.3645888Z       "leftEndExclusive": 500,
+2026-10-07T19:47:44.3646331Z       "pairComparisons": 656125
+2026-10-07T19:47:44.3646744Z     },
+2026-10-07T19:47:44.3647047Z     {
+2026-10-07T19:47:44.3647369Z       "leftStart": 500,
+2026-10-07T19:47:44.3647775Z       "leftEndExclusive": 750,
+2026-10-07T19:47:44.3648228Z       "pairComparisons": 593625
+2026-10-07T19:47:44.3648642Z     },
+2026-10-07T19:47:44.3648948Z     {
+2026-10-07T19:47:44.3649554Z       "leftStart": 750,
+2026-10-07T19:47:44.3649957Z       "leftEndExclusive": 1000,
+2026-10-07T19:47:44.3650417Z       "pairComparisons": 531125
+2026-10-07T19:47:44.3650855Z     },
+2026-10-07T19:47:44.3651171Z     {
+2026-10-07T19:47:44.3651520Z       "leftStart": 1000,
+2026-10-07T19:47:44.3651833Z       "leftEndExclusive": 1250,
+2026-10-07T19:47:44.3652086Z       "pairComparisons": 468625
+2026-10-07T19:47:44.3652313Z     },
+2026-10-07T19:47:44.3652853Z     {
+2026-10-07T19:47:44.3653074Z       "leftStart": 1250,
+2026-10-07T19:47:44.3653321Z       "leftEndExclusive": 1500,
+2026-10-07T19:47:44.3653565Z       "pairComparisons": 406125
+2026-10-07T19:47:44.3653790Z     },
+2026-10-07T19:47:44.3653962Z     {
+2026-10-07T19:47:44.3654143Z       "leftStart": 1500,
+2026-10-07T19:47:44.3654375Z       "leftEndExclusive": 1750,
+2026-10-07T19:47:44.3654617Z       "pairComparisons": 343625
+2026-10-07T19:47:44.3654838Z     },
+2026-10-07T19:47:44.3655007Z     {
+2026-10-07T19:47:44.3655187Z       "leftStart": 1750,
+2026-10-07T19:47:44.3655410Z       "leftEndExclusive": 2000,
+2026-10-07T19:47:44.3655649Z       "pairComparisons": 281125
+2026-10-07T19:47:44.3655871Z     },
+2026-10-07T19:47:44.3656042Z     {
+2026-10-07T19:47:44.3656220Z       "leftStart": 2000,
+2026-10-07T19:47:44.3656448Z       "leftEndExclusive": 2250,
+2026-10-07T19:47:44.3656687Z       "pairComparisons": 218625
+2026-10-07T19:47:44.3656915Z     },
+2026-10-07T19:47:44.3657084Z     {
+2026-10-07T19:47:44.3657262Z       "leftStart": 2250,
+2026-10-07T19:47:44.3657488Z       "leftEndExclusive": 2500,
+2026-10-07T19:47:44.3657725Z       "pairComparisons": 156125
+2026-10-07T19:47:44.3657947Z     },
+2026-10-07T19:47:44.3658114Z     {
+2026-10-07T19:47:44.3658297Z       "leftStart": 2500,
+2026-10-07T19:47:44.3658548Z       "leftEndExclusive": 2750,
+2026-10-07T19:47:44.3658853Z       "pairComparisons": 93625
+2026-10-07T19:47:44.3659083Z     },
+2026-10-07T19:47:44.3659560Z     {
+2026-10-07T19:47:44.3659754Z       "leftStart": 2750,
+2026-10-07T19:47:44.3659990Z       "leftEndExclusive": 3000,
+2026-10-07T19:47:44.3660243Z       "pairComparisons": 31125
+2026-10-07T19:47:44.3660477Z     }
+2026-10-07T19:47:44.3660648Z   ],
+2026-10-07T19:47:44.3660833Z   "flaggedPairs": 57,
+2026-10-07T19:47:44.3661066Z   "selectedFlaggedPairs": 4,
+2026-10-07T19:47:44.3661364Z   "originalSingleDirectionFlagsRetained": 55,
+2026-10-07T19:47:44.3661676Z   "elapsedSeconds": 649.846472516
+2026-10-07T19:47:44.3661917Z }
+2026-10-07T19:51:37.6600990Z {
+2026-10-07T19:51:37.6603130Z   "mode": "release",
+2026-10-07T19:51:37.6604020Z   "schemaCases": 3000,
+2026-10-07T19:51:37.6604458Z   "schemaPassed": 3000,
+2026-10-07T19:51:37.6604924Z   "candidateCounts": {
+2026-10-07T19:51:37.6605280Z     "fill": 1500,
+2026-10-07T19:51:37.6605619Z     "most-likely": 1500
+2026-10-07T19:51:37.6606012Z   },
+2026-10-07T19:51:37.6606363Z   "requiredCandidateCounts": {
+2026-10-07T19:51:37.6606798Z     "fill": 1500,
+2026-10-07T19:51:37.6607182Z     "most-likely": 1500
+2026-10-07T19:51:37.6607579Z   },
+2026-10-07T19:51:37.6607911Z   "maximumCharacters": 90,
+2026-10-07T19:51:37.6608755Z   "reviewInputSha256": "66243a6e5dba1d1a8c010f45630d45c56c25ab819f1645918f5f55c96c697241",
+2026-10-07T19:51:37.6610151Z   "independentReviewedCases": 3000,
+2026-10-07T19:51:37.6611073Z   "independentGrade4Plus": 2155,
+2026-10-07T19:51:37.6611723Z   "bothPassesGrade4Plus": 1978,
+2026-10-07T19:51:37.6612382Z   "reviewedExactGradeAgreement": 0.44766666666666666,
+2026-10-07T19:51:37.6613128Z   "reviewedThresholdAgreement": 0.739,
+2026-10-07T19:51:37.6613756Z   "secondPassCases": 3000,
+2026-10-07T19:51:37.6614391Z   "candidatePoolSimilarityComparisons": 4498500,
+2026-10-07T19:51:37.6614995Z   "similarityTextForms": 2,
+2026-10-07T19:51:37.6615280Z   "similarityDirections": 2,
+2026-10-07T19:51:37.6615550Z   "candidatePoolSimilarityFlags": 57,
+2026-10-07T19:51:37.6615837Z   "finalSchemaCases": 1200,
+2026-10-07T19:51:37.6616079Z   "namedReferenceBuckets": 630,
+2026-10-07T19:51:37.6616350Z   "maximumCombinedReferenceCount": 3,
+2026-10-07T19:51:37.6616645Z   "firstPassSealsChecked": 30,
+2026-10-07T19:51:37.6616913Z   "candidateConfidenceCases": 3000,
+2026-10-07T19:51:37.6617175Z   "selectedCounts": {
+2026-10-07T19:51:37.6617395Z     "most-likely": 600,
+2026-10-07T19:51:37.6617613Z     "fill": 600
+2026-10-07T19:51:37.6617821Z   },
+2026-10-07T19:51:37.6618034Z   "similarityPairComparisons": 719400,
+2026-10-07T19:51:37.6618326Z   "similarityFlaggedAndResolved": 4,
+2026-10-07T19:51:37.6618604Z   "editorialCases": 1200,
+2026-10-07T19:51:37.6618846Z   "agreementExact": 0.44766666666666666,
+2026-10-07T19:51:37.6619423Z   "agreementKeepThreshold": 0.739
+2026-10-07T19:51:37.6619697Z }
+2026-10-07T19:51:37.7521456Z .gitignore: OK
+2026-10-07T19:51:37.7521978Z ASSUMPTIONS.md: OK
+2026-10-07T19:51:37.7522461Z AUTHORING.md: OK
+2026-10-07T19:51:37.7522932Z CONFLICTS.md: OK
+2026-10-07T19:51:37.7523377Z LOOP.md: OK
+2026-10-07T19:51:37.7523783Z NEXT.md: OK
+2026-10-07T19:51:37.7524196Z README.md: OK
+2026-10-07T19:51:37.7524683Z REVIEWER-INSTRUCTIONS.md: OK
+2026-10-07T19:51:37.7525245Z REVISIONS.md: OK
+2026-10-07T19:51:37.7525689Z SOURCES.md: OK
+2026-10-07T19:51:37.7526120Z VERIFY.md: OK
+2026-10-07T19:51:37.7526589Z batches/001-household-names.tsv: OK
+2026-10-07T19:51:37.7527232Z batches/002-shopping-and-status.tsv: OK
+2026-10-07T19:51:37.7527757Z batches/003-money-and-bad-decisions.tsv: OK
+2026-10-07T19:51:37.7528208Z batches/004-travel-and-bureaucracy.tsv: OK
+2026-10-07T19:51:37.7530277Z batches/005-impossible-casting.tsv: OK
+2026-10-07T19:51:37.7530942Z batches/006-ceremonies-gone-wrong.tsv: OK
+2026-10-07T19:51:37.7531572Z batches/007-unbookable-musicians.tsv: OK
+2026-10-07T19:51:37.7532176Z batches/008-episodes-never-aired.tsv: OK
+2026-10-07T19:51:37.7532793Z batches/009-terrible-service-requests.tsv: OK
+2026-10-07T19:51:37.7533443Z batches/010-drinks-at-wrong-moments.tsv: OK
+2026-10-07T19:51:37.7534039Z batches/011-snacks-under-oath.tsv: OK
+2026-10-07T19:51:37.7534634Z batches/012-candy-with-consequences.tsv: OK
+2026-10-07T19:51:37.7535251Z batches/013-restaurants-after-hours.tsv: OK
+2026-10-07T19:51:37.7535851Z batches/014-domestic-evidence.tsv: OK
+2026-10-07T19:51:37.7536453Z batches/015-technology-needs-a-lawyer.tsv: OK
+2026-10-07T19:51:37.7537101Z batches/016-fictional-adults-real-paperwork.tsv: OK
+2026-10-07T19:51:37.7537628Z batches/017-athletes-off-the-clock.tsv: OK
+2026-10-07T19:51:37.7538119Z batches/018-adult-characters-bad-service.tsv: OK
+2026-10-07T19:51:37.7538658Z batches/019-geniuses-with-terrible-clients.tsv: OK
+2026-10-07T19:51:37.7539413Z batches/020-pantry-emergencies.tsv: OK
+2026-10-07T19:51:37.7540391Z batches/021-return-policy-from-hell.tsv: OK
+2026-10-07T19:51:37.7540891Z batches/022-status-with-a-cleaning-fee.tsv: OK
+2026-10-07T19:51:37.7541397Z batches/023-finance-for-the-deceased.tsv: OK
+2026-10-07T19:51:37.7541905Z batches/024-checkout-for-the-afterlife.tsv: OK
+2026-10-07T19:51:37.7542411Z batches/025-actors-on-the-wrong-payroll.tsv: OK
+2026-10-07T19:51:37.7542923Z batches/026-leading-ladies-last-wishes.tsv: OK
+2026-10-07T19:51:37.7543400Z batches/027-encores-and-estates.tsv: OK
+2026-10-07T19:51:37.7543908Z batches/028-television-after-hours.tsv: OK
+2026-10-07T19:51:37.7544425Z batches/029-platforms-and-probate.tsv: OK
+2026-10-07T19:51:37.7544875Z batches/030-the-last-test-drive.tsv: OK
+2026-10-07T19:51:37.7545533Z candidate-confidence.json: OK
+2026-10-07T19:51:37.7545926Z candidates.json: OK
+2026-10-07T19:51:37.7546256Z candidates.schema.json: OK
+2026-10-07T19:51:37.7546630Z curation-decisions.json: OK
+2026-10-07T19:51:37.7547147Z curation-iterations/01/full-pool-single-direction-scan.json: OK
+2026-10-07T19:51:37.7547813Z curation-iterations/01/provisional-selection.json: OK
+2026-10-07T19:51:37.7548472Z curation-iterations/01/similarity-flags-and-decisions.json: OK
+2026-10-07T19:51:37.7549453Z curation-iterations/02/bidirectional-flags-before-removal.json: OK
+2026-10-07T19:51:37.7550138Z curation-iterations/02/decisions.json: OK
+2026-10-07T19:51:37.7550639Z editorial-review.json: OK
+2026-10-07T19:51:37.7551036Z grading/pass2-001.json: OK
+2026-10-07T19:51:37.7551429Z grading/pass2-002.json: OK
+2026-10-07T19:51:37.7551811Z grading/pass2-003.json: OK
+2026-10-07T19:51:37.7552194Z grading/pass2-004.json: OK
+2026-10-07T19:51:37.7552571Z grading/pass2-005.json: OK
+2026-10-07T19:51:37.7552954Z grading/pass2-006.json: OK
+2026-10-07T19:51:37.7553354Z grading/pass2-007.json: OK
+2026-10-07T19:51:37.7553740Z grading/pass2-008.json: OK
+2026-10-07T19:51:37.7554138Z grading/pass2-009.json: OK
+2026-10-07T19:51:37.7554526Z grading/pass2-010.json: OK
+2026-10-07T19:51:37.7554900Z grading/pass2-011.json: OK
+2026-10-07T19:51:37.7555292Z grading/pass2-012.json: OK
+2026-10-07T19:51:37.7555687Z grading/pass2-013.json: OK
+2026-10-07T19:51:37.7556060Z grading/pass2-014.json: OK
+2026-10-07T19:51:37.7556440Z grading/pass2-015.json: OK
+2026-10-07T19:51:37.7556821Z grading/pass2-016.json: OK
+2026-10-07T19:51:37.7557172Z grading/pass2-017.json: OK
+2026-10-07T19:51:37.7557515Z grading/pass2-018.json: OK
+2026-10-07T19:51:37.7557870Z grading/pass2-019.json: OK
+2026-10-07T19:51:37.7558230Z grading/pass2-020.json: OK
+2026-10-07T19:51:37.7558572Z grading/pass2-021.json: OK
+2026-10-07T19:51:37.7558922Z grading/pass2-022.json: OK
+2026-10-07T19:51:37.7559509Z grading/pass2-023.json: OK
+2026-10-07T19:51:37.7559863Z grading/pass2-024.json: OK
+2026-10-07T19:51:37.7560223Z grading/pass2-025.json: OK
+2026-10-07T19:51:37.7560565Z grading/pass2-026.json: OK
+2026-10-07T19:51:37.7560910Z grading/pass2-027.json: OK
+2026-10-07T19:51:37.7561260Z grading/pass2-028.json: OK
+2026-10-07T19:51:37.7561606Z grading/pass2-029.json: OK
+2026-10-07T19:51:37.7561968Z grading/pass2-030.json: OK
+2026-10-07T19:51:37.7562996Z grading/pass2.json: OK
+2026-10-07T19:51:37.7563373Z named-reference-aliases.json: OK
+2026-10-07T19:51:37.7565387Z named-reference-audit.json: OK
+2026-10-07T19:51:37.7565770Z package.json: OK
+2026-10-07T19:51:37.7567540Z prompts.json: OK
+2026-10-07T19:51:37.7568069Z prompts.schema.json: OK
+2026-10-07T19:51:37.7568410Z requirements.txt: OK
+2026-10-07T19:51:37.7568830Z results/draft.json: OK
+2026-10-07T19:51:37.7569409Z results/pool-similarity.json: OK
+2026-10-07T19:51:37.7569806Z results/release.json: OK
+2026-10-07T19:51:37.7573013Z review-input.json: OK
+2026-10-07T19:51:37.7573625Z review-inputs/001-household-names.json: OK
+2026-10-07T19:51:37.7574571Z review-inputs/002-shopping-and-status.json: OK
+2026-10-07T19:51:37.7575568Z review-inputs/003-money-and-bad-decisions.json: OK
+2026-10-07T19:51:37.7576601Z review-inputs/004-travel-and-bureaucracy.json: OK
+2026-10-07T19:51:37.7577423Z review-inputs/005-impossible-casting.json: OK
+2026-10-07T19:51:37.7578480Z review-inputs/006-ceremonies-gone-wrong.json: OK
+2026-10-07T19:51:37.7579405Z review-inputs/007-unbookable-musicians.json: OK
+2026-10-07T19:51:37.7580179Z review-inputs/008-episodes-never-aired.json: OK
+2026-10-07T19:51:37.7580993Z review-inputs/009-terrible-service-requests.json: OK
+2026-10-07T19:51:37.7581813Z review-inputs/010-drinks-at-wrong-moments.json: OK
+2026-10-07T19:51:37.7582548Z review-inputs/011-snacks-under-oath.json: OK
+2026-10-07T19:51:37.7583280Z review-inputs/012-candy-with-consequences.json: OK
+2026-10-07T19:51:37.7584057Z review-inputs/013-restaurants-after-hours.json: OK
+2026-10-07T19:51:37.7584818Z review-inputs/014-domestic-evidence.json: OK
+2026-10-07T19:51:37.7585762Z review-inputs/015-technology-needs-a-lawyer.json: OK
+2026-10-07T19:51:37.7586651Z review-inputs/016-fictional-adults-real-paperwork.json: OK
+2026-10-07T19:51:37.7587471Z review-inputs/017-athletes-off-the-clock.json: OK
+2026-10-07T19:51:37.7587973Z review-inputs/018-adult-characters-bad-service.json: OK
+2026-10-07T19:51:37.7588461Z review-inputs/019-geniuses-with-terrible-clients.json: OK
+2026-10-07T19:51:37.7588887Z review-inputs/020-pantry-emergencies.json: OK
+2026-10-07T19:51:37.7589801Z review-inputs/021-return-policy-from-hell.json: OK
+2026-10-07T19:51:37.7590643Z review-inputs/022-status-with-a-cleaning-fee.json: OK
+2026-10-07T19:51:37.7591410Z review-inputs/023-finance-for-the-deceased.json: OK
+2026-10-07T19:51:37.7592149Z review-inputs/024-checkout-for-the-afterlife.json: OK
+2026-10-07T19:51:37.7593435Z review-inputs/025-actors-on-the-wrong-payroll.json: OK
+2026-10-07T19:51:37.7593821Z review-inputs/026-leading-ladies-last-wishes.json: OK
+2026-10-07T19:51:37.7594168Z review-inputs/027-encores-and-estates.json: OK
+2026-10-07T19:51:37.7594516Z review-inputs/028-television-after-hours.json: OK
+2026-10-07T19:51:37.7594862Z review-inputs/029-platforms-and-probate.json: OK
+2026-10-07T19:51:37.7595202Z review-inputs/030-the-last-test-drive.json: OK
+2026-10-07T19:51:37.7595509Z scripts/build.py: OK
+2026-10-07T19:51:37.7595744Z scripts/checksums.py: OK
+2026-10-07T19:51:37.7595981Z scripts/scan_pool.py: OK
+2026-10-07T19:51:37.7596214Z scripts/verify.py: OK
+2026-10-07T19:51:37.7596448Z seals/001-household-names.json: OK
+2026-10-07T19:51:37.7596743Z seals/002-shopping-and-status.json: OK
+2026-10-07T19:51:37.7597051Z seals/003-money-and-bad-decisions.json: OK
+2026-10-07T19:51:37.7597355Z seals/004-travel-and-bureaucracy.json: OK
+2026-10-07T19:51:37.7597657Z seals/005-impossible-casting.json: OK
+2026-10-07T19:51:37.7597944Z seals/006-ceremonies-gone-wrong.json: OK
+2026-10-07T19:51:37.7598250Z seals/007-unbookable-musicians.json: OK
+2026-10-07T19:51:37.7598552Z seals/008-episodes-never-aired.json: OK
+2026-10-07T19:51:37.7598862Z seals/009-terrible-service-requests.json: OK
+2026-10-07T19:51:37.7599620Z seals/010-drinks-at-wrong-moments.json: OK
+2026-10-07T19:51:37.7600155Z seals/011-snacks-under-oath.json: OK
+2026-10-07T19:51:37.7600654Z seals/012-candy-with-consequences.json: OK
+2026-10-07T19:51:37.7601007Z seals/013-restaurants-after-hours.json: OK
+2026-10-07T19:51:37.7601322Z seals/014-domestic-evidence.json: OK
+2026-10-07T19:51:37.7601614Z seals/015-technology-needs-a-lawyer.json: OK
+2026-10-07T19:51:37.7601955Z seals/016-fictional-adults-real-paperwork.json: OK
+2026-10-07T19:51:37.7602299Z seals/017-athletes-off-the-clock.json: OK
+2026-10-07T19:51:37.7602620Z seals/018-adult-characters-bad-service.json: OK
+2026-10-07T19:51:37.7602965Z seals/019-geniuses-with-terrible-clients.json: OK
+2026-10-07T19:51:37.7603289Z seals/020-pantry-emergencies.json: OK
+2026-10-07T19:51:37.7603581Z seals/021-return-policy-from-hell.json: OK
+2026-10-07T19:51:37.7603907Z seals/022-status-with-a-cleaning-fee.json: OK
+2026-10-07T19:51:37.7604240Z seals/023-finance-for-the-deceased.json: OK
+2026-10-07T19:51:37.7604568Z seals/024-checkout-for-the-afterlife.json: OK
+2026-10-07T19:51:37.7604900Z seals/025-actors-on-the-wrong-payroll.json: OK
+2026-10-07T19:51:37.7605228Z seals/026-leading-ladies-last-wishes.json: OK
+2026-10-07T19:51:37.7605735Z seals/027-encores-and-estates.json: OK
+2026-10-07T19:51:37.7606026Z seals/028-television-after-hours.json: OK
+2026-10-07T19:51:37.7606329Z seals/029-platforms-and-probate.json: OK
+2026-10-07T19:51:37.7606620Z seals/030-the-last-test-drive.json: OK
+2026-10-07T19:51:37.7606895Z seals/full-pool.json: OK
+2026-10-07T19:51:37.7607200Z similarity-resolutions.json: OK
+2026-10-07T19:51:37.7607471Z superseded/013-v1/batches.tsv: OK
+2026-10-07T19:51:37.7607753Z superseded/013-v1/review-inputs.json: OK
+2026-10-07T19:51:37.7608039Z superseded/013-v1/seals.json: OK
+2026-10-07T19:51:37.7608349Z superseded/030-unsealed-length-draft/original.tsv: OK
+2026-10-07T19:51:37.7608721Z verification-history/draft-milestones.md: OK
+2026-10-07T19:51:37.7763682Z ##[group]Run actions/upload-artifact@v4
+2026-10-07T19:51:37.7763998Z with:
+2026-10-07T19:51:37.7764227Z   name: B14-complete-content-verification
+2026-10-07T19:51:37.7764749Z   path: jobs/B14-comedy-prompts/.work/ci.log
+jobs/B14-comedy-prompts/.work/pool-similarity-rerun.json
+
+2026-10-07T19:51:37.7765260Z   if-no-files-found: warn
+2026-10-07T19:51:37.7765498Z   compression-level: 6
+2026-10-07T19:51:37.7765718Z   overwrite: false
+2026-10-07T19:51:37.7765933Z   include-hidden-files: false
+2026-10-07T19:51:37.7766169Z env:
+2026-10-07T19:51:37.7766427Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-07T19:51:37.7766859Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-07T19:51:37.7767280Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-07T19:51:37.7767658Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-07T19:51:37.7768040Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-07T19:51:37.7768460Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-07T19:51:37.7768787Z ##[endgroup]
+2026-10-07T19:51:37.9463599Z (node:2608) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-07T19:51:37.9464558Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-07T19:51:37.9519765Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-07T19:51:37.9523800Z The least common ancestor is /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/jobs/B14-comedy-prompts/.work. This will be the root directory of the artifact
+2026-10-07T19:51:37.9525329Z With the provided path, there will be 2 files uploaded
+2026-10-07T19:51:37.9530947Z Artifact name is valid!
+2026-10-07T19:51:37.9532491Z Root directory input is valid!
+2026-10-07T19:51:38.3545999Z Beginning upload of artifact content to blob storage
+2026-10-07T19:51:38.3843467Z (node:2608) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-07T19:51:38.6678732Z Uploaded bytes 5385
+2026-10-07T19:51:38.7491174Z Finished uploading artifact content to blob storage!
+2026-10-07T19:51:38.7492707Z SHA256 digest of uploaded artifact zip is ba8f481a977e3ab0f46542f35301f194e3f3e966e74e95bc2c2b77214646b3f6
+2026-10-07T19:51:38.7494660Z Finalizing artifact upload
+2026-10-07T19:51:39.0289704Z Artifact B14-complete-content-verification.zip successfully finalized. Artifact ID 11506704793
+2026-10-07T19:51:39.0291468Z Artifact B14-complete-content-verification has been successfully uploaded! Final size is 5385 bytes. Artifact ID is 11506704793
+2026-10-07T19:51:39.0300596Z Artifact download URL: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37675775829/artifacts/11506704793
+2026-10-07T19:51:39.0474735Z Post job cleanup.
+2026-10-07T19:51:39.1687547Z (node:2620) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-07T19:51:39.1688931Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-07T19:51:39.1901752Z Post job cleanup.
+2026-10-07T19:51:39.2909990Z [command]/usr/bin/git version
+2026-10-07T19:51:39.2963039Z git version 2.55.0
+2026-10-07T19:51:39.3047456Z Temporarily overriding HOME='/home/runner/work/_temp/6a321777-18e5-4527-83c7-eafd91c398b1' before making global git config changes
+2026-10-07T19:51:39.3055638Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-07T19:51:39.3057400Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+2026-10-07T19:51:39.3127816Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-07T19:51:39.3191634Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-07T19:51:39.3530453Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-07T19:51:39.3570594Z http.https://github.com/.extraheader
+2026-10-07T19:51:39.3588820Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-07T19:51:39.3642953Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-07T19:51:39.3977716Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-07T19:51:39.4017491Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-07T19:51:39.4418201Z Cleaning up orphan processes
+2026-10-07T19:51:39.4752057Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
