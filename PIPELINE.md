@@ -1,6 +1,6 @@
 # ChatGPT project pipeline
 
-_Last refreshed: 2026-10-14 17:53 UTC_
+_Last refreshed: 2026-10-14 21:27 UTC_
 
 This tracker follows the 20 jobs listed in [PROMPTS.md](PROMPTS.md). It checks the job branches and pull requests in this repository.
 
@@ -38,7 +38,7 @@ _None._
 | B11 | Rummikub validator + best play (C) | [PR #7](https://github.com/luisitin/partybox-gpt-drops/pull/7) open for review |
 | B12 | Ticket to Ride USA data + longest path (R+C) | [PR #27](https://github.com/luisitin/partybox-gpt-drops/pull/27) open for review |
 | B13 | 1,000 verified trivia questions (R) | [PR #28](https://github.com/luisitin/partybox-gpt-drops/pull/28) open for review |
-| B14 | 600 comedy prompts + 600 "most likely to" (R) | [PR #29](https://github.com/luisitin/partybox-gpt-drops/pull/29) open for review |
+| B14 | 600 comedy prompts + 600 "most likely to" (R) | [PR #13](https://github.com/luisitin/partybox-gpt-drops/pull/13) open for review |
 | B15 | 120 original SVG game icons (C) | [PR #10](https://github.com/luisitin/partybox-gpt-drops/pull/10) open for review |
 | B16 | 12 accessible player colors (C) | [PR #15](https://github.com/luisitin/partybox-gpt-drops/pull/15) open for review |
 | B17 | 40 original synthesized sound effects (C) | [PR #11](https://github.com/luisitin/partybox-gpt-drops/pull/11) open for review |
