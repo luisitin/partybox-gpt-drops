@@ -1,0 +1,276 @@
+{
+  "reviewer": "/root/r2048_audit",
+  "reviewedAt": "2026-10-07T21:23:36.568054+00:00",
+  "scope": "Actual independent read of amended food0979, all final options, both source paragraph contexts and selected inline origins; both sources physically refetched after lead author amendment, HTTP200.",
+  "priorRejectedReview": {
+    "id": "B13-0979",
+    "rowSha256": "64ce260d5c87f2653a1c6db3808235ff56782d629f27ea3982373fc76c3d6b32",
+    "reviewer": "/root/r2048_lead (independent final ordered-choice reviewer)",
+    "reviewedAt": "2026-10-07T21:17:52.580474+00:00",
+    "result": "revise",
+    "attemptedCounterexample": "REVISE: This turmeric-versus-ginger-family association is the exact inverse of0976, so test a distinct formal family-name target instead.",
+    "distractorsChecked": [
+      "Mustard",
+      "Fenugreek",
+      "Saffron",
+      "Turmeric"
+    ],
+    "scopeDateCheck": "Retested the formerly unsupported yellow qualifier: the new stem asks only the shared plant family. In the actual credited Zingiberaceae topic body turmeric is a named member; the separately compiled Ginger paragraph explicitly includes it. Saffron belongs to Iridaceae, mustard Brassicaceae and fenugreek Fabaceae rather than the ginger family. Common culinary ginger is explicitly Zingiber officinale in both selected surrounding contexts.",
+    "funFactCheck": "Retested the formerly unsupported yellow qualifier: the new stem asks only the shared plant family. In the actual credited Zingiberaceae topic body turmeric is a named member; the separately compiled Ginger paragraph explicitly includes it. Saffron belongs to Iridaceae, mustard Brassicaceae and fenugreek Fabaceae rather than the ginger family. Common culinary ginger is explicitly Zingiber officinale in both selected surrounding contexts.",
+    "sourceIndependenceCheck": "Wiki ginger rhizome/origin and family passages cite NCCIH, Southeast-Asia plant resource books, Kew and linguistic/botanical origin literature, not Britannica. The Zingiberaceae Britannica family article is read as a whole family account when selected.",
+    "editorialOwnersCompared": [
+      "Encyclopaedia Britannica Inc.",
+      "Wikimedia community contributors"
+    ],
+    "finalOptionOrderAssessment": "REVISE: This turmeric-versus-ginger-family association is the exact inverse of0976, so test a distinct formal family-name target instead.",
+    "finalOrderedChoicesActuallyRead": [
+      "Mustard",
+      "Fenugreek",
+      "Saffron",
+      "Turmeric"
+    ]
+  },
+  "priorSourceReopen": {
+    "id": "B13-0979",
+    "rowSha256": "64ce260d5c87f2653a1c6db3808235ff56782d629f27ea3982373fc76c3d6b32",
+    "reviewer": "/root/r2048_lead",
+    "reviewedAt": "2026-10-07T21:17:52.580474+00:00",
+    "result": "needs-revision",
+    "sources": [
+      {
+        "sourceId": "food-everyday-life-s0065",
+        "receipt": {
+          "pass": "reopen",
+          "retrievedAt": "2026-10-07T19:52:01.176162+00:00",
+          "method": "urllib-http-get",
+          "requestedUrl": "https://www.britannica.com/plant/Zingiberaceae",
+          "resolvedUrl": "https://www.britannica.com/plant/Zingiberaceae",
+          "status": 200,
+          "contentType": "text/html",
+          "rawSha256": "1e0d38cd6306fd06a5c6b904218cdff74a570cde03751f3a401aecd6b639a215",
+          "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0065.raw",
+          "title": "Zingiberaceae | Description, Genera, & Facts | Britannica",
+          "contentSha256": "6d6f0a05310b983f9a7f8e30aa584538451dee239db078f22f59a716c888954f",
+          "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0065.txt",
+          "captureComplete": true,
+          "characters": 5684
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "The dried thick rhizome of turmeric ( Curcuma longa )",
+            "exactMatch": true,
+            "wordCount": 10
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Ginger is obtained from the fresh or dried rhizomes of Zingiber officinale",
+            "exactMatch": true,
+            "wordCount": 12
+          }
+        ],
+        "contextRead": true,
+        "claimAssessment": "Retested the formerly unsupported yellow qualifier: the new stem asks only the shared plant family. In the actual credited Zingiberaceae topic body turmeric is a named member; the separately compiled Ginger paragraph explicitly includes it. Saffron belongs to Iridaceae, mustard Brassicaceae and fenugreek Fabaceae rather than the ginger family. Common culinary ginger is explicitly Zingiber officinale in both selected surrounding contexts.",
+        "sourceIndependenceAssessment": "Wiki ginger rhizome/origin and family passages cite NCCIH, Southeast-Asia plant resource books, Kew and linguistic/botanical origin literature, not Britannica. The Zingiberaceae Britannica family article is read as a whole family account when selected."
+      },
+      {
+        "sourceId": "food-everyday-life-s0052",
+        "receipt": {
+          "pass": "reopen",
+          "retrievedAt": "2026-10-07T19:51:59.981648+00:00",
+          "method": "urllib-http-get",
+          "requestedUrl": "https://en.wikipedia.org/wiki/Ginger",
+          "resolvedUrl": "https://en.wikipedia.org/wiki/Ginger",
+          "status": 200,
+          "contentType": "text/html",
+          "rawSha256": "16ebd244d3bb94943f4e3b7b64efb1f61d687f8d97aae47951ed70bed4c2e837",
+          "rawPath": ".work/food-everyday-life/reopen/food-everyday-life-s0052.raw",
+          "title": "Ginger - Wikipedia",
+          "contentSha256": "410cd01824a1d50d12159c80f1ddce6a95862104df833360acad4c1c63539c21",
+          "capturePath": ".work/food-everyday-life/reopen/food-everyday-life-s0052.txt",
+          "captureComplete": true,
+          "characters": 51444
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "Ginger is in the family Zingiberaceae , which also includes turmeric",
+            "exactMatch": true,
+            "wordCount": 11
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Ginger ( Zingiber officinale )",
+            "exactMatch": true,
+            "wordCount": 5
+          }
+        ],
+        "contextRead": true,
+        "claimAssessment": "Retested the formerly unsupported yellow qualifier: the new stem asks only the shared plant family. In the actual credited Zingiberaceae topic body turmeric is a named member; the separately compiled Ginger paragraph explicitly includes it. Saffron belongs to Iridaceae, mustard Brassicaceae and fenugreek Fabaceae rather than the ginger family. Common culinary ginger is explicitly Zingiber officinale in both selected surrounding contexts.",
+        "sourceIndependenceAssessment": "Wiki ginger rhizome/origin and family passages cite NCCIH, Southeast-Asia plant resource books, Kew and linguistic/botanical origin literature, not Britannica. The Zingiberaceae Britannica family article is read as a whole family account when selected."
+      }
+    ],
+    "assessment": "REVISE: This turmeric-versus-ginger-family association is the exact inverse of0976, so test a distinct formal family-name target instead.",
+    "sourceReceiptReuse": "Only choice order changed. The final ordered question/options/correct answer/fun fact were actually read now; retained physical second-pass GET receipts keep their actual original times.",
+    "finalOptionOrderAssessment": "REVISE: This turmeric-versus-ginger-family association is the exact inverse of0976, so test a distinct formal family-name target instead."
+  },
+  "currentRow": {
+    "id": "B13-0979",
+    "category": "food-everyday-life",
+    "question": "What is the botanical family name shared by ginger and turmeric?",
+    "difficulty": 2,
+    "options": [
+      "Brassicaceae",
+      "Fabaceae",
+      "Iridaceae",
+      "Zingiberaceae"
+    ],
+    "correctIndex": 3,
+    "correctAnswer": "Zingiberaceae",
+    "funFact": "Common culinary ginger is Zingiber officinale.",
+    "confidence": "high",
+    "confidenceReason": "Both actual editorial bodies identify the botanical ginger family Zingiberaceae; the credited family account includes turmeric among its named economic members. This formal family-name target replaces the inverse repeat of0976 rather than changing the validated spice-family relationship. Independent amended-row review is required.",
+    "sources": [
+      {
+        "sourceId": "food-everyday-life-s0065",
+        "url": "https://www.britannica.com/plant/Zingiberaceae",
+        "publisher": "Encyclopaedia Britannica",
+        "quote": "Zingiberaceae , the ginger family of flowering plants",
+        "funFactQuote": "Ginger is obtained from the fresh or dried rhizomes of Zingiber officinale",
+        "extraQuote": "The dried thick rhizome of turmeric ( Curcuma longa )"
+      },
+      {
+        "sourceId": "food-everyday-life-s0052",
+        "url": "https://en.wikipedia.org/wiki/Ginger",
+        "publisher": "Wikipedia contributors",
+        "quote": "Ginger is in the family Zingiberaceae , which also includes turmeric",
+        "funFactQuote": "Ginger ( Zingiber officinale )"
+      }
+    ],
+    "claims": [
+      {
+        "kind": "answer",
+        "text": "Ginger and turmeric belong to the botanical family Zingiberaceae.",
+        "sourceIds": [
+          "food-everyday-life-s0065",
+          "food-everyday-life-s0052"
+        ]
+      },
+      {
+        "kind": "funFact",
+        "text": "Common culinary ginger is Zingiber officinale.",
+        "sourceIds": [
+          "food-everyday-life-s0065",
+          "food-everyday-life-s0052"
+        ]
+      }
+    ]
+  },
+  "currentRowSha256": "6f3f77a9490e216aca0a22089bbef7fe4edcf009a6aafb7a135de16bdb22c258",
+  "freshReview": {
+    "id": "B13-0979",
+    "rowSha256": "6f3f77a9490e216aca0a22089bbef7fe4edcf009a6aafb7a135de16bdb22c258",
+    "reviewer": "/root/r2048_audit (did not author this food amendment)",
+    "reviewedAt": "2026-10-07T21:23:36.568054+00:00",
+    "result": "accept",
+    "attemptedCounterexample": "Actually challenged the formal botanical-family target rather than the inverse ginger/turmeric membership question0976. Both newly reopened bodies support Zingiberaceae: Britannica names the ginger family and discusses turmeric/common ginger as economic members; Wikipedia explicitly includes turmeric, with selected Curcuma/Kew and Zingiber/Kew references rather than paired Britannica. Brassicaceae (mustard), Fabaceae (fenugreek/legumes) and Iridaceae (saffron/irises) are real same-rank botanical families and none contains common culinary ginger/turmeric. The separate Zingiber officinale fun fact is directly named in both actual contextual passages; wild ginger Asarum and other vernacular gingers are excluded by common culinary wording. Final ordered choices read individually; correct fourth option remains unique.",
+    "distractorsChecked": [
+      "Brassicaceae",
+      "Fabaceae",
+      "Iridaceae",
+      "Zingiberaceae"
+    ],
+    "scopeDateCheck": "Actually challenged the formal botanical-family target rather than the inverse ginger/turmeric membership question0976. Both newly reopened bodies support Zingiberaceae: Britannica names the ginger family and discusses turmeric/common ginger as economic members; Wikipedia explicitly includes turmeric, with selected Curcuma/Kew and Zingiber/Kew references rather than paired Britannica. Brassicaceae (mustard), Fabaceae (fenugreek/legumes) and Iridaceae (saffron/irises) are real same-rank botanical families and none contains common culinary ginger/turmeric. The separate Zingiber officinale fun fact is directly named in both actual contextual passages; wild ginger Asarum and other vernacular gingers are excluded by common culinary wording. Final ordered choices read individually; correct fourth option remains unique.",
+    "funFactCheck": "Actually challenged the formal botanical-family target rather than the inverse ginger/turmeric membership question0976. Both newly reopened bodies support Zingiberaceae: Britannica names the ginger family and discusses turmeric/common ginger as economic members; Wikipedia explicitly includes turmeric, with selected Curcuma/Kew and Zingiber/Kew references rather than paired Britannica. Brassicaceae (mustard), Fabaceae (fenugreek/legumes) and Iridaceae (saffron/irises) are real same-rank botanical families and none contains common culinary ginger/turmeric. The separate Zingiber officinale fun fact is directly named in both actual contextual passages; wild ginger Asarum and other vernacular gingers are excluded by common culinary wording. Final ordered choices read individually; correct fourth option remains unique.",
+    "sourceIndependenceCheck": "Actually challenged the formal botanical-family target rather than the inverse ginger/turmeric membership question0976. Both newly reopened bodies support Zingiberaceae: Britannica names the ginger family and discusses turmeric/common ginger as economic members; Wikipedia explicitly includes turmeric, with selected Curcuma/Kew and Zingiber/Kew references rather than paired Britannica. Brassicaceae (mustard), Fabaceae (fenugreek/legumes) and Iridaceae (saffron/irises) are real same-rank botanical families and none contains common culinary ginger/turmeric. The separate Zingiber officinale fun fact is directly named in both actual contextual passages; wild ginger Asarum and other vernacular gingers are excluded by common culinary wording. Final ordered choices read individually; correct fourth option remains unique.",
+    "finalOrderedChoicesActuallyRead": [
+      "Brassicaceae",
+      "Fabaceae",
+      "Iridaceae",
+      "Zingiberaceae"
+    ],
+    "priorRejectedRowSha256": "64ce260d5c87f2653a1c6db3808235ff56782d629f27ea3982373fc76c3d6b32"
+  },
+  "freshSourceReopen": {
+    "id": "B13-0979",
+    "rowSha256": "6f3f77a9490e216aca0a22089bbef7fe4edcf009a6aafb7a135de16bdb22c258",
+    "reviewer": "/root/r2048_audit",
+    "reviewedAt": "2026-10-07T21:23:36.568054+00:00",
+    "result": "supported",
+    "sources": [
+      {
+        "sourceId": "food-everyday-life-s0065",
+        "receipt": {
+          "pass": "reopen",
+          "retrievedAt": "2026-10-07T21:19:25.930732+00:00",
+          "method": "urllib-http-get",
+          "requestedUrl": "https://www.britannica.com/plant/Zingiberaceae",
+          "resolvedUrl": "https://www.britannica.com/plant/Zingiberaceae",
+          "status": 200,
+          "contentType": "text/html",
+          "rawSha256": "eabaf4f6b3dbbbaf3784422751f4dc79b3e9de417a7ba30e69bac2c2a51aa239",
+          "rawPath": ".work/food-final-amendment-r2048/reopen/food-everyday-life-s0065.raw",
+          "title": "Zingiberaceae | Description, Genera, & Facts | Britannica",
+          "contentSha256": "6d6f0a05310b983f9a7f8e30aa584538451dee239db078f22f59a716c888954f",
+          "capturePath": ".work/food-final-amendment-r2048/reopen/food-everyday-life-s0065.txt",
+          "captureComplete": true,
+          "characters": 5684
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "Zingiberaceae , the ginger family of flowering plants",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Ginger is obtained from the fresh or dried rhizomes of Zingiber officinale",
+            "exactMatch": true
+          },
+          {
+            "field": "extraQuote",
+            "quote": "The dried thick rhizome of turmeric ( Curcuma longa )",
+            "exactMatch": true
+          }
+        ],
+        "contextRead": true,
+        "claimAssessment": "Actually challenged the formal botanical-family target rather than the inverse ginger/turmeric membership question0976. Both newly reopened bodies support Zingiberaceae: Britannica names the ginger family and discusses turmeric/common ginger as economic members; Wikipedia explicitly includes turmeric, with selected Curcuma/Kew and Zingiber/Kew references rather than paired Britannica. Brassicaceae (mustard), Fabaceae (fenugreek/legumes) and Iridaceae (saffron/irises) are real same-rank botanical families and none contains common culinary ginger/turmeric. The separate Zingiber officinale fun fact is directly named in both actual contextual passages; wild ginger Asarum and other vernacular gingers are excluded by common culinary wording. Final ordered choices read individually; correct fourth option remains unique."
+      },
+      {
+        "sourceId": "food-everyday-life-s0052",
+        "receipt": {
+          "pass": "reopen",
+          "retrievedAt": "2026-10-07T21:19:25.919316+00:00",
+          "method": "urllib-http-get",
+          "requestedUrl": "https://en.wikipedia.org/wiki/Ginger",
+          "resolvedUrl": "https://en.wikipedia.org/wiki/Ginger",
+          "status": 200,
+          "contentType": "text/html",
+          "rawSha256": "16ebd244d3bb94943f4e3b7b64efb1f61d687f8d97aae47951ed70bed4c2e837",
+          "rawPath": ".work/food-final-amendment-r2048/reopen/food-everyday-life-s0052.raw",
+          "title": "Ginger - Wikipedia",
+          "contentSha256": "410cd01824a1d50d12159c80f1ddce6a95862104df833360acad4c1c63539c21",
+          "capturePath": ".work/food-final-amendment-r2048/reopen/food-everyday-life-s0052.txt",
+          "captureComplete": true,
+          "characters": 51444
+        },
+        "quotations": [
+          {
+            "field": "quote",
+            "quote": "Ginger is in the family Zingiberaceae , which also includes turmeric",
+            "exactMatch": true
+          },
+          {
+            "field": "funFactQuote",
+            "quote": "Ginger ( Zingiber officinale )",
+            "exactMatch": true
+          }
+        ],
+        "contextRead": true,
+        "claimAssessment": "Actually challenged the formal botanical-family target rather than the inverse ginger/turmeric membership question0976. Both newly reopened bodies support Zingiberaceae: Britannica names the ginger family and discusses turmeric/common ginger as economic members; Wikipedia explicitly includes turmeric, with selected Curcuma/Kew and Zingiber/Kew references rather than paired Britannica. Brassicaceae (mustard), Fabaceae (fenugreek/legumes) and Iridaceae (saffron/irises) are real same-rank botanical families and none contains common culinary ginger/turmeric. The separate Zingiber officinale fun fact is directly named in both actual contextual passages; wild ginger Asarum and other vernacular gingers are excluded by common culinary wording. Final ordered choices read individually; correct fourth option remains unique."
+      }
+    ],
+    "assessment": "Actually challenged the formal botanical-family target rather than the inverse ginger/turmeric membership question0976. Both newly reopened bodies support Zingiberaceae: Britannica names the ginger family and discusses turmeric/common ginger as economic members; Wikipedia explicitly includes turmeric, with selected Curcuma/Kew and Zingiber/Kew references rather than paired Britannica. Brassicaceae (mustard), Fabaceae (fenugreek/legumes) and Iridaceae (saffron/irises) are real same-rank botanical families and none contains common culinary ginger/turmeric. The separate Zingiber officinale fun fact is directly named in both actual contextual passages; wild ginger Asarum and other vernacular gingers are excluded by common culinary wording. Final ordered choices read individually; correct fourth option remains unique.",
+    "priorRowSha256": "64ce260d5c87f2653a1c6db3808235ff56782d629f27ea3982373fc76c3d6b32"
+  }
+}
