@@ -1,0 +1,100 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "countQuoteIds",
+    "counts",
+    "familyGameSquadBaseMissing",
+    "job",
+    "nintendoLifeRawBaseOnly",
+    "normalization",
+    "note",
+    "wikiRawBaseMissingFromNintendoLife"
+  ],
+  "properties": {
+    "countQuoteIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "familyGameSquadBaseNames",
+        "nintendoLifeBaseTable",
+        "nintendoLifeCombinedStatement",
+        "nintendoLifeTvDistinctNames",
+        "wikiBase",
+        "wikiCombined",
+        "wikiTv"
+      ],
+      "properties": {
+        "familyGameSquadBaseNames": {
+          "type": "integer"
+        },
+        "nintendoLifeBaseTable": {
+          "type": "integer"
+        },
+        "nintendoLifeCombinedStatement": {
+          "type": "integer"
+        },
+        "nintendoLifeTvDistinctNames": {
+          "type": "integer"
+        },
+        "wikiBase": {
+          "type": "integer"
+        },
+        "wikiCombined": {
+          "type": "integer"
+        },
+        "wikiTv": {
+          "type": "integer"
+        }
+      }
+    },
+    "familyGameSquadBaseMissing": {
+      "type": "array",
+      "items": {
+        "type": [
+          "string",
+          "object",
+          "number",
+          "null",
+          "boolean",
+          "array"
+        ]
+      }
+    },
+    "job": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "nintendoLifeRawBaseOnly": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "normalization": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "note": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "wikiRawBaseMissingFromNintendoLife": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "B03 catalogue-list-comparison closed evidence schema"
+}

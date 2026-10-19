@@ -1,0 +1,539 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "B03 preliminary single-family gameplay research leads",
+  "type": "object",
+  "properties": {
+    "job": {
+      "const": "B03"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "complete": {
+      "const": false
+    },
+    "independentlyVerifiedRows": {
+      "const": 0
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 132,
+      "maxItems": 132,
+      "items": {
+        "type": "object",
+        "properties": {
+          "ordinal": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 132
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "edition": {
+            "enum": [
+              "base",
+              "jamboree_tv"
+            ]
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://www\\.mariowiki\\.com/"
+          },
+          "sourceFamily": {
+            "const": "MarioWiki"
+          },
+          "status": {
+            "type": "string"
+          },
+          "confidence": {
+            "const": "low"
+          },
+          "quotes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^q[1-9][0-9]*$"
+                },
+                "quote": {
+                  "type": "string",
+                  "pattern": "^\\S+(?:\\s+\\S+){0,24}$"
+                },
+                "quoteWords": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 25
+                },
+                "locator": {
+                  "type": "string"
+                },
+                "sectionPath": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "sourceImageLabels": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "alt": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "src": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "alt",
+                      "title",
+                      "src"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "quote",
+                "quoteWords",
+                "locator",
+                "sectionPath",
+                "sourceImageLabels"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "uniqueQuoteWords": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 90
+          },
+          "fieldQuoteReferences": {
+            "type": "object",
+            "properties": {
+              "controls": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^q[1-9][0-9]*$"
+                },
+                "uniqueItems": true
+              },
+              "winRules": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^q[1-9][0-9]*$"
+                },
+                "uniqueItems": true
+              },
+              "scoreRules": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^q[1-9][0-9]*$"
+                },
+                "uniqueItems": true
+              },
+              "timeLimit": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^q[1-9][0-9]*$"
+                },
+                "uniqueItems": true
+              },
+              "tieRules": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^q[1-9][0-9]*$"
+                },
+                "uniqueItems": true
+              },
+              "coinReward": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^q[1-9][0-9]*$"
+                },
+                "uniqueItems": true
+              },
+              "starReward": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^q[1-9][0-9]*$"
+                },
+                "uniqueItems": true
+              },
+              "gameplay": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^q[1-9][0-9]*$"
+                },
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "controls",
+              "winRules",
+              "scoreRules",
+              "timeLimit",
+              "tieRules",
+              "coinReward",
+              "starReward",
+              "gameplay"
+            ],
+            "additionalProperties": false
+          },
+          "missingLeadFields": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "controls",
+                "winRules",
+                "scoreRules",
+                "timeLimit",
+                "tieRules",
+                "coinReward",
+                "starReward",
+                "gameplay"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "scopeWarnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pass1": {
+            "type": "object",
+            "properties": {
+              "retrievedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "curlExit": {
+                "const": 0
+              },
+              "curlOutput": {
+                "type": "string",
+                "pattern": "^200\\n"
+              },
+              "bodySha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "bodyBytes": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "tlsVerificationEnabled": {
+                "const": true
+              }
+            },
+            "required": [
+              "retrievedAt",
+              "curlExit",
+              "curlOutput",
+              "bodySha256",
+              "bodyBytes",
+              "tlsVerificationEnabled"
+            ],
+            "additionalProperties": false
+          },
+          "pass2": {
+            "type": "object",
+            "properties": {
+              "retrievedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "curlExit": {
+                "const": 0
+              },
+              "curlOutput": {
+                "type": "string",
+                "pattern": "^200\\n"
+              },
+              "bodySha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "bodyBytes": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "tlsVerificationEnabled": {
+                "const": true
+              }
+            },
+            "required": [
+              "retrievedAt",
+              "curlExit",
+              "curlOutput",
+              "bodySha256",
+              "bodyBytes",
+              "tlsVerificationEnabled"
+            ],
+            "additionalProperties": false
+          },
+          "secondPassLeadsIdentical": {
+            "const": true
+          },
+          "finalVerified": {
+            "const": false
+          }
+        },
+        "required": [
+          "ordinal",
+          "name",
+          "edition",
+          "url",
+          "sourceFamily",
+          "status",
+          "confidence",
+          "quotes",
+          "uniqueQuoteWords",
+          "fieldQuoteReferences",
+          "missingLeadFields",
+          "scopeWarnings",
+          "pass1",
+          "pass2",
+          "secondPassLeadsIdentical",
+          "finalVerified"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "controls": {
+          "type": "object",
+          "properties": {
+            "rowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "tvRowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "quoteReferences": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "rowsWithLeads",
+            "tvRowsWithLeads",
+            "quoteReferences"
+          ],
+          "additionalProperties": false
+        },
+        "winRules": {
+          "type": "object",
+          "properties": {
+            "rowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "tvRowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "quoteReferences": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "rowsWithLeads",
+            "tvRowsWithLeads",
+            "quoteReferences"
+          ],
+          "additionalProperties": false
+        },
+        "scoreRules": {
+          "type": "object",
+          "properties": {
+            "rowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "tvRowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "quoteReferences": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "rowsWithLeads",
+            "tvRowsWithLeads",
+            "quoteReferences"
+          ],
+          "additionalProperties": false
+        },
+        "timeLimit": {
+          "type": "object",
+          "properties": {
+            "rowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "tvRowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "quoteReferences": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "rowsWithLeads",
+            "tvRowsWithLeads",
+            "quoteReferences"
+          ],
+          "additionalProperties": false
+        },
+        "tieRules": {
+          "type": "object",
+          "properties": {
+            "rowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "tvRowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "quoteReferences": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "rowsWithLeads",
+            "tvRowsWithLeads",
+            "quoteReferences"
+          ],
+          "additionalProperties": false
+        },
+        "coinReward": {
+          "type": "object",
+          "properties": {
+            "rowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "tvRowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "quoteReferences": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "rowsWithLeads",
+            "tvRowsWithLeads",
+            "quoteReferences"
+          ],
+          "additionalProperties": false
+        },
+        "starReward": {
+          "type": "object",
+          "properties": {
+            "rowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "tvRowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "quoteReferences": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "rowsWithLeads",
+            "tvRowsWithLeads",
+            "quoteReferences"
+          ],
+          "additionalProperties": false
+        },
+        "gameplay": {
+          "type": "object",
+          "properties": {
+            "rowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "tvRowsWithLeads": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "quoteReferences": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "rowsWithLeads",
+            "tvRowsWithLeads",
+            "quoteReferences"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "controls",
+        "winRules",
+        "scoreRules",
+        "timeLimit",
+        "tieRules",
+        "coinReward",
+        "starReward",
+        "gameplay"
+      ],
+      "additionalProperties": false
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "job",
+    "scope",
+    "complete",
+    "independentlyVerifiedRows",
+    "entries",
+    "coverage",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

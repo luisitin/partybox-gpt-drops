@@ -1,0 +1,194 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "factsFullyVerified",
+    "job",
+    "quoteRecoveriesPerPass",
+    "rows",
+    "scope"
+  ],
+  "properties": {
+    "factsFullyVerified": {
+      "const": 0
+    },
+    "job": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "quoteRecoveriesPerPass": {
+      "type": "integer"
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "articlePassAScopeSha256",
+          "articlePassBScopeSha256",
+          "articleQuoteRecoveriesA",
+          "articleQuoteRecoveriesB",
+          "articleScopeIdentical",
+          "checkedFields",
+          "completeMechanics",
+          "fieldStatuses",
+          "id",
+          "independentScopeChecks",
+          "name",
+          "publishedRowSha256",
+          "review"
+        ],
+        "properties": {
+          "articlePassAScopeSha256": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "articlePassBScopeSha256": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "articleQuoteRecoveriesA": {
+            "type": "integer"
+          },
+          "articleQuoteRecoveriesB": {
+            "type": "integer"
+          },
+          "articleScopeIdentical": {
+            "type": "boolean"
+          },
+          "checkedFields": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 20000
+            }
+          },
+          "completeMechanics": {
+            "type": "boolean"
+          },
+          "fieldStatuses": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "category",
+              "controls",
+              "format",
+              "gameplay",
+              "name",
+              "reward",
+              "scoreRules",
+              "tieRules",
+              "timeLimit",
+              "winRules"
+            ],
+            "properties": {
+              "category": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "controls": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "format": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "gameplay": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "reward": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "scoreRules": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "tieRules": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "timeLimit": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "winRules": {
+                "type": "string",
+                "maxLength": 20000
+              }
+            }
+          },
+          "id": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "independentScopeChecks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "passAScopeSha256",
+                "passBScopeSha256",
+                "quoteIds",
+                "scopeIdentical",
+                "sourceId"
+              ],
+              "properties": {
+                "passAScopeSha256": {
+                  "type": "string",
+                  "maxLength": 20000
+                },
+                "passBScopeSha256": {
+                  "type": "string",
+                  "maxLength": 20000
+                },
+                "quoteIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "maxLength": 20000
+                  }
+                },
+                "scopeIdentical": {
+                  "type": "boolean"
+                },
+                "sourceId": {
+                  "type": "string",
+                  "maxLength": 20000
+                }
+              }
+            }
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "publishedRowSha256": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "review": {
+            "type": "string",
+            "maxLength": 20000
+          }
+        }
+      },
+      "minItems": 132,
+      "maxItems": 132
+    },
+    "scope": {
+      "type": "string",
+      "maxLength": 20000
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "B03 catalogue-second-pass closed evidence schema"
+}
