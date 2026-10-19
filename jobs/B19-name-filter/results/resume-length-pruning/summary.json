@@ -1,0 +1,1652 @@
+{
+  "mode": "full",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "unicode": "17.0"
+  },
+  "sourceSha256": "5371665d9df3721f5b4d6d4c923120d2944fa3ae396008c74ca80006a03e25e9",
+  "referenceSha256": "962bab309ddf9cc2d8ccc7237f782d69db6aa2b603417f1a8935c3d5b167b5f6",
+  "blindReferenceSha256": "40449357a616619cc649d6b8efab2f6664a187de178511b8b0f17e28e92eea9a",
+  "suites": [
+    {
+      "name": "public-corpus-acquisition",
+      "cases": 1,
+      "passed": 1,
+      "seed": null,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "delivery-file-size-and-checksums",
+      "cases": 2,
+      "passed": 2,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "files": 109,
+      "checked": 109,
+      "failures": [],
+      "rootManifestPresent": true,
+      "maxFileBytes": 2524464
+    },
+    {
+      "name": "immutable-return-values",
+      "cases": 3,
+      "passed": 3,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "policy-copy-consistency-and-no-duplicate-terms",
+      "cases": 3,
+      "passed": 3,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "strict-TypeScript",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1,
+      "command": "tsc -p tsconfig.json --noEmit",
+      "output": ""
+    },
+    {
+      "name": "length-pruned-matcher-blind-boundaries",
+      "cases": 24873,
+      "passed": 24873,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "generator-byte-identical-replay-and-coverage",
+      "cases": 2,
+      "passed": 2,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "handwritten-format-and-Scunthorpe",
+      "cases": 459,
+      "passed": 459,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "exhaustive-declared-single-glyph-substitution",
+      "cases": 1371,
+      "passed": 1371,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "precompiled-Unicode-policy-context-differential",
+      "cases": 1296,
+      "passed": 1296,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "precompiled-printable-width-and-latin1-context-differential",
+      "cases": 1422,
+      "passed": 1422,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "generated-obfuscations",
+      "cases": 5000,
+      "passed": 5000,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "misses": 0,
+      "errors": [],
+      "coverage": {
+        "anal": 88,
+        "anus": 88,
+        "arsehole": 72,
+        "bastard": 80,
+        "bitch": 88,
+        "blowjob": 80,
+        "boner": 88,
+        "boob": 88,
+        "boobs": 88,
+        "bukkake": 80,
+        "chink": 88,
+        "clit": 88,
+        "cock": 88,
+        "coon": 87,
+        "cunt": 87,
+        "cum": 86,
+        "cumshot": 79,
+        "dick": 87,
+        "dildo": 87,
+        "douche": 85,
+        "dyke": 87,
+        "fag": 87,
+        "faggot": 83,
+        "fuck": 87,
+        "gook": 87,
+        "handjob": 83,
+        "hentai": 82,
+        "jizz": 85,
+        "kike": 87,
+        "nigga": 87,
+        "nigger": 84,
+        "orgasm": 86,
+        "paedophile": 49,
+        "pedophile": 51,
+        "penis": 87,
+        "porn": 87,
+        "pussy": 86,
+        "rape": 87,
+        "retard": 86,
+        "rimjob": 84,
+        "semen": 87,
+        "sex": 84,
+        "shemale": 80,
+        "slut": 87,
+        "spic": 87,
+        "spunk": 87,
+        "testicle": 67,
+        "tits": 87,
+        "titties": 77,
+        "titty": 87,
+        "tranny": 83,
+        "twat": 87,
+        "vagina": 86,
+        "wank": 87,
+        "wetback": 79,
+        "whore": 87,
+        "asshole": 80,
+        "bollocks": 71,
+        "fellatio": 70,
+        "masturbate": 39,
+        "ejaculation": 23,
+        "motherfucker": 18,
+        "masturbation": 16
+      },
+      "attempts": 5496
+    },
+    {
+      "name": "names-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "rows": 20000,
+      "unique": 20000
+    },
+    {
+      "name": "names-reviewed-corpus-policy",
+      "cases": 20000,
+      "passed": 20000,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "accepted": 19989,
+      "rejected": 11,
+      "reviewed": 11,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "names-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "words-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "rows": 10000,
+      "unique": 10000
+    },
+    {
+      "name": "words-reviewed-corpus-policy",
+      "cases": 10000,
+      "passed": 10000,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "accepted": 9951,
+      "rejected": 49,
+      "reviewed": 49,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "words-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "places-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "rows": 2000,
+      "unique": 2000
+    },
+    {
+      "name": "places-reviewed-corpus-policy",
+      "cases": 2000,
+      "passed": 2000,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "accepted": 1943,
+      "rejected": 57,
+      "reviewed": 57,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "places-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "regex-vs-bitset-NFA-differential",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "sealed-blind-reference-differential",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "repeat-call-purity",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "boolean-wrapper",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "mutation-baseline-truth",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "25-real-executed-mutations",
+      "cases": 25,
+      "passed": 25,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "survivors": []
+    },
+    {
+      "name": "runtime-gzip-size",
+      "cases": 2,
+      "passed": 2,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "sourceBytes": 10454,
+      "sourceGzipBytes": 4477,
+      "compiledBytes": 8535,
+      "compiledGzipBytes": 3358,
+      "limitBytes": 6000
+    },
+    {
+      "name": "zero-runtime-dependencies-and-forbidden-APIs",
+      "cases": 5,
+      "passed": 5,
+      "seed": 1,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "latency-every-observed-check-under-005ms",
+      "cases": 10000,
+      "passed": 9964,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "calls": 10000,
+      "meanMs": 0.0020764608000000406,
+      "p50Ms": 0.0008879999995770049,
+      "p99Ms": 0.007443999999850348,
+      "maxMs": 0.47296100000039587,
+      "over005Ms": 36,
+      "outliers": [
+        {
+          "index": 204,
+          "input": "ѕⅼⅼ-սսս́ｔｔｔ",
+          "timeMs": 0.06467100000008941
+        },
+        {
+          "index": 296,
+          "input": "ϝս-ςκ́",
+          "timeMs": 0.09712899999976798
+        },
+        {
+          "index": 426,
+          "input": "marjory",
+          "timeMs": 0.07555000000047585
+        },
+        {
+          "index": 639,
+          "input": "yount",
+          "timeMs": 0.07662400000026537
+        },
+        {
+          "index": 642,
+          "input": "fishman",
+          "timeMs": 0.10183800000049814
+        },
+        {
+          "index": 1055,
+          "input": "bradham",
+          "timeMs": 0.36583799999971234
+        },
+        {
+          "index": 1088,
+          "input": "naturals",
+          "timeMs": 0.18654199999946286
+        },
+        {
+          "index": 1505,
+          "input": "օօ́ԁԁԁ_L​іԁ",
+          "timeMs": 0.08520799999951123
+        },
+        {
+          "index": 2237,
+          "input": "Gooοk",
+          "timeMs": 0.11487299999953393
+        },
+        {
+          "index": 2533,
+          "input": "valentin",
+          "timeMs": 0.12276899999960733
+        },
+        {
+          "index": 2699,
+          "input": "t́oηηSSмммUς",
+          "timeMs": 0.19154900000012276
+        },
+        {
+          "index": 2875,
+          "input": "​BBооо​ϳϳṃ-ír",
+          "timeMs": 0.08777600000030361
+        },
+        {
+          "index": 3274,
+          "input": "ᴦᴦᴦ@@ρ3​",
+          "timeMs": 0.18242499999996653
+        },
+        {
+          "index": 4292,
+          "input": "-A-6ց1п",
+          "timeMs": 0.05301400000007561
+        },
+        {
+          "index": 4431,
+          "input": "levenson",
+          "timeMs": 0.2492949999996199
+        },
+        {
+          "index": 4710,
+          "input": "modules",
+          "timeMs": 0.09911499999998341
+        },
+        {
+          "index": 4719,
+          "input": "cosmetic",
+          "timeMs": 0.08528099999966798
+        },
+        {
+          "index": 5433,
+          "input": "hoyt",
+          "timeMs": 0.05511099999966973
+        },
+        {
+          "index": 5547,
+          "input": "guerra",
+          "timeMs": 0.20298300000013114
+        },
+        {
+          "index": 5912,
+          "input": "℮LσσһѕSа",
+          "timeMs": 0.36991499999930966
+        },
+        {
+          "index": 6230,
+          "input": "ғ​℮́ⅼ ℓATÍо",
+          "timeMs": 0.06076500000017404
+        },
+        {
+          "index": 6264,
+          "input": "leisure",
+          "timeMs": 0.11596599999938917
+        },
+        {
+          "index": 6296,
+          "input": "Denpasar",
+          "timeMs": 0.10359499999958643
+        },
+        {
+          "index": 6565,
+          "input": "cassaundra",
+          "timeMs": 0.06259599999975762
+        },
+        {
+          "index": 6694,
+          "input": "weatherspoon",
+          "timeMs": 0.41385300000001735
+        },
+        {
+          "index": 6706,
+          "input": "tyrrell",
+          "timeMs": 0.07270800000060262
+        },
+        {
+          "index": 6812,
+          "input": "afford",
+          "timeMs": 0.08981099999982689
+        },
+        {
+          "index": 6912,
+          "input": ".п0|т abruт5.4m",
+          "timeMs": 0.08470800000031886
+        },
+        {
+          "index": 6934,
+          "input": "magdalene",
+          "timeMs": 0.07247800000004645
+        },
+        {
+          "index": 7079,
+          "input": "ϲϲϲhιιιпκ",
+          "timeMs": 0.0964270000004035
+        },
+        {
+          "index": 8155,
+          "input": "ethier",
+          "timeMs": 0.0902829999995447
+        },
+        {
+          "index": 8741,
+          "input": "mandi",
+          "timeMs": 0.47296100000039587
+        },
+        {
+          "index": 9314,
+          "input": "ammerman",
+          "timeMs": 0.11002300000018295
+        },
+        {
+          "index": 9653,
+          "input": "TTT e​sTÍc​L e",
+          "timeMs": 0.08040500000061002
+        },
+        {
+          "index": 9691,
+          "input": "stiefel",
+          "timeMs": 0.08414799999991374
+        },
+        {
+          "index": 9754,
+          "input": "childers",
+          "timeMs": 0.07844699999986915
+        }
+      ],
+      "measurementStartMs": 4996.217202,
+      "measurementEndMs": 5016.98181,
+      "sink": 94721
+    },
+    {
+      "name": "delivery-file-size-and-checksums",
+      "cases": 2,
+      "passed": 2,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "files": 109,
+      "checked": 109,
+      "failures": [],
+      "rootManifestPresent": true,
+      "maxFileBytes": 2524464
+    },
+    {
+      "name": "immutable-return-values",
+      "cases": 3,
+      "passed": 3,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "policy-copy-consistency-and-no-duplicate-terms",
+      "cases": 3,
+      "passed": 3,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "strict-TypeScript",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2,
+      "command": "tsc -p tsconfig.json --noEmit",
+      "output": ""
+    },
+    {
+      "name": "length-pruned-matcher-blind-boundaries",
+      "cases": 24873,
+      "passed": 24873,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "generator-byte-identical-replay-and-coverage",
+      "cases": 2,
+      "passed": 2,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "handwritten-format-and-Scunthorpe",
+      "cases": 459,
+      "passed": 459,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "exhaustive-declared-single-glyph-substitution",
+      "cases": 1371,
+      "passed": 1371,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "precompiled-Unicode-policy-context-differential",
+      "cases": 1296,
+      "passed": 1296,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "precompiled-printable-width-and-latin1-context-differential",
+      "cases": 1422,
+      "passed": 1422,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "generated-obfuscations",
+      "cases": 5000,
+      "passed": 5000,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "misses": 0,
+      "errors": [],
+      "coverage": {
+        "anal": 87,
+        "anus": 86,
+        "arsehole": 74,
+        "asshole": 78,
+        "bastard": 84,
+        "bitch": 87,
+        "blowjob": 76,
+        "bollocks": 68,
+        "boner": 87,
+        "boob": 87,
+        "boobs": 86,
+        "bukkake": 81,
+        "chink": 86,
+        "clit": 87,
+        "cock": 87,
+        "coon": 86,
+        "cunt": 87,
+        "cum": 84,
+        "cumshot": 79,
+        "dick": 86,
+        "dildo": 87,
+        "douche": 87,
+        "dyke": 87,
+        "fag": 86,
+        "faggot": 86,
+        "fellatio": 68,
+        "fuck": 87,
+        "gook": 87,
+        "handjob": 79,
+        "hentai": 87,
+        "jizz": 87,
+        "kike": 87,
+        "masturbate": 42,
+        "motherfucker": 18,
+        "nigga": 87,
+        "nigger": 86,
+        "orgasm": 86,
+        "paedophile": 45,
+        "pedophile": 49,
+        "penis": 87,
+        "porn": 86,
+        "pussy": 87,
+        "rape": 87,
+        "retard": 85,
+        "rimjob": 85,
+        "semen": 87,
+        "sex": 86,
+        "shemale": 83,
+        "slut": 86,
+        "spic": 86,
+        "spunk": 87,
+        "tits": 87,
+        "titties": 82,
+        "titty": 87,
+        "tranny": 85,
+        "twat": 86,
+        "vagina": 84,
+        "wank": 85,
+        "wetback": 77,
+        "whore": 86,
+        "testicle": 67,
+        "ejaculation": 29,
+        "masturbation": 22
+      },
+      "attempts": 5475
+    },
+    {
+      "name": "names-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "rows": 20000,
+      "unique": 20000
+    },
+    {
+      "name": "names-reviewed-corpus-policy",
+      "cases": 20000,
+      "passed": 20000,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "accepted": 19989,
+      "rejected": 11,
+      "reviewed": 11,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "names-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "words-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "rows": 10000,
+      "unique": 10000
+    },
+    {
+      "name": "words-reviewed-corpus-policy",
+      "cases": 10000,
+      "passed": 10000,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "accepted": 9951,
+      "rejected": 49,
+      "reviewed": 49,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "words-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "places-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "rows": 2000,
+      "unique": 2000
+    },
+    {
+      "name": "places-reviewed-corpus-policy",
+      "cases": 2000,
+      "passed": 2000,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "accepted": 1943,
+      "rejected": 57,
+      "reviewed": 57,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "places-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "regex-vs-bitset-NFA-differential",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "sealed-blind-reference-differential",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "repeat-call-purity",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "boolean-wrapper",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "mutation-baseline-truth",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "25-real-executed-mutations",
+      "cases": 25,
+      "passed": 25,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "survivors": []
+    },
+    {
+      "name": "runtime-gzip-size",
+      "cases": 2,
+      "passed": 2,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "sourceBytes": 10454,
+      "sourceGzipBytes": 4477,
+      "compiledBytes": 8535,
+      "compiledGzipBytes": 3358,
+      "limitBytes": 6000
+    },
+    {
+      "name": "zero-runtime-dependencies-and-forbidden-APIs",
+      "cases": 5,
+      "passed": 5,
+      "seed": 2,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "latency-every-observed-check-under-005ms",
+      "cases": 10000,
+      "passed": 9992,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "calls": 10000,
+      "meanMs": 0.001248838700000124,
+      "p50Ms": 0.0006690000009257346,
+      "p99Ms": 0.005032999999457388,
+      "maxMs": 0.2467800000013085,
+      "over005Ms": 8,
+      "outliers": [
+        {
+          "index": 410,
+          "input": "AAAggIIIN",
+          "timeMs": 0.07765599999947881
+        },
+        {
+          "index": 718,
+          "input": "associated",
+          "timeMs": 0.2082959999988816
+        },
+        {
+          "index": 3818,
+          "input": "b0οв",
+          "timeMs": 0.07800200000019686
+        },
+        {
+          "index": 6276,
+          "input": "budgets",
+          "timeMs": 0.12763399999857938
+        },
+        {
+          "index": 6521,
+          "input": "fEEL-l​ATTT́I_oo",
+          "timeMs": 0.10419000000001688
+        },
+        {
+          "index": 6989,
+          "input": "tiTT_tttiee-SŚ",
+          "timeMs": 0.21427399999993213
+        },
+        {
+          "index": 8984,
+          "input": "Santo André",
+          "timeMs": 0.10880899999938265
+        },
+        {
+          "index": 9342,
+          "input": "BBoo_Ńεεr",
+          "timeMs": 0.2467800000013085
+        }
+      ],
+      "measurementStartMs": 9377.294525,
+      "measurementEndMs": 9389.782912,
+      "sink": 93467
+    },
+    {
+      "name": "delivery-file-size-and-checksums",
+      "cases": 2,
+      "passed": 2,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "files": 109,
+      "checked": 109,
+      "failures": [],
+      "rootManifestPresent": true,
+      "maxFileBytes": 2524464
+    },
+    {
+      "name": "immutable-return-values",
+      "cases": 3,
+      "passed": 3,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "policy-copy-consistency-and-no-duplicate-terms",
+      "cases": 3,
+      "passed": 3,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "strict-TypeScript",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3,
+      "command": "tsc -p tsconfig.json --noEmit",
+      "output": ""
+    },
+    {
+      "name": "length-pruned-matcher-blind-boundaries",
+      "cases": 24873,
+      "passed": 24873,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "generator-byte-identical-replay-and-coverage",
+      "cases": 2,
+      "passed": 2,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "handwritten-format-and-Scunthorpe",
+      "cases": 459,
+      "passed": 459,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "exhaustive-declared-single-glyph-substitution",
+      "cases": 1371,
+      "passed": 1371,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "precompiled-Unicode-policy-context-differential",
+      "cases": 1296,
+      "passed": 1296,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "precompiled-printable-width-and-latin1-context-differential",
+      "cases": 1422,
+      "passed": 1422,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "errors": []
+    },
+    {
+      "name": "generated-obfuscations",
+      "cases": 5000,
+      "passed": 5000,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "misses": 0,
+      "errors": [],
+      "coverage": {
+        "anal": 87,
+        "anus": 87,
+        "arsehole": 65,
+        "asshole": 78,
+        "bastard": 76,
+        "bitch": 87,
+        "blowjob": 77,
+        "bollocks": 76,
+        "boner": 87,
+        "boob": 87,
+        "boobs": 87,
+        "bukkake": 79,
+        "chink": 87,
+        "clit": 87,
+        "cock": 87,
+        "coon": 87,
+        "cunt": 87,
+        "cum": 87,
+        "cumshot": 79,
+        "dick": 87,
+        "dildo": 87,
+        "douche": 85,
+        "dyke": 87,
+        "fag": 86,
+        "faggot": 87,
+        "fellatio": 66,
+        "fuck": 86,
+        "gook": 87,
+        "handjob": 83,
+        "hentai": 86,
+        "jizz": 87,
+        "kike": 86,
+        "masturbate": 37,
+        "nigga": 87,
+        "nigger": 85,
+        "orgasm": 86,
+        "pedophile": 55,
+        "penis": 87,
+        "porn": 87,
+        "pussy": 87,
+        "rape": 86,
+        "retard": 85,
+        "rimjob": 86,
+        "semen": 87,
+        "sex": 87,
+        "shemale": 78,
+        "slut": 87,
+        "spic": 87,
+        "spunk": 87,
+        "testicle": 69,
+        "tits": 87,
+        "titties": 84,
+        "titty": 85,
+        "tranny": 85,
+        "twat": 86,
+        "vagina": 85,
+        "wank": 86,
+        "wetback": 77,
+        "whore": 86,
+        "masturbation": 22,
+        "motherfucker": 22,
+        "paedophile": 37,
+        "ejaculation": 34
+      },
+      "attempts": 5474
+    },
+    {
+      "name": "names-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "rows": 20000,
+      "unique": 20000
+    },
+    {
+      "name": "names-reviewed-corpus-policy",
+      "cases": 20000,
+      "passed": 20000,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "accepted": 19989,
+      "rejected": 11,
+      "reviewed": 11,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "names-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "words-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "rows": 10000,
+      "unique": 10000
+    },
+    {
+      "name": "words-reviewed-corpus-policy",
+      "cases": 10000,
+      "passed": 10000,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "accepted": 9951,
+      "rejected": 49,
+      "reviewed": 49,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "words-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "places-count-and-uniqueness",
+      "cases": 2,
+      "passed": 2,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "rows": 2000,
+      "unique": 2000
+    },
+    {
+      "name": "places-reviewed-corpus-policy",
+      "cases": 2000,
+      "passed": 2000,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "accepted": 1943,
+      "rejected": 57,
+      "reviewed": 57,
+      "unexpected": 0,
+      "stale": 0,
+      "zeroRejections": false
+    },
+    {
+      "name": "places-reviewed-baseline-no-stale-entries",
+      "cases": 1,
+      "passed": 1,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "regex-vs-bitset-NFA-differential",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "sealed-blind-reference-differential",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "repeat-call-purity",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "boolean-wrapper",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "mutation-baseline-truth",
+      "cases": 43830,
+      "passed": 43830,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "25-real-executed-mutations",
+      "cases": 25,
+      "passed": 25,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "survivors": []
+    },
+    {
+      "name": "runtime-gzip-size",
+      "cases": 2,
+      "passed": 2,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "sourceBytes": 10454,
+      "sourceGzipBytes": 4477,
+      "compiledBytes": 8535,
+      "compiledGzipBytes": 3358,
+      "limitBytes": 6000
+    },
+    {
+      "name": "zero-runtime-dependencies-and-forbidden-APIs",
+      "cases": 5,
+      "passed": 5,
+      "seed": 3,
+      "command": "node tests/run.mjs"
+    },
+    {
+      "name": "latency-every-observed-check-under-005ms",
+      "cases": 10000,
+      "passed": 9984,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "calls": 10000,
+      "meanMs": 0.0014358122999999978,
+      "p50Ms": 0.0006889999986015027,
+      "p99Ms": 0.005420999999842024,
+      "maxMs": 0.4564150000005611,
+      "over005Ms": 16,
+      "outliers": [
+        {
+          "index": 679,
+          "input": "́кссс​Iժ",
+          "timeMs": 0.1629400000001624
+        },
+        {
+          "index": 3654,
+          "input": "different",
+          "timeMs": 0.05808699999943201
+        },
+        {
+          "index": 4025,
+          "input": "bazile",
+          "timeMs": 0.10276299999895855
+        },
+        {
+          "index": 4604,
+          "input": "ьօ.ⅼ-1օ-скѕ​",
+          "timeMs": 0.05415700000048673
+        },
+        {
+          "index": 4952,
+          "input": "principal",
+          "timeMs": 0.0775180000000546
+        },
+        {
+          "index": 5183,
+          "input": "ԝԝԝ-ηηηοόггE",
+          "timeMs": 0.3590989999993326
+        },
+        {
+          "index": 5694,
+          "input": "jessica",
+          "timeMs": 0.4564150000005611
+        },
+        {
+          "index": 6407,
+          "input": "4ʂ5ηηησσσⅼ3",
+          "timeMs": 0.09736700000030396
+        },
+        {
+          "index": 6719,
+          "input": "Chéngguān Qū",
+          "timeMs": 0.0989609999996901
+        },
+        {
+          "index": 6911,
+          "input": "varied",
+          "timeMs": 0.3040259999997943
+        },
+        {
+          "index": 7046,
+          "input": "kkḱńAA ԝ",
+          "timeMs": 0.13821400000051653
+        },
+        {
+          "index": 7640,
+          "input": "fleck",
+          "timeMs": 0.11183499999970081
+        },
+        {
+          "index": 8031,
+          "input": "​2 Z | ј",
+          "timeMs": 0.09789699999964796
+        },
+        {
+          "index": 8861,
+          "input": "αnUUѕѕѕ",
+          "timeMs": 0.08947999999872991
+        },
+        {
+          "index": 8868,
+          "input": "​ԁԁԁrrа.τssɑbb",
+          "timeMs": 0.21359599999959755
+        },
+        {
+          "index": 9471,
+          "input": "ααRѕϵϵηоlϵ",
+          "timeMs": 0.12591500000053202
+        }
+      ],
+      "measurementStartMs": 13905.064938,
+      "measurementEndMs": 13919.423061,
+      "sink": 94479
+    }
+  ],
+  "failures": [
+    {
+      "name": "latency-every-observed-check-under-005ms",
+      "cases": 10000,
+      "passed": 9964,
+      "seed": 1,
+      "command": "node tests/run.mjs",
+      "calls": 10000,
+      "meanMs": 0.0020764608000000406,
+      "p50Ms": 0.0008879999995770049,
+      "p99Ms": 0.007443999999850348,
+      "maxMs": 0.47296100000039587,
+      "over005Ms": 36,
+      "outliers": [
+        {
+          "index": 204,
+          "input": "ѕⅼⅼ-սսս́ｔｔｔ",
+          "timeMs": 0.06467100000008941
+        },
+        {
+          "index": 296,
+          "input": "ϝս-ςκ́",
+          "timeMs": 0.09712899999976798
+        },
+        {
+          "index": 426,
+          "input": "marjory",
+          "timeMs": 0.07555000000047585
+        },
+        {
+          "index": 639,
+          "input": "yount",
+          "timeMs": 0.07662400000026537
+        },
+        {
+          "index": 642,
+          "input": "fishman",
+          "timeMs": 0.10183800000049814
+        },
+        {
+          "index": 1055,
+          "input": "bradham",
+          "timeMs": 0.36583799999971234
+        },
+        {
+          "index": 1088,
+          "input": "naturals",
+          "timeMs": 0.18654199999946286
+        },
+        {
+          "index": 1505,
+          "input": "օօ́ԁԁԁ_L​іԁ",
+          "timeMs": 0.08520799999951123
+        },
+        {
+          "index": 2237,
+          "input": "Gooοk",
+          "timeMs": 0.11487299999953393
+        },
+        {
+          "index": 2533,
+          "input": "valentin",
+          "timeMs": 0.12276899999960733
+        },
+        {
+          "index": 2699,
+          "input": "t́oηηSSмммUς",
+          "timeMs": 0.19154900000012276
+        },
+        {
+          "index": 2875,
+          "input": "​BBооо​ϳϳṃ-ír",
+          "timeMs": 0.08777600000030361
+        },
+        {
+          "index": 3274,
+          "input": "ᴦᴦᴦ@@ρ3​",
+          "timeMs": 0.18242499999996653
+        },
+        {
+          "index": 4292,
+          "input": "-A-6ց1п",
+          "timeMs": 0.05301400000007561
+        },
+        {
+          "index": 4431,
+          "input": "levenson",
+          "timeMs": 0.2492949999996199
+        },
+        {
+          "index": 4710,
+          "input": "modules",
+          "timeMs": 0.09911499999998341
+        },
+        {
+          "index": 4719,
+          "input": "cosmetic",
+          "timeMs": 0.08528099999966798
+        },
+        {
+          "index": 5433,
+          "input": "hoyt",
+          "timeMs": 0.05511099999966973
+        },
+        {
+          "index": 5547,
+          "input": "guerra",
+          "timeMs": 0.20298300000013114
+        },
+        {
+          "index": 5912,
+          "input": "℮LσσһѕSа",
+          "timeMs": 0.36991499999930966
+        },
+        {
+          "index": 6230,
+          "input": "ғ​℮́ⅼ ℓATÍо",
+          "timeMs": 0.06076500000017404
+        },
+        {
+          "index": 6264,
+          "input": "leisure",
+          "timeMs": 0.11596599999938917
+        },
+        {
+          "index": 6296,
+          "input": "Denpasar",
+          "timeMs": 0.10359499999958643
+        },
+        {
+          "index": 6565,
+          "input": "cassaundra",
+          "timeMs": 0.06259599999975762
+        },
+        {
+          "index": 6694,
+          "input": "weatherspoon",
+          "timeMs": 0.41385300000001735
+        },
+        {
+          "index": 6706,
+          "input": "tyrrell",
+          "timeMs": 0.07270800000060262
+        },
+        {
+          "index": 6812,
+          "input": "afford",
+          "timeMs": 0.08981099999982689
+        },
+        {
+          "index": 6912,
+          "input": ".п0|т abruт5.4m",
+          "timeMs": 0.08470800000031886
+        },
+        {
+          "index": 6934,
+          "input": "magdalene",
+          "timeMs": 0.07247800000004645
+        },
+        {
+          "index": 7079,
+          "input": "ϲϲϲhιιιпκ",
+          "timeMs": 0.0964270000004035
+        },
+        {
+          "index": 8155,
+          "input": "ethier",
+          "timeMs": 0.0902829999995447
+        },
+        {
+          "index": 8741,
+          "input": "mandi",
+          "timeMs": 0.47296100000039587
+        },
+        {
+          "index": 9314,
+          "input": "ammerman",
+          "timeMs": 0.11002300000018295
+        },
+        {
+          "index": 9653,
+          "input": "TTT e​sTÍc​L e",
+          "timeMs": 0.08040500000061002
+        },
+        {
+          "index": 9691,
+          "input": "stiefel",
+          "timeMs": 0.08414799999991374
+        },
+        {
+          "index": 9754,
+          "input": "childers",
+          "timeMs": 0.07844699999986915
+        }
+      ],
+      "measurementStartMs": 4996.217202,
+      "measurementEndMs": 5016.98181,
+      "sink": 94721
+    },
+    {
+      "name": "latency-every-observed-check-under-005ms",
+      "cases": 10000,
+      "passed": 9992,
+      "seed": 2,
+      "command": "node tests/run.mjs",
+      "calls": 10000,
+      "meanMs": 0.001248838700000124,
+      "p50Ms": 0.0006690000009257346,
+      "p99Ms": 0.005032999999457388,
+      "maxMs": 0.2467800000013085,
+      "over005Ms": 8,
+      "outliers": [
+        {
+          "index": 410,
+          "input": "AAAggIIIN",
+          "timeMs": 0.07765599999947881
+        },
+        {
+          "index": 718,
+          "input": "associated",
+          "timeMs": 0.2082959999988816
+        },
+        {
+          "index": 3818,
+          "input": "b0οв",
+          "timeMs": 0.07800200000019686
+        },
+        {
+          "index": 6276,
+          "input": "budgets",
+          "timeMs": 0.12763399999857938
+        },
+        {
+          "index": 6521,
+          "input": "fEEL-l​ATTT́I_oo",
+          "timeMs": 0.10419000000001688
+        },
+        {
+          "index": 6989,
+          "input": "tiTT_tttiee-SŚ",
+          "timeMs": 0.21427399999993213
+        },
+        {
+          "index": 8984,
+          "input": "Santo André",
+          "timeMs": 0.10880899999938265
+        },
+        {
+          "index": 9342,
+          "input": "BBoo_Ńεεr",
+          "timeMs": 0.2467800000013085
+        }
+      ],
+      "measurementStartMs": 9377.294525,
+      "measurementEndMs": 9389.782912,
+      "sink": 93467
+    },
+    {
+      "name": "latency-every-observed-check-under-005ms",
+      "cases": 10000,
+      "passed": 9984,
+      "seed": 3,
+      "command": "node tests/run.mjs",
+      "calls": 10000,
+      "meanMs": 0.0014358122999999978,
+      "p50Ms": 0.0006889999986015027,
+      "p99Ms": 0.005420999999842024,
+      "maxMs": 0.4564150000005611,
+      "over005Ms": 16,
+      "outliers": [
+        {
+          "index": 679,
+          "input": "́кссс​Iժ",
+          "timeMs": 0.1629400000001624
+        },
+        {
+          "index": 3654,
+          "input": "different",
+          "timeMs": 0.05808699999943201
+        },
+        {
+          "index": 4025,
+          "input": "bazile",
+          "timeMs": 0.10276299999895855
+        },
+        {
+          "index": 4604,
+          "input": "ьօ.ⅼ-1օ-скѕ​",
+          "timeMs": 0.05415700000048673
+        },
+        {
+          "index": 4952,
+          "input": "principal",
+          "timeMs": 0.0775180000000546
+        },
+        {
+          "index": 5183,
+          "input": "ԝԝԝ-ηηηοόггE",
+          "timeMs": 0.3590989999993326
+        },
+        {
+          "index": 5694,
+          "input": "jessica",
+          "timeMs": 0.4564150000005611
+        },
+        {
+          "index": 6407,
+          "input": "4ʂ5ηηησσσⅼ3",
+          "timeMs": 0.09736700000030396
+        },
+        {
+          "index": 6719,
+          "input": "Chéngguān Qū",
+          "timeMs": 0.0989609999996901
+        },
+        {
+          "index": 6911,
+          "input": "varied",
+          "timeMs": 0.3040259999997943
+        },
+        {
+          "index": 7046,
+          "input": "kkḱńAA ԝ",
+          "timeMs": 0.13821400000051653
+        },
+        {
+          "index": 7640,
+          "input": "fleck",
+          "timeMs": 0.11183499999970081
+        },
+        {
+          "index": 8031,
+          "input": "​2 Z | ј",
+          "timeMs": 0.09789699999964796
+        },
+        {
+          "index": 8861,
+          "input": "αnUUѕѕѕ",
+          "timeMs": 0.08947999999872991
+        },
+        {
+          "index": 8868,
+          "input": "​ԁԁԁrrа.τssɑbb",
+          "timeMs": 0.21359599999959755
+        },
+        {
+          "index": 9471,
+          "input": "ααRѕϵϵηоlϵ",
+          "timeMs": 0.12591500000053202
+        }
+      ],
+      "measurementStartMs": 13905.064938,
+      "measurementEndMs": 13919.423061,
+      "sink": 94479
+    }
+  ],
+  "unverified": [
+    "Literal all-pass corpus target is not met: reviewed blocked/overlength rows stay rejected. Exact exceptions were tuned on this corpus, so it is not held-out evidence.",
+    "All Unicode homoglyphs, all languages/slurs, intent, and arbitrary unseen obfuscations: not claimed. See POLICY.md.",
+    "Hard real-time 0.05ms bound on every platform: not established by a finite benchmark."
+  ]
+}

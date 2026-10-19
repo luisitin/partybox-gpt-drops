@@ -1,0 +1,15 @@
+{
+  "name": "b19-name-filter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Bounded player-name filter with reproducible differential and mutation tests",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node tests/run.mjs",
+    "test:core": "npm run build && node tests/run.mjs --core",
+    "data": "python3 scripts/fetch-data.py"
+  },
+  "devDependencies": { "typescript": "5.8.3" },
+  "engines": { "node": ">=22" }
+}

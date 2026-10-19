@@ -1,0 +1,473 @@
+{
+  "kind": "instrumented-private-candidate-nonacceptance",
+  "createdAt": "2026-10-08T16:00:54.399Z",
+  "environment": {
+    "node": "v24.19.0",
+    "unicode": "17.0"
+  },
+  "sourceStart": {
+    "nameFilter.ts": "5371665d9df3721f5b4d6d4c923120d2944fa3ae396008c74ca80006a03e25e9",
+    "dist/nameFilter.js": "2ff75dd48d317a4eeac66ca895a38bfbcde88afd7023127cee8f5f761028c040",
+    "tests/run.mjs": "2b2aca876be5cb45814fb58c1a21e8f4bfc2205bb26d842dd51001575b2fc517",
+    "tests/blind/reference.mjs": "40449357a616619cc649d6b8efab2f6664a187de178511b8b0f17e28e92eea9a",
+    "scripts/profile-ascii-allocation.mjs": "de965ec70eb104c1e34aac9f93861fe23733efbe4d6a47359e76f6c3b8c5d291"
+  },
+  "sourceEnd": {
+    "nameFilter.ts": "5371665d9df3721f5b4d6d4c923120d2944fa3ae396008c74ca80006a03e25e9",
+    "dist/nameFilter.js": "2ff75dd48d317a4eeac66ca895a38bfbcde88afd7023127cee8f5f761028c040",
+    "tests/run.mjs": "2b2aca876be5cb45814fb58c1a21e8f4bfc2205bb26d842dd51001575b2fc517",
+    "tests/blind/reference.mjs": "40449357a616619cc649d6b8efab2f6664a187de178511b8b0f17e28e92eea9a",
+    "scripts/profile-ascii-allocation.mjs": "de965ec70eb104c1e34aac9f93861fe23733efbe4d6a47359e76f6c3b8c5d291"
+  },
+  "candidateSha256": "3d67f4a23b26b39bf5559370c804d7dd44e32288933f51b4b655bb76ffdf256d",
+  "candidateChange": "Single allocation-free ASCII letter/case scan; whole-string folding retained for all other cases.",
+  "cases": 37005,
+  "disagreements": 0,
+  "phases": [
+    {
+      "workload": "hosted-witness",
+      "round": 0,
+      "variant": "baseline",
+      "calls": 500000,
+      "startMs": 388.963201,
+      "endMs": 430.009892,
+      "totalMs": 41.04669099999995,
+      "meanMs": 0.00008209338199999991,
+      "gcEvents": 3,
+      "gcDurationMs": 1.298593983054161
+    },
+    {
+      "workload": "hosted-witness",
+      "round": 0,
+      "variant": "candidate",
+      "calls": 500000,
+      "startMs": 431.216854,
+      "endMs": 458.322979,
+      "totalMs": 27.106124999999963,
+      "meanMs": 0.000054212249999999925,
+      "gcEvents": 0,
+      "gcDurationMs": 0
+    },
+    {
+      "workload": "hosted-witness",
+      "round": 1,
+      "variant": "baseline",
+      "calls": 500000,
+      "startMs": 459.291461,
+      "endMs": 490.739369,
+      "totalMs": 31.447907999999984,
+      "meanMs": 0.00006289581599999996,
+      "gcEvents": 3,
+      "gcDurationMs": 0.5214170068502426
+    },
+    {
+      "workload": "hosted-witness",
+      "round": 1,
+      "variant": "candidate",
+      "calls": 500000,
+      "startMs": 491.097657,
+      "endMs": 514.601555,
+      "totalMs": 23.503897999999936,
+      "meanMs": 0.000047007795999999874,
+      "gcEvents": 0,
+      "gcDurationMs": 0
+    },
+    {
+      "workload": "hosted-witness",
+      "round": 2,
+      "variant": "baseline",
+      "calls": 500000,
+      "startMs": 514.76978,
+      "endMs": 546.597856,
+      "totalMs": 31.82807600000001,
+      "meanMs": 0.00006365615200000002,
+      "gcEvents": 3,
+      "gcDurationMs": 0.5161010026931763
+    },
+    {
+      "workload": "hosted-witness",
+      "round": 2,
+      "variant": "candidate",
+      "calls": 500000,
+      "startMs": 546.974633,
+      "endMs": 575.449645,
+      "totalMs": 28.475011999999992,
+      "meanMs": 0.00005695002399999999,
+      "gcEvents": 0,
+      "gcDurationMs": 0
+    },
+    {
+      "workload": "mixed-original-corpora-and-obfuscations",
+      "round": 0,
+      "variant": "baseline",
+      "calls": 500000,
+      "startMs": 799.454311,
+      "endMs": 1482.11424,
+      "totalMs": 682.6599290000001,
+      "meanMs": 0.0013653198580000003,
+      "gcEvents": 11,
+      "gcDurationMs": 6.197772994637489
+    },
+    {
+      "workload": "mixed-original-corpora-and-obfuscations",
+      "round": 0,
+      "variant": "candidate",
+      "calls": 500000,
+      "startMs": 1487.497465,
+      "endMs": 2196.80508,
+      "totalMs": 709.3076150000002,
+      "meanMs": 0.0014186152300000004,
+      "gcEvents": 9,
+      "gcDurationMs": 6.618692994117737
+    },
+    {
+      "workload": "mixed-original-corpora-and-obfuscations",
+      "round": 1,
+      "variant": "baseline",
+      "calls": 500000,
+      "startMs": 2205.48172,
+      "endMs": 3343.997232,
+      "totalMs": 1138.515512,
+      "meanMs": 0.002277031024,
+      "gcEvents": 11,
+      "gcDurationMs": 18.136124029755592
+    },
+    {
+      "workload": "mixed-original-corpora-and-obfuscations",
+      "round": 1,
+      "variant": "candidate",
+      "calls": 500000,
+      "startMs": 3349.187651,
+      "endMs": 3949.099946,
+      "totalMs": 599.9122949999996,
+      "meanMs": 0.0011998245899999993,
+      "gcEvents": 9,
+      "gcDurationMs": 3.7231709957122803
+    },
+    {
+      "workload": "mixed-original-corpora-and-obfuscations",
+      "round": 2,
+      "variant": "baseline",
+      "calls": 500000,
+      "startMs": 3950.64124,
+      "endMs": 4496.367319,
+      "totalMs": 545.726079,
+      "meanMs": 0.0010914521580000002,
+      "gcEvents": 11,
+      "gcDurationMs": 3.8117689937353134
+    },
+    {
+      "workload": "mixed-original-corpora-and-obfuscations",
+      "round": 2,
+      "variant": "candidate",
+      "calls": 500000,
+      "startMs": 4496.9637,
+      "endMs": 5035.063197,
+      "totalMs": 538.0994970000002,
+      "meanMs": 0.0010761989940000004,
+      "gcEvents": 9,
+      "gcDurationMs": 2.668898031115532
+    }
+  ],
+  "gc": [
+    {
+      "startMs": 395.141012,
+      "durationMs": 0.21516598761081696
+    },
+    {
+      "startMs": 413.157312,
+      "durationMs": 0.8875519931316376
+    },
+    {
+      "startMs": 424.884843,
+      "durationMs": 0.19587600231170654
+    },
+    {
+      "startMs": 464.336587,
+      "durationMs": 0.19830898940563202
+    },
+    {
+      "startMs": 475.512273,
+      "durationMs": 0.21849600970745087
+    },
+    {
+      "startMs": 486.494524,
+      "durationMs": 0.10461200773715973
+    },
+    {
+      "startMs": 522.076047,
+      "durationMs": 0.20010900497436523
+    },
+    {
+      "startMs": 533.1081,
+      "durationMs": 0.2114969938993454
+    },
+    {
+      "startMs": 543.767506,
+      "durationMs": 0.10449500381946564
+    },
+    {
+      "startMs": 612.059665,
+      "durationMs": 0.21910399198532104
+    },
+    {
+      "startMs": 628.483428,
+      "durationMs": 0.24471800029277802
+    },
+    {
+      "startMs": 681.498805,
+      "durationMs": 0.22287499904632568
+    },
+    {
+      "startMs": 768.474324,
+      "durationMs": 0.23394601047039032
+    },
+    {
+      "startMs": 837.608392,
+      "durationMs": 0.20630700886249542
+    },
+    {
+      "startMs": 881.614793,
+      "durationMs": 0.2127320021390915
+    },
+    {
+      "startMs": 957.007393,
+      "durationMs": 0.8208429962396622
+    },
+    {
+      "startMs": 1039.141717,
+      "durationMs": 2.5128370076417923
+    },
+    {
+      "startMs": 1136.380685,
+      "durationMs": 0.733362004160881
+    },
+    {
+      "startMs": 1194.975091,
+      "durationMs": 0.647816002368927
+    },
+    {
+      "startMs": 1245.314707,
+      "durationMs": 0.14781299233436584
+    },
+    {
+      "startMs": 1295.041538,
+      "durationMs": 0.1443919986486435
+    },
+    {
+      "startMs": 1347.449034,
+      "durationMs": 0.19951499998569489
+    },
+    {
+      "startMs": 1400.033827,
+      "durationMs": 0.42771899700164795
+    },
+    {
+      "startMs": 1454.531398,
+      "durationMs": 0.14443698525428772
+    },
+    {
+      "startMs": 1518.746276,
+      "durationMs": 0.4022179991006851
+    },
+    {
+      "startMs": 1566.982548,
+      "durationMs": 1.7294559925794601
+    },
+    {
+      "startMs": 1656.38325,
+      "durationMs": 0.15361399948596954
+    },
+    {
+      "startMs": 1736.686511,
+      "durationMs": 1.1398610025644302
+    },
+    {
+      "startMs": 1837.232585,
+      "durationMs": 0.20991599559783936
+    },
+    {
+      "startMs": 1930.446977,
+      "durationMs": 1.487865000963211
+    },
+    {
+      "startMs": 2016.299675,
+      "durationMs": 0.44227200746536255
+    },
+    {
+      "startMs": 2091.283893,
+      "durationMs": 0.5409799963235855
+    },
+    {
+      "startMs": 2173.032047,
+      "durationMs": 0.5125110000371933
+    },
+    {
+      "startMs": 2241.868982,
+      "durationMs": 1.0727000087499619
+    },
+    {
+      "startMs": 2287.284831,
+      "durationMs": 0.7813130021095276
+    },
+    {
+      "startMs": 2334.579492,
+      "durationMs": 0.1496250033378601
+    },
+    {
+      "startMs": 2688.074185,
+      "durationMs": 0.23422400653362274
+    },
+    {
+      "startMs": 2771.006702,
+      "durationMs": 0.2017969936132431
+    },
+    {
+      "startMs": 2813.546854,
+      "durationMs": 0.2832549959421158
+    },
+    {
+      "startMs": 2885.774827,
+      "durationMs": 0.8811710029840469
+    },
+    {
+      "startMs": 2994.817382,
+      "durationMs": 6.2687209993600845
+    },
+    {
+      "startMs": 3151.713688,
+      "durationMs": 7.3201940059661865
+    },
+    {
+      "startMs": 3261.712549,
+      "durationMs": 0.38504600524902344
+    },
+    {
+      "startMs": 3312.939557,
+      "durationMs": 0.5580780059099197
+    },
+    {
+      "startMs": 3398.98306,
+      "durationMs": 0.4731990098953247
+    },
+    {
+      "startMs": 3468.525681,
+      "durationMs": 1.0623449981212616
+    },
+    {
+      "startMs": 3523.585635,
+      "durationMs": 0.22344699501991272
+    },
+    {
+      "startMs": 3593.63337,
+      "durationMs": 0.16619199514389038
+    },
+    {
+      "startMs": 3647.574858,
+      "durationMs": 0.18249599635601044
+    },
+    {
+      "startMs": 3752.050162,
+      "durationMs": 0.22958600521087646
+    },
+    {
+      "startMs": 3795.030812,
+      "durationMs": 0.1551389992237091
+    },
+    {
+      "startMs": 3867.403313,
+      "durationMs": 0.14221300184726715
+    },
+    {
+      "startMs": 3921.474137,
+      "durationMs": 1.0885539948940277
+    },
+    {
+      "startMs": 3985.276333,
+      "durationMs": 0.9461189955472946
+    },
+    {
+      "startMs": 4029.963103,
+      "durationMs": 1.1874639987945557
+    },
+    {
+      "startMs": 4085.551465,
+      "durationMs": 0.15029600262641907
+    },
+    {
+      "startMs": 4134.76025,
+      "durationMs": 0.1781120002269745
+    },
+    {
+      "startMs": 4180.291455,
+      "durationMs": 0.13238400220870972
+    },
+    {
+      "startMs": 4231.430897,
+      "durationMs": 0.1339149922132492
+    },
+    {
+      "startMs": 4279.318596,
+      "durationMs": 0.4278540015220642
+    },
+    {
+      "startMs": 4329.590799,
+      "durationMs": 0.13825200498104095
+    },
+    {
+      "startMs": 4385.401338,
+      "durationMs": 0.17574399709701538
+    },
+    {
+      "startMs": 4426.263985,
+      "durationMs": 0.21109899878501892
+    },
+    {
+      "startMs": 4471.487273,
+      "durationMs": 0.1305299997329712
+    },
+    {
+      "startMs": 4531.952195,
+      "durationMs": 0.28473100066185
+    },
+    {
+      "startMs": 4594.032458,
+      "durationMs": 1.2878160029649734
+    },
+    {
+      "startMs": 4639.293287,
+      "durationMs": 0.22841300070285797
+    },
+    {
+      "startMs": 4715.552554,
+      "durationMs": 0.138947993516922
+    },
+    {
+      "startMs": 4766.477844,
+      "durationMs": 0.1272830069065094
+    },
+    {
+      "startMs": 4838.218215,
+      "durationMs": 0.1345120072364807
+    },
+    {
+      "startMs": 4896.371294,
+      "durationMs": 0.13921800255775452
+    },
+    {
+      "startMs": 4973.877481,
+      "durationMs": 0.19182001054286957
+    },
+    {
+      "startMs": 5019.400085,
+      "durationMs": 0.13615700602531433
+    }
+  ],
+  "sink": 5980174,
+  "unchanged": true,
+  "limitations": [
+    "GC phase overlap is diagnostic association, not proof of any historical outlier cause.",
+    "Fixed/mixed loops and instrumentation do not replace the unchanged per-call acceptance workload.",
+    "Candidate is a separate module and has not changed production."
+  ]
+}

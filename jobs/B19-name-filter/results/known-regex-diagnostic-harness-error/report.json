@@ -1,0 +1,13 @@
+{
+  "kind": "diagnostic-harness-error-not-runtime-failure",
+  "command": "node scripts/profile-ascii-allocation.mjs --known-regex --balanced",
+  "observedAt": "2026-10-08T16:20:56Z",
+  "exitCode": 1,
+  "phase": "private-candidate import before measurements",
+  "error": "SyntaxError: Invalid or unexpected token",
+  "confirmedHarnessFault": "String.replace replacement text interpreted dollar-apostrophe from regex end-anchor as replacement substitution, injecting suffix into candidate.",
+  "scriptSha256": "2278819233688896b5ff706cc9832050b3cd67edd8c8441bf4e86302fdaaf69b",
+  "runtimeSha256": "5371665d9df3721f5b4d6d4c923120d2944fa3ae396008c74ca80006a03e25e9",
+  "performanceAcceptanceAttempt": false,
+  "rawPerformanceMeasurementsProduced": false
+}

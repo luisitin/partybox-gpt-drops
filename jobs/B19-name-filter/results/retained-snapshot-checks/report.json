@@ -1,0 +1,38 @@
+{
+  "kind": "targeted-corpus-restoration",
+  "command": "python3 tests/retained-snapshot.py",
+  "executedAtApprox": "2026-10-08T16:03:45Z",
+  "repetitions": [
+    {
+      "repetition": 1,
+      "cases": 8,
+      "passed": 8,
+      "networkCalls": 0
+    },
+    {
+      "repetition": 2,
+      "cases": 8,
+      "passed": 8,
+      "networkCalls": 0
+    },
+    {
+      "repetition": 3,
+      "cases": 8,
+      "passed": 8,
+      "networkCalls": 0
+    }
+  ],
+  "checks": [
+    "clean offline restoration of all32000 original rows/exact hashes",
+    "verified cache reuse without live network",
+    "changed byte rejected",
+    "missing corpus rejected",
+    "missing manifest rejected",
+    "changed manifest rejected",
+    "truncated JSON corpus rejected",
+    "corrupt existing cache rejected"
+  ],
+  "testSha256": "260677ea875c4a2bc97aa382e64a24bf0997bf453c590bfc3e3bdf0fe049af74",
+  "lockSha256": "46374224a6bfae76ac22ca87e77859d77d02353a26073bdfb72c91860ba79a6f",
+  "runtimeSha256": "5371665d9df3721f5b4d6d4c923120d2944fa3ae396008c74ca80006a03e25e9"
+}

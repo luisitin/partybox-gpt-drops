@@ -1,0 +1,27 @@
+{
+  "kind": "actual-read-hosted-log-summary",
+  "head": "b7709fedd5752d159374793bf1a9a4122adfffd3",
+  "runId": 37804648793,
+  "jobId": 113405617810,
+  "url": "https://github.com/luisitin/partybox-gpt-drops/actions/runs/37804648793",
+  "completedAt": "2026-10-08T15:55:24Z",
+  "conclusion": "failure",
+  "decodedLogBytes": 28579,
+  "actualFullLogRead": true,
+  "suites": 61,
+  "failures": [
+    {
+      "name": "public-corpus-acquisition",
+      "reason": "Original pinned places upstream source changed; no row/lock substitution allowed."
+    },
+    {
+      "name": "latency-every-observed-check-under-005ms",
+      "seed": 1,
+      "maxMs": 0.05056400000012218,
+      "over005Ms": 1
+    }
+  ],
+  "sealedComparisonsPerSeed": 11830,
+  "completeCorporaExecuted": false,
+  "rawArtifactBytesIndependentlyDownloaded": false
+}
