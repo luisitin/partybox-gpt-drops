@@ -1,0 +1,687 @@
+{
+  "job": "B04",
+  "checkedAt": "2026-10-09T10:24:34.944093+00:00",
+  "sourceParent": "d9b687d6a9e7c73df542395a5631323eef4ce78a",
+  "status": "UNADOPTED_SOURCE_SCOPE_CHECKPOINT",
+  "currentCounts": {
+    "corroborated": 91,
+    "single_source": 408,
+    "conflict": 18,
+    "unverified": 1
+  },
+  "all518CompleteFactObjectsValuesAnd593ReviewRowsUnchanged": true,
+  "all18ConflictsSourceRegistriesQuotationBudgetsAndOriginalGatesUnchanged": true,
+  "negativeWholeTidePeer": {
+    "recordedAt": {
+      "current_time": "2026-10-09 10:23:02 UTC"
+    },
+    "decision": "DECLINED",
+    "fact": "goomba-lagoon:events:tide_event",
+    "wholeValuePromotion": false,
+    "newCelQuoteAllocation": false,
+    "reason": "Wiki explicitly changes tide and paths. Cel explicitly describes high-tide trapping and a Happening extending being stuck, but does not literally establish that this exact Event switches tide state; a schedule/extension interpretation remains possible. No two-turn timing or phase inference.",
+    "completePairScopesPhysicallyReadByParent": {
+      "wikiEventsCharacters": 2580,
+      "celGoombaCharacters": 1691
+    },
+    "currentCoverageHeld": "91/518",
+    "sharedCelHeld": 131
+  },
+  "completeTideScopeMetadata": [
+    {
+      "pass": "A",
+      "wikiRawSHA256": "2799e63a31725577fce6d698cd38e9d98e5ee13310336fdf1c9e035ad10d96c3",
+      "wikiWholeEventsChars": 2580,
+      "wikiWholeEventsSHA256": "8b441bd0fc9687ab9c73b3cd4be99511c864fc7e9f76949eb147c6f7ce8499be",
+      "celWholeGoombaChars": 1691,
+      "celWholeGoombaSHA256": "41fe598265de51d5f18128aa632329db13eaa72c9e9418ebbb8d2677971810bb",
+      "wikiCaptureAt": "2026-10-09T07:22:13.515659+00:00"
+    },
+    {
+      "pass": "B",
+      "wikiRawSHA256": "2799e63a31725577fce6d698cd38e9d98e5ee13310336fdf1c9e035ad10d96c3",
+      "wikiWholeEventsChars": 2580,
+      "wikiWholeEventsSHA256": "8b441bd0fc9687ab9c73b3cd4be99511c864fc7e9f76949eb147c6f7ce8499be",
+      "celWholeGoombaChars": 1691,
+      "celWholeGoombaSHA256": "41fe598265de51d5f18128aa632329db13eaa72c9e9418ebbb8d2677971810bb",
+      "wikiCaptureAt": "2026-10-09T07:22:17.628523+00:00"
+    }
+  ],
+  "tideFactValueUnchanged": {
+    "name": "Tide change",
+    "trigger": "Land on a tide-change Event Space.",
+    "effect": "Change tide state and available paths."
+  },
+  "tideDecision": "The complete original Cel scope supports high-tide trapping and a Happening extending being stuck, but does not explicitly establish that this exact Event changes tide state. Keep single_source; proposed extra Cel quotes were declined and never registered. No two-turn timing or phase promotion.",
+  "newWholeSteamerRequests": [
+    {
+      "sourceId": "W_STEAMER",
+      "pass": "A",
+      "requestedUrl": "https://www.mariowiki.com/Steamer",
+      "startedAt": "2026-10-09T10:18:15.275003+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mariowiki.com/Steamer",
+      "headers": {
+        "x-powered-by": "PleskLin",
+        "x-content-type-options": "nosniff",
+        "content-language": "en",
+        "content-type": "text/html; charset=UTF-8",
+        "accept-ch": "",
+        "vary": "Accept-Encoding, Cookie",
+        "expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+        "cache-control": "private, must-revalidate, max-age=0",
+        "last-modified": "Thu, 08 Oct 2026 19:54:53 GMT",
+        "x-request-id": "bde0ace8cec82586727ca7f3",
+        "etag": "\"5410376-1791493613;;;\"",
+        "x-litespeed-cache": "hit",
+        "date": "Fri, 09 Oct 2026 10:18:15 GMT",
+        "server": "envoy",
+        "access-control-allow-origin": "*",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "frame-ancestors 'none'; upgrade-insecure-requests",
+        "strict-transport-security": "max-age=63072000; includeSubDomains",
+        "x-envoy-upstream-service-time": "329",
+        "connection": "close",
+        "transfer-encoding": "chunked"
+      },
+      "rawPath": "/tmp/b04-boards-resume-20261009-0605/private/current-steamer-original-1018/A-W_STEAMER.html",
+      "rawBytes": 85246,
+      "rawSha256": "ce6fcb65ed42383e0338f46ccd9cd8eb10574b91c9dcecdc53c91470306c22d6",
+      "selectedBodyChars": 10683,
+      "selectedBodySha256": "3ba056ed1532f1f9d60051773f5b41e4e3a41137b293c7bfd691fc73cb98de3d",
+      "selectedBodySelector": "#mw-content-text .mw-parser-output",
+      "result": "captured_full_response",
+      "finishedAt": "2026-10-09T10:18:16.186963+00:00"
+    },
+    {
+      "sourceId": "W_STEAMER",
+      "pass": "B",
+      "requestedUrl": "https://www.mariowiki.com/Steamer",
+      "startedAt": "2026-10-09T10:18:16.187147+00:00",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mariowiki.com/Steamer",
+      "headers": {
+        "x-powered-by": "PleskLin",
+        "x-content-type-options": "nosniff",
+        "content-language": "en",
+        "content-type": "text/html; charset=UTF-8",
+        "accept-ch": "",
+        "vary": "Accept-Encoding, Cookie",
+        "expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+        "cache-control": "private, must-revalidate, max-age=0",
+        "last-modified": "Thu, 08 Oct 2026 19:54:53 GMT",
+        "x-request-id": "bde0ace8cec82586727ca7f3",
+        "etag": "\"5410376-1791493613;;;\"",
+        "x-litespeed-cache": "hit",
+        "date": "Fri, 09 Oct 2026 10:18:16 GMT",
+        "server": "envoy",
+        "access-control-allow-origin": "*",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-security-policy": "frame-ancestors 'none'; upgrade-insecure-requests",
+        "strict-transport-security": "max-age=63072000; includeSubDomains",
+        "x-envoy-upstream-service-time": "94",
+        "connection": "close",
+        "transfer-encoding": "chunked"
+      },
+      "rawPath": "/tmp/b04-boards-resume-20261009-0605/private/current-steamer-original-1018/B-W_STEAMER.html",
+      "rawBytes": 85246,
+      "rawSha256": "ce6fcb65ed42383e0338f46ccd9cd8eb10574b91c9dcecdc53c91470306c22d6",
+      "selectedBodyChars": 10683,
+      "selectedBodySha256": "3ba056ed1532f1f9d60051773f5b41e4e3a41137b293c7bfd691fc73cb98de3d",
+      "selectedBodySelector": "#mw-content-text .mw-parser-output",
+      "result": "captured_full_response",
+      "finishedAt": "2026-10-09T10:18:16.709336+00:00"
+    }
+  ],
+  "actualFiniteSteamerClosure": {
+    "startedAt": "2026-10-09T10:18:15.274990+00:00",
+    "closedAt": "2026-10-09T10:18:16.709828+00:00",
+    "elapsedSeconds": 1.43487498498871,
+    "declaredWholeBoundSeconds": 60,
+    "nativePid": 350962,
+    "externalChildren": [],
+    "completedRequests": 2,
+    "allRequestedFullHttp200": true,
+    "failure": null,
+    "terminationSignals": [],
+    "fullRawPublic": false
+  },
+  "completeCurrentSteamerScopes": [
+    {
+      "pass": "A",
+      "currentChapterChars": 502,
+      "currentChapterSHA256": "c6ca024f671e8fc6e9acf7e536141ca254d9907216fdc56d6cc36bd8cddd05fb",
+      "entireReferenceIdsPersonallyRead": [
+        "cite_note-1",
+        "cite_note-2",
+        "cite_note-3",
+        "cite_note-4",
+        "cite_note-5",
+        "cite_note-6",
+        "cite_note-7",
+        "cite_note-8",
+        "cite_note-9",
+        "cite_note-10",
+        "cite_note-11",
+        "cite_note-12"
+      ],
+      "allReferenceOutgoingLinks": [
+        {
+          "id": "cite_note-1",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-1"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-2",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-2"
+            },
+            {
+              "text": "Mario Party 3 - End of the Line",
+              "href": "https://youtu.be/9gr_r0vlCnE?feature=shared&t=1"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-3",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-3"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-4",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-4"
+            },
+            {
+              "text": "End of the Line",
+              "href": "/End_of_the_Line"
+            },
+            {
+              "text": "Mario Party 3",
+              "href": "/Mario_Party_3"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-5",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-5"
+            },
+            {
+              "text": "Super Mario Party Jamboree",
+              "href": "/Super_Mario_Party_Jamboree"
+            },
+            {
+              "text": "Nintendo Cube",
+              "href": "/Nintendo_Cube"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-6",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-6"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-7",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-7"
+            },
+            {
+              "text": "Super Mario Party Jamboree",
+              "href": "https://nintendo.com/fr-fr/Jeux/Jeux-Nintendo-Switch/Super-Mario-Party-Jamboree-2591147.html"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-8",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-8"
+            },
+            {
+              "text": "Super Mario Party Jamboree",
+              "href": "https://nintendo.com/de-de/Spiele/Nintendo-Switch-Spiele/Super-Mario-Party-Jamboree-2591147.html"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-9",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-9"
+            },
+            {
+              "text": "Super Mario Party Jamboree",
+              "href": "https://nintendo.com/it-it/Giochi/Giochi-per-Nintendo-Switch/Super-Mario-Party-Jamboree-2591147.html"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-10",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-10"
+            },
+            {
+              "text": "Super Mario Party Jamboree",
+              "href": "/Super_Mario_Party_Jamboree"
+            },
+            {
+              "text": "Nintendo Cube",
+              "href": "/Nintendo_Cube"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-11",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-11"
+            },
+            {
+              "text": "Super Mario Party Jamboree",
+              "href": "https://nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-Switch/Super-Mario-Party-Jamboree-2591147.html"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-12",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pass": "B",
+      "currentChapterChars": 502,
+      "currentChapterSHA256": "c6ca024f671e8fc6e9acf7e536141ca254d9907216fdc56d6cc36bd8cddd05fb",
+      "entireReferenceIdsPersonallyRead": [
+        "cite_note-1",
+        "cite_note-2",
+        "cite_note-3",
+        "cite_note-4",
+        "cite_note-5",
+        "cite_note-6",
+        "cite_note-7",
+        "cite_note-8",
+        "cite_note-9",
+        "cite_note-10",
+        "cite_note-11",
+        "cite_note-12"
+      ],
+      "allReferenceOutgoingLinks": [
+        {
+          "id": "cite_note-1",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-1"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-2",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-2"
+            },
+            {
+              "text": "Mario Party 3 - End of the Line",
+              "href": "https://youtu.be/9gr_r0vlCnE?feature=shared&t=1"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-3",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-3"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-4",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-4"
+            },
+            {
+              "text": "End of the Line",
+              "href": "/End_of_the_Line"
+            },
+            {
+              "text": "Mario Party 3",
+              "href": "/Mario_Party_3"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-5",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-5"
+            },
+            {
+              "text": "Super Mario Party Jamboree",
+              "href": "/Super_Mario_Party_Jamboree"
+            },
+            {
+              "text": "Nintendo Cube",
+              "href": "/Nintendo_Cube"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-6",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-6"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-7",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-7"
+            },
+            {
+              "text": "Super Mario Party Jamboree",
+              "href": "https://nintendo.com/fr-fr/Jeux/Jeux-Nintendo-Switch/Super-Mario-Party-Jamboree-2591147.html"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-8",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-8"
+            },
+            {
+              "text": "Super Mario Party Jamboree",
+              "href": "https://nintendo.com/de-de/Spiele/Nintendo-Switch-Spiele/Super-Mario-Party-Jamboree-2591147.html"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-9",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-9"
+            },
+            {
+              "text": "Super Mario Party Jamboree",
+              "href": "https://nintendo.com/it-it/Giochi/Giochi-per-Nintendo-Switch/Super-Mario-Party-Jamboree-2591147.html"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-10",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-10"
+            },
+            {
+              "text": "Super Mario Party Jamboree",
+              "href": "/Super_Mario_Party_Jamboree"
+            },
+            {
+              "text": "Nintendo Cube",
+              "href": "/Nintendo_Cube"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-11",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-11"
+            },
+            {
+              "text": "Super Mario Party Jamboree",
+              "href": "https://nintendo.com/pt-pt/Jogos/Jogos-para-a-Nintendo-Switch/Super-Mario-Party-Jamboree-2591147.html"
+            }
+          ]
+        },
+        {
+          "id": "cite_note-12",
+          "links": [
+            {
+              "text": "^",
+              "href": "#cite_ref-12"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "entire10683CharacterArticlePhysicallyReadA_B": true,
+  "trainFactValueUnchanged": {
+    "trigger": "Visit station while Steamer available and pay fare.",
+    "effect": "Ride one stop for 3 coins or two stops for 6.",
+    "oneStopCoins": 3,
+    "twoStopsCoins": 6
+  },
+  "trainCandidateScope": {
+    "currentFareEvidence": "Current Steamer chapter and current Western/game contexts explicitly describe ordinary one-stop3/two-stop6 fares. The independent original Namu complete847-character current Western chapter agrees; Buddy6/12 parentheses are excluded from the proposed ordinary value.",
+    "currentAvailabilityEvidence": "New current-game footnotes cite Nintendo Toad dialogue about arriving at a station where Steamer is stopped. The independently retained SASKE original full introduction image5 displays corresponding Japanese Nintendo dialogue. Both full A/B images were opened; original page body and images are separate evidence scopes.",
+    "lineageLimit": "The cited availability wording and photographed availability wording originate in Nintendo dialogue. Different websites/localizations alone do not establish independent authorship of that rule. Whole train remains single_source until source independence and exact whole clause coverage are resolved.",
+    "excluded": "Old MarioParty2 five-coin chapter, direction-selection probabilities, current Event travel direction/end condition, ticket price schedule, Buddy fares and exact station positions."
+  },
+  "independentNamuCompleteScopeMetadata": [
+    {
+      "pass": "A",
+      "scopeId": "s-4.2.5.7",
+      "scopeChars": 847,
+      "scopeSha256": "bc2c22c28899b5b15ef4c0c07592e12a752f53e383071d029bbdf74dc4a0c14c",
+      "sourceSelectedBodySHA256": "c1a9bc7b00071be779aac153bf619e7a89befaca9d2bf8cb37692ddf8a280e03",
+      "rawSHA256": "ded224701727b312df383ac7d787223801badb3b139673a4f4973e1d15916166"
+    },
+    {
+      "pass": "B",
+      "scopeId": "s-4.2.5.7",
+      "scopeChars": 847,
+      "scopeSha256": "bc2c22c28899b5b15ef4c0c07592e12a752f53e383071d029bbdf74dc4a0c14c",
+      "sourceSelectedBodySHA256": "c1a9bc7b00071be779aac153bf619e7a89befaca9d2bf8cb37692ddf8a280e03",
+      "rawSHA256": "31807475a0ea132d387c5cd6d2959a3ac78d507a6aee04cd8d2623c5702ec9c8"
+    }
+  ],
+  "sharedAuthoredQuotationLedger": {
+    "Namu": {
+      "total": 250,
+      "ceiling": 250,
+      "noNewWords": true
+    },
+    "Cel": {
+      "B03Committed": 122,
+      "B04Committed": 9,
+      "actualTotal": 131,
+      "B03Reserved": 150,
+      "B04Reserved": 50,
+      "reservedTotal": 200,
+      "noNewWords": true
+    }
+  },
+  "privateScopeHelperFirstFailures": {
+    "privateOriginalFailuresRetained": [
+      {
+        "helper": "Goomba whole Events first heading selector",
+        "actualExit": 1,
+        "actualError": "StopIteration",
+        "reason": "Matched Mechanics against native heading text that actually includes [ edit ].",
+        "publicWritesBeforeFailure": false
+      },
+      {
+        "helper": "Goomba corrected heading second guard",
+        "actualExit": 1,
+        "actualError": "AssertionError",
+        "reason": "Incorrect guessed minimum3500 rejected the genuinely complete2580-character section. Native direct-sibling boundaries were then read in full and corrected; no fact promotion occurred.",
+        "publicWritesBeforeFailure": false
+      },
+      {
+        "helper": "Steamer scope first CSS selector",
+        "actualExit": 1,
+        "actualError": "soupsieve.util.SelectorSyntaxError: Invalid character / position28",
+        "reason": "Unescaped punctuation in heading ID. Corrected by selecting actual native heading text and reading complete502-current-chapter/all12references from both raw originals.",
+        "publicWritesBeforeFailure": false
+      }
+    ],
+    "nativeToolOutputsRemainOriginalReceipts": true,
+    "noExactFailureClockCaptured": "Do not infer or backdate native UTC start times from later receipt writing."
+  },
+  "discovery": {
+    "provider": "Exa",
+    "separateAngles": 3,
+    "requestedResults": 30,
+    "leadsAreValidatedFacts": false,
+    "noSearchSnippetFactAdoption": true,
+    "knownSamePublisherAndOldGameSourcesExcluded": true
+  },
+  "historicalParentExactWholeAcceptance": {
+    "source": "d9b687d6a9e7c73df542395a5631323eef4ce78a",
+    "runId": 37915278616,
+    "verifyJobId": 113769824220,
+    "naturallyCompletedAt": "2026-10-09T10:04:13Z",
+    "nativeCharacters": 21434,
+    "nativeBytes": 21436,
+    "nativeSHA256": "5387621d882bc43e6d39c9b99e60e02f4e7b2bbdcb2e56881e17af4355caac41",
+    "actualCheckout": {
+      "sha": "4a2fac4dd575fa46baccccd28fdd5c20945e66ae",
+      "source": "d9b687d6a9e7c73df542395a5631323eef4ce78a",
+      "base": "70ccb4f6e0b9080863070b9d60466e5d7ca68166"
+    },
+    "results": {
+      "structuralSuites": 26,
+      "structuralCases": 5693,
+      "shaManifest": 92,
+      "strictSuites": 25,
+      "strictCases": 5601,
+      "strictActualExit": 1,
+      "twoSource": "91/518",
+      "currentEvent": "37/38",
+      "originalWholeResearch": "NOT_MET",
+      "exactMaps": "0/7",
+      "nintendoGameplayExecuted": "NO",
+      "allOriginalWorkflowStepsSuccess": true
+    },
+    "wholeOriginalJobSteps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-10-09T10:04:05Z",
+        "completed_at": "2026-10-09T10:04:06Z"
+      },
+      {
+        "name": "Run actions/checkout@v4",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-10-09T10:04:06Z",
+        "completed_at": "2026-10-09T10:04:07Z"
+      },
+      {
+        "name": "Run actions/setup-python@v5",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-10-09T10:04:07Z",
+        "completed_at": "2026-10-09T10:04:07Z"
+      },
+      {
+        "name": "Run python -m pip install -r requirements.txt",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-10-09T10:04:07Z",
+        "completed_at": "2026-10-09T10:04:09Z"
+      },
+      {
+        "name": "Run python verify.py --structural --checksums",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-10-09T10:04:09Z",
+        "completed_at": "2026-10-09T10:04:10Z"
+      },
+      {
+        "name": "Record explicit unresolved original research standard",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-10-09T10:04:10Z",
+        "completed_at": "2026-10-09T10:04:11Z"
+      },
+      {
+        "name": "Post Run actions/setup-python@v5",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 11,
+        "started_at": "2026-10-09T10:04:11Z",
+        "completed_at": "2026-10-09T10:04:11Z"
+      },
+      {
+        "name": "Post Run actions/checkout@v4",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 12,
+        "started_at": "2026-10-09T10:04:11Z",
+        "completed_at": "2026-10-09T10:04:11Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 13,
+        "started_at": "2026-10-09T10:04:11Z",
+        "completed_at": "2026-10-09T10:04:11Z"
+      }
+    ],
+    "fullNativePath": "reports/milk-parent-native-113769824220.log"
+  },
+  "actualPriorSourcePublishedAt": "2026-10-09T10:03:56Z",
+  "currentNewSourceWholeHostedAcceptance": "Pending actual next source publication; d9 whole original acceptance is explicitly dated parent history.",
+  "fullCopyrightedBodiesImagesPublic": false,
+  "wholeOriginalResearchStandard": "NOT_MET",
+  "prDraft": true
+}

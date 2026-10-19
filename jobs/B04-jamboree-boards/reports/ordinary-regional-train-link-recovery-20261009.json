@@ -1,0 +1,170 @@
+{
+  "reviewedAt": "2026-10-09T14:08:42.672672+00:00",
+  "sourceParent": "e731a59b11f0a25ece0ed080eb2b6e5200891de1",
+  "factId": "western-land:map_link:train_transfer",
+  "beforeFact": {
+    "id": "western-land:map_link:train_transfer",
+    "kind": "map_link",
+    "status": "single_source",
+    "confidence": "medium",
+    "value": {
+      "from": "train station",
+      "to": "one or two next station stops",
+      "via": "Steamer",
+      "condition": "pay3/6coins; exact current direction-selection mechanic unknown"
+    },
+    "evidence": [
+      {
+        "sourceId": "W_WESTERN",
+        "quote": "two stations for six coins",
+        "locator": "CurrentJamboree train",
+        "quoteId": "W_WESTERN-Q024"
+      },
+      {
+        "sourceId": "MPL_BOARDS",
+        "quote": "get from one train station to another",
+        "locator": "Western",
+        "quoteId": "MPL_BOARDS-Q021"
+      }
+    ],
+    "note": "Regional connection only; endpoints are editorial region labels, not game space IDs."
+  },
+  "afterFact": {
+    "id": "western-land:map_link:train_transfer",
+    "kind": "map_link",
+    "status": "corroborated",
+    "confidence": "medium",
+    "value": {
+      "from": "train station",
+      "to": "one or two next station stops",
+      "via": "Steamer",
+      "condition": "pay3/6coins; exact current direction-selection mechanic unknown"
+    },
+    "evidence": [
+      {
+        "sourceId": "W_WESTERN",
+        "quote": "two stations for six coins",
+        "locator": "CurrentJamboree train",
+        "quoteId": "W_WESTERN-Q024"
+      },
+      {
+        "sourceId": "MPL_BOARDS",
+        "quote": "get from one train station to another",
+        "locator": "Western",
+        "quoteId": "MPL_BOARDS-Q021"
+      },
+      {
+        "sourceId": "NAMU_KR_COUNTS",
+        "quote": "3",
+        "locator": "Complete4.2.5.7 Western/Jamboree current train-fare paragraph: one station3 coins, two stations6; Buddy6/12 separately excluded. Existing numeric quote supports fare, complete authored paragraph supports regional station linkage.",
+        "quoteId": "NAMU_KR_COUNTS-Q003"
+      },
+      {
+        "sourceId": "NAMU_KR_COUNTS",
+        "quote": "6",
+        "locator": "Complete4.2.5.7 Western/Jamboree current train-fare paragraph: two stations6 coins; ordinary no-Buddy fare. Full chapter/footnotes83–86 examined; no quote/source budget reset.",
+        "quoteId": "NAMU_KR_COUNTS-Q006"
+      }
+    ],
+    "note": "2026-10-09 complete narrow regional-link review: Wiki Western current Jamboree introduction and same-family Steamer current chapter, versus independently authored Namu Western chapter, agree on ordinary no-Buddy station transport for one/two stops at3/6 coins. Existing numeric Namu quotes cite prices only; the whole native chapter establishes the station relationship. The same Wiki family is one publisher, and bare MPL station prose is supporting context without independent fare proof. Exact station space IDs and direction-selection mechanism remain unknown. Broader train availability is a separate single-source fact; no Steamer Event, exact numbered adjacency, Buddy price, Pro/TV profile or current Nintendo execution is promoted. Medium confidence reflects community provenance and an unobserved game build. Zero new expressive quotations."
+  },
+  "result": "complete narrow ordinary regional link corroborated medium; broader availability not adopted",
+  "clauseMapping": {
+    "from/trainStation": "Wiki whole native current intro and Namu entire Western station-fare clause; independent Namu editorial group, prior completeboardfootnote lineageaudit retained.",
+    "to/oneOrTwoStops": "Wiki explicitlytwo stations/threecoins; Namu explicitly1station3/2stations6.",
+    "via/Steamer": "Wiki namedSteamer, Namu 수염기차 samecharacter name in explicitWestern/Jamboree chapter.",
+    "ordinaryFare3and6": "Both completecontexts; reuseexistingquoteIDsNAMU-Q0033/Q0066, no expressive words.",
+    "directionSelection": "Unknown marker remains; no new probability/currentselection algorithm claim."
+  },
+  "wholeScopeEvidence": [
+    {
+      "publisherGroup": "mariowiki",
+      "url": "https://www.mariowiki.com/Western_Land",
+      "pairedCurrentNativeScopes": [
+        {
+          "pass": "A",
+          "characters": 1032,
+          "scopeSHA256": "b9d1206c827a23d64f0bf5d2888a287d008d7c410f90a34cd162bd581ac3a5bd",
+          "fullRawSHA256": "f0a6e4468f89513fa6c62b10dd2a8d4ac76dee9e7ef97f1116e21428bbc6a7c5",
+          "wholeAuthorScopeSHA256": "cba2991bea91aee6817a57cee51d6ac0e2cf12d51c70ca4fefc8e1db2b6c6a34",
+          "allSevenReferencesRead": true
+        },
+        {
+          "pass": "B",
+          "characters": 1032,
+          "scopeSHA256": "b9d1206c827a23d64f0bf5d2888a287d008d7c410f90a34cd162bd581ac3a5bd",
+          "fullRawSHA256": "f0a6e4468f89513fa6c62b10dd2a8d4ac76dee9e7ef97f1116e21428bbc6a7c5",
+          "wholeAuthorScopeSHA256": "cba2991bea91aee6817a57cee51d6ac0e2cf12d51c70ca4fefc8e1db2b6c6a34",
+          "allSevenReferencesRead": true
+        }
+      ]
+    },
+    {
+      "publisherGroup": "mariowiki",
+      "url": "https://www.mariowiki.com/Steamer",
+      "samePublisherAdditionalContext": true,
+      "pairedCurrentChapterHashes": [
+        "c6ca024f671e8fc6e9acf7e536141ca254d9907216fdc56d6cc36bd8cddd05fb",
+        "c6ca024f671e8fc6e9acf7e536141ca254d9907216fdc56d6cc36bd8cddd05fb"
+      ]
+    },
+    {
+      "publisherGroup": "namu_community_editors",
+      "url": "https://namu.wiki/w/%EC%8A%88%ED%8D%BC%20%EB%A7%88%EB%A6%AC%EC%98%A4%20%ED%8C%8C%ED%8B%B0%20%EC%9E%BC%EB%B2%84%EB%A6%AC",
+      "pairedCurrentScopeMetadata": [
+        {
+          "pass": "A",
+          "characters": 847,
+          "scopeSHA256": "bc2c22c28899b5b15ef4c0c07592e12a752f53e383071d029bbdf74dc4a0c14c",
+          "rawSHA256": "ded224701727b312df383ac7d787223801badb3b139673a4f4973e1d15916166",
+          "allWesternFootnotes83to86Read": true
+        },
+        {
+          "pass": "B",
+          "characters": 847,
+          "scopeSHA256": "bc2c22c28899b5b15ef4c0c07592e12a752f53e383071d029bbdf74dc4a0c14c",
+          "rawSHA256": "31807475a0ea132d387c5cd6d2959a3ac78d507a6aee04cd8d2623c5702ec9c8",
+          "allWesternFootnotes83to86Read": true
+        }
+      ],
+      "independence": "Prior whole Korean board/type/footnote/editorial-lineage review retained; current Western source fullchapter and all83–86 links have no outgoing attribution to paired Wiki or copied first-party dialogue. Different community narratives and existing count disagreements retained; no all-contributor identity audit asserted."
+    }
+  ],
+  "actualNewWikiOriginalCollector": {
+    "startedAt": "2026-10-09T14:01:40.867953+00:00",
+    "closedAt": "2026-10-09T14:01:42.532310+00:00",
+    "elapsedSeconds": 1.6643674870138057,
+    "declaredWholeBoundSeconds": 60,
+    "nativePid": 395471,
+    "externalChildren": [],
+    "completedRequests": 2,
+    "allRequestedFullHttp200": true,
+    "failure": null,
+    "terminationSignals": [],
+    "fullRawPublic": false
+  },
+  "all518ValuesPreserved": true,
+  "all517OtherWholeFactsPreserved": true,
+  "all19ConflictsPreserved": true,
+  "onlyChangedFingerprintIds": [
+    "western-land:board_record",
+    "western-land:map_description",
+    "western-land:map_link:train_transfer"
+  ],
+  "all590OtherAuditRowsPreserved": true,
+  "noNewExpressiveQuotesOrRegistryClips": true,
+  "canonicalNamuSharedAuthoredWords": 250,
+  "unchangedLocalNamuQuoteBudget": 30,
+  "narrowScopeExclusions": [
+    "The broader gatesPaths:train has parked-train availability gap and stayssingle_source.",
+    "37of38events stillunmet; Steamer Event remainsunknown.",
+    "0of7 exact numbered maps unchanged; regional link is no numbered adjacency.",
+    "No Buddy fare/TV/Pro/event/stock/space-count promotion.",
+    "All518values/517otherfactobjects/19conflicts mustremainunchanged."
+  ],
+  "originalStrictResearchStillNOT_MET": true,
+  "pr18Draft": true,
+  "firstPrivateReaderFailures": "First read-onlyscope extractor treated NavigableString asTag; correctedfilter then initialambiguous heading selectedSpacecounts283 only. Itsincorrectlylabelledprivatefile ispreserved asNONPROOF. Correctcurrentintro/A+B wholeauthorscopes/all7refs are separately retained.",
+  "currentHostedChecksPendingNewSource": true,
+  "noFullCopyrightedBodiesImagesOrHeadersPublished": true
+}
