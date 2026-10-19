@@ -1,0 +1,50 @@
+{
+  "closedAt": "2026-10-09T11:44:02.726302+00:00",
+  "actualOriginalCheckerSHA256": "3762e6084a4c7cce7367bf36438a221b2f8009348597ca1dd89853d39a6c0cfa",
+  "productionAstExpressionsUsedUnchanged": true,
+  "allOriginalBaselineDataUnchanged": true,
+  "cases": [
+    {
+      "case": "self",
+      "actualOldGateAccepts": true,
+      "expectedIndependentAcceptance": false,
+      "rowId": "B13-0101",
+      "actualAuthor": "/root/blind_b18",
+      "actualReviewer": "/root/blind_b18"
+    },
+    {
+      "case": "missing-author",
+      "actualOldGateAccepts": true,
+      "expectedIndependentAcceptance": false,
+      "rowId": "B13-0101",
+      "actualAuthor": null,
+      "actualReviewer": "/root (independent category reviewer)"
+    },
+    {
+      "case": "malformed",
+      "reviewedAt": "placeholder",
+      "actualOldGateAccepts": true,
+      "expectedValidActualUtcAcceptance": false
+    },
+    {
+      "case": "future",
+      "reviewedAt": "2026-10-10T11:44:02.721181+00:00",
+      "actualOldGateAccepts": true,
+      "expectedValidActualUtcAcceptance": false
+    },
+    {
+      "case": "non-utc",
+      "reviewedAt": "2026-10-07T22:20:25+01:00",
+      "actualOldGateAccepts": true,
+      "expectedValidActualUtcAcceptance": false
+    },
+    {
+      "case": "naive",
+      "reviewedAt": "2026-10-07T21:20:25",
+      "actualOldGateAccepts": true,
+      "expectedValidActualUtcAcceptance": false
+    }
+  ],
+  "count": 6,
+  "scope": "Actual unchanged production acceptance expressions evaluated against existing real current row/assessment bindings, changing only explicitly negative author/reviewer/date metadata. No factual or source retrieval acceptance invented."
+}

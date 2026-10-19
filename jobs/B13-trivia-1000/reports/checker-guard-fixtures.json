@@ -1,0 +1,70 @@
+{
+  "requiredMissingBodyRejected": true,
+  "MissingReopenReceiptRejected": true,
+  "missingReceiptErrors": [
+    "isolated naked-receipt fixture: receipt pass mismatch",
+    "isolated naked-receipt fixture: receipt lacks actual HTTP200",
+    "isolated naked-receipt fixture: invalid actual UTC retrieval time",
+    "isolated naked-receipt fixture: missing retrieval method",
+    "isolated naked-receipt fixture: receipt target differs from selected source URL",
+    "isolated naked-receipt fixture: invalid capture SHA256",
+    "isolated naked-receipt fixture: no capture path"
+  ],
+  "RejectedDuplicateNotCountedResolved": true,
+  "independentReviewIdentityCases": [
+    {
+      "case": "self-review",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "self-review-with-role-and-case",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "missing-author",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "blank-author",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "missing-reviewer",
+      "rejectedByActualProductionGate": true
+    }
+  ],
+  "validCurrentIndependentReviewAccepted": true,
+  "actualUtcLengthAssessmentCases": [
+    {
+      "case": "malformed",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "future",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "non-UTC",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "naive",
+      "rejectedByActualProductionGate": true
+    },
+    {
+      "case": "missing",
+      "rejectedByActualProductionGate": true
+    }
+  ],
+  "validCurrentUtcLengthAssessmentAccepted": true,
+  "checkerSha256": "df225dff957727d3d6171af3e26a75c8c7e47134d674dd50b6d9e0c8a4bf38df",
+  "runAt": "2026-10-09T16:04:40.393402+00:00",
+  "rerunCommand": "python scripts/verify-guard-fixtures.py .",
+  "actualInvocation": [
+    "python",
+    "scripts/verify-guard-fixtures.py",
+    "."
+  ],
+  "fixtureCount": 15,
+  "scope": "Three original evidence/duplicate controls, five author-identity counterexamples, five timestamp counterexamples and two valid current controls execute unchanged current production guards. No remote retrieval, factual grading, shared data mutation or invented real source receipt."
+}

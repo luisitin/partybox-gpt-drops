@@ -1,0 +1,680 @@
+{
+  "reviewer": "/root/r2048_sports (fresh independent sports reviewer; resumed /root/continue_b13_review)",
+  "reviewedAt": "2026-10-07T20:55:51.626739+00:00",
+  "actualManualRows": 100,
+  "accepted": 88,
+  "requestedRevisions": [
+    {
+      "id": "B13-0845",
+      "rowSha256": "7b189254605028afb5c58b5361ae2f6c3c4dad796560f6b0d86f819a8fa470a0",
+      "reason": "Conventional full round distinguishes the nine-hole-course exception, but the selected Wiki quote only says courses have nine or eighteen: it does not itself prove a full round has eighteen. The nine-hole course existence is explicitly supported in both full bodies.",
+      "originalRow": {
+        "id": "B13-0845",
+        "category": "sports-games",
+        "question": "How many holes are played in a conventional full round of golf?",
+        "difficulty": 1,
+        "options": [
+          "18",
+          "12",
+          "16",
+          "20"
+        ],
+        "correctIndex": 0,
+        "correctAnswer": "18",
+        "funFact": "Some golf courses have nine holes.",
+        "confidence": "high",
+        "confidenceReason": "Both rules describe 18-hole rounds and nine-hole courses; wording avoids claiming every golf course has 18 holes.",
+        "sources": [
+          {
+            "sourceId": "sports-games-s0053",
+            "url": "https://www.britannica.com/sports/golf/Play-of-the-game",
+            "publisher": "Encyclopaedia Britannica",
+            "quote": "The stipulated round consists of 18 holes",
+            "funFactQuote": "Some courses have only nine holes"
+          },
+          {
+            "sourceId": "sports-games-s0024",
+            "url": "https://en.wikipedia.org/wiki/Golf",
+            "publisher": "Wikipedia contributors",
+            "quote": "Courses typically have either 9 or 18 holes",
+            "funFactQuote": "Courses typically have either 9 or 18 holes"
+          }
+        ],
+        "claims": [
+          {
+            "kind": "answer",
+            "text": "A conventional full round of golf consists of 18 holes.",
+            "sourceIds": [
+              "sports-games-s0053",
+              "sports-games-s0024"
+            ]
+          },
+          {
+            "kind": "funFact",
+            "text": "Some golf courses have nine holes.",
+            "sourceIds": [
+              "sports-games-s0053",
+              "sports-games-s0024"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "B13-0857",
+      "rowSha256": "e7aea742c37dcbab2f73b78e60876c3cf30544a487336c741f7d94059970c149",
+      "reason": "The factual glove answer is plausible, but the chosen Wiki glove sentence directly cites the same paired Britannica account and is not independent corroboration. The isolated Wiki three-minutes string occurs first in an amateur Olympic-bout context rather than proving the original Queensberry rule.",
+      "originalRow": {
+        "id": "B13-0857",
+        "category": "sports-games",
+        "question": "What protective hand equipment was required by the original Queensberry boxing rules?",
+        "difficulty": 1,
+        "options": [
+          "Boxing gloves",
+          "Metal gauntlets",
+          "Leather straps",
+          "Finger guards"
+        ],
+        "correctIndex": 0,
+        "correctAnswer": "Boxing gloves",
+        "funFact": "Queensberry-rule boxing rounds lasted three minutes.",
+        "confidence": "high",
+        "confidenceReason": "Both histories identify gloves; the original historical rules are distinguished from bare-knuckle contests.",
+        "sources": [
+          {
+            "sourceId": "sports-games-s0059",
+            "url": "https://www.britannica.com/sports/boxing/The-Queensberry-rules",
+            "publisher": "Encyclopaedia Britannica",
+            "quote": "contestants wore padded gloves",
+            "funFactQuote": "a round consisted of three minutes of fighting"
+          },
+          {
+            "sourceId": "sports-games-s0030",
+            "url": "https://en.wikipedia.org/wiki/Boxing",
+            "publisher": "Wikipedia contributors",
+            "quote": "The introduction of boxing gloves of \"fair-size\"",
+            "funFactQuote": "three minutes"
+          }
+        ],
+        "claims": [
+          {
+            "kind": "answer",
+            "text": "The Queensberry rules required boxing gloves.",
+            "sourceIds": [
+              "sports-games-s0059",
+              "sports-games-s0030"
+            ]
+          },
+          {
+            "kind": "funFact",
+            "text": "Queensberry-rule boxing rounds lasted three minutes.",
+            "sourceIds": [
+              "sports-games-s0059",
+              "sports-games-s0030"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "B13-0858",
+      "rowSha256": "1638232fd2955360c5db1400140963f2c231234d3e395a8dee3a97844a928b05",
+      "reason": "Britannica gives three-minute Queensberry rounds; the very short Wiki quotation has no original-rules scope without its separately inspected historical context. The chosen rules-title string names the rule set but does not itself establish that the aristocrat lent his name; shared Britannica-derived context requires replacement.",
+      "originalRow": {
+        "id": "B13-0858",
+        "category": "sports-games",
+        "question": "How long was a fighting round under the original Queensberry boxing rules?",
+        "difficulty": 1,
+        "options": [
+          "One minute",
+          "Three minutes",
+          "Two minutes",
+          "Five minutes"
+        ],
+        "correctIndex": 1,
+        "correctAnswer": "Three minutes",
+        "funFact": "The Marquess of Queensberry lent his name to influential boxing rules.",
+        "confidence": "high",
+        "confidenceReason": "Both histories describe the round duration; the rule context is historical, not every modern age/category format.",
+        "sources": [
+          {
+            "sourceId": "sports-games-s0059",
+            "url": "https://www.britannica.com/sports/boxing/The-Queensberry-rules",
+            "publisher": "Encyclopaedia Britannica",
+            "quote": "a round consisted of three minutes of fighting",
+            "funFactQuote": "the 9th marquess of Queensberry, who lent his name to the new guidelines"
+          },
+          {
+            "sourceId": "sports-games-s0030",
+            "url": "https://en.wikipedia.org/wiki/Boxing",
+            "publisher": "Wikipedia contributors",
+            "quote": "three minutes",
+            "funFactQuote": "Marquess of Queensberry Rules"
+          }
+        ],
+        "claims": [
+          {
+            "kind": "answer",
+            "text": "Queensberry-rule boxing rounds lasted three minutes.",
+            "sourceIds": [
+              "sports-games-s0059",
+              "sports-games-s0030"
+            ]
+          },
+          {
+            "kind": "funFact",
+            "text": "The Marquess of Queensberry lent his name to influential boxing rules.",
+            "sourceIds": [
+              "sports-games-s0059",
+              "sports-games-s0030"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "B13-0859",
+      "rowSha256": "361b398e03ce04757fac8ad2111bbed22aaeb5aaff572deb5bbf2a7c8d937bc0",
+      "reason": "The marquess is the correct namesake, but a bare Wiki rules-title quotation is weak evidence and the nearby historical paragraph explicitly cites paired Britannica. The selected Wiki year clause is in a paragraph with direct paired-Britannica attribution; a second URL does not establish a second independent account.",
+      "originalRow": {
+        "id": "B13-0859",
+        "category": "sports-games",
+        "question": "Which titled aristocrat lent his name to boxing’s influential gloved-fighting rules?",
+        "difficulty": 2,
+        "options": [
+          "Duke of Wellington",
+          "Earl of Sandwich",
+          "Marquess of Queensberry",
+          "Marquess of Salisbury"
+        ],
+        "correctIndex": 2,
+        "correctAnswer": "Marquess of Queensberry",
+        "funFact": "The Queensberry boxing rules were introduced in 1867.",
+        "confidence": "high",
+        "confidenceReason": "Both histories identify the namesake; he is not falsely credited as their sole author.",
+        "sources": [
+          {
+            "sourceId": "sports-games-s0059",
+            "url": "https://www.britannica.com/sports/boxing/The-Queensberry-rules",
+            "publisher": "Encyclopaedia Britannica",
+            "quote": "the 9th marquess of Queensberry, who lent his name to the new guidelines",
+            "funFactQuote": "devised a new set of rules in 1867"
+          },
+          {
+            "sourceId": "sports-games-s0030",
+            "url": "https://en.wikipedia.org/wiki/Boxing",
+            "publisher": "Wikipedia contributors",
+            "quote": "Marquess of Queensberry Rules",
+            "funFactQuote": "Marquess of Queensberry Rules in 1867"
+          }
+        ],
+        "claims": [
+          {
+            "kind": "answer",
+            "text": "The Marquess of Queensberry lent his name to influential boxing rules.",
+            "sourceIds": [
+              "sports-games-s0059",
+              "sports-games-s0030"
+            ]
+          },
+          {
+            "kind": "funFact",
+            "text": "The Queensberry boxing rules were introduced in 1867.",
+            "sourceIds": [
+              "sports-games-s0059",
+              "sports-games-s0030"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "B13-0860",
+      "rowSha256": "34655a91413c735374efada984d24f35790fd93666be99a52c42ee70283d7e5e",
+      "reason": "1867 is in Britannica, but the chosen Wiki historical year clause explicitly cites the paired Britannica source; independent research remains necessary. The Wiki glove clause directly cites Britannica rather than independently verifying the glove fun fact.",
+      "originalRow": {
+        "id": "B13-0860",
+        "category": "sports-games",
+        "question": "In what year were the Marquess of Queensberry boxing rules introduced?",
+        "difficulty": 3,
+        "options": [
+          "1815",
+          "1848",
+          "1904",
+          "1867"
+        ],
+        "correctIndex": 3,
+        "correctAnswer": "1867",
+        "funFact": "The Queensberry rules required boxing gloves.",
+        "confidence": "high",
+        "confidenceReason": "Both histories agree on 1867; the year is separate from the sport’s much earlier origin.",
+        "sources": [
+          {
+            "sourceId": "sports-games-s0059",
+            "url": "https://www.britannica.com/sports/boxing/The-Queensberry-rules",
+            "publisher": "Encyclopaedia Britannica",
+            "quote": "devised a new set of rules in 1867",
+            "funFactQuote": "contestants wore padded gloves"
+          },
+          {
+            "sourceId": "sports-games-s0030",
+            "url": "https://en.wikipedia.org/wiki/Boxing",
+            "publisher": "Wikipedia contributors",
+            "quote": "Marquess of Queensberry Rules in 1867",
+            "funFactQuote": "The introduction of boxing gloves of \"fair-size\""
+          }
+        ],
+        "claims": [
+          {
+            "kind": "answer",
+            "text": "The Queensberry boxing rules were introduced in 1867.",
+            "sourceIds": [
+              "sports-games-s0059",
+              "sports-games-s0030"
+            ]
+          },
+          {
+            "kind": "funFact",
+            "text": "The Queensberry rules required boxing gloves.",
+            "sourceIds": [
+              "sports-games-s0059",
+              "sports-games-s0030"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "B13-0861",
+      "rowSha256": "c7e331e7f69b4002d7643fad7564251395dd4ff2f70c2c1d4a125b33ab6e0634",
+      "reason": "Foil and épée allow tip thrusts only and rapier is not an Olympic weapon; sabre allows both, but the chosen Britannica cutting-rather-than-thrusts quotation does not express both permissions. The two separately authored épée descriptions clearly make the entire body a valid target.",
+      "originalRow": {
+        "id": "B13-0861",
+        "category": "sports-games",
+        "question": "In modern Olympic fencing, which weapon allows both cutting and thrusting attacks?",
+        "difficulty": 1,
+        "options": [
+          "Sabre",
+          "Foil",
+          "Épée",
+          "Rapier"
+        ],
+        "correctIndex": 0,
+        "correctAnswer": "Sabre",
+        "funFact": "The entire body is a valid target in épée fencing.",
+        "confidence": "high",
+        "confidenceReason": "Both weapon-rule sections distinguish sabre cuts from foil and épée tip-only touches; rapier is outside modern competitive fencing disciplines.",
+        "sources": [
+          {
+            "sourceId": "sports-games-s0069",
+            "url": "https://www.britannica.com/sports/fencing/Organized-sport",
+            "publisher": "Encyclopaedia Britannica",
+            "quote": "sabre is characterized by cutting rather than thrusts of the tip",
+            "funFactQuote": "In épée, as in foil, hits are made with the point, but, unlike in foil, the target area is the entire body."
+          },
+          {
+            "sourceId": "sports-games-s0032",
+            "url": "https://en.wikipedia.org/wiki/Fencing",
+            "publisher": "Wikipedia contributors",
+            "quote": "The sabre is a cutting and thrusting weapon",
+            "funFactQuote": "In épée, the entire body is a valid target."
+          }
+        ],
+        "claims": [
+          {
+            "kind": "answer",
+            "text": "In sport fencing, the sabre permits cutting and thrusting.",
+            "sourceIds": [
+              "sports-games-s0069",
+              "sports-games-s0032"
+            ]
+          },
+          {
+            "kind": "funFact",
+            "text": "The entire body is a valid target in épée fencing.",
+            "sourceIds": [
+              "sports-games-s0069",
+              "sports-games-s0032"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "B13-0864",
+      "rowSha256": "179946afae70b0bcbea1c390f1bb3db99f55458c036e590b0c44ee5a4d22a801",
+      "reason": "The initial revival was 1896, not later 1900, 1908 or 1924 editions; both selected histories state inclusion. The fun fact asserts cutting and thrusting, whereas its selected Britannica quote only characterizes cutting rather than thrusts; change to the actual any-part-of-blade clause.",
+      "originalRow": {
+        "id": "B13-0864",
+        "category": "sports-games",
+        "question": "In what year did men’s fencing first feature at the revived modern Olympics?",
+        "difficulty": 3,
+        "options": [
+          "1900",
+          "1908",
+          "1924",
+          "1896"
+        ],
+        "correctIndex": 3,
+        "correctAnswer": "1896",
+        "funFact": "In sport fencing, the sabre permits cutting and thrusting.",
+        "confidence": "high",
+        "confidenceReason": "Both histories place fencing at the 1896 Games; individual weapon and women’s-event debut dates are not conflated.",
+        "sources": [
+          {
+            "sourceId": "sports-games-s0069",
+            "url": "https://www.britannica.com/sports/fencing/Organized-sport",
+            "publisher": "Encyclopaedia Britannica",
+            "quote": "fencing for men had been part of the Olympic Games since their revival in 1896.",
+            "funFactQuote": "sabre is characterized by cutting rather than thrusts of the tip"
+          },
+          {
+            "sourceId": "sports-games-s0032",
+            "url": "https://en.wikipedia.org/wiki/Fencing",
+            "publisher": "Wikipedia contributors",
+            "quote": "Fencing was part of the Olympic Games in the summer of 1896",
+            "funFactQuote": "The sabre is a cutting and thrusting weapon"
+          }
+        ],
+        "claims": [
+          {
+            "kind": "answer",
+            "text": "Men’s fencing appeared at the first revived modern Olympics in 1896.",
+            "sourceIds": [
+              "sports-games-s0069",
+              "sports-games-s0032"
+            ]
+          },
+          {
+            "kind": "funFact",
+            "text": "In sport fencing, the sabre permits cutting and thrusting.",
+            "sourceIds": [
+              "sports-games-s0069",
+              "sports-games-s0032"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "B13-0865",
+      "rowSha256": "c1dfdc9f846acde9f598b362f8d5e10b76fa04207986a50afa07d7a4665728ca",
+      "reason": "Gentle way distinguishes judo from karate, kendo and muay Thai translations, but the selected Wiki lead explicitly cites the same paired Britannica with mixed Nipponica attribution. Its founder lead repeats a statement with direct paired-Britannica reference, so independently authored support is not established.",
+      "originalRow": {
+        "id": "B13-0865",
+        "category": "sports-games",
+        "question": "What does the martial-art name judo mean?",
+        "difficulty": 1,
+        "options": [
+          "Gentle way",
+          "Empty hand",
+          "Way of the sword",
+          "Art of eight limbs"
+        ],
+        "correctIndex": 0,
+        "correctAnswer": "Gentle way",
+        "funFact": "Jigoro Kano founded modern judo.",
+        "confidence": "high",
+        "confidenceReason": "Both etymology contexts translate the name as gentle way; it is not the translation of karate or kendo.",
+        "sources": [
+          {
+            "sourceId": "sports-games-s0033",
+            "url": "https://www.britannica.com/sports/judo",
+            "publisher": "Encyclopaedia Britannica",
+            "quote": "meaning “gentle way”",
+            "funFactQuote": "Kanō Jigorō (1860–1938) collected the knowledge of the old jujitsu schools"
+          },
+          {
+            "sourceId": "sports-games-s0034",
+            "url": "https://en.wikipedia.org/wiki/Judo",
+            "publisher": "Wikipedia contributors",
+            "quote": "lit. ' gentle way '",
+            "funFactQuote": "Judo was created in 1882 by Kanō Jigorō"
+          }
+        ],
+        "claims": [
+          {
+            "kind": "answer",
+            "text": "Judo means gentle way.",
+            "sourceIds": [
+              "sports-games-s0033",
+              "sports-games-s0034"
+            ]
+          },
+          {
+            "kind": "funFact",
+            "text": "Jigoro Kano founded modern judo.",
+            "sourceIds": [
+              "sports-games-s0033",
+              "sports-games-s0034"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "B13-0866",
+      "rowSha256": "c8641f6712c2fd4d7fb9e71014565c35d4f9b621724878fe79b28d80a42d946b",
+      "reason": "Ueshiba founded aikido, Funakoshi is associated with karate and Oyama with Kyokushin; Kano is the factual judo founder, but selected Wiki founder lead directly cites paired Britannica. The later Eisho-ji school paragraph independently cites Hoare and supports the 1882 school fact; this does not fix the selected founder-lead dependency.",
+      "originalRow": {
+        "id": "B13-0866",
+        "category": "sports-games",
+        "question": "Who founded the modern martial art of judo?",
+        "difficulty": 2,
+        "options": [
+          "Morihei Ueshiba",
+          "Jigoro Kano",
+          "Gichin Funakoshi",
+          "Mas Oyama"
+        ],
+        "correctIndex": 1,
+        "correctAnswer": "Jigoro Kano",
+        "funFact": "Kano established the Kodokan judo school in 1882.",
+        "confidence": "high",
+        "confidenceReason": "Both accounts credit Kanō Jigorō; the authored US-order name Jigoro Kano preserves the same person without requiring diacritics.",
+        "sources": [
+          {
+            "sourceId": "sports-games-s0033",
+            "url": "https://www.britannica.com/sports/judo",
+            "publisher": "Encyclopaedia Britannica",
+            "quote": "Kanō Jigorō (1860–1938) collected the knowledge of the old jujitsu schools of the Japanese samurai and in 1882 founded his Kōdōkan School of judo",
+            "funFactQuote": "in 1882 founded his Kōdōkan School of judo"
+          },
+          {
+            "sourceId": "sports-games-s0034",
+            "url": "https://en.wikipedia.org/wiki/Judo",
+            "publisher": "Wikipedia contributors",
+            "quote": "Judo was created in 1882 by Kanō Jigorō",
+            "funFactQuote": "In February 1882, Kano founded a school and dōjō at the Eisho-ji"
+          }
+        ],
+        "claims": [
+          {
+            "kind": "answer",
+            "text": "Jigoro Kano founded modern judo.",
+            "sourceIds": [
+              "sports-games-s0033",
+              "sports-games-s0034"
+            ]
+          },
+          {
+            "kind": "funFact",
+            "text": "Kano established the Kodokan judo school in 1882.",
+            "sourceIds": [
+              "sports-games-s0033",
+              "sports-games-s0034"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "B13-0868",
+      "rowSha256": "73debb8afd6e279d8c49a1aac4fa0dca6964301aad6153ab99e4fa9bef1ea700",
+      "reason": "1964 Tokyo was the first men’s medal participation; 1960 acceptance and 1972 regular resumption are distinct dates. The gentle-way Wiki lead explicitly cites paired Britannica with mixed attribution; the fun fact requires clearly independent support.",
+      "originalRow": {
+        "id": "B13-0868",
+        "category": "sports-games",
+        "question": "At which year’s Olympic Games did men’s judo first become a medal sport?",
+        "difficulty": 3,
+        "options": [
+          "1948",
+          "1960",
+          "1972",
+          "1964"
+        ],
+        "correctIndex": 3,
+        "correctAnswer": "1964",
+        "funFact": "Judo means gentle way.",
+        "confidence": "high",
+        "confidenceReason": "Both Olympic histories identify 1964; the return in 1972, earlier acceptance vote and women’s 1992 debut are distinct.",
+        "sources": [
+          {
+            "sourceId": "sports-games-s0033",
+            "url": "https://www.britannica.com/sports/judo",
+            "publisher": "Encyclopaedia Britannica",
+            "quote": "Men’s judo competitions were first included at the Olympic Games in Tokyo in 1964",
+            "funFactQuote": "meaning “gentle way”"
+          },
+          {
+            "sourceId": "sports-games-s0034",
+            "url": "https://en.wikipedia.org/wiki/Judo",
+            "publisher": "Wikipedia contributors",
+            "quote": "Contested since 1964 [ 1 ] (men)",
+            "funFactQuote": "lit. ' gentle way '"
+          }
+        ],
+        "claims": [
+          {
+            "kind": "answer",
+            "text": "Men’s judo first became an Olympic medal sport in 1964.",
+            "sourceIds": [
+              "sports-games-s0033",
+              "sports-games-s0034"
+            ]
+          },
+          {
+            "kind": "funFact",
+            "text": "Judo means gentle way.",
+            "sourceIds": [
+              "sports-games-s0033",
+              "sports-games-s0034"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "B13-0898",
+      "rowSha256": "f7b978287e46044e2c39bab2d99a9c47a4c880c0f1b1d44561b1544d861ad7ac",
+      "reason": "Apollo, Poseidon and Ares are plausible other gods; both selected actual festival passages identify Zeus. The selected 776 BC Wiki sentence has direct footnote #cite_note-EB-3 to the paired Britannica article; two independently authored source confirmations are not established for the date fun fact.",
+      "originalRow": {
+        "id": "B13-0898",
+        "category": "sports-games",
+        "question": "The ancient Olympic Games honored which Greek god?",
+        "difficulty": 2,
+        "options": [
+          "Apollo",
+          "Zeus",
+          "Poseidon",
+          "Ares"
+        ],
+        "correctIndex": 1,
+        "correctAnswer": "Zeus",
+        "funFact": "The traditional first recorded ancient Olympic Games date is 776 BCE.",
+        "confidence": "high",
+        "confidenceReason": "Both histories explicitly identify Zeus; legends of founding heroes are not substituted for the honored god.",
+        "sources": [
+          {
+            "sourceId": "sports-games-s0049",
+            "url": "https://www.britannica.com/sports/Olympic-Games",
+            "publisher": "Encyclopaedia Britannica",
+            "quote": "They were held in honor of Zeus at Olympia",
+            "funFactQuote": "the sprint race in 776 bce"
+          },
+          {
+            "sourceId": "sports-games-s0050",
+            "url": "https://en.wikipedia.org/wiki/Olympic_Games",
+            "publisher": "Wikipedia contributors",
+            "quote": "at the sanctuary of Zeus in Olympia, Greece",
+            "funFactQuote": "this is based on inscriptions, found at Olympia , listing the winners of a footrace held every four years starting in 776 BC."
+          }
+        ],
+        "claims": [
+          {
+            "kind": "answer",
+            "text": "The ancient Olympic Games honored Zeus.",
+            "sourceIds": [
+              "sports-games-s0049",
+              "sports-games-s0050"
+            ]
+          },
+          {
+            "kind": "funFact",
+            "text": "The traditional first recorded ancient Olympic Games date is 776 BCE.",
+            "sourceIds": [
+              "sports-games-s0049",
+              "sports-games-s0050"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "B13-0899",
+      "rowSha256": "7f189869ae0373ed0c07883ae2dd7bb2f78afe468cac8c3a44a42469af9707ba",
+      "reason": "Traditional first-recorded wording avoids a legendary first-ever claim, but the Wiki selected date sentence directly cites paired Britannica and fails the independent-source requirement. The actual pentathlon enumeration is independently footnoted to Crowther and Perseus rather than the date sentence’s Britannica citation.",
+      "originalRow": {
+        "id": "B13-0899",
+        "category": "sports-games",
+        "question": "What is the traditional first recorded year of the ancient Olympic Games?",
+        "difficulty": 3,
+        "options": [
+          "490 BCE",
+          "323 BCE",
+          "776 BCE",
+          "146 BCE"
+        ],
+        "correctIndex": 2,
+        "correctAnswer": "776 BCE",
+        "funFact": "The ancient Olympic pentathlon comprised five events.",
+        "confidence": "high",
+        "confidenceReason": "Both historical accounts ground 776 BCE in recorded winners; traditional first recorded date avoids claiming no earlier unrecorded games occurred.",
+        "sources": [
+          {
+            "sourceId": "sports-games-s0049",
+            "url": "https://www.britannica.com/sports/Olympic-Games",
+            "publisher": "Encyclopaedia Britannica",
+            "quote": "the sprint race in 776 bce",
+            "funFactQuote": "an all-around competition consisting of five events"
+          },
+          {
+            "sourceId": "sports-games-s0050",
+            "url": "https://en.wikipedia.org/wiki/Olympic_Games",
+            "publisher": "Wikipedia contributors",
+            "quote": "this is based on inscriptions, found at Olympia , listing the winners of a footrace held every four years starting in 776 BC.",
+            "funFactQuote": "a pentathlon (consisting of a jumping event, discus and javelin throws , a foot race, and wrestling)"
+          }
+        ],
+        "claims": [
+          {
+            "kind": "answer",
+            "text": "The traditional first recorded ancient Olympic Games date is 776 BCE.",
+            "sourceIds": [
+              "sports-games-s0049",
+              "sports-games-s0050"
+            ]
+          },
+          {
+            "kind": "funFact",
+            "text": "The ancient Olympic pentathlon comprised five events.",
+            "sourceIds": [
+              "sports-games-s0049",
+              "sports-games-s0050"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

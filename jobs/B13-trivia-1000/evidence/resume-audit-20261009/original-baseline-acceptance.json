@@ -1,0 +1,94 @@
+{
+  "closedAt": "2026-10-09T11:27:19.849227+00:00",
+  "sourceHead": "87693947ed87314b3f835d555197123b74f8d2be",
+  "guardCount": 1312,
+  "allUnchanged": true,
+  "genuineOriginalCaptures": 1051,
+  "originalWorkflowHasNoArtifactUpload": true,
+  "steps": [
+    {
+      "label": "checksums",
+      "command": [
+        "sha256sum",
+        "--check",
+        "--quiet",
+        "SHA256SUMS.txt"
+      ],
+      "startedAt": "2026-10-09T11:27:03.338651+00:00",
+      "closedAt": "2026-10-09T11:27:03.440430+00:00",
+      "returncode": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "full-captured-evidence",
+      "command": [
+        "python",
+        "scripts/check-data.py",
+        "--require-local-captures",
+        "--output",
+        ".work/root-original-baseline-full.json"
+      ],
+      "startedAt": "2026-10-09T11:27:03.747495+00:00",
+      "closedAt": "2026-10-09T11:27:18.872093+00:00",
+      "returncode": 0,
+      "bytes": 584,
+      "sha256": "adf216b1b6ccd92d57b9bcc362bb3ea60583cc7ffa814f1f20cf01049cb4c95f"
+    },
+    {
+      "label": "original-guard-fixtures",
+      "command": [
+        "python",
+        "scripts/verify-guard-fixtures.py",
+        "."
+      ],
+      "startedAt": "2026-10-09T11:27:19.179498+00:00",
+      "closedAt": "2026-10-09T11:27:19.228690+00:00",
+      "returncode": 0,
+      "bytes": 1152,
+      "sha256": "49438fd781e215a6ad1b23753c6d5c2775830a27b168f547f76d2b0f04ca7059"
+    },
+    {
+      "label": "original-adapter-self-test",
+      "command": [
+        "python",
+        "scripts/to-partybox.py",
+        "--self-test"
+      ],
+      "startedAt": "2026-10-09T11:27:19.513594+00:00",
+      "closedAt": "2026-10-09T11:27:19.564717+00:00",
+      "returncode": 0,
+      "bytes": 81,
+      "sha256": "ba3d58df4df3613c362b89c09eb146e85a9a7e8a188806751a7dc35ee73635f7"
+    }
+  ],
+  "scope": "Original full local captures reused unchanged. No new retrieval, author identity or factual rereview claimed.",
+  "currentReviewedAt": "2026-10-09T11:38:31.652577+00:00",
+  "originalNativeWorkflowRun": 37809925089,
+  "originalNativeJob": 113423823659,
+  "originalNativeSHA256": "53ae9ccbf331c721641d9fa5375c3c76c8951b706baccb923708946551e00c12",
+  "originalNativeBytes": 42154,
+  "originalNativeFullyReadAgainstToolText": true,
+  "allOriginalWorkflowStepsSuccess": true,
+  "originalHostedQuoteBodyMatches": 0,
+  "hostedDoesNotMakeNewFactResearchClaim": true,
+  "originalCapturedBodyProofCounts": {
+    "questions": 1000,
+    "authorQuoteMatches": 3507,
+    "reopenQuoteMatches": 3507,
+    "receiptAssociations": 4000,
+    "resolvedSimilarityPairs": 2210
+  },
+  "currentEditorialAcceptance": false,
+  "changedRowsAdopted": 0,
+  "originalReadyPullRequestPreserved": 22,
+  "pendingSourceIndependentEightRowPacketSha256": "af82c0d0412cd9a664a1b1fcd22549bfad30de00c2552539fbeeb0666d909e2b",
+  "openMaterialIssues": [
+    "Eight authored variants require separate current adversarial and source reopening review before adoption.",
+    "Milk question B13-0911 remains an actual answer leak.",
+    "Two categories lack machine-bound author identities; actual root author provenance is retained in root-categories-difficulty-author-repairs.json, not a license to invent reviewer identities.",
+    "Option-length assessment timestamp gate accepts non-UTC/future/malformed nonempty values.",
+    "Documentation renderer overwrites completed historical audits and concrete NEXT.",
+    "Hosted workflow checks metadata; whole source bodies are private and unavailable to hosted CI."
+  ]
+}

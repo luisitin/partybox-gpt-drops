@@ -1,0 +1,24 @@
+{
+  "requiredMissingBodyRejected": true,
+  "MissingReopenReceiptRejected": true,
+  "missingReceiptErrors": [
+    "isolated naked-receipt fixture: receipt pass mismatch",
+    "isolated naked-receipt fixture: receipt lacks actual HTTP200",
+    "isolated naked-receipt fixture: invalid actual UTC retrieval time",
+    "isolated naked-receipt fixture: missing retrieval method",
+    "isolated naked-receipt fixture: receipt target differs from selected source URL",
+    "isolated naked-receipt fixture: invalid capture SHA256",
+    "isolated naked-receipt fixture: no capture path"
+  ],
+  "RejectedDuplicateNotCountedResolved": true,
+  "checkerSha256": "3762e6084a4c7cce7367bf36438a221b2f8009348597ca1dd89853d39a6c0cfa",
+  "runAt": "2026-10-09T11:27:19.222144+00:00",
+  "rerunCommand": "python scripts/verify-guard-fixtures.py .",
+  "actualInvocation": [
+    "python",
+    "scripts/verify-guard-fixtures.py",
+    "."
+  ],
+  "fixtureCount": 3,
+  "scope": "Three isolated tests execute current production guards on explicitly synthetic missing/rejected fixtures. No remote retrieval, factual grading, shared data mutation or invented real source receipt."
+}
