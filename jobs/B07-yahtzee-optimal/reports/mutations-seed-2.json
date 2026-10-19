@@ -1,0 +1,236 @@
+{
+  "passed": true,
+  "seed": 2,
+  "mutations": 25,
+  "strictCompiled": 25,
+  "runtimeKilled": 25,
+  "productionSHA256": "878f038112b2a12a5bd9f0ecaed375b89360cfa0e7894fc91ec4cc923f4de0fa",
+  "originalUnchanged": true,
+  "results": [
+    {
+      "name": "M01 upper bonus",
+      "before": "card.upper+points>=63?35:0",
+      "after": "card.upper+points>=63?34:0",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 63,\n...\n    points: 18,\n+   upperBonus: 34,\n-   upperBonus: 35,\n    yahtzeeBonus: 0\n  }\n"
+    },
+    {
+      "name": "M02 Yahtzee bonus",
+      "before": "card.yahtzeeBonus?100:0",
+      "after": "card.yahtzeeBonus?99:0",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Extra Yahtzee/Joker legal choices\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 5,\n...\n    upperBonus: 0,\n+   yahtzeeBonus: 99\n-   yahtzeeBonus: 100\n  }\n"
+    },
+    {
+      "name": "M03 capped upper",
+      "before": "Math.min(63,card.upper+points)",
+      "after": "Math.min(62,card.upper+points)",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n+     upper: 62,\n-     upper: 63,\n      usedMask: 63,\n      yahtzeeBonus: false\n    },\n    points: 18,\n    upperBonus: 35,\n"
+    },
+    {
+      "name": "M04 full house",
+      "before": "case 8:return pair&&triple?25:0",
+      "after": "case 8:return pair&&triple?24:0",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 24,\n-   points: 25,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+    },
+    {
+      "name": "M05 small straight",
+      "before": "(bits&60)===60?30:0",
+      "after": "(bits&60)===60?29:0",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 29,\n-   points: 30,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+    },
+    {
+      "name": "M06 large straight",
+      "before": "case 10:return bits===31||bits===62?40:0",
+      "after": "case 10:return bits===31||bits===62?39:0",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 39,\n-   points: 40,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+    },
+    {
+      "name": "M07 Yahtzee",
+      "before": "case 11:return max===5?50:0",
+      "after": "case 11:return max===5?49:0",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n      usedMask: 2048,\n+     yahtzeeBonus: false\n-     yahtzeeBonus: true\n    },\n+   points: 49,\n-   points: 50,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+    },
+    {
+      "name": "M08 upper face multiplier",
+      "before": "counts[category]!*(category+1)",
+      "after": "counts[category]!*(category+2)",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n+     upper: 6,\n-     upper: 3,\n      usedMask: 1,\n      yahtzeeBonus: false\n    },\n+   points: 6,\n-   points: 3,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+    },
+    {
+      "name": "M09 three of a kind",
+      "before": "case 6:return max>=3?sum:0",
+      "after": "case 6:return max>=4?sum:0",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 7,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+    },
+    {
+      "name": "M10 four of a kind",
+      "before": "case 7:return max>=4?sum:0",
+      "after": "case 7:return max>=5?sum:0",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 25,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+    },
+    {
+      "name": "M11 chance",
+      "before": "case 12:return sum;",
+      "after": "case 12:return sum+1;",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 8,\n-   points: 7,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+    },
+    {
+      "name": "M12 full house conjunction",
+      "before": "case 8:return pair&&triple",
+      "after": "case 8:return pair||triple",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 25,\n-   points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+    },
+    {
+      "name": "M13 high small straight",
+      "before": "||(bits&60)===60",
+      "after": "||(bits&60)===61",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "independent seeded objective comparison",
+      "failure": "Category objective 2:7"
+    },
+    {
+      "name": "M14 high large straight",
+      "before": "bits===31||bits===62",
+      "after": "bits===31||bits===63",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 40,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+    },
+    {
+      "name": "M15 category maximization",
+      "before": "value>best.expectedValue",
+      "after": "value<best.expectedValue",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "216.51959643767444 != 253.9091948744762"
+    },
+    {
+      "name": "M16 fair die denominator",
+      "before": "values[hand]=total/6",
+      "after": "values[hand]=total/7",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n+   2,\n+   3,\n    4,\n    6\n  ]\n"
+    },
+    {
+      "name": "M17 hold maximization",
+      "before": "values[prior]!>values[hand]!",
+      "after": "values[prior]!<values[hand]!",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n+   2,\n+   3\n-   4,\n-   6\n  ]\n"
+    },
+    {
+      "name": "M18 hold equality ordering",
+      "before": "rank[choices[prior]!]!<rank[choices[hand]!]!",
+      "after": "rank[choices[prior]!]!>rank[choices[hand]!]!",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    1,\n    2,\n    3,\n    4,\n+   4\n  ]\n"
+    },
+    {
+      "name": "M19 terminal hold ordering",
+      "before": "return {hold:sorted,expectedValue:categoryChoice",
+      "after": "return {hold:sorted.slice().reverse(),expectedValue:categoryChoice",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   6,\n+   4,\n+   3,\n+   2,\n    1,\n-   2,\n-   3,\n-   4,\n-   6\n  ]\n"
+    },
+    {
+      "name": "M20 table mask",
+      "before": "const index=card.usedMask+card.upper",
+      "after": "const index=(card.usedMask===ALL?0:card.usedMask)+card.upper",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "275.087728734496 != 20.5"
+    },
+    {
+      "name": "M21 filled legality",
+      "before": "if(!(legal&(1<<category)))",
+      "after": "if(false&&!(legal&(1<<category)))",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Extra Yahtzee/Joker legal choices\n+ actual - expected\n\n  {\n+   legal: true,\n-   legal: false,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 2050,\n-     usedMask: 2048,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"
+    },
+    {
+      "name": "M22 Yahtzee eligibility",
+      "before": "category===11&&points===50",
+      "after": "category===11&&points===0",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n      usedMask: 2048,\n+     yahtzeeBonus: true\n-     yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+    },
+    {
+      "name": "M23 first Yahtzee forced",
+      "before": "const extra=face>=0&&Boolean(card.usedMask&YAHTZEE);",
+      "after": "const extra=face>=0;",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n+   legal: false,\n-   legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 0,\n-     usedMask: 1,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"
+    },
+    {
+      "name": "M24 already earned upper bonus",
+      "before": "upperBonus:category<6&&card.upper<63",
+      "after": "upperBonus:category<6&&card.upper<=63",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 63,\n...\n    points: 18,\n+   upperBonus: 35,\n-   upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+    },
+    {
+      "name": "M25 convention reversal",
+      "before": "extra&&card.ruleMode==='official'",
+      "after": "extra&&card.ruleMode==='published'",
+      "strictCompilation": true,
+      "runtimeKilled": true,
+      "gate": "manual, independent boundary and contract checks",
+      "failure": "Extra Yahtzee/Joker legal choices\n+ actual - expected\n\n  {\n+   legal: true,\n-   legal: false,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 2050,\n-     usedMask: 2048,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"
+    }
+  ]
+}

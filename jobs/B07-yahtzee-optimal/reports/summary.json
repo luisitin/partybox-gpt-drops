@@ -1,0 +1,1494 @@
+{
+  "passed": true,
+  "runtime": {
+    "node": "v24.19.0",
+    "typescript": "5.8.3",
+    "cpp": "g++ (Debian 14.2.0-19) 14.2.0"
+  },
+  "sourceIsolation": {
+    "historicalPrimaryFiles": 19,
+    "independentFiles": 13,
+    "adapterOriginalFiles": 14,
+    "adapterFiles": 30,
+    "immutableFiles": 83,
+    "sourceHashes": {
+      ".gitignore": "2ede9a606bee347e05580c73a9e78c612ce549249bf7e8d0e80e76c4c79959fc",
+      "AMENDMENT.md": "89349db78a9cd3298a9a881a85e026d0992e676ba61fd83c99ed92d5ec1ed5c3",
+      "ASSUMPTIONS.md": "39c409f16036041a4797ed2e659e536a8f5cd08854c67ed5dec26a52636d4134",
+      "AUTHORING.md": "660875c2f53620c90cbd38bd249b3e31b029f7b3c00e442f9215c15a05855b03",
+      "CONFLICTS.md": "e4686693c67fa8338b6c71296af198a6c64085aed81fb31de30b9cc20d87244a",
+      "CORE-SELFCHECK.json": "a2d54f497443455e17f2866cc7f05a106aa9099e86878118ee9904612f0c329e",
+      "LOOP.md": "489fd301a82cd6a424225e96f3dbe3c970f6ff291a11f0d8ebe9c592dadfb2a6",
+      "NEXT.md": "e2c3b516570c72a145cd523e5c5386a20b8349cea71d7229623ab042ddbfa9ff",
+      "PRIMARY-SEALED-SHA256SUMS.txt": "d69083a1c39fe5b6e40089e1c82fafd5fc40ee011691e84afc6bce68a0c06a4a",
+      "PUBLIC-CONTRACT.md": "bfa33a41b3fdfbdf6811fbf0502c775bf774fffd66502a95ef1fc03b09c4eded",
+      "README.md": "a586cdbd7666c6ca2d2f843c1f0b7ebddf436bbac98b3b4ee9c0b2887b1038eb",
+      "SOURCES.md": "6ff8f8ac5c5c039772532b8712a54c2741b4768b34b7c00c9ed16e0d8d63642a",
+      "VERIFY.md": "31633e75596e7cc286a1c90005a42f1780352ea5726f7bcebbe9915971e479bf",
+      "component-proofs.mjs": "10015dd440e9360ecc740d1c862c88efcefe9c279f0e0452cbb29c00ae754c30",
+      "convert-tables.mjs": "82d2f42886770b5ca65a95bfdcd23b5d323fb6f3babd1cf4d59dfdf55373f0fc",
+      "copy-tables.mjs": "b67e968da0ec32d8ccd4b0acb9d93c21bc1eb67639c8eb929adc42114bb28e13",
+      "core-selfcheck.mjs": "a65792b1806de3fd7b03f7cfe5213f3f77f9a0dc85ab9244e7fd73007973b7df",
+      "generator.cpp": "4148ffd21aeb266a7f02420cd8b91118ecc5a97e01cca527d8a4ed2bd763c633",
+      "independent/AUTHORING.md": "2d1a3105916009a65b5f582d6d490e8f69d8654dc59d70d0435eabe6557407de",
+      "independent/SEALED-SHA256SUMS.txt": "ccaf33d7691ee100c288950ecd5acbaf7b2ecfb9fab598708b096ef6baf5c32c",
+      "independent/SELFCHECK.json": "b97872e45f3e04d3b0ad7be8325b4053e6137b61998136e38fa6fbabfedcf28b",
+      "independent/generate.cpp": "565d2607d7cb08f34499d0900d6e317bdbacab1c3a08fccece4ecc8bba04743e",
+      "independent/native-adapter/ADAPTER-AMENDMENT.md": "6fb5de18097cb6f40c4849a8466c91f1eca27a993d2ec761f45f7c77d300f607",
+      "independent/native-adapter/ADAPTER-V2-SEALED-SHA256SUMS.txt": "cb3b7538125c5264704995f42846e8b55de1e4563531f2e6876594937f5d7bb8",
+      "independent/native-adapter/AUTHORING.md": "5fe78d8d26132523b2a791baef328a0b264d375213c19337d61fa310c0c8925b",
+      "independent/native-adapter/PARSER-SELFCHECK.json": "45c2edc1890e434728dee56943384c66953459002c2fc0e09bb4aa57a7101917",
+      "independent/native-adapter/SCORE-SELFCHECK.json": "babe4b6ff5a4205776e9b3daa0174e3ff93a452ffbaaaeca4ae767f291f8a92e",
+      "independent/native-adapter/SELFCHECK-KEYS.bin": "07622d29af34e8550e767b1ddaf29e20f3bbef4901cf9733c56905588fe20761",
+      "independent/native-adapter/SELFCHECK.json": "329e84740b617f4ec65041117848a0784d3cdaa6ef8c68debbfbbdf64a3713f3",
+      "independent/native-adapter/dump-reference.cpp": "c0c4090166fb4077dd2658ecaab84b1d43c1039ad07d3a5570699fc23aaf7eb0",
+      "independent/native-adapter/generate-core.hpp": "87a7d279b8cdfc1dcae3969e6b78597435fdcacd8ab37e1b4ad6fb93f96f97f8",
+      "independent/native-adapter/native-reference.hpp": "0eac29cd281196a1db687506ee2946b2ae3448d347e27b9b0961194b63cd87af",
+      "independent/native-adapter/parser-selfcheck.mjs": "1ee829f0da42c8e07e3b54fff28f4ce2fb2fc52cb086affc0264ba7a62528afe",
+      "independent/native-adapter/reference-verification.ts": "4d3ec3ebf17c51c428e1095d681821fb01f9734796449374c891cf92b6cfcef9",
+      "independent/native-adapter/score-selfcheck.cpp": "8373ec0031ef44711481ebe0592542064d9ee351752b2b758d9d6621af2fc064",
+      "independent/native-adapter/score-selfcheck.mjs": "991d539842aa093843484634703b402b7e6d6826bdc417dfcb6b5d97d5447f94",
+      "independent/native-adapter/tsconfig.json": "0831ba13eaa812f4f1da6554062d30e993a59e6e1e04b78653dc7eee9e0f2251",
+      "independent/native-adapter/v1-snapshot/ADAPTER-SEALED-SHA256SUMS.txt": "bbe0e619a9f9a54c717f3dfb39dfcddb1326aa7c4a9e7b38dcc2e3c4330b0a70",
+      "independent/native-adapter/v1-snapshot/AUTHORING.md": "5fe78d8d26132523b2a791baef328a0b264d375213c19337d61fa310c0c8925b",
+      "independent/native-adapter/v1-snapshot/PARSER-SELFCHECK.json": "45c2edc1890e434728dee56943384c66953459002c2fc0e09bb4aa57a7101917",
+      "independent/native-adapter/v1-snapshot/SCORE-SELFCHECK.json": "babe4b6ff5a4205776e9b3daa0174e3ff93a452ffbaaaeca4ae767f291f8a92e",
+      "independent/native-adapter/v1-snapshot/SELFCHECK-KEYS.bin": "07622d29af34e8550e767b1ddaf29e20f3bbef4901cf9733c56905588fe20761",
+      "independent/native-adapter/v1-snapshot/SELFCHECK.json": "329e84740b617f4ec65041117848a0784d3cdaa6ef8c68debbfbbdf64a3713f3",
+      "independent/native-adapter/v1-snapshot/dump-reference.cpp": "c0c4090166fb4077dd2658ecaab84b1d43c1039ad07d3a5570699fc23aaf7eb0",
+      "independent/native-adapter/v1-snapshot/generate-core.hpp": "87a7d279b8cdfc1dcae3969e6b78597435fdcacd8ab37e1b4ad6fb93f96f97f8",
+      "independent/native-adapter/v1-snapshot/native-reference.hpp": "0eac29cd281196a1db687506ee2946b2ae3448d347e27b9b0961194b63cd87af",
+      "independent/native-adapter/v1-snapshot/parser-selfcheck.mjs": "1ee829f0da42c8e07e3b54fff28f4ce2fb2fc52cb086affc0264ba7a62528afe",
+      "independent/native-adapter/v1-snapshot/reference-verification.ts": "4d3ec3ebf17c51c428e1095d681821fb01f9734796449374c891cf92b6cfcef9",
+      "independent/native-adapter/v1-snapshot/score-selfcheck.cpp": "8373ec0031ef44711481ebe0592542064d9ee351752b2b758d9d6621af2fc064",
+      "independent/native-adapter/v1-snapshot/score-selfcheck.mjs": "991d539842aa093843484634703b402b7e6d6826bdc417dfcb6b5d97d5447f94",
+      "independent/native-adapter/v1-snapshot/tsconfig.json": "0831ba13eaa812f4f1da6554062d30e993a59e6e1e04b78653dc7eee9e0f2251",
+      "independent/native-adapter/v1-snapshot/verify-stream.mjs": "22337dcf43f195bc6d314962195dcb49280bc767887b03f02f8848b6c0dec781",
+      "independent/native-adapter/verify-stream.mjs": "e9d8b674cdedf1f39b165ba3f1040c8ebe7273a0e6db0e9839613e7ed203d0a0",
+      "independent/official-progress.log": "b6f3ad5e161cb79266d6e806569d57f61282ca231875debfc754f6e13ad309d6",
+      "independent/official-result.json": "826c7d7f938ee8dd831d35b7ce08f79c23faea29f0dc7db08b3138f6dd4fc9ab",
+      "independent/official.bin": "c26d041831a8a7ececb20e26689c6b142e00bc0900d4925d2a19547a16183709",
+      "independent/package.json": "e94f0913dc3dd26873f0f1f91ffbefae3d4a1a575b5be5313fdf5a9e6300caca",
+      "independent/published-progress.log": "ae05de74e00abf99fb4dcf81ac70a17318e2f0b2cfe776c852a866fa2e82d71e",
+      "independent/published-result.json": "5137eb8c6b630363069efb786efc2317857a8341a2518f451d41a86d1169ea50",
+      "independent/published.bin": "2b807d950f7027b10c296f5e91874431d6f20db9c642f4e45b430d31b7758ab5",
+      "independent/reference.ts": "da544ba90e2c5638f06b811f8ed01279e7e471a8b7f94f12f51063e00a146982",
+      "independent/selfcheck.mjs": "64804775925acf3c36bf924a9199928b4a4b44c92fe48fbaebf8a0ee66b98aad",
+      "independent/tsconfig.json": "e66b4525fa0cf661b24b3ba01002b2174f2a0a3dde0d185b1328304c7c3d4a00",
+      "mutate.mjs": "54c070c22a0cf54546fba00b12dbfd23fee88b0b9ede7a3b98656329c59f87cd",
+      "package-lock.json": "bdc8532206e665dbe121eda83ad865dad52ed1f794a59dac5955fceddb171a5f",
+      "package.json": "413978a004c4cb04e4695ed104aae0e22f4d8193fd90551dfa3b20f8f9e5efa7",
+      "paired-sim.cpp": "a16611c5fdb4d7cb89472d983f12541dc49789b1279120dec29311a82f9182c8",
+      "primary-bridge.mjs": "1c603d2570354af248484985bec9b0c9bec1113dd60f98c336c58fad99f51d39",
+      "primary-snapshot/PRIMARY-SEALED-SHA256SUMS.txt": "d69083a1c39fe5b6e40089e1c82fafd5fc40ee011691e84afc6bce68a0c06a4a",
+      "primary-snapshot/yahtzeeOpt.ts": "4e4933c5202f6e5f57ce5cb110b09f11cd6de7fda6432beb6f3825c274ec1222",
+      "proof-selfcheck.mjs": "db3c0fe35175ce98625a42635b96e29984ae4bc328980474be8155c7bf638bb3",
+      "run.mjs": "2f6ac8611f2578d4eb05d16bbdcdc42c66f210271cc8956ee4b25591106afdf4",
+      "simulate.mjs": "8fb087f2d723d014f8fd038f46aa43bd748f119f1c28c95bf49fcebc41786c03",
+      "tables/METADATA.json": "6f3702eea9d3f956a855c4cc2b4956ef7d8f20f19944e80588477ec7e4be9e0b",
+      "tables/official.bin": "6e93512a9b983afa721f6a7f1c51261a3d464f469b6c89a0c21e689efd76cbe1",
+      "tables/official.json": "665238f92971b722452ec3e490315d8479d623899798053afd6e4688b0954726",
+      "tables/published.bin": "2b2f401a4d6588decb2fbdab46eb86989d8ce6faa8f4a677b534306bb93b314c",
+      "tables/published.json": "80457c9fc93f04c0bf38bcb51c04272b9a4a2eb28d04c4b1bd854c0fca844a06",
+      "tables.d.ts": "cb1925f8dca1b0f5ac671d0dbaea07622cbbc48cbabd1eb928ac9e222177296c",
+      "test.mjs": "b89c9ea01da7a699c0b819fbc97934f8992ac3755959a9ff8e74866b51c8dac5",
+      "tsconfig.json": "528517dba7fe0086e4f87e3ec5836e9767206d3adaa772f0d850baa6216a3717",
+      "verify-seed.mjs": "e766b352f4121a884a1ff81e7feffa9c9867bc1463aaae7dab899b0ff95eb52d",
+      "yahtzeeOpt.ts": "878f038112b2a12a5bd9f0ecaed375b89360cfa0e7894fc91ec4cc923f4de0fa"
+    }
+  },
+  "tables": [
+    {
+      "mode": "official",
+      "entries": 1048576,
+      "finiteStates": 536448,
+      "binarySHA256": "6e93512a9b983afa721f6a7f1c51261a3d464f469b6c89a0c21e689efd76cbe1",
+      "jsonSHA256": "665238f92971b722452ec3e490315d8479d623899798053afd6e4688b0954726"
+    },
+    {
+      "mode": "published",
+      "entries": 1048576,
+      "finiteStates": 536448,
+      "binarySHA256": "2b2f401a4d6588decb2fbdab46eb86989d8ce6faa8f4a677b534306bb93b314c",
+      "jsonSHA256": "80457c9fc93f04c0bf38bcb51c04272b9a4a2eb28d04c4b1bd854c0fca844a06"
+    }
+  ],
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "totals": {
+    "midgameStates": 150000,
+    "scoringCases": 606528,
+    "strictCompiledMutants": 75,
+    "runtimeKilledMutants": 75,
+    "fullPairedGames": 6000000,
+    "nativeDecisionComparisons": 234000000,
+    "nativeScoringTransitionComparisons": 78000000,
+    "visitedComponentVectors": 985883,
+    "directActualTypeScriptComponents": 364338,
+    "reusedVerifiedComponentVectors": 621545
+  },
+  "suites": [
+    {
+      "seed": 1,
+      "independentRegenerations": [
+        {
+          "mode": "official",
+          "expectedValue": 254.5877287344961,
+          "validStates": 536448,
+          "computedStates": 359612,
+          "equivalentCopies": 176708,
+          "entries": 1048576,
+          "regeneratedSHA256": "c26d041831a8a7ececb20e26689c6b142e00bc0900d4925d2a19547a16183709"
+        },
+        {
+          "mode": "published",
+          "expectedValue": 254.58960948196366,
+          "validStates": 536448,
+          "computedStates": 359612,
+          "equivalentCopies": 176708,
+          "entries": 1048576,
+          "regeneratedSHA256": "2b807d950f7027b10c296f5e91874431d6f20db9c642f4e45b430d31b7758ab5"
+        }
+      ],
+      "verification": {
+        "passed": true,
+        "seed": 1,
+        "boundaries": {
+          "passed": true,
+          "assertions": 1056
+        },
+        "fullTables": {
+          "passed": true,
+          "tolerance": 1e-10,
+          "modes": [
+            {
+              "mode": "official",
+              "statesCompared": 536448,
+              "maximumDifference": 8.526512829121202e-13,
+              "worstIndex": 245800,
+              "primaryStartingValue": 254.58772873449593,
+              "independentStartingValue": 254.5877287344961
+            },
+            {
+              "mode": "published",
+              "statesCompared": 536448,
+              "maximumDifference": 9.379164112033322e-13,
+              "worstIndex": 368677,
+              "primaryStartingValue": 254.58960948196315,
+              "independentStartingValue": 254.58960948196366
+            }
+          ],
+          "actionSupersetInvariant": {
+            "passed": true,
+            "monotonicPairs": 536448,
+            "minimumGap": 0,
+            "maximumGap": 0.15396235930569446,
+            "worstIndex": 6477,
+            "tolerance": 1e-10
+          }
+        },
+        "scoring": {
+          "passed": true,
+          "seed": 1,
+          "orderedRolls": 7776,
+          "categories": 13,
+          "modes": 2,
+          "scoringCases": 202176
+        },
+        "random": {
+          "passed": true,
+          "seed": 1,
+          "states": 50000,
+          "distinctScorecards": 47533,
+          "modes": {
+            "official": 25000,
+            "published": 25000
+          },
+          "rollLayers": [
+            16667,
+            16667,
+            16666
+          ],
+          "orderedHoldChecks": 33333,
+          "tolerance": 1e-10,
+          "maximumValueDifference": 7.389644451905042e-13,
+          "maximumHoldResidual": 1.0103917702508625e-11,
+          "holdAlternates": 317,
+          "categoryAlternates": 0,
+          "alternateMeaning": "Different floating evaluation orders may select different holds within the declared roundoff tolerance; every selected hold was directly evaluated with ordered chance outcomes."
+        }
+      },
+      "mutations": {
+        "passed": true,
+        "seed": 1,
+        "mutations": 25,
+        "strictCompiled": 25,
+        "runtimeKilled": 25,
+        "productionSHA256": "878f038112b2a12a5bd9f0ecaed375b89360cfa0e7894fc91ec4cc923f4de0fa",
+        "originalUnchanged": true,
+        "results": [
+          {
+            "name": "M01 upper bonus",
+            "before": "card.upper+points>=63?35:0",
+            "after": "card.upper+points>=63?34:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 63,\n...\n    points: 18,\n+   upperBonus: 34,\n-   upperBonus: 35,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M02 Yahtzee bonus",
+            "before": "card.yahtzeeBonus?100:0",
+            "after": "card.yahtzeeBonus?99:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Extra Yahtzee/Joker legal choices\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 5,\n...\n    upperBonus: 0,\n+   yahtzeeBonus: 99\n-   yahtzeeBonus: 100\n  }\n"
+          },
+          {
+            "name": "M03 capped upper",
+            "before": "Math.min(63,card.upper+points)",
+            "after": "Math.min(62,card.upper+points)",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n+     upper: 62,\n-     upper: 63,\n      usedMask: 63,\n      yahtzeeBonus: false\n    },\n    points: 18,\n    upperBonus: 35,\n"
+          },
+          {
+            "name": "M04 full house",
+            "before": "case 8:return pair&&triple?25:0",
+            "after": "case 8:return pair&&triple?24:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 24,\n-   points: 25,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M05 small straight",
+            "before": "(bits&60)===60?30:0",
+            "after": "(bits&60)===60?29:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 29,\n-   points: 30,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M06 large straight",
+            "before": "case 10:return bits===31||bits===62?40:0",
+            "after": "case 10:return bits===31||bits===62?39:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 39,\n-   points: 40,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M07 Yahtzee",
+            "before": "case 11:return max===5?50:0",
+            "after": "case 11:return max===5?49:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n      usedMask: 2048,\n+     yahtzeeBonus: false\n-     yahtzeeBonus: true\n    },\n+   points: 49,\n-   points: 50,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M08 upper face multiplier",
+            "before": "counts[category]!*(category+1)",
+            "after": "counts[category]!*(category+2)",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n+     upper: 6,\n-     upper: 3,\n      usedMask: 1,\n      yahtzeeBonus: false\n    },\n+   points: 6,\n-   points: 3,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M09 three of a kind",
+            "before": "case 6:return max>=3?sum:0",
+            "after": "case 6:return max>=4?sum:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 7,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M10 four of a kind",
+            "before": "case 7:return max>=4?sum:0",
+            "after": "case 7:return max>=5?sum:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 25,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M11 chance",
+            "before": "case 12:return sum;",
+            "after": "case 12:return sum+1;",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 8,\n-   points: 7,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M12 full house conjunction",
+            "before": "case 8:return pair&&triple",
+            "after": "case 8:return pair||triple",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 25,\n-   points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M13 high small straight",
+            "before": "||(bits&60)===60",
+            "after": "||(bits&60)===61",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "independent seeded objective comparison",
+            "failure": "Hold objective 1:4 {\"card\":{\"usedMask\":2153,\"upper\":42,\"yahtzeeBonus\":false,\"ruleMode\":\"published\"},\"dice\":[2,3,6,3,4],\"rollsLeft\":1,\"chosen\":{\"hold\":[3,3],\"expectedValue\":170.23970968735327},\"optimum\":{\"hold\":[3,3],\"expectedValue\":170.38275712293552}}"
+          },
+          {
+            "name": "M14 high large straight",
+            "before": "bits===31||bits===62",
+            "after": "bits===31||bits===63",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 40,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M15 category maximization",
+            "before": "value>best.expectedValue",
+            "after": "value<best.expectedValue",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "216.51959643767444 != 253.9091948744762"
+          },
+          {
+            "name": "M16 fair die denominator",
+            "before": "values[hand]=total/6",
+            "after": "values[hand]=total/7",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n+   2,\n+   3,\n    4,\n    6\n  ]\n"
+          },
+          {
+            "name": "M17 hold maximization",
+            "before": "values[prior]!>values[hand]!",
+            "after": "values[prior]!<values[hand]!",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n+   2,\n+   3\n-   4,\n-   6\n  ]\n"
+          },
+          {
+            "name": "M18 hold equality ordering",
+            "before": "rank[choices[prior]!]!<rank[choices[hand]!]!",
+            "after": "rank[choices[prior]!]!>rank[choices[hand]!]!",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    1,\n    2,\n    3,\n    4,\n+   4\n  ]\n"
+          },
+          {
+            "name": "M19 terminal hold ordering",
+            "before": "return {hold:sorted,expectedValue:categoryChoice",
+            "after": "return {hold:sorted.slice().reverse(),expectedValue:categoryChoice",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   6,\n+   4,\n+   3,\n+   2,\n    1,\n-   2,\n-   3,\n-   4,\n-   6\n  ]\n"
+          },
+          {
+            "name": "M20 table mask",
+            "before": "const index=card.usedMask+card.upper",
+            "after": "const index=(card.usedMask===ALL?0:card.usedMask)+card.upper",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "275.087728734496 != 20.5"
+          },
+          {
+            "name": "M21 filled legality",
+            "before": "if(!(legal&(1<<category)))",
+            "after": "if(false&&!(legal&(1<<category)))",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Extra Yahtzee/Joker legal choices\n+ actual - expected\n\n  {\n+   legal: true,\n-   legal: false,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 2050,\n-     usedMask: 2048,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"
+          },
+          {
+            "name": "M22 Yahtzee eligibility",
+            "before": "category===11&&points===50",
+            "after": "category===11&&points===0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n      usedMask: 2048,\n+     yahtzeeBonus: true\n-     yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M23 first Yahtzee forced",
+            "before": "const extra=face>=0&&Boolean(card.usedMask&YAHTZEE);",
+            "after": "const extra=face>=0;",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n+   legal: false,\n-   legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 0,\n-     usedMask: 1,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"
+          },
+          {
+            "name": "M24 already earned upper bonus",
+            "before": "upperBonus:category<6&&card.upper<63",
+            "after": "upperBonus:category<6&&card.upper<=63",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 63,\n...\n    points: 18,\n+   upperBonus: 35,\n-   upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M25 convention reversal",
+            "before": "extra&&card.ruleMode==='official'",
+            "after": "extra&&card.ruleMode==='published'",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Extra Yahtzee/Joker legal choices\n+ actual - expected\n\n  {\n+   legal: true,\n-   legal: false,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 2050,\n-     usedMask: 2048,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"
+          }
+        ]
+      },
+      "paired": [
+        {
+          "passed": true,
+          "mode": "official",
+          "seed": 1,
+          "simulation": {
+            "passed": true,
+            "mode": "official",
+            "seed": 1,
+            "games": 1000000,
+            "pairedResults": 1000000,
+            "holdComparisons": 26000000,
+            "categoryComparisons": 13000000,
+            "scoreTransitionComparisons": 13000000,
+            "decisionComparisons": 39000000,
+            "individualDiceDraws": 125835535,
+            "distinctVisitedComponents": 164147,
+            "referenceComputedComponents": 164147,
+            "observationRecordBytes": 8572,
+            "maximumDecisionGap": 5.684341886080802e-14,
+            "decisionTolerance": 1e-10,
+            "alternateHolds": 170050,
+            "alternateCategories": 0,
+            "expectedValue": 254.58772873449593,
+            "independentExpectedValue": 254.5877287344961,
+            "mean": 254.566784,
+            "sampleVariance": 3536.8376827350266,
+            "standardError": 0.05947131815198842,
+            "sigma": 0.3521821131051014,
+            "minimum": 87,
+            "maximum": 832
+          },
+          "actualTypeScriptBridge": {
+            "records": 164147,
+            "numericChecks": 124095132,
+            "policyChecks": 124095132,
+            "alternativeCategories": 0,
+            "alternativeHolds": 0,
+            "maxDifference": 0,
+            "tolerance": 1e-10,
+            "streamSha256": "48e6734300df29d56b04c0ce463308aed2bdfa1919f904d6669d1a4050c28e79",
+            "orderedComponentKeysSha256": "e210d2e980eb3a43d0b9f1064c131de943c74972e90bdca263b8b1a9c0935261",
+            "format": "paired",
+            "recordBytes": 8572,
+            "allPassed": true,
+            "primaryNumericChecks": 124095132,
+            "primaryPolicyChecks": 124095132,
+            "primaryAlternativeCategories": 0,
+            "primaryAlternativeHolds": 0,
+            "primaryCrossImplementationAlternatives": 257296,
+            "primaryMaxDifference": 8.526512829121202e-13,
+            "directRecords": 164147,
+            "reusedRecords": 0,
+            "auditRecords": 0,
+            "distinctComponentProofs": 164147,
+            "sourceFingerprint": "fdbc22a298793b1c3f016574439909e3228793d01e4523db4d43a9d6dfb03b3c",
+            "directStreamSha256": "48e6734300df29d56b04c0ce463308aed2bdfa1919f904d6669d1a4050c28e79",
+            "directOrderedKeysSha256": "e210d2e980eb3a43d0b9f1064c131de943c74972e90bdca263b8b1a9c0935261",
+            "reuseRule": "Every8572-byte policy/value record exactly matches a SHA256 proof previously checked against both actual TS bodies during this npm test; first component is directly audited every stream."
+          },
+          "regeneratedBinarySHA256": "6e93512a9b983afa721f6a7f1c51261a3d464f469b6c89a0c21e689efd76cbe1",
+          "visitedKeysSHA256": "e210d2e980eb3a43d0b9f1064c131de943c74972e90bdca263b8b1a9c0935261"
+        },
+        {
+          "passed": true,
+          "mode": "published",
+          "seed": 1,
+          "simulation": {
+            "passed": true,
+            "mode": "published",
+            "seed": 1,
+            "games": 1000000,
+            "pairedResults": 1000000,
+            "holdComparisons": 26000000,
+            "categoryComparisons": 13000000,
+            "scoreTransitionComparisons": 13000000,
+            "decisionComparisons": 39000000,
+            "individualDiceDraws": 125849532,
+            "distinctVisitedComponents": 164218,
+            "referenceComputedComponents": 164218,
+            "observationRecordBytes": 8572,
+            "maximumDecisionGap": 5.684341886080802e-14,
+            "decisionTolerance": 1e-10,
+            "alternateHolds": 174850,
+            "alternateCategories": 0,
+            "expectedValue": 254.58960948196315,
+            "independentExpectedValue": 254.58960948196366,
+            "mean": 254.603886,
+            "sampleVariance": 3545.6734453724494,
+            "standardError": 0.05954555772996378,
+            "sigma": 0.2397579027067053,
+            "minimum": 70,
+            "maximum": 847
+          },
+          "actualTypeScriptBridge": {
+            "records": 164218,
+            "numericChecks": 124148808,
+            "policyChecks": 124148808,
+            "alternativeCategories": 0,
+            "alternativeHolds": 0,
+            "maxDifference": 0,
+            "tolerance": 1e-10,
+            "streamSha256": "ab1a1571c4f2433bdb83b50b4ba69e771c3c2c0d01dff6167ff8efd95682ba43",
+            "orderedComponentKeysSha256": "332ccd390a7410f3f92e4a280604bf2d1f591be3fc626c38c5e4772f47d79ddc",
+            "format": "paired",
+            "recordBytes": 8572,
+            "allPassed": true,
+            "primaryNumericChecks": 124148808,
+            "primaryPolicyChecks": 124148808,
+            "primaryAlternativeCategories": 0,
+            "primaryAlternativeHolds": 0,
+            "primaryCrossImplementationAlternatives": 260083,
+            "primaryMaxDifference": 8.526512829121202e-13,
+            "directRecords": 164218,
+            "reusedRecords": 0,
+            "auditRecords": 0,
+            "distinctComponentProofs": 164218,
+            "sourceFingerprint": "fdbc22a298793b1c3f016574439909e3228793d01e4523db4d43a9d6dfb03b3c",
+            "directStreamSha256": "ab1a1571c4f2433bdb83b50b4ba69e771c3c2c0d01dff6167ff8efd95682ba43",
+            "directOrderedKeysSha256": "332ccd390a7410f3f92e4a280604bf2d1f591be3fc626c38c5e4772f47d79ddc",
+            "reuseRule": "Every8572-byte policy/value record exactly matches a SHA256 proof previously checked against both actual TS bodies during this npm test; first component is directly audited every stream."
+          },
+          "regeneratedBinarySHA256": "2b2f401a4d6588decb2fbdab46eb86989d8ce6faa8f4a677b534306bb93b314c",
+          "visitedKeysSHA256": "332ccd390a7410f3f92e4a280604bf2d1f591be3fc626c38c5e4772f47d79ddc"
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "independentRegenerations": [
+        {
+          "mode": "official",
+          "expectedValue": 254.5877287344961,
+          "validStates": 536448,
+          "computedStates": 359612,
+          "equivalentCopies": 176708,
+          "entries": 1048576,
+          "regeneratedSHA256": "c26d041831a8a7ececb20e26689c6b142e00bc0900d4925d2a19547a16183709"
+        },
+        {
+          "mode": "published",
+          "expectedValue": 254.58960948196366,
+          "validStates": 536448,
+          "computedStates": 359612,
+          "equivalentCopies": 176708,
+          "entries": 1048576,
+          "regeneratedSHA256": "2b807d950f7027b10c296f5e91874431d6f20db9c642f4e45b430d31b7758ab5"
+        }
+      ],
+      "verification": {
+        "passed": true,
+        "seed": 2,
+        "boundaries": {
+          "passed": true,
+          "assertions": 1056
+        },
+        "fullTables": {
+          "passed": true,
+          "tolerance": 1e-10,
+          "modes": [
+            {
+              "mode": "official",
+              "statesCompared": 536448,
+              "maximumDifference": 8.526512829121202e-13,
+              "worstIndex": 245800,
+              "primaryStartingValue": 254.58772873449593,
+              "independentStartingValue": 254.5877287344961
+            },
+            {
+              "mode": "published",
+              "statesCompared": 536448,
+              "maximumDifference": 9.379164112033322e-13,
+              "worstIndex": 368677,
+              "primaryStartingValue": 254.58960948196315,
+              "independentStartingValue": 254.58960948196366
+            }
+          ],
+          "actionSupersetInvariant": {
+            "passed": true,
+            "monotonicPairs": 536448,
+            "minimumGap": 0,
+            "maximumGap": 0.15396235930569446,
+            "worstIndex": 6477,
+            "tolerance": 1e-10
+          }
+        },
+        "scoring": {
+          "passed": true,
+          "seed": 2,
+          "orderedRolls": 7776,
+          "categories": 13,
+          "modes": 2,
+          "scoringCases": 202176
+        },
+        "random": {
+          "passed": true,
+          "seed": 2,
+          "states": 50000,
+          "distinctScorecards": 47496,
+          "modes": {
+            "official": 25000,
+            "published": 25000
+          },
+          "rollLayers": [
+            16667,
+            16667,
+            16666
+          ],
+          "orderedHoldChecks": 33333,
+          "tolerance": 1e-10,
+          "maximumValueDifference": 7.958078640513122e-13,
+          "maximumHoldResidual": 2.2396307031158358e-11,
+          "holdAlternates": 283,
+          "categoryAlternates": 0,
+          "alternateMeaning": "Different floating evaluation orders may select different holds within the declared roundoff tolerance; every selected hold was directly evaluated with ordered chance outcomes."
+        }
+      },
+      "mutations": {
+        "passed": true,
+        "seed": 2,
+        "mutations": 25,
+        "strictCompiled": 25,
+        "runtimeKilled": 25,
+        "productionSHA256": "878f038112b2a12a5bd9f0ecaed375b89360cfa0e7894fc91ec4cc923f4de0fa",
+        "originalUnchanged": true,
+        "results": [
+          {
+            "name": "M01 upper bonus",
+            "before": "card.upper+points>=63?35:0",
+            "after": "card.upper+points>=63?34:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 63,\n...\n    points: 18,\n+   upperBonus: 34,\n-   upperBonus: 35,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M02 Yahtzee bonus",
+            "before": "card.yahtzeeBonus?100:0",
+            "after": "card.yahtzeeBonus?99:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Extra Yahtzee/Joker legal choices\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 5,\n...\n    upperBonus: 0,\n+   yahtzeeBonus: 99\n-   yahtzeeBonus: 100\n  }\n"
+          },
+          {
+            "name": "M03 capped upper",
+            "before": "Math.min(63,card.upper+points)",
+            "after": "Math.min(62,card.upper+points)",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n+     upper: 62,\n-     upper: 63,\n      usedMask: 63,\n      yahtzeeBonus: false\n    },\n    points: 18,\n    upperBonus: 35,\n"
+          },
+          {
+            "name": "M04 full house",
+            "before": "case 8:return pair&&triple?25:0",
+            "after": "case 8:return pair&&triple?24:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 24,\n-   points: 25,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M05 small straight",
+            "before": "(bits&60)===60?30:0",
+            "after": "(bits&60)===60?29:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 29,\n-   points: 30,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M06 large straight",
+            "before": "case 10:return bits===31||bits===62?40:0",
+            "after": "case 10:return bits===31||bits===62?39:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 39,\n-   points: 40,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M07 Yahtzee",
+            "before": "case 11:return max===5?50:0",
+            "after": "case 11:return max===5?49:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n      usedMask: 2048,\n+     yahtzeeBonus: false\n-     yahtzeeBonus: true\n    },\n+   points: 49,\n-   points: 50,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M08 upper face multiplier",
+            "before": "counts[category]!*(category+1)",
+            "after": "counts[category]!*(category+2)",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n+     upper: 6,\n-     upper: 3,\n      usedMask: 1,\n      yahtzeeBonus: false\n    },\n+   points: 6,\n-   points: 3,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M09 three of a kind",
+            "before": "case 6:return max>=3?sum:0",
+            "after": "case 6:return max>=4?sum:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 7,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M10 four of a kind",
+            "before": "case 7:return max>=4?sum:0",
+            "after": "case 7:return max>=5?sum:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 25,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M11 chance",
+            "before": "case 12:return sum;",
+            "after": "case 12:return sum+1;",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 8,\n-   points: 7,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M12 full house conjunction",
+            "before": "case 8:return pair&&triple",
+            "after": "case 8:return pair||triple",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 25,\n-   points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M13 high small straight",
+            "before": "||(bits&60)===60",
+            "after": "||(bits&60)===61",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "independent seeded objective comparison",
+            "failure": "Category objective 2:7"
+          },
+          {
+            "name": "M14 high large straight",
+            "before": "bits===31||bits===62",
+            "after": "bits===31||bits===63",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 40,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M15 category maximization",
+            "before": "value>best.expectedValue",
+            "after": "value<best.expectedValue",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "216.51959643767444 != 253.9091948744762"
+          },
+          {
+            "name": "M16 fair die denominator",
+            "before": "values[hand]=total/6",
+            "after": "values[hand]=total/7",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n+   2,\n+   3,\n    4,\n    6\n  ]\n"
+          },
+          {
+            "name": "M17 hold maximization",
+            "before": "values[prior]!>values[hand]!",
+            "after": "values[prior]!<values[hand]!",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n+   2,\n+   3\n-   4,\n-   6\n  ]\n"
+          },
+          {
+            "name": "M18 hold equality ordering",
+            "before": "rank[choices[prior]!]!<rank[choices[hand]!]!",
+            "after": "rank[choices[prior]!]!>rank[choices[hand]!]!",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    1,\n    2,\n    3,\n    4,\n+   4\n  ]\n"
+          },
+          {
+            "name": "M19 terminal hold ordering",
+            "before": "return {hold:sorted,expectedValue:categoryChoice",
+            "after": "return {hold:sorted.slice().reverse(),expectedValue:categoryChoice",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   6,\n+   4,\n+   3,\n+   2,\n    1,\n-   2,\n-   3,\n-   4,\n-   6\n  ]\n"
+          },
+          {
+            "name": "M20 table mask",
+            "before": "const index=card.usedMask+card.upper",
+            "after": "const index=(card.usedMask===ALL?0:card.usedMask)+card.upper",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "275.087728734496 != 20.5"
+          },
+          {
+            "name": "M21 filled legality",
+            "before": "if(!(legal&(1<<category)))",
+            "after": "if(false&&!(legal&(1<<category)))",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Extra Yahtzee/Joker legal choices\n+ actual - expected\n\n  {\n+   legal: true,\n-   legal: false,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 2050,\n-     usedMask: 2048,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"
+          },
+          {
+            "name": "M22 Yahtzee eligibility",
+            "before": "category===11&&points===50",
+            "after": "category===11&&points===0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n      usedMask: 2048,\n+     yahtzeeBonus: true\n-     yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M23 first Yahtzee forced",
+            "before": "const extra=face>=0&&Boolean(card.usedMask&YAHTZEE);",
+            "after": "const extra=face>=0;",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n+   legal: false,\n-   legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 0,\n-     usedMask: 1,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"
+          },
+          {
+            "name": "M24 already earned upper bonus",
+            "before": "upperBonus:category<6&&card.upper<63",
+            "after": "upperBonus:category<6&&card.upper<=63",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 63,\n...\n    points: 18,\n+   upperBonus: 35,\n-   upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M25 convention reversal",
+            "before": "extra&&card.ruleMode==='official'",
+            "after": "extra&&card.ruleMode==='published'",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Extra Yahtzee/Joker legal choices\n+ actual - expected\n\n  {\n+   legal: true,\n-   legal: false,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 2050,\n-     usedMask: 2048,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"
+          }
+        ]
+      },
+      "paired": [
+        {
+          "passed": true,
+          "mode": "official",
+          "seed": 2,
+          "simulation": {
+            "passed": true,
+            "mode": "official",
+            "seed": 2,
+            "games": 1000000,
+            "pairedResults": 1000000,
+            "holdComparisons": 26000000,
+            "categoryComparisons": 13000000,
+            "scoreTransitionComparisons": 13000000,
+            "decisionComparisons": 39000000,
+            "individualDiceDraws": 125841696,
+            "distinctVisitedComponents": 164403,
+            "referenceComputedComponents": 164403,
+            "observationRecordBytes": 8572,
+            "maximumDecisionGap": 5.684341886080802e-14,
+            "decisionTolerance": 1e-10,
+            "alternateHolds": 170133,
+            "alternateCategories": 0,
+            "expectedValue": 254.58772873449593,
+            "independentExpectedValue": 254.5877287344961,
+            "mean": 254.579815,
+            "sampleVariance": 3554.0055035712785,
+            "standardError": 0.05961548040208414,
+            "sigma": 0.1327463008358578,
+            "minimum": 85,
+            "maximum": 845
+          },
+          "actualTypeScriptBridge": {
+            "records": 164403,
+            "numericChecks": 9012276,
+            "policyChecks": 9012276,
+            "alternativeCategories": 0,
+            "alternativeHolds": 0,
+            "maxDifference": 0,
+            "tolerance": 1e-10,
+            "streamSha256": "fee26c010a7797d06798e10ec7c1cdeaf30ac8e6a9e8d8a3cca0433fd7157f09",
+            "orderedComponentKeysSha256": "28115e8c19b94d6f99016aad1f12599e1b6964959735094c4dd90455fe143669",
+            "format": "paired",
+            "recordBytes": 8572,
+            "allPassed": true,
+            "primaryNumericChecks": 9012276,
+            "primaryPolicyChecks": 9012276,
+            "primaryAlternativeCategories": 0,
+            "primaryAlternativeHolds": 0,
+            "primaryCrossImplementationAlternatives": 21490,
+            "primaryMaxDifference": 6.821210263296962e-13,
+            "directRecords": 11921,
+            "reusedRecords": 152482,
+            "auditRecords": 1,
+            "distinctComponentProofs": 176067,
+            "sourceFingerprint": "fdbc22a298793b1c3f016574439909e3228793d01e4523db4d43a9d6dfb03b3c",
+            "directStreamSha256": "93e3fe46daa877cdfa674040546d58c995807be954fc18ad05cab40d7c5e01ab",
+            "directOrderedKeysSha256": "b9ada866e2c0607d4373ba9ed5dee55ccd546da84fba235b840260b2e214bf18",
+            "reuseRule": "Every8572-byte policy/value record exactly matches a SHA256 proof previously checked against both actual TS bodies during this npm test; first component is directly audited every stream."
+          },
+          "regeneratedBinarySHA256": "6e93512a9b983afa721f6a7f1c51261a3d464f469b6c89a0c21e689efd76cbe1",
+          "visitedKeysSHA256": "28115e8c19b94d6f99016aad1f12599e1b6964959735094c4dd90455fe143669"
+        },
+        {
+          "passed": true,
+          "mode": "published",
+          "seed": 2,
+          "simulation": {
+            "passed": true,
+            "mode": "published",
+            "seed": 2,
+            "games": 1000000,
+            "pairedResults": 1000000,
+            "holdComparisons": 26000000,
+            "categoryComparisons": 13000000,
+            "scoreTransitionComparisons": 13000000,
+            "decisionComparisons": 39000000,
+            "individualDiceDraws": 125834384,
+            "distinctVisitedComponents": 164510,
+            "referenceComputedComponents": 164510,
+            "observationRecordBytes": 8572,
+            "maximumDecisionGap": 5.684341886080802e-14,
+            "decisionTolerance": 1e-10,
+            "alternateHolds": 174469,
+            "alternateCategories": 0,
+            "expectedValue": 254.58960948196315,
+            "independentExpectedValue": 254.58960948196366,
+            "mean": 254.575741,
+            "sampleVariance": 3547.9104872114062,
+            "standardError": 0.05956433905627936,
+            "sigma": 0.2328319625951727,
+            "minimum": 89,
+            "maximum": 944
+          },
+          "actualTypeScriptBridge": {
+            "records": 164510,
+            "numericChecks": 8961624,
+            "policyChecks": 8961624,
+            "alternativeCategories": 0,
+            "alternativeHolds": 0,
+            "maxDifference": 0,
+            "tolerance": 1e-10,
+            "streamSha256": "cbcf46c90428d2a046bf66990e3dd075907815d3f7f901be4ce5f229f8670a4f",
+            "orderedComponentKeysSha256": "a0db78606b9e4ce6e04cb2c73c56ecefa345f102395d8df5a3c153e6ce0af729",
+            "format": "paired",
+            "recordBytes": 8572,
+            "allPassed": true,
+            "primaryNumericChecks": 8961624,
+            "primaryPolicyChecks": 8961624,
+            "primaryAlternativeCategories": 0,
+            "primaryAlternativeHolds": 0,
+            "primaryCrossImplementationAlternatives": 21274,
+            "primaryMaxDifference": 7.958078640513122e-13,
+            "directRecords": 11854,
+            "reusedRecords": 152656,
+            "auditRecords": 1,
+            "distinctComponentProofs": 176071,
+            "sourceFingerprint": "fdbc22a298793b1c3f016574439909e3228793d01e4523db4d43a9d6dfb03b3c",
+            "directStreamSha256": "c0121b9cfe49d882200e3dc344e391753b67be55688e4aa21ed8e814cada3267",
+            "directOrderedKeysSha256": "c1258a12d7e013ebcfffceec72a26a298aef8931d09bffd2052f72ed5ba6587e",
+            "reuseRule": "Every8572-byte policy/value record exactly matches a SHA256 proof previously checked against both actual TS bodies during this npm test; first component is directly audited every stream."
+          },
+          "regeneratedBinarySHA256": "2b2f401a4d6588decb2fbdab46eb86989d8ce6faa8f4a677b534306bb93b314c",
+          "visitedKeysSHA256": "a0db78606b9e4ce6e04cb2c73c56ecefa345f102395d8df5a3c153e6ce0af729"
+        }
+      ]
+    },
+    {
+      "seed": 3,
+      "independentRegenerations": [
+        {
+          "mode": "official",
+          "expectedValue": 254.5877287344961,
+          "validStates": 536448,
+          "computedStates": 359612,
+          "equivalentCopies": 176708,
+          "entries": 1048576,
+          "regeneratedSHA256": "c26d041831a8a7ececb20e26689c6b142e00bc0900d4925d2a19547a16183709"
+        },
+        {
+          "mode": "published",
+          "expectedValue": 254.58960948196366,
+          "validStates": 536448,
+          "computedStates": 359612,
+          "equivalentCopies": 176708,
+          "entries": 1048576,
+          "regeneratedSHA256": "2b807d950f7027b10c296f5e91874431d6f20db9c642f4e45b430d31b7758ab5"
+        }
+      ],
+      "verification": {
+        "passed": true,
+        "seed": 3,
+        "boundaries": {
+          "passed": true,
+          "assertions": 1056
+        },
+        "fullTables": {
+          "passed": true,
+          "tolerance": 1e-10,
+          "modes": [
+            {
+              "mode": "official",
+              "statesCompared": 536448,
+              "maximumDifference": 8.526512829121202e-13,
+              "worstIndex": 245800,
+              "primaryStartingValue": 254.58772873449593,
+              "independentStartingValue": 254.5877287344961
+            },
+            {
+              "mode": "published",
+              "statesCompared": 536448,
+              "maximumDifference": 9.379164112033322e-13,
+              "worstIndex": 368677,
+              "primaryStartingValue": 254.58960948196315,
+              "independentStartingValue": 254.58960948196366
+            }
+          ],
+          "actionSupersetInvariant": {
+            "passed": true,
+            "monotonicPairs": 536448,
+            "minimumGap": 0,
+            "maximumGap": 0.15396235930569446,
+            "worstIndex": 6477,
+            "tolerance": 1e-10
+          }
+        },
+        "scoring": {
+          "passed": true,
+          "seed": 3,
+          "orderedRolls": 7776,
+          "categories": 13,
+          "modes": 2,
+          "scoringCases": 202176
+        },
+        "random": {
+          "passed": true,
+          "seed": 3,
+          "states": 50000,
+          "distinctScorecards": 47560,
+          "modes": {
+            "official": 25000,
+            "published": 25000
+          },
+          "rollLayers": [
+            16667,
+            16667,
+            16666
+          ],
+          "orderedHoldChecks": 33333,
+          "tolerance": 1e-10,
+          "maximumValueDifference": 7.673861546209082e-13,
+          "maximumHoldResidual": 1.3855583347321954e-11,
+          "holdAlternates": 307,
+          "categoryAlternates": 0,
+          "alternateMeaning": "Different floating evaluation orders may select different holds within the declared roundoff tolerance; every selected hold was directly evaluated with ordered chance outcomes."
+        }
+      },
+      "mutations": {
+        "passed": true,
+        "seed": 3,
+        "mutations": 25,
+        "strictCompiled": 25,
+        "runtimeKilled": 25,
+        "productionSHA256": "878f038112b2a12a5bd9f0ecaed375b89360cfa0e7894fc91ec4cc923f4de0fa",
+        "originalUnchanged": true,
+        "results": [
+          {
+            "name": "M01 upper bonus",
+            "before": "card.upper+points>=63?35:0",
+            "after": "card.upper+points>=63?34:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 63,\n...\n    points: 18,\n+   upperBonus: 34,\n-   upperBonus: 35,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M02 Yahtzee bonus",
+            "before": "card.yahtzeeBonus?100:0",
+            "after": "card.yahtzeeBonus?99:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Extra Yahtzee/Joker legal choices\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 5,\n...\n    upperBonus: 0,\n+   yahtzeeBonus: 99\n-   yahtzeeBonus: 100\n  }\n"
+          },
+          {
+            "name": "M03 capped upper",
+            "before": "Math.min(63,card.upper+points)",
+            "after": "Math.min(62,card.upper+points)",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n+     upper: 62,\n-     upper: 63,\n      usedMask: 63,\n      yahtzeeBonus: false\n    },\n    points: 18,\n    upperBonus: 35,\n"
+          },
+          {
+            "name": "M04 full house",
+            "before": "case 8:return pair&&triple?25:0",
+            "after": "case 8:return pair&&triple?24:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 24,\n-   points: 25,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M05 small straight",
+            "before": "(bits&60)===60?30:0",
+            "after": "(bits&60)===60?29:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 29,\n-   points: 30,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M06 large straight",
+            "before": "case 10:return bits===31||bits===62?40:0",
+            "after": "case 10:return bits===31||bits===62?39:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 39,\n-   points: 40,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M07 Yahtzee",
+            "before": "case 11:return max===5?50:0",
+            "after": "case 11:return max===5?49:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n      usedMask: 2048,\n+     yahtzeeBonus: false\n-     yahtzeeBonus: true\n    },\n+   points: 49,\n-   points: 50,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M08 upper face multiplier",
+            "before": "counts[category]!*(category+1)",
+            "after": "counts[category]!*(category+2)",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n+     upper: 6,\n-     upper: 3,\n      usedMask: 1,\n      yahtzeeBonus: false\n    },\n+   points: 6,\n-   points: 3,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M09 three of a kind",
+            "before": "case 6:return max>=3?sum:0",
+            "after": "case 6:return max>=4?sum:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 7,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M10 four of a kind",
+            "before": "case 7:return max>=4?sum:0",
+            "after": "case 7:return max>=5?sum:0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 25,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M11 chance",
+            "before": "case 12:return sum;",
+            "after": "case 12:return sum+1;",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 8,\n-   points: 7,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M12 full house conjunction",
+            "before": "case 8:return pair&&triple",
+            "after": "case 8:return pair||triple",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 25,\n-   points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M13 high small straight",
+            "before": "||(bits&60)===60",
+            "after": "||(bits&60)===61",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "independent seeded objective comparison",
+            "failure": "Hold objective 3:2 {\"card\":{\"usedMask\":7478,\"upper\":11,\"yahtzeeBonus\":true,\"ruleMode\":\"published\"},\"dice\":[2,2,4,2,3],\"rollsLeft\":2,\"chosen\":{\"hold\":[2,2,2],\"expectedValue\":92.95815502719417},\"optimum\":{\"hold\":[2,2,2],\"expectedValue\":92.99273679510392}}"
+          },
+          {
+            "name": "M14 high large straight",
+            "before": "bits===31||bits===62",
+            "after": "bits===31||bits===63",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n...\n    },\n+   points: 0,\n-   points: 40,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M15 category maximization",
+            "before": "value>best.expectedValue",
+            "after": "value<best.expectedValue",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "216.51959643767444 != 253.9091948744762"
+          },
+          {
+            "name": "M16 fair die denominator",
+            "before": "values[hand]=total/6",
+            "after": "values[hand]=total/7",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n+   2,\n+   3,\n    4,\n    6\n  ]\n"
+          },
+          {
+            "name": "M17 hold maximization",
+            "before": "values[prior]!>values[hand]!",
+            "after": "values[prior]!<values[hand]!",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   1,\n+   2,\n+   3\n-   4,\n-   6\n  ]\n"
+          },
+          {
+            "name": "M18 hold equality ordering",
+            "before": "rank[choices[prior]!]!<rank[choices[hand]!]!",
+            "after": "rank[choices[prior]!]!>rank[choices[hand]!]!",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    1,\n    2,\n    3,\n    4,\n+   4\n  ]\n"
+          },
+          {
+            "name": "M19 terminal hold ordering",
+            "before": "return {hold:sorted,expectedValue:categoryChoice",
+            "after": "return {hold:sorted.slice().reverse(),expectedValue:categoryChoice",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   6,\n+   4,\n+   3,\n+   2,\n    1,\n-   2,\n-   3,\n-   4,\n-   6\n  ]\n"
+          },
+          {
+            "name": "M20 table mask",
+            "before": "const index=card.usedMask+card.upper",
+            "after": "const index=(card.usedMask===ALL?0:card.usedMask)+card.upper",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "275.087728734496 != 20.5"
+          },
+          {
+            "name": "M21 filled legality",
+            "before": "if(!(legal&(1<<category)))",
+            "after": "if(false&&!(legal&(1<<category)))",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Extra Yahtzee/Joker legal choices\n+ actual - expected\n\n  {\n+   legal: true,\n-   legal: false,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 2050,\n-     usedMask: 2048,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"
+          },
+          {
+            "name": "M22 Yahtzee eligibility",
+            "before": "category===11&&points===50",
+            "after": "category===11&&points===0",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n      usedMask: 2048,\n+     yahtzeeBonus: true\n-     yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M23 first Yahtzee forced",
+            "before": "const extra=face>=0&&Boolean(card.usedMask&YAHTZEE);",
+            "after": "const extra=face>=0;",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Manual scoring and transition\n+ actual - expected\n\n  {\n+   legal: false,\n-   legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 0,\n-     usedMask: 1,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"
+          },
+          {
+            "name": "M24 already earned upper bonus",
+            "before": "upperBonus:category<6&&card.upper<63",
+            "after": "upperBonus:category<6&&card.upper<=63",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    legal: true,\n    next: {\n      ruleMode: 'official',\n      upper: 63,\n...\n    points: 18,\n+   upperBonus: 35,\n-   upperBonus: 0,\n    yahtzeeBonus: 0\n  }\n"
+          },
+          {
+            "name": "M25 convention reversal",
+            "before": "extra&&card.ruleMode==='official'",
+            "after": "extra&&card.ruleMode==='published'",
+            "strictCompilation": true,
+            "runtimeKilled": true,
+            "gate": "manual, independent boundary and contract checks",
+            "failure": "Extra Yahtzee/Joker legal choices\n+ actual - expected\n\n  {\n+   legal: true,\n-   legal: false,\n    next: {\n      ruleMode: 'official',\n      upper: 0,\n+     usedMask: 2050,\n-     usedMask: 2048,\n      yahtzeeBonus: false\n    },\n    points: 0,\n    upperBonus: 0,\n    yahtzeeBonus: 0\n"
+          }
+        ]
+      },
+      "paired": [
+        {
+          "passed": true,
+          "mode": "official",
+          "seed": 3,
+          "simulation": {
+            "passed": true,
+            "mode": "official",
+            "seed": 3,
+            "games": 1000000,
+            "pairedResults": 1000000,
+            "holdComparisons": 26000000,
+            "categoryComparisons": 13000000,
+            "scoreTransitionComparisons": 13000000,
+            "decisionComparisons": 39000000,
+            "individualDiceDraws": 125829535,
+            "distinctVisitedComponents": 164364,
+            "referenceComputedComponents": 164364,
+            "observationRecordBytes": 8572,
+            "maximumDecisionGap": 5.684341886080802e-14,
+            "decisionTolerance": 1e-10,
+            "alternateHolds": 170653,
+            "alternateCategories": 0,
+            "expectedValue": 254.58772873449593,
+            "independentExpectedValue": 254.5877287344961,
+            "mean": 254.577033,
+            "sampleVariance": 3550.8771807940916,
+            "standardError": 0.059589237122101936,
+            "sigma": 0.17949104590832957,
+            "minimum": 81,
+            "maximum": 925
+          },
+          "actualTypeScriptBridge": {
+            "records": 164364,
+            "numericChecks": 4601772,
+            "policyChecks": 4601772,
+            "alternativeCategories": 0,
+            "alternativeHolds": 0,
+            "maxDifference": 0,
+            "tolerance": 1e-10,
+            "streamSha256": "faf42ce98f8f6fb650d10458ecf4ba131b41d53e462f7db8028a5d9a1abc6ad4",
+            "orderedComponentKeysSha256": "acf6c9017bec03b401a5bd4b75e56b3c2e728d2c68ebecb208f8ed607423b962",
+            "format": "paired",
+            "recordBytes": 8572,
+            "allPassed": true,
+            "primaryNumericChecks": 4601772,
+            "primaryPolicyChecks": 4601772,
+            "primaryAlternativeCategories": 0,
+            "primaryAlternativeHolds": 0,
+            "primaryCrossImplementationAlternatives": 11149,
+            "primaryMaxDifference": 6.821210263296962e-13,
+            "directRecords": 6087,
+            "reusedRecords": 158277,
+            "auditRecords": 1,
+            "distinctComponentProofs": 182153,
+            "sourceFingerprint": "fdbc22a298793b1c3f016574439909e3228793d01e4523db4d43a9d6dfb03b3c",
+            "directStreamSha256": "86cae139cbe6c4934d10562a9c5c9c90299fed8c43a4898574d72f9007612e20",
+            "directOrderedKeysSha256": "1bdf171162f38dbf9d89a4968050ef3b68dfc5419e63330b10060b56acba7895",
+            "reuseRule": "Every8572-byte policy/value record exactly matches a SHA256 proof previously checked against both actual TS bodies during this npm test; first component is directly audited every stream."
+          },
+          "regeneratedBinarySHA256": "6e93512a9b983afa721f6a7f1c51261a3d464f469b6c89a0c21e689efd76cbe1",
+          "visitedKeysSHA256": "acf6c9017bec03b401a5bd4b75e56b3c2e728d2c68ebecb208f8ed607423b962"
+        },
+        {
+          "passed": true,
+          "mode": "published",
+          "seed": 3,
+          "simulation": {
+            "passed": true,
+            "mode": "published",
+            "seed": 3,
+            "games": 1000000,
+            "pairedResults": 1000000,
+            "holdComparisons": 26000000,
+            "categoryComparisons": 13000000,
+            "scoreTransitionComparisons": 13000000,
+            "decisionComparisons": 39000000,
+            "individualDiceDraws": 125836799,
+            "distinctVisitedComponents": 164241,
+            "referenceComputedComponents": 164241,
+            "observationRecordBytes": 8572,
+            "maximumDecisionGap": 5.684341886080802e-14,
+            "decisionTolerance": 1e-10,
+            "alternateHolds": 175300,
+            "alternateCategories": 0,
+            "expectedValue": 254.58960948196315,
+            "independentExpectedValue": 254.58960948196366,
+            "mean": 254.485353,
+            "sampleVariance": 3534.569240034631,
+            "standardError": 0.059452243355777847,
+            "sigma": 1.75361729143255,
+            "minimum": 91,
+            "maximum": 835
+          },
+          "actualTypeScriptBridge": {
+            "records": 164241,
+            "numericChecks": 4619916,
+            "policyChecks": 4619916,
+            "alternativeCategories": 0,
+            "alternativeHolds": 0,
+            "maxDifference": 0,
+            "tolerance": 1e-10,
+            "streamSha256": "d79d21605f8a06410e848c5f2fb676ee2dc9ad9724d55fcb5d9e49ed76064dc4",
+            "orderedComponentKeysSha256": "0c95c0e7054f38dfdae73d87180cd118931df7b0c9f6c3fbee3a0dfa61abf0c7",
+            "format": "paired",
+            "recordBytes": 8572,
+            "allPassed": true,
+            "primaryNumericChecks": 4619916,
+            "primaryPolicyChecks": 4619916,
+            "primaryAlternativeCategories": 0,
+            "primaryAlternativeHolds": 0,
+            "primaryCrossImplementationAlternatives": 11418,
+            "primaryMaxDifference": 7.958078640513122e-13,
+            "directRecords": 6111,
+            "reusedRecords": 158130,
+            "auditRecords": 1,
+            "distinctComponentProofs": 182181,
+            "sourceFingerprint": "fdbc22a298793b1c3f016574439909e3228793d01e4523db4d43a9d6dfb03b3c",
+            "directStreamSha256": "127ac10d02192d07d4c96af24cdc3912ed138a1bab2badaed2336ad50df04f7e",
+            "directOrderedKeysSha256": "247e027d6f43f4a9813b8a5d211833f3b91c4f2db38badff0344efce51d72d4a",
+            "reuseRule": "Every8572-byte policy/value record exactly matches a SHA256 proof previously checked against both actual TS bodies during this npm test; first component is directly audited every stream."
+          },
+          "regeneratedBinarySHA256": "2b2f401a4d6588decb2fbdab46eb86989d8ce6faa8f4a677b534306bb93b314c",
+          "visitedKeysSHA256": "0c95c0e7054f38dfdae73d87180cd118931df7b0c9f6c3fbee3a0dfa61abf0c7"
+        }
+      ]
+    }
+  ]
+}
