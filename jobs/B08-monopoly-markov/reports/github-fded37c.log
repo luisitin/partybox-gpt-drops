@@ -1,0 +1,359 @@
+verify	Set up job	﻿2026-10-07T15:19:26.3659365Z Current runner version: '2.337.0'
+verify	Set up job	2026-10-07T15:19:26.3678441Z ##[group]Runner Image Provisioner
+verify	Set up job	2026-10-07T15:19:26.3678988Z Hosted Compute Agent
+verify	Set up job	2026-10-07T15:19:26.3679401Z Version: 20261002.596
+verify	Set up job	2026-10-07T15:19:26.3679796Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+verify	Set up job	2026-10-07T15:19:26.3680269Z Build Date: 2026-10-02T22:28:27Z
+verify	Set up job	2026-10-07T15:19:26.3680672Z Worker ID: {7882edac-1a55-47da-b396-c7cf89c1b718}
+verify	Set up job	2026-10-07T15:19:26.3681061Z Region: westus2
+verify	Set up job	2026-10-07T15:19:26.3681424Z Cloud: Azure
+verify	Set up job	2026-10-07T15:19:26.3681771Z ##[endgroup]
+verify	Set up job	2026-10-07T15:19:26.3682626Z ##[group]Operating System
+verify	Set up job	2026-10-07T15:19:26.3683205Z Ubuntu
+verify	Set up job	2026-10-07T15:19:26.3683541Z 24.04.5
+verify	Set up job	2026-10-07T15:19:26.3683877Z LTS
+verify	Set up job	2026-10-07T15:19:26.3684206Z ##[endgroup]
+verify	Set up job	2026-10-07T15:19:26.3684512Z ##[group]Runner Image
+verify	Set up job	2026-10-07T15:19:26.3684922Z Image: ubuntu-24.04
+verify	Set up job	2026-10-07T15:19:26.3685248Z Version: 20261004.327.1
+verify	Set up job	2026-10-07T15:19:26.3685868Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+verify	Set up job	2026-10-07T15:19:26.3686907Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+verify	Set up job	2026-10-07T15:19:26.3687465Z ##[endgroup]
+verify	Set up job	2026-10-07T15:19:26.3688091Z ##[group]GITHUB_TOKEN Permissions
+verify	Set up job	2026-10-07T15:19:26.3689508Z Contents: read
+verify	Set up job	2026-10-07T15:19:26.3689852Z Metadata: read
+verify	Set up job	2026-10-07T15:19:26.3690217Z ##[endgroup]
+verify	Set up job	2026-10-07T15:19:26.3691517Z Secret source: Actions
+verify	Set up job	2026-10-07T15:19:26.3692118Z Cache mode: write
+verify	Set up job	2026-10-07T15:19:26.3692716Z Prepare workflow directory
+verify	Set up job	2026-10-07T15:19:26.3936628Z Prepare all required actions
+verify	Set up job	2026-10-07T15:19:26.3967329Z Getting action download info
+verify	Set up job	2026-10-07T15:19:26.8661247Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verify	Set up job	2026-10-07T15:19:26.9320336Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+verify	Set up job	2026-10-07T15:19:27.0249239Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+verify	Set up job	2026-10-07T15:19:27.2029169Z Complete job name: verify
+verify	Run actions/checkout@v4	﻿2026-10-07T15:19:27.2459325Z ##[group]Run actions/checkout@v4
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2459758Z with:
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2460005Z   repository: luisitin/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2462101Z   token: ***
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2462327Z   ssh-strict: true
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2462562Z   ssh-user: git
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2462797Z   persist-credentials: true
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2463192Z   clean: true
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2463432Z   sparse-checkout-cone-mode: true
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2463711Z   fetch-depth: 1
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2463944Z   fetch-tags: false
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2464179Z   show-progress: true
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2464415Z   lfs: false
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2464633Z   submodules: false
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2464871Z   set-safe-directory: true
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2465140Z   allow-unsafe-pr-checkout: false
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.2465491Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3095878Z Syncing repository: luisitin/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3097622Z ##[group]Getting Git version info
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3098311Z Working directory is '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3099040Z [command]/usr/bin/git version
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3169460Z git version 2.55.0
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3183831Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3194378Z Temporarily overriding HOME='/home/runner/work/_temp/fb79aaa9-ba95-4daa-8281-c728b20adbde' before making global git config changes
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3198411Z Adding repository directory to the temporary git global config as a safe directory
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3199073Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3243445Z Deleting the contents of '/home/runner/work/partybox-gpt-drops/partybox-gpt-drops'
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3246420Z ##[group]Initializing the repository
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3250093Z [command]/usr/bin/git init /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3337671Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3338817Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3343078Z hint: to use in all of your new repositories, which will suppress this warning,
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3343807Z hint: call:
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3344567Z hint:
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3345090Z hint: 	git config --global init.defaultBranch <name>
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3345683Z hint:
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3346280Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3347125Z hint: 'development'. The just-created branch can be renamed via this command:
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3347799Z hint:
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3348139Z hint: 	git branch -m <name>
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3348538Z hint:
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3348913Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3349638Z Initialized empty Git repository in /home/runner/work/partybox-gpt-drops/partybox-gpt-drops/.git/
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3351054Z [command]/usr/bin/git remote add origin https://github.com/luisitin/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3395115Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3395570Z ##[group]Disabling automatic garbage collection
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3400952Z [command]/usr/bin/git config --local gc.auto 0
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3428133Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3428540Z ##[group]Setting up auth
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3434079Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3471563Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3771949Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3800686Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3964738Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.3991094Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.4154548Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.4185857Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.4186444Z ##[group]Fetching the repository
+verify	Run actions/checkout@v4	2026-10-07T15:19:27.4191923Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d9da064c2e0d7e1ffce3fd6b778d38c75bdcd32e:refs/remotes/pull/14/merge
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9405545Z From https://github.com/luisitin/partybox-gpt-drops
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9407046Z  * [new ref]         d9da064c2e0d7e1ffce3fd6b778d38c75bdcd32e -> pull/14/merge
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9410009Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9411034Z ##[group]Determining the checkout info
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9412197Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9415885Z [command]/usr/bin/git sparse-checkout disable
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9464762Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9491177Z ##[group]Checking out the ref
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9492833Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/14/merge
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9574088Z Note: switching to 'refs/remotes/pull/14/merge'.
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9574834Z 
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9575463Z You are in 'detached HEAD' state. You can look around, make experimental
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9576997Z changes and commit them, and you can discard any commits you make in this
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9578153Z state without impacting any branches by switching back to a branch.
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9578867Z 
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9579343Z If you want to create a new branch to retain commits you create, you may
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9580934Z do so (now or later) by using -c with the switch command. Example:
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9581767Z 
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9582136Z   git switch -c <new-branch-name>
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9582702Z 
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9583239Z Or undo this operation with:
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9583907Z 
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9584322Z   git switch -
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9584880Z 
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9585657Z Turn off this advice by setting config variable advice.detachedHead to false
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9586869Z 
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9588111Z HEAD is now at d9da064 Merge fded37c9d208377386c0b1730eb90b487a10406f into d0a5d374146b623b9e27f28ad5846598a30302c9
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9592174Z ##[endgroup]
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9618438Z [command]/usr/bin/git log -1 --format=%H
+verify	Run actions/checkout@v4	2026-10-07T15:19:28.9639495Z d9da064c2e0d7e1ffce3fd6b778d38c75bdcd32e
+verify	Run actions/setup-node@v4	﻿2026-10-07T15:19:28.9944016Z ##[group]Run actions/setup-node@v4
+verify	Run actions/setup-node@v4	2026-10-07T15:19:28.9944719Z with:
+verify	Run actions/setup-node@v4	2026-10-07T15:19:28.9945215Z   node-version: 22.16.0
+verify	Run actions/setup-node@v4	2026-10-07T15:19:28.9945805Z   always-auth: false
+verify	Run actions/setup-node@v4	2026-10-07T15:19:28.9946355Z   check-latest: false
+verify	Run actions/setup-node@v4	2026-10-07T15:19:28.9952126Z   token: ***
+verify	Run actions/setup-node@v4	2026-10-07T15:19:28.9952831Z ##[endgroup]
+verify	Run actions/setup-node@v4	2026-10-07T15:19:29.0850634Z Attempting to download 22.16.0...
+verify	Run actions/setup-node@v4	2026-10-07T15:19:29.0919838Z (node:2212) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Run actions/setup-node@v4	2026-10-07T15:19:29.0921847Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Run actions/setup-node@v4	2026-10-07T15:19:29.6433838Z Acquiring 22.16.0 - x64 from https://github.com/actions/node-versions/releases/download/22.16.0-15177438473/node-22.16.0-linux-x64.tar.gz
+verify	Run actions/setup-node@v4	2026-10-07T15:19:30.1412822Z Extracting ...
+verify	Run actions/setup-node@v4	2026-10-07T15:19:30.1488988Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/b02e052a-f9ed-4c79-b21e-ec7a3d121d49 -f /home/runner/work/_temp/c4fd6e89-9e22-432a-940b-6b53660ad5b9
+verify	Run actions/setup-node@v4	2026-10-07T15:19:30.9778879Z Adding to the cache ...
+verify	Run actions/setup-node@v4	2026-10-07T15:19:32.5768324Z ##[group]Environment details
+verify	Run actions/setup-node@v4	2026-10-07T15:19:32.7219972Z node: v22.16.0
+verify	Run actions/setup-node@v4	2026-10-07T15:19:32.7220424Z npm: 10.9.2
+verify	Run actions/setup-node@v4	2026-10-07T15:19:32.7220604Z yarn: 1.22.22
+verify	Run actions/setup-node@v4	2026-10-07T15:19:32.7221077Z ##[endgroup]
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	﻿2026-10-07T15:19:32.7359285Z ##[group]Run npm ci --ignore-scripts --no-audit --no-fund
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:19:32.7359631Z [36;1mnpm ci --ignore-scripts --no-audit --no-fund[0m
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:19:32.7574283Z shell: /usr/bin/bash -e {0}
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:19:32.7574515Z ##[endgroup]
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:19:33.1835501Z 
+verify	Run npm ci --ignore-scripts --no-audit --no-fund	2026-10-07T15:19:33.1842239Z added 1 package in 385ms
+verify	Run npm test	﻿2026-10-07T15:19:33.2169744Z ##[group]Run npm test
+verify	Run npm test	2026-10-07T15:19:33.2169926Z [36;1mnpm test[0m
+verify	Run npm test	2026-10-07T15:19:33.2223458Z shell: /usr/bin/bash -e {0}
+verify	Run npm test	2026-10-07T15:19:33.2223622Z ##[endgroup]
+verify	Run npm test	2026-10-07T15:19:33.2853719Z 
+verify	Run npm test	2026-10-07T15:19:33.2854549Z > b08-monopoly-markov@1.0.0 test
+verify	Run npm test	2026-10-07T15:19:33.2854920Z > node run.mjs
+verify	Run npm test	2026-10-07T15:19:33.2855032Z 
+verify	Run npm test	2026-10-07T15:19:33.3077746Z RUN node hashes.mjs
+verify	Run npm test	2026-10-07T15:19:33.3280085Z SHA256: 54 files verified
+verify	Run npm test	2026-10-07T15:19:33.3304776Z RUN node node_modules/typescript/bin/tsc -p tsconfig.json
+verify	Run npm test	2026-10-07T15:19:33.8513556Z RUN node export.mjs
+verify	Run npm test	2026-10-07T15:19:33.8931986Z {"suite":"computed-outputs","passed":true,"strategies":2,"squares":80,"roiRows":348}
+verify	Run npm test	2026-10-07T15:19:33.8959519Z RUN node test.mjs 1
+verify	Run npm test	2026-10-07T15:19:34.0042391Z {"suite":"exact-and-published","seed":1,"passed":true,"assertions":37981,"exactTransitionCells":28800,"stationaryStates":240,"publishedSquares":240,"ownershipScenarios":348,"observations":[{"strategy":"leave ASAP","maxStateDifference":9.194034422677078e-16,"iterations":197,"residual":3.469446951953614e-17,"turnStartMass":0.8427269589619967,"rollsPerTurn":1.186623958525926,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":4.782849026552238e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.964513661276371e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0000011468197552155779,"tolerance":0.0001,"matchedSquares":40,"documentedGaps":[],"conflictRecord":null}]},{"strategy":"stay max","maxStateDifference":8.847089727481716e-16,"iterations":255,"residual":2.7755575615628914e-17,"turnStartMass":0.8577091677010615,"rollsPerTurn":1.165896364009171,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":6.87574422397752e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.994465015173422e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0006835468757442065,"tolerance":0.0001,"matchedSquares":39,"documentedGaps":[{"position":10,"difference":-0.0006835468757442065}],"conflictRecord":"CONFLICTS.md"}]}]}
+verify	Run npm test	2026-10-07T15:19:34.0074851Z RUN node simulate.mjs 1
+verify	Run npm test	2026-10-07T15:19:34.2856230Z simulation seed=1 strategy=leave ASAP rolls=10000000
+verify	Run npm test	2026-10-07T15:19:34.5274834Z simulation seed=1 strategy=leave ASAP rolls=20000000
+verify	Run npm test	2026-10-07T15:19:34.7637804Z simulation seed=1 strategy=leave ASAP rolls=30000000
+verify	Run npm test	2026-10-07T15:19:35.0000965Z simulation seed=1 strategy=leave ASAP rolls=40000000
+verify	Run npm test	2026-10-07T15:19:35.2405182Z simulation seed=1 strategy=leave ASAP rolls=50000000
+verify	Run npm test	2026-10-07T15:19:35.4777743Z simulation seed=1 strategy=leave ASAP rolls=60000000
+verify	Run npm test	2026-10-07T15:19:35.7144616Z simulation seed=1 strategy=leave ASAP rolls=70000000
+verify	Run npm test	2026-10-07T15:19:35.9509840Z simulation seed=1 strategy=leave ASAP rolls=80000000
+verify	Run npm test	2026-10-07T15:19:36.1877211Z simulation seed=1 strategy=leave ASAP rolls=90000000
+verify	Run npm test	2026-10-07T15:19:36.4247013Z simulation seed=1 strategy=leave ASAP rolls=100000000
+verify	Run npm test	2026-10-07T15:19:36.4395821Z {"suite":"simulation","strategy":"leave ASAP","seed":1,"rolls":100000000,"passed":true,"maxSigma":1.9794398220894414,"poissonResidual":1.5379335085874474e-15}
+verify	Run npm test	2026-10-07T15:19:36.6855628Z simulation seed=1 strategy=stay max rolls=10000000
+verify	Run npm test	2026-10-07T15:19:36.9209755Z simulation seed=1 strategy=stay max rolls=20000000
+verify	Run npm test	2026-10-07T15:19:37.1562713Z simulation seed=1 strategy=stay max rolls=30000000
+verify	Run npm test	2026-10-07T15:19:37.3924172Z simulation seed=1 strategy=stay max rolls=40000000
+verify	Run npm test	2026-10-07T15:19:37.6324691Z simulation seed=1 strategy=stay max rolls=50000000
+verify	Run npm test	2026-10-07T15:19:37.8678132Z simulation seed=1 strategy=stay max rolls=60000000
+verify	Run npm test	2026-10-07T15:19:38.1032301Z simulation seed=1 strategy=stay max rolls=70000000
+verify	Run npm test	2026-10-07T15:19:38.3384805Z simulation seed=1 strategy=stay max rolls=80000000
+verify	Run npm test	2026-10-07T15:19:38.5742134Z simulation seed=1 strategy=stay max rolls=90000000
+verify	Run npm test	2026-10-07T15:19:38.8116180Z simulation seed=1 strategy=stay max rolls=100000000
+verify	Run npm test	2026-10-07T15:19:38.8167170Z {"suite":"simulation","strategy":"stay max","seed":1,"rolls":100000000,"passed":true,"maxSigma":2.389731545521216,"poissonResidual":2.8171909249863347e-15}
+verify	Run npm test	2026-10-07T15:19:38.8201699Z RUN node mutate.mjs 1
+verify	Run npm test	2026-10-07T15:19:39.3996229Z {"suite":"mutation","seed":1,"name":"M01 denominator","strictCompilation":true,"runtimeKilled":true,"failure":"Exact common denominator\n\n9217 !== 9216\n"}
+verify	Run npm test	2026-10-07T15:19:39.6391740Z {"suite":"mutation","seed":1,"name":"M02 early triple-double jail","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+verify	Run npm test	2026-10-07T15:19:39.8208862Z {"suite":"mutation","seed":1,"name":"M03 reversed doubles","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n16 !== 96\n"}
+verify	Run npm test	2026-10-07T15:19:40.0069101Z {"suite":"mutation","seed":1,"name":"M04 premature third jail attempt","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/118/0\n\n112 !== 16\n"}
+verify	Run npm test	2026-10-07T15:19:40.1754706Z {"suite":"mutation","seed":1,"name":"M05 jail doubles extra roll","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/117/0\n\n0 !== 16\n"}
+verify	Run npm test	2026-10-07T15:19:40.3080220Z {"suite":"mutation","seed":1,"name":"M06 ASAP inherited jail streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/117/1\n\n0 !== 16\n"}
+verify	Run npm test	2026-10-07T15:19:40.4281510Z {"suite":"mutation","seed":1,"name":"M07 ordinary streak reset","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n0 !== 96\n"}
+verify	Run npm test	2026-10-07T15:19:40.5511855Z {"suite":"mutation","seed":1,"name":"M08 movement off by one","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n64 !== 96\n"}
+verify	Run npm test	2026-10-07T15:19:40.6730862Z {"suite":"mutation","seed":1,"name":"M09 GoToJail relocation","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+verify	Run npm test	2026-10-07T15:19:40.7954649Z {"suite":"mutation","seed":1,"name":"M10 CC jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/31\n\n272 !== 256\n"}
+verify	Run npm test	2026-10-07T15:19:40.9573280Z {"suite":"mutation","seed":1,"name":"M11 Chance jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+verify	Run npm test	2026-10-07T15:19:41.0744667Z {"suite":"mutation","seed":1,"name":"M12 CC card multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+verify	Run npm test	2026-10-07T15:19:41.1873724Z {"suite":"mutation","seed":1,"name":"M13 Chance stay multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+verify	Run npm test	2026-10-07T15:19:41.2815959Z {"suite":"mutation","seed":1,"name":"M14 missing second railroad card","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+verify	Run npm test	2026-10-07T15:19:41.3764665Z {"suite":"mutation","seed":1,"name":"M15 nearest railroad mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/15\n\n1312 !== 1120\n"}
+verify	Run npm test	2026-10-07T15:19:41.4684750Z {"suite":"mutation","seed":1,"name":"M16 nearest utility mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/36\n\n0 !== 96\n"}
+verify	Run npm test	2026-10-07T15:19:41.5637670Z {"suite":"mutation","seed":1,"name":"M17 back-three card","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/12\n\n512 !== 608\n"}
+verify	Run npm test	2026-10-07T15:19:41.6503415Z {"suite":"mutation","seed":1,"name":"M18 jail does not reset streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+verify	Run npm test	2026-10-07T15:19:41.7644978Z {"suite":"mutation","seed":1,"name":"M19 end-turn filter","strictCompilation":true,"runtimeKilled":true,"failure":"Blind turn landing: 0.022518443650798692 != 0.031357958722416555"}
+verify	Run npm test	2026-10-07T15:19:41.8583295Z {"suite":"mutation","seed":1,"name":"M20 Marvin Gardens rent edition","strictCompilation":true,"runtimeKilled":true,"failure":"Official street rents\n+ actual - expected\n\n  [\n+   22,\n-   24,\n    120,\n    360,\n    850,\n    1025,\n    1200\n"}
+verify	Run npm test	2026-10-07T15:19:41.9796214Z {"suite":"mutation","seed":1,"name":"M21 missing full-set rent doubling","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI ordinaryRent\n\n2 !== 4\n"}
+verify	Run npm test	2026-10-07T15:19:42.0903668Z {"suite":"mutation","seed":1,"name":"M22 hotel construction investment","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI investment\n\n260 !== 310\n"}
+verify	Run npm test	2026-10-07T15:19:42.1919874Z {"suite":"mutation","seed":1,"name":"M23 railroad premium missing","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.7407758002128082 != 0.8130152464211912"}
+verify	Run npm test	2026-10-07T15:19:42.3167189Z {"suite":"mutation","seed":1,"name":"M24 utility Chance premium","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.8099534939406092 != 0.8503649878708002"}
+verify	Run npm test	2026-10-07T15:19:42.4533617Z {"suite":"mutation","seed":1,"name":"M25 per-turn rent conversion","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerOpponentTurn: 0.03592338284004056 != 0.05058286826589295"}
+verify	Run npm test	2026-10-07T15:19:42.4851667Z RUN node test.mjs 2
+verify	Run npm test	2026-10-07T15:19:42.6045921Z {"suite":"exact-and-published","seed":2,"passed":true,"assertions":37981,"exactTransitionCells":28800,"stationaryStates":240,"publishedSquares":240,"ownershipScenarios":348,"observations":[{"strategy":"leave ASAP","maxStateDifference":9.194034422677078e-16,"iterations":197,"residual":3.469446951953614e-17,"turnStartMass":0.8427269589619967,"rollsPerTurn":1.186623958525926,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":4.782849026552238e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.964513661276371e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0000011468197552155779,"tolerance":0.0001,"matchedSquares":40,"documentedGaps":[],"conflictRecord":null}]},{"strategy":"stay max","maxStateDifference":8.847089727481716e-16,"iterations":255,"residual":2.7755575615628914e-17,"turnStartMass":0.8577091677010615,"rollsPerTurn":1.165896364009171,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":6.87574422397752e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.994465015173422e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0006835468757442065,"tolerance":0.0001,"matchedSquares":39,"documentedGaps":[{"position":10,"difference":-0.0006835468757442065}],"conflictRecord":"CONFLICTS.md"}]}]}
+verify	Run npm test	2026-10-07T15:19:42.6076898Z RUN node simulate.mjs 2
+verify	Run npm test	2026-10-07T15:19:42.8830377Z simulation seed=2 strategy=leave ASAP rolls=10000000
+verify	Run npm test	2026-10-07T15:19:43.1252357Z simulation seed=2 strategy=leave ASAP rolls=20000000
+verify	Run npm test	2026-10-07T15:19:43.3616362Z simulation seed=2 strategy=leave ASAP rolls=30000000
+verify	Run npm test	2026-10-07T15:19:43.5979870Z simulation seed=2 strategy=leave ASAP rolls=40000000
+verify	Run npm test	2026-10-07T15:19:43.8367355Z simulation seed=2 strategy=leave ASAP rolls=50000000
+verify	Run npm test	2026-10-07T15:19:44.0758854Z simulation seed=2 strategy=leave ASAP rolls=60000000
+verify	Run npm test	2026-10-07T15:19:44.3137517Z simulation seed=2 strategy=leave ASAP rolls=70000000
+verify	Run npm test	2026-10-07T15:19:44.5506956Z simulation seed=2 strategy=leave ASAP rolls=80000000
+verify	Run npm test	2026-10-07T15:19:44.7886059Z simulation seed=2 strategy=leave ASAP rolls=90000000
+verify	Run npm test	2026-10-07T15:19:45.0264030Z simulation seed=2 strategy=leave ASAP rolls=100000000
+verify	Run npm test	2026-10-07T15:19:45.0430586Z {"suite":"simulation","strategy":"leave ASAP","seed":2,"rolls":100000000,"passed":true,"maxSigma":2.5024991114465203,"poissonResidual":1.5379335085874474e-15}
+verify	Run npm test	2026-10-07T15:19:45.2901765Z simulation seed=2 strategy=stay max rolls=10000000
+verify	Run npm test	2026-10-07T15:19:45.5261946Z simulation seed=2 strategy=stay max rolls=20000000
+verify	Run npm test	2026-10-07T15:19:45.7609167Z simulation seed=2 strategy=stay max rolls=30000000
+verify	Run npm test	2026-10-07T15:19:45.9960495Z simulation seed=2 strategy=stay max rolls=40000000
+verify	Run npm test	2026-10-07T15:19:46.2324139Z simulation seed=2 strategy=stay max rolls=50000000
+verify	Run npm test	2026-10-07T15:19:46.4673580Z simulation seed=2 strategy=stay max rolls=60000000
+verify	Run npm test	2026-10-07T15:19:46.7015796Z simulation seed=2 strategy=stay max rolls=70000000
+verify	Run npm test	2026-10-07T15:19:46.9384321Z simulation seed=2 strategy=stay max rolls=80000000
+verify	Run npm test	2026-10-07T15:19:47.1729715Z simulation seed=2 strategy=stay max rolls=90000000
+verify	Run npm test	2026-10-07T15:19:47.4103631Z simulation seed=2 strategy=stay max rolls=100000000
+verify	Run npm test	2026-10-07T15:19:47.4205524Z {"suite":"simulation","strategy":"stay max","seed":2,"rolls":100000000,"passed":true,"maxSigma":1.570822181594039,"poissonResidual":2.8171909249863347e-15}
+verify	Run npm test	2026-10-07T15:19:47.4240413Z RUN node mutate.mjs 2
+verify	Run npm test	2026-10-07T15:19:48.0259737Z {"suite":"mutation","seed":2,"name":"M01 denominator","strictCompilation":true,"runtimeKilled":true,"failure":"Exact common denominator\n\n9217 !== 9216\n"}
+verify	Run npm test	2026-10-07T15:19:48.2714622Z {"suite":"mutation","seed":2,"name":"M02 early triple-double jail","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+verify	Run npm test	2026-10-07T15:19:48.4344920Z {"suite":"mutation","seed":2,"name":"M03 reversed doubles","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n16 !== 96\n"}
+verify	Run npm test	2026-10-07T15:19:48.6009190Z {"suite":"mutation","seed":2,"name":"M04 premature third jail attempt","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/118/0\n\n112 !== 16\n"}
+verify	Run npm test	2026-10-07T15:19:48.7382200Z {"suite":"mutation","seed":2,"name":"M05 jail doubles extra roll","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/117/0\n\n0 !== 16\n"}
+verify	Run npm test	2026-10-07T15:19:48.8453572Z {"suite":"mutation","seed":2,"name":"M06 ASAP inherited jail streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/117/1\n\n0 !== 16\n"}
+verify	Run npm test	2026-10-07T15:19:48.9466821Z {"suite":"mutation","seed":2,"name":"M07 ordinary streak reset","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n0 !== 96\n"}
+verify	Run npm test	2026-10-07T15:19:49.0780097Z {"suite":"mutation","seed":2,"name":"M08 movement off by one","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n64 !== 96\n"}
+verify	Run npm test	2026-10-07T15:19:49.2050308Z {"suite":"mutation","seed":2,"name":"M09 GoToJail relocation","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+verify	Run npm test	2026-10-07T15:19:49.3444690Z {"suite":"mutation","seed":2,"name":"M10 CC jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/31\n\n272 !== 256\n"}
+verify	Run npm test	2026-10-07T15:19:49.4596259Z {"suite":"mutation","seed":2,"name":"M11 Chance jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+verify	Run npm test	2026-10-07T15:19:49.5568409Z {"suite":"mutation","seed":2,"name":"M12 CC card multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+verify	Run npm test	2026-10-07T15:19:49.6457363Z {"suite":"mutation","seed":2,"name":"M13 Chance stay multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+verify	Run npm test	2026-10-07T15:19:49.7302793Z {"suite":"mutation","seed":2,"name":"M14 missing second railroad card","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+verify	Run npm test	2026-10-07T15:19:49.8108390Z {"suite":"mutation","seed":2,"name":"M15 nearest railroad mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/15\n\n1312 !== 1120\n"}
+verify	Run npm test	2026-10-07T15:19:49.8892183Z {"suite":"mutation","seed":2,"name":"M16 nearest utility mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/36\n\n0 !== 96\n"}
+verify	Run npm test	2026-10-07T15:19:49.9750730Z {"suite":"mutation","seed":2,"name":"M17 back-three card","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/12\n\n512 !== 608\n"}
+verify	Run npm test	2026-10-07T15:19:50.0562697Z {"suite":"mutation","seed":2,"name":"M18 jail does not reset streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+verify	Run npm test	2026-10-07T15:19:50.1545800Z {"suite":"mutation","seed":2,"name":"M19 end-turn filter","strictCompilation":true,"runtimeKilled":true,"failure":"Blind turn landing: 0.022518443650798692 != 0.031357958722416555"}
+verify	Run npm test	2026-10-07T15:19:50.2390880Z {"suite":"mutation","seed":2,"name":"M20 Marvin Gardens rent edition","strictCompilation":true,"runtimeKilled":true,"failure":"Official street rents\n+ actual - expected\n\n  [\n+   22,\n-   24,\n    120,\n    360,\n    850,\n    1025,\n    1200\n"}
+verify	Run npm test	2026-10-07T15:19:50.3414281Z {"suite":"mutation","seed":2,"name":"M21 missing full-set rent doubling","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI ordinaryRent\n\n2 !== 4\n"}
+verify	Run npm test	2026-10-07T15:19:50.4402521Z {"suite":"mutation","seed":2,"name":"M22 hotel construction investment","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI investment\n\n260 !== 310\n"}
+verify	Run npm test	2026-10-07T15:19:50.5414836Z {"suite":"mutation","seed":2,"name":"M23 railroad premium missing","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.7407758002128082 != 0.8130152464211912"}
+verify	Run npm test	2026-10-07T15:19:50.6593867Z {"suite":"mutation","seed":2,"name":"M24 utility Chance premium","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.8099534939406092 != 0.8503649878708002"}
+verify	Run npm test	2026-10-07T15:19:50.7897762Z {"suite":"mutation","seed":2,"name":"M25 per-turn rent conversion","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerOpponentTurn: 0.03592338284004056 != 0.05058286826589295"}
+verify	Run npm test	2026-10-07T15:19:50.8207106Z RUN node test.mjs 3
+verify	Run npm test	2026-10-07T15:19:50.9269383Z {"suite":"exact-and-published","seed":3,"passed":true,"assertions":37981,"exactTransitionCells":28800,"stationaryStates":240,"publishedSquares":240,"ownershipScenarios":348,"observations":[{"strategy":"leave ASAP","maxStateDifference":9.194034422677078e-16,"iterations":197,"residual":3.469446951953614e-17,"turnStartMass":0.8427269589619967,"rollsPerTurn":1.186623958525926,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":4.782849026552238e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.964513661276371e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0000011468197552155779,"tolerance":0.0001,"matchedSquares":40,"documentedGaps":[],"conflictRecord":null}]},{"strategy":"stay max","maxStateDifference":8.847089727481716e-16,"iterations":255,"residual":2.7755575615628914e-17,"turnStartMass":0.8577091677010615,"rollsPerTurn":1.165896364009171,"tableComparisons":[{"id":"butler-per-roll","squares":40,"maxDifference":6.87574422397752e-9,"tolerance":0.0001},{"id":"butler-end-turn","squares":40,"maxDifference":4.994465015173422e-10,"tolerance":0.0001},{"id":"collins-per-roll","squares":40,"maxDifference":0.0006835468757442065,"tolerance":0.0001,"matchedSquares":39,"documentedGaps":[{"position":10,"difference":-0.0006835468757442065}],"conflictRecord":"CONFLICTS.md"}]}]}
+verify	Run npm test	2026-10-07T15:19:50.9302290Z RUN node simulate.mjs 3
+verify	Run npm test	2026-10-07T15:19:51.2046385Z simulation seed=3 strategy=leave ASAP rolls=10000000
+verify	Run npm test	2026-10-07T15:19:51.4479764Z simulation seed=3 strategy=leave ASAP rolls=20000000
+verify	Run npm test	2026-10-07T15:19:51.6847988Z simulation seed=3 strategy=leave ASAP rolls=30000000
+verify	Run npm test	2026-10-07T15:19:51.9212381Z simulation seed=3 strategy=leave ASAP rolls=40000000
+verify	Run npm test	2026-10-07T15:19:52.1582495Z simulation seed=3 strategy=leave ASAP rolls=50000000
+verify	Run npm test	2026-10-07T15:19:52.3955704Z simulation seed=3 strategy=leave ASAP rolls=60000000
+verify	Run npm test	2026-10-07T15:19:52.6363868Z simulation seed=3 strategy=leave ASAP rolls=70000000
+verify	Run npm test	2026-10-07T15:19:52.8765144Z simulation seed=3 strategy=leave ASAP rolls=80000000
+verify	Run npm test	2026-10-07T15:19:53.1130291Z simulation seed=3 strategy=leave ASAP rolls=90000000
+verify	Run npm test	2026-10-07T15:19:53.3539918Z simulation seed=3 strategy=leave ASAP rolls=100000000
+verify	Run npm test	2026-10-07T15:19:53.3694273Z {"suite":"simulation","strategy":"leave ASAP","seed":3,"rolls":100000000,"passed":true,"maxSigma":2.1157739420388237,"poissonResidual":1.5379335085874474e-15}
+verify	Run npm test	2026-10-07T15:19:53.6183293Z simulation seed=3 strategy=stay max rolls=10000000
+verify	Run npm test	2026-10-07T15:19:53.8575498Z simulation seed=3 strategy=stay max rolls=20000000
+verify	Run npm test	2026-10-07T15:19:54.0961344Z simulation seed=3 strategy=stay max rolls=30000000
+verify	Run npm test	2026-10-07T15:19:54.3609119Z simulation seed=3 strategy=stay max rolls=40000000
+verify	Run npm test	2026-10-07T15:19:54.5973986Z simulation seed=3 strategy=stay max rolls=50000000
+verify	Run npm test	2026-10-07T15:19:54.8463713Z simulation seed=3 strategy=stay max rolls=60000000
+verify	Run npm test	2026-10-07T15:19:55.0883360Z simulation seed=3 strategy=stay max rolls=70000000
+verify	Run npm test	2026-10-07T15:19:55.3255772Z simulation seed=3 strategy=stay max rolls=80000000
+verify	Run npm test	2026-10-07T15:19:55.5622779Z simulation seed=3 strategy=stay max rolls=90000000
+verify	Run npm test	2026-10-07T15:19:55.7991566Z simulation seed=3 strategy=stay max rolls=100000000
+verify	Run npm test	2026-10-07T15:19:55.8038716Z {"suite":"simulation","strategy":"stay max","seed":3,"rolls":100000000,"passed":true,"maxSigma":2.136073308429187,"poissonResidual":2.8171909249863347e-15}
+verify	Run npm test	2026-10-07T15:19:55.8075926Z RUN node mutate.mjs 3
+verify	Run npm test	2026-10-07T15:19:56.3957309Z {"suite":"mutation","seed":3,"name":"M01 denominator","strictCompilation":true,"runtimeKilled":true,"failure":"Exact common denominator\n\n9217 !== 9216\n"}
+verify	Run npm test	2026-10-07T15:19:56.6344193Z {"suite":"mutation","seed":3,"name":"M02 early triple-double jail","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+verify	Run npm test	2026-10-07T15:19:56.8057683Z {"suite":"mutation","seed":3,"name":"M03 reversed doubles","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n16 !== 96\n"}
+verify	Run npm test	2026-10-07T15:19:56.9621234Z {"suite":"mutation","seed":3,"name":"M04 premature third jail attempt","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/118/0\n\n112 !== 16\n"}
+verify	Run npm test	2026-10-07T15:19:57.1043149Z {"suite":"mutation","seed":3,"name":"M05 jail doubles extra roll","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition stay max/117/0\n\n0 !== 16\n"}
+verify	Run npm test	2026-10-07T15:19:57.2175980Z {"suite":"mutation","seed":3,"name":"M06 ASAP inherited jail streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/117/1\n\n0 !== 16\n"}
+verify	Run npm test	2026-10-07T15:19:57.3202389Z {"suite":"mutation","seed":3,"name":"M07 ordinary streak reset","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n0 !== 96\n"}
+verify	Run npm test	2026-10-07T15:19:57.4252687Z {"suite":"mutation","seed":3,"name":"M08 movement off by one","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/0\n\n64 !== 96\n"}
+verify	Run npm test	2026-10-07T15:19:57.5288268Z {"suite":"mutation","seed":3,"name":"M09 GoToJail relocation","strictCompilation":true,"runtimeKilled":true,"failure":"Invalid free state"}
+verify	Run npm test	2026-10-07T15:19:57.6354877Z {"suite":"mutation","seed":3,"name":"M10 CC jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/31\n\n272 !== 256\n"}
+verify	Run npm test	2026-10-07T15:19:57.7775246Z {"suite":"mutation","seed":3,"name":"M11 Chance jail card visiting","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+verify	Run npm test	2026-10-07T15:19:57.8804788Z {"suite":"mutation","seed":3,"name":"M12 CC card multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+verify	Run npm test	2026-10-07T15:19:57.9774632Z {"suite":"mutation","seed":3,"name":"M13 Chance stay multiplicity","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+verify	Run npm test	2026-10-07T15:19:58.0651352Z {"suite":"mutation","seed":3,"name":"M14 missing second railroad card","strictCompilation":true,"runtimeKilled":true,"failure":"Transition row mass invariant"}
+verify	Run npm test	2026-10-07T15:19:58.1511700Z {"suite":"mutation","seed":3,"name":"M15 nearest railroad mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/15\n\n1312 !== 1120\n"}
+verify	Run npm test	2026-10-07T15:19:58.2333575Z {"suite":"mutation","seed":3,"name":"M16 nearest utility mapping","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/36\n\n0 !== 96\n"}
+verify	Run npm test	2026-10-07T15:19:58.3221272Z {"suite":"mutation","seed":3,"name":"M17 back-three card","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/12\n\n512 !== 608\n"}
+verify	Run npm test	2026-10-07T15:19:58.3995288Z {"suite":"mutation","seed":3,"name":"M18 jail does not reset streak","strictCompilation":true,"runtimeKilled":true,"failure":"Blind transition leave ASAP/0/30\n\n608 !== 512\n"}
+verify	Run npm test	2026-10-07T15:19:58.4977599Z {"suite":"mutation","seed":3,"name":"M19 end-turn filter","strictCompilation":true,"runtimeKilled":true,"failure":"Blind turn landing: 0.022518443650798692 != 0.031357958722416555"}
+verify	Run npm test	2026-10-07T15:19:58.5820987Z {"suite":"mutation","seed":3,"name":"M20 Marvin Gardens rent edition","strictCompilation":true,"runtimeKilled":true,"failure":"Official street rents\n+ actual - expected\n\n  [\n+   22,\n-   24,\n    120,\n    360,\n    850,\n    1025,\n    1200\n"}
+verify	Run npm test	2026-10-07T15:19:58.6988295Z {"suite":"mutation","seed":3,"name":"M21 missing full-set rent doubling","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI ordinaryRent\n\n2 !== 4\n"}
+verify	Run npm test	2026-10-07T15:19:58.7980155Z {"suite":"mutation","seed":3,"name":"M22 hotel construction investment","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI investment\n\n260 !== 310\n"}
+verify	Run npm test	2026-10-07T15:19:58.9016179Z {"suite":"mutation","seed":3,"name":"M23 railroad premium missing","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.7407758002128082 != 0.8130152464211912"}
+verify	Run npm test	2026-10-07T15:19:59.0035953Z {"suite":"mutation","seed":3,"name":"M24 utility Chance premium","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerRoll: 0.8099534939406092 != 0.8503649878708002"}
+verify	Run npm test	2026-10-07T15:19:59.1218844Z {"suite":"mutation","seed":3,"name":"M25 per-turn rent conversion","strictCompilation":true,"runtimeKilled":true,"failure":"Blind ROI expectedRentPerOpponentTurn: 0.03592338284004056 != 0.05058286826589295"}
+verify	Run npm test	2026-10-07T15:19:59.1572527Z RUN node hashes.mjs
+verify	Run npm test	2026-10-07T15:19:59.1780132Z SHA256: 54 files verified
+verify	Run npm test	2026-10-07T15:19:59.1812360Z {"suite":"complete","passed":true,"node":"v22.16.0","typescript":"5.8.3","seeds":[1,2,3],"totals":{"exactTransitionCells":86400,"stationaryStates":720,"publishedSquares":720,"matchedPublishedSquares":717,"documentedPublishedGaps":3,"requiredButlerComparisons":480,"roiScenarios":1044,"simulationRolls":600000000,"simulationSquares":240,"strictCompiledMutants":75,"runtimeKilledMutants":75}}
+verify	Run actions/upload-artifact@v4	﻿2026-10-07T15:19:59.1958069Z ##[group]Run actions/upload-artifact@v4
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.1958228Z with:
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.1958336Z   name: B08-verification
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.1958478Z   path: jobs/B08-monopoly-markov/.verification/
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.1958642Z   include-hidden-files: true
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.1958770Z   if-no-files-found: warn
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.1958892Z   compression-level: 6
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.1959009Z   overwrite: false
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.1959119Z ##[endgroup]
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.2962542Z (node:2428) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.2963458Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.3078440Z With the provided path, there will be 85 files uploaded
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.3079180Z Artifact name is valid!
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.3079536Z Root directory input is valid!
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.7043448Z Beginning upload of artifact content to blob storage
+verify	Run actions/upload-artifact@v4	2026-10-07T15:19:59.7695650Z (node:2428) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+verify	Run actions/upload-artifact@v4	2026-10-07T15:20:00.3763725Z Uploaded bytes 366701
+verify	Run actions/upload-artifact@v4	2026-10-07T15:20:00.4589498Z Finished uploading artifact content to blob storage!
+verify	Run actions/upload-artifact@v4	2026-10-07T15:20:00.4590153Z SHA256 digest of uploaded artifact zip is e7f316d55d07ba7b01de758122d50c77df3afbb1e3ae8f7cb987af6aa5c7fddd
+verify	Run actions/upload-artifact@v4	2026-10-07T15:20:00.4590652Z Finalizing artifact upload
+verify	Run actions/upload-artifact@v4	2026-10-07T15:20:00.7290788Z Artifact B08-verification.zip successfully finalized. Artifact ID 11493140803
+verify	Run actions/upload-artifact@v4	2026-10-07T15:20:00.7291512Z Artifact B08-verification has been successfully uploaded! Final size is 366701 bytes. Artifact ID is 11493140803
+verify	Run actions/upload-artifact@v4	2026-10-07T15:20:00.7296115Z Artifact download URL: https://github.com/luisitin/partybox-gpt-drops/actions/runs/37642906455/artifacts/11493140803
+verify	Post Run actions/setup-node@v4	﻿2026-10-07T15:20:00.7435554Z Post job cleanup.
+verify	Post Run actions/setup-node@v4	2026-10-07T15:20:00.8198920Z (node:2441) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+verify	Post Run actions/setup-node@v4	2026-10-07T15:20:00.8199638Z (Use `node --trace-deprecation ...` to show where the warning was created)
+verify	Post Run actions/checkout@v4	﻿2026-10-07T15:20:00.8380822Z Post job cleanup.
+verify	Post Run actions/checkout@v4	2026-10-07T15:20:00.8923813Z [command]/usr/bin/git version
+verify	Post Run actions/checkout@v4	2026-10-07T15:20:00.8951674Z git version 2.55.0
+verify	Post Run actions/checkout@v4	2026-10-07T15:20:00.8973939Z Temporarily overriding HOME='/home/runner/work/_temp/88c35472-ff54-4e62-b3ab-410022f48054' before making global git config changes
+verify	Post Run actions/checkout@v4	2026-10-07T15:20:00.8974914Z Adding repository directory to the temporary git global config as a safe directory
+verify	Post Run actions/checkout@v4	2026-10-07T15:20:00.8977614Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/partybox-gpt-drops/partybox-gpt-drops
+verify	Post Run actions/checkout@v4	2026-10-07T15:20:00.9006202Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Post Run actions/checkout@v4	2026-10-07T15:20:00.9032812Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Post Run actions/checkout@v4	2026-10-07T15:20:00.9228937Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Post Run actions/checkout@v4	2026-10-07T15:20:00.9251482Z http.https://github.com/.extraheader
+verify	Post Run actions/checkout@v4	2026-10-07T15:20:00.9275820Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verify	Post Run actions/checkout@v4	2026-10-07T15:20:00.9298238Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Post Run actions/checkout@v4	2026-10-07T15:20:00.9510406Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Post Run actions/checkout@v4	2026-10-07T15:20:00.9546963Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Complete job	﻿2026-10-07T15:20:00.9856041Z Cleaning up orphan processes
+verify	Complete job	2026-10-07T15:20:01.0040763Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
