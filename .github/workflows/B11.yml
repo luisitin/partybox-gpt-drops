@@ -1,0 +1,32 @@
+name: B11 Rummikub verification
+on:
+  pull_request:
+    paths: ['jobs/B11-*/**', '.github/workflows/B11.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: jobs/B11-rummikub-solver
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - run: python3 -m pip install --disable-pip-version-check -r requirements-dev.txt
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm test
+      - name: Upload fresh verification receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: B11-verification-receipts
+          path: jobs/B11-rummikub-solver/.test-output/
+          include-hidden-files: true
+          if-no-files-found: warn

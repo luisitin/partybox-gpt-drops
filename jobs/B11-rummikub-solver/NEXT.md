@@ -1,0 +1,3 @@
+# Next step
+
+Observe the hosted run on the polish head (the commit this pass pushes) and link its exact SHA and checks from PR 7. If its 500 ms bench gate fails on a loaded runner, record that as a timing finding and do not relax the gate. Then port per INTEGRATION.md step 1 into PartyBox and calibrate the expansion cap with `pnpm sim --game rummikub --players 4 --runs 200 --seed 1` before wiring the sharp bot. Preserve both immutable blind seals, every receipt and the disclosed floating-point bound limitation. Runtime production stays pure TypeScript with zero dependencies; Python/SciPy remain pinned development-only tools.

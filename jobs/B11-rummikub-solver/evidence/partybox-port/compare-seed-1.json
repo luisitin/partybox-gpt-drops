@@ -1,0 +1,196 @@
+{
+  "script": "evidence/partybox-port/compare.mts",
+  "partyBoxRoot": "/home/user/partybox",
+  "nodeNote": "tsx run; timings on a loaded 4-CPU host",
+  "partA": {
+    "exhaustiveLength3": 148876,
+    "sampledLength4": 2500,
+    "disagreements": [],
+    "checked": 151376,
+    "disagreementCount": 0,
+    "namedCases": [
+      {
+        "name": "run ending at 13 with joker (12,13,J)",
+        "pbValid": false,
+        "pbPoints": null,
+        "b11Valid": false,
+        "b11MaxPoints": null,
+        "agree": true
+      },
+      {
+        "name": "wrap 13-J-1 (no wrap) ",
+        "pbValid": false,
+        "pbPoints": null,
+        "b11Valid": false,
+        "b11MaxPoints": null,
+        "agree": true
+      },
+      {
+        "name": "J-1-2 would need a 0 (no low end)",
+        "pbValid": false,
+        "pbPoints": null,
+        "b11Valid": false,
+        "b11MaxPoints": null,
+        "agree": true
+      },
+      {
+        "name": "J-J-12 cannot reach 14",
+        "pbValid": true,
+        "pbPoints": 36,
+        "b11Valid": true,
+        "b11MaxPoints": 36,
+        "agree": true
+      },
+      {
+        "name": "group 5,5 with joker (distinct colours)",
+        "pbValid": true,
+        "pbPoints": 15,
+        "b11Valid": true,
+        "b11MaxPoints": 15,
+        "agree": true
+      },
+      {
+        "name": "group with duplicate colour 5r 5r J",
+        "pbValid": false,
+        "pbPoints": null,
+        "b11Valid": false,
+        "b11MaxPoints": null,
+        "agree": true
+      },
+      {
+        "name": "joker run middle 1 J 3",
+        "pbValid": true,
+        "pbPoints": 6,
+        "b11Valid": true,
+        "b11MaxPoints": 6,
+        "agree": true
+      },
+      {
+        "name": "J J 7 (run 5-6-7 or group of 7s)",
+        "pbValid": true,
+        "pbPoints": 21,
+        "b11Valid": true,
+        "b11MaxPoints": 21,
+        "agree": true
+      },
+      {
+        "name": "full red run 1..13 (13 tiles)",
+        "pbValid": true,
+        "pbPoints": 91,
+        "b11Valid": true,
+        "b11MaxPoints": 91,
+        "agree": true
+      },
+      {
+        "name": "group of four 7s",
+        "pbValid": true,
+        "pbPoints": 28,
+        "b11Valid": true,
+        "b11MaxPoints": 28,
+        "agree": true
+      },
+      {
+        "name": "group of five 7s (too long)",
+        "pbValid": false,
+        "pbPoints": null,
+        "b11Valid": false,
+        "b11MaxPoints": null,
+        "agree": true
+      },
+      {
+        "name": "two-tile run 1 2",
+        "pbValid": false,
+        "pbPoints": null,
+        "b11Valid": false,
+        "b11MaxPoints": null,
+        "agree": true
+      },
+      {
+        "name": "three jokers",
+        "pbValid": false,
+        "pbPoints": null,
+        "b11Valid": false,
+        "b11MaxPoints": null,
+        "agree": true
+      },
+      {
+        "name": "J 2..12 J (13 tiles, both ends)",
+        "pbValid": true,
+        "pbPoints": 91,
+        "b11Valid": true,
+        "b11MaxPoints": 91,
+        "agree": true
+      },
+      {
+        "name": "J 1..12 J (run would start at 0)",
+        "pbValid": false,
+        "pbPoints": null,
+        "b11Valid": false,
+        "b11MaxPoints": null,
+        "agree": true
+      }
+    ]
+  },
+  "partB": {
+    "easy": {
+      "positions": 440,
+      "pbPlays": 251,
+      "b11Plays": 287,
+      "missedByBot": 36,
+      "botBelowOptimum": 110,
+      "botAtOptimum": 141,
+      "gapValueSum": 3557,
+      "gapValueMax": 104,
+      "gapCountOnTie": 0,
+      "flags": {},
+      "examples": [],
+      "gapValueAvg": 32.336363636363636,
+      "pbMsP50": 0.1424120000010589,
+      "pbMsP99": 32.155399999999645,
+      "pbMsMax": 82.71511999999893,
+      "b11MsP50": 0.4334690000014234,
+      "b11MsP99": 248.70384199999899,
+      "b11MsMax": 689.9984250000016
+    },
+    "normal": {
+      "positions": 440,
+      "pbPlays": 260,
+      "b11Plays": 287,
+      "missedByBot": 27,
+      "botBelowOptimum": 93,
+      "botAtOptimum": 167,
+      "gapValueSum": 2381,
+      "gapValueMax": 70,
+      "gapCountOnTie": 0,
+      "flags": {},
+      "examples": [],
+      "gapValueAvg": 25.602150537634408,
+      "pbMsP50": 0.1695960000033665,
+      "pbMsP99": 31.72513600000093,
+      "pbMsMax": 111.20898099999977,
+      "b11MsP50": 0.40271800000118674,
+      "b11MsP99": 227.14577700000154,
+      "b11MsMax": 571.3588909999999
+    },
+    "sharp": {
+      "positions": 440,
+      "pbPlays": 263,
+      "b11Plays": 287,
+      "missedByBot": 24,
+      "botBelowOptimum": 87,
+      "botAtOptimum": 176,
+      "gapValueSum": 1801,
+      "gapValueMax": 70,
+      "gapCountOnTie": 0,
+      "flags": {},
+      "examples": [],
+      "gapValueAvg": 20.701149425287355,
+      "pbMsP50": 0.215914000000339,
+      "pbMsP99": 63.91064600000027,
+      "pbMsMax": 674.8851739999991,
+      "b11MsP50": 0.4321829999971669,
+      "b11MsP99": 307.6646150000015,
+      "b11MsMax": 810.0369720000017
+    }
+  }
+}
