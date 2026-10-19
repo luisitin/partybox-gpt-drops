@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "selectedSha256",
+    "rows"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "selectedSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "rows": {
+      "type": "array",
+      "minItems": 1200,
+      "maxItems": 1200,
+      "items": {
+        "type": "object",
+        "required": [
+          "promptId",
+          "textSha256",
+          "status",
+          "allActualCuesReviewed",
+          "verifiedFactIds",
+          "coverageReason"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "promptId": {
+            "type": "string",
+            "pattern": "^[MQ][0-9]{4}$"
+          },
+          "textSha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "status": {
+            "enum": [
+              "UNVERIFIED",
+              "VERIFIED"
+            ]
+          },
+          "allActualCuesReviewed": {
+            "type": "boolean"
+          },
+          "verifiedFactIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^CUE-[0-9]{3}$"
+            }
+          },
+          "coverageReason": {
+            "type": "string",
+            "minLength": 20
+          }
+        }
+      }
+    }
+  }
+}

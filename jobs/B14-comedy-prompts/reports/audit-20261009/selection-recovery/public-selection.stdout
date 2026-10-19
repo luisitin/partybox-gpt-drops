@@ -1,0 +1,21 @@
+
+> b14-comedy-prompts@1.0.0 test:selection
+> python3 scripts/test_selection.py && python3 scripts/check_selection.py
+
+{
+  "utc": "2026-10-09T12:31:58.759473+00:00",
+  "independentExhaustiveSubsetOracleCases": 600,
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "expectedInfeasibleCases": 423,
+  "greedyGenreTrapControl": [
+    "M0",
+    "Q1"
+  ],
+  "allPassed": true,
+  "scope": "Actual independent exhaustive subset oracle checks exact lexicographic inclusion, both genre quotas, shared canonical caps, aliases, exclusions, grade eligibility and infeasible packs; no oracle wraps production selector."
+}
+{"actualSelected": 1200, "allOriginalCandidates": 3000, "bothGenreQuotas": 600, "combinedReferenceCap": 3, "exactGlobalRankedFeasibleSelection": true, "originalWordsAndGradesChanged": false}

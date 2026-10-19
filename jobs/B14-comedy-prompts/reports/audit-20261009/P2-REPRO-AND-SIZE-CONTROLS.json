@@ -1,0 +1,135 @@
+{
+  "utc": "2026-10-09T12:09:45.089939+00:00",
+  "originalHead": "7985b82423a9419bbbfcdc6c1dfb12b816bc461e",
+  "omittedHigherGrades": [
+    {
+      "id": "Q0249",
+      "grade": [
+        5,
+        4
+      ],
+      "selected": false,
+      "referenceSlotsUsed": 2,
+      "text": "Steve Carell's worst team-building exercise for adults awaiting arraignment: ___."
+    },
+    {
+      "id": "Q0255",
+      "grade": [
+        5,
+        4
+      ],
+      "selected": false,
+      "referenceSlotsUsed": 2,
+      "text": "Nicole Kidman's least soothing welcome to a theater showing your divorce footage: ___."
+    }
+  ],
+  "weakerSelectedWitness": {
+    "id": "Q0002",
+    "grade": [
+      4,
+      4
+    ]
+  },
+  "semanticDuplicateIds": [
+    "M0497",
+    "Q0497"
+  ],
+  "legacyFalseGreenControls": [
+    {
+      "listed": false,
+      "oldExit": 0,
+      "oldStdout": "payload.txt: OK\nscripts/checksums.py: OK\n",
+      "new": {
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-old-size-witness-mq5ner9n/fixture/scripts/checksums.py\", line 71, in <module>\n    main()\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-old-size-witness-mq5ner9n/fixture/scripts/checksums.py\", line 68, in main\n    print(json.dumps(run(ROOT, args.check)))\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-old-size-witness-mq5ner9n/fixture/scripts/checksums.py\", line 34, in run\n    paths = delivered_files(root)\n            ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-old-size-witness-mq5ner9n/fixture/scripts/checksums.py\", line 21, in delivered_files\n    raise ValueError(\"delivered file exceeds 30 MB: \" + str(path.relative_to(root)))\nValueError: delivered file exceeds 30 MB: oversized.dat\n",
+        "allFixtureBytesPreserved": true
+      }
+    },
+    {
+      "listed": true,
+      "oldExit": 0,
+      "oldStdout": "oversized.dat: OK\npayload.txt: OK\nscripts/checksums.py: OK\n",
+      "new": {
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-old-size-witness-fg72cmw_/fixture/scripts/checksums.py\", line 71, in <module>\n    main()\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-old-size-witness-fg72cmw_/fixture/scripts/checksums.py\", line 68, in main\n    print(json.dumps(run(ROOT, args.check)))\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-old-size-witness-fg72cmw_/fixture/scripts/checksums.py\", line 34, in run\n    paths = delivered_files(root)\n            ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-old-size-witness-fg72cmw_/fixture/scripts/checksums.py\", line 21, in delivered_files\n    raise ValueError(\"delivered file exceeds 30 MB: \" + str(path.relative_to(root)))\nValueError: delivered file exceeds 30 MB: oversized.dat\n",
+        "allFixtureBytesPreserved": true
+      }
+    }
+  ],
+  "newReadOnlyChecks": [
+    {
+      "returncode": 0,
+      "stdout": "{\"mode\": \"check\", \"hashedFiles\": 2, \"sizeCheckedFiles\": 3, \"maxDeliveredFileBytes\": 3188, \"manifestChanged\": false}\n",
+      "stderr": "",
+      "allFixtureBytesPreserved": true,
+      "name": "unchanged complete positive"
+    },
+    {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-0ckl6eem/fixture/scripts/checksums.py\", line 71, in <module>\n    main()\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-0ckl6eem/fixture/scripts/checksums.py\", line 68, in main\n    print(json.dumps(run(ROOT, args.check)))\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-0ckl6eem/fixture/scripts/checksums.py\", line 54, in run\n    raise ValueError(\"delivery manifest mismatch: unlisted=\" + repr(missing) + \", absent=\" + repr(stale) + \", hashes=\" + repr(wrong))\nValueError: delivery manifest mismatch: unlisted=['unlisted.txt'], absent=[], hashes=[]\n",
+      "allFixtureBytesPreserved": true,
+      "name": "unlisted ordinary file"
+    },
+    {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-g9_8rwyu/fixture/scripts/checksums.py\", line 71, in <module>\n    main()\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-g9_8rwyu/fixture/scripts/checksums.py\", line 68, in main\n    print(json.dumps(run(ROOT, args.check)))\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-g9_8rwyu/fixture/scripts/checksums.py\", line 54, in run\n    raise ValueError(\"delivery manifest mismatch: unlisted=\" + repr(missing) + \", absent=\" + repr(stale) + \", hashes=\" + repr(wrong))\nValueError: delivery manifest mismatch: unlisted=[], absent=[], hashes=['payload.txt']\n",
+      "allFixtureBytesPreserved": true,
+      "name": "changed listed payload"
+    },
+    {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-m3w_ujnv/fixture/scripts/checksums.py\", line 71, in <module>\n    main()\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-m3w_ujnv/fixture/scripts/checksums.py\", line 68, in main\n    print(json.dumps(run(ROOT, args.check)))\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-m3w_ujnv/fixture/scripts/checksums.py\", line 54, in run\n    raise ValueError(\"delivery manifest mismatch: unlisted=\" + repr(missing) + \", absent=\" + repr(stale) + \", hashes=\" + repr(wrong))\nValueError: delivery manifest mismatch: unlisted=[], absent=['payload.txt'], hashes=[]\n",
+      "allFixtureBytesPreserved": true,
+      "name": "missing listed payload"
+    },
+    {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-ta076x77/fixture/scripts/checksums.py\", line 71, in <module>\n    main()\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-ta076x77/fixture/scripts/checksums.py\", line 68, in main\n    print(json.dumps(run(ROOT, args.check)))\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-ta076x77/fixture/scripts/checksums.py\", line 48, in run\n    raise ValueError(\"unsafe or duplicate manifest path: \" + relative)\nValueError: unsafe or duplicate manifest path: payload.txt\n",
+      "allFixtureBytesPreserved": true,
+      "name": "duplicate manifest entry"
+    },
+    {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-focu2yh9/fixture/scripts/checksums.py\", line 71, in <module>\n    main()\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-focu2yh9/fixture/scripts/checksums.py\", line 68, in main\n    print(json.dumps(run(ROOT, args.check)))\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-focu2yh9/fixture/scripts/checksums.py\", line 44, in run\n    raise ValueError(\"invalid manifest line \" + str(number))\nValueError: invalid manifest line 1\n",
+      "allFixtureBytesPreserved": true,
+      "name": "invalid checksum syntax"
+    },
+    {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-70h9f0nl/fixture/scripts/checksums.py\", line 71, in <module>\n    main()\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-70h9f0nl/fixture/scripts/checksums.py\", line 68, in main\n    print(json.dumps(run(ROOT, args.check)))\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-70h9f0nl/fixture/scripts/checksums.py\", line 48, in run\n    raise ValueError(\"unsafe or duplicate manifest path: \" + relative)\nValueError: unsafe or duplicate manifest path: /tmp/outside\n",
+      "allFixtureBytesPreserved": true,
+      "name": "absolute manifest path"
+    },
+    {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-qpukpdtk/fixture/scripts/checksums.py\", line 71, in <module>\n    main()\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-qpukpdtk/fixture/scripts/checksums.py\", line 68, in main\n    print(json.dumps(run(ROOT, args.check)))\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-qpukpdtk/fixture/scripts/checksums.py\", line 48, in run\n    raise ValueError(\"unsafe or duplicate manifest path: \" + relative)\nValueError: unsafe or duplicate manifest path: ../outside\n",
+      "allFixtureBytesPreserved": true,
+      "name": "parent traversal manifest path"
+    },
+    {
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-j0dv9j_k/fixture/scripts/checksums.py\", line 71, in <module>\n    main()\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-j0dv9j_k/fixture/scripts/checksums.py\", line 68, in main\n    print(json.dumps(run(ROOT, args.check)))\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-j0dv9j_k/fixture/scripts/checksums.py\", line 34, in run\n    paths = delivered_files(root)\n            ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/gpt-drops-B14-audit-20261009/.work/20261009-audit/b14-size-control-j0dv9j_k/fixture/scripts/checksums.py\", line 18, in delivered_files\n    raise ValueError(\"delivered symlink is not a regular local file: \" + str(path.relative_to(root)))\nValueError: delivered symlink is not a regular local file: link\n",
+      "allFixtureBytesPreserved": true,
+      "name": "symlink delivery"
+    },
+    {
+      "returncode": 0,
+      "stdout": "{\"mode\": \"check\", \"hashedFiles\": 2, \"sizeCheckedFiles\": 3, \"maxDeliveredFileBytes\": 3188, \"manifestChanged\": false}\n",
+      "stderr": "",
+      "allFixtureBytesPreserved": true,
+      "name": "private work excluded"
+    }
+  ],
+  "childClosures": "all subprocess.run completed naturally; owned temporary control fixtures removed by TemporaryDirectory; no signals",
+  "researchClaimsPromoted": 0
+}
