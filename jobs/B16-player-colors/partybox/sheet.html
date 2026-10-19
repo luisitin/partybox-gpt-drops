@@ -1,0 +1,1281 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PartyBox player colours</title>
+<style>
+:root { --pb-font: 'Nunito Variable','Segoe UI Variable Display','Segoe UI',system-ui,-apple-system,Roboto,sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 32px; background: #0b0c18; color: #f5f6ff; font-family: var(--pb-font); }
+h1 { font-size: 28px; margin: 0 0 6px; } p.lede { margin: 0 0 24px; color: #b3b7d9; font-size: 15px; max-width: 90ch; }
+.theme { border-radius: 24px; padding: 20px 24px 12px; margin: 0 0 20px; border: 1px solid rgba(127,127,160,.25); }
+.theme header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 8px; }
+.theme h2 { font-size: 20px; margin: 0 12px 0 0; }
+.chip { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: rgba(127,127,160,.18); }
+.chip.ok { background: rgba(6,214,160,.2); }
+.row { display: flex; align-items: flex-start; gap: 14px; margin: 8px 0; }
+.row h4 { width: 128px; flex: none; margin: 18px 0 0; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; opacity: .75; }
+.discs { display: flex; flex-wrap: nowrap; gap: 6px; }
+.disc { margin: 0; width: 70px; text-align: center; }
+.disc svg { width: 56px; height: 56px; display: block; margin: 0 auto; }
+.disc figcaption { font-size: 11px; line-height: 1.25; margin-top: 4px; white-space: nowrap; }
+.disc figcaption b { display: block; font-size: 13px; }
+.disc.repeat figcaption::after { content: ' (13-16)'; opacity: .7; font-size: 9px; }
+</style></head><body>
+<h1>PartyBox player colours: now (8) vs candidate (12)</h1>
+<p class="lede">Each disc is a player's avatar face in the candidate's exact 8-bit sRGB. Rows under "Candidate" are the same colours simulated for protanopia, deuteranopia and tritanopia (Machado 2009, severity 1.0, applied to the whole disc). The ring is the theme's text ink, 2.5 px, so every disc edge is at least 3:1 on its ground. Slots 13-16 repeat 1-4 with a dashed ring; the avatar face still tells players apart.</p>
+<section class="theme" style="background:#0f1020;color:#f5f6ff">
+<header><h2>Night (default)</h2>
+<span class="chip">ground #0f1020</span>
+<span class="chip">fill vs ground: now 6.5:1 · candidate 3.2:1</span>
+<span class="chip ok">ring 17.5:1 on every disc</span></header>
+<div class="row"><h4>PartyBox now</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 93 143)" stroke="#0f1020" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Pink</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 209 102)" stroke="#0f1020" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Gold</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(6 214 160)" stroke="#0f1020" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Mint</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(76 201 240)" stroke="#0f1020" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Sky</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(179 136 255)" stroke="#0f1020" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Lilac</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 159 67)" stroke="#0f1020" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Orange</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(72 219 251)" stroke="#0f1020" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Cyan</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(243 104 224)" stroke="#0f1020" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Magenta</figcaption></figure></div></div>
+<div class="row"><h4>Candidate</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(18 144 181)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(194 2 132)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(215 105 120)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(140 8 255)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(41 124 80)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(247 165 131)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(94 255 224)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(253 250 163)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(155 232 22)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(146 160 255)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(66 192 198)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(138 90 0)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Protanopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(124 141 183)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(53 82 135)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(127 126 120)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 101 255)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(123 114 77)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(186 174 128)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(245 240 223)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 244 157)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(243 214 0)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(126 171 255)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(178 184 199)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(107 93 0)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Deuteranopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(103 127 181)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(107 112 128)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(155 148 118)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 98 251)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(112 106 83)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(205 192 130)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(222 223 226)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 248 167)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(233 209 55)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(118 163 253)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(159 169 199)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(118 105 5)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Tritanopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 155 156)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(209 0 76)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(232 92 111)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(108 101 150)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 123 113)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 151 156)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 255 246)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 239 228)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(159 221 198)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(110 179 195)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 199 193)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(151 78 76)" stroke="#f5f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Room of 16</h4><div class="discs"><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(18 144 181)" stroke="#f5f6ff" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>13</b>Ocean</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(194 2 132)" stroke="#f5f6ff" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>14</b>Berry</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(215 105 120)" stroke="#f5f6ff" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>15</b>Coral</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(140 8 255)" stroke="#f5f6ff" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>16</b>Violet</figcaption></figure></div></div>
+</section><section class="theme" style="background:#f6f5ff;color:#171633">
+<header><h2>Daylight</h2>
+<span class="chip">ground #f6f5ff</span>
+<span class="chip">fill vs ground: now 1.3:1 · candidate 1.0:1</span>
+<span class="chip ok">ring 16.2:1 on every disc</span></header>
+<div class="row"><h4>PartyBox now</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 93 143)" stroke="#f6f5ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Pink</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 209 102)" stroke="#f6f5ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Gold</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(6 214 160)" stroke="#f6f5ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Mint</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(76 201 240)" stroke="#f6f5ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Sky</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(179 136 255)" stroke="#f6f5ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Lilac</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 159 67)" stroke="#f6f5ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Orange</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(72 219 251)" stroke="#f6f5ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Cyan</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(243 104 224)" stroke="#f6f5ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Magenta</figcaption></figure></div></div>
+<div class="row"><h4>Candidate</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(18 144 181)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(194 2 132)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(215 105 120)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(140 8 255)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(41 124 80)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(247 165 131)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(94 255 224)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(253 250 163)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(155 232 22)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(146 160 255)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(66 192 198)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(138 90 0)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Protanopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(124 141 183)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(53 82 135)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(127 126 120)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 101 255)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(123 114 77)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(186 174 128)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(245 240 223)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 244 157)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(243 214 0)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(126 171 255)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(178 184 199)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(107 93 0)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Deuteranopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(103 127 181)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(107 112 128)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(155 148 118)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 98 251)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(112 106 83)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(205 192 130)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(222 223 226)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 248 167)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(233 209 55)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(118 163 253)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(159 169 199)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(118 105 5)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Tritanopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 155 156)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(209 0 76)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(232 92 111)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(108 101 150)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 123 113)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 151 156)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 255 246)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 239 228)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(159 221 198)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(110 179 195)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 199 193)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(151 78 76)" stroke="#171633" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Room of 16</h4><div class="discs"><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(18 144 181)" stroke="#171633" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>13</b>Ocean</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(194 2 132)" stroke="#171633" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>14</b>Berry</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(215 105 120)" stroke="#171633" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>15</b>Coral</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(140 8 255)" stroke="#171633" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>16</b>Violet</figcaption></figure></div></div>
+</section><section class="theme" style="background:#050014;color:#f0f6ff">
+<header><h2>Arcade</h2>
+<span class="chip">ground #050014</span>
+<span class="chip">fill vs ground: now 7.1:1 · candidate 3.5:1</span>
+<span class="chip ok">ring 19.0:1 on every disc</span></header>
+<div class="row"><h4>PartyBox now</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 93 143)" stroke="#050014" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Pink</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 209 102)" stroke="#050014" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Gold</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(6 214 160)" stroke="#050014" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Mint</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(76 201 240)" stroke="#050014" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Sky</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(179 136 255)" stroke="#050014" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Lilac</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 159 67)" stroke="#050014" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Orange</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(72 219 251)" stroke="#050014" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Cyan</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(243 104 224)" stroke="#050014" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Magenta</figcaption></figure></div></div>
+<div class="row"><h4>Candidate</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(18 144 181)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(194 2 132)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(215 105 120)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(140 8 255)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(41 124 80)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(247 165 131)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(94 255 224)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(253 250 163)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(155 232 22)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(146 160 255)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(66 192 198)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(138 90 0)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Protanopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(124 141 183)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(53 82 135)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(127 126 120)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 101 255)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(123 114 77)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(186 174 128)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(245 240 223)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 244 157)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(243 214 0)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(126 171 255)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(178 184 199)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(107 93 0)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Deuteranopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(103 127 181)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(107 112 128)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(155 148 118)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 98 251)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(112 106 83)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(205 192 130)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(222 223 226)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 248 167)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(233 209 55)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(118 163 253)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(159 169 199)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(118 105 5)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Tritanopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 155 156)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(209 0 76)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(232 92 111)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(108 101 150)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 123 113)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 151 156)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 255 246)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 239 228)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(159 221 198)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(110 179 195)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 199 193)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(151 78 76)" stroke="#f0f6ff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Room of 16</h4><div class="discs"><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(18 144 181)" stroke="#f0f6ff" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>13</b>Ocean</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(194 2 132)" stroke="#f0f6ff" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>14</b>Berry</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(215 105 120)" stroke="#f0f6ff" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>15</b>Coral</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(140 8 255)" stroke="#f0f6ff" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>16</b>Violet</figcaption></figure></div></div>
+</section><section class="theme" style="background:#1d1410;color:#fbf3e8">
+<header><h2>Cabin</h2>
+<span class="chip">ground #1d1410</span>
+<span class="chip">fill vs ground: now 6.2:1 · candidate 3.1:1</span>
+<span class="chip ok">ring 16.5:1 on every disc</span></header>
+<div class="row"><h4>PartyBox now</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 93 143)" stroke="#1d1410" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Pink</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 209 102)" stroke="#1d1410" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Gold</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(6 214 160)" stroke="#1d1410" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Mint</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(76 201 240)" stroke="#1d1410" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Sky</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(179 136 255)" stroke="#1d1410" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Lilac</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 159 67)" stroke="#1d1410" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Orange</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(72 219 251)" stroke="#1d1410" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Cyan</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(243 104 224)" stroke="#1d1410" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Magenta</figcaption></figure></div></div>
+<div class="row"><h4>Candidate</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(18 144 181)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(194 2 132)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(215 105 120)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(140 8 255)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(41 124 80)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(247 165 131)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(94 255 224)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(253 250 163)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(155 232 22)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(146 160 255)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(66 192 198)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(138 90 0)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Protanopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(124 141 183)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(53 82 135)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(127 126 120)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 101 255)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(123 114 77)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(186 174 128)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(245 240 223)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 244 157)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(243 214 0)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(126 171 255)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(178 184 199)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(107 93 0)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Deuteranopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(103 127 181)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(107 112 128)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(155 148 118)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 98 251)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(112 106 83)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(205 192 130)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(222 223 226)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 248 167)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(233 209 55)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(118 163 253)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(159 169 199)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(118 105 5)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Tritanopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 155 156)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(209 0 76)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(232 92 111)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(108 101 150)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 123 113)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 151 156)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 255 246)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 239 228)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(159 221 198)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(110 179 195)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 199 193)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(151 78 76)" stroke="#fbf3e8" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Room of 16</h4><div class="discs"><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(18 144 181)" stroke="#fbf3e8" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>13</b>Ocean</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(194 2 132)" stroke="#fbf3e8" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>14</b>Berry</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(215 105 120)" stroke="#fbf3e8" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>15</b>Coral</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(140 8 255)" stroke="#fbf3e8" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>16</b>Violet</figcaption></figure></div></div>
+</section><section class="theme" style="background:#000000;color:#ffffff">
+<header><h2>High contrast</h2>
+<span class="chip">ground #000000</span>
+<span class="chip">fill vs ground: now 7.2:1 · candidate 3.5:1</span>
+<span class="chip ok">ring 21.0:1 on every disc</span></header>
+<div class="row"><h4>PartyBox now</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 93 143)" stroke="#000000" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Pink</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 209 102)" stroke="#000000" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Gold</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(6 214 160)" stroke="#000000" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Mint</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(76 201 240)" stroke="#000000" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Sky</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(179 136 255)" stroke="#000000" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Lilac</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 159 67)" stroke="#000000" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Orange</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(72 219 251)" stroke="#000000" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Cyan</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(243 104 224)" stroke="#000000" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Magenta</figcaption></figure></div></div>
+<div class="row"><h4>Candidate</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(18 144 181)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(194 2 132)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(215 105 120)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(140 8 255)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(41 124 80)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(247 165 131)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(94 255 224)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(253 250 163)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(155 232 22)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(146 160 255)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(66 192 198)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(138 90 0)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Protanopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(124 141 183)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(53 82 135)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(127 126 120)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 101 255)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(123 114 77)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(186 174 128)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(245 240 223)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 244 157)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(243 214 0)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(126 171 255)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(178 184 199)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(107 93 0)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Deuteranopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(103 127 181)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(107 112 128)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(155 148 118)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 98 251)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(112 106 83)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(205 192 130)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(222 223 226)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 248 167)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(233 209 55)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(118 163 253)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(159 169 199)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(118 105 5)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Tritanopia</h4><div class="discs"><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 155 156)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>1</b>Ocean</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(209 0 76)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>2</b>Berry</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(232 92 111)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>3</b>Coral</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(108 101 150)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>4</b>Violet</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 123 113)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>5</b>Forest</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 151 156)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>6</b>Peach</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 255 246)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>7</b>Aqua</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(255 239 228)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>8</b>Butter</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(159 221 198)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>9</b>Lime</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(110 179 195)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>10</b>Periwinkle</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(0 199 193)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>11</b>Turquoise</figcaption></figure><figure class="disc"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(151 78 76)" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>12</b>Ochre</figcaption></figure></div></div>
+<div class="row"><h4>Room of 16</h4><div class="discs"><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(18 144 181)" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>13</b>Ocean</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(194 2 132)" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>14</b>Berry</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(215 105 120)" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#1a0b12"/><circle cx="39.5" cy="28" r="3.2" fill="#1a0b12"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#1a0b12" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>15</b>Coral</figcaption></figure><figure class="disc repeat"><svg viewBox="0 0 64 64" aria-hidden="true">
+<circle cx="32" cy="32" r="29" fill="rgb(140 8 255)" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="4 3"/>
+<circle cx="24.5" cy="28" r="3.2" fill="#fff7fb"/><circle cx="39.5" cy="28" r="3.2" fill="#fff7fb"/>
+<path d="M22.5 40.5 Q32 48.5 41.5 40.5" fill="none" stroke="#fff7fb" stroke-width="3" stroke-linecap="round"/></svg>
+<figcaption><b>16</b>Violet</figcaption></figure></div></div>
+</section>
+</body></html>

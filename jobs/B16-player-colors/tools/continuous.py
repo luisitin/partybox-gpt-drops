@@ -1,0 +1,68 @@
+import json,pathlib,numpy as np
+from scipy.optimize import minimize
+
+palette_path=pathlib.Path(__file__).resolve().parent.parent/'reports/search/best-palette.json'
+raw=json.loads(palette_path.read_text())
+if isinstance(raw,dict):raw=raw.get('palette',raw.get('colors',raw.get('hex')))
+rgb=np.array([[int(value[i:i+2],16)/255 for i in [1,3,5]] for value in raw])
+pairs=np.array([(i,j) for i in range(12) for j in range(i)])
+matrices=np.array([np.eye(3),[[.152286,1.052583,-.204868],[.114503,.786281,.099216],[-.003882,-.048116,1.051998]],[[.367322,.860646,-.227968],[.280085,.672501,.047413],[-.011820,.042940,.968881]],[[1.255528,-.076749,-.178779],[-.078411,.930809,.147602],[.004733,.691367,.303900]]])
+xyz=np.array([[.4124564,.3575761,.1804375],[.2126729,.7151522,.0721750],[.0193339,.1191920,.9503041]])
+def linear(color):return np.where(color<=.04045,color/12.92,((color+.055)/1.055)**2.4)
+def lab(lin):
+    values=lin@xyz.T/np.array([.95047,1,1.08883])
+    f=np.where(values>(6/29)**3,np.cbrt(values),values/(3*(6/29)**2)+4/29)
+    return np.stack([116*f[...,1]-16,500*(f[...,0]-f[...,1]),200*(f[...,1]-f[...,2])],axis=-1)
+def delta(a,b):
+    c1=np.hypot(a[...,1],a[...,2]);c2=np.hypot(b[...,1],b[...,2]);cm=(c1+c2)/2
+    g=(1-np.sqrt(cm**7/(cm**7+25**7)))/2
+    ap1=(1+g)*a[...,1];ap2=(1+g)*b[...,1]
+    cp1=np.hypot(ap1,a[...,2]);cp2=np.hypot(ap2,b[...,2]);cm=(cp1+cp2)/2
+    h1=np.degrees(np.arctan2(a[...,2],ap1))%360;h2=np.degrees(np.arctan2(b[...,2],ap2))%360
+    difference=h2-h1
+    difference=np.where(difference>180,difference-360,np.where(difference< -180,difference+360,difference))
+    difference=np.where(cp1*cp2==0,0,difference)
+    hm=(h1+h2)/2
+    hm=np.where(np.abs(h1-h2)>180,hm+np.where(h1+h2<360,180,-180),hm)
+    hm=np.where(cp1*cp2==0,h1+h2,hm)
+    co=lambda x:np.cos(np.deg2rad(x));si=lambda x:np.sin(np.deg2rad(x))
+    t=1-.17*co(hm-30)+.24*co(2*hm)+.32*co(3*hm+6)-.20*co(4*hm-63)
+    lm=(a[...,0]+b[...,0])/2
+    dl=(b[...,0]-a[...,0])/(1+.015*(lm-50)**2/np.sqrt(20+(lm-50)**2))
+    dc=(cp2-cp1)/(1+.045*cm)
+    dh=2*np.sqrt(cp1*cp2)*si(difference/2)/(1+.015*cm*t)
+    rt=-2*np.sqrt(cm**7/(cm**7+25**7))*si(60*np.exp(-((hm-275)/25)**2))
+    return np.sqrt(np.maximum(0,dl*dl+dc*dc+dh*dh+rt*dc*dh))
+threshold=np.full((4,66),12.)
+threshold[0,pairs[:,0]<8]=20.
+def metrics(colors):
+    lin=linear(colors)
+    variants=np.clip(np.einsum('mij,nj->mni',matrices,lin),0,1)
+    labs=lab(variants)
+    differences=delta(labs[:,pairs[:,0]],labs[:,pairs[:,1]])
+    luminance=lin@np.array([.2126,.7152,.0722])
+    return differences,luminance
+low=.11883475895072134;high=.2712141434198072
+def constraints(vector):
+    differences,luminance=metrics(vector[:36].reshape(12,3))
+    margin=vector[36]
+    return np.concatenate([(differences-threshold-margin).ravel(),100*(luminance-low),100*(high-luminance)])
+initial=np.append(rgb.ravel(),-.018)
+best=initial.copy()
+for attempt in range(6):
+    result=minimize(lambda x:-x[36],initial,method='SLSQP',bounds=[(0,1)]*36+[(-1,.5)],constraints=[{'type':'ineq','fun':constraints}],options={'maxiter':500,'ftol':1e-10})
+    slack=constraints(result.x).min()
+    report={'attempt':attempt,'success':bool(result.success),'message':str(result.message),'iterations':int(result.nit),'margin':float(result.x[36]),'constraintMin':float(slack)}
+    print(json.dumps(report),flush=True)
+    if slack>=-1e-7 and result.x[36]>best[36]:best=result.x.copy()
+    if slack>=-1e-7 and result.x[36]>.002:break
+    initial=result.x.copy()
+    initial[:36]=np.clip(initial[:36]+np.random.default_rng(attempt+1).normal(0,.002,36),0,1)
+    initial[36]=min(-.02,initial[36])
+colors=best[:36].reshape(12,3)
+differences,luminance=metrics(colors)
+quant=np.rint(colors*65535)/65535
+qdiff,qlum=metrics(quant)
+output={'author':'root independent math refinement','rgb':colors.tolist(),'rgb16':quant.tolist(),'css':['color(srgb '+' '.join(format(float(x),'.12g') for x in row)+')' for row in colors], 'margin':float(best[36]),'differences':differences.tolist(),'luminance':luminance.tolist(),'quantized16MinMargin':float((qdiff-threshold).min()),'quantized16ContrastPass':bool(np.all((qlum>=low)&(qlum<=high))),'constraints':'first8normal>=20; all12eachview>=12; normalfillcontrast>=3 on both requested backgrounds'}
+(pathlib.Path(__file__).resolve().parent.parent/'reports-run/continuous-result.json').write_text(json.dumps(output,indent=2)+'\n')
+print(json.dumps({k:v for k,v in output.items() if k in ['margin','quantized16MinMargin','quantized16ContrastPass']}),flush=True)
