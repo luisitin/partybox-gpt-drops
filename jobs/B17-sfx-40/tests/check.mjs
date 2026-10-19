@@ -1,0 +1,50 @@
+import assert from 'node:assert/strict';
+import {inflateSync} from 'node:zlib';
+import {referenceMeter,referenceRaw,referenceEncode,referenceDecode,referenceFade,referenceEbuFixtures} from '../dist/reference.js';
+export function rng(seed){let state=seed>>>0;return()=>{state=(state*1664525+1013904223)%4294967296;return state/4294967296;};}
+export function compareArrays(a,b,tolerance,label){assert.equal(a.length,b.length,`${label} length`);let max=0;for(let i=0;i<a.length;i++)max=Math.max(max,Math.abs(a[i]-b[i]));assert.ok(max<=tolerance,`${label} max error ${max}`);return max;}
+export function compareMeters(a,b,label){for(const key of ['lufs','truePeakDb','dc','samplePeak']){if(!Number.isFinite(a[key])||!Number.isFinite(b[key]))assert.equal(a[key],b[key],`${label} ${key}`);else assert.ok(Math.abs(a[key]-b[key])<2e-8,`${label} ${key}: ${a[key]} vs ${b[key]}`);}}
+export function fade(i,n){const d=Math.min(i,n-1-i);return d>=240?1:Math.sin(Math.PI*d/480)**2;}
+export function independentMasterDetail(raw){let sum=0,weight=0;for(let i=0;i<raw.length;i++){const f=fade(i,raw.length);sum+=raw[i]*f;weight+=f;}const dc=sum/weight;const corrected=Float64Array.from(raw,(v,i)=>(v-dc)*fade(i,raw.length));const gain=10**((-16-referenceMeter(corrected).lufs)/20);let preFadePeak=0;for(const value of raw)preFadePeak=Math.max(preFadePeak,Math.abs(value-dc));return {samples:Float64Array.from(corrected,v=>v*gain),preFadePeak:preFadePeak*gain};}
+export function independentMaster(raw){return independentMasterDetail(raw).samples;}
+export function parsePng(bytes){assert.deepEqual([...bytes.subarray(0,8)],[137,80,78,71,13,10,26,10]);const view=new DataView(bytes.buffer,bytes.byteOffset,bytes.byteLength);let at=8,width=0,height=0;const idat=[];while(at<bytes.length){const len=view.getUint32(at),name=String.fromCharCode(...bytes.subarray(at+4,at+8));assert.ok(at+12+len<=bytes.length);const body=bytes.subarray(at+4,at+8+len);let crc=0xffffffff;for(const b of body){crc^=b;for(let k=0;k<8;k++)crc=crc&1?(crc>>>1)^0xedb88320:crc>>>1;}assert.equal(view.getUint32(at+8+len),(~crc)>>>0,`${name} CRC`);if(name==='IHDR'){width=view.getUint32(at+8);height=view.getUint32(at+12);assert.deepEqual([...bytes.subarray(at+16,at+21)],[8,2,0,0,0]);}if(name==='IDAT')idat.push(bytes.subarray(at+8,at+8+len));at+=12+len;}const raster=inflateSync(Buffer.concat(idat));assert.equal(raster.length,height*(3*width+1));for(let y=0;y<height;y++)assert.equal(raster[y*(3*width+1)],0);return{width,height,raster};}
+export async function loadProduction(directory){const base=new URL(directory,import.meta.url);return{...await import(new URL('meter.js',base)),...await import(new URL('sfx.js',base)),...await import(new URL('wav.js',base)),...await import(new URL('spectrogram.js',base))};}
+
+/**
+ * Blind-oracle probe of the SHARED stack (meter, master, encoder, decoder, fade) on the first-delivery
+ * recipe (legacy.ts, LEGACY_SOUNDS). reference.ts was written without seeing production, so these
+ * comparisons prove the shared stack independently of the v2 engine.
+ */
+export function probe(p,seed){
+ assert.equal(p.RATE,48000,'sample rate');assert.equal(p.SOUNDS.length,40,'catalog count');assert.equal(p.LEGACY_SOUNDS.length,40,'legacy catalog count');
+ for(const id of ['coin','pop','dice-roll','buzzer','teleport']){const sound=p.LEGACY_SOUNDS.find(s=>s.id===id);const a=p.synthesizeLegacyRaw(sound,p.seeded(seed)),b=referenceRaw(sound,rng(seed));compareArrays(a,b,1e-10,`raw ${id}`);const mastered=p.finishAudio(a);compareArrays(mastered,independentMaster(b),1e-9,`master ${id}`);compareMeters(p.meter(mastered),referenceMeter(mastered),`meter ${id}`);const wave=p.encodeWav(mastered);assert.ok(Buffer.from(wave).equals(Buffer.from(referenceEncode(mastered))),'encoder bytes must match');compareArrays(p.decodeWav(wave),referenceDecode(wave).samples,0,'decoder');assert.ok(referenceFade(p.decodeWav(wave),240,independentMasterDetail(b).preFadePeak),'edge fade against independent pre-fade peak');}
+ const n=48000*3,pattern=new Float64Array(n);for(let i=0;i<n;i++){const gain=i<11000?.001:i<43000?.12:i<83000?.004:i<119000?.3:.00001;pattern[i]=gain*Math.sin(2*Math.PI*997*i/48000);}
+ compareMeters(p.meter(pattern),referenceMeter(pattern),'gate pattern');
+ const low=Float64Array.from({length:24000},(_,i)=>.0001*Math.sin(2*Math.PI*997*i/48000));compareMeters(p.meter(low),referenceMeter(low),'absolute gate');
+ const peak=Float64Array.from({length:3000},(_,i)=>.5*Math.sin(2*Math.PI*i/4+Math.PI/4));compareMeters(p.meter(peak),referenceMeter(peak),'intersample');
+ const biased=Float64Array.from({length:24000},(_,i)=>.2+.3*Math.sin(2*Math.PI*400*i/48000));assert.ok(Math.abs(p.meter(biased).dc-referenceMeter(biased).dc)<1e-12,'DC reading');const corrected=p.finishAudio(biased);assert.ok(Math.abs(referenceMeter(corrected).dc)<1e-12,'DC correction');
+ for(let i=0;i<240;i++)assert.ok(Math.abs(p.fadeGain(i,24000)-fade(i,24000))<1e-15,'five ms fade');
+ const png=p.encodePng(2,2,new Uint8Array([1,2,3,4,5,6,7,8,9,10,11,12]));const raster=parsePng(png);assert.equal(raster.width,2);
+ return true;
+}
+
+/**
+ * Second-implementation probe of the SHIPPED v2 engine: dsp.ts (renderSound) against twin.ts
+ * (twinRender), both channels, then the mono master against the independent master of the twin.
+ * A render that throws is reported as an assertion so every kill is an AssertionError.
+ */
+export function productProbe(p,seed){
+ for(const id of ['coin','dice-roll','win-fanfare','whoosh']){
+  const sound=p.SOUNDS.find(s=>s.id===id),s=p.soundSeed(id,seed);
+  let stereo,twin;
+  try{stereo=p.renderSound(sound,p.seeded(s));}catch(error){assert.fail(`product render ${id}: ${error.message}`);}
+  try{twin=p.twinRender(sound,p.twinRng(s));}catch(error){assert.fail(`twin render ${id}: ${error.message}`);}
+  compareArrays(stereo.left,twin.left,1e-9,`product ${id} left`);compareArrays(stereo.right,twin.right,1e-9,`product ${id} right`);
+  const mid=Float64Array.from(stereo.left,(v,i)=>(v+stereo.right[i])/2),twinMid=Float64Array.from(twin.left,(v,i)=>(v+twin.right[i])/2);
+  compareArrays(p.finishAudio(mid),independentMaster(twinMid),1e-9,`product master ${id}`);
+ }
+ return true;
+}
+
+export function calibration(p){const rows=[];for(const fixture of referenceEbuFixtures()){const samples=fixture.create(),a=p.meter(samples),b=referenceMeter(samples);compareMeters(a,b,fixture.id);for(const key of ['lufs','truePeakDb'])if(fixture[key])assert.ok(a[key]>=fixture[key][0]&&a[key]<=fixture[key][1],`${fixture.id} ${key}: ${a[key]}`);rows.push({id:fixture.id,samples:samples.length,expectedLufs:fixture.lufs??null,expectedTruePeak:fixture.truePeakDb??null,production:a,reference:b,passed:true});}return rows;}
+export function fftCheck(p,seed){const random=rng(seed);for(const n of [2,4,8,16,32,64]){const raw=Float64Array.from({length:n},()=>random()*2-1),inputReal=raw.slice(),inputImag=new Float64Array(n),{real,imaginary:imag}=p.fft(inputReal,inputImag);assert.deepEqual(inputReal,raw,'FFT must preserve caller real input');assert.deepEqual(inputImag,new Float64Array(n),'FFT must preserve caller imaginary input');for(let k=0;k<n;k++){let r=0,j=0;for(let i=0;i<n;i++){r+=raw[i]*Math.cos(-2*Math.PI*k*i/n);j+=raw[i]*Math.sin(-2*Math.PI*k*i/n);}assert.ok(Math.abs(r-real[k])<1e-11&&Math.abs(j-imag[k])<1e-11,'FFT vs independent direct DFT');}}}

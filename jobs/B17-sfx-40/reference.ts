@@ -1,0 +1,380 @@
+/**
+ * Independently authored B17 oracle. No imports, runtime dependencies, random
+ * source, clock, or production implementation. See ORACLE.md for provenance.
+ */
+export interface ReferenceReading {
+  lufs: number;
+  truePeakDb: number;
+  dc: number;
+  samplePeak: number;
+}
+
+export interface ReferenceWave {
+  /** Interleaved samples for channels > 1; divide integer PCM by 32768. */
+  samples: Float64Array;
+  rate: number;
+  channels: number;
+  bits: number;
+}
+
+/** Shared public synthesis specification; no production source imported. */
+export interface ReferenceSound {
+  id: string;
+  name: string;
+  seconds: number;
+  kind: "tone" | "sweep" | "noise" | "sequence";
+  hz: number;
+  endHz?: number;
+  notes?: readonly number[];
+  texture: number;
+  decay: number;
+  description: string;
+}
+
+const RATE = 48000;
+const BLOCK = 19200;
+const HOP = 4800;
+const OFFSET = -0.691;
+
+// ITU-R BS.1770-4, Annex 2, p.17: columns are four interpolation phases.
+const FIR: readonly (readonly number[])[] = [
+  [0.0017089843750, 0.0109863281250, -0.0196533203125,
+    0.0332031250000, -0.0594482421875, 0.1373291015625,
+    0.9721679687500, -0.1022949218750, 0.0476074218750,
+    -0.0266113281250, 0.0148925781250, -0.0083007812500],
+  [-0.0291748046875, 0.0292968750000, -0.0517578125000,
+    0.0891113281250, -0.1665039062500, 0.4650878906250,
+    0.7797851562500, -0.2003173828125, 0.1015625000000,
+    -0.0582275390625, 0.0330810546875, -0.0189208984375],
+  [-0.0189208984375, 0.0330810546875, -0.0582275390625,
+    0.1015625000000, -0.2003173828125, 0.7797851562500,
+    0.4650878906250, -0.1665039062500, 0.0891113281250,
+    -0.0517578125000, 0.0292968750000, -0.0291748046875],
+  [-0.0083007812500, 0.0148925781250, -0.0266113281250,
+    0.0476074218750, -0.1022949218750, 0.9721679687500,
+    0.1373291015625, -0.0594482421875, 0.0332031250000,
+    -0.0196533203125, 0.0109863281250, 0.0017089843750],
+];
+
+function dbPower(power: number): number {
+  return power > 0 ? OFFSET + 10 * Math.log10(power) : -Infinity;
+}
+
+/** Exact 48 kHz Table 1/2 filters, mono unit channel weighting. */
+export function referenceMeter(samples: Float64Array, rate = RATE): ReferenceReading {
+  if (rate !== RATE) throw new RangeError("Reference meter supports 48000 Hz only");
+  if (samples.length === 0) throw new RangeError("Cannot meter an empty signal");
+  let peak = 0;
+  let total = 0;
+  let compensation = 0;
+  for (const sample of samples) {
+    if (!Number.isFinite(sample)) throw new RangeError("Samples must be finite");
+    peak = Math.max(peak, Math.abs(sample));
+    const corrected = sample - compensation;
+    const next = total + corrected;
+    compensation = (next - total) - corrected;
+    total = next;
+  }
+
+  // Direct form I, explicit independent histories for the two stages.
+  // For signals shorter than one block, feed raw zeros until 400 ms. This
+  // retains the filter's decay in the sole padded block (declared extension).
+  const length = Math.max(samples.length, BLOCK);
+  const ring = new Float64Array(BLOCK);
+  const powers: number[] = [];
+  let input1 = 0, input2 = 0, shelf1 = 0, shelf2 = 0;
+  let highInput1 = 0, highInput2 = 0, high1 = 0, high2 = 0;
+  let windowPower = 0;
+  for (let index = 0; index < length; index++) {
+    const input = index < samples.length ? samples[index]! : 0;
+    const shelf = 1.53512485958697 * input - 2.69169618940638 * input1
+      + 1.19839281085285 * input2 + 1.69065929318241 * shelf1
+      - 0.73248077421585 * shelf2;
+    input2 = input1;
+    input1 = input;
+    shelf2 = shelf1;
+    shelf1 = shelf;
+    const weighted = shelf - 2 * highInput1 + highInput2
+      + 1.99004745483398 * high1 - 0.99007225036621 * high2;
+    highInput2 = highInput1;
+    highInput1 = shelf;
+    high2 = high1;
+    high1 = weighted;
+    const slot = index % BLOCK;
+    const energy = weighted * weighted;
+    windowPower += energy - ring[slot]!;
+    ring[slot] = energy;
+    if (index + 1 >= BLOCK && (index + 1 - BLOCK) % HOP === 0) {
+      powers.push(Math.max(0, windowPower / BLOCK));
+    }
+  }
+  const absolutePower = 10 ** ((-70 - OFFSET) / 10);
+  let firstSum = 0, firstCount = 0;
+  for (const power of powers) {
+    if (power > absolutePower) {
+      firstSum += power;
+      firstCount++;
+    }
+  }
+  let lufs = -Infinity;
+  if (firstCount > 0) {
+    const relativePower = firstSum / firstCount / 10;
+    const threshold = Math.max(relativePower, absolutePower);
+    let gatedSum = 0, gatedCount = 0;
+    for (const power of powers) {
+      if (power > threshold) {
+        gatedSum += power;
+        gatedCount++;
+      }
+    }
+    if (gatedCount > 0) lufs = dbPower(gatedSum / gatedCount);
+  }
+
+  // Full four-phase convolution with zeros outside the finite record.
+  // Visit the filter tail too: the peak can occur after the last input sample.
+  let interpolatedPeak = 0;
+  for (let index = 0; index < samples.length + 11; index++) {
+    for (const phase of FIR) {
+      let value = 0;
+      for (let tap = 0; tap < 12; tap++) {
+        const source = index - tap;
+        if (source >= 0 && source < samples.length) {
+          value += samples[source]! * phase[tap]!;
+        }
+      }
+      interpolatedPeak = Math.max(interpolatedPeak, Math.abs(value));
+    }
+  }
+  return {
+    lufs,
+    truePeakDb: interpolatedPeak > 0 ? 20 * Math.log10(interpolatedPeak) : -Infinity,
+    dc: total / samples.length,
+    samplePeak: peak,
+  };
+}
+
+/** Strict RIFF/WAVE linear PCM16 parser, supporting interleaved channels. */
+export function referenceDecode(bytes: Uint8Array): ReferenceWave {
+  const fail = (message: string): never => { throw new RangeError(message); };
+  if (bytes.length < 44) fail("WAVE is shorter than the minimum PCM header");
+  const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+  const tag = (at: number): string => String.fromCharCode(
+    bytes[at]!, bytes[at + 1]!, bytes[at + 2]!, bytes[at + 3]!,
+  );
+  if (tag(0) !== "RIFF" || tag(8) !== "WAVE") fail("Expected RIFF/WAVE");
+  if (view.getUint32(4, true) + 8 !== bytes.length) fail("RIFF size mismatch");
+  let rate = 0, channels = 0, bits = 0, align = 0;
+  let sawFormat = false, sawData = false;
+  let dataStart = 0, dataLength = 0;
+  let cursor = 12;
+  while (cursor < bytes.length) {
+    if (bytes.length - cursor < 8) fail("Incomplete chunk header");
+    const id = tag(cursor);
+    const size = view.getUint32(cursor + 4, true);
+    const start = cursor + 8;
+    const end = start + size;
+    if (end > bytes.length) fail("Chunk exceeds RIFF boundary");
+    const paddedEnd = end + (size & 1);
+    if (paddedEnd > bytes.length) fail("Missing odd-chunk padding byte");
+    if (id === "fmt ") {
+      if (sawFormat || sawData) fail("Duplicated or misplaced fmt chunk");
+      if (size !== 16 && size !== 18) fail("PCM fmt length must be 16 or 18");
+      if (view.getUint16(start, true) !== 1) fail("Only linear PCM is supported");
+      channels = view.getUint16(start + 2, true);
+      rate = view.getUint32(start + 4, true);
+      const byteRate = view.getUint32(start + 8, true);
+      align = view.getUint16(start + 12, true);
+      bits = view.getUint16(start + 14, true);
+      if (channels < 1 || channels > 32 || rate < 1) fail("Invalid PCM dimensions");
+      if (bits !== 16 || align !== channels * 2) fail("Invalid PCM16 block alignment");
+      if (byteRate !== rate * align) fail("PCM byte rate mismatch");
+      if (size === 18 && view.getUint16(start + 16, true) !== 0) fail("PCM extension must be empty");
+      sawFormat = true;
+    } else if (id === "data") {
+      if (!sawFormat || sawData) fail("Duplicated data or data before format");
+      if (size === 0 || size % align !== 0) fail("Data contains an incomplete PCM frame");
+      dataStart = start;
+      dataLength = size;
+      sawData = true;
+    }
+    cursor = paddedEnd;
+  }
+  if (!sawFormat || !sawData) fail("Missing fmt or data chunk");
+  const samples = new Float64Array(dataLength / 2);
+  for (let index = 0; index < samples.length; index++) {
+    samples[index] = view.getInt16(dataStart + 2 * index, true) / 32768;
+  }
+  return { samples, rate, channels, bits };
+}
+
+/** Canonical PCM16 mono writer: round at 32768 and clip signed range. */
+export function referenceEncode(samples: Float64Array, rate = RATE): Uint8Array {
+  if (!Number.isInteger(rate) || rate <= 0 || rate > 0x7fffffff) {
+    throw new RangeError("Invalid PCM sample rate");
+  }
+  if (samples.length < 1 || samples.length > 0x7fffffe9) {
+    throw new RangeError("Invalid PCM record length");
+  }
+  const bytes = new Uint8Array(44 + 2 * samples.length);
+  const view = new DataView(bytes.buffer);
+  const writeTag = (offset: number, text: string): void => {
+    for (let index = 0; index < 4; index++) bytes[offset + index] = text.charCodeAt(index);
+  };
+  writeTag(0, "RIFF");
+  view.setUint32(4, bytes.length - 8, true);
+  writeTag(8, "WAVE");
+  writeTag(12, "fmt ");
+  view.setUint32(16, 16, true);
+  view.setUint16(20, 1, true);
+  view.setUint16(22, 1, true);
+  view.setUint32(24, rate, true);
+  view.setUint32(28, rate * 2, true);
+  view.setUint16(32, 2, true);
+  view.setUint16(34, 16, true);
+  writeTag(36, "data");
+  view.setUint32(40, 2 * samples.length, true);
+  for (let index = 0; index < samples.length; index++) {
+    const sample = samples[index]!;
+    if (!Number.isFinite(sample)) throw new RangeError("Samples must be finite");
+    const integer = Math.max(-32768, Math.min(32767, Math.round(sample * 32768)));
+    view.setInt16(44 + 2 * index, integer, true);
+  }
+  return bytes;
+}
+
+/** Independent evaluation of the shared mathematical synthesis recipe. */
+export function referenceRaw(sound: ReferenceSound, rng: () => number): Float64Array {
+  const count = Math.round(sound.seconds * RATE);
+  if (!Number.isInteger(count) || count < 2 || count > RATE * 3) {
+    throw new RangeError("Invalid synthesis duration");
+  }
+  const out = new Float64Array(count);
+  const destination = sound.endHz ?? sound.hz;
+  const notes = sound.notes ?? [sound.hz];
+  if (sound.kind === "sequence" && notes.length === 0) {
+    throw new RangeError("Sequence needs at least one note");
+  }
+  let phase = 0;
+  let noise = 0;
+  for (let index = 0; index < count; index++) {
+    const position = index / (count - 1);
+    const time = index / RATE;
+    let frequency = sound.hz + (destination - sound.hz) * position;
+    let envelope = Math.exp(-sound.decay * position);
+    if (sound.kind === "sweep") {
+      frequency = sound.hz * (destination / sound.hz) ** position;
+    } else if (sound.kind === "sequence") {
+      const step = Math.min(notes.length - 1, Math.floor(position * notes.length));
+      const local = position * notes.length - step;
+      frequency = notes[step]!;
+      const modulation = Math.sin(Math.PI * local);
+      envelope *= 0.65 + 0.35 * modulation * modulation;
+    }
+    phase += 2 * Math.PI * frequency / RATE;
+    const random = rng();
+    if (!Number.isFinite(random) || random < 0 || random >= 1) {
+      throw new RangeError("RNG must return a value in [0, 1)");
+    }
+    noise = 0.72 * noise + 0.28 * (2 * random - 1);
+    let base = Math.sin(phase) + 0.22 * Math.sin(2 * phase) + 0.09 * Math.sin(3 * phase);
+    if (sound.kind === "noise") {
+      const tremolo = Math.sin(2 * Math.PI * 13 * time);
+      base = 0.35 * base + 0.85 * noise * (0.6 + 0.4 * tremolo * tremolo);
+    }
+    if (sound.id === "buzzer" || sound.id === "error") base += 0.25 * Math.sin(1.012 * phase);
+    if (sound.id === "teleport") base *= 0.7 + 0.3 * Math.sin(2 * Math.PI * 9 * time);
+    out[index] = Math.tanh(base + sound.texture * noise) * envelope;
+  }
+  return out;
+}
+
+/** Diagnostic readback, or a proven bound when supplied the pre-fade peak. */
+export function referenceFade(samples: Float64Array, fadeSamples: number,
+  unfadedPeak?: number): boolean {
+  if (!Number.isInteger(fadeSamples) || fadeSamples < 2 || samples.length < 2 * fadeSamples) return false;
+  if (unfadedPeak !== undefined && (!Number.isFinite(unfadedPeak) || unfadedPeak < 0)) return false;
+  let peak = 0;
+  for (const sample of samples) {
+    if (!Number.isFinite(sample)) return false;
+    peak = Math.max(peak, Math.abs(sample));
+  }
+  const quantum = 1 / 32768;
+  if (Math.abs(samples[0]!) > quantum || Math.abs(samples[samples.length - 1]!) > quantum) return false;
+  // Without a pre-fade bound, the global faded peak comparison is only a
+  // conservative diagnostic: a legitimate taper can itself contain that peak.
+  // With the independent corrected pre-fade peak, use the specified raised
+  // cosine envelope. PCM readback may differ by one quantization step.
+  for (let index = 0; index < fadeSamples; index++) {
+    const bound = unfadedPeak === undefined
+      ? peak * Math.sin(Math.PI * index / (2 * (fadeSamples - 1))) + quantum
+      : unfadedPeak * (0.5 - 0.5 * Math.cos(Math.PI * index / fadeSamples)) + quantum;
+    if (Math.abs(samples[index]!) > bound
+      || Math.abs(samples[samples.length - 1 - index]!) > bound) return false;
+  }
+  return true;
+}
+
+export interface ReferenceFixture {
+  id: string;
+  description: string;
+  create: () => Float64Array;
+  lufs?: readonly [number, number];
+  truePeakDb?: readonly [number, number];
+}
+
+function steppedTone(segments: readonly (readonly [number, number])[]): Float64Array {
+  const count = segments.reduce((sum, segment) => sum + Math.round(segment[0] * RATE), 0);
+  const out = new Float64Array(count);
+  let cursor = 0;
+  for (const [seconds, peakDb] of segments) {
+    const size = Math.round(seconds * RATE);
+    const amplitude = 10 ** (peakDb / 20);
+    for (let index = 0; index < size; index++) {
+      out[cursor] = amplitude * Math.sin(2 * Math.PI * (cursor % 48) / 48);
+      cursor++;
+    }
+  }
+  return out;
+}
+
+function peakTone(divisor: number, amplitude: number, phaseDegrees: number): Float64Array {
+  const out = new Float64Array(RATE);
+  const fade = RATE / 100;
+  for (let index = 0; index < out.length; index++) {
+    const taper = Math.min(1, index / fade, (out.length - 1 - index) / fade);
+    out[index] = amplitude * taper * Math.sin(2 * Math.PI * (index % divisor) / divisor
+      + phaseDegrees * Math.PI / 180);
+  }
+  return out;
+}
+
+/** Mono adaptations of the fully described integrated and peak signal subset. */
+export function referenceEbuFixtures(): ReferenceFixture[] {
+  const stereoToMono = 10 * Math.log10(2);
+  const integrated = (caseNumber: number, target: number,
+    segments: readonly (readonly [number, number])[]): ReferenceFixture => ({
+    id: `ebu3341-${caseNumber}-mono`,
+    description: `Table 1 case ${caseNumber}, one channel of the in-phase stereo definition`,
+    create: () => steppedTone(segments),
+    lufs: [target - stereoToMono - 0.1, target - stereoToMono + 0.1],
+  });
+  const peak = (caseNumber: number, divisor: number, amplitude: number,
+    phase: number, target: number): ReferenceFixture => ({
+    id: `ebu3341-${caseNumber}-mono`,
+    description: `Table 1 case ${caseNumber}, one channel, 1 second with 10 ms linear tapers`,
+    create: () => peakTone(divisor, amplitude, phase),
+    truePeakDb: [target - 0.4, target + 0.2],
+  });
+  return [
+    integrated(1, -23, [[20, -23]]),
+    integrated(2, -33, [[20, -33]]),
+    integrated(3, -23, [[10, -36], [60, -23], [10, -36]]),
+    integrated(4, -23, [[10, -72], [10, -36], [60, -23], [10, -36], [10, -72]]),
+    integrated(5, -23, [[20, -26], [20.1, -20], [20, -26]]),
+    peak(15, 4, 0.5, 0, -6),
+    peak(16, 4, 0.5, 45, -6),
+    peak(17, 6, 0.5, 60, -6),
+    peak(18, 8, 0.5, 67.5, -6),
+    peak(19, 4, 1.41, 45, 3),
+  ];
+}

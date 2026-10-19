@@ -1,0 +1,714 @@
+{
+  "command": "npm test",
+  "mutations": [
+    {
+      "index": 1,
+      "name": "K shelf gain",
+      "file": "meter.ts",
+      "from": "1.53512485958697",
+      "to": "1.43512485958697",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.14251491148491036\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.1418070736355508\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.1426038891141194\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "name": "High-pass numerator",
+      "file": "meter.ts",
+      "from": "[1,-2,1]",
+      "to": "[1,-1.8,1]",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.30337963542672247\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.30476934155135027\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.3029461331509611\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "name": "Loudness calibration offset",
+      "file": "meter.ts",
+      "from": "return -0.691+10*Math.log10",
+      "to": "return -0.591+10*Math.log10",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.003780275724314164\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.003761310379197802\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.003782567841511153\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "name": "Wrong 400 ms block",
+      "file": "meter.ts",
+      "from": "rate*0.4",
+      "to": "rate*0.3",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.0022705463365262912\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.002269039511738624\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.002280481482747565\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "name": "Wrong 75% overlap",
+      "file": "meter.ts",
+      "from": "rate*0.1",
+      "to": "rate*0.2",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.014752810482982437\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.01464366656373961\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.014758896025470813\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "name": "Absolute gate too high",
+      "file": "meter.ts",
+      "from": ")>-70",
+      "to": ")>-20",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: gate pattern lufs: -14.481897821892813 vs -17.163923223667876\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:22:2)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: gate pattern lufs: -14.481897821892813 vs -17.163923223667876\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:22:2)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: gate pattern lufs: -14.481897821892813 vs -17.163923223667876\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:22:2)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "name": "Relative gate too high",
+      "file": "meter.ts",
+      "from": "average*0.1",
+      "to": "average*0.5",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: gate pattern lufs: -15.130733132326709 vs -17.163923223667876\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:22:2)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: gate pattern lufs: -15.130733132326709 vs -17.163923223667876\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:22:2)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: gate pattern lufs: -15.130733132326709 vs -17.163923223667876\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:22:2)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "name": "Corrupt true peak FIR tap",
+      "file": "meter.ts",
+      "from": "0.97216796875",
+      "to": "0.87216796875",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: meter dice-roll truePeakDb: -8.038812131849731 vs -8.024253660520607\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:331)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: meter coin truePeakDb: -9.660254469218758 vs -9.659213697442606\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:331)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: meter buzzer truePeakDb: -10.24466391529344 vs -10.235087346317378\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:331)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "name": "Power logarithm for true peak",
+      "file": "meter.ts",
+      "from": "return 20*Math.log10(peak)",
+      "to": "return 10*Math.log10(peak)",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: meter coin truePeakDb: -4.806834572821227 vs -9.613669145642454\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:331)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: meter coin truePeakDb: -4.829606848721303 vs -9.659213697442606\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:331)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: meter coin truePeakDb: -4.802703293924383 vs -9.605406587848766\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:331)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "name": "Remove all oversampling phases",
+      "file": "meter.ts",
+      "from": "i<samples.length+11",
+      "to": "i<0",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: meter coin truePeakDb\n+ actual - expected\n+ -Infinity\n- -9.613669145642454"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: meter coin truePeakDb\n+ actual - expected\n+ -Infinity\n- -9.659213697442606"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: meter coin truePeakDb\n+ actual - expected\n+ -Infinity\n- -9.605406587848766"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "name": "Incorrect DC divisor",
+      "file": "meter.ts",
+      "from": "dc:sum/samples.length",
+      "to": "dc:sum/(2*samples.length)",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: gate pattern dc: 0.000004169243175328547 vs 0.000008338486350657125\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:22:2)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: gate pattern dc: 0.000004169243175328547 vs 0.000008338486350657125\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:22:2)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: gate pattern dc: 0.000004169243175328547 vs 0.000008338486350657125\n    at compareMeters (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:6:212)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:22:2)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "name": "Fade shortened tenfold",
+      "file": "meter.ts",
+      "from": "fadeSamples=240",
+      "to": "fadeSamples=24",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.23290694542833407\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.2326105782790051\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.2335703183344073\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "name": "Disable DC correction",
+      "file": "meter.ts",
+      "from": "const correction=sum/weight",
+      "to": "const correction=0*sum/weight",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.00003503658252068664\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.000005514502318781922\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.000025157288166155478\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "name": "Wrong mastering loudness",
+      "file": "meter.ts",
+      "from": "target=-16",
+      "to": "target=-14",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.08550865227573917\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.08507966211233686\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: master coin max error 0.08556049924848402\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:266)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "name": "Wrong sample rate",
+      "file": "meter.ts",
+      "from": "RATE = 48000",
+      "to": "RATE = 44100",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: sample rate\n44100 !== 48000\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:19:9)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: sample rate\n44100 !== 48000\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:19:9)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: sample rate\n44100 !== 48000\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:19:9)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "name": "Incorrect bit depth header",
+      "file": "wav.ts",
+      "from": "setUint16(34,16,true)",
+      "to": "setUint16(34,8,true)",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: encoder bytes must match\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:443)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {\n  generatedMessage: false,"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: encoder bytes must match\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:443)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {\n  generatedMessage: false,"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: encoder bytes must match\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:443)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {\n  generatedMessage: false,"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "name": "Halved PCM encoder gain",
+      "file": "wav.ts",
+      "from": "Math.round(x*32768)",
+      "to": "Math.round(x*16384)",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: encoder bytes must match\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:443)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {\n  generatedMessage: false,"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: encoder bytes must match\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:443)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {\n  generatedMessage: false,"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: encoder bytes must match\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:443)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {\n  generatedMessage: false,"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "name": "Big endian PCM output",
+      "file": "wav.ts",
+      "from": "Math.round(x*32768))),true)",
+      "to": "Math.round(x*32768))),false)",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: encoder bytes must match\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:443)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {\n  generatedMessage: false,"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: encoder bytes must match\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:443)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {\n  generatedMessage: false,"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: encoder bytes must match\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:443)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {\n  generatedMessage: false,"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "name": "Incorrect PCM decoding scale",
+      "file": "wav.ts",
+      "from": "getInt16(44+2*i,true)/32768",
+      "to": "getInt16(44+2*i,true)/16384",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: decoder max error 0.330230712890625\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:539)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: decoder max error 0.328582763671875\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:539)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: decoder max error 0.3304443359375\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:539)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "name": "Incorrect seeded RNG multiplier",
+      "file": "dsp.ts",
+      "from": "Math.imul(state, 1664525)",
+      "to": "Math.imul(state, 1664523)",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: raw coin max error 0.045423622660375876\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:197)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: raw coin max error 0.03992446214478511\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:197)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: raw coin max error 0.036847492532758735\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at probe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:20:197)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:6:1 {"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "name": "Half oscillator frequency",
+      "file": "dsp.ts",
+      "from": "phases[p] = phase + TWO_PI * f / RATE;",
+      "to": "phases[p] = phase + Math.PI * f / RATE;",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product coin left max error 1.46220759469396\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:42:3)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product coin left max error 1.46220759469396\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:42:3)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product coin left max error 1.46220759469396\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:42:3)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "name": "Partial decay times doubled",
+      "file": "dsp.ts",
+      "from": "layer.t60 * partial.decay * RATE",
+      "to": "layer.t60 * partial.decay * RATE * 2",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product coin left max error 0.2632333980804713\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:42:3)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product coin left max error 0.2632333980804713\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:42:3)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product coin left max error 0.2632333980804713\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:42:3)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "name": "Corrupt noise filter state",
+      "file": "dsp.ts",
+      "from": "ic2 = 2 * v2 - ic2;",
+      "to": "ic2 = 2 * v2;",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product render dice-roll: Recipe produced a non-finite sample\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:40:68)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {\n  generatedMessage: false,"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product render dice-roll: Recipe produced a non-finite sample\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:40:68)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {\n  generatedMessage: false,"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product render dice-roll: Recipe produced a non-finite sample\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:40:68)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {\n  generatedMessage: false,"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "name": "Scatter curve doubled",
+      "file": "dsp.ts",
+      "from": "Math.pow(position, scatter.curve)",
+      "to": "Math.pow(position, 2 * scatter.curve)",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product dice-roll left max error 1.091301412079128\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:42:3)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product dice-roll left max error 1.2984776589308842\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:42:3)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product dice-roll left max error 1.3833962954506\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:42:3)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "name": "Limiter release ten times slower",
+      "file": "dsp.ts",
+      "from": "const LIMIT_RELEASE = 0.06;",
+      "to": "const LIMIT_RELEASE = 0.6;",
+      "compiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product coin left max error 0.2387447476386338\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:42:3)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product coin left max error 0.2387447476386338\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:42:3)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "exitCode": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\nAssertionError [ERR_ASSERTION]: product coin left max error 0.2387447476386338\n    at compareArrays (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:5:184)\n    at productProbe (file:///home/user/wt/B17/jobs/B17-sfx-40/tests/check.mjs:42:3)\n    at file:///home/user/wt/B17/jobs/B17-sfx-40/tests/mutant-probe.mjs:7:1 {"
+        }
+      ]
+    }
+  ],
+  "compiled": 25,
+  "killed": 25,
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "seededKills": 75,
+  "passed": true
+}
