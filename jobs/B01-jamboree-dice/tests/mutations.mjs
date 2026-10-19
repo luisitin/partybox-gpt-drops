@@ -1,0 +1,28 @@
+/** Each mutation is applied alone to a fresh compiled implementation A. */
+export const mutations = [
+ ['M01','Movement starts one too high','const movement = sum + model.offset;','const movement = sum + model.offset + 1;'],
+ ['M02','Movement ignores final die','const movement = sum + model.offset;','const movement = sum - roll[roll.length - 1] + model.offset;'],
+ ['M03','Movement subtracts mushroom','const movement = sum + model.offset;','const movement = sum - model.offset;'],
+ ['M04','Any pair awards triple bonus','roll.slice(0, model.bonusDice).every(v => v === roll[0])','roll.slice(0, 2).every(v => v === roll[0])'],
+ ['M05','Buddy must also match','roll.slice(0, model.bonusDice).every(v => v === roll[0])','roll.every(v => v === roll[0])'],
+ ['M06','Disable double matching','model.bonusDice >= 2','model.bonusDice >= 3'],
+ ['M07','Sevens receive ordinary bonus','roll[0] === 7 ? model.bonusSevens : model.bonusRegular','model.bonusRegular'],
+ ['M08','Every match receives sevens bonus','roll[0] === 7 ? model.bonusSevens : model.bonusRegular','model.bonusSevens'],
+ ['M09','Double sevens use old 30 reward','roll[0] === 7 ? model.bonusSevens : model.bonusRegular','roll[0] === 7 && model.bonusDice === 2 ? 30 : (roll[0] === 7 ? model.bonusSevens : model.bonusRegular)'],
+ ['M10','Add ordinary and special triple rewards','roll[0] === 7 ? model.bonusSevens : model.bonusRegular','roll[0] === 7 ? model.bonusSevens + model.bonusRegular : model.bonusRegular'],
+ ['M11','Payday loses roll coins','model.payday ? sum : 0','0'],
+ ['M12','Payday pays first die only','model.payday ? sum : 0','model.payday ? roll[0] : 0'],
+ ['M13','Everyone receives Payday coins','model.payday ? sum : 0','sum'],
+ ['M14','Unknown coin reward silently zero','+ bonus : null','+ bonus : 0'],
+ ['M15','Subtract matching bonus','+ bonus : null','- bonus : null'],
+ ['M16','Double matching reward only nine','+ bonus : null','+ (model.bonusDice === 2 ? bonus * 0.9 : bonus) : null'],
+ ['M17','Ordinary triple bonus wrong','+ bonus : null','+ (model.bonusDice === 3 && bonus === 20 ? 19 : bonus) : null'],
+ ['M18','Turbo ordinary bonus wrong','+ bonus : null','+ (model.bonusDice === 4 && bonus === 30 ? 20 : bonus) : null'],
+ ['M19','Turbo sevens reward wrong','+ bonus : null','+ (model.bonusDice === 4 && bonus === 70 ? 50 : bonus) : null'],
+ ['M20','Double the buddy addend','const movement = sum + model.offset;','const movement = sum + model.offset + (model.id.startsWith("mario-") ? roll[roll.length-1] : 0);'],
+ ['M21','Enumeration omits smallest face','for (const value of block)','for (const value of block.slice(1))'],
+ ['M22','Enumeration counts every tuple twice','+ 1n });','+ 2n });'],
+ ['M23','Wrong sample-space denominator','n * BigInt(b.length)','n * BigInt(b.length + 1)'],
+ ['M24','Fractions not reduced','return `${n / a}/${d / a}`;','return `${n}/${d}`;'],
+ ['M25','Expected movement one high','meanMovement: fraction(movementSum, total)','meanMovement: fraction(movementSum + total, total)']
+];

@@ -1,0 +1,277 @@
+[
+  {
+    "id": "M01",
+    "description": "Movement starts one too high",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "b3f990012e6b55f6f186e11265b414cdd1b3943b748309d480d23ae71555a814",
+    "witness": {
+      "model": "normal",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n      '0': '1/1'\n    },\n    confidence: 'high',\n...\n        coins: 0,\n-       mov"
+    }
+  },
+  {
+    "id": "M02",
+    "description": "Movement ignores final die",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "6bd44b1fda971a08b8bd24157117041ad3579d2469e1f7ce2a1bc8b42dbd26b0",
+    "witness": {
+      "model": "normal",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n      '0': '1/1'\n    },\n    confidence: 'high',\n...\n        coins: 0,\n+       mov"
+    }
+  },
+  {
+    "id": "M03",
+    "description": "Movement subtracts mushroom",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "ebe9e545b34265528e8b74b3f71692999facf115959dcc91d9b3bd982e7b1c40",
+    "witness": {
+      "model": "mushroom",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n      '0': '1/1'\n    },\n    confidence: 'high',\n...\n        coins: 0,\n+       mov"
+    }
+  },
+  {
+    "id": "M04",
+    "description": "Any pair awards triple bonus",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "d1492509ec5f0219f240bf782a0490041cddc486a8551be0bd2c3c43608be3d1",
+    "witness": {
+      "model": "triple",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n+     '0': '9/10',\n+     '20': '9/100',\n+     '50': '1/100'\n-     '0': '99/100',\n"
+    }
+  },
+  {
+    "id": "M05",
+    "description": "Buddy must also match",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "1b5bddb3133ace1d5918db04a719101ecc108f8954da6936b7b036829c4f0e19",
+    "witness": {
+      "model": "mario-double",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n+     '0': '99/100',\n+     '10': '1/100'\n-     '0': '9/10',\n-     '10': '1/10'\n  "
+    }
+  },
+  {
+    "id": "M06",
+    "description": "Disable double matching",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "63fdfde0d493a4d9077833c6364e6355e90d50f823d267234c8b4407cb5e99ef",
+    "witness": {
+      "model": "double",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n+     '0': '1/1'\n-     '0': '9/10',\n-     '10': '1/10'\n    },\n    confidence: 'hi"
+    }
+  },
+  {
+    "id": "M07",
+    "description": "Sevens receive ordinary bonus",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "cf794862dd5f2c742663adde8212d31b1b97bbcd021ee2199664c1dcfe123921",
+    "witness": {
+      "model": "triple",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n      '0': '99/100',\n+     '20': '1/100'\n-     '20': '9/1000',\n-     '50': '1/100"
+    }
+  },
+  {
+    "id": "M08",
+    "description": "Every match receives sevens bonus",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "81bd302ccdc8751b4b819dc48202b8cf791ac707cb97c1ccf757e9980bba8259",
+    "witness": {
+      "model": "triple",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n      '0': '99/100',\n+     '50': '1/100'\n-     '20': '9/1000',\n-     '50': '1/100"
+    }
+  },
+  {
+    "id": "M09",
+    "description": "Double sevens use old 30 reward",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "78cca74ee330d3c8b4756d1e6f167b0210042872754572ca0d4b9f9f34020d6e",
+    "witness": {
+      "model": "double",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n      '0': '9/10',\n+     '10': '9/100',\n+     '30': '1/100'\n-     '10': '1/10'\n  "
+    }
+  },
+  {
+    "id": "M10",
+    "description": "Add ordinary and special triple rewards",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "20b4f83202660ce4f056b968815659221a290e50045fc7ed8371d8479fbcc762",
+    "witness": {
+      "model": "double",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n      '0': '9/10',\n+     '10': '9/100',\n+     '20': '1/100'\n-     '10': '1/10'\n  "
+    }
+  },
+  {
+    "id": "M11",
+    "description": "Payday loses roll coins",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "ca62fe9ec7843f18c87337e6eb774c46f358458f4a26a6eeed23bdeede37de77",
+    "witness": {
+      "model": "payday-double",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n+     '0': '9/10',\n+     '10': '1/10'\n-     '10': '2/25',\n-     '11': '1/10',\n-  "
+    }
+  },
+  {
+    "id": "M12",
+    "description": "Payday pays first die only",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "651785e3c7c0847f2767143130c025f7bfa8b466af5b3121f08775c3a0c68a24",
+    "witness": {
+      "model": "payday-double",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n+     '1': '9/100',\n+     '10': '9/100',\n+     '11': '1/100',\n+     '12': '1/100'"
+    }
+  },
+  {
+    "id": "M13",
+    "description": "Everyone receives Payday coins",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "a0ed0c8c966b5d2d55f228b1f2560e038fb33cc5a8c070552fc2cac8c958fd85",
+    "witness": {
+      "model": "normal",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n+     '1': '1/10',\n+     '10': '1/10',\n+     '2': '1/10',\n+     '3': '1/10',\n+   "
+    }
+  },
+  {
+    "id": "M14",
+    "description": "Unknown coin reward silently zero",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "31b316bc930f70b95188a6114cadb0076bb2bec19c0cdb741680550c6bbccfb7",
+    "witness": {
+      "model": "together",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: null,\n    confidence: 'medium',\n    facts: [\n      'F23',\n...\n      {\n+       coins"
+    }
+  },
+  {
+    "id": "M15",
+    "description": "Subtract matching bonus",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "6ca83645cf559e4efc469c552a3a3ccfd204ca9d41e7f8eb240b975195f74aa2",
+    "witness": {
+      "model": "double",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n+     '-10': '1/10',\n      '0': '9/10',\n-     '10': '1/10'\n    },\n    confidence:"
+    }
+  },
+  {
+    "id": "M16",
+    "description": "Double matching reward only nine",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "c571a6a92d826a512208b130c2832a1fbb5cf4dbcbd526a8800118bf4a53a964",
+    "witness": {
+      "model": "double",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n      '0': '9/10',\n+     '9': '1/10'\n-     '10': '1/10'\n    },\n    confidence: 'h"
+    }
+  },
+  {
+    "id": "M17",
+    "description": "Ordinary triple bonus wrong",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "33ebdf37b9bdebef33c99c63406320c37da4c974b69a0c1543c5199986bc1b99",
+    "witness": {
+      "model": "triple",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n      '0': '99/100',\n+     '19': '9/1000',\n-     '20': '9/1000',\n      '50': '1/1"
+    }
+  },
+  {
+    "id": "M18",
+    "description": "Turbo ordinary bonus wrong",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "f67b833f6fda894a2403b5a8532f7975165c78a59a964a629d691eb31da39e12",
+    "witness": {
+      "model": "turbo",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n      '0': '999/1000',\n+     '20': '9/10000',\n-     '30': '9/10000',\n      '70': "
+    }
+  },
+  {
+    "id": "M19",
+    "description": "Turbo sevens reward wrong",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "e4747f964d6a479af3272fe9da2b4fdf275e61cff84d2a169f8bab60fcd1f56c",
+    "witness": {
+      "model": "turbo",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n      '0': '999/1000',\n      '30': '9/10000',\n+     '50': '1/10000'\n-     '70': '"
+    }
+  },
+  {
+    "id": "M20",
+    "description": "Double the buddy addend",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "40e13063dfc78bf978dfd6853ad1231bdb7c6c61a36b4990f9cdece2969b5cd7",
+    "witness": {
+      "model": "mario-extra",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n      '0': '1/1'\n    },\n    confidence: 'medium',\n...\n        coins: 0,\n+       m"
+    }
+  },
+  {
+    "id": "M21",
+    "description": "Enumeration omits smallest face",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "702fe4d37b91c4a442b554d704037ad7011dcc74c38a47a183d426ef770a4bc2",
+    "witness": {
+      "model": "normal",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n+     '0': '9/10'\n-     '0': '1/1'\n    },\n    confidence: 'high',\n    facts: [\n  "
+    }
+  },
+  {
+    "id": "M22",
+    "description": "Enumeration counts every tuple twice",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "ba76ac371fec79bc9804a3e29687c5b632f69d254a26e53ed329e79f51ad13cb",
+    "witness": {
+      "model": "normal",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n+     '0': '2/1'\n-     '0': '1/1'\n    },\n    confidence: 'high',\n    facts: [\n   "
+    }
+  },
+  {
+    "id": "M23",
+    "description": "Wrong sample-space denominator",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "cd2c6139bf3534d2a373e1acfc939c43664e7f9d90f60600485ffde381134767",
+    "witness": {
+      "model": "normal",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n+     '0': '10/11'\n-     '0': '1/1'\n    },\n    confidence: 'high',\n    facts: [\n "
+    }
+  },
+  {
+    "id": "M24",
+    "description": "Fractions not reduced",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "3cd9a603bac26fd0103f4f38b4bfba67967e0dca23442e0e20f4b74ad8efb30e",
+    "witness": {
+      "model": "normal",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n+     '0': '10/10'\n-     '0': '1/1'\n    },\n    confidence: 'high',\n    facts: [\n "
+    }
+  },
+  {
+    "id": "M25",
+    "description": "Expected movement one high",
+    "compiled": true,
+    "killed": true,
+    "sourceSha256": "35c68e7d4a45fe1fe2f7bfc87b1e3211d4878f37fd721e8437253f7e81ecb237",
+    "witness": {
+      "model": "normal",
+      "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    coins: {\n      '0': '1/1'\n    },\n    confidence: 'high',\n...\n    meanCoins: '0/1',\n+   mea"
+    }
+  }
+]

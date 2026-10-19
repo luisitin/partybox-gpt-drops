@@ -1,0 +1,428 @@
+[
+  {
+    "seed": 1,
+    "name": "artifact-integrity",
+    "passed": true,
+    "cases": 58,
+    "command": "npm test (all delivered hashes and per-file 30000000-byte gate)"
+  },
+  {
+    "seed": 1,
+    "name": "typescript-strict",
+    "passed": true,
+    "cases": 4,
+    "command": "tsc -p tsconfig.json"
+  },
+  {
+    "seed": 1,
+    "name": "native-sampler-compile",
+    "passed": true,
+    "cases": 1,
+    "command": "g++ -std=c++17 -O3 -Wall -Wextra -Werror tests/montecarlo.cpp -o .test-output/montecarlo"
+  },
+  {
+    "seed": 1,
+    "name": "json-schema",
+    "passed": true,
+    "cases": 2,
+    "command": "python3 tests/validate.py 1",
+    "output": "dice.json: VALID\nodds.json: VALID\nDraft 2020-12: schema valid; documents=2; errors=0; seed=1\n"
+  },
+  {
+    "seed": 1,
+    "name": "semantic-references",
+    "passed": true,
+    "cases": 113,
+    "command": "npm test (semantic references, aliases, quote budgets, dependency/purity scan)"
+  },
+  {
+    "seed": 1,
+    "name": "research-source-recheck",
+    "passed": true,
+    "cases": 148,
+    "recheckedRows": 120,
+    "retrievedSources": 27,
+    "unresolvedResearchFacts": [
+      "F07",
+      "F09",
+      "F11",
+      "F16",
+      "F22",
+      "F25",
+      "F28",
+      "F30",
+      "F31",
+      "F32",
+      "F33",
+      "F34"
+    ],
+    "command": "npm test (complete per-row second-pass coverage and all accepted source quotes recovered in both archived passes)"
+  },
+  {
+    "seed": 1,
+    "name": "exhaustive-A-B",
+    "passed": true,
+    "cases": 85777,
+    "distributions": 29,
+    "command": "npm test (TypeScript Cartesian enumeration versus Python convolution and independent per-tuple evaluator)"
+  },
+  {
+    "seed": 1,
+    "name": "blind-independent-odds",
+    "passed": true,
+    "cases": 85777,
+    "distributions": 29,
+    "fractionComparisons": 4020,
+    "invalidModelFixtures": 18,
+    "referenceSha256": "c98f59f1372ad59904437e93bfed9f0cc6872b92cc58efc249380beb5bad2718",
+    "command": "npm test (sealed blind mixed-radix oracle versus every production tuple, table, fraction and invalid model fixture)"
+  },
+  {
+    "seed": 1,
+    "name": "blind-author-selfcheck",
+    "passed": true,
+    "cases": 41,
+    "command": "npm test (rerun original sealed author self-check in transient directory)",
+    "output": "{\"status\":\"passed\",\"assertions\":41,\"authorship\":\"public contract and dice.json only; no production or tests read\"}"
+  },
+  {
+    "seed": 1,
+    "name": "exact-invariants",
+    "passed": true,
+    "cases": 612,
+    "command": "npm test (bigint normalization, marginals, expectations and reduction)"
+  },
+  {
+    "seed": 1,
+    "name": "lookup-boundaries",
+    "passed": true,
+    "cases": 2194,
+    "command": "npm test (lookup equality, all characters, custom choices, immutability, rejected inputs)"
+  },
+  {
+    "seed": 1,
+    "name": "literal-goldens",
+    "passed": true,
+    "cases": 19,
+    "command": "npm test (literal arithmetic goldens; game inputs retain their research confidence)"
+  },
+  {
+    "seed": 1,
+    "name": "seeded-rng",
+    "passed": true,
+    "cases": 1009,
+    "command": "npm test (RNG reproducibility, rejection branch and uint32 bounds)"
+  },
+  {
+    "seed": 1,
+    "name": "mutation-testing",
+    "passed": true,
+    "cases": 25,
+    "compiled": 25,
+    "killed": 25,
+    "survived": 0,
+    "compileErrors": 0,
+    "command": "npm test (25 individual compiled-source mutants; only assertion failures against sealed blind distributions count as kills)"
+  },
+  {
+    "seed": 1,
+    "name": "native-sampler-equivalence",
+    "passed": true,
+    "cases": 1053,
+    "models": 29,
+    "command": "npm test (C++ versus TypeScript PRNG values and 1000 complete sampled tuples for every model)"
+  },
+  {
+    "seed": 1,
+    "name": "monte-carlo",
+    "passed": true,
+    "cases": 1196,
+    "models": 29,
+    "trials": 290000000,
+    "command": "npm test (10000000 independent face-sampled tuples per model; exact bigint 4-sigma inequalities)"
+  },
+  {
+    "seed": 2,
+    "name": "artifact-integrity",
+    "passed": true,
+    "cases": 58,
+    "command": "npm test (all delivered hashes and per-file 30000000-byte gate)"
+  },
+  {
+    "seed": 2,
+    "name": "typescript-strict",
+    "passed": true,
+    "cases": 4,
+    "command": "tsc -p tsconfig.json"
+  },
+  {
+    "seed": 2,
+    "name": "native-sampler-compile",
+    "passed": true,
+    "cases": 1,
+    "command": "g++ -std=c++17 -O3 -Wall -Wextra -Werror tests/montecarlo.cpp -o .test-output/montecarlo"
+  },
+  {
+    "seed": 2,
+    "name": "json-schema",
+    "passed": true,
+    "cases": 2,
+    "command": "python3 tests/validate.py 2",
+    "output": "dice.json: VALID\nodds.json: VALID\nDraft 2020-12: schema valid; documents=2; errors=0; seed=2\n"
+  },
+  {
+    "seed": 2,
+    "name": "semantic-references",
+    "passed": true,
+    "cases": 113,
+    "command": "npm test (semantic references, aliases, quote budgets, dependency/purity scan)"
+  },
+  {
+    "seed": 2,
+    "name": "research-source-recheck",
+    "passed": true,
+    "cases": 148,
+    "recheckedRows": 120,
+    "retrievedSources": 27,
+    "unresolvedResearchFacts": [
+      "F07",
+      "F09",
+      "F11",
+      "F16",
+      "F22",
+      "F25",
+      "F28",
+      "F30",
+      "F31",
+      "F32",
+      "F33",
+      "F34"
+    ],
+    "command": "npm test (complete per-row second-pass coverage and all accepted source quotes recovered in both archived passes)"
+  },
+  {
+    "seed": 2,
+    "name": "exhaustive-A-B",
+    "passed": true,
+    "cases": 85777,
+    "distributions": 29,
+    "command": "npm test (TypeScript Cartesian enumeration versus Python convolution and independent per-tuple evaluator)"
+  },
+  {
+    "seed": 2,
+    "name": "blind-independent-odds",
+    "passed": true,
+    "cases": 85777,
+    "distributions": 29,
+    "fractionComparisons": 4020,
+    "invalidModelFixtures": 18,
+    "referenceSha256": "c98f59f1372ad59904437e93bfed9f0cc6872b92cc58efc249380beb5bad2718",
+    "command": "npm test (sealed blind mixed-radix oracle versus every production tuple, table, fraction and invalid model fixture)"
+  },
+  {
+    "seed": 2,
+    "name": "blind-author-selfcheck",
+    "passed": true,
+    "cases": 41,
+    "command": "npm test (rerun original sealed author self-check in transient directory)",
+    "output": "{\"status\":\"passed\",\"assertions\":41,\"authorship\":\"public contract and dice.json only; no production or tests read\"}"
+  },
+  {
+    "seed": 2,
+    "name": "exact-invariants",
+    "passed": true,
+    "cases": 612,
+    "command": "npm test (bigint normalization, marginals, expectations and reduction)"
+  },
+  {
+    "seed": 2,
+    "name": "lookup-boundaries",
+    "passed": true,
+    "cases": 2194,
+    "command": "npm test (lookup equality, all characters, custom choices, immutability, rejected inputs)"
+  },
+  {
+    "seed": 2,
+    "name": "literal-goldens",
+    "passed": true,
+    "cases": 19,
+    "command": "npm test (literal arithmetic goldens; game inputs retain their research confidence)"
+  },
+  {
+    "seed": 2,
+    "name": "seeded-rng",
+    "passed": true,
+    "cases": 1009,
+    "command": "npm test (RNG reproducibility, rejection branch and uint32 bounds)"
+  },
+  {
+    "seed": 2,
+    "name": "mutation-testing",
+    "passed": true,
+    "cases": 25,
+    "compiled": 25,
+    "killed": 25,
+    "survived": 0,
+    "compileErrors": 0,
+    "command": "npm test (25 individual compiled-source mutants; only assertion failures against sealed blind distributions count as kills)"
+  },
+  {
+    "seed": 2,
+    "name": "native-sampler-equivalence",
+    "passed": true,
+    "cases": 1053,
+    "models": 29,
+    "command": "npm test (C++ versus TypeScript PRNG values and 1000 complete sampled tuples for every model)"
+  },
+  {
+    "seed": 2,
+    "name": "monte-carlo",
+    "passed": true,
+    "cases": 1196,
+    "models": 29,
+    "trials": 290000000,
+    "command": "npm test (10000000 independent face-sampled tuples per model; exact bigint 4-sigma inequalities)"
+  },
+  {
+    "seed": 3,
+    "name": "artifact-integrity",
+    "passed": true,
+    "cases": 58,
+    "command": "npm test (all delivered hashes and per-file 30000000-byte gate)"
+  },
+  {
+    "seed": 3,
+    "name": "typescript-strict",
+    "passed": true,
+    "cases": 4,
+    "command": "tsc -p tsconfig.json"
+  },
+  {
+    "seed": 3,
+    "name": "native-sampler-compile",
+    "passed": true,
+    "cases": 1,
+    "command": "g++ -std=c++17 -O3 -Wall -Wextra -Werror tests/montecarlo.cpp -o .test-output/montecarlo"
+  },
+  {
+    "seed": 3,
+    "name": "json-schema",
+    "passed": true,
+    "cases": 2,
+    "command": "python3 tests/validate.py 3",
+    "output": "dice.json: VALID\nodds.json: VALID\nDraft 2020-12: schema valid; documents=2; errors=0; seed=3\n"
+  },
+  {
+    "seed": 3,
+    "name": "semantic-references",
+    "passed": true,
+    "cases": 113,
+    "command": "npm test (semantic references, aliases, quote budgets, dependency/purity scan)"
+  },
+  {
+    "seed": 3,
+    "name": "research-source-recheck",
+    "passed": true,
+    "cases": 148,
+    "recheckedRows": 120,
+    "retrievedSources": 27,
+    "unresolvedResearchFacts": [
+      "F07",
+      "F09",
+      "F11",
+      "F16",
+      "F22",
+      "F25",
+      "F28",
+      "F30",
+      "F31",
+      "F32",
+      "F33",
+      "F34"
+    ],
+    "command": "npm test (complete per-row second-pass coverage and all accepted source quotes recovered in both archived passes)"
+  },
+  {
+    "seed": 3,
+    "name": "exhaustive-A-B",
+    "passed": true,
+    "cases": 85777,
+    "distributions": 29,
+    "command": "npm test (TypeScript Cartesian enumeration versus Python convolution and independent per-tuple evaluator)"
+  },
+  {
+    "seed": 3,
+    "name": "blind-independent-odds",
+    "passed": true,
+    "cases": 85777,
+    "distributions": 29,
+    "fractionComparisons": 4020,
+    "invalidModelFixtures": 18,
+    "referenceSha256": "c98f59f1372ad59904437e93bfed9f0cc6872b92cc58efc249380beb5bad2718",
+    "command": "npm test (sealed blind mixed-radix oracle versus every production tuple, table, fraction and invalid model fixture)"
+  },
+  {
+    "seed": 3,
+    "name": "blind-author-selfcheck",
+    "passed": true,
+    "cases": 41,
+    "command": "npm test (rerun original sealed author self-check in transient directory)",
+    "output": "{\"status\":\"passed\",\"assertions\":41,\"authorship\":\"public contract and dice.json only; no production or tests read\"}"
+  },
+  {
+    "seed": 3,
+    "name": "exact-invariants",
+    "passed": true,
+    "cases": 612,
+    "command": "npm test (bigint normalization, marginals, expectations and reduction)"
+  },
+  {
+    "seed": 3,
+    "name": "lookup-boundaries",
+    "passed": true,
+    "cases": 2194,
+    "command": "npm test (lookup equality, all characters, custom choices, immutability, rejected inputs)"
+  },
+  {
+    "seed": 3,
+    "name": "literal-goldens",
+    "passed": true,
+    "cases": 19,
+    "command": "npm test (literal arithmetic goldens; game inputs retain their research confidence)"
+  },
+  {
+    "seed": 3,
+    "name": "seeded-rng",
+    "passed": true,
+    "cases": 1009,
+    "command": "npm test (RNG reproducibility, rejection branch and uint32 bounds)"
+  },
+  {
+    "seed": 3,
+    "name": "mutation-testing",
+    "passed": true,
+    "cases": 25,
+    "compiled": 25,
+    "killed": 25,
+    "survived": 0,
+    "compileErrors": 0,
+    "command": "npm test (25 individual compiled-source mutants; only assertion failures against sealed blind distributions count as kills)"
+  },
+  {
+    "seed": 3,
+    "name": "native-sampler-equivalence",
+    "passed": true,
+    "cases": 1053,
+    "models": 29,
+    "command": "npm test (C++ versus TypeScript PRNG values and 1000 complete sampled tuples for every model)"
+  },
+  {
+    "seed": 3,
+    "name": "monte-carlo",
+    "passed": true,
+    "cases": 1196,
+    "models": 29,
+    "trials": 290000000,
+    "command": "npm test (10000000 independent face-sampled tuples per model; exact bigint 4-sigma inequalities)"
+  }
+]

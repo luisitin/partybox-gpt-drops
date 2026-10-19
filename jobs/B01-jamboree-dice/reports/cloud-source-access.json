@@ -1,0 +1,372 @@
+{
+  "job": "B01",
+  "observedAt": "2026-10-07T15:06:34.812710+00:00",
+  "researchOutcome": "BLOCKED",
+  "newIndependentCorroboration": false,
+  "freshFullSourcePassPossible": false,
+  "requiredGates": [
+    "F07",
+    "F09",
+    "F11",
+    "F16",
+    "F22",
+    "F25",
+    "F28",
+    "F30",
+    "F31",
+    "F32",
+    "F33",
+    "F34"
+  ],
+  "networkPolicy": {
+    "mode": "restricted",
+    "state": "enforced",
+    "observationsCurrent": true,
+    "configuredAdditionalHosts": [],
+    "preset": "package_managers",
+    "vpnConfigured": false
+  },
+  "availableBrowsingTools": false,
+  "attemptedSourceCount": 28,
+  "sourceRetrievalsSucceeded": 0,
+  "attemptedIndependentHostCount": 6,
+  "independentRetrievalsSucceeded": 0,
+  "failure": "All HTTPS GETs failed before origin TLS handshake: curl exit 56, HTTP CONNECT proxy response 403 Forbidden, server envoy. TLS verification remained enabled; no origin content was retrieved.",
+  "sourceDomains": [
+    "clutchpoints.com",
+    "gamefaqs.gamespot.com",
+    "gaming.stackexchange.com",
+    "mario.fandom.com",
+    "mariopartylegacy.com",
+    "nintendowire.com",
+    "play.nintendo.com",
+    "superluigibros.com",
+    "www.cgmagonline.com",
+    "www.destructoid.com",
+    "www.mariowiki.com",
+    "www.nintendo.com"
+  ],
+  "independentAttemptDomains": [
+    "duckduckgo.com",
+    "game8.co",
+    "www.bing.com",
+    "www.google.com",
+    "www.reddit.com",
+    "www.youtube.com"
+  ],
+  "testedSources": [
+    {
+      "id": "S01",
+      "url": "https://www.destructoid.com/reviews/review-super-mario-party-jamboree/",
+      "retrievedAt": "2026-10-07T15:06:00.544330+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S02",
+      "url": "https://www.cgmagonline.com/review/game/super-mario-party-jamboree-switch/",
+      "retrievedAt": "2026-10-07T15:06:00.544984+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S03",
+      "url": "https://mariopartylegacy.com/games/super-mario-party-jamboree/",
+      "retrievedAt": "2026-10-07T15:06:00.545606+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S04",
+      "url": "https://www.mariowiki.com/Super_Mario_Party_Jamboree",
+      "retrievedAt": "2026-10-07T15:06:00.546004+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S05",
+      "url": "https://www.mariowiki.com/Double_Dice",
+      "retrievedAt": "2026-10-07T15:06:00.548215+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S06",
+      "url": "https://www.mariowiki.com/Triple_Dice",
+      "retrievedAt": "2026-10-07T15:06:00.549126+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S07",
+      "url": "https://www.mariowiki.com/Payday_Double_Dice",
+      "retrievedAt": "2026-10-07T15:06:00.558417+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S08",
+      "url": "https://www.mariowiki.com/Payday_Triple_Dice",
+      "retrievedAt": "2026-10-07T15:06:00.564653+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S09",
+      "url": "https://www.mariowiki.com/Custom_Dice_Block",
+      "retrievedAt": "2026-10-07T15:06:00.584737+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S10",
+      "url": "https://www.mariowiki.com/Creepy_Dice_Block",
+      "retrievedAt": "2026-10-07T15:06:00.595508+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S11",
+      "url": "https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80898998",
+      "retrievedAt": "2026-10-07T15:06:00.599251+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S12",
+      "url": "https://www.mariowiki.com/Creepy_Dice_Block_Tickets",
+      "retrievedAt": "2026-10-07T15:06:00.603623+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S13",
+      "url": "https://www.mariowiki.com/Mushroom_Tickets",
+      "retrievedAt": "2026-10-07T15:06:00.609948+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S14",
+      "url": "https://www.mariowiki.com/Turbo_Dice",
+      "retrievedAt": "2026-10-07T15:06:00.611505+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S15",
+      "url": "https://play.nintendo.com/news-tips/tips-tricks/super-mario-party-jamboree-tips-and-tricks/",
+      "retrievedAt": "2026-10-07T15:06:00.612015+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S16",
+      "url": "https://mariopartylegacy.com/games/super-mario-party-jamboree/jamboree-tv/",
+      "retrievedAt": "2026-10-07T15:06:00.613520+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S17",
+      "url": "https://www.mariowiki.com/Together_Dice",
+      "retrievedAt": "2026-10-07T15:06:00.627680+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S18",
+      "url": "https://nintendowire.com/news/2025/05/30/overview-trailer-super-mario-party-jamboree-nintendo-switch-2-edition-jamboree-tv/",
+      "retrievedAt": "2026-10-07T15:06:00.634026+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S19",
+      "url": "https://www.mariowiki.com/Jamboree_Buddy",
+      "retrievedAt": "2026-10-07T15:06:00.637049+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S20",
+      "url": "https://gaming.stackexchange.com/questions/410058/how-does-luigi-affect-your-chance-of-rolling-bigger-numbers",
+      "retrievedAt": "2026-10-07T15:06:00.639516+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S21",
+      "url": "https://www.mariowiki.com/Super_Mario_Party_Jamboree_%E2%80%93_Nintendo_Switch_2_Edition_%2B_Jamboree_TV",
+      "retrievedAt": "2026-10-07T15:06:00.650194+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S22",
+      "url": "https://superluigibros.com/super-mario-party-jamboree/",
+      "retrievedAt": "2026-10-07T15:06:00.651810+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S23",
+      "url": "https://mario.fandom.com/wiki/Payday_Double_Dice",
+      "retrievedAt": "2026-10-07T15:06:00.662717+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S24",
+      "url": "https://gamefaqs.gamespot.com/switch/470862-super-mario-party-jamboree/answers/648422-how-do-i-roll-the-same-number-on-triple-dice",
+      "retrievedAt": "2026-10-07T15:06:00.670671+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S25",
+      "url": "https://www.mariowiki.com/Super_Creepy_Dice",
+      "retrievedAt": "2026-10-07T15:06:00.671718+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S26",
+      "url": "https://clutchpoints.com/gaming/all-jamboree-buddies-in-super-mario-party-jamboree",
+      "retrievedAt": "2026-10-07T15:06:00.672294+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S27",
+      "url": "https://gamefaqs.gamespot.com/boards/470862-super-mario-party-jamboree/80896637",
+      "retrievedAt": "2026-10-07T15:06:00.688147+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "S28",
+      "url": "https://www.nintendo.com/us/whatsnew/the-party-is-getting-even-bigger-with-jamboree-tv/",
+      "retrievedAt": "2026-10-07T15:06:00.691527+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "SEARCH_GOOGLE",
+      "url": "https://www.google.com/search?q=Jamboree+Triple+Dice+50+coins",
+      "retrievedAt": "2026-10-07T15:06:00.716942+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "SEARCH_BING",
+      "url": "https://www.bing.com/search?q=Jamboree+Together+Dice+10+coins",
+      "retrievedAt": "2026-10-07T15:06:00.720499+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "SEARCH_DDG",
+      "url": "https://duckduckgo.com/?q=Jamboree+Turbo+Dice+70+coins",
+      "retrievedAt": "2026-10-07T15:06:00.726165+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "VIDEO_YOUTUBE",
+      "url": "https://www.youtube.com/results?search_query=Jamboree+triple+sevens",
+      "retrievedAt": "2026-10-07T15:06:00.732272+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "REDDIT",
+      "url": "https://www.reddit.com/r/MARIOPARTY/search/?q=payday%20dice&restrict_sr=1",
+      "retrievedAt": "2026-10-07T15:06:00.732731+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    },
+    {
+      "id": "GAME8",
+      "url": "https://game8.co/games/Super-Mario-Party-Jamboree",
+      "retrievedAt": "2026-10-07T15:06:00.744972+00:00",
+      "curlExit": 56,
+      "error": "curl: (56) CONNECT tunnel failed, response 403",
+      "httpConnectStatus": 403,
+      "retrieved": false
+    }
+  ],
+  "evidenceFile": "/workspace/b01-research/access-results.json",
+  "evidenceSha256": "c5330abd06ef1b9852c188a993f9118cad120aa001e5b52bc43051dcc33bdc93",
+  "notes": [
+    "Existing retained source-capture metadata was inspected as historical evidence, not counted as a current fresh source pass.",
+    "No new quotations or origin-content hashes can be supplied, because no origin content was retrieved.",
+    "No facts were promoted and no game probabilities were guessed."
+  ]
+}
