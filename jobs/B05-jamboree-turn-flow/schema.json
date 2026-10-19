@@ -1,0 +1,1196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/luisitin/partybox-gpt-drops/jobs/B05-jamboree-turn-flow/schema.json",
+  "title": "B05 research drop — structure, not factual certification",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/claims"
+    },
+    {
+      "$ref": "#/$defs/sources"
+    },
+    {
+      "$ref": "#/$defs/strings"
+    },
+    {
+      "$ref": "#/$defs/bonusStars"
+    },
+    {
+      "$ref": "#/$defs/homestretch"
+    },
+    {
+      "$ref": "#/$defs/recheck"
+    },
+    {
+      "$ref": "#/$defs/citationCapture"
+    },
+    {
+      "$ref": "#/$defs/sourceAudit"
+    },
+    {
+      "$ref": "#/$defs/rowAudit"
+    }
+  ],
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "excerptIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "sourceId",
+        "locator",
+        "excerptIds"
+      ],
+      "additionalProperties": false
+    },
+    "claim": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phase": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 0
+        },
+        "status": {
+          "enum": [
+            "corroborated",
+            "single_source",
+            "conflict",
+            "unverified"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "phase",
+        "text",
+        "evidence",
+        "status",
+        "confidence",
+        "note"
+      ],
+      "additionalProperties": false
+    },
+    "claims": {
+      "type": "object",
+      "properties": {
+        "job": {
+          "const": "B05"
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "acceptance": {
+          "const": "NOT_MET"
+        },
+        "independentResearcher": {
+          "const": false
+        },
+        "claims": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/claim"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "job",
+        "scope",
+        "acceptance",
+        "independentResearcher",
+        "claims"
+      ],
+      "additionalProperties": false
+    },
+    "excerpt": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "id",
+            "text"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "stringId": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "id",
+            "stringId"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "independenceGroup": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "primary",
+            "secondary",
+            "hands_on_review",
+            "derived",
+            "secondary_transcript"
+          ]
+        },
+        "initialRead": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string"
+        },
+        "excerpts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/excerpt"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "id",
+        "url",
+        "title",
+        "independenceGroup",
+        "kind",
+        "initialRead",
+        "notes",
+        "excerpts"
+      ],
+      "additionalProperties": false
+    },
+    "sources": {
+      "type": "object",
+      "properties": {
+        "job": {
+          "const": "B05"
+        },
+        "researchDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "job",
+        "researchDate",
+        "sources"
+      ],
+      "additionalProperties": false
+    },
+    "string": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "speaker": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "when": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "sourceId": {
+              "type": "string",
+              "minLength": 1
+            },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://"
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "timestamp": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "sourceId",
+            "url",
+            "locator",
+            "timestamp"
+          ],
+          "additionalProperties": false
+        },
+        "medium": {
+          "enum": [
+            "voice",
+            "on_screen_text_transcript"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "status": {
+          "enum": [
+            "corroborated",
+            "single_source",
+            "conflict",
+            "unverified"
+          ]
+        },
+        "visualCaptureVerified": {
+          "const": false
+        },
+        "independentSecondSource": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "id",
+        "speaker",
+        "text",
+        "when",
+        "source",
+        "medium",
+        "confidence",
+        "status",
+        "visualCaptureVerified",
+        "independentSecondSource"
+      ],
+      "additionalProperties": false
+    },
+    "strings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/string"
+      },
+      "minItems": 1
+    },
+    "bonus": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "criterion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "metric": {
+          "type": "string",
+          "minLength": 1
+        },
+        "direction": {
+          "enum": [
+            "min",
+            "max"
+          ]
+        },
+        "criterionClaimId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "criterionStatus": {
+          "enum": [
+            "corroborated",
+            "single_source",
+            "conflict",
+            "unverified"
+          ]
+        },
+        "criterionConfidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "nameSourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tieRule": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "null"
+            },
+            "claimIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "status": {
+              "const": "unverified"
+            }
+          },
+          "required": [
+            "value",
+            "claimIds",
+            "status"
+          ],
+          "additionalProperties": false
+        },
+        "starsPerQualifyingRecipient": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "const": 1
+            },
+            "status": {
+              "const": "single_source"
+            },
+            "sourceIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "value",
+            "status",
+            "sourceIds"
+          ],
+          "additionalProperties": false
+        },
+        "eligibilityMinimum": {
+          "type": "null"
+        },
+        "counterEdgeCasesVerified": {
+          "const": false
+        },
+        "selectionPolicyClaimIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "unverified": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "criterion",
+        "metric",
+        "direction",
+        "criterionClaimId",
+        "criterionStatus",
+        "criterionConfidence",
+        "confidence",
+        "sourceIds",
+        "nameSourceId",
+        "tieRule",
+        "starsPerQualifyingRecipient",
+        "eligibilityMinimum",
+        "counterEdgeCasesVerified",
+        "selectionPolicyClaimIds",
+        "unverified"
+      ],
+      "additionalProperties": false
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claimId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "categories": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "eligibleBonusIds": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "selection": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "corroborated",
+            "single_source",
+            "conflict",
+            "unverified"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "claimId",
+        "categories",
+        "eligibleBonusIds",
+        "selection",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "bonusStars": {
+      "type": "object",
+      "properties": {
+        "job": {
+          "const": "B05"
+        },
+        "catalogCompleteness": {
+          "type": "string",
+          "minLength": 1
+        },
+        "selectionAlgorithm": {
+          "type": "null"
+        },
+        "allCriteriaDualConfirmed": {
+          "const": false
+        },
+        "policyClaimIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "bonuses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/bonus"
+          },
+          "minItems": 1
+        },
+        "awardPolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/policy"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "job",
+        "catalogCompleteness",
+        "selectionAlgorithm",
+        "allCriteriaDualConfirmed",
+        "policyClaimIds",
+        "bonuses",
+        "awardPolicies"
+      ],
+      "additionalProperties": false
+    },
+    "effect": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "trigger": {
+          "type": "string",
+          "minLength": 1
+        },
+        "effect": {
+          "type": "string",
+          "minLength": 1
+        },
+        "excludedBoards": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "detail": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claimId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "status": {
+          "enum": [
+            "corroborated",
+            "single_source",
+            "conflict",
+            "unverified"
+          ]
+        },
+        "frenzyEligibilityVerified": {
+          "const": false
+        }
+      },
+      "required": [
+        "id",
+        "trigger",
+        "effect",
+        "excludedBoards",
+        "detail",
+        "claimId",
+        "sourceIds",
+        "confidence",
+        "status",
+        "frenzyEligibilityVerified"
+      ],
+      "additionalProperties": false
+    },
+    "homestretch": {
+      "type": "object",
+      "properties": {
+        "job": {
+          "const": "B05"
+        },
+        "mandatoryClaimIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "selectionClaimIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "completePoolIndependentlyVerified": {
+          "const": false
+        },
+        "selectionProbabilities": {
+          "type": "null"
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/effect"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "job",
+        "mandatoryClaimIds",
+        "selectionClaimIds",
+        "completePoolIndependentlyVerified",
+        "selectionProbabilities",
+        "effects"
+      ],
+      "additionalProperties": false
+    },
+    "reopen": {
+      "type": "object",
+      "properties": {
+        "pass": {
+          "enum": [
+            "A",
+            "B"
+          ]
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tool": {
+          "type": "string",
+          "minLength": 1
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "opened": {
+          "const": true
+        }
+      },
+      "required": [
+        "pass",
+        "sourceId",
+        "tool",
+        "references",
+        "opened"
+      ],
+      "additionalProperties": false
+    },
+    "decision": {
+      "type": "object",
+      "properties": {
+        "reviewed": {
+          "const": true
+        },
+        "result": {
+          "enum": [
+            "corroborated",
+            "single_source",
+            "conflict",
+            "unverified"
+          ]
+        }
+      },
+      "required": [
+        "reviewed",
+        "result"
+      ],
+      "additionalProperties": false
+    },
+    "auditRow": {
+      "type": "object",
+      "properties": {
+        "rowId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "passA": {
+          "enum": [
+            "corroborated",
+            "single_source",
+            "conflict",
+            "unverified"
+          ]
+        },
+        "passB": {
+          "enum": [
+            "corroborated",
+            "single_source",
+            "conflict",
+            "unverified"
+          ]
+        },
+        "canonicalSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "rowId",
+        "passA",
+        "passB",
+        "canonicalSha256"
+      ],
+      "additionalProperties": false
+    },
+    "recheck": {
+      "type": "object",
+      "properties": {
+        "job": {
+          "const": "B05"
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceReopens": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reopen"
+          },
+          "minItems": 1
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/auditRow"
+          },
+          "minItems": 1
+        },
+        "failedAccess": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "pattern": "^https://"
+              },
+              "tool": {
+                "type": "string",
+                "minLength": 1
+              },
+              "runId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "result": {
+                "type": "string",
+                "minLength": 1
+              },
+              "acceptedAsEvidence": {
+                "const": false
+              }
+            },
+            "required": [
+              "url",
+              "tool",
+              "runId",
+              "result",
+              "acceptedAsEvidence"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "resultMeanings": {
+          "type": "object",
+          "properties": {
+            "corroborated": {
+              "type": "string",
+              "minLength": 1
+            },
+            "single_source": {
+              "type": "string",
+              "minLength": 1
+            },
+            "conflict": {
+              "type": "string",
+              "minLength": 1
+            },
+            "unverified": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "corroborated",
+            "single_source",
+            "conflict",
+            "unverified"
+          ],
+          "additionalProperties": false
+        },
+        "amendments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "rowId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "decision": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "rowId",
+              "decision"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "job",
+        "method",
+        "sourceReopens",
+        "rows",
+        "failedAccess",
+        "resultMeanings",
+        "amendments"
+      ],
+      "additionalProperties": false
+    },
+    "citationCapture": {
+      "type": "object",
+      "properties": {
+        "pass": {
+          "enum": [
+            "A",
+            "B"
+          ]
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "accessedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "tool": {
+          "const": "Exa.web_fetch_exa"
+        },
+        "retrievedTextSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "retrievedCharacters": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "quotations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "recovered": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "text",
+              "recovered"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "interpretation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "accessedAtUtc": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "pass",
+        "sourceId",
+        "url",
+        "title",
+        "accessedDate",
+        "tool",
+        "retrievedTextSha256",
+        "retrievedCharacters",
+        "quotations",
+        "interpretation",
+        "accessedAtUtc"
+      ],
+      "additionalProperties": false
+    },
+    "sourceAudit": {
+      "type": "object",
+      "properties": {
+        "job": {
+          "const": "B05"
+        },
+        "accessedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "sources": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "passes": {
+          "const": [
+            "A",
+            "B"
+          ]
+        },
+        "captures": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "pass": {
+                "enum": [
+                  "A",
+                  "B"
+                ]
+              },
+              "sourceId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "quotationCount": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "recoveredCount": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "capture": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "pass",
+              "sourceId",
+              "quotationCount",
+              "recoveredCount",
+              "capture"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "unrecoveredQuotations": {
+          "type": "array",
+          "maxItems": 0
+        }
+      },
+      "required": [
+        "job",
+        "accessedDate",
+        "sources",
+        "passes",
+        "captures",
+        "unrecoveredQuotations"
+      ],
+      "additionalProperties": false
+    },
+    "rowAudit": {
+      "type": "object",
+      "properties": {
+        "job": {
+          "const": "B05"
+        },
+        "reviewDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rowsReviewedEachPass": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sourceUrlsReopenedEachPass": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "claimStatuses": {
+          "type": "object",
+          "properties": {
+            "corroborated": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "single_source": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "conflict": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unverified": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "corroborated",
+            "single_source",
+            "conflict",
+            "unverified"
+          ],
+          "additionalProperties": false
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/auditRow"
+          },
+          "minItems": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "job",
+        "reviewDate",
+        "reviewer",
+        "rowsReviewedEachPass",
+        "sourceUrlsReopenedEachPass",
+        "claimStatuses",
+        "rows",
+        "scope"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
