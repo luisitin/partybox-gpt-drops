@@ -1,0 +1,709 @@
+{
+  "passed": true,
+  "baselineSHA256": "7d489f2084a990b5043d0121a62195cc86cab721443bf275a788da7aa37a9a8b",
+  "isolatedMutations": 25,
+  "strictCompiled": 25,
+  "behavioralKills": 75,
+  "records": [
+    {
+      "id": 1,
+      "name": "six-point-table",
+      "from": "6:15",
+      "to": "6:16",
+      "sourceSHA256": "4ff1fdb609ffb11922a9a2cfe761fbc49f85046cf717ee1d244fc22311e1c101",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: positive tie and signed tickets\n+ actual - expected\n... Skipped lines\n\n  {\n    value: [\n      {\n        completedTicketIds: [\n          'complete'\n...\n        playerId: 'p0',\n+       routePoints: 16,\n-       routePoints: 15,\n        ticketPoints: 6,"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: positive tie and signed tickets\n+ actual - expected\n... Skipped lines\n\n  {\n    value: [\n      {\n        completedTicketIds: [\n          'complete'\n...\n        playerId: 'p0',\n+       routePoints: 16,\n-       routePoints: 15,\n        ticketPoints: 6,"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: positive tie and signed tickets\n+ actual - expected\n... Skipped lines\n\n  {\n    value: [\n      {\n        completedTicketIds: [\n          'complete'\n...\n        playerId: 'p0',\n+       routePoints: 16,\n-       routePoints: 15,\n        ticketPoints: 6,"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "minimum-route-length",
+      "from": "r.length<1",
+      "to": "r.length<2",
+      "sourceSHA256": "fea19c6f6914ab8396e021d514d5a15726b7199b5423f6263c5562a0f9b9637e",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: legal 2\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/02-minimum-route-length/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/02-minimum-route-length/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/02-minimum-route-length/tests/goldens.mjs:5:96)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/02-minimum-route-length/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: legal 2\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/02-minimum-route-length/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/02-minimum-route-length/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/02-minimum-route-length/tests/goldens.mjs:5:96)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/02-minimum-route-length/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: legal 2\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/02-minimum-route-length/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/02-minimum-route-length/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/02-minimum-route-length/tests/goldens.mjs:5:96)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/02-minimum-route-length/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "maximum-route-length",
+      "from": "r.length>6",
+      "to": "r.length>5",
+      "sourceSHA256": "9fa66df40c2883b9c0d3c997f0050521d8f9b54954cde8b202cc3f9985aa53dc",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: legal 2\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/03-maximum-route-length/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/03-maximum-route-length/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/03-maximum-route-length/tests/goldens.mjs:5:96)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/03-maximum-route-length/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: legal 2\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/03-maximum-route-length/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/03-maximum-route-length/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/03-maximum-route-length/tests/goldens.mjs:5:96)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/03-maximum-route-length/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: legal 2\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/03-maximum-route-length/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/03-maximum-route-length/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/03-maximum-route-length/tests/goldens.mjs:5:96)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/03-maximum-route-length/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "minimum-players",
+      "from": "game.playerCount<2",
+      "to": "game.playerCount<3",
+      "sourceSHA256": "1d8d1e0e486fe0c9c734644f0175bd592c5c82126b82eea3e5a26289e1aa314b",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: legal 2\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/04-minimum-players/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/04-minimum-players/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/04-minimum-players/tests/goldens.mjs:5:96)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/04-minimum-players/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: legal 2\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/04-minimum-players/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/04-minimum-players/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/04-minimum-players/tests/goldens.mjs:5:96)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/04-minimum-players/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: legal 2\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/04-minimum-players/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/04-minimum-players/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/04-minimum-players/tests/goldens.mjs:5:96)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/04-minimum-players/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "existing-three-player-parallel",
+      "from": "game.playerCount<=3||owners.includes(player)",
+      "to": "game.playerCount<=2||owners.includes(player)",
+      "sourceSHA256": "b820c7fb3bfda265c5d222bcff84fd5bc0c93dbc3fdf15ebac5626f06a47196c",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: existing parallels 3\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/05-existing-three-player-parallel/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/05-existing-three-player-parallel/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/05-existing-three-player-parallel/tests/goldens.mjs:5:459)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/05-existing-three-player-parallel/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: existing parallels 3\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/05-existing-three-player-parallel/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/05-existing-three-player-parallel/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/05-existing-three-player-parallel/tests/goldens.mjs:5:459)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/05-existing-three-player-parallel/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: existing parallels 3\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/05-existing-three-player-parallel/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/05-existing-three-player-parallel/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/05-existing-three-player-parallel/tests/goldens.mjs:5:459)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/05-existing-three-player-parallel/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "candidate-three-player-parallel",
+      "from": "game.playerCount<=3||owner===player.id",
+      "to": "game.playerCount<=2||owner===player.id",
+      "sourceSHA256": "dd5fc90c4c279fa40e9f0ac7e3405836f71f29fb81fe2fc66a82af92260bb5cc",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: parallel 3/p1\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/06-candidate-three-player-parallel/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/06-candidate-three-player-parallel/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/06-candidate-three-player-parallel/tests/goldens.mjs:5:284)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/06-candidate-three-player-parallel/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: parallel 3/p1\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/06-candidate-three-player-parallel/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/06-candidate-three-player-parallel/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/06-candidate-three-player-parallel/tests/goldens.mjs:5:284)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/06-candidate-three-player-parallel/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: parallel 3/p1\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/06-candidate-three-player-parallel/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/06-candidate-three-player-parallel/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/06-candidate-three-player-parallel/tests/goldens.mjs:5:284)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/06-candidate-three-player-parallel/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "same-player-parallel",
+      "from": "game.playerCount<=3||owner===player.id",
+      "to": "game.playerCount<=3||owner!==player.id",
+      "sourceSHA256": "1eb0b623fd1cb68870f06d90052a7760a4f2e9007bd4856875ec43dfd8c1d18c",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: parallel 4/p0\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/07-same-player-parallel/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/07-same-player-parallel/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/07-same-player-parallel/tests/goldens.mjs:5:284)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/07-same-player-parallel/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: parallel 4/p0\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/07-same-player-parallel/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/07-same-player-parallel/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/07-same-player-parallel/tests/goldens.mjs:5:284)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/07-same-player-parallel/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: parallel 4/p0\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/07-same-player-parallel/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/07-same-player-parallel/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/07-same-player-parallel/tests/goldens.mjs:5:284)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/07-same-player-parallel/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "exact-train-balance",
+      "from": "player.trainsRemaining<r.length",
+      "to": "player.trainsRemaining<=r.length",
+      "sourceSHA256": "93b370ba08f14e8b611c654b89b2e04e795f1cefdc8af4285b6b16699d8f30ea",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: exact trains and cards\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/08-exact-train-balance/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/08-exact-train-balance/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/08-exact-train-balance/tests/goldens.mjs:6:202)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/08-exact-train-balance/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: exact trains and cards\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/08-exact-train-balance/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/08-exact-train-balance/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/08-exact-train-balance/tests/goldens.mjs:6:202)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/08-exact-train-balance/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: exact trains and cards\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/08-exact-train-balance/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/08-exact-train-balance/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/08-exact-train-balance/tests/goldens.mjs:6:202)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/08-exact-train-balance/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "payment-length",
+      "from": "claim.cards.length!==r.length",
+      "to": "claim.cards.length===r.length",
+      "sourceSHA256": "939e691a3112a7af2e9b7c5d20df6a85b529c6a89da8656e49be54b9af530008",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: legal 2\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/09-payment-length/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/09-payment-length/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/09-payment-length/tests/goldens.mjs:5:96)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/09-payment-length/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: legal 2\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/09-payment-length/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/09-payment-length/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/09-payment-length/tests/goldens.mjs:5:96)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/09-payment-length/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: legal 2\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/09-payment-length/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/09-payment-length/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/09-payment-length/tests/goldens.mjs:5:96)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/09-payment-length/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "double-spend",
+      "from": "spend[card]++",
+      "to": "spend[card]+=2",
+      "sourceSHA256": "ab6ba0dcb3b0533398b14f91451bb06d0510e166397cfac421e6c7f5bce701ae",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: exact trains and cards\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/10-double-spend/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/10-double-spend/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/10-double-spend/tests/goldens.mjs:6:202)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/10-double-spend/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: exact trains and cards\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/10-double-spend/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/10-double-spend/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/10-double-spend/tests/goldens.mjs:6:202)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/10-double-spend/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: exact trains and cards\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/10-double-spend/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/10-double-spend/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/10-double-spend/tests/goldens.mjs:6:202)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/10-double-spend/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "exact-card-balance",
+      "from": "spend[c]<=player.cards[c]",
+      "to": "spend[c]<player.cards[c]",
+      "sourceSHA256": "a4b9382d8e081fd3159eb5e9bc9dc0a465456e0df202a4b6169f94435c5aaa97",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: exact trains and cards\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/11-exact-card-balance/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/11-exact-card-balance/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/11-exact-card-balance/tests/goldens.mjs:6:202)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/11-exact-card-balance/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: exact trains and cards\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/11-exact-card-balance/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/11-exact-card-balance/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/11-exact-card-balance/tests/goldens.mjs:6:202)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/11-exact-card-balance/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: exact trains and cards\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/11-exact-card-balance/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/11-exact-card-balance/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/11-exact-card-balance/tests/goldens.mjs:6:202)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/11-exact-card-balance/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "mixed-gray-payment",
+      "from": "new Set(colors).size<=1",
+      "to": "new Set(colors).size<=2",
+      "sourceSHA256": "d08386ffd9fcb7da1956b0e7c6541b668e5cecc7927c0bd0b8e798ac63f10b2f",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: gray payment\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/12-mixed-gray-payment/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/12-mixed-gray-payment/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/12-mixed-gray-payment/tests/goldens.mjs:8:122)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/12-mixed-gray-payment/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: gray payment\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/12-mixed-gray-payment/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/12-mixed-gray-payment/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/12-mixed-gray-payment/tests/goldens.mjs:8:122)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/12-mixed-gray-payment/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: gray payment\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/12-mixed-gray-payment/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/12-mixed-gray-payment/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/12-mixed-gray-payment/tests/goldens.mjs:8:122)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/12-mixed-gray-payment/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "all-locomotive-payment",
+      "from": "colors.every(c=>c===r.color)",
+      "to": "colors.some(c=>c===r.color)",
+      "sourceSHA256": "afce555914f9dfb310525020d1e5c9cf6efbfecd0c8c38fd928b519a162fbbf5",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: colored payment\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/13-all-locomotive-payment/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/13-all-locomotive-payment/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/13-all-locomotive-payment/tests/goldens.mjs:7:139)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/13-all-locomotive-payment/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: colored payment\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/13-all-locomotive-payment/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/13-all-locomotive-payment/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/13-all-locomotive-payment/tests/goldens.mjs:7:139)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/13-all-locomotive-payment/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: colored payment\n+ actual - expected\n\n  {\n+   value: true\n-   value: false\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/13-all-locomotive-payment/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/13-all-locomotive-payment/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/13-all-locomotive-payment/tests/goldens.mjs:7:139)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/13-all-locomotive-payment/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "card-deduction",
+      "from": "cards[c]--",
+      "to": "cards[c]++",
+      "sourceSHA256": "7232c453607ce1ee7461507ad1cc2423ba05112d999209b3184b6d6635646d27",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: immutable apply 2\n+ actual - expected\n... Skipped lines\n\n  {\n    value: {\n      claims: {\n        r: 'p0'\n      },\n...\n            green: 12,\n+           locomotive: 13,\n-           locomotive: 11,\n            orange: 12,"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: immutable apply 2\n+ actual - expected\n... Skipped lines\n\n  {\n    value: {\n      claims: {\n        r: 'p0'\n      },\n...\n            green: 12,\n+           locomotive: 13,\n-           locomotive: 11,\n            orange: 12,"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: immutable apply 2\n+ actual - expected\n... Skipped lines\n\n  {\n    value: {\n      claims: {\n        r: 'p0'\n      },\n...\n            green: 12,\n+           locomotive: 13,\n-           locomotive: 11,\n            orange: 12,"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "train-deduction",
+      "from": "p.trainsRemaining-(p.id===claim.playerId?r.length:0)",
+      "to": "p.trainsRemaining+(p.id===claim.playerId?r.length:0)",
+      "sourceSHA256": "1ed627123584040a382e477898c841f6bf3d82fc9ccb5f96660f924942176da4",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: immutable apply 2\n+ actual - expected\n... Skipped lines\n\n  {\n    value: {\n      claims: {\n        r: 'p0'\n      },\n...\n          ticketIds: [],\n+         trainsRemaining: 47\n-         trainsRemaining: 43\n        },"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: immutable apply 2\n+ actual - expected\n... Skipped lines\n\n  {\n    value: {\n      claims: {\n        r: 'p0'\n      },\n...\n          ticketIds: [],\n+         trainsRemaining: 47\n-         trainsRemaining: 43\n        },"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: immutable apply 2\n+ actual - expected\n... Skipped lines\n\n  {\n    value: {\n      claims: {\n        r: 'p0'\n      },\n...\n          ticketIds: [],\n+         trainsRemaining: 47\n-         trainsRemaining: 43\n        },"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "claim-owner",
+      "from": "[r.id]:claim.playerId",
+      "to": "[r.id]:game.players[1]!.id",
+      "sourceSHA256": "176e19d612594e80f2d050fd19263b814f912728fd483e894bfe712dd6dd8187",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: immutable apply 2\n+ actual - expected\n\n  {\n    value: {\n      claims: {\n+       r: 'p1'\n-       r: 'p0'\n      },\n      playerCount: 2,\n      players: [\n        {\n          cards: {\n"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: immutable apply 2\n+ actual - expected\n\n  {\n    value: {\n      claims: {\n+       r: 'p1'\n-       r: 'p0'\n      },\n      playerCount: 2,\n      players: [\n        {\n          cards: {\n"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: immutable apply 2\n+ actual - expected\n\n  {\n    value: {\n      claims: {\n+       r: 'p1'\n-       r: 'p0'\n      },\n      playerCount: 2,\n      players: [\n        {\n          cards: {\n"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "zero-edge-ticket",
+      "from": "if(ticket.a===ticket.b)return true",
+      "to": "if(ticket.a===ticket.b)return false",
+      "sourceSHA256": "cf94eb061be161e3f87f1c48e4165ab7ea54b5effdd0f5344e1724420435acfb",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: connectivity directions\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/17-zero-edge-ticket/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/17-zero-edge-ticket/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/17-zero-edge-ticket/tests/goldens.mjs:11:77)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/17-zero-edge-ticket/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: connectivity directions\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/17-zero-edge-ticket/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/17-zero-edge-ticket/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/17-zero-edge-ticket/tests/goldens.mjs:11:77)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/17-zero-edge-ticket/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: connectivity directions\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/17-zero-edge-ticket/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/17-zero-edge-ticket/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/17-zero-edge-ticket/tests/goldens.mjs:11:77)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/17-zero-edge-ticket/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "reverse-ticket-adjacency",
+      "from": "adjacency.set(r.b,[...(adjacency.get(r.b)??[]),r.a]);",
+      "to": "adjacency.set(r.b,[...(adjacency.get(r.b)??[])]);",
+      "sourceSHA256": "b4730df2ea716fa2d4591e5b8422176370361967a053f28200c5cd0252d38fb2",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: connectivity directions\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/18-reverse-ticket-adjacency/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/18-reverse-ticket-adjacency/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/18-reverse-ticket-adjacency/tests/goldens.mjs:11:77)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/18-reverse-ticket-adjacency/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: connectivity directions\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/18-reverse-ticket-adjacency/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/18-reverse-ticket-adjacency/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/18-reverse-ticket-adjacency/tests/goldens.mjs:11:77)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/18-reverse-ticket-adjacency/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: connectivity directions\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/18-reverse-ticket-adjacency/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/18-reverse-ticket-adjacency/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/18-reverse-ticket-adjacency/tests/goldens.mjs:11:77)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/18-reverse-ticket-adjacency/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "breadth-first-frontier",
+      "from": "queue.push(next)",
+      "to": "queue.push(ticket.a)",
+      "sourceSHA256": "25654c15a58e941a2b1971db9a0d97669d98e18cb0e6546ab2944d66c9b9d695",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: connectivity directions\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/19-breadth-first-frontier/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/19-breadth-first-frontier/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/19-breadth-first-frontier/tests/goldens.mjs:11:77)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/19-breadth-first-frontier/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: connectivity directions\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/19-breadth-first-frontier/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/19-breadth-first-frontier/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/19-breadth-first-frontier/tests/goldens.mjs:11:77)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/19-breadth-first-frontier/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: connectivity directions\n+ actual - expected\n\n  {\n+   value: false\n-   value: true\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/19-breadth-first-frontier/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/19-breadth-first-frontier/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/19-breadth-first-frontier/tests/goldens.mjs:11:77)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/19-breadth-first-frontier/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "four-odd-euler-shortcut",
+      "from": "if(odd<=2)",
+      "to": "if(odd<=4)",
+      "sourceSHA256": "b38b317afaa423cdd0a114e339fdbc29eaedd39e3fbd08ab6ff38b72d4a73039",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: four odd vertices\n+ actual - expected\n\n  {\n+   value: 10\n-   value: 7\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/20-four-odd-euler-shortcut/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/20-four-odd-euler-shortcut/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/20-four-odd-euler-shortcut/tests/goldens.mjs:12:90)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/20-four-odd-euler-shortcut/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: four odd vertices\n+ actual - expected\n\n  {\n+   value: 10\n-   value: 7\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/20-four-odd-euler-shortcut/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/20-four-odd-euler-shortcut/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/20-four-odd-euler-shortcut/tests/goldens.mjs:12:90)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/20-four-odd-euler-shortcut/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: four odd vertices\n+ actual - expected\n\n  {\n+   value: 10\n-   value: 7\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/20-four-odd-euler-shortcut/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/20-four-odd-euler-shortcut/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/20-four-odd-euler-shortcut/tests/goldens.mjs:12:90)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/20-four-odd-euler-shortcut/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "weighted-edge",
+      "from": "weight:r.length",
+      "to": "weight:1",
+      "sourceSHA256": "e28acc7f890df4a74ce8c33ca36f4296e9944050bf10664800fc1ab4ece8255d",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: owned validation\n+ actual - expected\n\n  {\n+   value: 1\n-   value: 2\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/21-weighted-edge/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/21-weighted-edge/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/21-weighted-edge/tests/goldens.mjs:10:81)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/21-weighted-edge/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: owned validation\n+ actual - expected\n\n  {\n+   value: 1\n-   value: 2\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/21-weighted-edge/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/21-weighted-edge/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/21-weighted-edge/tests/goldens.mjs:10:81)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/21-weighted-edge/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: owned validation\n+ actual - expected\n\n  {\n+   value: 1\n-   value: 2\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/21-weighted-edge/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/21-weighted-edge/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/21-weighted-edge/tests/goldens.mjs:10:81)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/21-weighted-edge/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "edge-reuse-guard",
+      "from": "if((used&edge.bit)!==0n)continue",
+      "to": "if((used&edge.bit)===0n)continue",
+      "sourceSHA256": "1b2ac7a41d4140265c72eff9a325e3cd0bd9d0a8975221c33566130a040b538b",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: four odd vertices\n+ actual - expected\n\n  {\n+   value: 0\n-   value: 7\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/22-edge-reuse-guard/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/22-edge-reuse-guard/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/22-edge-reuse-guard/tests/goldens.mjs:12:90)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/22-edge-reuse-guard/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: four odd vertices\n+ actual - expected\n\n  {\n+   value: 0\n-   value: 7\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/22-edge-reuse-guard/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/22-edge-reuse-guard/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/22-edge-reuse-guard/tests/goldens.mjs:12:90)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/22-edge-reuse-guard/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: four odd vertices\n+ actual - expected\n\n  {\n+   value: 0\n-   value: 7\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/22-edge-reuse-guard/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/22-edge-reuse-guard/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/22-edge-reuse-guard/tests/goldens.mjs:12:90)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/22-edge-reuse-guard/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "disconnected-component-sum",
+      "from": "best=Math.max(best,total)",
+      "to": "best+=total",
+      "sourceSHA256": "d679f4d2d0964d04857efe6f2e77e7d1c150138f1ed13fb195981d3b4cb71ecf",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: disconnected weighted\n+ actual - expected\n\n  {\n+   value: 8\n-   value: 6\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/23-disconnected-component-sum/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/23-disconnected-component-sum/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/23-disconnected-component-sum/tests/goldens.mjs:13:72)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/23-disconnected-component-sum/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: disconnected weighted\n+ actual - expected\n\n  {\n+   value: 8\n-   value: 6\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/23-disconnected-component-sum/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/23-disconnected-component-sum/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/23-disconnected-component-sum/tests/goldens.mjs:13:72)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/23-disconnected-component-sum/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: disconnected weighted\n+ actual - expected\n\n  {\n+   value: 8\n-   value: 6\n  }\n\n    at compare (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/23-disconnected-component-sum/tests/common.mjs:9:230)\n    at check (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/23-disconnected-component-sum/tests/goldens.mjs:3:317)\n    at goldens (file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/23-disconnected-component-sum/tests/goldens.mjs:13:72)\n    at file:///workspace/job-B12/jobs/B12-ttr-usa/.mutations/23-disconnected-component-sum/tests/one.mjs:1:144\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "incomplete-ticket-sign",
+      "from": "complete?ticket.points:-ticket.points",
+      "to": "complete?ticket.points:ticket.points",
+      "sourceSHA256": "fd2a5952c689bac298f9fa330134f3d63420a77d3d42a86c90b806e7f2887489",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: positive tie and signed tickets\n+ actual - expected\n... Skipped lines\n\n  {\n    value: [\n      {\n        completedTicketIds: [\n          'complete'\n...\n        routePoints: 15,\n+       ticketPoints: 14,\n+       total: 39\n-       ticketPoints: 6,"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: positive tie and signed tickets\n+ actual - expected\n... Skipped lines\n\n  {\n    value: [\n      {\n        completedTicketIds: [\n          'complete'\n...\n        routePoints: 15,\n+       ticketPoints: 14,\n+       total: 39\n-       ticketPoints: 6,"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: positive tie and signed tickets\n+ actual - expected\n... Skipped lines\n\n  {\n    value: [\n      {\n        completedTicketIds: [\n          'complete'\n...\n        routePoints: 15,\n+       ticketPoints: 14,\n+       total: 39\n-       ticketPoints: 6,"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "longest-tie-bonus",
+      "from": "p.longestLength===maximum?10:0",
+      "to": "p.longestLength>maximum?10:0",
+      "sourceSHA256": "016cdb84571b98da7c8bd0aa28038f08ffd46bf3eb0171dc9339706219527199",
+      "strictCompiled": true,
+      "seeds": [
+        {
+          "seed": 1,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed1: positive tie and signed tickets\n+ actual - expected\n\n  {\n    value: [\n      {\n        completedTicketIds: [\n          'complete'\n        ],\n+       longestBonus: 0,\n-       longestBonus: 10,\n        longestLength: 6,\n        playerId: 'p0',\n        routePoints: 15,"
+        },
+        {
+          "seed": 2,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed2: positive tie and signed tickets\n+ actual - expected\n\n  {\n    value: [\n      {\n        completedTicketIds: [\n          'complete'\n        ],\n+       longestBonus: 0,\n-       longestBonus: 10,\n        longestLength: 6,\n        playerId: 'p0',\n        routePoints: 15,"
+        },
+        {
+          "seed": 3,
+          "killed": true,
+          "status": 1,
+          "evidence": "node:internal/modules/run_main:123\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: seed3: positive tie and signed tickets\n+ actual - expected\n\n  {\n    value: [\n      {\n        completedTicketIds: [\n          'complete'\n        ],\n+       longestBonus: 0,\n-       longestBonus: 10,\n        longestLength: 6,\n        playerId: 'p0',\n        routePoints: 15,"
+        }
+      ]
+    }
+  ]
+}

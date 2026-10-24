@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "originalLongestResult": 0,
+  "amendedLongestError": "RangeError",
+  "amendedTicketError": "RangeError",
+  "input": {
+    "routes": [
+      {
+        "id": "r",
+        "a": "A",
+        "b": "B",
+        "length": 1,
+        "color": "gray"
+      }
+    ],
+    "ownedIds": "new Array(1) (one sparse hole, not an actual undefined-filled array)",
+    "ticket": {
+      "id": "t",
+      "a": "A",
+      "b": "B",
+      "points": 1
+    }
+  },
+  "publicRequirement": "Every owned ID must be a known distinct route ID; malformed ownedIds throws RangeError"
+}

@@ -1,0 +1,46 @@
+{
+  "sourceSHA256": "79982cb6fc526354b6a44da665077f55971869d49632bbfd7199d0ccee10523b",
+  "sameInputs": true,
+  "before": [
+    {
+      "playerId": "p0",
+      "routePoints": 15,
+      "ticketPoints": 0,
+      "longestLength": 6,
+      "completedTicketIds": [],
+      "longestBonus": 10,
+      "total": 25
+    },
+    {
+      "playerId": "p1",
+      "routePoints": 0,
+      "ticketPoints": 0,
+      "longestLength": 0,
+      "completedTicketIds": [],
+      "longestBonus": 0,
+      "total": 0
+    }
+  ],
+  "after": [
+    {
+      "playerId": "p0",
+      "routePoints": 16,
+      "ticketPoints": 0,
+      "longestLength": 6,
+      "completedTicketIds": [],
+      "longestBonus": 10,
+      "total": 26
+    },
+    {
+      "playerId": "p1",
+      "routePoints": 0,
+      "ticketPoints": 0,
+      "longestLength": 0,
+      "completedTicketIds": [],
+      "longestBonus": 0,
+      "total": 0
+    }
+  ],
+  "legalAfterExternalCardMutation": false,
+  "defect": "Readonly TS annotations did not protect exported tables from JavaScript mutation."
+}

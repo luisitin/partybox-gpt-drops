@@ -1,0 +1,195 @@
+{
+  "passed": true,
+  "nodeVersion": "v22.16.0",
+  "typescriptVersion": "5.9.3",
+  "suites": [
+    {
+      "suite": "data",
+      "passed": true
+    },
+    {
+      "suite": "oracle-self",
+      "passed": true
+    },
+    {
+      "suite": "probe",
+      "passed": true
+    },
+    {
+      "suite": "graphs",
+      "passed": true
+    },
+    {
+      "suite": "games",
+      "passed": true
+    },
+    {
+      "suite": "mutations",
+      "passed": true
+    }
+  ],
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "graphs": [
+    {
+      "seed": 1,
+      "graphs": 20000,
+      "exhaustiveSubsetComparisons": 20000,
+      "checks": 60000
+    },
+    {
+      "seed": 2,
+      "graphs": 20000,
+      "exhaustiveSubsetComparisons": 20000,
+      "checks": 60000
+    },
+    {
+      "seed": 3,
+      "graphs": 20000,
+      "exhaustiveSubsetComparisons": 20000,
+      "checks": 60000
+    }
+  ],
+  "graphComparisons": 186053,
+  "fullGames": [
+    {
+      "seed": 1,
+      "completedGames": 2000,
+      "endedByTrainsAndFullFinalRound": 2000,
+      "turns": 295271,
+      "claims": 118652,
+      "blindDraws": 340784,
+      "ticketDraws": 6227,
+      "recycles": 3284,
+      "maxOwned": 22,
+      "minTurns": 79,
+      "maxTurns": 220,
+      "checks": 4628245,
+      "replaySHA256": "7825340701a64c9faecab20f983f6fec28ae145c17215c55f07d76c0369a7cf9",
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "completedGames": 2000,
+      "endedByTrainsAndFullFinalRound": 2000,
+      "turns": 295199,
+      "claims": 118560,
+      "blindDraws": 341076,
+      "ticketDraws": 6101,
+      "recycles": 3304,
+      "maxOwned": 21,
+      "minTurns": 79,
+      "maxTurns": 219,
+      "checks": 4626687,
+      "replaySHA256": "bbc136a68fcaa4329fb6fbf1173d42caa0b24efffa0cae700f603c50cb021767",
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "completedGames": 2000,
+      "endedByTrainsAndFullFinalRound": 2000,
+      "turns": 295133,
+      "claims": 118757,
+      "blindDraws": 340388,
+      "ticketDraws": 6182,
+      "recycles": 3310,
+      "maxOwned": 21,
+      "minTurns": 79,
+      "maxTurns": 219,
+      "checks": 4625170,
+      "replaySHA256": "c6a2e929f86b59bca8e83350e33067cf8b4f8a8bf8b80ca9d8953a2f2e023a7f",
+      "passed": true
+    }
+  ],
+  "goldens": [
+    {
+      "seed": 1,
+      "checks": 175,
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "checks": 175,
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "checks": 175,
+      "passed": true
+    }
+  ],
+  "data": [
+    {
+      "seed": 1,
+      "checks": 2903,
+      "schemaCases": 125,
+      "passed": true
+    },
+    {
+      "seed": 2,
+      "checks": 2903,
+      "schemaCases": 125,
+      "passed": true
+    },
+    {
+      "seed": 3,
+      "checks": 2903,
+      "schemaCases": 125,
+      "passed": true
+    }
+  ],
+  "mutations": {
+    "isolated": 25,
+    "compiled": 25,
+    "kills": 75
+  },
+  "fingerprints": {
+    "citations.json": "267d7cd5269720b3cda5bd09ef0fd8dcb4b476b7c6a7c272cf6cf8ce6c1d4aab",
+    "package-lock.json": "a4ff8026297fb32ac3ce589dd10c52bc84c4d19db3e6367ca6299fe7d98838e9",
+    "package.json": "2900c6511f9bfdf4bf62d8a83606fc6e74e58d089c5a86ca9089341ac405376a",
+    "reference.ts": "ee875cffa3ed8960479c6dd74bcbdc24257a2ee2665cb1cf6da9f61de6c6da83",
+    "sources/agnias-1910.usa.tickets.json": "b11ad83fa0ac4cf54c0d563a3887e710db53457ac97ce4a67c93bdbe74acd57c",
+    "sources/agnias-colors.json": "72c0987998c97b37a6bb25b449dfcc4ac3deceb2da776a9cb62e1124b502aea3",
+    "sources/agnias-route-point-values.json": "d23d35a7c1a4ed578dd5b31be716b5ff9b164a4ad00fb213588d6a0f50f538c1",
+    "sources/agnias-routes.json": "57d0e90bce929518bb0d5adabb6b717bc15dbfe9539acd5ca2f6f8e7d6cdefed",
+    "sources/agnias-usa.cities.json": "e128af349b0d26bd77990142489fce27645f81d120e26f0068d4d24fe4f2181c",
+    "sources/agnias-usa.tickets.json": "feeb948aae3caf5123995fdee5c8718b48f09d263ad2acf199daa1f8cb952116",
+    "sources/discovery.json": "b17d2edf954903b5530345cfa359428b87cc959ff351f906fa0127c9421768fb",
+    "sources/fetch-discovery-0.json": "2c3fa0a5d2763b41ff19797ecb7310794a07fe5f3ab69ce277e7136978ebd8ae",
+    "sources/fetch-discovery-1.json": "4341c46a024155fb53329ff1f537de6189b6f9f8bbd7b89a2abd408123fe898a",
+    "sources/fetch-ticket-lists.json": "071beed9ff17bc991c55df37c8d7516ce10fd3a487277b023e4a3035f274f406",
+    "sources/index.json": "68064fbea226216cff2a55641cf1b2e686156b7cab1843e57878ecdff0123691",
+    "sources/mystery-discovery-2.json": "999acb1fb88772bf2967d9f591d205b883db8d6bda0bbdce61f4a36db3d965a5",
+    "sources/mystery-discovery.json": "0a2d7ad01dd0da60f60701a39a39600e307ab3fa26cb4d57e24b2dd7e3a15be6",
+    "sources/mystery-facts.json": "b43a6ebc840433f8d75e350eba34215edf71b7aefc737c8d47bf63a701979bad",
+    "sources/rob-cities.json": "aafb4b071b4358c22be8ca0d02a301abf4e2d33609ec7f9e062b7013de464317",
+    "sources/rob-routes.csv": "c216bd8f95d1ed56e0780e27a92fd22f3595d2427f683ed414f0721692341eb7",
+    "sources/rob-tickets.csv": "4f760c2ea6a1b9644f5613ffa9671d76918e61c5ab1a04014ebb0d71f767df17",
+    "sources/supercheats-mega-extracted.json": "d96c33da4ef121688ee85694b7a2210adc46dc9ac26881258eacea5af9ce865b",
+    "sources/ticket-discovery-2.json": "fa277267070de74a8a6ffa0d35ced1e5fbd430c0eaa661824aaa625117b36152",
+    "sources/ticket-discovery.json": "a9ba9559381f7d6312319579ec2a8b95765296e1888e8b739875e001399ea1ef",
+    "tests/brute.mjs": "3ca9e1b1ba3387d30b4589e0fe42d5d7f8dcb327083425d013e13fa8efdd06f0",
+    "tests/common.mjs": "e9f02131e445fe30f4fb94ccd051dcc4b85f3345d0d746fba133332f1b783bde",
+    "tests/data.mjs": "e20e92c793821e349074ed91af9e599c523791339ce4ca102489993cd56da312",
+    "tests/games.mjs": "d6e7be75344214a40978e5e231b6bf6869c0da7f5fb2dc2d60e717dad0f38355",
+    "tests/goldens.mjs": "1163967c995fc4c3c9de4f98ebd116b79922740d99a2b2f62c6002ac97a512c5",
+    "tests/graphs.mjs": "590858972d18943c1f1ed01c2089d40d7f9aa0ae65836d0b908f926d7b0657f2",
+    "tests/mutations.mjs": "8a142979d918fe2c5ccb4c3f4af006ebc67adabcdefcf5c64c9fcf311abf9cf5",
+    "tests/oracle-self.mjs": "e19bd99ae57b0d1dfaa43e09ed1a71200577b94711131beec8e184b506ac211e",
+    "tests/probe.mjs": "79b6b569a6008940cdd53722738098977043faed3ed3142a8ecc6db234521bff",
+    "tests/run.mjs": "0daf2c8ae822513062ac53a303f51698634f872b5a60e3f346aa59edb62c3aa9",
+    "tools/build-data.py": "a0861cbb73c2ed52879a9189857e80b02a44dd046f6a2c312ea9cf3ef4d9abbb",
+    "tools/reopen.py": "d90ed585766a4d2ecc2c8e33cf11b0117442ad03490e76cd82acc189cbddf4c3",
+    "tools/write-sources.mjs": "3ed10414b318dab65788fcea8448e3adcdfcf6fe05be75652da318faea8354bf",
+    "tools/write-verify.mjs": "f2d0566bd353b92e1529b8af3288da025a58afdfcf788d170333a6d014c01422",
+    "tsconfig.json": "71edf95ba711254c0f87909f2e898ba71770dd3c5a1705c1fee15917a7138138",
+    "ttr.ts": "7d489f2084a990b5043d0121a62195cc86cab721443bf275a788da7aa37a9a8b",
+    "usa.json": "4a5889976791b6b59f71296edca8c99afa97dbdf5dde8311c3f5279739494f31",
+    "usa.schema.json": "bdcac33f870bc04688bc6431066e6f655c67e07462fec59606dcf0d8d0f82279",
+    "validate.ts": "310eeaaf647c9ab375061f97bd498176caf9d8f2d158b966239c5e7a5bd07961",
+    "validate_schema.py": "dbe9d9d58352647d7c82b7aff73afe6022b9c4bd9302a7f180eb1cc9b7bf1f52"
+  }
+}
