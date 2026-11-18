@@ -1,6 +1,6 @@
 # ChatGPT project pipeline
 
-_Last refreshed: 2026-11-18 10:33 UTC_
+_Last refreshed: 2026-11-18 19:17 UTC_
 
 This tracker follows the 20 jobs listed in [PROMPTS.md](PROMPTS.md). It checks the job branches and pull requests in this repository.
 
@@ -31,7 +31,7 @@ _None._
 | B04 | All Jamboree boards, space by space (R) | [PR #18](https://github.com/luisitin/partybox-gpt-drops/pull/18) open for review |
 | B05 | Turn flow, exact strings, bonus stars (R) | [PR #9](https://github.com/luisitin/partybox-gpt-drops/pull/9) open for review |
 | B06 | Jamboree CPU behaviour + cpuPolicy.ts (R+C) | [PR #17](https://github.com/luisitin/partybox-gpt-drops/pull/17) open for review |
-| B07 | Yahtzee exact optimal solver (C) | [PR #24](https://github.com/luisitin/partybox-gpt-drops/pull/24) open for review |
+| B07 | Yahtzee exact optimal solver (C) | [PR #21](https://github.com/luisitin/partybox-gpt-drops/pull/21) open for review |
 | B08 | Monopoly exact landing odds + ROI (C) | [PR #25](https://github.com/luisitin/partybox-gpt-drops/pull/25) open for review |
 | B09 | Clue exact deduction engine (C) | [PR #26](https://github.com/luisitin/partybox-gpt-drops/pull/26) open for review |
 | B10 | Battleship probability-density AI (C) | [PR #6](https://github.com/luisitin/partybox-gpt-drops/pull/6) open for review |
